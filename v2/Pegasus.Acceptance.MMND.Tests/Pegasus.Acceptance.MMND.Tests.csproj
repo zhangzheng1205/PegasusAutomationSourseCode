@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8DF9080-AC3A-4A60-89A8-D5A159B86865}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pegasus.Acceptance.MMND.Tests</RootNamespace>
+    <AssemblyName>Pegasus.Acceptance.MMND.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\..\ExternalAssemblies\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonProductAcceptanceTestDefinitions\CommonSteps.cs" />
+    <Compile Include="CommonProductAcceptanceTestDefinitions\CommonStepsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonStepsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\CourseEventsWithMockApplication.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\CourseEventsWithMockApplicationResource.Designer.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\CreateActivity.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\CreateActivityResource.Designer.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\CreateCourse.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\CreateCourseResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateCourseResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\GradeBook.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\GradeBookResource.Designer.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\LaunchTool.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\LoginLogout.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\LoginLogoutResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginLogoutResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\MMNDIntegration.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\MMNDIntegrationResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MMNDIntegrationResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\Preferences.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\SMSRegistration.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\SMSRegistrationResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SMSRegistrationResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\SMSUserEnrollement.cs" />
+    <Compile Include="ProductAcceptanceTestFeatures\GDXStub.WorkFlow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GDXStub.WorkFlow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\US73789.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US73789.Workflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\US73790.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US73790.Workflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\US73791.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US73791.Workflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\US73792.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US73792.Workflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\US73793.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US73793.Workflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\LaunchToolResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaunchToolResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\US73794.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US73794.Workflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\US73795.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US73795.Workflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\US73796.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US73796.Workflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\WorkSpaceTeacher.WorkFlow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkSpaceTeacher.WorkFlow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserStoryAcceptanceTestFeatures\Pegasus-26091.Acceptance.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pegasus-26091.Acceptance.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pegasus.Automation\Pegasus.Automation.csproj">
+      <Project>{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}</Project>
+      <Name>Pegasus.Automation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pegasus.Pages\Pegasus.Pages.csproj">
+      <Project>{D4D42739-288C-421F-A3AA-5DC32CB0C5D6}</Project>
+      <Name>Pegasus.Pages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ProductAcceptanceTestFeatures\GDXStub.WorkFlow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GDXStub.WorkFlow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\US73789.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US73789.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\US73790.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US73790.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\US73791.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US73791.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\US73792.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US73792.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\US73793.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US73793.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\US73794.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US73794.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\US73795.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US73795.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\US73796.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US73796.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDEnvironmentRefresh.orderedtest" />
+    <None Include="ProductAcceptanceTestFeatures\WorkSpaceTeacher.WorkFlow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WorkSpaceTeacher.WorkFlow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UserStoryAcceptanceTestFeatures\Pegasus-26091.Acceptance.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Pegasus-26091.Acceptance.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommonProductAcceptanceTestDefinitions\CommonStepsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonStepsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\CourseEventsWithMockApplicationResource.resx" />
+    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\CreateActivityResource.resx" />
+    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\CreateCourseResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateCourseResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\GradeBookResource.resx" />
+    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\LoginLogoutResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginLogoutResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\MMNDIntegrationResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MMNDIntegrationResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\SMSRegistrationResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SMSRegistrationResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\LaunchToolResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LaunchToolResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

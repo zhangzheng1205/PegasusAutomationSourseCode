@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GBInstructorUX_Page_ActivityName_Value" xml:space="preserve">
+    <value>01:The American Revolution</value>
+  </data>
+  <data name="GBInstructorUX_Page_Activity_Title" xml:space="preserve">
+    <value>01:Posttest-Post Test</value>
+  </data>
+  <data name="GBInstructorUX_Page_AssignmentCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td</value>
+  </data>
+  <data name="GBInstructorUX_Page_AssignmentTitleFF_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/a</value>
+  </data>
+  <data name="GBInstructorUX_Page_AssignmentTitleIE_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/a</value>
+  </data>
+  <data name="GBInstructorUX_Page_AssignmentTitle_Value" xml:space="preserve">
+    <value>PA-01 Span Practice- Vocabulary: Saludos, despedidas y presentaciones</value>
+  </data>
+  <data name="GBInstructorUX_Page_AssignmentTitle_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/a</value>
+  </data>
+  <data name="GBInstructorUX_Page_CmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/div[@class='GBRepnewContextualmenu']</value>
+  </data>
+  <data name="GBInstructorUX_Page_EditGrades_Window_Name" xml:space="preserve">
+    <value>Edit Grades</value>
+  </data>
+  <data name="GBInstructorUX_Page_EditGrades_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblcmForColumnHead']/tbody/tr/td[@class='GBINScmForStudentTDone']</value>
+  </data>
+  <data name="GBInstructorUX_Page_GB_GradeCell_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridDataTable']/tbody/tr/td[{0}]</value>
+  </data>
+  <data name="GBInstructorUX_Page_GradeCell_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridDataTable']/tbody/tr[2]/td[{0}]</value>
+  </data>
+  <data name="GBInstructorUX_Page_GradesFrame_Iframe_Name_Locator" xml:space="preserve">
+    <value>Student gradebook frame</value>
+  </data>
+  <data name="GBInstructorUX_Page_Initial_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GBInstructorUX_Page_Synapse_GradeCell_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridDataTable']/tbody/tr[{1}]/td[{0}]</value>
+  </data>
+  <data name="GBInstructorUX_Page_Synapse_GradesFrame_Iframe_Name_Locator" xml:space="preserve">
+    <value>srcGBFrame</value>
+  </data>
+  <data name="GBINstructorUX_Page_ViewGradesButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_viewgrade</value>
+  </data>
+  <data name="GBInstructorUX_Page_ViewGradesButton_PartialLinkText" xml:space="preserve">
+    <value>View Grades</value>
+  </data>
+  <data name="GBInstructorUX_Page_WaitTime_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GBInstructorUX_Page_Window_Title" xml:space="preserve">
+    <value>Gradebook</value>
+  </data>
+  <data name="GBInstructorUX_Page_WaitWindowTime_Value" xml:space="preserve">
+    <value>3000</value>
+  </data>
+  <data name="GBInstructorUX_Page_CustomView_Window_Title" xml:space="preserve">
+    <value>Custom View</value>
+  </data>
+  <data name="GBInstructorUX_Page_LearnerSettings_Window_Title" xml:space="preserve">
+    <value>Learner Settings</value>
+  </data>
+  <data name="GBInstructorUX_Page_Reports_Window_Title" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td/div</value>
+  </data>
+  <data name="GBInstructorUX_Page_Table_Cmenu_Options_Id_Locator" xml:space="preserve">
+    <value>tblcmForColumnHead</value>
+  </data>
+  <data name="GBInstructorUX_Page__ctl0__ctl0_phBody_PageContent_ifrmPreferences" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_ifrmPreferences</value>
+  </data>
+  <data name="GBInstructorUX_Page_Window_ChkIncludeEmailInGBExportFile" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkIncludeEmailInGBExportFile</value>
+  </data>
+  <data name="GBInstructorUX_Page_Window_imgDownLoad" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_imgDownLoad</value>
+  </data>
+  <data name="GBInstructorUX_Page_Bottom_Table" xml:space="preserve">
+    <value>bottomtbl1</value>
+  </data>
+  <data name="GBInstructorUX_Page_Drop_Down_GB" xml:space="preserve">
+    <value>divStudentNameID</value>
+  </data>
+  <data name="GBInstructorUX_Page_Drop_Down_Select_GB" xml:space="preserve">
+    <value>divSelectStudID</value>
+  </data>
+  <data name="GBInstructorUX_Page_Drop_Down_Text_ID" xml:space="preserve">
+    <value>StudId</value>
+  </data>
+  <data name="GBInstructorUX_Page_Drop_Down_Text_Name" xml:space="preserve">
+    <value>StudName</value>
+  </data>
+  <data name="GBInstructorUX_Page_Drop_Down_Text_Name_Id" xml:space="preserve">
+    <value>StudNameID</value>
+  </data>
+  <data name="GBInstructorUX_Page_AutoIT_ExeFilepath" xml:space="preserve">
+    <value>\TestData\IE.exe</value>
+  </data>
+  <data name="GBInstructorUX_Page_DownLoad_DownloadedFilepath_Locator" xml:space="preserve">
+    <value>:\GradeBookDownload.xls</value>
+  </data>
+  <data name="GBInstructorUX_Page_ExcelSheet_Data_colan" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="GBInstructorUX_Page_ExcelSheet_PageNum" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GBInstructorUX_Page_ExcelSheet_RowNum" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GBInstructorUX_Page_ExcelSheet_ColNum" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GBInstructorUX_Page_Email_Column_Name" xml:space="preserve">
+    <value>EmailAddress</value>
+  </data>
+  <data name="GBInstructorUX_Page_ExcelSheet_Tab_Value" xml:space="preserve">
+    <value>\t</value>
+  </data>
+  <data name="GBInstructorUX_Page_ExcelSheet_Name" xml:space="preserve">
+    <value>EXCEL</value>
+  </data>
+  <data name="GBInstructorUX_Page_Create_Column_DropDown" xml:space="preserve">
+    <value>CreateColumnButtton</value>
+  </data>
+  <data name="GBInstructorUX_Page_Create_Menu_Table" xml:space="preserve">
+    <value>cmForCreateMenu</value>
+  </data>
+  <data name="GBInstructorUX_Page_Import_Grades_Id" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblimportgradescolumn</value>
+  </data>
+  <data name="GBInstructorUX_Page_Import_Grades_Text" xml:space="preserve">
+    <value>Import Grades</value>
+  </data>
+  <data name="GBInstructorUX_Page_Pop_Up_Window_Title" xml:space="preserve">
+    <value>Create Imported Grades Column</value>
+  </data>
+  <data name="GBInstructorUX_Page_Pop_Up_Column_Name_Id" xml:space="preserve">
+    <value>txtColumnName</value>
+  </data>
+  <data name="GBInstructorUX_Page_Pop_Up_Browse_Input_Id" xml:space="preserve">
+    <value>txtFileName</value>
+  </data>
+  <data name="GBInstructorUX_Page_ImportGrades_File_Path" xml:space="preserve">
+    <value>\TestData\BulkUser_Template.xls</value>
+  </data>
+  <data name="GBInstructorUX_Page_Pop_Up_Column_Number_Id" xml:space="preserve">
+    <value>txtColumnIndex</value>
+  </data>
+  <data name="GBInstructorUX_Page_Pop_Up_OK_Button_Id" xml:space="preserve">
+    <value>imgBtnOk</value>
+  </data>
+  <data name="GBInstructorUX_Page_SleepTime_Value" xml:space="preserve">
+    <value>6000</value>
+  </data>
+  <data name="GBInstrucotUX_Page_ActivitySelect_Thread_Time_Value" xml:space="preserve">
+    <value>1000</value>
+  </data>
+  <data name="GBInstructorUX_Page_ActivityCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='ColumnGrid']/tbody/tr</value>
+  </data>
+  <data name="GBInstructorUX_Page_ActivityNameText_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='ColumnGrid']/tbody/tr[{0}]/td[2]/span[2]/span</value>
+  </data>
+  <data name="GBInstructorUX_Page_Activity_Checkbox_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='ColumnGrid']/tbody/tr[{0}]/td[1]/input</value>
+  </data>
+  <data name="GBInstructorUX_Page_AddButton_ID_Locator" xml:space="preserve">
+    <value>imgAdd</value>
+  </data>
+  <data name="GBInstructorUX_Page_Add_Button_ID_Locator" xml:space="preserve">
+    <value>imgAdd</value>
+  </data>
+  <data name="GBInstructorUX_Page_Add_Button_Xpath_Locator" xml:space="preserve">
+    <value>//td[@id='tdmiddle']/a</value>
+  </data>
+  <data name="GBInstructorUX_Page_Add_Weight_TextBox_ID_Locator" xml:space="preserve">
+    <value>SelectedColumnGrid$_ctrl2</value>
+  </data>
+  <data name="GBInstructorUX_Page_Checkbox_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id="ColumnGrid$contentCntr"]/tbody/tr[4]/td[{0}]/input</value>
+  </data>
+  <data name="GBInstructorUX_Page_CreateColumnDropDown_ID_Locator" xml:space="preserve">
+    <value>CreateColumnButtton</value>
+  </data>
+  <data name="GBInstructorUX_Page_CreateColumn_ID_Locator" xml:space="preserve">
+    <value>CreateColumnButtton</value>
+  </data>
+  <data name="GBInstructorUX_Page_CreatTotlColum_Window_Name" xml:space="preserve">
+    <value>Create Total Column</value>
+  </data>
+  <data name="GBInstructorUX_Page_First_Text_Weight_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='SelectedColumnGrid']/tbody/tr[1]/td[3]/input</value>
+  </data>
+  <data name="GBInstructorUX_Page_IFrame_selectedList_ID_Locator" xml:space="preserve">
+    <value>frameGBSelectedlist</value>
+  </data>
+  <data name="GBInstructorUX_Page_MyCourse_Frame_ID_Locator" xml:space="preserve">
+    <value>frameGBlist</value>
+  </data>
+  <data name="GBInstructorUX_Page_Second_Text_Weight_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='SelectedColumnGrid']/tbody/tr[2]/td[3]/input</value>
+  </data>
+  <data name="GBinstructorUX_Page_Textbox_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id="SelectedColumnGrid"]/tbody/tr[0]/td[{2}]/input</value>
+  </data>
+  <data name="GBInstructorUX_Page_TotalColumnDropDown_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_td1</value>
+  </data>
+  <data name="GBInstructorUX_Page_TotalColumn_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_td1</value>
+  </data>
+  <data name="GBInstructorUX_Page_TotalColumn_Text" xml:space="preserve">
+    <value>Total Column</value>
+  </data>
+  <data name="GBInstructorUX_Page_TotalWeight_Text_XPath_Locator" xml:space="preserve">
+    <value>//input[@id='txtTotalWeight']</value>
+  </data>
+  <data name="GBInstructorUX_Page_ProcessName" xml:space="preserve">
+    <value>EXCEL</value>
+  </data>
+  <data name="GBInstructorUX_Page_ExcelProcessSleepTime_Value" xml:space="preserve">
+    <value>20000</value>
+  </data>
+  <data name="GBInstructorUX_Page_Window_ImportGrade" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_tdImportGrades</value>
+  </data>
+  <data name="GBInstructorUX_Page_SynchronizeWithLMS_Cmenu_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblcmForColumnHead']/tbody/tr[23]/td/span[@id='_ctl0_InnerPageContent_lblLMS']</value>
+  </data>
+  <data name="GBInstructorUX_Page_SynchronizewithLMS_Text" xml:space="preserve">
+    <value>Synchronize with LMS</value>
+  </data>
+  <data name="GBInstructorUX_Page_Header_GardeBook_GBGridHeaderTable_ID_Locator" xml:space="preserve">
+    <value>GBGridHeaderTable</value>
+  </data>
+  <data name="GBInstructorUX_Page_Window_CustomViewTab_ID_Locator" xml:space="preserve">
+    <value>101</value>
+  </data>
+  <data name="GBInstructorUX_Page_Window_GradesSubTab_ID_Locator" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="GBInstructorUX_Page_AcitivityNames_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr[@id='FirstTr']/td</value>
+  </data>
+  <data name="GBInstructorUX_Page_ActivityStatus_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]</value>
+  </data>
+  <data name="GBInstructorUX_Page_Initial_Count_Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GBInstructorUX_Page_Space_value" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="GBInstructorUX_Page_UserCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridLeftTableHolder']/tbody/tr</value>
+  </data>
+  <data name="GBInstructorUX_Page_AssetName_TA_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/span</value>
+  </data>
+  <data name="GBInstructorUX_Page_User_Title_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridLeftTableHolder']/tbody/tr[{0}]/td[2]</value>
+  </data>
+  <data name="GBInstructorUX_Page_ApplyGradeSchema_Cmenu_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblapplygradeschema</value>
+  </data>
+  <data name="GBInstructorUX_Page_Asset_Cmenuicon_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]//div[@class='GBRepnewContextualmenu']</value>
+  </data>
+  <data name="GBInstructorUX_Page_RemovefromCustomView_Cmenu_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblRemovecustomview</value>
+  </data>
+  <data name="GBInstructorUX_Page_SavetoCustomView_Cmenu_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblsavecustomview</value>
+  </data>
+  <data name="GBInstructorUX_Page_ViewAllSubmission_Cmenu_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblviewallsubmissions</value>
+  </data>
+  <data name="GBInstructorUX_Page_ModifyGradeSchema_Cmenu_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblmodifygradeschema</value>
+  </data>
+  <data name="GBInstructorUX_Page_RemoveGradeSchema_Cmenu_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblremovegradeschema</value>
+  </data>
+  <data name="GBInstructorUX_Page_AssignmentTitle_TA_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/span</value>
+  </data>
+  <data name="GBInstructorUX_Page_Undergrade_Cmenu_Icon_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridDataTable']/tbody/tr[2]/td[4]/span/span/img</value>
+  </data>
+  <data name="GBInstructorUX_Page_Undergrade_Cmenu_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridDataTable']/tbody/tr[2]/td[4]/span/span</value>
+  </data>
+  <data name="GBInstructorUX_Page_AssetCellGrade_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span/span</value>
+  </data>
+  <data name="GBInstructorUX_Page_EditGrade_Cmenu_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lbleditgrade1</value>
+  </data>
+  <data name="GBInstructorUX_Page_Input_MaxScoreValue" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GBInstructorUX_Page_Input_MaxScoreValue_Id_Locator" xml:space="preserve">
+    <value>txtNewMaxValue</value>
+  </data>
+  <data name="GBInstructorUX_Page_Input_ScoreValue" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GBInstructorUX_Page_Input_ScoreValue_Id_Locator" xml:space="preserve">
+    <value>txtNewValue</value>
+  </data>
+  <data name="GBInstructorUX_Page_Update_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_GBUpdate</value>
+  </data>
+  <data name="GBInstructorUX_Page_Undergrade_ColumnClick_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridDataTable']/tbody/tr[2]/td[4]</value>
+  </data>
+  <data name="GBInstructorUX_Page_UnderGradecel_EditGrade_Cmenu_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lbleditgrade1</value>
+  </data>
+  <data name="GBInstructorUX_Page_UnderGradecel_ViewHistory_Cmenu_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblGradeHistory</value>
+  </data>
+  <data name="GBInstructorUX_Page_UnderGradecel_ViewSubmission_Cmenu_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblviewGradeSubmission</value>
+  </data>
+  <data name="GBInstructorUX_Page_ViewGradeSubmission_Cmenu_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblviewGradeSubmission</value>
+  </data>
+  <data name="GBInstructorUX_Page_Custom_WaitTime_Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GBInstructorUX_Page_GradeColumn_EditGrade_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lbleditgrades2</value>
+  </data>
+  <data name="GBInstructorUX_Page_ActivitySchemaValue_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridDataTable']/tbody/tr/td[{0}]</value>
+  </data>
+  <data name="GBInstructorUX_Page_Searched_Activity_Name_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/span</value>
+  </data>
+  <data name="GBInstructorUX_Page_TrainingMaterial_Name" xml:space="preserve">
+    <value>Training</value>
+  </data>
+  <data name="GBInstructorUX_Page_AssignmentTypes_Filter_Id_Locator" xml:space="preserve">
+    <value>tblAssignmentTypesHeader</value>
+  </data>
+  <data name="GBInstructorUX_Page_AssignmentTypes_HomeworkCheckbox_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblAssignmentTypes']/tbody/tr[1]/td/input</value>
+  </data>
+  <data name="GBInstructorUX_Page_Gradebook_Cmenuoptions" xml:space="preserve">
+    <value>//table[@id='tblcmForColumnHead']/tbody</value>
+  </data>
+  <data name="GBInstructorUX_Page_HideForStudent_Cmeenu_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblrevokecolumn</value>
+  </data>
+  <data name="GBInstructorUX_Page_CenterFrame_Id_Locator" xml:space="preserve">
+    <value>centerIFrame</value>
+  </data>
+  <data name="GBInstructorUX_Page_CourseHome_Window_Title" xml:space="preserve">
+    <value>Course Home</value>
+  </data>
+  <data name="GBInstructorUX_Page_SuccessMessage_Classname_Locator" xml:space="preserve">
+    <value>messageBoardText</value>
+  </data>
+  <data name="GBInstructorUX_Page_GradeCellCmenu_Options_Id_Locator" xml:space="preserve">
+    <value>tblcmForGrade</value>
+  </data>
+  <data name="GBInstructorUX_Page_GradeCell_Cmenu_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridDataTable']/tbody/tr[{0}]/td[{1}]/span/span[2]/img</value>
+  </data>
+  <data name="GBInstructorUX_Page_Increment_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GBInstructorUXPage_Gradebook_CmenuImage_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/descendant::div[@class='GBRepnewContextualmenu']</value>
+  </data>
+  <data name="GBInstructorUXPage_Gradebook_CmenuIcon_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/div</value>
+  </data>
+  <data name="GBInstructorUXPage_Gradebook_LMSCmenu_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblLMS</value>
+  </data>
+  <data name="GBInstructorUXPage_Gradebook_LMSImage_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr[2]/td[{0}]/div[2]/span</value>
+  </data>
+</root>

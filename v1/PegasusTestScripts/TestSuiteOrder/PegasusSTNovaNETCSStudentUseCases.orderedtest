@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="pegasusstnovanetcsstudentusecases" storage="d:\bdd_automation\pegasus.testautomation\pegasustestscripts\testsuiteorder\pegasusstnovanetcsstudentusecases.orderedtest" priority="1" id="77b22683-3a20-4d15-bd84-ef16b350f2a8" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestCategory>
+    <TestCategoryItem TestCategory="Nightly" />
+  </TestCategory>
+  <Execution id="495a8887-3eee-4771-8fc4-f81616022e30" />
+  <TestLinks>
+    <TestLink id="3ba20585-dfc3-d80c-fc21-e78f541ba626" name="LauchActivityByTheStudentInCs" storage="..\bin\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="7bea600d-c4b8-5dcf-3686-aa710f29d9fc" name="ActivitySubmissionByTheStudentInCs" storage="..\bin\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="d7421c58-7f09-2571-2f4c-7c75511bd413" name="ViewActivitySubmissionByTheStudentInCs" storage="..\bin\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

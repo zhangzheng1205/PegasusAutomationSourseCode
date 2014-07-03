@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="UserLayoutRootNodeTargetPage_AssignedToCopyInterval_AppSettings_Key_Value" xml:space="preserve">
+    <value>AssignedToCopyInterval</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CoOrdinate_Course_Title" xml:space="preserve">
+    <value>MMND Pegasus Spnaish Zayas-Bazam Coord Sixth Edition</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_BackToYourCoursesPage_Link_Text" xml:space="preserve">
+    <value>Back to your Courses page</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_CourseId_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='top-table-holder']/table/tbody/tr[2]/td</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_CourseName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='bm']/div[{0}]/h4</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_Customized_Time" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_Customized_Wait_Time" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_Loop_Initializer" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_Second_ArrayIndex_Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_SectionDetail_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@id='confirmationCourseSections']/li/span</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_Split_By_Bracket_Character" xml:space="preserve">
+    <value>)</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_Successful_Message_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='pageheader']/h1</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_TotalCourses_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='courses']/div[@class='box']/div/div[@class='bm']/div</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_Window_Title" xml:space="preserve">
+    <value>Course Create Confirmation</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CreateOrCopyACourse_CoOrdinatorCourse_DropDown_Name_Locator" xml:space="preserve">
+    <value>coordinator_course</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CreateOrCopyACourse_CoOrdinatorCourse_DropDown_Value" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Courses_DropDown_AllOptions_Xpath_Locator" xml:space="preserve">
+    <value>//select[@name='coordinator_course']/option</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Courses_DropDown_Options_Initializer_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Courses_DropDown_Options_Xpath_Locator" xml:space="preserve">
+    <value>//select[@name='coordinator_course']/option[{0}]</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Go_Button_Id_Locator" xml:space="preserve">
+    <value>submitButton</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Search_RadioButton_Id_Locator" xml:space="preserve">
+    <value>searchButton</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Search_Textbox_Id_Locator" xml:space="preserve">
+    <value>searchid</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Section_RadioButton_Id_Locator" xml:space="preserve">
+    <value>copyCoordinatorButton</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Window_Title" xml:space="preserve">
+    <value>Create or Copy a Course</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_AvailableForCopy_RadioButton_Id_Locator" xml:space="preserve">
+    <value>availableForCopy</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_CommaAndSpace_Value" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseEnd_Id_Locator" xml:space="preserve">
+    <value>courseEnd</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseName_Textbox_Id_Locator" xml:space="preserve">
+    <value>course-name</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseStart_Id_Locator" xml:space="preserve">
+    <value>courseStart</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseType_RadioButton_Id_Locator" xml:space="preserve">
+    <value>courseTypeStudent</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_CreateCourseNow_Button_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='buttons']/button[2]</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_DateTime_Date_Parameter" xml:space="preserve">
+    <value>dd</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_DateTime_Month_Parameter" xml:space="preserve">
+    <value>MMM</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_DateTime_NextYear_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_DateTime_Year_Parameter" xml:space="preserve">
+    <value>yyyy</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_EnrollEnd_Id_Locator" xml:space="preserve">
+    <value>enrollEnd</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_EnrollStart_Id_Locator" xml:space="preserve">
+    <value>enrollStart</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_SectionName_Textbox_Id_Locator" xml:space="preserve">
+    <value>course_name0</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_SectionName_Value_Attribute" xml:space="preserve">
+    <value>value</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_Space_Value" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterCourseInformation_Window_Title" xml:space="preserve">
+    <value>Enter Course Information</value>
+  </data>
+  <data name="UserLayoutRootNodetargetPage_EnterKey" xml:space="preserve">
+    <value>{ENTER}</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_MyLabMasteringPearson_AssignedToCopy_Course_Icon_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='bi']/div[@class='bm']/div[{0}]/h4/img</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_MyLabMasteringPearson_AssignedToCopy_Course_Name_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='bi']/div[@class='bm']/div[{0}]/h4</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_MyLabMasteringPearson_AssignedToCopy_Section_Icon_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='bi']/div[@class='bm']/div[{0}]/div/h4/img</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_MyLabMasteringPearson_AssignedToCopy_Section_Name_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='bi']/div[@class='bm']/div[{0}]/div/h4</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_MyLabMasteringPearson_ThreadValue" xml:space="preserve">
+    <value>9000</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_MyLabMasteringPearson_SignOut_Id_Locator" xml:space="preserve">
+    <value>pearsonLogOutLink</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_MyLabMasteringPearson_Window_Sleep_Value" xml:space="preserve">
+    <value>3000</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_MyLabMasteringPearson_Window_Title" xml:space="preserve">
+    <value>MyLab &amp; Mastering | Pearson</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_NonCoOrdinate_Course_Title" xml:space="preserve">
+    <value>58_MMND_PegasusSpanish 6/e</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_SearchTerm_AppSettings_Key_Value" xml:space="preserve">
+    <value>CourseSearchTerm</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_SelectCourseMaterials_CourseName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='searchResults']/form/div[{0}]/table/tbody/tr/td[2]/h2</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_SelectCourseMaterials_CourseType_Button_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='searchResults']/form/div[{0}]/table/tbody/tr/td[3]/a</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_SelectCourseMaterials_Customized_Time" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_SelectCourseMaterials_Div_SearchResults_Id_Locator" xml:space="preserve">
+    <value>searchResults</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_SelectCourseMaterials_Loop_Initializer" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_SelectCourseMaterials_TotalCourses_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='searchResults']/form/div</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_SelectCourseMaterials_Window_Title" xml:space="preserve">
+    <value>Select Course Materials</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_Signout_Link_PartialLinkText" xml:space="preserve">
+    <value>Sign Out</value>
+  </data>
+  <data name="UserLayoutRootNodetargetPage_TabKey" xml:space="preserve">
+    <value>{TAB}</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_BrowserConfirmation_Alert_Id_Locator" xml:space="preserve">
+    <value>browserConfirmButton</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_BrowserConfirmation_ThreadTime" xml:space="preserve">
+    <value>1000</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseHome_ThreadValue" xml:space="preserve">
+    <value>8000</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_eCollegeNotifier_Alert_Id_Locator" xml:space="preserve">
+    <value>ecollegeNotifierClose</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_EnterAlert_Customized_Time" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="UserLayoutRootNodetargetPage_Subtab_Div_Id_Locator" xml:space="preserve">
+    <value>module</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_ShowContent_Alert_DisplayTime" xml:space="preserve">
+    <value>4000</value>
+  </data>
+  <data name="UserLayoutRootNodeTargetPage_CourseHome_Text" xml:space="preserve">
+    <value>Course Home</value>
+  </data>
+  <data name="UserLayoutRootNodetargetPage_CourseLoad_List_Id_Locator" xml:space="preserve">
+    <value>courseListLinkParent</value>
+  </data>
+</root>

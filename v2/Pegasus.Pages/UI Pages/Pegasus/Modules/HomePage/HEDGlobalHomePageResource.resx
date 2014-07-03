@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HEDGlobalHome_Page_AnnouncementsClose_Link_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lnkClose</value>
+  </data>
+  <data name="HEDGlobalHome_Page_AnnouncementsManageAll_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl5__ctl3__ctl0__ctl1__ctl0_btnViewAll</value>
+  </data>
+  <data name="HedGlobalHome_Page_CourseID_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtCourseID</value>
+  </data>
+  <data name="HEDGlobalHome_Page_CourseInactive_Text_ClassName_Locator" xml:space="preserve">
+    <value>cssCourseInactive</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Course_Table_ActiveSpan_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCourse']/tbody/tr/td/div[{0}]/descendant::span[@class='spnActive']</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Course_Table_Id_Locator" xml:space="preserve">
+    <value>tblCourse</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Course_Table_Row_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCourse']/tbody/tr/td/div[{0}]</value>
+  </data>
+  <data name="HEDGlobalHome_Page_EnrollInCourse_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl5:_ctl2:_ctl0:_ctl0:_ctl0:btnEnrollCourse</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Frame_First_Index" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="HEDGlobalHome_Page_SearchCatalog_LinkButton_PartialLinkText_Locator" xml:space="preserve">
+    <value>Create a Course</value>
+  </data>
+  <data name="HEDGlobalHome_Page_ThreadSleep_Value" xml:space="preserve">
+    <value>30000</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Window_Title_Name" xml:space="preserve">
+    <value>Global Home</value>
+  </data>
+  <data name="HEDGlobalHome_Catalog_Frame_Program_RadioButton_ID_Locator" xml:space="preserve">
+    <value>rndDiscipline</value>
+  </data>
+  <data name="HEDGlobalHome_Page_CourseNavigation_Title_ClassName_Locator" xml:space="preserve">
+    <value>MyClassSpan2</value>
+  </data>
+  <data name="HEDGlobalHome_Page_ManageAllButton_Id_Locator" xml:space="preserve">
+    <value>_ctl3__ctl3__ctl0__ctl1__ctl0_btnViewAll</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Custom_TimeToWait" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="HEDGlobalHome_Page_AnnouncementFrame_XPath_Locator" xml:space="preserve">
+    <value>//iframe[@src='/Pegasus/Modules/CourseAnnouncement/AnnouncementDefaultUX.aspx']</value>
+  </data>
+  <data name="HEDGlobalHome_Page_TimeInSeconds" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Course_Custom_TimeToWait" xml:space="preserve">
+    <value>4000</value>
+  </data>
+  <data name="HEDGlobalHome_Page_ElementFindTimeoutInSeconds" xml:space="preserve">
+    <value>ElementFindTimeOutInSeconds</value>
+  </data>
+  <data name="HEDGlobalHome_Page_EnrollInCourse_Button_PartialLinkText_Locator" xml:space="preserve">
+    <value>Enroll in a Course</value>
+  </data>
+  <data name="HEDGlobalHome_Page_MyProfile_Id_Locator" xml:space="preserve">
+    <value>_ctl6_pegHello_ancMyAccount</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Feedback_Id_Locator" xml:space="preserve">
+    <value>_ctl6_pegHello_FeedbackLink</value>
+  </data>
+  <data name="HEDGlobalHome_Page_SearchCatalog_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl5:_ctl2:_ctl0:_ctl0:_ctl0:btnSearchCatalog</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Course_Open_Time_Value" xml:space="preserve">
+    <value>3000</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Role_Instructor" xml:space="preserve">
+    <value>Instructor</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Help_Link_Id_Locator" xml:space="preserve">
+    <value>_ctl6_pegHello_HelpLink</value>
+  </data>
+  <data name="HEDGlobalHome_Page_ProgramCourse_Type" xml:space="preserve">
+    <value>ProgramCourse</value>
+  </data>
+  <data name="HEDGlobalHome_Page_TA_Help_Link_Id_Locator" xml:space="preserve">
+    <value>_ctl6_PegasushelloK5_HelpLink</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Course_Table_Div_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCourse']/tbody/tr/td/div</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Course_Table_UpgradeAvailable_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCourse']/tbody/tr/td/div[{0}]/descendant::span[@class='spnCourseUpgrade']/a</value>
+  </data>
+  <data name="HEDGlobalHome_Page_UpgradeCheckBox_Id_Locator_On_Popup" xml:space="preserve">
+    <value>chkUpgrade</value>
+  </data>
+  <data name="HEDGlobalHome_Page_Upgrade_Popup_Window_Name" xml:space="preserve">
+    <value>Upgrade</value>
+  </data>
+  <data name="HEDGlobalHome_Page_SectionValue" xml:space="preserve">
+    <value> 1</value>
+  </data>
+  <data name="HEDGlobalHome_Page_CourseName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCourse']/tbody/tr/td/div[{0}]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td/a</value>
+  </data>
+  <data name="HEDGlobalHome_Page_LoopIntializer_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="HEDGlobalHome_Page_CreateaCourse_LinkButton_Locator" xml:space="preserve">
+    <value>Create a Course</value>
+  </data>
+</root>

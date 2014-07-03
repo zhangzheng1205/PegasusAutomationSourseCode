@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedtest.us18493acceptancetest.myitlab" storage="d:\automationproject\pegasus.testautomation\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.us18493acceptancetest.myitlab.orderedtest" id="4832f769-562b-4403-be78-5dd4081dda44" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Execution id="0204e348-f426-43cb-b8f3-1000aefc3b1c" />
+  <TestLinks>
+    <TestLink id="b5eaa521-af33-f518-5ae2-c45de25d6519" name="CalculateTheTransactionTimingsForSIM5AssessmentLaunchBySingleUser" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b5eaa521-af33-f518-5ae2-c45de25d6519" name="CalculateTheTransactionTimingsForSIM5AssessmentLaunchBySingleUser" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b5eaa521-af33-f518-5ae2-c45de25d6519" name="CalculateTheTransactionTimingsForSIM5AssessmentLaunchBySingleUser" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PaperTestUX_Page_Add_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0:_ctl0:phBody:PageContent:btnAdd</value>
+  </data>
+  <data name="PaperTestUX_Page_Cancel_Test_Popup_Save_Button_Id_Locator" xml:space="preserve">
+    <value>imgsave</value>
+  </data>
+  <data name="PaperTestUX_Page_Cancel_Test_Popup_Window_Name" xml:space="preserve">
+    <value>Cancel Test</value>
+  </data>
+  <data name="PaperTestUX_Page_Checkbox_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divQuestionTree']/ul/li[4]/ul/li[2]/ul/li/ul/li/table/tbody/tr/td/input</value>
+  </data>
+  <data name="PaperTestUX_Page_Close_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0:_ctl0:phBody:PageContent:btnClose</value>
+  </data>
+  <data name="PaperTestUX_Page_CreateMyTest_Mesg_Time_Value" xml:space="preserve">
+    <value>4000</value>
+  </data>
+  <data name="PaperTestUX_Page_CreateQuestionAndGroup_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_spanQuestions</value>
+  </data>
+  <data name="PaperTestUX_Page_CreateQuestion_CmenuList_Id_Locator" xml:space="preserve">
+    <value>divQuestions</value>
+  </data>
+  <data name="PaperTestUX_Page_CreateQuestion_Select_TrueFalse_Ques_Id_Locator" xml:space="preserve">
+    <value>//div[@id='divQuestions']/table/tbody/tr[8]/td/span[@id='_ctl0__ctl0_phBody_PageContent_spnTF']</value>
+  </data>
+  <data name="PaperTestUX_Page_CreateQuestion_Time_Value" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="PaperTestUX_Page_DragQuestion_SourceElement_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divQuestionTree']/ul/li/ul/li/table/tbody/tr/td[2]</value>
+  </data>
+  <data name="PaperTestUX_Page_DropQuestion_Destination_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divPaperTest']/ul/li</value>
+  </data>
+  <data name="PaperTestUX_Page_FilterTest_QuestionCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divQuestionTree']/ul/li/ul/li</value>
+  </data>
+  <data name="PaperTestUX_Page_FilterTest_QuestionName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divQuestionTree']/ul/li/ul/li[{0}]/table/tbody/tr/td[2]</value>
+  </data>
+  <data name="PaperTestUX_Page_First_Level_Folder_Name" xml:space="preserve">
+    <value>Capítulo 01: ¿Quiénes somos?</value>
+  </data>
+  <data name="PaperTestUX_Page_ManageYourTest_QuestionCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divPaperTest']/ul/li</value>
+  </data>
+  <data name="PaperTestUX_Page_ManageYourTest_QuestionName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divPaperTest']/ul/li[{0}]/table/tbody/tr/td[3]</value>
+  </data>
+  <data name="PaperTestUX_Page_MyQuestion_Folder_Name" xml:space="preserve">
+    <value>My Questions Folder</value>
+  </data>
+  <data name="PaperTestUX_Page_MyQuestion_Folder_Question_LI_Variable_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divTreeCon']/ul/li/ul/li[{0}]</value>
+  </data>
+  <data name="PaperTestUX_Page_MyQuestion_Folder_Question_LI_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divTreeCon']/ul/li/ul/li</value>
+  </data>
+  <data name="PaperTestUX_Page_MyQuestion_Folder_UL_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divTreeCon']/ul</value>
+  </data>
+  <data name="PaperTestUX_Page_MYTest_Div_ID_Locator" xml:space="preserve">
+    <value>divTestPaper</value>
+  </data>
+  <data name="PaperTestUX_Page_MyTest_Window_Title" xml:space="preserve">
+    <value>MyTest</value>
+  </data>
+  <data name="PaperTestUX_Page_OK_Button_Id_Locator" xml:space="preserve">
+    <value>imgOk</value>
+  </data>
+  <data name="PaperTestUX_Page_Pegasus_Window_Message_Id_Locator" xml:space="preserve">
+    <value>lblPageHead</value>
+  </data>
+  <data name="PaperTestUX_Page_Popup_Pegasus_Window_Name" xml:space="preserve">
+    <value>Pegasus</value>
+  </data>
+  <data name="PaperTestUX_Page_Question_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divPaperTest']/ul/li</value>
+  </data>
+  <data name="PaperTestUX_Page_Question_Name_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divPaperTest']/ul/li/table/tbody/tr/td[3]</value>
+  </data>
+  <data name="PaperTestUX_Page_Random_Question_TextBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_txtRandomQnsNo</value>
+  </data>
+  <data name="PaperTestUX_Page_SaveAndClose_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_lnkSaveClose</value>
+  </data>
+  <data name="PaperTestUX_Page_SaveButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_spanSave</value>
+  </data>
+  <data name="PaperTestUX_Page_Save_Menu_Id_Locator" xml:space="preserve">
+    <value>divSave</value>
+  </data>
+  <data name="PaperTestUX_Page_Second_Level_Folder_Name" xml:space="preserve">
+    <value>Readiness Check Questions</value>
+  </data>
+  <data name="PaperTestUX_Page_Third_Level_Folder_Name" xml:space="preserve">
+    <value>Subject Pronouns</value>
+  </data>
+  <data name="PaperTestUX_Page_Thred_Time_Value" xml:space="preserve">
+    <value>5000</value>
+  </data>
+  <data name="PaperTestUX_Page_Viewalltests_Button_Id_Locator" xml:space="preserve">
+    <value>spanViewAll</value>
+  </data>
+  <data name="PaperTestUX_Page_Wait_Time_InSecond" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="PaperTestUX_Page__EssayQuestion_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_spnEssay</value>
+  </data>
+  <data name="PaperTestUX_Page__QuestionGroup_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_spnQuestionGroup</value>
+  </data>
+  <data name="PaperTestUX_Page__RandomQuestion_Number" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PaperTestUX_Page_MyTest_Download_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_spanExport</value>
+  </data>
+  <data name="PaperTestUX_Page_MyTest_Table_Id_Locator" xml:space="preserve">
+    <value>divExport</value>
+  </data>
+  <data name="PaperTestUX_Page_MyQuestionFolderLink_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0__ctl0_phBody_PageContent_divTreeCon']/ul/li/table/tbody/tr/td/a</value>
+  </data>
+</root>

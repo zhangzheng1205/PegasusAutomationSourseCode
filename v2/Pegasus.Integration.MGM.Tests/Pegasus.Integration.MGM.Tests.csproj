@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ADA54BAB-4A0F-405B-97E3-5974DB4FCF6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pegasus.Integration.MGM.Tests</RootNamespace>
+    <AssemblyName>Pegasus.Integration.MGM.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\..\ExternalAssemblies\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonIntegrationAcceptanceTestDefinitions\CommonSteps.cs" />
+    <Compile Include="CommonIntegrationAcceptanceTestDefinitions\CommonStepsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonStepsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestDefinitions\ActivitySubmission.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\ActivitySubmissionResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ActivitySubmissionResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestDefinitions\CourseCopy.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\CourseCopyResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseCopyResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestDefinitions\CreateActivity.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\CreateClass.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\CreateQuestion.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\CreateQuestionResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateQuestionResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestDefinitions\CreateUser.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\CreateUserResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateUserResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestDefinitions\CustomizeContent.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\LaunchActivity.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\LoginLogout.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\LoginLogoutResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginLogoutResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestDefinitions\LTIToolDeployment.Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LTIToolDeployment.Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestDefinitions\LTIToolToolDeployment.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\Preferences.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\PreferencesResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PreferencesResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestDefinitions\UserEnrollment.cs" />
+    <Compile Include="IntegrationAcceptanceTestDefinitions\UserEnrollmentResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserEnrollmentResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestFeatures\PEGASUS-10475.Integration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-10475.Integration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestFeatures\PEGASUS-10476.Integration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-10476.Integration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestFeatures\PEGASUS-10477.Integration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-10477.Integration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestFeatures\PEGASUS-10478.Integration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-10478.Integration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestFeatures\PEGASUS-10480.Integration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-10480.Integration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestFeatures\PEGASUS-10481.Integration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-10481.Integration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestFeatures\PEGASUS-10479.Integration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-10479.Integration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestFeatures\PEGASUS-10482.Integration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-10482.Integration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationAcceptanceTestFeatures\PEGASUS-10483.Integration.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-10483.Integration.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pegasus.Automation\Pegasus.Automation.csproj">
+      <Project>{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}</Project>
+      <Name>Pegasus.Automation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pegasus.Pages\Pegasus.Pages.csproj">
+      <Project>{D4D42739-288C-421F-A3AA-5DC32CB0C5D6}</Project>
+      <Name>Pegasus.Pages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="IntegrationAcceptanceTestFeatures\PEGASUS-10475.Integration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-10475.Integration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="IntegrationAcceptanceTestFeatures\PEGASUS-10476.Integration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-10476.Integration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="IntegrationAcceptanceTestFeatures\PEGASUS-10477.Integration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-10477.Integration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="IntegrationAcceptanceTestFeatures\PEGASUS-10478.Integration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-10478.Integration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="IntegrationAcceptanceTestFeatures\PEGASUS-10480.Integration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-10480.Integration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="IntegrationAcceptanceTestFeatures\PEGASUS-10481.Integration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-10481.Integration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="IntegrationAcceptanceTestFeatures\PEGASUS-10479.Integration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-10479.Integration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="IntegrationAcceptanceTestFeatures\PEGASUS-10482.Integration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-10482.Integration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="IntegrationAcceptanceTestFeatures\PEGASUS-10483.Integration.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-10483.Integration.feature.cs</LastGenOutput>
+    </None>
+    <None Include="IntegrationAcceptanceOrderedTests\OrderedTest.Integration.MGM.Tests.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="CommonIntegrationAcceptanceTestDefinitions\CommonStepsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonStepsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrationAcceptanceTestDefinitions\ActivitySubmissionResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ActivitySubmissionResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrationAcceptanceTestDefinitions\CourseCopyResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseCopyResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrationAcceptanceTestDefinitions\CreateQuestionResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateQuestionResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrationAcceptanceTestDefinitions\CreateUserResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateUserResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrationAcceptanceTestDefinitions\LoginLogoutResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginLogoutResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrationAcceptanceTestDefinitions\LTIToolDeployment.Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LTIToolDeployment.Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrationAcceptanceTestDefinitions\PreferencesResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PreferencesResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrationAcceptanceTestDefinitions\UserEnrollmentResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserEnrollmentResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

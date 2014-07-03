@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CalendarDefaultGlobalUX_Page_AdvancedSearchLink_Id_Locator" xml:space="preserve">
+    <value>ucLeftNavigationContainer_ucContentFilter_uxSearchPanel_lnkAdvSearch</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ClearResultLink_Id_Locator" xml:space="preserve">
+    <value>ucLeftNavigationContainer_ucContentTab_ucMessageBoard_lnkClear</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CustomTimeToWait_Value" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator" xml:space="preserve">
+    <value>frmPlanner</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SearchButton_Id_Locator" xml:space="preserve">
+    <value>ucLeftNavigationContainer_ucContentFilter_uxSearchPanel_uxcmdSearchGo</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SearchedAssetName_Xpath_Locator" xml:space="preserve">
+    <value>//td[@class='ES_delayClass ']/div</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SearchTextBox_Id_Locator" xml:space="preserve">
+    <value>ucLeftNavigationContainer_ucContentFilter_uxSearchPanel_txtSearch</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Window_TitleName" xml:space="preserve">
+    <value>Planner</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_BlockOut_StartDate_Id" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_txtFrom_txtDate</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ClassDropDown_Id_Locator" xml:space="preserve">
+    <value>drpClassAssociation</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CourseDropDown_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptView__ctl0_drpCourseAssociation</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DateFormat" xml:space="preserve">
+    <value>MM/dd/yyyy</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DisplayNameText_Value" xml:space="preserve">
+    <value>AutomationCalendar</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptView__ctl0_txtPeriodName</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ImportantDatesButton_Id_Locator" xml:space="preserve">
+    <value>btnImportantDates</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_LightBoxFrame_Id_Locator" xml:space="preserve">
+    <value>lightboxid</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ScheduleClassButton_CSS_Locator" xml:space="preserve">
+    <value>span &gt; span</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_BlockOut_EndDate_Id" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_txtTo_txtDate</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_LightBoxInsideFrame_Id_Locator" xml:space="preserve">
+    <value>iframeSetUpWizard</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ActivityName_TriangleImage" xml:space="preserve">
+    <value>//img[@src='/Pegasus/images/general_sprite.png']</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ActivitySearchTextBox_ID" xml:space="preserve">
+    <value>ucLeftNavigationContainer_ucContentFilter_uxSearchPanel_txtSearch</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Activity_ClassName_td" xml:space="preserve">
+    <value>ES_delayClass</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_AssignPartialText" xml:space="preserve">
+    <value>Assign</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_BlockOutday_Description" xml:space="preserve">
+    <value>BlockOutDay</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_txtBlockDesc</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ClassesAffected_OkButton_Id" xml:space="preserve">
+    <value>btnAddPeriods</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ClassesAffected_TriangleButton" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_btnImgdrd</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Order_DropDown_Id" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptView__ctl0_drpOrder</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Order_DropDown_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SaveCalendar_Button_Id" xml:space="preserve">
+    <value>btnSaveCalendar</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_TimeZone_DropDown_Id" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_cmbTimeZones</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_TimeZone_DropDown_Value" xml:space="preserve">
+    <value>(GMT-05:00) Eastern Time (US and Canada)</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CheckboxAll_ID" xml:space="preserve">
+    <value>_ctl0_ContentPlaceHolder1_rptBlockOutDay__ctl0_chkAll</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ExitButton_Id" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_MondayLabel_Id" xml:space="preserve">
+    <value>lblMon</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ThursdayLabel_Id" xml:space="preserve">
+    <value>lblThu</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_TuesdayLabel_Id" xml:space="preserve">
+    <value>lblTue</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_WednesdayLabel_Id" xml:space="preserve">
+    <value>lblWed</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Activity_AssignToCopy_Message" xml:space="preserve">
+    <value>Content is being prepared and will be available soon.</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Div_Id_Locator" xml:space="preserve">
+    <value>TreeViewContainer</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_AssetCopyMessage_XpathLocator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/table[{0}]/tbody/tr/td[3]/table[1]/tbody/tr/td/div</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_AssetName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/table[{0}]/tbody/tr/td[3]/table[2]/tbody/tr/td[2]/span</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_Assets_Xpath_Locator" xml:space="preserve">
+    <value>//div[id='TreeViewContainer']/table</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ForLoopInitialization_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_ActivityName_Td_Drag" xml:space="preserve">
+    <value>//td[@class='ES_delayClass ']/div</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DropActivityFrame_Text" xml:space="preserve">
+    <value>content is being</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_DropFrame_ClassName" xml:space="preserve">
+    <value>dvDueAssignmentsTodayCss</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_TwentySecsThread_Value" xml:space="preserve">
+    <value>20000</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_CalendarTitleHeader_Id" xml:space="preserve">
+    <value>calendarContainer_ucDayView_RptPeriods_ctl00_DVPeriodHeader</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_FridayLabel_Id" xml:space="preserve">
+    <value>lblFri</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SaturdayLabel_Id" xml:space="preserve">
+    <value>lblSat</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_SundayLabel_Id" xml:space="preserve">
+    <value>lblSun</value>
+  </data>
+  <data name="CalendarDefaultGlobalUX_Page_TimeThread_Value" xml:space="preserve">
+    <value>1000</value>
+  </data>
+</root>

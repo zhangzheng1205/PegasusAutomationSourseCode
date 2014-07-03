@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6CC8AD1-497C-4536-941B-74253702ACBD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pegasus.ProductionDefect.TestScripts</RootNamespace>
+    <AssemblyName>Pegasus.ProductionDefect.TestScripts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\ExternalAssemblies\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\ExternalAssemblies\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\ExternalAssemblies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Encoder">
+      <HintPath>..\..\ExternalAssemblies\Microsoft.Expression.Encoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\ExternalAssemblies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Selenium.WebDriverBackedSelenium">
+      <HintPath>..\..\ExternalAssemblies\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\..\ExternalAssemblies\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\..\ExternalAssemblies\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseTestScript.cs" />
+    <Compile Include="ProductionDefect_Features\HED.Core\US66317_Feature.Defect.feature.cs">
+      <DependentUpon>US66317_Feature.Defect.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProductionDefect_Features\HED.Core\US66319_Feature.Defect.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US66319_Feature.Defect.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionDefect_Features\HED.Core\US66320_Feature.Defect.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US66320_Feature.Defect.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionDefect_Features\HED.Core\US66321_Feature.Defect.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US66321_Feature.Defect.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionDefect_Features\HED.Core\US66333_Feature.Defect.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US66333_Feature.Defect.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionDefect_Features\HED.Core\US66335_Feature.Defect.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US66335_Feature.Defect.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionDefect_Features\HED.Core\US66343_Feature.Defect.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US66343_Feature.Defect.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionDefect_Features\HED.Core\US66344_Feature.Defect.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US66344_Feature.Defect.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionDefect_Features\HED.Core\US66348_Feature.Defect.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US66348_Feature.Defect.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionDefect_StepDefinitions\GenericStepDefinition.cs" />
+    <Compile Include="ProductionDefect_StepDefinitions\GenericTestStep.cs" />
+    <Compile Include="ProductionDefect_StepDefinitions\US66319_StepDefiniton.Defect.cs" />
+    <Compile Include="ProductionDefect_StepDefinitions\US66320_StepDefiniton.Defect.cs" />
+    <Compile Include="ProductionDefect_StepDefinitions\US66317_StepDefiniton.Defect.cs" />
+    <Compile Include="ProductionDefect_StepDefinitions\US66321_StepDefinition.Defect.cs" />
+    <Compile Include="ProductionDefect_StepDefinitions\US66333_StepDefiniton.Defect.cs" />
+    <Compile Include="ProductionDefect_StepDefinitions\US66335_StepDefiniton.Defect.cs" />
+    <Compile Include="ProductionDefect_StepDefinitions\US66343_StepDefiniton.Defect.cs" />
+    <Compile Include="ProductionDefect_StepDefinitions\US66344_StepDefinition.Defect.cs" />
+    <Compile Include="ProductionDefect_StepDefinitions\US66348_StepDefinition.Defect.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="ProductionDefect_Features\HED.Core\US66317_Feature.Defect.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US66317_Feature.Defect.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductionDefect_Features\HED.Core\US66319_Feature.Defect.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US66319_Feature.Defect.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductionDefect_Features\HED.Core\US66320_Feature.Defect.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US66320_Feature.Defect.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductionDefect_Features\HED.Core\US66321_Feature.Defect.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US66321_Feature.Defect.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductionDefect_Features\HED.Core\US66333_Feature.Defect.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US66333_Feature.Defect.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductionDefect_Features\HED.Core\US66335_Feature.Defect.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US66335_Feature.Defect.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductionDefect_Features\HED.Core\US66343_Feature.Defect.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US66343_Feature.Defect.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductionDefect_Features\HED.Core\US66344_Feature.Defect.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US66344_Feature.Defect.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductionDefect_Features\HED.Core\US66348_Feature.Defect.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US66348_Feature.Defect.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestSuiteOrder\Pegasus.ProductionDefect_OrderedTest.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProductionDefect_Features\DigitalPath\" />
+    <Folder Include="ProductionDefect_Features\NovaNET\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.CommonBase.TestScript\Framework.CommonBase.TestScript.csproj">
+      <Project>{E8164F5A-4B0D-4206-BCEA-E05C6E6653AF}</Project>
+      <Name>Framework.CommonBase.TestScript</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameWork.Common\Framework.Common.csproj">
+      <Project>{DDD89A92-09DD-4EAD-B99A-3C98A3212E6D}</Project>
+      <Name>Framework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pegasus_DataAccess\Framework.DataManager.csproj">
+      <Project>{C43633D4-A9BE-440C-9FC2-08A4ED7CF64B}</Project>
+      <Name>Framework.DataManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pegasus_Library\Framework.Core.csproj">
+      <Project>{3EACFF0A-8789-4E72-8B0F-1F271369BBBC}</Project>
+      <Name>Framework.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

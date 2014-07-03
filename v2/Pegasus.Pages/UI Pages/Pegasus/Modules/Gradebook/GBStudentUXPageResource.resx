@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GBStudentUXPage_ActivityFrame_Id_Locator" xml:space="preserve">
+    <value>srcGBFrame</value>
+  </data>
+  <data name="GBStudentUXPage_ActivityTable_GradeColumn_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[3]</value>
+  </data>
+  <data name="GBStudentUXPage_ActivityTable_Row_Count" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GBStudentUXPage_Activity_Name_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[2]</value>
+  </data>
+  <data name="GBStudentUXPage_Activity_Score_SplittingCharacter" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="GBStudentUXPage_Activity_Score_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr/td[3]/span/span</value>
+  </data>
+  <data name="GBStudentUXPage_Activity_Table_Tbody_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody</value>
+  </data>
+  <data name="GBStudentUXPage_Activity_Table_XPath_Count_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr</value>
+  </data>
+  <data name="GBStudentUXPage_Activity_Table_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]</value>
+  </data>
+  <data name="GBStudentUXPage_Activity_Test_Score_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[3]/span/span</value>
+  </data>
+  <data name="GBStudentUXPage_Activity_Title_Name" xml:space="preserve">
+    <value>PA-01 Span Practice- Vocabulary: Saludos, despedidas</value>
+  </data>
+  <data name="GBStudentUXPage_GetActivityName_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span</value>
+  </data>
+  <data name="GBStudentUXPage_GetActivityScore_SplittingCharacter" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="GBStudentUXPage_GetActivityScore_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[3]/span/span</value>
+  </data>
+  <data name="GBStudentUXPage_Initial_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GBStudentUXPage_SleepTime_Value" xml:space="preserve">
+    <value>5000</value>
+  </data>
+  <data name="GBStudentUXPage_Student_Grid_Id_Locator" xml:space="preserve">
+    <value>GridStudent</value>
+  </data>
+  <data name="GBStudentUXPage_Studyplanasset_Name" xml:space="preserve">
+    <value>StudyPlan</value>
+  </data>
+  <data name="GBStudentUXPage_Studyplanasset_Name_ViewGrade_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[3]/span/span[2]/span/a</value>
+  </data>
+  <data name="GBStudentUXPage_Studyplanasset_Name_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td//a[@class='ancCus']</value>
+  </data>
+  <data name="GBStudentUXPage_Studyplanasset_RowCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr</value>
+  </data>
+  <data name="GBStudentUXPage_Studyplan_Name" xml:space="preserve">
+    <value>01:The American Revolution</value>
+  </data>
+  <data name="GBStudentUXPage_ViewGrades_Link_Text_Locator" xml:space="preserve">
+    <value>View Grades</value>
+  </data>
+  <data name="GBStudentUXPage_Gradebook_Name_Locator" xml:space="preserve">
+    <value>Gradebook</value>
+  </data>
+  <data name="GBStudentUXPage_LeftIframe_Id_Locator" xml:space="preserve">
+    <value>Frame1</value>
+  </data>
+  <data name="GBStudentUXPage_Coursematerials_Text_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblcoursecontent</value>
+  </data>
+  <data name="GBStudentUXPage_Activity_Text_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent$tblHdr']/tbody/tr/td[@class='GBStu_tr2']/a</value>
+  </data>
+  <data name="GBStudentUXPage_AssignedItems_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_AssignedItems</value>
+  </data>
+  <data name="GBStudentUXPage_Completeditems_Id_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_Completeditems</value>
+  </data>
+  <data name="GBStudentUXPage_HomeWork_Cmenu_Option_Name_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[1]/td[2]/span/input[@src='/Pegasus/web/images/spacer.gif']</value>
+  </data>
+  <data name="GBStudentUXPage_HomeWork_Cmenu_Option_ViewReport_Xpath_Locator" xml:space="preserve">
+    <value>//*[@actionId='4']</value>
+  </data>
+  <data name="GBStudentUXPage_AllItems_Name" xml:space="preserve">
+    <value>AllItems</value>
+  </data>
+  <data name="GBStudentUXPage_Assigneditems_Activity_Text_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent$tblHdr']/tbody/tr/td[@class='GBStu_tr2']</value>
+  </data>
+  <data name="GBStudentUXPage_Student_Activity_Displayed_Classname" xml:space="preserve">
+    <value>GBStu_tr2_custom</value>
+  </data>
+  <data name="GBStudentUXPage_Student_AllItem_Displayed_Classname" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_AllItem_td2</value>
+  </data>
+  <data name="GBStudentUXPage_Student_AssignedItems_Displayed_Classname" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_Completeditems</value>
+  </data>
+  <data name="GBStudentUXPage_Student_ClassAverage_Displayed_Classname" xml:space="preserve">
+    <value>GBStu_tr4</value>
+  </data>
+  <data name="GBStudentUXPage_Student_CompletedFilter_Displayed_Classname" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_Completeditems</value>
+  </data>
+  <data name="GBStudentUXPage_Student_FilterDropdown_Displayed_Classname" xml:space="preserve">
+    <value>FilterByContent</value>
+  </data>
+  <data name="GBStudentUXPage_Student_Grade_Displayed_Classname" xml:space="preserve">
+    <value>GBStu_tr3</value>
+  </data>
+  <data name="GBStudentUXPage_Gradebook_Filterdropdown_Name" xml:space="preserve">
+    <value>_ctl0:InnerPageContent:SelectItems</value>
+  </data>
+  <data name="GBStudentUXPage_Activity_Grade_Displayed_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[3]/span/span</value>
+  </data>
+  <data name="GBStudentUXPage_Rowcount_Initial_Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GBStudentUXPage_Asset_CmenuImage_Class_Locator" xml:space="preserve">
+    <value>CV_DownImg</value>
+  </data>
+  <data name="GBStudentUXPage_Asset_CmenuImage_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td//input</value>
+  </data>
+  <data name="GBStudentUXPage_Verify_GardebookActivity_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GridStudent']</value>
+  </data>
+</root>

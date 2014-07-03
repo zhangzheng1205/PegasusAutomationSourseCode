@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestLists xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestList name="DPWorkFlow" id="1f430335-3b50-4cdc-8f3f-a8f1025b30b4" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="d20aec0c-c4e6-42c0-825b-4d22f4707f28" name="orderedtest.productacceptancetest.mgm" storage="pegasus.acceptance.digitalpath.tests\productacceptanceorderedtests\orderedtest.productacceptancetest.mgm.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="HEDoneScenario" id="2b5401dd-9f95-4803-87a2-c700e0a19577" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+  <TestList name="HedCoreWorkFlow" id="55b7d518-7304-4df3-a2da-9fc0354d33cf" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <Description>This is the TL for the Hed Core WorkFlow.</Description>
+  </TestList>
+  <TestList name="Lists of Tests" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <RunConfiguration id="64edf56f-b43a-4915-bd3e-a532cf139709" name="Local" storage="local.testsettings" type="Microsoft.VisualStudio.TestTools.Common.TestRunConfiguration, Microsoft.VisualStudio.QualityTools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestList>
+  <TestList name="AcceptanceTest" id="9562c1a3-4910-4115-a65d-d0dfd65248a8" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="c5f60593-1fa4-4180-b4f3-8cd6580c6ec2" name="orderedtest.acceptancetest.contineo" storage="pegasus.acceptance.contineo.tests\contineoacceptanceorderedtests\orderedtest.acceptancetest.contineo.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="NovaNETWorkFlow" id="afe9fc8e-4756-4996-87f7-b08a53543846" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="05fb1e6c-7f68-40fe-9518-feefe203443f" name="orderedtest.productacceptancetest.novanet" storage="pegasus.acceptance.novanet.tests\productacceptanceorderedtests\orderedtest.productacceptancetest.novanet.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="ETextS11" id="cd03b340-ee88-47b8-acae-3ac166a998b8" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+</TestLists>

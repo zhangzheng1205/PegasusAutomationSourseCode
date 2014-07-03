@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="PegasusSTNovaNETCSTeacherUseCases" storage="d:\automation latest\pegasus.testautomation\v1\pegasustestscripts\testsuiteorder\pegasusstnovanetcsteacherusecases.orderedtest" priority="1" id="6f5521d0-b077-4e71-a302-d9ba3880f880" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestCategory>
+    <TestCategoryItem TestCategory="Nightly" />
+  </TestCategory>
+  <Execution id="9426c0c8-5313-4051-8699-50de8e0a7a77" />
+  <TestLinks>
+    <TestLink id="7bea600d-c4b8-5dcf-3686-aa710f29d9fc" name="ActivitySubmissionByTheStudentInCs" storage="..\bin\debug\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="d7421c58-7f09-2571-2f4c-7c75511bd413" name="ViewActivitySubmissionByTheStudentInCs" storage="..\bin\debug\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="9615c276-a3f4-7a74-e3c9-38d4c3d87b40" name="ViewActivityAlertsByCSTeacher" storage="..\bin\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="0371689c-eb4d-5fc8-c6fe-59370b8768b7" name="ViewGradesByTheTeacherInCs" storage="..\bin\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="090f1631-fcb6-5dd8-e444-e7b8d0f0f37b" name="ViewReportsByTheTeacherInCs" storage="..\bin\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="5016ca16-83d5-f802-d50a-3c71dc2d49d3" name="CourseCreationByCsTeacher" storage="..\bin\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="e7e8de91-618f-9208-166c-ab666d0c632a" name="UserEnrollmentByCsTeacher" storage="..\bin\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

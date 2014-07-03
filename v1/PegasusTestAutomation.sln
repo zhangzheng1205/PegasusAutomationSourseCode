@@ -1,0 +1,114 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.TestScripts.Novanet", "PegasusTestScripts\Pegasus.TestScripts.Novanet.csproj", "{A8A1FDFC-3D79-45C8-9E6D-D42CE25C1856}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Common", "FrameWork.Common\Framework.Common.csproj", "{DDD89A92-09DD-4EAD-B99A-3C98A3212E6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Core", "Pegasus_Library\Framework.Core.csproj", "{3EACFF0A-8789-4E72-8B0F-1F271369BBBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.DataManager", "Pegasus_DataAccess\Framework.DataManager.csproj", "{C43633D4-A9BE-440C-9FC2-08A4ED7CF64B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.ReportGeneration", "Framework.ReportGeneration\Framework.ReportGeneration.csproj", "{C0E37580-B946-492C-956C-0300CA03C6A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0580BA95-E3A5-43A5-8256-0653B2174F4E}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		STTestList.vsmdi = STTestList.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.CommonBase.TestScript", "Framework.CommonBase.TestScript\Framework.CommonBase.TestScript.csproj", "{E8164F5A-4B0D-4206-BCEA-E05C6E6653AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.TestScripts.ProductionDefects", "Pegasus.ProductionDefect.TestScripts\Pegasus.TestScripts.ProductionDefects.csproj", "{E6CC8AD1-497C-4536-941B-74253702ACBD}"
+EndProject
+Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "Pegasus.TestScripts.Novanet.Database", "Pegasus.TestScripts.Novanet.Database\Pegasus.TestScripts.Novanet.Database.dbproj", "{67CBC824-A49E-4E9B-A947-360F3DFE65C3}"
+EndProject
+Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "Pegasus.TestScripts.ProductionDefects.Database", "Pegasus.TestScripts.ProductionDefects.Database\Pegasus.TestScripts.ProductionDefects.Database.dbproj", "{C1424B39-7956-4DC5-9E12-28ECE4ED35C2}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://pegasustfs.excelindia.com/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Pegasus_Library\\Framework.Core.csproj
+		SccProjectName1 = Pegasus_Library
+		SccLocalPath1 = Pegasus_Library
+		SccProjectUniqueName2 = Pegasus_DataAccess\\Framework.DataManager.csproj
+		SccProjectName2 = Pegasus_DataAccess
+		SccLocalPath2 = Pegasus_DataAccess
+		SccProjectUniqueName3 = Framework.ReportGeneration\\Framework.ReportGeneration.csproj
+		SccProjectName3 = Framework.ReportGeneration
+		SccLocalPath3 = Framework.ReportGeneration
+		SccProjectUniqueName4 = FrameWork.Common\\Framework.Common.csproj
+		SccProjectName4 = FrameWork.Common
+		SccLocalPath4 = FrameWork.Common
+		SccProjectUniqueName5 = Framework.CommonBase.TestScript\\Framework.CommonBase.TestScript.csproj
+		SccProjectName5 = Framework.CommonBase.TestScript
+		SccLocalPath5 = Framework.CommonBase.TestScript
+		SccProjectUniqueName6 = Pegasus.ProductionDefect.TestScripts\\Pegasus.TestScripts.ProductionDefects.csproj
+		SccProjectName6 = Pegasus.ProductionDefect.TestScripts
+		SccLocalPath6 = Pegasus.ProductionDefect.TestScripts
+		SccProjectUniqueName7 = PegasusTestScripts\\Pegasus.TestScripts.Novanet.csproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = PegasusTestScripts\\
+		SccProjectUniqueName8 = Pegasus.TestScripts.Novanet.Database\\Pegasus.TestScripts.Novanet.Database.dbproj
+		SccProjectName8 = Pegasus.TestScripts.Novanet.Database
+		SccLocalPath8 = Pegasus.TestScripts.Novanet.Database
+		SccProjectUniqueName9 = Pegasus.TestScripts.ProductionDefects.Database\\Pegasus.TestScripts.ProductionDefects.Database.dbproj
+		SccProjectName9 = Pegasus.TestScripts.ProductionDefects.Database
+		SccLocalPath9 = Pegasus.TestScripts.ProductionDefects.Database
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = STTestList.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8A1FDFC-3D79-45C8-9E6D-D42CE25C1856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A1FDFC-3D79-45C8-9E6D-D42CE25C1856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A1FDFC-3D79-45C8-9E6D-D42CE25C1856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A1FDFC-3D79-45C8-9E6D-D42CE25C1856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD89A92-09DD-4EAD-B99A-3C98A3212E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD89A92-09DD-4EAD-B99A-3C98A3212E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD89A92-09DD-4EAD-B99A-3C98A3212E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD89A92-09DD-4EAD-B99A-3C98A3212E6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EACFF0A-8789-4E72-8B0F-1F271369BBBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EACFF0A-8789-4E72-8B0F-1F271369BBBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EACFF0A-8789-4E72-8B0F-1F271369BBBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EACFF0A-8789-4E72-8B0F-1F271369BBBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C43633D4-A9BE-440C-9FC2-08A4ED7CF64B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C43633D4-A9BE-440C-9FC2-08A4ED7CF64B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C43633D4-A9BE-440C-9FC2-08A4ED7CF64B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C43633D4-A9BE-440C-9FC2-08A4ED7CF64B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E37580-B946-492C-956C-0300CA03C6A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E37580-B946-492C-956C-0300CA03C6A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E37580-B946-492C-956C-0300CA03C6A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E37580-B946-492C-956C-0300CA03C6A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8164F5A-4B0D-4206-BCEA-E05C6E6653AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8164F5A-4B0D-4206-BCEA-E05C6E6653AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8164F5A-4B0D-4206-BCEA-E05C6E6653AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8164F5A-4B0D-4206-BCEA-E05C6E6653AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6CC8AD1-497C-4536-941B-74253702ACBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6CC8AD1-497C-4536-941B-74253702ACBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6CC8AD1-497C-4536-941B-74253702ACBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6CC8AD1-497C-4536-941B-74253702ACBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C1424B39-7956-4DC5-9E12-28ECE4ED35C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1424B39-7956-4DC5-9E12-28ECE4ED35C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1424B39-7956-4DC5-9E12-28ECE4ED35C2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C1424B39-7956-4DC5-9E12-28ECE4ED35C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1424B39-7956-4DC5-9E12-28ECE4ED35C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1424B39-7956-4DC5-9E12-28ECE4ED35C2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

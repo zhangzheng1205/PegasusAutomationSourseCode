@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GeneralPreferences_Page_Frame_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_ifrmPreferences</value>
+  </data>
+  <data name="GeneralPreferences_Page_General_Preference_Id_Locator" xml:space="preserve">
+    <value>atdContnet12</value>
+  </data>
+  <data name="GeneralPreferences_Page_Roster_Preference_Id_Locator" xml:space="preserve">
+    <value>atdContnet20</value>
+  </data>
+  <data name="GeneralPreferences_Page_SavePreferences_Button_PartialText_Locator" xml:space="preserve">
+    <value>Save Preferences</value>
+  </data>
+  <data name="GeneralPreferences_Page_Selected_Subtab_ClassName_Locator" xml:space="preserve">
+    <value>SelectedTdPref1</value>
+  </data>
+  <data name="GeneralPreferences_Page_Window_Title" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="GeneralPreference_Page_InstructorETextCheckBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkInseBook</value>
+  </data>
+  <data name="GeneralPreference_Page_InstructorRadioButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_rdoInsEbookChoice</value>
+  </data>
+  <data name="GeneralPreference_Page_InstructorResourceToolBar_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkInsToolbar</value>
+  </data>
+  <data name="GeneralPreference_Page_InstructorSelectETextLink_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_ahrInsSelecteText</value>
+  </data>
+  <data name="GeneralPreference_Page_LockImage_Id_Locator" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GeneralPreference_Page_StudentETextCheckBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkeBook</value>
+  </data>
+  <data name="GeneralPreference_Page_StudentRadioButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_rdoEbookChoice</value>
+  </data>
+  <data name="GeneralPreference_Page_StudentResourceToolBar_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkToolbar</value>
+  </data>
+  <data name="GeneralPreference_Page_StudentSelectETextLink_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_ahrSelecteText</value>
+  </data>
+  <data name="GeneralPreference_EText_LightBox_Src" xml:space="preserve">
+    <value>/Pegasus/Modules/CourseSettings/popups/frmCourseEBooks.aspx?</value>
+  </data>
+  <data name="GeneralPreference_Page_LockImage_Class_Locator" xml:space="preserve">
+    <value>imgBigCloseLock</value>
+  </data>
+  <data name="GeneralPreference_Page_EtextLink_Popup_Class_Locator" xml:space="preserve">
+    <value>blockUI blockMsg blockElement</value>
+  </data>
+  <data name="GeneralPreferences_Page_CheckBox_Id_Locator" xml:space="preserve">
+    <value>chkEnableBadge</value>
+  </data>
+  <data name="GeneralPreferences_Page_CourseListingOption_Title_Locator" xml:space="preserve">
+    <value>Course Listing Options</value>
+  </data>
+  <data name="GeneralPreferences_Page_First_Title_By_XPath_Locator" xml:space="preserve">
+    <value>//tr[@id='trCourseHead']/td/b/span</value>
+  </data>
+  <data name="GeneralPreferences_Page_SelectContent_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0:ContentHolderArea:imgbtnSelectContent</value>
+  </data>
+  <data name="GeneralPreferences_Page_Select_Content_Text_By_Xpath_Locator" xml:space="preserve">
+    <value>//input[@id='txtSelectContent']</value>
+  </data>
+  <data name="GeneralPreferences_Page_WaitTime_Value" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="GeneralPreference_Page_ActivityCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdContentBrowser']/tbody/tr</value>
+  </data>
+  <data name="GeneralPreference_Page_ActivityNameText_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdContentBrowser']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="GeneralPreference_Page_ActivitySelect_Thread_Time_Value" xml:space="preserve">
+    <value>5000</value>
+  </data>
+  <data name="GeneralPreference_Page_Activity_Checkbox_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='grdContentBrowser']/tbody/tr[{0}]/td[1]/input</value>
+  </data>
+  <data name="GeneralPreference_Page_AddAndClose_Btn_By_ID_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_imgBtnAdd_Close</value>
+  </data>
+  <data name="GeneralPreference_Page_BadgeThreshold_By_ID_Locator" xml:space="preserve">
+    <value>txtBadgeThreshold</value>
+  </data>
+  <data name="GeneralPreference_Page_BadgeThreshold_Value" xml:space="preserve">
+    <value>123</value>
+  </data>
+  <data name="GeneralPreference_Page_Badge_Assignment_Selection_Window_Name" xml:space="preserve">
+    <value>Badge Assignment Selection</value>
+  </data>
+  <data name="GeneralPreference_Page_Button_AttributeValue" xml:space="preserve">
+    <value>disabled</value>
+  </data>
+  <data name="GeneralPreference_Page_IFrame_Left_ID_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_ifrmLeft</value>
+  </data>
+  <data name="GeneralPreference_Page_Initial_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GeneralPreference_Page_Select_Content_Btn_ID_Locotor" xml:space="preserve">
+    <value>_ctl0:ContentHolderArea:imgbtnSelectContent</value>
+  </data>
+  <data name="GeneralPreference_Page_TemplateID_By_ID_Locator" xml:space="preserve">
+    <value>txtTemplateID</value>
+  </data>
+  <data name="GeneralPreference_Page_TemplateID_Value" xml:space="preserve">
+    <value>0123456789</value>
+  </data>
+  <data name="GeneralPreference_SP_CustomizeStudyPlan" xml:space="preserve">
+    <value>lblCustomizeStudyPlan</value>
+  </data>
+  <data name="GeneralPreference_SP_Property_Timing" xml:space="preserve">
+    <value>pnlTiming</value>
+  </data>
+  <data name="GeneralPreference_SP_EditPreTest" xml:space="preserve">
+    <value>lnkPreTestPref</value>
+  </data>
+  <data name="GeneralPreference_SP_EditPostTest" xml:space="preserve">
+    <value>lnkPostTestPref</value>
+  </data>
+  <data name="GeneralPreferences_Page_CheckBox_EmbeddedReporting_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkEmbeddedReporting</value>
+  </data>
+  <data name="GeneralPrefernces_Page_CharaceterPalate_CheckBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkPallette</value>
+  </data>
+  <data name="GeneralPrefernces_Page_AllowStudentSendMail_Lock_Id_Locator" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="GeneralPrefernces_Page_BlackBoardIM_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkPronto</value>
+  </data>
+  <data name="GeneralPrefernces_Page_BlackBoard_IM_Lock_Id_Locator" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="GeneralPrefernces_Page_Businessunit_Textbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_txtWimbaBusinessUnit</value>
+  </data>
+  <data name="GeneralPrefernces_Page_BusinessUnit_Value" xml:space="preserve">
+    <value>Pegasus</value>
+  </data>
+  <data name="GeneralPrefernces_Page_Calendar_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkCalender</value>
+  </data>
+  <data name="GeneralPrefernces_Page_Calendar_Lock_Id_Locator" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="GeneralPrefernces_Page_Email_Textbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_txtWimbaEmail</value>
+  </data>
+  <data name="GeneralPrefernces_Page_Email_Value" xml:space="preserve">
+    <value>devaraju.at@excelindia.com</value>
+  </data>
+  <data name="GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_txtWimbaNames</value>
+  </data>
+  <data name="GeneralPrefernces_Page_FirstLast_Name_Value" xml:space="preserve">
+    <value>Fname Lname</value>
+  </data>
+  <data name="GeneralPrefernces_Page_HEDCalendar_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkHedcalendarlayout</value>
+  </data>
+  <data name="GeneralPrefernces_Page_HEDCalendar_Lock_Id_Locator" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="GeneralPrefernces_Page_LockIcon_Status_Value" xml:space="preserve">
+    <value>imgCloseLock</value>
+  </data>
+  <data name="GeneralPrefernces_Page_StudentMail_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkStudentMail</value>
+  </data>
+  <data name="GeneralPrefernces_Page_Display_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkInsCustom</value>
+  </data>
+  <data name="GeneralPrefernces_Page_Display_Name_Value" xml:space="preserve">
+    <value>PCT URL</value>
+  </data>
+  <data name="GeneralPrefernces_Page_Display_Textbox_Id_locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_txtInsCustom1</value>
+  </data>
+  <data name="GeneralPrefernces_Page_InstructorResource_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkInsToolbar</value>
+  </data>
+  <data name="GeneralPrefernces_Page_PctUrl_Textbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_txtInsCustomExternal</value>
+  </data>
+  <data name="GeneralPrefernces_Page_PctUrl_Value" xml:space="preserve">
+    <value>gradeit.vm.pegasus.pearsoncmg.com/PCTUI/PCTsmslogin.aspx</value>
+  </data>
+  <data name="GeneralPrefernces_Page_LockIcon_Open_Status_Value" xml:space="preserve">
+    <value>imgOpenLockSmall</value>
+  </data>
+  <data name="GeneralPrefernces_Page_SkipCalendarSetup_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkSkipCalendarSetup</value>
+  </data>
+  <data name="GeneralPrefernces_Page_SkipCalendar_Lock_Id_Locator" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="GeneralPrefernces_Page_GlossaryPreference_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkGlossary</value>
+  </data>
+  <data name="GeneralPrefernces_Page_GlossaryPreference_LockIcon_Id_Locator" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="GeneralPrefernces_Page_StudentGlossaryPreference_LockIcon_Id_Locator" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="GeneralPrefernces_Page_StudentGlossary_Preference_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkDispGlossary</value>
+  </data>
+  <data name="GeneralPrefernces_Page_StudentResourceToolbarPreference_LockIcon_Id_Locator" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GeneralPrefernces_Page_StudentResourceToolbar_Preference_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkToolbar</value>
+  </data>
+  <data name="GeneralPrefernces_Page_StudentVerbChartPreference_LockIcon_Id_Locator" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="GeneralPrefernces_Page_StudentVerbChart_Preference_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkVerbChart</value>
+  </data>
+  <data name="GeneralPrefernces_Page_Embeddedreport_LockIcon_Id_Locator" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="GeneralPrefernces_Page_CharacterPalate_LockIcon_Id_Locator" xml:space="preserve">
+    <value>1</value>
+  </data>
+</root>

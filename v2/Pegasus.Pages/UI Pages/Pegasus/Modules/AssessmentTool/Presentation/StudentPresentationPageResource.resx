@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="StudentPresentation_Page_ActivityFinish_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0:APH:btnfinish</value>
+  </data>
+  <data name="StudentPresentation_Page_AnswerChoice_RadioButton_XPath_Locator" xml:space="preserve">
+    <value>//div[@id ='divSection_1']/descendant::div[@id ='nextQuextion']/div[{0}]/descendant::table[@class='ChoiceBorder']/tbody/tr/td[2][@name='tdTF']</value>
+  </data>
+  <data name="StudentPresentation_Page_AssessmentHolder_Id_Locator" xml:space="preserve">
+    <value>assessmentHolder</value>
+  </data>
+  <data name="StudentPresentation_Page_BaseWindow_Title_Name" xml:space="preserve">
+    <value>Course Materials</value>
+  </data>
+  <data name="StudentPresentation_Page_Div_Count" xml:space="preserve">
+    <value>//div[@type='Question']</value>
+  </data>
+  <data name="StudentPresentation_Page_Finish_Button_Xpath_Locator" xml:space="preserve">
+    <value>//a[@id='_ctl0:APH:btnfinish']/span/span</value>
+  </data>
+  <data name="StudentPresentation_Page_MasterFinish_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0:btnMasterFinish</value>
+  </data>
+  <data name="StudentPresentation_Page_NextQuestion_Button_Id_Locator" xml:space="preserve">
+    <value>btnNextQuestion1</value>
+  </data>
+  <data name="StudentPresentation_Page_NextQuestion_Button_Locator" xml:space="preserve">
+    <value>Next Question</value>
+  </data>
+  <data name="StudentPresentation_Page_QuestionNavigation_Id_Locator" xml:space="preserve">
+    <value>//table[@id ='_ctl0_NPH_ucN_tblNavigation']/tbody/tr/td</value>
+  </data>
+  <data name="StudentPresentation_Page_QuestionRadioButton_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='nextQuextion']/div[{0}]/descendant::input[@type='radio']</value>
+  </data>
+  <data name="StudentPresentation_Page_ReturnToCourse_Button_Id_Locator" xml:space="preserve">
+    <value>Return to Course</value>
+  </data>
+  <data name="StudentPresentation_Page_RETURNToCourse_Button_Id_Locator_HED" xml:space="preserve">
+    <value>RETURN to Course</value>
+  </data>
+  <data name="StudentPresentation_Page_ReturnToCourse_Id_Locator" xml:space="preserve">
+    <value>_ctl0:btnReturnCourse</value>
+  </data>
+  <data name="StudentPresentation_Page_Sleep_Value" xml:space="preserve">
+    <value>5000</value>
+  </data>
+  <data name="StudentPresentation_Page_SubmitForGrading_Button_Id_Locator" xml:space="preserve">
+    <value>btnSubmit1</value>
+  </data>
+  <data name="StudentPresentation_Page_TimeToWait" xml:space="preserve">
+    <value>20000</value>
+  </data>
+  <data name="StudentPresentation_Page_Try_Button_Id_Locator" xml:space="preserve">
+    <value>btnlaunchtraining</value>
+  </data>
+  <data name="StudentPresentation_Page_Window_Title_Name" xml:space="preserve">
+    <value>Extra Practice</value>
+  </data>
+  <data name="StudentPresentation_Page_CustomWait_Time" xml:space="preserve">
+    <value>10000</value>
+  </data>
+  <data name="StudentPresentation_Page_TestActivityAnswer_XPath_Locator" xml:space="preserve">
+    <value>//div[@id ='divSection_1']/descendant::div[@id ='nextQuextion']/div[{0}]/descendant::table[@class='ChoiceBorder']/tbody/tr/td[2]/input</value>
+  </data>
+  <data name="StudentPresentation_Page_StudyPlanTypeActivity_PostTest_Window_Title_Name" xml:space="preserve">
+    <value>Post Test</value>
+  </data>
+  <data name="StudentPresentation_Page_TestTypeActivity_WindowName_Title" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="StudentPresentation_Page_StudyPlanTypeActivity" xml:space="preserve">
+    <value>StudyPlan</value>
+  </data>
+  <data name="StudentPresentation_Page_StudyPlanTypeActivity_WindowName" xml:space="preserve">
+    <value>Pre Test</value>
+  </data>
+  <data name="StudentPresentation_Page_TestTypeActivity" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="StudentPresentation_Page_StudyPlan_AnswersChoice_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id ='divSection_{0}']/descendant::div[@id ='nextQuextion']/div[1]/descendant::table[@class='ChoiceBorder']/tbody/tr/td[2]/input</value>
+  </data>
+  <data name="StudentPresentation_Page_PostTest_Id_Locator" xml:space="preserve">
+    <value>PostTestName</value>
+  </data>
+  <data name="StudentPresentation_Page_Content_Frame_Id_Locator" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
+  </data>
+  <data name="StudentPresentation_Page_Content_Window_Title_Name" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="StudentPresentation_Page_EnterKey_Value" xml:space="preserve">
+    <value>{ENTER}</value>
+  </data>
+  <data name="StudentPresentation_Page_LaunchWindowClose_TimeValue" xml:space="preserve">
+    <value>5000</value>
+  </data>
+  <data name="StudentPresentation_Page_LaunchWindow_TimeValue" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="StudentPresentation_Page_Initial_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="StudentPresentation_Page_Questions_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='assessmentHolder']/table/tbody/tr[2]/td/div/div</value>
+  </data>
+  <data name="StudentPresentation_Page_Select_QuestionRadioButton_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='ChoiceBorder']/tbody/tr/td[2]/input</value>
+  </data>
+  <data name="StudentPresentation_Page_WebActivity_Window_Name" xml:space="preserve">
+    <value>Web Activity</value>
+  </data>
+  <data name="StudentPresentation_Page_AnswerTextbox_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='MainQuestionLayoutDefault']/tbody/tr/td/table/tbody/tr/td/input</value>
+  </data>
+  <data name="StudentPresentation_Page_FirstText_CursorPosition_Id_Locator" xml:space="preserve">
+    <value>calcelCurPos</value>
+  </data>
+  <data name="StudentPresentation_Page_InsertTab_SIM_Player_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@class='ribbon-tabs-wrapper']/li[6]</value>
+  </data>
+  <data name="StudentPresentation_Page_SecondText_CursorPosition_Id_Locator" xml:space="preserve">
+    <value>defaultCurPos</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM_Activity_Id_Locator" xml:space="preserve">
+    <value>lnkName_6000000002706841</value>
+  </data>
+  <data name="StudentPresentation_Page_Add_File_Name" xml:space="preserve">
+    <value>w01A_Text.docx</value>
+  </data>
+  <data name="StudentPresentation_Page_MessageWindow_Ok_Button_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='CustomMessageBox']/div/div[3]</value>
+  </data>
+  <data name="StudentPresentation_Page_InsertObject_Dropdown_Option_Xpath_Locator" xml:space="preserve">
+    <value>//li[8][@class='ribbon-section']/span/span/span/span[3]/span[3]/div/div[2]/div/div[2]</value>
+  </data>
+  <data name="StudentPresentation_Page_InsertObject_Dropdown_Xpath_Locator" xml:space="preserve">
+    <value>//li[8][@class='ribbon-section']/span/span/span/span[3]/span[3]/div/div/span</value>
+  </data>
+  <data name="StudentPresentation_Page_Loop_Boundary_Additional_Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="StudentPresentation_Page_Loop_Initializer_Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="StudentPresentation_Page_RightKey_Value" xml:space="preserve">
+    <value>{RIGHT}</value>
+  </data>
+  <data name="StudentPresentation_Page_SimPresentation_Window_Name" xml:space="preserve">
+    <value> - BDD SMSUSER</value>
+  </data>
+  <data name="StudentPresentation_Page_Tab_Key_Value" xml:space="preserve">
+    <value>{TAB}</value>
+  </data>
+  <data name="StudentPresentation_Page_Text_Cursor_Position_Xaxis_Value" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="StudentPresentation_Page_Text_Cursor_Position_Yaxis_Value" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="StudentPresentation_Page_Text_Ok_Button_Cursor_Position_Xaxis_Value" xml:space="preserve">
+    <value>110</value>
+  </data>
+  <data name="StudentPresentation_Page_Text_Ok_Button_Cursor_Position_Yaxis_Value" xml:space="preserve">
+    <value>70</value>
+  </data>
+  <data name="StudentPresentation_Page_Activity_Count_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCourseCalendar']/tbody/tr</value>
+  </data>
+  <data name="StudentPresentation_Page_Activity_Name_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCourseCalendar']/tbody/tr[{0}]/td[2]/table/tbody/tr[1]</value>
+  </data>
+  <data name="StudentPresentation_Page_Activity_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCourseCalendar']/tbody/tr[{0}]/td[2]/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr/td/a</value>
+  </data>
+  <data name="StudentPresentation_Page_Loop_InitialValue" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="StudentPresentation_Page_Activity_Alert_Window_Name" xml:space="preserve">
+    <value>Activity Alert</value>
+  </data>
+  <data name="StudentPresentation_Page_Alert_Continue_Button_Id_Locator" xml:space="preserve">
+    <value>imgOk</value>
+  </data>
+  <data name="StudentPresentation_Page_Down_Key_Value" xml:space="preserve">
+    <value>{DOWN}</value>
+  </data>
+  <data name="StudentPresentation_Page_FillText_TextBoxPosition_Value" xml:space="preserve">
+    <value>6000</value>
+  </data>
+  <data name="StudentPresentation_Page_Fill_A1_Answer" xml:space="preserve">
+    <value> Pro Fit Marietta</value>
+  </data>
+  <data name="StudentPresentation_Page_Fill_A2_Answer" xml:space="preserve">
+    <value> First Quarter Cardio Sales</value>
+  </data>
+  <data name="StudentPresentation_Page_Fill_A4_Answer" xml:space="preserve">
+    <value> Exercise Bikes</value>
+  </data>
+  <data name="StudentPresentation_Page_Fill_A5_Answer" xml:space="preserve">
+    <value> Elliptical Machines</value>
+  </data>
+  <data name="StudentPresentation_Page_PreTest_Link_Class_Locator" xml:space="preserve">
+    <value>ssp_btnpreTestTraining</value>
+  </data>
+  <data name="StudentPresentation_Page_Studyplan_Cancel_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_btnReturn</value>
+  </data>
+  <data name="StudentPresentation_Page_StudyPlan_Window_Name" xml:space="preserve">
+    <value>myitlab Study Plan</value>
+  </data>
+  <data name="StudentPresentation_Page_Text_Studyplan_Ok_Cursor_Position_Xaxis_Value" xml:space="preserve">
+    <value>170</value>
+  </data>
+  <data name="StudentPresentation_Page_Text_Studyplan_Ok_Cursor_Position_Yaxis_Value" xml:space="preserve">
+    <value>80</value>
+  </data>
+  <data name="StudentPresentation_Page_StudyPlan_Submit_Button_Id_Locator" xml:space="preserve">
+    <value>submitbutton</value>
+  </data>
+  <data name="StudentPresentation_Page_TraingMaterial_Button_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='dark2']/thead/tr[8]/td/span/img</value>
+  </data>
+  <data name="StudentPresentation_Page_TraingMaterial_Window_Name" xml:space="preserve">
+    <value>Training</value>
+  </data>
+  <data name="StudentPresentation_Page_Activity_TotalCount_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
+  </data>
+  <data name="StudentPresentation_Page_Asset_LinkName_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr/td/a</value>
+  </data>
+  <data name="StudentPresentation_Page_Asset_Name_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td/table/tbody/tr</value>
+  </data>
+  <data name="StudentPresentation_Page_Activity_Status_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[8]/span</value>
+  </data>
+  <data name="StudentPresentation_Page_Thread_Time" xml:space="preserve">
+    <value>132000</value>
+  </data>
+  <data name="StudentPresentation_Page_Asset_Radio_Button_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='MainQuestionLayoutDefault']/tbody/tr[2]/td/table/tbody/tr/td[2]/input</value>
+  </data>
+  <data name="StudentPresentation_Page_Homework_Window_Name" xml:space="preserve">
+    <value>Homework</value>
+  </data>
+  <data name="StudentPresentation_Page_SaveForLater_Id_Locator" xml:space="preserve">
+    <value>saveForLater</value>
+  </data>
+  <data name="StudentPresentation_Page_Save_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0:APH:btnfinish</value>
+  </data>
+  <data name="StudentPresentation_Page_Feedback_Button_Id" xml:space="preserve">
+    <value>feedbackimg</value>
+  </data>
+  <data name="StudentPresentation_Page_Feedback_colon" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="StudentPresentation_Page_Return_Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="StudentPrsentation_Page_FeedbackText_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_APH_feedback']/b</value>
+  </data>
+  <data name="StudentPrsentation_Page_FeedbackText_Id_Locator" xml:space="preserve">
+    <value>_ctl0_APH_feedback</value>
+  </data>
+  <data name="StudentPrsentation_Page_ActivityQuiz_WindowName_Locator" xml:space="preserve">
+    <value>Quiz</value>
+  </data>
+  <data name="StudentPrsentation_Page_Essay_Text" xml:space="preserve">
+    <value>Manual Gradable Asset</value>
+  </data>
+  <data name="StudentPrsentation_Page_Essay_Textbox_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='MainQuestionLayoutDefault']/tbody/tr[2]/td/table/tbody/tr/td/textarea</value>
+  </data>
+  <data name="StudentPresentation_Page_OpenStudyPlan_Window_Name" xml:space="preserve">
+    <value>Open Study Plan</value>
+  </data>
+  <data name="StudentPrsentation_Page_QuestionCount_Presentation_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='nextQuextion']/div/table/tbody/tr[2]/td/div/table/tbody/tr</value>
+  </data>
+  <data name="StudentPrsentation_Page_Test_Window_Name" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="StudentPrsentation_Page_Ok_Button_MessageBox_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='CustomMessageBox']/div/div[3]/button[2]</value>
+  </data>
+</root>

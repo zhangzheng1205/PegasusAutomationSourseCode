@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestLists xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestList name="Lists of Tests" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <RunConfiguration id="c9e84f6c-190b-4f7e-bd4b-85b2724367f7" name="Local" storage="local.testsettings" type="Microsoft.VisualStudio.TestTools.Common.TestRunConfiguration, Microsoft.VisualStudio.QualityTools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestList>
+  <TestList name="STTestList" id="a75212d8-28cc-4928-ab82-e42bff33e87e" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="d4b8c6da-a667-4076-a4cd-3f715307a766" name="pegasusst.orderedtest" storage="pegasustestscripts\testsuiteorder\pegasusst.orderedtest.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="ProductionDefectList" id="bbcb7402-8f6d-4f84-af7d-822f6c44e408" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="2de08875-53f9-4657-8e67-2634e25f80bf" name="pegasus.productiondefect_orderedtest" storage="pegasus.productiondefect.testscripts\testsuiteorder\pegasus.productiondefect_orderedtest.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+    <TestLinks>
+      <TestLink id="d06ec500-3cd4-07e0-576b-ad021bc8f828" name="EnrollTheUsersToTheMasterLibraryCourse" storage="pegasustestscripts\bin\pegasustestscripts.dll" enabled="false" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="8d12fb95-8b68-e6c8-31ec-fc3cd7d825a4" name="PreviewSCOQuestionInTheManageQuestionLibrary_BDDML" storage="pegasustestscripts\bin\pegasustestscripts.dll" enabled="false" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="9a063baf-0999-0cc2-f707-5a596660bab4" name="AssociateActivityToMyCourseFrame" storage="pegasustestscripts\bin\pegasustestscripts.dll" enabled="false" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="66ee1b2b-c0af-bb76-950a-b9cad0821a89" name="ImportSCOQuestionInTheManageQuestionLibrary_BDDML" storage="pegasustestscripts\bin\pegasustestscripts.dll" enabled="false" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="6aa7833f-fd67-6d63-9486-a18cb9df11e7" name="CreateSkillStudyPlanInTheAddContentFromLibrary" storage="pegasustestscripts\bin\pegasustestscripts.dll" enabled="false" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="e2c37818-3767-b5d3-761d-35f4a14dee85" name="CreateMultipleChoiceQuestionInTheManageQuestionLibrary_BDDML" storage="pegasustestscripts\bin\pegasustestscripts.dll" enabled="false" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="33f837e4-e331-2e43-7458-7f74662881dc" name="CreateFillInTheBlankQuestionInTheManageQuestionLibrary_BDDML" storage="pegasustestscripts\bin\pegasustestscripts.dll" enabled="false" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="72a5d356-e9c9-e0f1-fa57-6c38b199144c" name="CreateClassForTheOrganizationUsingML" storage="pegasustestscripts\bin\pegasustestscripts.dll" enabled="false" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="af90f604-34ab-04ea-6ff6-8bde9519b533" name="CreateSCOQuestionThroughBrowseRepository_BDDML" storage="pegasustestscripts\bin\pegasustestscripts.dll" enabled="false" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="12c26d2d-74db-0baf-2a3e-1593710b7a70" name="AddCourseToTheClassInAnOrganization" storage="pegasustestscripts\bin\pegasustestscripts.dll" enabled="false" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+</TestLists>

@@ -1,0 +1,2785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D4D42739-288C-421F-A3AA-5DC32CB0C5D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pegasus.Pages</RootNamespace>
+    <AssemblyName>Pegasus.Pages</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\14.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalAssemblies\Microsoft.VisualStudio.TestTools.UITesting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WebDriver">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonResource\CommonResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\ExceptionHandler.cs" />
+    <Compile Include="Exceptions\GenericPageException.cs" />
+    <Compile Include="Exceptions\LoginFailedException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI Pages\DemoAccountRegistrationPage.cs" />
+    <Compile Include="UI Pages\DemoAccountRegistrationPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemoAccountRegistrationPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eCollege\CampusAdminNavPage.cs" />
+    <Compile Include="UI Pages\Integration\eCollege\CampusAdminNavPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CampusAdminNavPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eCollege\CampusAdmin\SingleCrsCreationBottomPage.cs" />
+    <Compile Include="UI Pages\Integration\eCollege\CampusAdmin\SingleCrsCreationBottomPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SingleCrsCreationBottomPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eCollege\DotNextLaunchPage.cs" />
+    <Compile Include="UI Pages\Integration\eCollege\DotNextLaunchPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DotNextLaunchPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eCollege\ECollegeLoginPage.cs" />
+    <Compile Include="UI Pages\Integration\eCollege\ECollegeLoginPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ECollegeLoginPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eCollege\ECPWireframePage.cs" />
+    <Compile Include="UI Pages\Integration\eCollege\ECPWireframePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ECPWireframePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eCollege\HomePSHPage.cs" />
+    <Compile Include="UI Pages\Integration\eCollege\HomePSHPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomePSHPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eCollege\ManageUsers\EnrollCourseTop.cs" />
+    <Compile Include="UI Pages\Integration\eCollege\ManageUsers\EnrollCourseTopResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnrollCourseTopResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eCollege\ManageUsers\ManageUsersContentPage.cs" />
+    <Compile Include="UI Pages\Integration\eCollege\ManageUsers\ManageUsersContentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageUsersContentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eCollege\SubHeadFramePage.cs" />
+    <Compile Include="UI Pages\Integration\eCollege\SubHeadFramePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubHeadFramePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eCollege\UnitViewPage.cs" />
+    <Compile Include="UI Pages\Integration\eCollege\UnitViewPageResource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UnitViewPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eText\EbookIntegrationErrorPage.cs" />
+    <Compile Include="UI Pages\Integration\eText\EbookIntegrationErrorPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EbookIntegrationErrorPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eText\LauncheTextPage.cs" />
+    <Compile Include="UI Pages\Integration\eText\LauncheTextPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LauncheTextPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\eText\UserConsentPage.cs" />
+    <Compile Include="UI Pages\Integration\eText\UserConsentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserConsentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\Rumba\CreateUserPage.cs" />
+    <Compile Include="UI Pages\Integration\Rumba\CreateUserPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateUserPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\SIM5\SIM5Services\SIM5ContentBrowse\SIMRepositoryPage.cs" />
+    <Compile Include="UI Pages\Integration\SIM5\SIM5Services\SIM5ContentBrowse\SIMRepositoryPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIMRepositoryPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\SMS\CourseIdInputPage.cs" />
+    <Compile Include="UI Pages\Integration\SMS\CourseIdInputPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseIdInputPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\SMS\Reg3Page.cs" />
+    <Compile Include="UI Pages\Integration\SMS\Reg3PageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reg3PageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\AdminPages\CampusAdmin\CampusAdminNavPage.cs" />
+    <Compile Include="UI Pages\MMND\AdminPages\CampusAdmin\CampusAdminNavPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CampusAdminNavPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\AdminPages\PubInclude\EPContentPage.cs" />
+    <Compile Include="UI Pages\MMND\AdminPages\PubInclude\EPContentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EPContentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\AdminPages\PubInclude\LoginContentPage.cs" />
+    <Compile Include="UI Pages\MMND\AdminPages\PubInclude\LoginContentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginContentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\Rumba\CreateProductPage.cs" />
+    <Compile Include="UI Pages\Integration\Rumba\CreateProductPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateProductPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\Rumba\CreateResourcePage.cs" />
+    <Compile Include="UI Pages\Integration\Rumba\CreateResourcePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateResourcePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\Rumba\PlaceOrderPage.cs" />
+    <Compile Include="UI Pages\Integration\Rumba\PlaceOrderPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlaceOrderPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\Rumba\ProductsAndResourcesPage.cs" />
+    <Compile Include="UI Pages\Integration\Rumba\ProductsAndResourcesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductsAndResourcesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\Rumba\SignInPage.cs" />
+    <Compile Include="UI Pages\Integration\Rumba\SignInPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SignInPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\Rumba\WelcometoRADminPage.cs" />
+    <Compile Include="UI Pages\Integration\Rumba\WelcometoRADminResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelcometoRADminResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\LogOutPage.cs" />
+    <Compile Include="UI Pages\LogOutPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogOutPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\DigitalVellum\PostIndexMixedPage.cs" />
+    <Compile Include="UI Pages\MMND\DigitalVellum\PostIndexMixedPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostIndexMixedPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolAssociationViewPage.cs" />
+    <Compile Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolAssociationViewPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseToolAssociationViewPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolSettingsUpdateViewPage.cs" />
+    <Compile Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolSettingsUpdateViewPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseToolSettingsUpdateViewPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolSettingsViewPage.cs" />
+    <Compile Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolSettingsViewPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseToolSettingsViewPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolVersionAssociationViewPage.cs" />
+    <Compile Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolVersionAssociationViewPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseToolVersionAssociationViewPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\ManageCourseToolSettingsViewPage.cs" />
+    <Compile Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\ManageCourseToolSettingsViewPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageCourseToolSettingsViewPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\PortalTest\MyPearsonLoginPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyPearsonLoginPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\PortalTest\Portal\UserLayoutRootNodeTargetPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserLayoutRootNodeTargetPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\SecureEcollegeLabs\CCNG\IndexPage.cs" />
+    <Compile Include="UI Pages\MMND\SecureEcollegeLabs\CCNG\IndexPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndexPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\Students\RegisterPage.cs" />
+    <Compile Include="UI Pages\MMND\Students\RegisterPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\VizedHtmlContent\Main\AuthorMode\CourseHomeProf\CourseHomeListItemViewPage.cs" />
+    <Compile Include="UI Pages\MMND\VizedHtmlContent\Main\AuthorMode\CourseHomeProf\CourseHomeListItemViewPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseHomeListItemViewPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\VizedHtmlContent\Main\AuthorMode\NonManagedVizedHtmlProf\ManagePage.cs" />
+    <Compile Include="UI Pages\MMND\VizedHtmlContent\Main\AuthorMode\NonManagedVizedHtmlProf\ManagePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\VizedHtmlContent\Main\CourseMode\VizedHtmlView\ViewPage.cs" />
+    <Compile Include="UI Pages\MMND\VizedHtmlContent\Main\CourseMode\VizedHtmlView\ViewPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Common\ShowMessagePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Common\ShowMessagePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowMessagePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\AdminEnrollment.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\AdminEnrollmentResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminEnrollmentResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\OrgAdminEnrollClassesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\OrgAdminEnrollClassesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrgAdminEnrollClassesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\OrgAdminUserEnrollmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\OrgAdminUserEnrollmentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrgAdminUserEnrollmentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\OrgEnrollmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\OrgEnrollmentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrgEnrollmentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\UserEnrollmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\UserEnrollmentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserEnrollmentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Organization\ManageWorkspacesPage.cs.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Organization\ManageWorkspacesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageWorkspacesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Organization\NewWorkspacePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Organization\NewWorkspacePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewWorkspacePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Organization\PublisherCustomizationPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Organization\PublisherCustomizationPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PublisherCustomizationPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\SupportPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\SupportPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupportPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Classes\Channels\ClassUserControlsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Classes\Channels\ClassUserControlsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassUserControlsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Classes\CreateClassCoursePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Classes\CreateClassCoursePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateClassCoursePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Classes\ManageClassManagementPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Classes\ManageClassManagementPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageClassManagementPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\AddTemplatePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\AddTemplatePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddTemplatePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\ManageTemplateMainPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\ManageTemplateMainPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageTemplateMainPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\FrmManageTemplatePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\FrmManageTemplatePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmManageTemplatePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\SelectClassCourseFolderPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\SelectClassCourseFolderPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelectClassCourseFolderPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\AddUserPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\AddUserPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddUserPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\BulkUploadQueuePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\BulkUploadQueuePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BulkUploadQueuePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\ImportUsersPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\ImportUsersPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImportUsersPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\ManageUserPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\ManageUserPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageUserPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\UserInformationPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\UserInformationPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserInformationPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Announcements\AnnouncementArchivePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Announcements\AnnouncementArchivePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnnouncementArchivePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Announcements\CreateAnnouncementPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Announcements\CreateAnnouncementPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateAnnouncementPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentSchedule\AssignContentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentSchedule\AssignContentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssignContentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\AddAssessmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\AddAssessmentPageResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddAssessmentPageResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\AdaptiveAssessmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\AdaptiveAssessmentResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdaptiveAssessmentResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\AssignmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\AssignmentResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssignmentResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\DocBasedAssessmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\DocBasedAssessmentResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocBasedAssessmentResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\PrintPopupPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\PrintPopupPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintPopupPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\PrintToolPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\PrintToolPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintToolPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\RandomAssessmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\RandomAssessmentResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RandomAssessmentResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\SkillBasedAssessmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\SkillBasedAssessmentResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkillBasedAssessmentResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\MathXLAssessmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\MathXLAssessmentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MathXLAssessmentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\InstructionsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\InstructionsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InstructionsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\InstructorPresentationPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\InstructorPresentationPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InstructorPresentationPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\RandomTopicListPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\RandomTopicListPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RandomTopicListPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\SelectQuestionTypePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\SelectQuestionTypePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelectQuestionTypePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\ViewSubmission\ViewSubmissionPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\ViewSubmission\ViewSubmissionPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewSubmissionPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\AddeBookLinkPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\AddeBookLinkPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddeBookLinkPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\AddFolderPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\AddFolderPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddFolderPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\AddUrlPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\AddUrlPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddUrlPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\ImportCartridgePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\ImportCartridgePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImportCartridgePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\PegasusHTMLUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\PegasusHTMLUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PegasusHTMLUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\UploadFilePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\ContentTool\UploadFilePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadFilePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\CourseAnnouncement\AnnouncementDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\CourseAnnouncement\AnnouncementDefaultUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnnouncementDefaultUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\CourseAnnouncement\AnnouncementRecipientListUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\CourseAnnouncement\AnnouncementRecipientListUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnnouncementRecipientListUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\CourseAnnouncement\CreateAnnouncementUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\CourseAnnouncement\CreateAnnouncementUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateAnnouncementUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\CourseChat\ProntoChatPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\CourseChat\ProntoChatPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProntoChatPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\CourseMail\ComposeNewMailUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\CourseMail\ComposeNewMailUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComposeNewMailUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\CourseMail\CourseMailDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\CourseMail\CourseMailDefaultUXResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseMailDefaultUXResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\CourseMail\GlobalRecipientListUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\CourseMail\GlobalRecipientListUXResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalRecipientListUXResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\CourseMail\MessageGridPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\CourseMail\MessageGridPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageGridPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\ActivitiesPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\ActivitiesPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ActivitiesPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CatalogPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CatalogPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatalogPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CourseChannelPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CourseChannelPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseChannelPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CourseContentPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CourseContentPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseContentPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CourseCopyPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CourseCopyPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseCopyPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CourseMaterialPreferencePage..cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CourseMaterialPreferencePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseMaterialPreferencePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CustomContentPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\CustomContentPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomContentPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\DefaultPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\DefaultPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\GeneralPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\GeneralPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneralPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\GradingPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\GradingPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GradingPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\LearnerLevelsPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\LearnerLevelsPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LearnerLevelsPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\LessonPlanPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\LessonPlanPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LessonPlanPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\LTIDefaultPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\LTIDefaultPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LTIDefaultPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\LTIToolsPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\LTIToolsPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LTIToolsPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\MyCoursesPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\MyCoursesPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyCoursesPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\MyTestPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\MyTestPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyTestPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\PermissionPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\PermissionPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PermissionPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\QuestionsPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\QuestionsPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuestionsPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\RosterPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\RosterPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RosterPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\SharedLibraryPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\SharedLibraryPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedLibraryPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\StandardSkillPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\StandardSkillPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StandardSkillPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\StandardSkillsGridPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\StandardSkillsGridPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StandardSkillsGridPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\ToolbarPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\ToolbarPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolbarPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\WritingCoachPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Coursesettings\WritingCoachPreferencesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WritingCoachPreferencesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Discussion\AddDiscussionTopicPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Discussion\AddDiscussionTopicPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddDiscussionTopicPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\DRT\DRTDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\DRT\DRTDefaultUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DRTDefaultUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\DRT\DRTPreviewUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\DRT\DRTPreviewUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DRTPreviewUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\EnhancedSearch\AdvancedSearchPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\EnhancedSearch\AdvancedSearchPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdvancedSearchPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\FeedBack\FeedbackPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\FeedBack\FeedbackPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeedbackPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBDefaultUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBDefaultUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBGradeBatchUpdationPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBGradeBatchUpdationPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBGradeBatchUpdationPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBGradeHistoryPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBGradeHistoryPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBGradeHistoryPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBGroupsDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBGroupsDefaultUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBGroupsDefaultUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBRoasterDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBRoasterDefaultUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBRoasterDefaultUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBRosterGridUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBRosterGridUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBRosterGridUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBSchemaCreatEditPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBSchemaCreatEditPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBSchemaCreatEditPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBSchemaPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBSchemaPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBSchemaPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBTotalColumnPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBTotalColumnPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBTotalColumnPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\ManageStudentsDefaultPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\ManageStudentsDefaultPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageStudentsDefaultPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\HomePage\AdminHomePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\HomePage\AdminHomePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminHomePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\HomePage\CalendarFramePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\HomePage\CalendarFramePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarFramePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\License\AvailableProductsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\License\AvailableProductsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvailableProductsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\License\CreateLicensePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\License\CreateLicensePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateLicensePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\License\LicensePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LicensePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\License\LicensesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Location\MacAddressDetailsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Location\MacAddressDetailsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MacAddressDetailsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\MediaLibrary\StuSearchMediaLinkUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\MediaLibrary\StuSearchMedialinkUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StuSearchMedialinkUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\MyPegasus\MyClassDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\MyPegasus\MyClassDefaultUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyClassDefaultUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\MyPegasus\MyPegasusUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\MyPegasus\MyPegasusUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyPegasusUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\MyPegasus\WelcomeMessagesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\MyPegasus\WelcomeMessagesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelcomeMessagesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\MySpanishLab\VerbChartUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\MySpanishLab\VerbChartUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VerbChartUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\OrganizationManagement\CreateOrganizationPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\OrganizationManagement\CreateOrganizationPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateOrganizationPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\OrganizationManagement\ManageOrganisationToolBarPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\OrganizationManagement\ManageOrganisationToolBarPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageOrganisationToolBarPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\OrganizationManagement\OrganizationManagementPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\OrganizationManagement\OrganizationManagementPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrganizationManagementPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\OrganizationManagement\OrganizationSearchPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\OrganizationManagement\OrganizationSearchPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrganizationSearchPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\PegasusTest\AssessmentNamePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\PegasusTest\AssessmentNamePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssessmentNamePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\PegasusTest\MyTestGridUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\PegasusTest\MyTestGridUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyTestGridUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\PegasusTest\MyTestUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\PegasusTest\MyTestUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyTestUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\PegasusTest\PaperTestUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\PegasusTest\PaperTestUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaperTestUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarDefaultGlobalUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarDefaultGlobalUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarDefaultGlobalUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarDefaultUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarDefaultUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarSetupPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarSetupPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarSetupPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\CreatePeriodsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\CreatePeriodsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreatePeriodsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\EmptyCalendarPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\EmptyCalendarPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmptyCalendarPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Enrollment\EnrollmentMainPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Enrollment\EnrollmentMainPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnrollmentMainPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\AutoGraderPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\AutoGraderPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutoGraderPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\EntryListPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\EntryListPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntryListPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\EssayPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\EssayPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EssayPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\FileUploadPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\FileUploadPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FileUploadPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\FillInTheBlanksPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\FillInTheBlanksPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FillInTheBlanksPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\MatchingPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\MatchingPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MatchingPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\MultipleChoicePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\MultipleChoicePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultipleChoicePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\MultipleResponsePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\MultipleResponsePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultipleResponsePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\NumericPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\NumericPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NumericPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\PullDownListPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\PullDownListPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PullDownListPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\QlGridUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\QlGridUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QlGridUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\RankingPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\RankingPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RankingPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\SimQuestionPointValuePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\SimQuestionPointValuePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SimQuestionPointValuePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\TextMatchPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\TextMatchPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextMatchPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\TrueFalsePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\TrueFalsePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrueFalsePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionSection\QuestionSectionUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionSection\QuestionSectionUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuestionSectionUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionSet\QuestionSetPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\QuestionSet\QuestionSetPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuestionSetPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\ReportsAssessmentCertificatePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\ReportsAssessmentCertificatePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportsAssessmentCertificatePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptCourseUsagePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptCourseUsagePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptCourseUsagePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptCustomReportCriteriaPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptCustomReportCriteriaPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptCustomReportCriteriaPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptExamFreqAnalysisPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptExamFreqAnalysisPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptExamFreqAnalysisPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptPadminCriteriaPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptPadminCriteriaPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptPadminCriteriaPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptAssessmentAllStudentsPage.cs" />
+    <Compile Include="UI Pages\Integration\SMS\ConsentPage.cs" />
+    <Compile Include="UI Pages\Integration\SMS\ConsentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\SMS\Reg1Page.cs" />
+    <Compile Include="UI Pages\Integration\SMS\Reg1PageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reg1PageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Integration\SMS\Reg2Page.cs" />
+    <Compile Include="UI Pages\Integration\SMS\Reg2PageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reg2PageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\LoginPage.cs" />
+    <Compile Include="UI Pages\LoginPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\AdminToolPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\AdminToolPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminToolPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Course\ManageCoursesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Course\ManageCoursesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageCoursesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Course\NewCoursePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Course\NewCoursePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewCoursePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Course\SearchCoursesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Course\SearchCoursesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchCoursesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\EnrollmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\EnrollmentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnrollmentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\SelfEnrollment\SelfEnrollmentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\Enrollment\SelfEnrollment\SelfEnrollmentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelfEnrollmentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User Creation\NewUserPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User Creation\NewUserPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewUserPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\ManageUsersPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\ManageUsersPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageUsersPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\SearchUsersPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Admin\User\SearchUsersPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchUsersPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\StudentPresentationPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\StudentPresentationPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentPresentationPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\CourseAnnouncement\AnnouncementPopUpLightBoxUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\CourseAnnouncement\AnnouncementPopUpLightBoxUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnnouncementPopUpLightBoxUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\CourseCatalog\CourseCatalogMainPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\CourseCatalog\CourseCatalogMainPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseCatalogMainPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBFoldersPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBFoldersPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBFoldersPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBInstructorUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBInstructorUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBInstructorUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBLeftNavigationUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBLeftNavigationUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBLeftNavigationUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBStudentUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Gradebook\GBStudentUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GBStudentUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\HomePage\HEDGlobalHomePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\HomePage\HEDGlobalHomePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HEDGlobalHomePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\MyPegasus\StudentHelpTextPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\MyPegasus\StudentHelpTextPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentHelpTextPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarHEDDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarHEDDefaultUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarHEDDefaultUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Course Templates\AddNewTemplatePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Course Templates\AddNewTemplatePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddNewTemplatePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Course Templates\ManageTemplatePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Course Templates\ManageTemplatePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageTemplatePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Enrollment\ProgramAdminManageCourseTemplatesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Enrollment\ProgramAdminManageCourseTemplatesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramAdminManageCourseTemplatesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Enrollment\ProgramAdminManageUsersPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Enrollment\ProgramAdminManageUsersPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramAdminManageUsersPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\ProgramAdminToolPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\ProgramAdminToolPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramAdminToolPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Sections\AddNewSectionPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Sections\AddNewSectionPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddNewSectionPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Users\ProgramAdminUsersPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Users\ProgramAdminUsersPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramAdminUsersPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptAssessmentAllStudentsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptAssessmentAllStudentsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptCommonCriteriaPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptCommonCriteriaPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptCommonCriteriaPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptDetailedStudentActivityPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptDetailedStudentActivityPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptDetailedStudentActivityPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptGCOptionsUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptGCOptionsUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptGCOptionsUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptMainPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptMainPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptMainPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptMainUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptMainUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptMainUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSaveReportPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSaveReportPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSaveReportPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSaveSettingsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSaveSettingsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSaveSettingsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSelectAssessmentsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSelectAssessmentsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSelectAssessmentsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSelectCoursesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSelectCoursesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSelectCoursesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSelectOrganisationsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSelectOrganisationsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSelectOrganisationsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSelectSectionsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSelectSectionsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSelectSectionsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSelectStudentsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptSelectStudentsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptSelectStudentsResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptMasteryPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptMasteryPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptMasteryPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStuAssessmentSummaryPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStuAssessmentSummaryPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStuAssessmentSummaryPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentActivityPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentActivityPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStudentActivityPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentAllAssessmentsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentAllAssessmentsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStudentAllAssessmentsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentUsagePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentUsagePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStudentUsagePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStuStudyPlanPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStuStudyPlanPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStuStudyPlanPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptTrainingFreqAnalysisPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptTrainingFreqAnalysisPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptTrainingFreqAnalysisPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SIMStudyPlan\SIMStudyPlanDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SIMStudyPlan\SIMStudyPlanDefaultUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIMStudyPlanDefaultUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SIMStudyPlan\SIMStudyPlanStudentUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SIMStudyPlan\SIMStudyPlanStudentUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIMStudyPlanStudentUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SkillStandeardIntegration\SkillStandardAlignedAssetsUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SkillStandeardIntegration\SkillStandardAlignedAssetsUXResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkillStandardAlignedAssetsUXResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProductCoursesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\AddButtonPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\AddButtonPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddButtonPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\CourseEnrollmentModePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\CourseEnrollmentModePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseEnrollmentModePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ListCoursesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ListCoursesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListCoursesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ManageProductsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ManageProductsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageProductsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\NewProductPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProductCoursesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductCoursesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProductManagementContainerPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProductManagementContainerPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductManagementContainerPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProductSearchPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProductSearchPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductSearchPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProgramCreatePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProgramCreatePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramCreatePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProgramManagementPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProgramManagementPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramManagementPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\PublishCourseSearchPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\PublishCourseSearchPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PublishCourseSearchPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\PublishingNotesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\PublishingNotesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PublishingNotesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\NewProductPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewProductPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\StudyMaterialsExplorer\StudentExplorePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\StudyMaterialsExplorer\StudentExplorePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentExplorePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\AssetInformationPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\AssetInformationPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssetInformationPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\ContentLibraryPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\ContentLibraryPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContentLibraryPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\CustomContentPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\CustomContentPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomContentPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\CustomizeNotificationPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\CustomizeNotificationPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomizeNotificationPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\Calendar\CourseCalendarPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\Calendar\CourseCalendarPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseCalendarPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\ContentBrowserMainUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\ContentBrowserMainUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContentBrowserMainUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\ContentBrowserUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\ContentBrowserUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContentBrowserUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\ContentLibraryUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\ContentLibraryUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContentLibraryUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\CourseContentUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\CourseContentUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseContentUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\CoursePreviewMainUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\CoursePreviewMainUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoursePreviewMainUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\CoursePreviewUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\CoursePreviewUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoursePreviewUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\StudTodoDonePage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\StudTodoDonePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudTodoDonePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\TeachingPlanUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\TeachingPlanUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeachingPlanUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\UserTemplateSectionsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TeachingPlan\UserTemplateSectionsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserTemplateSectionsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TodaysView\SettingsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TodaysView\SettingsPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SettingsPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\TodaysView\TodaysViewUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\TodaysView\TodaysViewUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TodaysViewUXPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\MyPrefernce\MyAccountSettingPage.cs" />
+    <Compile Include="UI Pages\Pegasus\MyPrefernce\MyAccountSettingPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyAccountSettingPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\UserControls\CourseBrowser\CourseBrowserPage.cs" />
+    <Compile Include="UI Pages\Pegasus\UserControls\CourseBrowser\CourseBrowserPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseBrowserPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegng\HomePage.cs" />
+    <Compile Include="UI Pages\Pegng\HomePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\PortalTest\MyPearsonLoginPage.cs" />
+    <Compile Include="UI Pages\MMND\PortalTest\Portal\UserLayoutRootNodePage.cs" />
+    <Compile Include="UI Pages\MMND\PortalTest\Portal\UserLayoutRootNodePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserLayoutRootNodePageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\MMND\PortalTest\Portal\UserLayoutRootNodeTargetPage.cs" />
+    <Compile Include="UI Pages\RestServicePost\PostRestServicePage.cs" />
+    <Compile Include="UI Pages\RestServicePost\PostRestServiceResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostRestServiceResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Student\PlayerTestPage.cs" />
+    <Compile Include="UI Pages\Student\PlayerTestPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlayerTestPageResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommonResource\CommonResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\DemoAccountRegistrationPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DemoAccountRegistrationPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eCollege\CampusAdminNavPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CampusAdminNavPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eCollege\CampusAdmin\SingleCrsCreationBottomPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SingleCrsCreationBottomPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eCollege\DotNextLaunchPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DotNextLaunchPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eCollege\ECollegeLoginPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ECollegeLoginPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eCollege\ECPWireframePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ECPWireframePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eCollege\HomePSHPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomePSHPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eCollege\ManageUsers\EnrollCourseTopResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EnrollCourseTopResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eCollege\ManageUsers\ManageUsersContentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageUsersContentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eCollege\SubHeadFramePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SubHeadFramePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eCollege\UnitViewPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UnitViewPageResource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eText\EbookIntegrationErrorPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EbookIntegrationErrorPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eText\LauncheTextPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LauncheTextPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\eText\UserConsentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserConsentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Rumba\CreateUserPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateUserPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\SIM5\SIM5Services\SIM5ContentBrowse\SIMRepositoryPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SIMRepositoryPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\SMS\CourseIdInputPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseIdInputPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\SMS\Reg3PageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Reg3PageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\AdminPages\CampusAdmin\CampusAdminNavPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CampusAdminNavPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\AdminPages\PubInclude\EPContentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EPContentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\AdminPages\PubInclude\LoginContentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginContentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Rumba\CreateProductPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateProductPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Rumba\CreateResourcePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateResourcePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Rumba\PlaceOrderPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PlaceOrderPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Rumba\ProductsAndResourcesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductsAndResourcesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Rumba\SignInPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SignInPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\Rumba\WelcometoRADminResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WelcometoRADminResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\SMS\ConsentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConsentPageResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\SMS\Reg1PageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Reg1PageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\SMS\Reg2PageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Reg2PageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\LoginPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\LogOutPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LogOutPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\DigitalVellum\PostIndexMixedPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PostIndexMixedPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolAssociationViewPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseToolAssociationViewPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolSettingsUpdateViewPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseToolSettingsUpdateViewPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolSettingsViewPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseToolSettingsViewPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\CourseToolVersionAssociationViewPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseToolVersionAssociationViewPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\LTISettings\Main\AdminMode\LTICourseToolSettings\ManageCourseToolSettingsViewPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageCourseToolSettingsViewPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\PortalTest\MyPearsonLoginPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyPearsonLoginPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\PortalTest\Portal\UserLayoutRootNodeTargetPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserLayoutRootNodeTargetPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\SecureEcollegeLabs\CCNG\IndexPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IndexPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\Students\RegisterPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RegisterPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\VizedHtmlContent\Main\AuthorMode\CourseHomeProf\CourseHomeListItemViewPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseHomeListItemViewPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\VizedHtmlContent\Main\AuthorMode\NonManagedVizedHtmlProf\ManagePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManagePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\VizedHtmlContent\Main\CourseMode\VizedHtmlView\ViewPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ViewPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Common\ShowMessagePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ShowMessagePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\AdminToolPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AdminToolPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Course\ManageCoursesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageCoursesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Course\NewCoursePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NewCoursePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Course\SearchCoursesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SearchCoursesPageResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Enrollment\AdminEnrollmentResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AdminEnrollmentResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Enrollment\EnrollmentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EnrollmentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Enrollment\OrgAdminEnrollClassesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrgAdminEnrollClassesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Enrollment\OrgAdminUserEnrollmentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrgAdminUserEnrollmentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Enrollment\OrgEnrollmentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrgEnrollmentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Enrollment\SelfEnrollment\SelfEnrollmentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelfEnrollmentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Enrollment\UserEnrollmentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserEnrollmentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Organization\ManageWorkspacesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageWorkspacesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Organization\NewWorkspacePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NewWorkspacePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\Organization\PublisherCustomizationPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PublisherCustomizationPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\SupportPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SupportPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Classes\Channels\ClassUserControlsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ClassUserControlsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Classes\CreateClassCoursePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateClassCoursePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Classes\ManageClassManagementPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageClassManagementPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\AddTemplatePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddTemplatePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\ManageTemplateMainPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageTemplateMainPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\FrmManageTemplatePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmManageTemplatePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\TemplateClassManagement\Templates\SelectClassCourseFolderPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelectClassCourseFolderPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\User Creation\NewUserPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NewUserPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\User\AddUserPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddUserPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\User\BulkUploadQueuePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BulkUploadQueuePageResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\User\ImportUsersPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ImportUsersPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\User\ManageUserPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageUserPageResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\User\ManageUsersPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageUsersPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\User\SearchUsersPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SearchUsersPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Admin\User\UserInformationPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserInformationPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Announcements\AnnouncementArchivePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AnnouncementArchivePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Announcements\CreateAnnouncementPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateAnnouncementPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentSchedule\AssignContentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AssignContentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\AddAssessmentPageResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddAssessmentPageResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\AdaptiveAssessmentResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AdaptiveAssessmentResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\AssignmentResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AssignmentResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\DocBasedAssessmentResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DocBasedAssessmentResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\PrintPopupPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintPopupPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\PrintToolPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintToolPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\RandomAssessmentResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RandomAssessmentResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\SkillBasedAssessmentResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SkillBasedAssessmentResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\MathXLAssessmentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MathXLAssessmentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\InstructionsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InstructionsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\InstructorPresentationPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InstructorPresentationPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\StudentPresentationPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StudentPresentationPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\RandomTopicListPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RandomTopicListPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\SelectQuestionTypePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SelectQuestionTypePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\ViewSubmission\ViewSubmissionPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ViewSubmissionPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\ContentTool\AddeBookLinkPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddeBookLinkPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\ContentTool\AddFolderPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddFolderPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\ContentTool\AddUrlPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddUrlPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\ContentTool\ImportCartridgePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ImportCartridgePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\ContentTool\PegasusHTMLUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PegasusHTMLUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\ContentTool\UploadFilePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UploadFilePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\CourseAnnouncement\AnnouncementDefaultUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AnnouncementDefaultUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\CourseAnnouncement\AnnouncementPopUpLightBoxUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AnnouncementPopUpLightBoxUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\CourseAnnouncement\AnnouncementRecipientListUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AnnouncementRecipientListUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\CourseAnnouncement\CreateAnnouncementUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateAnnouncementUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\CourseCatalog\CourseCatalogMainPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseCatalogMainPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\CourseChat\ProntoChatPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProntoChatPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\CourseMail\ComposeNewMailUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ComposeNewMailUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\CourseMail\CourseMailDefaultUXResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseMailDefaultUXResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\CourseMail\GlobalRecipientListUXResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobalRecipientListUXResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\CourseMail\MessageGridPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageGridPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\ActivitiesPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ActivitiesPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\CatalogPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CatalogPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\CourseChannelPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseChannelPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\CourseContentPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseContentPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\CourseCopyPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseCopyPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\CourseMaterialPreferencePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseMaterialPreferencePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\CustomContentPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomContentPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\DefaultPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\GeneralPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GeneralPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\GradingPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GradingPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\LearnerLevelsPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LearnerLevelsPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\LessonPlanPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LessonPlanPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\LTIDefaultPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LTIDefaultPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\LTIToolsPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LTIToolsPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\MyCoursesPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyCoursesPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\MyTestPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyTestPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\PermissionPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PermissionPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\QuestionsPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QuestionsPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\RosterPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RosterPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\SharedLibraryPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedLibraryPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\StandardSkillPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StandardSkillPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\StandardSkillsGridPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StandardSkillsGridPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\ToolbarPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ToolbarPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Coursesettings\WritingCoachPreferencesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WritingCoachPreferencesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Discussion\AddDiscussionTopicPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddDiscussionTopicPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\DRT\DRTDefaultUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DRTDefaultUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\DRT\DRTPreviewUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DRTPreviewUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\EnhancedSearch\AdvancedSearchPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AdvancedSearchPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\FeedBack\FeedbackPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FeedbackPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBDefaultUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBDefaultUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBFoldersPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBFoldersPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBGradeBatchUpdationPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBGradeBatchUpdationPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBGradeHistoryPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBGradeHistoryPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBGroupsDefaultUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBGroupsDefaultUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBInstructorUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBInstructorUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBLeftNavigationUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBLeftNavigationUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBRoasterDefaultUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBRoasterDefaultUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBRosterGridUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBRosterGridUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBSchemaCreatEditPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBSchemaCreatEditPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBSchemaPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBSchemaPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBStudentUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBStudentUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\GBTotalColumnPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GBTotalColumnPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Gradebook\ManageStudentsDefaultPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageStudentsDefaultPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\HomePage\AdminHomePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AdminHomePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\HomePage\CalendarFramePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CalendarFramePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\HomePage\HEDGlobalHomePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HEDGlobalHomePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\License\AvailableProductsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AvailableProductsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\License\CreateLicensePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateLicensePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\License\LicensePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LicensePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Location\MacAddressDetailsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MacAddressDetailsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\MediaLibrary\StuSearchMedialinkUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StuSearchMedialinkUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\MyPegasus\MyClassDefaultUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyClassDefaultUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\MyPegasus\MyPegasusUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyPegasusUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\MyPegasus\StudentHelpTextPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StudentHelpTextPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\MyPegasus\WelcomeMessagesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WelcomeMessagesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\MySpanishLab\VerbChartUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>VerbChartUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\OrganizationManagement\CreateOrganizationPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateOrganizationPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\OrganizationManagement\ManageOrganisationToolBarPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageOrganisationToolBarPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\OrganizationManagement\OrganizationManagementPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrganizationManagementPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\OrganizationManagement\OrganizationSearchPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrganizationSearchPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\PegasusTest\AssessmentNamePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AssessmentNamePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\PegasusTest\MyTestGridUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyTestGridUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\PegasusTest\MyTestUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyTestUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\PegasusTest\PaperTestUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PaperTestUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarDefaultGlobalUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CalendarDefaultGlobalUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarDefaultUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CalendarDefaultUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarHEDDefaultUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CalendarHEDDefaultUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Planner\Calendar\CalendarSetupPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CalendarSetupPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Planner\Calendar\CreatePeriodsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreatePeriodsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Planner\Calendar\EmptyCalendarPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmptyCalendarPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Course Templates\AddNewTemplatePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddNewTemplatePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Course Templates\ManageTemplatePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageTemplatePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Enrollment\EnrollmentMainPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EnrollmentMainPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Enrollment\ProgramAdminManageCourseTemplatesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgramAdminManageCourseTemplatesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Enrollment\ProgramAdminManageUsersPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgramAdminManageUsersPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\ProgramAdminToolPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgramAdminToolPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Sections\AddNewSectionPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddNewSectionPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Users\ProgramAdminUsersPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgramAdminUsersPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\AutoGraderPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AutoGraderPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\EntryListPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EntryListPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\EssayPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EssayPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\FileUploadPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FileUploadPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\FillInTheBlanksPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FillInTheBlanksPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\MatchingPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MatchingPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\MultipleChoicePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MultipleChoicePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\MultipleResponsePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MultipleResponsePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\NumericPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NumericPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\PullDownListPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PullDownListPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\QlGridUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QlGridUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\RankingPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RankingPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\SimQuestionPointValuePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SimQuestionPointValuePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\TextMatchPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TextMatchPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionLibrary\TrueFalsePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TrueFalsePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionSection\QuestionSectionUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QuestionSectionUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\QuestionSet\QuestionSetPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QuestionSetPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\ReportsAssessmentCertificatePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReportsAssessmentCertificatePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptCourseUsagePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptCourseUsagePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptCustomReportCriteriaPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptCustomReportCriteriaPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptExamFreqAnalysisPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptExamFreqAnalysisPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptPadminCriteriaPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptPadminCriteriaPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptAssessmentAllStudentsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptAssessmentAllStudentsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptCommonCriteriaPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptCommonCriteriaPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptDetailedStudentActivityPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptDetailedStudentActivityPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptGCOptionsUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptGCOptionsUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptMainPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptMainPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptMainUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptMainUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptSaveReportPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptSaveReportPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptSaveSettingsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptSaveSettingsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptSelectAssessmentsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptSelectAssessmentsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptSelectCoursesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptSelectCoursesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptSelectOrganisationsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptSelectOrganisationsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptSelectSectionsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptSelectSectionsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptSelectStudentsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptSelectStudentsResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptMasteryPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptMasteryPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStuAssessmentSummaryPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptStuAssessmentSummaryPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStudentActivityPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptStudentActivityPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStudentAllAssessmentsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptStudentAllAssessmentsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStudentUsagePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptStudentUsagePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStuStudyPlanPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptStuStudyPlanPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptTrainingFreqAnalysisPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptTrainingFreqAnalysisPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SIMStudyPlan\SIMStudyPlanDefaultUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SIMStudyPlanDefaultUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SIMStudyPlan\SIMStudyPlanStudentUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SIMStudyPlanStudentUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SkillStandeardIntegration\SkillStandardAlignedAssetsUXResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SkillStandardAlignedAssetsUXResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\AddButtonPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddButtonPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\CourseEnrollmentModePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseEnrollmentModePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ListCoursesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ListCoursesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ManageProductsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageProductsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProductCoursesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductCoursesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProductManagementContainerPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductManagementContainerPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProductSearchPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductSearchPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProgramCreatePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgramCreatePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProgramManagementPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgramManagementPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\PublishCourseSearchPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PublishCourseSearchPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\PublishingNotesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PublishingNotesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\NewProductPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NewProductPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\StudyMaterialsExplorer\StudentExplorePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StudentExplorePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\AssetInformationPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AssetInformationPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\ContentLibraryPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContentLibraryPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\CustomContentPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomContentPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeacherSharedLibrary\CustomizeNotificationPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomizeNotificationPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\Calendar\CourseCalendarPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseCalendarPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\ContentBrowserMainUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContentBrowserMainUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\ContentBrowserUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContentBrowserUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\ContentLibraryUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContentLibraryUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\CourseContentUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseContentUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\CoursePreviewMainUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CoursePreviewMainUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\CoursePreviewUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CoursePreviewUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\StudTodoDonePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StudTodoDonePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\TeachingPlanUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TeachingPlanUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TeachingPlan\UserTemplateSectionsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserTemplateSectionsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TodaysView\SettingsPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SettingsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\TodaysView\TodaysViewUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TodaysViewUXPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\MyPrefernce\MyAccountSettingPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyAccountSettingPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\UserControls\CourseBrowser\CourseBrowserPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseBrowserPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegng\HomePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\MMND\PortalTest\Portal\UserLayoutRootNodePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserLayoutRootNodePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\RestServicePost\PostRestServiceResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PostRestServiceResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Student\PlayerTestPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PlayerTestPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pegasus.Automation\Pegasus.Automation.csproj">
+      <Project>{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}</Project>
+      <Name>Pegasus.Automation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

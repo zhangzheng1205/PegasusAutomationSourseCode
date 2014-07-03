@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CalendarHEDDefauktUXPage_CancelButton_Id_Locator" xml:space="preserve">
+    <value>imgbtnCancel</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Button_More_Id_Locator" xml:space="preserve">
+    <value>divMore</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_TimeToWaitForElement" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_ActivityRootFolder_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/table[2]/tbody/tr/td/img[@class='collpsImg']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_ActivityStatus_ClassName_Locator" xml:space="preserve">
+    <value>cssDueDate</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_ActivitySubFolder_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/div/table[6]/tbody/tr/td/img[@class='collpsImg']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_AsseOne_XPath_Locator" xml:space="preserve">
+    <value>//div[@title='PA-02 Span Practice- Vocabulary: Expresiones útiles para la clase']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_AssetOne_CheckBox_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/div/div[5]/table/tbody/tr/td/input[@class='collpsChk']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_AssetTwo_CheckBox_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/div/div[5]/table[2]/tbody/tr/td/input[@class='collpsChk']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_AssignedActivityDay_Xpath_Locator" xml:space="preserve">
+    <value>//td[contains(@class,'HighlightTodayCell')]/div[2]/div[3]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_AssignedActivityNameInDayView_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='dvDueAssignments dvAssignmentscss']/div[{0}]/div/span</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_AssignmentProperties_Link_Id_Locator" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Button_GO_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_acSearchPanel_btnSearchGo</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Calendar_WindowName" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Calendar_Window_Name" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator" xml:space="preserve">
+    <value>//td[@class='HighlightTodayCell']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Div_AssignedActivitiesInDayView_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='dvDueAssignmentLable']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Div_SearchedAssetTitle_Id_Locator" xml:space="preserve">
+    <value>dvAssetName</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_DueDate_Row_Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CalendarHedDefaultUXPage_DueDate_SpecialCharacter_Value" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_DueDate_TextBox_Xpath_Locator" xml:space="preserve">
+    <value>//select[@id='cmbDateFormat2']/option[6]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Frame_Xpath_Locator" xml:space="preserve">
+    <value>//iframe[contains(@src,'Modules/MyPrefernce/frmMyAccountSetting.aspx?')]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Image_Cmenu_Id_Locator" xml:space="preserve">
+    <value>ES_CMenuImg</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Loop_Initializer_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_MyProfile_Button_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phHeader_ctl00_ucs_HelloObject_ancMyAccount</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_MyProfile_Link_Locator" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_SleepTime" xml:space="preserve">
+    <value>10000</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Support_Close_Button_Id_Locator" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Support_Link_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phHeader_ctl00_ucs_HelloObject_ancSupport</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Support_Window_Name" xml:space="preserve">
+    <value>Pearson Education Customer Technical Support</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Support_Window_UserName_Id_Locator" xml:space="preserve">
+    <value>lblLogin</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Table_SearchedAssets_Id_Locator" xml:space="preserve">
+    <value>grdSearch_Container</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Textbox_Search_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_acSearchPanel_txtSearch</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_TodaysView_Window_Name" xml:space="preserve">
+    <value>Today's View</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_LocaleOption_EnglishUnitedKingdom_Value" xml:space="preserve">
+    <value>English (United Kingdom)</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Backword_Slash_Character" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Hyphen_Character" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Apply_Button_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_drdMultiSelect_btnApply</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_ContentType_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='grdSearch_Container']/div[{0}]/div/div</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Content_Checkbox_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='grdSearch_Container']/div[{0}]/div/div/div/table/tbody/tr/td/input</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Content_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='grdSearch_Container']/div</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_OptionText_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_drdMultiSelect_chkBoxList']/tbody/tr[{0}]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Show_Dropdown_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_drdMultiSelect_btnImgdrd</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Show_Dropdown_OptionCheckbox_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_drdMultiSelect_chkBoxList']/tbody/tr[{0}]/td/span/input</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Show_Dropdown_OptionCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_drdMultiSelect_chkBoxList']/tbody/tr</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_ViewBy_Dropdown_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_ucSearchViewOptions_drpViews</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_FirstContent_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/div/div/table[1]/tbody/tr/td[3]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_SecondContent_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/div/div/table[2]/tbody/tr/td[3]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_FirstActivity_Value" xml:space="preserve">
+    <value>PA-01 Span Practice- Vocabulary: Saludos, despedidas y presentaciones</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_ContentCheckbox_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/div[2]/div[5]/table[{0}]/tbody/tr/td/input</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_ContentCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/div[2]/div[5]/table</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_ContentName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/div[2]/div[5]/table[{0}]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_ContentStatus_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/div[2]/div[5]/table[{0}]/tbody/tr/td[4]/div/div/div[2]/img</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssignUnassign_Button_DisabledState_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblMain']/tbody/tr[2]/td[@class='tdassignunassignshowhide']/div/a[@class='btn_AddContent2_off']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssignUnassign_Button_Id_Locator" xml:space="preserve">
+    <value>ctl00$ctl00$phBody$PageContent$ucLeftNavigationContainer$ucContentFilter$btnAssignUnassign</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Content_Expand_Button_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/table[2]/tbody/tr/td/img[contains(@src,'/Pegasus/images/Calendar/iconPlus.gif')]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssignCourseMaterials_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_calendarContainer_ucCalHeader_AsgnCourse</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssignedCountText_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_lblDueAssignmentsTodayHeaderText</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssignedText_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_lblNoDueAsgmtTxt</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Day_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_calendarContainer_ucCalHeader_btnDayView</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Month_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_calendarContainer_ucCalHeader_btnMonthView</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_ViewAdvancedCalendar_Button_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_calendarContainer_ucCalHeader_ViewAdvCal</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Week_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_calendarContainer_ucCalHeader_btnWeekView</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_CurrentDate_Xpath_Locator" xml:space="preserve">
+    <value>//td[@class='HighlightTodayCell']/div[2]/div[3][contains(@id,'ctl00_ctl00_phBody_PageContent')]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AddNote_Xpath_Locator" xml:space="preserve">
+    <value>//input[@class='dvAddNotesButtonCss']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_CalendarIcon_Id_Locator" xml:space="preserve">
+    <value>dueImgAssignment</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_SetSchedulingOptions_Id_Locator" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AllItems_Option_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_drdMultiSelect_chkBoxList_0</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_ItemsAssigned_Option_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_drdMultiSelect_chkBoxList_1</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_ShownItems_Option_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_drdMultiSelect_chkBoxList_6</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Show_Apply_Button_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_drdMultiSelect_btnApply</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_InstructorGraded_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_drdMultiSelect_chkBoxList_3</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_FailureMessage_Classname_Locator" xml:space="preserve">
+    <value>ES_NoRecordMessage</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssetCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/table</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssetName_CheckboxXpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/table[{0}]/tbody/tr/td/input</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssetName_Drag_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/table[{0}]/tbody/tr/td[3]/table/tbody/tr/td</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssetName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/table[{0}]</value>
+  </data>
+</root>

@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PostRestService_Page_ClassEvent_TestClient_Key_Value" xml:space="preserve">
+    <value>ProsperoClassEventTestClientURL</value>
+  </data>
+  <data name="PostRestService_Page_JsonRequest_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtJson</value>
+  </data>
+  <data name="PostRestService_Page_JSON_Create_Request" xml:space="preserve">
+    <value>{{'section':{{'id':'{0}','operation':'Create','sectionData':{{'sectionInfo':{{'sectionCode':'SectionCode','sectionName':'{1}','organizationId':'{2}','deleted':false,'sessionInfo':{{'name':'CourseTitleGG888info','type':'SessionType','beginDate':'2013-04-26','endDate':'2014-05-15','schoolYear':2013}},'courseInfo':{{'code':'0002','title':'CourseTitleGG888'}}}},'students':[{{'piUserId':'{3}','enrollmentStartDate':'26-04-2013:23:30:45','enrollmentEndDate':'25-04-2014:23:30:45','operation':'Create'}}],'staff':[{{'piUserId':'{4}','enrollmentStartDate':'26-04-2013:23:30:45','enrollmentEndDate':'26-04-2014:23:30:45','classProductModifiedBy':true,'operation':'Create','teacherOfRecord':true}}],'productsInfo':[{{'productId':'{5}','operation':'Create'}}]}}}}}}</value>
+  </data>
+  <data name="PostRestService_Page_JSON_Unenroll_Request" xml:space="preserve">
+    <value>{{'section':{{'id':'{0}','operation':'Update','sectionData':{{'sectionInfo':{{'sectionCode':'SectionCode','sectionName':'{1}','organizationId':'{2}','deleted':false}},'staff':[{{'piUserId':'{3}','enrollmentStartDate':'03-09-2012:23:30:45','enrollmentEndDate':'03-09-2012:23:30:45','operation':'Delete'}}]}}}}}}</value>
+  </data>
+  <data name="PostRestService_Page_JSON_Update_Request" xml:space="preserve">
+    <value>{{'section':{{'id':'{0}','operation':'Update','sectionData':{{'sectionInfo':{{'sectionCode':'SectionCode','sectionName':'{1}','organizationId':'{2}','deleted':false}},'staff':[{{'piUserId':'{3}','enrollmentStartDate':'03-09-2012:23:30:45','enrollmentEndDate':'03-09-2012:23:30:45','operation':'Create'}}]}}}}}}</value>
+  </data>
+  <data name="PostRestService_Page_PostServiceURL_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtUrl</value>
+  </data>
+  <data name="PostRestService_Page_Post_Button_Id_Locator" xml:space="preserve">
+    <value>btnPost</value>
+  </data>
+  <data name="PostRestService_Page_Relative_Path" xml:space="preserve">
+    <value>Pegasus.Integration.RestApi/ServiceApi/cms/class</value>
+  </data>
+  <data name="PostRestService_Page_Request_URL" xml:space="preserve">
+    <value>RestServiceURL</value>
+  </data>
+  <data name="PostRestService_Page_Response_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtResponse</value>
+  </data>
+  <data name="PostRestServicePage_GBR_item_URL" xml:space="preserve">
+    <value>/items</value>
+  </data>
+  <data name="PostRestService_Page_JSON_GBR_Request" xml:space="preserve">
+    <value>[{{'grades': [{{'isVisible': false,'lastModified': '2014-02-26T23:12:15.128Z','id': '4458374b-0a68-4af5-972f-0f0b8bf33daf1','duration': 122,'itemId': '0891e3a9-6982-4e38-9b0d-510eb98202ae2','userId': '5000000000002667','courseId': '{0}','pointsReceived': 34,'extraCreditPointsReceived': 0,'letterGrade': 'B'}},{{'isVisible': false,'lastModified': '2014-02-26T23:12:15.128Z','id': '559f515f-67bb-45ff-b398-519b2ae9b4ec2','duration': 101,'itemId': '0891e3a9-6982-4e38-9b0d-510eb98202ae2','userId': '5000000000002667','courseId': '{1}','pointsReceived': 54,'extraCreditPointsReceived': 0,'letterGrade': 'A'}}],'lastModified': '2014-02-26T23:12:15.128Z','id': '0891e3a9-6982-4e38-9b0d-510eb98202ae2','description': 'desc','categoryId': '6f25c030-91fb-42f9-b76a-e7a05c305bbd1','courseId': '{2}','title': 'WS Activity AAA','startDate': '2014-01-15T23:05:30.280Z','dueDate': '2014-06-15T22:05:30.280Z','pointsPossible': 64,'extraCreditPointsPossible': 0,'isVisible': false,'isIncludedInTotal': true}},{{'grades': [{{'isVisible': true,'lastModified': '2013-04-26T16:13:56.001Z','id': 'a20a8bd3-fa44-46c9-9cc4-6942ca5428c84','duration': 0,'itemId': '0a81bc7e-3c5a-48b1-b5e9-771bc54f7b7b4','userId': '5000000000002667','courseId': '{3}','pointsReceived': 10,'extraCreditPointsReceived': 0,'letterGrade': 'C'}}],'lastModified': '2013-04-26T16:13:56.001Z','id': '0a81bc7e-3c5a-48b1-b5e9-771bc54f7b7b4','description': 'desc','categoryId': '0bd2d1de-4cd6-427d-a448-8975600ce7a63','courseId': '{4}','title': 'WS Activity BBB','startDate': '2014-01-15T16:51:54.686Z','dueDate': '2014-06-15T15:51:54.686Z','pointsPossible': 100,'extraCreditPointsPossible': 0,'isVisible': false,'isIncludedInTotal': true}}]</value>
+  </data>
+  <data name="PostRestServicePage_Authorization_KeyValue" xml:space="preserve">
+    <value>ABCxyz123</value>
+  </data>
+  <data name="PostRestServicePage_Authorization_Key_TextBox_Id_Locator" xml:space="preserve">
+    <value>MainContent_txtAuthToken</value>
+  </data>
+  <data name="PostRestServicePage_ExternalCourseId_Button_Id_Locator" xml:space="preserve">
+    <value>MainContent_btnGetExternalCourseID</value>
+  </data>
+  <data name="PostRestServicePage_ExternalCourseId_TextBox_Id_Locator" xml:space="preserve">
+    <value>MainContent_txtExternalCourseID</value>
+  </data>
+  <data name="PostRestServicePage_FetchExternalCourse_Window_Name" xml:space="preserve">
+    <value>Fetch External Course</value>
+  </data>
+  <data name="PostRestServicePage_PegasusCourseId_TextBox_Id_Locator" xml:space="preserve">
+    <value>MainContent_txtPegCourseID</value>
+  </data>
+  <data name="PostRestService_Page_ItemPostJSON_GBR_Request" xml:space="preserve">
+    <value>{
+"courseId" : "{0}",
+"externalPartnerId" : "WritingSpace_Peg",
+"externalInstitutionId" : "eCollege",
+"externalCourseId" : "{1}",
+"providerItemId" : "Peg:abc1234",
+   "title" : "{2}",
+   "description" : "The first assignment",
+   "pointsPossible" : 100.0,
+   "extraCreditPointsPossible" : 0.0,
+   "isVisible" : true
+}</value>
+  </data>
+  <data name="PostRestServicePage_HomePage_Mock_Window_Name" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="PostRestServicePage_MockApplication_ExecuteButton_Id_Locator" xml:space="preserve">
+    <value>MainContent_btnExecute</value>
+  </data>
+  <data name="PostRestServicePage_requestbody_Activity_Value" xml:space="preserve">
+    <value>{2}</value>
+  </data>
+  <data name="PostRestServicePage_requestbody_CourseId_Value" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="PostRestServicePage_requestbody_ExternalCourseId_Value" xml:space="preserve">
+    <value>{1}</value>
+  </data>
+  <data name="PostRestServicePage_RequestBody_TextBox_Id_Locator" xml:space="preserve">
+    <value>MainContent_txtRequestBody</value>
+  </data>
+  <data name="PostRestServicePage_ResponseBody_TextBox_Id_Locator" xml:space="preserve">
+    <value>MainContent_txtResponse</value>
+  </data>
+  <data name="PostRestServicePage_Split_Array_FirstValue" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PostRestServicePage_Split_Array_SecondValue" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PostRestServicePage_Split_Array_ZeroValue" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PostRestServicePage_Split_ColonSeperated" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="PostRestServicePage_Split_MultipleSeperated_Value" xml:space="preserve">
+    <value>id\":\"</value>
+  </data>
+  <data name="PostRestServicePage_Split_Quotes_Value" xml:space="preserve">
+    <value>"</value>
+  </data>
+  <data name="PostRestServicePage_RequestType_Dropdown_Id_Locator" xml:space="preserve">
+    <value>MainContent_drRequestType</value>
+  </data>
+  <data name="PostRestServicePage_URL_Text_Id_Locator" xml:space="preserve">
+    <value>MainContent_txtURL</value>
+  </data>
+  <data name="PostRestServicePage_HeaderUrl_Appendgrades" xml:space="preserve">
+    <value>/grades</value>
+  </data>
+  <data name="PostRestServicePage_HeaderUrl_Slash_Character" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="PostRestService_Page_GradePostJSON_GBR_Request" xml:space="preserve">
+    <value>{
+  "externalUserId": "2137526",
+  "userId": 2137526,
+  "pointsReceived": "80",
+  "letterGrade": "",
+  "comments": "",
+  "lastModified": "2014-03-19T05:05:15Z",
+   "courseId" : "{0}",
+   "externalPartnerId" : "WritingSpace_Peg",
+   "externalInstitutionId" : "eCollege",
+   "externalCourseId" : "{1}",
+   "providerItemId" : "06f15fb8-9bc3-40b9-9cbb-98d93ff08c16"
+}</value>
+  </data>
+  <data name="PostRestServicePage_Element_Delay" xml:space="preserve">
+    <value>3000</value>
+  </data>
+</root>

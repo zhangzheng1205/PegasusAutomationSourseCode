@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="PegasusDemo1" storage="d:\bdd_automation\pegasus.testautomation\pegasustestscripts\testsuiteorder\pegasusdemo1.orderedtest" id="3d23da47-9af4-4fdb-8a5f-9ebee4b8c857" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="0f819292-189a-c577-de16-dc8eaf65b6d2" name="CreateDistrictLevelOfOrganizationInCs" storage="..\bin\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b6f51963-c253-c93b-a5a0-2acbc0b3bbe2" name="CreateSchoolLevelOfOrganizationInCs" storage="..\bin\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="805da0db-d3da-829d-3526-ef1bbc027191" name="ApproveTheMasterLibraryCourseSInCs" storage="..\bin\pegasustestscripts.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

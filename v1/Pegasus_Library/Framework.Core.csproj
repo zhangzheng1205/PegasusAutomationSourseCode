@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3EACFF0A-8789-4E72-8B0F-1F271369BBBC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pegasus_Library</RootNamespace>
+    <AssemblyName>Pegasus_Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\ExternalAssemblies\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\ExternalAssemblies\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\ExternalAssemblies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\Framework.Core\bin\Debug\Microsoft.VisualStudio.TestTools.UITesting.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\ExternalAssemblies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Selenium.WebDriverBackedSelenium">
+      <HintPath>..\..\ExternalAssemblies\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\..\ExternalAssemblies\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\..\ExternalAssemblies\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code_Base\BasePage.cs" />
+    <Compile Include="Library\GenericHelper.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Common\ShowMessagePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\LoginPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Activity\ContentBrowserUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Activity\ContentLibraryUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Activity\CourseContentUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Activity\FillInTheBlanksPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Activity\MultipleChoicePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Activity\MyPegasusUxPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Activity\QLGridUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Activity\SpreadSheetImportPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Activity\Admin\AdminToolPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Activity\Admin\Course\NewCoursePage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Admin\Enrollment\EnrollClassesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Admin\Enrollment\UserEnrollmentPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Admin\templatesclassmanagement\classes\CreateClassCoursePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Admin\User\AdduserPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Admin\User\ImportUsersPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Admin\User\ManageUserPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Admin\User\NewUserPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\AssessmentSchedule\AssignContentPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\AssessmentTool\AddAssessmentPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\AssessmentTool\Presentation\ErrorMessagePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\AssessmentTool\Presentation\InstructorPresentationPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\AssessmentTool\Presentation\PresentationPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\AssessmentTool\Presentation\StudentPresentationPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\AssessmentTool\RandomAssessmentPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\AssessmentTool\RandomTopicListPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\AssessmentTool\SelectQuestionTypePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\AssessmentTool\ViewSubmission\ViewSubmissionPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Calendar\CalendarDefaultUX.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Calendar\DRTDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\CatalogInstructor\HEDGlobalHomePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Course Preference\ActivityPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Course Preference\CourseContentPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Course Preference\CourseCopyPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Course Preference\CustomContentPreferencePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Course Preference\MyCoursesPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Course Preference\SharedLibraryPreferencePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\CourseCatalog\CourseCatalogMainPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Coursesettings\ActivitiesPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Coursesettings\DefaultPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Coursesettings\GeneralPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Coursesettings\RosterPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Coursesettings\StandardSkillPreferencesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Create Class\CreateNewClassPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Create Class\ManageClassManagementPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\DRT\DRTDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\DRT\DRTStudentUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\GradeBook\GBDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\GradeBook\GBInstructorUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\GradeBook\GBRoasterDefaultPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\GradeBook\GBRoasterGridUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\GradeBook\GBStudentPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\MyPegasus\MyClassdefaultPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\MyPegasus\MyPegasusPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\MyPrefernce\MyAccountSettingPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\OrganizationManagement\CreateOrganisationPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\PegasusTest\AssessmentNamePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\PegasusTest\MyTestGridUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\PegasusTest\MyTestUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\PegasusTest\PaperTestUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Planner\Calendar\CalendarHEDDefaultUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Planner\Calendar\HEDCalenderMonthPopUpPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Planner\Calendar\ShowAssignedContentListPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Product Licensing\CreateLicensePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Product Licensing\LicensesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Product Licensing\ManageOrganizationPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Product Licensing\OrganizationManagementPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Product Licensing\ProductDefaultPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\ProgramAdmin\CourseTemplates\AddNewTemplatePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\ProgramAdmin\CourseTemplates\ManageTemplatePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\ProgramAdmin\ProgramAdminToolPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\ProgramAdmin\Sections\AddNewSectionPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\QuestionLibrary\TrueFalsePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Reports\ReportsDRTModulePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Reports\RptSelectAssessmentsPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Reports\RptSelectStudentsPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Reports\RptCommonCriteriaPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Reports\RptDetailedStudentActivityPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Reports\RptGCOptionsUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Reports\RptMainPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Reports\RptStudentActivityPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\SkillStandardIntegration\AlignContentsToSkillPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\AddButtonPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\CourseEnrollmentModePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ListCoursesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ManageProductsPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\NewProductPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProductSearchPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProgramCreatePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\ProgramManagementPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\SMSIntegration\ProgramManagement\PublishingNotesPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\SMSUserCreation\FrmRegisterPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\StudyMaterialsExplorer\StudentExplorePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\TeachingPlan\ContentBrowserMainUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\TeachingPlan\ContentLibraryUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\TeachingPlan\CoursePreviewMainUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\TeachingPlan\StudTodoDonePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\TeachingPlan\TeachingplanUXPage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Template\AddTemplatePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\Template\ManageTemplatePage.cs" />
+    <Compile Include="UI Pages\Pages\Pegasus\Modules\TodaysView\TodaysViewPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FrameWork.Common\Framework.Common.csproj">
+      <Project>{DDD89A92-09DD-4EAD-B99A-3C98A3212E6D}</Project>
+      <Name>Framework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pegasus_DataAccess\Framework.DataManager.csproj">
+      <Project>{C43633D4-A9BE-440C-9FC2-08A4ED7CF64B}</Project>
+      <Name>Framework.DataManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI Pages\Pages\Pegasus\Modules\Activity\Admin\User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8A1FDFC-3D79-45C8-9E6D-D42CE25C1856}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PegasusTestScripts</RootNamespace>
+    <AssemblyName>PegasusTestScripts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\ExternalAssemblies\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\ExternalAssemblies\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\ExternalAssemblies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\ExternalAssemblies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Selenium.WebDriverBackedSelenium">
+      <HintPath>..\..\ExternalAssemblies\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\..\ExternalAssemblies\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\..\ExternalAssemblies\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseTestScript.cs" />
+    <Compile Include="Smoke_Features\US58861_Feature.ActivityCreationInWs.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58861_Feature.ActivityCreationInWs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58857_Feature.CourseCreationInWs.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58857_Feature.CourseCreationInWs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Smoke_Features\US58864_Feature.OrganizationCreationInCs.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58864_Feature.OrganizationCreationInCs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58866 _Feature.ViewReports.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58866 _Feature.ViewReports.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58867_Feature.ProductLicensing.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58867_Feature.ProductLicensing.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58868_Feature.TemplateCreationInCS.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58868_Feature.TemplateCreationInCS.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58869_Feature.ClassCreationInCS.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58869_Feature.ClassCreationInCS.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58870_Feature.User%28s%29CreationInCs.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58870_Feature.User%28s%29CreationInCs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58871_Feature.UserEnrollmentInClass.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58871_Feature.UserEnrollmentInClass.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58873_Feature.ViewSubmission.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58873_Feature.ViewSubmission.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58877_Feature.TeacherDashboard.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58877_Feature.TeacherDashboard.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US59275_Feature.CourseAssociationToProductInCs.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US59275_Feature.CourseAssociationToProductInCs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US59015_Feature.CoursePreferenceSettinginWS.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US59015_Feature.CoursePreferenceSettinginWS.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58860_Feature.ManageQuestionCreation.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58860_Feature.ManageQuestionCreation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58865_Feature.ProductCreationInCs.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58865_Feature.ProductCreationInCs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58863_Feature.ProgramCreationInCs.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58863_Feature.ProgramCreationInCs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58862_Feature.PublishCourseInWs.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58862_Feature.PublishCourseInWs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58858_Feature.UserCreationInWs.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58858_Feature.UserCreationInWs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58859_Feature.UserEnrollmentInWs.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58859_Feature.UserEnrollmentInWs.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US60228_FeatureCourseCreationbyCsTeacher.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US60228_FeatureCourseCreationbyCsTeacher.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US60229_Feature.UserEnrollmentsByCsTeacher.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US60229_Feature.UserEnrollmentsByCsTeacher.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US60230_Feature.CalendarCreationinCS.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US60230_Feature.CalendarCreationinCS.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US61717_Feature.CourseCopyCreation.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US61717_Feature.CourseCopyCreation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Smoke_Features\US58875_Feature.ViewGrades.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>US58875_Feature.ViewGrades.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Step_Definitions\ActivityCreationinWS_Definitions.cs" />
+    <Compile Include="Step_Definitions\CalendarCreationInCS_Definitions.cs" />
+    <Compile Include="Step_Definitions\ClassCreationInCS_Definitions.cs" />
+    <Compile Include="Step_Definitions\CourseAssociationToProductInCs_Definitions.cs" />
+    <Compile Include="Step_Definitions\CourseCopyCreation_Definitions.cs" />
+    <Compile Include="Step_Definitions\CourseCreationbyCsTeacher_Definitions.cs" />
+    <Compile Include="Step_Definitions\CourseCreationInWs_Definitions.cs" />
+    <Compile Include="Step_Definitions\CoursePreferenceSettinginWS_Definitions.cs" />
+    <Compile Include="Step_Definitions\GenericDefinitions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Step_Definitions\OrganizationCreationInCs_Definitions.cs" />
+    <Compile Include="Step_Definitions\ProductCreationInCs_Definitions.cs" />
+    <Compile Include="Step_Definitions\ProductLicensinginCS_Definitions.cs" />
+    <Compile Include="Step_Definitions\ProgramCreationInCs_Definitions.cs" />
+    <Compile Include="Step_Definitions\PublishCourseInWs_Definitions.cs" />
+    <Compile Include="Step_Definitions\TeacherDashboard_Definitions.cs" />
+    <Compile Include="Step_Definitions\TemplateCreationInCS_Definitions.cs" />
+    <Compile Include="Step_Definitions\User%28s%29CreationInCs_Definitions.cs" />
+    <Compile Include="Step_Definitions\UserCreationInWs_Definitions.cs" />
+    <Compile Include="Step_Definitions\UserEnrollmentInClass_Definitions.cs" />
+    <Compile Include="Step_Definitions\UserEnrollmentInWs_Definitions.cs" />
+    <Compile Include="Step_Definitions\UserEnrollmentsByCsTeacher_Definitions.cs" />
+    <Compile Include="Step_Definitions\ViewGrades_Definitions.cs" />
+    <Compile Include="Step_Definitions\ViewReportsInCS_Defintions.cs" />
+    <Compile Include="Step_Definitions\ViewSubmissionInCS_Definitions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bulk Upload Import\BulkUser_Template.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Smoke_Features\US58866 _Feature.ViewReports.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58866 _Feature.ViewReports.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58877_Feature.TeacherDashboard.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58877_Feature.TeacherDashboard.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US60228_FeatureCourseCreationbyCsTeacher.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US60228_FeatureCourseCreationbyCsTeacher.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US60229_Feature.UserEnrollmentsByCsTeacher.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US60229_Feature.UserEnrollmentsByCsTeacher.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US60230_Feature.CalendarCreationinCS.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US60230_Feature.CalendarCreationinCS.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US61717_Feature.CourseCopyCreation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US61717_Feature.CourseCopyCreation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58875_Feature.ViewGrades.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58875_Feature.ViewGrades.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestSuiteOrder\PegasusSTNovaNETWSUseCases.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestSuiteOrder\PegasusSTNovaNETCSUseCases.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestSuiteOrder\PegasusSTNovaNETCSStudentUseCases.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestSuiteOrder\PegasusSTNovaNETCSTeacherUseCases.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestSuiteOrder\PegasusDemo1.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestSuiteOrder\PegasusST.OrderedTest.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\BulkUser_Template.xls" />
+    <None Include="Smoke_Features\US58861_Feature.ActivityCreationInWs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58861_Feature.ActivityCreationInWs.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58857_Feature.CourseCreationInWs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58857_Feature.CourseCreationInWs.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Smoke_Features\US58864_Feature.OrganizationCreationInCs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58864_Feature.OrganizationCreationInCs.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58867_Feature.ProductLicensing.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58867_Feature.ProductLicensing.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58868_Feature.TemplateCreationInCS.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58868_Feature.TemplateCreationInCS.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58869_Feature.ClassCreationInCS.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58869_Feature.ClassCreationInCS.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58870_Feature.User%28s%29CreationInCs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58870_Feature.User%28s%29CreationInCs.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58871_Feature.UserEnrollmentInClass.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58871_Feature.UserEnrollmentInClass.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58873_Feature.ViewSubmission.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58873_Feature.ViewSubmission.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US59275_Feature.CourseAssociationToProductInCs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US59275_Feature.CourseAssociationToProductInCs.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US59015_Feature.CoursePreferenceSettinginWS.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US59015_Feature.CoursePreferenceSettinginWS.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58860_Feature.ManageQuestionCreation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58860_Feature.ManageQuestionCreation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58865_Feature.ProductCreationInCs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58865_Feature.ProductCreationInCs.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58863_Feature.ProgramCreationInCs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58863_Feature.ProgramCreationInCs.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58862_Feature.PublishCourseInWs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58862_Feature.PublishCourseInWs.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58858_Feature.UserCreationInWs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58858_Feature.UserCreationInWs.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Smoke_Features\US58859_Feature.UserEnrollmentInWs.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>US58859_Feature.UserEnrollmentInWs.feature.cs</LastGenOutput>
+    </None>
+    <None Include="specflow.exe.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Library_Methods\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.CommonBase.TestScript\Framework.CommonBase.TestScript.csproj">
+      <Project>{E8164F5A-4B0D-4206-BCEA-E05C6E6653AF}</Project>
+      <Name>Framework.CommonBase.TestScript</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameWork.Common\Framework.Common.csproj">
+      <Project>{DDD89A92-09DD-4EAD-B99A-3C98A3212E6D}</Project>
+      <Name>Framework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pegasus_DataAccess\Framework.DataManager.csproj">
+      <Project>{C43633D4-A9BE-440C-9FC2-08A4ED7CF64B}</Project>
+      <Name>Framework.DataManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pegasus_Library\Framework.Core.csproj">
+      <Project>{3EACFF0A-8789-4E72-8B0F-1F271369BBBC}</Project>
+      <Name>Framework.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

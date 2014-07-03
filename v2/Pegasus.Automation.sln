@@ -1,0 +1,156 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Automation", "Pegasus.Automation\Pegasus.Automation.csproj", "{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.HigherEducationCore.Tests", "Pegasus.Acceptance.HigherEducationCore.Tests\Pegasus.Acceptance.HigherEducationCore.Tests.csproj", "{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{30917346-01F2-42D8-866B-65D7902C1358}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Pegasus.Automation.vsmdi = Pegasus.Automation.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Pages", "Pegasus.Pages\Pegasus.Pages.csproj", "{D4D42739-288C-421F-A3AA-5DC32CB0C5D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.DigitalPath.Tests", "Pegasus.Acceptance.DigitalPath.Tests\Pegasus.Acceptance.DigitalPath.Tests.csproj", "{314F873A-6C54-49A6-B15E-92CE71C5A50F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.NovaNET.Tests", "Pegasus.Acceptance.NovaNET.Tests\Pegasus.Acceptance.NovaNET.Tests.csproj", "{67D6010B-4724-426B-860B-6DE57D4474A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.Contineo.Tests", "Pegasus.Acceptance.Contineo.Tests\Pegasus.Acceptance.Contineo.Tests.csproj", "{4BBBA6BD-D332-447E-903D-1B3A432C0BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.ETextS11.Tests", "Pegasus.Integration.ETextS11.Tests\Pegasus.Integration.ETextS11.Tests.csproj", "{A3A750FE-71D4-438F-B27F-C8F459B088AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.MLP.Tests", "Pegasus.Integration.MLP.Tests\Pegasus.Integration.MLP.Tests.csproj", "{8413E51E-C450-4694-8C0E-A89145EA3E91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MyItLab.Tests", "Pegasus.Acceptance.MyItLab.Tests\Pegasus.Acceptance.MyItLab.Tests.csproj", "{CC79FB91-DC29-4CE7-93C4-F091E330B357}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.MGM.Tests", "Pegasus.Integration.MGM.Tests\Pegasus.Integration.MGM.Tests.csproj", "{ADA54BAB-4A0F-405B-97E3-5974DB4FCF6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MMND.Tests", "Pegasus.Acceptance.MMND.Tests\Pegasus.Acceptance.MMND.Tests.csproj", "{C8DF9080-AC3A-4A60-89A8-D5A159B86865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MyTest.Tests", "Pegasus.Acceptance.MyTest.Tests\Pegasus.Acceptance.MyTest.Tests.csproj", "{5CF79D9E-1F1A-4D07-B433-FEA5D844DFC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.WritingSpace.Tests", "Pegasus.Acceptance.WritingSpace.Tests\Pegasus.Acceptance.WritingSpace.Tests.csproj", "{BA06F996-39AE-460C-8A62-99768BC4B215}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MyItLab.GraderIT.Tests", "Pegasus.Acceptance.MyItLab.GraderIT.Tests\Pegasus.Acceptance.MyItLab.GraderIT.Tests.csproj", "{5416BB71-2D64-4EC1-B330-CE1478603181}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 15
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://pegasustfs.excelindia.com:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Pegasus.Automation\\Pegasus.Automation.csproj
+		SccProjectName1 = Pegasus.Automation
+		SccLocalPath1 = Pegasus.Automation
+		SccProjectUniqueName2 = Pegasus.Pages\\Pegasus.Pages.csproj
+		SccProjectName2 = Pegasus.Pages
+		SccLocalPath2 = Pegasus.Pages
+		SccProjectUniqueName3 = Pegasus.Integration.ETextS11.Tests\\Pegasus.Integration.ETextS11.Tests.csproj
+		SccProjectName3 = Pegasus.Integration.ETextS11.Tests
+		SccLocalPath3 = Pegasus.Integration.ETextS11.Tests
+		SccProjectUniqueName4 = Pegasus.Integration.MLP.Tests\\Pegasus.Integration.MLP.Tests.csproj
+		SccProjectName4 = Pegasus.Integration.MLP.Tests
+		SccLocalPath4 = Pegasus.Integration.MLP.Tests
+		SccProjectUniqueName5 = Pegasus.Acceptance.MyItLab.Tests\\Pegasus.Acceptance.MyItLab.Tests.csproj
+		SccProjectName5 = Pegasus.Acceptance.MyItLab.Tests
+		SccLocalPath5 = Pegasus.Acceptance.MyItLab.Tests
+		SccProjectUniqueName6 = Pegasus.Integration.MGM.Tests\\Pegasus.Integration.MGM.Tests.csproj
+		SccProjectName6 = Pegasus.Integration.MGM.Tests
+		SccLocalPath6 = Pegasus.Integration.MGM.Tests
+		SccProjectUniqueName7 = Pegasus.Acceptance.MMND.Tests\\Pegasus.Acceptance.MMND.Tests.csproj
+		SccProjectName7 = Pegasus.Acceptance.MMND.Tests
+		SccLocalPath7 = Pegasus.Acceptance.MMND.Tests
+		SccProjectUniqueName8 = Pegasus.Acceptance.NovaNET.Tests\\Pegasus.Acceptance.NovaNET.Tests.csproj
+		SccProjectName8 = Pegasus.Acceptance.NovaNET.Tests
+		SccLocalPath8 = Pegasus.Acceptance.NovaNET.Tests
+		SccProjectUniqueName9 = Pegasus.Acceptance.Contineo.Tests\\Pegasus.Acceptance.Contineo.Tests.csproj
+		SccProjectName9 = Pegasus.Acceptance.Contineo.Tests
+		SccLocalPath9 = Pegasus.Acceptance.Contineo.Tests
+		SccProjectUniqueName10 = Pegasus.Acceptance.DigitalPath.Tests\\Pegasus.Acceptance.DigitalPath.Tests.csproj
+		SccProjectName10 = Pegasus.Acceptance.DigitalPath.Tests
+		SccLocalPath10 = Pegasus.Acceptance.DigitalPath.Tests
+		SccProjectUniqueName11 = Pegasus.Acceptance.MyTest.Tests\\Pegasus.Acceptance.MyTest.Tests.csproj
+		SccProjectName11 = Pegasus.Acceptance.MyTest.Tests
+		SccLocalPath11 = Pegasus.Acceptance.MyTest.Tests
+		SccProjectUniqueName12 = Pegasus.Acceptance.HigherEducationCore.Tests\\Pegasus.Acceptance.HigherEducationCore.Tests.csproj
+		SccProjectName12 = Pegasus.Acceptance.HigherEducationCore.Tests
+		SccLocalPath12 = Pegasus.Acceptance.HigherEducationCore.Tests
+		SccProjectUniqueName13 = Pegasus.Acceptance.WritingSpace.Tests\\Pegasus.Acceptance.WritingSpace.Tests.csproj
+		SccProjectName13 = Pegasus.Acceptance.WritingSpace.Tests
+		SccLocalPath13 = Pegasus.Acceptance.WritingSpace.Tests
+		SccProjectUniqueName14 = Pegasus.Acceptance.MyItLab.GraderIT.Tests\\Pegasus.Acceptance.MyItLab.GraderIT.Tests.csproj
+		SccProjectName14 = Pegasus.Acceptance.MyItLab.GraderIT.Tests
+		SccLocalPath14 = Pegasus.Acceptance.MyItLab.GraderIT.Tests
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Pegasus.Automation.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D42739-288C-421F-A3AA-5DC32CB0C5D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D42739-288C-421F-A3AA-5DC32CB0C5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D42739-288C-421F-A3AA-5DC32CB0C5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D42739-288C-421F-A3AA-5DC32CB0C5D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{314F873A-6C54-49A6-B15E-92CE71C5A50F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{314F873A-6C54-49A6-B15E-92CE71C5A50F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{314F873A-6C54-49A6-B15E-92CE71C5A50F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{314F873A-6C54-49A6-B15E-92CE71C5A50F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D6010B-4724-426B-860B-6DE57D4474A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D6010B-4724-426B-860B-6DE57D4474A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D6010B-4724-426B-860B-6DE57D4474A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D6010B-4724-426B-860B-6DE57D4474A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BBBA6BD-D332-447E-903D-1B3A432C0BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BBBA6BD-D332-447E-903D-1B3A432C0BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BBBA6BD-D332-447E-903D-1B3A432C0BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BBBA6BD-D332-447E-903D-1B3A432C0BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3A750FE-71D4-438F-B27F-C8F459B088AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A750FE-71D4-438F-B27F-C8F459B088AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A750FE-71D4-438F-B27F-C8F459B088AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A750FE-71D4-438F-B27F-C8F459B088AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8413E51E-C450-4694-8C0E-A89145EA3E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8413E51E-C450-4694-8C0E-A89145EA3E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8413E51E-C450-4694-8C0E-A89145EA3E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8413E51E-C450-4694-8C0E-A89145EA3E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC79FB91-DC29-4CE7-93C4-F091E330B357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC79FB91-DC29-4CE7-93C4-F091E330B357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC79FB91-DC29-4CE7-93C4-F091E330B357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC79FB91-DC29-4CE7-93C4-F091E330B357}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA54BAB-4A0F-405B-97E3-5974DB4FCF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA54BAB-4A0F-405B-97E3-5974DB4FCF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA54BAB-4A0F-405B-97E3-5974DB4FCF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA54BAB-4A0F-405B-97E3-5974DB4FCF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8DF9080-AC3A-4A60-89A8-D5A159B86865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8DF9080-AC3A-4A60-89A8-D5A159B86865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8DF9080-AC3A-4A60-89A8-D5A159B86865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8DF9080-AC3A-4A60-89A8-D5A159B86865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CF79D9E-1F1A-4D07-B433-FEA5D844DFC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF79D9E-1F1A-4D07-B433-FEA5D844DFC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF79D9E-1F1A-4D07-B433-FEA5D844DFC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF79D9E-1F1A-4D07-B433-FEA5D844DFC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA06F996-39AE-460C-8A62-99768BC4B215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA06F996-39AE-460C-8A62-99768BC4B215}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA06F996-39AE-460C-8A62-99768BC4B215}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA06F996-39AE-460C-8A62-99768BC4B215}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5416BB71-2D64-4EC1-B330-CE1478603181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5416BB71-2D64-4EC1-B330-CE1478603181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5416BB71-2D64-4EC1-B330-CE1478603181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5416BB71-2D64-4EC1-B330-CE1478603181}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

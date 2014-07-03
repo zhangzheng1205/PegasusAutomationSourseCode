@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NewProduct_Page_Discipline_DropDown_Id_Locator" xml:space="preserve">
+    <value>drpDiscipline</value>
+  </data>
+  <data name="NewProduct_Page_Discipline_DropDown_Value" xml:space="preserve">
+    <value>Art</value>
+  </data>
+  <data name="NewProduct_Page_Hed_SMSID_Value" xml:space="preserve">
+    <value>40153</value>
+  </data>
+  <data name="NewProduct_Page_IFrameSearchProgram_Id_Locator" xml:space="preserve">
+    <value>ifrmSearchProgram</value>
+  </data>
+  <data name="NewProduct_Page_PegasusDataGrid_Ctrl1_Id_Locator" xml:space="preserve">
+    <value>grdPegasusDataGrid$_ctrl1</value>
+  </data>
+  <data name="NewProduct_Page_PegasusDataGrid_Id_Locator" xml:space="preserve">
+    <value>grdPegasusDataGrid</value>
+  </data>
+  <data name="NewProduct_Page_Hed_ProductName_Id_Locator" xml:space="preserve">
+    <value>txtProgramName</value>
+  </data>
+  <data name="NewProduct_Page_ProgramType_CheckBox_Id_Locator" xml:space="preserve">
+    <value>chkIsProgram</value>
+  </data>
+  <data name="NewProduct_Page_RightSearch_Id_Locator" xml:space="preserve">
+    <value>ancRightSearch</value>
+  </data>
+  <data name="NewProduct_Page_SaveButton_Id_Locator" xml:space="preserve">
+    <value>imgbtnSave</value>
+  </data>
+  <data name="NewProduct_Page_SearchButton_Id_Locator" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="NewProduct_Page_SMSID_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtSMSID</value>
+  </data>
+  <data name="NewProduct_Page_Window_Title_Name" xml:space="preserve">
+    <value>Create New Product</value>
+  </data>
+  <data name="NewProduct_Page_SearchProgram_Title_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdPegasusDataGrid']/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="NewProduct_Page_AppConfig_Key" xml:space="preserve">
+    <value>TestDataFolder</value>
+  </data>
+  <data name="NewProduct_Page_BannerImage_Name" xml:space="preserve">
+    <value>\TestData\Product_Banner.png</value>
+  </data>
+  <data name="NewProduct_Page_Button_BrowseBannerImage_Id_Locator" xml:space="preserve">
+    <value>LogoImg</value>
+  </data>
+  <data name="NewProduct_Page_Button_BrowseIconImage_Id_Locator" xml:space="preserve">
+    <value>CatalogImage</value>
+  </data>
+  <data name="NewProduct_Page_IconImage_Name" xml:space="preserve">
+    <value>\TestData\Product_Icon.png</value>
+  </data>
+  <data name="NewProduct_Page_LicensingType_DropDown_Id_Locator" xml:space="preserve">
+    <value>DrpLicenseModel</value>
+  </data>
+  <data name="NewProduct_Page_Seat_LicensingType_DropDown_Value" xml:space="preserve">
+    <value>Seat</value>
+  </data>
+  <data name="NewProduct_Page_School_ProductName_Id_Locator" xml:space="preserve">
+    <value>txtProductName</value>
+  </data>
+  <data name="NewProduct_Page_ProductType_DropDown_Id_Locator" xml:space="preserve">
+    <value>drpProductType</value>
+  </data>
+  <data name="NewProduct_Page_Basal_ProductType_DropDown_Value" xml:space="preserve">
+    <value>Basal</value>
+  </data>
+  <data name="NewProduct_Page_SearchPrograms_Link_Id_Locator" xml:space="preserve">
+    <value>ancRightSearch</value>
+  </data>
+  <data name="NewProduct_Page_Concurrent_LicensingType_DropDown_Value" xml:space="preserve">
+    <value>Concurrent</value>
+  </data>
+  <data name="NewProduct_Page_NovaNET_ProductType_DropDown_Value" xml:space="preserve">
+    <value>NovaNet</value>
+  </data>
+  <data name="NewProduct_Page_MyItLabProgramAdminReporting_Id_Locator" xml:space="preserve">
+    <value>chkEnableITLab</value>
+  </data>
+  <data name="NewProduct_Page_SMSModule_Id_Key" xml:space="preserve">
+    <value>SMSModuleID</value>
+  </data>
+  <data name="NewProduct_Page_AccessCode_Characterset_Value" xml:space="preserve">
+    <value>REAL12345</value>
+  </data>
+  <data name="NewProduct_Page_AccessCode_Textbox_Id_Locator" xml:space="preserve">
+    <value>txtaccesscode</value>
+  </data>
+  <data name="NewProduct_Page_Button_BrowseWelcomeImage_Id_Locator" xml:space="preserve">
+    <value>welcomeImage</value>
+  </data>
+  <data name="NewProduct_Page_DemoProduct_Checkbox_Id_Locator" xml:space="preserve">
+    <value>chkdemoproduct</value>
+  </data>
+  <data name="NewProduct_Page_Welcome_Message_Editor_ID_Locator" xml:space="preserve">
+    <value>ucWelcomeEditor</value>
+  </data>
+  <data name="NewProduct_Page_Welcome_Message_WebEditor_ClassID_Locator" xml:space="preserve">
+    <value>WebEditor</value>
+  </data>
+</root>

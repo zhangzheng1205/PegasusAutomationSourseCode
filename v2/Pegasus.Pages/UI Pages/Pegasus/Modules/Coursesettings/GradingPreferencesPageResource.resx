@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GradingPreferencesPage_ApplyGradeSchema_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkGradeSchema</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailText_Xpath_Locator" xml:space="preserve">
+    <value>//span[@id='lblIncludeEmailInGBExportFile']</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailCheckBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkIncludeEmailInGBExportFile</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailCheckBox_Checked_Xpath_Locator" xml:space="preserve">
+    <value>//Input[@checked='checked']</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailCheckBox_LockOpen_Xpath_Locator" xml:space="preserve">
+    <value>//img[@class='imgOpenLockSmall']</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailCheckBox_LockClosed_Xpath_Locator" xml:space="preserve">
+    <value>//img[@class='imgCloseLock']</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailCheckBox_HelpIconById_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_HelpImage34</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailCheckBox_HelpIconToolTip_XPath_Locator" xml:space="preserve">
+    <value>//img[@title='More information']</value>
+  </data>
+  <data name="GradingPrefernces_Page_SavePreferences_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderHeader_lbtnSavePrefHeader</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailLock_Id_Locator" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMainLock_Id_Locator" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailCheckBox_Disabled_XPath_Locator" xml:space="preserve">
+    <value>//input[@disabled='disabled']</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailCheckBox_MessageBoard_Table_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl1_MsgBoard_placeHolderMessageBoard</value>
+  </data>
+  <data name="GradingPrefernces_Page_DownloadPreferenceIcon_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderHeader_imgDownload</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailCheckBox_Download_Temp_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderHeader_DownDrop</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailCheckBox_Download_CP_Locator" xml:space="preserve">
+    <value>//select[@id='_ctl0_ContentHolderHeader_DownDrop']/option[1][@selected='selected']</value>
+  </data>
+  <data name="GradingPrefernces_Page_GetIncludeMailCheckBox_Download_AP_Locator" xml:space="preserve">
+    <value>//select[@id='_ctl0_ContentHolderHeader_DownDrop']/option[2][@selected='selected']</value>
+  </data>
+  <data name="GradingPrefernces_Page_Iframe_Preferences" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_ifrmPreferences</value>
+  </data>
+  <data name="GradingPrefernces_Page_Text_Preferences" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="GradingPrefernces_Page_Text_Grading" xml:space="preserve">
+    <value>Grading</value>
+  </data>
+  <data name="GradingPrefernces_Page_AutoIT_ExeFilepath_Locator" xml:space="preserve">
+    <value>\TestData\IE.exe</value>
+  </data>
+  <data name="GradingPrefernces_Page_CP_Preferences_DownloadedFilepath_Locator" xml:space="preserve">
+    <value>:\CurrentPagePreferences.xls</value>
+  </data>
+  <data name="GradingPrefernces_Page_ExcelSheet_Data_colon" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="GradingPrefernces_Page_Current_Page" xml:space="preserve">
+    <value>Current Page</value>
+  </data>
+  <data name="GradingPrefernces_Page_All_Pages" xml:space="preserve">
+    <value>All Pages</value>
+  </data>
+  <data name="GradingPrefernces_Page_ExcelSheet_Tab_Value" xml:space="preserve">
+    <value>\t</value>
+  </data>
+  <data name="GradingPrefernces_Page_ExcelSheet_Name" xml:space="preserve">
+    <value>EXCEL</value>
+  </data>
+  <data name="GradingPrefernces_Page_ExcelSheet_RowNum_CP" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="GradingPrefernces_Page_ExcelSheet_PageNum" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GradingPrefernces_Page_ExcelSheet_RowNum_AP" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="GradingPrefernces_Page_ExcelSheet_ColNum" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GradingPrefernces_Page_ExcelSheet_Chk" xml:space="preserve">
+    <value>Checked</value>
+  </data>
+  <data name="GradingPrefernces_Page_ExcelSheet_UnChk" xml:space="preserve">
+    <value>Unchecked</value>
+  </data>
+  <data name="GradingPrefernces_Page_ExcelSheet_Lock" xml:space="preserve">
+    <value>Locked</value>
+  </data>
+  <data name="GradingPrefernces_Page_ExcelSheet_UnLock" xml:space="preserve">
+    <value>Unlocked</value>
+  </data>
+  <data name="GradingPrefernces_Page_CustomTimetoWait" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="GradingPrefernces_Page_SleepTime_Value" xml:space="preserve">
+    <value>6000</value>
+  </data>
+  <data name="GradingPrefernces_Page_Sleep_Value" xml:space="preserve">
+    <value>40000</value>
+  </data>
+  <data name="GradingPrefernces_Page_GradingSubtab" xml:space="preserve">
+    <value>atdContnet6</value>
+  </data>
+  <data name="GradingPrefernces_Page_IntegrityDetection_LockIcon_Id_Locator" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="GradingPrefernces_Page_IntegrityDetection_Preference_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkIntegrityDetection</value>
+  </data>
+  <data name="GradingPrefernces_Page_AssignmentCalendar_Settings_Xpath_Locator" xml:space="preserve">
+    <value>//tr[@id='aTag']/td[2]/div[@class='divTagContainer']</value>
+  </data>
+  <data name="GradingPrefernces_Page_FolderLevel_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkGrade</value>
+  </data>
+  <data name="GradingPreferences_Page_Rawscore_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkFractionGrade</value>
+  </data>
+  <data name="GradingPreferences_Page_Rawscore_Lock_Id_Locator" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GradingPreferences_Page_Rawscore_Radiobutton_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_rdRawGrade</value>
+  </data>
+  <data name="GradingPrefernces_Page_FilterContentType_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkEnableFilter</value>
+  </data>
+  <data name="GradingPrefernces_Page_FilterContentType_Lock_Id_Locator" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="GradingPrefernces_Page_GradeSchema_Lock_Id_Locator" xml:space="preserve">
+    <value>1</value>
+  </data>
+</root>

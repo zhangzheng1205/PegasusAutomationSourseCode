@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdminTool_Page_AddasNew_Button_Id_Locator" xml:space="preserve">
+    <value>tdAddNewCourse</value>
+  </data>
+  <data name="AdminTool_Page_CourseListFrame_Id_Locator" xml:space="preserve">
+    <value>dgUserEnrollList$divContent</value>
+  </data>
+  <data name="AdminTool_Page_DeleteUserLink_Id_Locator" xml:space="preserve">
+    <value>lnkDeleteUser</value>
+  </data>
+  <data name="AdminTool_Page_EnrollButton_Id_Locator" xml:space="preserve">
+    <value>btnEnroll</value>
+  </data>
+  <data name="AdminTool_Page_EnrollmentMode_Window_Title_Name" xml:space="preserve">
+    <value>Enrollment Mode</value>
+  </data>
+  <data name="AdminTool_Page_gridUserRight_Id_Locator" xml:space="preserve">
+    <value>grdUser$_ctrl1</value>
+  </data>
+  <data name="AdminTool_Page_gridUser_Id_Locator" xml:space="preserve">
+    <value>grdUser$_ctrl0</value>
+  </data>
+  <data name="AdminTool_Page_ImageCourseSearch_Xpath_Locator" xml:space="preserve">
+    <value>//img[contains(@src,'/images/btn_search.gif')]</value>
+  </data>
+  <data name="AdminTool_Page_AddAsInstructor_Id_Locator" xml:space="preserve">
+    <value>tdInst</value>
+  </data>
+  <data name="AdminTool_Page_leftFrame_Id_Locator" xml:space="preserve">
+    <value>ifrmleft</value>
+  </data>
+  <data name="AdminTool_Page_MiddleFrame_Id_Locator" xml:space="preserve">
+    <value>ifrmMiddle</value>
+  </data>
+  <data name="AdminTool_Page_RightFrame_Id_Locator" xml:space="preserve">
+    <value>ifrmright</value>
+  </data>
+  <data name="AdminTool_Page_SearchLink_Id_Locator" xml:space="preserve">
+    <value>ancLeftSearch</value>
+  </data>
+  <data name="AdminTool_Page_SuccessMessage_Class_Locator" xml:space="preserve">
+    <value>message</value>
+  </data>
+  <data name="AdminTool_Page_SuccessMessage_Id_Locator" xml:space="preserve">
+    <value>PegasusMessageBoard</value>
+  </data>
+  <data name="AdminTool_Page_TextUserName_Xpath_Locator" xml:space="preserve">
+    <value>//TABLE[@id='grdUser']/tbody/tr/td[3]/span</value>
+  </data>
+  <data name="AdminTool_Page_UserDetailTextBox_Id_Locator" xml:space="preserve">
+    <value>txtUserDetail</value>
+  </data>
+  <data name="AdminTool_Page_EnrolledUserRole_Xpath_Locator" xml:space="preserve">
+    <value>//TABLE[@id='dgUserEnrollList']/tbody/tr[" +rownum.ToString(CultureInfo.InvariantCulture) + "]/td[3]</value>
+  </data>
+  <data name="AdminTool_Page_EnrolledUser_Xpath_Locator" xml:space="preserve">
+    <value>//TABLE[@id='dgUserEnrollList']/tbody/tr[" + i.ToString(CultureInfo.InvariantCulture) + "]/td[2]/span</value>
+  </data>
+  <data name="AdminTool_Page_Instructor_InnerText_Value" xml:space="preserve">
+    <value>Instructor</value>
+  </data>
+  <data name="AdminTool_Page_ManageProducts_Page_Title_Name" xml:space="preserve">
+    <value>Manage Products</value>
+  </data>
+  <data name="AdminTool_Page_ManageProducts_Tab_Text_Locator" xml:space="preserve">
+    <value>Manage Products</value>
+  </data>
+  <data name="AdminTool_Page_ManagePrograms_Page_Title_Name" xml:space="preserve">
+    <value>Manage Programs</value>
+  </data>
+  <data name="AdminTool_Page_ManagePrograms_Tab_Text_Locator" xml:space="preserve">
+    <value>Manage Programs</value>
+  </data>
+  <data name="AdminTool_Page_Publishing_Tab_Text_Locator" xml:space="preserve">
+    <value>Publishing</value>
+  </data>
+  <data name="AdminTool_Page_AddAsStudent_Id_Locator" xml:space="preserve">
+    <value>tdStu</value>
+  </data>
+  <data name="AdminTool_Page_MyProfile_Link_Id_Locator" xml:space="preserve">
+    <value>_ctl7_pegHello_ancMyAccount</value>
+  </data>
+  <data name="AdminTool_Page_OrganizationAdminTab_LinkText_Locator" xml:space="preserve">
+    <value>Organization Admin</value>
+  </data>
+  <data name="AdminTool_Page_OrganizationManagementWindow_Name_Locator" xml:space="preserve">
+    <value>Organization Management</value>
+  </data>
+  <data name="AdminTool_Page_AnnouncementArchive_Window_Title_Name" xml:space="preserve">
+    <value>Announcement Archive</value>
+  </data>
+  <data name="AdminTool_Page_CourseEnrollment_Window_Title_Name" xml:space="preserve">
+    <value>Course Enrollment</value>
+  </data>
+  <data name="AdminTool_Page_TabName_ID_Locator" xml:space="preserve">
+    <value>_ctl8__ctl12_Link</value>
+  </data>
+  <data name="AdminTool_Page_CSAdmin_SignOut_Id_Locator" xml:space="preserve">
+    <value>_ctl7_pegHello_testLogOut</value>
+  </data>
+  <data name="AdminTool_Page_CTG_admin_Window_Name" xml:space="preserve">
+    <value>Workspaces</value>
+  </data>
+  <data name="AdminTool_Page_CTG_CreateWorkspace_PartialText_Locator" xml:space="preserve">
+    <value>Create New Workspace</value>
+  </data>
+  <data name="AdminTool_Page_CTG_Window_Frame_Name" xml:space="preserve">
+    <value>ifrmWorkspace</value>
+  </data>
+  <data name="AdminTool_Page_Substring_Second_Value" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="AdminTool_Page_Substring_Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AdminTool_Page_Workspace_EditWorkspace_Text" xml:space="preserve">
+    <value>Edit Workspace info</value>
+  </data>
+  <data name="AdminTool_Page_Workspace_Table_ID_Locator" xml:space="preserve">
+    <value>grdOrganization</value>
+  </data>
+  <data name="AdminTool_Page_Workspace_Table_Next_ID_Locator" xml:space="preserve">
+    <value>grdOrganization$next</value>
+  </data>
+  <data name="AdminTool_Page_Workspace_Table_RowCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdOrganization']/tbody/tr</value>
+  </data>
+  <data name="AdminTool_Page_Workspace_Table_RowTextValue_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdOrganization']/tbody/tr[{0}]/td[2]</value>
+  </data>
+  <data name="AdminTool_Page_Workspace_Table_RowText_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdOrganization']/tbody/tr[{0}]</value>
+  </data>
+  <data name="AdminTool_Page_Workspace_Table_Row_Img_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdOrganization']/tbody/tr[{0}]/td[4]/center/a/img</value>
+  </data>
+  <data name="AdminTool_Page_Workspaces_TabNames_Id_Locator" xml:space="preserve">
+    <value>idMenuCollection</value>
+  </data>
+  <data name="AdminTool_Page_Workspaces_TabName_Preferences_Text" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="AdminTool_Page_Workspaces_TabName_Workspaces_Text" xml:space="preserve">
+    <value>Workspaces</value>
+  </data>
+  <data name="AdminTool_Page_Workspace_Delete_Cmenu_Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="AdminTool_Page_Workspace_Inactive_Cmenu_Text" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="AdminTool_Page_Pegasus_Ok_Button_Id_Locator" xml:space="preserve">
+    <value>imgOk</value>
+  </data>
+  <data name="AdminTool_Page_Pegasus_WindowName" xml:space="preserve">
+    <value>Pegasus</value>
+  </data>
+  <data name="AdminTool_Page_Workspaces_Delete_Checkbox_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdOrganization']/tbody/tr[{0}]/td/input</value>
+  </data>
+  <data name="AdminTool_Page_Workspaces_Delet_Id_Locator" xml:space="preserve">
+    <value>lnkDeleteOrganisation</value>
+  </data>
+  <data name="AdminTool_Page_AdministratorsTab_LinkText_Locator" xml:space="preserve">
+    <value>Administrators</value>
+  </data>
+  <data name="AdminTool_Page_AdministratorToolWindow_Name_Locator" xml:space="preserve">
+    <value>Administration Tool</value>
+  </data>
+  <data name="AdminTool_Page_CTG_CreateWorkspace_Window_Name" xml:space="preserve">
+    <value>Create New Workspace</value>
+  </data>
+  <data name="AdminTool_Page_DeliverMasterCourseThrougheCollegeIntegration_Id_Locator" xml:space="preserve">
+    <value>ChkDelivPrefEcol</value>
+  </data>
+  <data name="AdminTool_Page_Workspaces_Product_Course_CMenu_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='grdProgramCourses']/tbody/tr[2]/td[6]/center/a/img</value>
+  </data>
+  <data name="AdminTool_Page_Custom_Wait_Time_Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+</root>

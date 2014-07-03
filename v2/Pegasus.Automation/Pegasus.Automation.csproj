@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pegasus.Automation</RootNamespace>
+    <AssemblyName>Pegasus.Automation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalAssemblies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Selenium.WebDriverBackedSelenium, Version=2.26.0.0, Culture=neutral, PublicKeyToken=1c2bd1631853048f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalAssemblies\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalAssemblies\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="ThoughtWorks.Selenium.Core, Version=2.26.0.0, Culture=neutral, PublicKeyToken=1c2bd1631853048f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalAssemblies\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=2.26.0.0, Culture=neutral, PublicKeyToken=1c2bd1631853048f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalAssemblies\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.26.0.0, Culture=neutral, PublicKeyToken=1c2bd1631853048f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalAssemblies\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutomationConfigurationManager.cs" />
+    <Compile Include="AutomationConfigurationManagerResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutomationConfigurationManagerResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDataTransferObject.cs" />
+    <Compile Include="BasePage.cs" />
+    <Compile Include="BasePegasusAutomationException.cs" />
+    <Compile Include="BrowserProcessFactory.cs" />
+    <Compile Include="DataTransferObjects\Activity.cs" />
+    <Compile Include="DataTransferObjects\Announcement.cs" />
+    <Compile Include="DataTransferObjects\BaseEntityObject.cs" />
+    <Compile Include="DataTransferObjects\Class.cs" />
+    <Compile Include="DataTransferObjects\Course.cs" />
+    <Compile Include="DataTransferObjects\License.cs" />
+    <Compile Include="DataTransferObjects\Mail.cs" />
+    <Compile Include="DataTransferObjects\MMNDToolLinks.cs" />
+    <Compile Include="DataTransferObjects\Organization.cs" />
+    <Compile Include="DataTransferObjects\Product.cs" />
+    <Compile Include="DataTransferObjects\Program.cs" />
+    <Compile Include="DataTransferObjects\Question.cs" />
+    <Compile Include="DataTransferObjects\Report.cs" />
+    <Compile Include="DataTransferObjects\Section.cs" />
+    <Compile Include="DataTransferObjects\User.cs" />
+    <Compile Include="DataTransferObjects\WorkSpace.cs" />
+    <Compile Include="InMemoryDatabase.cs" />
+    <Compile Include="InMemoryDatabaseSingleton.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="PegasusBaseTestFixture.cs" />
+    <Compile Include="PegasusBaseTestScript.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenshotRemoteWebDriver.cs" />
+    <Compile Include="WebDriverFactory.cs" />
+    <Compile Include="WebDriverSingleton.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="TestData\BulkUser_Template.xls" />
+    <None Include="TestData\metadataExport_Gold-1.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InMemoryTestData\PegasusTestDataPROD.xml" />
+    <Content Include="InMemoryTestData\PegasusTestDataST.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="InMemoryTestData\PegasusTestDataPPE.xml" />
+    <Content Include="InMemoryTestData\PegasusTestDataVM.xml" />
+    <Content Include="TestData\Branding_Image.png" />
+    <Content Include="TestData\CourseIconImage.png" />
+    <Content Include="TestData\IE.exe" />
+    <Content Include="TestData\Product_Banner.png" />
+    <Content Include="TestData\Product_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AutomationConfigurationManagerResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AutomationConfigurationManagerResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

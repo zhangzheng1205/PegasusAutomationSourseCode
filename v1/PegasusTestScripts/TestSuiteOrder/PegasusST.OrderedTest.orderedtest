@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="pegasusst.orderedtest" storage="d:\automation latest\pegasus.testautomation\v1\pegasustestscripts\testsuiteorder\pegasusst.orderedtest.orderedtest" id="d4b8c6da-a667-4076-a4cd-3f715307a766" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Owners>
+    <Owner name="Pegasus" />
+  </Owners>
+  <TestCategory>
+    <TestCategoryItem TestCategory="Nightly" />
+  </TestCategory>
+  <Execution id="a0eca751-dbcb-4df1-8cab-96c8424e3df0" />
+  <TestLinks>
+    <TestLink id="4ec3543d-6453-4865-923f-1fc7d503dbd1" name="pegasusstnovanetwsusecases" storage="pegasusstnovanetwsusecases.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="c9330682-305c-4cc6-8263-63a70e98c51c" name="pegasusstnovanetcsusecases" storage="pegasusstnovanetcsusecases.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="6f5521d0-b077-4e71-a302-d9ba3880f880" name="pegasusstnovanetcsteacherusecases" storage="pegasusstnovanetcsteacherusecases.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
