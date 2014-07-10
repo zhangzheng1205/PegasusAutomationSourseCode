@@ -1271,5 +1271,30 @@ namespace Pegasus.Pages.UI_Pages
             "EnableCharacterPalatePreferenceSettings",
             base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Enable the 'Enable Blackboard Collaborate Voice Authoring' Option
+        /// </summary>
+        public void EnableBlackBoardCollaborateVoiceAuthoring()
+        {
+            //Enable The 'Enable Blackboard Collaborate Voice Authoring' Option 
+            logger.LogMethodEntry("GradingPreferencesPage",
+           "EnableBlackBoardCollaborateVoiceAuthoring",
+           base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Enable Blackboard Collaborate Voice Authoring Preference                
+                this.EnableGeneralPreferenceSettings(GeneralPreferencesPageResource.
+                    GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Lock_Id_Locator,
+                    GeneralPreferencesPageResource.
+                    GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Checkbox_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GradingPreferencesPage",
+              "EnableBlackBoardCollaborateVoiceAuthoring",
+              base.isTakeScreenShotDuringEntryExit);
+        }
     }
 }

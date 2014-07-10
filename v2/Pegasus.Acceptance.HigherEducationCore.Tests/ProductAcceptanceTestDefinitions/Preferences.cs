@@ -735,5 +735,28 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                "SetThePreferencesForCopyContent",
                base.isTakeScreenShotDuringEntryExit);
        }
+      
+       /// <summary>
+       /// Enable Blackboard Collaborate Voice Authoring Preference option.
+       /// </summary>
+       [When(@"I 'Enable Blackboard Collaborate Voice Authoring' preference option")]
+       public void EnableBlackboardVoiceAuthoringOption()
+       {
+           // Enable Blackboard Collaborate Voice Authoring Preference option
+           Logger.LogMethodEntry("Preference",
+               "EnableBlackboardVoiceAuthoringOption",
+               base.isTakeScreenShotDuringEntryExit);
+           GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
+           //Select The Main Frame
+           generalPreferencePage.SelectThePreferenceWindowWithFrame();
+           //Enable Blackboard Collaborate Voice Authoring Option
+           generalPreferencePage.EnableBlackBoardCollaborateVoiceAuthoring();
+           //Save The Preference
+           generalPreferencePage.SavePreferences();
+           Logger.LogMethodExit("Preference",
+              "EnableBlackboardVoiceAuthoringOption",
+              base.isTakeScreenShotDuringEntryExit);
+       }
+      
     }
 }

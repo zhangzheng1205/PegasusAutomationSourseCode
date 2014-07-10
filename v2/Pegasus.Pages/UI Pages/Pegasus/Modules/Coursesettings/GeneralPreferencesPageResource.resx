@@ -351,4 +351,10 @@
   <data name="GeneralPrefernces_Page_CharacterPalate_LockIcon_Id_Locator" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkAudio</value>
+  </data>
+  <data name="GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Lock_Id_Locator" xml:space="preserve">
+    <value>5</value>
+  </data>
 </root>

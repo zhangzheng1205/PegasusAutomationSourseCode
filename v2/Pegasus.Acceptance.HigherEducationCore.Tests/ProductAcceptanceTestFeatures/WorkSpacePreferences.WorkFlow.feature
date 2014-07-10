@@ -45,3 +45,12 @@ And I navigate to the "Preferences" tab
 Then I should be on the "Preferences" page
 When I set the preferences for Copy Content
 Then I should see the successfull message "Preferences updated successfully."
+
+#Purpose: UseCase To Enable Blackboard Collaborate Voice Authoring in course preference To Use Learnosity
+#PEGASUS-26115 : Learnosity Automation - Enable Blackboard IM in course preference to enable voice tool in a course
+Scenario: Enable Blackboard Collaborate Voice Authoring by Ws Teacher
+When I enter in the "MySpanishLabMaster" from the Global Home page as "HedWsInstructor"
+And I navigate to the "Preferences" tab
+Then I should be on the "Preferences" page
+When I 'Enable Blackboard Collaborate Voice Authoring' preference option
+Then I should see the successfull message "Preferences updated successfully."
