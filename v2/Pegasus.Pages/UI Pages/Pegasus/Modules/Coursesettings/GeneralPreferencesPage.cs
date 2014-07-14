@@ -921,21 +921,45 @@ namespace Pegasus.Pages.UI_Pages
                 GeneralPrefernces_Page_BlackBoard_IM_Lock_Id_Locator,
                 GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_BlackBoardIM_Checkbox_Id_Locator);
-            base.WaitForElement(By.Id(GeneralPreferencesPageResource.
-                GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator));
-            //Enter First And Last Name
-            base.ClearTextByID(GeneralPreferencesPageResource.
-                GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator);
-            base.FillTextBoxByID(GeneralPreferencesPageResource.
-                GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator,
-                GeneralPreferencesPageResource.GeneralPrefernces_Page_FirstLast_Name_Value);
-            base.WaitForElement(By.Id(GeneralPreferencesPageResource.
-                GeneralPrefernces_Page_Email_Textbox_Id_Locator));
-            //Enter Mail And Business Unit
-            this.EnterMailAndBusinessUnit();
+            //Fill Firstname Last Name TextBox
+            this.EnableBlackBoardFnameLnameTextBox();
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableBlackBoardIMPreference", base.isTakeScreenShotDuringEntryExit);
         }
+
+
+        /// <summary>
+        /// Fill Firstname Lastname Email TextBoxes
+        /// </summary>
+        public void EnableBlackBoardFnameLnameTextBox()
+        {
+            // Fill Firstname Lastname Email TextBoxes
+            logger.LogMethodEntry("GeneralPreferencesPage",
+            "EnableBlackBoardFnameLnameTextBox", base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(GeneralPreferencesPageResource.
+               GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator));
+                //Enter First And Last Name
+                base.ClearTextByID(GeneralPreferencesPageResource.
+                    GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator);
+                base.FillTextBoxByID(GeneralPreferencesPageResource.
+                    GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator,
+                    GeneralPreferencesPageResource.GeneralPrefernces_Page_FirstLast_Name_Value);
+                base.WaitForElement(By.Id(GeneralPreferencesPageResource.
+                    GeneralPrefernces_Page_Email_Textbox_Id_Locator));
+                //Enter Mail And Business Unit
+                this.EnterMailAndBusinessUnit();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+           
+            logger.LogMethodExit("GeneralPreferencesPage",
+            "EnableBlackBoardFnameLnameTextBox", base.isTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Enter Mail And Business Unit.

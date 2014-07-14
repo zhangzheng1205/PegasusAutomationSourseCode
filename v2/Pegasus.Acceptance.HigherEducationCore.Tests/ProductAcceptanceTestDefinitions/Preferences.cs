@@ -748,9 +748,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                base.isTakeScreenShotDuringEntryExit);
            GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
            //Select The Main Frame
-           generalPreferencePage.SelectThePreferenceWindowWithFrame();
+           generalPreferencePage.SelectThePreferenceWindowWithFrame();          
            //Enable Blackboard Collaborate Voice Authoring Option
            generalPreferencePage.EnableBlackBoardCollaborateVoiceAuthoring();
+           //Fill Black board Fname Lname Email Text
+           generalPreferencePage.EnableBlackBoardFnameLnameTextBox();
            //Save The Preference
            generalPreferencePage.SavePreferences();
            Logger.LogMethodExit("Preference",
