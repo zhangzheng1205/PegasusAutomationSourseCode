@@ -921,8 +921,8 @@ namespace Pegasus.Pages.UI_Pages
                 GeneralPrefernces_Page_BlackBoard_IM_Lock_Id_Locator,
                 GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_BlackBoardIM_Checkbox_Id_Locator);
-            //Fill Firstname Last Name TextBox
-            this.EnableBlackBoardFnameLnameTextBox();
+            //Fill Black board Fname Lname Email TextBoxes
+            this.EnterBlackBoardIMDetails();
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableBlackBoardIMPreference", base.isTakeScreenShotDuringEntryExit);
         }
@@ -931,11 +931,11 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Fill Firstname Lastname Email TextBoxes
         /// </summary>
-        public void EnableBlackBoardFnameLnameTextBox()
+        public void EnterBlackBoardIMDetails()
         {
             // Fill Firstname Lastname Email TextBoxes
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnableBlackBoardFnameLnameTextBox", base.isTakeScreenShotDuringEntryExit);
+            "EnterBlackBoardIMDetails", base.isTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
@@ -957,7 +957,7 @@ namespace Pegasus.Pages.UI_Pages
             }
            
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnableBlackBoardFnameLnameTextBox", base.isTakeScreenShotDuringEntryExit);
+            "EnterBlackBoardIMDetails", base.isTakeScreenShotDuringEntryExit);
         }
 
 

@@ -751,8 +751,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            generalPreferencePage.SelectThePreferenceWindowWithFrame();          
            //Enable Blackboard Collaborate Voice Authoring Option
            generalPreferencePage.EnableBlackBoardCollaborateVoiceAuthoring();
-           //Fill Black board Fname Lname Email Text
-           generalPreferencePage.EnableBlackBoardFnameLnameTextBox();
+           //Fill Black board Fname Lname Email TextBoxes
+           generalPreferencePage.EnterBlackBoardIMDetails();
            //Save The Preference
            generalPreferencePage.SavePreferences();
            Logger.LogMethodExit("Preference",
