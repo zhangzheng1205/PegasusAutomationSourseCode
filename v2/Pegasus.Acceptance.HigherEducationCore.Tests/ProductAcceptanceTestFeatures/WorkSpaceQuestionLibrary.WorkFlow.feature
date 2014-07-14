@@ -20,4 +20,23 @@ Then I should be on the "AlignContentsToSkill" page
 When I map "TrueFalse" question to skill
 Then I should see the successfull message "Content item is added to Skill"
 
+#Purpose : Audio Essay Question Creation in Question Bank By WS Instructor
+#PEGASUS-26118 Learnosity Automation : Record audio in Essay question type authoring
+Scenario: Learnosity Audio Essay Question Creation in Question Bank By WS Instructor
+When I enter in the "MySpanishLabMaster" from the Global Home page as "HedWsInstructor"
+Then I should be on the "Today's View" page
+When I navigate to the "Course Materials" tab
+And I select the "Manage Question Bank" tab
+Then I should be on the "Question Bank" page
+When I select 'Add Course Materials' option
+And I select "Essay" question type
+Then I should be on the "Create Essay" page
+When I create 'Essay audio' question type
+Then I should see the successfull message "Question added successfully."
+
+
+
+
+
+
 

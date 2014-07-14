@@ -64,8 +64,47 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("EssayPage", "CreateEssayQuestion",
                 base.isTakeScreenShotDuringEntryExit);
-        }            
-
+        }      
+      
+         /// <summary>
+        /// Create Audio Essay Question
+        /// </summary>
+        public void CreateAudioEssayQuestions()
+        {
+            //Create Audio Essay Question
+            logger.LogMethodEntry("EssayPage", "CreateAudioEssayQuestions",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {  
+                this.SelectEssayWindow();
+                //Enter Title for Essay Question
+                string questionDetails = this.EnterTitleOfEssayQuestion().ToString();
+                //Select HTML Frame
+                this.SelectHTMLFrame();
+                //Click On View Source button and Enter Data
+                this.ClickOnViewSourceOfEssayQuestionandEnterText(questionDetails);
+                this.SelectEssayWindow();
+                //Click on Add Text Settings
+                this.ClickOnAddTextSettings();
+                //Enter Score For Essay Question
+                this.EnterScoreValueForEssayQuestion();
+                //Enter Audio Input Details
+                this.EnableAudioInputCheckBox();
+                //Click On Save and Close Button
+                this.ClickONSaveAndCloseButtonOfEssayQuestion();
+                //Wait for 'True/False' question window to close
+                base.IsPopUpClosed(Convert.ToInt32(TrueFalsePageResource.
+                    TrueFalse_Page_Window_Count));
+                //Store Question Details in Memory
+                this.storeQuestionDetailsInMemory(questionDetails);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("EssayPage", "CreateAudioEssayQuestions",
+                base.isTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Create EssayQuestion Inside The Activity.
         /// </summary>
@@ -242,6 +281,60 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("EssayPage", 
                 "EnterScoreValueForEssayQuestion",
              base.isTakeScreenShotDuringEntryExit);
+        }
+        ///<summary>
+        /// Enable Audio Input CheckBox
+        ///</summary>
+        private void EnableAudioInputCheckBox()
+        {
+            logger.LogMethodEntry("EssayPage",
+                "EnableAudioInputCheckBox",
+                base.isTakeScreenShotDuringEntryExit);
+            //Enable AudioInput Checkbox
+            base.WaitForElement(By.Id(EssayPageResource.
+                Essay_Page_AudioInput_Checkbox_Id_Locator));
+            // Get CheckBox Id Property
+            IWebElement getIdProperty = base.GetWebElementPropertiesById(
+                EssayPageResource.Essay_Page_AudioInput_Checkbox_Id_Locator);
+            //Enable on Audio Input CheckBox
+            ClickByJavaScriptExecutor(getIdProperty);
+            this.EnterAudioInputTimingsValue();
+            logger.LogMethodExit("EssayPage",
+                "EnableAudioInputCheckBox",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Enter Audio Input Time to Record Value       
+        /// </summary>
+        private void EnterAudioInputTimingsValue()
+        {
+            //Enter Audio Input Time to Record Value
+            logger.LogMethodEntry("EssayPage",
+                "EnterAudioInputTimingsValue",
+                base.isTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(EssayPageResource.
+                Essay_Page_AudioInput_MinTime_Id_Locator));
+            //Clear Minutes TextBox Value
+            base.ClearTextByID(EssayPageResource.
+                Essay_Page_AudioInput_MinTime_Id_Locator);
+            //Enter Minutes TextBox Value
+            base.FillTextBoxByID(EssayPageResource.
+                Essay_Page_AudioInput_MinTime_Id_Locator,
+                EssayPageResource.Essay_Page_AudioInput_Minutes_Time_Value);
+            base.WaitForElement(By.Id(EssayPageResource.
+               Essay_Page_AudioInput_Seconds_Time_Id_Locator));
+            //Clear Seconds TextBox Value
+            base.ClearTextByID(EssayPageResource.
+                Essay_Page_AudioInput_Seconds_Time_Id_Locator);
+            //Enter Seconds TextBox Value
+            base.FillTextBoxByID(EssayPageResource.
+                Essay_Page_AudioInput_Seconds_Time_Id_Locator,
+                EssayPageResource.Essay_Page_AudioInput_Seconds_Time_Value); 
+            logger.LogMethodExit("EssayPage",
+                "EnterAudioInputTimingsValue",
+                base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
