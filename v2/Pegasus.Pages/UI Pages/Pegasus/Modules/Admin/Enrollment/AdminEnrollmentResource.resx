@@ -120,6 +120,12 @@
   <data name="AdminEnrollmentPage_AdminNameTableRow_Xpath_Locator" xml:space="preserve">
     <value>//table[@id="dgAdminEnrollList$contentCntr"]/tbody/tr/td/table/tbody/tr[{0}]</value>
   </data>
+  <data name="AdminEnrollmentPage_Cmenu_Div" xml:space="preserve">
+    <value>PC_mainLinks</value>
+  </data>
+  <data name="AdminEnrollmentPage_CMenu_Options_Division_Id_Locator" xml:space="preserve">
+    <value>AdminEnroll</value>
+  </data>
   <data name="AdminEnrollmentPage_ContextMenu_AdminName_Xpath_Locator" xml:space="preserve">
     <value>//table[@id="dgAdminEnrollList$contentCntr"]/tbody/tr/td/table/tbody/tr[{0}]/td[3]/center/center/a/img</value>
   </data>

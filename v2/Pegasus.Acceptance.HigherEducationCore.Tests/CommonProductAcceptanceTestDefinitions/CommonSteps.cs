@@ -346,6 +346,24 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         }
 
         /// <summary>
+        /// Enroll the selected user
+        /// </summary>
+        [When(@"I click the Add button")]
+        [When(@"I click on enroll button")]
+        public void ClickOnEnrollButton()
+        {
+            //click on enroll button in administrator tab left frame        
+            Logger.LogMethodEntry("CommonSteps",
+               "ClickOnEnrollButton",
+               base.isTakeScreenShotDuringEntryExit);
+            new EnrollmentPage().ClickEnrollButton();
+            Logger.LogMethodExit("CommonSteps",
+                "ClickOnEnrollButton",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeScenario]

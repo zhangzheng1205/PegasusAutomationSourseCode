@@ -78,8 +78,8 @@ namespace Pegasus.Pages.UI_Pages
                     ManageUsers_Page_GridUserRight_Id_Locator);
                 base.ClickByJavaScriptExecutor(getUserSelector);
                 //Wait Delete Link to get Enabled
-                base.WaitForElement(By.Id(ManageUsersPageResource.
-                    ManageUsers_Page_DeleteUserLink_Id_Locator));
+                //base.WaitForElement(By.Id(ManageUsersPageResource.
+                //    ManageUsers_Page_DeleteUserLink_Id_Locator));
                 base.SwitchToDefaultWindow();
             }
             catch (Exception e)

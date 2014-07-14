@@ -126,5 +126,30 @@ namespace Pegasus.Pages.UI_Pages
             return getCmenuOption.Trim();
         }
 
+
+        /// <summary>
+        /// Get all User CMenu Options for Admin
+        /// </summary>
+        /// <returns>Cmenu options</returns>
+        public String GetCMenuOptionsOfAdmin()
+        {
+            //Check If the User CMenu Options are Displayed
+            logger.LogMethodEntry("AdminEnrollment", "GetCMenuOptionsOfAdmin"
+                , base.isTakeScreenShotDuringEntryExit);
+            //Initialize the Variable
+            string ContextMenuNames = string.Empty;
+            try
+            {
+                ContextMenuNames = base.GetElementTextByClassName(AdminEnrollmentResource.AdminEnrollmentPage_Cmenu_Div);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AdminEnrollment", "GetCMenuOptionsOfAdmin"
+                , base.isTakeScreenShotDuringEntryExit);
+            return ContextMenuNames;
+        }
+
     }
 }
