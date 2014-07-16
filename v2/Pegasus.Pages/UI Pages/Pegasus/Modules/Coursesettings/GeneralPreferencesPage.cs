@@ -905,7 +905,7 @@ namespace Pegasus.Pages.UI_Pages
             "EnableGeneralTabCalendarPreferenceSettings", 
             base.isTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Enable BlackBoard IM Preference.
         /// </summary>
@@ -921,21 +921,43 @@ namespace Pegasus.Pages.UI_Pages
                 GeneralPrefernces_Page_BlackBoard_IM_Lock_Id_Locator,
                 GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_BlackBoardIM_Checkbox_Id_Locator);
-            base.WaitForElement(By.Id(GeneralPreferencesPageResource.
-                GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator));
-            //Enter First And Last Name
-            base.ClearTextByID(GeneralPreferencesPageResource.
-                GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator);
-            base.FillTextBoxByID(GeneralPreferencesPageResource.
-                GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator,
-                GeneralPreferencesPageResource.GeneralPrefernces_Page_FirstLast_Name_Value);
-            base.WaitForElement(By.Id(GeneralPreferencesPageResource.
-                GeneralPrefernces_Page_Email_Textbox_Id_Locator));
-            //Enter Mail And Business Unit
-            this.EnterMailAndBusinessUnit();
+            //Fill Black board Fname Lname Email TextBoxes
+            this.EnterBlackBoardIMDetails();
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableBlackBoardIMPreference", base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Fill Firstname Lastname Email TextBoxes
+        /// </summary>
+        public void EnterBlackBoardIMDetails()
+        {
+            // Fill Firstname Lastname Email TextBoxes
+            logger.LogMethodEntry("GeneralPreferencesPage",
+            "EnterBlackBoardIMDetails", base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(GeneralPreferencesPageResource.
+               GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator));
+                //Enter First And Last Name
+                base.ClearTextByID(GeneralPreferencesPageResource.
+                    GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator);
+                base.FillTextBoxByID(GeneralPreferencesPageResource.
+                    GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator,
+                    GeneralPreferencesPageResource.GeneralPrefernces_Page_FirstLast_Name_Value);
+                base.WaitForElement(By.Id(GeneralPreferencesPageResource.
+                    GeneralPrefernces_Page_Email_Textbox_Id_Locator));
+                //Enter Mail And Business Unit
+                this.EnterMailAndBusinessUnit();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("GeneralPreferencesPage",
+            "EnterBlackBoardIMDetails", base.isTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Enter Mail And Business Unit.
@@ -1270,6 +1292,31 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableCharacterPalatePreferenceSettings",
             base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Enable the 'Enable Blackboard Collaborate Voice Authoring' Option
+        /// </summary>
+        public void EnableBlackBoardCollaborateVoiceAuthoring()
+        {
+            //Enable The 'Enable Blackboard Collaborate Voice Authoring' Option 
+            logger.LogMethodEntry("GradingPreferencesPage",
+           "EnableBlackBoardCollaborateVoiceAuthoring",
+           base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Enable Blackboard Collaborate Voice Authoring Preference                
+                this.EnableGeneralPreferenceSettings(GeneralPreferencesPageResource.
+                    GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Checkbox_Id_Locator,
+                    GeneralPreferencesPageResource.
+                    GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Checkbox_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GradingPreferencesPage",
+              "EnableBlackBoardCollaborateVoiceAuthoring",
+              base.isTakeScreenShotDuringEntryExit);
         }
     }
 }
