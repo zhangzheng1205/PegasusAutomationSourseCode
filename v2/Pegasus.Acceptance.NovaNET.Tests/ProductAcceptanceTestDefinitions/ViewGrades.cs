@@ -114,7 +114,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Select The Cmenu Option Of Asset
             gbInstructorPage.SelectTheCmenuOptionOfAssetInGradebook(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
-                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name);
+                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum);
             Logger.LogMethodExit("ViewGrades", "ClickOnCmenuOfAssetInGradebook",
                  isTakeScreenShotDuringEntryExit);
         }

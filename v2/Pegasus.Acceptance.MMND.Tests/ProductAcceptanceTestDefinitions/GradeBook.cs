@@ -97,7 +97,7 @@ namespace Pegasus.Acceptance.MMND.
             //Select The Cmenu Option Of Asset
             gbInstructorPage.SelectTheCmenuOptionOfActivity(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
-                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name);
+                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum);
             Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfActivityInGradebook", isTakeScreenShotDuringEntryExit);
         }                
 
@@ -117,5 +117,91 @@ namespace Pegasus.Acceptance.MMND.
                     new GBInstructorUXPage().GetHideForStudentSuccessMessage()));
             Logger.LogMethodExit("GradeBook", "VerifyTheSuccessfullMessageInGradebook", base.isTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// click on create column drop down.
+        /// </summary>
+        [When(@"I click on the Create Column drop down and select ""(.*)"" Column")]
+        public void ClickOnCustomColumn(string customColumnCmenu)
+        {
+            // Open Create Total column pop up window
+            Logger.LogMethodEntry("GradeBook", "ClickOnCustomColumn",
+                base.isTakeScreenShotDuringEntryExit);
+            new GBInstructorUXPage().ClickOnCustomColumn(
+                (GBInstructorUXPage.CustomColumnTypeEnum)Enum.Parse(typeof(
+                GBInstructorUXPage.CustomColumnTypeEnum), customColumnCmenu)
+                );
+            Logger.LogMethodExit("GradeBook", "ClickOnCustomColumn",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter Calculated Column Name
+        /// </summary>
+        [When(@"I enter Calculated Column name")]
+        public void EnterCalculatedColumnName()
+        {
+            // Open Create Total column pop up window
+            Logger.LogMethodEntry("GradeBook", "EnterCalculatedColumnName",
+                base.isTakeScreenShotDuringEntryExit);
+            new GBInstructorUXPage().EnterCalculatedColumnName();
+            Logger.LogMethodExit("GradeBook", "EnterCalculatedColumnName",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select the activities for Calculated Column (Min 2 activities are required)
+        /// </summary>
+        /// <param name="activityTypeEnum1">Activity Type 1</param>
+        /// <param name="activityTypeEnum2">Activity Type 2</param>
+        [When(@"I select checkbox of activities ""(.*)"" and ""(.*)""")]
+        public void SelectCheckboxOfActivities(Activity.ActivityTypeEnum activityTypeEnum1, Activity.ActivityTypeEnum activityTypeEnum2)
+        {
+            // Select activities for adding
+            Logger.LogMethodEntry("GradeBook", "SelectCheckboxOfActivities",
+                base.isTakeScreenShotDuringEntryExit);
+            //Sending first activity to for loop
+            Activity activity1 = Activity.Get(activityTypeEnum1);
+            new GBInstructorUXPage().SelectActivityFromLeftFrameForCustomColumn(activity1.Name);
+            //Sending second activity to for loop
+            Activity activity2 = Activity.Get(activityTypeEnum2);
+            new GBInstructorUXPage().SelectActivityFromLeftFrameForCustomColumn(activity2.Name);
+            Logger.LogMethodExit("GradeBook", "SelectCheckboxOfActivities",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Add button image 
+        /// </summary>
+        [When(@"I click the on Add button")]
+        public void ClickOnAddButton()
+        {
+            // Select activities for adding
+            Logger.LogMethodEntry("GradeBook", "ClickOnAddButton",
+                base.isTakeScreenShotDuringEntryExit);
+            // Add activities to right frame
+            new GBInstructorUXPage().AddActivitiesinRightFrame();
+            Logger.LogMethodExit("GradeBook", "ClickOnAddButton",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Save button
+        /// </summary>
+        [When(@"I click on Save Button")]
+        public void ClickOnSaveButton()
+        {
+            // Select activities for adding
+            Logger.LogMethodEntry("GradeBook", "ClickOnAddButton",
+                base.isTakeScreenShotDuringEntryExit);
+            // Add activities to right frame
+            new GBInstructorUXPage().ClickOnsaveButton();
+            Logger.LogMethodExit("GradeBook", "ClickOnAddButton",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+
+
     }
 }

@@ -92,6 +92,8 @@ namespace Pegasus.Pages.UI_Pages
                 new CourseContentUXPage().SelectFrameInWindow(GBDefaultUXPageResource.
                     GBDefaultUXPage_Gradebook_CourseHome_Window,
                     GBDefaultUXPageResource.GBDefaultUXPage_Gradebook_Center_Frame);
+                base.WaitForElement(By.Id(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_Synapse_GradesFrame_Iframe_Name_Locator));
                 //Switch to Frame
                 base.SwitchToIFrame(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Synapse_GradesFrame_Iframe_Name_Locator);

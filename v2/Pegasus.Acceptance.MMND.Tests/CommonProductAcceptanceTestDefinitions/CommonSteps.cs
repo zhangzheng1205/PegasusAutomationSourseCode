@@ -146,6 +146,20 @@ namespace Pegasus.Acceptance.MMND.Tests.
                 base.isTakeScreenShotDuringEntryExit);
         }
 
+        [Then(@"I should be on the ""(.*)"" window")]
+        public void VerifyCustomColumnWindow(string expectedPageTitle)
+        {
+            //Method to Navigate to the Tab Window 
+            Logger.LogMethodEntry("CommonSteps", "OpenCustomColumnWindow",
+                base.isTakeScreenShotDuringEntryExit);
+            new GBInstructorUXPage().SelectTheWindowName(expectedPageTitle);
+            string getActualPageTitle = base.GetPageTitle;
+            Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(expectedPageTitle, getActualPageTitle));
+            Logger.LogMethodExit("CommonSteps", "OpenCustomColumnWindow",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts
         /// </summary>

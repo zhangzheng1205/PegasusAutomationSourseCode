@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.MMND.Tests.UserStoryAcceptanceTestFeatures
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "WS Gradebook Instructor", "\t\tAs a MMND Instructor \r\n\t\tI want to manage all the MMND Instructor Gradebook rel" +
-                    "ated usecases \r\n\t\tso that I would validate all the MMND Instructor Gradebook sce" +
-                    "narios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "WS Gradebook Instructor", "\t\tAs a MMND Instructor \n\t\tI want to manage all the MMND Instructor Gradebook rela" +
+                    "ted usecases \n\t\tso that I would validate all the MMND Instructor Gradebook scena" +
+                    "rios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -136,6 +136,60 @@ testRunner.Then("I should able to see the Display of c-menu options for activity
 #line 30
 testRunner.When("I click on cmenu \"SynchronizewithLMS\" of \"Test\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 31
+testRunner.Then("I should see the successfull message \"LMS Synchronization is enabled\" in gradeboo" +
+                    "k", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To Create Custom Column And Verify LMS Grade Synch in Gradebook by MMND Instructo" +
+            "r")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WS Gradebook Instructor")]
+        public virtual void ToCreateCustomColumnAndVerifyLMSGradeSynchInGradebookByMMNDInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Create Custom Column And Verify LMS Grade Synch in Gradebook by MMND Instructo" +
+                    "r", ((string[])(null)));
+#line 34
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line 35
+testRunner.When("I click on \"Course Home\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 36
+testRunner.And("I click the \"Grades\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+testRunner.Then("I should see the \"Test\" activity in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 38
+testRunner.And("I should see the \"Homework\" activity in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 39
+testRunner.When("I click on the Create Column drop down and select \"Calculated\" Column", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 40
+testRunner.Then("I should be on the \"Create Calculated Column\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 41
+testRunner.When("I enter Calculated Column name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 42
+testRunner.And("I select checkbox of activities \"Test\" and \"Homework\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 43
+testRunner.And("I click the on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 44
+testRunner.And("I click on Save Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 45
+testRunner.Then("I should see the \"CalculatedColumn\" activity in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 46
+testRunner.When("I click the \"CalculatedColumn\" activity cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "ExpectedResult",
+                        "ActualResult"});
+            table3.AddRow(new string[] {
+                        "Synchronize with LMS",
+                        "Synchronize with LMS"});
+#line 47
+testRunner.Then("I should able to see the Display of c-menu options for activity", ((string)(null)), table3, "Then ");
+#line 50
+testRunner.When("I click on cmenu \"SynchronizewithLMS\" of \"CalculatedColumn\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 51
 testRunner.Then("I should see the successfull message \"LMS Synchronization is enabled\" in gradeboo" +
                     "k", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

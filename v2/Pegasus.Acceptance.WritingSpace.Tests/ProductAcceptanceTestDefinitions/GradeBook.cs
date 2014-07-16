@@ -197,7 +197,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Select The Cmenu Option Of Asset
             gbInstructorPage.SelectTheCmenuOptionOfAsset(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
-                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name);            
+                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum);            
             Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebook",
                  isTakeScreenShotDuringEntryExit);
         }
@@ -267,7 +267,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Select The Cmenu Option Of Asset
             gbInstructorPage.SelectTheCmenuOptionOfAsset(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
-                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name);
+                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum);
             Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInCustomView",
                  isTakeScreenShotDuringEntryExit);
         }

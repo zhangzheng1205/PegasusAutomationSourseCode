@@ -173,7 +173,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Select The Cmenu Option Of Asset
             gbInstructorPage.SelectTheCmenuOptionOfAsset(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
-                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name);
+                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum);
             Logger.LogMethodExit("Gradebook", "SelectTheCmenuOfAssetInGradeBook",
                 base.isTakeScreenShotDuringEntryExit);
         }
@@ -314,7 +314,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu),
                 activity.Name + GradebookResource.
-                Gradebook_Resource_TariningMaterial_Name);
+                Gradebook_Resource_TariningMaterial_Name, activityTypeEnum);
             Logger.LogMethodExit("GradeBook",
                 "ClickOnCmenuOfStudyplanTrainingMaterial",
                 isTakeScreenShotDuringEntryExit);

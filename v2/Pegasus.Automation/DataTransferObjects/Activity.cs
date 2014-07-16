@@ -26,6 +26,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// </summary>
         public enum ActivityTypeEnum
         {
+            Null = 0, // When there is no activity type we can pass this. So that rewriting the same function is not required
             SkillStudyPlan = 1,
             HomeWork = 2,
             Folder = 3,
@@ -50,7 +51,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
             Quiz=22,
             WritingSpace=23,
             PracticeTest=24,
-            PreTest=25
+            PreTest = 25,
+            CalculatedColumn = 26
         }
 
         /// <summary>
@@ -127,6 +129,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public void UpdateActivityInMemory(Activity activity)
         {
             InMemoryDatabaseSingleton.DatabaseInstance.Update(activity);
+        }
+
+        /// <summary>
+        /// This method returns all created activity of the given type.
+        /// </summary>
+        /// <param name="activityType">This is the type of the activity.</param>
+        /// <returns>Activity List.</returns>
+        public static List<Activity> GetAll(ActivityTypeEnum activityType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Activity>(
+                x => x.ActivityType == activityType).OrderByDescending(
+                x => x.creationDate).ToList();
         }
     }
 }

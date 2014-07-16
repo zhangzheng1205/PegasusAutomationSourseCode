@@ -74,7 +74,11 @@ namespace Pegasus.Pages.UI_Pages
             /// <summary>
             /// Asset cmenu option for Stop LMS Synchronization
             /// </summary>
-            StopLMSSynchronization = 10
+            StopLMSSynchronization = 10,
+            /// <summary>
+            /// Asset cmenu option for Show for student
+            /// </summary>
+            ShowforStudent = 11
         }
 
         /// <summary>
@@ -103,6 +107,16 @@ namespace Pegasus.Pages.UI_Pages
         {
             FirstText,
             SecondText,
+        }
+
+        public enum CustomColumnTypeEnum
+        {
+            Numeric = 1,
+            Calculated = 2,
+            SelectionList = 3,
+            FreeText = 4,
+            ImportGrades = 5,
+            TotalColumn = 6
         }
 
         /// <summary>
@@ -1463,8 +1477,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
-                //Select Total Column Window
-                this.SelectTotalColumnWindow();  
+                //Select Custom Column Window  
+                String pagetitle = base.GetPageTitle;
+                this.SelectTheWindowName(pagetitle);
                 // wait for element     
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Add_Button_ID_Locator));
@@ -2081,7 +2096,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="assetCmenuOptionEnum">This is Asset cmenu options.</param>
         /// <param name="assetName">This is Asset name.</param>
         public void SelectTheCmenuOptionOfAsset(
-            AssetCmenuOptionEnum assetCmenuOptionEnum, string assetName)
+            AssetCmenuOptionEnum assetCmenuOptionEnum, string assetName, Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Select The Cmenu Option Of Asset
             logger.LogMethodEntry("GBInstructorUXPage", "SelectTheCmenuOptionOfAsset",
@@ -2094,7 +2109,7 @@ namespace Pegasus.Pages.UI_Pages
               this.ClickTheCmenuIconInGradebook(getActivityColumnCount);   
               //Click On Cmenu Of Asset In Gradebook
               this.ClickOnCmenuOfAssetInGradebook(
-                  getActivityColumnCount, assetCmenuOptionEnum);              
+                  getActivityColumnCount, assetCmenuOptionEnum, activityTypeEnum);              
           }
           catch (Exception e)
           {
@@ -2110,7 +2125,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="assetCmenuOptionEnum">This is Asset cmenu options.</param>
         /// <param name="assetName">This is Asset name.</param>
         public void SelectTheCmenuOptionOfActivity(
-            AssetCmenuOptionEnum assetCmenuOptionEnum, string assetName)
+            AssetCmenuOptionEnum assetCmenuOptionEnum, string assetName, Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Select The Cmenu Option Of Asset
             logger.LogMethodEntry("GBInstructorUXPage", "SelectTheCmenuOptionOfActivity",
@@ -2123,7 +2138,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.ClickTheCmenuIconInGradebook(getActivityColumnCount);
                 //Click On Cmenu Of Asset In Gradebook
                 this.ClickOnCmenuOfAssetInGradebook(
-                    getActivityColumnCount, assetCmenuOptionEnum);
+                    getActivityColumnCount, assetCmenuOptionEnum, activityTypeEnum);
             }
             catch (Exception e)
             {
@@ -2152,7 +2167,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.ClickonAssetCmenuIconInGradebook(getActivityColumnCount);
                 //Click On Cmenu Of Asset In Gradebook
                 this.ClickOnCmenuOfAssetInGradebook(
-                    getActivityColumnCount, assetCmenuOptionEnum);
+                    getActivityColumnCount, assetCmenuOptionEnum, Activity.ActivityTypeEnum.Null);
             }
             catch (Exception e)
             {
@@ -2168,7 +2183,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="getActivityColumnCount">This is asset count.</param>
         /// <param name="assetCmenuOptionEnum">Thia is asset cmenu option.</param>
         private void ClickOnCmenuOfAssetInGradebook(
-            int getActivityColumnCount, AssetCmenuOptionEnum assetCmenuOptionEnum)
+            int getActivityColumnCount, AssetCmenuOptionEnum assetCmenuOptionEnum, Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Click On Cmenu Of Asset In Gradebook
             logger.LogMethodEntry("GBInstructorUXPage", "ClickOnCmenuOfAssetInGradebook",
@@ -2203,14 +2218,21 @@ namespace Pegasus.Pages.UI_Pages
                 case AssetCmenuOptionEnum.EditGrades:
                     this.SelectTheEditGradesCmenuOption();
                     break;
+                //Click 'Hide for Student'
                 case AssetCmenuOptionEnum.HideforStudent:
                     this.SelectTheHideForStudentCmenuOption();
                     break;
+                // Click 'Synchronize with LMS'
                 case AssetCmenuOptionEnum.SynchronizewithLMS:
-                    SynchronizeWithLMSCmenuOption(getActivityColumnCount, AssetCmenuOptionEnum.SynchronizewithLMS);
+                    SynchronizeWithLMSCmenuOption(getActivityColumnCount, AssetCmenuOptionEnum.SynchronizewithLMS, activityTypeEnum);
                     break;
+                //Click 'Stop LMS synchronization'
                 case AssetCmenuOptionEnum.StopLMSSynchronization:
-                    SynchronizeWithLMSCmenuOption(getActivityColumnCount, AssetCmenuOptionEnum.StopLMSSynchronization);
+                    SynchronizeWithLMSCmenuOption(getActivityColumnCount, AssetCmenuOptionEnum.StopLMSSynchronization, activityTypeEnum);
+                    break;
+                //Click 'Show for Student'
+                case AssetCmenuOptionEnum.ShowforStudent:
+                    this.SelectTheShowForStudentCmenuOption();
                     break;
             }
             logger.LogMethodExit("GBInstructorUXPage", "ClickOnCmenuOfAssetInGradebook",
@@ -2427,7 +2449,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         ///Select Synchronize with LMS/Stop LMS Synchronization Cmenu Option
         /// </summary>
-        private void SynchronizeWithLMSCmenuOption(int getActivityColumnCount, AssetCmenuOptionEnum LMSoption)
+        private void SynchronizeWithLMSCmenuOption(int getActivityColumnCount, AssetCmenuOptionEnum LMSoption, Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Select View All Submission Cmenu Option
             logger.LogMethodEntry("GBInstructorUXPage", "SynchronizeWithLMSCmenuOption",
@@ -2441,16 +2463,16 @@ namespace Pegasus.Pages.UI_Pages
 
             if (LMSoption == AssetCmenuOptionEnum.SynchronizewithLMS)
             {
-                this.updateActivityWithLMSSynchID(getActivityColumnCount);
+                this.updateActivityWithLMSSynchID(getActivityColumnCount, activityTypeEnum);
             }
 
             logger.LogMethodExit("GBInstructorUXPage", "SynchronizeWithLMSCmenuOption",
                                    base.isTakeScreenShotDuringEntryExit);
         }
 
-        private void updateActivityWithLMSSynchID(int getActivityColumnCount)
+        private void updateActivityWithLMSSynchID(int getActivityColumnCount, Activity.ActivityTypeEnum activityTypeEnum)
         {
-            //Select View All Submission Cmenu Option
+            //Select LMS Grade Synch Cmenu Option
             logger.LogMethodEntry("GBInstructorUXPage", "updateActivityWithLMSSynchID",
                                    base.isTakeScreenShotDuringEntryExit);
 
@@ -2464,7 +2486,7 @@ namespace Pegasus.Pages.UI_Pages
             string LMSGradesynch = getLMSIconProperty.GetAttribute("title");
             string[] LMSAttribute = LMSGradesynch.Split(':');
 
-            Activity activity = Activity.Get(Activity.ActivityTypeEnum.Test);
+            Activity activity = Activity.Get(activityTypeEnum);
             activity.ActivityID = LMSAttribute[1].Trim();
             activity.creationDate = DateTime.Now;
             activity.UpdateActivityInMemory(activity);
@@ -2523,7 +2545,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.ClickTheCmenuIconInGradebook(getActivityColumnCount);   
                 //Click On Cmenu Of Asset In Gradebook
                 this.ClickOnCmenuOfAssetInGradebook(getActivityColumnCount,
-                    assetCmenuOptionEnum);
+                    assetCmenuOptionEnum, Activity.ActivityTypeEnum.Null);
             }
             catch (Exception e)
             {
@@ -3477,7 +3499,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="assetCmenuOptionEnum">This is Asset cmenu options.</param>
         /// <param name="assetName">This is Asset name.</param>
         public void SelectTheCmenuOptionOfAssetInGradebook(
-            AssetCmenuOptionEnum assetCmenuOptionEnum, string assetName)
+            AssetCmenuOptionEnum assetCmenuOptionEnum, string assetName, Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Select The Cmenu Option Of Asset
             logger.LogMethodEntry("GBInstructorUXPage",
@@ -3491,7 +3513,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.ClickTheCmenuIconInNovaNetGradebook(getActivityColumnCount);
                 //Click On Cmenu Of Asset In Gradebook
                 this.ClickOnCmenuOfAssetInGradebook(
-                    getActivityColumnCount, assetCmenuOptionEnum);
+                    getActivityColumnCount, assetCmenuOptionEnum, activityTypeEnum);
             }
             catch (Exception e)
             {
@@ -3525,7 +3547,317 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getCmenuIconProperty);
             logger.LogMethodExit("GBInstructorUXPage", "ClickTheCmenuIconInNovaNetGradebook",
                           base.isTakeScreenShotDuringEntryExit);
-        }       
+        }
+
+        /// <summary>
+        /// Click on create column drop down.
+        /// </summary>
+        public void ClickOnCustomColumn(CustomColumnTypeEnum customColumnType)
+        {
+            //Click on create column drop down
+            logger.LogMethodEntry("GBInstructorUXPage", "ClickOnCustomColumn",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the Gradebook Frame
+                this.SelectGradebookFrameForMMND();
+                //Wait for the element
+                base.WaitForElement(By.Id(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_CreateColumnDropDown_ID_Locator));
+                IWebElement getColumnDropDown = base.GetWebElementPropertiesById
+                    (GBInstructorUXPageResource.
+                    GBInstructorUX_Page_CreateColumnDropDown_ID_Locator);
+                //click on drop down
+                base.ClickByJavaScriptExecutor(getColumnDropDown);
+
+                this.SelectCustomColumn(customColumnType);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "ClickOnCustomColumn",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Generic Method to select custom column
+        /// </summary>
+        /// <param name="customColumnType">Custom Column Type Enum</param>
+        private void SelectCustomColumn(CustomColumnTypeEnum customColumnType)
+        {
+            //Click on create column drop down
+            logger.LogMethodEntry("GBInstructorUXPage", "SelectCustomColumn",
+                base.isTakeScreenShotDuringEntryExit);
+            String getCustomcolumnName = String.Empty;
+            try
+            {
+                switch (customColumnType)
+                {
+                    case CustomColumnTypeEnum.Calculated:
+                        {
+                            getCustomcolumnName = GBInstructorUXPageResource.GBInstructorUXPage_CustomColumn_Calculated_ID_Locator;
+                            break;
+                        }
+                    case CustomColumnTypeEnum.FreeText:
+                        {
+                            getCustomcolumnName = GBInstructorUXPageResource.GBInstructorUXPage_CustomColumn_FreeText_ID_Locator;
+                            break;
+                        }
+                    case CustomColumnTypeEnum.ImportGrades:
+                        {
+                            getCustomcolumnName = GBInstructorUXPageResource.GBInstructorUXPage_CustomColumn_ImportGrades_ID_Locator;
+                            break;
+                        }
+                    case CustomColumnTypeEnum.Numeric:
+                        {
+                            getCustomcolumnName = GBInstructorUXPageResource.GBInstructorUXPage_CustomColumn_Numeric_ID_Locator;
+                            break;
+                        }
+                    case CustomColumnTypeEnum.SelectionList:
+                        {
+                            getCustomcolumnName = GBInstructorUXPageResource.GBInstructorUXPage_CustomColumn_SelectionList_ID_Locator;
+                            break;
+                        }
+                    case CustomColumnTypeEnum.TotalColumn:
+                        {
+                            getCustomcolumnName = GBInstructorUXPageResource.GBInstructorUXPage_CustomColumn_TotalColumn_ID_Locator;
+                            break;
+                        }
+                }
+                //Wait for the cmenu
+                base.WaitForElement(By.Id(getCustomcolumnName));
+                IWebElement getCustomcolumnType = base.GetWebElementPropertiesById(getCustomcolumnName);
+                base.ClickByJavaScriptExecutor(getCustomcolumnType);
+                Thread.Sleep(Convert.ToInt32(GBInstructorUXPageResource.GBInstructorUX_Page_WaitWindowTime_Value));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "SelectCustomColumn",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Enter Custom Column Name and Save in Memory
+        /// </summary>
+        public void EnterCalculatedColumnName()
+        {
+            logger.LogMethodEntry("GBInstructorUXPage", "EnterCalculatedColumnName",
+                base.isTakeScreenShotDuringEntryExit);
+            String ColumnName = string.Empty;
+            //Generate Custom Column Name GUID
+            Guid calculatedColumnName = Guid.NewGuid();
+            //Select Window            
+            this.SelectCalculatedColumnWindow();
+            //Enter Custom Column Title
+            base.WaitForElement(By.Id(GBInstructorUXPageResource.GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator));
+            //Fill the Custom Column Name in textbox
+            base.FillTextBoxByID(GBInstructorUXPageResource.GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator, calculatedColumnName.ToString());
+            ColumnName = base.GetValueAttributeById(GBInstructorUXPageResource.GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator);
+            this.StoreCustomColumnInMemory(ColumnName, Activity.ActivityTypeEnum.CalculatedColumn);
+            logger.LogMethodExit("GBInstructorUXPage", "EnterCalculatedColumnName",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select activities from Left Iframe.  
+        /// </summary>
+        /// <param name="activityName">This is activity name</param>
+        public void SelectActivityFromLeftFrameForCustomColumn(string activityName)
+        {
+            //Select activities from Left Iframe 
+            logger.LogMethodEntry("GBInstructorUXPage", "SelectActivityFromLeftFrameForCustomColumn",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Get the total activity count
+                int getActivityCount = this.GetActivityCountForCalculatedColumn();
+                //Write a for loop for selecting the checkboxes
+                for (int initialCount = Convert.ToInt32(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_Initial_Value); initialCount <= getActivityCount;
+                    initialCount++)
+                {
+                    if (base.IsElementPresent(By.XPath(string.Format(GBInstructorUXPageResource.
+                         GBInstructorUX_Page_ActivityNameText_Xpath_Locator, initialCount)),
+                         Convert.ToInt32(GBInstructorUXPageResource.
+                         GBInstructorUX_Page_WaitTime_Value)))
+                    {
+                        string getActivityName = base.GetTitleAttributeValueByXPath(string.
+                            Format(GBInstructorUXPageResource.
+                             GBInstructorUX_Page_ActivityNameText_Xpath_Locator, initialCount));
+                        //check for activity
+                        if (getActivityName.Contains(activityName))
+                        {
+                            this.SelectTheActivityCheckBox(initialCount);
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "SelectActivityFromLeftFrameForCustomColumn",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get Activity Count for Calculated Column.
+        /// </summary>
+        /// <returns>The Total Activity count</returns>
+        private int GetActivityCountForCalculatedColumn()
+        {
+            logger.LogMethodEntry("GBInstructorUXPage", "GetActivityCountForCalculatedColumn",
+                base.isTakeScreenShotDuringEntryExit);
+            //select window
+            this.SelectCalculatedColumnWindow();
+            // switch to iframe
+            base.SwitchToIFrame(GBInstructorUXPageResource.GBInstructorUX_Page_MyCourse_LeftFrame_ID_Locator);
+            //Wait for element
+            base.WaitForElement(By.XPath(GBInstructorUXPageResource.GBInstructorUX_Page_ActivityCount_Xpath_Locator));
+            int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
+                GBInstructorUX_Page_ActivityCount_Xpath_Locator);
+            logger.LogMethodExit("GBInstructorUXPage", "GetActivityCountForCalculatedColumn",
+                base.isTakeScreenShotDuringEntryExit);
+            return getActivityCount;
+        }        
+
+        /// <summary>
+        /// Select Calculated Column Window
+        /// </summary>
+        private void SelectCalculatedColumnWindow()
+        {
+            //Select Calculated Column Window
+            logger.LogMethodEntry("GBInstructorUXPage", "SelectCalculatedColumnWindow",
+                base.isTakeScreenShotDuringEntryExit);
+            //select the pop up window
+            base.WaitUntilWindowLoads(GBInstructorUXPageResource.
+                GBInstructorUXPage_CalculatedColumn_Windiw_Title);
+            base.SelectWindow(GBInstructorUXPageResource.
+                GBInstructorUXPage_CalculatedColumn_Windiw_Title);
+            logger.LogMethodExit("GBInstructorUXPage", "SelectCalculatedColumnWindow",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click the Save button
+        /// </summary>
+        public void ClickOnsaveButton()
+        {
+            logger.LogMethodEntry("GBInstructorUXPage", "ClickOnsaveButton",
+                base.isTakeScreenShotDuringEntryExit);
+            this.SelectCalculatedColumnWindow();
+            //Wait for element
+            base.WaitForElement(By.Id(GBInstructorUXPageResource.GBInstructorUXPage_CustomColumn_Save_Button_ID_Locator));
+            IWebElement getSaveButton = base.GetWebElementPropertiesById
+                    (GBInstructorUXPageResource.GBInstructorUXPage_CustomColumn_Save_Button_ID_Locator);
+            //click on drop down
+            base.ClickByJavaScriptExecutor(getSaveButton);
+
+            logger.LogMethodExit("GBInstructorUXPage", "ClickOnsaveButton",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// To Store the custom column in InMemory
+        /// </summary>
+        /// <param name="activityName">Custom Column Name to be saved</param>
+        /// <param name="activityTypeEnum">Custom Column type to be saved</param>
+        private void StoreCustomColumnInMemory(String columnName,
+            Activity.ActivityTypeEnum columnTypeEnum)
+        {
+            logger.LogMethodEntry("GBInstructorUXPage", "StoreCustomColumnInMemory",
+                base.isTakeScreenShotDuringEntryExit);
+
+            Activity newCustomColumn = new Activity
+            {
+                Name = columnName,
+                ActivityType = columnTypeEnum,
+                IsCreated = true,
+            };
+            //Saves the Custom column details
+            newCustomColumn.StoreActivityInMemory();
+
+            logger.LogMethodExit("GBInstructorUXPage", "StoreCustomColumnInMemory",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select The Show For Student Cmenu Option.
+        /// </summary>
+        private void SelectTheShowForStudentCmenuOption()
+        {
+            //Select The Show For Student Cmenu Option
+            logger.LogMethodEntry("GBInstructorUXPage", "SelectTheShowForStudentCmenuOption",
+               base.isTakeScreenShotDuringEntryExit);
+            //Wait for Element
+            base.WaitForElement(By.Id(GBInstructorUXPageResource.
+                GBInstructorUX_Page_ShowForStudent_Cmenu_ID_Locator));
+            IWebElement getSelectShowForStudentCmenuOption =
+                base.GetWebElementPropertiesById(GBInstructorUXPageResource.
+                GBInstructorUX_Page_ShowForStudent_Cmenu_ID_Locator);
+            //Click the 'Show For Student' Cmenu Option
+            base.ClickByJavaScriptExecutor(getSelectShowForStudentCmenuOption);
+            logger.LogMethodExit("GBInstructorUXPage", "SelectTheShowForStudentCmenuOption",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select the Gradebook Frame for MMND.
+        /// </summary>
+        public void SelectGradebookFrameForMMND()
+        {
+            //Select the Frame
+            logger.LogMethodEntry("GBInstructorUXPage", "SelectGradebookFrameForMMND",
+                                   base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Course Home Window
+                new CourseContentUXPage().SelectFrameInWindow(GBDefaultUXPageResource.
+                    GBDefaultUXPage_Gradebook_CourseHome_Window,
+                    GBDefaultUXPageResource.GBDefaultUXPage_Gradebook_Center_Frame);
+                //Wait for Element         
+                base.WaitForElement(By.Id(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_Synapse_GradesFrame_Iframe_Name_Locator));
+                //Switch to Frame
+                base.SwitchToIFrame(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_Synapse_GradesFrame_Iframe_Name_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "SelectGradebookFrameForMMND",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select The Window Name.
+        /// </summary>
+        /// <param name="windowName">This is Window Name.</param>
+        public void SelectTheWindowName(string windowName)
+        {
+            //Select The Window Name
+            logger.LogMethodEntry("ContentLibraryUXPage", "SelectTheWindowName",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the window
+                base.WaitUntilWindowLoads(windowName);
+                base.SelectWindow(windowName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", "SelectTheWindowName",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
 

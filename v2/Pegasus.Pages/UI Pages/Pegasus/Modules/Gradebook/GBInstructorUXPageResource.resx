@@ -513,4 +513,40 @@
   <data name="GBInstructorUXPage_Gradebook_LMSImage_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='GBGridHeaderTable']/tbody/tr[2]/td[{0}]/div[2]/span</value>
   </data>
+  <data name="GBInstructorUXPage_CustomColumn_Calculated_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblcalculatedcolumn</value>
+  </data>
+  <data name="GBInstructorUXPage_CustomColumn_FreeText_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblfreetextcolumn</value>
+  </data>
+  <data name="GBInstructorUXPage_CustomColumn_ImportGrades_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblimportgradescolumn</value>
+  </data>
+  <data name="GBInstructorUXPage_CustomColumn_Numeric_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblalphanumericcolumn</value>
+  </data>
+  <data name="GBInstructorUXPage_CustomColumn_SelectionList_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblselectionlistcolumn</value>
+  </data>
+  <data name="GBInstructorUXPage_CustomColumn_TotalColumn_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblTotalcolumn</value>
+  </data>
+  <data name="GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator" xml:space="preserve">
+    <value>txtColumn</value>
+  </data>
+  <data name="GBInstructorUXPage_CalculatedColumn_Windiw_Title" xml:space="preserve">
+    <value>Create Calculated Column</value>
+  </data>
+  <data name="GBInstructorUX_Page_MyCourse_LeftFrame_ID_Locator" xml:space="preserve">
+    <value>ifrmLeft</value>
+  </data>
+  <data name="GBInstructorUXPage_CustomColumn_Cancel_Button_ID_Locator" xml:space="preserve">
+    <value>btncancel1</value>
+  </data>
+  <data name="GBInstructorUXPage_CustomColumn_Save_Button_ID_Locator" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="GBInstructorUX_Page_ShowForStudent_Cmenu_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lblreleasecolumn</value>
+  </data>
 </root>

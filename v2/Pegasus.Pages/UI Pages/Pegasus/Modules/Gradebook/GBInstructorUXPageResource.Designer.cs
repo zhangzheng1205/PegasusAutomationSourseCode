@@ -790,6 +790,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ifrmLeft.
+        /// </summary>
+        internal static string GBInstructorUX_Page_MyCourse_LeftFrame_ID_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUX_Page_MyCourse_LeftFrame_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to txtFileName.
         /// </summary>
         internal static string GBInstructorUX_Page_Pop_Up_Browse_Input_Id {
@@ -894,6 +903,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         internal static string GBInstructorUX_Page_Second_Text_Weight_Xpath_Locator {
             get {
                 return ResourceManager.GetString("GBInstructorUX_Page_Second_Text_Weight_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_lblreleasecolumn.
+        /// </summary>
+        internal static string GBInstructorUX_Page_ShowForStudent_Cmenu_ID_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUX_Page_ShowForStudent_Cmenu_ID_Locator", resourceCulture);
             }
         }
         
@@ -1213,6 +1231,87 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create Calculated Column.
+        /// </summary>
+        internal static string GBInstructorUXPage_CalculatedColumn_Windiw_Title {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_CalculatedColumn_Windiw_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_lblcalculatedcolumn.
+        /// </summary>
+        internal static string GBInstructorUXPage_CustomColumn_Calculated_ID_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_CustomColumn_Calculated_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btncancel1.
+        /// </summary>
+        internal static string GBInstructorUXPage_CustomColumn_Cancel_Button_ID_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_CustomColumn_Cancel_Button_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_lblfreetextcolumn.
+        /// </summary>
+        internal static string GBInstructorUXPage_CustomColumn_FreeText_ID_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_CustomColumn_FreeText_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_lblimportgradescolumn.
+        /// </summary>
+        internal static string GBInstructorUXPage_CustomColumn_ImportGrades_ID_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_CustomColumn_ImportGrades_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_lblalphanumericcolumn.
+        /// </summary>
+        internal static string GBInstructorUXPage_CustomColumn_Numeric_ID_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_CustomColumn_Numeric_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btnSave.
+        /// </summary>
+        internal static string GBInstructorUXPage_CustomColumn_Save_Button_ID_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_CustomColumn_Save_Button_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_lblselectionlistcolumn.
+        /// </summary>
+        internal static string GBInstructorUXPage_CustomColumn_SelectionList_ID_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_CustomColumn_SelectionList_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_lblTotalcolumn.
+        /// </summary>
+        internal static string GBInstructorUXPage_CustomColumn_TotalColumn_ID_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_CustomColumn_TotalColumn_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;GBGridHeaderTable&apos;]/tbody/tr/td[{0}]/div.
         /// </summary>
         internal static string GBInstructorUXPage_Gradebook_CmenuIcon_Xpath_Locator {
@@ -1245,6 +1344,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         internal static string GBInstructorUXPage_Gradebook_LMSImage_Xpath_Locator {
             get {
                 return ResourceManager.GetString("GBInstructorUXPage_Gradebook_LMSImage_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to txtColumn.
+        /// </summary>
+        internal static string GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator", resourceCulture);
             }
         }
     }
