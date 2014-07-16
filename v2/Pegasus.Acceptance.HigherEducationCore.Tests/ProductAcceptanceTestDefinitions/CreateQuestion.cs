@@ -289,8 +289,21 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CreateQuestion", "MapQuestionToSkill",
                base.isTakeScreenShotDuringEntryExit);
         }
-
-        
+        /// <summary>
+        /// Create Essay Audio Questions.
+        /// </summary>        
+        [When(@"I create 'Essay audio' question type")]
+        public void CreateAudioEssayQuestionType()
+        {
+            //Create Audio Essay Questions
+            Logger.LogMethodEntry("CreateQuestion", "CreateAudioEssayQuestionType",
+                base.isTakeScreenShotDuringEntryExit);
+            //Create Audio Essay Questions
+            new EssayPage().CreateAudioEssayQuestions();
+            Logger.LogMethodExit("CreateQuestion", "CreateAudioEssayQuestionType",
+                       base.isTakeScreenShotDuringEntryExit);
+        }
+                
         /// <summary>
         /// This method is called before execution of test.
         /// </summary>
