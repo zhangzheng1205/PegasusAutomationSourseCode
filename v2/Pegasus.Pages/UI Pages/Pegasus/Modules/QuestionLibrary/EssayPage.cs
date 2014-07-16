@@ -64,8 +64,213 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("EssayPage", "CreateEssayQuestion",
                 base.isTakeScreenShotDuringEntryExit);
-        }            
+        }      
+      
+         /// <summary>
+        /// Create Audio Essay Question.
+        /// </summary>
+        public void CreateAudioEssayQuestions()
+        {
+            //Create Audio Essay Question
+            logger.LogMethodEntry("EssayPage", "CreateAudioEssayQuestions",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {  
+                this.SelectEssayWindow();
+                //Enter Title for Essay Question
+                string questionDetails = this.EnterTitleOfEssayQuestion().ToString();
+                //Select HTML Frame
+                this.SelectHTMLFrame();
+                //Click On View Source button and Enter Data
+                this.ClickOnViewSourceOfEssayQuestionandEnterText(questionDetails);
+                //Record Audio For Essay Question
+                this.RecordAudioforEssayQuestion();
+                this.SelectEssayWindow();
+                //Click on Add Text Settings
+                this.ClickOnAddTextSettings();
+                //Enter Score For Essay Question
+                this.EnterScoreValueForEssayQuestion();
+                //Enter Audio Input Details
+                this.EnableAudioInputCheckBox();
+                //Click On Save and Close Button
+                this.ClickONSaveAndCloseButtonOfEssayQuestion();
+                //Wait for 'True/False' question window to close
+                base.IsPopUpClosed(Convert.ToInt32(TrueFalsePageResource.
+                    TrueFalse_Page_Window_Count));
+                //Store Question Details in Memory
+                this.storeQuestionDetailsInMemory(questionDetails);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("EssayPage", "CreateAudioEssayQuestions",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Record Audio for Essay Question.
+        /// </summary>
+        public void RecordAudioforEssayQuestion()
+        {
+            //Create Audio Essay Question
+            logger.LogMethodEntry("EssayPage", "RecordAudioforEssayQuestion",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Select Record Audio Window
+                this.SelectRecordAudioWindow();
+                //Wait For Record Button Class Name
+                base.WaitForElement(By.ClassName(
+                    EssayPageResource.Essay_Page_RecordButton_ClassName));
+                IWebElement getRecordButton = base.GetWebElementPropertiesByClassName(
+                     EssayPageResource.Essay_Page_RecordButton_ClassName);
+                //Click On Record Button To Start Recording
+                base.ClickByJavaScriptExecutor(getRecordButton);
+                // Recording Audio for One Minute
+                this.RecordAudioForOneMinute();
+                //Click On Record Button To Stop Recording 
+                base.ClickByJavaScriptExecutor(getRecordButton);
+                // Save Audio Recorded input value
+                this.SaveAudioRecordingValue();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }           
+            logger.LogMethodExit("EssayPage", "RecordAudioforEssayQuestion",
+               base.isTakeScreenShotDuringEntryExit);
+        }
 
+        /// <summary>
+        /// Select Record Audio Window.
+        /// </summary>
+        private void SelectRecordAudioWindow()
+        {
+            logger.LogMethodEntry("EssayPage", "SelectRecordAudioWindow",
+               base.isTakeScreenShotDuringEntryExit);
+            //Click On Record Audio Image
+            base.WaitForElement(By.Id(
+                EssayPageResource.Essay_Page_AudioRecord_Image_Id_Locator));
+            base.ClickImageById(
+                EssayPageResource.Essay_Page_AudioRecord_Image_Id_Locator);
+            //Switch To Popup Window
+            base.WaitUntilPopUpLoads(
+                EssayPageResource.Essay_Page_RecordAudio_Window_Name);
+            base.SelectWindow(
+                EssayPageResource.Essay_Page_RecordAudio_Window_Name);
+            logger.LogMethodExit("EssayPage", "SelectRecordAudioWindow",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Record Audio for One Minute.
+        /// </summary>
+        private void RecordAudioForOneMinute()
+        {
+            //Record Audio for One Minute
+            logger.LogMethodEntry("EssayPage", "RecordAudioForOneMinute",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Fetching The Recording Time Value
+                base.WaitForElement(By.ClassName(
+                    EssayPageResource.Essay_Page_CurrentTime_ClassName));
+                string getRecordingCurretTime = base.GetElementTextByClassName(
+                    EssayPageResource.Essay_Page_CurrentTime_ClassName);
+                //Reccursive Method To Record Audio For One Minute
+                if (Convert.ToInt32(getRecordingCurretTime.Split(':')[0]) >=
+                    Convert.ToInt32(EssayPageResource.Essay_Page_AudioInput_Minutes_Time_Value))
+                {
+                    return;
+                }
+                else{
+                    RecordAudioForOneMinute();
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("EssayPage", "RecordAudioForOneMinute",
+               base.isTakeScreenShotDuringEntryExit);   
+        }
+        /// <summary>
+        /// Save Audio Recorded input value.
+        /// </summary>
+        private void SaveAudioRecordingValue()
+        {
+            logger.LogMethodEntry("EssayPage", "SaveAudioRecordingValue",
+                base.isTakeScreenShotDuringEntryExit);
+            //Wait Till Record Saving Message Disappears
+            bool getIsSaveButtonEnabled = false;
+            do
+            {
+                getIsSaveButtonEnabled = base.IsElementEnabledByID(
+                    EssayPageResource.Essay_Page_SaveAndClose_Id_Locator);
+
+            } while (getIsSaveButtonEnabled == false);
+            // Wait For SaveButton ID
+            base.WaitForElement(By.Id(
+                EssayPageResource.Essay_Page_SaveAndClose_Id_Locator));
+            IWebElement getSaveButtonId = base.GetWebElementPropertiesById(
+                EssayPageResource.Essay_Page_SaveAndClose_Id_Locator);
+            //Click On Save And Close Button
+            base.ClickByJavaScriptExecutor(getSaveButtonId);
+            logger.LogMethodExit("EssayPage", "SaveAudioRecordingValue",
+               base.isTakeScreenShotDuringEntryExit);   
+        }
+        ///<summary>
+        /// Enable Audio Input CheckBox.
+        ///</summary>
+        private void EnableAudioInputCheckBox()
+        {
+            logger.LogMethodEntry("EssayPage",
+                "EnableAudioInputCheckBox",
+                base.isTakeScreenShotDuringEntryExit);
+            //Enable AudioInput Checkbox
+            base.WaitForElement(By.Id(EssayPageResource.
+                Essay_Page_AudioInput_Checkbox_Id_Locator));
+            // Get CheckBox Id Property
+            IWebElement getIdProperty = base.GetWebElementPropertiesById(
+                EssayPageResource.Essay_Page_AudioInput_Checkbox_Id_Locator);
+            //Enable on Audio Input CheckBox
+            ClickByJavaScriptExecutor(getIdProperty);
+            // Enter Audio Input Time to Record Value    
+            this.EnterAudioInputTimingsValue();
+            logger.LogMethodExit("EssayPage",
+                "EnableAudioInputCheckBox",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Enter Audio Input Time to Record Value.      
+        /// </summary>
+        private void EnterAudioInputTimingsValue()
+        {
+            //Enter Audio Input Time to Record Value
+            logger.LogMethodEntry("EssayPage",
+                "EnterAudioInputTimingsValue",
+                base.isTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(EssayPageResource.
+                Essay_Page_AudioInput_MinTime_Id_Locator));
+            //Clear Minutes TextBox Value
+            base.ClearTextByID(EssayPageResource.
+                Essay_Page_AudioInput_MinTime_Id_Locator);
+            //Enter Minutes TextBox Value
+            base.FillTextBoxByID(EssayPageResource.
+                Essay_Page_AudioInput_MinTime_Id_Locator,
+                EssayPageResource.Essay_Page_AudioInput_Minutes_Time_Value);
+            base.WaitForElement(By.Id(EssayPageResource.
+               Essay_Page_AudioInput_Seconds_Time_Id_Locator));
+            //Clear Seconds TextBox Value
+            base.ClearTextByID(EssayPageResource.
+                Essay_Page_AudioInput_Seconds_Time_Id_Locator);
+            //Enter Seconds TextBox Value
+            base.FillTextBoxByID(EssayPageResource.
+                Essay_Page_AudioInput_Seconds_Time_Id_Locator,
+                EssayPageResource.Essay_Page_AudioInput_Seconds_Time_Value);
+            logger.LogMethodExit("EssayPage",
+                "EnterAudioInputTimingsValue",
+                base.isTakeScreenShotDuringEntryExit);
+        }       
         /// <summary>
         /// Create EssayQuestion Inside The Activity.
         /// </summary>
@@ -243,7 +448,7 @@ namespace Pegasus.Pages.UI_Pages
                 "EnterScoreValueForEssayQuestion",
              base.isTakeScreenShotDuringEntryExit);
         }
-
+       
         /// <summary>
         /// Click On Add Text Settings.
         /// </summary>
@@ -315,8 +520,8 @@ namespace Pegasus.Pages.UI_Pages
             newQuestion.StoreQuestionInMemory();
             logger.LogMethodExit("EssayPage", "storeQuestionDetailsInMemory",
               base.isTakeScreenShotDuringEntryExit);            
-        }
-
+        }      
+       
         /// <summary>
         /// Add Pallette Characters.
         /// </summary>

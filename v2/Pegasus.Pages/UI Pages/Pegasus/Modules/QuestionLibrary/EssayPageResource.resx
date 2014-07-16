@@ -120,6 +120,24 @@
   <data name="Essay_Page_Answer_Button_Id_Locator" xml:space="preserve">
     <value>spnAnswer</value>
   </data>
+  <data name="Essay_Page_AudioInput_Checkbox_Id_Locator" xml:space="preserve">
+    <value>_ctl1_chkAudio</value>
+  </data>
+  <data name="Essay_Page_AudioInput_MinTime_Id_Locator" xml:space="preserve">
+    <value>_ctl1_txtMin</value>
+  </data>
+  <data name="Essay_Page_AudioInput_Minutes_Time_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Essay_Page_AudioInput_Seconds_Time_Id_Locator" xml:space="preserve">
+    <value>_ctl1_txtSec</value>
+  </data>
+  <data name="Essay_Page_AudioInput_Seconds_Time_Value" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="Essay_Page_AudioRecord_Image_Id_Locator" xml:space="preserve">
+    <value>recordaudio</value>
+  </data>
   <data name="Essay_Page_Browse_Button_Id_Locator" xml:space="preserve">
     <value>_ctl1:btnImgbrow</value>
   </data>
@@ -140,6 +158,9 @@
   </data>
   <data name="Essay_Page_CreateEssay_Window_Name" xml:space="preserve">
     <value>Create Essay</value>
+  </data>
+  <data name="Essay_Page_CurrentTime_ClassName" xml:space="preserve">
+    <value>lrn_currentTime</value>
   </data>
   <data name="Essay_Page_EnterQuestionTitle_Id_Locator" xml:space="preserve">
     <value>_ctl1_txtQuestionLabel</value>
@@ -170,6 +191,15 @@
   </data>
   <data name="Essay_Page_NumberOfWords_Value" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="Essay_Page_RecordAudio_Window_Name" xml:space="preserve">
+    <value>Record Audio</value>
+  </data>
+  <data name="Essay_Page_RecordButton_ClassName" xml:space="preserve">
+    <value>lrn_start_recording</value>
+  </data>
+  <data name="Essay_Page_SaveAndClose_Id_Locator" xml:space="preserve">
+    <value>btnSave</value>
   </data>
   <data name="Essay_Page_Save_Button_Id_Locator" xml:space="preserve">
     <value>imgReturnf</value>
