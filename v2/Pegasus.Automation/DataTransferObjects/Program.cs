@@ -59,7 +59,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Program>(
                 x => x.ProgramType == programTypeEnum && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).First();
         }
 
         /// <summary>
@@ -70,6 +70,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static List<Program> Get(Func<Program, bool> predicate)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany(predicate);
+        }
+
+        /// <summary>
+        /// This method returns all created program of the given type.
+        /// </summary>
+        /// <param name="programType">This is the type of the program.</param>
+        /// <returns>Program List.</returns>
+        public static List<Program> GetAll(ProgramTypeEnum programType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Program>(
+                x => x.ProgramType == programType).OrderByDescending(
+                x => x.CreationDate).ToList();
         }
     }
 }

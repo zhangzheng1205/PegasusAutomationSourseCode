@@ -104,20 +104,20 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// To verify section displays in global home page.
         /// </summary>
-        [Then(@"I should see enrolled Section in Global Home Page")]
-        public void DisplayOfEnrolledSectionInGlobalHomePage()
+        [Then(@"I should see enrolled ""(.*)"" Section in Global Home Page")]
+        public void DisplayOfEnrolledSectionInGlobalHomePage(Course.CourseTypeEnum courseTypeEnum)
         {
             //Section Display in Global Home Page
             Logger.LogMethodEntry("UserEnrollment",
                 "DisplayOfEnrolledSectionInGlobalHomePage",
                 base.isTakeScreenShotDuringEntryExit);
             //Get Course From Memory
-            Course course = Course.Get(Course.CourseTypeEnum.MyItLabProgramCourse);
+            Course course = Course.Get(courseTypeEnum);
+            bool isCourseVisibleInGlobalHomePage = new HEDGlobalHomePage().
+                    GetCoursePresentInGlobalHomePage().Replace(" ", "").Contains(course.SectionName);
             //Assert section displays in global home page
             Logger.LogAssertion("VerifySmsStudentEnrollInCourse", ScenarioContext.
-                Current.ScenarioInfo.Title, () => Assert.AreEqual(true,
-                    new HEDGlobalHomePage().GetCoursePresentInGlobalHomePage().
-                    Contains(course.SectionName + UserEnrollementResource.UserEnrollement_SectionName_Value)));           
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(true, isCourseVisibleInGlobalHomePage));
             Logger.LogMethodExit("UserEnrollment",
                 "DisplayOfEnrolledSectionInGlobalHomePage",
                 base.isTakeScreenShotDuringEntryExit);

@@ -49,7 +49,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
             //Get Course Id From Memeory
             Course course = Course.Get(courseTypeEnum);
             //Enter Section Id
-            new RegisterPage().EnterSectionId(course.ECollegeIntegrationID);
+            new RegisterPage().EnterSectionId(course.ECollegeIntegrationId);
             Logger.LogMethodExit("SMSUserEnrollement", "EnterTheSectionId",
                 base.isTakeScreenShotDuringEntryExit);
         }

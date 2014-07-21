@@ -65,6 +65,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CommonStepsResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="CommonProductAcceptanceTestFeatures\CommonUserLoginLogout.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonUserLoginLogout.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\ActivityCreation.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ActivityCreationResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -199,16 +204,26 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="CommonProductAcceptanceTestFeatures\CommonUserLoginLogout.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CommonUserLoginLogout.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MyTest.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Extended.MyTest.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MyTest.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MyTestFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProductAcceptanceTest.MyTest.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BTS.MyTest.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.GroupingUsecaseTest.MyTest.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.WorkFlow.feature">

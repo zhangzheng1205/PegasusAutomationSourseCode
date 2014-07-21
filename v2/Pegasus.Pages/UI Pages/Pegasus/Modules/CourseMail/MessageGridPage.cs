@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on View Source
             base.WaitForElement(By.Id(MessageGridPageResource.
                 MessageGrid_Page_HTMLEditor_ViewSource_Id_Locator));
-            base.ClickLinkByID(MessageGridPageResource.
+            base.ClickLinkById(MessageGridPageResource.
                 MessageGrid_Page_HTMLEditor_ViewSource_Id_Locator);
             //Enter Message in Text Area
             base.WaitForElement(By.Id(MessageGridPageResource.

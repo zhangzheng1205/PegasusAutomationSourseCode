@@ -120,6 +120,9 @@
   <data name="CommonSteps_CreateNewUserWindow_Name_Locator" xml:space="preserve">
     <value>Create New User</value>
   </data>
+  <data name="CommonSteps_Grades_Subtab_Id_Locator" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="CommonSteps_IFrame" xml:space="preserve">
     <value>ifrm</value>
   </data>

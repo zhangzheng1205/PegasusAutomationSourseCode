@@ -70,47 +70,23 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestFeatures
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 6
-#line 8
-testRunner.Given("I browsed the login url for \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I logged into the Pegasus as \"HedWsInstructor\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.And("I should be on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-testRunner.When("I enter in the \"MySpanishLabMaster\" from the Global Home page as \"HedWsInstructor" +
-                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create New Test By HedWsInstructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpace Teacher Work Flow")]
         public virtual void CreateNewTestByHedWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create New Test By HedWsInstructor", ((string[])(null)));
-#line 17
+#line 8
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 18
-testRunner.When("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
-testRunner.And("I click on the \"Create New Test\" link in Manage Your Tests and created Test using" +
-                    " \"TrueFalse\" question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
+#line 9
+testRunner.When("I navigate to \"MyTest\" tab of the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+testRunner.When("I click on the \"Create New Test\" link in Manage Your Tests and created Test using" +
+                    " \"TrueFalse\" question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
 testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 21
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -121,22 +97,22 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void TestCreationWithQuestionGroupByHedWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Creation with Question Group By HedWsInstructor", ((string[])(null)));
-#line 26
+#line 16
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 27
-testRunner.When("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 28
-testRunner.And("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
+#line 17
+testRunner.When("I navigate to \"MyTest\" tab of the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 19
+testRunner.When("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
 testRunner.And("I click on \"CreateQuestionGroup\" link in the Manage Your Test frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
+#line 21
 testRunner.And("I enter the Question Group title, Add the question from the Questions banks and c" +
                     "lick on Save and close button in Create Question Group pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
+#line 22
 testRunner.And("I click on Save button in action row of Manage your test frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
+#line 23
 testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -148,16 +124,16 @@ testRunner.Then("I should see the successfull message \"Test saved successfully.
         public virtual void CreatingNewTestWithEssayQuestionByHedWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creating New Test with Essay Question By HedWsInstructor", ((string[])(null)));
-#line 36
+#line 27
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 37
-testRunner.When("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
-testRunner.And("I click on the \"Create New Test\" link in Manage Your Tests and created Test using" +
-                    " \"Essay\" question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
+#line 28
+testRunner.When("I navigate to \"MyTest\" tab of the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 30
+testRunner.When("I click on the \"Create New Test\" link in Manage Your Tests and created Test using" +
+                    " \"Essay\" question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 31
 testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -171,18 +147,18 @@ testRunner.Then("I should see the successfull message \"Test saved successfully.
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creating New Test with Adding the Questions to the test from Testbank Using \"Numb" +
                     "er of Random Questions to add\" option By HedWsInstructor", ((string[])(null)));
-#line 43
+#line 35
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 44
-testRunner.When("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
-testRunner.And("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
+#line 36
+testRunner.When("I navigate to \"MyTest\" tab of the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 37
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 38
+testRunner.When("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 39
 testRunner.And("I Select questions in Filter Test bank Frame and enter \"2\" number in the Number o" +
                     "f random questions to add field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 47
+#line 40
 testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -196,22 +172,22 @@ testRunner.Then("I should see the successfull message \"Test saved successfully.
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Creation with Question Group and Save the Test through Cancel Test Confirmat" +
                     "ion pop up By HedWsInstructor", ((string[])(null)));
-#line 51
+#line 44
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 52
-testRunner.When("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 53
-testRunner.And("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 54
+#line 45
+testRunner.When("I navigate to \"MyTest\" tab of the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 46
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 47
+testRunner.When("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 48
 testRunner.And("I click on \"CreateQuestionGroup\" link in the Manage Your Test frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
+#line 49
 testRunner.And("I enter the Question Group title, Add the question from the Questions banks and c" +
                     "lick on Save and close button in Create Question Group pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 56
+#line 50
 testRunner.And("I click on Close button in action row of Manage your test frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 57
+#line 51
 testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -223,22 +199,22 @@ testRunner.Then("I should see the successfull message \"Test saved successfully.
         public virtual void DeletingTheTestInManageYourTestFrameByHedWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deleting the Test in Manage your test Frame By HedWsInstructor", ((string[])(null)));
-#line 62
+#line 56
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 63
-testRunner.When("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
-testRunner.And("I click on the \"Create New Test\" link in Manage Your Tests and created Test using" +
-                    " \"TrueFalse\" question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 65
+#line 57
+testRunner.When("I navigate to \"MyTest\" tab of the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 58
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 59
+testRunner.When("I click on the \"Create New Test\" link in Manage Your Tests and created Test using" +
+                    " \"TrueFalse\" question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
 testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 66
+#line 61
 testRunner.When("I select \"Delete\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 67
+#line 62
 testRunner.And("I click on \'OK\' button in confirmation popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 68
+#line 63
 testRunner.Then("I should see the successfull message \"Test deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -250,17 +226,17 @@ testRunner.Then("I should see the successfull message \"Test deleted successfull
         public virtual void VerifiyThePrintPopUpDetailsOnMyTestDownloadPopup()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verifiy the print pop up details on My test download popup", ((string[])(null)));
-#line 72
+#line 67
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 73
-testRunner.When("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 74
-testRunner.And("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 75
+#line 68
+testRunner.When("I navigate to \"MyTest\" tab of the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 69
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 70
+testRunner.When("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 71
 testRunner.Then("I should see print details are in disabled state by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 76
+#line 72
 testRunner.When("I click On cancel button on MyTest download popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -274,28 +250,28 @@ testRunner.When("I click On cancel button on MyTest download popup", ((string)(n
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Functionality of Adding the duplicate questions using drag drop By HedWsInstructo" +
                     "r", ((string[])(null)));
-#line 80
+#line 76
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 81
-testRunner.When("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 82
-testRunner.And("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 83
+#line 77
+testRunner.When("I navigate to \"MyTest\" tab of the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 78
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 79
+testRunner.When("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 80
 testRunner.And("I click on expand button of \"My Questions Folder\" in filtertest bank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 84
+#line 81
 testRunner.And("I drag and drop of \"Essay\" question from Filter Test Bank  to Manage Your Test Fr" +
                     "ame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 85
+#line 82
 testRunner.Then("I should see the \"Pegasus\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 86
+#line 83
 testRunner.And("I should see confirmation message \"You are about to add or copy questions that ar" +
                     "e already included in your test. Do you want to create duplicate test questions?" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 87
+#line 84
 testRunner.When("I click on \'OK\' button in \"Pegasus\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 88
+#line 85
 testRunner.Then("I should see the \"Essay\" question in manage your test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -309,13 +285,13 @@ testRunner.Then("I should see the \"Essay\" question in manage your test", ((str
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Availability of Questions in My Questions folder in Filter test bank frame By Hed" +
                     "WsInstructor", ((string[])(null)));
-#line 92
+#line 89
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 93
-testRunner.When("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 94
+#line 90
+testRunner.When("I navigate to \"MyTest\" tab of the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 91
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 92
 testRunner.Then("I should see the \"Essay\" question in mytest", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -327,13 +303,13 @@ testRunner.Then("I should see the \"Essay\" question in mytest", ((string)(null)
         public virtual void DisplayOfTestOptionsInManageYourTestFrameActionRowByHedWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Test options in Manage your Test frame action row By HedWsInstructor", ((string[])(null)));
-#line 98
+#line 96
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
+#line 97
+testRunner.When("I navigate to \"MyTest\" tab of the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 98
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 99
-testRunner.When("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 100
 testRunner.Then("I should see the Display of Test options headers in manage your tests frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -345,27 +321,25 @@ testRunner.Then("I should see the Display of Test options headers in manage your
         public virtual void DisplayOfMyTestFolderOrderInAddContentFromLibraryByHedWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of MyTest Folder order in Add content from library By HedWsInstructor", ((string[])(null)));
-#line 104
+#line 103
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
+#line 104
+testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 105
-testRunner.When("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 106
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 107
+#line 106
 testRunner.When("I navigate to the \"MyTest\" tab in Preferences Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 108
+#line 107
 testRunner.Then("I should be on the \"MyTest\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 109
+#line 108
 testRunner.When("I enable the \'MyTest\' options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 110
+#line 109
 testRunner.And("I save the Preferences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 111
+#line 110
 testRunner.And("I navigate back to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 112
+#line 111
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 113
+#line 112
 testRunner.And("I should see the \"My Tests Folder\" and displayed \"2\" order in add course material" +
                     "s library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -380,19 +354,15 @@ testRunner.And("I should see the \"My Tests Folder\" and displayed \"2\" order i
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Test inside the MyTest Folder order in Add content from library By Hed" +
                     "WsInstructor", ((string[])(null)));
-#line 117
+#line 116
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
+#line 117
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 118
-testRunner.When("I select the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 119
-testRunner.And("I navigate to the \"Add from Library\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 120
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 121
+#line 119
 testRunner.When("I click on \'My Tests Folder\' folder in Add Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 122
+#line 120
 testRunner.Then("I should see the \'MyTest\' in My Test Folder in Add content from library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -404,19 +374,17 @@ testRunner.Then("I should see the \'MyTest\' in My Test Folder in Add content fr
         public virtual void AddingOfTestFromCLToCCByHedWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding of Test from CL to  CC By HedWsInstructor", ((string[])(null)));
-#line 126
+#line 124
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 127
-testRunner.When("I select the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 128
+#line 125
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 126
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 129
+#line 127
 testRunner.When("I click on \'My Tests Folder\' folder in Add Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 130
+#line 128
 testRunner.And("I add the \"MyTest\" activity from Content Library to MyCourse frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 131
+#line 129
 testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -428,19 +396,17 @@ testRunner.Then("I should see the successfull message \"Content item is added to
         public virtual void DisplayOfC_MenuOptionsForTestInMyCourseFrameByHedWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of c-menu options for Test in My course frame By HedWsInstructor", ((string[])(null)));
-#line 135
+#line 133
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 136
-testRunner.When("I select the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 137
+#line 134
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 135
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 138
+#line 136
 testRunner.And("I should see \"MyTest\" activity in the MyCourse Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 139
+#line 137
 testRunner.When("I click on \'ShowHide\' option of Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 140
+#line 138
 testRunner.And("I click the activity cmenu option in MyCourse Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -479,13 +445,8 @@ testRunner.And("I click the activity cmenu option in MyCourse Frame", ((string)(
             table1.AddRow(new string[] {
                         "Remove",
                         "Remove"});
-#line 141
+#line 139
 testRunner.Then("I should able to see the Display of c-menu options for activity", ((string)(null)), table1, "Then ");
-#line 154
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 155
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -496,27 +457,25 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void ToCreateThePageByWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Create The Page By Ws Instructor", ((string[])(null)));
-#line 158
+#line 154
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 159
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 160
+#line 155
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 156
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 161
+#line 157
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 162
+#line 158
 testRunner.And("I click on the \"Add Page\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 163
+#line 159
 testRunner.Then("I should be on the \"Create page\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 164
+#line 160
 testRunner.When("I create the \"Page\" activity in Content Library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 165
+#line 161
 testRunner.Then("I should see the successfull message \"Page saved successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 166
+#line 162
 testRunner.When("I associate the \"Page\" activity Content Library to MyCourse frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 167
+#line 163
 testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

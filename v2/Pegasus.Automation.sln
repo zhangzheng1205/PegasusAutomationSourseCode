@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Automation", "Pegasus.Automation\Pegasus.Automation.csproj", "{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.HigherEducationCore.Tests", "Pegasus.Acceptance.HigherEducationCore.Tests\Pegasus.Acceptance.HigherEducationCore.Tests.csproj", "{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}"
@@ -20,13 +22,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.NovaNET.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.Contineo.Tests", "Pegasus.Acceptance.Contineo.Tests\Pegasus.Acceptance.Contineo.Tests.csproj", "{4BBBA6BD-D332-447E-903D-1B3A432C0BAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.ETextS11.Tests", "Pegasus.Integration.ETextS11.Tests\Pegasus.Integration.ETextS11.Tests.csproj", "{A3A750FE-71D4-438F-B27F-C8F459B088AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.Hed.ETextS11.Tests", "Pegasus.Integration.ETextS11.Tests\Pegasus.Integration.Hed.ETextS11.Tests.csproj", "{A3A750FE-71D4-438F-B27F-C8F459B088AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.MLP.Tests", "Pegasus.Integration.MLP.Tests\Pegasus.Integration.MLP.Tests.csproj", "{8413E51E-C450-4694-8C0E-A89145EA3E91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.Hed.MLP.Tests", "Pegasus.Integration.MLP.Tests\Pegasus.Integration.Hed.MLP.Tests.csproj", "{8413E51E-C450-4694-8C0E-A89145EA3E91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MyItLab.Tests", "Pegasus.Acceptance.MyItLab.Tests\Pegasus.Acceptance.MyItLab.Tests.csproj", "{CC79FB91-DC29-4CE7-93C4-F091E330B357}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.MGM.Tests", "Pegasus.Integration.MGM.Tests\Pegasus.Integration.MGM.Tests.csproj", "{ADA54BAB-4A0F-405B-97E3-5974DB4FCF6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.DigitalPath.Rumba.Tests", "Pegasus.Integration.MGM.Tests\Pegasus.Integration.DigitalPath.Rumba.Tests.csproj", "{ADA54BAB-4A0F-405B-97E3-5974DB4FCF6D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MMND.Tests", "Pegasus.Acceptance.MMND.Tests\Pegasus.Acceptance.MMND.Tests.csproj", "{C8DF9080-AC3A-4A60-89A8-D5A159B86865}"
 EndProject
@@ -48,45 +50,42 @@ Global
 		SccProjectUniqueName2 = Pegasus.Pages\\Pegasus.Pages.csproj
 		SccProjectName2 = Pegasus.Pages
 		SccLocalPath2 = Pegasus.Pages
-		SccProjectUniqueName3 = Pegasus.Integration.ETextS11.Tests\\Pegasus.Integration.ETextS11.Tests.csproj
-		SccProjectName3 = Pegasus.Integration.ETextS11.Tests
-		SccLocalPath3 = Pegasus.Integration.ETextS11.Tests
-		SccProjectUniqueName4 = Pegasus.Integration.MLP.Tests\\Pegasus.Integration.MLP.Tests.csproj
-		SccProjectName4 = Pegasus.Integration.MLP.Tests
-		SccLocalPath4 = Pegasus.Integration.MLP.Tests
-		SccProjectUniqueName5 = Pegasus.Acceptance.MyItLab.Tests\\Pegasus.Acceptance.MyItLab.Tests.csproj
-		SccProjectName5 = Pegasus.Acceptance.MyItLab.Tests
-		SccLocalPath5 = Pegasus.Acceptance.MyItLab.Tests
-		SccProjectUniqueName6 = Pegasus.Integration.MGM.Tests\\Pegasus.Integration.MGM.Tests.csproj
-		SccProjectName6 = Pegasus.Integration.MGM.Tests
-		SccLocalPath6 = Pegasus.Integration.MGM.Tests
-		SccProjectUniqueName7 = Pegasus.Acceptance.MMND.Tests\\Pegasus.Acceptance.MMND.Tests.csproj
-		SccProjectName7 = Pegasus.Acceptance.MMND.Tests
-		SccLocalPath7 = Pegasus.Acceptance.MMND.Tests
-		SccProjectUniqueName8 = Pegasus.Acceptance.NovaNET.Tests\\Pegasus.Acceptance.NovaNET.Tests.csproj
-		SccProjectName8 = Pegasus.Acceptance.NovaNET.Tests
-		SccLocalPath8 = Pegasus.Acceptance.NovaNET.Tests
-		SccProjectUniqueName9 = Pegasus.Acceptance.Contineo.Tests\\Pegasus.Acceptance.Contineo.Tests.csproj
-		SccProjectName9 = Pegasus.Acceptance.Contineo.Tests
-		SccLocalPath9 = Pegasus.Acceptance.Contineo.Tests
-		SccProjectUniqueName10 = Pegasus.Acceptance.DigitalPath.Tests\\Pegasus.Acceptance.DigitalPath.Tests.csproj
-		SccProjectName10 = Pegasus.Acceptance.DigitalPath.Tests
-		SccLocalPath10 = Pegasus.Acceptance.DigitalPath.Tests
-		SccProjectUniqueName11 = Pegasus.Acceptance.MyTest.Tests\\Pegasus.Acceptance.MyTest.Tests.csproj
-		SccProjectName11 = Pegasus.Acceptance.MyTest.Tests
-		SccLocalPath11 = Pegasus.Acceptance.MyTest.Tests
-		SccProjectUniqueName12 = Pegasus.Acceptance.HigherEducationCore.Tests\\Pegasus.Acceptance.HigherEducationCore.Tests.csproj
-		SccProjectName12 = Pegasus.Acceptance.HigherEducationCore.Tests
-		SccLocalPath12 = Pegasus.Acceptance.HigherEducationCore.Tests
-		SccProjectUniqueName13 = Pegasus.Acceptance.WritingSpace.Tests\\Pegasus.Acceptance.WritingSpace.Tests.csproj
-		SccProjectName13 = Pegasus.Acceptance.WritingSpace.Tests
-		SccLocalPath13 = Pegasus.Acceptance.WritingSpace.Tests
-		SccProjectUniqueName14 = Pegasus.Acceptance.MyItLab.GraderIT.Tests\\Pegasus.Acceptance.MyItLab.GraderIT.Tests.csproj
-		SccProjectName14 = Pegasus.Acceptance.MyItLab.GraderIT.Tests
-		SccLocalPath14 = Pegasus.Acceptance.MyItLab.GraderIT.Tests
-	EndGlobalSection
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Pegasus.Automation.vsmdi
+		SccProjectUniqueName3 = Pegasus.Acceptance.MyItLab.Tests\\Pegasus.Acceptance.MyItLab.Tests.csproj
+		SccProjectName3 = Pegasus.Acceptance.MyItLab.Tests
+		SccLocalPath3 = Pegasus.Acceptance.MyItLab.Tests
+		SccProjectUniqueName4 = Pegasus.Acceptance.MMND.Tests\\Pegasus.Acceptance.MMND.Tests.csproj
+		SccProjectName4 = Pegasus.Acceptance.MMND.Tests
+		SccLocalPath4 = Pegasus.Acceptance.MMND.Tests
+		SccProjectUniqueName5 = Pegasus.Acceptance.NovaNET.Tests\\Pegasus.Acceptance.NovaNET.Tests.csproj
+		SccProjectName5 = Pegasus.Acceptance.NovaNET.Tests
+		SccLocalPath5 = Pegasus.Acceptance.NovaNET.Tests
+		SccProjectUniqueName6 = Pegasus.Acceptance.Contineo.Tests\\Pegasus.Acceptance.Contineo.Tests.csproj
+		SccProjectName6 = Pegasus.Acceptance.Contineo.Tests
+		SccLocalPath6 = Pegasus.Acceptance.Contineo.Tests
+		SccProjectUniqueName7 = Pegasus.Acceptance.DigitalPath.Tests\\Pegasus.Acceptance.DigitalPath.Tests.csproj
+		SccProjectName7 = Pegasus.Acceptance.DigitalPath.Tests
+		SccLocalPath7 = Pegasus.Acceptance.DigitalPath.Tests
+		SccProjectUniqueName8 = Pegasus.Acceptance.MyTest.Tests\\Pegasus.Acceptance.MyTest.Tests.csproj
+		SccProjectName8 = Pegasus.Acceptance.MyTest.Tests
+		SccLocalPath8 = Pegasus.Acceptance.MyTest.Tests
+		SccProjectUniqueName9 = Pegasus.Acceptance.HigherEducationCore.Tests\\Pegasus.Acceptance.HigherEducationCore.Tests.csproj
+		SccProjectName9 = Pegasus.Acceptance.HigherEducationCore.Tests
+		SccLocalPath9 = Pegasus.Acceptance.HigherEducationCore.Tests
+		SccProjectUniqueName10 = Pegasus.Acceptance.WritingSpace.Tests\\Pegasus.Acceptance.WritingSpace.Tests.csproj
+		SccProjectName10 = Pegasus.Acceptance.WritingSpace.Tests
+		SccLocalPath10 = Pegasus.Acceptance.WritingSpace.Tests
+		SccProjectUniqueName11 = Pegasus.Acceptance.MyItLab.GraderIT.Tests\\Pegasus.Acceptance.MyItLab.GraderIT.Tests.csproj
+		SccProjectName11 = Pegasus.Acceptance.MyItLab.GraderIT.Tests
+		SccLocalPath11 = Pegasus.Acceptance.MyItLab.GraderIT.Tests
+		SccProjectUniqueName12 = Pegasus.Integration.MGM.Tests\\Pegasus.Integration.DigitalPath.Rumba.Tests.csproj
+		SccProjectName12 = Pegasus.Integration.MGM.Tests
+		SccLocalPath12 = Pegasus.Integration.MGM.Tests
+		SccProjectUniqueName13 = Pegasus.Integration.ETextS11.Tests\\Pegasus.Integration.Hed.ETextS11.Tests.csproj
+		SccProjectName13 = Pegasus.Integration.ETextS11.Tests
+		SccLocalPath13 = Pegasus.Integration.ETextS11.Tests
+		SccProjectUniqueName14 = Pegasus.Integration.MLP.Tests\\Pegasus.Integration.Hed.MLP.Tests.csproj
+		SccProjectName14 = Pegasus.Integration.MLP.Tests
+		SccLocalPath14 = Pegasus.Integration.MLP.Tests
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -152,5 +151,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Pegasus.Automation.vsmdi
 	EndGlobalSection
 EndGlobal

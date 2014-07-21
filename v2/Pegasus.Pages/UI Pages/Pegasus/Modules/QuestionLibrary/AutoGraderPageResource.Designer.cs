@@ -61,6 +61,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.QuestionLibrary {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 750.
+        /// </summary>
+        internal static string AutoGraderPageResource_PCT_WinHeight {
+            get {
+                return ResourceManager.GetString("AutoGraderPageResource_PCT_WinHeight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 950.
+        /// </summary>
+        internal static string AutoGraderPageResource_PCT_WinWidth {
+            get {
+                return ResourceManager.GetString("AutoGraderPageResource_PCT_WinWidth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to imgBtnAdd_Close.
         /// </summary>
         internal static string AutoGraderPageResourse_AddClose_Button_Id_Locator {
@@ -120,6 +138,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.QuestionLibrary {
         internal static string AutoGraderPageResourse_CreateNewQuestion_WindowName {
             get {
                 return ResourceManager.GetString("AutoGraderPageResourse_CreateNewQuestion_WindowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SpanManageVariation.
+        /// </summary>
+        internal static string AutoGraderPageResourse_Edit_Grader_Project_Instruction {
+            get {
+                return ResourceManager.GetString("AutoGraderPageResourse_Edit_Grader_Project_Instruction", resourceCulture);
             }
         }
         

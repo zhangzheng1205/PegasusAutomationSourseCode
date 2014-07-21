@@ -3,6 +3,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using System.Collections.Generic;
 
 namespace Pegasus.Acceptance.NovaNET.Tests.
     ProductAcceptanceTestDefinitions
@@ -33,7 +34,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 "ClickOnTheAddProductsOption",
             base.isTakeScreenShotDuringEntryExit);
         }
-
+        
         /// <summary>
         /// License the Product.
         /// </summary>
@@ -51,36 +52,45 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //License the Product
             new AvailableProductsPage().LicenseProduct(product.Name);
             //Enter License Details
-            new CreateLicensePage().EnterLicenseDetail();
+            new CreateLicensePage().EnterLicenseDetail(productTypeEnum);
             Logger.LogMethodExit("ProductLicense", "LicenseTheProduct",
             base.isTakeScreenShotDuringEntryExit);
         }
 
+       
+       
         /// <summary>
         /// License multiple DigitalPath Demo Product
         /// </summary>
         /// <param name="p0"></param>
         /// <param name="p1"></param>
-        [When(@"I create (.*) license for the ""(.*)"" product")]
-        public void WhenICreateLicenseForTheProduct(int ProductLicenseCount, Product.ProductTypeEnum
+        /// <param name="p2"></param>
+        [When(@"I create (.*) licenses for different ""(.*)"" product")]
+        public void WhenICreateLicensesForDifferentProduct(int ProductLicenseCount, Product.ProductTypeEnum
             productTypeEnum)
         {
             //License the Product
             Logger.LogMethodEntry("ProductLicense", "LicenseTheProduct",
                base.isTakeScreenShotDuringEntryExit);
             //To select the product stored in memory
-            Product product = Product.Get(productTypeEnum);
-            for (int i = 0; i < ProductLicenseCount; i++ )
-            { //License the Product
-                new AvailableProductsPage().LicenseProduct(product.Name);
+            List<Product> products = new List<Product>();
+            products = Product.GetAll(productTypeEnum);
+            for (int i = 1; i <= ProductLicenseCount; i++)
+            {
+                //License the Product
+                new AvailableProductsPage().LicenseProduct(products[i-1].Name);
                 //Enter License Details
-                new CreateLicensePage().EnterLicenseDetail();
+                new CreateLicensePage().EnterLicenseDetail(productTypeEnum);
+                if (i != ProductLicenseCount)
+                {
+                    //Click on Add Product Link
+                    new LicensesPage().ClickAddProductOptionLink();
+                }
             }
-                
+
             Logger.LogMethodExit("ProductLicense", "LicenseTheProduct",
             base.isTakeScreenShotDuringEntryExit);
         }
-
 
         /// <summary>
         /// Search the Licensed Product.

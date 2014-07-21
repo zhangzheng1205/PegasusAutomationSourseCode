@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
                 BulkUploadQueue_Page_Remove_Link_Id_Locator)) )
             {
                 //Click on the Remove link
-                base.ClickLinkByID(BulkUploadQueuePageResource.
+                base.ClickLinkById(BulkUploadQueuePageResource.
                     BulkUploadQueue_Page_Remove_Link_Id_Locator);
                 base.CloseBrowserWindow();
             }
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on the Remove link
                 base.WaitForElement(By.Id(BulkUploadQueuePageResource.
                     BulkUploadQueue_Page_Remove_Link_Id_Locator));
-                base.ClickLinkByID(BulkUploadQueuePageResource.
+                base.ClickLinkById(BulkUploadQueuePageResource.
                     BulkUploadQueue_Page_Remove_Link_Id_Locator);
                 base.CloseBrowserWindow();
             }

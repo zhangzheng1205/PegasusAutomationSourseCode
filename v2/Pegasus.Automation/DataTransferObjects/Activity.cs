@@ -51,8 +51,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
             Quiz=22,
             WritingSpace=23,
             PracticeTest=24,
-            PreTest = 25,
-            CalculatedColumn = 26
+            PreTest=25,
+            CalculatedColumn=26,
+            QuestionFolder = 27
         }
 
         /// <summary>
@@ -87,7 +88,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Activity>(
                 x => x.ActivityType == activityType && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).First();
         }
 
         /// <summary>
@@ -100,17 +101,17 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Activity>(
                 x => x.ActivityType == activityTypeEnum && x.ActivityBehavioralMode == activityBehavioralModesEnum && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).First();
         }
 
         /// <summary>
         /// This method gets the activity based on Activity ID.
         /// </summary>
-        /// <param name="activityID">This is activity ID.</param>
+        /// <param name="activityId">This is activity ID.</param>
         /// <returns>Returns Activity based in ID.</returns>
-        public static Activity Get(string activityID)
+        public static Activity Get(string activityId)
         {
-            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Activity>(x => x.ActivityID == activityID && x.IsCreated).First();
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Activity>(x => x.ActivityID == activityId && x.IsCreated).First();
         }
 
         /// <summary>
@@ -140,7 +141,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Activity>(
                 x => x.ActivityType == activityType).OrderByDescending(
-                x => x.creationDate).ToList();
+                x => x.CreationDate).ToList();
         }
     }
 }

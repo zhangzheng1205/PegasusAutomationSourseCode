@@ -70,60 +70,34 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 6
-#line 8
-testRunner.Given("I browsed the login url for \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I logged into the Pegasus as \"HedWsInstructor\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor Manage location settings")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceInstructorContentLibrary")]
         public virtual void InstructorManageLocationSettings()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Manage location settings", ((string[])(null)));
-#line 15
+#line 9
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 16
-testRunner.When("I enter in the \"MyItLabSIM5MasterCourse\" from the Global Home page as \"HedWsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 18
-testRunner.When("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
+#line 10
+testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 20
+#line 12
 testRunner.When("I navigate to the \"Manage Locations\" tab in Preferences Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 13
 testRunner.Then("I should be on the \"Manage Locations\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 22
+#line 14
 testRunner.When("I create the mac address for computer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
+#line 15
 testRunner.Then("I should see the successfull message \"New computer added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 24
+#line 16
 testRunner.When("I create the location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 25
+#line 17
 testRunner.Then("I should see the successfull message \"New location created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 26
+#line 18
 testRunner.When("I associate the computer to location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
+#line 19
 testRunner.Then("I should see the successfull message \"Computers added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 28
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -134,38 +108,26 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreationOfNonGradableAssetsLinkInMILCourseByWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of non gradable assets Link in MIL course By Ws Instructor", ((string[])(null)));
-#line 33
+#line 24
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 34
-testRunner.When("I enter in the \"MyItLabSIM5MasterCourse\" from the Global Home page as \"HedWsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 36
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 37
+#line 25
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 38
+#line 27
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 39
+#line 28
 testRunner.And("I click on the \"Add Link\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
+#line 29
 testRunner.Then("I should be on the \"Add link\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 41
+#line 30
 testRunner.When("I create the nongradable \"Link\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 42
+#line 31
 testRunner.Then("I should see the successfull message \"Link saved successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 43
+#line 32
 testRunner.And("I should see \"Link\" Activity in the MyCourse Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
+#line 33
 testRunner.When("I click the \"Open\" cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
-testRunner.And("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -176,35 +138,23 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void ToCreateTheInstructorGradableEssayAssetByWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To create the Instructor Gradable Essay Asset By Ws Instructor", ((string[])(null)));
-#line 50
+#line 38
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 51
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 52
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 53
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
+#line 39
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 40
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 55
+#line 41
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 42
 testRunner.And("I click on the \"Homework\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 57
+#line 43
 testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 58
+#line 44
 testRunner.When("I create \"HomeWork\" activity of behavioral mode \"BasicRandom\" type using Essay qu" +
                     "estion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 59
+#line 45
 testRunner.Then("I should see the successfull message \"Activity added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 60
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 61
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -215,29 +165,17 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void AssignTheActivityInMycourseFrameByWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign the activity in mycourse frame By Ws Instructor", ((string[])(null)));
-#line 65
+#line 50
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 66
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 67
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 68
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
+#line 51
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 52
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 70
+#line 53
 testRunner.And("I should see the \"SIMStudyPlan2010\" activity of behavioral mode \"SkillBased\" type" +
                     " using SIM question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 71
+#line 54
 testRunner.When("I assign the activity in mycourse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 72
-testRunner.And("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 73
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -248,38 +186,26 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreationOfNonGradableAssetsPageInMILCourseByWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of non gradable assets Page in MIL course By Ws Instructor", ((string[])(null)));
-#line 77
+#line 59
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 78
-testRunner.When("I enter in the \"MyItLabSIM5MasterCourse\" from the Global Home page as \"HedWsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 79
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 80
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 81
+#line 60
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 61
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 82
+#line 62
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 83
+#line 63
 testRunner.And("I click on the \"Add Page\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 84
+#line 64
 testRunner.Then("I should be on the \"Create page\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 85
+#line 65
 testRunner.When("I create the nongradable \"Page\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 86
+#line 66
 testRunner.Then("I should see the successfull message \"Page saved successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 87
+#line 67
 testRunner.And("I should see \"Page\" Activity in the MyCourse Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 88
+#line 68
 testRunner.When("I click the \"Preview\" cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 89
-testRunner.And("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 90
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -290,38 +216,26 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreationOfNonGradableAssetsFileInMILCourseByWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of non gradable assets File in MIL course By Ws Instructor", ((string[])(null)));
-#line 94
+#line 73
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 95
-testRunner.When("I enter in the \"MyItLabSIM5MasterCourse\" from the Global Home page as \"HedWsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 96
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 97
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 98
+#line 74
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 75
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 99
+#line 76
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 100
+#line 77
 testRunner.And("I click on the \"Add File\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 101
+#line 78
 testRunner.Then("I should be on the \"Add File\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 102
+#line 79
 testRunner.When("I create the nongradable \"File\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 103
+#line 80
 testRunner.Then("I should see the successfull message \"File saved successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 104
+#line 81
 testRunner.And("I should see \"File\" Activity in the MyCourse Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 105
+#line 82
 testRunner.When("I click the \"Preview\" cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 106
-testRunner.And("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 107
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -332,38 +246,26 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreationOfNonGradableAssetsDiscussionTopicInMILCourseByWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of non gradable assets Discussion Topic in MIL course By Ws Instructor", ((string[])(null)));
-#line 111
+#line 87
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 112
-testRunner.When("I enter in the \"MyItLabSIM5MasterCourse\" from the Global Home page as \"HedWsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 113
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 114
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 115
+#line 88
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 89
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 116
+#line 90
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 117
+#line 91
 testRunner.And("I click on the \"Add Discussion Topic\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 118
+#line 92
 testRunner.Then("I should be on the \"Add Discussion Topic\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 119
+#line 93
 testRunner.When("I create the nongradable \"DiscussionTopic\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 120
+#line 94
 testRunner.Then("I should see the successfull message \"Discussion topic saved successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 121
+#line 95
 testRunner.And("I should see \"DiscussionTopic\" Activity in the MyCourse Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 122
+#line 96
 testRunner.When("I click the \"Open\" cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 123
-testRunner.And("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 124
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -374,35 +276,23 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreationOfExamSkillBasedActivitiesWith2010SIMQuestionsByWsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of Exam Skill Based Activities with 2010 SIM Questions By Ws Instructor", ((string[])(null)));
-#line 128
+#line 101
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 129
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 130
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 131
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 132
+#line 102
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 103
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 133
+#line 104
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 134
+#line 105
 testRunner.And("I click on the \"Homework\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 135
+#line 106
 testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 136
+#line 107
 testRunner.When("I create \"SIMExamActivity\" activity of behavioral mode \"SkillBased\" type using SI" +
                     "M question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 137
+#line 108
 testRunner.Then("I should see the successfull message \"Activity added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 138
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 139
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -415,35 +305,23 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of Training Skill Based Activities with 2010 SIM Questions By Ws Instruc" +
                     "tor", ((string[])(null)));
-#line 143
+#line 113
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 144
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 145
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 146
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 147
+#line 114
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 115
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 148
+#line 116
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 149
+#line 117
 testRunner.And("I click on the \"Homework\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 150
+#line 118
 testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 151
+#line 119
 testRunner.When("I create \"SIMTrainingActivity\" activity of behavioral mode \"SkillBased\" type usin" +
                     "g SIM question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 152
+#line 120
 testRunner.Then("I should see the successfull message \"Activity added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 153
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 154
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -456,35 +334,23 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of Exam Project Based Activities with 2010 SIM Questions By Ws Instructo" +
                     "r", ((string[])(null)));
-#line 158
+#line 125
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 159
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 160
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 161
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 162
+#line 126
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 127
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 163
+#line 128
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 164
+#line 129
 testRunner.And("I click on the \"Homework\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 165
+#line 130
 testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 166
+#line 131
 testRunner.When("I create \"SIMExamActivity\" activity of behavioral mode \"DocBased\" type using SIM " +
                     "question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 167
+#line 132
 testRunner.Then("I should see the successfull message \"Activity added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 168
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 169
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -497,35 +363,23 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of Training Project Based Activities with 2010 SIM Questions By Ws Instr" +
                     "uctor", ((string[])(null)));
-#line 173
+#line 137
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 174
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 175
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 176
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 177
+#line 138
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 139
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 178
+#line 140
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 179
+#line 141
 testRunner.And("I click on the \"Homework\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 180
+#line 142
 testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 181
+#line 143
 testRunner.When("I create \"SIMTrainingActivity\" activity of behavioral mode \"DocBased\" type using " +
                     "SIM question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 182
+#line 144
 testRunner.Then("I should see the successfull message \"Activity added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 183
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 184
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -536,35 +390,23 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreationOfSIMStudyplanWith2010SIMQuestionsByWSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of SIMStudyplan with 2010 SIM Questions by WS Teacher", ((string[])(null)));
-#line 188
+#line 149
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 189
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 190
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 191
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 192
+#line 150
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 151
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 193
+#line 152
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 194
+#line 153
 testRunner.And("I click on the \"myitlab Study Plan\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 195
+#line 154
 testRunner.Then("I should be on the \"Add myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 196
+#line 155
 testRunner.When("I create \"SIMStudyPlan2010\" activity of behavioral mode \"SkillBased\" type using S" +
                     "IM question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 197
+#line 156
 testRunner.Then("I should see the successfull message \"Myitlab Study Plan added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 198
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 199
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -575,30 +417,18 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void InstructorPreviewsTheSimStudyPlan()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Previews the sim study Plan", ((string[])(null)));
-#line 203
+#line 161
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 204
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 205
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 206
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 207
+#line 162
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 163
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 208
+#line 164
 testRunner.When("I search \"SIMStudyPlan2010\" activity of behavioral mode \"SkillBased\" type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 209
+#line 165
 testRunner.And("I select the Cmenu option \"Preview\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 210
+#line 166
 testRunner.Then("I should be on the \"myitlab Study Plan Preview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 211
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 212
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -609,35 +439,23 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreationOfSIMStudyplanDocumentBasedWith2010SIMQuestionsByWSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of SIMStudyplan Document Based with 2010 SIM Questions by WS Teacher", ((string[])(null)));
-#line 216
+#line 171
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 217
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 218
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 219
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 220
+#line 172
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 173
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 221
+#line 174
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 222
+#line 175
 testRunner.And("I click on the \"myitlab Study Plan\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 223
+#line 176
 testRunner.Then("I should be on the \"Add myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 224
+#line 177
 testRunner.When("I create \"SIMStudyPlan2010\" activity of behavioral mode \"DocBased\" type using SIM" +
                     " question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 225
+#line 178
 testRunner.Then("I should see the successfull message \"Myitlab Study Plan added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 226
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 227
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -648,30 +466,18 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void InstructorPreviewsSIMStudyplanDocumentBasedActivityByWSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Previews SIMStudyplan Document Based Activity by WS Teacher", ((string[])(null)));
-#line 231
+#line 183
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 232
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 233
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 234
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 235
+#line 184
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 185
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 236
+#line 186
 testRunner.When("I search \"SIMStudyPlan2010\" activity of behavioral mode \"DocBased\" type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 237
+#line 187
 testRunner.And("I select the Cmenu option \"Preview\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 238
+#line 188
 testRunner.Then("I should be on the \"myitlab Study Plan Preview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 239
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 240
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -682,35 +488,23 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreationOfSIMStudyplanWith2007SIMQuestionsByWSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of SIMStudyplan with 2007 SIM Questions by WS Teacher", ((string[])(null)));
-#line 244
+#line 193
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 245
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 246
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 247
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 248
+#line 194
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 195
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 249
+#line 196
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 250
+#line 197
 testRunner.And("I click on the \"myitlab Study Plan\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 251
+#line 198
 testRunner.Then("I should be on the \"Add myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 252
+#line 199
 testRunner.When("I create \"SIMStudyPlan2007\" activity of behavioral mode \"SkillBased\" type using S" +
                     "IM question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 253
+#line 200
 testRunner.Then("I should see the successfull message \"Myitlab Study Plan added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 254
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 255
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -721,30 +515,18 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void InstructorPreviewsTheSimStudyPlanWith2007SIMQuestions()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Previews the sim study Plan with 2007 SIM Questions", ((string[])(null)));
-#line 260
+#line 205
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 261
-testRunner.When("I enter in the \"MyItLabSIMMasterCourse\" from the Global Home page as \"HedWsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 262
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 263
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 264
+#line 206
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 207
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 265
+#line 208
 testRunner.When("I search \"SIMStudyPlan2007\" activity of behavioral mode \"SkillBased\" type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 266
+#line 209
 testRunner.And("I select the Cmenu option \"Preview\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 267
+#line 210
 testRunner.Then("I should be on the \"myitlab Study Plan Preview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 268
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 269
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

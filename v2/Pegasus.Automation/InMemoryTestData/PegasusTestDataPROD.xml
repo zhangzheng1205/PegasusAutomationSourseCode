@@ -35,7 +35,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>0d06a6e8-166b-442c-ac3e-1316dfa8144d</Name>
+      <Name>digits - grade 6</Name>
       <CourseType>MasterLibrary</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -46,6 +46,14 @@
     <Course>
       <Name>MySpanishLab-release</Name>
       <CourseType>MySpanishLabAuthored</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>QA Automation - MyITLab for Office 2013: Preview_SIM5</Name>
+      <CourseType>MyItLabSIM5MasterCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
@@ -92,7 +100,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>c98c05c4-0769-4289-b870-49876a03e5de</Name>
+      <Name>QA Automation - Spanish IC</Name>
       <CourseType>InstructorCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -135,22 +143,45 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>563216d6-1178-4667-9283-a2fc460f87af</Name>
+      <Name>Geometry A 3.0 (Open)</Name>
       <CourseType>NovaNETMasterLibrary</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
-    </Course>
-    <!--Hard coded Course data for "MyTest" Product.-->
+    </Course>    
     <Course>
-      <Name>2664efee-8d64-4959-b7cd-5cc5f986abbd</Name>
-      <CourseType>MyTestInstructorCourse</CourseType>
-      <InstructorCourseId>CRSKLDC-14001126</InstructorCourseId>
+      <Name>Automation MyTest Course</Name>
+      <CourseType>MyTestBankCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
+      <Name>Copy ofAutomation MyTest Course</Name>
+      <CourseType>MyTestInstructorCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
+      <Name>QA Automation - MIL IC</Name>
+      <CourseType>MyItLabInstructorCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>QA - Automation Program</Name>
+      <CourseType>MyItLabProgramCourse</CourseType>
+      <SectionName>QA_Automation_MyItLab_Section</SectionName>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
     </Course>
   </ArrayOfCourse>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
@@ -371,8 +402,8 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>55bdfdd2-0245-4020-88ae-1d280d5ea7a1</Name>
-      <Password>password1</Password>
+      <Name>prodautoinstructor1</Name>
+      <Password>pass@word1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -382,18 +413,18 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>77c227b1-76cd-42ca-8cfa-0ffd52e8d60d</Name>
+      <Name>prodautostudent1</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>BDD</FirstName>
+      <FirstName>Chethan</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>SMSUSER</LastName>
+      <LastName>Gangoor</LastName>
       <UserType>CsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>7e291029-3cdf-4df0-a3c8-4cc6545facac</Name>
+      <Name>actinstructor1</Name>
       <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>45f1937e-5049-42b1-b50e-dcbab74f24b6</FirstName>
@@ -402,19 +433,7 @@
       <UserType>HedWsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
-    </User>
-    <User>
-      <Name>1c30732a-fa7f-432d-b7d5-8962d259b493</Name>
-      <Password>password2</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>56636801-2504-43b9-a94e-60a512c5063e</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>56636801-2504-43b9-a94e-60a512c5063e</LastName>
-      <UserType>HedWsInstructor</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>true</EnrolementStatus>
-    </User>
-
+    </User>    
     <!--Hard coded Users data for "NovaNET" Product.-->
     <User>
       <Name>cif_automation</Name>
@@ -494,8 +513,25 @@
   <!--This is already created activity present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfActivity>
     <Activity>
-      <Name>6e7f63dd-a897-4e50-ae1d-27e7572ddbfe</Name>
+      <Name>1a9733fb-69a1-4c75-88e1-88aeb757ef40</Name>
       <ActivityType>SkillStudyPlan</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>6cbe8b16-a57b-4b83-b687-6ea4197ef780</Name>
+      <ActivityType>SIM5Activity</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>5065e506-4d66-464c-8b5a-d92ce09655b0</Name>
+      <ActivityType>SIM5StudyPlan</ActivityType>
+      <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>69282aca-6f5a-4ed1-8b0e-864bd811dcbc</Name>
+      <ActivityType>Sim5PreTest</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
@@ -532,32 +568,32 @@
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>5c380911-7c31-4352-82df-5b002be77ebd</Name>
+      <Name>Test_1</Name>
       <ActivityType>MyTest</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>014da19e-d315-4273-af06-794f790d0467</Name>
+      <Name>8544ab2b-4bee-4771-b025-c7ac3195737a</Name>
       <ActivityType>Link</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>489533ec-4698-4e7e-8d53-8be8f7b9d9bb</Name>
+      <Name>6934585e-58fb-4672-8864-536ac3ac7ea3</Name>
       <ActivityType>Page</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>8036e729-b6ca-451d-a5dd-b1dbaafe349e</Name>
+      <Name>HomeWork</Name>
       <ActivityType>HomeWork</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>0090edbb-1ee3-417c-931c-966fee666b96</Name>
+      <Name>Essay</Name>
       <ActivityType>Quiz</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>fca86e3a-929c-4bf9-bd5b-ce11efcf58db</Name>
+      <Name>af223d95-e55d-466e-8f22-064b6579f985</Name>
       <ActivityType>File</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>

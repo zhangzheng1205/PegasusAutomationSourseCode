@@ -70,58 +70,35 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestFeatures
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 7
-#line 8
-testRunner.Given("I browsed the login url for \"WsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I login to Pegasus as \"WsTeacher\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Set Preferences for Container Course by Ws Teacher")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceTeacher")]
         public virtual void SetPreferencesForContainerCourseByWsTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Set Preferences for Container Course by Ws Teacher", ((string[])(null)));
-#line 14
+#line 8
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 15
-testRunner.When("I enter in the \"Container\" course as \"WsTeacher\" from the Global Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
-testRunner.And("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 9
+testRunner.When("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 18
+#line 11
 testRunner.When("I set the preferences for Copy Content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
+#line 12
 testRunner.Then("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 20
+#line 13
 testRunner.When("I set the preferences for Content in Container course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 14
 testRunner.Then("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 22
+#line 15
 testRunner.When("I set the preferences for Shared Library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
+#line 16
 testRunner.Then("I should see the successfull message \"Shared library courses successfully added t" +
                     "o the current course.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 24
+#line 17
 testRunner.When("I save the Preferences", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 25
+#line 18
 testRunner.Then("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 26
-testRunner.When("I \"Sign out\" from the \"WsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -132,37 +109,28 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void SetPreferencesForEmptyCourseByWsTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Set Preferences for Empty Course by Ws Teacher", ((string[])(null)));
-#line 30
+#line 22
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 31
-testRunner.When("I enter in the \"EmptyClass\" course as \"WsTeacher\" from the Global Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
-testRunner.And("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
+#line 23
+testRunner.When("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 34
+#line 25
 testRunner.When("I set the preferences for Copy Content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
+#line 26
 testRunner.Then("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 36
+#line 27
 testRunner.When("I set the preferences for Custom Content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 37
+#line 28
 testRunner.Then("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 38
+#line 29
 testRunner.When("I set the preferences for My Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 39
+#line 30
 testRunner.Then("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 40
+#line 31
 testRunner.When("I set the preferences for Content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
+#line 32
 testRunner.Then("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 42
-testRunner.When("I \"Sign out\" from the \"WsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 43
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -173,28 +141,18 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void SetPreferencesForMasterCourseByWsTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Set Preferences for Master Course by Ws Teacher", ((string[])(null)));
-#line 46
+#line 36
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 47
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"WsTeacher\" from the Global Home " +
-                    "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 48
-testRunner.And("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 49
+#line 37
+testRunner.When("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
+#line 39
 testRunner.When("I click on the \"Grading\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 40
 testRunner.And("I enable necessary grades preference settings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
+#line 41
 testRunner.Then("I should see the successfull message \"preferences updated successfully\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 53
-testRunner.When("I \"Sign out\" from the \"WsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -205,36 +163,24 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void ActivityCreationByWsTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Activity creation by Ws Teacher", ((string[])(null)));
-#line 58
+#line 46
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 59
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"WsTeacher\" from the Global Home " +
-                    "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 60
-testRunner.Then("I should be on the \"Overview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 61
+#line 47
 testRunner.When("I navigate to the \"Content\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
+#line 48
 testRunner.Then("I should be on the \"Content\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 63
+#line 49
 testRunner.When("I select on the \"Test\" from add content link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
+#line 50
 testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 65
+#line 51
 testRunner.When("I create \"Test\" type activity of behavioral mode \'BasicRandom\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
+#line 52
 testRunner.Then("I should see the successfull message \"Activity added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 67
+#line 53
 testRunner.When("I associate the \"Test\" activity Content Library to MyCourse frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 68
+#line 54
 testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 69
-testRunner.When("I \"Sign out\" from the \"WsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 70
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -245,36 +191,24 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void ToCreateQuizWithManualGradableActivityByWSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Create Quiz with Manual Gradable Activity By WS Teacher", ((string[])(null)));
-#line 73
+#line 58
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 74
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"WsTeacher\" from the Global Home " +
-                    "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 75
-testRunner.Then("I should be on the \"Overview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 76
+#line 59
 testRunner.When("I navigate to the \"Content\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 77
+#line 60
 testRunner.Then("I should be on the \"Content\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 78
+#line 61
 testRunner.When("I select on the \"Quiz\" from add content link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 79
+#line 62
 testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 80
+#line 63
 testRunner.When("I create \"Quiz\" activity of behavioral mode type using Essay question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 81
+#line 64
 testRunner.Then("I should see the successfull message \"Activity added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 82
+#line 65
 testRunner.When("I associate the \"Quiz\" activity Content Library to MyCourse frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 83
+#line 66
 testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 84
-testRunner.When("I \"Sign out\" from the \"WsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 85
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

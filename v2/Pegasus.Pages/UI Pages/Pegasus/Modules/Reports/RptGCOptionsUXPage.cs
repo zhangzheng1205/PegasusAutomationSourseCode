@@ -238,6 +238,48 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Select Students In Study Plan Results Report
+        /// </summary>
+        /// <param name="reportTypeEnum">This is Report Type</param>
+        public void SelectStudentInStudyPlanResultsReport(
+            RptMainUXPage.PegasusInstructorReportEnum reportTypeEnum)
+        {
+            //Select Student In Study Plan Results Report
+            logger.LogMethodEntry("RptGCOptionsUXPage",
+                "SelectStudentInStudyPlanResultsReport",
+                  base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Report Window
+                base.SelectWindow(RptMainPageResource
+                        .RptMain_Page_WindowName_Title);
+                //Wait for Frame
+                base.WaitForElement(By.Id(RptGCOptionsUXPageResource.
+                    RptGCOptionsUX_Page_Frame_Id_Locator));
+                //Switch To Frame
+                base.SwitchToIFrame(RptGCOptionsUXPageResource.
+                    RptGCOptionsUX_Page_Frame_Id_Locator);
+                base.WaitForElement(By.PartialLinkText(RptGCOptionsUXPageResource.
+                    RptGCOptionsUX_Page_SelectStudent_Link_Locator));
+                //Click on Select Student Button
+                base.ClickButtonByPartialLinkText(RptGCOptionsUXPageResource.
+                    RptGCOptionsUX_Page_SelectStudent_Link_Locator);
+                //Select the Student
+                new RptSelectStudentsPage().SelectStudentInInstructorReport(reportTypeEnum);
+                //Verify the Select Student Pop up is closed
+                base.IsPopUpClosed(Convert.ToInt32(RptGCOptionsUXPageResource
+                    .RptGCOptionsUX_Page_NumberOfWindow));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptGCOptionsUXPage",
+                "SelectStudentInStudyPlanResultsReport",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Click on Select Button In Report.
         /// </summary>
         /// <param name="buttonName">This is Button Name.</param>

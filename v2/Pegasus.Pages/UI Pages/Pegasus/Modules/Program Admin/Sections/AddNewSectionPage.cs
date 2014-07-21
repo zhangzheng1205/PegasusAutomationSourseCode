@@ -12,7 +12,7 @@ using Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Sections;
 namespace Pegasus.Pages.UI_Pages
 {
     /// <summary>
-    /// This class handles Adding NewSections Action
+    /// This class handles adding new sections action.
     /// </summary>
     public class AddNewSectionPage : BasePage
     {
@@ -34,43 +34,73 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
-                //Generate New Guid Section Name
+                // generate new guid section name
                 Guid sectionGuid = Guid.NewGuid();
-                //Selecting the Create New Section window
+                // selecting the create new section window
                 this.SelectAddNewSectionWindow();
                 base.WaitForElement(By.Id(AddNewSectionPageResource.
                     AddNewSection_Page_CourseName_TextName_Id_Locator));
-                //Enter the Section text name
+                // enter the section name
                 base.FillTextBoxByID(AddNewSectionPageResource.
                   AddNewSection_Page_CourseName_TextName_Id_Locator, sectionGuid.ToString());
-                // Select Template
+                // select template
                 this.SelectingTemplateFromDropDown(courseTypeEnum);
-                // Enter No. of section count in text box 
+                // enter no. of section count in text box 
                 this.EnterSectionCount(courseTypeEnum);
+                // get date format
+                string getStartDateFormat = base.GetElementTextByID(AddNewSectionPageResource.
+                    AddNewSection_Page_Section_StartDate_Format_Id_Locator);
+                string getEndDateFormat = base.GetElementTextByID(AddNewSectionPageResource.
+                    AddNewSection_Page_Section_EndDate_Format_Id_Locator);
+
+                // select section date based on acceptable format 
+                if (getStartDateFormat.Trim().Equals(AddNewSectionPageResource.
+                    AddNewSection_Page_Section_Actual_StartDate_Format_DDMMYYYY)
+                    && (getEndDateFormat.Trim().Equals(AddNewSectionPageResource.
+                    AddNewSection_Page_Section_Actual_EndDate_Format_DDMMYYYY)))
+                {
+                    // enter section start and end date                           
+                    this.AddSectionStartAndEndDate(DateTime.Now.AddDays(1).ToString(AddNewSectionPageResource.
+                        AddNewSection_Page_Date_Format_DDMMYYYY), DateTime.Now.AddDays(90).
+                        ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_DDMMYYYY));
+                }
+                if (getStartDateFormat.Trim().Equals(AddNewSectionPageResource.
+                   AddNewSection_Page_Section_Actual_StartDate_Format_MMDDYYYY)
+                   && (getEndDateFormat.Trim().Equals(AddNewSectionPageResource.
+                   AddNewSection_Page_Section_Actual_EndDate_Format_MMDDYYYY)))
+                {
+                    // enter section start and end date                           
+                    this.AddSectionStartAndEndDate(DateTime.Now.AddDays(1).ToString(AddNewSectionPageResource.
+                        AddNewSection_Page_Date_Format_MMDDYYYY), DateTime.Now.AddDays(90).
+                        ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_MMDDYYYY));
+                }
+                // check copy content check box
                 if (base.IsElementSelectedById(AddNewSectionPageResource.
                     AddNewSection_Page_Copycontent_Checkbox_Id_Locator))
                 {
-                    //Uncheck the checkbox
+                    // uncheck the checkbox
                     IWebElement getCopyContentCheckbox =
                     base.GetWebElementPropertiesById(AddNewSectionPageResource.
                     AddNewSection_Page_Copycontent_Checkbox_Id_Locator);
                     base.ClickByJavaScriptExecutor(getCopyContentCheckbox);
                 }
-                //Getting the Date in Proper Format
-                String getSectionStartDate = DateTime.Now.ToString(
-                    AddNewSectionPageResource.AddNewSection_Page_Date_Format);
-                this.CloseAddNewSectionWindow(getSectionStartDate);
+                // save and close section
+                this.SaveAndCloseAddNewSection();
                 // Storing the Section ID
                 switch (courseTypeEnum)
                 {
-                    case Course.CourseTypeEnum.MySpanishLabMaster:                        
+                    case Course.CourseTypeEnum.MySpanishLabMaster:
                         new ManageTemplatePage().StoreSectionID(sectionGuid.ToString(),
                             Course.CourseTypeEnum.ProgramCourse);
                         break;
                     case Course.CourseTypeEnum.GraderITSIM5Course:
                     case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
                         new ManageTemplatePage().StoreSectionID(sectionGuid.ToString(),
-                            Course.CourseTypeEnum.MyItLabProgramCourse);
+                          Course.CourseTypeEnum.MyItLabProgramCourse);
+                        break;
+                    case Course.CourseTypeEnum.MyITLabForOffice2013Master:
+                        new ManageTemplatePage().StoreSectionID(sectionGuid.ToString(),
+                            Course.CourseTypeEnum.MyITLabOffice2013Program);
                         break;
                 }
             }
@@ -98,6 +128,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 case Course.CourseTypeEnum.HedMilAcceptanceSIMProgramCourse:
                 case Course.CourseTypeEnum.HedMilAcceptanceSIM5ProgramCourse:
+                case Course.CourseTypeEnum.MyITLabForOffice2013Master:
                     // Enter section count in Drop Down box
                     base.FillTextBoxByID(AddNewSectionPageResource.
                         AddNewSection_Page_NoList_Id_Locator, AddNewSectionPageResource.
@@ -156,24 +187,12 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Close Add New Section Window
+        /// Close Add Save New Section.
         /// </summary>
-        /// <param name="sectionStartDate">This is Section Start Date</param>
-        /// <param name="sectionGuid">This is Section Guid</param>
-        private void CloseAddNewSectionWindow(
-            String sectionStartDate)
+        private void SaveAndCloseAddNewSection()
         {
-            //Close Add New Section Window
-            Logger.LogMethodEntry("AddNewSectionPage", "CloseAddNewSectionWindow",
-                base.isTakeScreenShotDuringEntryExit);
-            //Enter Section Date
-            String getSectionEndDate = DateTime.Now.AddDays(90).ToString(
-                    AddNewSectionPageResource.AddNewSection_Page_Date_Format);
-            base.WaitForElement(By.Id(AddNewSectionPageResource.
-                 AddNewSection_Page_StartDate_TextBox_Id_Locator));
-            //Adding the Section Start and End Date
-            this.AddSectionStartAndEndDate(sectionStartDate, getSectionEndDate);
-            //Wait For Element
+            Logger.LogMethodEntry("AddNewSectionPage", "SaveAndCloseAddNewSection",
+                    base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                 AddNewSection_Page_AddClose_Button_Id_Locator));
             //Get Element Property
@@ -188,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
             // Select defalut window
             base.SelectWindow(AddNewSectionPageResource
                 .AddNewSection_Page_ParentWindow_Page_Title);
-            Logger.LogMethodExit("AddNewSectionPage", "CloseAddNewSectionWindow",
+            Logger.LogMethodExit("AddNewSectionPage", "SaveAndCloseAddNewSection",
                     base.isTakeScreenShotDuringEntryExit);
         }
 
@@ -203,6 +222,8 @@ namespace Pegasus.Pages.UI_Pages
             //Enters Start and End Date
             Logger.LogMethodEntry("AddNewSectionPage", "AddSectionStartAndEndDate",
                     base.isTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(AddNewSectionPageResource.
+               AddNewSection_Page_StartDate_TextBox_Id_Locator));
             //Enter Start Date
             base.FillTextBoxByID(AddNewSectionPageResource.
                                      AddNewSection_Page_StartDate_TextBox_Id_Locator, sectionStartDate);

@@ -70,41 +70,24 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestFeatures
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 6
-#line 8
-testRunner.Given("I browsed the login url for \"DPCTGPPublisherAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I login to Pegasus as \"DPCTGPPublisherAdmin\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.Given("I am on the \"Workspaces\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Default view of the Workspaces tab for CTG Publisher admin")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CTGPublisherAdmin")]
         public virtual void DefaultViewOfTheWorkspacesTabForCTGPublisherAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Default view of the Workspaces tab for CTG Publisher admin", ((string[])(null)));
-#line 14
+#line 7
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 15
+#line 8
+testRunner.When("I navigate to the \"Workspaces\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
+testRunner.Then("I should be on the \"Workspaces\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
 testRunner.Then("I should see Preference and Workspaces Tabs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 16
+#line 11
 testRunner.And("I should see default view as Workspaces tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 12
 testRunner.And("I should see the default contents of Workspace tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 18
-testRunner.When("I \"Sign out\" from the \"DPCTGPPublisherAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -115,13 +98,15 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreatingTheWorkspaceByCTGPublisheradmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creating the Workspace by CTG Publisheradmin", ((string[])(null)));
-#line 22
+#line 15
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 23
+#line 16
+testRunner.When("I navigate to the \"Workspaces\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 17
+testRunner.Then("I should be on the \"Workspaces\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 18
 testRunner.When("I \"Create\" the new \"DPWorkSpace\" admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
+#line 19
 testRunner.Then("I should see the successfull message \"New workspace created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -133,21 +118,23 @@ testRunner.Then("I should see the successfull message \"New workspace created su
         public virtual void EditingTheWorkspaceByCTGPublisheradmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Editing the Workspace by CTG Publisheradmin", ((string[])(null)));
-#line 27
+#line 22
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 28
+#line 23
+testRunner.When("I navigate to the \"Workspaces\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+testRunner.Then("I should be on the \"Workspaces\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 25
 testRunner.When("I search the \"DPWorkSpace\" and click on the \"Update\" cmenu link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 26
 testRunner.Then("I should see the cmenu options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 30
+#line 27
 testRunner.When("I click on the \'Edit Workspace info\' cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 31
+#line 28
 testRunner.Then("I should see the displayed Textbox fields", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 32
+#line 29
 testRunner.When("I \"Update\" the new \"DPWorkSpace\" admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 33
+#line 30
 testRunner.Then("I should see the successfull message \"Workspace updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -159,15 +146,17 @@ testRunner.Then("I should see the successfull message \"Workspace updated succes
         public virtual void DeletingTheWorkspacByCTGPublisheradmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deleting the Workspac by CTG Publisheradmin", ((string[])(null)));
-#line 36
+#line 33
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 37
+#line 34
+testRunner.When("I navigate to the \"Workspaces\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+testRunner.Then("I should be on the \"Workspaces\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 36
 testRunner.When("I search the \"DPWorkSpace\" and click on the \"Delete\" cmenu link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 37
 testRunner.And("I click the delete link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
+#line 38
 testRunner.Then("I should see the successfull message \"Workspaces deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -179,31 +168,29 @@ testRunner.Then("I should see the successfull message \"Workspaces deleted succe
         public virtual void UploadingTheBrandingImageInPreferenceByCTGPublisheradmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Uploading The Branding Image In Preference by CTG Publisheradmin", ((string[])(null)));
-#line 42
+#line 41
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 43
+#line 42
 testRunner.When("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
+#line 43
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 45
+#line 44
 testRunner.And("I should see all the default contents in the \'Preferences\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
+#line 45
 testRunner.When("I upload the branding Image", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 47
+#line 46
 testRunner.And("I enter the Welcome text and Registration URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 48
+#line 47
 testRunner.And("I click on the Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 49
+#line 48
 testRunner.Then("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
+#line 49
 testRunner.When("I navigate to the \"Workspaces\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 50
 testRunner.And("I \"Sign out\" from the \"DPCTGPPublisherAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
+#line 51
 testRunner.Then("I should see the Welcome text displayed in login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 53
+#line 52
 testRunner.And("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

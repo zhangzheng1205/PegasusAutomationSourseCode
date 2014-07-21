@@ -3,19 +3,12 @@
 					I want to manage all the coursespace student Today's View related usecases 
 					so that I would validate all the coursespace student scenarios are working fine.
 
-#Purpose: Open Student Url
-Background: 
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
 
+#Used Instructor Course
 #Purpose: To lookup the obtained grades in student side
 # TestCase Id: HSS_Core_PWF_410
 Scenario: To lookup the obtained grades By SMS Student
-When I enter in the "InstructorCourse" from the Global Home page as "CsSmsStudent"
-Then I should be on the "Today's View" page
-When I navigate to the "Course Materials" tab
+When I navigate to "Course Materials" tab of the "Course Materials" page
 Then I should be on the "Course Materials" page
 When I open the "Test" Activity
 And I submit the activity in course material
@@ -26,17 +19,11 @@ Then I should see the successfully submitted "Test" activity name
 When I click the cmenu option 'ViewAllSubmissions' in student side
 Then I should see the grade "100" in view submission page
 When I close the "View Submission" window
-And I "Sign out" from the "CsSmsStudent"
-Then I should see the successfull message "You have been signed out of the application."
 
-
+#Used Instructor Course
 #Usecase To View and Read Mail Message
 #TestCase Id: HSS_Core_PWF_171
 Scenario: View Mail Message by Cs Student
-When I enter in the "InstructorCourse" from the Global Home page as "CsSmsStudent"
-Then I should be on the "Today's View" page
-When I navigate to the "Communicate" tab
-And I select 'Mail' option
-Then I should see the mail message sent by "CsSmsInstructor" 
-When I "Sign out" from the "CsSmsStudent"
-Then I should see the successfull message "You have been signed out of the application."
+When I navigate to "Communicate" tab and selected "Mail" subtab
+Then I should be on the "Course Mail" page
+And I should see the mail message sent by "CsSmsInstructor" 

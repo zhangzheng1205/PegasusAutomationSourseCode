@@ -70,44 +70,28 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestFeatures
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 7
-#line 8
-testRunner.Given("I browsed the login url for \"HedCsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I logged into the Pegasus as \"HedCsAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Approve Master Course by Cs Admin")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceAdmin")]
         public virtual void ApproveMasterCourseByCsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Approve Master Course by Cs Admin", ((string[])(null)));
-#line 13
-this.ScenarioSetup(scenarioInfo);
 #line 7
-this.FeatureBackground();
-#line 14
-testRunner.Given("I am on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 15
+this.ScenarioSetup(scenarioInfo);
+#line 8
 testRunner.When("I navigate to the \"Publishing\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
+#line 9
 testRunner.And("I select the \"Manage Products\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 10
 testRunner.Then("I should be on the \"Manage Products\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 18
+#line 11
 testRunner.When("I search the \"MySpanishLabMaster\" course in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
+#line 12
 testRunner.Then("I should be able to see the searched \"MySpanishLabMaster\" course in the left fram" +
                     "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 20
+#line 13
 testRunner.When("I click on \"Approve\" cmenu option of course in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 14
 testRunner.Then("I should see the successfull message \"Published course marked as Approved.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -119,17 +103,15 @@ testRunner.Then("I should see the successfull message \"Published course marked 
         public virtual void ProgramCreationInCourseSpaceByCsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Program Creation In CourseSpace by Cs Admin", ((string[])(null)));
-#line 24
+#line 17
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 25
+#line 18
 testRunner.Given("I am on the \'Manage Programs\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
+#line 19
 testRunner.When("I click on the Create New Program  Link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
+#line 20
 testRunner.And("I create the \"HedCore\" Program in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
+#line 21
 testRunner.Then("I should see the successfull message \"Program created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -141,17 +123,15 @@ testRunner.Then("I should see the successfull message \"Program created successf
         public virtual void CreateGeneralProductByCsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create General Product by Cs Admin", ((string[])(null)));
-#line 31
+#line 24
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 32
+#line 25
 testRunner.Given("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 33
+#line 26
 testRunner.When("I click on the \'Create New Product\' Link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 27
 testRunner.And("I create \"HedCoreGeneral\" type product using \"HedCore\" program type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 35
+#line 28
 testRunner.Then("I should see the successfull message \"New product created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -163,24 +143,22 @@ testRunner.Then("I should see the successfull message \"New product created succ
         public virtual void AssociateCourseToTheGeneralProductByCsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Associate Course to the General Product by Cs Admin", ((string[])(null)));
-#line 38
+#line 31
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 39
+#line 32
 testRunner.Given("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 40
+#line 33
 testRunner.When("I search the \"MySpanishLabMaster\" course in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
+#line 34
 testRunner.Then("I should be able to see the searched \"MySpanishLabMaster\" course in the left fram" +
                     "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 42
+#line 35
 testRunner.When("I select course in left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 43
+#line 36
 testRunner.And("I select product type \"HedCoreGeneral\" in right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
+#line 37
 testRunner.When("I associate the course to Pegasus product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
+#line 38
 testRunner.Then("I should see the successfull message \"Approved courses programmed successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -192,29 +170,20 @@ testRunner.Then("I should see the successfull message \"Approved courses program
         public virtual void DeleteTheCreatedGeneralTypeProductByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete the Created General Type Product by CS Admin", ((string[])(null)));
-#line 48
+#line 41
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 49
-testRunner.Given("I am on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 50
+#line 42
 testRunner.When("I navigate to the \"Publishing\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 43
 testRunner.And("I select the \"Manage Products\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
+#line 44
 testRunner.Then("I should be on the \"Manage Products\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 53
+#line 45
 testRunner.When("I search the product type \"HedCoreGeneral\" in right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
+#line 46
 testRunner.And("I click on \"Delete\" cmenu option of product in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
+#line 47
 testRunner.Then("I should see the successfull message \"Products deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 56
-testRunner.When("I \"Sign out\" from the \"HedCsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 57
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -225,25 +194,21 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void ApproveEmptyCourseByCsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Approve Empty Course by Cs Admin", ((string[])(null)));
-#line 60
+#line 50
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 61
-testRunner.Given("I am on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 62
+#line 51
 testRunner.When("I navigate to the \"Publishing\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 63
+#line 52
 testRunner.And("I select the \"Manage Products\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 64
+#line 53
 testRunner.Then("I should be on the \"Manage Products\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 65
+#line 54
 testRunner.When("I search the \"HedEmptyClass\" course in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
+#line 55
 testRunner.Then("I should be able to see the searched \"HedEmptyClass\" course in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 67
+#line 56
 testRunner.When("I click on \"Approve as Empty Class\" cmenu option of course in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 68
+#line 57
 testRunner.Then("I should see the successfull message \"Published course marked as Approved.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

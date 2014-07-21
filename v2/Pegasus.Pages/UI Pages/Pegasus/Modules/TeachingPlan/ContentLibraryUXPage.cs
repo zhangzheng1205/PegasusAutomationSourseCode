@@ -38,6 +38,28 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Specifiyies different button types available in Advanced Options.
+        /// </summary>
+        public enum AdvancedOptionsButtonType
+        {
+            Copy = 1,
+            Cut = 2,
+            Delete = 3,
+            Paste = 4
+        }
+
+        /// <summary>
+        /// Possible Options available for pasting the assets.
+        /// </summary>
+        public enum PasteOptions
+        {
+            PasteAtTop = 1,
+            PasteBeforeSelected = 2,
+            PasteAfterSelected = 3,
+            PasteAtBottom = 4
+        }
+
+        /// <summary>
         /// Click on Add Content Options.
         /// </summary>
         /// <param name="linkName">This is Link Name.</param>
@@ -1434,5 +1456,250 @@ namespace Pegasus.Pages.UI_Pages
                 "SearchAssetNameByAdvancedSearchOption",
                    base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Select Left Frame In Content Window.
+        /// </summary>
+        public void SelectLeftFrame() {
+    
+             //Wait for the Content Library Frame
+                base.WaitForElement(By.Id(ContentLibraryUXPageResource.
+                        ContentLibraryUX_Page_Left_Frame_ID_Locator));
+                base.SwitchToIFrame(ContentLibraryUXPageResource.
+                    ContentLibraryUX_Page_Left_Frame_ID_Locator);
+    }
+
+        /// <summary>
+        /// Select and swith to content library frame
+        /// </summary>
+        public void SelectAndSwitchToContentLibrary()
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", "SelectAndSwitchToContentLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+
+            this.SelectTheWindowName(ContentLibraryUXPageResource.
+                ContentLibraryUX_Page_CourseMaterials_Window_Name);            
+            this.SelectAndSwitchtoFrame(ContentLibraryUXPageResource.
+                ContentLibraryUX_Page_Left_Frame_ID_Locator);
+
+            logger.LogMethodExit("ContentLibraryUXPage", "SelectAndSwitchToContentLibrary",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Expnads the Advanced options on Content Library
+        /// </summary>
+        public void ExpandAdvancedOptions()
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", "ExpandAdvancedOptions",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {                                          
+                base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_AdvancedOptions_Link_Class_Locator));                
+                IWebElement advancedOptionsLink = base.GetWebElementPropertiesByClassName(
+                    ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_AdvancedOptions_Link_Class_Locator);
+                
+                base.ClickByJavaScriptExecutor(advancedOptionsLink);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", "ExpandAdvancedOptions",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Selects check boxes in assets item listed in Content library.
+        /// </summary>
+        /// <param name="assetCount">Number of assets to be selected.</param>
+        public void SelectCheckboxOfAssets(int assetCount)
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", 
+                "SelectCheckboxOfAssets",
+                base.isTakeScreenShotDuringEntryExit);
+
+            if (assetCount <= 0) return;
+            Thread.Sleep(Convert.ToInt32(ContentLibraryUXPageResource
+                .ContentLibraryUXPage_AdvancedOptions_ItemReady_Wait_Value));
+            ICollection<IWebElement> assetCheckBoxs = base.GetWebElementsCollectionById(
+                ContentLibraryUXPageResource
+                .ContentLibraryUX_Page_Asset_Checkbox_ID_Locator);
+            int counter = 0;
+            foreach(IWebElement assetCheckBox in assetCheckBoxs)
+            {
+                
+                base.ClickByJavaScriptExecutor(assetCheckBox);
+                ++counter;
+                if (counter >= assetCount-1) break;
+            }
+
+            logger.LogMethodExit("ContentLibraryUXPage", 
+                "SelectCheckboxOfAssets",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Is button on header enabled or not.
+        /// </summary>
+        /// <param name="buttonType">Type of header button.</param>
+        /// <returns></returns>
+        public bool IsButtonEnabledOnHeader(AdvancedOptionsButtonType buttonType)
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", 
+                "IsButtonEnabledOnHeader",
+                base.isTakeScreenShotDuringEntryExit);
+
+            string buttonID = this.GetButtonIDOnHeaderByButtonType(buttonType);
+            if (buttonID == null) return false;
+            return base.IsElementEnabledByID(buttonID); 
+        }
+
+        /// <summary>
+        /// Clicks button on the header.
+        /// </summary>
+        /// <param name="buttonType">Type of header button.</param>
+        public void ClickButtonOnHeader(AdvancedOptionsButtonType buttonType)
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", 
+                "ClickButtonOnHeader",
+                base.isTakeScreenShotDuringEntryExit);
+
+            string buttonID = this.GetButtonIDOnHeaderByButtonType(buttonType);
+            this.ClickButtonByID(buttonID);
+            logger.LogMethodExit("ContentLibraryUXPage", 
+                "ClickButtonOnHeader",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Gets the ID attribute value of button on the header by button type.
+        /// </summary>
+        /// <param name="buttonType">Type of header button.</param>
+        /// <returns>ID attribute value of the button</returns>
+        private string GetButtonIDOnHeaderByButtonType(AdvancedOptionsButtonType buttonType)
+        {
+            string buttonID;
+            switch (buttonType)
+            {
+                case AdvancedOptionsButtonType.Copy:
+                    buttonID = ContentLibraryUXPageResource
+                        .ContentLibraryUXPage_AdvancedOptions_Copy_Link_ID_Locator;
+                    break;
+                case AdvancedOptionsButtonType.Cut:
+                    buttonID = ContentLibraryUXPageResource
+                        .ContentLibraryUXPage_AdvancedOptions_Cut_Link_ID_Locator;
+                    break;
+                case AdvancedOptionsButtonType.Paste:
+                    buttonID = ContentLibraryUXPageResource
+                        .ContentLibraryUXPage_AdvancedOptions_Paste_Link_ID_Locator;
+                    break;
+                case AdvancedOptionsButtonType.Delete:
+                    buttonID = ContentLibraryUXPageResource
+                        .ContentLibraryUXPage_AdvancedOptions_Delete_Link_ID_Locator;
+                    break;
+                default:
+                    return null;
+            }
+            return buttonID;
+        }
+
+        /// <summary>
+        /// Getsitems count displayed on Clipboard division.
+        /// </summary>
+        /// <returns>Count of Clipboard item.</returns>
+        public int GetClipboardItemsCount()
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", 
+                "GetClipboardItemsCount",
+                base.isTakeScreenShotDuringEntryExit);
+
+            int itemCount = 0;
+            int.TryParse(base.GetElementTextByID(ContentLibraryUXPageResource
+                .ContentLibraryUXPage_AdvancedOptions_ClipBoard_Count_Span_ID_Locator)
+                , out itemCount);
+
+            logger.LogMethodExit("ContentLibraryUXPage", 
+                "GetClipboardItemsCount",
+               base.isTakeScreenShotDuringEntryExit);
+            return itemCount;
+        }
+
+        /// <summary>
+        /// Gets the count of assets by color and style.
+        /// </summary>
+        /// <param name="titleColor">Color</param>
+        /// <param name="fontStyle">Style i.e. Italic.</param>
+        /// <returns>Count of the assets</returns>
+        public int GetCountOfAssetTitleByColorAndFontStyle(
+            string titleColor, string fontStyle)
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage", 
+                "GetCountOfAssetTitleByColorAndFontStyle",
+                base.isTakeScreenShotDuringEntryExit);
+
+            ICollection<IWebElement> clipBoardAssets = base
+                .GetWebElementsCollectionByClassName(ContentLibraryUXPageResource
+                .ContentLibraryUXPage_AdvancedOptions_ClipboardAsset_Link_Class_Locator);
+            if (clipBoardAssets == null) 
+                return 0;
+            logger.LogMethodExit("ContentLibraryUXPage", 
+                "GetCountOfAssetTitleByColorAndFontStyle",
+               base.isTakeScreenShotDuringEntryExit);
+            return clipBoardAssets.Count;            
+        }
+
+        /// <summary>
+        /// Selects paste option.
+        /// </summary>
+        /// <param name="option">Paste option type.</param>
+        public void SelectPasteOption(PasteOptions option)
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage",
+                "SelectPasteOption",
+                base.isTakeScreenShotDuringEntryExit);
+            string optionButtonID = string.Empty;
+            switch (option)
+            {
+                case PasteOptions.PasteAtTop:
+                    optionButtonID = ContentLibraryUXPageResource
+                        .ContentLibraryUXPage_PasteOptions_Top_TD_ID_Locator;
+                    break;
+                case PasteOptions.PasteBeforeSelected:
+                    optionButtonID = ContentLibraryUXPageResource
+                        .ContentLibraryUXPage_PasteOptions_BeforeSelected_TD_ID_Locator;
+                    break;
+                case PasteOptions.PasteAfterSelected:
+                    optionButtonID = ContentLibraryUXPageResource
+                        .ContentLibraryUXPage_PasteOptions_AfterSelected_TD_ID_Locator;
+                    break;
+                case PasteOptions.PasteAtBottom:
+                    optionButtonID = ContentLibraryUXPageResource
+                        .ContentLibraryUXPage_PasteOptions_Bottom_TD_ID_Locator;
+                    break;
+            }
+            this.ClickButtonByID(optionButtonID);
+
+            logger.LogMethodExit("ContentLibraryUXPage",
+                "SelectPasteOption",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Clicks the button by its ID attribute.
+        /// </summary>
+        /// <param name="buttonID">ID attribute of the button.</param>
+        private void ClickButtonByID(string buttonID)
+        {
+            if (buttonID != null)
+            {
+                base.WaitForElement(By.Id(buttonID));
+                IWebElement headerButton = base
+                    .GetWebElementPropertiesById(buttonID);
+                base.ClickByJavaScriptExecutor(headerButton);
+            }
+        }
+
     }
 }

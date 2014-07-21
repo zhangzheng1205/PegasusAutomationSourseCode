@@ -541,7 +541,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(SearchCoursesPageResource
                 .SearchCourses_Page_FiltersDropDown_Id_Locator));
             //Select Dropdown Option
-            base.SelectDropDownValueThroughTextByID(SearchCoursesPageResource
+            base.SelectDropDownValueThroughTextById(SearchCoursesPageResource
                 .SearchCourses_Page_FiltersDropDown_Id_Locator, dropdownOption);
             Logger.LogMethodExit("SearchCoursesPage", "SelectFilterDropdownOption",
                  base.isTakeScreenShotDuringEntryExit);

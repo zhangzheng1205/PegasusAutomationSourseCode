@@ -4,6 +4,7 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
@@ -138,5 +139,92 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("CustomizeContent", "VerifyCustomizedContentsOfMLInCustomContentView",
                   base.isTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select Cmenu Of Asset In Table Of Contents.
+        /// </summary>
+        /// <param name="assetCmenu">This is Asset Cmenu.</param>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        [When(@"I select ""(.*)"" cmenu option of ""(.*)"" in table of contents")]
+        public void SelectCmenuOfAssetInTableOfContents(string assetCmenu,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Select Cmenu Of Asset In Table Of Contents
+            Logger.LogMethodEntry("CustomizeContent", "SelectCmenuOfAssetInTableOfContents",
+                  base.isTakeScreenShotDuringEntryExit);
+            //Get Activity Name From Memory
+            Activity activity = Activity.Get(activityTypeEnum);
+            //Search Activity
+            new ContentLibraryPage().SearchActivity(activity.Name);
+            //Select Asset Cmenu In Table of Content
+            new ContentLibraryPage().SelectAssetCmenuInTableofContent(activity.Name, assetCmenu);
+            Logger.LogMethodExit("CustomizeContent", "SelectCmenuOfAssetInTableOfContents",
+                  base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Set The Due Date For The Activity In Curriculum.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        [When(@"I set the due date for the ""(.*)"" activity in curriculum")]
+        public void SetTheDueDateForTheActivityInCurriculum(
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Select Cmenu Of Asset In Table Of Contents
+            Logger.LogMethodEntry("CustomizeContent",
+                "SetTheDueDateForTheActivityInCurriculum",
+                  base.isTakeScreenShotDuringEntryExit);
+            //Get Activity Name From Memory
+            Activity activity = Activity.Get(activityTypeEnum);
+            // fetch class name 
+            Class orgClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
+            //Set Due Date For Activity In Curriculum
+            new ContentLibraryPage().SetDueDateForActivityInCurriculum(orgClass.Name);
+            Logger.LogMethodExit("CustomizeContent",
+                "SetTheDueDateForTheActivityInCurriculum",
+                  base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify The Download Option In Print Window.
+        /// </summary>
+        /// <param name="downloadOption">This is Download Option.</param>
+       [Then(@"I should see the ""(.*)"" option in print window")]
+        public void VerifyTheDownloadOptionInPrintWindow(string downloadOption)
+        {
+            //Verify The Download Option In Print Window
+            Logger.LogMethodEntry("CustomizeContent",
+                "VerifyTheDownloadOptionInPrintWindow",
+                  base.isTakeScreenShotDuringEntryExit);
+            //Assert Download Option In Print Window
+            Logger.LogAssertion("VerifyTheDownloadOptionInPrintWindow",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new PrintToolPage().IsDownloadOptionPresent())); 
+            Logger.LogMethodExit("CustomizeContent",
+                "VerifyTheDownloadOptionInPrintWindow",
+                  base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+       /// Verify The Button In Test Page.
+        /// </summary>
+        /// <param name="buttonName">This is Button Name.</param>
+       [Then(@"I should see the ""(.*)"" button in 'Test' page")]
+       public void VerifyTheButtonInTestPage(string buttonName)
+       {
+           //Verify The Download Option In Print Window
+           Logger.LogMethodEntry("CustomizeContent",
+               "VerifyTheDownloadOptionInPrintWindow",
+                 base.isTakeScreenShotDuringEntryExit);
+           //Assert Download Option In Print Window
+           Logger.LogAssertion("VerifyTheDownloadOptionInPrintWindow",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(buttonName, new InstructionsPage().GetButtonText()));
+           Logger.LogMethodExit("CustomizeContent",
+               "VerifyTheDownloadOptionInPrintWindow",
+                 base.isTakeScreenShotDuringEntryExit);
+       }
+
+        
     }
 }

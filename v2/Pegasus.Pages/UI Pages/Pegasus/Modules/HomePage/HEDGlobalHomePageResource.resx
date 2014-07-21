@@ -148,7 +148,7 @@
     <value>Create a Course</value>
   </data>
   <data name="HEDGlobalHome_Page_ThreadSleep_Value" xml:space="preserve">
-    <value>30000</value>
+    <value>7000</value>
   </data>
   <data name="HEDGlobalHome_Page_Window_Title_Name" xml:space="preserve">
     <value>Global Home</value>

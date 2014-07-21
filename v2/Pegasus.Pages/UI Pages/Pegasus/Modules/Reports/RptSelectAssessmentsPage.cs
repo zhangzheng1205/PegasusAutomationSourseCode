@@ -346,6 +346,96 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Select Study Plan For Study Plan Results Report
+        /// </summary>
+        /// <param name="activityName">This is Study Plan Name</param>
+        public void SelectStudyPlanInStudyPlanResultsReport(string studyPlanName)
+        {
+            //Select StudyPlan In Study Plan Results Report
+            logger.LogMethodEntry("RptSelectAssessmentsPage",
+                "SelectStudyPlanInStudyPlanResultsReport",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait For Window
+                base.SelectWindow(RptSelectAssessmentsResource.
+                    RptSelectAssessments_Page_Reports_Window_Name);
+                //Wait for Frame
+                base.WaitForElement(By.Id(RptSelectAssessmentsResource.
+                    RptSelectAssessments_Page_Frame_Id_Locator));
+                //Switch To Frame
+                base.SwitchToIFrame(RptSelectAssessmentsResource.
+                    RptSelectAssessments_Page_Frame_Id_Locator);
+                base.WaitForElement(By.PartialLinkText(RptSelectAssessmentsResource.
+                    RptSelectAssessments_Page_Ins_SelectStudyPlans_Window_Title_Name));
+                //Click On Select Study Plan Button
+                base.ClickButtonByPartialLinkText(RptSelectAssessmentsResource.
+                    RptSelectAssessments_Page_Ins_SelectStudyPlans_Window_Title_Name);
+                //Select the Study Plan
+                this.SelectStudyPlan(studyPlanName);
+                base.WaitForElement(By.PartialLinkText(RptSelectAssessmentsResource.
+                       RptSelectAssessments_Page_Ins_Add_Link_Locator));
+                //Click on Add Button
+                base.ClickButtonByPartialLinkText(RptSelectAssessmentsResource.
+                    RptSelectAssessments_Page_Ins_Add_Link_Locator);
+                //Make sure the pop up is closed
+                base.IsPopUpClosed(Convert.ToInt32(RptSelectAssessmentsResource.
+                    RptSelectAssessments_Page_Ins_Window_Count));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptSelectAssessmentsPage",
+                "SelectStudyPlanInStudyPlanResultsReport",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select the Study Plan
+        /// </summary>
+        /// <param name="activityName">This is the Study Plan Name to be selected</param>
+        private void SelectStudyPlan(string studyPlanName)
+        {
+            logger.LogMethodEntry("RptSelectAssessmentsPage", "SelectStudyPlan",
+                base.isTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(RptSelectAssessmentsResource.
+                   RptSelectAssessments_Page_Ins_SelectStudyPlans_Popup_Window_Title_Name);
+            //Select Select Study Plan Window
+            base.SelectWindow(RptSelectAssessmentsResource.
+                RptSelectAssessments_Page_Ins_SelectStudyPlans_Popup_Window_Title_Name);
+            base.WaitForElement(By.XPath(RptSelectAssessmentsResource.
+                RptSelectAssessments_Page_Ins_ActivityCount_Xpath_Locator));
+            //Get Study Plan Count
+            int getActivityCount = base.GetElementCountByXPath(RptSelectAssessmentsResource.
+                RptSelectAssessments_Page_Ins_ActivityCount_Xpath_Locator);
+            for (int initialCount = Convert.ToInt32(RptSelectAssessmentsResource.
+                RptSelectAssessments_Page_Ins_Activity_InitialCount_Value);
+                initialCount <= getActivityCount; initialCount++)
+            {
+                base.WaitForElement(By.XPath(string.Format(RptSelectAssessmentsResource.
+                    RptSelectAssessments_Page_Ins_ActivitySelect_Xpath_Locator, initialCount)));
+                //Get Study Plan Name
+                string getActivityName = base.GetTitleAttributeValueByXPath(string.Format(RptSelectAssessmentsResource.
+                    RptSelectAssessments_Page_Ins_ActivitySelect_Xpath_Locator, initialCount));
+                if (getActivityName.Contains(studyPlanName))
+                {
+                    //Wait for study plan CheckBox
+                    base.WaitForElement(By.XPath(string.Format(RptSelectAssessmentsResource.
+                        RptSelectAssessments_Page_Ins_Checkbox_Xpath_Locator, initialCount)));
+                    base.FocusOnElementByXPath((string.Format(RptSelectAssessmentsResource.
+                        RptSelectAssessments_Page_Ins_Checkbox_Xpath_Locator, initialCount)));
+                    //Click On study plan Checkbox
+                    base.ClickButtonByXPath((string.Format(RptSelectAssessmentsResource.
+                        RptSelectAssessments_Page_Ins_Checkbox_Xpath_Locator, initialCount)));
+                    break;
+                }
+            }
+            logger.LogMethodExit("RptSelectAssessmentsPage", "SelectStudyPlan",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Select Window
         /// </summary>
         private void SelectWindow()

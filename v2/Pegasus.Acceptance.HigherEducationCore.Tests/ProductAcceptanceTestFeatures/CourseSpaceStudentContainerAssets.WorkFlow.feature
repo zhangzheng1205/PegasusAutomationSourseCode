@@ -3,24 +3,24 @@
 					I want to manage all the coursespace student Container Assets related usecases 
 					so that I would validate all the coursespace student Container Assets related scenarios are working fine.
 
-#Purpose: Open Student Url
-Background: 
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-
+#Used Instructor Course
 #Purpose : Submit the study plan with pretest and post test
 # TestCase Id: HSS_PWF_479
 Scenario: Submit the study plan with pretest and post test by CSSMSStudent
-When I enter in the "InstructorCourse" from the Global Home page as "CsSmsStudent"
-Then I should be on the "Today's View" page
-When I navigate to the "Course Materials" tab
-And I open activity in course materials tab
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I open activity in course materials tab
 And I submit the pretest of "StudyPlan"
 And I submit the posttest of "StudyPlan"
 Then I should see the status of "Readiness Check ChPA" asset as "Completed"
-When I "Sign out" from the "CsSmsStudent"
-Then I should see the successfull message "You have been signed out of the application."
+
+#Used Instructor Course
+#Purpose : Submit the study plan with pretest and post test
+# TestCase Id: HSS_PWF_479
+Scenario: Functionality of select activity when the Activity with quote by CSSMSStudent
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I click on "Test" activity of behavioral mode "BasicRandom"
+And I submit the "Test" activity
 
 	

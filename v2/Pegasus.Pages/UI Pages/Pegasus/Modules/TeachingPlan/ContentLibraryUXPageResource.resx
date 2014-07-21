@@ -231,4 +231,46 @@
   <data name="ContentLibraryUXPage_ClearResults_Id_Locator" xml:space="preserve">
     <value>_ctl0_InnerPageContent_ucSearchMessageBoard_lnkClear</value>
   </data>
+  <data name="ContentLibraryUXPage_AdvancedOptions_Copy_Link_ID_Locator" xml:space="preserve">
+    <value>aCopy</value>
+  </data>
+  <data name="ContentLibraryUXPage_AdvancedOptions_Cut_Link_ID_Locator" xml:space="preserve">
+    <value>aCut</value>
+  </data>
+  <data name="ContentLibraryUXPage_AdvancedOptions_Delete_Link_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_lnkDelete</value>
+  </data>
+  <data name="ContentLibraryUXPage_AdvancedOptions_Link_Class_Locator" xml:space="preserve">
+    <value>whiteboldAdvOpt</value>
+  </data>
+  <data name="ContentLibraryUXPage_AdvancedOptions_Paste_Link_ID_Locator" xml:space="preserve">
+    <value>lnkPaste</value>
+  </data>
+  <data name="ContentLibraryUXPage_AdvancedOptions_PasteOptionTop_Link_ID_Locator" xml:space="preserve">
+    <value>pstOpt1</value>
+  </data>
+  <data name="ContentLibraryUXPage_AdvancedOptions_ClipboardAsset_Link_Class_Locator" xml:space="preserve">
+    <value>pastecompose</value>
+  </data>
+  <data name="ContentLibraryUXPage_AdvancedOptions_ClipBoard_Count_Span_ID_Locator" xml:space="preserve">
+    <value>lblcount</value>
+  </data>
+  <data name="ContentLibraryUX_Page_Asset_Checkbox_ID_Locator" xml:space="preserve">
+    <value>grdContentLibrary$_ctrl1</value>
+  </data>
+  <data name="ContentLibraryUXPage_AdvancedOptions_ItemReady_Wait_Value" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="ContentLibraryUXPage_PasteOptions_AfterSelected_TD_ID_Locator" xml:space="preserve">
+    <value>pstOpt3</value>
+  </data>
+  <data name="ContentLibraryUXPage_PasteOptions_BeforeSelected_TD_ID_Locator" xml:space="preserve">
+    <value>pstOpt2</value>
+  </data>
+  <data name="ContentLibraryUXPage_PasteOptions_Bottom_TD_ID_Locator" xml:space="preserve">
+    <value>pstOpt4</value>
+  </data>
+  <data name="ContentLibraryUXPage_PasteOptions_Top_TD_ID_Locator" xml:space="preserve">
+    <value>pstOpt1</value>
+  </data>
 </root>

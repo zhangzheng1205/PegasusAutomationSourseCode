@@ -19,7 +19,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestFeature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.2.1")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CourseSpaceAuthorFeature
+    public partial class CourseSpaceInstructorFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestFeature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceAuthor", "               As a courseSpace Instructor\r\n\t\t\tI want to manage all the coursespa" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructor", "               As a courseSpace Instructor\r\n\t\t\tI want to manage all the coursespa" +
                     "ce Instructor related usecases \r\n\t\t\tso that I would validate all the coursespace" +
                     " Instructor scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
@@ -48,9 +48,9 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestFeature
         public virtual void TestInitialize()
         {
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
-                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "CourseSpaceAuthor")))
+                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "CourseSpaceInstructor")))
             {
-                Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestFeatures.CourseSpaceAuthorFeature.FeatureSetup(null);
+                Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestFeatures.CourseSpaceInstructorFeature.FeatureSetup(null);
             }
         }
         
@@ -96,11 +96,11 @@ testRunner.Then("I should be on the \"Question Bank\" page", ((string)(null)), (
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create the GradeIT Question (2010) in coursespace")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceAuthor")]
-        public virtual void CreateTheGradeITQuestion2010InCoursespace()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create the GradeIT Question in coursespace by CsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void CreateTheGradeITQuestionInCoursespaceByCsSmsInstructor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create the GradeIT Question (2010) in coursespace", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create the GradeIT Question in coursespace by CsSmsInstructor", ((string[])(null)));
 #line 20
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -110,13 +110,40 @@ testRunner.When("I select \'Add Course Materials\' option", ((string)(null)), ((
 #line 22
 testRunner.And("I select \"Grader Project\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
-testRunner.And("I create \"SIMGraderQuestion\" grader IT Question using \"Personal Finances\" project" +
-                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I create \"SIMGraderQuestion\" grader IT Question using \"A Kiss Of Chocolate\" proje" +
+                    "ct in \'CourseSpace\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
 testRunner.Then("I should see the successfull message \"Question added successfully.\"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 25
 testRunner.And("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
+testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
+                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify “Edit Grader Project Instructions” should be visible user Edit the Questio" +
+            "n by CsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void VerifyEditGraderProjectInstructionsShouldBeVisibleUserEditTheQuestionByCsSmsInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify “Edit Grader Project Instructions” should be visible user Edit the Questio" +
+                    "n by CsSmsInstructor", ((string[])(null)));
+#line 29
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 30
+testRunner.When("I click on \"Edit\" cmenu option of \"SIMGraderQuestion\" question in manage question" +
+                    " bank", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 31
+testRunner.Then("I should see instead of \'Preference\', \'Edit Grader Project Instruction\' is visibl" +
+                    "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 32
+testRunner.And("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 33
 testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

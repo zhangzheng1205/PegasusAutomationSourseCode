@@ -5,6 +5,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Integration.MGM.Tests.CommonIntegrationAcceptanceTestDefinitions;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using Pegasus.Integration.DigitalPath.Rumba.Tests.CommonIntegrationAcceptanceTestDefinitions;
 
 namespace Pegasus.Integration.MGM.Tests.
     IntegrationAcceptanceTestDefinitions

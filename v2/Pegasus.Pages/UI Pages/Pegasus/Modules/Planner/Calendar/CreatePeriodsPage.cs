@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
             if ( base.GetWebElementPropertiesById(CreatePeriodsPageResource.
                 CreatePeriodsPage_ClassAssociations_DropDown_Id_Locator).Enabled )
             {
-                base.SelectDropDownValueThroughIndexByID(CreatePeriodsPageResource.
+                base.SelectDropDownValueThroughIndexById(CreatePeriodsPageResource.
                 CreatePeriodsPage_ClassAssociations_DropDown_Id_Locator,
                 Convert.ToInt32(CreatePeriodsPageResource.
                 CreatePeriodsPage_ClassAssociations_DropDown_Index_Value));
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
             if ( base.GetWebElementPropertiesById(CreatePeriodsPageResource.
                 CreatePeriodsPage_CourseAssociations_DropDown_Id_Locator).Enabled )
             {
-                base.SelectDropDownValueThroughIndexByID(CreatePeriodsPageResource.
+                base.SelectDropDownValueThroughIndexById(CreatePeriodsPageResource.
                 CreatePeriodsPage_CourseAssociations_DropDown_Id_Locator,
                 Convert.ToInt32(CreatePeriodsPageResource.
                 CreatePeriodsPage_CourseAssociations_DropDown_Index_Value));
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Drop down
             base.WaitForElement(By.Id(CreatePeriodsPageResource.
                 CreatePeriodsPage_Order_DropDown_Id_Locator));
-            base.SelectDropDownValueThroughIndexByID(CreatePeriodsPageResource.
+            base.SelectDropDownValueThroughIndexById(CreatePeriodsPageResource.
                 CreatePeriodsPage_Order_DropDown_Id_Locator, Convert.ToInt32(
                 CreatePeriodsPageResource.CreatePeriodsPage_Order_DropDown_Index_Value));
             //Display Name

@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
                 "StorePegasusCourseIDInMemory", base.isTakeScreenShotDuringEntryExit);
             Course course = new Course
             {
-                PegasusCourseID = pegasusCourseId,
+                PegasusCourseId = pegasusCourseId,
                 CourseType = Course.CourseTypeEnum.PegasusCourseID,
                 IsCreated = true,
             };

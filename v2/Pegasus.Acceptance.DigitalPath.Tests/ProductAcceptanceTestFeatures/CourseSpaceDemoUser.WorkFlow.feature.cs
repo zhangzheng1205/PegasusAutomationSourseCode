@@ -85,26 +85,6 @@ testRunner.Then("I should see the successful message box \"Registration successf
 #line hidden
             this.ScenarioCleanup();
         }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Display of welcome message to demo User when one product is licensed with organiz" +
-            "ation")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceDemoUser")]
-        public virtual void DisplayOfWelcomeMessageToDemoUserWhenOneProductIsLicensedWithOrganization()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of welcome message to demo User when one product is licensed with organiz" +
-                    "ation", ((string[])(null)));
-#line 12
-this.ScenarioSetup(scenarioInfo);
-#line 13
-testRunner.Given("I browsed the login url for \"DPDemoUser\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 14
-testRunner.When("I login to Pegasus as \"DPDemoUser\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
-testRunner.Then("I should see display of welcome message for \"DigitalPathDemo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
     }
 }
 #pragma warning restore

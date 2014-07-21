@@ -70,49 +70,28 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 6
-#line 8
-testRunner.Given("I browsed the login url for \"HedMiLWsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I logged into the Pegasus as \"HedMiLWsAdmin\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.Given("I am on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create New SIM5 Master Course by Ws Admin")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceAdmin")]
         public virtual void CreateNewSIM5MasterCourseByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create New SIM5 Master Course by Ws Admin", ((string[])(null)));
-#line 16
+#line 8
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 17
+#line 9
 testRunner.When("I click on the \"Create New Courses\" link in \"right\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
+#line 10
 testRunner.Then("I should see the \"Create New Courses\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 19
+#line 11
 testRunner.When("I create a new \"MyItLabSIM5MasterCourse\" course by selecting \"Sim Course\" format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
+#line 12
 testRunner.Then("I should see the successfull message \"New course created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 21
+#line 13
 testRunner.When("I search \"MyItLabSIM5MasterCourse\" course in workspace by \"CourseName\" and \"Equal" +
                     "s\" dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
+#line 14
 testRunner.Then("I should see the searched \"MyItLabSIM5MasterCourse\" course in Manage Courses fram" +
                     "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 23
-testRunner.When("I \"Sign out\" from the \"HedMiLWsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -123,23 +102,16 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreateTeacherByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Teacher by Ws Admin", ((string[])(null)));
-#line 27
+#line 17
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 28
+#line 18
 testRunner.When("I click on the \"Create New User\" link in \"left\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 19
 testRunner.Then("I should see the \"Create New User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 30
+#line 20
 testRunner.When("I create a new \"HedWsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 31
+#line 21
 testRunner.Then("I should see the successfull message \"New user created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 32
-testRunner.When("I \"Sign out\" from the \"HedMiLWsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 33
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -150,28 +122,21 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void EnrollTeacherToSIM5MasterCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll Teacher to SIM5 Master Course by WS Admin", ((string[])(null)));
-#line 36
+#line 24
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 37
+#line 25
 testRunner.When("I search \"MyItLabSIM5MasterCourse\" course in workspace by \"CourseName\" and \"Equal" +
                     "s\" dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 26
 testRunner.Then("I should be able to see the searched \"MyItLabSIM5MasterCourse\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 39
+#line 27
 testRunner.When("I select the created \"MyItLabSIM5MasterCourse\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
+#line 28
 testRunner.And("I select the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 41
+#line 29
 testRunner.When("I enrolled the \"HedWsInstructor\" in the Master course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 42
+#line 30
 testRunner.Then("I should see the successfull message \"Instructors enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 43
-testRunner.When("I \"Sign out\" from the \"HedMiLWsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -182,24 +147,17 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void PublishSIM5MasterCourseByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Publish SIM5 Master Course by Ws Admin", ((string[])(null)));
-#line 47
+#line 33
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 48
+#line 34
 testRunner.When("I search \"MyItLabSIM5MasterCourse\" course in workspace by \"CourseName\" and \"Equal" +
                     "s\" dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 49
+#line 35
 testRunner.Then("I should be able to see the searched \"MyItLabSIM5MasterCourse\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
+#line 36
 testRunner.When("I publish the Authored \"MyItLabSIM5MasterCourse\" in workspace as \"Master Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 37
 testRunner.Then("I should see the successfull message \"Course published successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 52
-testRunner.When("I \"Sign out\" from the \"HedMiLWsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 53
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -210,29 +168,22 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreateNewSIMMasterCourseByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create New SIM Master Course by Ws Admin", ((string[])(null)));
-#line 56
+#line 40
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 57
+#line 41
 testRunner.When("I click on the \"Create New Courses\" link in \"right\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 58
+#line 42
 testRunner.Then("I should see the \"Create New Courses\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 59
+#line 43
 testRunner.When("I create a new \"MyItLabSIMMasterCourse\" course by selecting \"Sim Course\" format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 60
+#line 44
 testRunner.Then("I should see the successfull message \"New course created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 61
+#line 45
 testRunner.When("I search \"MyItLabSIMMasterCourse\" course in workspace by \"CourseName\" and \"Equals" +
                     "\" dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
+#line 46
 testRunner.Then("I should see the searched \"MyItLabSIMMasterCourse\" course in Manage Courses frame" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 63
-testRunner.When("I \"Sign out\" from the \"HedMiLWsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -243,28 +194,21 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void EnrollTeacherToSIMMasterCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll Teacher to SIM Master Course by WS Admin", ((string[])(null)));
-#line 67
+#line 49
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 68
+#line 50
 testRunner.When("I search \"MyItLabSIMMasterCourse\" course in workspace by \"CourseName\" and \"Equals" +
                     "\" dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
+#line 51
 testRunner.Then("I should be able to see the searched \"MyItLabSIMMasterCourse\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 70
+#line 52
 testRunner.When("I select the created \"MyItLabSIMMasterCourse\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 71
+#line 53
 testRunner.And("I select the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 72
+#line 54
 testRunner.When("I enrolled the \"HedWsInstructor\" in the Master course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 73
+#line 55
 testRunner.Then("I should see the successfull message \"Instructors enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 74
-testRunner.When("I \"Sign out\" from the \"HedMiLWsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 75
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -275,24 +219,17 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void PublishSIMMasterCourseByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Publish SIM Master Course by Ws Admin", ((string[])(null)));
-#line 78
+#line 58
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 79
+#line 59
 testRunner.When("I search \"MyItLabSIMMasterCourse\" course in workspace by \"CourseName\" and \"Equals" +
                     "\" dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 80
+#line 60
 testRunner.Then("I should be able to see the searched \"MyItLabSIMMasterCourse\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 81
+#line 61
 testRunner.When("I publish the Authored \"MyItLabSIMMasterCourse\" in workspace as \"Master Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 82
+#line 62
 testRunner.Then("I should see the successfull message \"Course published successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 83
-testRunner.When("I \"Sign out\" from the \"HedMiLWsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 84
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -303,24 +240,22 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void DeleteTheCreatedSIMMasterCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete The Created SIM Master Course by WS admin", ((string[])(null)));
-#line 87
+#line 65
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 88
+#line 66
 testRunner.When("I search \"MyItLabSIMMasterCourse\" course in workspace by \"CourseName\" and \"Equals" +
                     "\" dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 89
+#line 67
 testRunner.Then("I should see the searched \"MyItLabSIMMasterCourse\" course in Manage Courses frame" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 90
+#line 68
 testRunner.When("I select the course to delete in manage course frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 91
+#line 69
 testRunner.Then("I should see the successfull message \"\"Courses deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 92
+#line 70
 testRunner.When("I search \"MyItLabSIMMasterCourse\" course in workspace by \"CourseName\" and \"Equals" +
                     "\" dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 93
+#line 71
 testRunner.Then("I should see the \"There are no courses. To add courses, click Create New Course.\"" +
                     " message in Manage Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -333,24 +268,22 @@ testRunner.Then("I should see the \"There are no courses. To add courses, click 
         public virtual void DeleteTheCreatedSIM5MasterCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete The Created SIM5 Master Course by WS admin", ((string[])(null)));
-#line 96
+#line 74
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 97
+#line 75
 testRunner.When("I search \"MyItLabSIM5MasterCourse\" course in workspace by \"CourseName\" and \"Equal" +
                     "s\" dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 98
+#line 76
 testRunner.Then("I should see the searched \"MyItLabSIM5MasterCourse\" course in Manage Courses fram" +
                     "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 99
+#line 77
 testRunner.When("I select the course to delete in manage course frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 100
+#line 78
 testRunner.Then("I should see the successfull message \"\"Courses deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 101
+#line 79
 testRunner.When("I search \"MyItLabSIM5MasterCourse\" course in workspace by \"CourseName\" and \"Equal" +
                     "s\" dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 102
+#line 80
 testRunner.Then("I should see the \"There are no courses. To add courses, click Create New Course.\"" +
                     " message in Manage Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -363,22 +296,20 @@ testRunner.Then("I should see the \"There are no courses. To add courses, click 
         public virtual void CreateNewEmptyCourseByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create New Empty Course by Ws Admin", ((string[])(null)));
-#line 105
+#line 83
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 106
+#line 84
 testRunner.When("I click on the \"Create New Courses\" link in \"right\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 107
+#line 85
 testRunner.Then("I should see the \"Create New Courses\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 108
+#line 86
 testRunner.When("I create a new \"HedEmptyClass\" course by selecting \"General Course\" format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 109
+#line 87
 testRunner.Then("I should see the successfull message \"New course created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 110
+#line 88
 testRunner.When("I search \"HedEmptyClass\" course in workspace by \"CourseName\" and \"Equals\" dropdow" +
                     "n option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 111
+#line 89
 testRunner.Then("I should see the searched \"HedEmptyClass\" course in Manage Courses frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -390,22 +321,20 @@ testRunner.Then("I should see the searched \"HedEmptyClass\" course in Manage Co
         public virtual void EnrollTeacherToEmptyCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll Teacher to Empty Course by WS Admin", ((string[])(null)));
-#line 114
+#line 92
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 115
+#line 93
 testRunner.When("I search \"HedEmptyClass\" course in workspace by \"CourseName\" and \"Equals\" dropdow" +
                     "n option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 116
+#line 94
 testRunner.Then("I should be able to see the searched \"HedEmptyClass\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 117
+#line 95
 testRunner.When("I select the created \"HedEmptyClass\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 118
+#line 96
 testRunner.And("I select the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 119
+#line 97
 testRunner.When("I enrolled the \"HedWsInstructor\" in the Master course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 120
+#line 98
 testRunner.Then("I should see the successfull message \"Instructors enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -417,18 +346,16 @@ testRunner.Then("I should see the successfull message \"Instructors enrolled suc
         public virtual void PublishTheEmptyCourseByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Publish The Empty Course by Ws Admin", ((string[])(null)));
-#line 123
+#line 101
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 124
+#line 102
 testRunner.When("I search \"HedEmptyClass\" course in workspace by \"CourseName\" and \"Equals\" dropdow" +
                     "n option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 125
+#line 103
 testRunner.Then("I should be able to see the searched \"HedEmptyClass\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 126
+#line 104
 testRunner.When("I publish the Authored \"HedEmptyClass\" in workspace as \"Master Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 127
+#line 105
 testRunner.Then("I should see the successfull message \"Course published successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -440,23 +367,21 @@ testRunner.Then("I should see the successfull message \"Course published success
         public virtual void DeleteTheCreatedEmptyCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete The Created Empty Course by WS admin", ((string[])(null)));
-#line 130
+#line 108
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 131
+#line 109
 testRunner.When("I search \"HedEmptyClass\" course in workspace by \"CourseName\" and \"Equals\" dropdow" +
                     "n option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 132
+#line 110
 testRunner.Then("I should see the searched \"HedEmptyClass\" course in Manage Courses frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 133
+#line 111
 testRunner.When("I select the course to delete in manage course frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 134
+#line 112
 testRunner.Then("I should see the successfull message \"\"Courses deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 135
+#line 113
 testRunner.When("I search \"HedEmptyClass\" course in workspace by \"CourseName\" and \"Equals\" dropdow" +
                     "n option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 136
+#line 114
 testRunner.Then("I should see the \"There are no courses. To add courses, click Create New Course.\"" +
                     " message in Manage Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

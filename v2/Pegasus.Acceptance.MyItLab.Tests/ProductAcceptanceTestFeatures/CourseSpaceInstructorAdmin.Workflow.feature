@@ -3,69 +3,48 @@
 					I want to manage all the coursespace instructor related usecases 
 					so that I would validate all the coursespace instructor scenarios are working fine.
 
-#Purpose: Open Instructor Url
-Background: 
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-
 #Purpose: Create Instructor course through catalog by CS instructor
-#HED_MIL_PWF_156
 Scenario: Add Instructor Course From Catalog by SMS Instructor
 When I add Product Course type "MyItLabSIM5MasterCourse" course from Search Catalog
-Then I should see "MyItLabInstructorCourse" on the Global Home page
-When I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
+Then I should see "MyItLabInstructorCourse" course on the Global Home page
 
+#Global HomePage Scenario
 Scenario: Validate Instructor Course To Get Out From Assigned To Copy State
 When I select course to validate Inactive State to Active State on Global Home page
 Then I should see "MyItLabInstructorCourse" on the Global Home page in Active State
-When I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Create Program type course through catalog by CS instructor
-@ProgramCreation
 Scenario: Add Program Course From Catalog by SMS Instructor
-When I add Product type "HedMilProgram" from Search Catalog
-Then I should see "MyItLabProgramCourse" on the Global Home page
-When I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
+When I add product type "MyITLabForOffice2013Program" from search catalog
+Then I should see "MyITLabOffice2013Program" course on the Global Home page
 
 #Purpose: To Create Template
 Scenario: Create Template by Program Admin
-When I enter in the "MyItLabProgramCourse" from the Global Home page as "CsSmsInstructor"
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsInstructor"
 Then I should be on the "Program Administration" page
-When I create Template using "MyItLabSIM5MasterCourse" course as a program admin
-And I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
+When I navigate to "Templates" tab of the "Program Administration" page
+And I create Template using "MyITLabForOffice2013Master" course as a program admin
 
 #Purpose: Validate Template to get out from the assigned to copy state
+#MyItLabProgramCourse
 Scenario: Validate Template To Get Out From Assigned To Copy State
-When I enter in the "MyItLabProgramCourse" from the Global Home page as "CsSmsInstructor"
+When I navigate to "Templates" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
-When I verify the "MyItLabSIM5MasterCourse" course Template for AssignedToCopy state
-Then I should see the "MyItLabSIM5MasterCourse" course Template to be successfully out of AssignedToCopy state
-And I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
+When I verify the "MyITLabForOffice2013Master" course Template for AssignedToCopy state
+Then I should see the "MyITLabForOffice2013Master" course Template to be successfully out of AssignedToCopy state
 
-#Purpose: To Create Section
+#MyItLabProgramCourse
 Scenario: Create Section by Program Admin
-When I enter in the "MyItLabProgramCourse" from the Global Home page as "CsSmsInstructor"
+When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
-When I select the "Sections" tab
-And I click on Add Sections link from the Program Administration page
-And I create Section from "MyItLabSIM5MasterCourse" Template as a Program Admin
-And I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
+When I click on Add Sections link from the Program Administration page
+And I create Section from "MyITLabForOffice2013Master" Template as a Program Admin
 
 #Purpose: Validate Section to get out from the assigned to copy state
+#MyItLabProgramCourse
 Scenario: Validate Section To Get Out From Assigned To Copy State
-When I enter in the "MyItLabProgramCourse" from the Global Home page as "CsSmsInstructor"
+When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
-When I select the "Sections" tab
-And I verify the Section created from "MyItLabProgramCourse" course Template for AssignedToCopy state
-Then I should see the Section created from "MyItLabProgramCourse" course Template to be successfully out of AssignedToCopy state
-And I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
+When I verify the Section created from "MyITLabOffice2013Program" course Template for AssignedToCopy state
+Then I should see the Section created from "MyITLabOffice2013Program" course Template to be successfully out of AssignedToCopy state
 

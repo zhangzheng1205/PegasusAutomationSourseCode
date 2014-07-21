@@ -135,4 +135,10 @@
   <data name="InstructorReports_Student_LastName" xml:space="preserve">
     <value>SMSUSER</value>
   </data>
+  <data name="InstructorReports_StudyPlan_Name" xml:space="preserve">
+    <value>Readiness Check ChPA</value>
+  </data>
+  <data name="InstructorReports_StudyPlan_Score" xml:space="preserve">
+    <value>25</value>
+  </data>
 </root>

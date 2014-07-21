@@ -3,20 +3,13 @@
 					I want to manage all the coursespace copy content related usecases 
 					so that I would validate all the coursespace Instructor scenarios are working fine.
 
-Background:
-#Purpose: Open Ws Url 
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-
-
 #Purpose: Copying the assets using the "Add to Multiple Section" c-menu add the content across different section
 # TestCase Id: HED_MIL_PWF_161
+#MyItLabProgramCourse
 Scenario: Copying the assets using the "Add to Multiple Section" c-menu add the content across different section
-When I enter in the "MyItLabProgramCourse" from the Global Home page as "CsSmsInstructor"
+When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
-When I select the "Sections" tab
-And I search the "MyItLabProgramCourse" first section
+When I search the "MyItLabProgramCourse" second section
 And I click the "Enter Section as Instructor" 
 Then I should be on the "Today's View" page
 When I navigate to the "Course Materials" tab
@@ -27,7 +20,7 @@ Then I should be on the "Add to Multiple Sections" page
 When I select the 'Multiple Sections'
 And I select 'Home' option
 Then I should be on the "Program Administration" page
-When I search the "MyItLabProgramCourse" second section
+When I search the "MyItLabProgramCourse" first section
 And I click the "Enter Section as Instructor" 
 Then I should be on the "Today's View" page
 When I navigate to the "Course Materials" tab
@@ -38,16 +31,16 @@ When I click the activity cmenu option in MyCourse Frame
 And I click on "Preview" cmenu option
 Then I should be on the "Skill-Based Assessment Text Preview" page
 When I close the "Skill-Based Assessment Text Preview" window
-And I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
+And I select 'Home' option
+Then I should be on the "Program Administration" page
 
 #Purpose: To check the functionality that ensures the availability and not availability of assets between the date range
 # TestCase Id: HED_MIL_PWF_1013
+#MyItLabInstructorCourse
 Scenario: To check the functionality that ensures the availability and not availability of assets between the date range
-When I enter in the "MyItLabInstructorCourse" from the Global Home page as "CsSmsInstructor" 
-Then I should be on the "Today's View" page
-When I navigate to the "Course Materials" tab
-And I select 'Add Course Materials' in 'My Course'
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I select 'Add Course Materials' in 'My Course'
 And I click on the "myitlab Study Plan" activity type
 Then I should be on the "Add myitlab Study Plan" page
 When I create "StudyPlan" of behavioral mode "SkillBased" type
@@ -63,5 +56,15 @@ When I select 'Assigned' radiobutton
 And I select 'Set availability date range' radiobutton
 And I enable 'Do not provide an End Date' option
 Then I should see the successfull message "Properties updated successfully."
-When I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
+
+#Purpose: UseCase To Create SIM5Activity
+#Test Case Id : HED_MIL_PWF_053
+#MyItLabInstructorCourse
+Scenario: Create SIM5Activity By SMS Instructor
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I select 'Add Course Materials' in 'My Course'
+And I click on the "Homework" activity type
+Then I should be on the "Create activity" page
+When I create "SIM5Activity" activity of behavioral mode "SkillBased" type
+Then I should see the successfull message "Activity added successfully."

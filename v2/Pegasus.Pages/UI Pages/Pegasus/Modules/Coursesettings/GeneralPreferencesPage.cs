@@ -582,7 +582,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Giving delay till given link element load
                 base.WaitForElement(By.Id(linkID));
                 // Click event get fire on given link, based on thier ID
-                base.ClickLinkByID(linkID);
+                base.ClickLinkById(linkID);
             }
             catch (Exception e)
             {
@@ -684,7 +684,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable General Tab Embedded Report Preference Settings
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnableGeneralTabEmbeddedReportPreferenceSettings", 
+            "EnableGeneralTabEmbeddedReportPreferenceSettings",
             base.isTakeScreenShotDuringEntryExit);
             try
             {
@@ -699,7 +699,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnableGeneralTabEmbeddedReportPreferenceSettings", 
+            "EnableGeneralTabEmbeddedReportPreferenceSettings",
             base.isTakeScreenShotDuringEntryExit);
         }
 
@@ -751,7 +751,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Main Frame
                 this.SelectThePreferenceWindowWithFrame();
                 //Enable BlackBoard IM Preference
-                this.EnableBlackBoardIMPreference();
+                this.EnableBlackBoardImPreference();
                 //Enable Calendar Preference
                 this.EnableGeneralTabCalendarPreferenceSettings();
                 //Enable Allow Student Send Mail Preference
@@ -760,8 +760,11 @@ namespace Pegasus.Pages.UI_Pages
                 this.EnableGeneralTabEmbeddedReportPreferenceSettings();
                 //Enable Student Resource Toolbar Preferences
                 this.EnableStudentResourceToolbarPreferences();
+                //Enable Instructor Resource Toolbar Preferences
+                this.EnalbleInsResToolbarLaunchPreferences();
+
                 //Save Preferences
-                this.SavePreferences();                
+                this.SavePreferences();
             }
             catch (Exception e)
             {
@@ -806,8 +809,10 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enable General Preference Settings.
         /// </summary>
+        /// <param name="lockIconIdProperty">This is LockId.</param>
+        /// <param name="preferenceSelectorIdProperty">This is CheckboxId.</param>
         public void EnableGeneralPreferenceSettings(
-            string LockIconIdProperty,string PreferenceSelectorIdProperty)
+            string lockIconIdProperty, string preferenceSelectorIdProperty)
         {
             //Enable General Preference Settings
             logger.LogMethodEntry("GeneralPreferencesPage",
@@ -815,22 +820,22 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Get Lock Icon Status
-                base.WaitForElement(By.Id(LockIconIdProperty));
-                base.FocusOnElementByID(LockIconIdProperty);
+                base.WaitForElement(By.Id(lockIconIdProperty));
+                base.FocusOnElementByID(lockIconIdProperty);
                 string getPreferenceLockIconStatus =
-                    base.GetClassAttributeValueById(LockIconIdProperty);
+                    base.GetClassAttributeValueById(lockIconIdProperty);
                 if (getPreferenceLockIconStatus == GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_LockIcon_Status_Value)
                 {
                     IWebElement getLockIdPropety = base.GetWebElementPropertiesById
-                        (LockIconIdProperty);
+                        (lockIconIdProperty);
                     //Click On Lock Icon
                     base.ClickByJavaScriptExecutor(getLockIdPropety);
                 }
-                if (!base.IsElementSelectedById(PreferenceSelectorIdProperty))
+                if (!base.IsElementSelectedById(preferenceSelectorIdProperty))
                 {
                     IWebElement getCheckboxId = base.GetWebElementPropertiesById
-                        (PreferenceSelectorIdProperty);
+                        (preferenceSelectorIdProperty);
                     //Enable Preference
                     base.ClickByJavaScriptExecutor(getCheckboxId);
                 }
@@ -841,7 +846,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableGeneralPreferenceSettings", base.isTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         /// Enable Allow Student Send Mail Preference.
@@ -882,7 +887,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable General Tab Calendar Preference Settings
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnableGeneralTabCalendarPreferenceSettings", 
+            "EnableGeneralTabCalendarPreferenceSettings",
             base.isTakeScreenShotDuringEntryExit);
             try
             {
@@ -902,14 +907,14 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnableGeneralTabCalendarPreferenceSettings", 
+            "EnableGeneralTabCalendarPreferenceSettings",
             base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Enable BlackBoard IM Preference.
         /// </summary>
-        private void EnableBlackBoardIMPreference()
+        private void EnableBlackBoardImPreference()
         {
             //Enable BlackBoard IM Preference
             logger.LogMethodEntry("GeneralPreferencesPage",
@@ -921,43 +926,21 @@ namespace Pegasus.Pages.UI_Pages
                 GeneralPrefernces_Page_BlackBoard_IM_Lock_Id_Locator,
                 GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_BlackBoardIM_Checkbox_Id_Locator);
-            //Fill Black board Fname Lname Email TextBoxes
-            this.EnterBlackBoardIMDetails();
+            base.WaitForElement(By.Id(GeneralPreferencesPageResource.
+                GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator));
+            //Enter First And Last Name
+            base.ClearTextByID(GeneralPreferencesPageResource.
+                GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator);
+            base.FillTextBoxByID(GeneralPreferencesPageResource.
+                GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator,
+                GeneralPreferencesPageResource.GeneralPrefernces_Page_FirstLast_Name_Value);
+            base.WaitForElement(By.Id(GeneralPreferencesPageResource.
+                GeneralPrefernces_Page_Email_Textbox_Id_Locator));
+            //Enter Mail And Business Unit
+            this.EnterMailAndBusinessUnit();
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableBlackBoardIMPreference", base.isTakeScreenShotDuringEntryExit);
         }
-        /// <summary>
-        /// Fill Firstname Lastname Email TextBoxes
-        /// </summary>
-        public void EnterBlackBoardIMDetails()
-        {
-            // Fill Firstname Lastname Email TextBoxes
-            logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnterBlackBoardIMDetails", base.isTakeScreenShotDuringEntryExit);
-            try
-            {
-                base.WaitForElement(By.Id(GeneralPreferencesPageResource.
-               GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator));
-                //Enter First And Last Name
-                base.ClearTextByID(GeneralPreferencesPageResource.
-                    GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator);
-                base.FillTextBoxByID(GeneralPreferencesPageResource.
-                    GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator,
-                    GeneralPreferencesPageResource.GeneralPrefernces_Page_FirstLast_Name_Value);
-                base.WaitForElement(By.Id(GeneralPreferencesPageResource.
-                    GeneralPrefernces_Page_Email_Textbox_Id_Locator));
-                //Enter Mail And Business Unit
-                this.EnterMailAndBusinessUnit();
-            }
-            catch (Exception e)
-            {
-                ExceptionHandler.HandleException(e);
-            }
-
-            logger.LogMethodExit("GeneralPreferencesPage",
-            "EnterBlackBoardIMDetails", base.isTakeScreenShotDuringEntryExit);
-        }
-
 
         /// <summary>
         /// Enter Mail And Business Unit.
@@ -1049,7 +1032,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Enter Pct Url
                 base.FillTextBoxByID(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_PctUrl_Textbox_Id_Locator,
-                    GeneralPreferencesPageResource.GeneralPrefernces_Page_PctUrl_Value);               
+                    GeneralPreferencesPageResource.GeneralPrefernces_Page_PctUrl_Value);
             }
             logger.LogMethodExit("GeneralPreferencesPage",
              "EnableInstructorResourceToolbarPreference",
@@ -1105,7 +1088,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableCalendarGeneralPreferenceSettings",
             base.isTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         /// Verify Calendar Preferences Unchecked and Disabled.
@@ -1168,7 +1151,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_HEDCalendar_Lock_Id_Locator));
                 //Get 'HED Calendar Layout' Lock Status
-                gethedCalendarPreferenceLockStatus = 
+                gethedCalendarPreferenceLockStatus =
                     base.GetClassAttributeValueById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_HEDCalendar_Lock_Id_Locator);
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
@@ -1198,29 +1181,29 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Disable 'HED Calendar' Preference.
         /// </summary>       
-        public void DisableHEDCalendarPreference()
+        public void DisableHedCalendarPreference()
         {
             // Disable 'HED Calendar' Preference
             logger.LogMethodEntry("GeneralPreferencesPage",
             "DisableHEDCalendarPreference",
-            base.isTakeScreenShotDuringEntryExit);            
+            base.isTakeScreenShotDuringEntryExit);
             try
             {
                 //Selct window and frame
                 this.SelectThePreferenceWindowWithFrame();
                 if (base.IsElementSelectedById(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_Calendar_Checkbox_Id_Locator))
-                {  
+                {
                     //Disable Calendar
                     base.ClickCheckBoxById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_Calendar_Checkbox_Id_Locator);
-                    if(base.GetClassAttributeValueById(GeneralPreferencesPageResource.
+                    if (base.GetClassAttributeValueById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_HEDCalendar_Lock_Id_Locator) ==
                     GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_LockIcon_Open_Status_Value)
                     {
                         //Click On 'Skip Calendar' Lock Icon
-                        base.ClickLinkByID(GeneralPreferencesPageResource.
+                        base.ClickLinkById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_HEDCalendar_Lock_Id_Locator);
                     }
                     if (base.GetClassAttributeValueById(GeneralPreferencesPageResource.
@@ -1229,7 +1212,7 @@ namespace Pegasus.Pages.UI_Pages
                     GeneralPrefernces_Page_LockIcon_Open_Status_Value)
                     {
                         //Click On 'Skip Calendar' Lock Icon
-                        base.ClickLinkByID(GeneralPreferencesPageResource.
+                        base.ClickLinkById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_SkipCalendar_Lock_Id_Locator);
                     }
                 }
@@ -1242,7 +1225,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "DisableHEDCalendarPreference",
-            base.isTakeScreenShotDuringEntryExit);            
+            base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1257,7 +1240,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Enable Blackboard IM Preference Settings          
-                this.EnableBlackBoardIMPreference();
+                this.EnableBlackBoardImPreference();
             }
             catch (Exception e)
             {
@@ -1294,29 +1277,98 @@ namespace Pegasus.Pages.UI_Pages
             base.isTakeScreenShotDuringEntryExit);
         }
         /// <summary>
-        /// Enable the 'Enable Blackboard Collaborate Voice Authoring' Option
+        /// Enable Instructor Resource Toolbar Preference for Launch.
         /// </summary>
-        public void EnableBlackBoardCollaborateVoiceAuthoring()
+        public void EnalbleInsResToolbarLaunchPreferences()
         {
-            //Enable The 'Enable Blackboard Collaborate Voice Authoring' Option 
-            logger.LogMethodEntry("GradingPreferencesPage",
-           "EnableBlackBoardCollaborateVoiceAuthoring",
-           base.isTakeScreenShotDuringEntryExit);
+            logger.LogMethodEntry("GeneralPreferencesPage",
+            "EnalbleInsResToolbarLaunchPreferences",
+            base.isTakeScreenShotDuringEntryExit);
+
             try
             {
-                //Enable Blackboard Collaborate Voice Authoring Preference                
+                // unlock Instructor resource toolbar preference and click checkbox
                 this.EnableGeneralPreferenceSettings(GeneralPreferencesPageResource.
-                    GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Checkbox_Id_Locator,
+                    GeneralPreferences_Page_InstructorResourceToolbar_LockIcon_Id_Locator,
                     GeneralPreferencesPageResource.
-                    GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Checkbox_Id_Locator);
+                      GeneralPreferences_Page_InstructorResourceToolbar_CheckBox_Id_Locator);
+
+                //wait for element                
+                base.WaitForElement(By.Id(GeneralPreferencesPageResource.
+                    GeneralPreferences_Page_InstructorResourceToolbar_Display1_CheckBox_Id_Locator));
+                // click checkbox
+                base.ClickCheckBoxById(GeneralPreferencesPageResource.
+                    GeneralPreferences_Page_InstructorResourceToolbar_Display1_CheckBox_Id_Locator);
+
+                //wait for element                
+                base.WaitForElement(By.Id(GeneralPreferencesPageResource.
+                    GeneralPreferences_Page_InstructorResourceToolbar_Display2_CheckBox_Id_Locator));
+                // click checkbox
+                base.ClickCheckBoxById(GeneralPreferencesPageResource.
+                    GeneralPreferences_Page_InstructorResourceToolbar_Display2_CheckBox_Id_Locator);
+
+                // call method to Assign appropriate values to text boxes
+                this.AssignPctLaunchValue();
+
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("GradingPreferencesPage",
-              "EnableBlackBoardCollaborateVoiceAuthoring",
-              base.isTakeScreenShotDuringEntryExit);
+
+            logger.LogMethodExit("GeneralPreferencesPage",
+            "EnalbleInsResToolbarLaunchPreferences",
+            base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Assign appropriate values to text boxes for Instructor 
+        /// Resource Tool Bar in Preferences Tab.
+        /// </summary>
+        private void AssignPctLaunchValue()
+        {
+            // Assign Values to PCT Tool Txt Boxes in General Preferences tab
+            logger.LogMethodEntry("GeneralPreferencesPage",
+            "AssignPCTLaunchValue", base.isTakeScreenShotDuringEntryExit);
+
+            // Wait for Title1 text box, clear it and fill text box from resource file 
+            AssignPctLaunchValuestoPreferenceTextBoxes(GeneralPreferencesPageResource.
+                    GeneralPreferences_Page_InstructorResourceToolbar_Title1_TextBox_Id_Locator,
+                    GeneralPreferencesPageResource.PCT_Display1);
+            // Wait for URL1 text box, clear it and fill text box from resource file
+            AssignPctLaunchValuestoPreferenceTextBoxes(GeneralPreferencesPageResource.
+                GeneralPreferences_Page_InstructorResourceToolbar_URL1_TextBox_Id_Locator,
+                AutomationConfigurationManager.PctInstructorResourceToolsUrl);
+            // Wait for Title2 text box, clear it and fill text box from resource file
+            AssignPctLaunchValuestoPreferenceTextBoxes(GeneralPreferencesPageResource.
+                GeneralPreferences_Page_InstructorResourceToolbar_Title2_TextBox_Id_Locator,
+                GeneralPreferencesPageResource.PCT_Display2);
+            // Wait for URL2 text box, clear it and fill text box from resource file
+            AssignPctLaunchValuestoPreferenceTextBoxes(GeneralPreferencesPageResource.
+                GeneralPreferences_Page_InstructorResourceToolbar_URL2_TextBox_Id_Locator,
+                AutomationConfigurationManager.PctInstructorResourceToolsUrl);
+
+            logger.LogMethodExit("GeneralPreferencesPage",
+            "AssignPCTLaunchValue", base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Assign PCT Launch Values to General Preference Instructor Resource Toolbar TextBoxes
+        /// </summary>
+        /// <param name="elementId"></param>
+        /// <param name="value"></param>
+        private void AssignPctLaunchValuestoPreferenceTextBoxes(string elementId, string value)
+        {
+            logger.LogMethodExit("GeneralPreferencesPage",
+            "AssignPCTLaunchValuestoPreferenceTextBoxes", base.isTakeScreenShotDuringEntryExit);
+
+            // wait for element
+            base.WaitForElement(By.Id(elementId));
+            // clear text of element
+            base.ClearTextByID(elementId);
+            // fill desired text in element provided as argument to the method
+            base.FillTextBoxByID(elementId, value);
+
+            logger.LogMethodExit("GeneralPreferencesPage",
+            "AssignPCTLaunchValuestoPreferenceTextBoxes", base.isTakeScreenShotDuringEntryExit);
         }
     }
 }

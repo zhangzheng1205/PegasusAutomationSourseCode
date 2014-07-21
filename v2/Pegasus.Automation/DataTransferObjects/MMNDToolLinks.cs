@@ -40,7 +40,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<MMNDToolLinks>(
                 x => x.LinkType == linkTypeEnum && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).First();
         }
 
         /// <summary>

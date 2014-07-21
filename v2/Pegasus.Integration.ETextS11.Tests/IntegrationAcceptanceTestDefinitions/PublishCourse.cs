@@ -3,6 +3,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using Pegasus.Integration.Hed.ETextS11.Tests.IntegrationAcceptanceTestDefinitions;
 
 namespace Pegasus.Integration.ETextS11.Tests.
     IntegrationAcceptanceTestDefinitions

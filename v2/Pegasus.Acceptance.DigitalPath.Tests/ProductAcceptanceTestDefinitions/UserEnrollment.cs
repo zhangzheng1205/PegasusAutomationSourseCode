@@ -247,6 +247,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// <summary>
         /// Navigate To Administrator Tool Page.
         /// </summary>
+        [When(@"I am on the 'Administration Tool' page")]
         [Given(@"I am on the 'Administration Tool' page")]
         public void NavigateToAdministratorToolPage()
         {
@@ -258,7 +259,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("UserEnrollment", "NavigateToAdministratorToolPage",
                base.isTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Search The Promoted Admin.
         /// </summary>

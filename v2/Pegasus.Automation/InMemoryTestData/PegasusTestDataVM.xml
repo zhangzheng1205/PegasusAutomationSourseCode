@@ -41,7 +41,7 @@
       <IsPreferenceStatus>true</IsPreferenceStatus>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
-    </Course>    
+    </Course>
     <!--Hard coded Course data for "HED" Product.-->
     <Course>
       <Name>MySpanishLab-release</Name>
@@ -124,6 +124,15 @@
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
+    </Course>
+    <!--Hard coded Course data for "HEDMIL" Product.-->
+    <Course>
+      <Name>Copy of MyITLab for Office 2013: GO! Series + Technology in Action [01.01.14]</Name>
+      <CourseType>MyITLabForOffice2013Master</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
     </Course>
     <!--Hard coded Course data for "NovaNET" Product.-->
     <Course>
@@ -275,7 +284,7 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
-    
+
     <!--Hard coded Users data for "HED" Product.-->
     <User>
       <Name>autohedwsadmin</Name>
@@ -481,7 +490,7 @@
       <Password >pegasusadmin</Password>
       <UserType>ECollegeAdmin</UserType>
       <IsCreated>true</IsCreated>
-    </User>    
+    </User>
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProgram>
@@ -512,7 +521,7 @@
       <Name>WSAutomationActivity</Name>
       <ActivityType>WritingSpace</ActivityType>
       <IsCreated>true</IsCreated>
-      </Activity>
+    </Activity>
     <Activity>
       <Name>7bb15133-f77e-4f9a-a72d-7d14e8405a94</Name>
       <ActivityType>Test</ActivityType>
@@ -538,9 +547,9 @@
     </Activity>
     <Activity>
       <Name>014da19e-d315-4273-af06-794f790d0467</Name>
-      <ActivityType>Link</ActivityType>      
+      <ActivityType>Link</ActivityType>
       <IsCreated>true</IsCreated>
-    </Activity>    
+    </Activity>
     <Activity>
       <Name>489533ec-4698-4e7e-8d53-8be8f7b9d9bb</Name>
       <ActivityType>Page</ActivityType>
@@ -562,32 +571,12 @@
       <IsCreated>true</IsCreated>
     </Activity>
   </ArrayOfActivity>
-    <!--This is already created class  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
-  <ArrayOfClass>
-    <Class>
-      <Name>c85c3db8-f5da-4a4a-9cb0-05dd2bbe0765</Name>
-      <ClassType>DigitalPathMasterLibrary</ClassType>
-      <IsCreated>true</IsCreated>
-    </Class>
-    <Class>
-      <Name>4ea7c842-911b-49bb-ab1b-440ab1a3a950</Name>
-      <ClassType>NovaNETTemplate</ClassType>
-      <IsCreated>true</IsCreated>
-    </Class>
-  </ArrayOfClass>
-  <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+   <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProduct>
     <Product>
-      <Name>308f0b9b-3415-44b1-8eb1-41ef51a7492e</Name>
-      <ProductType>DigitalPath</ProductType>
+      <Name>MyITLab for Office 2013</Name>
+      <ProductType>MyITLabForOffice2013Program</ProductType>
       <IsCreated>true</IsCreated>
     </Product>
   </ArrayOfProduct>
-  <ArrayOfSubtab>
-    <Subtab>
-      <Name>Automation_Subtab</Name>
-      <SubtabType>MMND</SubtabType>
-      <IsCreated>true</IsCreated>
-    </Subtab>
-    </ArrayOfSubtab>
 </Data>

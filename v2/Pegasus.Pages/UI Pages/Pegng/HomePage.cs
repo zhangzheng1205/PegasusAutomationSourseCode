@@ -39,7 +39,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(HomePageResource.
                     HomePage_Messeges_Link_Id_Locator));
                 //Click on the 'Messeges' link
-                base.ClickLinkByID(HomePageResource.HomePage_Messeges_Link_Id_Locator);
+                base.ClickLinkById(HomePageResource.HomePage_Messeges_Link_Id_Locator);
                 //Selecting the 'View All' link
                 this.ClickAnnouncementViewAllLink(userType);
             }
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
                         base.WaitForElement(By.Id(HomePageResource.
                             HomePage_MyProfile_Link_Id_Locator));
                         //Click on Link
-                        base.ClickLinkByID(HomePageResource.
+                        base.ClickLinkById(HomePageResource.
                             HomePage_MyProfile_Link_Id_Locator);
                         break;
                     // Click my profile  by Cs Student
@@ -193,7 +193,7 @@ namespace Pegasus.Pages.UI_Pages
                         //Click on User Profile imagelink
                         base.WaitForElement(By.Id(HomePageResource.
                              HomePage_DownArrowLink_Id_locator));
-                        base.ClickLinkByID(HomePageResource.
+                        base.ClickLinkById(HomePageResource.
                             HomePage_DownArrowLink_Id_locator);
                         //Click on My Profile link
                         base.WaitForElement(By.PartialLinkText(
@@ -230,7 +230,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(HomePageResource.
                     HomePage_Messeges_Link_Id_Locator));
                 //Click on Messages Link
-                base.ClickLinkByID(HomePageResource.
+                base.ClickLinkById(HomePageResource.
                     HomePage_Messeges_Link_Id_Locator);
                 switch (userTypeEnum)
                 {
@@ -340,12 +340,12 @@ namespace Pegasus.Pages.UI_Pages
                 // Click on UserProfile image
                 base.WaitForElement(By.Id(HomePageResource.
                     HomePage_UserProfile_Image_Id_Locator));
-                base.ClickLinkByID(HomePageResource.
+                base.ClickLinkById(HomePageResource.
                     HomePage_UserProfile_Image_Id_Locator);
                 // Click on SignOut link
                 base.WaitForElement(By.Id(HomePageResource.
                     HomePage_SignOut_Link_Id_Locator));
-                base.ClickLinkByID(HomePageResource.
+                base.ClickLinkById(HomePageResource.
                     HomePage_SignOut_Link_Id_Locator);
                 //Wait for Signout window
                 base.WaitUntilWindowLoads(HomePageResource.
@@ -539,7 +539,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Sign Out Link
                 base.WaitForElement(By.Id(HomePageResource.
                     HomePage_SignOut_Link_Id_Locator));
-                base.ClickLinkByID(HomePageResource.
+                base.ClickLinkById(HomePageResource.
                     HomePage_SignOut_Link_Id_Locator);
             }
             catch (Exception e)
@@ -645,11 +645,37 @@ namespace Pegasus.Pages.UI_Pages
 
             SelectLightBoxFrame();
             base.WaitForElement(By.Id(HomePageResource.HomePage_WelcomeMessage_Div_Id_Locator));
-            welcomeMessage = base.GetElementTextByID(HomePageResource.HomePage_WelcomeMessage_Div_Id_Locator);
+            welcomeMessage = base.GetElementTextByID(
+                HomePageResource.HomePage_WelcomeMessage_Div_Id_Locator);
 
             logger.LogMethodExit("HomePage", "GetWelcomeMessage",
               base.isTakeScreenShotDuringEntryExit);
             return welcomeMessage;
+        }
+
+        /// <summary>
+        /// Gets the Welcome banner Src attribute value
+        /// </summary>
+        /// <returns></returns>
+        public string GetWelcomeBannerSrcAttribute()
+        {
+            logger.LogMethodEntry("HomePage", "GetWelcomeBannerSrcAttribute",
+               base.isTakeScreenShotDuringEntryExit);
+            string welcomeBannerSrc = String.Empty;
+
+            SelectLightBoxFrame();
+            base.WaitForElement(By.Id(HomePageResource.HomePage_WelcomeBanner_Img_Id_Locator));
+            if (base.IsElementDisplayedByID(HomePageResource.HomePage_WelcomeBanner_Img_Id_Locator))
+            {
+                IWebElement bannerImage = base.GetWebElementPropertiesById(
+                    HomePageResource.HomePage_WelcomeBanner_Img_Id_Locator);
+                welcomeBannerSrc = bannerImage.GetAttribute("src");//the method supposed to return Src attribute value only
+                //so, need to get dynamically attribute key.
+            }
+
+            logger.LogMethodExit("HomePage", "GetWelcomeBannerSrcAttribute",
+             base.isTakeScreenShotDuringEntryExit);
+            return welcomeBannerSrc;
         }
 
         /// <summary>
@@ -669,6 +695,42 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("HomePage", "GetWelcomeMessageButtonText",
               base.isTakeScreenShotDuringEntryExit);
             return welcomeMessageButtonText;
+        }
+
+        /// <summary>
+        /// Gets Product Id's of Product branding images displayed over Home page.
+        /// </summary>
+        /// <returns> List of Product Ids.</returns>
+        public IList<String> GetProductIdOfProductBrandingImagesDispayed()
+        {
+            base.SwitchToDefaultWindow();
+            ICollection<IWebElement> productBrandingImageList = base.GetWebElementsCollectionByClassName(
+                HomePageResource.Home_Page_Product_BrandingImage_Class_Locator);
+            if (productBrandingImageList == null) {
+                return null;
+            }
+            return (from brandingImage in productBrandingImageList
+                    select brandingImage.GetAttribute(HomePageResource
+                    .Home_Page_Product_BrandingImage_ProductAttribute_Value))
+                    .ToList();            
+        }
+
+        /// <summary>
+        /// Clicks navigation button on Welcome message light box
+        /// </summary>
+        public void ClickWelcomeMessageBoxNavigationButton()
+        {
+            logger.LogMethodEntry("HomePage", "ClickWelcomeMessageBoxNavigationButton",
+             base.isTakeScreenShotDuringEntryExit);
+
+            SelectLightBoxFrame();
+            base.WaitForElement(By.Id(
+                HomePageResource.HomePage_WelcomeMessage_Button_Id_Locator));
+            base.ClickButtonByID(HomePageResource
+                .HomePage_WelcomeMessage_Button_Id_Locator);
+
+            logger.LogMethodExit("HomePage", "ClickWelcomeMessageBoxNavigationButton",
+              base.isTakeScreenShotDuringEntryExit);
         }
     }
 }

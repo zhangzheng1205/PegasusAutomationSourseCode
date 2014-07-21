@@ -95,17 +95,17 @@ this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line 15
-testRunner.When("I changed the CS User Time Zone to Indian GMT in MyProfile by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
-testRunner.And("I click on the Messages and select the View All link by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 17
-testRunner.And("I select \"System Announcements\" in \'View by\' drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I changed the CS User Time Zone to Indian GMT in MyProfile by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
-testRunner.Then("I should see the details of  \"CsSystem\" Announcement in Announcement Light box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I click on the Messages and select the View All link by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
-testRunner.When("I \"Sign out\" from the \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I select \"System Announcements\" in \'View by\' drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the details of  \"CsSystem\" Announcement in Announcement Light box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -121,10 +121,14 @@ this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
 #line 24
-testRunner.When("I click on the Messages and select the View All link by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 25
-testRunner.And("I create \"CsCourse\" Announcement in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 26
+testRunner.When("I click on the Messages and select the View All link by \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+testRunner.And("I create \"CsCourse\" Announcement in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
 testRunner.Then("I should see the successfull message \"Announcement created successfully.\" in Anno" +
                     "uncements Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -137,20 +141,24 @@ testRunner.Then("I should see the successfull message \"Announcement created suc
         public virtual void CreateCourseAnnouncementByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Course Announcement by CS Teacher", ((string[])(null)));
-#line 29
+#line 31
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 30
-testRunner.When("I enter into the \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 31
-testRunner.When("I create CS Course Announcement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 32
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 33
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 34
+testRunner.When("I enter into the \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+testRunner.When("I create CS Course Announcement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 36
 testRunner.Then("I should see the successfull message \"Announcement created successfully.\" in Anno" +
                     "uncements Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 33
+#line 37
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 38
 testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -162,15 +170,19 @@ testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk
         public virtual void ViewWelcomeMessageByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Welcome Message by CS Teacher", ((string[])(null)));
-#line 37
+#line 41
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 38
+#line 42
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 43
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 44
 testRunner.Then("I should see the welcome message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 39
+#line 45
 testRunner.When("I close the welcome message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
+#line 46
 testRunner.Then("I should see the welcome message popup closed successfully for \"DPCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -182,11 +194,15 @@ testRunner.Then("I should see the welcome message popup closed successfully for 
         public virtual void ViewHomePageTabsByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Home Page Tabs by CS Teacher", ((string[])(null)));
-#line 43
+#line 49
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 44
+#line 50
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 51
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 52
 testRunner.Then("I should see the Home Page tabs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -198,17 +214,17 @@ testRunner.Then("I should see the Home Page tabs", ((string)(null)), ((TechTalk.
         public virtual void ViewEnrolledClassesInClassesFrameByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Enrolled Classes in Classes Frame by CS Teacher", ((string[])(null)));
-#line 47
+#line 55
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 48
+#line 56
 testRunner.When("I navigate to the \"Classes\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 49
+#line 57
 testRunner.Then("I should see the Enrolled \"DigitalPathMasterLibrary\" in classes frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
+#line 58
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 59
 testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -220,17 +236,17 @@ testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk
         public virtual void ViewBasalProductsInTheCurriculumChannelByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Basal Products in the Curriculum Channel by CS Teacher", ((string[])(null)));
-#line 54
+#line 62
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 55
+#line 63
 testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 64
 testRunner.Then("I should see the \"DigitalPath\" Product in the Curriculum Channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 57
+#line 65
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 58
+#line 66
 testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -242,25 +258,29 @@ testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk
         public virtual void AccessClassByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Access Class by CS Teacher", ((string[])(null)));
-#line 61
+#line 69
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 62
+#line 70
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 71
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 72
 testRunner.When("I click on the Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 63
+#line 73
 testRunner.Then("I should be able to see the \"DigitalPath\" product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 64
+#line 74
 testRunner.When("I click on the Cancel button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 65
+#line 75
 testRunner.Then("I should able to see the \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 66
+#line 76
 testRunner.When("I enter into the \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 67
+#line 77
 testRunner.Then("I should be on the \"Classes\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 68
+#line 78
 testRunner.When("I navigate to the \"Planner\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
+#line 79
 testRunner.Then("I should be on the \"Planner\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -272,35 +292,35 @@ testRunner.Then("I should be on the \"Planner\" page", ((string)(null)), ((TechT
         public virtual void BasicSearchInCurriculumTabByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Basic Search in Curriculum Tab by CS Teacher", ((string[])(null)));
-#line 72
+#line 82
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 73
-testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 74
-testRunner.And("I search the asset type \"Test\" by \"TableofContents\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 75
-testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 76
-testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 77
-testRunner.Then("I should not see the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 78
-testRunner.When("I search the asset type \"Test\" by \"Skill\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 79
-testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 80
-testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 81
-testRunner.Then("I should not see the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 82
-testRunner.When("I search the asset type \"Test\" by \"ContentType\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 83
-testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 84
-testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I search the asset type \"Test\" by \"TableofContents\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 85
+testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 86
+testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 87
+testRunner.Then("I should not see the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 88
+testRunner.When("I search the asset type \"Test\" by \"Skill\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 89
+testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 90
+testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 91
+testRunner.Then("I should not see the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 92
+testRunner.When("I search the asset type \"Test\" by \"ContentType\" criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 93
+testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 94
+testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 95
 testRunner.Then("I should not see the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -312,19 +332,19 @@ testRunner.Then("I should not see the searched result", ((string)(null)), ((Tech
         public virtual void AdvancedSearchInCurriculumTabByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Advanced Search in Curriculum Tab by CS Teacher", ((string[])(null)));
-#line 88
+#line 98
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 89
+#line 99
 testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 90
+#line 100
 testRunner.And("I search the asset type \"Test\" in \"Curriculum\" tab using Advanced Search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 91
+#line 101
 testRunner.Then("I should see the searched asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 92
+#line 102
 testRunner.When("I clear the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 93
+#line 103
 testRunner.Then("I should not see the searched result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -336,19 +356,19 @@ testRunner.Then("I should not see the searched result", ((string)(null)), ((Tech
         public virtual void BasicSearchInPlannerTabByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Basic Search in Planner Tab by CS Teacher", ((string[])(null)));
-#line 96
+#line 106
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 97
+#line 107
 testRunner.When("I navigate to the \"Planner\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 98
+#line 108
 testRunner.And("I search the asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 99
+#line 109
 testRunner.Then("I should see the searched asset \"Test\" successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 100
+#line 110
 testRunner.When("I clear the searched result in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 101
+#line 111
 testRunner.Then("I should not see the searched result in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -360,19 +380,19 @@ testRunner.Then("I should not see the searched result in planner tab", ((string)
         public virtual void AdvancedSearchInPlannerTabByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Advanced Search in Planner Tab by CS Teacher", ((string[])(null)));
-#line 104
+#line 114
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 105
+#line 115
 testRunner.When("I navigate to the \"Planner\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 106
+#line 116
 testRunner.And("I search the asset type \"Test\" in \"Planner\" tab using Advanced Search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 107
+#line 117
 testRunner.Then("I should see the searched asset \"Test\" in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 108
+#line 118
 testRunner.When("I clear the searched result in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 109
+#line 119
 testRunner.Then("I should not see the searched result in planner tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -384,28 +404,28 @@ testRunner.Then("I should not see the searched result in planner tab", ((string)
         public virtual void CustomizeContentInCurriculumTabByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Customize Content In Curriculum Tab by CS Teacher", ((string[])(null)));
-#line 112
+#line 122
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 113
+#line 123
 testRunner.When("I navigate to the \"Curriculum\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 114
+#line 124
 testRunner.And("I customize the content \"Test\" in curriculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 115
+#line 125
 testRunner.Then("I should see the successfull message \"You have successfully added custom content." +
                     "\" in Curriculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 116
+#line 126
 testRunner.When("I click on the custom content link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 117
+#line 127
 testRunner.Then("I should see the ML in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 118
+#line 128
 testRunner.When("I click on the expand button of MasterLibrary in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 119
+#line 129
 testRunner.Then("I should see the customized \"Test\" content of the ML in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 120
+#line 130
 testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 121
+#line 131
 testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -417,20 +437,24 @@ testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk
         public virtual void CreateLicencedAssetsInGlobalByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Licenced Assets in Global by CS Teacher", ((string[])(null)));
-#line 124
+#line 134
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 125
+#line 135
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 136
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 137
 testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 126
+#line 138
 testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 127
+#line 139
 testRunner.When("I mouseover on the Licensed content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 128
+#line 140
 testRunner.And("I create the global \"Licensed\" content \"Test\" activity and \'TrueFalse\' question i" +
                     "n global", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 129
+#line 141
 testRunner.Then("I should see the successfull message \"Activity added successfully.\" in Curriculum" +
                     " tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -443,25 +467,29 @@ testRunner.Then("I should see the successfull message \"Activity added successfu
         public virtual void CreateNonLicencedTestAssetsInGlobalByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create NonLicenced TestAssets in Global by CS Teacher", ((string[])(null)));
-#line 132
+#line 144
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 133
+#line 145
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 146
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 147
 testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 134
+#line 148
 testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 135
+#line 149
 testRunner.When("I Create the custom content \"Folder\" activity global", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 136
+#line 150
 testRunner.Then("I should see the successfull message \"Folder saved successfully.\" in Curriculum t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 137
+#line 151
 testRunner.When("I mouseOver on the NonLicensed Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 138
+#line 152
 testRunner.And("I create the global \"NonLicensed\" content \"Test\" activity and \'TrueFalse\' questio" +
                     "n in global", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 139
+#line 153
 testRunner.Then("I should see the successfull message \"Activity added successfully.\" in Curriculum" +
                     " tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -474,17 +502,21 @@ testRunner.Then("I should see the successfull message \"Activity added successfu
         public virtual void CreateNonLicencedLinkAssetsInGlobalByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create NonLicenced LinkAssets in Global by CS Teacher", ((string[])(null)));
-#line 142
+#line 156
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 143
+#line 157
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 158
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 159
 testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 144
+#line 160
 testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 145
+#line 161
 testRunner.When("I create the nonGgadable \"Link\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 146
+#line 162
 testRunner.Then("I should see the successfull message \"Link saved successfully.\" in Curriculum tab" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -497,37 +529,41 @@ testRunner.Then("I should see the successfull message \"Link saved successfully.
         public virtual void CopyPasteOfLicensedAssetsByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy paste of Licensed Assets by CS Teacher", ((string[])(null)));
-#line 149
+#line 165
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 150
+#line 166
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 167
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 168
 testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 151
+#line 169
 testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 152
+#line 170
 testRunner.When("I click on the expand button of MasterLibrary in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 153
+#line 171
 testRunner.And("I should able to see the \"Licensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 154
+#line 172
 testRunner.And("I select the \"Licensed\" CopyPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 155
+#line 173
 testRunner.Then("I should see the successfull message \"Items copied successfully.\" in Curriculum t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 156
+#line 174
 testRunner.When("I Clear the Clipboard link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 157
+#line 175
 testRunner.And("I click on the expand button of MasterLibrary in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 158
+#line 176
 testRunner.And("I remove the \"Licensed\" copied content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 159
+#line 177
 testRunner.Then("I should see the successfull message \"Items deleted successfully.\" in Curriculum " +
                     "tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 160
+#line 178
 testRunner.When("I should able to see the \"Licensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 161
+#line 179
 testRunner.And("I select the \"Licensed\" CutPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 162
+#line 180
 testRunner.Then("I should see the successfull message \"Selected items moved successfully.\" in Curr" +
                     "iculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -540,37 +576,41 @@ testRunner.Then("I should see the successfull message \"Selected items moved suc
         public virtual void CopyPasteOfNonLicensedAssetsByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy paste of NonLicensed Assets by CS Teacher", ((string[])(null)));
-#line 165
+#line 183
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 166
+#line 184
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 185
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 186
 testRunner.When("I click The \"Custom Content\" link in Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 167
+#line 187
 testRunner.Then("I should see the \"MasterLibrary\" course in the custom content view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 168
+#line 188
 testRunner.When("I click on the expand button of Non licensed Folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 169
+#line 189
 testRunner.And("I should able to see the \"NonLicensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 170
+#line 190
 testRunner.And("I select the \"NonLicensed\" CopyPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 171
+#line 191
 testRunner.Then("I should see the successfull message \"Items copied successfully.\" in Curriculum t" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 172
+#line 192
 testRunner.When("I Clear the Clipboard link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 173
+#line 193
 testRunner.And("I click on the expand button of Non licensed Folder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 174
+#line 194
 testRunner.And("I remove the \"NonLicensed\" copied content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 175
+#line 195
 testRunner.Then("I should see the successfull message \"Items deleted successfully.\" in Curriculum " +
                     "tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 176
+#line 196
 testRunner.When("I should able to see the \"NonLicensed\" customized content \"Test\" Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 177
+#line 197
 testRunner.And("I select the \"NonLicensed\" CutPaste link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 178
+#line 198
 testRunner.Then("I should see the successfull message \"Selected items moved successfully.\" in Curr" +
                     "iculum tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -583,20 +623,24 @@ testRunner.Then("I should see the successfull message \"Selected items moved suc
         public virtual void SendingMailMessageByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sending Mail Message by CS Teacher", ((string[])(null)));
-#line 181
+#line 201
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 182
+#line 202
+testRunner.When("I navigate to the \"Home\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 203
+testRunner.Then("I should be on the \"Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 204
 testRunner.When("I create mail by \"DPCsTeacher\" in CourseSpace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 183
+#line 205
 testRunner.And("I send created mail to CourseSpace users", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 184
+#line 206
 testRunner.Then("I should see the successfull message \"Your message has been sent.\" in the send ma" +
                     "il popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 185
+#line 207
 testRunner.When("I close the mail popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 186
+#line 208
 testRunner.Then("I should see the mail popup closed successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

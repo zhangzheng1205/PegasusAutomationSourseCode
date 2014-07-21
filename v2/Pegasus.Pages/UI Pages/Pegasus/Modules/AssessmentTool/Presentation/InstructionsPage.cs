@@ -75,5 +75,38 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation
               base.isTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Get Button Text.
+        /// </summary>
+        /// <returns>This Returns Button Text.</returns>
+        public string GetButtonText()
+        {
+            //Get Button Text
+            logger.LogMethodEntry("InstructionsPage", "GetButtonText",
+               base.isTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            string getButtonText = string.Empty;
+            try
+            {
+                base.WaitUntilWindowLoads(InstructionsPageResource.
+                    Instructions_Page_WindowName);
+                //Select Window
+                base.SelectWindow(InstructionsPageResource.
+                    Instructions_Page_WindowName);
+                // Wait For Start Button
+                base.WaitForElement(By.Id(InstructionsPageResource
+                    .Instructions_Page_ActivityStart_Button_Id_Locator));
+                //Get Button Text
+                getButtonText = base.GetElementTextByID(InstructionsPageResource
+                    .Instructions_Page_ActivityStart_Button_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("InstructionsPage", "GetButtonText",
+              base.isTakeScreenShotDuringEntryExit);
+            return getButtonText;
+        }
     }
 }

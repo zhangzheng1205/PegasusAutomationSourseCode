@@ -455,7 +455,7 @@ namespace Pegasus.Pages.UI_Pages
                 }                
                 //Update CourseId
                 Course course = Course.Get(courseTypeEnum);
-                course.ECollegeIntegrationID = getCourseId;                
+                course.ECollegeIntegrationId = getCourseId;                
             }
             catch (Exception e)
             {
@@ -543,7 +543,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.FocusOnElementByID(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_MyLabMasteringPearson_SignOut_Id_Locator);
                 //Click on the Signout Link
-                base.ClickLinkByID(UserLayoutRootNodeTargetPageResource.
+                base.ClickLinkById(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_MyLabMasteringPearson_SignOut_Id_Locator);
             }
             catch (Exception e)
@@ -826,7 +826,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Name(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_CoOrdinatorCourse_DropDown_Name_Locator));
                 //Select the Coordinate Course base on the Course Id
-                this.SelectTheCoOrdinateCourseOption(course.ECollegeIntegrationID);            
+                this.SelectTheCoOrdinateCourseOption(course.ECollegeIntegrationId);            
                 //Click on GO button
                 base.ClickButtonByID(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Go_Button_Id_Locator);

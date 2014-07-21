@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
                 CatalogPreferences_Page_Resource_Publisher_Dropdown_Id_Locator));
             base.FocusOnElementByID(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Publisher_Dropdown_Id_Locator);
-            base.SelectDropDownValueThroughTextByID(CatalogPreferencesPageResource.
+            base.SelectDropDownValueThroughTextById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Publisher_Dropdown_Id_Locator,
                 CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Publisher_Dropdown_Value);
@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
                 CatalogPreferences_Page_Resource_Discipline_Dropdown_Id_Locator));
             base.FocusOnElementByID(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Discipline_Dropdown_Id_Locator);
-            base.SelectDropDownValueThroughTextByID(CatalogPreferencesPageResource.
+            base.SelectDropDownValueThroughTextById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Discipline_Dropdown_Id_Locator,
                 CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Discipline_Dropdown_Value);

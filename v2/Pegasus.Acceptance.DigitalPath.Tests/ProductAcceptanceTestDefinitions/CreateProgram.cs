@@ -44,6 +44,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
         /// Navigate to Manage Programs Page.
         /// </summary>
         [Given(@"I am on the 'Manage Programs' Page")]
+        [When(@"I am on the 'Manage Programs' Page")]
         public void NavigateManageProgramsPage()
         {
             //Navigate Manage Programs Page

@@ -54,6 +54,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select Curriculum or Planner Tab
                 this.ClickonAdvancedSearchLink(activityName, tabName);
+                Thread.Sleep(Convert.ToInt32(AdvancedSearchPageResource.
+                    AdvancedSearch_Page_Window_TimeValue));
                 //Switch to Advanced Search LightBox Frame
                 base.WaitForElement(By.Id(AdvancedSearchPageResource.
                     AdvancedSearch_Page_AdvancedSearch_Frame_Id_Locator));
@@ -70,8 +72,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Search Button
                 base.WaitForElement(By.PartialLinkText(AdvancedSearchPageResource.
                     AdvancedSearch_Page_SearchButton_PartialLinkText_Value));
-                base.ClickButtonByPartialLinkText(AdvancedSearchPageResource.
+                IWebElement getSearchButton=base.GetWebElementPropertiesByPartialLinkText
+                    (AdvancedSearchPageResource.
                     AdvancedSearch_Page_SearchButton_PartialLinkText_Value);
+                base.ClickByJavaScriptExecutor(getSearchButton);
             }
             catch (Exception e)
             {

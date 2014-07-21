@@ -3,17 +3,11 @@
 					I want to manage all the coursespace admin related usecases 
 					so that I would validate all the coursespace admin scenarios are working fine.
 
-#Purpose: Open CS Url
-Background: 
-Given I browsed the login url for "CsAdmin"
-When I login to Pegasus as "CsAdmin" in "CourseSpace"
-Then I should be logged in successfully
-
 #Purpose: Approve master course in Course space
 Scenario: Approve Master Library by CS Admin
-Given I am on the "Course Enrollment" page
 When I navigate to the "Publishing" tab
-And I select the "Manage Products" tab
+Then I should be on the "Manage Programs" page
+When I select the "Manage Products" tab
 Then I should be on the "Manage Products" page
 When I search the course "MasterLibrary" in coursespace
 Then I should be able to see the searched "MasterLibrary" course in the left frame
@@ -22,39 +16,41 @@ Then I should see the successfull message "Published course marked as Approved."
 
 #Purpose: UseCase To create Program in course space
 Scenario: Create Program by CS Admin
-Given I am on the 'Manage Programs' Page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Programs' Page
 When I create the "DigitalPath" Program in coursespace
 Then I should see the successfull message "Program created successfully."
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Create DigitalPath Product
 Scenario: Create DP Product by CS Admin
-Given I am on the 'Manage Products' Page
-When I create the "DigitalPath" Product in coursespace using "DigitalPath" Program
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Products' Page
+And I create the "DigitalPath" Product in coursespace using "DigitalPath" Program
 Then I should see the successfull message "New product created successfully."
 
 #Purpose: Create DigitalPath Demo Product
 Scenario: Create Demo Product by CS Admin
-Given I am on the 'Manage Products' Page
-When I create the "DigitalPathDemo" Product in coursespace using "DigitalPath" Program
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Products' Page
+And I create the "DigitalPathDemo" Product in coursespace using "DigitalPath" Program
 Then I should see the successfull message "New product created successfully."
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Creation of Demo Organization
 Scenario: Create School Level DigitalPath Demo Organization by CS Admin
-Given I am on the 'Organization Management' page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I click on the Create New Organization link 
 Then I should see the "Create Organization" popup
-When I create the "School" level organization "Hierarchical" in "DigitalPathDemo"
+When I create the "School" level organization "Independent" in "DigitalPathDemo"
 Then I should see the successfull message "Organization created successfully."
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Creation of State Level Organization
 Scenario: Create State Level Organization by CS Admin
-Given I am on the 'Organization Management' page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I click on the Create New Organization link 
 Then I should see the "Create Organization" popup
 When I create the "State" level organization "Hierarchical" in "DigitalPath"
@@ -62,7 +58,8 @@ Then I should see the successfull message "Organization created successfully."
 
 #Purpose: Creation of Region Level Organization
 Scenario: Create Region Level Organization by CS Admin
-Given  I am on the 'Organization Management' page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I search the "State" level Organization in "DigitalPath"
 Then I should see the "State" level organization name in "DigitalPath"
 When I create the "Region" level organization "Hierarchical" in "DigitalPath"
@@ -72,7 +69,8 @@ Then I should be on the "Organization Management" page
 
 #Purpose: Creation of District Level Organization
 Scenario: Create District Level Organization by CS Admin
-Given I am on the 'Organization Management' page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I search the "Region" level Organization in "DigitalPath"
 Then I should see the "Region" level organization name in "DigitalPath"
 When I create the "District" level organization "Hierarchical" in "DigitalPath"
@@ -83,7 +81,8 @@ Then I should be on the "Organization Management" page
 #Purpose: Creation of School Level Organization
 @CreateSchoolLevelOrganiationbyCSAdmin
 Scenario: Create School Level Organization by CS Admin
-Given I am on the 'Organization Management' page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I search the "District" level Organization in "DigitalPath"
 Then I should see the "District" level organization name in "DigitalPath"
 When I create the "School" level organization "Hierarchical" in "DigitalPath"
@@ -93,8 +92,10 @@ Then I should see the "School" level organization name in "DigitalPath"
 
 #Purpose: To Associate Master Library To Product 
 Scenario:Associate Master Library To Product by CS Admin
-Given I am on the 'Manage Products' Page
-When I search the course "MasterLibrary" in coursespace
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Products' Page
+And I search the course "MasterLibrary" in coursespace
 Then I should be able to see the searched "MasterLibrary" course in the left frame
 When I select course in left frame
 And I select product type "DigitalPath" in right frame
@@ -103,8 +104,10 @@ Then I should see the successfull message "The course has been added successfull
 
 #Purpose: To create Teacher from Users subtab
 Scenario: Create Teacher in Users Tab by CS Admin 
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I click on the "Users" tab in Manage Organization page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I click on the "Users" tab in Manage Organization page
 And I select the "DPCsTeacher" option from "Users" subtab
 Then I should see the "Add User" popup
 When I create a new "DPCsTeacher" user in Coursespace
@@ -115,7 +118,9 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Student from Users subtab
 Scenario: Create Student in Users Tab by CS Admin
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 Then I should be on the "Manage Organization" page
 When I click on the "Users" tab in Manage Organization page
 And I select the "DPCsStudent" option from "Users" subtab
@@ -128,8 +133,10 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Aide from Users subtab
 Scenario: Create Aide in Users Tab by CS Admin
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I click on the "Users" tab in Manage Organization page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I click on the "Users" tab in Manage Organization page
 And I select the "DPCsAide" option from "Users" subtab
 Then I should see the "Add User" popup
 When I create a new "DPCsAide" user in Coursespace
@@ -140,8 +147,10 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Organization Admin from Users subtab
 Scenario: Create Organization Admin in Users Tab by CS Admin
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I click on the "Users" tab in Manage Organization page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I click on the "Users" tab in Manage Organization page
 And I select the "DPCsOrganizationAdmin" option from "Users" subtab
 Then I should see the "Add User" popup
 When I create a new "DPCsOrganizationAdmin" user in Coursespace
@@ -152,16 +161,20 @@ When I close the "Manage Organization" window
 
 #Purpose: To Create Bulk Users from Users subtab
 Scenario: Upload Bulk User in Users Tab by CS Admin
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I click on the "Users" tab in Manage Organization page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I click on the "Users" tab in Manage Organization page
 And I select the Bulk user upload option and Import a bulk users file in "Users" subtab
 Then I should see the successfull message "Bulk Registration- 0 of 1 Files in progress" in Users subtab
 When I close the "Manage Organization" window
 
 #Purpose: To create Teacher from Enrollment tab
 Scenario: Create Teacher in Enrollment Tab by CS Admin
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I click on the "Enrollment" tab in Manage Organization page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I click on the "Enrollment" tab in Manage Organization page
 And I select the "DPCsTeacher" option from "Enrollment" subtab
 Then I should see the "Add User" popup
 When I create a new "DPCsTeacher" user in Coursespace
@@ -172,8 +185,10 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Student from Enrollment tab
 Scenario: Create Student in Enrollment Tab by CS Admin
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I click on the "Enrollment" tab in Manage Organization page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I click on the "Enrollment" tab in Manage Organization page
 And I select the "DPCsStudent" option from "Enrollment" subtab
 Then I should see the "Add User" popup
 When I create a new "DPCsStudent" user in Coursespace
@@ -184,8 +199,10 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Aide from Enrollment tab
 Scenario: Create Aide in Enrollment Tab by CS Admin
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I click on the "Enrollment" tab in Manage Organization page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I click on the "Enrollment" tab in Manage Organization page
 And I select the "DPCsAide" option from "Enrollment" subtab
 Then I should see the "Add User" popup
 When I create a new "DPCsAide" user in Coursespace
@@ -196,8 +213,10 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Organization Admin from Enrollment tab
 Scenario: Create Organization Admin in Enrollment Tab by CS Admin
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I click on the "Enrollment" tab in Manage Organization page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I click on the "Enrollment" tab in Manage Organization page
 And I select the "DPCsOrganizationAdmin" option from "Enrollment" subtab
 Then I should see the "Add User" popup
 When I create a new "DPCsOrganizationAdmin" user in Coursespace
@@ -208,15 +227,17 @@ When I close the "Manage Organization" window
 
 #Purpose: To Create Bulk Users from Enrollment tab
 Scenario: Upload Bulk User in Enrollment Tab by CS Admin
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I click on the "Enrollment" tab in Manage Organization page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I click on the "Enrollment" tab in Manage Organization page
 And I select the Bulk user upload option and Import a bulk users file in "Enrollment" subtab
 Then I should see the successfull message "Bulk Registration- 0 of 1 Files in progress" in Users subtab
 When I close the "Manage Organization" window
 
 #Purpose: To create User In Administrators Tab in CourseSpace
 Scenario: Create User In Administrators Tab By CS Admin
-Given  I am on the 'Administration Tool' page
+When I am on the 'Administration Tool' page
 When I click on the "Create New User" link in "left" frame
 Then I should see the "Create New User" popup
 When I create a new "DPCourseSpacePramotedAdmin" user
@@ -226,8 +247,10 @@ Then I should see the "DPCourseSpacePramotedAdmin" in Manage Users frame
 
 #Purpose: Creation of Class Using Master Library Added to the Basal product
 Scenario: Create Class Using Master Library by CS Admin
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I navigate to the "Classes" tab
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I navigate to the "Classes" tab
 And I click on the Add Classes Option
 Then I should see the "Create Class" popup
 When I create the class using "MasterLibrary" course
@@ -238,8 +261,10 @@ When I close the "Manage Organization" window
 
 #Purpose: Navigate inside the Course through C menu option "Enter Class as Teacher"
 Scenario: Navigate inside Class by Enter Class as Teacher
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I navigate to the "Classes" tab
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I navigate to the "Classes" tab
 And I search "DigitalPathMasterLibrary" class in Coursespace
 Then I should be able to see the searched "DigitalPathMasterLibrary" class
 When I click on Enter Class as Teacher cmenu option of class in coursespace
@@ -255,8 +280,10 @@ When I close the "Manage Organization" window
 
 #Purpose: Enroll Teacher to class
 Scenario: Teacher Enrollment in Class by CS Admin 
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I navigate to the "Enrollment" tab
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I navigate to the "Enrollment" tab
 And I select the "DigitalPathMasterLibrary" class
 And I select the "DPCsTeacher" under User Frame
 And I select the Enroll button
@@ -265,8 +292,10 @@ When I close the "Manage Organization" window
 
 #Purpose: Enroll Student to class
 Scenario: Student Enrollment in Class by CS Admin
-Given I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
-When I navigate to the "Enrollment" tab
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
+And I navigate to the "Enrollment" tab
 And I select the "DigitalPathMasterLibrary" class
 When  I select the "DPCsStudent" under User Frame
 And I select the Enroll button
@@ -275,7 +304,8 @@ When I close the "Manage Organization" window
 
 #Purpose : Creating the System Announcement
 Scenario: Create System Announcement by CS Admin
-Given I am on the "Course Enrollment" page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I changed the WS Admin Time Zone to Indian GMT in MyProfile
 And I navigate to the "Announcement" tab
 When I create "CsSystem" Announcement
@@ -285,6 +315,8 @@ Then I should be on the "Course Enrollment" page
 
 #Purpose: Edit The School Level Organization for Pearson Admin 
 Scenario: Enhance organization management by CS Admin
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Organization Management' page
 And I search the "School" level Organization in "DigitalPath"
 Then I should see the "School" level organization name in "DigitalPath"
@@ -305,6 +337,8 @@ Then I should see the successfull message "Tools saved successfully."
 
 #Purpose: To Create Teacher from Classes subtab for CS Admin
 Scenario: Creating Teacher in Classes Tab by CS Admin  
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Classes" tab in Manage Organization page
 And I select the "Manage Roster" from "DigitalPathMasterLibrary" cmenu options
@@ -317,6 +351,8 @@ And I close the "Manage Organization" window
 
 #Purpose: To Create Student from Classes subtab for CS Admin
 Scenario: Creating Student in Classes Tab by CS Admin  
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Classes" tab in Manage Organization page
 And I select the "Manage Roster" from "DigitalPathMasterLibrary" cmenu options
@@ -329,6 +365,8 @@ And I close the "Manage Organization" window
 
 #Purpose: To Create Aide from Classes subtab for CS Admin
 Scenario: Creating Aide in Classes Tab by CS Admin  
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Classes" tab in Manage Organization page
 And I select the "Manage Roster" from "DigitalPathMasterLibrary" cmenu options
@@ -341,6 +379,8 @@ And I close the "Manage Organization" window
 
 #Purpose: Student Bulk upload in the Manage organization popup by CS Admin
 Scenario: Student Bulk upload in the Manage organization popup by CS Admin
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I navigate to the "Classes" tab
 And I select the "Manage Roster" from "DigitalPathMasterLibrary" cmenu options
@@ -354,8 +394,10 @@ And I close the "Manage Organization" window
 
 #Purpose: To Restrict Access to Product 
 Scenario: Restrict Access to Product by CS Admin
-Given I am on the 'Manage Products' Page
-When I select product type "DigitalPath" in right frame
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Products' Page
+And I select product type "DigitalPath" in right frame
 And I select "Preferences" cmenu of "MasterLibrary" course
 And I disable the course in product
 Then I should see the successfull message "Course updated successfully."
@@ -364,7 +406,6 @@ Then I should see the "MasterLibrary" course in "Hidden" state
 
 #Purpose: Approve Empty Course in Course space
 Scenario: Approve Empty Course by CS Admin
-Given I am on the "Course Enrollment" page
 When I navigate to the "Publishing" tab
 And I select the "Manage Products" tab
 Then I should be on the "Manage Products" page
@@ -375,8 +416,10 @@ Then I should see the successfull message "Published course marked as Approved."
 
 #Purpose: Context C-Menu Options of the Product
 Scenario: Display of Context CMenu Options of the Product by CS Admin
-Given I am on the 'Manage Products' Page
-When I search the product type "DigitalPath" in right frame
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Products' Page
+And I search the product type "DigitalPath" in right frame
 And I click the product cmenu option
 Then I should able to see the Display of c-menu options for product
 | ExpectedResult  | ActualResult    |
@@ -386,8 +429,10 @@ Then I should able to see the Display of c-menu options for product
 
 #Purpose: Delete the created Organization
 Scenario: Delete the created Organization by CS Admin
-Given I am on the 'Organization Management' page
-When I create the "School" level organization "Independent" in "DigitalPath"
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Organization Management' page
+And I create the "School" level organization "Independent" in "DigitalPath"
 Then I should see the successfull message "Organization created successfully."
 When I search the "School" level Organization in "DigitalPath"
 Then I should see the "School" level organization name in "DigitalPath"
@@ -397,4 +442,33 @@ When I search the "School" level Organization in "DigitalPath"
 Then I should see the message "No records found."
 
 
+#Purpose: UseCase To license DigitalPath Demo products
+Scenario: Create License for the DigitalPath Demo Organization by CS Admin
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPathDemo"
+And I navigate to the "Licenses" tab
+When I click on the Add Products Option
+Then I should see the "Product Selection" popup
+When I create 3 license for the "DigitalPathDemo" product
+And I search "Pegasus" licensed product in Coursespace
+Then I should be able to see the searched "Pegasus" licensed product in the frame
+When I close the "Manage Organization" window
+And I "Sign out" from the "CsAdmin"
+Then I should see the successfull message "You have been signed out of the application."
+
+#Purpose: UseCase To license Multiple DigitalPath Demo products with same AccessCode
+Scenario: Create Multiple License for the DigitalPath Demo Organization by CS Admin
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
+When I am on the 'Manage Organization' page of "School" level in the "DigitalPathDemo"
+And I navigate to the "Licenses" tab
+When I click on the Add Products Option
+Then I should see the "Product Selection" popup
+When I create 3 licenses for different "DigitalPathDemo" product
+And I search "Pegasus" licensed product in Coursespace
+Then I should be able to see the searched "Pegasus" licensed product in the frame
+When I close the "Manage Organization" window
+And I "Sign out" from the "CsAdmin"
+Then I should see the successfull message "You have been signed out of the application."
 

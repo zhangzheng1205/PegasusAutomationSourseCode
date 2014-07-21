@@ -92,7 +92,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             Course course = Course.Get(pegasusCourse);
             // Enter The Course Details To Mock Application
             new PostRestServicePage().
-                EnterTheCourseDetailsInMockApplication(course.PegasusCourseID);
+                EnterTheCourseDetailsInMockApplication(course.PegasusCourseId);
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "EnterTheCourseDetailsToMockApplication",
            base.isTakeScreenShotDuringEntryExit);
@@ -134,7 +134,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             new PostRestServicePage().EnterUrlInMockApplication(
                 (PostRestServicePage.PostingTheDataInMockEnum)Enum.Parse
                 (typeof(PostRestServicePage.PostingTheDataInMockEnum), postEventType),
-                getWritingspaceItemUrl, course.ExternalCourseID,
+                getWritingspaceItemUrl, course.ExternalCourseId,
                 CourseEventsWithMockApplicationResource.
                 CourseEventsWithMockApplication_Resource_Append_Value);
             Logger.LogMethodExit("CourseEventsWithMockApplication",

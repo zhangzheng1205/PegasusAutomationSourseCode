@@ -7,7 +7,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
     /// <summary>
     /// This class is represents an announcement
     /// </summary>
-    public class Announcement: BaseEntityObject
+    public class Announcement : BaseEntityObject
     {
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// This is the type of announcement
         /// </summary>
         public AnnouncementTypeEnum AnnouncementType { get; set; }
-        
+
         /// <summary>
         /// This method is used to save new announcement
         /// </summary>
@@ -45,7 +45,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Announcement>(
                 x => x.AnnouncementType == announcementType && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).First();
         }
 
         /// <summary>
@@ -56,6 +56,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static List<Announcement> Get(Func<Announcement, bool> predicate)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany(predicate);
+        }
+
+        /// <summary>
+        /// This method returns all created announcement of the given type.
+        /// </summary>
+        /// <param name="announcementType">This is the type of the announcement.</param>
+        /// <returns>Announcement List.</returns>
+        public static List<Announcement> GetAll(AnnouncementTypeEnum announcementType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Announcement>(
+                x => x.AnnouncementType == announcementType).OrderByDescending(
+                x => x.CreationDate).ToList();
         }
 
     }

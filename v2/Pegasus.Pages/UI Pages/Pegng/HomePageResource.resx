@@ -237,4 +237,13 @@
   <data name="HomePage_WelcomeMessage_Button_Id_Locator" xml:space="preserve">
     <value>btn_text</value>
   </data>
+  <data name="HomePage_WelcomeBanner_Img_Id_Locator" xml:space="preserve">
+    <value>dlwm_loginMessageBanner</value>
+  </data>
+  <data name="Home_Page_Product_BrandingImage_Class_Locator" xml:space="preserve">
+    <value>curriculum_icon_placeholder</value>
+  </data>
+  <data name="Home_Page_Product_BrandingImage_ProductAttribute_Value" xml:space="preserve">
+    <value>productid</value>
+  </data>
 </root>

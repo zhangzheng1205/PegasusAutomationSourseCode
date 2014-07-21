@@ -153,6 +153,9 @@
   <data name="DemoAccountRegistration_Page_Password_Value" xml:space="preserve">
     <value>password1</value>
   </data>
+  <data name="DemoAccountRegistration_Page_RegisterTimeToWait_Value" xml:space="preserve">
+    <value>2000</value>
+  </data>
   <data name="DemoAccountRegistration_Page_Register_Button_Id_Locator" xml:space="preserve">
     <value>imgRegister</value>
   </data>

@@ -16,7 +16,7 @@ using Pegasus.Pages.Exceptions;
 namespace Pegasus.Pages.UI_Pages
 {
     /// <summary>
-    /// This class contains Template Details
+    /// This class manage program administration actions.
     /// </summary>
     public class ManageTemplatePage : BasePage
     {
@@ -37,11 +37,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
-                //Selecting the Program Administration window
-                base.WaitUntilWindowLoads(ManageTemplatePageResource.
-                    ManageTemplate_Page_Window_Title_Name);
-                base.SelectWindow(ManageTemplatePageResource.
-                    ManageTemplate_Page_Window_Title_Name);
+                // select window
+                this.SelectProgramAdministrationWindow();
                 base.WaitForElement(By.Id(ManageTemplatePageResource.
                     ManageTemplate_Page_IFrame_Middle_Name_Id_Locator));
                 //Swith To Frame
@@ -69,27 +66,43 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Select Program Administration Window.
+        /// </summary>
+        private void SelectProgramAdministrationWindow()
+        {
+            Logger.LogMethodEntry("ManageTemplatePage", "SelectProgramAdministrationWindow",
+                   base.isTakeScreenShotDuringEntryExit);
+            // selecting the Program Administration window
+            base.WaitUntilWindowLoads(ManageTemplatePageResource.
+                ManageTemplate_Page_Window_Title_Name);
+            base.SelectWindow(ManageTemplatePageResource.
+                ManageTemplate_Page_Window_Title_Name);
+            Logger.LogMethodExit("ManageTemplatePage", "SelectProgramAdministrationWindow",
+                   base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Extract Method From GetCreatedTemplate
         /// </summary>
         private void TemplateCreation()
         {
-            //Create Template
+            // create template
             Logger.LogMethodEntry("ManageTemplatePage", "TemplateCreation",
                 base.isTakeScreenShotDuringEntryExit);
-            //Create New Template 
+            // create New Template 
             base.SwitchToDefaultWindow();
-            base.SelectWindow(ManageTemplatePageResource.
-                ManageTemplate_Page_Window_Title_Name);
+            // select window
+            this.SelectProgramAdministrationWindow();
             base.WaitForElement(By.Id(ManageTemplatePageResource.
                 ManageTemplate_Page_IFrame_Middle_Name_Id_Locator));
-            //Switching to Frame
+            // switching to frame
             base.SwitchToIFrame(
                 ManageTemplatePageResource.ManageTemplate_Page_IFrame_Middle_Name_Id_Locator);
             base.WaitForElement(By.XPath(ManageTemplatePageResource.
                 ManageTemplate_Page_CursorHand_XPath_Locator));
             base.ClickButtonByXPath(ManageTemplatePageResource.
                 ManageTemplate_Page_CursorHand_XPath_Locator);
-            //Create New Template
+            // create new template
             new AddNewTemplatePage().CreateNewTemplate();
             Logger.LogMethodExit("ManageTemplatePage", "TemplateCreation",
                 base.isTakeScreenShotDuringEntryExit);
@@ -250,8 +263,8 @@ namespace Pegasus.Pages.UI_Pages
                         ManageTemplate_Page_TemplateSection_Grid_Xpath_Locator).Text;
                 // Set focus on the default window
                 base.SwitchToDefaultPageContent();
-                base.SelectWindow(ManageTemplatePageResource
-                    .ManageTemplate_Page_Window_Title_Name);
+                // select window
+                this.SelectProgramAdministrationWindow();
             }
             catch (Exception e)
             {
@@ -272,9 +285,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
-                //Select the Program Administration Window
-                base.SelectWindow(ManageTemplatePageResource.
-                    ManageTemplate_Page_Window_Title_Name);
+                // select window
+                this.SelectProgramAdministrationWindow();
                 base.WaitForElement(By.Id(ManageTemplatePageResource.
                     ManageTemplate_Page_IFrame_Middle_Name_Id_Locator));
                 //Switch To Frame
@@ -343,8 +355,10 @@ namespace Pegasus.Pages.UI_Pages
             // Click on Search button
             base.WaitForElement(By.Id(ManageTemplatePageResource.
                           ManageTemplate_Page_Search_Button_Id_Locator));
-            base.ClickButtonByID(ManageTemplatePageResource.
+            IWebElement getSearchButton = base.GetWebElementPropertiesById
+                (ManageTemplatePageResource.
                           ManageTemplate_Page_Search_Button_Id_Locator);
+            base.ClickByJavaScriptExecutor(getSearchButton);
             Logger.LogMethodExit("ManageTemplatePage", "ClickSearchButtonForSectionSearch",
                 base.isTakeScreenShotDuringEntryExit);
         }
@@ -381,6 +395,9 @@ namespace Pegasus.Pages.UI_Pages
             //Click search link
             base.WaitForElement(By.PartialLinkText(ManageTemplatePageResource.
                              ManageTemplate_Page_Search_Link_Locator));
+            IWebElement getSearchLink = base.GetWebElementPropertiesByPartialLinkText
+                (ManageTemplatePageResource.
+                             ManageTemplate_Page_Search_Link_Locator);
             base.ClickButtonByPartialLinkText(ManageTemplatePageResource.
                              ManageTemplate_Page_Search_Link_Locator);
             Logger.LogMethodExit("ManageTemplatePage", "ClickSearchLinkForSectionSearch",
@@ -388,29 +405,29 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Store Section ID.
+        /// Store Section Id.
         /// </summary>
         /// <param name="sectionName">This is section name.</param>
         /// <param name="courseTypeEnum">This is course type enum.</param>
         public void StoreSectionID(String sectionName, Course.CourseTypeEnum courseTypeEnum)
         {
-            //Store Section ID
+            // store section details
             Logger.LogMethodEntry("ManageTemplatePage", "StoreSectionID",
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
-                //Search section 
+                // search section 
                 SearchSection(sectionName);
                 base.WaitForElement(By.Id(ManageTemplatePageResource.
                     ManageTemplate_Page_TemplateSection_Grid_Id_Locator));
-                // Getting Section id to store
+                // get section id to store
                 String getSectionID = base.GetElementTextByXPath(ManageTemplatePageResource.
                     ManageTemplate_Page_TemplateSectionGrid_XPath_Locator);
                 WebDriver.SwitchTo().DefaultContent();
-                //Check Section Id is not null
+                // check section Id is not null
                 if (getSectionID != null)
                 {
-                    //Store Section ID
+                    // store section Id
                     StoreSectionNameInMemory(getSectionID, sectionName, courseTypeEnum);
                 }
             }
@@ -490,11 +507,8 @@ namespace Pegasus.Pages.UI_Pages
             //Select Middle Frame
             Logger.LogMethodEntry("ManageTemplatePage", "SelectMiddleFrame",
                 base.isTakeScreenShotDuringEntryExit);
-            base.WaitUntilWindowLoads(ManageTemplatePageResource
-                   .ManageTemplate_Page_Window_Title_Name);
-            //Select Window
-            base.SelectWindow(ManageTemplatePageResource.
-                ManageTemplate_Page_Window_Title_Name);
+            // select window
+            this.SelectProgramAdministrationWindow();
             base.WaitForElement(By.Id(ManageTemplatePageResource.
                 ManageTemplate_Page_IFrame_Middle_Name_Id_Locator));
             //Switch to IFrame

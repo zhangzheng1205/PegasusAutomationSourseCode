@@ -257,7 +257,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 //Wait for the selct option dropdown for class
                 base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
                     RptCommonCriteria_Page_SelectSkills_Dropdown_Id_Locator));
-                base.SelectDropDownValueThroughTextByID(RptCommonCriteriaPageResource.
+                base.SelectDropDownValueThroughTextById(RptCommonCriteriaPageResource.
                     RptCommonCriteria_Page_SelectSkills_Dropdown_Id_Locator, skillName);
                 //Select Skills from treeview
                 this.SelectSkillsFromTreeview();

@@ -1506,7 +1506,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 // Click on Expand icon
-                base.ClickLinkByID(TodaysViewUXPageResource.
+                base.ClickLinkById(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_Page_TreeViewExpandIconID);
             }
             catch (Exception ex)
@@ -1619,7 +1619,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodaysViewUX_Page_Default_View_DropDownList_By_ID_Locator));
                 //Select the Dropdown option Text
-                base.SelectDropDownValueThroughTextByID(TodaysViewUXPageResource.
+                base.SelectDropDownValueThroughTextById(TodaysViewUXPageResource.
                     TodaysViewUX_Page_Default_View_DropDownList_By_ID_Locator, channelName);
             }
             catch (Exception ex)
@@ -1846,11 +1846,11 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("TodaysViewUXPage", "ClickTheHomeLinkInGlobalHomepage",
               base.isTakeScreenShotDuringEntryExit);
             //Wait for the element
-            base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                TodaysViewUXPageResource_Home_Link_Id_Locator));
-            IWebElement getHomeLinkProperty = base.GetWebElementPropertiesById
+            base.WaitForElement(By.PartialLinkText(TodaysViewUXPageResource.
+                TodayViewUXPageResource_Home_Link_PartialLink_Locator));
+            IWebElement getHomeLinkProperty = base.GetWebElementPropertiesByPartialLinkText
                 (TodaysViewUXPageResource.
-                TodaysViewUXPageResource_Home_Link_Id_Locator);
+                TodayViewUXPageResource_Home_Link_PartialLink_Locator);
             //Click the Home link
             base.ClickByJavaScriptExecutor(getHomeLinkProperty);
             logger.LogMethodExit("TodaysViewUXPage", "ClickTheHomeLinkInGlobalHomepage",
@@ -2317,7 +2317,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodayViewUXPageResource_VerbChart_Image_Id_Locator));
             //Click On Verb Chart Option
-            base.ClickLinkByID(TodaysViewUXPageResource.
+            base.ClickLinkById(TodaysViewUXPageResource.
                 TodayViewUXPageResource_VerbChart_Image_Id_Locator);
             logger.LogMethodExit("TodaysViewUXPage",
                 "SelectVerbChartOptionInToolsDropdown",
@@ -2341,7 +2341,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodayViewUXPageResource_Glossary_Image_Id_Locator));
             //Click On Glossary Option
-            base.ClickLinkByID(TodaysViewUXPageResource.
+            base.ClickLinkById(TodaysViewUXPageResource.
                 TodayViewUXPageResource_Glossary_Image_Id_Locator);
             logger.LogMethodExit("TodaysViewUXPage",
                 "SelectGlossaryOptionInToolsDropdown",
@@ -2773,6 +2773,107 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(moreLink);
             logger.LogMethodExit("GBInstructorUXPage", "ClickonMoreLink",
                           base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Launch PCT From ToolBar.
+        /// </summary>
+        public void OpenPCTToolsDropDown()
+        {
+            //Launch PCT From Resource ToolBar.
+            logger.LogMethodEntry("TodaysViewUXPage", "OpenPCTToolsDropDown",
+                 base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                // wait for xpath element for PCT DropDown
+                WaitForElement(By.XPath(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_PCTInstructorResourceDropDown));
+                // Gets PCT Tools drop down element object
+                IWebElement ToolsDropDown = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_PCTInstructorResourceDropDown);
+                base.ClickByJavaScriptExecutor(ToolsDropDown);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "OpenPCTToolsDropDown"
+                , base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Launch PCT From ToolBar.
+        /// </summary>
+        public void LaunchPCTFromDropDown(string PCTToolName)
+        {
+            //Launch PCT From Resource ToolBar
+            logger.LogMethodEntry("TodaysViewUXPage", "LaunchPCTFromDropDown",
+                 base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                // wait for xpath element for PCT Link
+                WaitForElement(By.XPath(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_PCTInstructorResourceToolLink + "=" + "'" + PCTToolName + "'" + "]"));
+                // Gets PCT Link element object from drop down
+                IWebElement ResourceToolLaunch1 = base.GetWebElementPropertiesByXPath(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_PCTInstructorResourceToolLink + "=" +"'"+ PCTToolName +"'"+ "]");
+                // Perform mouse hover action over the PCT Tool Link
+                base.PerformMouseHoverAction(ResourceToolLaunch1);
+                // Click on the PCT Tool Link
+                base.ClickByJavaScriptExecutor(ResourceToolLaunch1);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "LaunchPCTFromDropDown"
+                , base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get PCT Window Width.
+        /// </summary>
+        public int GetPCTWindowWidth()
+        {
+            // Get current PCT window width
+            logger.LogMethodEntry("TodaysViewUXPage", "GetPCTWindowWidth"
+                , base.isTakeScreenShotDuringEntryExit);
+
+            int windowWidth = 0;
+            try
+            {
+                windowWidth = base.GetCurrentOpenWindowSize().Width;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "GetPCTWindowWidth"
+                , base.isTakeScreenShotDuringEntryExit);
+            return windowWidth;
+        }
+
+        /// <summary>
+        /// Get PCT Window Height.
+        /// </summary>
+        public int GetPCTWindowHeight()
+        {
+            // Get current PCT window height
+            logger.LogMethodEntry("TodaysViewUXPage", "GetPCTWindowHeight"
+                , base.isTakeScreenShotDuringEntryExit);
+
+            int windowHeight = 0;
+            try
+            {
+                windowHeight = base.GetCurrentOpenWindowSize().Height;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "GetPCTWindowHeight"
+                , base.isTakeScreenShotDuringEntryExit);
+            return windowHeight;
         }
     }
 }

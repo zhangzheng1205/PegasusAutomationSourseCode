@@ -193,7 +193,7 @@
     <value>30000</value>
   </data>
   <data name="CourseCatalogMain_Page_Thread_SleepTime_Value_Paging_NextLink" xml:space="preserve">
-    <value>15000</value>
+    <value>5000</value>
   </data>
   <data name="CourseCatalogMain_Page_Total_Pages_Id_Locator" xml:space="preserve">
     <value>_ctl4_UCPaging_lnkSecondNumber</value>
@@ -202,9 +202,12 @@
     <value>50</value>
   </data>
   <data name="CourseCatalogMain_Page_WaitTime_MailServerError_Value" xml:space="preserve">
-    <value>120</value>
+    <value>5</value>
   </data>
   <data name="CourseCatalogMain_Page_Window_Title_Page" xml:space="preserve">
     <value>Global Home</value>
+  </data>
+  <data name="CourseCatalogMain_ProductTextBook_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtProductTextBook</value>
   </data>
 </root>

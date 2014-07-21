@@ -1,5 +1,7 @@
 ﻿#region
 
+using System.Linq;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
@@ -88,16 +90,121 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("GlobalHome", "VerifyProductInTheCurriculumChannel",
                base.isTakeScreenShotDuringEntryExit);
 
-            Product demoProduct = Product.Get(productType);
-            Logger.LogAssertion("VerifyWelcomeMessageText", ScenarioContext.
-               Current.ScenarioInfo.Title, () => Assert.AreEqual
-               (demoProduct.WelcomeMessage, new HomePage().GetWelcomeMessage()));
+            VerifyDisplayOfWelcomeBannerImageAndMessageOneByOne(1);
 
             Logger.LogMethodExit("GlobalHome", "VerifyProductInTheCurriculumChannel",
                base.isTakeScreenShotDuringEntryExit);
         }
 
-        
+        /// <summary>
+        /// Verify the Welcome Message text and button type on Welcome message light box.
+        /// </summary>
+        /// <param name="noOfProduct">Number of product</param>
+        /// <param name="buttonText">Expected text on button</param>
+        [Then(@"Only ""(.*)"" Welcome message should display with ""(.*)"" button instead of Next button\.")]
+        public void VerifyWelcomeMessageTextAndButtonType(int noOfProduct, string buttonText)
+        {
+            Logger.LogMethodEntry("GlobalHome", "VerifyWelcomeMessageTextAndButtonType",
+               base.isTakeScreenShotDuringEntryExit);
+
+            Product demoProduct = Product.Get(Product.ProductTypeEnum.DigitalPathDemo);
+                        //Assert button type
+            Logger.LogAssertion("VerifyWelcomeMessageTextAndButtonType", ScenarioContext.
+                   Current.ScenarioInfo.Title, () => Assert.AreEqual
+                   (buttonText, new HomePage().GetWelcomeMessageButtonText()));
+            //Assert welcome message
+            VerifyDisplayOfWelcomeBannerImageAndMessageOneByOne(1);
+
+            Logger.LogMethodExit("GlobalHome", "VerifyWelcomeMessageTextAndButtonType",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the display of Welcome banner images one by one on Welcome message light box.
+        /// </summary>
+        /// <param name="bannerCount">Number of Welcome banner images</param>
+        [Then(@"I can see display of (.*) welcome banner image and welcome message one by one")]
+        public void VerifyDisplayOfWelcomeBannerImageAndMessageOneByOne(int bannerCount)
+        {
+            Logger.LogMethodEntry("GlobalHome",
+               "VerifyDisplayOfWelcomeBannerImagesOneByOne",
+             base.isTakeScreenShotDuringEntryExit);
+
+            List<Product> demoProductList = Product.GetAll(
+                Product.ProductTypeEnum.DigitalPathDemo);
+            HomePage homePage = new HomePage();
+
+            for (int index = 0; index < bannerCount; index++)
+            {
+                VerifyDisplayOfWelcomeBannerImageMessage(homePage,
+                    demoProductList);
+                //navigate to next banner or enter to global home
+                homePage.ClickWelcomeMessageBoxNavigationButton();
+            }
+
+            Logger.LogMethodExit("GlobalHome",
+                "VerifyDisplayOfWelcomeBannerImagesOneByOne",
+            base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the display of Welcome banner image and welcome message
+        /// </summary>
+        /// <param name="imageBlobId">Id of Welcome banner image blob</param>
+        private void VerifyDisplayOfWelcomeBannerImageMessage(HomePage homePage
+            , List<Product> demoProductList)
+        {
+            Logger.LogMethodEntry("GlobalHome",
+              "VerifyDisplayOfWelcomeBannerImage",
+            base.isTakeScreenShotDuringEntryExit);
+
+            foreach(Product demoProduct in demoProductList)
+            {
+                if (string.IsNullOrWhiteSpace(
+                    demoProduct.WelcomeBannerBlobId)) { continue; }
+                if (homePage.GetWelcomeBannerSrcAttribute()
+                .EndsWith(demoProduct.WelcomeBannerBlobId))
+                {     
+                    //Further validate welcome message
+                    Logger.LogAssertion("VerifyDisplayOfWelcomeBannerImage", 
+                        ScenarioContext.Current.ScenarioInfo.Title,
+                        () => Assert.AreEqual(demoProduct.WelcomeMessage, 
+                            homePage.GetWelcomeMessage()));
+                    return;
+                }
+            };
+
+            Logger.LogAssertion("VerifyDisplayOfWelcomeBannerImage", 
+                ScenarioContext.Current.ScenarioInfo.Title, 
+                () => Assert.Fail());
+
+            Logger.LogMethodExit("GlobalHome",
+                "VerifyDisplayOfWelcomeBannerImage",
+            base.isTakeScreenShotDuringEntryExit);
+        }
+
+       /// <summary>
+        /// Verify the display of Product branding images
+       /// </summary>
+       /// <param name="productCount">Number of products.</param>
+       /// <param name="productType">Type of product.</param>
+        [Then(@"I should see the display of (.*) ""(.*)"" Product branding images")]
+        public void VerifyDisplayOfProductBrandingImages(int productCount,Product.ProductTypeEnum productType)
+        {
+            Logger.LogMethodEntry("GlobalHome",
+              "VerifyDisplayOfProductBrandingImages",
+            base.isTakeScreenShotDuringEntryExit);
+
+            IList<Product> demoProductList = Product.GetAll(productType);            
+            IList<string> productIdList =  new HomePage().GetProductIdOfProductBrandingImagesDispayed();
+            var result = demoProductList.Where(product => productIdList.Contains(product.ProductId));
+            Assert.AreEqual(productCount, result.Count());
+            Logger.LogMethodExit("GlobalHome",
+                "VerifyDisplayOfProductBrandingImages",
+            base.isTakeScreenShotDuringEntryExit);
+        }
+
+                
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

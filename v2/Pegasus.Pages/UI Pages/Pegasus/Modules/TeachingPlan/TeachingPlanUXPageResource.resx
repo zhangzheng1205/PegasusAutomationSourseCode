@@ -180,4 +180,7 @@
   <data name="TeachingPlanUX_Page_HomeButton_Id_Locator" xml:space="preserve">
     <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_MyCoursesLink</value>
   </data>
+  <data name="TeachingPlanUX_Page_Section_WindowName" xml:space="preserve">
+    <value>Program Administration</value>
+  </data>
 </root>

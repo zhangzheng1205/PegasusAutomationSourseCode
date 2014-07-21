@@ -6,6 +6,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Integration.Rumba;
+using Pegasus.Pages.Exceptions;
 using TechTalk.SpecFlow;
 
 namespace Pegasus.Acceptance.NovaNET.Tests.
@@ -200,6 +201,30 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         }
 
         /// <summary>
+        /// Select Grades Subtab.
+        /// </summary>
+        [When(@"I select 'Grades' subtab")]        
+        public void SelectGradesSubtab()
+        {
+            Logger.LogMethodEntry("CommonSteps", "SelectGradesSubtab",
+                 base.isTakeScreenShotDuringEntryExit);
+            base.SelectDefaultWindow();
+            //Wait for the element
+            base.WaitForElement(By.Id(CommonStepsResource.
+                CommonSteps_Grades_Subtab_Id_Locator));
+            //Click on Grades Subtab
+            IWebElement getSubtabname = 
+                base.GetWebElementPropertiesById(CommonStepsResource.
+                CommonSteps_Grades_Subtab_Id_Locator);
+            base.FocusOnElementByID(CommonStepsResource.
+                CommonSteps_Grades_Subtab_Id_Locator);
+            base.ClickByJavaScriptExecutor(getSubtabname);           
+            Logger.LogMethodExit("CommonSteps", "SelectGradesSubtab",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Select the Report SubTab
         /// </summary>
         /// <param name="subTab">This is Name of the Tab</param>
@@ -243,6 +268,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         /// </summary>
         /// <param name="windowName">This is Window Name.</param>
         [When(@"I close the ""(.*)"" window")]
+        [Then(@"I close the ""(.*)"" window")]
         public void CloseThePresentWindow(String windowName)
         {
             //Close the window
@@ -253,7 +279,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             Logger.LogMethodExit("CommonSteps", "CloseThePresentWindow",
                 base.isTakeScreenShotDuringEntryExit);
         }
-
+       
         /// <summary>
         /// Search and Select the Organization.
         /// </summary>
@@ -304,9 +330,46 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         }
 
         /// <summary>
+        /// Navigate To Tab Of The Perticular Page.
+        /// </summary>
+        /// <param name="tabName">This is Tab Name.</param>
+        /// <param name="pageName">This is Page Name.</param>
+        [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page")]
+        public void NavigateToTabOfThePerticularPage(string tabName, string pageName)
+        {
+            //Navigate Administrator Tool Page
+            Logger.LogMethodEntry("AdminToolPage", "NavigateToTabOfThePerticularPage",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Is The Page Open Already
+                Boolean isPageAlreadyExists = base.IsPopupPresent(pageName, 2);
+                if (isPageAlreadyExists)
+                {
+                    //Selecting the Page If Opened
+                    base.SelectWindow(pageName);
+                }
+                else
+                {
+                    // Navigating To Administrators tab
+                    base.WaitForElement(By.PartialLinkText(tabName));
+                    IWebElement getTabName = base.GetWebElementPropertiesByPartialLinkText
+                        (tabName);
+                    base.ClickByJavaScriptExecutor(getTabName);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfThePerticularPage",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts
         /// </summary>
-        [BeforeScenario]
+        [BeforeTestRun]
         public static void Setup()
         {
             //Reset Webdriver Instance
@@ -317,7 +380,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         /// Deinitialize Pegasus test after the execution of test
         /// and clean the WebDriver Instance.
         /// </summary>
-        [AfterScenario]
+        [AfterTestRun]
         public static void TearDown()
         {
             // clean processess

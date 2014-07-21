@@ -121,6 +121,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginLogoutResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\PCTToolLaunch.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\Preferences.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\PreferencesResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -180,6 +181,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceStudentEnrollment.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorTooLaunch.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceInstructorTooLaunch.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\SMS.WorkFlow.feature.cs">
       <AutoGen>True</AutoGen>
@@ -258,6 +264,10 @@
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudentEnrollment.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceStudentEnrollment.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorTooLaunch.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceInstructorTooLaunch.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\SMS.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

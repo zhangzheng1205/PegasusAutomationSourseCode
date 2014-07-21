@@ -218,6 +218,31 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             Logger.LogMethodExit("CreateActivity", " SearchAssetInContentLibrary",
               base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Associate The Activity From Content Library To MyCourse.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        [When(@"I associate the ""(.*)"" activity Content Library to MyCourse frame")]
+        public void AssociateTheActivityFromContentLibraryToMyCourse(
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Associate The Activity From Content Library To MyCourse
+            Logger.LogMethodEntry("CreateActivity",
+                "AssociateTheActivityFromContentLibraryToMyCourse",
+                isTakeScreenShotDuringEntryExit);
+            ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
+            //Fetch the data from memory
+            Activity activity = Activity.Get(activityTypeEnum);
+            //Select Window and Frame
+            contentLibraryUXPage.SelectLeftFrame();
+            // Select the activity
+            contentLibraryUXPage.SelectActivity(activity.Name);
+            // Click on Activity Add Button
+            contentLibraryUXPage.ClickOnActivityAddButton();
+            Logger.LogMethodExit("CreateActivity",
+                "AssociateTheActivityFromContentLibraryToMyCourse",
+                isTakeScreenShotDuringEntryExit);
+        }
     }
 
 }

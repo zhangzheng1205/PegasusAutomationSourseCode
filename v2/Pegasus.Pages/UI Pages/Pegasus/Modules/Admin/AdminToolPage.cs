@@ -621,7 +621,7 @@ namespace Pegasus.Pages.UI_Pages
                     if (!getElementtext.Contains(getWorkspaceName))
                     {
                         //Click on next button
-                        base.ClickLinkByID(AdminToolPageResource.
+                        base.ClickLinkById(AdminToolPageResource.
                             AdminTool_Page_Workspace_Table_Next_ID_Locator);
                         //Select Workspace Frame
                         this.SelectWorkspaceFrame();

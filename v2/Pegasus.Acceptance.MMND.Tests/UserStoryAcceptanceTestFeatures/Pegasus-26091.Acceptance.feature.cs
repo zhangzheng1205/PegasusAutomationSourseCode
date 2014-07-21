@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.MMND.Tests.UserStoryAcceptanceTestFeatures
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "WS Gradebook Instructor", "\t\tAs a MMND Instructor \n\t\tI want to manage all the MMND Instructor Gradebook rela" +
-                    "ted usecases \n\t\tso that I would validate all the MMND Instructor Gradebook scena" +
-                    "rios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "WS Gradebook Instructor", "\t\tAs a MMND Instructor \r\n\t\tI want to manage all the MMND Instructor Gradebook rel" +
+                    "ated usecases \r\n\t\tso that I would validate all the MMND Instructor Gradebook sce" +
+                    "narios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

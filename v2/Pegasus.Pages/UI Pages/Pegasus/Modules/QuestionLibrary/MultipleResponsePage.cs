@@ -342,7 +342,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_ImageDropDown_Id_Locator));
             //Select 'Image' in Drop Down
-            base.SelectDropDownValueThroughTextByID(MultipleResponsePageResource.
+            base.SelectDropDownValueThroughTextById(MultipleResponsePageResource.
                 MultipleResponse_Page_ImageDropDown_Id_Locator,
                 MultipleResponsePageResource.MultipleResponse_Page_DropDown_Image_Name);
             logger.LogMethodExit("MultipleResponsePage", "SelectDropDownToAddImage",
@@ -420,7 +420,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_AudioDropDown_Id_Locator));
             //Select Drop Down for Audio
-            base.SelectDropDownValueThroughTextByID(MultipleResponsePageResource.
+            base.SelectDropDownValueThroughTextById(MultipleResponsePageResource.
                 MultipleResponse_Page_AudioDropDown_Id_Locator,
                 MultipleResponsePageResource.MultipleResponse_Page_DropDown_Audio_Name);
             logger.LogMethodExit("MultipleResponsePage", "SelectDropDownToAddAudio",
@@ -479,7 +479,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_VideoDropDown_Id_Locator));
             //Select Drop Down for video
-            base.SelectDropDownValueThroughTextByID(MultipleResponsePageResource.
+            base.SelectDropDownValueThroughTextById(MultipleResponsePageResource.
                 MultipleResponse_Page_VideoDropDown_Id_Locator,
                 MultipleResponsePageResource.MultipleResponse_Page_DropDown_Movie_Name);
             logger.LogMethodExit("MultipleResponsePage", "SelectDropDownToAddVideo",

@@ -48,7 +48,7 @@ namespace Pegasus.Automation.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Report>(
                 x => x.ReportType == reportTypeEnum && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).First();
         }
 
         /// <summary>

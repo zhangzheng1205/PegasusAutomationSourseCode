@@ -14,7 +14,7 @@ namespace Pegasus.Pages.UI_Pages
     /// </summary>
     public class Reg1Page : BasePage
     {
-        
+
         //Getting SMS MMND Instructor Access Code From Configuration File.
         string getSMSMMNDInstructor = ConfigurationManager.AppSettings[
             Reg1PageResource.Reg1_Page_SMS_AccessCode_MMNDInstructor];
@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     base.FocusOnElementByID(Reg1PageResource.
                         Reg1_Page_AccountNo_RadioButton_Id_Locator);
-                    IWebElement getAccountNumRadioButton=base.GetWebElementPropertiesById
+                    IWebElement getAccountNumRadioButton = base.GetWebElementPropertiesById
                         (Reg1PageResource.
                         Reg1_Page_AccountNo_RadioButton_Id_Locator);
                     base.ClickByJavaScriptExecutor(getAccountNumRadioButton);
@@ -339,7 +339,7 @@ namespace Pegasus.Pages.UI_Pages
                     Reg1_Page_AccountNo_RadioButton_Id_Locator);
             }
             //Enter User Name
-            this.EnterUserName(userNameSMSGuid);            
+            this.EnterUserName(userNameSMSGuid);
             string getSMSUserPassword = this.EnterSMSUserLoginDetails(userType);
             //Save SMS User Details in Memory
             StoreSMSUserInMemory(userType, userNameSMSGuid, getSMSUserPassword);
@@ -391,21 +391,11 @@ namespace Pegasus.Pages.UI_Pages
                 //Save SMS Student
                 case User.UserTypeEnum.CsSmsStudent:
                 case User.UserTypeEnum.HedTeacherAssistant:
-                    //Save SMS Instructor in Memory
-                    this.StoreSMSStudent(userType,usernameGuid, password);
-                    break;
-                // Save SMS Instructor
                 case User.UserTypeEnum.CsSmsInstructor:
-                    this.StoreSMSInstructor(usernameGuid, password);
-                    break;
-                //Save the MMND SMS Instructor
                 case User.UserTypeEnum.MMNDInstructor:
-                    this.StoreMMNDSMSInstructor(usernameGuid, password);
-                    break;
-
-                //Save the MMND SMS Student
                 case User.UserTypeEnum.MMNDStudent:
-                    this.StoreMMNDSMSStudent(usernameGuid, password);
+                    //Save SMS Instructor in Memory
+                    this.InsertUserDetailsInMemory(userType, usernameGuid, password);
                     break;
             }
             logger.LogMethodExit("Reg1Page", "StoreSMSUserInMemory",
@@ -413,98 +403,29 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Store SMS Student in Memory
+        /// Insert User Properties In Memory.
         /// </summary>
-        /// <param name="usernameGuid">This is Guid Username</param>
-        /// <param name="password">This is Password</param>
-        /// <param name="userType">This is User type</param>
-        private void StoreSMSStudent(User.UserTypeEnum userType,Guid usernameGuid, string password)
+        /// <param name="usernameGuid">This is Guid Username.</param>
+        /// <param name="password">This is Password.</param>
+        /// <param name="userType">This is User type.</param>
+        private void InsertUserDetailsInMemory(User.UserTypeEnum userType, Guid usernameGuid, string password)
         {
-            //Save SMS Student
-            logger.LogMethodEntry("Reg1Page", "StoreSMSStudent",
+            // save sms1 user 
+            logger.LogMethodEntry("Reg1Page", "InsertUserDetailsInMemory",
                 base.isTakeScreenShotDuringEntryExit);
             User userSMSInstructor = new User
                                          {
-                                             //Save the SMS User Properties
+                                             // save sms user properties
                                              Name = usernameGuid.ToString(),
                                              Password = password,
                                              UserType = userType,
                                              IsCreated = true,
                                          };
             userSMSInstructor.StoreUserInMemory();
-            logger.LogMethodExit("Reg1Page", "StoreSMSStudent",
+            logger.LogMethodExit("Reg1Page", "InsertUserDetailsInMemory",
                 base.isTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Store SMS Student in Memory
-        /// </summary>
-        /// <param name="usernameGuid">This is Guid Username</param>
-        /// <param name="password">This is Password</param>
-        private void StoreSMSInstructor(Guid usernameGuid, string password)
-        {
-            //Save SMS Instructor
-            logger.LogMethodEntry("Reg1Page", "StoreSMSInstructor",
-                base.isTakeScreenShotDuringEntryExit);
-            User userSMSStudent = new User
-                                      {
-                                          //Save the SMS User Properties
-                                          Name = usernameGuid.ToString(),
-                                          Password = password,
-                                          UserType = User.UserTypeEnum.CsSmsInstructor,
-                                          IsCreated = true,
-                                      };
-            userSMSStudent.StoreUserInMemory();
-            logger.LogMethodExit("Reg1Page", "StoreSMSInstructor",
-                base.isTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Store MMND SMS Instructor in Memory
-        /// </summary>
-        /// <param name="usernameGuid">This is Guid Username</param>
-        /// <param name="password">This is Password</param>
-        private void StoreMMNDSMSInstructor(Guid usernameGuid, string password)
-        {
-            //Save MMND SMS Instructor
-            logger.LogMethodEntry("Reg1Page", "StoreMMNDSMSInstructor",
-                base.isTakeScreenShotDuringEntryExit);
-            User userMMNDInstructor = new User
-                                          {
-                                              //Save the MMND SMS user Properties
-                                              Name = usernameGuid.ToString(),
-                                              Password = password,
-                                              UserType = User.UserTypeEnum.MMNDInstructor,
-                                              IsCreated = true,
-                                          };
-            userMMNDInstructor.StoreUserInMemory();
-            logger.LogMethodExit("Reg1Page", "StoreMMNDSMSInstructor",
-                base.isTakeScreenShotDuringEntryExit);
-        }
-
-        
-        /// <summary>
-        /// Store MMND SMS Student in Memory
-        /// </summary>
-        /// <param name="usernameGuid">This is Guid Username</param>
-        /// <param name="password">This is Password</param>
-        private void StoreMMNDSMSStudent(Guid usernameGuid, string password)
-        {
-            //Save MMND SMS Instructor
-            logger.LogMethodEntry("Reg1Page", "StoreMMNDSMSStudent",
-                base.isTakeScreenShotDuringEntryExit);
-            User userMMNDStudent = new User
-                                       {
-                                           //Save the MMND SMS user Properties
-                                           Name = usernameGuid.ToString(),
-                                           Password = password,
-                                           UserType = User.UserTypeEnum.MMNDStudent,
-                                           IsCreated = true,
-                                       };
-            userMMNDStudent.StoreUserInMemory();
-            logger.LogMethodExit("Reg1Page", "StoreMMNDSMSStudent",
-                base.isTakeScreenShotDuringEntryExit);
-        }
 
     }
 }

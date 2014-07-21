@@ -70,44 +70,21 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestFeatures
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 7
-#line 8
-testRunner.Given("I browsed the login url for \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I login to Pegasus as \"NovaNETCsTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("View Activity Score by CS Teacher")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceGradeBook")]
         public virtual void ViewActivityScoreByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Activity Score by CS Teacher", ((string[])(null)));
-#line 14
+#line 9
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 15
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"NovaNETCsTeacher\" from the Globa" +
-                    "l Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 10
+testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 18
+#line 12
 testRunner.And("I should see the grade under activity column of the submitted \"01:Posttest\" activ" +
                     "ity for \"NovaNETCsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
-testRunner.When("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -118,28 +95,19 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         public virtual void ToVerifyTheFunctionalityOfEditC_MenuOptionsOfGradeColumnByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify The Functionality of Edit C-menu Options of Grade Column by CS Teacher", ((string[])(null)));
-#line 24
+#line 17
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 25
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"NovaNETCsTeacher\" from the Globa" +
-                    "l Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
+#line 18
+testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 19
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 28
+#line 20
 testRunner.When("I click on cmenu \"EditGrades\" of asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 21
 testRunner.And("I edit the score in Edit Grade Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
+#line 22
 testRunner.Then("I should see the successfull message \"Batch update completed successfully.  \"Test" +
                     "\"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 31
-testRunner.When("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -152,30 +120,21 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify The Functionality of Apply Grade Schema c-menu options of Grade Column " +
                     "by CS Teacher", ((string[])(null)));
-#line 36
+#line 27
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 37
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"NovaNETCsTeacher\" from the Globa" +
-                    "l Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
+#line 28
+testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 40
+#line 30
 testRunner.When("I click on cmenu \"ApplyGradeSchema\" of asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
+#line 31
 testRunner.And("I \'Apply\' the grade schema for the submitted activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
+#line 32
 testRunner.Then("I should see the successfull message \"Schema applied successfully.\" in \"Gradebook" +
                     "\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 43
+#line 33
 testRunner.And("I should see the updated apply grade schema value \"B\" for Activity \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
-testRunner.When("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -188,29 +147,20 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify The Functionality of View All Submissions c-menu options of Grade Colum" +
                     "n by CS Teacher", ((string[])(null)));
-#line 49
+#line 38
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 50
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"NovaNETCsTeacher\" from the Globa" +
-                    "l Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
+#line 39
+testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 40
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 53
+#line 41
 testRunner.When("I click on cmenu \"ViewAllSubmissions\" of asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
+#line 42
 testRunner.And("I edit the grade in view submission window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
+#line 43
 testRunner.Then("I should see the edited grade \"33\" in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 56
+#line 44
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 57
-testRunner.And("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 58
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -223,28 +173,14 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify teacher selects Search Student Filtering Options in GradeBook by CS Tea" +
                     "cher", ((string[])(null)));
-#line 62
+#line 49
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 63
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"NovaNETCsTeacher\" from the Globa" +
-                    "l Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 65
+#line 50
+testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 51
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 66
+#line 52
 testRunner.When("I click the \'View Filters\' link in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 67
-testRunner.And("I search the \"NovaNETCsStudent\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 68
-testRunner.Then("I should see searched grade under activity column of submitted \"Test\" activity fo" +
-                    "r \"NovaNETCsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 69
-testRunner.When("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 70
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -257,26 +193,17 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify teacher selects Show Status for all items Filtering Options in GradeBoo" +
                     "k by CS Teacher", ((string[])(null)));
-#line 74
+#line 57
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 75
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"NovaNETCsTeacher\" from the Globa" +
-                    "l Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 76
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 77
+#line 58
+testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 59
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 78
+#line 60
 testRunner.When("I select \'Show Status for All Items\' filter option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 79
+#line 61
 testRunner.Then("I should see the \"Test\" activity in Gradebook for all the enrollled \"NovaNETCsStu" +
                     "dent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 80
-testRunner.When("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 81
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -289,27 +216,18 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To verify teacher selects Assignment type filtering options in grade book by CS T" +
                     "eacher", ((string[])(null)));
-#line 85
+#line 66
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 86
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"NovaNETCsTeacher\" from the Globa" +
-                    "l Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 87
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 88
+#line 67
+testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 68
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 89
+#line 69
 testRunner.When("I click on \'Assignment Types\' link in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 90
+#line 70
 testRunner.And("I select \"Test\" Assignment Type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 91
+#line 71
 testRunner.Then("I should see the \"Test\" activity in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 92
-testRunner.When("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 93
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

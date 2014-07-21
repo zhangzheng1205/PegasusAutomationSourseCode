@@ -71,6 +71,15 @@ namespace Pegasus.Acceptance.NovaNET.Tests.CommonProductAcceptanceTestDefinition
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string CommonSteps_Grades_Subtab_Id_Locator {
+            get {
+                return ResourceManager.GetString("CommonSteps_Grades_Subtab_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ifrm.
         /// </summary>
         internal static string CommonSteps_IFrame {

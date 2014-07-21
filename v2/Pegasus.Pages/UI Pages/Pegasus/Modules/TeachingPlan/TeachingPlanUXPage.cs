@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on the Copy Content Drop Down
                 base.WaitForElement(By.Id(TeachingPlanUXPageResource.
                     TeachingPlanUX_Page_CopyContent_Id_Locator));
-                base.ClickLinkByID(TeachingPlanUXPageResource.
+                base.ClickLinkById(TeachingPlanUXPageResource.
                     TeachingPlanUX_Page_CopyContent_Id_Locator);
             }
             catch (Exception e)
@@ -289,6 +289,10 @@ namespace Pegasus.Pages.UI_Pages
                     TeachingPlanUXPageResource.TeachingPlanUX_Page_HomeButton_Id_Locator);
                 //Click On Home Button
                 base.ClickByJavaScriptExecutor(getHomeButtonProperty);
+                base.WaitUntilWindowLoads(TeachingPlanUXPageResource.
+                    TeachingPlanUX_Page_Section_WindowName);
+                base.SelectWindow(TeachingPlanUXPageResource.
+                    TeachingPlanUX_Page_Section_WindowName);
             }
             catch (Exception e)
             {
@@ -299,26 +303,26 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Select Course Materials Window
+        /// Select Window.
         /// </summary>
-        public void SelectCourseMaterialsWindow()
+        public void SelectWindow()
         {
-            //Select Course Materials Window
-            logger.LogMethodExit("TeachingPlanUXPage", "SelectCourseMaterialsWindow",
+            //Select Window
+            logger.LogMethodExit("TeachingPlanUXPage", "SelectWindow",
               base.isTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            string getPageTitle = string.Empty;
             try
             {
-                base.WaitUntilWindowLoads(TeachingPlanUXPageResource.
-                            TeachingPlanUX_Page_CourseMaterials_WindowName);
-                //Select Course Materials Window
-                base.SelectWindow(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_CourseMaterials_WindowName);
+                getPageTitle = base.GetPageTitle;                
+                //Select Window
+                base.SelectWindow(getPageTitle);
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("TeachingPlanUXPage", "SelectCourseMaterialsWindow",
+            logger.LogMethodExit("TeachingPlanUXPage", "SelectWindow",
                 base.isTakeScreenShotDuringEntryExit);
         }
 

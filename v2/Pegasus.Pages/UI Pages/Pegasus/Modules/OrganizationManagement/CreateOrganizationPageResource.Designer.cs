@@ -179,7 +179,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.OrganizationManagement {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Organization Management.
+        ///   Looks up a localized string similar to Create Organization.
         /// </summary>
         internal static string CreateOrganization_Page_OrganizationManagement_Window_Name {
             get {

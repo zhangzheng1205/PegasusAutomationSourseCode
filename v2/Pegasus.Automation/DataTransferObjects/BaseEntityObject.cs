@@ -19,6 +19,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// <summary>
         /// This is the date time of creation
         /// </summary>
-        public DateTime creationDate = DateTime.Now;
+        public DateTime CreationDate = DateTime.Now;
     }
 }

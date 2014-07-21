@@ -159,6 +159,12 @@
   <data name="RptSelectAssessments_Page_Ins_SelectActivities_Window_Title_Name" xml:space="preserve">
     <value>Select Activities</value>
   </data>
+  <data name="RptSelectAssessments_Page_Ins_SelectStudyPlans_Popup_Window_Title_Name" xml:space="preserve">
+    <value>Select Study Plan</value>
+  </data>
+  <data name="RptSelectAssessments_Page_Ins_SelectStudyPlans_Window_Title_Name" xml:space="preserve">
+    <value>Select Study Plans</value>
+  </data>
   <data name="RptSelectAssessments_Page_Ins_Window_Count" xml:space="preserve">
     <value>2</value>
   </data>

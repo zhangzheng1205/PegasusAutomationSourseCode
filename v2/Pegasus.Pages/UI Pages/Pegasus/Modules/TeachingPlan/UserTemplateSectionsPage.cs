@@ -100,7 +100,9 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan
             IWebElement getAddButton =
                 base.GetWebElementPropertiesByCssSelector(UserTemplateSectionsPageResource.
                 UserTemplateSections_Add_Button_CssSelector_Locator);
-            base.ClickByJavaScriptExecutor(getAddButton);           
+            base.ClickByJavaScriptExecutor(getAddButton);
+            Thread.Sleep(Convert.ToInt32(UserTemplateSectionsPageResource.
+                UserTemplateSections_Page_ElementTime_Value));
             logger.LogMethodEntry("UserTemplateSectionsPage", "ClickOnAddButton",
                                    base.isTakeScreenShotDuringEntryExit);
         }

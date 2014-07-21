@@ -126,4 +126,19 @@
   <data name="ProgramAdminTool_Page_MiddleFrame_Id_Locator" xml:space="preserve">
     <value>_ctl0_PageContent_ifrmMiddle</value>
   </data>
+  <data name="ProgramAdminTool_Page_SubNavigationTab_Id_Locator" xml:space="preserve">
+    <value>trSubNavigationTab</value>
+  </data>
+  <data name="ProgramAdminTool_Page_SubNavigationTab_Link_XPath_Locator" xml:space="preserve">
+    <value>//tr[@id='trSubNavigationTab']/td[{0}]/a</value>
+  </data>
+  <data name="ProgramAdminTool_Page_SubNavigationTab_Selected_ClassName_Value" xml:space="preserve">
+    <value>SubNavigationTabSelected</value>
+  </data>
+  <data name="ProgramAdminTool_Page_SubNavigationTab_TableRow_XPath_Locator" xml:space="preserve">
+    <value>//tr[@id='trSubNavigationTab']/td[{0}]</value>
+  </data>
+  <data name="ProgramAdminTool_Page_SubNavigationTab_Table_XPath_Locator" xml:space="preserve">
+    <value>//tr[@id='trSubNavigationTab']/td</value>
+  </data>
 </root>

@@ -126,6 +126,9 @@
   <data name="UserTemplateSections_Page_AllSections_Id_Locator" xml:space="preserve">
     <value>chkheaderrptid</value>
   </data>
+  <data name="UserTemplateSections_Page_ElementTime_Value" xml:space="preserve">
+    <value>3000</value>
+  </data>
   <data name="UserTemplateSections_Page_Window_Name" xml:space="preserve">
     <value>Add to Multiple Sections</value>
   </data>

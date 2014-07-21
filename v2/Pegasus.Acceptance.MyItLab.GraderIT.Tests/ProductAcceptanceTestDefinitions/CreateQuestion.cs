@@ -124,6 +124,26 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
               base.isTakeScreenShotDuringEntryExit);
         }
         /// <summary>
+        /// Create Grader IT Question In CourseSpace.
+        /// </summary>
+        /// <param name="questionTypeEnum">This is Question Type Enum.</param>
+        /// <param name="projectName">This is Project Name.</param>
+        [When(@"I create ""(.*)"" grader IT Question using ""(.*)"" project in 'CourseSpace'")]
+        public void CreateGraderITQuestionInCourseSpace(
+            Question.QuestionTypeEnum questionTypeEnum, String projectName)
+        {
+            // Create Grader IT Question In Manage Question Bank
+            Logger.LogMethodEntry("CreateQuestion",
+                "CreateGraderITQuestionInManageQuestionBank",
+                 base.isTakeScreenShotDuringEntryExit);
+            //Create The GraderIT Question In Manage Question Bank
+            new AutoGraderPage().
+                CreateTheGraderITQuestionInCourseSpace(questionTypeEnum, projectName);
+            Logger.LogMethodExit("CreateQuestion",
+                "CreateGraderITQuestionInManageQuestionBank",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
         /// Click On Cmenu Option Of Question.
         /// </summary>
         /// <param name="questionCmenuOption">This is Question Cmenu Option.</param>
@@ -195,7 +215,24 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
               base.isTakeScreenShotDuringEntryExit);
 
         }
-        
+
+        /// <summary>
+        /// Verify the 'Edit Grader Project Instruction' control on the Page.
+        /// </summary>
+        [Then("I should see instead of 'Preference', 'Edit Grader Project Instruction' is visible")]
+        public void DisplayEditGraderProjectInstruction()
+        {
+            // Method To Verify 'Edit Grader Project Instruction' control on the Page
+            Logger.LogMethodEntry("CreateQuestion", "DisplayTheSuccessfullMessage",
+                base.isTakeScreenShotDuringEntryExit);
+            //Asserts To Verify 'Edit Grader Project Instruction' control on the Page
+            Logger.LogAssertion("VerifyTheEditGraderProjectInstruction",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.IsTrue( new AutoGraderPage().
+              DisplayEditGraderProjectInstruction()));           
+            Logger.LogMethodExit("CreateQuestion", "DisplayTheSuccessfullMessage",
+                base.isTakeScreenShotDuringEntryExit);
+        }
 
     }
 }

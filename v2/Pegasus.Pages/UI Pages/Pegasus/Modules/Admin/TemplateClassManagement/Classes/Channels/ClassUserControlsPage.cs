@@ -77,6 +77,8 @@ namespace Pegasus.Pages.UI_Pages
                 this.StoreTemplateClassDetailsInMemory(getClassName);
                 Thread.Sleep(Convert.ToInt32(ClassUserControlsPageResource.
                     ClassUserControls_SleepTime_Value));
+                //Select Create Class Window
+                this.SelectCreateClassWindow();
                 //Select the Create Class Frame
                 this.SelectCreateClassFrame();
                 base.WaitForElement(By.Id(ClassUserControlsPageResource.

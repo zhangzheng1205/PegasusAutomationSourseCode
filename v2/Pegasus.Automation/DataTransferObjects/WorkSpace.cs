@@ -50,7 +50,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static WorkSpace Get(WorkSpaceTypeEnum workSpaceType)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<WorkSpace>(x => x.WorkSpaceType == workSpaceType && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).First();
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static WorkSpace Get(String workSpace)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<WorkSpace>(x => x.Name == workSpace && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First(); ;
+                x => x.CreationDate).First(); ;
         }
     }
 }

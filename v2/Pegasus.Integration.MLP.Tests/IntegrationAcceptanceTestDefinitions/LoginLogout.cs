@@ -5,6 +5,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using Pegasus.Integration.Hed.MLP.Tests.IntegrationAcceptanceTestDefinitions;
 
 namespace Pegasus.Integration.MLP.Tests.
     IntegrationAcceptanceTestDefinitions

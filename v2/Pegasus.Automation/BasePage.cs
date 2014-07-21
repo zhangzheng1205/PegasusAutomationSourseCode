@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium.Interactions;
 using Keys = OpenQA.Selenium.Keys;
+using System.Collections.ObjectModel;
 namespace Pearson.Pegasus.TestAutomation.Frameworks
 {
     /// <summary>
@@ -265,7 +267,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Click the Link element by locating it's Id.
         /// </summary>
         /// <param name="idAttributeValue">This is the Id Attribute Value.</param>
-        protected void ClickLinkByID(String idAttributeValue)
+        protected void ClickLinkById(String idAttributeValue)
         {
             ClickButton(By.Id(idAttributeValue));
         }
@@ -274,7 +276,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Select the Tab element by locating it's Id.
         /// </summary>
         /// <param name="idAttributeValue">This is the Id Attribute Value.</param>
-        protected void SelectTabByID(String idAttributeValue)
+        protected void SelectTabById(String idAttributeValue)
         {
             ClickButton(By.Id(idAttributeValue));
         }
@@ -469,6 +471,56 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             FillEmptyText(By.XPath(xPathValue));
         }
 
+        /// <summary>
+        /// Simulate focus on element by Moves the mouse to the middle of the element. 
+        /// The element is scrolled into view and its location is calculated using getBoundingClientRect.
+        /// </summary>
+        /// <param name="iWebElement">Defines the interface through which the user controls elements on the page.</param>
+        /// <remarks>This is working with google chome and other browsers.</remarks>
+        private void PerformFocusOnElementAction(IWebElement iWebElement)
+        {
+            PerformMoveToElementAction(iWebElement);
+        }
+
+        /// <summary>
+        /// Simulate focus on element id by Moves the mouse to the middle of the element. 
+        /// The element is scrolled into view and its location is calculated using getBoundingClientRect.
+        /// </summary>
+        /// <param name="idLocator">Defines the interface by locating element Id through which 
+        /// the user controls elements on the page.</param>
+        /// <remarks>This is working with google chome and other browsers.</remarks>
+        protected void PerformFocusOnElementActionById(string idLocator)
+        {
+            IWebElement IdLoctorProperty = GetWebElementPropertiesById(idLocator);
+            PerformFocusOnElementAction(IdLoctorProperty);
+        }
+
+        /// <summary>
+        /// Simulate focus on element xpath by Moves the mouse to the middle of the element. 
+        /// The element is scrolled into view and its location is calculated using getBoundingClientRect.
+        /// </summary>
+        /// <param name="xPathLocator">Defines the interface by locating element xpath through which 
+        /// the user controls elements on the page.</param>
+        /// <remarks>This is working with google chome and other browsers.</remarks>
+        protected void PerformFocusOnElementActionByXPath(string xPathLocator)
+        {
+            IWebElement IdLoctorProperty = GetWebElementPropertiesByXPath(xPathLocator);
+            PerformFocusOnElementAction(IdLoctorProperty);
+        }
+
+        /// <summary>
+        /// Simulate focus on element xpath by Moves the mouse to the middle of the element. 
+        /// The element is scrolled into view and its location is calculated using getBoundingClientRect.
+        /// </summary>
+        /// <param name="xPathLocator">Defines the interface by locating element class name through which 
+        /// the user controls elements on the page.</param>
+        /// <remarks>This is working with google chome and other browsers.</remarks>
+        protected void PerformFocusOnElementActionByClassName(string classNameLocator)
+        {
+            IWebElement IdLoctorProperty = GetWebElementPropertiesByClassName(classNameLocator);
+            PerformFocusOnElementAction(IdLoctorProperty);
+        }
+
 
         #endregion
 
@@ -551,6 +603,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected void SwitchToDefaultWindow()
         {
             WebDriver.SwitchTo().Window(WebDriver.WindowHandles.First());
+        }
+
+        /// <summary>
+        /// Send future commands to select a last frame or window.
+        /// </summary>
+        /// <see cref="List{T}">Return a set of window handles which can be used to iterate over all open windows
+        ///  of this webdriver instance by passing them to #switchTo().window(String)</see>
+        protected void SwitchToLastOpenedWindow()
+        {
+            WebDriver.SwitchTo().Window(WebDriver.WindowHandles.ToList().Last());
         }
 
         #endregion
@@ -928,7 +990,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Get the value of href of the element by locating Xpath value.
         /// </summary>
-        /// <param name="xPathValue"> Retrieves The name of the attribute by locating Xpath value.</param>
+        /// <param name="xPathValue">Retrieves The name of the attribute by locating Xpath value.</param>
         /// <returns>The attribute's current value or null if the value is not set by locating Xpath value.</returns>
         protected string GetHrefAttributeValueByXPath(String xPathValue)
         {
@@ -1058,6 +1120,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Get the value of a the given class of the element by locating PartialLinkText attribute value.
+        /// </summary>
+        /// <param name="partialLinkTextAttributeValue"> Retrieves The name of the attribute by locating 
+        /// PartialLinkText attribute value.</param>
+        /// <returns>The attribute's current value or null if the value is not 
+        /// set by locating PartialLinkText attribute value.</returns>
+        protected String GetClassAttributeValueByPartialLinkText(String partialLinkTextAttributeValue)
+        {
+            return GetClassAttributeValue(By.PartialLinkText(partialLinkTextAttributeValue));
+        }
+
+        /// <summary>
         /// Get the style attribute value of a web element.
         /// </summary>
         /// <param name="by">This is HTML element locating mechanism to use.</param>
@@ -1074,7 +1148,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Get the value of a the given id of the element by locating style attribute value.
         /// </summary>
-        /// <param name="xPathValue"> Retrieves the style of the attribute by locating id attribute value.</param>
+        /// <param name="idAttributeValue"> Retrieves the style of the attribute by locating id attribute value.</param>
         /// <remarks>This helps to locate the color of a webelement in hexadecimal format.</remarks>
         /// <returns>The attribute's current value or null if the value is not set by locating Id attribute value.</returns>
         protected String GetStyleAttributeValueById(String idAttributeValue)
@@ -1102,9 +1176,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="by">This is HTML element locating mechanism to use.</param>
         /// <returns>True if the element is currently selected or checked, false otherwise.</returns>
-        /// <see cref="Selected">Determine whether or not this element is selected or not. 
+        /// <see>Determine whether or not this element is selected or not. 
         /// This operation only applies to input elements such as checkboxes, 
-        /// options in a select and radio buttons.</see>
+        /// options in a select and radio buttons.
+        ///     <cref>Selected</cref>
+        /// </see>
         protected Boolean IsElementSelected(By by)
         {
             return WebDriver.FindElement(by).Selected;
@@ -1149,7 +1225,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="id">This is HTML attribute Id value.</param>
         /// <param name="selectTextValue">The visible text to match against by id attribute of the HTML element.</param>
-        protected void SelectDropDownValueThroughTextByID(String id, String selectTextValue)
+        protected void SelectDropDownValueThroughTextById(String id, String selectTextValue)
         {
             SelectDropDownValueByText(By.Id(id), selectTextValue);
         }
@@ -1180,9 +1256,76 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="idAttributeValue">The option at this index will be selected by id attribute of the HTML element.</param>
         /// <param name="indexValue">The option at this index will be selected.</param>
-        protected void SelectDropDownValueThroughIndexByID(String idAttributeValue, int indexValue)
+        protected void SelectDropDownValueThroughIndexById(String idAttributeValue, int indexValue)
         {
             SelectDropDownValueByIndex(By.Id(idAttributeValue), indexValue);
+        }
+
+        /// <summary>
+        /// Select the option from the given list of options attribute and match with expected option value.
+        /// This is done by examing the "option"  attribute of an element, and merely by listing.
+        /// </summary>
+        /// <param name="by">>This is HTML element locating mechanism to use.</param>
+        /// <param name="optionName">This is a name of the option.</param>
+        /// <see cref="IWebElement">he IWebElement interface represents an HTML element. 
+        /// Generally, all interesting operations to do with interacting with a page will be performed through this interface</see>
+        private void SelectDropDownValueByTagNameOption(By by, string optionName)
+        {
+            IWebElement select = WebDriver.FindElement(by);
+            IList<IWebElement> options = select.FindElements(By.TagName("option"));
+            foreach (IWebElement option in options)
+            {
+                if (option.Text.Equals(optionName))
+                {
+                    ClickByJavaScriptExecutor(option);
+                    Thread.Sleep(500);
+                    break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Select the option from the given list of options attribute and match with expected option value.
+        /// This is done by examing the "option"  attribute of an element, and merely by listing.
+        /// </summary>
+        /// <param name="idLocatorValue">>This is HTML element locating mechanism through id.</param>
+        /// <param name="optionName">This is a name of the drop down option.</param>
+        protected void SelectDropDownOptionById(string idLocatorValue, string optionName)
+        {
+            SelectDropDownValueByTagNameOption(By.Id(idLocatorValue), optionName);
+        }
+
+        /// <summary>
+        /// Select the option from the given list of options attribute and match with expected option value.
+        /// This is done by examing the "option"  attribute of an element, and merely by listing.
+        /// </summary>
+        /// <param name="classNameLocatorValue">>This is HTML element locating mechanism through class name.</param>
+        /// <param name="optionName">This is a name of the drop down option.</param>
+        protected void SelectDropDownOptionByClassName(string classNameLocatorValue, string optionName)
+        {
+            SelectDropDownValueByTagNameOption(By.ClassName(classNameLocatorValue), optionName);
+        }
+
+        /// <summary>
+        /// Select the option from the given list of options attribute and match with expected option value.
+        /// This is done by examing the "option"  attribute of an element, and merely by listing.
+        /// </summary>
+        /// <param name="nameLocatorValue">>This is HTML element locating mechanism through name.</param>
+        /// <param name="optionName">This is a name of the drop down option.</param>
+        protected void SelectDropDownOptionByName(string nameLocatorValue, string optionName)
+        {
+            SelectDropDownValueByTagNameOption(By.Name(nameLocatorValue), optionName);
+        }
+
+        /// <summary>
+        /// Select the option from the given list of options attribute and match with expected option value.
+        /// This is done by examing the "option"  attribute of an element, and merely by listing.
+        /// </summary>
+        /// <param name="cssSelectorLocatorValue">>This is HTML element locating mechanism through css selector.</param>
+        /// <param name="optionName">This is a name of the drop down option.</param>
+        protected void SelectDropDownOptionByCssSelector(string cssSelectorLocatorValue, string optionName)
+        {
+            SelectDropDownValueByTagNameOption(By.CssSelector(cssSelectorLocatorValue), optionName);
         }
 
         #endregion
@@ -1447,18 +1590,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected void CloseBrowserWindow()
         {
             WebDriver.Close();
+            Thread.Sleep(1000);
         }
 
-        /// <summary>
-        /// Send future commands to select a last frame or window.
-        /// </summary>
-        /// <see cref="List{T}">Return a set of window handles which can be used to iterate over all open windows
-        ///  of this webdriver instance by passing them to #switchTo().window(String)</see>
-        protected void SwitchToLastOpenedWindow()
+        protected int GetCurrentOpenWindowsCount()
         {
-            List<string> handles = WebDriver.WindowHandles.ToList();
-            WebDriver.SwitchTo().Window(handles.Last());
+            ReadOnlyCollection<string> windowHandles = WebDriver.WindowHandles;
+            return windowHandles.Count();
         }
+
+
 
         #endregion
 

@@ -106,6 +106,42 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PCTInstructorResourceToolbarURLPPE.
+        /// </summary>
+        internal static string PCTInstructorResourceToolsPPE_Key {
+            get {
+                return ResourceManager.GetString("PCTInstructorResourceToolsPPE_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PCTInstructorResourceToolbarURLPROD.
+        /// </summary>
+        internal static string PCTInstructorResourceToolsPROD_Key {
+            get {
+                return ResourceManager.GetString("PCTInstructorResourceToolsPROD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PCTInstructorResourceToolbarURLST.
+        /// </summary>
+        internal static string PCTInstructorResourceToolsST_Key {
+            get {
+                return ResourceManager.GetString("PCTInstructorResourceToolsST_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PCTInstructorResourceToolbarURLVM.
+        /// </summary>
+        internal static string PCTInstructorResourceToolsVM_Key {
+            get {
+                return ResourceManager.GetString("PCTInstructorResourceToolsVM_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PEG_AUTOMATION_CSURL.
         /// </summary>
         internal static string PEG_AUTOMATION_CSURL_Key {

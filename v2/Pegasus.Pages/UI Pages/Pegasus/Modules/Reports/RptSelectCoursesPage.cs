@@ -49,7 +49,7 @@ namespace Pegasus.Pages.UI_Pages
                //Wait for the selct option dropdown for class
                base.WaitForElement(By.Id(RptSelectCoursesPageResource.
                    RptSelectCourses_Page_SelectClass_Dropdown_Id_Locator));
-               base.SelectDropDownValueThroughIndexByID(RptSelectCoursesPageResource.
+               base.SelectDropDownValueThroughIndexById(RptSelectCoursesPageResource.
                    RptSelectCourses_Page_SelectClass_Dropdown_Id_Locator,
                     Convert.ToInt32(RptSelectCoursesPageResource.
                    RptSelectCourses_Page_SelectClass_Dropdown_Value));

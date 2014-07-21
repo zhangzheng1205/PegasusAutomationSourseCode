@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(MyAccountSettingPageResource.
                     MyAccountSetting_Page_TimeZone_DropDown_Id_Locator));
                 // Select TimeZone from Drop down
-                base.SelectDropDownValueThroughTextByID(MyAccountSettingPageResource.
+                base.SelectDropDownValueThroughTextById(MyAccountSettingPageResource.
                     MyAccountSetting_Page_TimeZone_DropDown_Id_Locator, timeZone);               
                 base.WaitForElement(By.Id(MyAccountSettingPageResource.
                     MyAccountSetting_Page_Save_Button_Id_Locator));
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(MyAccountSettingPageResource.
                     MyAccountSetting_Page_TimeZone_DropDown_Id_Locator));
                 // Select TimeZone from Drop down
-                base.SelectDropDownValueThroughTextByID(MyAccountSettingPageResource.
+                base.SelectDropDownValueThroughTextById(MyAccountSettingPageResource.
                     MyAccountSetting_Page_TimeZone_DropDown_Id_Locator, timeZone);
                 //Click Save Button
                 base.FocusOnElementByID(MyAccountSettingPageResource.
@@ -180,7 +180,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(MyAccountSettingPageResource.
                     MyAccountSetting_Page_LocalePreferences_Id_Locator));
                 //Select Time Format
-                base.SelectDropDownValueThroughTextByID(MyAccountSettingPageResource.
+                base.SelectDropDownValueThroughTextById(MyAccountSettingPageResource.
                     MyAccountSetting_Page_LocalePreferences_Id_Locator, timeFormat);
             }
             catch (Exception e)
@@ -203,7 +203,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_ScreenLanguage_Id_Locator));
             //Select Language
-            base.SelectDropDownValueThroughTextByID(MyAccountSettingPageResource.
+            base.SelectDropDownValueThroughTextById(MyAccountSettingPageResource.
                 MyAccountSetting_Page_ScreenLanguage_Id_Locator, languageType);
             logger.LogMethodExit("MyAccountSettingPage", "ChangeScreenLanguage",
                base.isTakeScreenShotDuringEntryExit);
@@ -222,7 +222,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_HelpLanguage_Id_Locator));
             //Select Help Language
-            base.SelectDropDownValueThroughTextByID(MyAccountSettingPageResource.
+            base.SelectDropDownValueThroughTextById(MyAccountSettingPageResource.
                 MyAccountSetting_Page_HelpLanguage_Id_Locator, helpLanguageType);
             logger.LogMethodExit("MyAccountSettingPage", "ChangeHelpLanguage",
               base.isTakeScreenShotDuringEntryExit);
@@ -239,7 +239,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocalePrefernceNumber_Id_Locator));
             //Select Locale Prefernce Number Value
-            base.SelectDropDownValueThroughIndexByID(MyAccountSettingPageResource.
+            base.SelectDropDownValueThroughIndexById(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocalePrefernceNumber_Id_Locator, Convert.ToInt32(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocalePrefernces_DropDownValue));
             logger.LogMethodExit("MyAccountSettingPage", "ChangeLocalePrefernceNumberValue",
@@ -257,7 +257,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocaleTimeDisplay_Id_Locator));
             //Change Locale Prefernce Time Display
-            base.SelectDropDownValueThroughIndexByID(MyAccountSettingPageResource.
+            base.SelectDropDownValueThroughIndexById(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocaleTimeDisplay_Id_Locator, 
                 Convert.ToInt32(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocalePrefernces_DropDownValue));
@@ -276,7 +276,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocaleDateDisplay_Id_Locator));
             //Change Locale Prefernce Date Display
-            base.SelectDropDownValueThroughIndexByID(MyAccountSettingPageResource.
+            base.SelectDropDownValueThroughIndexById(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocaleDateDisplay_Id_Locator,
                 Convert.ToInt32(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocalePrefernces_DropDownValue));
@@ -295,7 +295,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocaleLongDate_Id_Locator));
             //Change Locale prefernce Long Date
-            base.SelectDropDownValueThroughIndexByID(MyAccountSettingPageResource.
+            base.SelectDropDownValueThroughIndexById(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocaleLongDate_Id_Locator, 
                 Convert.ToInt32(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocalePrefernces_DropDownValue));

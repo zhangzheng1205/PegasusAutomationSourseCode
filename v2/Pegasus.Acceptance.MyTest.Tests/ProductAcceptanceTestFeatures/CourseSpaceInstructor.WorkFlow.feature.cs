@@ -70,20 +70,6 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestFeatures
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 7
-#line 8
-testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add TestBank From Catalog by SMS Instructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
@@ -92,19 +78,12 @@ testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTal
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add TestBank From Catalog by SMS Instructor", new string[] {
                         "InsCourse"});
-#line 16
+#line 10
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 17
+#line 11
 testRunner.When("I add TestBank from Course type \"MySpanishLabMaster\" course from Search Catalog", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
+#line 12
 testRunner.Then("I should see \"MyTestBankCourse\" on the Global Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 19
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -115,19 +94,12 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void ValidateTestBankCourseToGetOutFromAssignedToCopyState()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate TestBank Course To Get Out From Assigned To Copy State", ((string[])(null)));
-#line 23
+#line 16
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 24
+#line 17
 testRunner.When("I select course to validate Inactive State to Active State on Global Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 25
+#line 18
 testRunner.Then("I should see \"MyTestBankCourse\" on the Global Home page in Active State", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 26
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -138,14 +110,12 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void ToVerifyTheFunctionalityOfCheckBoxEnableOnTheUpgradeTextPopUp()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To verify the functionality of check box Enable on the \"Upgrade text pop up\"", ((string[])(null)));
-#line 31
+#line 23
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 32
+#line 24
 testRunner.When("I click on Up arrow image followed by Upgrade Available link of the \"MyTestBankCo" +
                     "urse\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 33
+#line 25
 testRunner.Then("I should see the Keep My Test course check box which is enabled by default on Upg" +
                     "rade Popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -158,17 +128,15 @@ testRunner.Then("I should see the Keep My Test course check box which is enabled
         public virtual void ToVerifyTheAvailabilityOfUpgradeToTextImageOptionInsideCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To verify the availability of Upgrade to Text/ Image option inside course", ((string[])(null)));
-#line 37
+#line 30
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 38
-testRunner.When("I enter in the \"MyTestBankCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 39
-testRunner.And("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
-testRunner.And("I click on Upgrade to Link inside course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 41
+#line 31
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 33
+testRunner.When("I click on Upgrade to Link inside course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 34
 testRunner.Then("I should be on the \"frmUpgrade\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -180,36 +148,24 @@ testRunner.Then("I should be on the \"frmUpgrade\" page", ((string)(null)), ((Te
         public virtual void ToCheckTheSavedPreferencesChangesToTheActivityBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To check the Saved Preferences changes to the activity By SMS Instructor", ((string[])(null)));
-#line 45
+#line 39
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 46
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 47
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 48
+#line 40
 testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 49
+#line 41
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
+#line 42
 testRunner.And("I should see \"MyTest\" activity in the MyCourse Frame in CourseSpace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 51
+#line 43
 testRunner.When("I click the activity ShowHide cmenu option in MyCourse Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 52
+#line 44
 testRunner.And("I click the activity cmenu option in MyCourse Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 53
+#line 45
 testRunner.And("I click on \"Edit\" cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 54
+#line 46
 testRunner.And("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
+#line 47
 testRunner.Then("I should see the \'Allow students to Try Again\' checkbox selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 56
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 57
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -220,25 +176,18 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void UpgradeTheMyTestCourseToInstructorCourseBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Upgrade the MyTestCourse to Instructor Course by SMS Instructor", ((string[])(null)));
-#line 60
+#line 51
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 61
-testRunner.When("I enter in the \"MyTestBankCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
-testRunner.And("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 63
-testRunner.And("I click on Upgrade to Link inside course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 64
+#line 52
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 53
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 54
+testRunner.When("I click on Upgrade to Link inside course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 55
 testRunner.Then("I should be on the \"frmUpgrade\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 65
+#line 56
 testRunner.When("I click on \'OK\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
-testRunner.And("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 67
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -251,19 +200,12 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate Upgrade Instructor Course To Get Out From Assigned To Copy State by SMS " +
                     "Instructor", ((string[])(null)));
-#line 70
+#line 60
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 71
+#line 61
 testRunner.When("I select course to validate Inactive State to Active State on Global Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 72
+#line 62
 testRunner.Then("I should see \"MyTestInstructorCourse\" on the Global Home page in Active State", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 73
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 74
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -274,29 +216,17 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreateNewTestBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create New Test By SMS Instructor", ((string[])(null)));
-#line 78
+#line 67
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 79
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 80
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 81
+#line 68
 testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 82
+#line 69
 testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 83
+#line 70
 testRunner.When("I click on the \"Create New Test\" link in Manage Your Tests and created Test using" +
                     " \"TrueFalse\" question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 84
+#line 71
 testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 85
-testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 86
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -307,28 +237,16 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void DisplayOfViewAllTestButtonInsideATestBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of View All Test Button inside a Test By SMS Instructor", ((string[])(null)));
-#line 90
+#line 76
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 91
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 92
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 93
+#line 77
 testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 94
+#line 78
 testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 95
+#line 79
 testRunner.When("I select \"Open\" c-menu option from \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 96
+#line 80
 testRunner.Then("I should see the \"View all tests\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 97
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 98
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -339,32 +257,20 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void VerifyTheFuntionalityOfViewAllTestButtonInsideATest()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the Funtionality of View All Test button inside a Test", ((string[])(null)));
-#line 102
+#line 85
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 103
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 104
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 105
+#line 86
 testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 106
+#line 87
 testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 107
+#line 88
 testRunner.When("I select \"Open\" c-menu option from \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 108
+#line 89
 testRunner.Then("I should see the \"View all tests\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 109
+#line 90
 testRunner.When("I click on \'View all tests\' button inside test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 110
+#line 91
 testRunner.Then("I should navigate back to \"Manage Your Tests\" Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 111
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 112
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -375,26 +281,16 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void DisplayOfDownloadOptionInTestFolderBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Download option in Test Folder By SMS Instructor", ((string[])(null)));
-#line 116
+#line 96
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 117
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 118
-testRunner.And("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 119
+#line 97
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 98
 testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 120
+#line 99
 testRunner.When("I select \"Open\" c-menu option from \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 121
+#line 100
 testRunner.Then("I should see the \"Download\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 122
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 123
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -405,20 +301,15 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void FunctionalityOfDownloadOptionBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Functionality of Download option By SMS Instructor", ((string[])(null)));
-#line 127
+#line 105
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 128
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 129
-testRunner.And("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 130
+#line 106
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 107
 testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 131
+#line 108
 testRunner.When("I select \"Open\" c-menu option from \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 132
+#line 109
 testRunner.And("I click on the \'Download\' options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -439,13 +330,8 @@ testRunner.And("I click on the \'Download\' options", ((string)(null)), ((TechTa
             table1.AddRow(new string[] {
                         "Blackboard Vista(WebCT)",
                         "Blackboard Vista(WebCT)"});
-#line 133
+#line 110
 testRunner.Then("I should able to see Display of Download cmenu options for test", ((string)(null)), table1, "Then ");
-#line 140
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 141
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -456,39 +342,31 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void DownloadingTheQuestionsInWordFormatBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Downloading the questions in word format By SMS Instructor", ((string[])(null)));
-#line 145
+#line 121
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 146
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 147
-testRunner.And("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 148
-testRunner.And("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 149
+#line 122
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 123
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 124
+testRunner.When("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 125
 testRunner.Then("I should see print details are in disabled state by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 150
+#line 126
 testRunner.When("I select the \"Create multiple versions\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 151
+#line 127
 testRunner.Then("I should see \"Scramble question order\" dropdown option is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 152
+#line 128
 testRunner.When("I select the \"Include area for student response\" checkbox on My Test Download Pag" +
                     "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 153
+#line 129
 testRunner.Then("I should see \"As blank on left side of test\" radio is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 154
+#line 130
 testRunner.When("I select the \"Include answer key in\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 155
+#line 131
 testRunner.Then("I should see \"Separate file\" radio button is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 156
+#line 132
 testRunner.When("I click On cancel button on MyTest download popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 157
-testRunner.And("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 158
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -499,39 +377,31 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void DownloadingTheQuestionsInPDFFormatBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Downloading the questions in PDF format By SMS Instructor", ((string[])(null)));
-#line 162
+#line 137
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 163
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 164
-testRunner.And("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 165
-testRunner.And("I select \"Download as PDF (.pdf)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 166
+#line 138
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 139
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 140
+testRunner.When("I select \"Download as PDF (.pdf)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 141
 testRunner.Then("I should see print details are in disabled state by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 167
+#line 142
 testRunner.When("I select the \"Create multiple versions\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 168
+#line 143
 testRunner.Then("I should see \"Scramble question order\" dropdown option is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 169
+#line 144
 testRunner.When("I select the \"Include area for student response\" checkbox on My Test Download Pag" +
                     "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 170
+#line 145
 testRunner.Then("I should see \"As blank on left side of test\" radio is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 171
+#line 146
 testRunner.When("I select the \"Include answer key in\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 172
+#line 147
 testRunner.Then("I should see \"Separate file\" radio button is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 173
+#line 148
 testRunner.When("I click On cancel button on MyTest download popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 174
-testRunner.And("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 175
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -542,18 +412,13 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void OptionsCmenuForTestFolderBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Options Cmenu for Test Folder By SMS Instructor", ((string[])(null)));
-#line 179
+#line 153
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 180
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 181
-testRunner.And("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 182
+#line 154
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 155
 testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 183
+#line 156
 testRunner.When("I click on c-menu option of \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -586,13 +451,8 @@ testRunner.When("I click on c-menu option of \"MyTest\" activity", ((string)(nul
             table2.AddRow(new string[] {
                         "Delete",
                         "Delete"});
-#line 184
+#line 157
 testRunner.Then("I should able to see Display of cmenu options for test created", ((string)(null)), table2, "Then ");
-#line 195
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 196
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -605,29 +465,21 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creating New Test with Adding the 500 Questions to the test from Testbank Using \"" +
                     "Number of Random Questions to add\" option By SMS Instructor", ((string[])(null)));
-#line 200
+#line 172
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 201
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 202
-testRunner.And("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 203
-testRunner.And("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 204
+#line 173
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 174
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 175
+testRunner.When("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 176
 testRunner.And("I Enter \"500\" question to add randon question to MyTest", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 205
+#line 177
 testRunner.Then("I should see validation message \"You are about to add or copy questions that are " +
                     "already included in your test. Do you want to create duplicate test questions?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 206
+#line 178
 testRunner.When("I click on \'OK\' button in \"Pegasus\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 207
-testRunner.And("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 208
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -638,28 +490,20 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void DisplayOfNumberOfTestVersionsBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Number of Test Versions By SMS Instructor", ((string[])(null)));
-#line 212
+#line 183
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 213
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 214
-testRunner.And("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 215
-testRunner.And("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 216
+#line 184
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 185
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 186
+testRunner.When("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 187
 testRunner.And("I enter \"3\" in the Create Multiple Versions text box and click on the ok button i" +
                     "n Print pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 217
+#line 188
 testRunner.Then("I should see \"3\" versions entered in the Print pop up should be displayed in the " +
                     "Multiple version pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 218
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 219
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -670,31 +514,89 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void FunctionalityOfNumberOfTestVersionsBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Functionality of Number of Test Versions By SMS Instructor", ((string[])(null)));
-#line 223
+#line 193
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 224
-testRunner.When("I enter in the \"MyTestInstructorCourse\" from the Global Home page as \"CsSmsInstru" +
-                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 225
-testRunner.And("I select the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 226
-testRunner.And("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 227
+#line 194
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 195
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 196
+testRunner.When("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 197
 testRunner.And("I enter \"1\" in the Create Multiple Versions text box and click on the ok button i" +
                     "n Print pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 228
+#line 198
 testRunner.Then("I should see \"1\" versions entered in the Print pop up should be displayed in the " +
                     "Multiple version pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 229
+#line 199
 testRunner.And("I should see Select the links you want to download: should be displayed with \"MyT" +
                     "est\" name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 230
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 231
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deleting the Test in Manage your test Frame By SMS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void DeletingTheTestInManageYourTestFrameBySMSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deleting the Test in Manage your test Frame By SMS Instructor", ((string[])(null)));
+#line 205
+this.ScenarioSetup(scenarioInfo);
+#line 206
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 207
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 208
+testRunner.When("I click on the \"Create New Test\" link in Manage Your Tests and created Test using" +
+                    " \"TrueFalse\" question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 209
+testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 210
+testRunner.When("I select \"Delete\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 211
+testRunner.And("I click on \'OK\' button in confirmation popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 212
+testRunner.Then("I should see the successfull message \"Test deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Display of Test options in Manage your Test frame action row By SMS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void DisplayOfTestOptionsInManageYourTestFrameActionRowBySMSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Test options in Manage your Test frame action row By SMS Instructor", ((string[])(null)));
+#line 217
+this.ScenarioSetup(scenarioInfo);
+#line 218
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 219
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 220
+testRunner.And("I should see the Display of Test options headers in manage your tests frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Creating New Test with Essay Question By SMS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void CreatingNewTestWithEssayQuestionBySMSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creating New Test with Essay Question By SMS Instructor", ((string[])(null)));
+#line 225
+this.ScenarioSetup(scenarioInfo);
+#line 226
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 227
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 228
+testRunner.When("I click on the \"Create New Test\" link in Manage Your Tests and created Test using" +
+                    " \"Essay\" question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 229
+testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

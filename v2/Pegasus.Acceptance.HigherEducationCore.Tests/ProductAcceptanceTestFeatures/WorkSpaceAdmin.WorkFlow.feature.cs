@@ -70,37 +70,25 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.ProductAcceptanceTestFeat
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 6
-#line 8
-testRunner.Given("I browsed the login url for \"HedWsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I logged into the Pegasus as \"HedWsAdmin\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.Given("I am on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Teacher by Ws Admin")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpaceAdmin")]
         public virtual void CreateTeacherByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Teacher by Ws Admin", ((string[])(null)));
-#line 14
+#line 7
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 15
+#line 8
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
 testRunner.When("I click on the \"Create New User\" link in \"left\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
+#line 11
 testRunner.Then("I should see the \"Create New User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 17
+#line 12
 testRunner.When("I create a new \"HedWsInstructor\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
+#line 13
 testRunner.Then("I should see the successfull message \"New user created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -112,17 +100,19 @@ testRunner.Then("I should see the successfull message \"New user created success
         public virtual void CreateStudentByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Student by Ws Admin", ((string[])(null)));
-#line 22
+#line 17
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 23
+#line 18
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 19
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 20
 testRunner.When("I click on the \"Create New User\" link in \"left\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
+#line 21
 testRunner.Then("I should see the \"Create New User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 25
+#line 22
 testRunner.When("I create a new \"HedWsStudent\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
+#line 23
 testRunner.Then("I should see the successfull message \"New user created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -134,22 +124,24 @@ testRunner.Then("I should see the successfull message \"New user created success
         public virtual void CreateMasterCourseByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Master Course by Ws Admin", ((string[])(null)));
-#line 30
+#line 27
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 31
+#line 28
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 30
 testRunner.When("I click on the \"Create New Courses\" link in \"right\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
+#line 31
 testRunner.Then("I should see the \"Create New Courses\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 33
+#line 32
 testRunner.When("I create a new \"MySpanishLabMaster\" course by selecting \"General Course\" format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 33
 testRunner.Then("I should see the successfull message \"New course created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 35
+#line 34
 testRunner.When("I search \"MySpanishLabMaster\" course in workspace by \"CourseName\" and \"Equals\" dr" +
                     "opdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 36
+#line 35
 testRunner.Then("I should see the searched \"MySpanishLabMaster\" course in Manage Courses frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -161,18 +153,20 @@ testRunner.Then("I should see the searched \"MySpanishLabMaster\" course in Mana
         public virtual void CourseCopyCreationInOtherWorkspaceByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Course Copy Creation in other Workspace by Ws Admin", ((string[])(null)));
-#line 40
+#line 39
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
+#line 40
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 41
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 42
 testRunner.When("I search \"MySpanishLabAuthored\" course in workspace by \"CourseName\" and \"Equals\" " +
                     "dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 42
-testRunner.Then("I should be able to see the searched \"MySpanishLabAuthored\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 43
-testRunner.When("I create course copy to other workspace as \"MySpanishLabCopiedMaster\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be able to see the searched \"MySpanishLabAuthored\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 44
+testRunner.When("I create course copy to other workspace as \"MySpanishLabCopiedMaster\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 45
 testRunner.Then("I should see the successfull message \"Copied as master course.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -184,23 +178,25 @@ testRunner.Then("I should see the successfull message \"Copied as master course.
         public virtual void CourseCopyCreationAsTestingCourseByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Course Copy Creation as Testing Course by Ws Admin", ((string[])(null)));
-#line 48
-this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
 #line 49
+this.ScenarioSetup(scenarioInfo);
+#line 50
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 51
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 52
 testRunner.When("I search \"MySpanishLabAuthored\" course in workspace by \"CourseName\" and \"Equals\" " +
                     "dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 50
-testRunner.Then("I should be able to see the searched \"MySpanishLabAuthored\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 51
-testRunner.When("I create testing type course copy as \"MySpanishLabTestingMaster\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 52
-testRunner.Then("I should see the successfull message \"Copied as test course.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 53
+testRunner.Then("I should be able to see the searched \"MySpanishLabAuthored\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 54
+testRunner.When("I create testing type course copy as \"MySpanishLabTestingMaster\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 55
+testRunner.Then("I should see the successfull message \"Copied as test course.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 56
 testRunner.When("I verified the course \"MySpanishLabTestingMaster\" for AssignedToCopy state by \"Co" +
                     "urseName\" and \"Equals\" dropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
+#line 57
 testRunner.Then("I should see the Copied \"MySpanishLabTestingMaster\" Course Out Of Assigned to Cop" +
                     "y State", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -213,22 +209,24 @@ testRunner.Then("I should see the Copied \"MySpanishLabTestingMaster\" Course Ou
         public virtual void EnrollTeacherInMasterCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll Teacher in Master Course by WS Admin", ((string[])(null)));
-#line 58
+#line 61
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 59
+#line 62
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 63
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 64
 testRunner.When("I search \"MySpanishLabMaster\" course in workspace by \"CourseName\" and \"Equals\" dr" +
                     "opdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 60
+#line 65
 testRunner.Then("I should be able to see the searched \"MySpanishLabMaster\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 61
+#line 66
 testRunner.When("I select the created \"MySpanishLabMaster\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
+#line 67
 testRunner.And("I select the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 63
+#line 68
 testRunner.When("I enrolled the \"HedWsInstructor\" in the Master course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
+#line 69
 testRunner.Then("I should see the successfull message \"Instructors enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -242,18 +240,20 @@ testRunner.Then("I should see the successfull message \"Instructors enrolled suc
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Publish Master Course by Ws Admin", new string[] {
                         "PublishCourse"});
-#line 69
+#line 74
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 70
+#line 75
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 76
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 77
 testRunner.When("I search \"MySpanishLabMaster\" course in workspace by \"CourseName\" and \"Equals\" dr" +
                     "opdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 71
+#line 78
 testRunner.Then("I should be able to see the searched \"MySpanishLabMaster\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 72
+#line 79
 testRunner.When("I publish the Authored \"MySpanishLabMaster\" in workspace as \"Master Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 73
+#line 80
 testRunner.Then("I should see the successfull message \"Course published successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -265,22 +265,24 @@ testRunner.Then("I should see the successfull message \"Course published success
         public virtual void CreateNewGeneralCourseByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create New General Course by Ws Admin", ((string[])(null)));
-#line 78
+#line 85
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 79
+#line 86
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 87
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 88
 testRunner.When("I click on the \"Create New Courses\" link in \"right\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 80
+#line 89
 testRunner.Then("I should see the \"Create New Courses\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 81
+#line 90
 testRunner.When("I create a new \"HEDGeneral\" course by selecting \"General Course\" format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 82
+#line 91
 testRunner.Then("I should see the successfull message \"New course created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 83
+#line 92
 testRunner.When("I search \"HEDGeneral\" course in workspace by \"CourseName\" and \"Equals\" dropdown o" +
                     "ption", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 84
+#line 93
 testRunner.Then("I should see the searched \"HEDGeneral\" course in Manage Courses frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -292,22 +294,24 @@ testRunner.Then("I should see the searched \"HEDGeneral\" course in Manage Cours
         public virtual void EnrollStudentInGeneralCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll Student in General Course by WS Admin", ((string[])(null)));
-#line 89
+#line 98
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 90
+#line 99
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 100
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 101
 testRunner.When("I search \"HEDGeneral\" course in workspace by \"CourseName\" and \"Equals\" dropdown o" +
                     "ption", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 91
+#line 102
 testRunner.Then("I should be able to see the searched \"HEDGeneral\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 92
+#line 103
 testRunner.When("I select the created \"HEDGeneral\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 93
+#line 104
 testRunner.And("I select the \"HedWsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 94
+#line 105
 testRunner.When("I enrolled the \"HedWsStudent\" in the Master course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 95
+#line 106
 testRunner.Then("I should see the successfull message \"Students enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -319,22 +323,24 @@ testRunner.Then("I should see the successfull message \"Students enrolled succes
         public virtual void EnrollTeacherInGeneralCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll Teacher in General Course by WS Admin", ((string[])(null)));
-#line 100
+#line 111
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 101
+#line 112
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 113
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 114
 testRunner.When("I search \"HEDGeneral\" course in workspace by \"CourseName\" and \"Equals\" dropdown o" +
                     "ption", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 102
+#line 115
 testRunner.Then("I should be able to see the searched \"HEDGeneral\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 103
+#line 116
 testRunner.When("I select the created \"HEDGeneral\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 104
+#line 117
 testRunner.And("I select the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 105
+#line 118
 testRunner.When("I enrolled the \"HedWsInstructor\" in the Master course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 106
+#line 119
 testRunner.Then("I should see the successfull message \"Instructors enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -346,17 +352,17 @@ testRunner.Then("I should see the successfull message \"Instructors enrolled suc
         public virtual void CreateSystemAnnouncementByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create System Announcement by WS Admin", ((string[])(null)));
-#line 111
+#line 124
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 112
+#line 125
 testRunner.When("I change the WS Admin Time Zone to Indian GMT in MyProfile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 113
+#line 126
 testRunner.And("I navigate to the \"Announcement\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 114
-testRunner.And("I create \"WsSystem\" Announcement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 115
+#line 127
+testRunner.Then("I should be on the \"Announcement Archive\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 128
+testRunner.When("I create \"WsSystem\" Announcement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 129
 testRunner.Then("I should see the successfull message \"Announcement created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -370,21 +376,23 @@ testRunner.Then("I should see the successfull message \"Announcement created suc
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Functionality of the Course Name,WS ID radio buttons and Search button Equals/Con" +
                     "tains/Begins with/Ends  by WS Admin", ((string[])(null)));
-#line 119
+#line 133
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 120
+#line 134
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 135
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 136
 testRunner.When("I search \"MySpanishLabMaster\" course in workspace by \"CourseName\" and \"Equals\" dr" +
                     "opdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 121
+#line 137
 testRunner.Then("I should be able to see the searched \"MySpanishLabMaster\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 122
+#line 138
 testRunner.When("I search \"MySpanishLabMaster\" course in workspace by \"WSId\" and \"Equals\" filter d" +
                     "ropdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 123
+#line 139
 testRunner.Then("I should be able to see the searched \"MySpanishLabMaster\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 124
+#line 140
 testRunner.And("I should see the column headers in manage users frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -396,23 +404,25 @@ testRunner.And("I should see the column headers in manage users frame", ((string
         public virtual void DeleteTheCreatedMasterCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete The Created Master Course by WS admin", ((string[])(null)));
-#line 127
+#line 143
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 128
+#line 144
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 145
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 146
 testRunner.When("I search \"MySpanishLabMaster\" course in workspace by \"CourseName\" and \"Equals\" dr" +
                     "opdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 129
+#line 147
 testRunner.Then("I should see the searched \"MySpanishLabMaster\" course in Manage Courses frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 130
+#line 148
 testRunner.When("I select the course to delete in manage course frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 131
+#line 149
 testRunner.Then("I should see the successfull message \"\"Courses deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 132
+#line 150
 testRunner.When("I search \"MySpanishLabMaster\" course in workspace by \"CourseName\" and \"Equals\" dr" +
                     "opdown option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 133
+#line 151
 testRunner.Then("I should see the \"There are no courses. To add courses, click Create New Course.\"" +
                     " message in Manage Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -425,23 +435,25 @@ testRunner.Then("I should see the \"There are no courses. To add courses, click 
         public virtual void DeleteTheCreatedGeneralCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete The Created General Course by WS admin", ((string[])(null)));
-#line 136
+#line 154
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 137
+#line 155
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 156
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 157
 testRunner.When("I search \"HEDGeneral\" course in workspace by \"CourseName\" and \"Equals\" dropdown o" +
                     "ption", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 138
+#line 158
 testRunner.Then("I should see the searched \"HEDGeneral\" course in Manage Courses frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 139
+#line 159
 testRunner.When("I select the course to delete in manage course frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 140
+#line 160
 testRunner.Then("I should see the successfull message \"\"Courses deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 141
+#line 161
 testRunner.When("I search \"HEDGeneral\" course in workspace by \"CourseName\" and \"Equals\" dropdown o" +
                     "ption", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 142
+#line 162
 testRunner.Then("I should see the \"There are no courses. To add courses, click Create New Course.\"" +
                     " message in Manage Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -454,22 +466,24 @@ testRunner.Then("I should see the \"There are no courses. To add courses, click 
         public virtual void CreateNewEmptyCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create New Empty Course by WS Admin", ((string[])(null)));
-#line 145
+#line 165
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 146
+#line 166
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 167
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 168
 testRunner.When("I click on the \"Create New Courses\" link in \"right\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 147
+#line 169
 testRunner.Then("I should see the \"Create New Courses\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 148
+#line 170
 testRunner.When("I create a new \"HedEmptyClass\" course by selecting \"General Course\" format", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 149
+#line 171
 testRunner.Then("I should see the successfull message \"New course created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 150
+#line 172
 testRunner.When("I search \"HedEmptyClass\" course in workspace by \"CourseName\" and \"Equals\" dropdow" +
                     "n option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 151
+#line 173
 testRunner.Then("I should see the searched \"HedEmptyClass\" course in Manage Courses frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -481,22 +495,24 @@ testRunner.Then("I should see the searched \"HedEmptyClass\" course in Manage Co
         public virtual void EnrollTeacherToEmptyCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll Teacher To Empty Course by WS Admin", ((string[])(null)));
-#line 154
+#line 176
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 155
+#line 177
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 178
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 179
 testRunner.When("I search \"HedEmptyClass\" course in workspace by \"CourseName\" and \"Equals\" dropdow" +
                     "n option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 156
+#line 180
 testRunner.Then("I should be able to see the searched \"HedEmptyClass\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 157
+#line 181
 testRunner.When("I select the created \"HedEmptyClass\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 158
+#line 182
 testRunner.And("I select the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 159
+#line 183
 testRunner.When("I enrolled the \"HedWsInstructor\" in the Master course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 160
+#line 184
 testRunner.Then("I should see the successfull message \"Instructors enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -508,18 +524,20 @@ testRunner.Then("I should see the successfull message \"Instructors enrolled suc
         public virtual void PublishEmptyCourseAsMasterCourseByWsAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Publish Empty Course As Master Course by Ws Admin", ((string[])(null)));
-#line 163
+#line 187
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 164
+#line 188
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 189
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 190
 testRunner.When("I search \"HedEmptyClass\" course in workspace by \"CourseName\" and \"Equals\" dropdow" +
                     "n option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 165
+#line 191
 testRunner.Then("I should be able to see the searched \"HedEmptyClass\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 166
+#line 192
 testRunner.When("I publish the Authored \"HedEmptyClass\" in workspace as \"Master Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 167
+#line 193
 testRunner.Then("I should see the successfull message \"Course published successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -531,23 +549,25 @@ testRunner.Then("I should see the successfull message \"Course published success
         public virtual void DeleteTheCreatedEmptyCourseByWSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete The Created Empty Course by WS admin", ((string[])(null)));
-#line 170
+#line 196
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 171
+#line 197
+testRunner.When("I navigate to \"Course Enrollment\" tab of the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 198
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 199
 testRunner.When("I search \"HedEmptyClass\" course in workspace by \"CourseName\" and \"Equals\" dropdow" +
                     "n option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 172
+#line 200
 testRunner.Then("I should see the searched \"HedEmptyClass\" course in Manage Courses frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 173
+#line 201
 testRunner.When("I select the course to delete in manage course frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 174
+#line 202
 testRunner.Then("I should see the successfull message \"\"Courses deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 175
+#line 203
 testRunner.When("I search \"HedEmptyClass\" course in workspace by \"CourseName\" and \"Equals\" dropdow" +
                     "n option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 176
+#line 204
 testRunner.Then("I should see the \"There are no courses. To add courses, click Create New Course.\"" +
                     " message in Manage Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

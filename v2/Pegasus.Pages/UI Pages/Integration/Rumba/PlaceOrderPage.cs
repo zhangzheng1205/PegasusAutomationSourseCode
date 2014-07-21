@@ -38,7 +38,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.FocusOnElementByID(PlaceOrderPageResource.
                     PlaceOrder_Page_Select_OrderingSystem_Id_Locator);
                 //Selects the Ordering system
-                base.SelectDropDownValueThroughTextByID(PlaceOrderPageResource.
+                base.SelectDropDownValueThroughTextById(PlaceOrderPageResource.
                     PlaceOrder_Page_Select_OrderingSystem_Id_Locator,
                     PlaceOrderPageResource.
                     PlaceOrder_Page_Select_OrderingSystem_Value);
@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages
             License license = License.Get(License.LicenseTypeEnum.Rumba);
             //Enter License Order ID
             base.FillTextBoxByID(PlaceOrderPageResource.
-               PlaceOrder_Page_OrderId_Id_Locator, license.OrderID);
+               PlaceOrder_Page_OrderId_Id_Locator, license.OrderId);
             //Get State Level Organization
             Organization organization = Organization.
                 Get(organizationLevelEnum, organizationTypeEnum);
@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill 13 Digit Order ID
             base.FillTextBoxByID(PlaceOrderPageResource.
                 PlaceOrder_page_ProductExternalId_Id_Locator,
-                license.OrderID);
+                license.OrderId);
             //Sleep for a Time
             Thread.Sleep(Convert.ToInt32(PlaceOrderPageResource.
                 PlaceOrder_Page_ThreadSleepTime));
@@ -185,7 +185,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FocusOnElementByID(PlaceOrderPageResource.
                 PlaceOrder_Page_SelectLicenseType_Id_Locator);
             //Select Value
-            base.SelectDropDownValueThroughTextByID(PlaceOrderPageResource.
+            base.SelectDropDownValueThroughTextById(PlaceOrderPageResource.
                 PlaceOrder_Page_SelectLicenseType_Id_Locator,
                 PlaceOrderPageResource.PlaceOrder_Page_LicenseTypeValue);
             Logger.LogMethodExit("PlaceOrderPage", "EnterLineItemIDAndLicenseType",

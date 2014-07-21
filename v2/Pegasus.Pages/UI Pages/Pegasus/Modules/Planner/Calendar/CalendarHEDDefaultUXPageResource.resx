@@ -348,4 +348,7 @@
   <data name="CalendarHEDDefaultUXPageResource_AssetName_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='TreeViewContainer']/table[{0}]</value>
   </data>
+  <data name="CalendarHEDDefaultUXPage_Element_Time" xml:space="preserve">
+    <value>2000</value>
+  </data>
 </root>

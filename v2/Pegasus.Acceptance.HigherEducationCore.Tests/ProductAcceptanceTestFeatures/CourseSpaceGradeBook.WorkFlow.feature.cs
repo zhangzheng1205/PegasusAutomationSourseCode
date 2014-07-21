@@ -70,45 +70,20 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.ProductAcceptanceTestFeat
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 7
-#line 8
-testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("View Activity Grade by SMS Instructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceGradeBook")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ViewGrades")]
         public virtual void ViewActivityGradeBySMSInstructor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Activity Grade by SMS Instructor", new string[] {
-                        "ViewGrades"});
-#line 14
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Activity Grade by SMS Instructor", ((string[])(null)));
+#line 8
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 15
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
-testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 17
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 18
-testRunner.Then("I should see the grades for submitted activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 19
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 9
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+testRunner.And("I should see the grades for submitted activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -119,16 +94,16 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void ManuallyGradeTheActivityBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Manually Grade the Activity by SMS Instructor", ((string[])(null)));
-#line 23
+#line 15
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 24
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 25
-testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 26
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 17
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 18
+testRunner.When("I manually grade the activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 19
+testRunner.Then("I should see the successfull message \"Batch update completed successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -139,23 +114,21 @@ testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTa
         public virtual void ToVerifyGradeBookPageIsLoadedSuccessfully()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify GradeBook Page is Loaded Successfully", ((string[])(null)));
-#line 29
+#line 23
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 30
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 31
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
-testRunner.Then("I should see GradeBook page loaded successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 33
+#line 24
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 25
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 26
+testRunner.And("I should see GradeBook page loaded successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
 testRunner.When("I navigate to CustomView sub tab in a Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 28
 testRunner.Then("I should be on CustomView in a GradeBook Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 35
+#line 29
 testRunner.When("I navigate to Grades Subtab in a GradeBook Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 36
+#line 30
 testRunner.Then("I should see GradeBook page loaded successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -167,17 +140,13 @@ testRunner.Then("I should see GradeBook page loaded successfully", ((string)(nul
         public virtual void ToCheckTheDisplayOfActivitiesInGradebookBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To check the display of Activities in Gradebook by SMS Instructor", ((string[])(null)));
-#line 40
+#line 35
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 41
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 42
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
+#line 36
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 37
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 44
+#line 38
 testRunner.Then("I should see the \"Test\" activity in Gradebook for all the enrollled \"CsSmsStudent" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -190,17 +159,13 @@ testRunner.Then("I should see the \"Test\" activity in Gradebook for all the enr
         public virtual void ToCheckTheDisplayOfSkillStudyPlanInGradebookBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To check the display of SkillStudyPlan in Gradebook by SMS Instructor", ((string[])(null)));
-#line 49
+#line 43
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 50
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
+#line 44
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 45
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 53
+#line 46
 testRunner.Then("I should see the \"SkillStudyPlan\" activity in Gradebook for all the enrollled \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -213,50 +178,46 @@ testRunner.Then("I should see the \"SkillStudyPlan\" activity in Gradebook for a
         public virtual void ToVerifyTheFunctionalityOfApplyGradeSchemaInGradebook()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify the functionality of Apply Grade Schema in gradebook", ((string[])(null)));
-#line 58
+#line 51
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 59
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 60
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 61
+#line 52
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 53
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 62
+#line 54
 testRunner.When("I navigate to the subfolder \"ADDITIONALPRACTICE\" of asset in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 63
+#line 55
 testRunner.And("I click on cmenu \"ApplyGradeSchema\" of asset \"PA-01 Span Practice- Vocabulary: Sa" +
                     "ludos, despedidas y presentaciones\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 64
+#line 56
 testRunner.Then("I should be on the \"Gradebook schema\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 65
+#line 57
 testRunner.When("I \'Apply\' the grade schema for the submitted activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
+#line 58
 testRunner.Then("I should see the successfull message \"Schema applied successfully.\" in \"Gradebook" +
                     "\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 67
+#line 59
 testRunner.Then("I should see the updated schema value \"F\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 68
+#line 60
 testRunner.When("I click on cmenu \"ModifyGradeSchema\" of asset \"PA-01 Span Practice- Vocabulary: S" +
                     "aludos, despedidas y presentaciones\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
+#line 61
 testRunner.When("I update the schema of the submitted activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 70
+#line 62
 testRunner.Then("I should see the successfull message \"Grade schema updated successfully.\" in \"Gra" +
                     "debook schema\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 71
+#line 63
 testRunner.When("I save the Updated schema", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 72
+#line 64
 testRunner.Then("I should see the successfull message \"Schema applied successfully.\" in \"Gradebook" +
                     "\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 73
+#line 65
 testRunner.When("I click on cmenu \"RemoveGradeSchema\" of asset \"PA-01 Span Practice- Vocabulary: S" +
                     "aludos, despedidas y presentaciones\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 74
+#line 66
 testRunner.Then("I should see the successfull message \"Grade schema removed successfully.\" in \"Gra" +
                     "debook\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 75
+#line 67
 testRunner.Then("I should see the updated schema value \"11,1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -268,31 +229,25 @@ testRunner.Then("I should see the updated schema value \"11,1\"", ((string)(null
         public virtual void VerifyTheFunctionalityOfRemoveFromCustomViewOptionBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the functionality of Remove from custom view option By SMS Instructor", ((string[])(null)));
-#line 80
+#line 72
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 81
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 82
-testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 83
-testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 84
+#line 73
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 74
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 85
+#line 75
 testRunner.When("I click on cmenu \"SavetoCustomView\" of asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 86
+#line 76
 testRunner.Then("I should see the successfull message \"Column successfully saved to Custom View.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 87
+#line 77
 testRunner.And("I should see cmenu \"Remove from Custom View\" of asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 88
+#line 78
 testRunner.When("I navigate to CustomView sub tab in a Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 89
+#line 79
 testRunner.Then("I should be on the \"Custom View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 90
+#line 80
 testRunner.When("I click on cmenu \"RemovefromCustomView\" of asset \"Test\" in Custom View", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 91
+#line 81
 testRunner.Then("I should see the successfull message \"Column successfully removed from Custom Vie" +
                     "w.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -305,23 +260,17 @@ testRunner.Then("I should see the successfull message \"Column successfully remo
         public virtual void VerifyTheFunctionalityOfViewAllSubmissionOptionBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the functionality of \"View All Submission\" option by SMS Instructor", ((string[])(null)));
-#line 96
+#line 86
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 97
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 98
-testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 99
-testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 100
+#line 87
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 88
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 101
+#line 89
 testRunner.When("I click on cmenu \"ViewAllSubmissions\" of asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 102
+#line 90
 testRunner.Then("I should see all submission for that particular activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 103
+#line 91
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -335,21 +284,15 @@ testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((Te
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Grade cell C-menu options for the activity under Gradebook by SMS Inst" +
                     "ructor", ((string[])(null)));
-#line 108
+#line 96
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 109
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 110
-testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 111
-testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 112
+#line 97
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 98
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 113
+#line 99
 testRunner.When("I click on the Grade cell cmenu of \"Test\" activity in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 114
+#line 100
 testRunner.Then("I should see the cmenu under grade cell activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -361,29 +304,25 @@ testRunner.Then("I should see the cmenu under grade cell activity", ((string)(nu
         public virtual void ToVerifyTheFunctionalityOfGradeCellCmenuOptionEditGrades()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify The functionality of Grade cell cmenu option\'Edit Grades\'", ((string[])(null)));
-#line 119
+#line 105
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 120
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 121
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 122
+#line 106
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 107
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 123
+#line 108
 testRunner.When("I navigate to the subfolder \"ADDITIONALPRACTICE\" of asset in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 124
+#line 109
 testRunner.And("I click on Grade cell cmenu options of asset \"PA-01 Span Practice- Vocabulary: Sa" +
                     "ludos, despedidas y presentaciones\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 125
+#line 110
 testRunner.And("I select the \"EditGrade\" in grade cell cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 126
+#line 111
 testRunner.And("I update the grade for the submitted activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 127
+#line 112
 testRunner.Then("I should see the updated grade \"50\" for the asset \"PA-01 Span Practice- Vocabular" +
                     "y: Saludos, despedidas y presentaciones\" for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 128
+#line 113
 testRunner.And("I should see the grade icon of \"PA-01 Span Practice- Vocabulary: Saludos, despedi" +
                     "das y presentaciones\" for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -398,28 +337,24 @@ testRunner.And("I should see the grade icon of \"PA-01 Span Practice- Vocabulary
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the functionality of options displayed when Grade cell cmenu is View Grade" +
                     "/Submission By SMS Instructor", ((string[])(null)));
-#line 133
+#line 118
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 134
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 135
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 136
+#line 119
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 120
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 137
+#line 121
 testRunner.When("I navigate to the subfolder \"ADDITIONALPRACTICE\" of asset in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 138
+#line 122
 testRunner.And("I click on Grade cell cmenu options of asset \"PA-01 Span Practice- Vocabulary: Sa" +
                     "ludos, despedidas y presentaciones\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 139
+#line 123
 testRunner.And("I select the \"ViewGradeSubmission\" in grade cell cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 140
+#line 124
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 141
+#line 125
 testRunner.And("I should see the edited grade \"50\" in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 142
+#line 126
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -433,28 +368,24 @@ testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((Te
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the functionality of options displayed when Grade cell cmenu is View Grade" +
                     " History By SMS Instructor", ((string[])(null)));
-#line 147
+#line 131
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 148
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 149
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 150
+#line 132
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 133
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 151
+#line 134
 testRunner.When("I navigate to the subfolder \"ADDITIONALPRACTICE\" of asset in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 152
+#line 135
 testRunner.And("I click on Grade cell cmenu options of asset \"PA-01 Span Practice- Vocabulary: Sa" +
                     "ludos, despedidas y presentaciones\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 153
+#line 136
 testRunner.And("I select the \"ViewGradeHistory\" in grade cell cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 154
+#line 137
 testRunner.Then("I should be on the \"Grade history\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 155
+#line 138
 testRunner.And("I should see the score by \"CsSmsInstructor\" in grade history page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 156
+#line 139
 testRunner.When("I close the \"Grade history\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -466,36 +397,32 @@ testRunner.When("I close the \"Grade history\" window", ((string)(null)), ((Tech
         public virtual void ToCheckTheFunctionalityOfTotalWeightFieldBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Check the functionality of total weight field By SMS Instructor", ((string[])(null)));
-#line 161
+#line 144
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 162
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 163
-testRunner.And("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 164
+#line 145
+testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 146
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 165
+#line 147
 testRunner.When("I associate the \"Test\" activity of behavioral mode \"Assignment\" to MyCourse frame" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 166
+#line 148
 testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 167
+#line 149
 testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 168
+#line 150
 testRunner.And("I click on the \'Create Column\' drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 169
+#line 151
 testRunner.Then("I should be on the \"Create Total Column\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 170
+#line 152
 testRunner.When("I select checkbox of \"Test\" activity of behavioral mode \"BasicRandom\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 171
+#line 153
 testRunner.And("I select checkbox of \"Test\" activity of behavioral mode \"Assignment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 172
+#line 154
 testRunner.And("I should click on Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 173
+#line 155
 testRunner.And("I have entered \"50\" and \"30\" into weight box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 174
+#line 156
 testRunner.Then("I should able to see the result in Total Weight is \"80\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -509,21 +436,17 @@ testRunner.Then("I should able to see the result in Total Weight is \"80\"", ((s
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Total weight percentage column for SMS instructor and its functionalit" +
                     "y By SMS Instructor", ((string[])(null)));
-#line 179
+#line 161
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 180
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 181
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 182
+#line 162
+testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 163
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 183
+#line 164
 testRunner.When("I click on the \'Create Column\' drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 184
+#line 165
 testRunner.Then("I should be on the \"Create Total Column\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 185
+#line 166
 testRunner.And("I should see the \'Total Weight\' field with value \"0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

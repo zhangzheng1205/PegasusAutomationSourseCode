@@ -132,7 +132,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Get Course Id From Memeory
             Course course = Course.Get(courseTypeEnum);
             //Enter Course Id
-            new CourseIdInputPage().EnterCourseId(course.ECollegeIntegrationID);
+            new CourseIdInputPage().EnterCourseId(course.ECollegeIntegrationId);
             Logger.LogMethodExit("SMSRegistration", "EnterTheCourseId",
                 base.isTakeScreenShotDuringEntryExit);
         }
@@ -203,7 +203,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             Course course = Course.Get(courseTypeEnum);
             //Enter Non coordinator Course Id
             new CourseIdInputPage().
-                EnterNonCoordinatorCourseId(course.ECollegeIntegrationID);
+                EnterNonCoordinatorCourseId(course.ECollegeIntegrationId);
             Logger.LogMethodExit("SMSRegistration", "EnterNonCoordinatorCourseId",
                 base.isTakeScreenShotDuringEntryExit);
         }

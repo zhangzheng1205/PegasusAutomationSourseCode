@@ -302,7 +302,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptSaveSettingsPageResource.
                     RptSaveSettingsPage_ReplaceExistingReport_Dropdown_Id_Locator));
                 //Select Report In Dropdown
-                base.SelectDropDownValueThroughTextByID(RptSaveSettingsPageResource.
+                base.SelectDropDownValueThroughTextById(RptSaveSettingsPageResource.
                     RptSaveSettingsPage_ReplaceExistingReport_Dropdown_Id_Locator, reportName);
                 //Get Report
                 string getReportName = base.GetElementTextByID(RptSaveSettingsPageResource.

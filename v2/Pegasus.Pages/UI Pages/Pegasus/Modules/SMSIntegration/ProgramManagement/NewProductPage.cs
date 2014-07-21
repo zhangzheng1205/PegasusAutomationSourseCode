@@ -49,12 +49,19 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectProgramNameInTheSearchFrame();
                 //Create Product Based on Type
                 EnterDetailsBasedOnProductType(productTypeEnum);
-                String demoAccessCode = NewProductPageResource.
-                NewProduct_Page_AccessCode_Characterset_Value.ToString();
+                //for demo Product
+                String demoAccessCode = string.Empty;
+                String welcomeMessage = string.Empty;
+                if (productTypeEnum == Product.ProductTypeEnum.DigitalPathDemo)
+                {
+                    demoAccessCode = base.GetValueAttributeById(NewProductPageResource.
+                       NewProduct_Page_AccessCode_Textbox_Id_Locator);
+                    welcomeMessage = this.EnterWelcomeMessage();
+                }
                 //Click To Save Button
                 this.ClickToSaveProduct();
                 //Store Product Details in Memory
-                StoreProductDetailsInMemory(productTypeEnum, productName, demoAccessCode);
+                StoreProductDetailsInMemory(productTypeEnum, productName, demoAccessCode, welcomeMessage);
             }
             catch (Exception e)
             {
@@ -109,8 +116,6 @@ namespace Pegasus.Pages.UI_Pages
                     this.SelectEnableLicensingAndProductTypeOptions(productTypeEnum);
                     //Enter Demo Access Code
                     this.EnterDemoAccessCode();
-                    //Enter welcome message
-                    this.EnterWelcomeMessage();
                     //Upload Banner Image for Demo Product
                     this.UploadBannerAndIconImagesForSchoolProduct(productTypeEnum);
                     break;
@@ -146,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enter Welcome Message for Demo Product.
         /// </summary>
-        private void EnterWelcomeMessage()
+        private String EnterWelcomeMessage()
         {
             //Log Method Entry
             Logger.LogMethodEntry("NewProductPage", "EnterWelcomeMessage",
@@ -154,14 +159,17 @@ namespace Pegasus.Pages.UI_Pages
             //Switch To Frame
             base.SwitchToIFrame(NewProductPageResource.
             NewProduct_Page_Welcome_Message_Editor_ID_Locator);
+            base.WaitForElement(By.ClassName("WebEditor"));
             //Click on Text Editor
-            base.ClickButtonByClassName("WebEditor");          
+            base.ClickButtonByClassName("WebEditor");    
             //Enter Welcome message in Welcome Message editor
             base.FillTextBoxByClassName("WebEditor", "Welcome To Demo Product");
+            String welcomeMessage = base.GetElementTextByClassName("WebEditor");
             //switch back to the DefaultContent
             base.SwitchToDefaultPageContent();
             Logger.LogMethodExit("NewProductPage", "EnterWelcomeMessage",
                 base.isTakeScreenShotDuringEntryExit);
+            return welcomeMessage;
         }
 
         /// <summary>
@@ -302,7 +310,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillEmptyTextByID(NewProductPageResource.
                                        NewProduct_Page_Discipline_DropDown_Id_Locator);
             //Select Drop Down Value
-            base.SelectDropDownValueThroughTextByID(NewProductPageResource.
+            base.SelectDropDownValueThroughTextById(NewProductPageResource.
                                                 NewProduct_Page_Discipline_DropDown_Id_Locator,
                                             NewProductPageResource.NewProduct_Page_Discipline_DropDown_Value);
             Logger.LogMethodExit("NewProductPage", "SelectDisciplineNameToCreateHedProgramTypeProduct",
@@ -472,7 +480,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FocusOnElementByID(NewProductPageResource.
                 NewProduct_Page_LicensingType_DropDown_Id_Locator);
             // Select Licensing Type
-            base.SelectDropDownValueThroughTextByID(NewProductPageResource.
+            base.SelectDropDownValueThroughTextById(NewProductPageResource.
                                                 NewProduct_Page_LicensingType_DropDown_Id_Locator,
                                             NewProductPageResource.NewProduct_Page_Concurrent_LicensingType_DropDown_Value);
             Logger.LogMethodExit("NewProductPage", "SelectNovaNETEnableLicensingOptionValue",
@@ -493,7 +501,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FocusOnElementByID(NewProductPageResource.
                                         NewProduct_Page_ProductType_DropDown_Id_Locator);
             //Select Product Type
-            base.SelectDropDownValueThroughTextByID(NewProductPageResource.
+            base.SelectDropDownValueThroughTextById(NewProductPageResource.
                                                         NewProduct_Page_ProductType_DropDown_Id_Locator,
                                                     NewProductPageResource.NewProduct_Page_NovaNET_ProductType_DropDown_Value);
             Logger.LogMethodExit("NewProductPage", "SelectNovaNETProductTypeOptionValue",
@@ -515,7 +523,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FocusOnElementByID(NewProductPageResource.
                 NewProduct_Page_LicensingType_DropDown_Id_Locator);
             // Select Licensing Type
-            base.SelectDropDownValueThroughTextByID(NewProductPageResource.
+            base.SelectDropDownValueThroughTextById(NewProductPageResource.
                 NewProduct_Page_LicensingType_DropDown_Id_Locator,
                 NewProductPageResource.NewProduct_Page_Seat_LicensingType_DropDown_Value);
             Logger.LogMethodExit("NewProductPage", "SelectDigitalPathEnableLicesingOptionValue",
@@ -537,7 +545,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FocusOnElementByID(NewProductPageResource.
                                         NewProduct_Page_ProductType_DropDown_Id_Locator);
             //Select Product Type
-            base.SelectDropDownValueThroughTextByID(NewProductPageResource.
+            base.SelectDropDownValueThroughTextById(NewProductPageResource.
                                                         NewProduct_Page_ProductType_DropDown_Id_Locator,
                                                     NewProductPageResource.NewProduct_Page_Basal_ProductType_DropDown_Value);
             Logger.LogMethodExit("NewProductPage", "SelectDigitalPathProductTypeOptionValue",
@@ -614,7 +622,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="productName">This is Product Name Guid.</param>
         private void StoreProductDetailsInMemory
             (Product.ProductTypeEnum productTypeEnum,
-            String productName, String demoAccessCode = "")
+            String productName, String demoAccessCode = "", String welcomeMessage = "")
         {
             //Save Copy Course in Memory
             Logger.LogMethodEntry("NewProductPage", "StoreProductDetailsInMemory",
@@ -625,6 +633,7 @@ namespace Pegasus.Pages.UI_Pages
                   Name = productName,
                   ProductType = productTypeEnum,
                   DemoAccessCode = demoAccessCode,
+                  WelcomeMessage = welcomeMessage,
                   IsCreated = true,
               };
             newProduct.StoreProductInMemory();

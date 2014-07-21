@@ -70,43 +70,29 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestFeatures
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 7
-#line 8
-testRunner.Given("I browsed the login url for \"CsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I login to Pegasus as \"CsAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Approve Master Library by CS Admin")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceAdmin")]
         public virtual void ApproveMasterLibraryByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Approve Master Library by CS Admin", ((string[])(null)));
-#line 13
-this.ScenarioSetup(scenarioInfo);
 #line 7
-this.FeatureBackground();
-#line 14
-testRunner.Given("I am on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 15
+this.ScenarioSetup(scenarioInfo);
+#line 8
 testRunner.When("I navigate to the \"Publishing\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
-testRunner.And("I select the \"Manage Products\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 9
+testRunner.Then("I should be on the \"Manage Programs\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
+testRunner.When("I select the \"Manage Products\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
 testRunner.Then("I should be on the \"Manage Products\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 18
+#line 12
 testRunner.When("I search the course \"MasterLibrary\" in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
+#line 13
 testRunner.Then("I should be able to see the searched \"MasterLibrary\" course in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 20
+#line 14
 testRunner.When("I click on \"Approve\" cmenu option of course in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 15
 testRunner.Then("I should see the successfull message \"Published course marked as Approved.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -118,21 +104,18 @@ testRunner.Then("I should see the successfull message \"Published course marked 
         public virtual void CreateProgramByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Program by CS Admin", ((string[])(null)));
-#line 24
+#line 18
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 25
-testRunner.Given("I am on the \'Manage Programs\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
+#line 19
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 21
+testRunner.When("I am on the \'Manage Programs\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 22
 testRunner.When("I create the \"DigitalPath\" Program in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
+#line 23
 testRunner.Then("I should see the successfull message \"Program created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 28
-testRunner.When("I \"Sign out\" from the \"CsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -143,15 +126,17 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreateDPProductByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create DP Product by CS Admin", ((string[])(null)));
-#line 32
+#line 26
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 33
-testRunner.Given("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 34
-testRunner.When("I create the \"DigitalPath\" Product in coursespace using \"DigitalPath\" Program", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
+#line 27
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 28
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 29
+testRunner.When("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 30
+testRunner.And("I create the \"DigitalPath\" Product in coursespace using \"DigitalPath\" Program", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
 testRunner.Then("I should see the successfull message \"New product created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -163,22 +148,19 @@ testRunner.Then("I should see the successfull message \"New product created succ
         public virtual void CreateDemoProductByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Demo Product by CS Admin", ((string[])(null)));
-#line 38
+#line 34
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
+#line 35
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 36
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 37
+testRunner.When("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
+testRunner.And("I create the \"DigitalPathDemo\" Product in coursespace using \"DigitalPath\" Program" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 39
-testRunner.Given("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 40
-testRunner.When("I create the \"DigitalPathDemo\" Product in coursespace using \"DigitalPath\" Program" +
-                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
 testRunner.Then("I should see the successfull message \"New product created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 42
-testRunner.When("I \"Sign out\" from the \"CsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 43
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -189,25 +171,20 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreateSchoolLevelDigitalPathDemoOrganizationByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create School Level DigitalPath Demo Organization by CS Admin", ((string[])(null)));
-#line 46
+#line 42
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 47
-testRunner.Given("I am on the \'Organization Management\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 48
+#line 43
+testRunner.When("I navigate to \"Organization Admin\" tab of the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 44
+testRunner.Then("I should be on the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 45
 testRunner.When("I click on the Create New Organization link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 49
+#line 46
 testRunner.Then("I should see the \"Create Organization\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
-testRunner.When("I create the \"School\" level organization \"Hierarchical\" in \"DigitalPathDemo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 47
+testRunner.When("I create the \"School\" level organization \"Independent\" in \"DigitalPathDemo\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 48
 testRunner.Then("I should see the successfull message \"Organization created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 52
-testRunner.When("I \"Sign out\" from the \"CsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 53
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -218,19 +195,19 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void CreateStateLevelOrganizationByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create State Level Organization by CS Admin", ((string[])(null)));
-#line 56
+#line 51
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 57
-testRunner.Given("I am on the \'Organization Management\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 58
+#line 52
+testRunner.When("I navigate to \"Organization Admin\" tab of the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 53
+testRunner.Then("I should be on the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 54
 testRunner.When("I click on the Create New Organization link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 59
+#line 55
 testRunner.Then("I should see the \"Create Organization\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 60
+#line 56
 testRunner.When("I create the \"State\" level organization \"Hierarchical\" in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 61
+#line 57
 testRunner.Then("I should see the successfull message \"Organization created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -242,23 +219,23 @@ testRunner.Then("I should see the successfull message \"Organization created suc
         public virtual void CreateRegionLevelOrganizationByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Region Level Organization by CS Admin", ((string[])(null)));
-#line 64
+#line 60
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 65
-testRunner.Given("I am on the \'Organization Management\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 66
+#line 61
+testRunner.When("I navigate to \"Organization Admin\" tab of the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 62
+testRunner.Then("I should be on the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 63
 testRunner.When("I search the \"State\" level Organization in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 67
+#line 64
 testRunner.Then("I should see the \"State\" level organization name in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 68
+#line 65
 testRunner.When("I create the \"Region\" level organization \"Hierarchical\" in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
+#line 66
 testRunner.Then("I should see the successfull message \"Organization created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 70
+#line 67
 testRunner.When("I click on the Select Organization link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 71
+#line 68
 testRunner.Then("I should be on the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -270,23 +247,23 @@ testRunner.Then("I should be on the \"Organization Management\" page", ((string)
         public virtual void CreateDistrictLevelOrganizationByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create District Level Organization by CS Admin", ((string[])(null)));
-#line 74
+#line 71
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 75
-testRunner.Given("I am on the \'Organization Management\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 76
+#line 72
+testRunner.When("I navigate to \"Organization Admin\" tab of the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 73
+testRunner.Then("I should be on the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 74
 testRunner.When("I search the \"Region\" level Organization in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 77
+#line 75
 testRunner.Then("I should see the \"Region\" level organization name in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 78
+#line 76
 testRunner.When("I create the \"District\" level organization \"Hierarchical\" in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 79
+#line 77
 testRunner.Then("I should see the successfull message \"Organization created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 80
+#line 78
 testRunner.When("I click on the Select Organization link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 81
+#line 79
 testRunner.Then("I should be on the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -300,23 +277,23 @@ testRunner.Then("I should be on the \"Organization Management\" page", ((string)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create School Level Organization by CS Admin", new string[] {
                         "CreateSchoolLevelOrganiationbyCSAdmin"});
-#line 85
+#line 83
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
+#line 84
+testRunner.When("I navigate to \"Organization Admin\" tab of the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 85
+testRunner.Then("I should be on the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 86
-testRunner.Given("I am on the \'Organization Management\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 87
 testRunner.When("I search the \"District\" level Organization in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 88
+#line 87
 testRunner.Then("I should see the \"District\" level organization name in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 89
+#line 88
 testRunner.When("I create the \"School\" level organization \"Hierarchical\" in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 90
+#line 89
 testRunner.Then("I should see the successfull message \"Organization created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 91
+#line 90
 testRunner.When("I search the \"School\" level Organization in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 92
+#line 91
 testRunner.Then("I should see the \"School\" level organization name in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -328,23 +305,25 @@ testRunner.Then("I should see the \"School\" level organization name in \"Digita
         public virtual void AssociateMasterLibraryToProductByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Associate Master Library To Product by CS Admin", ((string[])(null)));
-#line 95
+#line 94
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
+#line 95
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 96
-testRunner.Given("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 97
-testRunner.When("I search the course \"MasterLibrary\" in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 98
-testRunner.Then("I should be able to see the searched \"MasterLibrary\" course in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I search the course \"MasterLibrary\" in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 99
-testRunner.When("I select course in left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be able to see the searched \"MasterLibrary\" course in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 100
-testRunner.And("I select product type \"DigitalPath\" in right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I select course in left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 101
-testRunner.When("I associate the course to Pegasus product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I select product type \"DigitalPath\" in right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 102
+testRunner.When("I associate the course to Pegasus product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 103
 testRunner.Then("I should see the successfull message \"The course has been added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -356,28 +335,30 @@ testRunner.Then("I should see the successfull message \"The course has been adde
         public virtual void CreateTeacherInUsersTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Teacher in Users Tab by CS Admin", ((string[])(null)));
-#line 105
-this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
 #line 106
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 107
-testRunner.When("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 108
-testRunner.And("I select the \"DPCsTeacher\" option from \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 109
-testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 110
-testRunner.When("I create a new \"DPCsTeacher\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 111
+testRunner.And("I select the \"DPCsTeacher\" option from \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 112
+testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 113
+testRunner.When("I create a new \"DPCsTeacher\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 114
 testRunner.Then("I should see the successfull message \"New users added successfully.\" in \"Manage O" +
                     "rganization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 112
+#line 115
 testRunner.When("I search the created \"DPCsTeacher\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 113
+#line 116
 testRunner.Then("I should see the \"DPCsTeacher\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 114
+#line 117
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -389,30 +370,32 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void CreateStudentInUsersTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Student in Users Tab by CS Admin", ((string[])(null)));
-#line 117
-this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 118
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 119
-testRunner.Then("I should be on the \"Manage Organization\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 120
-testRunner.When("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 121
-testRunner.And("I select the \"DPCsStudent\" option from \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 122
-testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 123
-testRunner.When("I create a new \"DPCsStudent\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 124
+testRunner.Then("I should be on the \"Manage Organization\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 125
+testRunner.When("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 126
+testRunner.And("I select the \"DPCsStudent\" option from \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 127
+testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 128
+testRunner.When("I create a new \"DPCsStudent\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 129
 testRunner.Then("I should see the successfull message \"New users added successfully.\" in \"Manage O" +
                     "rganization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 125
+#line 130
 testRunner.When("I search the created \"DPCsStudent\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 126
+#line 131
 testRunner.Then("I should see the \"DPCsStudent\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 127
+#line 132
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -424,28 +407,30 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void CreateAideInUsersTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Aide in Users Tab by CS Admin", ((string[])(null)));
-#line 130
-this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 131
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 132
-testRunner.When("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 133
-testRunner.And("I select the \"DPCsAide\" option from \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 134
-testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 135
-testRunner.When("I create a new \"DPCsAide\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 136
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 137
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 138
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 139
+testRunner.And("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 140
+testRunner.And("I select the \"DPCsAide\" option from \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 141
+testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 142
+testRunner.When("I create a new \"DPCsAide\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 143
 testRunner.Then("I should see the successfull message \"New users added successfully.\" in \"Manage O" +
                     "rganization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 137
+#line 144
 testRunner.When("I search the created \"DPCsAide\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 138
+#line 145
 testRunner.Then("I should see the \"DPCsAide\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 139
+#line 146
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -457,28 +442,30 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void CreateOrganizationAdminInUsersTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Organization Admin in Users Tab by CS Admin", ((string[])(null)));
-#line 142
+#line 149
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 143
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 144
-testRunner.When("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 145
+#line 150
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 151
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 152
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 153
+testRunner.And("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 154
 testRunner.And("I select the \"DPCsOrganizationAdmin\" option from \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 146
+#line 155
 testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 147
+#line 156
 testRunner.When("I create a new \"DPCsOrganizationAdmin\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 148
+#line 157
 testRunner.Then("I should see the successfull message \"New users added successfully.\" in \"Manage O" +
                     "rganization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 149
+#line 158
 testRunner.When("I search the created \"DPCsOrganizationAdmin\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 150
+#line 159
 testRunner.Then("I should see the \"DPCsOrganizationAdmin\" in \"Users\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 151
+#line 160
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -490,21 +477,23 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void UploadBulkUserInUsersTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Upload Bulk User in Users Tab by CS Admin", ((string[])(null)));
-#line 154
+#line 163
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 155
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 156
-testRunner.When("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 157
+#line 164
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 165
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 166
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 167
+testRunner.And("I click on the \"Users\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 168
 testRunner.And("I select the Bulk user upload option and Import a bulk users file in \"Users\" subt" +
                     "ab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 158
+#line 169
 testRunner.Then("I should see the successfull message \"Bulk Registration- 0 of 1 Files in progress" +
                     "\" in Users subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 159
+#line 170
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -516,28 +505,30 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void CreateTeacherInEnrollmentTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Teacher in Enrollment Tab by CS Admin", ((string[])(null)));
-#line 162
+#line 173
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 163
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 164
-testRunner.When("I click on the \"Enrollment\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 165
+#line 174
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 175
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 176
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 177
+testRunner.And("I click on the \"Enrollment\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 178
 testRunner.And("I select the \"DPCsTeacher\" option from \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 166
+#line 179
 testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 167
+#line 180
 testRunner.When("I create a new \"DPCsTeacher\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 168
+#line 181
 testRunner.Then("I should see the successfull message \"New users added successfully.\" in \"Manage O" +
                     "rganization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 169
+#line 182
 testRunner.When("I search the created \"DPCsTeacher\" in \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 170
+#line 183
 testRunner.Then("I should see the \"DPCsTeacher\" in \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 171
+#line 184
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -549,28 +540,30 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void CreateStudentInEnrollmentTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Student in Enrollment Tab by CS Admin", ((string[])(null)));
-#line 174
+#line 187
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 175
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 176
-testRunner.When("I click on the \"Enrollment\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 177
+#line 188
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 189
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 190
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 191
+testRunner.And("I click on the \"Enrollment\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 192
 testRunner.And("I select the \"DPCsStudent\" option from \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 178
+#line 193
 testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 179
+#line 194
 testRunner.When("I create a new \"DPCsStudent\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 180
+#line 195
 testRunner.Then("I should see the successfull message \"New users added successfully.\" in \"Manage O" +
                     "rganization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 181
+#line 196
 testRunner.When("I search the created \"DPCsStudent\" in \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 182
+#line 197
 testRunner.Then("I should see the \"DPCsStudent\" in \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 183
+#line 198
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -582,28 +575,30 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void CreateAideInEnrollmentTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Aide in Enrollment Tab by CS Admin", ((string[])(null)));
-#line 186
+#line 201
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 187
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 188
-testRunner.When("I click on the \"Enrollment\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 189
+#line 202
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 203
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 204
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 205
+testRunner.And("I click on the \"Enrollment\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 206
 testRunner.And("I select the \"DPCsAide\" option from \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 190
+#line 207
 testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 191
+#line 208
 testRunner.When("I create a new \"DPCsAide\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 192
+#line 209
 testRunner.Then("I should see the successfull message \"New users added successfully.\" in \"Manage O" +
                     "rganization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 193
+#line 210
 testRunner.When("I search the created \"DPCsAide\" in \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 194
+#line 211
 testRunner.Then("I should see the \"DPCsAide\" in \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 195
+#line 212
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -615,28 +610,30 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void CreateOrganizationAdminInEnrollmentTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Organization Admin in Enrollment Tab by CS Admin", ((string[])(null)));
-#line 198
+#line 215
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 199
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 200
-testRunner.When("I click on the \"Enrollment\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 201
+#line 216
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 217
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 218
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 219
+testRunner.And("I click on the \"Enrollment\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 220
 testRunner.And("I select the \"DPCsOrganizationAdmin\" option from \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 202
+#line 221
 testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 203
+#line 222
 testRunner.When("I create a new \"DPCsOrganizationAdmin\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 204
+#line 223
 testRunner.Then("I should see the successfull message \"New users added successfully.\" in \"Manage O" +
                     "rganization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 205
+#line 224
 testRunner.When("I search the created \"DPCsOrganizationAdmin\" in \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 206
+#line 225
 testRunner.Then("I should see the \"DPCsOrganizationAdmin\" in \"Enrollment\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 207
+#line 226
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -648,21 +645,23 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void UploadBulkUserInEnrollmentTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Upload Bulk User in Enrollment Tab by CS Admin", ((string[])(null)));
-#line 210
+#line 229
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 211
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 212
-testRunner.When("I click on the \"Enrollment\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 213
+#line 230
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 231
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 232
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 233
+testRunner.And("I click on the \"Enrollment\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 234
 testRunner.And("I select the Bulk user upload option and Import a bulk users file in \"Enrollment\"" +
                     " subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 214
+#line 235
 testRunner.Then("I should see the successfull message \"Bulk Registration- 0 of 1 Files in progress" +
                     "\" in Users subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 215
+#line 236
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -674,23 +673,21 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void CreateUserInAdministratorsTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create User In Administrators Tab By CS Admin", ((string[])(null)));
-#line 218
+#line 239
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 219
-testRunner.Given("I am on the \'Administration Tool\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 220
+#line 240
+testRunner.When("I am on the \'Administration Tool\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 241
 testRunner.When("I click on the \"Create New User\" link in \"left\" frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 221
+#line 242
 testRunner.Then("I should see the \"Create New User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 222
+#line 243
 testRunner.When("I create a new \"DPCourseSpacePramotedAdmin\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 223
+#line 244
 testRunner.Then("I should see the successfull message \"New user created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 224
+#line 245
 testRunner.When("I search the created \"DPCourseSpacePramotedAdmin\" in  Manage Users frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 225
+#line 246
 testRunner.Then("I should see the \"DPCourseSpacePramotedAdmin\" in Manage Users frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -702,27 +699,29 @@ testRunner.Then("I should see the \"DPCourseSpacePramotedAdmin\" in Manage Users
         public virtual void CreateClassUsingMasterLibraryByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Class Using Master Library by CS Admin", ((string[])(null)));
-#line 228
+#line 249
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 229
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 230
-testRunner.When("I navigate to the \"Classes\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 231
+#line 250
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 251
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 252
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 253
+testRunner.And("I navigate to the \"Classes\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 254
 testRunner.And("I click on the Add Classes Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 232
+#line 255
 testRunner.Then("I should see the \"Create Class\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 233
+#line 256
 testRunner.When("I create the class using \"MasterLibrary\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 234
+#line 257
 testRunner.And("I search \"DigitalPathMasterLibrary\" class in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 235
+#line 258
 testRunner.And("I wait for class \"DigitalPathMasterLibrary\" to copy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 236
+#line 259
 testRunner.Then("I should be able to see the searched \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 237
+#line 260
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -734,37 +733,39 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void NavigateInsideClassByEnterClassAsTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Navigate inside Class by Enter Class as Teacher", ((string[])(null)));
-#line 240
+#line 263
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 241
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 242
-testRunner.When("I navigate to the \"Classes\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 243
+#line 264
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 265
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 266
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 267
+testRunner.And("I navigate to the \"Classes\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 268
 testRunner.And("I search \"DigitalPathMasterLibrary\" class in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 244
+#line 269
 testRunner.Then("I should be able to see the searched \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 245
+#line 270
 testRunner.When("I click on Enter Class as Teacher cmenu option of class in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 246
+#line 271
 testRunner.Then("I should see the \"Select Course\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 247
+#line 272
 testRunner.When("I select the course and enter inside the course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 248
+#line 273
 testRunner.Then("I should see the default tabs for teacher view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 249
+#line 274
 testRunner.When("I enter as Demo Student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 250
+#line 275
 testRunner.Then("I should see the \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 251
+#line 276
 testRunner.And("I navigate back to Teacher view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 252
+#line 277
 testRunner.When("I navigate outside of the class from \"Overview\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 253
+#line 278
 testRunner.Then("I should be on the \"Manage Organization\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 254
+#line 279
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -776,23 +777,25 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void TeacherEnrollmentInClassByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher Enrollment in Class by CS Admin", ((string[])(null)));
-#line 257
+#line 282
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 258
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 259
-testRunner.When("I navigate to the \"Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 260
+#line 283
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 284
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 285
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 286
+testRunner.And("I navigate to the \"Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 287
 testRunner.And("I select the \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 261
+#line 288
 testRunner.And("I select the \"DPCsTeacher\" under User Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 262
+#line 289
 testRunner.And("I select the Enroll button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 263
+#line 290
 testRunner.Then("I should see the successfull message \'Users enrolled successfully\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 264
+#line 291
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -804,23 +807,25 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void StudentEnrollmentInClassByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student Enrollment in Class by CS Admin", ((string[])(null)));
-#line 267
+#line 294
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 268
-testRunner.Given("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 269
-testRunner.When("I navigate to the \"Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 270
+#line 295
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 296
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 297
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 298
+testRunner.And("I navigate to the \"Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 299
 testRunner.And("I select the \"DigitalPathMasterLibrary\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 271
+#line 300
 testRunner.When("I select the \"DPCsStudent\" under User Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 272
+#line 301
 testRunner.And("I select the Enroll button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 273
+#line 302
 testRunner.Then("I should see the successfull message \'Users enrolled successfully\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 274
+#line 303
 testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -832,23 +837,23 @@ testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), 
         public virtual void CreateSystemAnnouncementByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create System Announcement by CS Admin", ((string[])(null)));
-#line 277
+#line 306
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 278
-testRunner.Given("I am on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 279
+#line 307
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 308
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 309
 testRunner.When("I changed the WS Admin Time Zone to Indian GMT in MyProfile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 280
+#line 310
 testRunner.And("I navigate to the \"Announcement\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 281
+#line 311
 testRunner.When("I create \"CsSystem\" Announcement", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 282
+#line 312
 testRunner.Then("I should see the successfull message \"Announcement created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 283
+#line 313
 testRunner.When("I navigate back to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 284
+#line 314
 testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -860,23 +865,25 @@ testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)
         public virtual void EnhanceOrganizationManagementByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enhance organization management by CS Admin", ((string[])(null)));
-#line 287
+#line 317
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 288
+#line 318
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 319
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 320
 testRunner.When("I am on the \'Organization Management\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 289
+#line 321
 testRunner.And("I search the \"School\" level Organization in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 290
+#line 322
 testRunner.Then("I should see the \"School\" level organization name in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 291
+#line 323
 testRunner.When("I click on the Select Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 292
+#line 324
 testRunner.And("I navigate to the \"Properties\" tab in \'Manage Organization\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 293
+#line 325
 testRunner.And("I edit the \"School\" level Organization in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 294
+#line 326
 testRunner.Then("I should see the successfull message \"Organization updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -888,23 +895,21 @@ testRunner.Then("I should see the successfull message \"Organization updated suc
         public virtual void EnrollingTheUserAsPromotedAdminInAdministratorsTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enrolling The User As Promoted Admin In Administrators Tab By CS Admin", ((string[])(null)));
-#line 297
+#line 329
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 298
+#line 330
 testRunner.Given("I am on the \'Administration Tool\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 299
+#line 331
 testRunner.When("I click the \"AdministratorsDisplayAllUsers\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 300
+#line 332
 testRunner.And("I select the \"DPCourseSpacePramotedAdmin\" user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 301
+#line 333
 testRunner.And("I click the Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 302
+#line 334
 testRunner.Then("I should see the successfull message \"Administrators enrolled successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 303
+#line 335
 testRunner.When("I search the \"DPCourseSpacePramotedAdmin\" in Administrator tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 304
+#line 336
 testRunner.Then("I should see the successfull message \"Tools saved successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -916,29 +921,31 @@ testRunner.Then("I should see the successfull message \"Tools saved successfully
         public virtual void CreatingTeacherInClassesTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creating Teacher in Classes Tab by CS Admin", ((string[])(null)));
-#line 307
+#line 339
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 308
+#line 340
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 341
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 342
 testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 309
+#line 343
 testRunner.And("I click on the \"Classes\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 310
+#line 344
 testRunner.And("I select the \"Manage Roster\" from \"DigitalPathMasterLibrary\" cmenu options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 311
+#line 345
 testRunner.And("I select the \"DPCsTeacherManageRoster\" option from \"Classes\" subtab in Manage Stu" +
                     "dent Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 312
+#line 346
 testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 313
+#line 347
 testRunner.When("I create a new \"DPCsTeacherManageRoster\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 314
+#line 348
 testRunner.Then("I should see the successfull message \"User has been created successfully.\" in Man" +
                     "age Students page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 315
+#line 349
 testRunner.When("I close the \"Manage Students\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 316
+#line 350
 testRunner.And("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -950,29 +957,31 @@ testRunner.And("I close the \"Manage Organization\" window", ((string)(null)), (
         public virtual void CreatingStudentInClassesTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creating Student in Classes Tab by CS Admin", ((string[])(null)));
-#line 319
+#line 353
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 320
+#line 354
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 355
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 356
 testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 321
+#line 357
 testRunner.And("I click on the \"Classes\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 322
+#line 358
 testRunner.And("I select the \"Manage Roster\" from \"DigitalPathMasterLibrary\" cmenu options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 323
+#line 359
 testRunner.And("I select the \"DPCsStudentManageRoster\" option from \"Classes\" subtab in Manage Stu" +
                     "dent Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 324
+#line 360
 testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 325
+#line 361
 testRunner.When("I create a new \"DPCsStudentManageRoster\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 326
+#line 362
 testRunner.Then("I should see the successfull message \"User has been created successfully.\" in Man" +
                     "age Students page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 327
+#line 363
 testRunner.When("I close the \"Manage Students\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 328
+#line 364
 testRunner.And("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -984,29 +993,31 @@ testRunner.And("I close the \"Manage Organization\" window", ((string)(null)), (
         public virtual void CreatingAideInClassesTabByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creating Aide in Classes Tab by CS Admin", ((string[])(null)));
-#line 331
+#line 367
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 332
+#line 368
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 369
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 370
 testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 333
+#line 371
 testRunner.And("I click on the \"Classes\" tab in Manage Organization page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 334
+#line 372
 testRunner.And("I select the \"Manage Roster\" from \"DigitalPathMasterLibrary\" cmenu options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 335
+#line 373
 testRunner.And("I select the \"DPCsAideManageRoster\" option from \"Classes\" subtab in Manage Studen" +
                     "t Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 336
+#line 374
 testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 337
+#line 375
 testRunner.When("I create a new \"DPCsAideManageRoster\" user in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 338
+#line 376
 testRunner.Then("I should see the successfull message \"User has been created successfully.\" in Man" +
                     "age Students page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 339
+#line 377
 testRunner.When("I close the \"Manage Students\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 340
+#line 378
 testRunner.And("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -1018,30 +1029,32 @@ testRunner.And("I close the \"Manage Organization\" window", ((string)(null)), (
         public virtual void StudentBulkUploadInTheManageOrganizationPopupByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student Bulk upload in the Manage organization popup by CS Admin", ((string[])(null)));
-#line 343
+#line 381
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 344
+#line 382
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 383
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 384
 testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 345
+#line 385
 testRunner.And("I navigate to the \"Classes\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 346
+#line 386
 testRunner.And("I select the \"Manage Roster\" from \"DigitalPathMasterLibrary\" cmenu options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 347
+#line 387
 testRunner.Then("I should be on the \'Manage Students\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 348
+#line 388
 testRunner.When("I delete the Older uploaded files", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 349
+#line 389
 testRunner.And("I select the \"Import Students\" option from the \'Create New\' drop down option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 350
+#line 390
 testRunner.And("I Import a bulk users file", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 351
+#line 391
 testRunner.Then("I should see the successfull message \"Bulk Registration- 0 of 1 Files in progress" +
                     "\" in \'Manage Students\' window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 352
+#line 392
 testRunner.When("I close the \"Manage Students\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 353
+#line 393
 testRunner.And("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -1053,23 +1066,25 @@ testRunner.And("I close the \"Manage Organization\" window", ((string)(null)), (
         public virtual void RestrictAccessToProductByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Restrict Access to Product by CS Admin", ((string[])(null)));
-#line 356
+#line 396
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 357
-testRunner.Given("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 358
-testRunner.When("I select product type \"DigitalPath\" in right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 359
+#line 397
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 398
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 399
+testRunner.When("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 400
+testRunner.And("I select product type \"DigitalPath\" in right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 401
 testRunner.And("I select \"Preferences\" cmenu of \"MasterLibrary\" course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 360
+#line 402
 testRunner.And("I disable the course in product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 361
+#line 403
 testRunner.Then("I should see the successfull message \"Course updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 362
+#line 404
 testRunner.When("I select product type \"DigitalPath\" in right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 363
+#line 405
 testRunner.Then("I should see the \"MasterLibrary\" course in \"Hidden\" state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1081,25 +1096,21 @@ testRunner.Then("I should see the \"MasterLibrary\" course in \"Hidden\" state",
         public virtual void ApproveEmptyCourseByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Approve Empty Course by CS Admin", ((string[])(null)));
-#line 366
+#line 408
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 367
-testRunner.Given("I am on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 368
+#line 409
 testRunner.When("I navigate to the \"Publishing\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 369
+#line 410
 testRunner.And("I select the \"Manage Products\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 370
+#line 411
 testRunner.Then("I should be on the \"Manage Products\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 371
+#line 412
 testRunner.When("I search the course \"EmptyClass\" in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 372
+#line 413
 testRunner.Then("I should be able to see the searched \"EmptyClass\" course in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 373
+#line 414
 testRunner.When("I click on \"Approve as Empty Class\" cmenu option of course in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 374
+#line 415
 testRunner.Then("I should see the successfull message \"Published course marked as Approved.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1111,15 +1122,17 @@ testRunner.Then("I should see the successfull message \"Published course marked 
         public virtual void DisplayOfContextCMenuOptionsOfTheProductByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Context CMenu Options of the Product by CS Admin", ((string[])(null)));
-#line 377
+#line 418
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 378
-testRunner.Given("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 379
-testRunner.When("I search the product type \"DigitalPath\" in right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 380
+#line 419
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 420
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 421
+testRunner.When("I am on the \'Manage Products\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 422
+testRunner.And("I search the product type \"DigitalPath\" in right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 423
 testRunner.And("I click the product cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -1134,7 +1147,7 @@ testRunner.And("I click the product cmenu option", ((string)(null)), ((TechTalk.
             table1.AddRow(new string[] {
                         "Product History",
                         "Product History"});
-#line 381
+#line 424
 testRunner.Then("I should able to see the Display of c-menu options for product", ((string)(null)), table1, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1146,28 +1159,106 @@ testRunner.Then("I should able to see the Display of c-menu options for product"
         public virtual void DeleteTheCreatedOrganizationByCSAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete the created Organization by CS Admin", ((string[])(null)));
-#line 388
+#line 431
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 389
-testRunner.Given("I am on the \'Organization Management\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 390
-testRunner.When("I create the \"School\" level organization \"Independent\" in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 391
+#line 432
+testRunner.When("I navigate to the \"Course Enrollment\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 433
+testRunner.Then("I should be on the \"Course Enrollment\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 434
+testRunner.When("I am on the \'Organization Management\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 435
+testRunner.And("I create the \"School\" level organization \"Independent\" in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 436
 testRunner.Then("I should see the successfull message \"Organization created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 392
+#line 437
 testRunner.When("I search the \"School\" level Organization in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 393
+#line 438
 testRunner.Then("I should see the \"School\" level organization name in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 394
+#line 439
 testRunner.When("I delete the organization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 395
+#line 440
 testRunner.Then("I should see the successfull message \"Organization was successfully removed.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 396
+#line 441
 testRunner.When("I search the \"School\" level Organization in \"DigitalPath\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 397
+#line 442
 testRunner.Then("I should see the message \"No records found.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create License for the DigitalPath Demo Organization by CS Admin")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceAdmin")]
+        public virtual void CreateLicenseForTheDigitalPathDemoOrganizationByCSAdmin()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create License for the DigitalPath Demo Organization by CS Admin", ((string[])(null)));
+#line 446
+this.ScenarioSetup(scenarioInfo);
+#line 447
+testRunner.When("I navigate to \"Organization Admin\" tab of the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 448
+testRunner.Then("I should be on the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 449
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPathDemo\"" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 450
+testRunner.And("I navigate to the \"Licenses\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 451
+testRunner.When("I click on the Add Products Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 452
+testRunner.Then("I should see the \"Product Selection\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 453
+testRunner.When("I create 3 license for the \"DigitalPathDemo\" product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 454
+testRunner.And("I search \"Pegasus\" licensed product in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 455
+testRunner.Then("I should be able to see the searched \"Pegasus\" licensed product in the frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 456
+testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 457
+testRunner.And("I \"Sign out\" from the \"CsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 458
+testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
+                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Multiple License for the DigitalPath Demo Organization by CS Admin")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceAdmin")]
+        public virtual void CreateMultipleLicenseForTheDigitalPathDemoOrganizationByCSAdmin()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Multiple License for the DigitalPath Demo Organization by CS Admin", ((string[])(null)));
+#line 461
+this.ScenarioSetup(scenarioInfo);
+#line 462
+testRunner.When("I navigate to \"Organization Admin\" tab of the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 463
+testRunner.Then("I should be on the \"Organization Management\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 464
+testRunner.When("I am on the \'Manage Organization\' page of \"School\" level in the \"DigitalPathDemo\"" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 465
+testRunner.And("I navigate to the \"Licenses\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 466
+testRunner.When("I click on the Add Products Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 467
+testRunner.Then("I should see the \"Product Selection\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 468
+testRunner.When("I create 3 licenses for different \"DigitalPathDemo\" product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 469
+testRunner.And("I search \"Pegasus\" licensed product in Coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 470
+testRunner.Then("I should be able to see the searched \"Pegasus\" licensed product in the frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 471
+testRunner.When("I close the \"Manage Organization\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 472
+testRunner.And("I \"Sign out\" from the \"CsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 473
+testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
+                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

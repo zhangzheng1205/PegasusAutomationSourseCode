@@ -148,7 +148,7 @@ namespace Pegasus.Pages.UI_Pages
             string getRumbaOrganizationID = getSplittedOrgID[1].Substring(0, 32).Trim();
             // Store for school level organization
             Organization organization = Organization.Get(organizationLevelEnum, organizationTypeEnum);
-            organization.RumbaOrgID = getRumbaOrganizationID;
+            organization.RumbaOrgId = getRumbaOrganizationID;
             Logger.LogMethodExit("CreateUserPage", "GetAndStoreOrganizationID",
              base.isTakeScreenShotDuringEntryExit);
         }
@@ -432,7 +432,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Get User From Memory
                 User rumbaUser = User.Get(userTypeEnum);
                 // Save the Rumba Owner ID in Memory
-                rumbaUser.RumbaOwnerID = getOwnerID;
+                rumbaUser.RumbaOwnerId = getOwnerID;
             }
             catch (Exception e)
             {

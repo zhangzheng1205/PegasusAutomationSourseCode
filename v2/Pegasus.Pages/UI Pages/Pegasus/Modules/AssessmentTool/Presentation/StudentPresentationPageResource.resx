@@ -151,7 +151,7 @@
     <value>//div[@id='nextQuextion']/div[{0}]/descendant::input[@type='radio']</value>
   </data>
   <data name="StudentPresentation_Page_ReturnToCourse_Button_Id_Locator" xml:space="preserve">
-    <value>Return to Course</value>
+    <value>to Course</value>
   </data>
   <data name="StudentPresentation_Page_RETURNToCourse_Button_Id_Locator_HED" xml:space="preserve">
     <value>RETURN to Course</value>

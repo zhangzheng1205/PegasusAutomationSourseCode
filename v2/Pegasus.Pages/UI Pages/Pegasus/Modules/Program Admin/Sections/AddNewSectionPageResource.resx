@@ -132,7 +132,10 @@
   <data name="AddNewSection_Page_CursorHand_Image_XPath_Locator" xml:space="preserve">
     <value>//IMG[@class='CursorHand']</value>
   </data>
-  <data name="AddNewSection_Page_Date_Format" xml:space="preserve">
+  <data name="AddNewSection_Page_Date_Format_DDMMYYYY" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="AddNewSection_Page_Date_Format_MMDDYYYY" xml:space="preserve">
     <value>MM/dd/yyyy</value>
   </data>
   <data name="AddNewSection_Page_EndDate_TextBox_Id_Locator" xml:space="preserve">
@@ -152,6 +155,24 @@
   </data>
   <data name="AddNewSection_Page_PopUp_Page_Title" xml:space="preserve">
     <value>Create New Section</value>
+  </data>
+  <data name="AddNewSection_Page_Section_Actual_EndDate_Format_DDMMYYYY" xml:space="preserve">
+    <value>DD/MM/YYYY</value>
+  </data>
+  <data name="AddNewSection_Page_Section_Actual_EndDate_Format_MMDDYYYY" xml:space="preserve">
+    <value>MM/DD/YYYY</value>
+  </data>
+  <data name="AddNewSection_Page_Section_Actual_StartDate_Format_DDMMYYYY" xml:space="preserve">
+    <value>DD/MM/YYYY</value>
+  </data>
+  <data name="AddNewSection_Page_Section_Actual_StartDate_Format_MMDDYYYY" xml:space="preserve">
+    <value>MM/DD/YYYY</value>
+  </data>
+  <data name="AddNewSection_Page_Section_EndDate_Format_Id_Locator" xml:space="preserve">
+    <value>txtEndDateId_lblDateFormat</value>
+  </data>
+  <data name="AddNewSection_Page_Section_StartDate_Format_Id_Locator" xml:space="preserve">
+    <value>txtStartDateId_lblDateFormat</value>
   </data>
   <data name="AddNewSection_Page_StartDate_TextBox_Id_Locator" xml:space="preserve">
     <value>txtStartDate</value>

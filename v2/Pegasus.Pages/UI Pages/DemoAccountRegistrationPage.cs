@@ -177,42 +177,56 @@ namespace Pegasus.Pages.UI_Pages
          {
              logger.LogMethodEntry("DemoAccountRegistrationPage", "EnterUserDetails"
                , base.isTakeScreenShotDuringEntryExit);
-                         
+
+             base.RefreshTheCurrentPage();
              Product demoProduct = Product.Get(Product.ProductTypeEnum.DigitalPathDemo);
 
              //Wait for last element (Registraion button) to load
-             base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Register_Button_Id_Locator));
+             base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
+                 DemoAccountRegistration_Page_Register_Button_Id_Locator));
 
              //User Name
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Name_TextBox_Id_Locator,
+             base.FillTextBoxByID(DemoAccountRegistrationPageResource.
+                 DemoAccountRegistration_Page_Name_TextBox_Id_Locator,
                 DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Name_Value);
 
              //Email
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Email_TextBox_Id_Locator,
+             base.FillTextBoxByID(DemoAccountRegistrationPageResource.
+                 DemoAccountRegistration_Page_Email_TextBox_Id_Locator,
                 DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Email_Value);
 
             //Login name
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_UserName_TextBox_Id_Locator,
+             base.FillTextBoxByID(DemoAccountRegistrationPageResource.
+                 DemoAccountRegistration_Page_UserName_TextBox_Id_Locator,
                 userUniqueId);
 
             //Password
-             base.ClickButtonByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_PasswordWM_TextBox_IE_Id_Locator);
-             base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Password_TextBox_Id_Locator));
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Password_TextBox_Id_Locator,
+             base.ClickButtonByID(DemoAccountRegistrationPageResource.
+                 DemoAccountRegistration_Page_PasswordWM_TextBox_IE_Id_Locator);
+             base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
+                 DemoAccountRegistration_Page_Password_TextBox_Id_Locator));
+             base.FillTextBoxByID(DemoAccountRegistrationPageResource.
+                 DemoAccountRegistration_Page_Password_TextBox_Id_Locator,
                 DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Password_Value);
 
             //Demo Access code
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_AccessCode_TextBox_Id_Locator,
+             base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
+                 DemoAccountRegistration_Page_AccessCode_TextBox_Id_Locator));
+             base.FillTextBoxByID(DemoAccountRegistrationPageResource.
+                 DemoAccountRegistration_Page_AccessCode_TextBox_Id_Locator,
                 demoProduct.DemoAccessCode);   
           
              //Select State
-             // base.ClickButtonByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_State_Select_Id_Locator);
-             base.SelectDropDownValueThroughIndexByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_State_Select_Id_Locator,
-                Convert.ToInt32(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_State_Select_Index_Value));
+             base.SelectDropDownValueThroughIndexById(DemoAccountRegistrationPageResource.
+                 DemoAccountRegistration_Page_State_Select_Id_Locator,
+                Convert.ToInt32(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_State_Select_Index_Value));
 
              //Zip Code
-             base.IsElementEnabledByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Zipcode_TextBox_Id_Locator);
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Zipcode_TextBox_Id_Locator,
+             base.IsElementEnabledByID(DemoAccountRegistrationPageResource.
+                 DemoAccountRegistration_Page_Zipcode_TextBox_Id_Locator);
+             base.FillTextBoxByID(DemoAccountRegistrationPageResource
+                 .DemoAccountRegistration_Page_Zipcode_TextBox_Id_Locator,
                  DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Zipcode_Value);
 
              logger.LogMethodExit("DemoAccountRegistrationPage", "EnterUserDetails"
@@ -224,8 +238,14 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void RegisterDemoAccount()
         {
-            base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Register_Button_Id_Locator));
-            base.ClickButtonByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Register_Button_Id_Locator);
+            //Page have some validations scripts which require some time to be executed.
+            Thread.Sleep(Convert.ToInt32(DemoAccountRegistrationPageResource
+                .DemoAccountRegistration_Page_RegisterTimeToWait_Value));
+            base.WaitForElement(By.Id(DemoAccountRegistrationPageResource
+                .DemoAccountRegistration_Page_Register_Button_Id_Locator));
+            IWebElement registerButton = base.GetWebElementPropertiesById(
+                DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Register_Button_Id_Locator);
+            base.ClickByJavaScriptExecutor(registerButton);           
         }
 
         /// <summary>
@@ -239,7 +259,7 @@ namespace Pegasus.Pages.UI_Pages
                 Name = userUniqueId,
                 Password = DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Password_Value,
                 IsCreated = true,
-                creationDate = DateTime.UtcNow
+                CreationDate = DateTime.UtcNow
             };
             user.StoreUserInMemory();
         }

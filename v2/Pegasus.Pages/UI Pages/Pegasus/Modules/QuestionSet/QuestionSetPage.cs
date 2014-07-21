@@ -399,7 +399,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(QuestionSetPageResource.
                 QuestionSetPage_AddQuestion_Link_Id));
             //Click on Add Question Link 
-            base.ClickLinkByID(QuestionSetPageResource.
+            base.ClickLinkById(QuestionSetPageResource.
                 QuestionSetPage_AddQuestion_Link_Id);
             Logger.LogMethodExit("QuestionSetPage", "ClickOnAddQuestionLink",  
                 base.isTakeScreenShotDuringEntryExit);

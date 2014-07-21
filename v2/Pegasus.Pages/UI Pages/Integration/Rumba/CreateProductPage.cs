@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
                     CreateProductPageResource.
                     CreateProduct_Page_LongDescriptionName);
                 //Select Billing Type
-                base.SelectDropDownValueThroughTextByID(CreateProductPageResource.
+                base.SelectDropDownValueThroughTextById(CreateProductPageResource.
                     CreateProduct_Page_DisplayLanguage_id_Locator,
                     CreateProductPageResource.CreateProduct_Page_SelectLanguage);
                 this.ClickAddButtonInDisplayInformation();
@@ -263,7 +263,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FocusOnElementByID(CreateProductPageResource.
                 CreateProduct_Page_OrderingandBillingSystems_Dropdown_id_Locator);
             //Select Billing Type
-            base.SelectDropDownValueThroughTextByID(CreateProductPageResource.
+            base.SelectDropDownValueThroughTextById(CreateProductPageResource.
                 CreateProduct_Page_OrderingandBillingSystems_Dropdown_id_Locator,
                 CreateProductPageResource.
                 CreateProduct_Page_OrderingandBillingSystems_Dropdown_Value);
@@ -309,7 +309,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save the product details
             License license = new License
             {
-                OrderID = orderId,
+                OrderId = orderId,
                 LicenseType = License.LicenseTypeEnum.Rumba,
                 IsCreated = true
             };

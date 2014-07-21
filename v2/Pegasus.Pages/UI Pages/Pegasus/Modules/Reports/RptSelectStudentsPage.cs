@@ -58,6 +58,17 @@ namespace Pegasus.Pages.UI_Pages
                         this.SelectStudentToGenerateReport(RptSelectStudentsResource
                        .RptSelectStudents_Page_Ins_Student_LastName);
                         break;
+
+                    case RptMainUXPage.PegasusInstructorReportEnum.StudyPlanResults:
+                        base.WaitUntilWindowLoads(RptSelectStudentsResource.
+                        RptSelectStudents_Page_Ins_Window_Name);
+                        //Select Select Students Window
+                        base.SelectWindow(RptSelectStudentsResource.
+                        RptSelectStudents_Page_Ins_Window_Name);
+                        //Select the Student
+                        this.SelectStudentToGenerateReport(RptSelectStudentsResource
+                       .RptSelectStudents_Page_Ins_Student_LastName);                        
+                        break;
                 }
                 base.WaitForElement(By.PartialLinkText(RptSelectStudentsResource.
                     RptSelectStudents_Page_Ins_AddLinkText_Locator));

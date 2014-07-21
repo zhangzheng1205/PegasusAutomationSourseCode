@@ -50,7 +50,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Mail>(
                 x => x.MailType == mailTypeEnum && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).First();
         }
 
         /// <summary>
@@ -61,6 +61,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static List<Mail> Get(Func<Mail, bool> predicate)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany(predicate);
+        }
+
+        /// <summary>
+        /// This method returns all created mail of the given type.
+        /// </summary>
+        /// <param name="mailType">This is the type of the mail.</param>
+        /// <returns>Mail List.</returns>
+        public static List<Mail> GetAll(MailTypeEnum mailType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Mail>(
+                x => x.MailType == mailType).OrderByDescending(
+                x => x.CreationDate).ToList();
         }
     }
 }

@@ -42,13 +42,13 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //This is Organization Rumba ID
             Organization organizationID = Organization.Get(Organization.
                 OrganizationLevelEnum.PowerSchool, Organization.OrganizationTypeEnum.DigitalPath);
-            String getOrganizationID = organizationID.RumbaOrgID;
+            String getOrganizationID = organizationID.RumbaOrgId;
             // This is Rumba User ID
             User userID = User.Get(User.UserTypeEnum.RumbaTeacher);
-            String getTeacherID = userID.RumbaOwnerID;
+            String getTeacherID = userID.RumbaOwnerId;
             //This is Rumba Student ID
             User userStudentID = User.Get(User.UserTypeEnum.RumbaStudent);
-            String getStudentID = userStudentID.RumbaOwnerID;
+            String getStudentID = userStudentID.RumbaOwnerId;
             // This is Rumba Product ID
             License productID = License.Get(License.LicenseTypeEnum.Rumba);
             int getProductID = productID.ProductID;

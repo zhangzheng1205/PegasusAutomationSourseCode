@@ -463,8 +463,7 @@ namespace Pegasus.Pages.UI_Pages
                 switch (userType)
                 {
                     case User.UserTypeEnum.CsSmsInstructor:
-                        //Select Calendar Window
-                        this.SelectCalendarWindow();
+                        base.SelectDefaultWindow();                        
                         break;
                     case User.UserTypeEnum.CsSmsStudent:
                         //Wait for Today's Veiw Window to Load
@@ -802,7 +801,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_ViewBy_Dropdown_Id_Locator));
                 //Select Option In View By Dropdown
-                base.SelectDropDownValueThroughTextByID(CalendarHEDDefaultUXPageResource.
+                base.SelectDropDownValueThroughTextById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_ViewBy_Dropdown_Id_Locator,
                     viewByDropdownOption);
             }
@@ -1281,6 +1280,8 @@ namespace Pegasus.Pages.UI_Pages
                     CalendarHEDDefaultUXPageResource_ViewAdvancedCalendar_Button_Id_Locator);
                 //Click On View Advanced Calendar Button
                 base.ClickByJavaScriptExecutor(getViewAdvancedCalendarProperty);
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Element_Time));
             }
             catch (Exception e)
             {
@@ -1310,6 +1311,8 @@ namespace Pegasus.Pages.UI_Pages
                     CalendarHEDDefaultUXPageResource_CurrentDate_Xpath_Locator);
                 //Click On Current Date Cell Property
                 base.ClickByJavaScriptExecutor(getCurrentCellProperty);
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Element_Time));
             }
             catch (Exception e)
             {

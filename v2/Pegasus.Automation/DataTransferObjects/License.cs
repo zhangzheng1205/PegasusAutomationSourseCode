@@ -43,7 +43,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// <summary>
         /// This is the Order ID
         /// </summary>
-        public string OrderID { get; set; }
+        public string OrderId { get; set; }
 
         /// <summary>
         /// This is the type of the License.
@@ -77,7 +77,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static License Get(LicenseTypeEnum licenseName)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<License>(x => x.LicenseType == licenseName && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).First();
         }
 
         /// <summary>
@@ -88,17 +88,29 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static License Get(String licenseName)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<License>(x => x.Name == licenseName && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First(); ;
+                x => x.CreationDate).First(); ;
         }
 
         /// <summary>
         /// This method is used to update the rumba resource ID
         /// </summary>
-        /// <param name="resourceID">This is the rumba resource ID</param>
-        public void UpdateResourceID(int resourceID)
+        /// <param name="resourceId">This is the rumba resource ID</param>
+        public void UpdateResourceId(int resourceId)
         {
             License license = InMemoryDatabaseSingleton.DatabaseInstance.SelectTopOne<License>(x => x.Name == Name);
-            license.ResourceID = resourceID;
+            license.ResourceID = resourceId;
+        }
+
+        /// <summary>
+        /// This method returns all created license of the given type.
+        /// </summary>
+        /// <param name="licenseType">This is the type of the license.</param>
+        /// <returns>License List.</returns>
+        public static List<License> GetAll(LicenseTypeEnum licenseType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<License>(
+                x => x.LicenseType == licenseType).OrderByDescending(
+                x => x.CreationDate).ToList();
         }
     }
 }

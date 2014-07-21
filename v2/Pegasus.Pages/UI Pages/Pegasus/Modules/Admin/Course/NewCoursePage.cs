@@ -315,7 +315,7 @@ namespace Pegasus.Pages.UI_Pages
                             CourseType = courseTypeEnum,
                             IsCreated = true,
                             IsPreferenceStatus = true,
-                            creationDate = DateTime.Now,
+                            CreationDate = DateTime.Now,
                         };
             //Save the Course Name
             newCourse.StoreCourseInMemory();

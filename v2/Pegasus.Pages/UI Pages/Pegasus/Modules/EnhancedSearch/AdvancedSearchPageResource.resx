@@ -144,6 +144,9 @@
   <data name="AdvancedSearch_Page_TextBox_Id_Locator" xml:space="preserve">
     <value>ucAdvancedSearchCriteria_txtFor</value>
   </data>
+  <data name="AdvancedSearch_Page_Window_TimeValue" xml:space="preserve">
+    <value>3000</value>
+  </data>
   <data name="AdvancedSearch_Page_Window_TitleName" xml:space="preserve">
     <value>Curriculum</value>
   </data>

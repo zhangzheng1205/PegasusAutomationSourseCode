@@ -32,11 +32,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
             Matching = 16,
             Ranking = 17,
             CreateQuestionGroup = 18,
-            SIMGraderQuestion =19,
-            SIM2010ExcelQuestionSet=20,
-            SIM2010WordQuestionSet=21,
-            SIM2010PowerPointQuestionSet=22,
-            SIM2010MSAccessQuestionSet=23,
+            SIMGraderQuestion = 19,
+            SIM2010ExcelQuestionSet = 20,
+            SIM2010WordQuestionSet = 21,
+            SIM2010PowerPointQuestionSet = 22,
+            SIM2010MSAccessQuestionSet = 23,
             SIM2007ExcelQuestionSet = 24,
             SIM2007WordQuestionSet = 25,
             SIM2007PowerPointQuestionSet = 26,
@@ -48,6 +48,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// This is the type of the question
         /// </summary>
         public QuestionTypeEnum QuestionType { get; set; }
+
+        /// <summary>
+        /// This is the question Id.
+        /// </summary>
+        public string QuestionId { get; set; }
 
         /// <summary>
         /// This method creates a new question
@@ -67,7 +72,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
 
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Question>(
                 x => x.QuestionType == questionType && x.IsCreated
-                ).OrderByDescending(x => x.creationDate).First();
+                ).OrderByDescending(x => x.CreationDate).First();
 
         }
 
@@ -79,6 +84,28 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static List<Question> Get(Func<Question, bool> predicate)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany(predicate);
+        }
+
+        /// <summary>
+        /// This method gets the question based on question Id.
+        /// </summary>
+        /// <param name="questionId">This is activity ID.</param>
+        /// <returns>Returns Activity based in ID.</returns>
+        public static Question Get(string questionId)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Question>(x => x.QuestionId == questionId && x.IsCreated).First();
+        }
+
+        /// <summary>
+        /// This method returns all created quesions of the given type.
+        /// </summary>
+        /// <param name="questionType">This is the type of the question.</param>
+        /// <returns>Questions List.</returns>
+        public static List<Question> GetAll(QuestionTypeEnum questionType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Question>(
+                x => x.QuestionType == questionType).OrderByDescending(
+                x => x.CreationDate).ToList();
         }
     }
 }

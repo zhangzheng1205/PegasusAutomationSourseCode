@@ -163,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages
                     Convert.ToInt32(ManageStudentsDefaultPageResource.
                     ManageStudentsDefaultPage_Customized_Wait_Time)))
                 {
-                    base.ClickLinkByID(ManageStudentsDefaultPageResource.
+                    base.ClickLinkById(ManageStudentsDefaultPageResource.
                         ManageStudentsDefaultPage_ViewRegistrationQueue_Id_Locator);
                     //Delete the Files
                     new BulkUploadQueuePage().DeleteOlderUploadedFileInManageStudentsWindow();

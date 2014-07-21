@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(StudentExplorePageResource.
                 StudentExplore_Page_ActivityFolder_Id_Locator));
             //Click Link Button
-            base.ClickLinkByID(StudentExplorePageResource.
+            base.ClickLinkById(StudentExplorePageResource.
                 StudentExplore_Page_ActivityFolder_Id_Locator);
             logger.LogMethodExit("StudentExplorePage", "NavigateInsideActivityFolder",
                  base.isTakeScreenShotDuringEntryExit);

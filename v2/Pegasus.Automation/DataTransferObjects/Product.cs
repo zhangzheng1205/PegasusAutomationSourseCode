@@ -28,7 +28,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
             HedMilGeneral = 5,
             HedMilProgram = 6,
             PromotedAdminDigitalPath = 7,
-            DigitalPathDemo = 8
+            DigitalPathDemo = 8,
+            MyITLabForOffice2013Program = 9,
+            MyITLabForOffice2013General = 10
         }
 
         /// <summary>
@@ -52,6 +54,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public String RumbaProductId {get;set;}
 
         /// <summary>
+        /// This is the pegasus product id
+        /// </summary>
+        public String ProductId { get; set; }
+
+        /// <summary>
         /// This is the product demo access code.
         /// </summary>
         public String DemoAccessCode { get; set; }
@@ -62,7 +69,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public String WelcomeMessage { get; set; }
 
         /// <summary>
-        /// This method is used to create a product
+        /// This is the Image blob id of Welcome banner.
+        /// </summary>
+        public String WelcomeBannerBlobId { get; set; }
+
+        /// <summary>
+        /// This method is used to create a product.
         /// </summary>
         public void StoreProductInMemory()
         {
@@ -70,17 +82,34 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         }
 
         /// <summary>
-        /// This method returns the last created product of the given type
+        /// This method returns the last created product of the given type.
         /// </summary>
-        /// <param name="productType">This is the type of the product</param>
-        /// <returns>The product</returns>
+        /// <param name="productType">This is the type of the product.</param>
+        /// <returns>Last Created Product.</returns>
         public static Product Get(ProductTypeEnum productType)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Product>(
                 x => x.ProductType == productType && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).First();
         }
 
+        /// <summary>
+        /// This method returns all created product of the given type.
+        /// </summary>
+        /// <param name="productType">This is the type of the product.</param>
+        /// <returns>Product List.</returns>
+        public static List<Product> GetAll(ProductTypeEnum productType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Product>(
+                x => x.ProductType == productType).OrderByDescending(
+                x => x.CreationDate).ToList();
+        }
+
+        /// <summary>
+        /// This method returns all created product of the given type.
+        /// </summary>
+        /// <param name="predicate"></param>
+        /// <returns></returns>
         public static List<Product> Get(Func<Product,bool> predicate)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany(predicate);

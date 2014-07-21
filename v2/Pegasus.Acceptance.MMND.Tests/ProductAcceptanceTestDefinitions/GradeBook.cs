@@ -144,7 +144,7 @@ namespace Pegasus.Acceptance.MMND.
             // Open Create Total column pop up window
             Logger.LogMethodEntry("GradeBook", "EnterCalculatedColumnName",
                 base.isTakeScreenShotDuringEntryExit);
-            new GBInstructorUXPage().EnterCalculatedColumnName();
+            new GBInstructorUXPage().EnterCalculatedColumnName();            
             Logger.LogMethodExit("GradeBook", "EnterCalculatedColumnName",
                 base.isTakeScreenShotDuringEntryExit);
         }

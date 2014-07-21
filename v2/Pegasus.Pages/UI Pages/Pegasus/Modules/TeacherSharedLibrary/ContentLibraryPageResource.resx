@@ -198,4 +198,7 @@
   <data name="ContnetLibrary_Page_FrameRefresh_CustomTimeToWait_Value" xml:space="preserve">
     <value>20000</value>
   </data>
+  <data name="ContnetLibrary_Page_Asset_Cmenu_Options_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='diMenuOptions']/table/tbody/tr/td/div[2]</value>
+  </data>
 </root>

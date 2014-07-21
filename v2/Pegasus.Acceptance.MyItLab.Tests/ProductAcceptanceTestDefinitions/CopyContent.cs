@@ -15,27 +15,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// The static instance of the logger for the class.
         /// </summary>
         private static Logger Logger =
-            Logger.GetInstance(typeof(CopyContent));
-
-
-        /// <summary>
-        /// Search Section
-        /// </summary>
-        /// <param name="courseTypeEnum">This is Course Type Enum</param>
-        [When(@"I search the ""(.*)"" first section")]
-        public void SearchFirstSection(Course.CourseTypeEnum courseTypeEnum)
-        {
-            //Search Section
-            Logger.LogMethodEntry("CopyContent", "SearchFirstSection",
-                base.isTakeScreenShotDuringEntryExit);
-            //Get Course From Memory
-            Course course = Course.Get(courseTypeEnum);
-            //Search Section
-            new ManageTemplatePage().SearchSection(course.SectionName + 
-                CopyContentResource.CopyContent_SecondSection_Value);
-            Logger.LogMethodExit("CopyContent", " SearchFirstSection",
-              base.isTakeScreenShotDuringEntryExit);
-        }
+            Logger.GetInstance(typeof(CopyContent));        
 
         /// <summary>
         /// Search Asset In Course Materials Library
@@ -97,31 +77,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             base.isTakeScreenShotDuringEntryExit);
             TeachingPlanUXPage teachingPlanUxPage = new TeachingPlanUXPage();
             //Select Course Materials Window
-            teachingPlanUxPage.SelectCourseMaterialsWindow();
+            teachingPlanUxPage.SelectWindow();
             //Click On Home Button
             teachingPlanUxPage.ClickOnHomeButton();
             Logger.LogMethodExit("CopyContent", " SelectHomeButton",
              base.isTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Search Second Section
-        /// </summary>
-        /// <param name="courseTypeEnum">This is Course Type Enum</param>
-        [When(@"I search the ""(.*)"" second section")]
-        public void SearchSecondSection(Course.CourseTypeEnum courseTypeEnum)
-        {
-            //Search Section
-            Logger.LogMethodEntry("CopyContent", "SearchSecondSection",
-                base.isTakeScreenShotDuringEntryExit);
-            //Get Course From Memory
-            Course course = Course.Get(courseTypeEnum);
-            //Search Section
-            new ManageTemplatePage().SearchSection(course.SectionName + 
-                CopyContentResource.CopyContent_FirstSection_Value);
-            Logger.LogMethodExit("CopyContent", " SearchSecondSection",
-              base.isTakeScreenShotDuringEntryExit);
-        }
+        }        
 
         /// <summary>
         /// Search Asset In My Course Frame.
@@ -331,5 +292,42 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
               base.isTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Search Section
+        /// </summary>
+        /// <param name="courseTypeEnum">This is Course Type Enum</param>
+        [When(@"I search the ""(.*)"" first section")]
+        public void SearchFirstSection(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Search Section
+            Logger.LogMethodEntry("CopyContent", "SearchFirstSection",
+                base.isTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Search Section
+            new ManageTemplatePage().SearchSection(course.SectionName +
+                CopyContentResource.CopyContent_FirstSection_Value);
+            Logger.LogMethodExit("CopyContent", " SearchFirstSection",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Search Second Section
+        /// </summary>
+        /// <param name="courseTypeEnum">This is Course Type Enum</param>
+        [When(@"I search the ""(.*)"" second section")]
+        public void SearchSecondSection(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Search Section
+            Logger.LogMethodEntry("CopyContent", "SearchSecondSection",
+                base.isTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);            
+            //Search Section
+            new ManageTemplatePage().SearchSection(course.SectionName +
+                CopyContentResource.CopyContent_SecondSection_Value);
+            Logger.LogMethodExit("CopyContent", " SearchSecondSection",
+              base.isTakeScreenShotDuringEntryExit);
+        }        
     }
 }

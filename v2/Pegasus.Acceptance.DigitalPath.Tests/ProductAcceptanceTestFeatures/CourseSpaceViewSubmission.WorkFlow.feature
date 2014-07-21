@@ -3,13 +3,6 @@
 					I want to manage all the coursespace student view submission related usecases 
 					so that I would validate all the view submission scenarios are working fine.
 
-Background:
-#Purpose: Open CS Url 
-Given I browsed the login url for "DPCsStudent"
-When I login to Pegasus as "DPCsStudent" in "CourseSpace"
-Then I should be logged in successfully
-Given I am on the "Overview" page
-
 #Purpose: Display of StudyPlan Grades in View Submission Page by student   
 Scenario: Display of StudyPlan Grade in View Submission Page by CS Student
 When I navigate to the "Grades" tab

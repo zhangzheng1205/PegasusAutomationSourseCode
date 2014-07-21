@@ -122,6 +122,9 @@ namespace Pegasus.Pages.UI_Pages
                     case RptMainUXPage.PegasusInstructorReportEnum.StudentResultsbyActivity:
                         this.StudentResultByActivityReport(reportTypeEnum);
                         break;
+                    case RptMainUXPage.PegasusInstructorReportEnum.StudyPlanResults:
+                        this.StudyPlanResultsReport(reportTypeEnum);
+                        break;
                 }
             }
             catch (Exception e)
@@ -375,6 +378,55 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByXPath(RptMainUXPageResource.
                 RptMainUX_Page_StudentResultByActivityReport_Xpath_Locator);
             Logger.LogMethodExit("RptMainUXPage", "SelectStudentResultByActivityReport",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Generate Study Plan results Type Report.
+        /// </summary>
+        /// <param name="reportTypeEnum">This is Report Type Enum.</param>
+        private void StudyPlanResultsReport(
+            PegasusInstructorReportEnum reportTypeEnum)
+        {
+            Logger.LogMethodEntry("RptMainUXPage", "StudyPlanResultsReport",
+                base.isTakeScreenShotDuringEntryExit);
+            //Select Study Plan Results Report Link
+            this.SelectStudyPlanResultsReport();
+            //Select the Study Plan 
+            new RptSelectAssessmentsPage().SelectStudyPlanInStudyPlanResultsReport(
+                RptMainUXPageResource.RptMainUX_Page_Ins_StudyPlan_Name);
+            //Select the Student
+            new RptGCOptionsUXPage().SelectStudentInStudyPlanResultsReport(reportTypeEnum);            
+            //Generate the Report
+            new RptGCOptionsUXPage().GenerateReport();
+            Logger.LogMethodExit("RptMainUXPage", "StudyPlanResultsReport",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Study Plan Results Report.
+        /// </summary>
+        private void SelectStudyPlanResultsReport()
+        {
+            Logger.LogMethodEntry("RptMainUXPage",
+                "SelectStudyPlanResultsReport",
+               base.isTakeScreenShotDuringEntryExit);
+            //Select Reports Window    
+            base.SelectWindow(RptMainUXPageResource.
+                RptMainUX_Page_Report_Window_Name);
+            base.WaitForElement(By.Id(RptMainUXPageResource.
+                RptMain_Page_Frame_Id_Locator));
+            //Switch to Frame
+            base.SwitchToIFrame(RptMainUXPageResource.
+                RptMain_Page_Frame_Id_Locator);
+            base.WaitForElement(By.XPath(RptMainUXPageResource.
+                RptMainUX_Page_StudyPlanReport_Xpath_Locator));
+            base.FocusOnElementByXPath(RptMainUXPageResource.
+                RptMainUX_Page_StudyPlanReport_Xpath_Locator);
+            //Click On Study Plan Results Report link
+            base.ClickButtonByXPath(RptMainUXPageResource.
+                RptMainUX_Page_StudyPlanReport_Xpath_Locator);
+            Logger.LogMethodExit("RptMainUXPage", "SelectStudyPlanResultsReport",
               base.isTakeScreenShotDuringEntryExit);
         }
 

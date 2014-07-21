@@ -99,7 +99,7 @@ namespace Pegasus.Pages.UI_Pages
                 SharedLibraryPreferencesPage_Textbox_SharedLibraryCourse_Id_Locator, 
                 getMasterLibrary.Name);
             //Click on the Search Button
-            base.ClickLinkByID(SharedLibraryPreferencesPageResource.
+            base.ClickLinkById(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_Button_Search_Id_Locator);
             logger.LogMethodExit("SharedLibraryPreferencesPage", "SearchTheMasterLibrary",
                 base.isTakeScreenShotDuringEntryExit);
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the Shared Libraries link
             base.WaitForElement(By.Id(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_SharedLibraries_Link_Id_Locator));
-            base.ClickLinkByID(SharedLibraryPreferencesPageResource.
+            base.ClickLinkById(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_SharedLibraries_Link_Id_Locator);
             logger.LogMethodExit("SharedLibraryPreferencesPage", "ClickOnSharedLibrariesLink",
                 base.isTakeScreenShotDuringEntryExit);

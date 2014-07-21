@@ -231,7 +231,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ProgramAdminManageCourseTemplatesPageResource.
                     ProgramAdminManageCourseTemplates_Page_Dropdown_Id_Locator));
                 //Select Option in Dropdown
-                base.SelectDropDownValueThroughIndexByID
+                base.SelectDropDownValueThroughIndexById
                     (ProgramAdminManageCourseTemplatesPageResource.
                     ProgramAdminManageCourseTemplates_Page_Dropdown_Id_Locator,
                     Convert.ToInt32(ProgramAdminManageCourseTemplatesPageResource.

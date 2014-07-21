@@ -330,7 +330,7 @@ namespace Pegasus.Pages.UI_Pages
             string getShowAllLinkText = base.GetElementTextByID(RptSaveReportPageResource.
                 RptSaveReport_Page_ShowCollapse_Link_Id_Locator);
             //Click On Show All Link
-            base.ClickLinkByID(RptSaveReportPageResource.
+            base.ClickLinkById(RptSaveReportPageResource.
                 RptSaveReport_Page_ShowCollapse_Link_Id_Locator);
             //Get Collapse Link Text
             string getCollapseLinkText = base.GetElementTextByID(RptSaveReportPageResource.

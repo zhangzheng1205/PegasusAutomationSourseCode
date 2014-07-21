@@ -25,9 +25,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public OrganizationTypeEnum OrganizationType { get; set; }
 
         /// <summary>
-        /// This is the organization ID.
+        /// This is the organization Id.
         /// </summary>
-        public String RumbaOrgID { get; set; }
+        public String RumbaOrgId { get; set; }
 
         /// <summary>
         /// This si the organization level enum.
@@ -65,7 +65,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Organization>(
                 x => x.OrganizationLevel == organizationLevel && x.OrganizationType == organizationTypeEnum && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).First();
         }
 
         /// <summary>
@@ -76,6 +76,20 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static List<Organization> Get(Func<Organization, bool> predicate)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany(predicate);
+        }
+
+        /// <summary>
+        /// This method returns all the created organizations of the given level and type.
+        /// </summary>
+        /// <param name="organizationLevel">This is the type of the organization level.</param>
+        /// /// <param name="organizationType">This is the type of the organization type.</param>
+        /// <returns>Organization List.</returns>
+        public static List<Organization> GetAll(OrganizationLevelEnum organizationLevel,
+            OrganizationTypeEnum organizationType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Organization>(
+                x => x.OrganizationType == organizationType && x.OrganizationLevel == organizationLevel && x.IsCreated).OrderByDescending(
+                x => x.CreationDate).ToList();
         }
     }
 }

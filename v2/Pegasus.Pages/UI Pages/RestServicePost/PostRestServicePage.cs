@@ -397,7 +397,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store the CourseId into memory
             Course course = new Course
             {
-                ExternalCourseID = getCourseId,
+                ExternalCourseId = getCourseId,
                 CourseType = Course.CourseTypeEnum.ExternalCourse,
                 IsCreated = true,
             };
@@ -502,7 +502,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(PostRestServiceResource.
                     PostRestServicePage_RequestType_Dropdown_Id_Locator));
                 //Select Post Request Option
-                base.SelectDropDownValueThroughTextByID(PostRestServiceResource.
+                base.SelectDropDownValueThroughTextById(PostRestServiceResource.
                     PostRestServicePage_RequestType_Dropdown_Id_Locator, requestType);
             }
             catch (Exception e)
@@ -528,7 +528,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Fetch the Course ID from memory
                 Course course = Course.Get(Course.CourseTypeEnum.ExternalCourse);
-                string getcourseId = course.ExternalCourseID;
+                string getcourseId = course.ExternalCourseId;
                 Activity activity = Activity.Get(Activity.ActivityTypeEnum.WritingSpace);
                 //Split the course id
                 string getexternalCorseId = getcourseId.Split(Convert.ToChar

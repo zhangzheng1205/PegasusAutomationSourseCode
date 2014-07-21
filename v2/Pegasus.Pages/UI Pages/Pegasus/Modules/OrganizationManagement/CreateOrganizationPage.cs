@@ -79,16 +79,8 @@ namespace Pegasus.Pages.UI_Pages
                         case Organization.OrganizationLevelEnum.School:
                             try
                             {
-                                if (organizationTypeEnum == Organization.OrganizationTypeEnum.DigitalPathDemo)
-                                {
-                                    //Create School Level Orgnization
-                                    this.CreateSchoolLevelOrganization(organizationLevelEnum, organizationTypeEnum);
-                                }
-                                else
-                                {
-                                    //Select Region Level Organization and Create School level Organization
-                                    this.SelectAndCreateOrganization(organizationLevelEnum, organizationTypeEnum);
-                                }
+                                //Select Region Level Organization and Create School level Organization
+                                this.SelectAndCreateOrganization(organizationLevelEnum, organizationTypeEnum);
                             }
                             catch
                             {
@@ -143,20 +135,32 @@ namespace Pegasus.Pages.UI_Pages
             Guid organizationNameGuid)
         {
             ///Create School Level Organization
-            Logger.LogMethodEntry("CreateOrganizationPage","CreateSchoolLevelOrganization",
+            Logger.LogMethodEntry("CreateOrganizationPage", "CreateSchoolLevelOrganization",
                  base.isTakeScreenShotDuringEntryExit);
-            //Select Organization Management Window
-            this.SelectOrganizationManagementWindow();
-            //Click on New Organization Link
-            new OrganizationManagementPage().ClickOnTheCreateNewOrganizationLink();
-            //Select Organization Window
-            new CreateOrganizationPage().SelectCreateOrganizationWindow();
+            if (organizationTypeEnum != Organization.OrganizationTypeEnum.DigitalPathDemo)
+            {
+                //Select Organization Management Window
+                this.SelectOrganizationManagementWindow();
+                //Click on New Organization Link
+                new OrganizationManagementPage().ClickOnTheCreateNewOrganizationLink();
+                //Select Organization Window
+                new CreateOrganizationPage().SelectCreateOrganizationWindow();
+            }
             //Select Country
             this.SelectCountryOptionForStateLevelOrganization();
             // Fill Internal Organization Name
             this.FillInternalOrganizationName(organizationNameGuid);
             //Fill Organization Display Name
             FillOrganizationDisplayName();
+            if (organizationTypeEnum == Organization.OrganizationTypeEnum.DigitalPathDemo)
+            {
+                base.WaitForElement(By.Id(CreateOrganizationPageResource.
+                    CreateOrganization_Page_DemoOrganisation_CheckBox_Id_Locator));
+                //Click Demo Organisation CheckBox
+                IWebElement demoOrganizationCheckbox = base.GetWebElementPropertiesById
+                    (CreateOrganizationPageResource.CreateOrganization_Page_DemoOrganisation_CheckBox_Id_Locator);
+                base.ClickByJavaScriptExecutor(demoOrganizationCheckbox);
+            }
             //Fill Organization Contact Details
             this.FillOrganizationContactDetails(organizationNameGuid);
             //Select Organization Type Based on Level
@@ -172,7 +176,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.StoreTheOrganizationDetails(organizationNameGuid,
                     organizationLevelEnum, organizationTypeEnum);
             }
-            Logger.LogMethodExit("CreateOrganizationPage","CreateSchoolLevelOrganization",
+            Logger.LogMethodExit("CreateOrganizationPage", "CreateSchoolLevelOrganization",
                base.isTakeScreenShotDuringEntryExit);
         }
 
@@ -275,15 +279,6 @@ namespace Pegasus.Pages.UI_Pages
             Guid organizationNameGuid = Guid.NewGuid();
             //Enter Organization Name
             this.EnterOrganizationName(organizationNameGuid);
-            if(organizationTypeEnum == Organization.OrganizationTypeEnum.DigitalPathDemo)
-            {
-                base.WaitForElement(By.Id(CreateOrganizationPageResource.
-                    CreateOrganization_Page_DemoOrganisation_CheckBox_Id_Locator));
-                //Click Demo Organisation CheckBox
-                IWebElement demoOrganizationCheckbox = base.GetWebElementPropertiesById
-                    (CreateOrganizationPageResource.CreateOrganization_Page_DemoOrganisation_CheckBox_Id_Locator);
-                base.ClickByJavaScriptExecutor(demoOrganizationCheckbox);
-            }
             //Fill Organization Contact Details
             this.FillOrganizationContactDetails(organizationNameGuid);
             //Select School Level Organization
@@ -435,7 +430,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateOrganizationPageResource.
                 CreateOrganization_Page_Country_dropdown_Id_Locator));
             //Select the Country Details           
-            base.SelectDropDownValueThroughIndexByID(CreateOrganizationPageResource.
+            base.SelectDropDownValueThroughIndexById(CreateOrganizationPageResource.
                 CreateOrganization_Page_Country_dropdown_Id_Locator,
                 Convert.ToInt32(CreateOrganizationPageResource.
                     CreateOrganization_Page_Country_dropdown_Id_Locator_Value));
@@ -610,7 +605,7 @@ namespace Pegasus.Pages.UI_Pages
               "SelectOrganizationState",
               base.isTakeScreenShotDuringEntryExit);
             //Select the State
-            base.SelectDropDownValueThroughIndexByID(CreateOrganizationPageResource.
+            base.SelectDropDownValueThroughIndexById(CreateOrganizationPageResource.
                 CreateOrganization_Page_State_dropdown_Id_Locator,
                 Convert.ToInt32(CreateOrganizationPageResource.
                     CreateOrganization_Page_State_dropdown_Id_Locator_Value));

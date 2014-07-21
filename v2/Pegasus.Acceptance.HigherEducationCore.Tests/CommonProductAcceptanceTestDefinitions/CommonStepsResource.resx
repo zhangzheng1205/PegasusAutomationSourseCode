@@ -123,11 +123,35 @@
   <data name="CommonSteps_CreateNewUserWindow_Name_Locator" xml:space="preserve">
     <value>Create New User</value>
   </data>
+  <data name="CommonSteps_ElementWaitTimeOut_Value" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="CommonSteps_GetClass_Value" xml:space="preserve">
+    <value>class</value>
+  </data>
+  <data name="CommonSteps_GetSelectedTab_Value" xml:space="preserve">
+    <value>SubNavigationTabSelected</value>
+  </data>
   <data name="CommonSteps_IFrame" xml:space="preserve">
     <value>ifrm</value>
   </data>
   <data name="CommonSteps_LeftFrame" xml:space="preserve">
     <value>left</value>
+  </data>
+  <data name="CommonSteps_Maintab_Classname_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblMenuBar']/tbody/tr/td[{0}]/a</value>
+  </data>
+  <data name="CommonSteps_Maintab_Count_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblMenuBar']/tbody/tr/td</value>
+  </data>
+  <data name="CommonSteps_MainTab_SelectedTab_Value" xml:space="preserve">
+    <value>ancCourseNavSelectedMenuImgCls</value>
+  </data>
+  <data name="CommonSteps_ManageProductsTab_Value" xml:space="preserve">
+    <value>_ctl9_td_3</value>
+  </data>
+  <data name="CommonSteps_ManageProgramsTab_Value" xml:space="preserve">
+    <value>_ctl9_td_2</value>
   </data>
   <data name="CommonSteps_PageNotOpened_Message" xml:space="preserve">
     <value>Page not opened in the specified amount of time.</value>
@@ -138,6 +162,15 @@
   <data name="CommonSteps_SleepTime_Value" xml:space="preserve">
     <value>3000</value>
   </data>
+  <data name="CommonSteps_Subtab_Classname_Xpath_Locator" xml:space="preserve">
+    <value>//tr[@id='trSubNavigationTab']/td[{0}]</value>
+  </data>
+  <data name="CommonSteps_Subtab_Count_Xpath_Locator" xml:space="preserve">
+    <value>//tr[@id='trSubNavigationTab']/td</value>
+  </data>
+  <data name="CommonSteps_SubTab_SelectedTab_Value" xml:space="preserve">
+    <value>SubNavigationTabSelected1</value>
+  </data>
   <data name="CommonSteps_SuccessMessage_Class_Locator" xml:space="preserve">
     <value>messageBoardText</value>
   </data>
@@ -146,5 +179,11 @@
   </data>
   <data name="CommonSteps_WaitTimeOut_Value" xml:space="preserve">
     <value>20</value>
+  </data>
+  <data name="CommonSteps_ElementWait_Time_Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
   </data>
 </root>

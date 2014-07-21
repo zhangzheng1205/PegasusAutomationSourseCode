@@ -205,6 +205,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Print tool.
+        /// </summary>
+        internal static string PrintToolPage_Print_Window_Name {
+            get {
+                return ResourceManager.GetString("PrintToolPage_Print_Window_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .//*[@id=&apos;Form1&apos;]/div/table[2]/tbody/tr.
         /// </summary>
         internal static string PrintToolPage_Table_Row_Xpath_Locator {

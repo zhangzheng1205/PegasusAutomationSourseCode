@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using Pegasus.Integration.DigitalPath.Rumba.Tests.IntegrationAcceptanceTestDefinitions;
 
 namespace Pegasus.Integration.MGM.Tests.
     IntegrationAcceptanceTestDefinitions

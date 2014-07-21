@@ -358,7 +358,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 15.
+        ///   Looks up a localized string similar to 3.
         /// </summary>
         internal static string TodaysViewUXPageResource_Custom_WaitTime {
             get {
@@ -1168,6 +1168,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Home_Link_PartialLink_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Home_Link_PartialLink_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;grdCoursePerformance&apos;].
         /// </summary>
         internal static string TodayViewUXPageResource_Instructor_CoursePerformance_Assets_Xpath_Locator {
@@ -1245,6 +1254,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_Outer_Frame_Id_Locator {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_Outer_Frame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //td[@id=&apos;tdResTB&apos;]/div[1]/a.
+        /// </summary>
+        internal static string TodayViewUXPageResource_PCTInstructorResourceDropDown {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_PCTInstructorResourceDropDown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblRTBPulldown&apos;]/tbody/tr/td/div/div[@title.
+        /// </summary>
+        internal static string TodayViewUXPageResource_PCTInstructorResourceToolLink {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_PCTInstructorResourceToolLink", resourceCulture);
             }
         }
         

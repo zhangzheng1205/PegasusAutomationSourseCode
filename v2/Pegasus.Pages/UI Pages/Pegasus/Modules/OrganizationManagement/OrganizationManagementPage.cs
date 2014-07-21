@@ -38,9 +38,11 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for Create New Organization' link opened
                 base.WaitForElement(By.Id(OrganizationManagementPageResource.
                     OrganizationManagement_Page_CreateNewOrganization_Link_Id_Locator));
-                //Click on the Create New Organization' link button
-                base.ClickButtonByID(OrganizationManagementPageResource.
+                IWebElement getCreateOrganizationlink = base.GetWebElementPropertiesById
+                    (OrganizationManagementPageResource.
                     OrganizationManagement_Page_CreateNewOrganization_Link_Id_Locator);
+                //Click on the Create New Organization' link button
+                base.ClickByJavaScriptExecutor(getCreateOrganizationlink);
                 base.WaitUntilWindowLoads(OrganizationManagementPageResource.
                     OrganizationManagement_Page_CreateOrganizationWindow_Name_Locator);
             }

@@ -244,7 +244,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GradingPreferencesPageResource.
                     GradingPrefernces_Page_GetIncludeMailCheckBox_Download_Temp_Locator));
                 //Select the drop down value
-                base.SelectDropDownValueThroughTextByID(GradingPreferencesPageResource.
+                base.SelectDropDownValueThroughTextById(GradingPreferencesPageResource.
                     GradingPrefernces_Page_GetIncludeMailCheckBox_Download_Temp_Locator,
                     GradingPreferencesPageResource.GradingPrefernces_Page_Current_Page);
                 base.WaitForElement(By.Id(GradingPreferencesPageResource.
@@ -308,7 +308,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GradingPreferencesPageResource.
                     GradingPrefernces_Page_GetIncludeMailCheckBox_Download_Temp_Locator));
                 //select the drop down value
-                base.SelectDropDownValueThroughTextByID(GradingPreferencesPageResource.
+                base.SelectDropDownValueThroughTextById(GradingPreferencesPageResource.
                     GradingPrefernces_Page_GetIncludeMailCheckBox_Download_Temp_Locator,
                     GradingPreferencesPageResource.GradingPrefernces_Page_All_Pages);
                 base.WaitForElement(By.Id(GradingPreferencesPageResource.

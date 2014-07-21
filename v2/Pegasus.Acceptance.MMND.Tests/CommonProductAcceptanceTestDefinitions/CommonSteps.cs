@@ -160,6 +160,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                base.isTakeScreenShotDuringEntryExit);
         }
 
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts
         /// </summary>

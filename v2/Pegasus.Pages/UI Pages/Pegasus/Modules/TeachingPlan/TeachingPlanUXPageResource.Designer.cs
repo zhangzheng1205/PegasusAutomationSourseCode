@@ -241,6 +241,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Program Administration.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_Section_WindowName {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_Section_WindowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 10000.
         /// </summary>
         internal static string TeachingPlanUX_Page_TimetoWait {

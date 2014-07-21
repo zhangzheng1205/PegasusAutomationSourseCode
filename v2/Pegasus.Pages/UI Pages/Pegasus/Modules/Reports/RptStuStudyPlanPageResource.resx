@@ -126,10 +126,34 @@
   <data name="RptStuStudyPlanPage_CloseButton_IdLocator" xml:space="preserve">
     <value>_ctl4</value>
   </data>
+  <data name="RptStuStudyPlanPage_Close_Link_Locator" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="RptStuStudyPlanPage_Ins_Score_Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RptStuStudyPlanPage_Student_Name_SplittingCharacter" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="RptStuStudyPlanPage_Student_Score_SplittingCharacter" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="RptStuStudyPlanPage_StudyplanResults_WindowName" xml:space="preserve">
+    <value>Study Plan Results</value>
+  </data>
   <data name="RptStuStudyPlanPage_Studyplan_WindowName" xml:space="preserve">
     <value>StudyPlan Summary Report</value>
   </data>
   <data name="RptStuStudyPlanPage_ViewButton_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='MainTBL']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[5]/a</value>
+  </data>
+  <data name="RptStuStudyPlanResultsPage_Student_Name_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='MainDiv']/div/table[3]/tbody/tr/td</value>
+  </data>
+  <data name="RptStuStudyPlanResultsPage_Student_Score_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl3_AveragePlaceHolder']/table/tbody/tr/td[1]/span</value>
+  </data>
+  <data name="RptStuStudyPlanResultsPage_StudyPlan_Name_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='MainDiv']/div/table[2]/tbody/tr/td[2]</value>
   </data>
 </root>

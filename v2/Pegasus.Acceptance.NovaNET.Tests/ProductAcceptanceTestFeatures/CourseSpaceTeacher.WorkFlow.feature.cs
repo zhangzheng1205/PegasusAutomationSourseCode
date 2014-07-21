@@ -70,47 +70,24 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestFeatures
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 7
-#line 8
-testRunner.Given("I browsed the login url for \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I login to Pegasus as \"NovaNETCsTeacher\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("View Activity Alerts by CS Teacher")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
         public virtual void ViewActivityAlertsByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Activity Alerts by CS Teacher", ((string[])(null)));
-#line 14
+#line 9
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 15
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"NovaNETCsTeacher\" from the Globa" +
-                    "l Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
-testRunner.And("I navigate to the \"Overview\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 10
+testRunner.When("I navigate to the \"Overview\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
 testRunner.Then("I should be on the \"Overview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 18
+#line 12
 testRunner.And("I should see the alert for New Grades", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
+#line 13
 testRunner.When("I select New Grades option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
+#line 14
 testRunner.Then("I should see name of submitted activity as \"Posttest\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 21
-testRunner.When("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -121,22 +98,16 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         public virtual void CreateCourseByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Course by CS Teacher", ((string[])(null)));
-#line 25
+#line 18
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 26
+#line 19
 testRunner.When("I navigate to the \"Classes\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
+#line 20
 testRunner.And("I select the \'Create Course\' option in \'Classes\' Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
+#line 21
 testRunner.And("I create the course using master libraries", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
+#line 22
 testRunner.Then("I should see the successfull message \"Item created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 30
-testRunner.When("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 31
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -147,32 +118,26 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         public virtual void UserEnrollmentByCsTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Enrollment by Cs Teacher", ((string[])(null)));
-#line 34
+#line 26
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 35
+#line 27
 testRunner.When("I enter in to \"NovaNETTemplate\" class", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 36
+#line 28
 testRunner.And("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 37
+#line 29
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 38
+#line 30
 testRunner.When("I enable roster in Preferences tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 39
+#line 31
 testRunner.Then("I should see the successfull message \"Preferences updated successfully\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 40
+#line 32
 testRunner.When("I navigate to the \"Enrollments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
+#line 33
 testRunner.And("I navigate to the \"Roster\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
+#line 34
 testRunner.And("I create \"NovaNETCsClassStudent\" user as coursespace teacher", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
+#line 35
 testRunner.Then("I should see the successfull message \"User has been created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 44
-testRunner.When("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -183,27 +148,21 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         public virtual void ToVerifyTheFunctionalityOfTeacherManageAnnouncementsByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify The Functionality of Teacher Manage announcements by CS Teacher", ((string[])(null)));
-#line 49
+#line 40
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 50
+#line 41
 testRunner.When("I click on the \'Manage All\' button in global home", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 42
 testRunner.And("I create \"Class\" Announcement in coursespace", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
+#line 43
 testRunner.Then("I should see the successfull message \"Announcement created successfully.\" in Anno" +
                     "uncements Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 53
+#line 44
 testRunner.When("I click on the \'Manage All\' button in global home", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
+#line 45
 testRunner.And("I select \"Class Announcements\" in \'View by\' drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
+#line 46
 testRunner.Then("I should see the details of  \"Class\" Announcement in Announcement Light box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 56
-testRunner.When("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 57
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -214,29 +173,23 @@ testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((T
         public virtual void TeacherManagesEnrollmentsDuringClassCreationByCSTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teacher Manages Enrollments During Class Creation by CS Teacher", ((string[])(null)));
-#line 61
+#line 51
 this.ScenarioSetup(scenarioInfo);
-#line 7
-this.FeatureBackground();
-#line 62
+#line 52
 testRunner.When("I click on \'Create Class\' button in Global home", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 63
+#line 53
 testRunner.Then("I should see the \"Create Class\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 64
+#line 54
 testRunner.When("I create the class using \"Container\" template in Global Home", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 65
+#line 55
 testRunner.And("I select the user from create class window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 66
+#line 56
 testRunner.Then("I should see the \"Add User\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 67
+#line 57
 testRunner.When("I create a new \"DPCsTeacher\" user in Coursespace Global Home", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 68
+#line 58
 testRunner.Then("I should see the successfull message \"New users added successfully.\" in Create Cl" +
                     "ass Popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 69
-testRunner.When("I \"Sign Out\" from the \"NovaNETCsTeacher\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 70
-testRunner.Then("I should see the \"Signed Out\" message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

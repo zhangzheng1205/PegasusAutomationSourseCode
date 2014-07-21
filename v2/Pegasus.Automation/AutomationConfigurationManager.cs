@@ -67,19 +67,19 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
             {
                 case "ST":
-                    applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_CSURL_Key)
+                    applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootST_Key];
                     break;
                 case "VM":
-                    applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_CSURL_Key)
+                    applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootVM_Key];
                     break;
                 case "PPE":
-                    applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_CSURL_Key)
+                    applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootPPE_Key];
                     break;
                 case "PROD":
-                    applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_CSURL_Key)
+                    applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootPROD_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
@@ -307,5 +307,43 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             return ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.BrowserName_Key];
         }
+
+        /// <summary>
+        /// Property to get PCT Instructor Resource Tools URL.
+        /// </summary>
+        public static string PctInstructorResourceToolsUrl
+        {
+            get { return GetPctInstructorResourceToolsUrl(); }
+        }
+        /// <summary>
+        /// Get PCT Instructor Resource Tools URL.
+        /// </summary>
+        /// <returns>PCT Instructor Resource Tools URL.</returns>
+        private static string GetPctInstructorResourceToolsUrl()
+        {
+            string pctInsUrl;
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            {
+                case "ST":
+                    pctInsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_CSURL_Key)
+                    ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.PCTInstructorResourceToolsST_Key];
+                    break;
+                case "VM":
+                    pctInsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_CSURL_Key)
+                    ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.PCTInstructorResourceToolsVM_Key];
+                    break;
+                case "PPE":
+                    pctInsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_CSURL_Key)
+                    ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.PCTInstructorResourceToolsVM_Key];
+                    break;
+                case "PROD":
+                    pctInsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_CSURL_Key)
+                    ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.PCTInstructorResourceToolsVM_Key];
+                    break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return pctInsUrl;
+        }
+
     }
 }

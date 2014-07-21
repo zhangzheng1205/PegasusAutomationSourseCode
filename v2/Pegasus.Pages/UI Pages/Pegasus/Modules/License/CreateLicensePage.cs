@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enter License Details
         /// </summary>
-        public void EnterLicenseDetail()
+        public void EnterLicenseDetail(Product.ProductTypeEnum productType)
         {
             //Enter License Details
             logger.LogMethodEntry("CreateLicensePage", "EnterLicenseDetail",
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     //Store License Details In Memory
                     StoreTheLicenseDetailsInMemory(getStartDate, getEndDate, Convert.ToInt32(CreateLicensePageResource.
-                    CreateLicense_Page_Quantity_Input_Value));
+                    CreateLicense_Page_Quantity_Input_Value), productType);
                 }
             }
             catch (Exception e)
@@ -101,17 +101,16 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="startDate">This is license start date.</param>
         /// <param name="endDate">This is license end date.</param>
         /// <param name="licenseQuantity">This is license quantity.</param>
-        private void StoreTheLicenseDetailsInMemory(string startDate, string endDate, int licenseQuantity)
+        private void StoreTheLicenseDetailsInMemory(string startDate, string endDate, int licenseQuantity, Product.ProductTypeEnum productType)
         {
             //Store the Activity content
             logger.LogMethodEntry("AddAssessmentPage", "StoreTheLicenseDetailsInMemory",
                  base.isTakeScreenShotDuringEntryExit);
             //Get product from memory
-            Product product = Product.Get(Product.ProductTypeEnum.NovaNET);
+            Product product = Product.Get(productType);
             //Store the activity in memory
             License newLicense = new License
             {
-
                 Name = product.Name,
                 StartDate = startDate,
                 EndDate = endDate,
@@ -123,7 +122,5 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AddAssessmentPage", "StoreTheLicenseDetailsInMemory",
                base.isTakeScreenShotDuringEntryExit);
         }
-
-
     }
 }

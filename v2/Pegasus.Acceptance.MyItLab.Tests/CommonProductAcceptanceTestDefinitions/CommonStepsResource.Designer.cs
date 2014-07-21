@@ -89,6 +89,33 @@ namespace Pegasus.Acceptance.MyItLab.Tests.CommonProductAcceptanceTestDefinition
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 2000.
+        /// </summary>
+        internal static string CommonSteps_ElementWaitTimeOut_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_ElementWaitTimeOut_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to class.
+        /// </summary>
+        internal static string CommonSteps_GetClass_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_GetClass_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubNavigationTabSelected.
+        /// </summary>
+        internal static string CommonSteps_GetSelectedTab_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_GetSelectedTab_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ifrm.
         /// </summary>
         internal static string CommonSteps_IFrame {
@@ -103,6 +130,24 @@ namespace Pegasus.Acceptance.MyItLab.Tests.CommonProductAcceptanceTestDefinition
         internal static string CommonSteps_LeftFrame {
             get {
                 return ResourceManager.GetString("CommonSteps_LeftFrame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_td_3.
+        /// </summary>
+        internal static string CommonSteps_ManageProductsTab_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_ManageProductsTab_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_td_2.
+        /// </summary>
+        internal static string CommonSteps_ManageProgramsTab_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_ManageProgramsTab_Value", resourceCulture);
             }
         }
         

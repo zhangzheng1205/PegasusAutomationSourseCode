@@ -44,13 +44,13 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //This is Organization Rumba ID
             Organization organizationID = Organization.Get(Organization.
                 OrganizationLevelEnum.PowerSchool, Organization.OrganizationTypeEnum.DigitalPath);
-            string getOrganizationID = organizationID.RumbaOrgID;
+            string getOrganizationID = organizationID.RumbaOrgId;
             // This is Rumba User ID
             User userID = User.Get(User.UserTypeEnum.RumbaTeacher);
-            string getTeacherID = userID.RumbaOwnerID;
+            string getTeacherID = userID.RumbaOwnerId;
             // This is Rumba Student ID
             User userStudentID = User.Get(User.UserTypeEnum.RumbaStudent);
-            string getStudentID = userStudentID.RumbaOwnerID;
+            string getStudentID = userStudentID.RumbaOwnerId;
             // This is Rumba Product ID
             License productID = License.Get(License.LicenseTypeEnum.Rumba);
             int getProductID = productID.ProductID;

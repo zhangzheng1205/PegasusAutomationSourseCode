@@ -152,9 +152,11 @@ namespace Pegasus.Pages.UI_Pages
                     CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
                 base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_ClearResultLink_Id_Locator));
-                //Click on Clear Results Link
-                ClickLinkByID(CalendarDefaultGlobalUXPageResource.
+                IWebElement getClearResult=base.GetWebElementPropertiesById
+                    (CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_ClearResultLink_Id_Locator);
+                //Click on Clear Results Link
+                ClickByJavaScriptExecutor(getClearResult);
             }
             catch (Exception e)
             {
@@ -222,7 +224,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Advanced Search Link
                 base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_AdvancedSearchLink_Id_Locator));
-                base.ClickLinkByID(CalendarDefaultGlobalUXPageResource.
+                base.ClickLinkById(CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_AdvancedSearchLink_Id_Locator);
             }
             catch (Exception e)
@@ -349,12 +351,12 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                    .CalendarDefaultGlobalUX_Page_ClassDropDown_Id_Locator));
             // Select class name in drop down
-            base.SelectDropDownValueThroughTextByID(CalendarDefaultGlobalUXPageResource
+            base.SelectDropDownValueThroughTextById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_ClassDropDown_Id_Locator, orgClassName);
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_CourseDropDown_Id_Locator));
             // Select course name in drop down
-            base.SelectDropDownValueThroughTextByID(CalendarDefaultGlobalUXPageResource
+            base.SelectDropDownValueThroughTextById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_CourseDropDown_Id_Locator, courseName);
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
             .CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator));
@@ -367,7 +369,7 @@ namespace Pegasus.Pages.UI_Pages
             // Select order in order drop down
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_Order_DropDown_Id));
-            base.SelectDropDownValueThroughIndexByID(CalendarDefaultGlobalUXPageResource
+            base.SelectDropDownValueThroughIndexById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_Order_DropDown_Id, Convert.ToInt32
             (CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_Order_DropDown_Value));
@@ -399,7 +401,7 @@ namespace Pegasus.Pages.UI_Pages
             // Select timezone value in timezone drop down
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
             .CalendarDefaultGlobalUX_Page_TimeZone_DropDown_Id));
-            base.SelectDropDownValueThroughTextByID(CalendarDefaultGlobalUXPageResource
+            base.SelectDropDownValueThroughTextById(CalendarDefaultGlobalUXPageResource
             .CalendarDefaultGlobalUX_Page_TimeZone_DropDown_Id,
             CalendarDefaultGlobalUXPageResource
             .CalendarDefaultGlobalUX_Page_TimeZone_DropDown_Value);

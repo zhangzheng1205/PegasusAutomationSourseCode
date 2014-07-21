@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Drawing;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
@@ -36,14 +37,14 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             Thread.Sleep(Convert.ToInt32(AutoGraderPageResource.
                 AutoGraderPageResourse_GraderIt_Wait_Time_Value));
-                //Select Create New Question Window And Frame
-                base.WaitUntilWindowLoads(AutoGraderPageResource.
-                    AutoGraderPageResourse_CreateNewQuestion_WindowName);
-                base.SelectWindow(AutoGraderPageResource.
-                    AutoGraderPageResourse_CreateNewQuestion_WindowName);
-                //Select Question frame
-                base.SwitchToIFrame(AutoGraderPageResource.
-                    AutoGraderPageResourse_CreateNewQuestion_Frame);           
+            //Select Create New Question Window And Frame
+            base.WaitUntilWindowLoads(AutoGraderPageResource.
+                AutoGraderPageResourse_CreateNewQuestion_WindowName);
+            base.SelectWindow(AutoGraderPageResource.
+                AutoGraderPageResourse_CreateNewQuestion_WindowName);
+            //Select Question frame
+            base.SwitchToIFrame(AutoGraderPageResource.
+                AutoGraderPageResourse_CreateNewQuestion_Frame);
             Logger.LogMethodExit("AutoGraderPage",
                 "SelectCreateNewQuestionWindowAndFrame",
                base.isTakeScreenShotDuringEntryExit);
@@ -56,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages
         public void CreateGraderITQuestion(Question.QuestionTypeEnum questionTypeEnum)
         {
             //Create SIM Studyplan
-            Logger.LogMethodEntry("AutoGraderPage","CreateGraderITQuestion",
+            Logger.LogMethodEntry("AutoGraderPage", "CreateGraderITQuestion",
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
@@ -80,8 +81,8 @@ namespace Pegasus.Pages.UI_Pages
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
-            }           
-            Logger.LogMethodExit("AutoGraderPage","CreateGraderITQuestion",
+            }
+            Logger.LogMethodExit("AutoGraderPage", "CreateGraderITQuestion",
                base.isTakeScreenShotDuringEntryExit);
         }
 
@@ -158,7 +159,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("AutoGraderPage", "ClickOnSaveAndCloseButton",
                 base.isTakeScreenShotDuringEntryExit);
             //Click The Question SaveButton
-            this.ClickTheQuestionSaveButton();            
+            this.ClickTheQuestionSaveButton();
             //Select Create New Question Window And Frame
             this.SelectCreateNewQuestionWindowAndFrame();
             //Wait for the element
@@ -213,7 +214,7 @@ namespace Pegasus.Pages.UI_Pages
             string getProjectName = AutoGraderPageResource.
                 AutoGraderPageResourse_GraderProject_Name;
             //Select The Project ID
-            this.SelectTheProject(getProjectName);            
+            this.SelectTheProject(getProjectName);
             Logger.LogMethodExit("AutoGraderPage",
                 "SelectProjectQuestionFromProjectCreationTool",
                base.isTakeScreenShotDuringEntryExit);
@@ -261,14 +262,15 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator));
                 if (base.IsElementEnabledByID(string.Format((AutoGraderPageResource.
-                    AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator)))){
+                    AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator))))
+                {
                     //Fill Score for 2007 type question
                     base.FillTextBoxByID(AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator,
                     AutoGraderPageResource.AutoGraderPageResourse_MaximumScore_Value);
                 }
                 //Click The Question SaveButton
-                this.ClickTheQuestionSaveButton();   
+                this.ClickTheQuestionSaveButton();
             }
             catch (Exception e)
             {
@@ -287,7 +289,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Project
             Logger.LogMethodEntry("AutoGraderPage", "SelectTheProject",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.isTakeScreenShotDuringEntryExit);
             //Maxmize pop-up window
             base.MaximizeWindow();
             //Wait for project load
@@ -302,6 +304,20 @@ namespace Pegasus.Pages.UI_Pages
                 AutoGraderPageResourse_GradeIT_Projects_Tab_Xpath_Locator);
             //Click on GraderProject Button
             base.ClickByJavaScriptExecutor(getGraderProjectsButton);
+            SearchTheProject(projectName);
+            Logger.LogMethodExit("AutoGraderPage", "SelectTheProject",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+         /// <summary>
+        /// Search The Project.
+        /// </summary>
+        /// <param name="projectName">This is Project Name.</param>
+        private void SearchTheProject(string projectName)
+        {
+            //Select The Project
+            Logger.LogMethodEntry("AutoGraderPage", "SearchTheProject",
+                base.isTakeScreenShotDuringEntryExit);
             //Wait for project load
             Thread.Sleep(Convert.ToInt32(AutoGraderPageResource.
                 AutoGraderPageResourse_GraderIt_Wait_Time_Value));
@@ -316,7 +332,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.XPath(AutoGraderPageResource.
                 AutoGraderPageResourse_GradeIT_Projects_Search_Xpath_Locator));
             //Get Search Button on PCT
-            IWebElement getSearchButton =base.GetWebElementPropertiesByXPath
+            IWebElement getSearchButton = base.GetWebElementPropertiesByXPath
                 (AutoGraderPageResource.
                 AutoGraderPageResourse_GradeIT_Projects_Search_Xpath_Locator);
             //Click on Search buttun
@@ -342,14 +358,13 @@ namespace Pegasus.Pages.UI_Pages
                 if (getProjectName.Contains(projectName))
                 {
                     //Perform MouseAction For ProjectName
-                    this.PerformMouseActionForProjectName(setProjectDivCount);                    
+                    this.PerformMouseActionForProjectName(setProjectDivCount);
                     break;
                 }
             }
-            Logger.LogMethodExit("AutoGraderPage", "SelectTheProject",
-               base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("AutoGraderPage", "SearchTheProject",
+              base.isTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Perform Mouse Action For ProjectName.
         /// </summary>
@@ -357,7 +372,7 @@ namespace Pegasus.Pages.UI_Pages
         private void PerformMouseActionForProjectName(int setProjectDivCount)
         {
             //Perform Mouse Action For ProjectName
-            Logger.LogMethodEntry("AutoGraderPage", 
+            Logger.LogMethodEntry("AutoGraderPage",
                 "PerformMouseActionForProjectName",
                 base.isTakeScreenShotDuringEntryExit);
             //Wait for the element
@@ -372,7 +387,7 @@ namespace Pegasus.Pages.UI_Pages
             //base.PerformMouseHoverAction(getSelectButtonID);
             base.MouseOverByJavaScriptExecutor(getSelectedProject);
             //base.PerformMouseHoverByJavaScriptExecutor(getSelectButtonID);
-     
+
             //Wait for the element
             base.WaitForElement(By.XPath(string.Format(AutoGraderPageResource.
                 AutoGraderPageResourse_SelectProject_Click_Xpath_Locator,
@@ -385,7 +400,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSelectProject);
             Thread.Sleep(Convert.ToInt32(AutoGraderPageResource.
                 AutoGraderPageResourse_ThreadTime_Value));
-            Logger.LogMethodExit("AutoGraderPage", 
+            Logger.LogMethodExit("AutoGraderPage",
                 "PerformMouseActionForProjectName",
                base.isTakeScreenShotDuringEntryExit);
         }
@@ -428,7 +443,7 @@ namespace Pegasus.Pages.UI_Pages
                base.isTakeScreenShotDuringEntryExit);
             return isQuestionTitleTextboxPresent;
         }
-         /// <summary>
+        /// <summary>
         /// Create Grader IT Question from  activity authoring.
         /// </summary>
         /// <param name="questionTypeEnum">This is Question Type Enum.</param>
@@ -437,7 +452,7 @@ namespace Pegasus.Pages.UI_Pages
             Question.QuestionTypeEnum questionTypeEnum, string projectName)
         {
             //Create Grader IT Question from  activity authoring
-            Logger.LogMethodEntry("AutoGraderPage","CreateGraderITQuestionFromActivityAuthoring",
+            Logger.LogMethodEntry("AutoGraderPage", "CreateGraderITQuestionFromActivityAuthoring",
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
@@ -472,6 +487,77 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("AutoGraderPage", "CreateGraderITQuestionFromActivityAuthoring",
                base.isTakeScreenShotDuringEntryExit);
         }
-
+        /// <summary>
+        ///  Verify the 'Edit Grader Project Instruction' control on the Page.
+        /// </summary>
+        public bool DisplayEditGraderProjectInstruction()
+        {
+            Logger.LogMethodEntry("AutoGraderPage", "DisplayEditGraderProjectInstruction",
+                base.isTakeScreenShotDuringEntryExit);
+            bool isElementPresent = false;
+            try
+            {
+                //Wait for the Element
+                base.WaitForElement(By.Id(AutoGraderPageResource.
+                    AutoGraderPageResourse_Edit_Grader_Project_Instruction));
+                if (IsElementEnabledByID(AutoGraderPageResource.
+                    AutoGraderPageResourse_Edit_Grader_Project_Instruction))
+                {
+                    isElementPresent = true;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AutoGraderPage", "DisplayEditGraderProjectInstruction",
+              base.isTakeScreenShotDuringEntryExit);
+            return isElementPresent;
+        }
+        /// <summary>
+        /// Create The GraderIT Question In Cours-space.
+        /// </summary>
+        /// <param name="questionTypeEnum">This is Question Type Enum.</param>
+        /// <param name="projectName">This is Project Name.</param>
+        public void CreateTheGraderITQuestionInCourseSpace(
+            Question.QuestionTypeEnum questionTypeEnum, string projectName)
+        {
+            //Create The GraderIT Question In CourseSpace
+            Logger.LogMethodEntry("AutoGraderPage",
+                "CreateTheGraderITQuestionInCourseSpace",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Enter The Grader Question Name
+                this.EnterTheGraderQuestionName(questionTypeEnum);
+                //Select Project Creation Tool Window
+                this.SelectProjectCreationToolWindow();
+                //Maxmize pop-up window
+                base.MaximizeWindow();
+                //Select The Project 
+                this.SearchTheProject(projectName);
+                base.SelectDefaultWindow();
+                //Wait for the Maximum score
+                base.WaitForElement(By.Id(AutoGraderPageResource.
+                    AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator));
+                if (base.IsElementEnabledByID(string.Format((AutoGraderPageResource.
+                    AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator))))
+                {
+                    //Fill Score for 2007 type question
+                    base.FillTextBoxByID(AutoGraderPageResource.
+                    AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator,
+                    AutoGraderPageResource.AutoGraderPageResourse_MaximumScore_Value);
+                }
+                //Click The Question SaveButton
+                this.ClickTheQuestionSaveButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AutoGraderPage",
+                "CreateTheGraderITQuestionInCourseSpace",
+               base.isTakeScreenShotDuringEntryExit);
+        }
     }
 }

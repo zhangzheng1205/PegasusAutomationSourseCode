@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
                 ManagePage_Text_Appended_To_Window_Title);
             //Click on the Modify Link
             base.WaitForElement(By.Id(ManagePageResource.ManagePage_Right_Modify_Id_Locator));
-            base.ClickLinkByID(ManagePageResource.ManagePage_Right_Modify_Id_Locator);
+            base.ClickLinkById(ManagePageResource.ManagePage_Right_Modify_Id_Locator);
             //Click on the View Link
             base.WaitForElement(By.XPath(ManagePageResource.
                 ManagePage_Modify_View_Option_Xpath_Locator));

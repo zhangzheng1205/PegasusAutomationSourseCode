@@ -86,7 +86,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// Add Product From Search Catalog.
         /// </summary>
         /// <param name="productTypeEnum">This is product Type</param>
-        [When(@"I add Product type ""(.*)"" from Search Catalog")]
+        [When(@"I add product type ""(.*)"" from search catalog")]
         public void SelectProgramTypeProductFromCatalog(
             Product.ProductTypeEnum productTypeEnum)
         {

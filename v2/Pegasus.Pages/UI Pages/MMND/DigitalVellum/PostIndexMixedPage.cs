@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("PostIndexMixedPage", "SaveTheSubTabAndCloseThePopup",
                 base.isTakeScreenShotDuringEntryExit);
             //Click on the Save button
-            base.ClickLinkByID(PostIndexMixedPageResource.
+            base.ClickLinkById(PostIndexMixedPageResource.
                 PostIndexMixedPage_Lightbox_Save_Button_Id_Locator);
             //Wait and Click on the Add New subtab Button
             base.WaitForElement(By.Id(PostIndexMixedPageResource.
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PostIndexMixedPageResource.
                 PostIndexMixedPage_Lightbox_AddContents_Dropdown_Id_Locator));
             //Select the option as 'Content Page'
-            base.SelectDropDownValueThroughTextByID(PostIndexMixedPageResource.
+            base.SelectDropDownValueThroughTextById(PostIndexMixedPageResource.
                 PostIndexMixedPage_Lightbox_AddContents_Dropdown_Id_Locator,
                 PostIndexMixedPageResource.
                 PostIndexMixedPage_Lightbox_AddContent_Dropdown_ContentPage_Value);
@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on the Modify Link
                 base.WaitForElement(By.Id(PostIndexMixedPageResource.
                     PostIndexMixedPage_Right_Modify_Id_Locator));
-                base.ClickLinkByID(PostIndexMixedPageResource.
+                base.ClickLinkById(PostIndexMixedPageResource.
                     PostIndexMixedPage_Right_Modify_Id_Locator);
                 //Click on the Manage option from the Drop Down
                 base.WaitForElement(By.XPath(PostIndexMixedPageResource.

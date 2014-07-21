@@ -5,6 +5,8 @@ using Pegasus.Integration.MGM.Tests.CommonIntegrationAcceptanceTestDefinitions;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 using System;
+using Pegasus.Integration.DigitalPath.Rumba.Tests.IntegrationAcceptanceTestDefinitions;
+using Pegasus.Integration.DigitalPath.Rumba.Tests.CommonIntegrationAcceptanceTestDefinitions;
 
 namespace Pegasus.Integration.MGM.Tests.
     IntegrationAcceptanceTestDefinitions

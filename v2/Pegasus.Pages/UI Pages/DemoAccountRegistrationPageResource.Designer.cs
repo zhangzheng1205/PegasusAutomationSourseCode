@@ -178,6 +178,15 @@ namespace Pegasus.Pages.UI_Pages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 2000.
+        /// </summary>
+        internal static string DemoAccountRegistration_Page_RegisterTimeToWait_Value {
+            get {
+                return ResourceManager.GetString("DemoAccountRegistration_Page_RegisterTimeToWait_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to cmbState.
         /// </summary>
         internal static string DemoAccountRegistration_Page_State_Select_Id_Locator {

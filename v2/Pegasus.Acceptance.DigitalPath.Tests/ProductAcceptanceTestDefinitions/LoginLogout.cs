@@ -37,6 +37,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// </summary>
         /// <param name="userType">This is User Type.</param>
         [Given(@"I browsed the login url for ""(.*)""")]
+		[When(@"I browse the login url for ""(.*)""")]
         public void BrowsePegasusLoginUrl(string userType)
         {
             //Browse Login Url
@@ -162,7 +163,8 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     // Click Sign out link 
                     new AdminToolPage().SignOutByPegasusUser(linkSignOut);
                     break;
-                case User.UserTypeEnum.DPCsTeacher:               
+                case User.UserTypeEnum.DPCsTeacher:
+                case User.UserTypeEnum.DPDemoUser: 
                     //Click on Sign Out Link
                     homePage.SignoutByDigitalPathCSTeacher(linkSignOut);
                     break;

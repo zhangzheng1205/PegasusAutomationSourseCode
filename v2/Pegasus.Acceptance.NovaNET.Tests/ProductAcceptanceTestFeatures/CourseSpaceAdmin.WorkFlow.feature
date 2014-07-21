@@ -3,15 +3,9 @@
 					I want to manage all the coursespace admin related usecases 
 					so that I would validate all the coursespace admin scenarios are working fine.
 
-#Purpose: Open CS Url
-Background: 
-Given I browsed the login url for "CsAdmin"
-When I login to Pegasus as "CsAdmin" in "CourseSpace"
-Then I should be logged in successfully
 
 #Purpose: Approve Empty Course in Course space
 Scenario: Approve Empty Course by CS Admin
-Given I am on the "Course Enrollment" page
 When I navigate to the "Publishing" tab
 And I select the "Manage Products" tab
 Then I should be on the "Manage Products" page
@@ -19,12 +13,9 @@ When I search the "EmptyClass" course in coursespace
 Then I should be able to see the searched "EmptyClass" course in the left frame
 When I click on "Approve as Empty Class" cmenu option of course in coursespace
 Then I should see the successfull message "Published course marked as Approved."
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Approve Empty Course in Course space
 Scenario: Approve Container Course by CS Admin
-Given I am on the "Course Enrollment" page
 When I navigate to the "Publishing" tab
 And I select the "Manage Products" tab
 Then I should be on the "Manage Products" page
@@ -32,12 +23,9 @@ When I search the "Container" course in coursespace
 Then I should be able to see the searched "Container" course in the left frame
 When I click on "Approve" cmenu option of course in coursespace
 Then I should see the successfull message "Published course marked as Approved."
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Approve Master Library in Course space
 Scenario: Approve Master Library by CS Admin
-Given I am on the "Course Enrollment" page
 When I navigate to the "Publishing" tab
 And I select the "Manage Products" tab
 Then I should be on the "Manage Products" page
@@ -45,54 +33,49 @@ When I search the "NovaNETMasterLibrary" course in coursespace
 Then I should be able to see the searched "NovaNETMasterLibrary" course in the left frame
 When I click on "Approve" cmenu option of course in coursespace
 Then I should see the successfull message "Published course marked as Approved."
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: UseCase To create Program in course space
 Scenario: Create Program by CS Admin
 Given I am on the 'Manage Programs' Page
 When I create the "NovaNET" Program in coursespace
 Then I should see the successfull message "Program created successfully."
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Creation of State Level Organization
 Scenario: Create State Level NovaNET Organization by CS Admin
-Given I am on the 'Organization Management' page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I click on the Create New Organization link 
 Then I should see the "Create Organization" popup
 When I create the "State" level organization "Hierarchical" in "NovaNET"
 Then I should see the successfull message "Organization created successfully."
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
+#Given  I am on the 'Organization Management' page
 #Purpose: Creation of Region Level Organization
 Scenario: Create Region Level NovaNET Organization by CS Admin
-Given  I am on the 'Organization Management' page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I search the "State" level Organization in "NovaNET"
 Then I should see the "State" level organization name in "NovaNET"
 When I create the "Region" level organization "Hierarchical" in "NovaNET"
 Then I should see the successfull message "Organization created successfully."
 When I click on the Select Organization link
 Then I should be on the "Organization Management" page
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Creation of District Level Organization
 Scenario: Create District Level NovaNET Organization by CS Admin 
-Given I am on the 'Organization Management' page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I search the "Region" level Organization in "NovaNET"
 Then I should see the "Region" level organization name in "NovaNET"
 When I create the "District" level organization "Hierarchical" in "NovaNET"
 Then I should see the successfull message "Organization created successfully."
 When I click on the Select Organization link
 Then I should be on the "Organization Management" page
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Creation of School Level Organization
 Scenario: Create School Level NovaNET Organization by CS Admin
-Given I am on the 'Organization Management' page
+When I navigate to "Organization Admin" tab of the "Organization Management" page
+Then I should be on the "Organization Management" page
 When I search the "District" level Organization in "NovaNET"
 Then I should see the "District" level organization name in "NovaNET"
 When I create the "School" level organization "Hierarchical" in "NovaNET"
@@ -100,16 +83,12 @@ Then I should see the successfull message "Organization created successfully."
 When I create the multiple "Schools"
 And I search the "School" level Organization in "NovaNET"
 Then I should see the "School" level organization name in "NovaNET"
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Create NovaNET Product
 Scenario: Create Product by CS Admin
 Given I am on the 'Manage Products' Page
 When I create the "NovaNET" Product in coursespace using "NovaNET" Program
 Then I should see the successfull message "New product created successfully."
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: UseCase To license products
 Scenario: Create License for the NovaNET Organization by CS Admin
@@ -121,23 +100,29 @@ Then I should see the "Product Selection" popup
 When I create license for the "NovaNET" product
 And I search "Pegasus" licensed product in Coursespace
 Then I should be able to see the searched "Pegasus" licensed product in the frame
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose: UseCase To license DigitalPath Demo products
 Scenario: Create License for the DigitalPath Demo Organization by CS Admin
 Given I am on the 'Manage Organization' page of "School" level in the "DigitalPathDemo"
-And I enter into the organization
 And I navigate to the "Licenses" tab
 When I click on the Add Products Option
 Then I should see the "Product Selection" popup
 When I create 3 license for the "DigitalPathDemo" product
 And I search "Pegasus" licensed product in Coursespace
 Then I should be able to see the searched "Pegasus" licensed product in the frame
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
+
+#Purpose: UseCase To license Multiple DigitalPath Demo products with same AccessCode
+Scenario: Create Multiple License for the DigitalPath Demo Organization by CS Admin
+Given I am on the 'Manage Organization' page of "School" level in the "DigitalPathDemo"
+And I navigate to the "Licenses" tab
+When I click on the Add Products Option
+Then I should see the "Product Selection" popup
+When I create 3 licenses for different "DigitalPathDemo" product
+And I search "Pegasus" licensed product in Coursespace
+Then I should be able to see the searched "Pegasus" licensed product in the frame
+And I close the "Manage Organization" window
 
 #Purpose: UseCase To View student activity report by Organization Admin
 Scenario: View student activity report by Organization Admin
@@ -148,8 +133,6 @@ And It Should display the grades under launched report
 Then It Should display the 'Score' under launched report
 When I click on the Close button in launched report
 And I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: UseCase To View Custom Report by Organization Admin
 Scenario: View Custom Report by Organization Admin
@@ -158,9 +141,7 @@ When I navigate to the "Reports" tab
 And I generate the "CustomActivityReport" in Organization Admin of student "NovaNETCsStudent" 
 And I select the 'DownloadReport' in Report tab
 Then I should see the "NovaNETTemplate" class 
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose: Create Template for the Organization 
 Scenario: Create Template by CS Admin
@@ -172,9 +153,7 @@ When I search the created Template in the frame
 Then I should see the created Template in the frame
 And I verifiy the Template for Assigned to Copy State 
 Then I should see the created Template out of Assigned to Copy State
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose: Creation of Class Using Master Library Added to the Basal product
 Scenario: Create Class using Template by CS Admin
@@ -186,9 +165,7 @@ When I create the class using "Container" template
 And I search "NovaNETTemplate" class in Coursespace
 And I wait for class "NovaNETTemplate" to copy
 Then I should be able to see the searched "NovaNETTemplate" class
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose:To verify that CS Admin Creates the Class using Master Library Course
 #TestCase ID: NN_PWF_202
@@ -205,9 +182,7 @@ Then I should see the successfull message "New users added successfully." in Cre
 When I search "NovaNETTemplate" class in Coursespace
 And I wait for class "NovaNETTemplate" to copy
 Then I should be able to see the searched "NovaNETTemplate" class
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose:UseCase To add course in the class 
 Scenario: Enter Class as Teacher to move the Master Library by CS Admin
@@ -221,9 +196,7 @@ When I navigate to the "Content" tab
 And I move the ML to right frame
 Then I should see the successfull message "Done! Your content" in "Content" window
 And I wait for the class to get in available state
-When I close the "Content" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Content" window
 
 #Purpose: To create Teacher from Users subtab
 Scenario: Create Teacher in Users Tab by CS Admin 
@@ -235,9 +208,7 @@ When I create a new "NovaNETCsTeacher" user in Coursespace
 Then I should see the successfull message "New users added successfully." in "Manage Organization" window
 When I search the created "NovaNETCsTeacher" in "Users" subtab
 Then I should see the "NovaNETCsTeacher" in "Users" subtab
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose: To create Student from Users subtab
 Scenario: Create Student in Users Tab by CS Admin
@@ -250,9 +221,7 @@ When I create a new "NovaNETCsStudent" user in Coursespace
 Then I should see the successfull message "New users added successfully." in "Manage Organization" window
 When I search the created "NovaNETCsStudent" in "Users" subtab
 Then I should see the "NovaNETCsStudent" in "Users" subtab
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose: To create Aide from Users subtab
 Scenario: Create Aide in Users Tab by CS Admin
@@ -264,9 +233,7 @@ When I create a new "NovaNETCsAide" user in Coursespace
 Then I should see the successfull message "New users added successfully." in "Manage Organization" window
 When I search the created "NovaNETCsAide" in "Users" subtab
 Then I should see the "NovaNETCsAide" in "Users" subtab
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose: To create Organization Admin from Users subtab
 Scenario: Create Organization Admin in Users Tab by CS Admin
@@ -278,9 +245,7 @@ When I create a new "NovaNETCsOrganizationAdmin" user in Coursespace
 Then I should see the successfull message "New users added successfully." in "Manage Organization" window
 When I search the created "NovaNETCsOrganizationAdmin" in "Users" subtab
 Then I should see the "NovaNETCsOrganizationAdmin" in "Users" subtab
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose: To Create Bulk Users from Users subtab
 Scenario: Upload Bulk User in Users Tab by CS Admin
@@ -288,9 +253,7 @@ Given I am on the 'Manage Organization' page of "School" level in the "NovaNET"
 When I click on the "Users" tab in Manage Organization page
 And I select the Bulk user upload option and Import a bulk users file in "Users" subtab
 Then I should see the successfull message "Bulk Registration- 0 of 1 Files in progress" in Users subtab
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose: Enroll Teacher to class
 Scenario: Teacher Enrollment in Class by CS Admin 
@@ -300,9 +263,7 @@ And I select the "NovaNETTemplate" class
 And I select the "NovaNETCsTeacher" under User Frame
 And I select the Enroll button
 Then I should see the successfull message 'Users enrolled successfully'
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose: Enroll Student to class
 Scenario: Student Enrollment in Class by CS Admin
@@ -312,9 +273,7 @@ And I select the "NovaNETTemplate" class
 When  I select the "NovaNETCsStudent" under User Frame
 And I select the Enroll button
 Then I should see the successfull message 'Users enrolled successfully'
-When I close the "Manage Organization" window
-And I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
+And I close the "Manage Organization" window
 
 #Purpose: To associate Master Library to the NovaNET Product
 Scenario: Associate Master Library to the Product by CS Admin
@@ -325,8 +284,6 @@ When I select course in left frame
 And I select product type "NovaNET" in right frame
 When I associate the course to Pegasus product
 Then I should see the successfull message "The course has been added successfully."
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: To associate Container Course to the NovaNET Product
 Scenario: Associate Container Course to the Product by CS Admin
@@ -337,8 +294,6 @@ When I select course in left frame
 And I select product type "NovaNET" in right frame
 When I associate the course to Pegasus product
 Then I should see the successfull message "The course has been added successfully."
-When I "Sign out" from the "CsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: To Restrict Access to Product 
 Scenario: Restrict Access to Product by CS Admin

@@ -249,14 +249,14 @@ namespace Pegasus.Pages.UI_Pages
                 case SearchCriteriaEnum.Skill: 
                     base.WaitForElement(By.Id(ContentLibraryPageResource.
                     ContnetLibrary_Page_SkillLink_Id_Locator));                    
-                    base.ClickLinkByID(ContentLibraryPageResource.
+                    base.ClickLinkById(ContentLibraryPageResource.
                         ContnetLibrary_Page_SkillLink_Id_Locator);
                     break;
                 //Click on Content Type Link
                 case SearchCriteriaEnum.ContentType: 
                     base.WaitForElement(By.Id(ContentLibraryPageResource.
                     ContnetLibrary_Page_ContentTypeLink_Id_Locator));
-                    base.ClickLinkByID(ContentLibraryPageResource.
+                    base.ClickLinkById(ContentLibraryPageResource.
                         ContnetLibrary_Page_ContentTypeLink_Id_Locator);
                     break;
             }
@@ -313,7 +313,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ContentLibraryPageResource.
                        ContnetLibrary_Page_ClearResultLink_Id_Locator));
                 //Click on Clear Results
-                ClickLinkByID(ContentLibraryPageResource.
+                ClickLinkById(ContentLibraryPageResource.
                     ContnetLibrary_Page_ClearResultLink_Id_Locator);
             }
             catch (Exception e)
@@ -371,7 +371,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ContentLibraryPageResource.
                     ContnetLibrary_Page_AdvancedSearchLink_Id_Locator));
                 //Click link
-                base.ClickLinkByID(ContentLibraryPageResource.
+                base.ClickLinkById(ContentLibraryPageResource.
                     ContnetLibrary_Page_AdvancedSearchLink_Id_Locator);
             }
             catch (Exception e)
@@ -541,6 +541,78 @@ namespace Pegasus.Pages.UI_Pages
                 ContnetLibrary_Page_SearchButton_Id_Locator);
             logger.LogMethodExit("ContentLibraryPage", "SearchActivity",
                   base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Asset Cmenu In Table of Content.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name</param>
+        /// <param name="assetCmenu">This is Asset Cmenu.</param>
+        public void SelectAssetCmenuInTableofContent(string activityName,string assetCmenu)
+        {
+            //Select Asset Cmenu In Table of Content
+            logger.LogMethodEntry("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
+                  base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Selects Window and Switch to Frame
+                this.SelectWindowAndFrame();
+                //MouseHover On Activity
+                this.MouseHoverOnActivity();                
+                //Click on Activity Cmenu Icon               
+                base.WaitForElement(By.XPath(ContentLibraryPageResource.
+                    ContnetLibrary_Page_Activity_CmenuIcon_Xpath_Locator));
+                //Get HTML peroperty of Cmenu icon
+                IWebElement getPropertyOfCmenuIcon = 
+                    base.GetWebElementPropertiesByXPath(
+                    ContentLibraryPageResource.
+                    ContnetLibrary_Page_Activity_CmenuIcon_Xpath_Locator);
+                base.ClickByJavaScriptExecutor(getPropertyOfCmenuIcon);
+                base.WaitForElement(By.XPath(ContentLibraryPageResource.
+                    ContnetLibrary_Page_Asset_Cmenu_Options_Xpath_Locator));
+                //Get Cmenu Options
+                string getCmenuOptions = 
+                    base.GetElementTextByXPath(ContentLibraryPageResource.
+                    ContnetLibrary_Page_Asset_Cmenu_Options_Xpath_Locator);
+                if (getCmenuOptions.Contains(assetCmenu))
+                {
+                    base.WaitForElement(By.PartialLinkText(assetCmenu));
+                    IWebElement getCmenuProperty =
+                        base.GetWebElementPropertiesByPartialLinkText(assetCmenu);
+                    //Click on Cmenu Option
+                    base.ClickByJavaScriptExecutor(getCmenuProperty);
+                }                
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
+                 base.isTakeScreenShotDuringEntryExit);
+        }
+
+         /// <summary>
+        /// Select Asset Cmenu In Table of Content.
+        /// </summary>
+        /// <param name="activityName">This is Class Name</param>
+        public void SetDueDateForActivityInCurriculum(string className)
+        {
+            //Select Asset Cmenu In Table of Content
+            logger.LogMethodEntry("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
+                  base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Select class radio button
+                new AssignContentPage().SelectClassOnAssignWindow(className);
+                // Configure the due date on assign window 
+                new AssignContentPage().ConfigureDueDate();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryPage", "SelectAssetCmenuInTableofContent",
+                 base.isTakeScreenShotDuringEntryExit);
         }
     }
 }

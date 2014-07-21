@@ -7,6 +7,7 @@ using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
+using Pegasus.Pages.Exceptions;
 using TechTalk.SpecFlow;
 
 #endregion
@@ -297,6 +298,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// </summary>
         /// <param name="windowName">This is Window Name.</param>
         [When(@"I close the ""(.*)"" window")]
+        [Then(@"I close the ""(.*)"" window")]
         public void CloseTheManageOrganizationWindow(String windowName)
         {
             //Close the window
@@ -307,7 +309,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodExit("CommonSteps", "CloseTheManageOrganizationWindow",
                 isTakeScreenShotDuringEntryExit);
         }
-
+        
         /// <summary>
         /// Search and Select the Organization.
         /// </summary>
@@ -323,9 +325,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 isTakeScreenShotDuringEntryExit);
             //Fetch Organization Name From Memory
             Organization organizationLevel = Organization.Get(
-                organizationLevelEnum, organizationTypeEnum);
-            //Click On Organization Admin Tab
-            new AdminToolPage().ClickOnOrganizationAdminTab();
+               organizationLevelEnum, organizationTypeEnum);
             //Created Class Object
             OrganizationManagementPage organizationManagementPage = new OrganizationManagementPage();
             //Search the Organization
@@ -352,11 +352,47 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 isTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Navigate To Tab Of The Perticular Page.
+        /// </summary>
+        /// <param name="tabName">This is Tab Name.</param>
+        /// <param name="pageName">This is Page Name.</param>
+        [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page")]
+        public void NavigateToTabOfThePerticularPage(string tabName, string pageName)
+        {
+            //Navigate Administrator Tool Page
+            Logger.LogMethodEntry("AdminToolPage", "NavigateToTabOfThePerticularPage",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Is The Page Open Already
+                Boolean isPageAlreadyExists = base.IsPopupPresent(pageName, 2);
+                if (isPageAlreadyExists)
+                {
+                    //Selecting the Page If Opened
+                    base.SelectWindow(pageName);
+                }
+                else
+                {
+                    // Navigating To Administrators tab
+                    base.WaitForElement(By.PartialLinkText(tabName));
+                    IWebElement getTabName = base.GetWebElementPropertiesByPartialLinkText
+                        (tabName);
+                    base.ClickByJavaScriptExecutor(getTabName);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfThePerticularPage",
+                base.isTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts
         /// </summary>
-        [BeforeScenario]
+        [BeforeTestRun]
         public static void Setup()
         {
             //Reset Webdriver Instance
@@ -367,7 +403,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         /// Deinitialize Pegasus test after the execution of test
         /// and stops the webdriver.
         /// </summary>
-        [AfterScenario]
+        [AfterTestRun]
         public static void TearDown()
         {
             new CommonSteps().WebDriverCleanUp();

@@ -718,7 +718,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_Viewby_Dropdown_Id_Locator));
                 //Select Dropdown Value
-                base.SelectDropDownValueThroughTextByID(AssignContentPageResource.
+                base.SelectDropDownValueThroughTextById(AssignContentPageResource.
                     AssignContent_Page_Viewby_Dropdown_Id_Locator,
                     AssignContentPageResource.AssignContent_Page_Dropdown_Option_Value);
                 this.SelectAssignWindow();

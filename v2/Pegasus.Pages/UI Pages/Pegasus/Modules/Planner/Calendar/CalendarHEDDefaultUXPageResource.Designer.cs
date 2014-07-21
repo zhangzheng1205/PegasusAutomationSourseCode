@@ -242,6 +242,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 2000.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_Element_Time {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_Element_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ES_NoRecordMessage.
         /// </summary>
         internal static string CalendarHEDDefaultUXPage_FailureMessage_Classname_Locator {

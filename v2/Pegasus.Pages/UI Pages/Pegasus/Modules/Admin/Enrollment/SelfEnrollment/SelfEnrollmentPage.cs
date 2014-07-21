@@ -55,6 +55,7 @@ namespace Pegasus.Pages.UI_Pages
                     case Course.CourseTypeEnum.MyItLabProgramCourse:
                     case Course.CourseTypeEnum.HedMilAcceptanceSIMProgramCourse:
                     case Course.CourseTypeEnum.HedMilAcceptanceSIM5ProgramCourse:
+                    case Course.CourseTypeEnum.MyITLabOffice2013Program:
                         // Enter section id in the Textfield
                         base.FillTextBoxByID(SelfEnrollmentPageResource.
                             SelfEnrollment_Page_CourseID_TextBox_Id_Locator,
@@ -71,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
                 this.EnrollSMSUserInCourse();
                 //Store Enrollment Date
-                course.EnrollmentDate = DateTime.Now;                
+                course.EnrollmentDate = DateTime.Now;
             }
             catch (Exception e)
             {
@@ -80,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("SelfEnrollmentPage", "SMSStudentEnrolledInCourse",
                 base.isTakeScreenShotDuringEntryExit);
         }
-                
+
         /// <summary>
         /// Select Global Home Window.
         /// </summary>
@@ -127,7 +128,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Click on confirm button
                 this.ClickOnConfirmButton();
-            }           
+            }
             //Select Window
             this.SelectGlobalHomeWindow();
             Logger.LogMethodExit("SelfEnrollmentPage", "EnrollSMSUserInCourse",

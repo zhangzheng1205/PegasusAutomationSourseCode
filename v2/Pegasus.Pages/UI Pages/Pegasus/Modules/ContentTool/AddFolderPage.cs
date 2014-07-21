@@ -47,11 +47,14 @@ namespace Pegasus.Pages.UI_Pages
                 activityFolder.ToString());
                 //Store the Activity Folder content
                 this.StoreTheActivityFolderContent(activityFolder,activityTypeEnum);
-                if (!base.IsElementSelectedById(AddFolderPageResource.
-                    AddFolder_Page_QuestionFolder_Checkbox_Id_Locator))
+                if (activityTypeEnum == Activity.ActivityTypeEnum.QuestionFolder)
                 {
-                    base.ClickCheckBoxById(AddFolderPageResource.
-                    AddFolder_Page_QuestionFolder_Checkbox_Id_Locator);
+                    if (!base.IsElementSelectedById(AddFolderPageResource.
+                        AddFolder_Page_QuestionFolder_Checkbox_Id_Locator))
+                    {
+                        base.ClickCheckBoxById(AddFolderPageResource.
+                        AddFolder_Page_QuestionFolder_Checkbox_Id_Locator);
+                    }
                 }
                 base.FocusOnElementByID(AddFolderPageResource.
                     AddFolder_Page_Folder_Create_Button_Id_Locator);

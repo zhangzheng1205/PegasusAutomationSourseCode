@@ -89,12 +89,12 @@ namespace Pegasus.Pages.UI_Pages
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.ECollegeTeacher:
-                    base.SelectDropDownValueThroughTextByID(ManageUsersContentPageResource.
+                    base.SelectDropDownValueThroughTextById(ManageUsersContentPageResource.
                         MangeUsersContent_DropDown_Id_Locator, ManageUsersContentPageResource.
                         MangeUsersContent_DropDown_TeacherTextValue);
                     break;
                 case User.UserTypeEnum.ECollegeStudent:
-                    base.SelectDropDownValueThroughTextByID(ManageUsersContentPageResource.
+                    base.SelectDropDownValueThroughTextById(ManageUsersContentPageResource.
                     MangeUsersContent_DropDown_Id_Locator, ManageUsersContentPageResource.
                     MangeUsersContent_DropDown_StudentTextValue);
                     break;

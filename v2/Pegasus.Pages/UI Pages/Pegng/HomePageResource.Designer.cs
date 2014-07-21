@@ -214,6 +214,24 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to curriculum_icon_placeholder.
+        /// </summary>
+        internal static string Home_Page_Product_BrandingImage_Class_Locator {
+            get {
+                return ResourceManager.GetString("Home_Page_Product_BrandingImage_Class_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to productid.
+        /// </summary>
+        internal static string Home_Page_Product_BrandingImage_ProductAttribute_Value {
+            get {
+                return ResourceManager.GetString("Home_Page_Product_BrandingImage_ProductAttribute_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;divMainRepeater&apos;]/table[&quot;+u+&quot;]/tbody/tr/td[3]/div[@class=&apos;AddProdScrRoTxt1&apos;].
         /// </summary>
         internal static string Home_Page_ProductName_Title_Xpath_Locator {
@@ -399,6 +417,15 @@ namespace Pegasus.Pages.UI_Pages.Pegng {
         internal static string HomePage_ViewAll_Link_PartialLink {
             get {
                 return ResourceManager.GetString("HomePage_ViewAll_Link_PartialLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dlwm_loginMessageBanner.
+        /// </summary>
+        internal static string HomePage_WelcomeBanner_Img_Id_Locator {
+            get {
+                return ResourceManager.GetString("HomePage_WelcomeBanner_Img_Id_Locator", resourceCulture);
             }
         }
         

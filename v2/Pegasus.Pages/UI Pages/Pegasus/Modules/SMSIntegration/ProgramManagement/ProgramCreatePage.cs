@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
                         //Get the Empty Class from Memory
                         Course getEmptyHedClass = Course.Get(Course.CourseTypeEnum.HedEmptyClass);
                         //Select Empty Class
-                        base.SelectDropDownValueThroughTextByID(ProgramCreatePageResource.
+                        base.SelectDropDownValueThroughTextById(ProgramCreatePageResource.
                             ProgramCreation_Page_EmptyClass_DropDown_Id_Locator,
                             getEmptyHedClass.Name);
                         break;
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
                 case Program.ProgramTypeEnum.PromotedAdminDigitalPathProgram:
                     {
                         //Select Empty Class
-                        base.SelectDropDownValueThroughTextByID(ProgramCreatePageResource.
+                        base.SelectDropDownValueThroughTextById(ProgramCreatePageResource.
                             ProgramCreation_Page_EmptyClass_DropDown_Id_Locator,
                             ProgramCreatePageResource.ProgramCreation_Page_DPEmptyClass_Value);
                         break;
@@ -130,7 +130,7 @@ namespace Pegasus.Pages.UI_Pages
                         //Get the Empty Class from Memory
                         Course getEmptyClass = Course.Get(Course.CourseTypeEnum.EmptyClass);
                         //Select Empty Class
-                        base.SelectDropDownValueThroughTextByID(ProgramCreatePageResource.
+                        base.SelectDropDownValueThroughTextById(ProgramCreatePageResource.
                             ProgramCreation_Page_EmptyClass_DropDown_Id_Locator,
                             getEmptyClass.Name);
                         break;

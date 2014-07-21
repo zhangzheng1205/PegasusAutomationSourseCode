@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(UnitViewPageResource.
                     UnitViewPage_gradebookViewDropDown_ID_locator));
                 //Select Item summary from dropdown
-                base.SelectDropDownValueThroughTextByID(UnitViewPageResource.
+                base.SelectDropDownValueThroughTextById(UnitViewPageResource.
                     UnitViewPage_gradebookViewDropDown_ID_locator, dropDownValue);
                 //Get property of Go button
                 IWebElement getPropertyOfGoButton = base.GetWebElementPropertiesById

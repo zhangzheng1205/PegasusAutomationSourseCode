@@ -20,8 +20,6 @@ And I click the "Enter Section as Instructor" option
 When I navigate to the "Today's View" tab
 Then I should be on the "Today's View" page
 And I should see the section name and ID of "ProgramCourse"
-When I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: To verify the message display for the user if the entered search criteria not holds good with the course info in the catalog
 # TestCase Id: HSS_Core_PWF_026
@@ -29,8 +27,6 @@ Scenario: To verify the message display for the user if the entered search crite
 When I enter the invalid search parameter "InvalidText" in search catalog 
 And I click on next button
 Then I should see the message "No records found."
-When I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: To verify the functionality of C-menu "Enter Template as Instructor " of the created Template
 # TestCase Id: HSS_Core_PWF_028
@@ -39,7 +35,6 @@ When I enter in the "ProgramCourse" from the Global Home page as "CsSmsInstructo
 Then I should be on the "Program Administration" page
 When I click the "Enter Template as Instructor" option
 Then I should see the "MySpanishLabMaster" course
-When I "Sign out" from the "CsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Accessibility of SMS Courses which are having same start date and end date by SMS Student and SMS TA
@@ -61,8 +56,6 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enroll SMS Student in "ProgramCourse"
 Then I should see enrolled Section in Global Home Page 
-When I "Sign out" from the "CsSmsStudent"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: User Promoted As Teaching Assistant By Program Admin
 # TestCase Id: HSS_Core_PWF_366
@@ -76,5 +69,3 @@ And I navigate to the "Enrollments" tab
 Then I should be on the "Roster" page
 When I select the "CsSmsStudent" as promoted "HedTeacherAssistant" in SMS Instructor
 Then I should see the role as "Teaching Assistant"
-Then I "Sign out" from the "CsSmsStudent"
-Then I should see the successfull message "You have been signed out of the application."

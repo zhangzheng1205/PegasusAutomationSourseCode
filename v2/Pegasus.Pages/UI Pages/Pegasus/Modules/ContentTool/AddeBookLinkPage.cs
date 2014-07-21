@@ -40,7 +40,7 @@ namespace Pegasus.Pages.UI_Pages
                eText.ToString());
                //Wait for the select book textbox
                base.WaitForElement(By.Id(AddeBookLinkPageResource.AddeBookLink_Page_SelectBook_Id_Locator));                 
-               base.SelectDropDownValueThroughIndexByID
+               base.SelectDropDownValueThroughIndexById
                    (AddeBookLinkPageResource.AddeBookLink_Page_SelectBook_Id_Locator,
                  Convert.ToInt32(AddeBookLinkPageResource.AddeBookLink_Page_SelectBook_Dropdown_Value));
                //Wait for the add button

@@ -126,11 +126,26 @@
   <data name="CommonSteps_CreateNewUserWindow_Name_Locator" xml:space="preserve">
     <value>Create New User</value>
   </data>
+  <data name="CommonSteps_ElementWaitTimeOut_Value" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="CommonSteps_GetClass_Value" xml:space="preserve">
+    <value>class</value>
+  </data>
+  <data name="CommonSteps_GetSelectedTab_Value" xml:space="preserve">
+    <value>SubNavigationTabSelected</value>
+  </data>
   <data name="CommonSteps_IFrame" xml:space="preserve">
     <value>ifrm</value>
   </data>
   <data name="CommonSteps_LeftFrame" xml:space="preserve">
     <value>left</value>
+  </data>
+  <data name="CommonSteps_ManageProductsTab_Value" xml:space="preserve">
+    <value>_ctl9_td_3</value>
+  </data>
+  <data name="CommonSteps_ManageProgramsTab_Value" xml:space="preserve">
+    <value>_ctl9_td_2</value>
   </data>
   <data name="CommonSteps_PageNotOpened_Message" xml:space="preserve">
     <value>Page not opened in the specified amount of time.</value>

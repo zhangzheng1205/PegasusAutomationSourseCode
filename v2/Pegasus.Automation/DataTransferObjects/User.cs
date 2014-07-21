@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
+namespace Pearson.Pegasus.TestAutomation.
+    Frameworks.DataTransferObjects
 {
     /// <summary>
     /// This class represents a user.
@@ -12,7 +13,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// <summary>
         /// This is the password.
         /// </summary>
-        public String Password { get; set; }   
+        public String Password { get; set; }
 
         /// <summary>
         /// This is the email of the user.
@@ -37,7 +38,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// <summary>
         /// This is the Rumba Owner ID.
         /// </summary>
-        public String RumbaOwnerID { get; set; }
+        public String RumbaOwnerId { get; set; }
 
         /// <summary>
         /// This is the enrolment status of the user.
@@ -113,11 +114,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
             HedMilAcceptanceInstructor = 51,
             HedMilAcceptanceStudent = 52,
             HedMiLWsAdmin = 53,
-            HedCoreVmWsAdmin =54,
+            HedCoreVmWsAdmin = 54,
             HedBackdoorLoginStudent = 55,
-            HedBackdoorLoginInstructor =56,
+            HedBackdoorLoginInstructor = 56,
             HedMilPPEStudent = 57,
-            SMSAdminStudent=58
+            SMSAdminStudent = 58
 
             #endregion
         }
@@ -153,7 +154,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// <summary>
         /// This is the user Id.
         /// </summary>
-        private string UserID { get; set; }
+        private string UserId { get; set; }
 
         /// <summary>
         /// This method selects users based on given condition.
@@ -181,18 +182,17 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static User Get(UserTypeEnum userType)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany
-                <User>(x => x.UserType == userType && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                <User>(x => x.UserType == userType && x.IsCreated).OrderByDescending(x => x.CreationDate).Last();
         }
 
         /// <summary>
         /// This method gets the user based on User ID.
         /// </summary>
-        /// <param name="userID">This is user ID.</param>
+        /// <param name="userId">This is user ID.</param>
         /// <returns>User based on ID.</returns>
-        public static User Get(string userID)
+        public static User Get(string userId)
         {
-            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<User>(x => x.UserID == userID && x.IsCreated).First();
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<User>(x => x.UserId == userId && x.IsCreated).Last();
         }
 
         /// <summary>
@@ -205,5 +205,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
             user.Password = password;
         }
 
+        /// <summary>
+        /// This method returns all created users of the given type.
+        /// </summary>
+        /// <param name="userType">This is the type of the user.</param>
+        /// <returns>User List.</returns>
+        public static List<User> GetAll(UserTypeEnum userType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<User>(
+                x => x.UserType == userType).OrderByDescending(
+                x => x.CreationDate).ToList();
+        }
     }
 }

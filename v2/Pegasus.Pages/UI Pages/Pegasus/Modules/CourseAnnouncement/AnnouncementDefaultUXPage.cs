@@ -299,7 +299,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_ViewBy_DropDown_Id_Locator));
                 // Select system announcement in 'View by' Dropdown
-                base.SelectDropDownValueThroughTextByID(AnnouncementDefaultUXPageResource.
+                base.SelectDropDownValueThroughTextById(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_ViewBy_DropDown_Id_Locator, announcementType);
                 Thread.Sleep(Convert.ToInt32(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_ThreadSleep_Value));
@@ -328,7 +328,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AnnouncementDefaultUXPageResource.
                             AnnouncementDefaultUX_Page_ViewBy_DropDown_Id_Locator));
                 // Select system announcement in 'View by' Dropdown
-                base.SelectDropDownValueThroughTextByID(AnnouncementDefaultUXPageResource.
+                base.SelectDropDownValueThroughTextById(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_ViewBy_DropDown_Id_Locator, annoucementType);
             }
             catch (Exception e)
@@ -395,7 +395,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_ViewBy_DropDown_Id_Locator));
                 // Select system announcement in 'View by' Dropdown
-                base.SelectDropDownValueThroughTextByID(AnnouncementDefaultUXPageResource.
+                base.SelectDropDownValueThroughTextById(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_ViewBy_DropDown_Id_Locator, announcementType);
                 Thread.Sleep(Convert.ToInt32(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_ThreadSleep_Value));

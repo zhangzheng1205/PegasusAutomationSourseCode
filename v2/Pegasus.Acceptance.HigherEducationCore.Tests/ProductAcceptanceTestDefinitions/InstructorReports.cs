@@ -147,6 +147,35 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         }
 
         /// <summary>
+        ///  Verify Display of StudyPlan, StudentName and Average Score in study Plan Results report window
+        /// </summary>
+        [Then(@"I should successfully see the studyplan name, student name and average score under launched report")]
+        public void VerifyTheStudyPlanNameAndStudentNameUnderLaunchedReport()
+        {
+            //Method to Check Score and Student Name in the Launched Report 
+            Logger.LogMethodEntry("InstructorReports",
+                "VerifyTheStudyPlanNameAndStudentNameUnderLaunchedReport",
+                 base.isTakeScreenShotDuringEntryExit);
+            RptStuStudyPlanPage StuStudyPlanPage = new RptStuStudyPlanPage();
+            //Assert StudyPlan Name
+            Logger.LogAssertion("VerifyStudyPlanName", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(InstructorReportsResource
+                     .InstructorReports_StudyPlan_Name, StuStudyPlanPage.GetStudyPlanName()));            
+            //Assert Student Name
+            Logger.LogAssertion("VerifyStudentName", ScenarioContext.Current.ScenarioInfo.Title,
+                 () => Assert.AreEqual(InstructorReportsResource
+                     .InstructorReports_Student_LastName, StuStudyPlanPage.GetStudentName()));
+            //Assert Student score
+            Logger.LogAssertion("VerifyAverageScore", ScenarioContext.Current.ScenarioInfo.Title,
+                 () => Assert.AreEqual(InstructorReportsResource
+                     .InstructorReports_StudyPlan_Score, StuStudyPlanPage.GetAverageScore()));
+            Logger.LogMethodExit("InstructorReports",
+               "VerifyTheStudyPlanNameAndStudentNameUnderLaunchedReport",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// This method is called before execution of test.
         /// </summary>
         [BeforeTestRun]

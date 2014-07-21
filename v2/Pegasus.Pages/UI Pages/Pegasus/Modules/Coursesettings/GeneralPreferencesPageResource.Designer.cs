@@ -386,6 +386,78 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentHolderArea_chkInsToolbar.
+        /// </summary>
+        internal static string GeneralPreferences_Page_InstructorResourceToolbar_CheckBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("GeneralPreferences_Page_InstructorResourceToolbar_CheckBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentHolderArea_chkInsCustom.
+        /// </summary>
+        internal static string GeneralPreferences_Page_InstructorResourceToolbar_Display1_CheckBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("GeneralPreferences_Page_InstructorResourceToolbar_Display1_CheckBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentHolderArea_chkInsCustomOne.
+        /// </summary>
+        internal static string GeneralPreferences_Page_InstructorResourceToolbar_Display2_CheckBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("GeneralPreferences_Page_InstructorResourceToolbar_Display2_CheckBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 34.
+        /// </summary>
+        internal static string GeneralPreferences_Page_InstructorResourceToolbar_LockIcon_Id_Locator {
+            get {
+                return ResourceManager.GetString("GeneralPreferences_Page_InstructorResourceToolbar_LockIcon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentHolderArea_txtInsCustom1.
+        /// </summary>
+        internal static string GeneralPreferences_Page_InstructorResourceToolbar_Title1_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("GeneralPreferences_Page_InstructorResourceToolbar_Title1_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentHolderArea_txtInsCustomOne.
+        /// </summary>
+        internal static string GeneralPreferences_Page_InstructorResourceToolbar_Title2_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("GeneralPreferences_Page_InstructorResourceToolbar_Title2_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentHolderArea_txtInsCustomExternal.
+        /// </summary>
+        internal static string GeneralPreferences_Page_InstructorResourceToolbar_URL1_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("GeneralPreferences_Page_InstructorResourceToolbar_URL1_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentHolderArea_txtInsCustomExternalOne.
+        /// </summary>
+        internal static string GeneralPreferences_Page_InstructorResourceToolbar_URL2_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("GeneralPreferences_Page_InstructorResourceToolbar_URL2_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to atdContnet20.
         /// </summary>
         internal static string GeneralPreferences_Page_Roster_Preference_Id_Locator {
@@ -584,24 +656,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _ctl0_ContentHolderArea_chkAudio.
-        /// </summary>
-        internal static string GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Checkbox_Id_Locator {
-            get {
-                return ResourceManager.GetString("GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Checkbox_Id_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 5.
-        /// </summary>
-        internal static string GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Lock_Id_Locator {
-            get {
-                return ResourceManager.GetString("GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Lock_Id_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to _ctl0_ContentHolderArea_txtWimbaNames.
         /// </summary>
         internal static string GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator {
@@ -778,6 +832,69 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings {
         internal static string GeneralPrefernces_Page_StudentVerbChartPreference_LockIcon_Id_Locator {
             get {
                 return ResourceManager.GetString("GeneralPrefernces_Page_StudentVerbChartPreference_LockIcon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PCTLink1.
+        /// </summary>
+        internal static string PCT_Display1 {
+            get {
+                return ResourceManager.GetString("PCT_Display1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PCTLink2.
+        /// </summary>
+        internal static string PCT_Display2 {
+            get {
+                return ResourceManager.GetString("PCT_Display2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Creation Tool.
+        /// </summary>
+        internal static string PCT_Launch_Window {
+            get {
+                return ResourceManager.GetString("PCT_Launch_Window", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to pegasusst.excelindia.com/PCTUI/PCTsmslogin.aspx.
+        /// </summary>
+        internal static string PCT_ST_Url {
+            get {
+                return ResourceManager.GetString("PCT_ST_Url", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to gradeit.vm.pegasus.pearsoncmg.com/PCTUI/PCTsmslogin.aspx.
+        /// </summary>
+        internal static string PCT_VM_Url {
+            get {
+                return ResourceManager.GetString("PCT_VM_Url", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ST.
+        /// </summary>
+        internal static string ST_Env {
+            get {
+                return ResourceManager.GetString("ST_Env", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VM.
+        /// </summary>
+        internal static string VM_Env {
+            get {
+                return ResourceManager.GetString("VM_Env", resourceCulture);
             }
         }
     }

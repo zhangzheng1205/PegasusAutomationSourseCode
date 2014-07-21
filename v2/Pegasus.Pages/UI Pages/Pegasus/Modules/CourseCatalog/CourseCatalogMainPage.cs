@@ -44,7 +44,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Get Course from Memory
-                Course course = Course.Get(courseTypeEnum);                
+                Course course = Course.Get(courseTypeEnum);
                 //Course Guid Name
                 Guid courseGuidName = Guid.NewGuid();
                 //Generate New Course Name Through Global Unique Identifier
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
                 switch (courseTypeEnum)
                 {
                     case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
-                    case Course.CourseTypeEnum.GraderITSIM5Course:   
+                    case Course.CourseTypeEnum.GraderITSIM5Course:
                         // Store MyItLab Instructor Course Name in Memory
                         StoreCourseInMemory(courseGuidName,
                             Course.CourseTypeEnum.MyItLabInstructorCourse);
@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages
                     case Course.CourseTypeEnum.MySpanishLabMaster:
                         // Store HED Core Instructor Course Name in Memory
                         StoreCourseInMemory(courseGuidName, Course.CourseTypeEnum.
-                            InstructorCourse);                       
+                            InstructorCourse);
                         break;
                 }
             }
@@ -92,40 +92,38 @@ namespace Pegasus.Pages.UI_Pages
         public void AddProductFromSearchCatalog
             (Product.ProductTypeEnum productType)
         {
-            // Add Course From Instructor Search Catalog
+            // add course from instructor search catalog
             Logger.LogMethodEntry("CourseCatalogMainPage",
                 "AddProductFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
             try
             {
-                //Get Product from Memory
+                // get product from memory
                 Product product = Product.Get(productType);
                 //Program course Guid Name
                 Guid programCourseGuidName = Guid.NewGuid();
-                //Generate New Course Name Through Global Unique Identifier
-                this.EnterProgramCourseSearchCatalogParameter();
-                //Click On Next Button
+                // generate new course name Guid
+                switch (productType)
+                {
+                    case Product.ProductTypeEnum.MyITLabForOffice2013Program:
+                        this.SearchCourseByTextBookName(product.Name);
+                        break;
+                    case Product.ProductTypeEnum.MyITLabForOffice2013General:
+                        this.BrowseCourseByDiscipline();
+                        break;
+                }
+
+                // click next button
                 this.ClickOnNextButton();
-                //Purpose: Search Product In Instructor Catalog
-                SearchCourseInInstructorCatalog(product.Name);
+                // search product in instructor catalog
+                this.SearchCourseInInstructorCatalog(product.Name);
                 // Check to verify the availibility of finish button
                 CatalogFinishButtonAvailability(programCourseGuidName);
-                // Verify is Search Catalog Pop Up Closed
+                // verify is Search Catalog Pop Up Closed
                 if (base.IsPopUpClosed(2))
                 {
-                    switch (productType)
-                    {
-                        case Product.ProductTypeEnum.HedMilProgram:
-                            // Save Program Course Name in Memory
-                            StoreCourseInMemory(programCourseGuidName,
-                                Course.CourseTypeEnum.MyItLabProgramCourse);
-                            break;
-
-                        case Product.ProductTypeEnum.HedCoreProgram:
-                            // Save Program Course Name in Memory
-                            StoreCourseInMemory(programCourseGuidName,
-                                Course.CourseTypeEnum.ProgramCourse);
-                            break;
-                    }                    
+                    // save course details in memory
+                    this.StoreCourseInMemory(programCourseGuidName,
+                        Course.CourseTypeEnum.MyITLabOffice2013Program);
                 }
             }
             catch (Exception e)
@@ -134,6 +132,28 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseCatalogMainPage",
                 "AddProductFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Search Course By Text Book Name In Catalog.
+        /// </summary>
+        /// <param name="productType">This is product type enum.</param>
+        private void SearchCourseByTextBookName(string productName)
+        {
+            //Enter Catalog Search Parameter
+            Logger.LogMethodEntry("CourseCatalogMainPage",
+                "SearchCourseByTextBookName",
+                base.isTakeScreenShotDuringEntryExit);
+            // Click on the radio button
+            base.WaitForElement(By.Id(CourseCatalogMainPageResource
+                .CourseCatalogMain_ProductTextBook_TextBox_Id_Locator));
+            // clear text box
+            base.ClearTextByID(CourseCatalogMainPageResource
+                .CourseCatalogMain_ProductTextBook_TextBox_Id_Locator);
+            base.FillTextBoxByID(CourseCatalogMainPageResource
+                .CourseCatalogMain_ProductTextBook_TextBox_Id_Locator, productName);
+            Logger.LogMethodExit("CourseCatalogMainPage", "SearchCourseByTextBookName",
+                base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -281,11 +301,11 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enter Catalog Search Parameter For Program Course
         /// </summary>
-        private void EnterProgramCourseSearchCatalogParameter()
+        private void BrowseCourseByDiscipline()
         {
             //Enter Catalog Search Parameter
             Logger.LogMethodEntry("CourseCatalogMainPage",
-                "EnterProgramCourseSearchCatalogParameter",
+                "BrowseCourseByDiscipline",
                 base.isTakeScreenShotDuringEntryExit);
             // Click on the radio button
             base.WaitForElement(By.Id(CourseCatalogMainPageResource
@@ -293,12 +313,12 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByID(CourseCatalogMainPageResource
                 .CourseCatalogMain_Page_Discipline_RadioButton_Id_Locator);
             //Select Art option in the drop down value
-            base.SelectDropDownValueThroughTextByID(CourseCatalogMainPageResource
+            base.SelectDropDownValueThroughTextById(CourseCatalogMainPageResource
                     .CourseCatalogMain_Page_Discipline_DropDown_Id_Locator,
                 CourseCatalogMainPageResource
                     .CourseCatalogMain_Page_Discipline_DropDown_Text_Value);
             Logger.LogMethodExit("CourseCatalogMainPage",
-                "EnterProgramCourseSearchCatalogParameter",
+                "BrowseCourseByDiscipline",
                 base.isTakeScreenShotDuringEntryExit);
         }
 
@@ -333,19 +353,19 @@ namespace Pegasus.Pages.UI_Pages
         private void SearchCourseInInstructorCatalog
             (string productCourseName)
         {
-            //Search Course in Instructor Catalog
+            // search course in instructor catalog
             Logger.LogMethodEntry("CourseCatalogMainPage"
                 , "SearchCourseInInstructorCatalog", base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CourseCatalogMainPageResource
                 .CourseCatalogMain_Page_SearchCatalog_Span_Id_Locator));
-            //Start Stop Watch
+            // start stop watch
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-            //Setting Course Table Row
+            // set course grid row
             int setCourseTableRow = 1;
-            //Check if the course name is Visible
+            // check if the course name is visible
             HandlePagingToFindCourseNameOnCatalogPage(productCourseName);
-            // Purpose: To Search the Course Through Each Table Row(s)
+            // search the course in each rows
             while (stopWatch.Elapsed.Minutes < MinutesToWait)
             {
                 string getCourseName = base.GetElementTextByXPath
@@ -355,10 +375,10 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     base.WaitForElement(By.XPath(string.Format(CourseCatalogMainPageResource.
                         CourseCatalogMain_Page_SelectCourse_Button_XPath_Locator, setCourseTableRow)));
-                    // Set focus on the course and click on select course
-                    base.FillEmptyTextByXPath(string.Format(CourseCatalogMainPageResource.
+                    // set focus on the course and click on select course
+                    base.PerformFocusOnElementActionByXPath(string.Format(CourseCatalogMainPageResource.
                         CourseCatalogMain_Page_SelectCourse_Button_XPath_Locator, setCourseTableRow));
-                    //Get Select COurse Button Property
+                    // get select course button property
                     IWebElement getSelectCourseButtonProperty = base.GetWebElementPropertiesByXPath(
                         string.Format(CourseCatalogMainPageResource.
                         CourseCatalogMain_Page_SelectCourse_Button_XPath_Locator, setCourseTableRow));
@@ -379,37 +399,37 @@ namespace Pegasus.Pages.UI_Pages
         private void HandlePagingToFindCourseNameOnCatalogPage
             (string productCourseName)
         {
-            //Find Course In Catalog
+            // search and select course in catalog
             Logger.LogMethodEntry("CourseCatalogMainPage",
                 "HandlePagingToFindCourseNameOnCatalogPage",
                 base.isTakeScreenShotDuringEntryExit);
-            //Halt Execution for 15 Seconds
+            // wait for catalog loads
             Thread.Sleep(Convert.ToInt32(CourseCatalogMainPageResource.
-                    CourseCatalogMain_Page_Thread_SleepTime_Value_Paging_NextLink));            
+                    CourseCatalogMain_Page_Thread_SleepTime_Value_Paging_NextLink));
             base.WaitForElement(By.Id(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_SearchCatalog_Span_Id_Locator));
-            //Validate the page number present or not 
+            // validate page number present or not 
             if (base.IsElementDisplayedByID(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_Total_Pages_Id_Locator))
             {
-                //Get the Total Page count
+                // get page count
                 int getTotalPageCount = Convert.ToInt16(base.
                     GetElementTextByID(CourseCatalogMainPageResource.
                     CourseCatalogMain_Page_Total_Pages_Id_Locator));
-                // Purpose: To Check if the Course Name is Visible on the Page
+                // check if the course name is visible on the page
                 for (int pageCount = Convert.ToInt16(CourseCatalogMainPageResource.
                     CourseCatalogMain_Page_Frame_First_Index);
                     pageCount <= getTotalPageCount; pageCount++)
                 {
-                    //Check if the Text is Present
+                    // check if the course name s present
                     if (base.IsElementContainsTextById(CourseCatalogMainPageResource.
                         CourseCatalogMain_Page_SearchCatalog_Span_Id_Locator, productCourseName))
                     {
                         break;
                     }
-                    //Click on the "Next>>" Link
+                    // click on the "Next>>" link
                     this.ClickOnNextLink();
-                    //Wait For Element
+                    // wait for course grid on next page
                     base.WaitForElement(By.Id(CourseCatalogMainPageResource.
                         CourseCatalogMain_Page_SearchCatalog_Span_Id_Locator));
                 }
@@ -442,7 +462,7 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Purpose: To Verify the Mail Error on the Catalog Light Box 
+        /// Purpose: To Verify the Mail Error on the Catalog Light Box.
         /// </summary>
         private void InstructorCatalogCourseMailErrorDisappeared()
         {
@@ -451,14 +471,10 @@ namespace Pegasus.Pages.UI_Pages
                 "InstructorCatalogCourseMailErrorDisappeared"
                 , base.isTakeScreenShotDuringEntryExit);
             // Check the mail server error on the catalog page 
-            base.IsElementPresent(By.ClassName(CourseCatalogMainPageResource.
-                  CourseCatalogMain_Page_MessageBoard_Text_ClassName_Locator)
-                  , Convert.ToInt32(CourseCatalogMainPageResource
-                  .CourseCatalogMain_Page_WaitTime_MailServerError_Value));
             if (base.IsElementPresent(By.ClassName(CourseCatalogMainPageResource.
-                  CourseCatalogMain_Page_MessageBoard_Text_ClassName_Locator),
-                  Convert.ToInt32(CourseCatalogMainPageResource
-                  .CourseCatalogMain_Page_WaitTime_MailServerError_Value)))
+                CourseCatalogMain_Page_MessageBoard_Text_ClassName_Locator),
+                Convert.ToInt32(CourseCatalogMainPageResource
+                .CourseCatalogMain_Page_WaitTime_MailServerError_Value)))
             {
                 IWebElement courseMailErrorText = base.GetWebElementPropertiesByClassName
                     (CourseCatalogMainPageResource.
@@ -570,7 +586,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="courseGuid">This is Course Name Guid by Guid</param>
         /// <param name="courseTypeEnum">This is Hed Course by Type</param>
-        private void StoreCourseInMemory(Guid courseGuid, 
+        private void StoreCourseInMemory(Guid courseGuid,
             Course.CourseTypeEnum courseTypeEnum)
         {
             //Save Product  Course in Memory

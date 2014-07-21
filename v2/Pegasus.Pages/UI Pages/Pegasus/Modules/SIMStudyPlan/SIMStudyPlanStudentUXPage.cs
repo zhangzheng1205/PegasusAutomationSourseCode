@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(SIMStudyPlanStudentUXPageResource.
                     SIMStudyPlanStudentUXPage_ViewSubmission_Cmenu_Option_Id_Locator));
                 //Click On 'View Submission' Option
-                base.ClickLinkByID(SIMStudyPlanStudentUXPageResource.
+                base.ClickLinkById(SIMStudyPlanStudentUXPageResource.
                     SIMStudyPlanStudentUXPage_ViewSubmission_Cmenu_Option_Id_Locator);
             }
             catch (Exception e)

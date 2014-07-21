@@ -106,18 +106,18 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         }
 
         /// <summary>
-        /// Create Question Folder.
+        /// Create Folder of specified type.
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity Type Enum</param>
-        [When(@"I create question ""(.*)""")]
-        public void CreateQuestionFolder(Activity.ActivityTypeEnum activityTypeEnum)
+        [When(@"I create ""(.*)"" type Folder")]
+        public void CreateFolder(Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Create Question Folder
-            Logger.LogMethodEntry("CreateQuestion", "CreateQuestionFolder",
+            Logger.LogMethodEntry("CreateQuestion", "CreateFolder",
                 base.isTakeScreenShotDuringEntryExit);
             // Create Folder
             new AddFolderPage().CreateTheFolder(activityTypeEnum);
-            Logger.LogMethodExit("CreateQuestion", "CreateQuestionFolder",
+            Logger.LogMethodExit("CreateQuestion", "CreateFolder",
                 base.isTakeScreenShotDuringEntryExit);
         }
         
@@ -148,7 +148,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheCreatedQuestionFolder",
                  base.isTakeScreenShotDuringEntryExit);
             //Fetch Folder from Memory
-            Activity getFolder = Activity.Get(Activity.ActivityTypeEnum.Folder);
+            Activity getFolder = Activity.Get(Activity.ActivityTypeEnum.QuestionFolder);
             //Assert Created Question Folder
             Logger.LogAssertion("VerifyTheCreatedQuestionFolder",
                ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -289,21 +289,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CreateQuestion", "MapQuestionToSkill",
                base.isTakeScreenShotDuringEntryExit);
         }
-        /// <summary>
-        /// Create Essay Audio Questions.
-        /// </summary>        
-        [When(@"I create 'Essay audio' question type")]
-        public void CreateAudioEssayQuestionType()
-        {
-            //Create Audio Essay Questions
-            Logger.LogMethodEntry("CreateQuestion", "CreateAudioEssayQuestionType",
-                base.isTakeScreenShotDuringEntryExit);
-            //Create Audio Essay Questions
-            new EssayPage().CreateAudioEssayQuestions();
-            Logger.LogMethodExit("CreateQuestion", "CreateAudioEssayQuestionType",
-                       base.isTakeScreenShotDuringEntryExit);
-        }
-                
+
+        
         /// <summary>
         /// This method is called before execution of test.
         /// </summary>

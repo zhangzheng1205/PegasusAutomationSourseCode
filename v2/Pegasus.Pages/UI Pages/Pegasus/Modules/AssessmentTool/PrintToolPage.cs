@@ -510,6 +510,41 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("PrintToolPage", "ClickOnDownloadButton",
                 base.isTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Verify Download Option Present.
+        /// </summary>
+        /// <returns>This Returns Status of Download Option.</returns>
+        public bool IsDownloadOptionPresent()
+        {
+            //Verify Download Option Present
+            Logger.LogMethodEntry("PrintToolPage", "ClickOnDownloadButton",
+                base.isTakeScreenShotDuringEntryExit);
+            bool isDownloadOptionPresent = false;
+            try
+            {
+                base.WaitUntilWindowLoads(PrintToolPageResource.
+                    PrintToolPage_Print_Window_Name);
+                //Select Print Window
+                base.SelectWindow(PrintToolPageResource.
+                    PrintToolPage_Print_Window_Name);
+                //Wait For Element
+                base.WaitForElement(By.Id(PrintToolPageResource.
+                    PrintToolPage_Download_Button_Id_Locator));
+               if(base.IsElementPresent(By.Id(PrintToolPageResource.
+                    PrintToolPage_Download_Button_Id_Locator),10))
+               {
+                   isDownloadOptionPresent = true;
+               }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }           
+            Logger.LogMethodExit("PrintToolPage", "ClickOnDownloadButton",
+                base.isTakeScreenShotDuringEntryExit);
+            return isDownloadOptionPresent;
+        }
     }
 }
 

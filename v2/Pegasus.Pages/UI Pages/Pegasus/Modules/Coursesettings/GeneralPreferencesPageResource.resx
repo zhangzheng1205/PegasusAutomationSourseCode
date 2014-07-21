@@ -351,10 +351,49 @@
   <data name="GeneralPrefernces_Page_CharacterPalate_LockIcon_Id_Locator" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Checkbox_Id_Locator" xml:space="preserve">
-    <value>_ctl0_ContentHolderArea_chkAudio</value>
+  <data name="GeneralPreferences_Page_InstructorResourceToolbar_CheckBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkInsToolbar</value>
   </data>
-  <data name="GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Lock_Id_Locator" xml:space="preserve">
-    <value>5</value>
+  <data name="GeneralPreferences_Page_InstructorResourceToolbar_Display1_CheckBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkInsCustom</value>
+  </data>
+  <data name="GeneralPreferences_Page_InstructorResourceToolbar_Display2_CheckBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_chkInsCustomOne</value>
+  </data>
+  <data name="GeneralPreferences_Page_InstructorResourceToolbar_LockIcon_Id_Locator" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="GeneralPreferences_Page_InstructorResourceToolbar_Title1_TextBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_txtInsCustom1</value>
+  </data>
+  <data name="GeneralPreferences_Page_InstructorResourceToolbar_Title2_TextBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_txtInsCustomOne</value>
+  </data>
+  <data name="GeneralPreferences_Page_InstructorResourceToolbar_URL1_TextBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_txtInsCustomExternal</value>
+  </data>
+  <data name="GeneralPreferences_Page_InstructorResourceToolbar_URL2_TextBox_Id_Locator" xml:space="preserve">
+    <value>_ctl0_ContentHolderArea_txtInsCustomExternalOne</value>
+  </data>
+  <data name="PCT_VM_Url" xml:space="preserve">
+    <value>gradeit.vm.pegasus.pearsoncmg.com/PCTUI/PCTsmslogin.aspx</value>
+  </data>
+  <data name="PCT_ST_Url" xml:space="preserve">
+    <value>pegasusst.excelindia.com/PCTUI/PCTsmslogin.aspx</value>
+  </data>
+  <data name="PCT_Display1" xml:space="preserve">
+    <value>PCTLink1</value>
+  </data>
+  <data name="PCT_Display2" xml:space="preserve">
+    <value>PCTLink2</value>
+  </data>
+  <data name="PCT_Launch_Window" xml:space="preserve">
+    <value>Project Creation Tool</value>
+  </data>
+  <data name="ST_Env" xml:space="preserve">
+    <value>ST</value>
+  </data>
+  <data name="VM_Env" xml:space="preserve">
+    <value>VM</value>
   </data>
 </root>

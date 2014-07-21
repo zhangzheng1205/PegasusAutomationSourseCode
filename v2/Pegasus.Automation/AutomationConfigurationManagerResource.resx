@@ -132,6 +132,18 @@
   <data name="CourseSpaceURLRootVM_Key" xml:space="preserve">
     <value>CourseSpaceURLRootVM</value>
   </data>
+  <data name="PCTInstructorResourceToolsPPE_Key" xml:space="preserve">
+    <value>PCTInstructorResourceToolbarURLPPE</value>
+  </data>
+  <data name="PCTInstructorResourceToolsPROD_Key" xml:space="preserve">
+    <value>PCTInstructorResourceToolbarURLPROD</value>
+  </data>
+  <data name="PCTInstructorResourceToolsST_Key" xml:space="preserve">
+    <value>PCTInstructorResourceToolbarURLST</value>
+  </data>
+  <data name="PCTInstructorResourceToolsVM_Key" xml:space="preserve">
+    <value>PCTInstructorResourceToolbarURLVM</value>
+  </data>
   <data name="PEG_AUTOMATION_CSURL_Key" xml:space="preserve">
     <value>PEG_AUTOMATION_CSURL</value>
   </data>

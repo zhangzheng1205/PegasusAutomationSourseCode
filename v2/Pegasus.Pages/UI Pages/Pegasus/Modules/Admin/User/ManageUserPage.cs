@@ -221,13 +221,13 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.NovaNETCsAide:
                     case User.UserTypeEnum.DPCsAide:
                         //Click on the Aide link
-                        base.ClickLinkByID(ManageUserPageResource.
+                        base.ClickLinkById(ManageUserPageResource.
                             ManageUser_Page_AddUsers_Aide_Option_Id_Locator);
                         break;
                     case User.UserTypeEnum.NovaNETCsOrganizationAdmin:
                     case User.UserTypeEnum.DPCsOrganizationAdmin:
                         //Click on the Administrator link
-                        base.ClickLinkByID(ManageUserPageResource.
+                        base.ClickLinkById(ManageUserPageResource.
                             ManageUser_Page_AddUsers_Administrator_Option_Id_Locator);
                         break;
                 }
@@ -265,7 +265,7 @@ namespace Pegasus.Pages.UI_Pages
             else
             {
                 //Click on the student Option in Enrollment tab
-                base.ClickLinkByID(OrgAdminUserEnrollmentPageResource.
+                base.ClickLinkById(OrgAdminUserEnrollmentPageResource.
                     OrgAdminUserEnrollment_Page_CreateUsers_Student_Option_Id_Locator);
             }
             logger.LogMethodExit("ManageUserPage", "ClickOnStudentOption",
@@ -423,7 +423,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ManageUserPageResource.
                     ManageUser_Page_AddUsers_BulkUser_Option_Id_Locator));
                 //Click on the Bulk User link
-                base.ClickLinkByID(ManageUserPageResource.
+                base.ClickLinkById(ManageUserPageResource.
                     ManageUser_Page_AddUsers_BulkUser_Option_Id_Locator);
                 //Wait For Window
                 base.WaitUntilWindowLoads(ImportUsersPageResource.ImportUsers_Page_Window_Name);

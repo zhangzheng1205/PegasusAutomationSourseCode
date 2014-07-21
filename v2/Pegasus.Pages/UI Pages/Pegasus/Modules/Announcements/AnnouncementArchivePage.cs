@@ -37,7 +37,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AnnouncementArchivePageResource.
                     AnnouncementArchive_Page_CreateAnnouncement_Link_Id_Locator));
                 // Click Create Announcement Link
-                base.ClickLinkByID(AnnouncementArchivePageResource.
+                base.ClickLinkById(AnnouncementArchivePageResource.
                     AnnouncementArchive_Page_CreateAnnouncement_Link_Id_Locator);                
             }
             catch (Exception e)

@@ -182,7 +182,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 new ManageCoursesPage().GetCourseStatus()));
             //Get Course Creation Date
             Course course = Course.Get(Course.CourseTypeEnum.MasterLibrary);
-            DateTime dateMonthYear = course.creationDate;
+            DateTime dateMonthYear = course.CreationDate;
             string getCurrentDateMonthYear = dateMonthYear.ToString();
             string[] getCurrentDate = getCurrentDateMonthYear.Split(Convert.ToChar(
                 CreateCourseResource.CreateCourseCopy_SpecialCharacter_DateMonthYear_value));

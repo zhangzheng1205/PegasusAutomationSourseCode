@@ -61,6 +61,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CommonStepsResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="CommonProductAcceptanceTestFeatures\CommonUserLoginLogOut.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonUserLoginLogOut.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\ActivityGrades.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ActivityGradesResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -171,6 +176,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PreferencesResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\ProductLicense.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\PublishCourse.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\PublishCourseResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -288,6 +294,26 @@
       <DependentUpon>WorkSpaceStudent.WorkFlow.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserStoryAcceptanceTestFeatures\PEGASUS-26905.Acceptance.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-26905.Acceptance.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UserStoryAcceptanceTestFeatures\PEGASUS-26907.Acceptance.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-26907.Acceptance.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UserStoryAcceptanceTestFeatures\PEGASUS-26909.Acceptance.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-26909.Acceptance.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UserStoryAcceptanceTestFeatures\PEGASUS-26910.Acceptance.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-26910.Acceptance.feature</DependentUpon>
+    </Compile>
     <Compile Include="UserStoryAcceptanceTestFeatures\PEGASUS-656.Acceptance.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -306,6 +332,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CommonProductAcceptanceTestFeatures\CommonUserLoginLogOut.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CommonUserLoginLogOut.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MGM.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProductAcceptanceTest2.MGM.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -314,6 +347,9 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Extended.MGM.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.GroupingUsecaseTest.MGM.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -382,8 +418,24 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProductAcceptanceTest.MGM.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MGM.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTestFull.MGM.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-26905.Acceptance.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-26905.Acceptance.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-26907.Acceptance.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-26907.Acceptance.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-26909.Acceptance.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-26909.Acceptance.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-26910.Acceptance.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-26910.Acceptance.feature.cs</LastGenOutput>
     </None>
     <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-656.Acceptance.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

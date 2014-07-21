@@ -94,57 +94,29 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Grader IT Activity with 2010 in coursespace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Previews the Grader IT Activity in the my Course tab in coursespace by CsSmsInstr" +
+            "uctor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorCourseContent")]
-        public virtual void CreateGraderITActivityWith2010InCoursespace()
+        public virtual void PreviewsTheGraderITActivityInTheMyCourseTabInCoursespaceByCsSmsInstructor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Grader IT Activity with 2010 in coursespace", ((string[])(null)));
-#line 18
-this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Previews the Grader IT Activity in the my Course tab in coursespace by CsSmsInstr" +
+                    "uctor", ((string[])(null)));
 #line 19
-testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
-testRunner.And("I click on the \"Homework\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
-testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 22
-testRunner.When("I create \"SIMGraderActivity\" of grader activity of behavioral mode \"Assignment\" t" +
-                    "ype using \"Personal Finances\" project in \"MyCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
-testRunner.Then("I should see the successfull message \"Activity added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 24
-testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 25
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Previews the Grader IT Activity in the my Course tab in coursespace")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorCourseContent")]
-        public virtual void PreviewsTheGraderITActivityInTheMyCourseTabInCoursespace()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Previews the Grader IT Activity in the my Course tab in coursespace", ((string[])(null)));
-#line 28
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
-#line 29
+#line 20
 testRunner.When("I search \"SIMGraderActivity\" activity of behavioral mode \"Assignment\" type in Myc" +
                     "ourse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
+#line 21
 testRunner.And("I select the Cmenu option \"Preview\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
+#line 22
 testRunner.Then("I should be on the \"Test Presentation\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 32
+#line 23
 testRunner.When("I close the \"Test Presentation\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 33
+#line 24
 testRunner.And("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 34
+#line 25
 testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

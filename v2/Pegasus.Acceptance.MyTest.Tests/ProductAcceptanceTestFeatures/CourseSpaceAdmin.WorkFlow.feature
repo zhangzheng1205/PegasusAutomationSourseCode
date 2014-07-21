@@ -3,15 +3,8 @@
 					I want to manage all the coursespace admin related usecases 
 					so that I would validate all the coursespace admin scenarios are working fine.
 
-#Purpose: Open CS Url
-Background: 
-Given I browsed the login url for "HedCsAdmin"
-When I logged into the Pegasus as "HedCsAdmin" in "CourseSpace"
-Then I should logged in successfully
-
 #Purpose: Approve master course in Course space
 Scenario: Approve Master Course by Cs Admin
-Given I am on the "Course Enrollment" page
 When I navigate to the "Publishing" tab
 And I select the "Manage Products" tab
 Then I should be on the "Manage Products" page
@@ -46,19 +39,15 @@ Then I should see the successfull message "Approved courses programmed successfu
 
 #Purpose : Delete the Created General Type Product
 Scenario: Delete the Created General Type Product by CS Admin
-Given I am on the "Course Enrollment" page
 When I navigate to the "Publishing" tab
 And I select the "Manage Products" tab
 Then I should be on the "Manage Products" page
 When I search the product type "HedCoreGeneral" in right frame
 And I click on "Delete" cmenu option of product in coursespace
 Then I should see the successfull message "Products deleted successfully."
-When I "Sign out" from the "HedCsAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Approve Empty Course in Course space
 Scenario: Approve Empty Course by Cs Admin
-Given I am on the "Course Enrollment" page
 When I navigate to the "Publishing" tab
 And I select the "Manage Products" tab
 Then I should be on the "Manage Products" page

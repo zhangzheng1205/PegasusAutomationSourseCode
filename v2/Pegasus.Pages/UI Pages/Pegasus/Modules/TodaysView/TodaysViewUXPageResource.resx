@@ -229,7 +229,7 @@
     <value>ux_Instructor_View</value>
   </data>
   <data name="TodaysViewUXPageResource_Custom_WaitTime" xml:space="preserve">
-    <value>15</value>
+    <value>3</value>
   </data>
   <data name="TodaysViewUXPageResource_Enrollments_Link_Locator" xml:space="preserve">
     <value>Enrollments</value>
@@ -530,5 +530,14 @@
   </data>
   <data name="TodayViewUXPageResource_Outer_Frame_Id_Locator" xml:space="preserve">
     <value>frmCourseContainer</value>
+  </data>
+  <data name="TodayViewUXPageResource_Home_Link_PartialLink_Locator" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="TodayViewUXPageResource_PCTInstructorResourceDropDown" xml:space="preserve">
+    <value>//td[@id='tdResTB']/div[1]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_PCTInstructorResourceToolLink" xml:space="preserve">
+    <value>//table[@id='tblRTBPulldown']/tbody/tr/td/div/div[@title</value>
   </data>
 </root>

@@ -61,6 +61,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CommonStepsResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="CommonProductAcceptanceTestFeatures\CommomUserLoginLogout.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommomUserLoginLogout.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\ActivityAlerts.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ActivityAlertsResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -200,8 +205,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CommonProductAcceptanceTestFeatures\CommomUserLoginLogout.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CommomUserLoginLogout.feature.cs</LastGenOutput>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BTS.NovaNET.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.NovaNET.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Extended.NovaNET.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -241,7 +253,7 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProductAcceptanceTest.NovaNET.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.NovaNET.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.NovaNETFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

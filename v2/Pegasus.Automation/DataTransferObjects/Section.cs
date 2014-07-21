@@ -23,7 +23,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// <summary>
         /// This is course section id
         /// </summary>
-        public String SectionID { get; set; }
+        public String SectionId { get; set; }
 
         /// <summary>
         /// This is the type of the section
@@ -39,13 +39,13 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         }
 
         /// <summary>
-        /// This method returns last creatd section
+        /// This method returns last creatd section.
         /// </summary>
         public static Section Get(SectionTypeEnum sectionType, string courseName)
         {
             return
                 InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Section>(x => x.SectionType == 
-                    sectionType && x.CourseName == courseName && x.IsCreated).OrderByDescending(x => x.creationDate).First();
+                    sectionType && x.CourseName == courseName && x.IsCreated).OrderByDescending(x => x.CreationDate).First();
         }
 
         /// <summary>
@@ -56,6 +56,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static List<Section> Get(Func<Section, bool> predicate)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany(predicate);
+        }
+
+        /// <summary>
+        /// This method returns all created sections of the given type.
+        /// </summary>
+        /// <param name="sectionType">This is the type of the section.</param>
+        /// <returns>Section List.</returns>
+        public static List<Section> GetAll(SectionTypeEnum sectionType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Section>(
+                x => x.SectionType == sectionType).OrderByDescending(
+                x => x.CreationDate).ToList();
         }
     }
 }

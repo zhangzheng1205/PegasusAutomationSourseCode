@@ -936,12 +936,23 @@ namespace Pegasus.Pages.UI_Pages
             //Checks After LoggedIn Window Present    
             Logger.LogMethodEntry("LoginPage", "IsDigitalPathCsDemoUserLoggedIn",
                 base.isTakeScreenShotDuringEntryExit);
-            //Wait For consent Window
-            if (base.IsElementLoadedInWindow(LoginPageResource.LoginPage_Consent_Window_Title,
-                By.ClassName(LoginPageResource.Login_Page_Synapse_CSUser_SignIn_Button_Class_Locator),
-                Convert.ToInt32(LoginPageResource.Login_Page_Custom_TimeToWait)))
+            try
             {
-                isLoginSuccessful = true;
+                //Wait For consent Window
+                if (base.IsElementLoadedInWindow(LoginPageResource.LoginPage_Consent_Window_Title,
+                    By.ClassName(LoginPageResource.Login_Page_Synapse_CSUser_SignIn_Button_Class_Locator),
+                    Convert.ToInt32(LoginPageResource.Login_Page_Custom_TimeToWait)))
+                {
+                    isLoginSuccessful = true;
+                }
+                else
+                {
+                    isLoginSuccessful = IsDigitalPathCsUserLoggedIn(isLoginSuccessful);
+                }
+            }
+            catch
+            {  //incase demo user log-in is not a first login attempt.
+                isLoginSuccessful = IsDigitalPathCsUserLoggedIn(isLoginSuccessful);
             }
             Logger.LogMethodExit("LoginPage", "IsDigitalPathCsDemoUserLoggedIn",
                 base.isTakeScreenShotDuringEntryExit);

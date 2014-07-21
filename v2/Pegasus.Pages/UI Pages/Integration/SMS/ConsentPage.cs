@@ -19,7 +19,7 @@ namespace Pegasus.Pages.UI_Pages
         /// This is the logger
         /// </summary>
         private static readonly Logger logger = Logger.GetInstance(typeof(ConsentPage));
-       
+
         /// <summary>
         /// Get the current page tile name
         /// </summary>
@@ -50,24 +50,26 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
-                //Select Window
+                // select window
                 base.SelectWindow(ConsentPageResource.Consent_Page_Window_Page_Name);
-                // Wait for Element to Apppear
+                // wait for element to apppear
                 base.WaitForElement(By.XPath(ConsentPageResource.
                     Consent_Page_IAccept_Button_Image_XPath_Locator));
-                base.FocusOnElementByXPath(ConsentPageResource.
-                    Consent_Page_IAccept_Button_Image_XPath_Locator);
-                IWebElement getAcceptButton=base.GetWebElementPropertiesByXPath
-                    (ConsentPageResource.
-                    Consent_Page_IAccept_Button_Image_XPath_Locator);
-                //Click on Button
-                base.ClickByJavaScriptExecutor(getAcceptButton);
+                // perform focus on element
+                base.PerformFocusOnElementActionByXPath(ConsentPageResource.
+                Consent_Page_IAccept_Button_Image_XPath_Locator);
+                // web element property
+                IWebElement IAcceptButtonProperty = base.GetWebElementPropertiesByXPath
+                (ConsentPageResource.
+                Consent_Page_IAccept_Button_Image_XPath_Locator);
+                // click on button
+                base.ClickByJavaScriptExecutor(IAcceptButtonProperty);
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ConsentPage", "ClickIAcceptButtonBySMSAdmin", 
+            logger.LogMethodExit("ConsentPage", "ClickIAcceptButtonBySMSAdmin",
                 base.isTakeScreenShotDuringEntryExit);
         }
 
@@ -94,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-               ExceptionHandler.HandleException(e);                 
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ConsentPage", "IsAcceptButtonPresent",
                 base.isTakeScreenShotDuringEntryExit);

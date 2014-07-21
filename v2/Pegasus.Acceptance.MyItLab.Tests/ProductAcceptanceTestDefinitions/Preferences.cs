@@ -512,7 +512,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 "DisableTheHEDCalendarPreference"
                , base.isTakeScreenShotDuringEntryExit);
             // Disable 'HED Calendar' Preference
-            new GeneralPreferencesPage().DisableHEDCalendarPreference();
+            new GeneralPreferencesPage().DisableHedCalendarPreference();
             Logger.LogMethodExit("Preference",
                 "DisableTheHEDCalendarPreference"
                 , base.isTakeScreenShotDuringEntryExit);

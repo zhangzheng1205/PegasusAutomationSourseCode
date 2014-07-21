@@ -80,6 +80,42 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.CommonProductAcceptanceTe
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 2.
+        /// </summary>
+        internal static string CommonSteps_ElementWait_Time_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_ElementWait_Time_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2000.
+        /// </summary>
+        internal static string CommonSteps_ElementWaitTimeOut_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_ElementWaitTimeOut_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to class.
+        /// </summary>
+        internal static string CommonSteps_GetClass_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_GetClass_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubNavigationTabSelected.
+        /// </summary>
+        internal static string CommonSteps_GetSelectedTab_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_GetSelectedTab_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ifrm.
         /// </summary>
         internal static string CommonSteps_IFrame {
@@ -94,6 +130,51 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.CommonProductAcceptanceTe
         internal static string CommonSteps_LeftFrame {
             get {
                 return ResourceManager.GetString("CommonSteps_LeftFrame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblMenuBar&apos;]/tbody/tr/td[{0}]/a.
+        /// </summary>
+        internal static string CommonSteps_Maintab_Classname_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CommonSteps_Maintab_Classname_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblMenuBar&apos;]/tbody/tr/td.
+        /// </summary>
+        internal static string CommonSteps_Maintab_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CommonSteps_Maintab_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ancCourseNavSelectedMenuImgCls.
+        /// </summary>
+        internal static string CommonSteps_MainTab_SelectedTab_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_MainTab_SelectedTab_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_td_3.
+        /// </summary>
+        internal static string CommonSteps_ManageProductsTab_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_ManageProductsTab_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_td_2.
+        /// </summary>
+        internal static string CommonSteps_ManageProgramsTab_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_ManageProgramsTab_Value", resourceCulture);
             }
         }
         
@@ -125,6 +206,33 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.CommonProductAcceptanceTe
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //tr[@id=&apos;trSubNavigationTab&apos;]/td[{0}].
+        /// </summary>
+        internal static string CommonSteps_Subtab_Classname_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CommonSteps_Subtab_Classname_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //tr[@id=&apos;trSubNavigationTab&apos;]/td.
+        /// </summary>
+        internal static string CommonSteps_Subtab_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CommonSteps_Subtab_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubNavigationTabSelected1.
+        /// </summary>
+        internal static string CommonSteps_SubTab_SelectedTab_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_SubTab_SelectedTab_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to messageBoardText.
         /// </summary>
         internal static string CommonSteps_SuccessMessage_Class_Locator {
@@ -148,6 +256,15 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.CommonProductAcceptanceTe
         internal static string CommonSteps_WaitTimeOut_Value {
             get {
                 return ResourceManager.GetString("CommonSteps_WaitTimeOut_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
     }

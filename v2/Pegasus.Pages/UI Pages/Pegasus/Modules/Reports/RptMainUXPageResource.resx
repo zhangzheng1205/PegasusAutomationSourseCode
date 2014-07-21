@@ -270,4 +270,10 @@
   <data name="RptMain_Page_CertificateOfExam_Id_Locator" xml:space="preserve">
     <value>_ctl0_InnerPageContent_rptrCertificatesRep__ctl0_lblCertificateReplink</value>
   </data>
+  <data name="RptMainUX_Page_StudyPlanReport_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblrptgrid']/tbody/tr[5]/td/span</value>
+  </data>
+  <data name="RptMainUX_Page_Ins_StudyPlan_Name" xml:space="preserve">
+    <value>Readiness Check ChPA</value>
+  </data>
 </root>

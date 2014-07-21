@@ -1,4 +1,5 @@
 ﻿using Pearson.Pegasus.TestAutomation.Frameworks;
+using Pegasus.Integration.DigitalPath.Rumba.Tests.IntegrationAcceptanceTestDefinitions;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 

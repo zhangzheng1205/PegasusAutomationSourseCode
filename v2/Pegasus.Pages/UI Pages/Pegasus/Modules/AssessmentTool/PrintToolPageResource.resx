@@ -171,4 +171,7 @@
   <data name="PrintToolPage_MyTest_CustomWait" xml:space="preserve">
     <value>10000</value>
   </data>
+  <data name="PrintToolPage_Print_Window_Name" xml:space="preserve">
+    <value>Print tool</value>
+  </data>
 </root>

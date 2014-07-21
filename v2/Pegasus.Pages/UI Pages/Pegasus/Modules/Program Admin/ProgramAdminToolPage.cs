@@ -12,7 +12,7 @@ using Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Enrollment;
 namespace Pegasus.Pages.UI_Pages
 {
     /// <summary>
-    /// This class handles Pegasus Program Admin Tool Page Actions
+    /// This class handles Pegasus Program Admin Tool Page Actions.
     /// </summary>
     public class ProgramAdminToolPage : BasePage
     {
@@ -39,7 +39,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-               ExceptionHandler.HandleException(e);                 
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProgramAdminToolPage", "SelectFrame",
                 base.isTakeScreenShotDuringEntryExit);
@@ -93,5 +93,58 @@ namespace Pegasus.Pages.UI_Pages
              base.isTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Navigate Program Admin Tabs.
+        /// </summary>
+        /// <param name="selectWindowName">Current Window Name.</param>
+        /// <param name="selectSubNavigationTab">Select Navigation Tab Name.</param>
+        public void NavigateProgramAdminTabs(string selectWindowName,
+            string selectSubNavigationTab)
+        {
+            // select program admin sub tabs 
+            logger.LogMethodEntry("ProgramAdminToolPage", "NavigateProgramAdminTabs",
+               base.isTakeScreenShotDuringEntryExit);
+            // wait for window
+            base.WaitUntilWindowLoads(selectWindowName);
+            // select window
+            base.SelectWindow(selectWindowName);
+            base.WaitForElement(By.Id(ProgramAdminToolPageResource.ProgramAdminTool_Page_SubNavigationTab_Id_Locator));
+            // get sub tab counts
+            int getSubNavigationTabCount = base.GetElementCountByXPath(ProgramAdminToolPageResource.
+                ProgramAdminTool_Page_SubNavigationTab_Table_XPath_Locator);
+            // click not selected expected sub tab
+            for (int subNavigationTab = 2; subNavigationTab <= getSubNavigationTabCount; subNavigationTab++)
+            {
+                base.WaitForElement(By.XPath(string.Format(ProgramAdminToolPageResource.
+                    ProgramAdminTool_Page_SubNavigationTab_TableRow_XPath_Locator, subNavigationTab)));
+                // get sub tab property
+                string getSubNavigationTabSelectedTabProperty = WebDriver.
+                    FindElement(By.XPath(string.Format(ProgramAdminToolPageResource.
+                    ProgramAdminTool_Page_SubNavigationTab_TableRow_XPath_Locator, subNavigationTab))).GetAttribute("class");
+                if (getSubNavigationTabSelectedTabProperty.Trim().Equals
+                    (ProgramAdminToolPageResource.ProgramAdminTool_Page_SubNavigationTab_Selected_ClassName_Value))
+                {
+                    IWebElement getSubNavigationTabName = null;
+                    // get sub tab link property
+                    getSubNavigationTabName = base.GetWebElementPropertiesByXPath
+                        (string.Format(ProgramAdminToolPageResource.
+                        ProgramAdminTool_Page_SubNavigationTab_Link_XPath_Locator, subNavigationTab));
+                    if (getSubNavigationTabName.Text.Trim().Equals(selectSubNavigationTab))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        // get sub tab link property
+                        getSubNavigationTabName = base.GetWebElementPropertiesByPartialLinkText(selectSubNavigationTab);
+                        base.ClickByJavaScriptExecutor(getSubNavigationTabName);
+                        break;
+                    }
+                }
+            }
+            logger.LogMethodExit("ProgramAdminToolPage", "NavigateProgramAdminTabs",
+               base.isTakeScreenShotDuringEntryExit);
+
+        }
     }
 }

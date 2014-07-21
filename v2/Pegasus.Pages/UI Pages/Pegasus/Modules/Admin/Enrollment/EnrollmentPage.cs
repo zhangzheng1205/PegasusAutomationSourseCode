@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
                     if (!getTableText.Contains(getPromotedUserName))
                     {
                         //Click on next button
-                        base.ClickLinkByID(EnrollmentPageResource.
+                        base.ClickLinkById(EnrollmentPageResource.
                             Enrollment_Page_promotedUserTable_NextButton_Id_Locator);
                         //Select Administrator Right Frame
                         this.SelectAdministratorRightFrame();

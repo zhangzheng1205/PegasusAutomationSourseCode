@@ -14,7 +14,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// </summary>
         public enum CourseTypeEnum
         {
-            //NovaNet and DigitalPath Course Enum
+            // NovaNet and DigitalPath courses
             EmptyClass = 1,
             Container = 2,
             MasterLibrary = 3,
@@ -23,7 +23,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
             DigitsAuthoredCourse = 6,
             CTCDigitsAuthoredCourse = 7,
             DigitsCourse = 8,
-            //Hed WL Course Enum
+            // Hed WL courses
             MySpanishLabAuthored = 9,
             MySpanishLabMaster = 10,
             InstructorCourse = 11,
@@ -31,12 +31,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
             HEDGeneral = 13,
             MySpanishLabCopiedMaster = 14,
             MySpanishLabTestingMaster = 15,
-            //MMND Course Enum
+            // MMND courses
             MMNDCoOrdinate = 16,
             MMNDNonCoOrdinate = 17,
             MMNDSection = 18,
             CopiedDigitsAuthoredCourse = 19,
-            //ECollege Course Enum
+            // ecollege courses
             ECollege = 20,
             MySpanishLabMasterVm = 21,
             NovaNETMasterLibrary = 22,
@@ -45,27 +45,29 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
             MyTestBankCourse = 24,
             MyTestInstructorCourse = 25,
             MyTestProgramCourse = 26,
-            //MyItLab Course Enum
+            // mil Courses
             MyItLabAuthoredCourse = 27,
-            MyItLabMasterCourse=28,
+            MyItLabMasterCourse = 28,
             MyItLabSIMMasterCourse = 29,
             MyItLabSIM5MasterCourse = 30,
             MyItLabInstructorCourse = 31,
             MyItLabProgramCourse = 32,
-            MyItLabSIMCourse =33,
-            HedMyItLabPPECourse=34,
-            //MyItLab Acceptance Test Course Enum
-            HedMilAcceptanceSIMProgramCourse = 35,
-            HedMilAcceptanceSIM5ProgramCourse = 36,
-            //Hed WL Acceptance Test Course Enum
-            HedCoreAcceptanceInstructorCourse = 37,
-            HedCoreAcceptanceProgramCourse = 38,
-            IntegrationPointID=39,
-            PegasusCourseID=40,
-            ExternalCourse=41,
-            HedEmptyClass=42,
-            //MyItLab GraderIt Course Enum
-            GraderITSIM5Course=43
+            MyItLabSIMCourse = 33,
+            HedMyItLabPPECourse = 34,
+            MyITLabOffice2013Program = 35,
+            MyITLabForOffice2013Master =36,
+            // mil Acceptance Test Course Enum
+            HedMilAcceptanceSIMProgramCourse = 37,
+            HedMilAcceptanceSIM5ProgramCourse = 38,
+            // hed WL Acceptance Test Course Enum
+            HedCoreAcceptanceInstructorCourse = 39,
+            HedCoreAcceptanceProgramCourse = 40,
+            IntegrationPointID = 41,
+            PegasusCourseID = 42,
+            ExternalCourse = 43,
+            HedEmptyClass = 44,
+            // mil GraderIT Courses
+            GraderITSIM5Course = 45
         }
 
         /// <summary>
@@ -116,17 +118,17 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// <summary>
         /// This is Pegasus Course id.
         /// </summary>
-        public String PegasusCourseID { get; set; }
+        public String PegasusCourseId { get; set; }
 
         /// <summary>
         /// This is External Course id.
         /// </summary>
-        public String ExternalCourseID { get; set; }
+        public String ExternalCourseId { get; set; }
 
         /// <summary>
         /// This is eCollege course integration id.
         /// </summary>
-        public String ECollegeIntegrationID { get; set; }
+        public String ECollegeIntegrationId { get; set; }
 
         /// <summary>
         /// This gives the course workspace id.
@@ -157,7 +159,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Course>
                 (x => x.CourseType == courseType && x.IsCreated).OrderByDescending(
-                x => x.creationDate).First();
+                x => x.CreationDate).Last();
         }
 
         /// <summary>
@@ -176,6 +178,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static Course Get(string name)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectTopOne<Course>(x => x.Name == name && x.IsCreated);
+        }
+
+        /// <summary>
+        /// This method returns all created course of the given type.
+        /// </summary>
+        /// <param name="courseType">This is the type of the course.</param>
+        /// <returns>course List.</returns>
+        public static List<Course> GetAll(CourseTypeEnum courseType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Course>(
+                x => x.CourseType == courseType).OrderByDescending(
+                x => x.CreationDate).ToList();
         }
     }
 }

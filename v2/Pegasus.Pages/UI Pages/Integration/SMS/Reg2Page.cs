@@ -40,7 +40,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(Reg2PageResource.
                     Reg2_Page_Entered_Country_DropDown_Id_Locator));
                 //Select Drop Down Value
-                base.SelectDropDownValueThroughTextByID(Reg2PageResource.
+                base.SelectDropDownValueThroughTextById(Reg2PageResource.
                     Reg2_Page_Entered_Country_DropDown_Id_Locator,
                     Reg2PageResource.Reg2_Page_Entered_Country_DropDown_Value);
                 //Enter SMS User School Information

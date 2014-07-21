@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pegasus.Integration.MGM.Tests.CommonIntegrationAcceptanceTestDefinitions {
+namespace Pegasus.Integration.DigitalPath.Rumba.Tests.CommonIntegrationAcceptanceTestDefinitions {
     using System;
     
     
@@ -39,8 +39,8 @@ namespace Pegasus.Integration.MGM.Tests.CommonIntegrationAcceptanceTestDefinitio
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pegasus.Integration.MGM.Tests.CommonIntegrationAcceptanceTestDefinitions.CommonSt" +
-                            "epsResource", typeof(CommonStepsResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pegasus.Integration.DigitalPath.Rumba.Tests.CommonIntegrationAcceptanceTestDefini" +
+                            "tions.CommonStepsResource", typeof(CommonStepsResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

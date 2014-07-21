@@ -3,28 +3,26 @@
 					I want to manage all the course space promoted admin related usecases 
 					so that I would validate all the promoted admin scenarios are working fine.
 
-#Purpose: Open Cs Promoted Admin Url and Logged In 
-Background: 
-Given I browsed the login url for "DPCourseSpacePramotedAdmin"
-When I login to Pegasus as "DPCourseSpacePramotedAdmin" in "Coursespace"
-Then I should be logged in successfully
-
 #Purpose: UseCase To create Basal Program in course space  
 Scenario: Create Basal Program by CS PromotedAdmin
-Given I am on the 'Manage Programs' Page
-When I create the "PromotedAdminDigitalPathProgram" Program in coursespace
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Programs' Page
+And I create the "PromotedAdminDigitalPathProgram" Program in coursespace
 Then I should see the successfull message "Program created successfully."
-When I "Sign out" from the "DPCourseSpacePramotedAdmin"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: UseCase To create Basal Product in course space  
 Scenario: Create Basal Product by CS PromotedAdmin
-Given I am on the 'Manage Products' Page
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I am on the 'Manage Products' Page
 When I create the "PromotedAdminDigitalPath" Product in coursespace using "PromotedAdminDigitalPathProgram" Program
 Then I should see the successfull message "New product created successfully."
 
 #Purpose: Edit The School Level Organization for Promoted Admin
 Scenario: Enhance organization management by Promoted Admin
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Organization Management' page
 And I search the "School" level Organization in "DigitalPath"
 Then I should see the "School" level organization name in "DigitalPath"
@@ -35,6 +33,8 @@ Then I should see the successfull message "Organization updated successfully."
 
 #Purpose: To create Teacher from Users subtab for Promoted Admin
 Scenario: Creating Teacher in Users Tab by CS PromotedAdmin 
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Users" tab in Manage Organization page
 And I select the "DPCsTeacher" option from "Users" subtab
@@ -47,6 +47,8 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Student from Users subtab for Promoted Admin
 Scenario: Creating Student in Users Tab by CS PromotedAdmin 
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Users" tab in Manage Organization page
 And I select the "DPCsStudent" option from "Users" subtab
@@ -59,6 +61,8 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Aide from Users subtab for Promoted Admin
 Scenario: Creating Aide in Users Tab by CS PromotedAdmin 
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Users" tab in Manage Organization page
 And I select the "DPCsAide" option from "Users" subtab
@@ -71,6 +75,8 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Organization Admin from Users subtab for Promoted Admin
 Scenario: Creating Organization Admin in Users Tab by CS PromotedAdmin 
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Users" tab in Manage Organization page
 And I select the "DPCsOrganizationAdmin" option from "Users" subtab
@@ -83,6 +89,8 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Teacher from Enrollment subtab for Promoted Admin
 Scenario: Creating Teacher in Enrollment Tab by CS PromotedAdmin 
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Enrollment" tab in Manage Organization page
 And I select the "DPCsTeacher" option from "Enrollment" subtab
@@ -95,6 +103,8 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Student from Enrollment subtab for Promoted Admin
 Scenario: Creating Student in Enrollment Tab by CS PromotedAdmin 
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Enrollment" tab in Manage Organization page
 And I select the "DPCsStudent" option from "Enrollment" subtab
@@ -107,6 +117,8 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Aide from Enrollment subtab for Promoted Admin
 Scenario: Creating Aide in Enrollment Tab by CS PromotedAdmin 
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Enrollment" tab in Manage Organization page
 And I select the "DPCsAide" option from "Enrollment" subtab
@@ -119,6 +131,8 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Organization Admin from Enrollment subtab for Promoted Admin
 Scenario: Creating Organization Admin in Enrollment Tab by CS PromotedAdmin 
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Enrollment" tab in Manage Organization page
 And I select the "DPCsOrganizationAdmin" option from "Enrollment" subtab
@@ -131,6 +145,8 @@ When I close the "Manage Organization" window
 
 #Purpose: To create Teacher from Classes subtab for Promoted Admin
 Scenario: Creating Teacher in Classes Tab by CS PromotedAdmin 
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Classes" tab in Manage Organization page
 And I select the "Manage Roster" from "DigitalPathMasterLibrary" cmenu options
@@ -143,6 +159,8 @@ And I close the "Manage Organization" window
 
 #Purpose: To create Student from Classes subtab for Promoted Admin
 Scenario: Creating Student in Classes Tab by CS PromotedAdmin 
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Classes" tab in Manage Organization page
 And I select the "Manage Roster" from "DigitalPathMasterLibrary" cmenu options
@@ -155,6 +173,8 @@ And I close the "Manage Organization" window
 
 #Purpose: To create Aide from Classes subtab for Promoted Admin
 Scenario: Creating Aide in Classes Tab by CS PromotedAdmin 
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Classes" tab in Manage Organization page
 And I select the "Manage Roster" from "DigitalPathMasterLibrary" cmenu options
@@ -167,6 +187,8 @@ And I close the "Manage Organization" window
 
 #Purpose: Student Bulk upload in the Manage organization popup by Promoted Admin
 Scenario: Student Bulk upload in the Manage organization popup by Promoted Admin
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
 When I am on the 'Manage Organization' page of "School" level in the "DigitalPath"
 And I click on the "Users" tab in Manage Organization page
 And I select the Bulk user upload option and Import a bulk users file in "Users" subtab

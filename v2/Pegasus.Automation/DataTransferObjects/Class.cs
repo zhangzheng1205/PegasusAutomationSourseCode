@@ -52,7 +52,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         public static Class Get(ClassTypeEnum classTypeEnum)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Class>(x => x.ClassType == classTypeEnum 
-                && x.IsCreated).OrderByDescending(x => x.creationDate).First();
+                && x.IsCreated).OrderByDescending(x => x.CreationDate).First();
         }
 
         /// <summary>
@@ -73,6 +73,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         {
             Class Class = InMemoryDatabaseSingleton.DatabaseInstance.SelectTopOne<Class>(x => x.Name == Name);
             Class.Name = className;
+        }
+
+        /// <summary>
+        /// This method returns all created class of the given type.
+        /// </summary>
+        /// <param name="classType">This is the type of the class.</param>
+        /// <returns>Class List.</returns>
+        public static List<Class> GetAll(ClassTypeEnum classType)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Class>(
+                x => x.ClassType == classType).OrderByDescending(
+                x => x.CreationDate).ToList();
         }
     }
 }

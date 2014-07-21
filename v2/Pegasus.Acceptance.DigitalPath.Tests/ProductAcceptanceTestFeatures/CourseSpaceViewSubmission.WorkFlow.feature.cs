@@ -70,35 +70,19 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestFeatures
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 6
-#line 8
-testRunner.Given("I browsed the login url for \"DPCsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
-testRunner.When("I login to Pegasus as \"DPCsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
-testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
-testRunner.Given("I am on the \"Overview\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Display of StudyPlan Grade in View Submission Page by CS Student")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceViewSubmission")]
         public virtual void DisplayOfStudyPlanGradeInViewSubmissionPageByCSStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of StudyPlan Grade in View Submission Page by CS Student", ((string[])(null)));
-#line 14
+#line 7
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 15
+#line 8
 testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
+#line 9
 testRunner.And("I click on the \"StudyPlan\" cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 10
 testRunner.Then("I should see the \'Grade\' in View Submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -110,15 +94,13 @@ testRunner.Then("I should see the \'Grade\' in View Submission page", ((string)(
         public virtual void DisplayOfTestGradeInViewSubmissionPageByCSStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Test Grade in View Submission Page by CS Student", ((string[])(null)));
-#line 20
+#line 13
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 21
+#line 14
 testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
+#line 15
 testRunner.And("I click on the \"Test\" cmenu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
+#line 16
 testRunner.Then("I should see the \'Grade\' in View Submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -130,15 +112,13 @@ testRunner.Then("I should see the \'Grade\' in View Submission page", ((string)(
         public virtual void DisplayOfStudyPlanGradeInGradesTabByCSStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of StudyPlan Grade in Grades Tab by CS Student", ((string[])(null)));
-#line 26
+#line 19
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 27
+#line 20
 testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 28
+#line 21
 testRunner.And("I open the activity named as \"StudyPlan\" in Grades Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
+#line 22
 testRunner.Then("I should see the \"StudyPlan\" for \'Grade\' in GradeBook tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -150,15 +130,13 @@ testRunner.Then("I should see the \"StudyPlan\" for \'Grade\' in GradeBook tab",
         public virtual void DisplayOfTestGradeInGradesTabByCSStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Test Grade in Grades Tab by CS Student", ((string[])(null)));
-#line 32
+#line 25
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 33
+#line 26
 testRunner.When("I navigate to the \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 27
 testRunner.And("I check the \"Test\" in Grades Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 35
+#line 28
 testRunner.Then("I should see the \"Test\" for \'Grade\' in GradeBook tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

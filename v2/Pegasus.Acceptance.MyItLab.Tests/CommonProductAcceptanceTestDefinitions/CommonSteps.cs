@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using Pegasus.Pages.Exceptions;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
@@ -186,7 +187,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// Verify Course Present In User's Home Page.
         /// </summary>
         /// <param name="courseTypeEnum">This is Course by type.</param>
-        [Then(@"I should see ""(.*)"" on the Global Home page")]
+        [Then(@"I should see ""(.*)"" course on the Global Home page")]
         public void ShowCourseOnTheGlobalHomePage(
             Course.CourseTypeEnum courseTypeEnum)
         {
@@ -297,6 +298,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// </summary>
         /// <param name="windowName">This is Window Name.</param>
         [When(@"I close the ""(.*)"" window")]
+        [Then(@"I close the ""(.*)"" window")]
         public void CloseTheManageOrganizationWindow(
             String windowName)
         {
@@ -314,7 +316,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// </summary>
         /// <param name="courseTypeEnum">This is Course by Type.</param>
         /// <param name="userTypeEnum">This is user time enum.</param>
-        [When(@"I enter in the ""(.*)"" from the Global Home page as ""(.*)""")]
+        [When(@"I enter in the ""(.*)"" course from the Global Home page as ""(.*)""")]
         public void EnterInCourse(Course.CourseTypeEnum courseTypeEnum,
             User.UserTypeEnum userTypeEnum)
         {
@@ -402,11 +404,101 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
                 isTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Navigate To Tab Of The Particular Page.
+        /// </summary>
+        /// <param name="tabName">This is Tab Name.</param>
+        /// <param name="pageName">This is Page Name.</param>
+        [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page")]
+        public void NavigateToTabInProgramAdminPage(string subNavigationTabName, string subNavigationTabParentWindowName)
+        {
+            // navigate program administrator page
+            Logger.LogMethodEntry("AdminToolPage", "NavigateToTabOfTheParticularPage",
+                base.isTakeScreenShotDuringEntryExit);
+            new ProgramAdminToolPage().NavigateProgramAdminTabs(subNavigationTabParentWindowName, subNavigationTabName);
+            Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfTheParticularPage",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Publishing Tab.
+        /// </summary>
+        /// <param name="subtabName">This is SubTab Name.</param>
+        /// <param name="mainTabName">This is MainTab Name.</param>
+        [When(@"I navigate to ""(.*)"" subtab from ""(.*)"" tab")]
+        public void NavigateToPublishingTab(string subtabName, string mainTabName)
+        {
+            //Navigate to perticular Page
+            Logger.LogMethodEntry("CommonSteps", "NavigateToPublishingTab",
+                base.isTakeScreenShotDuringEntryExit);
+            string pageTitle = base.GetPageTitle;
+            if (pageTitle != "Manage Programs" && pageTitle != "Manage Products")
+            {
+                base.SelectWindow(pageTitle);
+                IWebElement mainTabNameElement =
+                    base.GetWebElementPropertiesByPartialLinkText(mainTabName);
+                //Click on the 'publishing' tab
+                base.ClickByJavaScriptExecutor(mainTabNameElement);
+                Thread.Sleep(Convert.ToInt32(CommonStepsResource.
+                    CommonSteps_ElementWaitTimeOut_Value));
+            }
+            string getPublishingPageTitle = base.GetPageTitle;
+            base.SelectWindow(getPublishingPageTitle);
+            //Get Seleted Tab Name
+            string getSelectorTab = this.GetSubtabValue(subtabName);
+            IWebElement selectedTabElement = base.GetWebElementPropertiesById(getSelectorTab);
+            //Get Seleted Tab Class value
+            string getClassName = selectedTabElement.GetAttribute(CommonStepsResource.
+                CommonSteps_GetClass_Value);
+            if (getClassName == CommonStepsResource.CommonSteps_GetSelectedTab_Value)
+            {
+                base.SelectWindow(subtabName);
+            }
+            else
+            {
+                //Wait for the element
+                base.WaitForElement(By.PartialLinkText(subtabName));
+                IWebElement subtabNameElement =
+                    base.GetWebElementPropertiesByPartialLinkText(subtabName);
+                //Click the subtab
+                base.ClickByJavaScriptExecutor(subtabNameElement);
+            }
+            Logger.LogMethodExit("CommonSteps", "NavigateToPublishingTab",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get Subtab Value.
+        /// </summary>
+        /// <param name="SubtabName">Get the SubTab.</param>
+        /// <returns>Return selector tab Id.</returns>
+        private String GetSubtabValue(string SubtabName)
+        {
+            //Navigate Administrator Tool Page
+            Logger.LogMethodEntry("CommonSteps", "GetSubtabValue",
+                base.isTakeScreenShotDuringEntryExit);
+            //Intialize the variable
+            String getSubTabId = String.Empty;
+            switch (SubtabName)
+            {
+                case "Manage Programs":
+                    getSubTabId = CommonStepsResource.
+                        CommonSteps_ManageProgramsTab_Value;
+                    break;
+                case "Manage Products":
+                    getSubTabId = CommonStepsResource.
+                        CommonSteps_ManageProductsTab_Value;
+                    break;
+            }
+            Logger.LogMethodExit("CommonSteps", "GetSubtabValue",
+               base.isTakeScreenShotDuringEntryExit);
+            return getSubTabId;
+        }
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
-        [BeforeScenario]
+        [BeforeTestRun]
         public static void Setup()
         {
             new CommonSteps().ResetWebdriver();
@@ -416,7 +508,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// Deinitialize Pegasus test after the execution of test
         /// and clean the WebDriver Instance.
         /// </summary>
-        [AfterScenario]
+        [AfterTestRun]
         public static void TearDown()
         {
             new CommonSteps().WebDriverCleanUp();

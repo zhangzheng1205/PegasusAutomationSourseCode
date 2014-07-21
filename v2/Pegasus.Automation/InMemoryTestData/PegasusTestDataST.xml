@@ -15,7 +15,7 @@
       <IsCreated>true</IsCreated>
     </Organization>
     <Organization>
-      <Name>5.15.1 Demo Organization 1</Name>
+      <Name>5.15.1 ST Demo Organisation_Automation</Name>
       <OrganizationLevel>School</OrganizationLevel>
       <OrganizationType>DigitalPathDemo</OrganizationType>
       <IsCreated>true</IsCreated>
@@ -87,7 +87,6 @@
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
-
     <Course>
       <Name>c401776c-bacc-4a2c-9da2-340fac724f95</Name>
       <CourseType>MyItLabSIMMasterCourse</CourseType>
@@ -95,18 +94,17 @@
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
-    </Course>
-    
+    </Course>    
     <Course>
-      <Name>72a9d34d-6838-4807-8849-42f0acc90c4f</Name>
+      <Name>23c5b01c-eb89-4cbe-8970-c34b0e11ac7d</Name>
       <CourseType>MySpanishLabMaster</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
-    </Course>	 
+    </Course>	     
     <Course>
-      <Name>c62e695e-cdb6-4980-acfc-589f4701fbc6</Name>
+      <Name>cea6d68f-24fe-4f0e-9010-6bd7dbbb15c7</Name>
       <CourseType>ProgramCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -165,6 +163,15 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
+      <Name>2487c476-ff23-4106-a7ec-1e935a346086</Name>
+      <CourseType>InstructorCourse</CourseType>
+      <IsCreated>true</IsCreated>
+      <InstructorCourseId>CRSKLX8-12003701</InstructorCourseId>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
       <Name>e2874de9-a6b7-4193-aab0-53287443ca7c9</Name>
       <CourseType>MyItLabMasterCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -179,6 +186,14 @@
       <IsPreferenceStatus>true</IsPreferenceStatus>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
+    </Course>
+  <Course>
+      <Name>94763cd2-85ca-4acd-ab22-288034637551</Name>
+      <CourseType>HedEmptyClass</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
     </Course>
   </ArrayOfCourse>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
@@ -403,7 +418,7 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>33d4408c-325e-4cf6-b64f-8be5f1a1efab</Name>
+      <Name>5565f6f3-c869-4628-8f42-3be4d1baaaa2</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
@@ -414,7 +429,7 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>6d9bfb55-5d54-451a-8d0f-02d206a29d15</Name>
+      <Name>7139f69e-909a-45c3-91de-ddad134bf4f2</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
@@ -447,7 +462,7 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>b7454b53-a29b-4777-8488-223da8e41c53</Name>
+      <Name>5e5e830a-4cde-44f1-9f5a-87d586d0c91b</Name>
       <Password>password2</Password>
       <Email>ramya.nb@excelindia.com</Email>
       <FirstName>90316256-b527-4bf6-8846-e54f1c3ce1c1</FirstName>
@@ -487,6 +502,30 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>17e8e13e-a034-47d9-86b4-e2f4ea680c50</LastName>
       <UserType>DPCsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>6ff9b5a5-d3cd-49ec-9472-9db345134651</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Automation</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>DemoUser</LastName>
+      <UserType>DPDemoUser</UserType>
+      <ProductInstance>1</ProductInstance>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>6ff9b5a5-d3cd-49ec-9472-7biz45134651</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>Automation</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>DemoUser</LastName>
+      <UserType>DPDemoUser</UserType>
+      <ProductInstance>2</ProductInstance>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -544,8 +583,49 @@
       <IsCreated>true</IsCreated>
     </Product>
     <Product>
-      <Name>01fd8618-9c09-44ed-a40e-6fc12f858153</Name>
+      <Name>f74150f5-360b-4cbd-b28f-633348fad675</Name>
       <ProductType>HedCoreGeneral</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>  
+    <Product>
+      <Name>c78931fd-829b-4e85-9e27-dba14a06a165</Name>
+      <ProductType>HedCoreProgram</ProductType>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>5.15.1 ST Demo Product 007</Name>
+      <ProductType>DigitalPathDemo</ProductType>
+      <DemoAccessCode>REAL1234</DemoAccessCode>
+      <WelcomeMessage>Welcome to 5.15.1 ST Demo Product 007!!!</WelcomeMessage>
+      <ProductId>5000000000003190</ProductId>
+      <WelcomeBannerBlobId>5000000000018125</WelcomeBannerBlobId>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>5.15.1 ST Demo Product 008</Name>
+      <ProductType>DigitalPathDemo</ProductType>
+      <DemoAccessCode>REAL1234</DemoAccessCode>
+      <WelcomeMessage>Welcome to 5.15.1 ST Demo Product 008!!!</WelcomeMessage>
+      <ProductId>5000000000003191</ProductId>
+      <WelcomeBannerBlobId>5000000000018128</WelcomeBannerBlobId>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>5.15.1 ST Demo Product 009</Name>
+      <ProductType>DigitalPathDemo</ProductType>
+      <DemoAccessCode>REAL1234</DemoAccessCode>
+      <WelcomeMessage>Welcome to 5.15.1 ST Demo Product 009!!!</WelcomeMessage>
+      <ProductId>5000000000003192</ProductId>
+      <WelcomeBannerBlobId>5000000000018131</WelcomeBannerBlobId>
+      <IsCreated>true</IsCreated>
+    </Product>
+    <Product>
+      <Name>5.15.1 ST Demo Product 010</Name>
+      <ProductType>DigitalPathDemo</ProductType>
+      <DemoAccessCode>REAL2345</DemoAccessCode>
+      <WelcomeMessage>Welcome to 5.15.1 ST Demo Product 010!!!</WelcomeMessage>
+      <ProductId>5000000000003193</ProductId>
+      <WelcomeBannerBlobId>5000000000018134</WelcomeBannerBlobId>
       <IsCreated>true</IsCreated>
     </Product>
   </ArrayOfProduct>

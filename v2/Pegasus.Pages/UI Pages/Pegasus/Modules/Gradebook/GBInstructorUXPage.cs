@@ -1349,10 +1349,10 @@ namespace Pegasus.Pages.UI_Pages
                 //click on drop down
                 base.ClickByJavaScriptExecutor(getColumnDropDown);
                 //Click the 'Total Column'
-                base.ClickLinkByID(GBInstructorUXPageResource.
+                base.ClickLinkById(GBInstructorUXPageResource.
                     GBInstructorUX_Page_TotalColumnDropDown_ID_Locator);
                 //Select Total Column Window
-                this.SelectTotalColumnWindow();               
+                this.SelectTotalColumnWindow();                 
             }
             catch (Exception e)
             {
@@ -2218,19 +2218,19 @@ namespace Pegasus.Pages.UI_Pages
                 case AssetCmenuOptionEnum.EditGrades:
                     this.SelectTheEditGradesCmenuOption();
                     break;
-                //Click 'Hide for Student'
+                    //Click 'Hide for Student'
                 case AssetCmenuOptionEnum.HideforStudent:
                     this.SelectTheHideForStudentCmenuOption();
                     break;
-                // Click 'Synchronize with LMS'
+                    // Click 'Synchronize with LMS'
                 case AssetCmenuOptionEnum.SynchronizewithLMS:
                     SynchronizeWithLMSCmenuOption(getActivityColumnCount, AssetCmenuOptionEnum.SynchronizewithLMS, activityTypeEnum);
                     break;
-                //Click 'Stop LMS synchronization'
+                    //Click 'Stop LMS synchronization'
                 case AssetCmenuOptionEnum.StopLMSSynchronization:
                     SynchronizeWithLMSCmenuOption(getActivityColumnCount, AssetCmenuOptionEnum.StopLMSSynchronization, activityTypeEnum);
                     break;
-                //Click 'Show for Student'
+                    //Click 'Show for Student'
                 case AssetCmenuOptionEnum.ShowforStudent:
                     this.SelectTheShowForStudentCmenuOption();
                     break;
@@ -2488,7 +2488,7 @@ namespace Pegasus.Pages.UI_Pages
 
             Activity activity = Activity.Get(activityTypeEnum);
             activity.ActivityID = LMSAttribute[1].Trim();
-            activity.creationDate = DateTime.Now;
+            activity.CreationDate = DateTime.Now;
             activity.UpdateActivityInMemory(activity);
 
             logger.LogMethodExit("GBInstructorUXPage", "updateActivityWithLMSSynchID",
@@ -3571,7 +3571,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(getColumnDropDown);
 
                 this.SelectCustomColumn(customColumnType);
-
+                
             }
             catch (Exception e)
             {
@@ -3589,13 +3589,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on create column drop down
             logger.LogMethodEntry("GBInstructorUXPage", "SelectCustomColumn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.isTakeScreenShotDuringEntryExit);            
             String getCustomcolumnName = String.Empty;
             try
             {
-                switch (customColumnType)
+                switch(customColumnType)
                 {
-                    case CustomColumnTypeEnum.Calculated:
+                    case CustomColumnTypeEnum.Calculated :
                         {
                             getCustomcolumnName = GBInstructorUXPageResource.GBInstructorUXPage_CustomColumn_Calculated_ID_Locator;
                             break;
@@ -3724,7 +3724,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("GBInstructorUXPage", "GetActivityCountForCalculatedColumn",
                 base.isTakeScreenShotDuringEntryExit);
             return getActivityCount;
-        }        
+        }
 
         /// <summary>
         /// Select Calculated Column Window
@@ -3747,7 +3747,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Click the Save button
         /// </summary>
         public void ClickOnsaveButton()
-        {
+        {           
             logger.LogMethodEntry("GBInstructorUXPage", "ClickOnsaveButton",
                 base.isTakeScreenShotDuringEntryExit);
             this.SelectCalculatedColumnWindow();

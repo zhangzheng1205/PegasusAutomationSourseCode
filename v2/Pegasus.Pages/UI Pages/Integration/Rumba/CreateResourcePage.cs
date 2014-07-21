@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FocusOnElementByID(CreateResourcePageResource.
                 CreateResource_Page_AuthorizationContextName_Id_Locator);
             //Select AutoFill Menu Item
-            base.SelectDropDownValueThroughTextByID(CreateResourcePageResource.
+            base.SelectDropDownValueThroughTextById(CreateResourcePageResource.
                 CreateResource_Page_AuthorizationContextName_Id_Locator,
                 CreateResourcePageResource.CreateResource_Page_AuthorizationContextName_SelectText);
             logger.LogMethodExit("CreateResourcePage", "SelectRumbaBusinessUnitFromAutoFill",
