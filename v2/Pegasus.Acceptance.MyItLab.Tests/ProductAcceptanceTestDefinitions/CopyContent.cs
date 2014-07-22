@@ -305,8 +305,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Search Section
-            new ManageTemplatePage().SearchSection(course.SectionName +
-                CopyContentResource.CopyContent_FirstSection_Value);
+            new ManageTemplatePage().SearchSection(course.SectionName);
             Logger.LogMethodExit("CopyContent", " SearchFirstSection",
               base.isTakeScreenShotDuringEntryExit);
         }
