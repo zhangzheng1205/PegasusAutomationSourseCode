@@ -420,7 +420,26 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "CreateTheNonGradableActivityInContentLibrary",
                       base.isTakeScreenShotDuringEntryExit);
         }
-        
+        /// <summary>
+        /// Create The Audio Page Asset.
+        /// </summary>
+        /// <param name="pageAssetTypeEnum">This is Page Asset Type Enum.</param>
+        [When(@"I create the Audio ""(.*)"" AssetType in Content Library")]
+        public void CreateAudioPageAssetTypeInContentLibrary(
+                       Activity.ActivityTypeEnum pageAssetTypeEnum)
+        {
+            //Create The Audio Page Asset
+            Logger.LogMethodEntry("CreateActivity",
+                "CreateAudioPageAssetTypeInContentLibrary",
+                      base.isTakeScreenShotDuringEntryExit);
+            //Create The Audio Page Asset
+            new PegasusHTMLUXPage().
+                RecordAudioFromPageAssetType(pageAssetTypeEnum);
+            Logger.LogMethodExit("CreateActivity",
+                "CreateAudioPageAssetTypeInContentLibrary",
+                      base.isTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

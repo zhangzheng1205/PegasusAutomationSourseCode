@@ -32,3 +32,16 @@ Then I should be on the "Create Essay" page
 When I create 'Essay audio' question type
 Then I should see the successfull message "Question added successfully."
 
+#Purpose : Record Audio from HTML Page By WS Instructor
+#PEGASUS-26116 Learnosity Automation : Record audio from HTML page
+Scenario: Learnosity Record Audio from HTML Page By WS Instructor
+When I navigate to the "Course Materials" tab
+And I click on the 'Add Course Materials' option
+When I click on the "Add Page" activity type
+Then I should be on the "Create page" page
+When I create the Audio "Page" AssetType in Content Library
+Then I should see the successfull message "Page saved successfully."
+
+
+
+

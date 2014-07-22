@@ -38,17 +38,8 @@ namespace Pegasus.Pages.UI_Pages
             Guid newHTMLDiscription = Guid.NewGuid();
             try
             {
-                //Select the window
-                this.SelectCreatePageWindow();
-                //Wait for the element
-                base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
-                    PegasusHTMLUXPageResource_HTML_Title_Id_Locator));
-                //Fill the page Name in textbox
-                base.FillTextBoxByID(PegasusHTMLUXPageResource.
-                    PegasusHTMLUXPageResource_HTML_Title_Id_Locator,
-                    newPageAsset.ToString());
-                //Fill The HTML Description
-                this.FillTheHTMLDescription(newHTMLDiscription.ToString());
+                //Enter Page Name and Description Fields
+                this.EnterPageNameAndDescirptionFields(newPageAsset, newHTMLDiscription);
                 //Store the link Asset
                 this.StoreThePageAsset(newPageAsset, activityTypeEnum);
                 //Click The Add Button
@@ -60,6 +51,25 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("PegasusHTMLUXPage", "CreatePageAsset",
                      base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Enter Page Name and Description Fields.
+        /// </summary>
+        /// <param name="newPageAsset">This is Page Name.</param>
+        /// <param name="newHTMLDiscription">This is Page Discription.</param>
+        private void EnterPageNameAndDescirptionFields(Guid newPageAsset, Guid newHTMLDiscription)
+        {
+            //Select the window
+            this.SelectCreatePageWindow();
+            //Wait for the element
+            base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
+                PegasusHTMLUXPageResource_HTML_Title_Id_Locator));
+            //Fill the page Name in textbox
+            base.FillTextBoxByID(PegasusHTMLUXPageResource.
+                PegasusHTMLUXPageResource_HTML_Title_Id_Locator,
+                newPageAsset.ToString());
+            //Fill The HTML Description
+            this.FillTheHTMLDescription(newHTMLDiscription.ToString());
         }
 
         /// <summary>
@@ -77,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
             // Click on ShowHTML button
             base.FocusOnElementByID(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Sourse_Id_Locator);
-            IWebElement getHTMLSourceButton=base.GetWebElementPropertiesById
+            IWebElement getHTMLSourceButton = base.GetWebElementPropertiesById
                 (PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Sourse_Id_Locator);
             //Click the sourse link
@@ -93,7 +103,6 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("PegasusHTMLUXPage", "FillTheHTMLDescription",
                      base.isTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Select Create Page Window.
         /// </summary>
@@ -152,6 +161,39 @@ namespace Pegasus.Pages.UI_Pages
             newPage.StoreActivityInMemory();
             logger.LogMethodExit("PegasusHTMLUXPage", "StoreThePageAsset",
                      base.isTakeScreenShotDuringEntryExit);
+        }      
+
+        /// <summary>
+        /// Create Audio Page Asset.
+        /// </summary>
+        /// <param name="pageAssetTypeEnum">This is Page Asset Type Enum.</param>
+        public void RecordAudioFromPageAssetType(Activity.ActivityTypeEnum pageAssetTypeEnum)
+        {
+            // Create Page Asset.
+            logger.LogMethodEntry("PegasusHTMLUXPage", "RecordAudioFromPageAssetType",
+                      base.isTakeScreenShotDuringEntryExit);
+            //Intialize Guid for Page Asset
+            Guid newPageAsset = Guid.NewGuid();
+            //Generate New Guid Page Name
+            Guid newHTMLDiscription = Guid.NewGuid();
+            try
+            {
+                //Record Audio In Page
+                new EssayPage().RecordAudioforEssayQuestion();
+                //Enter Page Name and Description Fields
+                this.EnterPageNameAndDescirptionFields(newPageAsset, newHTMLDiscription);
+                //Store the link Asset
+                this.StoreThePageAsset(newPageAsset, pageAssetTypeEnum);
+                //Click The Add Button
+                this.ClickTheCreateButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("PegasusHTMLUXPage", "RecordAudioFromPageAssetType",
+                     base.isTakeScreenShotDuringEntryExit);
         }
+
     }
 }
