@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
@@ -16,7 +17,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// This is the logger.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(UserEnrollment));
 
         /// <summary>
@@ -83,11 +84,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="courseTypeEnum">This is Course Type Enum.</param>
         [When(@"I enroll SMS Student in ""(.*)""")]
-        public void EnrollSMSStudentInCourse(
+        public void EnrollSmsStudentInCourse(
             Course.CourseTypeEnum courseTypeEnum)
         {
             //Add Course From Search Catalog
-            Logger.LogMethodEntry("UserEnrollment", "EnrollSMSStudentInCourse",
+            Logger.LogMethodEntry("UserEnrollment", "EnrollSmsStudentInCourse",
                 base.isTakeScreenShotDuringEntryExit);
             //Assert student Help Text Window Closed
             new StudentHelpTextPage().ManageStudentHelpTextWindow();
@@ -96,8 +97,8 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             // Click 'Enroll In a Course' Button 
             new HEDGlobalHomePage().ClickOnEnrollInCourseButton();
             // To Enroll student depending on the course
-            new SelfEnrollmentPage().SMSStudentEnrolledInCourse(courseTypeEnum);
-            Logger.LogMethodExit("UserEnrollment", "EnrollSMSStudentInCourse",
+            new SelfEnrollmentPage().SmsStudentEnrolledInCourse(courseTypeEnum);
+            Logger.LogMethodExit("UserEnrollment", "EnrollSmsStudentInCourse",
                 base.isTakeScreenShotDuringEntryExit);
         }
 

@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Text;
 using OpenQA.Selenium;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Pegasus.Automation.DataTransferObjects;
 using TechTalk.SpecFlow;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using System.Configuration;

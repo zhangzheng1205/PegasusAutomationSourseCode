@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Pegasus.Automation.DataTransferObjects;
 
 namespace Pearson.Pegasus.TestAutomation.
     Frameworks.DataTransferObjects
@@ -182,7 +183,7 @@ namespace Pearson.Pegasus.TestAutomation.
         public static User Get(UserTypeEnum userType)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany
-                <User>(x => x.UserType == userType && x.IsCreated).OrderByDescending(x => x.CreationDate).Last();
+                <User>(x => x.UserType == userType && x.IsCreated).OrderByDescending(x => x.CreationDate).First();
         }
 
         /// <summary>
@@ -192,7 +193,7 @@ namespace Pearson.Pegasus.TestAutomation.
         /// <returns>User based on ID.</returns>
         public static User Get(string userId)
         {
-            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<User>(x => x.UserId == userId && x.IsCreated).Last();
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<User>(x => x.UserId == userId && x.IsCreated).First();
         }
 
         /// <summary>

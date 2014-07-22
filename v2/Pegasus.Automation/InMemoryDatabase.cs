@@ -15,9 +15,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// This dictionary is used to manage the data store.
         /// </summary>
-        private Dictionary<Type, Dictionary<Guid,BaseDataTransferObject>> database = new Dictionary<Type, Dictionary<Guid,BaseDataTransferObject>>();
+        private readonly Dictionary<Type, Dictionary<Guid,BaseDataTransferObject>> _database = 
+            new Dictionary<Type, Dictionary<Guid,BaseDataTransferObject>>();
 
-        internal Dictionary<Type, Dictionary<Guid, BaseDataTransferObject>> Database { get { return database; } } 
+        internal Dictionary<Type, Dictionary<Guid, BaseDataTransferObject>> Database { get { return _database; } } 
 
         /// <summary>
         /// This method is used to insert an object
@@ -27,13 +28,17 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         public void Insert<T>(T value) where T:BaseDataTransferObject
         {
             //if the storage list doesnt exists
-            if (database.Keys.Contains(typeof(T)) == false)
+            if (_database.Keys.Contains(typeof(T)) == false)
             {
-                Dictionary<Guid,BaseDataTransferObject> dictionaryOfEntities = new Dictionary<Guid,BaseDataTransferObject>();
-                database.Add(typeof(T), dictionaryOfEntities);
+                var dictionaryOfEntities = new Dictionary<Guid,BaseDataTransferObject>();
+                _database.Add(typeof(T), dictionaryOfEntities);
             }
+            // set entity creation date 
+            value.CreationDate = DateTime.Now;
             //finally insert the value
-            database[typeof(T)].Add(value.GuidId,value);
+            _database[typeof(T)].Add(value.GuidId,value);
+
+            
 
             
         }
@@ -46,8 +51,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>A List of T</returns>
         public List<T> SelectMany<T>(Func<T,bool> predicate) where T:BaseDataTransferObject
         {
-            if (database.ContainsKey(typeof(T)) == false) throw new KeyNotFoundException("The object type has not been insinaciated");
-            return database[typeof(T)].Values.Select(x => (T)x).Where(predicate).ToList();
+            if (_database.ContainsKey(typeof(T)) == false) throw new KeyNotFoundException("The object type has not been insinaciated");
+            return _database[typeof(T)].Values.Select(x => (T)x).Where(predicate).ToList();
         }
 
         /// <summary>
@@ -68,9 +73,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="value">This is the value</param>
         public void Update<T>(T value) where T:BaseDataTransferObject
         {
-            if (database.ContainsKey(typeof(T)) == false) throw new KeyNotFoundException("The object type has not been insinaciated");
-            if (!database[typeof(T)].Keys.Contains(value.GuidId)) throw new KeyNotFoundException("The Object doesnt exist in data store");
-            database[typeof(T)][value.GuidId] = value;
+            if (_database.ContainsKey(typeof(T)) == false) throw new KeyNotFoundException("The object type has not been insinaciated");
+            if (!_database[typeof(T)].Keys.Contains(value.GuidId)) throw new KeyNotFoundException("The Object doesnt exist in data store");
+            _database[typeof(T)][value.GuidId] = value;
         }
 
         /// <summary>
@@ -80,9 +85,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="value">This is the value</param>
         public void Delete<T>(T value) where T : BaseDataTransferObject
         {
-            if (database.ContainsKey(typeof(T)) == false) throw new KeyNotFoundException("The object type has not been insinaciated");
-            if (database[typeof(Task)].Keys.Contains(value.GuidId)) throw new KeyNotFoundException("The Object doesnt exist in data store");
-            database[typeof(Task)].Remove(value.GuidId);
+            if (_database.ContainsKey(typeof(T)) == false) throw new KeyNotFoundException("The object type has not been insinaciated");
+            if (_database[typeof(Task)].Keys.Contains(value.GuidId)) throw new KeyNotFoundException("The Object doesnt exist in data store");
+            _database[typeof(Task)].Remove(value.GuidId);
         }
     }
 }

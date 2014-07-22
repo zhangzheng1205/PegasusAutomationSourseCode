@@ -1,6 +1,7 @@
 ﻿using System;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Text;

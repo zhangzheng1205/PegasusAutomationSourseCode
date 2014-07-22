@@ -134,6 +134,16 @@
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
+    <Course>
+      <Name>04e76335-fc54-4ac2-b8dc-060735d73521</Name>
+      <CourseType>MyITLabOffice2013Program</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <SectionName>42408df5-fcb7-4973-915c-17b7b5ecfc0a</SectionName>
+      <SectionId>CRSKLE7-16001685</SectionId>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
     <!--Hard coded Course data for "NovaNET" Product.-->
     <Course>
       <Name>US History A 2.0 (Sequential)</Name>
@@ -388,7 +398,7 @@
       <LastName>SMSUSER</LastName>
       <UserType>CsSmsInstructor</UserType>
       <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
+      <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
       <Name>77c227b1-76cd-42ca-8cfa-0ffd52e8d60d</Name>
@@ -399,7 +409,7 @@
       <LastName>SMSUSER</LastName>
       <UserType>CsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
-      <EnrolementStatus>false</EnrolementStatus>
+      <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
       <Name>7e291029-3cdf-4df0-a3c8-4cc6545facac</Name>
@@ -571,7 +581,7 @@
       <IsCreated>true</IsCreated>
     </Activity>
   </ArrayOfActivity>
-   <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+  <!--This is already created product  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProduct>
     <Product>
       <Name>MyITLab for Office 2013</Name>

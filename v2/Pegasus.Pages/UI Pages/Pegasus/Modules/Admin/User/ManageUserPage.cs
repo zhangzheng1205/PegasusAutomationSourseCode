@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using OpenQA.Selenium;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.User;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment;

@@ -7,6 +7,7 @@ using System.Net;
 using System.IO;
 using System.Diagnostics;
 using System.Configuration;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.RestServicePost;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using OpenQA.Selenium;

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
+using Pearson.Pegasus.TestAutomation.Frameworks;
+
+namespace Pegasus.Automation.DataTransferObjects
 {
     /// <summary>
     /// This class is represents an activity.

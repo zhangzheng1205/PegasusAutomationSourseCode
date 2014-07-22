@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
@@ -34,11 +35,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             /// <summary>
             /// This is Left frame
             /// </summary>
-            left = 1,
+            Left = 1,
             /// <summary>
             /// This is Right frame
             /// </summary>
-            right = 2,
+            Right = 2,
         }
         /// <summary>
         /// Verifies the Correct Page Opened.
@@ -110,12 +111,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             base.ClickByJavaScriptExecutor(getLinkProperty);
             switch (frame)
             {
-                case CommonSteps.FrameTypeEnum.left:
+                case CommonSteps.FrameTypeEnum.Left:
                     //Wait untill window of users
                     base.WaitUntilWindowLoads(CommonStepsResource.
                         CommonSteps_CreateNewUserWindow_Name_Locator);
                     break;
-                case CommonSteps.FrameTypeEnum.right:
+                case CommonSteps.FrameTypeEnum.Right:
                     //Wait untill window of Courses
                     base.WaitUntilWindowLoads(CommonStepsResource.
                         CommonSteps_CreateNewCoursesWindow_Name_Locator);
@@ -191,15 +192,16 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         public void ShowCourseOnTheGlobalHomePage(
             Course.CourseTypeEnum courseTypeEnum)
         {
-            //Show Course On The MyCourses and Testbanks Page In Active State
+            // Show Course On The MyCourses and Testbanks Page In Active State
             Logger.LogMethodEntry("CommonSteps", "ShowCourseOnTheGlobalHomePage",
                 base.isTakeScreenShotDuringEntryExit);
-            //Get Course From Memory
+            // Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
-            //Assert Course Present on Global Home Page
+            bool isCoursePresentOnGlobalHomePage = new HEDGlobalHomePage().
+                GetCoursePresentInGlobalHomePage().Replace(" ", "").Contains(course.Name);
+            // Assert Course Present on Global Home Page
             Logger.LogAssertion("VerifyCoursePresent", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(true, new HEDGlobalHomePage().
-                    GetCoursePresentInGlobalHomePage().Contains(course.Name)));
+                () => Assert.AreEqual(true, isCoursePresentOnGlobalHomePage));
             Logger.LogMethodExit("CommonSteps", " ShowCourseOnTheGlobalHomePage",
                 base.isTakeScreenShotDuringEntryExit);
         }
@@ -407,8 +409,8 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// <summary>
         /// Navigate To Tab Of The Particular Page.
         /// </summary>
-        /// <param name="tabName">This is Tab Name.</param>
-        /// <param name="pageName">This is Page Name.</param>
+        /// <param name="subNavigationTabName">This is Tab Name.</param>
+        /// <param name="subNavigationTabParentWindowName">This is Page Name.</param>
         [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page")]
         public void NavigateToTabInProgramAdminPage(string subNavigationTabName, string subNavigationTabParentWindowName)
         {
@@ -445,7 +447,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             string getPublishingPageTitle = base.GetPageTitle;
             base.SelectWindow(getPublishingPageTitle);
             //Get Seleted Tab Name
-            string getSelectorTab = this.GetSubtabValue(subtabName);
+            string getSelectorTab = this.GetSubTabValue(subtabName);
             IWebElement selectedTabElement = base.GetWebElementPropertiesById(getSelectorTab);
             //Get Seleted Tab Class value
             string getClassName = selectedTabElement.GetAttribute(CommonStepsResource.
@@ -470,16 +472,16 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// <summary>
         /// Get Subtab Value.
         /// </summary>
-        /// <param name="SubtabName">Get the SubTab.</param>
+        /// <param name="subtabName">Get the SubTab.</param>
         /// <returns>Return selector tab Id.</returns>
-        private String GetSubtabValue(string SubtabName)
+        private String GetSubTabValue(string subtabName)
         {
             //Navigate Administrator Tool Page
             Logger.LogMethodEntry("CommonSteps", "GetSubtabValue",
                 base.isTakeScreenShotDuringEntryExit);
             //Intialize the variable
             String getSubTabId = String.Empty;
-            switch (SubtabName)
+            switch (subtabName)
             {
                 case "Manage Programs":
                     getSubTabId = CommonStepsResource.

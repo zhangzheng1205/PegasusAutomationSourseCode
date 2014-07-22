@@ -6,6 +6,7 @@ using System.Threading;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.MMND.DigitalVellum;
 
@@ -77,10 +78,10 @@ namespace Pegasus.Pages.UI_Pages
             //Store Subtab Link Name In Memory
             logger.LogMethodEntry("PostIndexMixedPage", "StoreSubtabLinkNameInMemory",
                 base.isTakeScreenShotDuringEntryExit);            
-            MMNDToolLinks link = new MMNDToolLinks
+            MmndToolLinks link = new MmndToolLinks
             {
                 Name = subtabLinkName,
-                LinkType = MMNDToolLinks.LinkTypeEnum.MMND,
+                LinkType = MmndToolLinks.LinkTypeEnum.MMND,
                 IsCreated = true
             }; 
             link.StoreLinkInMemory();
@@ -220,13 +221,13 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             //Initialize the Variables            
             string subTabName = string.Empty;
-            MMNDToolLinks toolLinkName = null;
+            MmndToolLinks toolLinkName = null;
             try
             {
                 try
                 {
                     //Get the Link Name 
-                    toolLinkName = MMNDToolLinks.Get(MMNDToolLinks.LinkTypeEnum.MMND);
+                    toolLinkName = MmndToolLinks.Get(MmndToolLinks.LinkTypeEnum.MMND);
                     if (toolLinkName == null)
                     {
                         //Create a new GUID

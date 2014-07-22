@@ -127,8 +127,8 @@ Given I browsed the login url for "CsSmsStudent"
 When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
-When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsInstructor"
-Then I should be on the "Program Administration" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
+
 
 #Purpose: Login as SMS Student
 Scenario: User Login as SMS Student

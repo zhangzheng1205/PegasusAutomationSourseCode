@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Pearson.Pegasus.TestAutomation.Frameworks;
 
-namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
+namespace Pegasus.Automation.DataTransferObjects
 {
     public class License : BaseEntityObject
     {

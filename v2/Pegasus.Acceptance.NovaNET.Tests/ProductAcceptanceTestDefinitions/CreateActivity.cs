@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Text;
+using Pegasus.Automation.DataTransferObjects;
 using TechTalk.SpecFlow;
 using Pegasus.Pages.UI_Pages;
 

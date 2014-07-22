@@ -1,4 +1,5 @@
-﻿using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool;
+﻿using Pegasus.Automation.DataTransferObjects;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool;
 using TechTalk.SpecFlow;
 using System;
 using System.Threading;

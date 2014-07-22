@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
@@ -97,7 +98,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
             // Click 'Enroll In a Course' Button 
             new HEDGlobalHomePage().ClickOnEnrollInCourseButton();
             // To Enroll student depending on the course
-            new SelfEnrollmentPage().SMSStudentEnrolledInCourse(courseTypeEnum);
+            new SelfEnrollmentPage().SmsStudentEnrolledInCourse(courseTypeEnum);
             Logger.LogMethodExit("UserEnrollment", "EnrollSMSStudentInCourse",
                 base.isTakeScreenShotDuringEntryExit);
         }

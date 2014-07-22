@@ -5,6 +5,7 @@ using System.Text;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Users;

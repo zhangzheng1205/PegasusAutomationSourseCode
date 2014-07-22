@@ -1,4 +1,5 @@
-﻿using TechTalk.SpecFlow;
+﻿using Pegasus.Automation.DataTransferObjects;
+using TechTalk.SpecFlow;
 using System;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

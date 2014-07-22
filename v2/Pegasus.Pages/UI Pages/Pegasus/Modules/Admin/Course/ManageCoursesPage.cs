@@ -5,6 +5,7 @@ using OpenQA.Selenium.Interactions;
 using System.Diagnostics;
 using System.Configuration;
 using System.Threading;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Course;
 using Pegasus.Pages.Exceptions;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;

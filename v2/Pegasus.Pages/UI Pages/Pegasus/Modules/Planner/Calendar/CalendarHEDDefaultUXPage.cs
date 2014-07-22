@@ -5,6 +5,7 @@ using System.Text;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using OpenQA.Selenium;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView;
 using Pegasus.Pages.Exceptions;

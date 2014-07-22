@@ -9,7 +9,6 @@ When I enroll SMS Student in "MyITLabOffice2013Program"
 Then I should see enrolled "MyITLabOffice2013Program" Section in Global Home Page 
 
 #Purpose: To Enroll student to Instructor Course
-@EnrollStudentToInsCourse
 Scenario: Enroll student to Instructor Course by SMS Student
 When I enroll SMS Student in "MyItLabInstructorCourse"
 Then I should see enrolled InstructorCourse in Global Home Page 

@@ -1,6 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;

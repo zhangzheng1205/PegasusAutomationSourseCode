@@ -6,6 +6,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Acceptance.WritingSpace.Tests.CommonProductAcceptanceTestDefinitions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Pearson.Pegasus.TestAutomation.Frameworks;
 
-namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
+namespace Pegasus.Automation.DataTransferObjects
 {
     /// <summary>
     /// This class represents MMND tool links.
     /// </summary>
-    public class MMNDToolLinks : BaseEntityObject
+    public class MmndToolLinks : BaseEntityObject
     {
         /// <summary>
         /// This is the type of Link
@@ -36,9 +37,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// </summary>
         /// <param name="linkTypeEnum">This is the type of the link.</param>
         /// <returns>link details.</returns>
-        public static MMNDToolLinks Get(LinkTypeEnum linkTypeEnum)
+        public static MmndToolLinks Get(LinkTypeEnum linkTypeEnum)
         {
-            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<MMNDToolLinks>(
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<MmndToolLinks>(
                 x => x.LinkType == linkTypeEnum && x.IsCreated).OrderByDescending(
                 x => x.CreationDate).First();
         }
@@ -48,7 +49,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         /// </summary>
         /// <param name="predicate">The where condition.</param>
         /// <returns>List of links.</returns>
-        public static List<MMNDToolLinks> Get(Func<MMNDToolLinks, bool> predicate)
+        public static List<MmndToolLinks> Get(Func<MmndToolLinks, bool> predicate)
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany(predicate);
         }

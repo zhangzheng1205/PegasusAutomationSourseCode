@@ -7,11 +7,13 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// This is the Guid id og the object. This is used by DB to update the list
         /// </summary>
-        private Guid guidId = Guid.NewGuid();
+        private readonly Guid _guidId = Guid.NewGuid();
 
         public Guid GuidId 
         {
-            get { return guidId; } 
-        } 
+            get { return _guidId; } 
+        }
+
+        public DateTime CreationDate { get; set; }
     }
 }

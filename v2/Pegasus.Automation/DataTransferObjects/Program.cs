@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Pearson.Pegasus.TestAutomation.Frameworks;
+using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 
-namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
+namespace Pegasus.Automation.DataTransferObjects
 {
     /// <summary>
     /// This is the program class

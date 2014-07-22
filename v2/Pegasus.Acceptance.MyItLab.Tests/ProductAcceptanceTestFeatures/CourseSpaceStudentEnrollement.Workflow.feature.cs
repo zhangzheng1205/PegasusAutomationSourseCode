@@ -89,16 +89,14 @@ testRunner.Then("I should see enrolled \"MyITLabOffice2013Program\" Section in G
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Enroll student to Instructor Course by SMS Student")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Enrollement")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("EnrollStudentToInsCourse")]
         public virtual void EnrollStudentToInstructorCourseBySMSStudent()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll student to Instructor Course by SMS Student", new string[] {
-                        "EnrollStudentToInsCourse"});
-#line 13
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enroll student to Instructor Course by SMS Student", ((string[])(null)));
+#line 12
 this.ScenarioSetup(scenarioInfo);
-#line 14
+#line 13
 testRunner.When("I enroll SMS Student in \"MyItLabInstructorCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
+#line 14
 testRunner.Then("I should see enrolled InstructorCourse in Global Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
@@ -75,13 +76,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
         /// <param name="linkTypeEnum">This is MMND Link Type Enum.</param>
         [When(@"I paste CBOM request in Tool/Asset launch ""(.*)"" link")]
         public void PasteCBOMRequest(
-            MMNDToolLinks.LinkTypeEnum linkTypeEnum)
+            MmndToolLinks.LinkTypeEnum linkTypeEnum)
         {
             //Paste CBOM Request
             Logger.LogMethodEntry("LaunchTool", "PasteCBOMRequest",
                    base.isTakeScreenShotDuringEntryExit);
             //Fetch the Tool link Name from Memory
-            MMNDToolLinks subtabLinkName = MMNDToolLinks.Get(linkTypeEnum);
+            MmndToolLinks subtabLinkName = MmndToolLinks.Get(linkTypeEnum);
             //Paste CBOM Request
             new ManagePage().PasteTheCBOMRequest(subtabLinkName.Name);
             Logger.LogMethodExit("LaunchTool", "PasteCBOMRequest",
@@ -94,13 +95,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
         /// <param name="linkTypeEnum">This is MMND Link Type Enum.</param>
         [When(@"I launch Instructor tools from the Tool/Asset launch ""(.*)"" link")]
         public void LaunchInstructorToolFromSubTab(
-            MMNDToolLinks.LinkTypeEnum linkTypeEnum)
+            MmndToolLinks.LinkTypeEnum linkTypeEnum)
         {
             //Launch Tool From SubTab
             Logger.LogMethodEntry("LaunchTool", "LaunchInstructorToolFromSubTab",
                    base.isTakeScreenShotDuringEntryExit);
             //Fetch the Tool link Name from Memory
-            MMNDToolLinks subtabLinkName = MMNDToolLinks.Get(linkTypeEnum);
+            MmndToolLinks subtabLinkName = MmndToolLinks.Get(linkTypeEnum);
             //Launch Tool From SubTab            
             new ViewPage().PreviewInstructorTodaysViewLink(subtabLinkName.Name);
             Logger.LogMethodExit("LaunchTool", "LaunchInstructorToolFromSubTab",
@@ -135,13 +136,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
         /// <param name="linkTypeEnum">This is MMND Link Type Enum.</param>
         [When(@"I launch Student tool from the Tool/Asset launch ""(.*)"" link")]
         public void LaunchStudentToolFromSubtabLink(
-            MMNDToolLinks.LinkTypeEnum linkTypeEnum)
+            MmndToolLinks.LinkTypeEnum linkTypeEnum)
         {
             //Launch Student Tool From SubTab
             Logger.LogMethodEntry("LaunchTool", "LaunchStudentToolFromSubtabLink",
                    base.isTakeScreenShotDuringEntryExit);
             //Fetch the Tool link Name from Memory
-            MMNDToolLinks subtabLinkName = MMNDToolLinks.Get(linkTypeEnum);
+            MmndToolLinks subtabLinkName = MmndToolLinks.Get(linkTypeEnum);
             //Launch Student Tool From SubTab            
             new ViewPage().PreviewStudentCourseCalendarLink(subtabLinkName.Name);
             Logger.LogMethodExit("LaunchTool", "LaunchStudentToolFromSubtabLink",
@@ -191,13 +192,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
         /// <param name="linkTypeEnum">This is MMND Link Type Enum.</param>
         [When(@"I launch Asset tool from the Tool/Asset launch ""(.*)"" link")]
         public void LaunchAssetToolFromAssetLaunchSubtabLink(
-            MMNDToolLinks.LinkTypeEnum linkTypeEnum)
+            MmndToolLinks.LinkTypeEnum linkTypeEnum)
         {
             //Launch Asset Tool From SubTab
             Logger.LogMethodEntry("LaunchTool", "LaunchAssetToolFromAssetLaunchSubtabLink",
                    base.isTakeScreenShotDuringEntryExit);
             //Fetch the Tool link Name from Memory
-            MMNDToolLinks subtabLinkName = MMNDToolLinks.Get(linkTypeEnum);
+            MmndToolLinks subtabLinkName = MmndToolLinks.Get(linkTypeEnum);
             //Launch Asset Tool From SubTab            
             new ViewPage().PreviewAssetLink(subtabLinkName.Name);
             Logger.LogMethodExit("LaunchTool", "LaunchAssetToolFromAssetLaunchSubtabLink",
@@ -228,13 +229,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
         /// <param name="linkTypeEnum">This is MMND Link Type Enum.</param>
         [When(@"I navigate inside the ""(.*)"" subtab")]
         public void NavigateInsideTheSubtabLink(
-            MMNDToolLinks.LinkTypeEnum linkTypeEnum)
+            MmndToolLinks.LinkTypeEnum linkTypeEnum)
         {
             //Navigate Inside Sub Tab
             Logger.LogMethodEntry("LaunchTool", "NavigateInsideTheSubtabLink",
                    base.isTakeScreenShotDuringEntryExit);
             //Fetch the Tool link Name from Memory
-            MMNDToolLinks subtabLinkName = MMNDToolLinks.Get(linkTypeEnum);
+            MmndToolLinks subtabLinkName = MmndToolLinks.Get(linkTypeEnum);
             //Navigate to Sub Tab
             new ViewPage().NavigateInsideSubTabLink(subtabLinkName.Name);
             Logger.LogMethodExit("LaunchTool", "NavigateInsideTheSubtabLink",

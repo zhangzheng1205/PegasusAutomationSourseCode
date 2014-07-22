@@ -3,6 +3,7 @@ using System.Globalization;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using OpenQA.Selenium;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.User_Creation;
 using Pegasus.Pages.Exceptions;
 namespace Pegasus.Pages.UI_Pages

@@ -6,6 +6,7 @@ using System.Text;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment.SelfEnrollment;
 using System.Threading;
@@ -27,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Enroll SMS Student In a Course.
         /// </summary>
         /// <param name="courseTypeEnum">This is Course by type enum.</param>
-        public void SMSStudentEnrolledInCourse(
+        public void SmsStudentEnrolledInCourse(
             Course.CourseTypeEnum courseTypeEnum)
         {
             // Enroll SMS Student In a Course 
@@ -70,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
                         course.InstructorCourseId);
                         break;
                 }
-                this.EnrollSMSUserInCourse();
+                this.EnrollSmsUserInCourse();
                 //Store Enrollment Date
                 course.EnrollmentDate = DateTime.Now;
             }
@@ -104,32 +105,30 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Select Course And Enroll User In a Course.
         /// </summary>
-        private void EnrollSMSUserInCourse()
+        private void EnrollSmsUserInCourse()
         {
             // Select Course And Enroll User
             Logger.LogMethodEntry("SelfEnrollmentPage", "EnrollSMSUserInCourse",
                base.isTakeScreenShotDuringEntryExit);
-            //Wait For Element
+            // Wait For Element
             base.WaitForElement(By.CssSelector(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_CourseID_Span_CssSelector_Locator));
-            //Click Course ID Button
+            // Click Course ID Button
             IWebElement getConfirmButton = base.GetWebElementPropertiesByCssSelector(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_CourseID_Span_CssSelector_Locator);
             base.ClickByJavaScriptExecutor(getConfirmButton);
-            //base.ClickButtonByCssSelector(SelfEnrollmentPageResource.
-            //    SelfEnrollment_Page_CourseID_Span_CssSelector_Locator);
-            //Check Is User Already Enrolled Error Message Present
+            // Check Is User Already Enrolled Error Message Present
             if (IsUserAlreadyEnrolledInCourseMessagePresent())
             {
-                //Click on cancel button
+                // click on cancel button
                 this.ClickOnCancelButton();
             }
             else
             {
-                //Click on confirm button
+                // Click on confirm button
                 this.ClickOnConfirmButton();
             }
-            //Select Window
+            // Select Window
             this.SelectGlobalHomeWindow();
             Logger.LogMethodExit("SelfEnrollmentPage", "EnrollSMSUserInCourse",
                base.isTakeScreenShotDuringEntryExit);
@@ -180,7 +179,7 @@ namespace Pegasus.Pages.UI_Pages
                base.isTakeScreenShotDuringEntryExit);
             //Is Message Present
             bool isErrorMessagePresent = base.IsElementPresent(By.Id(SelfEnrollmentPageResource.
-                SelfEnrollment_Page_UserAlreadyEnrolled_ErrorMessage_Id_Locator), 10);
+                SelfEnrollment_Page_UserAlreadyEnrolled_ErrorMessage_Id_Locator), 5);
             //Logger exit
             Logger.LogMethodExit("SelfEnrollmentPage",
                 "IsUserAlreadyEnrolledInCourseMessagePresent",

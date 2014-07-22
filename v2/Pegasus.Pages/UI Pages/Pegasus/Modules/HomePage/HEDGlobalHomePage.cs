@@ -3,6 +3,7 @@ using System.Threading;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage;
 using System.Diagnostics;
@@ -607,6 +608,7 @@ namespace Pegasus.Pages.UI_Pages
                         {
                             case Course.CourseTypeEnum.ProgramCourse:
                             case Course.CourseTypeEnum.MySpanishLabMaster:
+                            case Course.CourseTypeEnum.MyITLabOffice2013Program:
                                 //Open the Course
                                 this.OpenTheCourse(course.SectionName);
                                 break;

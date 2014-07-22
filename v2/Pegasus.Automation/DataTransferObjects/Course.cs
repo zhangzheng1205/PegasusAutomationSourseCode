@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Pearson.Pegasus.TestAutomation.Frameworks;
 
-namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
+namespace Pegasus.Automation.DataTransferObjects
 {
     /// <summary>
     /// This class represents a course.
@@ -159,7 +160,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects
         {
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Course>
                 (x => x.CourseType == courseType && x.IsCreated).OrderByDescending(
-                x => x.CreationDate).Last();
+                x => x.CreationDate).First();
         }
 
         /// <summary>

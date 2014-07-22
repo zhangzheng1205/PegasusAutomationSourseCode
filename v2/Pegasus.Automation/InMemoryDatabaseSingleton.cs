@@ -7,6 +7,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System;
+using Pegasus.Automation.DataTransferObjects;
 
 namespace Pearson.Pegasus.TestAutomation.Frameworks
 {
@@ -18,12 +19,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// This is the in memory database.
         /// </summary>
-        private InMeoryDatabase inMemoryDatabase = null;
+        private readonly InMeoryDatabase _inMemoryDatabase = null;
 
         /// <summary>
         /// This is the singleton instance class.
         /// </summary>
-        private static InMemoryDatabaseSingleton inMemoryDatabaseSingleton = null;
+        private static InMemoryDatabaseSingleton _inMemoryDatabaseSingleton = null;
 
         /// <summary>
         /// This is the private constructor of the database and
@@ -31,18 +32,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         private InMemoryDatabaseSingleton()
         {
-            inMemoryDatabase = new InMeoryDatabase();
+            _inMemoryDatabase = new InMeoryDatabase();
 
             // based on environment deserialize xml data in memory
             switch (AutomationConfigurationManager.ApplicationTestEnvironment)
             {
-                case "ST": this.DeserializeTheXMLDataInMemory(GetInMemoryTestDataFilePath
+                case "ST": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
-                case "VM": this.DeserializeTheXMLDataInMemory(GetInMemoryTestDataFilePath
+                case "VM": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
-                case "PPE": this.DeserializeTheXMLDataInMemory(GetInMemoryTestDataFilePath
+                case "PPE": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
-                case "PROD": this.DeserializeTheXMLDataInMemory(GetInMemoryTestDataFilePath
+                case "PROD": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
                 default: throw new ArgumentException("The suggested environment was not found");
             }
@@ -66,7 +67,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Deserialize The XML Data In Memory.
         /// </summary>
         /// <param name="xmlTestDataFilePath">This is the xml file path.</param>
-        private void DeserializeTheXMLDataInMemory(String xmlTestDataFilePath)
+        private void DeserializeTheXmlDataInMemory(String xmlTestDataFilePath)
         {
             // get xml data based on file path
             String getXmlData = File.ReadAllText(xmlTestDataFilePath);
@@ -77,13 +78,13 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             XmlNodeList xmlNodeList;
             XmlSerializer xmlSerializer;
             // desearlize data
-            desearlizeOrganzationTestData(xmlDocument, out xmlNodeList, out xmlSerializer);
-            desearlizeCourseTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
-            desearlizeUserTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
-            desearlizeProgramTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
-            desearlizeActivityTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
-            desearlizeClassTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
-            desearlizeProductTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeOrganzationTestData(xmlDocument, out xmlNodeList, out xmlSerializer);
+            DesearlizeCourseTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeUserTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeProgramTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeActivityTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeClassTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeProductTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
         }
 
         /// <summary>
@@ -93,7 +94,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
         /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
         /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
-        private void desearlizeProductTestData(XmlDocument xmlDocument,
+        private void DesearlizeProductTestData(XmlDocument xmlDocument,
             ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
         {
             //Get Xml Node List For Class
@@ -110,7 +111,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 foreach (Product products in getProductList)
                 {
                     // push in memory
-                    inMemoryDatabase.Insert(products);
+                    _inMemoryDatabase.Insert(products);
                 }
             }
         }
@@ -122,7 +123,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
         /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
         /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
-        private void desearlizeClassTestData(XmlDocument xmlDocument,
+        private void DesearlizeClassTestData(XmlDocument xmlDocument,
             ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
         {
             // get xml node list for class
@@ -139,7 +140,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 foreach (Class classes in getClassList)
                 {
                     // push in memory
-                    inMemoryDatabase.Insert(classes);
+                    _inMemoryDatabase.Insert(classes);
                 }
             }
         }
@@ -151,7 +152,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
         /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
         /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
-        private void desearlizeActivityTestData(XmlDocument xmlDocument,
+        private void DesearlizeActivityTestData(XmlDocument xmlDocument,
             ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
         {
             // get xml node list for activity
@@ -168,7 +169,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 foreach (Activity activities in getActivityList)
                 {
                     // push in memory
-                    inMemoryDatabase.Insert(activities);
+                    _inMemoryDatabase.Insert(activities);
                 }
             }
         }
@@ -180,7 +181,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
         /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
         /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
-        private void desearlizeProgramTestData(XmlDocument xmlDocument,
+        private void DesearlizeProgramTestData(XmlDocument xmlDocument,
             ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
         {
             // get xml node list for programs
@@ -197,7 +198,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 foreach (Program programs in getProgramList)
                 {
                     // push in memory
-                    inMemoryDatabase.Insert(programs);
+                    _inMemoryDatabase.Insert(programs);
                 }
             }
         }
@@ -209,7 +210,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
         /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
         /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
-        private void desearlizeUserTestData(XmlDocument xmlDocument,
+        private void DesearlizeUserTestData(XmlDocument xmlDocument,
             ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
         {
             // get xml node list for courses
@@ -226,7 +227,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 foreach (User users in getUserList)
                 {
                     // push in memory
-                    inMemoryDatabase.Insert(users);
+                    _inMemoryDatabase.Insert(users);
                 }
             }
         }
@@ -238,7 +239,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
         /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
         /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
-        private void desearlizeCourseTestData(XmlDocument xmlDocument,
+        private void DesearlizeCourseTestData(XmlDocument xmlDocument,
             ref XmlNodeList xmlNodeList, ref XmlSerializer xmlSerializer)
         {
             // get xml data based on file path
@@ -255,7 +256,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 foreach (Course courses in getCourseList)
                 {
                     // push in memory
-                    inMemoryDatabase.Insert(courses);
+                    _inMemoryDatabase.Insert(courses);
                 }
             }
         }
@@ -267,7 +268,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
         /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
         /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
-        private void desearlizeOrganzationTestData(XmlDocument xmlDocument,
+        private void DesearlizeOrganzationTestData(XmlDocument xmlDocument,
             out XmlNodeList xmlNodeList, out XmlSerializer xmlSerializer)
         {
             xmlNodeList = xmlDocument.SelectNodes("Data/ArrayOfOrganization");
@@ -282,7 +283,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 foreach (Organization organizations in organizationList)
                 {
                     // push in memory
-                    inMemoryDatabase.Insert(organizations);
+                    _inMemoryDatabase.Insert(organizations);
                 }
             }
         }
@@ -294,12 +295,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static InMemoryDatabaseSingleton GetInstance()
         {
             //if the instance doesnt exist then create a new one
-            if (inMemoryDatabaseSingleton == null)
+            if (_inMemoryDatabaseSingleton == null)
             {
-                inMemoryDatabaseSingleton = new InMemoryDatabaseSingleton();
+                _inMemoryDatabaseSingleton = new InMemoryDatabaseSingleton();
             }
 
-            return inMemoryDatabaseSingleton;
+            return _inMemoryDatabaseSingleton;
         }
 
         /// <summary>
@@ -307,7 +308,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         public static InMeoryDatabase DatabaseInstance
         {
-            get { return GetInstance().inMemoryDatabase; }
+            get { return GetInstance()._inMemoryDatabase; }
         }
     }
 }

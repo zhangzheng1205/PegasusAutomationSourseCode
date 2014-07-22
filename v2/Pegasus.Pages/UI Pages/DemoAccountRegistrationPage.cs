@@ -3,6 +3,7 @@ using System.Threading;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using System.Configuration;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using System.Diagnostics;
 using OpenQA.Selenium;

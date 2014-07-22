@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using System.Configuration;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Integration.SMS;
 using Pegasus.Pages.Exceptions;
 

@@ -6,6 +6,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Diagnostics;
 using System.Configuration;
 using System.Threading;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.OrganizationManagement;
 using Pegasus.Pages.Exceptions;
 
