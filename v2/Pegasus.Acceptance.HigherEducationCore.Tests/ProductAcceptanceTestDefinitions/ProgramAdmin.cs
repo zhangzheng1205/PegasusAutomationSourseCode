@@ -493,6 +493,21 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("ProgramAdmin", "SearchTheSection",
                 base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Save Button click to create course Manage Template section
+        /// </summary>
+        /// <param name=""></param>
+        [When(@"I click ""(.*)"" button to ""(.*)""")]
+        public void ClickToCreateUpdate(string Button, String Operation)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+            //SaveUpdate method to create or update the course.
+            new EditCopyTemplatesSectionsPage().ClickToCreateUpdate();
+
+            Logger.LogMethodExit("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

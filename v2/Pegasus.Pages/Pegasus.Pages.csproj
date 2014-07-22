@@ -1009,6 +1009,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmptyCalendarPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Course Templates\EditCopyTemplatesSectionsPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Course Templates\EditCopyTemplatesSectionsResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditCopyTemplatesSectionsResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Enrollment\EnrollmentMainPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Enrollment\EnrollmentMainPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2410,6 +2416,10 @@
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Course Templates\AddNewTemplatePageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AddNewTemplatePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Course Templates\EditCopyTemplatesSectionsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EditCopyTemplatesSectionsResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Course Templates\ManageTemplatePageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
