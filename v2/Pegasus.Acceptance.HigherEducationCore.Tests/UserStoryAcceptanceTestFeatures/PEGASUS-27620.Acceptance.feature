@@ -1,4 +1,4 @@
-﻿Feature: CsSmsInstructor
+﻿Feature: PEGASUS-27620: Automation: (Admin Modules) Validating PMCID for created shared Library course
 					As a CS Program admin
 					I want to search a Template 
 					so that I can create a shared library from the searched template.

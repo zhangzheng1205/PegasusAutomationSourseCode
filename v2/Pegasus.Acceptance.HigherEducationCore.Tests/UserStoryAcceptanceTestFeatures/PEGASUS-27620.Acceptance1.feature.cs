@@ -19,7 +19,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.3.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CsSmsInstructorFeature
+    public partial class PEGASUS_27620AutomationAdminModulesValidatingPMCIDForCreatedSharedLibraryCourseFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CsSmsInstructor", "\t\t\tAs a CS Program admin\n\t\t\tI want to search a Template \n\t\t\tso that I can create " +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PEGASUS-27620: Automation: (Admin Modules) Validating PMCID for created shared Li" +
+                    "brary course", "\t\t\tAs a CS Program admin\n\t\t\tI want to search a Template \n\t\t\tso that I can create " +
                     "a shared library from the searched template.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -47,9 +48,10 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
         public virtual void TestInitialize()
         {
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
-                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "CsSmsInstructor")))
+                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "PEGASUS-27620: Automation: (Admin Modules) Validating PMCID for created shared Li" +
+                            "brary course")))
             {
-                Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFeatures.CsSmsInstructorFeature.FeatureSetup(null);
+                Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFeatures.PEGASUS_27620AutomationAdminModulesValidatingPMCIDForCreatedSharedLibraryCourseFeature.FeatureSetup(null);
             }
         }
         
@@ -85,7 +87,8 @@ testRunner.Then("I should be on the \"Program Administration\" page", ((string)(
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To copy as shared library.")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PEGASUS-27620: Automation: (Admin Modules) Validating PMCID for created shared Li" +
+            "brary course")]
         public virtual void ToCopyAsSharedLibrary_()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To copy as shared library.", ((string[])(null)));
