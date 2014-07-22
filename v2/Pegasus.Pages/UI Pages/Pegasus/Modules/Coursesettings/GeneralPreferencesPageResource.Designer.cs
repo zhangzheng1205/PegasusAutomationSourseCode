@@ -656,6 +656,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0_ContentHolderArea_chkAudio.
+        /// </summary>
+        internal static string GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Checkbox_Id_Locator {
+            get {
+                return ResourceManager.GetString("GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Checkbox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5.
+        /// </summary>
+        internal static string GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Lock_Id_Locator {
+            get {
+                return ResourceManager.GetString("GeneralPrefernces_Page_EnableBlackBoardVoiceAuthoring_Lock_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0_ContentHolderArea_txtWimbaNames.
         /// </summary>
         internal static string GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator {
