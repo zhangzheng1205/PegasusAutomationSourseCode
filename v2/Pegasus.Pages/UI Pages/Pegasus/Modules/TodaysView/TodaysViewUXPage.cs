@@ -7,6 +7,7 @@ using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView;
+using TechTalk.SpecFlow;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.TemplateClassManagement.Classes;
@@ -2876,5 +2877,198 @@ namespace Pegasus.Pages.UI_Pages
                 , base.isTakeScreenShotDuringEntryExit);
             return windowHeight;
         }
+
+        /// <summary>
+        /// Select Tab.
+        /// </summary>
+        /// <param name="parentTabName">This is Parent Tab Name.</param>
+        /// <param name="childTabName">This is Child Tab Name.</param>
+        public void SelectTab(string parentTabName,
+            string childTabName = "Default Value")
+        {
+            //Navigate to Tab
+            logger.LogMethodEntry("TodaysViewUXPage", "SelectTab",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the CourseSpace User MainTab
+                this.SelectCourseSpaceUserMainTab(parentTabName);
+                if (childTabName != "Default Value")
+                {
+                    //Get Subtab Counts
+                    base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Subtab_Count_Xpath_Locator));
+                    //Get Tab Count
+                    int getSubTabCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Subtab_Count_Xpath_Locator);
+                    for (int csTabCountNo = Convert.ToInt32(
+                        TodaysViewUXPageResource.TodaysViewUXPageResource_Page_Initial_Value);
+                        csTabCountNo <= getSubTabCount; csTabCountNo++)
+                    {
+                        IWebElement getSelectedTabElement = base.GetWebElementPropertiesByXPath
+                            (String.Format(TodaysViewUXPageResource.
+                                    TodayViewUXPageResource_Subtab_Classname_Xpath_Locator, csTabCountNo));
+                        if (getSelectedTabElement.Text == childTabName)
+                        {
+                            string getClassName = getSelectedTabElement.
+                                          GetAttribute(TodaysViewUXPageResource.
+                               TodayViewUXPageResource_GetClass_Value);
+                            if (getClassName == TodaysViewUXPageResource.
+                                             TodayViewUXPageResource__SubTab_SelectedTab_Value)
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                //Select The Tab
+                                this.ClickonTab(parentTabName);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "SelectTab",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select MainTab.
+        /// </summary>
+        /// <param name="mainTabName">This is Main Tab Name.</param>
+        private void SelectCourseSpaceUserMainTab(string mainTabName)
+        {
+            //Select MainTab
+            logger.LogMethodEntry("TodaysViewUXPage", "SelectCourseSpaceUserMainTab",
+                base.isTakeScreenShotDuringEntryExit);
+            //Wait for the MainTab
+            base.WaitForElement(By.PartialLinkText(mainTabName));
+            //Get Tab Property
+            string getTabClassAttribute =
+                base.GetClassAttributeValueByPartialLinkText(mainTabName);
+            if (getTabClassAttribute ==
+                TodaysViewUXPageResource.TodayViewUXPageResource_MainTab_SelectedTab_Value)
+            {
+                //Select Window
+                base.SelectWindow(base.GetPageTitle);
+            }
+            else
+            {
+                //Select The Tab
+                this.ClickonTab(mainTabName);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "SelectCourseSpaceUserMainTab",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Tab.
+        /// </summary>
+        /// <param name="mainTabName">This is Tab Name.</param>
+        private void ClickonTab(string mainTabName)
+        {
+            //Click on Tab
+            logger.LogMethodEntry("TodaysViewUXPage", "ClickonTab",
+                base.isTakeScreenShotDuringEntryExit);
+            //Click On More Link if More Link Is Present
+            //And The Required Tab Is Not Present
+            new TodaysViewUXPage().ClickTheMoreLinkIfPresent(mainTabName);
+            //Wait For Element
+            base.WaitForElement(By.PartialLinkText(mainTabName));
+            //Get Tab Element Property
+            IWebElement getTabNameProperty = base.
+                GetWebElementPropertiesByPartialLinkText(mainTabName);
+            //Click on Tab 
+            base.ClickByJavaScriptExecutor(getTabNameProperty);
+            logger.LogMethodExit("TodaysViewUXPage", "ClickonTab",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To The Publishing Tab.
+        /// </summary>
+        /// <param name="subtabName">This is Subtab Name.</param>
+        /// <param name="mainTabName">This is Maintab Name.</param>
+        public void NavigateToThePublishingTab(string subtabName, string mainTabName)
+        {
+            //Navigate To The Publishing Tab
+            logger.LogMethodEntry("TodaysViewUXPage", "NavigateToThePublishingTab",
+               base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                string pageTitle = base.GetPageTitle;
+                if (pageTitle != TodaysViewUXPageResource.TodayViewUXPageResource_ManagePrograms_Tab_Name
+                    && pageTitle != TodaysViewUXPageResource.TodayViewUXPageResource_ManageProducts_Tab_Name)
+                {
+                    base.SelectWindow(pageTitle);
+                    IWebElement mainTabNameElement =
+                        base.GetWebElementPropertiesByPartialLinkText(mainTabName);
+                    //Click on the 'publishing' tab
+                    base.ClickByJavaScriptExecutor(mainTabNameElement);
+                    Thread.Sleep(Convert.ToInt32(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_ElementWaitTimeOut_Value));
+                }
+                string getPublishingPageTitle = base.GetPageTitle;
+                base.SelectWindow(getPublishingPageTitle);
+                //Get Seleted Tab Name
+                string getSelectorTab = this.GetSubtabValue(subtabName);
+                IWebElement selectedTabElement = base.GetWebElementPropertiesById(getSelectorTab);
+                //Get Seleted Tab Class value
+                string getClassName = selectedTabElement.GetAttribute(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_GetClass_Value);
+                if (getClassName == TodaysViewUXPageResource.TodayViewUXPageResource__SubTab_SelectedTab_Value)
+                {
+                    base.SelectWindow(subtabName);
+                }
+                else
+                {
+                    //Wait for the element
+                    base.WaitForElement(By.PartialLinkText(subtabName));
+                    IWebElement subtabNameElement =
+                        base.GetWebElementPropertiesByPartialLinkText(subtabName);
+                    //Click the subtab
+                    base.ClickByJavaScriptExecutor(subtabNameElement);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "NavigateToThePublishingTab",
+             base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get Subtab Value.
+        /// </summary>
+        /// <param name="SubtabName">Get the SubTab.</param>
+        /// <returns>Return selector tab Id.</returns>
+        private String GetSubtabValue(string SubtabName)
+        {
+            //Navigate Administrator Tool Page
+            logger.LogMethodEntry("TodaysViewUXPage", "GetSubtabValue",
+                base.isTakeScreenShotDuringEntryExit);
+            //Intialize the variable
+            String getSubTabId = String.Empty;
+            switch (SubtabName)
+            {
+                case "Manage Programs":
+                    getSubTabId = TodaysViewUXPageResource.
+                        TodayViewUXPageResource_ManageProgramsTab_Value;
+                    break;
+                case "Manage Products":
+                    getSubTabId = TodaysViewUXPageResource.
+                        TodayViewUXPageResource_ManageProductsTab_Value;
+                    break;
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "GetSubtabValue",
+               base.isTakeScreenShotDuringEntryExit);
+            return getSubTabId;
+        }
+        
     }
 }

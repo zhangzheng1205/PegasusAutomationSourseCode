@@ -1051,6 +1051,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SubNavigationTabSelected1.
+        /// </summary>
+        internal static string TodayViewUXPageResource__SubTab_SelectedTab_Value {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource__SubTab_SelectedTab_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 2.
         /// </summary>
         internal static string TodayViewUXPageResource_Asset_InitialValue {
@@ -1132,6 +1141,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 2000.
+        /// </summary>
+        internal static string TodayViewUXPageResource_ElementWaitTimeOut_Value {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_ElementWaitTimeOut_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_FeedbackLink.
         /// </summary>
         internal static string TodayViewUXPageResource_Feedback_Id_Locator {
@@ -1146,6 +1164,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_GetActivityName_Xpath_Locator {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_GetActivityName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to class.
+        /// </summary>
+        internal static string TodayViewUXPageResource_GetClass_Value {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_GetClass_Value", resourceCulture);
             }
         }
         
@@ -1218,6 +1245,51 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_LinkName_Xpath_Locator {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_LinkName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ancCourseNavSelectedMenuImgCls.
+        /// </summary>
+        internal static string TodayViewUXPageResource_MainTab_SelectedTab_Value {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_MainTab_SelectedTab_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Products.
+        /// </summary>
+        internal static string TodayViewUXPageResource_ManageProducts_Tab_Name {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_ManageProducts_Tab_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_td_3.
+        /// </summary>
+        internal static string TodayViewUXPageResource_ManageProductsTab_Value {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_ManageProductsTab_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Programs.
+        /// </summary>
+        internal static string TodayViewUXPageResource_ManagePrograms_Tab_Name {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_ManagePrograms_Tab_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl9_td_2.
+        /// </summary>
+        internal static string TodayViewUXPageResource_ManageProgramsTab_Value {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_ManageProgramsTab_Value", resourceCulture);
             }
         }
         
@@ -1299,6 +1371,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_StudentPerformance_AssetsName_Id_Locator {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_StudentPerformance_AssetsName_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //tr[@id=&apos;trSubNavigationTab&apos;]/td[{0}].
+        /// </summary>
+        internal static string TodayViewUXPageResource_Subtab_Classname_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Subtab_Classname_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //tr[@id=&apos;trSubNavigationTab&apos;]/td.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Subtab_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Subtab_Count_Xpath_Locator", resourceCulture);
             }
         }
         

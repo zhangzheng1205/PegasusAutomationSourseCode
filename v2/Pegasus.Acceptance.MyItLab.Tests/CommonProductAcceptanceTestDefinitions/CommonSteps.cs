@@ -3,7 +3,6 @@ using System.Globalization;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
@@ -164,7 +163,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
                 base.isTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
+        /// <summar
         /// Verify the Success Message Display on the Page.
         /// </summary>
         /// <param name="successMessage">This is Success Message Text.</param>
@@ -411,12 +410,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// <param name="tabName">This is Tab Name.</param>
         /// <param name="pageName">This is Page Name.</param>
         [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page")]
-        public void NavigateToTabInProgramAdminPage(string subNavigationTabName, string subNavigationTabParentWindowName)
+        public void NavigateToTabInProgramAdminPage(
+            string subNavigationTabName, string subNavigationTabParentWindowName)
         {
             // navigate program administrator page
             Logger.LogMethodEntry("AdminToolPage", "NavigateToTabOfTheParticularPage",
                 base.isTakeScreenShotDuringEntryExit);
-            new ProgramAdminToolPage().NavigateProgramAdminTabs(subNavigationTabParentWindowName, subNavigationTabName);
+            new ProgramAdminToolPage().NavigateProgramAdminTabs(
+                subNavigationTabParentWindowName, subNavigationTabName);
             Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfTheParticularPage",
                 base.isTakeScreenShotDuringEntryExit);
         }
@@ -432,70 +433,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             //Navigate to perticular Page
             Logger.LogMethodEntry("CommonSteps", "NavigateToPublishingTab",
                 base.isTakeScreenShotDuringEntryExit);
-            string pageTitle = base.GetPageTitle;
-            if (pageTitle != "Manage Programs" && pageTitle != "Manage Products")
-            {
-                base.SelectWindow(pageTitle);
-                IWebElement mainTabNameElement =
-                    base.GetWebElementPropertiesByPartialLinkText(mainTabName);
-                //Click on the 'publishing' tab
-                base.ClickByJavaScriptExecutor(mainTabNameElement);
-                Thread.Sleep(Convert.ToInt32(CommonStepsResource.
-                    CommonSteps_ElementWaitTimeOut_Value));
-            }
-            string getPublishingPageTitle = base.GetPageTitle;
-            base.SelectWindow(getPublishingPageTitle);
-            //Get Seleted Tab Name
-            string getSelectorTab = this.GetSubtabValue(subtabName);
-            IWebElement selectedTabElement = base.GetWebElementPropertiesById(getSelectorTab);
-            //Get Seleted Tab Class value
-            string getClassName = selectedTabElement.GetAttribute(CommonStepsResource.
-                CommonSteps_GetClass_Value);
-            if (getClassName == CommonStepsResource.CommonSteps_GetSelectedTab_Value)
-            {
-                base.SelectWindow(subtabName);
-            }
-            else
-            {
-                //Wait for the element
-                base.WaitForElement(By.PartialLinkText(subtabName));
-                IWebElement subtabNameElement =
-                    base.GetWebElementPropertiesByPartialLinkText(subtabName);
-                //Click the subtab
-                base.ClickByJavaScriptExecutor(subtabNameElement);
-            }
+            //Navigate To The Publishing Tab
+            new TodaysViewUXPage().NavigateToThePublishingTab(subtabName, mainTabName);
             Logger.LogMethodExit("CommonSteps", "NavigateToPublishingTab",
                base.isTakeScreenShotDuringEntryExit);
         }
-
-        /// <summary>
-        /// Get Subtab Value.
-        /// </summary>
-        /// <param name="SubtabName">Get the SubTab.</param>
-        /// <returns>Return selector tab Id.</returns>
-        private String GetSubtabValue(string SubtabName)
-        {
-            //Navigate Administrator Tool Page
-            Logger.LogMethodEntry("CommonSteps", "GetSubtabValue",
-                base.isTakeScreenShotDuringEntryExit);
-            //Intialize the variable
-            String getSubTabId = String.Empty;
-            switch (SubtabName)
-            {
-                case "Manage Programs":
-                    getSubTabId = CommonStepsResource.
-                        CommonSteps_ManageProgramsTab_Value;
-                    break;
-                case "Manage Products":
-                    getSubTabId = CommonStepsResource.
-                        CommonSteps_ManageProductsTab_Value;
-                    break;
-            }
-            Logger.LogMethodExit("CommonSteps", "GetSubtabValue",
-               base.isTakeScreenShotDuringEntryExit);
-            return getSubTabId;
-        }
-
+       
         /// <summary>
         /// Navigate To Course Space User Tabs.
         /// </summary>
@@ -509,7 +452,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "NavigateToCourseSpaceUserTabs",
                 base.isTakeScreenShotDuringEntryExit);
             //Select Tab
-            this.SelectTab(parentTabName, childTabName);
+            new TodaysViewUXPage().SelectTab(parentTabName, childTabName);
             Logger.LogMethodExit("CommonSteps", "NavigateToCourseSpaceUserTabs",
                base.isTakeScreenShotDuringEntryExit);
         }
@@ -525,91 +468,10 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "NavigateToTab",
                 base.isTakeScreenShotDuringEntryExit);
             //Select Tab
-            this.SelectTab(tabName);
+            new TodaysViewUXPage().SelectTab(tabName);           
             Logger.LogMethodExit("CommonSteps", "NavigateToTab",
                base.isTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Select Tab.
-        /// </summary>
-        /// <param name="parentTabName">This is Parent Tab Name.</param>
-        /// <param name="childTabName">This is Child Tab Name.</param>
-        private void SelectTab(string parentTabName,
-            string childTabName = "Default Value")
-        {
-            //Navigate to Tab
-            Logger.LogMethodEntry("CommonSteps", "SelectTab",
-                base.isTakeScreenShotDuringEntryExit);
-            //Select the CourseSpace User MainTab
-            this.SelectCourseSpaceUserMainTab(parentTabName);
-            if (childTabName != "Default Value")
-            {
-                //Get Subtab Counts
-                base.WaitForElement(By.XPath(CommonStepsResource.
-                    CommonSteps_Subtab_Count_Xpath_Locator));
-                //Get Tab Count
-                int getSubTabCount = base.GetElementCountByXPath(CommonStepsResource.
-                    CommonSteps_Subtab_Count_Xpath_Locator);
-                for (int csTabCountNo = Convert.ToInt32(
-                    CommonStepsResource.CommonSteps_Loop_Initializer_Value);
-                    csTabCountNo <= getSubTabCount; csTabCountNo++)
-                {
-                    IWebElement getSelectedTabElement = base.GetWebElementPropertiesByXPath
-                        (String.Format(CommonStepsResource.
-                                CommonSteps_Subtab_Classname_Xpath_Locator, csTabCountNo));
-                    if (getSelectedTabElement.Text == childTabName)
-                    {
-                        string getClassName = getSelectedTabElement.
-                                      GetAttribute(CommonStepsResource.
-                           CommonSteps_GetClass_Value);
-                        if (getClassName == CommonStepsResource.
-                                         CommonSteps_SubTab_SelectedTab_Value)
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            //Select The Tab
-                            this.NavigateToTheTab(childTabName);
-                            break;
-                        }
-                    }
-                }
-            }
-            Logger.LogMethodExit("CommonSteps", "SelectTab",
-              base.isTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Select MainTab.
-        /// </summary>
-        /// <param name="mainTabName">This is Main Tab Name.</param>
-        private void SelectCourseSpaceUserMainTab(string mainTabName)
-        {
-
-            //Select MainTab
-            Logger.LogMethodEntry("CommonSteps", "SelectCourseSpaceUserMainTab",
-                base.isTakeScreenShotDuringEntryExit);
-            //Wait for the MainTab
-            base.WaitForElement(By.PartialLinkText(mainTabName));
-            //Get Tab Property
-            string getTabClassAttribute =
-                base.GetClassAttributeValueByPartialLinkText(mainTabName);
-            if (getTabClassAttribute ==
-                CommonStepsResource.CommonSteps_MainTab_SelectedTab_Value)
-            {
-                //Select Window
-                base.SelectWindow(base.GetPageTitle);
-            }
-            else
-            {
-                //Select The Tab
-                this.NavigateToTheTab(mainTabName);
-            }
-            Logger.LogMethodExit("CommonSteps", "SelectCourseSpaceUserMainTab",
-               base.isTakeScreenShotDuringEntryExit);
-        }
+        }        
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

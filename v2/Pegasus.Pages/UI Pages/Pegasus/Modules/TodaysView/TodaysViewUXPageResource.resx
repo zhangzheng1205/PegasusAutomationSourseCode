@@ -540,4 +540,34 @@
   <data name="TodayViewUXPageResource_PCTInstructorResourceToolLink" xml:space="preserve">
     <value>//table[@id='tblRTBPulldown']/tbody/tr/td/div/div[@title</value>
   </data>
+  <data name="TodayViewUXPageResource_ElementWaitTimeOut_Value" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="TodayViewUXPageResource_GetClass_Value" xml:space="preserve">
+    <value>class</value>
+  </data>
+  <data name="TodayViewUXPageResource_MainTab_SelectedTab_Value" xml:space="preserve">
+    <value>ancCourseNavSelectedMenuImgCls</value>
+  </data>
+  <data name="TodayViewUXPageResource_ManageProductsTab_Value" xml:space="preserve">
+    <value>_ctl9_td_3</value>
+  </data>
+  <data name="TodayViewUXPageResource_ManageProducts_Tab_Name" xml:space="preserve">
+    <value>Manage Products</value>
+  </data>
+  <data name="TodayViewUXPageResource_ManageProgramsTab_Value" xml:space="preserve">
+    <value>_ctl9_td_2</value>
+  </data>
+  <data name="TodayViewUXPageResource_ManagePrograms_Tab_Name" xml:space="preserve">
+    <value>Manage Programs</value>
+  </data>
+  <data name="TodayViewUXPageResource_Subtab_Classname_Xpath_Locator" xml:space="preserve">
+    <value>//tr[@id='trSubNavigationTab']/td[{0}]</value>
+  </data>
+  <data name="TodayViewUXPageResource_Subtab_Count_Xpath_Locator" xml:space="preserve">
+    <value>//tr[@id='trSubNavigationTab']/td</value>
+  </data>
+  <data name="TodayViewUXPageResource__SubTab_SelectedTab_Value" xml:space="preserve">
+    <value>SubNavigationTabSelected1</value>
+  </data>
 </root>
