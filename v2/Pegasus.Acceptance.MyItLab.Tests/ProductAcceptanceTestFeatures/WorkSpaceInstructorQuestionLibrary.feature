@@ -8,7 +8,7 @@
 #Test Case Id : HED_MIL_PWF_053
 #MyItLabSIM5MasterCourse
 Scenario: Create SIM5Activity by WS Teacher
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select 'Add Course Materials' in 'My Course'
 And I click on the "Homework" activity type
@@ -19,7 +19,7 @@ Then I should see the successfull message "Activity added successfully."
 #Purpose: UseCase To Create SIM5Studyplan
 #MyItLabSIM5MasterCourse
 Scenario: Create SIM5Studyplan by WS Teacher
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select 'Add Course Materials' in 'My Course'
 And I click on the "myitlab Study Plan" activity type
@@ -31,7 +31,7 @@ Then I should see the successfull message "Myitlab Study Plan added successfully
 #Test Case Id : HED_MIL_PWF_052
 #MyItLabSIM5MasterCourse
 Scenario: Instructor sets the behavioral mode for the SIM and grader activity (Basic Random)
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select 'Add Course Materials' in 'My Course'
 And I click on the "Test" activity type
@@ -43,7 +43,7 @@ Then I should see the successfull message "Activity added successfully."
 #TestCase Id: HED_MIL_PWF_055
 #MyItLabSIM5MasterCourse
 Scenario: To check the Workspace Instructor sets the behavioral mode for the SIM and grader activity By Ws Instructor 
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select 'Add Course Materials' in 'My Course'
 And I click on the "Homework" activity type
@@ -79,7 +79,7 @@ Then I should see the successfull message "Sim questions added successfully."
 #TestCase Id: HED_MIL_PWF_059
 #MyItLabSIM5MasterCourse
 Scenario: Creation and accessibility of Grader IT questions (2007) by Workspace Instructor 
-When I navigate to "Preferences" tab of the "Preferences" page
+When I navigate to "Preferences" tab
 Then I should be on the "Preferences" page
 When I enable 'Enable Instructor Resource Toolbar Preference' preference
 Then I should see the successfull message "preferences updated successfully"

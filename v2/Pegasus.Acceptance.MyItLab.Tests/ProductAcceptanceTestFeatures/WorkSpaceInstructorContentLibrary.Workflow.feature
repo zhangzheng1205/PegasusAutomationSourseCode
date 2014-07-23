@@ -7,7 +7,7 @@
 # TestCase Id: HED_MIL_PWF_056
 #MyItLabSIM5MasterCourse
 Scenario: Instructor Manage location settings
-When I navigate to "Preferences" tab of the "Preferences" page
+When I navigate to "Preferences" tab
 Then I should be on the "Preferences" page
 When I navigate to the "Manage Locations" tab in Preferences Page
 Then I should be on the "Manage Locations" subtab
@@ -22,7 +22,7 @@ Then I should see the successfull message "Computers added successfully."
 # TestCase Id: HED_MIL_PWF_090 
 #MyItLabSIM5MasterCourse
 Scenario: Creation of non gradable assets Link in MIL course By Ws Instructor 
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Add Link" activity type
@@ -36,7 +36,7 @@ When I click the "Open" cmenu option
 # TestCase Id: HED_MIL_PWF_125
 #MyItLabSIMMasterCourse
 Scenario: To create the Instructor Gradable Essay Asset By Ws Instructor 
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Homework" activity type
@@ -48,7 +48,7 @@ Then I should see the successfull message "Activity added successfully."
 # TestCase Id: HED_MIL_PWF_123
 #MyItLabSIMMasterCourse
 Scenario: Assign the activity in mycourse frame By Ws Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 And I should see the "SIMStudyPlan2010" activity of behavioral mode "SkillBased" type using SIM question
 When I assign the activity in mycourse
@@ -57,7 +57,7 @@ When I assign the activity in mycourse
 # TestCase Id: HED_MIL_PWF_090 
 #MyItLabSIM5MasterCourse
 Scenario: Creation of non gradable assets Page in MIL course By Ws Instructor 
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Add Page" activity type
@@ -71,7 +71,7 @@ When I click the "Preview" cmenu option
 # TestCase Id: HED_MIL_PWF_090 
 #MyItLabSIM5MasterCourse
 Scenario: Creation of non gradable assets File in MIL course By Ws Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Add File" activity type
@@ -85,7 +85,7 @@ When I click the "Preview" cmenu option
 # TestCase Id: HED_MIL_PWF_090 
 #MyItLabSIM5MasterCourse
 Scenario: Creation of non gradable assets Discussion Topic in MIL course By Ws Instructor 
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Add Discussion Topic" activity type
@@ -99,7 +99,7 @@ When I click the "Open" cmenu option
 # TestCase Id: HED_MIL_PWF_084
 #MyItLabSIMMasterCourse
 Scenario: Creation of Exam Skill Based Activities with 2010 SIM Questions By Ws Instructor 
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Homework" activity type
@@ -111,7 +111,7 @@ Then I should see the successfull message "Activity added successfully."
 # TestCase Id: HED_MIL_PWF_083
 #MyItLabSIMMasterCourse
 Scenario: Creation of Training Skill Based Activities with 2010 SIM Questions By Ws Instructor 
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Homework" activity type
@@ -123,7 +123,7 @@ Then I should see the successfull message "Activity added successfully."
 # TestCase Id: HED_MIL_PWF_086
 #MyItLabSIMMasterCourse
 Scenario: Creation of Exam Project Based Activities with 2010 SIM Questions By Ws Instructor 
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Homework" activity type
@@ -135,7 +135,7 @@ Then I should see the successfull message "Activity added successfully."
 # TestCase Id: HED_MIL_PWF_085
 #MyItLabSIMMasterCourse
 Scenario: Creation of Training Project Based Activities with 2010 SIM Questions By Ws Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Homework" activity type
@@ -147,7 +147,7 @@ Then I should see the successfull message "Activity added successfully."
 #TestCase : HED_MIL_PWF_087
 #MyItLabSIMMasterCourse
 Scenario: Creation of SIMStudyplan with 2010 SIM Questions by WS Teacher
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "myitlab Study Plan" activity type
@@ -159,7 +159,7 @@ Then I should see the successfull message "Myitlab Study Plan added successfully
 # TestCase Id: HED_MIL_PWF_093
 #MyItLabSIMMasterCourse
 Scenario: Instructor Previews the sim study Plan
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I search "SIMStudyPlan2010" activity of behavioral mode "SkillBased" type
 And I select the Cmenu option "Preview"
@@ -169,7 +169,7 @@ Then I should be on the "myitlab Study Plan Preview" page
 #TestCase : HED_MIL_PWF_092
 #MyItLabSIMMasterCourse
 Scenario: Creation of SIMStudyplan Document Based with 2010 SIM Questions by WS Teacher
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "myitlab Study Plan" activity type
@@ -181,7 +181,7 @@ Then I should see the successfull message "Myitlab Study Plan added successfully
 # TestCase Id: HED_MIL_PWF_092
 #MyItLabSIMMasterCourse
 Scenario: Instructor Previews SIMStudyplan Document Based Activity by WS Teacher
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I search "SIMStudyPlan2010" activity of behavioral mode "DocBased" type
 And I select the Cmenu option "Preview"
@@ -191,7 +191,7 @@ Then I should be on the "myitlab Study Plan Preview" page
 #TestCase : HED_MIL_PWF_110
 #MyItLabSIMMasterCourse
 Scenario: Creation of SIMStudyplan with 2007 SIM Questions by WS Teacher
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "myitlab Study Plan" activity type
@@ -203,7 +203,7 @@ Then I should see the successfull message "Myitlab Study Plan added successfully
 # TestCase Id: HED_MIL_PWF_110
 #MyItLabSIMMasterCourse
 Scenario: Instructor Previews the sim study Plan with 2007 SIM Questions
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I search "SIMStudyPlan2007" activity of behavioral mode "SkillBased" type
 And I select the Cmenu option "Preview"

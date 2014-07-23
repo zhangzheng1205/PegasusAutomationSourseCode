@@ -15,7 +15,7 @@ Given I am on the "Global Home" page
 #TestCase Id: HED_MIL_PWF_094
 #MyItLabSIMMasterCourse
 Scenario: Instructor Previews the Grader IT Activity
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I search "SIMGraderActivity" activity of behavioral mode "Assignment" type
 And I select the Cmenu option "Preview"

@@ -27,7 +27,7 @@ And I close the "SIM Question Preview" window
 ## TestCase Id: HED_MIL_PWF_048
 #MyItLabSIM5MasterCourse
 Scenario: Workspace Instructor Sets General preference settings
-When I navigate to "Preferences" tab of the "Preferences" page
+When I navigate to "Preferences" tab
 Then I should be on the "Preferences" page
 When I click on the "General" tab
 And I enable necessary general preference settings
@@ -46,7 +46,7 @@ Then I should see the successfull message "preferences updated successfully"
 ## TestCase Id: HED_MIL_PWF_049
 #MyItLabSIM5MasterCourse
 Scenario: Workspace Instructor sets the preference for SIM 5 Course
-When I navigate to "Preferences" tab of the "Preferences" page
+When I navigate to "Preferences" tab
 Then I should be on the "Preferences" page
 When I click on the "Question" tab
 And I enable 'Enable SIM5 questions' preference
@@ -55,7 +55,7 @@ Then I should see the successfull message "preferences updated successfully"
 #Purpose: To check the Workspace Instructor sets the preference for Enable original SIM questions in Course
 #MyItLabSIMMasterCourse
 Scenario: Workspace Instructor sets the preference for original SIM questions in Course
-When I navigate to "Preferences" tab of the "Preferences" page
+When I navigate to "Preferences" tab
 Then I should be on the "Preferences" page
 When I click on the "Question" tab
 And I enable 'Enable original SIM questions' preference
@@ -65,7 +65,7 @@ Then I should see the successfull message "preferences updated successfully"
 ## TestCase Id: HED_MIL_PWF_046
 #MyItLabSIM5MasterCourse
 Scenario: Enabling preferences set for grader IT activity In SIM5 Course by Workspace Instructor 
-When I navigate to "Preferences" tab of the "Preferences" page
+When I navigate to "Preferences" tab
 Then I should be on the "Preferences" page
 When I click on the "Question" tab
 And I enable 'Grader Project' question type preference 
@@ -78,7 +78,7 @@ Then I should see the successfull message "preferences updated successfully"
 ## TestCase Id: HED_MIL_PWF_098
 #MyItLabSIMMasterCourse
 Scenario: Enabling preferences set for grader IT activity In SIM Course by Workspace Instructor
-When I navigate to "Preferences" tab of the "Preferences" page
+When I navigate to "Preferences" tab
 Then I should be on the "Preferences" page
 When I click on the "General" tab
 And I enable 'Enable Calendar' in general preference settings
@@ -96,7 +96,7 @@ Then I should see the successfull message "preferences updated successfully"
 #Purpose: UseCase To Set Preferences for Empty Course
 #HedEmptyClass
 Scenario: Set Preferences for Empty Course by Ws Teacher
-When I navigate to "Preferences" tab of the "Preferences" page
+When I navigate to "Preferences" tab
 Then I should be on the "Preferences" page
 When I set the preferences for Copy Content
 Then I should see the successfull message "Preferences updated successfully."

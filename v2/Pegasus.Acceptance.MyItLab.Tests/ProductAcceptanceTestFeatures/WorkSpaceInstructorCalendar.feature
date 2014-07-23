@@ -16,7 +16,7 @@ Then I should see contents in the content frame which are created in course
 # TestCase Id: HED_MIL_PWF_117
 # MyItLabSIMMasterCourse
 Scenario: To check the Display of Assignment Calendar tab By Ws Instructor
-When I navigate to "Preferences" tab of the "Preferences" page
+When I navigate to "Preferences" tab
 Then I should be on the "Preferences" page
 When I click on the "Course Tools" tab
 And I click on 'Display as tab on main navigation row' link under course materials
@@ -69,7 +69,7 @@ Then I should see the Instructor Graded contents in caledar frame
 # TestCase Id: HED_MIL_PWF_118
 #MyItLabSIMMasterCourse
 Scenario: To verify the dependency of the calendar preferences with other preference By Ws Instructor
-When I navigate to "Preferences" tab of the "Preferences" page
+When I navigate to "Preferences" tab
 Then I should be on the "Preferences" page
 When I disable the 'Enable Calendar' preference
 And I click on the "Instructor Resources" tab

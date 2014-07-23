@@ -123,7 +123,7 @@ testRunner.And("I close the \"SIM Question Preview\" window", ((string)(null)), 
 #line 29
 this.ScenarioSetup(scenarioInfo);
 #line 30
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 31
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 32
@@ -163,7 +163,7 @@ testRunner.Then("I should see the successfull message \"preferences updated succ
 #line 48
 this.ScenarioSetup(scenarioInfo);
 #line 49
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 50
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 51
@@ -185,7 +185,7 @@ testRunner.Then("I should see the successfull message \"preferences updated succ
 #line 57
 this.ScenarioSetup(scenarioInfo);
 #line 58
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 59
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 60
@@ -209,7 +209,7 @@ testRunner.Then("I should see the successfull message \"preferences updated succ
 #line 67
 this.ScenarioSetup(scenarioInfo);
 #line 68
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 69
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 70
@@ -240,7 +240,7 @@ testRunner.Then("I should see the successfull message \"preferences updated succ
 #line 80
 this.ScenarioSetup(scenarioInfo);
 #line 81
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 82
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 83
@@ -281,7 +281,7 @@ testRunner.Then("I should see the successfull message \"preferences updated succ
 #line 98
 this.ScenarioSetup(scenarioInfo);
 #line 99
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 100
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 101

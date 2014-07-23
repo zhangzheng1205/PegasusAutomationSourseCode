@@ -99,7 +99,7 @@ testRunner.Then("I should see contents in the content frame which are created in
 #line 18
 this.ScenarioSetup(scenarioInfo);
 #line 19
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 21
@@ -223,7 +223,7 @@ testRunner.Then("I should see the Instructor Graded contents in caledar frame", 
 #line 71
 this.ScenarioSetup(scenarioInfo);
 #line 72
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 73
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 74
