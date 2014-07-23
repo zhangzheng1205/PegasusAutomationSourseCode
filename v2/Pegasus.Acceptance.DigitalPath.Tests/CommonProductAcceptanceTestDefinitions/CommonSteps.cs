@@ -347,7 +347,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Selects the Link
             Logger.LogMethodEntry("CommonSteps", "SelectTheLink",
                 isTakeScreenShotDuringEntryExit);
-            //Click on Link
+            //Click on More Link 
             new TodaysViewUXPage().ClickLinkInMoreDropdown(linkName);
             Logger.LogMethodExit("CommonSteps", "SelectTheLink",
                 isTakeScreenShotDuringEntryExit);
