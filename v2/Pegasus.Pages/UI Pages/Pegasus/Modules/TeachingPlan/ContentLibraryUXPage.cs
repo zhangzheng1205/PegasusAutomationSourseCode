@@ -1533,7 +1533,7 @@ namespace Pegasus.Pages.UI_Pages
                 
                 base.ClickByJavaScriptExecutor(assetCheckBox);
                 ++counter;
-                if (counter >= assetCount-1) break;
+                if (counter >= assetCount) break;
             }
 
             logger.LogMethodExit("ContentLibraryUXPage", 
@@ -1700,6 +1700,27 @@ namespace Pegasus.Pages.UI_Pages
                     .GetWebElementPropertiesById(buttonID);
                 base.ClickByJavaScriptExecutor(headerButton);
             }
+        }
+
+        /// <summary>
+        /// Gets count of Assets Copy/Cut Pasted.
+        /// </summary>
+        /// <returns>Count of Assets.</returns>
+        public int GetPastedItemCount()
+        {
+            logger.LogMethodEntry("ContentLibraryUXPage",
+               "GetPastedItemCount",
+               base.isTakeScreenShotDuringEntryExit);
+
+            ICollection<IWebElement> pastedAssets = base
+                .GetWebElementsCollectionByClassName(ContentLibraryUXPageResource
+                .ContentLibraryUXPage_PastedItem_TR_Class_Locator);
+            if (pastedAssets == null)
+                return 0;
+            logger.LogMethodExit("ContentLibraryUXPage",
+                "GetPastedItemCount",
+               base.isTakeScreenShotDuringEntryExit);
+            return pastedAssets.Count;   
         }
 
     }

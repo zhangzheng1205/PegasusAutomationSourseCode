@@ -141,4 +141,10 @@
   <data name="ShowMessage_Page_Validation_MSG_Span_Id_Locator" xml:space="preserve">
     <value>lblPageHead</value>
   </data>
+  <data name="ShowMessage_Page_CancelButton_Id_Locator" xml:space="preserve">
+    <value>imgCancel</value>
+  </data>
+  <data name="ShowMessage_Page_AlertWindow_Title_Value" xml:space="preserve">
+    <value>Pegasus</value>
+  </data>
 </root>
