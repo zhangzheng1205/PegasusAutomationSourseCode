@@ -96,11 +96,11 @@ testRunner.Then("I should see the \"CalendarNotificationsAnnouncements\" channel
 #line 15
 this.ScenarioSetup(scenarioInfo);
 #line 16
-testRunner.When("I navigate to \"MyTest\" tab of the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 17
 testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 18
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "SubtabName",
@@ -126,7 +126,7 @@ testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Material
 #line 19
 testRunner.Then("I should see the following subtabs under Course Materials page", ((string)(null)), table1, "Then ");
 #line 27
-testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "SubtabName",
@@ -146,7 +146,7 @@ testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechT
 #line 28
 testRunner.Then("I should see the following subtabs under Gradebook page", ((string)(null)), table2, "Then ");
 #line 34
-testRunner.When("I navigate to the \"Enrollments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Enrollments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "SubtabName",
@@ -160,7 +160,7 @@ testRunner.When("I navigate to the \"Enrollments\" tab", ((string)(null)), ((Tec
 #line 35
 testRunner.Then("I should see the following subtabs in Enrollments page", ((string)(null)), table3, "Then ");
 #line 39
-testRunner.When("I navigate to the \"Communicate\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Communicate\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "SubtabName",
@@ -174,7 +174,7 @@ testRunner.When("I navigate to the \"Communicate\" tab", ((string)(null)), ((Tec
 #line 40
 testRunner.Then("I should see the following subtabs under Communicate page", ((string)(null)), table4, "Then ");
 #line 44
-testRunner.When("I navigate to the \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Preferences\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 45
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
