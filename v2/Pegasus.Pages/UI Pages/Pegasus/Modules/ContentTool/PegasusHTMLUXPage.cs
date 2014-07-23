@@ -184,7 +184,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Enter Page Name and Description Fields
                 this.EnterPageNameAndDescirptionFields(newPageAsset, newHTMLDiscription);
                 //Store the link Asset
-                this.StoreThePageAsset(newPageAsset, pageAssetTypeEnum);
+                this.StoreTheAudioPageAsset(newPageAsset, pageAssetTypeEnum);
                 //Click The Add Button
                 this.ClickTheCreateButton();
             }
@@ -195,6 +195,29 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("PegasusHTMLUXPage", "RecordAudioFromPageAssetType",
                      base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Store The Audio Page Asset.
+        /// </summary>
+        /// <param name="newPageAsset">This is Page Name.</param>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        private void StoreTheAudioPageAsset(Guid newPageAsset,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Store The Audio Page Asset
+            logger.LogMethodEntry("PegasusHTMLUXPage", "StoreTheAudioPageAsset",
+                      base.isTakeScreenShotDuringEntryExit);
+            //Store the Page in memory
+            Activity newPage = new Activity
+            {
+                AudioPageAssetID = CommonResource.CommonResource.HigherEdCore_Audio_PageAseet_UC1,
+                Name = newPageAsset.ToString(),
+                ActivityType = activityTypeEnum,
+                IsCreated = true,
+            };
+            newPage.StoreActivityInMemory();
+            logger.LogMethodExit("PegasusHTMLUXPage", "StoreTheAudioPageAsset",
+                     base.isTakeScreenShotDuringEntryExit);
+        } 
 
     }
 }
