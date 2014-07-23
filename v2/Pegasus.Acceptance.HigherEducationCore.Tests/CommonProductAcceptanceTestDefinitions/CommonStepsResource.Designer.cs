@@ -134,6 +134,15 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.CommonProductAcceptanceTe
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string CommonSteps_Loop_Initializer_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_Loop_Initializer_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;tblMenuBar&apos;]/tbody/tr/td[{0}]/a.
         /// </summary>
         internal static string CommonSteps_Maintab_Classname_Xpath_Locator {
@@ -256,15 +265,6 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.CommonProductAcceptanceTe
         internal static string CommonSteps_WaitTimeOut_Value {
             get {
                 return ResourceManager.GetString("CommonSteps_WaitTimeOut_Value", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
     }

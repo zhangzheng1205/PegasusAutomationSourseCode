@@ -3,7 +3,6 @@ using System.Globalization;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
@@ -35,11 +34,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             /// <summary>
             /// This is Left frame
             /// </summary>
-            Left = 1,
+            left = 1,
             /// <summary>
             /// This is Right frame
             /// </summary>
-            Right = 2,
+            right = 2,
         }
         /// <summary>
         /// Verifies the Correct Page Opened.
@@ -111,12 +110,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             base.ClickByJavaScriptExecutor(getLinkProperty);
             switch (frame)
             {
-                case CommonSteps.FrameTypeEnum.Left:
+                case CommonSteps.FrameTypeEnum.left:
                     //Wait untill window of users
                     base.WaitUntilWindowLoads(CommonStepsResource.
                         CommonSteps_CreateNewUserWindow_Name_Locator);
                     break;
-                case CommonSteps.FrameTypeEnum.Right:
+                case CommonSteps.FrameTypeEnum.right:
                     //Wait untill window of Courses
                     base.WaitUntilWindowLoads(CommonStepsResource.
                         CommonSteps_CreateNewCoursesWindow_Name_Locator);
@@ -192,16 +191,15 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         public void ShowCourseOnTheGlobalHomePage(
             Course.CourseTypeEnum courseTypeEnum)
         {
-            // Show Course On The MyCourses and Testbanks Page In Active State
+            //Show Course On The MyCourses and Testbanks Page In Active State
             Logger.LogMethodEntry("CommonSteps", "ShowCourseOnTheGlobalHomePage",
                 base.isTakeScreenShotDuringEntryExit);
-            // Get Course From Memory
+            //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
-            bool isCoursePresentOnGlobalHomePage = new HEDGlobalHomePage().
-                GetCoursePresentInGlobalHomePage().Replace(" ", "").Contains(course.Name);
-            // Assert Course Present on Global Home Page
+            //Assert Course Present on Global Home Page
             Logger.LogAssertion("VerifyCoursePresent", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(true, isCoursePresentOnGlobalHomePage));
+                () => Assert.AreEqual(true, new HEDGlobalHomePage().
+                    GetCoursePresentInGlobalHomePage().Contains(course.Name)));
             Logger.LogMethodExit("CommonSteps", " ShowCourseOnTheGlobalHomePage",
                 base.isTakeScreenShotDuringEntryExit);
         }
@@ -409,8 +407,8 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// <summary>
         /// Navigate To Tab Of The Particular Page.
         /// </summary>
-        /// <param name="subNavigationTabName">This is Tab Name.</param>
-        /// <param name="subNavigationTabParentWindowName">This is Page Name.</param>
+        /// <param name="tabName">This is Tab Name.</param>
+        /// <param name="pageName">This is Page Name.</param>
         [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page")]
         public void NavigateToTabInProgramAdminPage(string subNavigationTabName, string subNavigationTabParentWindowName)
         {
@@ -447,7 +445,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             string getPublishingPageTitle = base.GetPageTitle;
             base.SelectWindow(getPublishingPageTitle);
             //Get Seleted Tab Name
-            string getSelectorTab = this.GetSubTabValue(subtabName);
+            string getSelectorTab = this.GetSubtabValue(subtabName);
             IWebElement selectedTabElement = base.GetWebElementPropertiesById(getSelectorTab);
             //Get Seleted Tab Class value
             string getClassName = selectedTabElement.GetAttribute(CommonStepsResource.
@@ -472,16 +470,16 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// <summary>
         /// Get Subtab Value.
         /// </summary>
-        /// <param name="subtabName">Get the SubTab.</param>
+        /// <param name="SubtabName">Get the SubTab.</param>
         /// <returns>Return selector tab Id.</returns>
-        private String GetSubTabValue(string subtabName)
+        private String GetSubtabValue(string SubtabName)
         {
             //Navigate Administrator Tool Page
             Logger.LogMethodEntry("CommonSteps", "GetSubtabValue",
                 base.isTakeScreenShotDuringEntryExit);
             //Intialize the variable
             String getSubTabId = String.Empty;
-            switch (subtabName)
+            switch (SubtabName)
             {
                 case "Manage Programs":
                     getSubTabId = CommonStepsResource.
@@ -495,6 +493,121 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             Logger.LogMethodExit("CommonSteps", "GetSubtabValue",
                base.isTakeScreenShotDuringEntryExit);
             return getSubTabId;
+        }
+
+        /// <summary>
+        /// Navigate To Course Space User Tabs.
+        /// </summary>
+        /// <param name="parentTabName">This is Parent Tab Name.</param>
+        /// <param name="childTabName">This is Child Tab Name.</param>      
+        [When(@"I navigate to ""(.*)"" tab and selected ""(.*)"" subtab")]
+        public void NavigateToCourseSpaceUserTabs(
+            string parentTabName, string childTabName)
+        {
+            //Navigate to Tab
+            Logger.LogMethodEntry("CommonSteps", "NavigateToCourseSpaceUserTabs",
+                base.isTakeScreenShotDuringEntryExit);
+            //Select Tab
+            this.SelectTab(parentTabName, childTabName);
+            Logger.LogMethodExit("CommonSteps", "NavigateToCourseSpaceUserTabs",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Tab.
+        /// </summary>
+        /// <param name="tabName">This is Tab Name.</param>
+        [When(@"I navigate to ""(.*)"" tab")]
+        public void NavigateToTab(string tabName)
+        {
+            //Navigate to Tab
+            Logger.LogMethodEntry("CommonSteps", "NavigateToTab",
+                base.isTakeScreenShotDuringEntryExit);
+            //Select Tab
+            this.SelectTab(tabName);
+            Logger.LogMethodExit("CommonSteps", "NavigateToTab",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Tab.
+        /// </summary>
+        /// <param name="parentTabName">This is Parent Tab Name.</param>
+        /// <param name="childTabName">This is Child Tab Name.</param>
+        private void SelectTab(string parentTabName,
+            string childTabName = "Default Value")
+        {
+            //Navigate to Tab
+            Logger.LogMethodEntry("CommonSteps", "SelectTab",
+                base.isTakeScreenShotDuringEntryExit);
+            //Select the CourseSpace User MainTab
+            this.SelectCourseSpaceUserMainTab(parentTabName);
+            if (childTabName != "Default Value")
+            {
+                //Get Subtab Counts
+                base.WaitForElement(By.XPath(CommonStepsResource.
+                    CommonSteps_Subtab_Count_Xpath_Locator));
+                //Get Tab Count
+                int getSubTabCount = base.GetElementCountByXPath(CommonStepsResource.
+                    CommonSteps_Subtab_Count_Xpath_Locator);
+                for (int csTabCountNo = Convert.ToInt32(
+                    CommonStepsResource.CommonSteps_Loop_Initializer_Value);
+                    csTabCountNo <= getSubTabCount; csTabCountNo++)
+                {
+                    IWebElement getSelectedTabElement = base.GetWebElementPropertiesByXPath
+                        (String.Format(CommonStepsResource.
+                                CommonSteps_Subtab_Classname_Xpath_Locator, csTabCountNo));
+                    if (getSelectedTabElement.Text == childTabName)
+                    {
+                        string getClassName = getSelectedTabElement.
+                                      GetAttribute(CommonStepsResource.
+                           CommonSteps_GetClass_Value);
+                        if (getClassName == CommonStepsResource.
+                                         CommonSteps_SubTab_SelectedTab_Value)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            //Select The Tab
+                            this.NavigateToTheTab(childTabName);
+                            break;
+                        }
+                    }
+                }
+            }
+            Logger.LogMethodExit("CommonSteps", "SelectTab",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select MainTab.
+        /// </summary>
+        /// <param name="mainTabName">This is Main Tab Name.</param>
+        private void SelectCourseSpaceUserMainTab(string mainTabName)
+        {
+
+            //Select MainTab
+            Logger.LogMethodEntry("CommonSteps", "SelectCourseSpaceUserMainTab",
+                base.isTakeScreenShotDuringEntryExit);
+            //Wait for the MainTab
+            base.WaitForElement(By.PartialLinkText(mainTabName));
+            //Get Tab Property
+            string getTabClassAttribute =
+                base.GetClassAttributeValueByPartialLinkText(mainTabName);
+            if (getTabClassAttribute ==
+                CommonStepsResource.CommonSteps_MainTab_SelectedTab_Value)
+            {
+                //Select Window
+                base.SelectWindow(base.GetPageTitle);
+            }
+            else
+            {
+                //Select The Tab
+                this.NavigateToTheTab(mainTabName);
+            }
+            Logger.LogMethodExit("CommonSteps", "SelectCourseSpaceUserMainTab",
+               base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

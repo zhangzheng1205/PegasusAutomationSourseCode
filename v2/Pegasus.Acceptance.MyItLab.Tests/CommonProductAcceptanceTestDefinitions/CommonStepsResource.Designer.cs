@@ -134,6 +134,24 @@ namespace Pegasus.Acceptance.MyItLab.Tests.CommonProductAcceptanceTestDefinition
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string CommonSteps_Loop_Initializer_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_Loop_Initializer_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ancCourseNavSelectedMenuImgCls.
+        /// </summary>
+        internal static string CommonSteps_MainTab_SelectedTab_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_MainTab_SelectedTab_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl9_td_3.
         /// </summary>
         internal static string CommonSteps_ManageProductsTab_Value {
@@ -175,6 +193,33 @@ namespace Pegasus.Acceptance.MyItLab.Tests.CommonProductAcceptanceTestDefinition
         internal static string CommonSteps_SleepTime_Value {
             get {
                 return ResourceManager.GetString("CommonSteps_SleepTime_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //tr[@id=&apos;trSubNavigationTab&apos;]/td[{0}].
+        /// </summary>
+        internal static string CommonSteps_Subtab_Classname_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CommonSteps_Subtab_Classname_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //tr[@id=&apos;trSubNavigationTab&apos;]/td.
+        /// </summary>
+        internal static string CommonSteps_Subtab_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CommonSteps_Subtab_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubNavigationTabSelected1.
+        /// </summary>
+        internal static string CommonSteps_SubTab_SelectedTab_Value {
+            get {
+                return ResourceManager.GetString("CommonSteps_SubTab_SelectedTab_Value", resourceCulture);
             }
         }
         

@@ -183,7 +183,7 @@
   <data name="CommonSteps_ElementWait_Time_Value" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
+  <data name="CommonSteps_Loop_Initializer_Value" xml:space="preserve">
+    <value>1</value>
   </data>
 </root>
