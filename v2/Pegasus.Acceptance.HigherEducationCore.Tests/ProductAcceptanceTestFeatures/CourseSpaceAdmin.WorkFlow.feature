@@ -6,7 +6,7 @@
 #Purpose: Approve master course in Course space
 @ApproveCourse
 Scenario: Approve Master Course by Cs Admin
-When I navigate to "Manage Products" subtab from "Publishing" tab
+When I navigate to "Manage Products" subtab from "Publishing" maintab
 Then I should be on the "Manage Products" page
 When I search the "MySpanishLabMaster" course in coursespace
 Then I should be able to see the searched "MySpanishLabMaster" course in the left frame
@@ -27,7 +27,7 @@ Then I should see the successfull message "Program created successfully."
 #Purpose: Create General Product
 @CreateProduct
 Scenario: Create General Product by Cs Admin
-When I navigate to "Manage Products" subtab from "Publishing" tab
+When I navigate to "Manage Products" subtab from "Publishing" maintab
 Then I should be on the "Manage Products" page
 When I click on the 'Create New Product' Link
 And I create "HedCoreGeneral" type product using "HedCore" program type 
@@ -35,7 +35,7 @@ Then I should see the successfull message "New product created successfully."
 
 #Purpose: Create Program Product
 Scenario: Create Program Product by Cs Admin
-When I navigate to "Manage Products" subtab from "Publishing" tab
+When I navigate to "Manage Products" subtab from "Publishing" maintab
 Then I should be on the "Manage Products" page
 When I click on the 'Create New Product' Link
 And I create "HedCoreProgram" type product using "HedCore" program type 
@@ -43,7 +43,7 @@ Then I should see the successfull message "New product created successfully."
 
 #Purpose: To associate courses to the General Product
 Scenario: Associate Course to the General Product by Cs Admin
-When I navigate to "Manage Products" subtab from "Publishing" tab
+When I navigate to "Manage Products" subtab from "Publishing" maintab
 Then I should be on the "Manage Products" page
 When I search the "MySpanishLabMaster" course in coursespace
 Then I should be able to see the searched "MySpanishLabMaster" course in the left frame
@@ -55,7 +55,7 @@ Then I should see the successfull message "Approved courses programmed successfu
 #Purpose: To associate courses to the Program Type Product
 @AssociateToProgram
 Scenario: Associate Course to the Program Type Product by Cs Admin
-When I navigate to "Manage Products" subtab from "Publishing" tab
+When I navigate to "Manage Products" subtab from "Publishing" maintab
 Then I should be on the "Manage Products" page
 When I search the "MySpanishLabMaster" course in coursespace
 Then I should be able to see the searched "MySpanishLabMaster" course in the left frame
@@ -77,7 +77,7 @@ Then I should see the successfull message "Announcement created successfully."
 
 #Purpose : Delete the Created General Type Product
 Scenario: Delete the Created General Type Product by CS Admin
-When I navigate to "Manage Products" subtab from "Publishing" tab
+When I navigate to "Manage Products" subtab from "Publishing" maintab
 Then I should be on the "Manage Products" page
 When I search the product type "HedCoreGeneral" in right frame
 And I click on "Delete" cmenu option of product in coursespace
@@ -85,7 +85,7 @@ Then I should see the successfull message "Products deleted successfully."
 
 #Purpose : Delete the Created Program Type Product
 Scenario: Delete the Created Program Type Product by CS Admin
-When I navigate to "Manage Products" subtab from "Publishing" tab
+When I navigate to "Manage Products" subtab from "Publishing" maintab
 Then I should be on the "Manage Products" page
 When I search the product type "HedCoreProgram" in right frame
 And I click on "Delete" cmenu option of product in coursespace
@@ -93,7 +93,7 @@ Then I should see the successfull message "Products deleted successfully."
 
 #Purpose: Approve Empty Course in Course space
 Scenario: Approve Empty Course by Cs Admin
-When I navigate to "Manage Products" subtab from "Publishing" tab
+When I navigate to "Manage Products" subtab from "Publishing" maintab
 Then I should be on the "Manage Products" page
 When I search the "HedEmptyClass" course in coursespace
 Then I should be able to see the searched "HedEmptyClass" course in the left frame

@@ -186,4 +186,10 @@
   <data name="CommonSteps_Loop_Initializer_Value" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="CommonSteps_Publishing_ManageProducts_Tab" xml:space="preserve">
+    <value>Manage Products</value>
+  </data>
+  <data name="CommonSteps_Publishing_ManagePrograms_Tab" xml:space="preserve">
+    <value>Manage Programs</value>
+  </data>
 </root>

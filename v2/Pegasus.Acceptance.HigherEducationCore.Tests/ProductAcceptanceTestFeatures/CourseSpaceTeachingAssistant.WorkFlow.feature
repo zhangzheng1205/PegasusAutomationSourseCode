@@ -20,6 +20,7 @@ Scenario: To Verify The Go to Student View Button Functionality By TA Instructor
 When I navigate to "Assignment Calendar" tab of the "Calendar" page
 Then I should be on the "Calendar" page
 When I select the "Go to Student View" link in Global Home page
+When I navigate to "Today's View" tab of the "Today's View" page
 Then I should be on the "Today's View" page
 And I should see the following tabs
 | TabName                  | WindowTitle      |

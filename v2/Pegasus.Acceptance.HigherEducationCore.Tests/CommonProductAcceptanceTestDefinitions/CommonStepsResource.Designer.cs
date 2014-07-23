@@ -197,6 +197,24 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.CommonProductAcceptanceTe
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Manage Products.
+        /// </summary>
+        internal static string CommonSteps_Publishing_ManageProducts_Tab {
+            get {
+                return ResourceManager.GetString("CommonSteps_Publishing_ManageProducts_Tab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Programs.
+        /// </summary>
+        internal static string CommonSteps_Publishing_ManagePrograms_Tab {
+            get {
+                return ResourceManager.GetString("CommonSteps_Publishing_ManagePrograms_Tab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to right.
         /// </summary>
         internal static string CommonSteps_RightFrame {

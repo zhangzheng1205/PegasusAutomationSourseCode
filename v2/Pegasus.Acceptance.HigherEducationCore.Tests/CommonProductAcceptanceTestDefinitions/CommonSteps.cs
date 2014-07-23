@@ -352,7 +352,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <param name="tabName">This is Tab Name.</param>
         /// <param name="pageName">This is Page Name.</param>
         [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page")]
-        public void NavigateToTabOfThePerticularPage(string tabName, string pageName)
+        public void TabNavigation(string tabName, string pageName)
         {
             //Navigate Administrator Tool Page
             Logger.LogMethodEntry("CommonSteps", "NavigateToTabOfThePerticularPage",
@@ -379,14 +379,15 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// </summary>
         /// <param name="subtabName">This is SubTab Name.</param>
         /// <param name="mainTabName">This is MainTab Name.</param>
-         [When(@"I navigate to ""(.*)"" subtab from ""(.*)"" tab")]
+         [When(@"I navigate to ""(.*)"" subtab from ""(.*)"" maintab")]
         public void NavigateToPublishingTab(string subtabName, string mainTabName)
         {
             //Navigate to perticular Page
             Logger.LogMethodEntry("CommonSteps", "NavigateToPublishingTab",
                 base.isTakeScreenShotDuringEntryExit);
             string pageTitle = base.GetPageTitle;
-            if (pageTitle != "Manage Programs" && pageTitle != "Manage Products")
+            if (pageTitle != CommonStepsResource.CommonSteps_Publishing_ManagePrograms_Tab
+                && pageTitle != CommonStepsResource.CommonSteps_Publishing_ManageProducts_Tab)
             {                
                 base.SelectWindow(pageTitle);
                 //Select The Perticular Tab
