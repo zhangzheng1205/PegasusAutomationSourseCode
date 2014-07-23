@@ -141,4 +141,10 @@
   <data name="DigitalPath_User_WorkSpaceTeacher_UC1" xml:space="preserve">
     <value>DigitalPath_User_WorkSpaceTeacher_UC1</value>
   </data>
+  <data name="HigherEdCore_Audio_EssayQuestion_UC1" xml:space="preserve">
+    <value>HigherEdCore_Audio_EssayQuestion_UC1</value>
+  </data>
+  <data name="HigherEdCore_Audio_PageAseet_UC1" xml:space="preserve">
+    <value>HigherEdCore_Audio_PageAseet_UC1</value>
+  </data>
 </root>
