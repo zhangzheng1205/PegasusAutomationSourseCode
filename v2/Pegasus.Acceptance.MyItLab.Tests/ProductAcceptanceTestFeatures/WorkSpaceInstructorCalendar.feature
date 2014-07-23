@@ -7,9 +7,7 @@
 # TestCase Id: HED_MIL_PWF_119
 # MyItLabSIMMasterCourse
 Scenario: To check the View By dropdown under Table of Contents By Ws Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
-Then I should be on the "Course Materials" page
-When I select the "Assignment Calendar" tab
+When I navigate to "Course Materials" tab and selected "Assignment Calendar" subtab
 Then I should be on the "Calendar" page
 When I select " Table of Contents" option in 'View By' dropdown
 Then I should see contents in the content frame which are created in course
@@ -24,17 +22,14 @@ When I click on the "Course Tools" tab
 And I click on 'Display as tab on main navigation row' link under course materials
 Then I should see the "Assignment Calendar" tab as main tab
 When I click on 'Display under Content tab' link under course materials
-And I navigate to the "Course Materials" tab
-And I select the "Assignment Calendar" tab
+And I navigate to "Course Materials" tab and selected "Assignment Calendar" subtab
 Then I should be on the "Calendar" page
 
 # Purpose: To check the All Items functionality under Table of Contents View by option
 # TestCase Id: HED_MIL_PWF_122
 # MyItLabSIMMasterCourse
 Scenario: To check the All Items functionality under Table of Contents View by option By Ws Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
-Then I should be on the "Course Materials" page
-When I select the "Assignment Calendar" tab
+When I navigate to "Course Materials" tab and selected "Assignment Calendar" subtab
 Then I should be on the "Calendar" page
 When I select " Table of Contents" option in 'View By' dropdown
 And I select the "AllItems" from show dropdown
@@ -44,9 +39,7 @@ Then I should see the asset contents in caledar frame
 # TestCase Id: HED_MIL_PWF_123 
 #MyItLabSIMMasterCourse
 Scenario: To check the Items Assigned functionality under Table of Contents View by option
-When I navigate to "Course Materials" tab of the "Course Materials" page
-Then I should be on the "Course Materials" page
-When I select the "Assignment Calendar" tab
+When I navigate to "Course Materials" tab and selected "Assignment Calendar" subtab
 Then I should be on the "Calendar" page
 When I select " Table of Contents" option in 'View By' dropdown
 And I select the "ItemsAssigned" from show dropdown
@@ -56,9 +49,7 @@ Then I should see the  assigned asset contents in caledar frame
 # TestCase Id: HED_MIL_PWF_126
 #MyItLabSIMMasterCourse
 Scenario: To check the Shown Items functionality under Table of Contents View by option By Ws Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
-Then I should be on the "Course Materials" page
-When I select the "Assignment Calendar" tab
+When I navigate to "Course Materials" tab and selected "Assignment Calendar" subtab
 Then I should be on the "Calendar" page
 When I select " Table of Contents" option in 'View By' dropdown
 And I select the "ShownItems" from show dropdown
@@ -68,9 +59,7 @@ Then I should see the asset contents in caledar frame
 # TestCase Id:HED_MIL_PWF_125
 #MyItLabSIMMasterCourse
 Scenario: To check the Instructor Graded functionality under Table of Contents View by option By Ws Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
-Then I should be on the "Course Materials" page
-When I select the "Assignment Calendar" tab
+When I navigate to "Course Materials" tab and selected "Assignment Calendar" subtab
 Then I should be on the "Calendar" page
 When I select " Table of Contents" option in 'View By' dropdown
 And I select the "InstructorGraded" from show dropdown

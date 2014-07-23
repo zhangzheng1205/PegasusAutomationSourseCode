@@ -7,9 +7,7 @@
 ## TestCase Id: HED_MIL_PWF_050
 #MyItLabSIM5MasterCourse
 Scenario: Adding the SIM5 Question in the Manage Question Bank
-When I navigate to "Course Materials" tab of the "Course Materials" page
-Then I should be on the "Course Materials" page
-When I navigate to the "Manage Question Bank" tab
+When I navigate to "Course Materials" tab and selected "Manage Question Bank" subtab
 Then I should be on the "Question Bank" page
 When I select 'Add Course Materials' option
 And I select "Add SIM5 Question" option

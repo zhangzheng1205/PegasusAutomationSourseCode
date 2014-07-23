@@ -18,9 +18,7 @@ Then I should see the score "100" of "SIM5Activity" activity of behavioral mode 
 #Test Case Id :HED_MIL_PWF_978
 #MyItLabInstructorCourse
 Scenario: Save and Run functionality for Study Plan single student report
-When I navigate to "Gradebook" tab of the "Gradebook" page
-Then I should be on the "Gradebook" page
-When I navigate to "Reports" tab of the "Reports" page
+When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
 When I click on 'Study Plan Single Student' report link
 And I select options to create 'Study Plan Single Student' report
@@ -44,9 +42,7 @@ When I click on "Cancel" button
 #Test Case Id :HED_MIL_PWF_963
 #MyItLabInstructorCourse
 Scenario: To verify the functionality of "Run Report" button in the Options Page (with valid details added in the fields provided)
-When I navigate to "Gradebook" tab of the "Gradebook" page
-Then I should be on the "Gradebook" page
-When I navigate to "Reports" tab of the "Reports" page
+When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
 When I click on "TrainingFrequencyAnalysis" report type
 And I enter the valid data in the fields to 'Training Frequency Analysis' generate report
@@ -66,9 +62,7 @@ Then I should see the "MyItLabTrainingFrequencyAnalysis" report in 'My Reports' 
 #Test Case Id : HED_MIL_PWF_965
 #MyItLabInstructorCourse
 Scenario: Activity Results for Single Student by SMS Instructor
-When I navigate to "Gradebook" tab of the "Gradebook" page
-Then I should be on the "Gradebook" page
-When I navigate to "Reports" tab of the "Reports" page
+When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
 When I click on "ActivityResultsSingleStudent" report type
 And I select options to generate report by instructor for "Test"
@@ -80,9 +74,7 @@ When I close the "Activity Results (Single Student)" window
 #Test Case Id : HED_MIL_PWF_972
 #MyItLabInstructorCourse
 Scenario: To verify the functionality of "Most Recent" radio button by SMS Instructor
-When I navigate to "Gradebook" tab of the "Gradebook" page
-Then I should be on the "Gradebook" page
-When I navigate to "Reports" tab of the "Reports" page
+When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
 When I click on "ExamFrequencyAnalysis" report type
 And I enter the exam frequency analysis valid data in the fields to generate report
@@ -107,9 +99,7 @@ When I close the "Certificate of Completion (Exam)" window
 #Test Case Id : HED_MIL_PWF_968
 #MyItLabInstructorCourse
 Scenario: Certificate of Competition Training based By SMS Instructor
-When I navigate to "Gradebook" tab of the "Gradebook" page
-Then I should be on the "Gradebook" page
-When I navigate to "Reports" tab of the "Reports" page
+When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
 When I click on "CertificateofCompletionTraining" certificate type
 And I enter the valid data in the fields to generate certificate
@@ -120,9 +110,7 @@ When I close the "Certificate of Completion (Training)" window
 #Purpose : Certificate of Competition Exam based 
 #Test Case Id : HED_MIL_PWF_967
 Scenario: Certificate of Competition Exam based By SMS Instructor
-When I navigate to "Gradebook" tab of the "Gradebook" page
-Then I should be on the "Gradebook" page
-When I navigate to "Reports" tab of the "Reports" page
+When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
 When I click on "CertificateofCompletionExam" certificate type
 And I enter the valid data in the fields to generate certificate for Exam report
