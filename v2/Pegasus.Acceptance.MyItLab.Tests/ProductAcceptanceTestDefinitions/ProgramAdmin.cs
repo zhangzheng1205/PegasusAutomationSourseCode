@@ -185,6 +185,25 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             "ToValidateTheMessage",
               base.isTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="courseTypeEnum"></param>
+        [When(@"I search the section of ""(.*)""")]
+        public void SearchSection(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Verify Section in Active State
+            Logger.LogMethodEntry("ProgramAdmin", "SearchSection",
+            base.isTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Approve Section in Active State
+            new ManageTemplatePage().SearchEntityInProgramAdministration(course.SectionName);
+            Logger.LogMethodExit("ProgramAdmin", "SearchSection",
+            base.isTakeScreenShotDuringEntryExit);
+        }
+
     }
 
 
