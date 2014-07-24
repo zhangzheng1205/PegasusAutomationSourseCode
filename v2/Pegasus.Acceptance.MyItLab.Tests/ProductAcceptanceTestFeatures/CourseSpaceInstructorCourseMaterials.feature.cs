@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
 testRunner.And("I selected activity \"Access Chapter 1: End-of-Chapter Quiz\" and assigned in My Co" +
                     "urse frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

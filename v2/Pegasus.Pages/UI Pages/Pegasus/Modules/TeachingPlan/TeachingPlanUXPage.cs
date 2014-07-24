@@ -337,11 +337,36 @@ namespace Pegasus.Pages.UI_Pages
                     base.SelectWindow(TeachingPlanUXPageResource.
                         TeachingPlanUX_Page_CourseMaterials_WindowName);
                     base.SwitchToIFrameById("ifrmLeft");
-                    base.WaitForElement(By.PartialLinkText("Technology in Action, 10e"));
-                    base.ClickLinkByPartialLinkText("Technology in Action, 10e");
-                    base.WaitForElement(By.Id("grdContentLibrary"));
-                    int getActivityCount = base.GetElementCountByXPath("//table[@id ='grdContentLibrary$contentCntr']/tbody");
-                    IWebElement expectedActivityName = base.GetWebElementPropertiesByXPath("//table[@id ='grdContentLibrary']/tr");
+                    base.WaitForElement(By.PartialLinkText("GO! with Microsoft Access 2013 Comprehensive"));
+                    base.ClickLinkByPartialLinkText("GO! with Microsoft Access 2013 Comprehensive");
+
+                    base.WaitForElement(By.PartialLinkText("Access Chapter 1: Getting Started with Microsoft Access 2013"));
+                    base.ClickLinkByPartialLinkText("Access Chapter 1: Getting Started with Microsoft Access 2013");
+
+                    base.WaitForElement(By.PartialLinkText("Access Chapter 1: Activities"));
+                    base.ClickLinkByPartialLinkText("Access Chapter 1: Activities");
+
+
+
+                    base.WaitForElement(By.PartialLinkText("Access Chapter 1: End-of-Chapter Activities"));
+                    base.ClickLinkByPartialLinkText("Access Chapter 1: End-of-Chapter Activities");
+
+                    string isRequiredAssetPresent = base.GetElementTextByID("grdContentLibrary$divContent");
+                    if (isRequiredAssetPresent.Contains(activityName))
+                    {
+                        base.WaitForElement((By.Id("grdContentLibrary$_ctrl0")));
+                        base.ClickCheckBoxById("grdContentLibrary$_ctrl0");
+
+                    }
+
+                    
+                    base.SwitchToDefaultPageContent();
+
+                    base.WaitForElement(By.Id("_ctl0:_ctl0:phBody:PageContent:imgbtnAddContent"));
+                    base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesById("_ctl0:_ctl0:phBody:PageContent:imgbtnAddContent"));
+                    
+
+
                     break;
             }
         }
