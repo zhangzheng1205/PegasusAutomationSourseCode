@@ -81,7 +81,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 10
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 12
@@ -109,7 +109,7 @@ testRunner.Then("I should see the \"Passed\" status of the \"Test\" activity typ
 #line 21
 this.ScenarioSetup(scenarioInfo);
 #line 22
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 23
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 24
@@ -142,7 +142,7 @@ testRunner.And("I should see the message \"Activity has been started and saved f
 #line 36
 this.ScenarioSetup(scenarioInfo);
 #line 37
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 38
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 39
@@ -172,7 +172,7 @@ testRunner.Then("I should see the \"Submitted\" status of the \"Quiz\" activity 
 #line 50
 this.ScenarioSetup(scenarioInfo);
 #line 51
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 52
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 53

@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 10
-testRunner.When("I navigate to \"Today\'s View\" tab of the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 12
@@ -99,7 +99,7 @@ testRunner.When("I click New Grades alert option", ((string)(null)), ((TechTalk.
 #line 18
 this.ScenarioSetup(scenarioInfo);
 #line 19
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 21
@@ -125,7 +125,7 @@ testRunner.Then("I should see the successfull message \"Activity added successfu
 #line 30
 this.ScenarioSetup(scenarioInfo);
 #line 31
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 32
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 33
@@ -153,7 +153,7 @@ testRunner.Then("I should see the successfull message \"Activity added successfu
 #line 42
 this.ScenarioSetup(scenarioInfo);
 #line 43
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 44
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 45
@@ -177,7 +177,7 @@ testRunner.Then("I should see the successfull message \"Activity updated success
 #line 53
 this.ScenarioSetup(scenarioInfo);
 #line 54
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 55
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 56

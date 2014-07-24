@@ -21,7 +21,7 @@ Then I should be on the "Program Administration" page
 #Purpose: To Associate Activity Content From Course Materials Frame To MyCourse
 #MyItLabInstructorCourse
 Scenario: Associate Activity From Course Materials Frame To MyCourse
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I associate the "SIM5Activity" activity of behavioral mode "SkillBased" to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
@@ -29,7 +29,7 @@ Then I should see the successfull message "Content item is added to My Course"
 #Purpose: To Associate SIM5 Studyplan Content From Course Materials Frame To MyCourse
 #MyItLabInstructorCourse
 Scenario: Associate SIM5 Studyplan From Course Materials Frame To MyCourse
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I associate the "SIM5StudyPlan" activity of behavioral mode "SkillBased" to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
@@ -38,7 +38,7 @@ Then I should see the successfull message "Content item is added to My Course"
 # TestCase Id: HED_MIL_PWF_882
 #MyItLabInstructorCourse
 Scenario: Verify the functionality of "Apply Grade schema" in Gradebook by SmsInstructor
-When I navigate to "Gradebook" tab of the "Gradebook" page
+When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 When I click on view grade "SIM5StudyPlan" of behavioral mode type "SkillBased" in Gradebook 
 And I click on cmenu "ApplyGradeSchema" of studyplan Training Material "Sim5PreTest"
@@ -57,7 +57,7 @@ And I should see the "Sim5PreTest" activity status "100" in Gradebook for all th
 #Test Case Id : HED_MIL_PWF_509
 #MyItLabInstructorCourse
 Scenario: Edit Grade in View Submission for Manual Gradable Activity By SMS Instructor
-When I navigate to "Gradebook" tab of the "Gradebook" page
+When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 When I click the cmenu "ViewAllSubmissions" of asset "Quiz" 
 Then I should be on the "View Submission" page
@@ -67,18 +67,18 @@ When I edit the grade in view submission page
 #Test Case Id : HED_MIL_PWF_1002
 #MyItLabInstructorCourse
 Scenario: To check the Gradebook view for multiple visit in same session By SMS Instructor
-When I navigate to "Gradebook" tab of the "Gradebook" page
+When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 When I apply 'Assignment Types' filter in gradebook
-And I navigate to the "Today's View" tab
-And I navigate to the "Gradebook" tab
+And I navigate to "Today's View" tab
+And I navigate to "Gradebook" tab
 Then I should see the filter selection changes made earlier
 
 #Purpose : To confirm that edited score of any status should propagate throughout the course
 #Test Case Id : HED_MIL_PWF_1008
 #MyItLabInstructorCourse
 Scenario: To confirm that edited score of status in course By SMS Instructor
-When I navigate to "Gradebook" tab of the "Gradebook" page
+When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 When I click the cmenu "ViewAllSubmissions" of asset "Test" 
 Then I should be on the "View Submission" page

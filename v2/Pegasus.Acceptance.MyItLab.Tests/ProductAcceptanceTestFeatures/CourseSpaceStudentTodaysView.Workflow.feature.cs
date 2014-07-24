@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 10
-testRunner.When("I navigate to \"Today\'s View\" tab of the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 12
@@ -106,7 +106,7 @@ testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((Te
 #line 21
 this.ScenarioSetup(scenarioInfo);
 #line 22
-testRunner.When("I navigate to \"Today\'s View\" tab of the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 23
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 24
@@ -142,7 +142,7 @@ testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((Te
 #line 37
 this.ScenarioSetup(scenarioInfo);
 #line 38
-testRunner.When("I navigate to \"Today\'s View\" tab of the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 39
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40

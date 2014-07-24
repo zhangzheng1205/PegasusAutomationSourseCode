@@ -15,6 +15,7 @@ Given I am on the "Global Home" page
 Scenario: Display of Grades in the Gradebook By By TA Instructor
 When I enter in the "MyItLabInstructorCourse" from the Global Home page as "HedTeacherAssistant" 
 Then I should be on the "Today's View" page
+When I navigate to "Gradebook" tab
 When I navigate to the "Gradebook" tab
 Then I should be on the "Gradebook" page
 And I should see the score "100" of "SIM5Activity" activity of behavioral mode "SkillBased" type

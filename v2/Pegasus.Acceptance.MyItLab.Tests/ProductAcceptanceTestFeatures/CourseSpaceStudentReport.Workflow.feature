@@ -7,7 +7,7 @@
 #TestCase Id : HED_MIL_PWF_957
 #MyItLabInstructorCourse
 Scenario: To check the functionality of the view submission report by SMS Student
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'View Submissions' cmenu option of "SIM5StudyPlan" which has been submitted
 Then I should see the total submission "1/1"
@@ -18,7 +18,7 @@ When I close the "View Submission" window
 #TestCase Id : HED_MIL_PWF_953
 #MyItLabInstructorCourse
 Scenario: To Check the Functionality of the View Button in Report page by SMS Student
-When I navigate to "Grades" tab of the "Gradebook" page
+When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I click on the "SIM5StudyPlan" 'View Grades' option 
 And I click on cmenu "View Report" of asset "Sim5PreTest"
@@ -32,7 +32,7 @@ And I close the "StudyPlan Summary Report" window
 #TestCase Id : HED_MIL_PWF_956
 #MyItLabInstructorCourse
 Scenario: To check the functionality of the close button in reports page by SMS Student
-When I navigate to "Grades" tab of the "Gradebook" page
+When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I click on the "SIM5StudyPlan" 'View Grades' option 
 And I click on cmenu "View Report" of asset "Sim5PreTest"

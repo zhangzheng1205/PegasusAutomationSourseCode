@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
 #line 8
 this.ScenarioSetup(scenarioInfo);
 #line 9
-testRunner.When("I navigate to \"Today\'s View\" tab of the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 11
@@ -100,7 +100,7 @@ testRunner.Then("I should see the \"Passed\" status of the \"SIM5Activity\" acti
 #line 17
 this.ScenarioSetup(scenarioInfo);
 #line 18
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 20
@@ -124,7 +124,7 @@ testRunner.Then("I should see the \"In Progress\" status of the \"SIM5StudyPlan\
 #line 26
 this.ScenarioSetup(scenarioInfo);
 #line 27
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 28
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 29
@@ -151,7 +151,7 @@ testRunner.Then("I should see the \"In Progress\" status of the \"SIM5StudyPlan\
 #line 38
 this.ScenarioSetup(scenarioInfo);
 #line 39
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 40
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 41
@@ -173,7 +173,7 @@ testRunner.Then("I should see the \"In Progress\" status of the \"SIM5StudyPlan\
 #line 47
 this.ScenarioSetup(scenarioInfo);
 #line 48
-testRunner.When("I navigate to \"Grades\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 49
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 50
@@ -201,7 +201,7 @@ testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((Te
 #line 60
 this.ScenarioSetup(scenarioInfo);
 #line 61
-testRunner.When("I navigate to \"Grades\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 62
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 63

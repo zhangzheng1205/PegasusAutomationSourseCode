@@ -7,9 +7,7 @@
 #Test Case Id :HED_MIL_PWF_227
 #MyItLabInstructorCourse
 Scenario: Day view in the Expanded calendar
-When I navigate to "Course Materials" tab of the "Course Materials" page
-Then I should be on the "Course Materials" page
-When I navigate to "Assignment Calendar" tab of the "Calendar" page
+When I navigate to "Course Materials" tab and selected "Assignment Calendar" subtab
 Then I should be on the "Calendar" page
 When I select the current date 
 And I select 'View Advanced calendar' option in calendar 

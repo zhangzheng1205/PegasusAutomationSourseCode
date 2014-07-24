@@ -7,7 +7,7 @@
 #Test Case Id : HED_MIL_PWF_590
 #MyItLabInstructorCourse
 Scenario: To verify the functionality of alert listed in New Grades By SMS Instructor
-When I navigate to "Today's View" tab of the "Today's View" page
+When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 And I should successfully see the alert for New Grades
 When I click New Grades alert option
@@ -16,7 +16,7 @@ When I click New Grades alert option
 #Test Case Id : HED_MIL_PWF_424
 #MyItLabInstructorCourse
 Scenario: To Create Test with Basic Random Activity By SMS Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Test" activity type
@@ -28,7 +28,7 @@ Then I should see the successfull message "Activity added successfully."
 #Test Case Id : HED_MIL_PWF_434
 #MyItLabInstructorCourse
 Scenario: To Create Homework with Basic Random Activity By SMS Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Homework" activity type
@@ -40,7 +40,7 @@ Then I should see the successfull message "Activity added successfully."
 #Test Case Id : HED_MIL_PWF_495
 #MyItLabInstructorCourse
 Scenario: To Set Feedback Preference for Homework with Basic Random Activity By SMS Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 And I should see "HomeWork" activity in the Content Library Frame
 When I click on "Edit" cmenu option of activity in "CsSmsInstructor"
@@ -51,7 +51,7 @@ Then I should see the successfull message "Activity updated successfully."
 #Test Case Id : HED_MIL_PWF_509
 #MyItLabInstructorCourse
 Scenario: To Create Quiz with Manual Gradable Activity By SMS Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option
 And I click on the "Quiz" activity type

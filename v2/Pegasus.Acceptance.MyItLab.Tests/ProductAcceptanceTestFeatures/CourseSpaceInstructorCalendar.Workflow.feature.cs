@@ -79,21 +79,17 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 10
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab and selected \"Assignment Calendar\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 12
-testRunner.When("I navigate to \"Assignment Calendar\" tab of the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 14
+#line 12
 testRunner.When("I select the current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
+#line 13
 testRunner.And("I select \'View Advanced calendar\' option in calendar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
+#line 14
 testRunner.Then("I should see the \"Assign Course Materials\" option with \"DayWeekMonth\" and \"Add No" +
                     "te\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 17
+#line 15
 testRunner.And("I should see the message of calendar \"0 Items Due Today\" and \"No Items are Due To" +
                     "day\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -108,40 +104,40 @@ testRunner.And("I should see the message of calendar \"0 Items Due Today\" and \
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drag and drop a single content to a day and display of Assigned content in Day Vi" +
                     "ew", ((string[])(null)));
-#line 22
+#line 20
 this.ScenarioSetup(scenarioInfo);
-#line 23
+#line 21
 testRunner.When("I navigate to \"Sections\" tab of the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
+#line 22
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 25
+#line 23
 testRunner.When("I search the \"MyItLabProgramCourse\" first section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
+#line 24
 testRunner.And("I click the \"Enter Section as Instructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
+#line 25
 testRunner.And("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
+#line 26
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 29
+#line 27
 testRunner.When("I navigate to \"Assignment Calendar\" tab of the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
+#line 28
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 31
+#line 29
 testRunner.When("I search the \"SIM5Activity\" activity of behavioral mode \"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
+#line 30
 testRunner.Then("I should see the searched \"SIM5Activity\" activity of behavioral mode \"SkillBased\"" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 33
+#line 31
 testRunner.When("I \'Drag and Drop\' the \"SIM5Activity\" activity of behavioral mode \"SkillBased\" on " +
                     "current day", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 32
 testRunner.Then("I should see the \"SIM5Activity\" activity of behavioral mode \"SkillBased\" assigned" +
                     " by \'Drag and Drop\' in day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 35
+#line 33
 testRunner.And("I should see the message \"1 Item Due Today\" in day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 36
+#line 34
 testRunner.When("I select \'Home\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 37
+#line 35
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -155,32 +151,32 @@ testRunner.Then("I should be on the \"Program Administration\" page", ((string)(
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drag and drop a single content to a day and display of Assigned content in Month " +
                     "View", ((string[])(null)));
-#line 43
+#line 41
 this.ScenarioSetup(scenarioInfo);
-#line 44
+#line 42
 testRunner.When("I navigate to \"Sections\" tab of the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
+#line 43
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 46
+#line 44
 testRunner.When("I search the \"MyItLabProgramCourse\" first section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 47
+#line 45
 testRunner.And("I click the \"Enter Section as Instructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 48
+#line 46
 testRunner.And("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 49
+#line 47
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
+#line 48
 testRunner.When("I navigate to \"Assignment Calendar\" tab of the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 49
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 52
+#line 50
 testRunner.When("I click on the calendar icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 53
+#line 51
 testRunner.Then("I should see the \"SIM5Activity\" activity of behavioral mode \"SkillBased\" assigned" +
                     " by \'Drag and Drop\' in day view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 54
+#line 52
 testRunner.When("I select \'Home\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 55
+#line 53
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -194,34 +190,34 @@ testRunner.Then("I should be on the \"Program Administration\" page", ((string)(
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To check the Status of the assigned Content in the Status Column By SMS Instructo" +
                     "r", ((string[])(null)));
-#line 60
+#line 58
 this.ScenarioSetup(scenarioInfo);
-#line 61
+#line 59
 testRunner.When("I navigate to \"Sections\" tab of the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
+#line 60
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 63
+#line 61
 testRunner.When("I search the \"MyItLabProgramCourse\" first section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
+#line 62
 testRunner.And("I click the \"Enter Section as Instructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 65
+#line 63
 testRunner.And("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 66
+#line 64
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 67
+#line 65
 testRunner.When("I navigate to \"Assignment Calendar\" tab of the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 68
+#line 66
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 69
+#line 67
 testRunner.When("I search the \"SIM5Activity\" activity of behavioral mode \"SkillBased\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 70
+#line 68
 testRunner.Then("I should see the searched \"SIM5Activity\" activity of behavioral mode \"SkillBased\"" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 71
+#line 69
 testRunner.And("I should see the Status of the assigned content in status column", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 72
+#line 70
 testRunner.When("I select \'Home\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 73
+#line 71
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

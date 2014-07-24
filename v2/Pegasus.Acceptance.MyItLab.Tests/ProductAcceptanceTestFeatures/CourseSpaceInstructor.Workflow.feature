@@ -6,7 +6,7 @@
 #Purpose : Set Time limit for SIM Study Plan Pre test as SMS Instructor
 #MyItLabInstructorCourse
 Scenario: Set Time limit for SIM Study Plan Pre test as SMS Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 And I should see "SIM5StudyPlan" activity in the Content Library Frame
 When I click on "Edit" cmenu option of activity in "CsSmsInstructor"
@@ -20,7 +20,7 @@ Then I should see the successfull message "Myitlab Study Plan updated successful
 # TestCase Id: HED_MIL_PWF_492
 #MyItLabInstructorCourse
 Scenario: To Set Feedback Preference for Test with Basic Random Activity By SMS Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 And I should see "Test" activity in the Content Library Frame
 When I click on "Edit" cmenu option of activity in "CsSmsInstructor"

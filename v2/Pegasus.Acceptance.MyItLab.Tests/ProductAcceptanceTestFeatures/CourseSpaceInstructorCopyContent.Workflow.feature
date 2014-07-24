@@ -38,7 +38,7 @@ Then I should be on the "Program Administration" page
 # TestCase Id: HED_MIL_PWF_1013
 #MyItLabInstructorCourse
 Scenario: To check the functionality that ensures the availability and not availability of assets between the date range
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select 'Add Course Materials' in 'My Course'
 And I click on the "myitlab Study Plan" activity type
@@ -61,7 +61,7 @@ Then I should see the successfull message "Properties updated successfully."
 #Test Case Id : HED_MIL_PWF_053
 #MyItLabInstructorCourse
 Scenario: Create SIM5Activity By SMS Instructor
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select 'Add Course Materials' in 'My Course'
 And I click on the "Homework" activity type

@@ -6,7 +6,7 @@
 #Purpose: To Submit Sim Activity Inside Instructor Course
 #MyItLabInstructorCourse
 Scenario: Activity Submission Inside Instructor Course by SMS Student
-When I navigate to "Today's View" tab of the "Today's View" page
+When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I submit the "SIM5Activity" activity of behavioral mode "SkillBased" type
 Then I should see the "Passed" status of the "SIM5Activity" activity of behavioral mode "SkillBased" type
@@ -15,7 +15,7 @@ Then I should see the "Passed" status of the "SIM5Activity" activity of behavior
 # TestCase ID: HED_MIL_PWF_392
 #MyItLabInstructorCourse
 Scenario: To Check The Student Launch The SIM study Plan PreTest by SMS Student
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I submit the "SIM5StudyPlan" pretest activity of behavioral mode type "SkillBased"
 Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
@@ -24,7 +24,7 @@ Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of be
 #TestCase Id: HED_MIL_PWF_393
 #MyItLabInstructorCourse
 Scenario: To check the Student : SIM study Plan  launch (Skill based) and display of Total time taken in VS Page
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I open the "SIM5StudyPlan" Activity
 Then I should be on the "myitlab Study Plan" page
@@ -36,7 +36,7 @@ Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of be
 # TestCase ID: HED_MIL_PWF_395
 #MyItLabInstructorCourse
 Scenario: To Check The Student Launch The SIM study Plan Trainig Material by SMS Student
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I submit the "SIM5StudyPlan" activity of behavioral mode type "SkillBased" using Training Material
 Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of behavioral mode "SkillBased" type
@@ -45,7 +45,7 @@ Then I should see the "In Progress" status of the "SIM5StudyPlan" activity of be
 #TestCase Id: HED_MIL_PWF_390
 #MyItLabInstructorCourse
 Scenario: Display Grades in Gradebook
-When I navigate to "Grades" tab of the "Gradebook" page
+When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I click on the "SIM5StudyPlan" 'View Grades' option 
 Then I should see the pre test "Sim5PreTest" score "0"
@@ -58,7 +58,7 @@ When I close the "View Submission" window
 #TestCase Id : HED_MIL_PWF_396
 #MyItLabInstructorCourse
 Scenario: Display of View Grades for Students Training materials
-When I navigate to "Grades" tab of the "Gradebook" page
+When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I click on the "SIM5StudyPlan" 'View Grades' option 
 Then I should see the pre test training "Sim5PreTest" score "100"

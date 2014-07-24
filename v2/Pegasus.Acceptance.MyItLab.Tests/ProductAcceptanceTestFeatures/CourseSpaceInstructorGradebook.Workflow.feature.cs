@@ -112,7 +112,7 @@ testRunner.Then("I should be on the \"Program Administration\" page", ((string)(
 #line 23
 this.ScenarioSetup(scenarioInfo);
 #line 24
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 25
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 26
@@ -133,7 +133,7 @@ testRunner.Then("I should see the successfull message \"Content item is added to
 #line 31
 this.ScenarioSetup(scenarioInfo);
 #line 32
-testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 33
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 34
@@ -154,7 +154,7 @@ testRunner.Then("I should see the successfull message \"Content item is added to
 #line 40
 this.ScenarioSetup(scenarioInfo);
 #line 41
-testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 42
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 43
@@ -202,7 +202,7 @@ testRunner.And("I should see the \"Sim5PreTest\" activity status \"100\" in Grad
 #line 59
 this.ScenarioSetup(scenarioInfo);
 #line 60
-testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 61
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 62
@@ -224,15 +224,15 @@ testRunner.When("I edit the grade in view submission page", ((string)(null)), ((
 #line 69
 this.ScenarioSetup(scenarioInfo);
 #line 70
-testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 71
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 72
 testRunner.When("I apply \'Assignment Types\' filter in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 73
-testRunner.And("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 74
-testRunner.And("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 75
 testRunner.Then("I should see the filter selection changes made earlier", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -248,7 +248,7 @@ testRunner.Then("I should see the filter selection changes made earlier", ((stri
 #line 80
 this.ScenarioSetup(scenarioInfo);
 #line 81
-testRunner.When("I navigate to \"Gradebook\" tab of the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 82
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 83

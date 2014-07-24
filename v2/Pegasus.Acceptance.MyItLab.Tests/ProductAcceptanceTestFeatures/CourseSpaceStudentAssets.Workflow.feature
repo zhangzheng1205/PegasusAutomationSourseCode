@@ -8,7 +8,7 @@
 #TestCase Id: HED_MIL_PWF_420
 #MyItLabInstructorCourse
 Scenario: Context menu option  view submission of a Activity in View All Course Materials
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I open the "SIM5StudyPlan" Activity
 Then I should be on the "myitlab Study Plan" page
@@ -21,7 +21,7 @@ And I should see the score "0" in View Submission page
 #Testcase Id: HED_MIL_PWF_421
 #MyItLabInstructorCourse
 Scenario: Context menu option compose mail of a Activity in  View All Course Materials
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I open the "SIM5StudyPlan" Activity
 Then I should be on the "myitlab Study Plan" page
@@ -39,7 +39,7 @@ And I close the "View Submission" window
  #Testcase Id : HED_MIL_PWF_422
  #MyItLabInstructorCourse
 Scenario: Context menu option get information of a Activity in View All Course Materials
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select cmenu option "GetInformation" of activity "SIM5Activity"
 Then I should see the "SIM5Activity" in Information frame
@@ -48,7 +48,7 @@ Then I should see the "SIM5Activity" in Information frame
 #Test Case Id : HED_MIL_PWF_495
 #MyItLabInstructorCourse
 Scenario: To verify the behavior of the presentation when Display feedback option is set to Never in activity preferences 
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I open the activity named as "HomeWork"
 And I submit the "HomeWork" activity
@@ -68,7 +68,7 @@ Then I should see the 'Verb Chart' tool launched successfully
 #TestCase Id:HED_MIL_PWF_492
 #MyItLabInstructorCourse
 Scenario: When Display correct answers after student submits the activity option is selected At attempt
-When I navigate to "Course Materials" tab of the "Course Materials" page
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I open the activity named as "Test"
 And I submit the "Test" activity
