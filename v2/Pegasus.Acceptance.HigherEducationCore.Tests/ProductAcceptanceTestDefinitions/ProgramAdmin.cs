@@ -504,9 +504,41 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
                 base.isTakeScreenShotDuringEntryExit);
             //SaveUpdate method to create or update the course.
-            new EditCopyTemplatesSectionsPage().ClickToCreateUpdate();
+            new EditCopyTemplatesSectionsPage().CreateSharedLibrary();
 
             Logger.LogMethodExit("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// click on the copy button, during the copy of the template/section as template inside the program 
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        [When(@"I click ""(.*)"" button ""(.*)""")]
+        public void ClickOnCopyButton(string Button, string Oparation)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "ClickOnCopyButton",
+                base.isTakeScreenShotDuringEntryExit);
+            //SaveUpdate method to create or update the course.
+            new EditCopyTemplatesSectionsPage().ClickToCreateUpdate();
+            Logger.LogMethodExit("ProgramAdmin", "ClickOnCopyButton",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Copying the section from section inside the program
+        /// </summary>
+        /// <param name="Button"></param>
+        /// <param name="Oparation"></param>
+        [When(@"I click ""(.*)"" button to copy ""(.*)""")]
+        public void ClickonCopySectionButton(string Button, string Oparation)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "ClickonCopySectionButton",
+          base.isTakeScreenShotDuringEntryExit);
+            //SaveUpdate method to create or update the course.
+            new EditCopyTemplatesSectionsPage().CopySection();
+            Logger.LogMethodExit("ProgramAdmin", "ClickonCopySectionButton",
                 base.isTakeScreenShotDuringEntryExit);
         }
 

@@ -90,6 +90,25 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         }
 
         /// <summary>
+        /// Verify the display message is valid or not.
+        /// </summary>
+        /// <param name="successMessage">This is Success Message Text.</param>
+        [Then("I should see successfull message \"(.*)\"")]
+        public void DisplaySuccessfullMessageStopCopyEnroll(String successMessage)
+        {
+            // Method To Verify the Success Message 
+            Logger.LogMethodEntry("CommonSteps", "DisplaySuccessfullMessageStopCopyEnroll",
+                base.isTakeScreenShotDuringEntryExit);
+            //Verify Correct Message Present on the Page
+            bool isSuccessMessageExist = base.IsMessageExists(successMessage,
+                CommonStepsResource.CommonSteps_SuccessMessage_Class_Locator);
+            Logger.LogAssertion("VerifySussessfullmsg", ScenarioContext.Current.ScenarioInfo.Title,
+              () => Assert.IsTrue(isSuccessMessageExist));
+            Logger.LogMethodExit("CommonSteps", "DisplaySuccessfullMessageStopCopyEnroll",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         ///  Click on the Link .
         /// </summary>
         /// <param name="linkName">This is Link name on which click is required.</param>
