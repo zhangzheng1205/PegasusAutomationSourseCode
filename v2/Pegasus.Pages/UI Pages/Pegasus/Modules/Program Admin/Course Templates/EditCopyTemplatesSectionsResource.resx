@@ -127,7 +127,7 @@
     <value>txtCourseName</value>
   </data>
   <data name="CopyAsSharedLibrary_Page_Date_Format" xml:space="preserve">
-        <value>MM/dd/yyyy</value>
+    <value>MM/dd/yyyy</value>
   </data>
   <data name="SL_create_start_date" xml:space="preserve">
     <value>txtStartDate</value>
@@ -137,5 +137,14 @@
   </data>
   <data name="SuccessfulMessage_id_locator" xml:space="preserve">
     <value>PegasusMessageBoard</value>
+  </data>
+  <data name="CopyAsSection_Page_Window_Page_Title" xml:space="preserve">
+    <value>Copy as Section</value>
+  </data>
+  <data name="CopyAsSection_PopUpPage_Page_CheckBox_Id_Locator" xml:space="preserve">
+    <value>OnlyCourseContent</value>
+  </data>
+  <data name="CopyAsSection_Table_Id_Locator" xml:space="preserve">
+    <value>tableOnlyCourseContent</value>
   </data>
 </root>

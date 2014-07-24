@@ -20,7 +20,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickToCreateUpdate()
         {
             //Copy as shared library
-            logger.LogMethodEntry("CopyAsSharedLibraryPage", "ClickToCreateUpdate",
+            logger.LogMethodEntry("EditCopyTemplatesSectionsPage", "ClickToCreateUpdate",
                 base.isTakeScreenShotDuringEntryExit);
             try
             {    
@@ -46,8 +46,73 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("CopyAsSharedLibraryPage", "ClickToCreateUpdate",
+            logger.LogMethodExit("EditCopyTemplatesSectionsPage", "ClickToCreateUpdate",
                 base.isTakeScreenShotDuringEntryExit);
+        }
+
+        
+        /// <summary>
+        ///  Validate The Message On the Copy as Section Popup Page
+        /// </summary>
+
+        public Boolean ToValidateTheMessageOnPopupPage(string message)
+        {
+            //To Validate The Message On the Copy as Section Popup Page
+            logger.LogMethodEntry("EditCopyTemplatesSectionsPage", "ToValidateTheMessageOnPopupPage",
+            base.isTakeScreenShotDuringEntryExit);
+
+            //Initialize Variable
+            bool IsTrue = false; ;
+            try
+            {
+                //TO select the pop window so as to set focus to its elements.
+                base.SelectWindow(EditCopyTemplatesSectionsResource.CopyAsSection_Page_Window_Page_Title);
+
+                //Check the message excpected and obtained are same
+                IsTrue = base.IsElementContainsTextById(EditCopyTemplatesSectionsResource.CopyAsSection_Table_Id_Locator, message);
+            }
+            //Exception Handling
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("EditCopyTemplatesSectionsPage", "ToValidateTheMessageOnPopupPage",
+            base.isTakeScreenShotDuringEntryExit);
+
+            return IsTrue;
+        }
+
+        /// <summary>
+        /// Get the Section popup check box status
+        /// </summary>
+        public Boolean IsVerifyCheckBoxStatusNotSelected()
+        {
+            //To get the Section popup check box status
+            logger.LogMethodEntry("EditCopyTemplatesSectionsPage", "IsVerifyCheckBoxStatusNotSelected",
+            base.isTakeScreenShotDuringEntryExit);
+
+            //Variable Initialization
+            bool IsChecked = false;
+            try
+            {
+                //TO select the pop window so as to set focus to its elements.
+                base.SelectWindow(EditCopyTemplatesSectionsResource.CopyAsSection_Page_Window_Page_Title);
+
+                //Fetch the check box selection property
+                IsChecked = base.GetWebElementPropertiesById(EditCopyTemplatesSectionsResource.
+                    CopyAsSection_PopUpPage_Page_CheckBox_Id_Locator).Selected;
+            }
+            //Exception Handling
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("EditCopyTemplatesSectionsPage", "IsVerifyCheckBoxStatusNotSelected",
+            base.isTakeScreenShotDuringEntryExit);
+
+            return IsChecked;
         }
     }
 }

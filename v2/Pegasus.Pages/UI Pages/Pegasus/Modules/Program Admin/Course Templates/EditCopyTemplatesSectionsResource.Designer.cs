@@ -62,6 +62,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Course_Templates 
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Copy as Section.
+        /// </summary>
+        internal static string CopyAsSection_Page_Window_Page_Title {
+            get {
+                return ResourceManager.GetString("CopyAsSection_Page_Window_Page_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OnlyCourseContent.
+        /// </summary>
+        internal static string CopyAsSection_PopUpPage_Page_CheckBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("CopyAsSection_PopUpPage_Page_CheckBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to tableOnlyCourseContent.
+        /// </summary>
+        internal static string CopyAsSection_Table_Id_Locator {
+            get {
+                return ResourceManager.GetString("CopyAsSection_Table_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to MM/dd/yyyy.
         /// </summary>
         internal static string CopyAsSharedLibrary_Page_Date_Format {
