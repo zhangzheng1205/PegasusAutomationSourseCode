@@ -34,7 +34,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             Logger.LogMethodEntry("AddContentFromLibrary", "ClickOnFolderInAddCourseMaterials",
                 base.isTakeScreenShotDuringEntryExit);
             //Click on MyTest folder in Add From Library
-            new TeachingPlanUXPage().
+            new TeachingPlanUxPage().
                 ClickOnFolderInAddCourseMaterialsFrame(expectedFolderName);
             //Logger exist
             Logger.LogMethodExit("AddContentFromLibrary", "ClickOnFolderInAddCourseMaterials",
@@ -58,7 +58,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             Logger.LogAssertion("VerifySuccessfullMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(activity.Name,
-                    new TeachingPlanUXPage().GetMyTestAssestsName(
+                    new TeachingPlanUxPage().GetMyTestAssestsName(
                     activity.Name)));
             //Logger exist
             Logger.LogMethodExit("AddContentFromLibrary", "SeeTheMyTestInMyTestFolder",

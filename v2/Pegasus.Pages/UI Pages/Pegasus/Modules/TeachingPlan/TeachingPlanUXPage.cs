@@ -16,13 +16,13 @@ namespace Pegasus.Pages.UI_Pages
     /// <summary>
     /// This class handles TeachingPlanUX Page Actions
     /// </summary>
-    public class TeachingPlanUXPage : BasePage
+    public class TeachingPlanUxPage : BasePage
     {
         /// <summary>
         /// The Static Instance of the Logger for the Class
         /// </summary>
-        private static readonly Logger logger = 
-            Logger.GetInstance(typeof(TeachingPlanUXPage));
+        private static readonly Logger Logger =
+            Logger.GetInstance(typeof(TeachingPlanUxPage));
 
         /// <summary>
         /// Get the Tabs Window Title.
@@ -34,7 +34,7 @@ namespace Pegasus.Pages.UI_Pages
             string tabName, string windowTitle)
         {
             //Get the Tabs Window Title
-            logger.LogMethodEntry("TeachingPlanUXPage", "GetTabsWindowTitle",
+            Logger.LogMethodEntry("TeachingPlanUXPage", "GetTabsWindowTitle",
                                    base.isTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getWindowTitle = string.Empty;
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("TeachingPlanUXPage", "GetTabsWindowTitle",
+            Logger.LogMethodExit("TeachingPlanUXPage", "GetTabsWindowTitle",
                                        base.isTakeScreenShotDuringEntryExit);
             //Returns the Window Title
             return getWindowTitle;
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
         private void NavigateToTabs(string tabName)
         {
             // Navigate to Tabs
-            logger.LogMethodEntry("TeachingPlanUXPage", "NavigateToTabs",
+            Logger.LogMethodEntry("TeachingPlanUXPage", "NavigateToTabs",
                                    base.isTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.PartialLinkText(tabName));
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Tab
             IWebElement getSubTabName = base.GetWebElementPropertiesByPartialLinkText(tabName);
             base.ClickByJavaScriptExecutor(getSubTabName);
-            logger.LogMethodExit("TeachingPlanUXPage", "NavigateToTabs",
+            Logger.LogMethodExit("TeachingPlanUXPage", "NavigateToTabs",
                                    base.isTakeScreenShotDuringEntryExit);
         }
 
@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetTheCopyContentOptionTextDisplayed()
         {
             //Get The 'Copy Content' Option Text Displayed
-            logger.LogMethodEntry("TeachingPlanUXPage", "GetTheCopyContentOptionTextDisplayed",
+            Logger.LogMethodEntry("TeachingPlanUXPage", "GetTheCopyContentOptionTextDisplayed",
                 base.isTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getCopyContentTextDisplayed = string.Empty;
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("TeachingPlanUXPage", "GetTheCopyContentOptionTextDisplayed",
+            Logger.LogMethodExit("TeachingPlanUXPage", "GetTheCopyContentOptionTextDisplayed",
                 base.isTakeScreenShotDuringEntryExit);
             return getCopyContentTextDisplayed;
         }
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnTheChangeSourceOption()
         {
             //Click On The 'Change Source' Option
-            logger.LogMethodEntry("TeachingPlanUXPage", "ClickOnTheChangeSourceOption",
+            Logger.LogMethodEntry("TeachingPlanUXPage", "ClickOnTheChangeSourceOption",
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("TeachingPlanUXPage", "ClickOnTheChangeSourceOption",
+            Logger.LogMethodExit("TeachingPlanUXPage", "ClickOnTheChangeSourceOption",
                 base.isTakeScreenShotDuringEntryExit);
         }
         /// <summary>
@@ -139,7 +139,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnActivity(string activityName)
         {
             //Click On The 'specific  Activity' for Editing
-            logger.LogMethodEntry("TeachingPlanUXPage", "ClickOnActivity",
+            Logger.LogMethodEntry("TeachingPlanUXPage", "ClickOnActivity",
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Navigate 'Add from Library' sub tab
                 NavigateToTabs(TeachingPlanUXPageResource.
                     TeachingPlanUX_Page_AddFromLibrary_Tab);
-               //Wait for Right Iframe
+                //Wait for Right Iframe
                 base.WaitForElement(By.Id(TeachingPlanUXPageResource.
                      TeachingPlanUX_Page_Course_Content_Iframe_Id));
                 //Switch to Content Frame
@@ -167,7 +167,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("TeachingPlanUXPage", "ClickOnActivity",
+            Logger.LogMethodExit("TeachingPlanUXPage", "ClickOnActivity",
                 base.isTakeScreenShotDuringEntryExit);
 
         }
@@ -180,7 +180,7 @@ namespace Pegasus.Pages.UI_Pages
             String expectedFolderName)
         {
             //Logger Entry
-            logger.LogMethodEntry("TeachingPlanUXPage", "ClickOnFolderInAddCourseMaterialsFrame",
+            Logger.LogMethodEntry("TeachingPlanUXPage", "ClickOnFolderInAddCourseMaterialsFrame",
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
@@ -203,9 +203,9 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(ex);
             }
-           
+
             //Logger Exist
-            logger.LogMethodExit("TeachingPlanUXPage", "ClickOnFolderInAddCourseMaterialsFrame",
+            Logger.LogMethodExit("TeachingPlanUXPage", "ClickOnFolderInAddCourseMaterialsFrame",
                 base.isTakeScreenShotDuringEntryExit);
         }
 
@@ -217,7 +217,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetMyTestAssestsName(String expectedActivityName)
         {
             //Logger Entry
-            logger.LogMethodExit("TeachingPlanUXPage", "GetMyTestAssestsName",
+            Logger.LogMethodExit("TeachingPlanUXPage", "GetMyTestAssestsName",
                 base.isTakeScreenShotDuringEntryExit);
             //Initialize variable
             String getMyTestAssetsName = string.Empty;
@@ -254,10 +254,10 @@ namespace Pegasus.Pages.UI_Pages
                     getMyTestAssetsName = base.GetInnerTextAttributeValueByXPath
                         (string.Format(TeachingPlanUXPageResource.
                         TeachingPlanUX_Page_Folder_Row_WithPointer_InCourseConten_Id_Locator,
-                        setRowCount)).Replace(Environment.NewLine,string.Empty).TrimEnd();
+                        setRowCount)).Replace(Environment.NewLine, string.Empty).TrimEnd();
                     if (getMyTestAssetsName.Contains(expectedActivityName))
                     {
-                       break;
+                        break;
                     }
                 }
             }
@@ -266,7 +266,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(ex);
             }
             //Logger Exist
-            logger.LogMethodExit("TeachingPlanUXPage", "GetMyTestAssestsName",
+            Logger.LogMethodExit("TeachingPlanUXPage", "GetMyTestAssestsName",
                 base.isTakeScreenShotDuringEntryExit);
             //return MyTest assets Name
             return getMyTestAssetsName;
@@ -278,7 +278,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnHomeButton()
         {
             //Click On Home Button
-            logger.LogMethodExit("TeachingPlanUXPage", "ClickOnHomeButton",
+            Logger.LogMethodExit("TeachingPlanUXPage", "ClickOnHomeButton",
               base.isTakeScreenShotDuringEntryExit);
             try
             {
@@ -298,7 +298,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("TeachingPlanUXPage", "ClickOnHomeButton",
+            Logger.LogMethodExit("TeachingPlanUXPage", "ClickOnHomeButton",
                 base.isTakeScreenShotDuringEntryExit);
         }
 
@@ -308,13 +308,12 @@ namespace Pegasus.Pages.UI_Pages
         public void SelectWindow()
         {
             //Select Window
-            logger.LogMethodExit("TeachingPlanUXPage", "SelectWindow",
+            Logger.LogMethodExit("TeachingPlanUXPage", "SelectWindow",
               base.isTakeScreenShotDuringEntryExit);
             //Initialize Variable
-            string getPageTitle = string.Empty;
             try
             {
-                getPageTitle = base.GetPageTitle;                
+                string getPageTitle = base.GetPageTitle;
                 //Select Window
                 base.SelectWindow(getPageTitle);
             }
@@ -322,9 +321,29 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("TeachingPlanUXPage", "SelectWindow",
+            Logger.LogMethodExit("TeachingPlanUXPage", "SelectWindow",
                 base.isTakeScreenShotDuringEntryExit);
         }
 
-     }
+        public void SelectActivityInCourseMaterialsLibraryFrame(string activityName)
+        {
+            switch (activityName)
+            {
+                case "Access Chapter 1: End-of-Chapter Quiz":
+
+                    //Wait for the Window
+                    base.WaitUntilWindowLoads(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_CourseMaterials_WindowName);
+                    base.SelectWindow(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_CourseMaterials_WindowName);
+                    base.SwitchToIFrameById("ifrmLeft");
+                    base.WaitForElement(By.PartialLinkText("Technology in Action, 10e"));
+                    base.ClickLinkByPartialLinkText("Technology in Action, 10e");
+                    base.WaitForElement(By.Id("grdContentLibrary"));
+                    int getActivityCount = base.GetElementCountByXPath("//table[@id ='grdContentLibrary$contentCntr']/tbody");
+                    IWebElement expectedActivityName = base.GetWebElementPropertiesByXPath("//table[@id ='grdContentLibrary']/tr");
+                    break;
+            }
+        }
+    }
 }

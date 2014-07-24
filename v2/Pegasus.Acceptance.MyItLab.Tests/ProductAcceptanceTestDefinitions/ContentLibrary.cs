@@ -129,6 +129,17 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                base.isTakeScreenShotDuringEntryExit);
         }
 
-       
+        [When(@"I selected activity ""(.*)"" and assigned in My Course frame")]
+        public void SelectedActivityAndAssignedInMyCourseFrame(string activityName)
+        {
+            Logger.LogMethodEntry("ContentLibrary",
+                 "SelectedActivityAndAssignedInMyCourseFrame",
+                 base.isTakeScreenShotDuringEntryExit);
+            new Pages.UI_Pages.TeachingPlanUxPage().
+                SelectActivityInCourseMaterialsLibraryFrame(activityName);
+            Logger.LogMethodExit("ContentLibrary",
+            "SelectedActivityAndAssignedInMyCourseFrame",
+            base.isTakeScreenShotDuringEntryExit);
+        }
     }
 }

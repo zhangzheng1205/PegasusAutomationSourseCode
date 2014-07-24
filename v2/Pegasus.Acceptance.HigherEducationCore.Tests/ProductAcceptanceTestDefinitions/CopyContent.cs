@@ -56,7 +56,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogAssertion("VerifyTheDisplayOfCopyContentOptionText",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(copyContentOptionText,
-                    new TeachingPlanUXPage().
+                    new TeachingPlanUxPage().
                     GetTheCopyContentOptionTextDisplayed()));            
             Logger.LogMethodExit("CopyContent",
                 "DisplayOfCopyContentOptionText",
@@ -74,7 +74,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "ClickOnTheChangeSourceOption",
                 base.isTakeScreenShotDuringEntryExit);
             //Click on the 'Change Source' option
-            new TeachingPlanUXPage().ClickOnTheChangeSourceOption();
+            new TeachingPlanUxPage().ClickOnTheChangeSourceOption();
             Logger.LogMethodExit("CopyContent",
                 "ClickOnTheChangeSourceOption",
                 base.isTakeScreenShotDuringEntryExit);
