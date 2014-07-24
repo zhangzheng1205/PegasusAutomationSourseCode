@@ -2920,7 +2920,7 @@ namespace Pegasus.Pages.UI_Pages
                             else
                             {
                                 //Select The Tab
-                                this.ClickonTab(parentTabName);
+                                this.ClickonTab(childTabName);
                                 break;
                             }
                         }
@@ -2967,20 +2967,20 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click on Tab.
         /// </summary>
-        /// <param name="mainTabName">This is Tab Name.</param>
-        private void ClickonTab(string mainTabName)
+        /// <param name="tabName">This is Tab Name.</param>
+        private void ClickonTab(string tabName)
         {
             //Click on Tab
             logger.LogMethodEntry("TodaysViewUXPage", "ClickonTab",
                 base.isTakeScreenShotDuringEntryExit);
             //Click On More Link if More Link Is Present
             //And The Required Tab Is Not Present
-            new TodaysViewUXPage().ClickTheMoreLinkIfPresent(mainTabName);
+            new TodaysViewUXPage().ClickTheMoreLinkIfPresent(tabName);
             //Wait For Element
-            base.WaitForElement(By.PartialLinkText(mainTabName));
+            base.WaitForElement(By.PartialLinkText(tabName));
             //Get Tab Element Property
             IWebElement getTabNameProperty = base.
-                GetWebElementPropertiesByPartialLinkText(mainTabName);
+                GetWebElementPropertiesByPartialLinkText(tabName);
             //Click on Tab 
             base.ClickByJavaScriptExecutor(getTabNameProperty);
             logger.LogMethodExit("TodaysViewUXPage", "ClickonTab",

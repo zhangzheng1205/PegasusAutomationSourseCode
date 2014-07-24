@@ -7,7 +7,7 @@
 #Purpose: To check the display of contents in student side Grades tab 
 # TestCase Id: HSS_Core_PWF_580
 Scenario: To check the display of contents in student side Grades tab By SMS Student
-When I navigate to "Grades" tab and selected "Grades" subtab
+When I navigate to "Grades" tab of the "Gradebook" page
 Then I should be on the "Gradebook" page
 And I should see columns and filter options displayed in gradebook
 And I should see folder navigation frame and filter dropdown

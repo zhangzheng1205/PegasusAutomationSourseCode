@@ -183,4 +183,7 @@
   <data name="TeachingPlanUX_Page_Section_WindowName" xml:space="preserve">
     <value>Program Administration</value>
   </data>
+  <data name="TeachingPlanUX_Page_Home_Link_PartialLinkText" xml:space="preserve">
+    <value>Home</value>
+  </data>
 </root>

@@ -12,8 +12,15 @@ When I navigate to "Course Materials" tab of the "Course Materials" page
 Then I should be on the "Course Materials" page
 When I open the "Test" Activity
 And I submit the activity in course material
-And I navigate to the "Today's View" tab
-Then I should successfully see the alert for New Grades
+
+
+#Used Instructor Course
+#Purpose: To lookup the obtained grades in student side
+# TestCase Id: HSS_Core_PWF_410
+Scenario: To Verify The New Grades By SMS Student
+When I navigate to "Today's View" tab of the "Today's View" page
+Then I should be on the "Today's View" page
+And I should successfully see the alert for New Grades
 When I click New Grades alert option
 Then I should see the successfully submitted "Test" activity name
 When I click the cmenu option 'ViewAllSubmissions' in student side

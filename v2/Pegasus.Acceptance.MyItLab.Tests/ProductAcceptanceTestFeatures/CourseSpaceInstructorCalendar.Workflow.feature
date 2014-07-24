@@ -22,9 +22,7 @@ When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
 When I search the "MyItLabProgramCourse" first section
 And I click the "Enter Section as Instructor"
-And I navigate to "Course Materials" tab of the "Course Materials" page
-Then I should be on the "Course Materials" page
-When I navigate to "Assignment Calendar" tab of the "Calendar" page
+And I navigate to "Course Materials" tab and selected "Assignment Calendar" subtab
 Then I should be on the "Calendar" page
 When I search the "SIM5Activity" activity of behavioral mode "SkillBased"
 Then I should see the searched "SIM5Activity" activity of behavioral mode "SkillBased"
@@ -43,9 +41,7 @@ When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
 When I search the "MyItLabProgramCourse" first section
 And I click the "Enter Section as Instructor"
-And I navigate to "Course Materials" tab of the "Course Materials" page
-Then I should be on the "Course Materials" page
-When I navigate to "Assignment Calendar" tab of the "Calendar" page
+And I navigate to "Course Materials" tab and selected "Assignment Calendar" subtab
 Then I should be on the "Calendar" page
 When I click on the calendar icon
 Then I should see the "SIM5Activity" activity of behavioral mode "SkillBased" assigned by 'Drag and Drop' in day view
@@ -60,9 +56,7 @@ When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
 When I search the "MyItLabProgramCourse" first section
 And I click the "Enter Section as Instructor"
-And I navigate to "Course Materials" tab of the "Course Materials" page
-Then I should be on the "Course Materials" page
-When I navigate to "Assignment Calendar" tab of the "Calendar" page
+And I navigate to "Course Materials" tab and selected "Assignment Calendar" subtab
 Then I should be on the "Calendar" page
 When I search the "SIM5Activity" activity of behavioral mode "SkillBased"
 Then I should see the searched "SIM5Activity" activity of behavioral mode "SkillBased"
