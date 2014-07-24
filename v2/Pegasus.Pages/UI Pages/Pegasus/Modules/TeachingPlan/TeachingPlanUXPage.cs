@@ -282,11 +282,13 @@ namespace Pegasus.Pages.UI_Pages
               base.isTakeScreenShotDuringEntryExit);
             try
             {
-                base.WaitForElement(By.Id(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_HomeButton_Id_Locator));
+                base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
+                    TeachingPlanUX_Page_Home_Link_PartialLinkText));
                 //Get Home Button Property
-                IWebElement getHomeButtonProperty = base.GetWebElementPropertiesById(
-                    TeachingPlanUXPageResource.TeachingPlanUX_Page_HomeButton_Id_Locator);
+                IWebElement getHomeButtonProperty =
+                    base.GetWebElementPropertiesByPartialLinkText(
+                    TeachingPlanUXPageResource.
+                    TeachingPlanUX_Page_Home_Link_PartialLinkText);
                 //Click On Home Button
                 base.ClickByJavaScriptExecutor(getHomeButtonProperty);
                 base.WaitUntilWindowLoads(TeachingPlanUXPageResource.
@@ -313,9 +315,8 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize Variable
             try
             {
-                string getPageTitle = base.GetPageTitle;
-                //Select Window
-                base.SelectWindow(getPageTitle);
+                //Select Default Window
+                base.SelectDefaultWindow();
             }
             catch (Exception e)
             {
