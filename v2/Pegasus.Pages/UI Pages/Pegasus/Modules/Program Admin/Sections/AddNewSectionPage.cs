@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
                     AddNewSection_Page_Section_Actual_EndDate_Format_DDMMYYYY)))
                 {
                     // enter section start and end date                           
-                    this.AddSectionStartAndEndDate(DateTime.Now.AddDays(1).ToString(AddNewSectionPageResource.
+                    this.AddSectionStartAndEndDate(DateTime.Now.ToString(AddNewSectionPageResource.
                         AddNewSection_Page_Date_Format_DDMMYYYY), DateTime.Now.AddDays(90).
                         ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_DDMMYYYY));
                 }
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
                    AddNewSection_Page_Section_Actual_EndDate_Format_MMDDYYYY)))
                 {
                     // enter section start and end date                           
-                    this.AddSectionStartAndEndDate(DateTime.Now.AddDays(1).ToString(AddNewSectionPageResource.
+                    this.AddSectionStartAndEndDate(DateTime.Now.ToString(AddNewSectionPageResource.
                         AddNewSection_Page_Date_Format_MMDDYYYY), DateTime.Now.AddDays(90).
                         ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_MMDDYYYY));
                 }
