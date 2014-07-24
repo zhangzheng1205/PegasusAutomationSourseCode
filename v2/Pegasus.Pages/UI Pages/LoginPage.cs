@@ -94,20 +94,20 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedMiLWsAdmin:
                     case User.UserTypeEnum.HedCoreVmWsAdmin:
                         baseLoginURL = string.Format(
-                            AutomationConfigurationManager.WorkSpaceURLRoot
+                            AutomationConfigurationManager.WorkSpaceUrlRoot
                                 + LoginPageResource
                                  .Login_Page_WorkSpaceAdminURL_Append_Parameters); break;
                     // Get URL of workspace Teacher/Student
                     case User.UserTypeEnum.HedWsInstructor:
                     case User.UserTypeEnum.HedWsStudent:
                         baseLoginURL = string.Format(
-                            AutomationConfigurationManager.WorkSpaceURLRoot
+                            AutomationConfigurationManager.WorkSpaceUrlRoot
                                  + LoginPageResource
                                   .Login_Page_WorkspaceURL_Append_Parameters); break;
                     // Get URL of Course Space admin
                     case User.UserTypeEnum.HedCsAdmin:
                         baseLoginURL = string.Format(
-                            AutomationConfigurationManager.CourseSpaceURLRoot
+                            AutomationConfigurationManager.CourseSpaceUrlRoot
                                 + LoginPageResource
                                  .Login_Page_CourseSpaceAdminURL_Append_Parameters); break;
                     //Get url of course space teacher/student
@@ -119,20 +119,20 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedCoreAcceptanceInstructor:
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
                         baseLoginURL = string.Format(
-                            AutomationConfigurationManager.CourseSpaceURLRoot
+                            AutomationConfigurationManager.CourseSpaceUrlRoot
                                  + LoginPageResource
                                  .Login_Page_Hed_CourseSpaceURL_Append_Parameters); break;
                     //Get url of Synapse workspace admin
                     case User.UserTypeEnum.WsAdmin:
                         baseLoginURL = string.Format(
-                            AutomationConfigurationManager.WorkSpaceURLRoot
+                            AutomationConfigurationManager.WorkSpaceUrlRoot
                                + LoginPageResource
                                .Login_Page_WorkSpaceAdminURL_Append_Parameters); break;
                     //Get url of Synapse course space admin
                     case User.UserTypeEnum.CsAdmin:
                     case User.UserTypeEnum.DPCourseSpacePramotedAdmin:
                         baseLoginURL = string.Format(
-                            AutomationConfigurationManager.CourseSpaceURLRoot
+                            AutomationConfigurationManager.CourseSpaceUrlRoot
                                + LoginPageResource
                                .Login_Page_WorkSpaceAdminURL_Append_Parameters); break;
                     //Get url of workspace teacher/student for Synapse users
@@ -140,12 +140,12 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.WsTeacher:
                     case User.UserTypeEnum.DPWorkSpacePramotedAdmin:
                         baseLoginURL = string.Format(
-                            AutomationConfigurationManager.WorkSpaceURLRoot
+                            AutomationConfigurationManager.WorkSpaceUrlRoot
                                    + LoginPageResource.
                                    Login_Page_WorkspaceURL_Append_Parameters); break;
                     //Get Url of Rumba Admin
                     case User.UserTypeEnum.RUMBAAdmin:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.RumbaURLRoot);
+                        baseLoginURL = string.Format(AutomationConfigurationManager.RumbaUrlRoot);
                         base.DeleteAllBrowserCookies();
                         break;
                     //Get Url of Synapse CourseSpace User
@@ -155,20 +155,20 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.RumbaTeacher:
                     case User.UserTypeEnum.RumbaStudent:
                         baseLoginURL = string.Format(AutomationConfigurationManager.
-                            CourseSpaceURLRoot
+                            CourseSpaceUrlRoot
                                  + LoginPageResource
                                  .Login_Page_Synapse_CourseSpaceUserURL_Append_Parameters); break;
                     //Get url of Synapse workspace admin
                     case User.UserTypeEnum.NovaNETWsAdmin:
                         baseLoginURL = string.Format(AutomationConfigurationManager.
-                            WorkSpaceURLRoot
+                            WorkSpaceUrlRoot
                                + LoginPageResource
                                .Login_Page_WorkSpaceAdminURL_Append_Parameters); break;
                     //Get Url of Synapse Novanet Coursespace User
                     case User.UserTypeEnum.NovaNETCsTeacher:
                     case User.UserTypeEnum.NovaNETCsStudent:
                         baseLoginURL = string.Format(AutomationConfigurationManager.
-                            CourseSpaceURLRoot
+                            CourseSpaceUrlRoot
                                  + LoginPageResource
                                  .Login_Page_Synapse_CourseSpaceUserURL_Append_Parameters); break;
                     // Get URL of MMNDInstructor
@@ -188,12 +188,12 @@ namespace Pegasus.Pages.UI_Pages
                     // Get URL for DPCTGPPublisherAdmin
                     case User.UserTypeEnum.DPCTGPPublisherAdmin:
                     case User.UserTypeEnum.HEDWSCTGPublisherAdmin:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.WorkSpaceURLRoot
+                        baseLoginURL = string.Format(AutomationConfigurationManager.WorkSpaceUrlRoot
                             + LoginPageResource.Login_Page_WorkSpaceAdminURL_Append_Parameters);
                         break;
                     // Get URL of OrganizationAdmin
                     case User.UserTypeEnum.DPCsOrganizationAdmin:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.CourseSpaceURLRoot
+                        baseLoginURL = string.Format(AutomationConfigurationManager.CourseSpaceUrlRoot
                                 + LoginPageResource
                                 .Login_Page_Synapse_CourseSpaceUserURL_Append_Parameters);
                         break;
@@ -208,26 +208,26 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedBackdoorLoginInstructor:
                     case User.UserTypeEnum.HedBackdoorLoginStudent:
                         baseLoginURL = string.Format("{0}{1}",
-                            AutomationConfigurationManager.CourseSpaceURLRoot
+                            AutomationConfigurationManager.CourseSpaceUrlRoot
                             , LoginPageResource
                             .LoginPage_Backdoor_CourseSpaceUser_Append_Parameters);
                         break;
                     case User.UserTypeEnum.HEDCSCTGPPublisherAdmin:
                         baseLoginURL = string.Format("{0}{1}",
-                            AutomationConfigurationManager.CourseSpaceURLRoot
+                            AutomationConfigurationManager.CourseSpaceUrlRoot
                             , LoginPageResource.LoginPage_CourseSpaceAdminURL_Append_Parameters);
                         break;
                     case User.UserTypeEnum.HedMilPPEStudent:
                         baseLoginURL = string.Format(
-                            AutomationConfigurationManager.CourseSpaceURLRoot
+                            AutomationConfigurationManager.CourseSpaceUrlRoot
                                  + LoginPageResource
                                  .Login_Page_Hed_CourseSpaceURL_Append_Parameters); break;
                     case User.UserTypeEnum.SMSAdmin:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.SMSAdminURLRoot)
+                        baseLoginURL = string.Format(AutomationConfigurationManager.SmsAdminUrlRoot)
                             + LoginPageResource.Login_Page_SMSAdmin_Append_Parameter;
                         break;
                     case User.UserTypeEnum.SMSAdminStudent:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.SMSAdminURLRoot);
+                        baseLoginURL = string.Format(AutomationConfigurationManager.SmsAdminUrlRoot);
                         break;
                 }
             }

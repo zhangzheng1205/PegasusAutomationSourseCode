@@ -10,22 +10,21 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
     /// </summary>
     public class AutomationConfigurationManager
     {
-
         /// <summary>
         /// Property course space url root.
         /// </summary>
-        public static string CourseSpaceURLRoot
+        public static string CourseSpaceUrlRoot
         {
-            get { return GetCourseSpaceURLRoot(); }
+            get { return GetCourseSpaceUrlRoot(); }
         }
 
         /// <summary>
         /// Find course space url root based on application environment.
         /// </summary> 
         /// <returns>Application cs url.</returns>
-        private static string GetCourseSpaceURLRoot()
+        private static string GetCourseSpaceUrlRoot()
         {
-            string applicationCsUrl = string.Empty;
+            string applicationCsUrl;
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
             {
                 case "ST":
@@ -52,18 +51,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Property work space url root.
         /// </summary>
-        public static string WorkSpaceURLRoot
+        public static string WorkSpaceUrlRoot
         {
-            get { return GetWorkSpaceURLRoot(); }
+            get { return GetWorkSpaceUrlRoot(); }
         }
 
         /// <summary>
         /// Find work space url root based on application environment.
         /// </summary> 
         /// <returns>Application ws url.</returns>
-        private static string GetWorkSpaceURLRoot()
+        private static string GetWorkSpaceUrlRoot()
         {
-            string applicationWsurl = string.Empty;
+            string applicationWsurl;
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
             {
                 case "ST":
@@ -102,16 +101,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Property SMS admin url root.
         /// </summary> 
-        public static string SMSAdminURLRoot
+        public static string SmsAdminUrlRoot
         {
-            get { return GetSMSAdminURLRoot(); }
+            get { return GetSmsAdminUrlRoot(); }
         }
 
         /// <summary>
         /// Find sms admin url root based on application environment.
         /// </summary> 
         /// <returns>SMS admin url.</returns>
-        private static string GetSMSAdminURLRoot()
+        private static string GetSmsAdminUrlRoot()
         {
             string url = string.Empty;
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
@@ -140,90 +139,90 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Property SMS student access code.
         /// </summary> 
-        public static string SMSStudentAccessCode
+        public static string SmsStudentAccessCode
         {
-            get { return GetSMSSTUAccessCode(); }
+            get { return GetSmsstuAccessCode(); }
         }
 
         /// <summary>
         /// Find sms student access code based on application environment.
         /// </summary> 
         /// <returns>SMS student access code.</returns>
-        private static string GetSMSSTUAccessCode()
+        private static string GetSmsstuAccessCode()
         {
-            string smsSTUAccessCode = string.Empty;
+            string smsStuAccessCode;
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
             {
                 case "ST":
-                    smsSTUAccessCode = ConfigurationManager.AppSettings
+                    smsStuAccessCode = ConfigurationManager.AppSettings
                         [AutomationConfigurationManagerResource.SMSStudentAccessCodeST_Key];
                     break;
                 case "VM":
-                    smsSTUAccessCode = ConfigurationManager.AppSettings
+                    smsStuAccessCode = ConfigurationManager.AppSettings
                         [AutomationConfigurationManagerResource.SMSStudentAccessCodeVM_Key];
                     break;
                 case "PPE":
-                    smsSTUAccessCode = ConfigurationManager.AppSettings
+                    smsStuAccessCode = ConfigurationManager.AppSettings
                         [AutomationConfigurationManagerResource.SMSStudentAccessCodePPE_Key];
                     break;
                 case "PROD":
-                    smsSTUAccessCode = ConfigurationManager.AppSettings
+                    smsStuAccessCode = ConfigurationManager.AppSettings
                         [AutomationConfigurationManagerResource.SMSStudentAccessCodePROD_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
-            return smsSTUAccessCode;
+            return smsStuAccessCode;
         }
 
         /// <summary>
         /// Property SMS instructor access code.
         /// </summary> 
-        public static string SMSInstructorAccessCode
+        public static string SmsInstructorAccessCode
         {
-            get { return GetSMSINSAccessCode(); }
+            get { return GetSmsinsAccessCode(); }
         }
 
         /// <summary>
         /// Find sms instructor access code based on application environment.
         /// </summary> 
         /// <returns>SMS instructor access code.</returns>
-        private static string GetSMSINSAccessCode()
+        private static string GetSmsinsAccessCode()
         {
-            string smsINSAccessCode = string.Empty;
+            string smsInsAccessCode;
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
             {
                 case "ST":
-                    smsINSAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodeST_Key];
+                    smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodeST_Key];
                     break;
                 case "VM":
-                    smsINSAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodeVM_Key];
+                    smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodeVM_Key];
                     break;
                 case "PPE":
-                    smsINSAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodePPE_Key];
+                    smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodePPE_Key];
                     break;
                 case "PROD":
-                    smsINSAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodePROD_key];
+                    smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodePROD_key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
-            return smsINSAccessCode;
+            return smsInsAccessCode;
         }
 
         /// <summary>
         /// Property SMS module Id.
         /// </summary>
-        public static string SMSMuduleId
+        public static string SmsMuduleId
         {
-            get { return GetSMSModuleId(); }
+            get { return GetSmsModuleId(); }
         }
 
         /// <summary>
         /// Find sms module id based on application environment.
         /// </summary> 
         /// <returns>SMS module id.</returns>
-        private static string GetSMSModuleId()
+        private static string GetSmsModuleId()
         {
-            string smsModuleId = string.Empty;
+            string smsModuleId;
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
             {
                 case "ST":
@@ -246,18 +245,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Property for rumba url.
         /// </summary>
-        public static string RumbaURLRoot
+        public static string RumbaUrlRoot
         {
-            get { return GetRumbaURLRoot(); }
+            get { return GetRumbaUrlRoot(); }
         }
 
         /// <summary>
         /// Find the rumba url based on application environment.
         /// </summary> 
         /// <returns>Rumba url.</returns>
-        private static string GetRumbaURLRoot()
+        private static string GetRumbaUrlRoot()
         {
-            string applicationRumbaUrl = string.Empty;
+            string applicationRumbaUrl;
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
             {
                 case "ST":

@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages
 
              if (userTypeEnum == User.UserTypeEnum.DPDemoUser)
              {
-                 demoAccountRegistrationURL = AutomationConfigurationManager.CourseSpaceURLRoot
+                 demoAccountRegistrationURL = AutomationConfigurationManager.CourseSpaceUrlRoot
                      + DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_PageName;                
              }
              logger.LogMethodExit("DemoAccountRegistrationPage", "DemoAccountRegistrationPage", base.isTakeScreenShotDuringEntryExit);

@@ -180,7 +180,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateResourcePageResource.
                 CreateResource_Page_DigitAssetURL_Text_Id_Locator));
             //Get Digit Asset URL
-            string getDigitAssetUrl = AutomationConfigurationManager.CourseSpaceURLRoot +
+            string getDigitAssetUrl = AutomationConfigurationManager.CourseSpaceUrlRoot +
                 CreateResourcePageResource.CreateResource_Page_DigitAssetURL_Url;
             //Fills the Url
             base.FillTextBoxByID(CreateResourcePageResource.

@@ -278,7 +278,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             //Enter SMS Code in Text Box
             base.FillTextBoxByID(Reg1PageResource.Reg1_Page_Access1_TextBox_Id_Locator,
-                                 AutomationConfigurationManager.SMSStudentAccessCode);
+                                 AutomationConfigurationManager.SmsStudentAccessCode);
             logger.LogMethodExit("Reg1Page", "EnterSMSAccessCodeForStudent",
                 base.isTakeScreenShotDuringEntryExit);
 
@@ -294,7 +294,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             //Enter SMS Code in Text Box
             base.FillTextBoxByID(Reg1PageResource.Reg1_Page_Access1_TextBox_Id_Locator,
-                                 AutomationConfigurationManager.SMSInstructorAccessCode);
+                                 AutomationConfigurationManager.SmsInstructorAccessCode);
             logger.LogMethodExit("Reg1Page", "EnterSMSAccessCodeForInstructor",
                 base.isTakeScreenShotDuringEntryExit);
         }
