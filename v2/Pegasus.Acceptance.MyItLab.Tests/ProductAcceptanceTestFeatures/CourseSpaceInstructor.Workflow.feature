@@ -6,7 +6,7 @@
 #Purpose : Set Time limit for SIM Study Plan Pre test as SMS Instructor
 #MyItLabInstructorCourse
 Scenario: Set Time limit for SIM Study Plan Pre test as SMS Instructor
-When I navigate to "Course Materials" tab
+When I navigate to "Course Materials" tab and selected "Add from Library" subtab
 Then I should be on the "Course Materials" page
 And I should see "SIM5StudyPlan" activity in the Content Library Frame
 When I click on "Edit" cmenu option of activity in "CsSmsInstructor"
