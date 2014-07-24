@@ -179,6 +179,11 @@ namespace Pegasus.Pages.UI_Pages
             Boolean isSearchedElementPresent = false;
             try
             {
+                Thread.Sleep(Convert.ToInt32(CalendarDefaultGlobalUXPageResource.
+               CalendarDefaultGlobalUX_Page_TimeThread_Value));
+                //Wait for the window
+                base.WaitUntilWindowLoads(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_Window_TitleName);
                 base.SelectWindow(CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_Window_TitleName);
                 //Switch to Frame
