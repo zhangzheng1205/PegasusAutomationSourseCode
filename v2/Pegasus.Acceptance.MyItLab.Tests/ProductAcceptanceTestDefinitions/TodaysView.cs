@@ -128,7 +128,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 Logger.LogAssertion("VerifySubTabsUnderMainTab", ScenarioContext.
                     Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(row[TodaysViewResource.
-                    TodaysViewResource_WindowTitle_Text], new TeachingPlanUXPage().
+                    TodaysViewResource_WindowTitle_Text], new Pages.UI_Pages.TeachingPlanUxPage().
                     GetTabsWindowTitle(row[TodaysViewResource.
                     TodaysViewResource_SubTabName_Text], row[TodaysViewResource.
                     TodaysViewResource_WindowTitle_Text])));

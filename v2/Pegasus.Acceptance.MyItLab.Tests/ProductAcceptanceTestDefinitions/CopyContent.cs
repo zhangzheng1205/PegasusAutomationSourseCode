@@ -76,7 +76,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Select Home Button
             Logger.LogMethodEntry("CopyContent", "SelectHomeButton",
             base.isTakeScreenShotDuringEntryExit);
-            TeachingPlanUXPage teachingPlanUxPage = new TeachingPlanUXPage();
+            Pages.UI_Pages.TeachingPlanUxPage teachingPlanUxPage = new Pages.UI_Pages.TeachingPlanUxPage();
             //Select Course Materials Window
             teachingPlanUxPage.SelectWindow();
             //Click On Home Button

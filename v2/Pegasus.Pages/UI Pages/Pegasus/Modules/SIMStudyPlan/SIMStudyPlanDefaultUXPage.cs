@@ -23,7 +23,7 @@ namespace Pegasus.Pages.UI_Pages
         /// The Static Instance of the Logger for the Class.
         /// </summary>
         private static readonly Logger logger =
-            Logger.GetInstance(typeof(TeachingPlanUXPage));
+            Logger.GetInstance(typeof(TeachingPlanUxPage));
 
         /// <summary>
         /// Edit Sim Study plan.

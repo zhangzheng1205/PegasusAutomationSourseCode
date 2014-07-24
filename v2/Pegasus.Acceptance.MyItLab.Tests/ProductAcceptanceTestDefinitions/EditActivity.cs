@@ -179,7 +179,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("EditActivity", "EditTheActivity",
                 base.isTakeScreenShotDuringEntryExit);
             // Edit Activity 
-            new TeachingPlanUXPage().ClickOnActivity(activtyName);
+            new Pages.UI_Pages.TeachingPlanUxPage().ClickOnActivity(activtyName);
             Logger.LogMethodExit("EditActivity", "EditTheActivity",
                 base.isTakeScreenShotDuringEntryExit);
         }

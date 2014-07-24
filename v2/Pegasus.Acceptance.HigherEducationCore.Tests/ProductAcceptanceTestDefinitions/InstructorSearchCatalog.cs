@@ -126,7 +126,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 Logger.LogAssertion("VerifySubTabsUnderMainTab", ScenarioContext.
                     Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(row[InstructorSearchCatalogResource.
-                    InstructorSearchCatalog_WindowTitle_Text], new TeachingPlanUXPage().
+                    InstructorSearchCatalog_WindowTitle_Text], new TeachingPlanUxPage().
                     GetTabsWindowTitle(row[InstructorSearchCatalogResource.
                     InstructorSearchCatalog_SubTabName_Text], row[InstructorSearchCatalogResource.
                     InstructorSearchCatalog_WindowTitle_Text])));
@@ -154,7 +154,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 Logger.LogAssertion("VerifyTabsInCourse", ScenarioContext.
                     Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(row[InstructorSearchCatalogResource.
-                    InstructorSearchCatalog_WindowTitle_Text], new TeachingPlanUXPage().
+                    InstructorSearchCatalog_WindowTitle_Text], new TeachingPlanUxPage().
                     GetTabsWindowTitle(row[InstructorSearchCatalogResource.
                     InstructorSearchCatalog_TabName_Text], row[InstructorSearchCatalogResource.
                     InstructorSearchCatalog_WindowTitle_Text])));

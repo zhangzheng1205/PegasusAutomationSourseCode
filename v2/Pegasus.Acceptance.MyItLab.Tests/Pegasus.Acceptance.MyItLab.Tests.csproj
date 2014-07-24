@@ -140,6 +140,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SMSRegistrationResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestDefinitions\TeachingPlanUxPage.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\TodaysView.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\TodaysViewResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -172,6 +173,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceInstructorCopyContent.Workflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorCourseMaterials.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceInstructorCourseMaterials.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorGradebook.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
@@ -377,6 +383,10 @@
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorCopyContent.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceInstructorCopyContent.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorCourseMaterials.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceInstructorCourseMaterials.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorGradebook.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
