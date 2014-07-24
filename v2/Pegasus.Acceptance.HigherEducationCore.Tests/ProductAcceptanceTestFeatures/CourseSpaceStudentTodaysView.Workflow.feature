@@ -12,13 +12,6 @@ When I navigate to "Course Materials" tab of the "Course Materials" page
 Then I should be on the "Course Materials" page
 When I open the "Test" Activity
 And I submit the activity in course material
-And I navigate to the "Today's View" tab
-Then I should successfully see the alert for New Grades
-When I click New Grades alert option
-Then I should see the successfully submitted "Test" activity name
-When I click the cmenu option 'ViewAllSubmissions' in student side
-Then I should see the grade "100" in view submission page
-When I close the "View Submission" window
 
 
 #Used Instructor Course

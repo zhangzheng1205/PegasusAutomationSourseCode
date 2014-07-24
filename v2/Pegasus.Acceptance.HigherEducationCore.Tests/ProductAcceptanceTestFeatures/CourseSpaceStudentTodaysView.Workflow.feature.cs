@@ -86,20 +86,6 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I open the \"Test\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
 testRunner.And("I submit the activity in course material", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
-testRunner.And("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
-testRunner.Then("I should successfully see the alert for New Grades", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 17
-testRunner.When("I click New Grades alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 18
-testRunner.Then("I should see the successfully submitted \"Test\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 19
-testRunner.When("I click the cmenu option \'ViewAllSubmissions\' in student side", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
-testRunner.Then("I should see the grade \"100\" in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 21
-testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -110,23 +96,23 @@ testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((Te
         public virtual void ToVerifyTheNewGradesBySMSStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify The New Grades By SMS Student", ((string[])(null)));
-#line 27
+#line 20
 this.ScenarioSetup(scenarioInfo);
-#line 28
+#line 21
 testRunner.When("I navigate to \"Today\'s View\" tab of the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 22
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 30
+#line 23
 testRunner.And("I should successfully see the alert for New Grades", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
+#line 24
 testRunner.When("I click New Grades alert option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
+#line 25
 testRunner.Then("I should see the successfully submitted \"Test\" activity name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 33
+#line 26
 testRunner.When("I click the cmenu option \'ViewAllSubmissions\' in student side", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 27
 testRunner.Then("I should see the grade \"100\" in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 35
+#line 28
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -138,13 +124,13 @@ testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((Te
         public virtual void ViewMailMessageByCsStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Mail Message by Cs Student", ((string[])(null)));
-#line 40
+#line 33
 this.ScenarioSetup(scenarioInfo);
-#line 41
+#line 34
 testRunner.When("I navigate to \"Communicate\" tab and selected \"Mail\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 42
+#line 35
 testRunner.Then("I should be on the \"Course Mail\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 43
+#line 36
 testRunner.And("I should see the mail message sent by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
