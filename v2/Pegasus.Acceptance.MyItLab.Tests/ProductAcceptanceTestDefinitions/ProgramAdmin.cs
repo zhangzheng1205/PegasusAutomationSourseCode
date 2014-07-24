@@ -136,7 +136,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// Click on Cmenu of Section or Template.
         /// </summary>
         /// <param name="cMenuOption">This is Cmenu option.</param>
-        [When(@"I click the ""(.*)"" c-menu option")]
+        [Then(@"I click the ""(.*)"" c-menu option")]
         [When(@"I click the ""(.*)"" option")]
         public void ClickOnCmenuOfSectionOrTemplate(String cMenuOption)
         {
@@ -166,6 +166,38 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("ProgramAdmin",
            "CheckBoxUnchecked",
             base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// To search the template
+        /// </summary>
+        /// <param name="TemplateName">Name of the template</param>
+        [When(@"I search the template ""(.*)""")]
+        public void SearchTemplate(string TemplateName)
+        {
+            Logger.LogMethodEntry("ProgramAdmin",
+               "SearchTemplate",
+             base.isTakeScreenShotDuringEntryExit);
+            new ManageTemplatePage().SearchEntityInProgramAdministration(TemplateName);
+            Logger.LogMethodExit("ProgramAdmin",
+               "SearchTemplate",
+             base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Save Button click to create course Manage Template section
+        /// </summary>
+        /// <param name=""></param>
+        [When(@"I click ""(.*)"" button to ""(.*)""")]
+        public void ClickToCreateUpdate(string Button, String Operation)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+            //SaveUpdate method to create or update the course.
+            new EditCopyTemplatesSectionsPage().CreateSharedLibrary();
+
+            Logger.LogMethodExit("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
+                base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
