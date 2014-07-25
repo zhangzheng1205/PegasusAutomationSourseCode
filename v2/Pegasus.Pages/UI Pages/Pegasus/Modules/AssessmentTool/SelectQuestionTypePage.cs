@@ -106,6 +106,34 @@ namespace Pegasus.Pages.UI_Pages
            }
            logger.LogMethodExit("SelectQuestionTypePage", "SelectCreateNewQuestionWindow",
                 base.isTakeScreenShotDuringEntryExit);
-       }   
+       }
+       /// <summary>
+       /// Click The True-False QuestionType.
+       /// </summary>
+       public void ClickTheTrueFalseQuestionType()
+       {
+           // Click The Essay QuestionType
+           logger.LogMethodEntry("SelectQuestionTypePage", "ClickTheTrueFalseQuestionType",
+                  base.isTakeScreenShotDuringEntryExit);
+           try
+           {
+               //Select Create New Question Window
+               this.SelectCreateNewQuestionWindow();
+               base.WaitForElement(By.Id(SelectQuestionTypePageResource.
+                 SelectQuestionType_Page_QuestionWindow_SelectQuesType_Title_ID_Locator));
+               //Get web element
+               IWebElement getEssayPropertyLink = base.GetWebElementPropertiesByXPath
+                     (SelectQuestionTypePageResource.
+                   SelectQuestionType_Page_QuestionType_TF_Title_Xpath_Locator);
+               //Click the "Essay" link
+               base.ClickByJavaScriptExecutor(getEssayPropertyLink);
+           }
+           catch (Exception e)
+           {
+               ExceptionHandler.HandleException(e);
+           }
+           logger.LogMethodExit("SelectQuestionTypePage", "ClickTheTrueFalseQuestionType",
+                base.isTakeScreenShotDuringEntryExit);
+       }
     }
 }

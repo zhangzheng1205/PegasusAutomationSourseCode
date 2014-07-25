@@ -340,6 +340,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to cmdTabHelpLinksFinish.
+        /// </summary>
+        internal static string AddAssessment_Page_ActivityHelpLinksSaveAndReturn_Id_Locator {
+            get {
+                return ResourceManager.GetString("AddAssessment_Page_ActivityHelpLinksSaveAndReturn_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to lblDefaultStartMessage.
         /// </summary>
         internal static string AddAssessment_Page_BeginActivityDefaultMessage_Id_Locator {
@@ -372,6 +381,87 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         internal static string AddAssessment_Page_EndActivityInstructorMessage_Id_Locator {
             get {
                 return ResourceManager.GetString("AddAssessment_Page_EndActivityInstructorMessage_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to frmTopic1.
+        /// </summary>
+        internal static string AddAssessment_Page_HelpLink_Frame_ID_Locator {
+            get {
+                return ResourceManager.GetString("AddAssessment_Page_HelpLink_Frame_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add and Close.
+        /// </summary>
+        internal static string AddAssessment_Page_HelpLinkAddAndClose_PartialText_Locator {
+            get {
+                return ResourceManager.GetString("AddAssessment_Page_HelpLinkAddAndClose_PartialText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to grdContentBrowser$_ctrl1.
+        /// </summary>
+        internal static string AddAssessment_Page_HelpLinkAssets_CheckBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("AddAssessment_Page_HelpLinkAssets_CheckBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_PopupPageContent_ifrmLeft.
+        /// </summary>
+        internal static string AddAssessment_Page_HelpLinkAssetsIFrame_Id_Locator {
+            get {
+                return ResourceManager.GetString("AddAssessment_Page_HelpLinkAssetsIFrame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdHelpLinkGrid&apos;]/tbody/tr[3]/td[5]/center/a.
+        /// </summary>
+        internal static string AddAssessment_Page_HelpLinkCMenu_XPath_Locator {
+            get {
+                return ResourceManager.GetString("AddAssessment_Page_HelpLinkCMenu_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;referenceId3&apos;]/table/tbody/tr/td/div[2]/a.
+        /// </summary>
+        internal static string AddAssessment_Page_HelpLinkPreview_XPath_Locator {
+            get {
+                return ResourceManager.GetString("AddAssessment_Page_HelpLinkPreview_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cmdTabHelpLinks.
+        /// </summary>
+        internal static string AddAssessment_Page_HelpLinks_Tab_Id_Locator {
+            get {
+                return ResourceManager.GetString("AddAssessment_Page_HelpLinks_Tab_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select content.
+        /// </summary>
+        internal static string AddAssessment_Page_SelectContentPopup_Title_Loactor {
+            get {
+                return ResourceManager.GetString("AddAssessment_Page_SelectContentPopup_Title_Loactor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //td[contains(.,&apos;Select from Course Materials Library&apos;)].
+        /// </summary>
+        internal static string AddAssessment_Page_SelectFromCourseMaterialsLibrary_XPath_Locator {
+            get {
+                return ResourceManager.GetString("AddAssessment_Page_SelectFromCourseMaterialsLibrary_XPath_Locator", resourceCulture);
             }
         }
     }

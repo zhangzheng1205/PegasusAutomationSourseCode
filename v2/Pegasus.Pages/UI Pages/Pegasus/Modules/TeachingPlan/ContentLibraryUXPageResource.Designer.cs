@@ -529,6 +529,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to *[id ^=&apos;lnkName_&apos;].
+        /// </summary>
+        internal static string CourseContentUXPage_AssetPartial_Id_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_AssetPartial_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Course Materials.
         /// </summary>
         internal static string CourseContentUXPage_CourseMaterials_Window_Title {

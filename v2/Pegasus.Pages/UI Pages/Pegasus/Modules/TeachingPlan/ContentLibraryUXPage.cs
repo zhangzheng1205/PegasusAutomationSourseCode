@@ -1779,6 +1779,38 @@ namespace Pegasus.Pages.UI_Pages
                base.isTakeScreenShotDuringEntryExit);
             return "Not Found";
         }
+        public void SelectLeftFrameInCourseMaterialsPage()
+        {
+            //Wait for the Frame
+            base.WaitForElement(By.Id(ContentLibraryUXPageResource.ContentLibraryUX_Page_Left_Frame_ID_Locator));
+            base.SwitchToIFrame(ContentLibraryUXPageResource.ContentLibraryUX_Page_Left_Frame_ID_Locator);
+        }
+        /// <summary>
+        /// Click On Last Activity in Content Library.
+        /// </summary>
+        public void ClickOnLastActivityinContentLibrary()
+        {
+            //Select Frame In Window
+            logger.LogMethodEntry("ContentLibraryUXPage", 
+                "ClickOnLastActivityinContentLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Gets the collection of all Help Link assets
+                ICollection<IWebElement> getAllAssetsInContentLibrary = base.GetWebElementsCollectionByPartialCssSelector(
+                    ContentLibraryUXPageResource.CourseContentUXPage_AssetPartial_Id_Locator);
+
+                IWebElement getLastAsset = getAllAssetsInContentLibrary.Last();
+                base.ClickByJavaScriptExecutor(getLastAsset);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", 
+                "ClickOnLastActivityinContentLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Clicks the button by its ID attribute.
         /// </summary>

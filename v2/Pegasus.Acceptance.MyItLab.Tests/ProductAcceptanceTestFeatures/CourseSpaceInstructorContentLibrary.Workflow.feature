@@ -23,7 +23,7 @@ When I click on the Activity Name in Content Library frame
 Then I should be on the "Edit Random activity" page
 When I click on the HelpLinks activity subtab
 Then I should be on the "Edit Random activity" page
-When I click on the 'Preview' link in c-menu of Helplink
+When I click on the Preview link in c-menu of Helplink
 Then I should be on the "Homework" page
 When I close the "Homework" window
 Then I should be on the "Edit Random activity" page

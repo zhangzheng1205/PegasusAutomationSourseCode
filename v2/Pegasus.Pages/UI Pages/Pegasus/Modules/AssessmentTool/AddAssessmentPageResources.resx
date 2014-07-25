@@ -222,4 +222,34 @@
   <data name="AddAssessment_Page_EndActivityInstructorMessage_Id_Locator" xml:space="preserve">
     <value>txtEndFeedback</value>
   </data>
+  <data name="AddAssessment_Page_ActivityHelpLinksSaveAndReturn_Id_Locator" xml:space="preserve">
+    <value>cmdTabHelpLinksFinish</value>
+  </data>
+  <data name="AddAssessment_Page_HelpLinkAddAndClose_PartialText_Locator" xml:space="preserve">
+    <value>Add and Close</value>
+  </data>
+  <data name="AddAssessment_Page_HelpLinkAssetsIFrame_Id_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_ifrmLeft</value>
+  </data>
+  <data name="AddAssessment_Page_HelpLinkAssets_CheckBox_Id_Locator" xml:space="preserve">
+    <value>grdContentBrowser$_ctrl1</value>
+  </data>
+  <data name="AddAssessment_Page_HelpLinkCMenu_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='grdHelpLinkGrid']/tbody/tr[3]/td[5]/center/a</value>
+  </data>
+  <data name="AddAssessment_Page_HelpLinkPreview_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='referenceId3']/table/tbody/tr/td/div[2]/a</value>
+  </data>
+  <data name="AddAssessment_Page_HelpLinks_Tab_Id_Locator" xml:space="preserve">
+    <value>cmdTabHelpLinks</value>
+  </data>
+  <data name="AddAssessment_Page_HelpLink_Frame_ID_Locator" xml:space="preserve">
+    <value>frmTopic1</value>
+  </data>
+  <data name="AddAssessment_Page_SelectContentPopup_Title_Loactor" xml:space="preserve">
+    <value>Select content</value>
+  </data>
+  <data name="AddAssessment_Page_SelectFromCourseMaterialsLibrary_XPath_Locator" xml:space="preserve">
+    <value>//td[contains(.,'Select from Course Materials Library')]</value>
+  </data>
 </root>

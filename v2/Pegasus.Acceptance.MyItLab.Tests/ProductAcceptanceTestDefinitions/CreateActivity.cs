@@ -514,5 +514,29 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CommonSteps", "VerifyNewActivityTypeInTheAddCourseMaterialsMenu",
                 isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Create Basic Random Activity Using True-False Question And HelpLinks.
+        /// </summary>
+        /// <param name="ActivityTypeEnum">Activity Type Enum</param>
+        /// <param name="ActivityBehavioralModesEnum">Activity Behavioral Modes Enum</param>
+        [When(@"I create ""(.*)"" activity of behavioral mode ""(.*)"" type using True-False question")]
+        public void CreateBasicRandomActivityWithTrueFalseQuestionAndHelpLinks(
+            Activity.ActivityTypeEnum activityTypeEnum,
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum)
+        {
+            //Create Instructor Gradable Activity
+            Logger.LogMethodEntry("CreateActivity", 
+                "CreateBasicRandomActivityUsingTrueandFalseQuestionAndHelpLinks",
+               base.isTakeScreenShotDuringEntryExit);
+
+            //Enter Activity Details and Click on Add Question Link
+            new AddAssessmentPage().EnterActivityDetailsandClickonAddQuestion(activityTypeEnum);
+            //Create Activity
+            new AddAssessmentPage().CreateActivityWithHelpLinks(activityTypeEnum);
+
+            Logger.LogMethodExit("CreateActivity", 
+                "CreateBasicRandomActivityUsingTrueandFalseQuestionAndHelpLinks",
+                base.isTakeScreenShotDuringEntryExit);
+        }
     }
 }
