@@ -524,6 +524,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     CommonStepsResource.CommonSteps_Loop_Initializer_Value);
                     csTabCountNo <= getSubTabCount; csTabCountNo++)
                 {
+                    base.WaitForElement(By.XPath(String.Format(CommonStepsResource.
+                                CommonSteps_Subtab_Classname_Xpath_Locator, csTabCountNo)));
                     IWebElement getSelectedTabElement = base.GetWebElementPropertiesByXPath
                         (String.Format(CommonStepsResource.
                                 CommonSteps_Subtab_Classname_Xpath_Locator, csTabCountNo));
