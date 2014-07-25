@@ -144,4 +144,34 @@
   <data name="ActivitiesPreferences_Page_TimeToWait_Value" xml:space="preserve">
     <value>20</value>
   </data>
+  <data name="ActivitiesPreferences_Page_BeginDefaultMessage_Id_Locator" xml:space="preserve">
+    <value>txtMCBeginMsg</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_BeginDefaultMessage_Text" xml:space="preserve">
+    <value>TEST Beginning of Activity Default Message</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_BeginInstructorMessage_Id_Locator" xml:space="preserve">
+    <value>txtInsBeginMsg</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_BeginInstructorMessage_Text" xml:space="preserve">
+    <value>TEST Beginning of Activity Instructor Message</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_EndDefaultMessage_Id_Locator" xml:space="preserve">
+    <value>txtMCEndMsg</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_EndDefaultMessage_Text" xml:space="preserve">
+    <value>TEST End of Activity Default Message</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_EndInstructorMessage_Id_Locator" xml:space="preserve">
+    <value>txtInsEndMsg</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_EndInstructorMessage_Text" xml:space="preserve">
+    <value>TEST End of Activity Instructor Message</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_MessagesSubTab_Id_Locator" xml:space="preserve">
+    <value>RptToolItems__ctl1_lnk</value>
+  </data>
+  <data name="ActivitiesPreferences_Page_NewActivityTypeName_CSSSelector" xml:space="preserve">
+    <value>*[id ^='txtActivityName']</value>
+  </data>
 </root>

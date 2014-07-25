@@ -1228,5 +1228,108 @@ namespace Pegasus.Pages.UI_Pages
                  "EnterTheMessageForActivity",
                      base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Enter Assignment Activity Details and Click Save and Continue button.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity type.</param>
+        public void EnterAssignmentActivityDetailsandClickSaveandContinue()
+        {
+            //Enter Activity Details and Click on Add Question
+            logger.LogMethodEntry("AddAssessmentPage",
+                "EnterAssignmentActivityDetailsandClickSaveandContinue",
+                  base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Generate Activity Name GUID
+                Guid activityName = Guid.NewGuid();
+                //Select Window
+                this.SelectCreateActivityWindow();
+                //Enter Activity Title
+                this.EnterActivityTitle(activityName);
+                //Click The Basic Random Radio Button
+                this.SelectAssignmentRadioButton();
+                //Click On Save and Continue Button
+                this.ClickOnSaveAndContinueButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage",
+                "EnterAssignmentActivityDetailsandClickSaveandContinue",
+                   base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// return Beginning of Activity Default Message Text.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnBeginningofActivityDefaultMessageText()
+        {
+            logger.LogMethodEntry("AddAssessmentPage",
+                "returnBeginningofActivityDefaultMessageText",
+               base.isTakeScreenShotDuringEntryExit);
+            //Gets Beginning of Activity Default Message Span
+            IWebElement BeginActivityDefaultMessage = base.GetWebElementPropertiesById(
+                AddAssessmentPageResources.AddAssessment_Page_BeginActivityDefaultMessage_Id_Locator);
+
+            logger.LogMethodExit("AddAssessmentPage",
+                "returnBeginningofActivityDefaultMessageText",
+                base.isTakeScreenShotDuringEntryExit);
+            return BeginActivityDefaultMessage.Text;
+        }
+        /// <summary>
+        /// return Beginning of Activity Instructor Message Text.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnBeginningofActivityInstructorMessageText()
+        {
+            logger.LogMethodEntry("AddAssessmentPage",
+                "returnBeginningofActivityInstructorMessageText",
+               base.isTakeScreenShotDuringEntryExit);
+            //Gets Beginning of Activity Instructor Message Text Box
+            IWebElement BeginActivityInstructorMessage = base.GetWebElementPropertiesById(
+                AddAssessmentPageResources.AddAssessment_Page_BeginActivityInstructorMessage_Id_Locator);
+
+            logger.LogMethodExit("AddAssessmentPage",
+                "returnBeginningofActivityInstructorMessageText",
+                base.isTakeScreenShotDuringEntryExit);
+            return BeginActivityInstructorMessage.Text;
+        }
+        /// <summary>
+        /// return End of Activity Default Message Text.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnEndofActivityDefaultMessageText()
+        {
+            logger.LogMethodEntry("AddAssessmentPage",
+                "returnEndofActivityDefaultMessageText",
+               base.isTakeScreenShotDuringEntryExit);
+            //Gets End of Activity Default Message Span
+            IWebElement EndActivityDefaultMessage = base.GetWebElementPropertiesById(
+                AddAssessmentPageResources.AddAssessment_Page_EndActivityDefaultMessage_Id_Locator);
+
+            logger.LogMethodExit("AddAssessmentPage",
+                "returnEndofActivityDefaultMessageText",
+                base.isTakeScreenShotDuringEntryExit);
+            return EndActivityDefaultMessage.Text;
+        }
+        /// <summary>
+        /// return End of Activity Instructor Message Text.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnEndofActivityInstructorMessageText()
+        {
+            logger.LogMethodEntry("AddAssessmentPage",
+                "returnEndofActivityInstructorMessageText",
+               base.isTakeScreenShotDuringEntryExit);
+            //Get End of Activity Instructor Message Text Box
+            IWebElement EndActivityInstructorMessage = base.GetWebElementPropertiesById(
+                AddAssessmentPageResources.AddAssessment_Page_EndActivityInstructorMessage_Id_Locator);
+
+            logger.LogMethodExit("AddAssessmentPage",
+                "returnEndofActivityInstructorMessageText",
+                base.isTakeScreenShotDuringEntryExit);
+            return EndActivityInstructorMessage.Text;
+        }
     }
 }

@@ -527,5 +527,14 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
                 return ResourceManager.GetString("ContentLibraryUXPage_SearchedContent_Table_Id_Locator", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Course Materials.
+        /// </summary>
+        internal static string CourseContentUXPage_CourseMaterials_Window_Title {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_CourseMaterials_Window_Title", resourceCulture);
+            }
+        }
     }
 }

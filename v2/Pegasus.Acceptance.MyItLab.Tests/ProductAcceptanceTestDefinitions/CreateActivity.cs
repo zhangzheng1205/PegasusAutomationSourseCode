@@ -410,7 +410,109 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CreateActivity", "SetTheFeedbackCorrectAnswerPreference",
               base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Click On Add Course Materials Link in Content Library.
+        /// </summary>        
+        [When(@"I click on the 'Add Course Materials' option in Content Library")]
+        public void ClickOnAddCourseMaterialsLinkInContentLibrary()
+        {
+            //Click On Add Course Materials Link
+            Logger.LogMethodEntry("CreateActivity", "ClickOnAddCourseMaterialsLinkInContentLibrary",
+                base.isTakeScreenShotDuringEntryExit);
 
+            //Click On Add Course Materials Option
+            new ContentLibraryUXPage().ClickOnAddCourseMaterialsOptioninContentLibrary();
 
+            Logger.LogMethodExit("CreateActivity", "ClickOnAddCourseMaterialsLinkInContentLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Enter The Necessary Details Begin Creation Of Assignment Behavioral Type.
+        /// </summary>
+        [When(@"I enter the necessary details begin creation of Assignment behavioral type")]
+        public void EnterTheNecessaryDetailsBeginCreationOfAssignmentBehavioralType()
+        {
+            Logger.LogMethodEntry("CommonSteps",
+                "EnterTheNecessaryDetailsBeginCreationOfAssignmentBehavioralType",
+                isTakeScreenShotDuringEntryExit);
+
+            new AddAssessmentPage().EnterAssignmentActivityDetailsandClickSaveandContinue();
+
+            Logger.LogMethodExit("CommonSteps",
+                "EnterTheNecessaryDetailsBeginCreationOfAssignmentBehavioralType",
+                isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On The Messages Activity Sub-tab.
+        /// </summary>
+        [When(@"I click on the Messages activity subtab")]
+        public void ClickOnTheMessagesActivitySubtab()
+        {
+            Logger.LogMethodEntry("CommonSteps",
+                "ClickOnTheMessagesActivitySubtab",
+                isTakeScreenShotDuringEntryExit);
+
+            new AddAssessmentPage().ClickonMessageTab();
+
+            Logger.LogMethodExit("CommonSteps",
+                "ClickOnTheMessagesActivitySubtab",
+                isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verify The Activity Beginning And End Messages are present in new activity
+        /// which were previously set In Main Course Preferences.
+        /// </summary>
+        [Then(@"I should see the activity Beginning and End messages set in Main Course Preferences")]
+        public void VerifyTheActivityBeginningAndEndMessagesSetInMainCoursePreferences()
+        {
+            Logger.LogMethodEntry("CommonSteps",
+                "VerifyTheActivityBeginningAndEndMessagesSetInMainCoursePreferences",
+                isTakeScreenShotDuringEntryExit);
+
+            //Asserts the Activity Name
+            Logger.LogAssertion("VerifyBeginActivityDefaultMessage", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(
+                    new ActivitiesPreferencesPage().returnActivityBeginDefaultMessage(),
+                    new AddAssessmentPage().returnBeginningofActivityDefaultMessageText()));
+            //Asserts the Activity Name
+            Logger.LogAssertion("VerifyBeginActivityInstructorMessage", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(
+                    new ActivitiesPreferencesPage().returnActivityBeginInstructorMessage(),
+                    new AddAssessmentPage().returnBeginningofActivityInstructorMessageText()));
+            //Asserts the Activity Name
+            Logger.LogAssertion("VerifyEndActivityDefaultMessage", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(
+                    new ActivitiesPreferencesPage().returnActivityEndDefaultMessage(),
+                    new AddAssessmentPage().returnEndofActivityDefaultMessageText()));
+            //Asserts the Activity Name
+            Logger.LogAssertion("VerifyEndActivityInstructorMessage", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(
+                    new ActivitiesPreferencesPage().returnActivityEndInstructorMessage(),
+                    new AddAssessmentPage().returnEndofActivityInstructorMessageText()));
+
+            Logger.LogMethodExit("CommonSteps",
+                "VerifyTheActivityBeginningAndEndMessagesSetInMainCoursePreferences",
+                isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verify New Activity Type In The Add Course Materials Menu.
+        /// </summary>
+        /// <param name="activityTypeName">Activity Type Name</param>
+        [Then(@"I should see the ""(.*)"" activity type in the Add Course Materials menu")]
+        public void VerifyNewActivityTypeInTheAddCourseMaterialsMenu(string activityTypeName)
+        {
+            Logger.LogMethodEntry("CommonSteps", "VerifyNewActivityTypeInTheAddCourseMaterialsMenu",
+                isTakeScreenShotDuringEntryExit);
+
+            //Assert we have correct page opened
+            Logger.LogAssertion("VerifyNewActivityTypeName",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(activityTypeName,
+                    new ContentLibraryUXPage().
+                    VerifyNewActivityType(activityTypeName)));
+
+            Logger.LogMethodExit("CommonSteps", "VerifyNewActivityTypeInTheAddCourseMaterialsMenu",
+                isTakeScreenShotDuringEntryExit);
+        }
     }
 }
