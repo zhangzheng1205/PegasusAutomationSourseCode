@@ -177,8 +177,9 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Method to Navigate to the Tab Window 
             Logger.LogMethodEntry("CommonSteps", "NavigateToTheTab",
                 base.isTakeScreenShotDuringEntryExit);
+            base.SelectDefaultWindow();
             //Click On More Link if More Link Is Present
-            new TodaysViewUXPage().ClickMoreLinkIfPresent(tabName);
+            new TodaysViewUXPage().ClickMoreLinkIfPresent(tabName); 
             //Wait For Element
             base.WaitForElement((By.PartialLinkText(tabName)));
             //Get Tab Element Property
