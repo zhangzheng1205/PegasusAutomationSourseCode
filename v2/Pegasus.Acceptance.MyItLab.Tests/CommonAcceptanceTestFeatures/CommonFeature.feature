@@ -96,7 +96,7 @@ Given I browsed the login url for "CsSmsInstructor"
 When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
-When I enter in the "MyItLabProgramCourse" course from the Global Home page as "CsSmsInstructor"
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsInstructor"
 
 
 #Purpose: Login as SMS Instructor

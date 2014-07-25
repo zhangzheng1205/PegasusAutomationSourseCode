@@ -116,10 +116,10 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Get the Section popup check box status
         /// </summary>
-        public Boolean IsVerifyCheckBoxStatusNotSelected()
+        public Boolean CopyMyCourseContentCheckBoxStatus()
         {
             //To get the Section popup check box status
-            logger.LogMethodEntry("EditCopyTemplatesSectionsPage", "IsVerifyCheckBoxStatusNotSelected",
+            logger.LogMethodEntry("EditCopyTemplatesSectionsPage", "CopyMyCourseContentCheckBoxStatus",
             base.isTakeScreenShotDuringEntryExit);
 
             //Variable Initialization
@@ -128,7 +128,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //TO select the pop window so as to set focus to its elements.
                 base.SelectWindow(EditCopyTemplatesSectionsResource.CopyAsSection_Page_Window_Page_Title);
-
+                base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.
+                    CopyAsSection_PopUpPage_Page_CheckBox_Id_Locator));
                 //Fetch the check box selection property
                 IsChecked = base.GetWebElementPropertiesById(EditCopyTemplatesSectionsResource.
                     CopyAsSection_PopUpPage_Page_CheckBox_Id_Locator).Selected;
@@ -139,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
 
-            logger.LogMethodExit("EditCopyTemplatesSectionsPage", "IsVerifyCheckBoxStatusNotSelected",
+            logger.LogMethodExit("EditCopyTemplatesSectionsPage", "CopyMyCourseContentCheckBoxStatus",
             base.isTakeScreenShotDuringEntryExit);
 
             return IsChecked;
