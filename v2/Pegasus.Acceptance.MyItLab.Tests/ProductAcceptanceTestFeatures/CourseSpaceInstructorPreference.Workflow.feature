@@ -5,8 +5,6 @@
 
 #Purpose:Necessary preference setting for creating a new Activity Type
 Scenario: CourseSpace Instructor Sets preference settings to create a new activity type
-When I navigate to the "Today's View" tab
-Then I should be on the "Today's View" page
 When I click on "Preferences" button in "Today's View"
 Then I should be on the "Preferences" page
 When I click on the "Activities" tab
@@ -22,8 +20,6 @@ And I should be on the "Course Materials" page
 
 #Purpose:CourseSpace Instructor Functionality of 'Save' button when Messages are created in Main Preference
 Scenario: CourseSpace Instructor Functionality of 'Save' button when Messages are created in Main Preference
-When I navigate to the "Today's View" tab
-Then I should be on the "Today's View" page
 When I click on "Preferences" button in "Today's View"
 Then I should be on the "Preferences" page
 When I click on the "Activities" tab

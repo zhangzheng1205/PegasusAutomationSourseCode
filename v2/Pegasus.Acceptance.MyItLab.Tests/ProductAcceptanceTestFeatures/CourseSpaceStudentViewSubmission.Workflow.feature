@@ -51,3 +51,12 @@ Scenario: Check the Status of Edited Instructor Manual Gradable Activity By SMS 
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 And I should see the "Passed" status of the "Quiz" activity type
+
+#Purpose : (Activity types and tools) Sim5 assessment launch when "Trap ALT + TAB" is disabled
+Scenario: Sim5 assessment launch when "Trap ALT + TAB" is disabled
+When I navigate to the "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I open the activity named as "Test"
+Then I should see the activity successfully launched in browser normal mode
+When I close the "Launch" window
+Then I should be on the "Course Materials" page

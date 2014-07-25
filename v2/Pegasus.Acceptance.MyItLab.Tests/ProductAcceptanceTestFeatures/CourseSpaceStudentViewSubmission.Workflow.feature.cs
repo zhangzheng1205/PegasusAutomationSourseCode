@@ -180,6 +180,30 @@ testRunner.And("I should see the \"Passed\" status of the \"Quiz\" activity type
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Sim5 assessment launch when \"Trap ALT + TAB\" is disabled")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentViewSubmission")]
+        public virtual void Sim5AssessmentLaunchWhenTrapALTTABIsDisabled()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sim5 assessment launch when \"Trap ALT + TAB\" is disabled", ((string[])(null)));
+#line 56
+this.ScenarioSetup(scenarioInfo);
+#line 57
+testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 58
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 59
+testRunner.When("I open the activity named as \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
+testRunner.Then("I should see the activity successfully launched in browser normal mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 61
+testRunner.When("I close the \"Launch\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 62
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

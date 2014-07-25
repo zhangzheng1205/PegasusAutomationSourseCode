@@ -2171,5 +2171,33 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("StudentPresentationPage", "AttemptTheActivityInStudentSide",
                     base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// verify Window Switching, which is a confirmation that activity is open in normal Browser mode
+        /// </summary>
+        public void verifyWindowSwitching()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "AttemptTheActivityInStudentSide",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                Thread.Sleep(15000);                
+                //base.WaitUntilPopUpLoads("SIM 5 - ws student", 15);
+                base.SwitchToLastOpenedWindow();
+                string Sim5Title = WebDriver.Title;
+                string SimURL = WebDriver.Url;
+                string currHandle1 = WebDriver.CurrentWindowHandle;
+                base.SwitchToDefaultWindow();
+                string PTitle = WebDriver.Title;
+                string strPURL = WebDriver.Url;
+                string currHandle2 = WebDriver.CurrentWindowHandle;
+                base.SwitchToLastOpenedWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "AttemptTheActivityInStudentSide",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
     }
 }

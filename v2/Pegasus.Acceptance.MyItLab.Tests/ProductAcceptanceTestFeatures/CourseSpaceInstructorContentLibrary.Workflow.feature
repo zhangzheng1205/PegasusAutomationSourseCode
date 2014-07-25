@@ -5,7 +5,6 @@
 
 #Purpose: To save an activity in Content Library with HelpLink
 Scenario: To save an activity in Content Library with HelpLink
-Then I should be on the "Today's View" page
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option in Content Library
@@ -18,7 +17,6 @@ Then I should see the successfull message "You have been signed out of the appli
 
 #Purpose: To edit an activity in Content Library and preview the HelpLink
 Scenario: To edit an activity in Content Library and preview the HelpLink
-Then I should be on the "Today's View" page
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the Activity Name in Content Library frame

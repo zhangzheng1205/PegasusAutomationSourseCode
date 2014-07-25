@@ -354,7 +354,20 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Launch SIM5 Questions By Navigating        
             new StudTodoDonePage().LaunchSIM5QuestionsByNavigating(activityName, questionCount);
         }
-        
+        /// <summary>
+        /// Activity should get successfully Launched In Browser Normal Mode
+        /// </summary>
+        [Then(@"I should see the activity successfully launched in browser normal mode")]
+        public void ActivitySuccessfullyLaunchedInBrowserNormalMode()
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ActivitySuccessfullyLaunchedInBrowserNormalMode",
+                base.isTakeScreenShotDuringEntryExit);
+            //Verify that control switches from SIM5 activity launch popup to the 'Course Materials' page
+            new StudentPresentationPage().verifyWindowSwitching();
+
+            Logger.LogMethodEntry("ActivitySubmission", "ActivitySuccessfullyLaunchedInBrowserNormalMode",
+                base.isTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
