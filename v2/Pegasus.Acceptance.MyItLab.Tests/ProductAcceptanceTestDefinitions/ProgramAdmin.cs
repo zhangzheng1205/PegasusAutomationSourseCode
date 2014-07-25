@@ -151,21 +151,22 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 , base.isTakeScreenShotDuringEntryExit);
         }
 
+
         /// <summary>
-        /// To Get the checkbox status
+        /// To Get the CopyMyCourseContentCheckBoxStatus
         /// </summary>
-        [Then(@"I should see the check box as unchecked")]
-        public void CheckBoxUnchecked()
+        [Then(@"I should see the ""(.*)"" check box as unchecked")]
+        public void CopyMyCourseContentCheckBoxStatus()
         {
             Logger.LogMethodEntry("ProgramAdmin",
-               "CheckBoxUnchecked",
+               "CopyMyCourseContentCheckBoxStatus",
              base.isTakeScreenShotDuringEntryExit);
             // To Verify Checkbox Is Not Selected
-            Logger.LogAssertion("CheckBoxUnchecked",
+            Logger.LogAssertion("CopyMyCourseContentCheckBoxStatus",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
-               => Assert.IsFalse(new EditCopyTemplatesSectionsPage().IsVerifyCheckBoxStatusNotSelected()));
+               => Assert.IsFalse(new EditCopyTemplatesSectionsPage().CopyMyCourseContentCheckBoxStatus()));
             Logger.LogMethodExit("ProgramAdmin",
-           "CheckBoxUnchecked",
+           "CopyMyCourseContentCheckBoxStatus",
             base.isTakeScreenShotDuringEntryExit);
         }
 

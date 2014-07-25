@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Set Thread To Wait
                 Thread.Sleep(Convert.ToInt32(HEDGlobalHomePageResource.
                             HEDGlobalHome_Page_ThreadSleep_Value));
-                base.SwitchToDefaultPageContent();
+                base.SelectDefaultWindow();
                 //Select Global Home window
                 base.SelectWindow(HEDGlobalHomePageResource.
                     HEDGlobalHome_Page_Window_Title_Name);

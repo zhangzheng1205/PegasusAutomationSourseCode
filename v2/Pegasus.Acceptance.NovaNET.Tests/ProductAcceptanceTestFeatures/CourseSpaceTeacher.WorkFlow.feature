@@ -7,7 +7,7 @@
 #NovaNETMasterLibrary Scenario				 
 #Purpose : To View Activity Alerts by CS teacher
 Scenario: View Activity Alerts by CS Teacher
-When I navigate to the "Overview" tab
+When I navigate to "Overview" tab
 Then I should be on the "Overview" page
 And I should see the alert for New Grades
 When I select New Grades option
@@ -25,7 +25,7 @@ Then I should see the successfull message "Item created successfully."
 #Purpose: UseCase to User Enrollment by CS Teacher
 Scenario: User Enrollment by Cs Teacher
 When I enter in to "NovaNETTemplate" class
-And I navigate to the "Preferences" tab
+And I navigate to "Preferences" tab
 Then I should be on the "Preferences" page
 When I enable roster in Preferences tab
 Then I should see the successfull message "Preferences updated successfully"
