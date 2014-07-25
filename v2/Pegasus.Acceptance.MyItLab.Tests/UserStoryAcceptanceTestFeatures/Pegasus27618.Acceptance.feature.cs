@@ -82,11 +82,11 @@ testRunner.When("I select the \"Sections\" tab", ((string)(null)), ((TechTalk.Sp
 #line 9
 testRunner.Then("I navigate to the \"Sections\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 10
-testRunner.When("I search the section of \"MyItLabProgramCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I search the section of \"MyITLabOffice2013Program\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
 testRunner.And("I click the \"Copy as Section\" c-menu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
-testRunner.Then("I should see the check box as unchecked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Copy My Course Content Only.\" check box as unchecked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 13
 testRunner.And("I should see the message \"Copy My Course Content Only.\" on popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
