@@ -3,16 +3,8 @@
 					I want to manage all the coursespace course preference related usecases 
 					so that I would validate that all the coursespace course preference scenarios are working fine.
 
-#Purpose: Open Instructor Url
-Background: 
-Given I browsed the login url for "HedWsInstructor"
-When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-
 #Purpose:Necessary preference setting for creating a new Activity Type
 Scenario: CourseSpace Instructor Sets preference settings to create a new activity type
-When I enter in the "MyItLabInstructorCourse" from the Global Home page as "HedWsInstructor" 
 When I navigate to the "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on "Preferences" button in "Today's View"
@@ -28,11 +20,8 @@ When I click on the 'Add Course Materials' option in Content Library
 Then I should see the "Test1" activity type in the Add Course Materials menu
 And I should be on the "Course Materials" page
 
-
-
 #Purpose:CourseSpace Instructor Functionality of 'Save' button when Messages are created in Main Preference
 Scenario: CourseSpace Instructor Functionality of 'Save' button when Messages are created in Main Preference
-When I enter in the "MyItLabInstructorCourse" from the Global Home page as "HedWsInstructor" 
 When I navigate to the "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on "Preferences" button in "Today's View"

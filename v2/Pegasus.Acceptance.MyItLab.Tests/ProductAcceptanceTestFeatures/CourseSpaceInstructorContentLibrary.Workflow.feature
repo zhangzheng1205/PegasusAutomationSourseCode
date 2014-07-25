@@ -1,18 +1,10 @@
 ﻿Feature: CourseSpaceInstructorContentLibrary
 	     As a Cs Instructor 
-		I want to manage all the coursespace Instructor related usecases 
-		so that I would validate all the coursespace Instructor scenarios are working fine.
-
-
-Background:
-#Purpose: Open CS Url 
-Given I browsed the login url for "HedWsInstructor"
-When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
-Then I should logged in successfully
+		I want to manage all the coursespace Content Library related usecases 
+		so that I would validate all the coursespace Content Library scenarios are working fine.
 
 #Purpose: To save an activity in Content Library with HelpLink
 Scenario: To save an activity in Content Library with HelpLink
-When I enter in the "MyItLabInstructorCourse" from the Global Home page as "HedWsInstructor" 
 Then I should be on the "Today's View" page
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
@@ -26,7 +18,6 @@ Then I should see the successfull message "You have been signed out of the appli
 
 #Purpose: To edit an activity in Content Library and preview the HelpLink
 Scenario: To edit an activity in Content Library and preview the HelpLink
-When I enter in the "MyItLabInstructorCourse" from the Global Home page as "HedWsInstructor" 
 Then I should be on the "Today's View" page
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
