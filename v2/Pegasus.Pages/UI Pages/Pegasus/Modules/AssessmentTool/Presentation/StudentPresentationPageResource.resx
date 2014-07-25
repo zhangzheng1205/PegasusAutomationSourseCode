@@ -405,4 +405,10 @@
   <data name="StudentPrsentation_Page_Ok_Button_MessageBox_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='CustomMessageBox']/div/div[3]/button[2]</value>
   </data>
+  <data name="StudentPresentation_Page_PassDue_Message_Id" xml:space="preserve">
+    <value>_ctl0_lateSubText</value>
+  </data>
+  <data name="StudentPresentation_Page_ReturntoCourse_Button_Text" xml:space="preserve">
+    <value>Return to Course</value>
+  </data>
 </root>

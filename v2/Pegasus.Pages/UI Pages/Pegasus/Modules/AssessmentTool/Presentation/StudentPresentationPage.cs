@@ -2199,5 +2199,89 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("StudentPresentationPage", "AttemptTheActivityInStudentSide",
                     base.isTakeScreenShotDuringEntryExit);
         }
+
+
+
+        public void WaitForActivitytoLoad(string activityName)
+        {
+            // This code checks the link exists
+            //if (base.IsElementDisplayedByPartialLinkText(assetName))
+
+
+            base.WaitForElement(By.PartialLinkText(activityName));
+            //Get Element Property
+            IWebElement getCmenuIconProperty1 = base.GetWebElementPropertiesByPartialLinkText(activityName);
+            //Perform Mouse Hover on Cmenu Icon
+
+            base.ClickByJavaScriptExecutor(getCmenuIconProperty1);
+            //}
+
+            base.WaitForElement(By.PartialLinkText(activityName));
+        }
+
+
+
+
+        public string GetActivityPastDueStatusMessage()
+        {
+
+            base.SwitchToLastOpenedWindow();
+            //Select Window And Frame
+            //base.SwitchToIFrameById(StudentPresentationPageResource.StudentPresentation_Page_Content_Frame_Id_Locator);
+            base.WaitForElement(By.Id(StudentPresentationPageResource.StudentPresentation_Page_PassDue_Message_Id));
+            string actualPastDueActivityMessage = base.GetElementInnerTextById(StudentPresentationPageResource.StudentPresentation_Page_PassDue_Message_Id);
+            return actualPastDueActivityMessage;
+
+
+        }
+
+
+        public void SubmitPastDueActivity()
+        {
+            //Opens Activity Presentation Window
+            logger.LogMethodEntry("StudentPresentationPage", "AttemptActivity",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                base.SwitchToLastOpenedWindow();
+                //Answers Selection in Presention window
+                this.AnswersSelectionInTestWindow();
+                //Click the Submit button
+                this.ClickOnSubmitForGradingButton();
+                //Click on the Finish button
+                this.ClickOnFinishButton();
+                //Click On Return To Course Button
+                //this.ClickOnReturnToCourseButton();
+                // Switch to default window after closing of presentation pop up
+                //base.WaitUntilWindowLoads(StudentPresentationPageResource
+                //.StudentPresentation_Page_BaseWindow_Title_Name);
+                //base.SelectWindow(StudentPresentationPageResource
+                //.StudentPresentation_Page_BaseWindow_Title_Name);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "AttemptActivity",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+        public void ReturnToParentWindow()
+        {
+            //Click On Return To Course Button  Return to Course
+            IWebElement getReturnToCourseLinkProperties = base.GetWebElementPropertiesByPartialLinkText(StudentPresentationPageResource.StudentPresentation_Page_ReturntoCourse_Button_Text);
+            //Click on Button
+            base.ClickByJavaScriptExecutor(getReturnToCourseLinkProperties);
+
+            //this.ClickOnReturnToCourseButton();
+            //Switch to default window after closing of presentation pop up
+            //base.WaitUntilWindowLoads(StudentPresentationPageResource
+            //.StudentPresentation_Page_BaseWindow_Title_Name);
+            //base.SelectWindow(StudentPresentationPageResource
+            //.StudentPresentation_Page_BaseWindow_Title_Name);
+
+        }
     }
 }
