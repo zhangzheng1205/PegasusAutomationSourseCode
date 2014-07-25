@@ -68,7 +68,8 @@ namespace Pegasus.Automation.DataTransferObjects
             ExternalCourse = 43,
             HedEmptyClass = 44,
             // mil GraderIT Courses
-            GraderITSIM5Course = 45
+            GraderITSIM5Course = 45,
+            SelfStudyCourse=46
         }
 
         /// <summary>
