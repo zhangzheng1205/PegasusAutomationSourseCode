@@ -105,11 +105,11 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As HedWsInstrucor and Navigate to Master Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As HedWsInstrucor and Navigate to MySpanishLabMaster Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogout")]
-        public virtual void UserLoginAsHedWsInstrucorAndNavigateToMasterCourse()
+        public virtual void UserLoginAsHedWsInstrucorAndNavigateToMySpanishLabMasterCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As HedWsInstrucor and Navigate to Master Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As HedWsInstrucor and Navigate to MySpanishLabMaster Course", ((string[])(null)));
 #line 18
 this.ScenarioSetup(scenarioInfo);
 #line 19
@@ -128,11 +128,11 @@ testRunner.When("I enter in the \"MySpanishLabMaster\" from the Global Home page
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As HedWsInstrucor and Navigate to Empty Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As HedWsInstrucor and Navigate to HedEmptyClass Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogout")]
-        public virtual void UserLoginAsHedWsInstrucorAndNavigateToEmptyCourse()
+        public virtual void UserLoginAsHedWsInstrucorAndNavigateToHedEmptyClassCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As HedWsInstrucor and Navigate to Empty Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As HedWsInstrucor and Navigate to HedEmptyClass Course", ((string[])(null)));
 #line 26
 this.ScenarioSetup(scenarioInfo);
 #line 27
@@ -222,11 +222,11 @@ testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTal
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSmsInstructor and Navigate to Test Bank Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSmsInstructor and Navigate to MyTestBankCourse Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogout")]
-        public virtual void UserLoginAsCsSmsInstructorAndNavigateToTestBankCourse()
+        public virtual void UserLoginAsCsSmsInstructorAndNavigateToMyTestBankCourseCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSmsInstructor and Navigate to Test Bank Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSmsInstructor and Navigate to MyTestBankCourse Course", ((string[])(null)));
 #line 57
 this.ScenarioSetup(scenarioInfo);
 #line 58
@@ -244,11 +244,11 @@ testRunner.When("I enter in the \"MyTestBankCourse\" from the Global Home page a
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSmsInstructor and Navigate to Instructor Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSmsInstructor and Navigate to MyTestInstructorCourse")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogout")]
-        public virtual void UserLoginAsCsSmsInstructorAndNavigateToInstructorCourse()
+        public virtual void UserLoginAsCsSmsInstructorAndNavigateToMyTestInstructorCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSmsInstructor and Navigate to Instructor Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSmsInstructor and Navigate to MyTestInstructorCourse", ((string[])(null)));
 #line 65
 this.ScenarioSetup(scenarioInfo);
 #line 66
@@ -284,11 +284,11 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSmsStudent and Navigate to Instructor Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSmsStudent and Navigate to MyTestInstructorCourse")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogout")]
-        public virtual void UserLoginAsCsSmsStudentAndNavigateToInstructorCourse()
+        public virtual void UserLoginAsCsSmsStudentAndNavigateToMyTestInstructorCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSmsStudent and Navigate to Instructor Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSmsStudent and Navigate to MyTestInstructorCourse", ((string[])(null)));
 #line 78
 this.ScenarioSetup(scenarioInfo);
 #line 79
