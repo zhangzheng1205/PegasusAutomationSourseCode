@@ -20,7 +20,6 @@ Then I should be on the "Preferences" page
 When I click on the "Activities" tab
 And I click on the "Add Activity Name" tab
 When I enter "Test1" as new activity type name
-
 And I click on Save Preferences button on Preferences page
 Then I should see the successfull message "Preferences updated successfully."
 When I navigate to the "Course Materials" tab

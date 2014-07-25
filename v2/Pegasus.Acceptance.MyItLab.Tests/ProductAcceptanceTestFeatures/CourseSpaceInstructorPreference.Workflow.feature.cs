@@ -111,19 +111,19 @@ testRunner.When("I click on the \"Activities\" tab", ((string)(null)), ((TechTal
 testRunner.And("I click on the \"Add Activity Name\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 22
 testRunner.When("I enter \"Test1\" as new activity type name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
+#line 23
 testRunner.And("I click on Save Preferences button on Preferences page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
+#line 24
 testRunner.Then("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 26
+#line 25
 testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
+#line 26
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 28
+#line 27
 testRunner.When("I click on the \'Add Course Materials\' option in Content Library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 28
 testRunner.Then("I should see the \"Test1\" activity type in the Add Course Materials menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 30
+#line 29
 testRunner.And("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -137,55 +137,55 @@ testRunner.And("I should be on the \"Course Materials\" page", ((string)(null)),
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CourseSpace Instructor Functionality of \'Save\' button when Messages are created i" +
                     "n Main Preference", ((string[])(null)));
-#line 35
+#line 34
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 36
+#line 35
 testRunner.When("I enter in the \"MyItLabInstructorCourse\" from the Global Home page as \"HedWsInstr" +
                     "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 37
+#line 36
 testRunner.When("I navigate to the \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 37
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 39
+#line 38
 testRunner.When("I click on \"Preferences\" button in \"Today\'s View\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
+#line 39
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 41
+#line 40
 testRunner.When("I click on the \"Activities\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 42
+#line 41
 testRunner.And("I click on the Edit Preferences link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
+#line 42
 testRunner.Then("I should be on the \"Default preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 44
+#line 43
 testRunner.When("I click on the \"Messages\" sub-tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
+#line 44
 testRunner.And("I enter Beginning of activity Default and Instructor messages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
+#line 45
 testRunner.And("I enter End of activity Default and Instructor messages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 47
+#line 46
 testRunner.And("I click on the \"Save\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 48
+#line 47
 testRunner.Then("I should see the successfull message \"Preference settings updated for selected ac" +
                     "tivity type.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 49
+#line 48
 testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 50
+#line 49
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 51
+#line 50
 testRunner.When("I click on the \'Add Course Materials\' option in Content Library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 52
+#line 51
 testRunner.And("I click on the \"Homework\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 53
+#line 52
 testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 54
+#line 53
 testRunner.When("I enter the necessary details begin creation of Assignment behavioral type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 55
+#line 54
 testRunner.Then("I should be on the \"Create Assignment activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 56
+#line 55
 testRunner.When("I click on the Messages activity subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 57
+#line 56
 testRunner.Then("I should see the activity Beginning and End messages set in Main Course Preferenc" +
                     "es", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
