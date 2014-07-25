@@ -309,6 +309,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PEGASUS-2119.Acceptance.feature</DependentUpon>
     </Compile>
+    <Compile Include="UserStoryAcceptanceTestFeatures\PEGASUS-27620.Acceptance.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-27620.Acceptance.feature</DependentUpon>
+    </Compile>
     <Compile Include="UserStoryAcceptanceTestFeatures\PEGASUS-8441.Acceptance.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -338,6 +343,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PreferencesResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserStoryAcceptanceTestFeatures\Pegasus27618.Acceptance.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pegasus27618.Acceptance.feature</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -492,6 +502,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PEGASUS-2119.Acceptance.feature.cs</LastGenOutput>
     </None>
+    <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-27620.Acceptance.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-27620.Acceptance.feature.cs</LastGenOutput>
+    </None>
     <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-8441.Acceptance.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PEGASUS-8441.Acceptance.feature.cs</LastGenOutput>
@@ -501,6 +515,10 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProductAcceptanceTest.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UserStoryAcceptanceTestFeatures\Pegasus27618.Acceptance.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Pegasus27618.Acceptance.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup />

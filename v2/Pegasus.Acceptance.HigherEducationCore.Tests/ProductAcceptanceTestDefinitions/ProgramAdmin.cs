@@ -542,42 +542,6 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 base.isTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// To Validate the obtained message on the popup page
-        /// </summary>
-        [Then(@"I should see the message ""(.*)"" on popup page")]
-        public void ToValidateTheMessage(string message)
-        {
-            Logger.LogMethodEntry("ProgramAdmin",
-               "ToValidateTheMessage",
-               base.isTakeScreenShotDuringEntryExit);
-            //To Verify The Message In Copy as Section Popup
-            Logger.LogAssertion("ToValidateTheMessage",
-                            ScenarioContext.Current.ScenarioInfo.Title, ()
-                           => Assert.IsTrue(new EditCopyTemplatesSectionsPage().ToValidateTheMessageOnPopupPage(message)));
-            Logger.LogMethodExit("ProgramAdmin",
-            "ToValidateTheMessage",
-              base.isTakeScreenShotDuringEntryExit);
-        }
-
-
-        /// <summary>
-        /// To Get the checkbox status
-        /// </summary>
-        [Then(@"I should see the check box as unchecked")]
-        public void CheckBoxUnchecked()
-        {
-            Logger.LogMethodEntry("ProgramAdmin",
-               "CheckBoxUnchecked",
-             base.isTakeScreenShotDuringEntryExit);
-            // To Verify Checkbox Is Not Selected
-            Logger.LogAssertion("CheckBoxUnchecked",
-                ScenarioContext.Current.ScenarioInfo.Title, ()
-               => Assert.IsFalse(new EditCopyTemplatesSectionsPage().IsVerifyCheckBoxStatusNotSelected()));
-            Logger.LogMethodExit("ProgramAdmin",
-           "CheckBoxUnchecked",
-            base.isTakeScreenShotDuringEntryExit);
-        }
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

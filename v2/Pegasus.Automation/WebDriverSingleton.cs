@@ -83,8 +83,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             browser = WebDriverFactory.GetBrowser();
 
             webDriver = WebDriverFactory.GetInstance();
-            selenium = new WebDriverBackedSelenium(webDriver, AutomationConfigurationManager.WorkSpaceURLRoot);
-            webDriver.Navigate().GoToUrl(AutomationConfigurationManager.WorkSpaceURLRoot + "frmlogin.aspx?mode=admin");
+            selenium = new WebDriverBackedSelenium(webDriver, AutomationConfigurationManager.WorkSpaceUrlRoot);
+            webDriver.Navigate().GoToUrl(AutomationConfigurationManager.WorkSpaceUrlRoot + "frmlogin.aspx?mode=admin");
             webDriver.Manage().Cookies.DeleteAllCookies();
             webDriver.Manage().Window.Maximize();
         }

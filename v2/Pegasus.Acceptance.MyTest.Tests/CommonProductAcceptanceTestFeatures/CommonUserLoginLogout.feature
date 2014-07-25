@@ -15,7 +15,7 @@ When I "Sign out" from the "HedWsAdmin"
 Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose:Verify The User Login As HedWsInstrucor and Navigate to Master Course
-Scenario: User Login As HedWsInstrucor and Navigate to Master Course
+Scenario: User Login As HedWsInstrucor and Navigate to MySpanishLabMaster Course
 Given I browsed the login url for "HedWsInstructor"
 When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
 Then I should logged in successfully
@@ -23,7 +23,7 @@ And I should be on the "Global Home" page
 When I enter in the "MySpanishLabMaster" from the Global Home page as "HedWsInstructor"
 
 #Purpose:Verify The User Login As HedWsInstrucor and Navigate to Empty Course
-Scenario: User Login As HedWsInstrucor and Navigate to Empty Course
+Scenario: User Login As HedWsInstrucor and Navigate to HedEmptyClass Course
 Given I browsed the login url for "HedWsInstructor"
 When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
 Then I should logged in successfully
@@ -53,16 +53,16 @@ When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 
-#Purpose:Verify The User Login As CsSmsInstructor and Navigate to Test Bank Course
-Scenario: User Login As CsSmsInstructor and Navigate to Test Bank Course
+#Purpose:Verify The User Login As CsSmsInstructor and Navigate to MyTestBankCourse Course
+Scenario: User Login As CsSmsInstructor and Navigate to MyTestBankCourse Course
 Given I browsed the login url for "CsSmsInstructor"
 When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyTestBankCourse" from the Global Home page as "CsSmsInstructor"
 
-#Purpose:Verify The User Login As CsSmsInstructor and Navigate to Instructor Course
-Scenario: User Login As CsSmsInstructor and Navigate to Instructor Course
+#Purpose:Verify The User Login As CsSmsInstructor and Navigate to MyTestInstructorCourse
+Scenario: User Login As CsSmsInstructor and Navigate to MyTestInstructorCourse
 Given I browsed the login url for "CsSmsInstructor"
 When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
@@ -74,8 +74,8 @@ Scenario: User Logout As CsSmsInstructor
 When I "Sign out" from the "CsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
-#Purpose:Verify The User Login As CsSmsStudent and Navigate to Instructor Course
-Scenario: User Login As CsSmsStudent and Navigate to Instructor Course
+#Purpose:Verify The User Login As CsSmsStudent and Navigate to MyTestInstructorCourse
+Scenario: User Login As CsSmsStudent and Navigate to MyTestInstructorCourse
 Given I browsed the login url for "CsSmsStudent"
 When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
 Then I should logged in successfully

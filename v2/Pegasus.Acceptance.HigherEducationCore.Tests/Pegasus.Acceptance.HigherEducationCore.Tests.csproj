@@ -531,11 +531,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PEGASUS-8551.Acceptance.feature</DependentUpon>
     </Compile>
-    <Compile Include="UserStoryAcceptanceTestFeatures\Pegasus27618.Acceptance.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Pegasus27618.Acceptance.feature</DependentUpon>
-    </Compile>
     <Compile Include="UserStoryAcceptanceTestFeatures\PEGASUS433%2801%29.Acceptance.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -819,10 +814,6 @@
     <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-8551.Acceptance.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PEGASUS-8551.Acceptance.feature.cs</LastGenOutput>
-    </None>
-    <None Include="UserStoryAcceptanceTestFeatures\Pegasus27618.Acceptance.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Pegasus27618.Acceptance.feature.cs</LastGenOutput>
     </None>
     <None Include="UserStoryAcceptanceTestFeatures\PEGASUS433%2801%29.Acceptance.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

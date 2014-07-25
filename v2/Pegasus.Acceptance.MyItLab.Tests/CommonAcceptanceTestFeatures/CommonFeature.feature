@@ -47,6 +47,7 @@ Given I browsed the login url for "HedWsInstructor"
 When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
+When I enter in the "MyItLabSIM5MasterCourse" course from the Global Home page as "HedWsInstructor"
 
 #Purpose: Open Ws Url and Login as Workspace Instructor and Navigate to MyItLabSIMMasterCourse
 Scenario: User Login as Workspace Instructor and Navigate to MyItLabSIMMasterCourse
@@ -54,6 +55,7 @@ Given I browsed the login url for "HedWsInstructor"
 When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
+When I enter in the "MyItLabSIMMasterCourse" course from the Global Home page as "HedWsInstructor"
 
 #Purpose: Open Ws Url and Login as Workspace Instructor and Navigate to HedEmptyClass
 Scenario: User Login as Workspace Instructor and Navigate to HedEmptyClass
@@ -61,6 +63,7 @@ Given I browsed the login url for "HedWsInstructor"
 When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
+When I enter in the "HedEmptyClass" course from the Global Home page as "HedWsInstructor"
 
 #Purpose: Open Ws Url and Logout as Workspace Instructor
 Scenario: User Logout as Workspace Instructor
@@ -75,6 +78,17 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
 
+#Purpose: Login as SMS Instructor and Navigate to MyITLabOffice2013Program
+Scenario: User Login as SMS Instructor and Navigate to MyITLabOffice2013Program Course
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsInstructor"
+Then I should be on the "Program Administration" page
+When I navigate to "Sections" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
+When I search the "MyITLabOffice2013Program" first section
+And I click the "Enter Section as Instructor"
 
 #Purpose: Login as SMS Instructor and Navigate to MyItLabProgramCourse
 Scenario: User Login as SMS Instructor and Navigate to MyItLabProgramCourse
@@ -116,11 +130,6 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
 
-#Purpose: Logout as SMS Student
-Scenario: User Logout as SMS Student
-When I "Sign out" from the "CsSmsStudent"
-Then I should see the successfull message "You have been signed out of the application."
-
 #Purpose: Login as SMS Student and Navigate to MyItLabProgramCourse
 Scenario: User Login as SMS Student and Navigate to MyItLabProgramCourse
 Given I browsed the login url for "CsSmsStudent"
@@ -129,6 +138,13 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyItLabProgramCourse" course from the Global Home page as "CsSmsStudent"
 
+#Purpose: Login as SMS Student and Navigate to MyITLabOffice2013Program
+Scenario: User Login as SMS Student and Navigate to MyITLabOffice2013Program Course
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
 
 #Purpose: Login as SMS Student
 Scenario: User Login as SMS Student
@@ -136,4 +152,9 @@ Given I browsed the login url for "CsSmsStudent"
 When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
+
+#Purpose: Logout as SMS Student
+Scenario: User Logout as SMS Student
+When I "Sign out" from the "CsSmsStudent"
+Then I should see the successfull message "You have been signed out of the application."
 

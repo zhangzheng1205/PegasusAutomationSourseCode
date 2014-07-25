@@ -285,7 +285,7 @@ namespace Pegasus.Pages.UI_Pages
             //Insert Text in Text Box
             base.FillTextBoxByID(NewProductPageResource.
                 NewProduct_Page_SMSID_TextBox_Id_Locator,
-                AutomationConfigurationManager.SMSMuduleId);
+                AutomationConfigurationManager.SmsMuduleId);
             //Wait For Element
             base.WaitForElement(By.Id(NewProductPageResource.
                 NewProduct_Page_ProgramType_CheckBox_Id_Locator));
@@ -335,7 +335,7 @@ namespace Pegasus.Pages.UI_Pages
             //Insert Text in Text Box
             base.FillTextBoxByID(NewProductPageResource.
                 NewProduct_Page_SMSID_TextBox_Id_Locator,
-                AutomationConfigurationManager.SMSMuduleId);
+                AutomationConfigurationManager.SmsMuduleId);
             Logger.LogMethodExit("NewProductPage", "EnterDetailsForGeneralTypeProductForHed",
                 base.isTakeScreenShotDuringEntryExit);
         }

@@ -136,7 +136,9 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// Click on Cmenu of Section or Template.
         /// </summary>
         /// <param name="cMenuOption">This is Cmenu option.</param>
+        [Then(@"I click the ""(.*)"" c-menu option")]
         [When(@"I click the ""(.*)"" option")]
+        [When(@"I click the ""(.*)"" c-menu option")]
         public void ClickOnCmenuOfSectionOrTemplate(String cMenuOption)
         {
             //Click on Cmenu of Section or Template
@@ -148,5 +150,94 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("ProgramAdmin", "ClickOnCmenuOfSectionOrTemplate"
                 , base.isTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// To Get the checkbox status
+        /// </summary>
+        [Then(@"I should see the check box as unchecked")]
+        public void CheckBoxUnchecked()
+        {
+            Logger.LogMethodEntry("ProgramAdmin",
+               "CheckBoxUnchecked",
+             base.isTakeScreenShotDuringEntryExit);
+            // To Verify Checkbox Is Not Selected
+            Logger.LogAssertion("CheckBoxUnchecked",
+                ScenarioContext.Current.ScenarioInfo.Title, ()
+               => Assert.IsFalse(new EditCopyTemplatesSectionsPage().IsVerifyCheckBoxStatusNotSelected()));
+            Logger.LogMethodExit("ProgramAdmin",
+           "CheckBoxUnchecked",
+            base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// To search the template
+        /// </summary>
+        /// <param name="TemplateName">Name of the template</param>
+        [When(@"I search the template ""(.*)""")]
+        public void SearchTemplate(string TemplateName)
+        {
+            Logger.LogMethodEntry("ProgramAdmin",
+               "SearchTemplate",
+             base.isTakeScreenShotDuringEntryExit);
+            new ManageTemplatePage().SearchEntityInProgramAdministration(TemplateName);
+            Logger.LogMethodExit("ProgramAdmin",
+               "SearchTemplate",
+             base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Save Button click to create course Manage Template section
+        /// </summary>
+        /// <param name=""></param>
+        [When(@"I click ""(.*)"" button to ""(.*)""")]
+        public void ClickToCreateUpdate(string Button, String Operation)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+            //SaveUpdate method to create or update the course.
+            new EditCopyTemplatesSectionsPage().CreateSharedLibrary();
+
+            Logger.LogMethodExit("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// To Validate the obtained message on the popup page
+        /// </summary>
+        [Then(@"I should see the message ""(.*)"" on popup page")]
+        public void ToValidateTheMessage(string message)
+        {
+            Logger.LogMethodEntry("ProgramAdmin",
+               "ToValidateTheMessage",
+               base.isTakeScreenShotDuringEntryExit);
+            //To Verify The Message In Copy as Section Popup
+            Logger.LogAssertion("ToValidateTheMessage",
+                            ScenarioContext.Current.ScenarioInfo.Title, ()
+                           => Assert.IsTrue(new EditCopyTemplatesSectionsPage().ToValidateTheMessageOnPopupPage(message)));
+            Logger.LogMethodExit("ProgramAdmin",
+            "ToValidateTheMessage",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="courseTypeEnum"></param>
+        [When(@"I search the section of ""(.*)""")]
+        public void SearchSection(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Verify Section in Active State
+            Logger.LogMethodEntry("ProgramAdmin", "SearchSection",
+            base.isTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Approve Section in Active State
+            new ManageTemplatePage().SearchEntityInProgramAdministration(course.SectionName);
+            Logger.LogMethodExit("ProgramAdmin", "SearchSection",
+            base.isTakeScreenShotDuringEntryExit);
+        }
+
     }
+
+
 }
