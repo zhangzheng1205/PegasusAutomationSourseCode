@@ -186,4 +186,13 @@
   <data name="TeachingPlanUX_Page_Home_Link_PartialLinkText" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="TeachingPlanUX_Page_Course_Office2013_Microsoft Access 2013_AssetFolder_Level1" xml:space="preserve">
+    <value>GO! with Microsoft Access 2013 Comprehensive</value>
+  </data>
+  <data name="TeachingPlanUX_Page_Course_Office2013_Microsoft Access 2013_AssetFolder_Level2" xml:space="preserve">
+    <value>Access Chapter 1: Getting Started with Microsoft Access 2013</value>
+  </data>
+  <data name="TeachingPlanUX_Page_Course_Office2013_Microsoft Access 2013_AssetFolder_Level3" xml:space="preserve">
+    <value>Access Chapter 1: Activities</value>
+  </data>
 </root>

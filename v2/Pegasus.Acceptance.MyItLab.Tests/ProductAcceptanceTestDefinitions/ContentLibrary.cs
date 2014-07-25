@@ -26,7 +26,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("ContentLibrary",
                "ExpandAdvancedOptionsLink",
                base.isTakeScreenShotDuringEntryExit);
-            ContentLibraryUXPage contentLibrary = 
+            ContentLibraryUXPage contentLibrary =
                 new ContentLibraryUXPage();
             contentLibrary.SelectAndSwitchToContentLibrary();
             contentLibrary.ExpandAdvancedOptions();
@@ -41,7 +41,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("ContentLibrary",
                 "SelectCheckboxOfAssets",
                 base.isTakeScreenShotDuringEntryExit);
-            ContentLibraryUXPage contentLibrary = 
+            ContentLibraryUXPage contentLibrary =
                 new ContentLibraryUXPage();
             contentLibrary.SelectAndSwitchToContentLibrary();
             contentLibrary.SelectCheckboxOfAssets(assetCount);
@@ -52,7 +52,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
 
         [Then(@"""(.*)"" button on Content Library header should get ""(.*)""")]
         public void VerifyStatusOfButtonOnContentLibraryHeader(
-            ContentLibraryUXPage.AdvancedOptionsButtonType buttonType, 
+            ContentLibraryUXPage.AdvancedOptionsButtonType buttonType,
             string buttonStatus)
         {
             Logger.LogMethodEntry("ContentLibrary",
@@ -129,12 +129,18 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                base.isTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Selected Activity By Name And Assigned In My CourseFrame.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
         [When(@"I selected activity ""(.*)"" and assigned in My Course frame")]
         public void SelectedActivityAndAssignedInMyCourseFrame(string activityName)
         {
+            // select activity and assign 
             Logger.LogMethodEntry("ContentLibrary",
                  "SelectedActivityAndAssignedInMyCourseFrame",
                  base.isTakeScreenShotDuringEntryExit);
+            // select and add activity in my course frame
             new Pages.UI_Pages.TeachingPlanUxPage().
                 SelectActivityInCourseMaterialsLibraryFrame(activityName);
             Logger.LogMethodExit("ContentLibrary",

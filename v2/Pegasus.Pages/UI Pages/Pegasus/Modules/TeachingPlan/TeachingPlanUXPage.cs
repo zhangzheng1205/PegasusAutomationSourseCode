@@ -326,34 +326,39 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// This method is use to select activity and add in my course frame
+        /// that used for scenario verification. This is a dependent method for 
+        /// other scenarios verifications for student side.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
         public void SelectActivityInCourseMaterialsLibraryFrame(string activityName)
         {
             switch (activityName)
             {
                 case "Access Chapter 1: End-of-Chapter Quiz":
-
-                    //Wait for the Window
-                    base.WaitUntilWindowLoads(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_CourseMaterials_WindowName);
-                    base.SelectWindow(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_CourseMaterials_WindowName);
-                    base.SwitchToIFrameById("ifrmLeft");
-                    base.WaitForElement(By.PartialLinkText("GO! with Microsoft Access 2013 Comprehensive"));
-                    base.ClickLinkByPartialLinkText("GO! with Microsoft Access 2013 Comprehensive");
-
-                    base.WaitForElement(By.PartialLinkText("Access Chapter 1: Getting Started with Microsoft Access 2013"));
-                    base.ClickLinkByPartialLinkText("Access Chapter 1: Getting Started with Microsoft Access 2013");
-
-                    base.WaitForElement(By.PartialLinkText("Access Chapter 1: Activities"));
-                    base.ClickLinkByPartialLinkText("Access Chapter 1: Activities");
-
-
-
-                    base.WaitForElement(By.PartialLinkText("Access Chapter 1: End-of-Chapter Activities"));
-                    base.ClickLinkByPartialLinkText("Access Chapter 1: End-of-Chapter Activities");
-
-                    string isRequiredAssetPresent = base.GetElementTextByID("grdContentLibrary$divContent");
-                    if (isRequiredAssetPresent.Contains(activityName))
+                    // select the window
+                    this.SelectCourseMaterialsWindow();
+                    base.SwitchToIFrameById(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_Course_Content_Left_IFrame_Id_Locator);
+                    base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level1));
+                    // select level 1 asset folder
+                    base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level1);
+                    base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level2));
+                    // select level 2 asset folder
+                    base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level2);
+                    base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level3));
+                    // select level 3 asset folder
+                    base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level3);
+                    
+                    string getRequiredAssets = base.GetElementTextByID("grdContentLibrary$divContent");
+                    if (getRequiredAssets.Contains(activityName))
                     {
                         base.WaitForElement((By.Id("grdContentLibrary$_ctrl0")));
                         base.ClickCheckBoxById("grdContentLibrary$_ctrl0");
@@ -370,6 +375,14 @@ namespace Pegasus.Pages.UI_Pages
 
                     break;
             }
+        }
+
+        private void SelectCourseMaterialsWindow()
+        {
+            base.WaitUntilWindowLoads(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_CourseMaterials_WindowName);
+            base.SelectWindow(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_CourseMaterials_WindowName);
         }
     }
 }
