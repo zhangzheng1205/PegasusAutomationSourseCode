@@ -21,8 +21,6 @@ Then I should see the status of "Test" assets as "Passed"
 
 #Purpose : To View Activity Score by the Student in CourseSpace
 Scenario: View Activity Score by CS Student
-When I navigate to the "Content" tab
-Then I should be on the "Content" page
 When I navigate to the "Grades" tab
 And I select 'Grades' subtab
 Then I should see the grade "100" of the submitted activity named as "Test"

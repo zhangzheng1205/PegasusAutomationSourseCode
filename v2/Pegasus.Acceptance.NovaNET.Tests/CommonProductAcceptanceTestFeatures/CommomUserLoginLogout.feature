@@ -81,3 +81,8 @@ When I login to Pegasus as "NovaNETCsStudent" in "CourseSpace"
 Then I should be logged in successfully
 Given I am on the "Global Home" page 
 When I enter in the "NovaNETMasterLibrary" course as "NovaNETCsStudent" from the Global Home page
+
+#Purpose:Verify The User Logout As NovaNETCsStudent
+Scenario: User Logout As NovaNETCsStudent
+When I "Sign out" from the "NovaNETCsStudent"
+Then I should see the "Signed Out" message
