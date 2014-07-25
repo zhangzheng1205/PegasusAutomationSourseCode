@@ -210,4 +210,16 @@
   <data name="AddAssement_Page_ActivityMessagae_SaveButton_Id_Locator" xml:space="preserve">
     <value>cmdTabMessagesFinish</value>
   </data>
+  <data name="AddAssessment_Page_BeginActivityDefaultMessage_Id_Locator" xml:space="preserve">
+    <value>lblDefaultStartMessage</value>
+  </data>
+  <data name="AddAssessment_Page_BeginActivityInstructorMessage_Id_Locator" xml:space="preserve">
+    <value>txtBeginFeedback</value>
+  </data>
+  <data name="AddAssessment_Page_EndActivityDefaultMessage_Id_Locator" xml:space="preserve">
+    <value>lblDefaultEndMessage</value>
+  </data>
+  <data name="AddAssessment_Page_EndActivityInstructorMessage_Id_Locator" xml:space="preserve">
+    <value>txtEndFeedback</value>
+  </data>
 </root>
