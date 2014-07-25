@@ -138,6 +138,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="cMenuOption">This is Cmenu option.</param>
         [Then(@"I click the ""(.*)"" c-menu option")]
         [When(@"I click the ""(.*)"" option")]
+        [When(@"I click the ""(.*)"" c-menu option")]
         public void ClickOnCmenuOfSectionOrTemplate(String cMenuOption)
         {
             //Click on Cmenu of Section or Template
