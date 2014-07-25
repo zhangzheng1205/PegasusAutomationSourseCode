@@ -78,17 +78,17 @@ namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
         public virtual void ToCopyAsSharedLibrary_()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To copy as shared library.", ((string[])(null)));
-#line 9
-this.ScenarioSetup(scenarioInfo);
-#line 10
-testRunner.When("I search the template \"eCollege Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
-testRunner.Then("I click the \"Copy as Shared Library\" c-menu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 12
-testRunner.And("I should be on the \"Copy as Shared Library\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I search the Template of \"MyITLabForOffice2013Master\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
-testRunner.When("I click \"Save\" button to \"Copy as Shared Library\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I click the \"Copy as Shared Library\" c-menu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
+testRunner.Then("I should be on the \"Copy as Shared Library\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 15
+testRunner.When("I click \"Save\" button to \"Copy as Shared Library\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
 testRunner.Then("I should see the successfull message \"Please wait… copying is in progress. This m" +
                     "ay take up to 24 hours. To see your copies, you may need to refresh your screen." +
                     " To view items you copied as a Shared Library, go to the Sections tab.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

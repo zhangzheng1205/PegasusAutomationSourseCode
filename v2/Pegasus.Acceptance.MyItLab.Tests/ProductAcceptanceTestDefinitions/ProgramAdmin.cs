@@ -170,19 +170,21 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// To search the template
+        /// Searching the template inside the program
         /// </summary>
-        /// <param name="TemplateName">Name of the template</param>
-        [When(@"I search the template ""(.*)""")]
-        public void SearchTemplate(string TemplateName)
+        [When(@"I search the Template of ""(.*)""")]
+        public void SearchTemplateCourse(Course.CourseTypeEnum courseTypeEnum)
         {
-            Logger.LogMethodEntry("ProgramAdmin",
-               "SearchTemplate",
-             base.isTakeScreenShotDuringEntryExit);
-            new ManageTemplatePage().SearchEntityInProgramAdministration(TemplateName);
-            Logger.LogMethodExit("ProgramAdmin",
-               "SearchTemplate",
-             base.isTakeScreenShotDuringEntryExit);
+            //Verify Section in Active State
+            Logger.LogMethodEntry("ProgramAdmin", "SearchTemplateCourse",
+                base.isTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Search the passed course
+            new ManageTemplatePage().SearchEntityInProgramAdministration(course.Name);
+
+            Logger.LogMethodExit("ProgramAdmin", "SearchTemplateCourse",
+                base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -190,7 +192,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name=""></param>
         [When(@"I click ""(.*)"" button to ""(.*)""")]
-        public void ClickToCreateUpdate(string Button, String Operation)
+        public void ClickToCreateUpdate()
         {
             Logger.LogMethodEntry("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
                 base.isTakeScreenShotDuringEntryExit);
