@@ -23,17 +23,17 @@ Then I should see the status of "Test" assets as "Passed"
 # NovaNETMasterLibrary Course
 #Purpose : To View Activity Score by the Student in CourseSpace
 Scenario: View Activity Score by CS Student
-When I navigate to "Grades" tab and selected "Grades" subtab
-Then I should be on the "Gradebook" page
 When I navigate to "Grades" tab
 And I select 'Grades' subtab
+Then I should be on the "Gradebook" page
 Then I should see the grade "100" of the submitted activity named as "Test"
 
 # NovaNETMasterLibrary Course
 #Purpose : Student views the View submission from Gradebook
 #Usecase ID : NN_PWF_538
 Scenario: Student views the View submission from Gradebook by CS Student
-When I navigate to "Grades" tab and selected "Grades" subtab
+When I navigate to "Grades" tab
+And I select 'Grades' subtab
 Then I should be on the "Gradebook" page
 When I click the "Test" activity of cmneu "View Submission" 
 Then I should see the grade "100" in view submission page
