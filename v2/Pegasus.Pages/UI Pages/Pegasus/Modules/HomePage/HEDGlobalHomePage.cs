@@ -621,7 +621,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.MyTestInstructorCourse:
                             case Course.CourseTypeEnum.MyItLabInstructorCourse:
                             case Course.CourseTypeEnum.HedMyItLabPPECourse:
-                            case Course.CourseTypeEnum.HedMilSelfStudyCourse:
+                            case Course.CourseTypeEnum.HedMilSelfStudy:
                                 //Open the Course
                                 this.OpenTheCourse(course.Name);
                                 break;
