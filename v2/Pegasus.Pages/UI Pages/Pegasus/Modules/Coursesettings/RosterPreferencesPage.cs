@@ -53,10 +53,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RosterPreferencesPageResource.
                     RosterPreferences_Page_RegistrationURL_Textbox_Id_Locator));
                 //Clear Textbox
-                base.ClearTextByID(RosterPreferencesPageResource.
+                base.ClearTextById(RosterPreferencesPageResource.
                     RosterPreferences_Page_RegistrationURL_Textbox_Id_Locator);
                 //Enter Regestration URL
-                base.FillTextBoxByID(RosterPreferencesPageResource.
+                base.FillTextBoxById(RosterPreferencesPageResource.
                     RosterPreferences_Page_RegistrationURL_Textbox_Id_Locator, 
                     RosterPreferencesPageResource.RosterPreferences_Page_RegistrationURL_Value);
                 base.WaitForElement(By.PartialLinkText(RosterPreferencesPageResource.

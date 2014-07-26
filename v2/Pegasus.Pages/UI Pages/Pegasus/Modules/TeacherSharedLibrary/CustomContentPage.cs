@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_MLName_Id_Locator));
                 //Get ML Name From Application
-                getMLName = base.GetElementTextByID(CustomContentPageResource.
+                getMLName = base.GetElementTextById(CustomContentPageResource.
                     CustomContent_Page_MLName_Id_Locator);
             }
             catch (Exception e)
@@ -394,7 +394,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_SelectContentMenu_Id_Locator));
-                base.FocusOnElementByID(CustomContentPageResource.
+                base.FocusOnElementById(CustomContentPageResource.
                     CustomContent_Page_SelectContentMenu_Id_Locator);
                 //Focus on "Test" text
                 base.FocusOnElementByXPath(CustomContentPageResource.
@@ -444,10 +444,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                       CustomContent_Page_Copy_Id_Locator));
-                base.FocusOnElementByID(CustomContentPageResource.
+                base.FocusOnElementById(CustomContentPageResource.
                       CustomContent_Page_Copy_Id_Locator);
                 //Click on the "Copy" link
-                base.ClickButtonByID(CustomContentPageResource.
+                base.ClickButtonById(CustomContentPageResource.
                     CustomContent_Page_Copy_Id_Locator);           
             logger.LogMethodExit("CustomContentPage", "ClickTheCopyLink",
                    base.isTakeScreenShotDuringEntryExit);
@@ -570,7 +570,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(CustomContentPageResource.
                 CustomContent_Page_Paste_Dropdown_Id_Locator));
-            FocusOnElementByID(CustomContentPageResource.
+            FocusOnElementById(CustomContentPageResource.
                 CustomContent_Page_Paste_Dropdown_Id_Locator);
             //Time Value for dropdown
             Thread.Sleep(Convert.ToInt32(CustomContentPageResource.
@@ -631,7 +631,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_Clipboard_Id_Locator));
-                base.FocusOnElementByID(CustomContentPageResource.
+                base.FocusOnElementById(CustomContentPageResource.
                     CustomContent_Page_Clipboard_Id_Locator);
                 //Get the Web element
                 IWebElement getClipboarProperty =
@@ -667,10 +667,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_CreateButton_Global_Id_Locator));
-                base.FocusOnElementByID(CustomContentPageResource.
+                base.FocusOnElementById(CustomContentPageResource.
                     CustomContent_Page_CreateButton_Global_Id_Locator);
                 //Click the "CreateButton"
-                base.ClickButtonByID(CustomContentPageResource.
+                base.ClickButtonById(CustomContentPageResource.
                     CustomContent_Page_CreateButton_Global_Id_Locator);
                 Thread.Sleep(Convert.ToInt32(CustomContentPageResource.
                     CustomContent_Page_CustonContent_ButtonClick_Time_value));
@@ -697,7 +697,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                   CustomContent_Page_Global_CreateContent_Menu_Id_Locator));
-                base.FocusOnElementByID(CustomContentPageResource.
+                base.FocusOnElementById(CustomContentPageResource.
                   CustomContent_Page_Global_CreateContent_Menu_Id_Locator);
                 //Wait for the element
                 base.WaitForElement(By.XPath(CustomContentPageResource.
@@ -1067,10 +1067,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_Cut_Link_Id_Locator));
-                base.FocusOnElementByID(CustomContentPageResource.
+                base.FocusOnElementById(CustomContentPageResource.
                     CustomContent_Page_Cut_Link_Id_Locator);
                 //Click the "Cut" link
-                base.ClickButtonByID(CustomContentPageResource.
+                base.ClickButtonById(CustomContentPageResource.
                     CustomContent_Page_Cut_Link_Id_Locator);           
             logger.LogMethodExit("CustomContentPage", "ClickTheCutLink",
            base.isTakeScreenShotDuringEntryExit);
@@ -1088,10 +1088,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_Activity_Remove_Checkbox_Id_Locator));
-                base.FocusOnElementByID(CustomContentPageResource.
+                base.FocusOnElementById(CustomContentPageResource.
                     CustomContent_Page_Activity_Remove_Checkbox_Id_Locator);
                 //Click the check box
-                base.ClickCheckBoxById(CustomContentPageResource.
+                base.SelectCheckBoxById(CustomContentPageResource.
                     CustomContent_Page_Activity_Remove_Checkbox_Id_Locator); 
             logger.LogMethodExit("CustomContentPage",
                 "RemoveNonLicensedCopiedContent",
@@ -1109,10 +1109,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_RemoveButton_Id_Locator));
-                base.FocusOnElementByID(CustomContentPageResource.
+                base.FocusOnElementById(CustomContentPageResource.
                     CustomContent_Page_RemoveButton_Id_Locator);
                 //Click the "Remove " Button
-                base.ClickButtonByID(CustomContentPageResource.
+                base.ClickButtonById(CustomContentPageResource.
                     CustomContent_Page_RemoveButton_Id_Locator);           
             logger.LogMethodExit("CustomContentPage", "ClickTheRemoveButton",
             base.isTakeScreenShotDuringEntryExit);
@@ -1132,10 +1132,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Waiat for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_Ok_Button_Id_Locator));
-                base.FocusOnElementByID(CustomContentPageResource.
+                base.FocusOnElementById(CustomContentPageResource.
                     CustomContent_Page_Ok_Button_Id_Locator);
                 //Click the "OK" button
-                base.ClickButtonByID(CustomContentPageResource.
+                base.ClickButtonById(CustomContentPageResource.
                     CustomContent_Page_Ok_Button_Id_Locator);
                 Thread.Sleep(Convert.ToInt32(CustomContentPageResource.
                   CustomContent_Page_CustonContent_ButtonClick_Time_value));            
@@ -1155,10 +1155,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_Remove_Paste_LicensedAsset_Id_Locator));
-                base.FocusOnElementByID(CustomContentPageResource.
+                base.FocusOnElementById(CustomContentPageResource.
                     CustomContent_Page_Remove_Paste_LicensedAsset_Id_Locator);
                 //Click the Check box of pasted asset
-                base.ClickCheckBoxById(CustomContentPageResource.
+                base.SelectCheckBoxById(CustomContentPageResource.
                     CustomContent_Page_Remove_Paste_LicensedAsset_Id_Locator); 
             logger.LogMethodExit("CustomContentPage",
                 "RemoveLicensedCopiedContent",

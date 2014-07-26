@@ -55,12 +55,12 @@ namespace Pegasus.Pages.UI_Pages
                 // Enter Start and End Minute
                 this.EnterAnnouncementFromAndToMinute(fromDate, toDate);
                 // Click on Show Html image
-                base.ClickButtonByID(CreateAnnouncementPageResource.
+                base.ClickButtonById(CreateAnnouncementPageResource.
                     CreateAnnouncement_Page_ShowHTML_Image_Id_Locator);
                 //Enter Description
                 this.EnterAnnouncementDescription(announcementGuid);
                 //Click Save Button
-                base.ClickButtonByID(CreateAnnouncementPageResource.
+                base.ClickButtonById(CreateAnnouncementPageResource.
                     CreateAnnouncement_Page_Save_Button_Id_Locator);
                 Thread.Sleep(Convert.ToInt32(CreateAnnouncementPageResource.
                     CreateAnnouncement_Page_CustomTimeToWait_Value));
@@ -91,7 +91,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateAnnouncementPageResource.
                CreateAnnouncement_Page_Subject_TextBox_Id_Locator));
             // Enter subject
-            base.FillTextBoxByID(CreateAnnouncementPageResource.
+            base.FillTextBoxById(CreateAnnouncementPageResource.
                 CreateAnnouncement_Page_Subject_TextBox_Id_Locator, announcement);
             logger.LogMethodExit("CreateAnnouncementPage", "EnterSubject",
                base.isTakeScreenShotDuringEntryExit);
@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
             WaitForElement(By.Id(CreateAnnouncementPageResource.
                   CreateAnnouncement_Page_HTMLEditor_TextArea_Id_Locator));
             //Enter Description in HTMLEditor TextArea
-            base.FillTextBoxByID(CreateAnnouncementPageResource.
+            base.FillTextBoxById(CreateAnnouncementPageResource.
                   CreateAnnouncement_Page_HTMLEditor_TextArea_Id_Locator, announcementGuid.ToString());
             logger.LogMethodExit("CreateAnnouncementPage", "EnterDescriptionForAnnouncement",
                base.isTakeScreenShotDuringEntryExit);
@@ -142,22 +142,22 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CreateAnnouncementPage", "EnterAnnouncementFromAndToMinute",
                base.isTakeScreenShotDuringEntryExit);
             // Focus on element
-            base.FocusOnElementByID(CreateAnnouncementPageResource.
+            base.FocusOnElementById(CreateAnnouncementPageResource.
                        CreateAnnouncement_Page_StartMinute_TextBox_Id_Locator);
-            base.ClearTextByID(CreateAnnouncementPageResource.
+            base.ClearTextById(CreateAnnouncementPageResource.
                       CreateAnnouncement_Page_StartMinute_TextBox_Id_Locator);
             //Enter Start Minute
-            base.FillTextBoxByID(CreateAnnouncementPageResource.
+            base.FillTextBoxById(CreateAnnouncementPageResource.
                  CreateAnnouncement_Page_StartMinute_TextBox_Id_Locator,
                  fromDate.ToString(CreateAnnouncementPageResource.
                 CreateAnnouncement_Page_MinuteFormat_Value));
             // Focus on element
-            base.FocusOnElementByID(CreateAnnouncementPageResource.
+            base.FocusOnElementById(CreateAnnouncementPageResource.
                      CreateAnnouncement_Page_EndMinute_TextBox_Id_Locator);
-            base.ClearTextByID(CreateAnnouncementPageResource.
+            base.ClearTextById(CreateAnnouncementPageResource.
                      CreateAnnouncement_Page_EndMinute_TextBox_Id_Locator);
             // Enter End Minute
-            base.FillTextBoxByID(CreateAnnouncementPageResource.
+            base.FillTextBoxById(CreateAnnouncementPageResource.
                  CreateAnnouncement_Page_EndMinute_TextBox_Id_Locator,
                  toDate.ToString(CreateAnnouncementPageResource.
                 CreateAnnouncement_Page_MinuteFormat_Value));
@@ -175,21 +175,21 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CreateAnnouncementPage", "EnterAnnouncementFromAndToHour",
                base.isTakeScreenShotDuringEntryExit);
             // Focus on element
-            base.FocusOnElementByID(CreateAnnouncementPageResource.
+            base.FocusOnElementById(CreateAnnouncementPageResource.
                       CreateAnnouncement_Page_StartHour_TextBox_Id_Locator);
-            base.ClearTextByID(CreateAnnouncementPageResource.
+            base.ClearTextById(CreateAnnouncementPageResource.
                   CreateAnnouncement_Page_StartHour_TextBox_Id_Locator);
             //Enter Start Hour
-            base.FillTextBoxByID(CreateAnnouncementPageResource.
+            base.FillTextBoxById(CreateAnnouncementPageResource.
                   CreateAnnouncement_Page_StartHour_TextBox_Id_Locator,
                  fromDate.Hour.ToString());
             // Focus on element           
-            base.FocusOnElementByID(CreateAnnouncementPageResource.
+            base.FocusOnElementById(CreateAnnouncementPageResource.
                        CreateAnnouncement_Page_EndHour_TextBox_Id_Locator);
-            base.ClearTextByID(CreateAnnouncementPageResource.
+            base.ClearTextById(CreateAnnouncementPageResource.
                        CreateAnnouncement_Page_EndHour_TextBox_Id_Locator);
             //Enter End Hour
-            base.FillTextBoxByID(CreateAnnouncementPageResource.
+            base.FillTextBoxById(CreateAnnouncementPageResource.
                   CreateAnnouncement_Page_EndHour_TextBox_Id_Locator,
                   toDate.Hour.ToString());
             logger.LogMethodExit("CreateAnnouncementPage", "EnterAnnouncementFromAndToHour",
@@ -213,23 +213,23 @@ namespace Pegasus.Pages.UI_Pages
                 case Announcement.AnnouncementTypeEnum.CsSystem:
                     //Enter Start  Date 
                     //string format = base.GetElementTextByID("txtStartDateTimeId_lblDateFormat");                    
-                    base.FillTextBoxByID(CreateAnnouncementPageResource.
+                    base.FillTextBoxById(CreateAnnouncementPageResource.
                         CreateAnnouncement_Page_StartDate_TextBox_Id_Locator,
                         fromDate.ToString(CreateAnnouncementPageResource.
                         CreateAnnouncement_Page_CsDateFormat_Value));
                     //Enter End Date
-                    base.FillTextBoxByID(CreateAnnouncementPageResource.
+                    base.FillTextBoxById(CreateAnnouncementPageResource.
                         CreateAnnouncement_Page_EndDate_TextBox_Id_Locator,
                         toDate.ToString(CreateAnnouncementPageResource.
                         CreateAnnouncement_Page_CsDateFormat_Value));
                     break;
                 case Announcement.AnnouncementTypeEnum.WsSystem:
                     //Enter Start  Date 
-                    base.FillTextBoxByID(CreateAnnouncementPageResource.
+                    base.FillTextBoxById(CreateAnnouncementPageResource.
                         CreateAnnouncement_Page_StartDate_TextBox_Id_Locator,
                         fromDate.ToShortDateString());
                     //Enter End Date
-                    base.FillTextBoxByID(CreateAnnouncementPageResource.
+                    base.FillTextBoxById(CreateAnnouncementPageResource.
                         CreateAnnouncement_Page_EndDate_TextBox_Id_Locator,
                         toDate.ToShortDateString());
                     break;

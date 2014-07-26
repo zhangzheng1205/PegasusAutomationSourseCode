@@ -150,7 +150,7 @@ namespace Pegasus.Pages.UI_Pages
                 Convert.ToInt32(StandardSkillsGridPageResource.
                 StandardSkillGrid_Page_TimeToWait_Value));
             //Enter Skill Name Need To Be Added
-            base.FillTextBoxByID(StandardSkillsGridPageResource.
+            base.FillTextBoxById(StandardSkillsGridPageResource.
                 StandardSkillGrid_Page_SkillFrameworkName_Input_Id_Locator,
                 skillFrameName);
             IWebElement getViewButton = base.GetWebElementPropertiesById

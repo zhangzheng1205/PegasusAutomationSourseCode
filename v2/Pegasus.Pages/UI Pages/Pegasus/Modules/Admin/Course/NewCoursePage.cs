@@ -209,12 +209,12 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewCoursePageResource.
                                           NewCourse_Page_CourseName_TextBox_Id_Locator));
             //Clearing the Text if present earlier
-            base.ClearTextByID(NewCoursePageResource.
+            base.ClearTextById(NewCoursePageResource.
                                    NewCourse_Page_CourseName_TextBox_Id_Locator);
             //Genearate Course Name Guid
             Guid courseNameGuid = Guid.NewGuid();
             //Enter The Course Name
-            base.FillTextBoxByID(NewCoursePageResource.
+            base.FillTextBoxById(NewCoursePageResource.
                 NewCourse_Page_CourseName_TextBox_Id_Locator, courseNameGuid.ToString());
             logger.LogMethodExit("NewCoursePage", "GetCourseName",
            base.isTakeScreenShotDuringEntryExit);
@@ -270,10 +270,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewCoursePageResource.
                                           NewCourse_Page_CopyAsMasterCoursePopUp_Checkbox_Id_Locator));
             //Focus On Element
-            base.FocusOnElementByID(NewCoursePageResource.
+            base.FocusOnElementById(NewCoursePageResource.
                                         NewCourse_Page_CopyAsMasterCoursePopUp_Checkbox_Id_Locator);
             //Click the checkbox
-            base.ClickCheckBoxById(NewCoursePageResource.
+            base.SelectCheckBoxById(NewCoursePageResource.
                                        NewCourse_Page_CopyAsMasterCoursePopUp_Checkbox_Id_Locator);
             Thread.Sleep(Convert.ToInt32(NewCoursePageResource.
                                              NewCourse_Page_Total_Window_TimeValue));

@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
                     CalendarHEDDefaultUXPageResource_TimeToWaitForElement)))
                 {
                     //Click on the More Drop Down
-                    base.ClickButtonByID(CalendarHEDDefaultUXPageResource.
+                    base.ClickButtonById(CalendarHEDDefaultUXPageResource.
                         CalendarHEDDefaultUXPageResource_Button_More_Id_Locator);
                 }
                 //Click on the Drop Down Option Link
@@ -118,9 +118,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Textbox_Search_Id_Locator));
                 //Focus on the Text box
-                base.FocusOnElementByID(CalendarHEDDefaultUXPageResource.
+                base.FocusOnElementById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Textbox_Search_Id_Locator);
-                base.FillTextBoxByID(CalendarHEDDefaultUXPageResource.
+                base.FillTextBoxById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Textbox_Search_Id_Locator, activityName);
                 //Click on the GO Button
                 base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
@@ -427,7 +427,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Support_Window_UserName_Id_Locator));
-                getUserName = base.GetElementTextByID
+                getUserName = base.GetElementTextById
                      (CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Support_Window_UserName_Id_Locator);
                 //Wait for the close button
@@ -1341,7 +1341,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                         CalendarHEDDefaultUXPageResource_AssignCourseMaterials_Id_Locator));
                 //Get Assign Course Materials Text
-                getAssignCourseMaterialsText = base.GetElementTextByID(CalendarHEDDefaultUXPageResource.
+                getAssignCourseMaterialsText = base.GetElementTextById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_AssignCourseMaterials_Id_Locator);
             }
             catch (Exception e)
@@ -1382,13 +1382,13 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_Month_Id_Locator));
                 //Get Day Text
-                getdayText = base.GetElementTextByID(CalendarHEDDefaultUXPageResource.
+                getdayText = base.GetElementTextById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_Day_Id_Locator);
                 //Get Week Text
-                getWeekText = base.GetElementTextByID(CalendarHEDDefaultUXPageResource.
+                getWeekText = base.GetElementTextById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_Week_Id_Locator);
                 //Get Month Text
-                getMonthText = base.GetElementTextByID(CalendarHEDDefaultUXPageResource.
+                getMonthText = base.GetElementTextById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_Month_Id_Locator);
             }
             catch (Exception e)
@@ -1419,7 +1419,7 @@ namespace Pegasus.Pages.UI_Pages
                         CalendarHEDDefaultUXPageResource_AssignedCountText_Id_Locator));
                 //Get Assinged Count with Text
                 getAssignedCountWithText = base.
-                    GetElementTextByID(CalendarHEDDefaultUXPageResource.
+                    GetElementTextById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_AssignedCountText_Id_Locator);
             }
             catch (Exception e)
@@ -1450,7 +1450,7 @@ namespace Pegasus.Pages.UI_Pages
                         CalendarHEDDefaultUXPageResource_AssignedText_Id_Locator));
                 //Get Assigned Text In Calendar Frame
                 getAssignedTextInCalendarFrame = base.
-                    GetElementTextByID(CalendarHEDDefaultUXPageResource.
+                    GetElementTextById(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_AssignedText_Id_Locator);
             }
             catch (Exception e)

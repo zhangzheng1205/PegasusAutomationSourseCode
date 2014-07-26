@@ -444,17 +444,17 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_CurrentPassword_Textbox_Locator));
             //Insert Old Password
-            base.FillTextBoxByID(LoginPageResource.
+            base.FillTextBoxById(LoginPageResource.
                                      Login_Page_CurrentPassword_Textbox_Locator, existingPassword);
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_NewPassword_Texbox_Locator));
             //Insert New Password
-            base.FillTextBoxByID(LoginPageResource.
+            base.FillTextBoxById(LoginPageResource.
                 Login_Page_NewPassword_Texbox_Locator, newPassword);
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_ConfirmPassword_Texbox_Locator));
             //Insert Confirm Password
-            base.FillTextBoxByID(LoginPageResource.
+            base.FillTextBoxById(LoginPageResource.
                 Login_Page_ConfirmPassword_Texbox_Locator, newPassword);
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_Save_Button_Locator));
@@ -487,12 +487,12 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_NewPassword_Textbox_Id_Locator));
             //Insert Existing Password
-            base.FillTextBoxByID(LoginPageResource.
+            base.FillTextBoxById(LoginPageResource.
                 Login_Page_NewPassword_Textbox_Id_Locator, newPassword);
             base.WaitForElement(By.Id(LoginPageResource.
                   Login_Page_ConfirmPassword_Textbox_Id_Locator));
             //Insert New Password
-            base.FillTextBoxByID(LoginPageResource.
+            base.FillTextBoxById(LoginPageResource.
                 Login_Page_ConfirmPassword_Textbox_Id_Locator, newPassword);
             //Wait For Element
             base.WaitForElement(By.ClassName(LoginPageResource.
@@ -597,9 +597,9 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("LoginPage", "DefaultUserLoginAuthentication",
                 base.isTakeScreenShotDuringEntryExit);
             //Clear and Enter Password   
-            base.ClearTextByID(LoginPageResource.
+            base.ClearTextById(LoginPageResource.
                          Login_Page_Password_TextBox_Id_Locator);
-            base.FillTextBoxByID(LoginPageResource.
+            base.FillTextBoxById(LoginPageResource.
                          Login_Page_Password_TextBox_Id_Locator, password);
             //Click on Login Submit Button based on User by Type
             if (User.UserTypeEnum.DPCsTeacher == userTypeEnum
@@ -646,7 +646,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_UserName_TextBox_Id_Locator));
             //Insert User Name in Username TextBox
-            base.FillTextBoxByID(LoginPageResource.
+            base.FillTextBoxById(LoginPageResource.
                 Login_Page_UserName_TextBox_Id_Locator, userName);
             Logger.LogMethodExit("LoginPage", "EnterDefaultUserName",
                 base.isTakeScreenShotDuringEntryExit);
@@ -664,10 +664,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_LoginName_TextBox_Id_Locator));
             //Clear the text of text box
-            base.ClearTextByID(LoginPageResource.
+            base.ClearTextById(LoginPageResource.
                 Login_Page_LoginName_TextBox_Id_Locator);
             //Insert User Name in Username TextBox
-            base.FillTextBoxByID(LoginPageResource.
+            base.FillTextBoxById(LoginPageResource.
                 Login_Page_LoginName_TextBox_Id_Locator, userName);
             Logger.LogMethodExit("LoginPage", "EnterSMSUserName",
                 base.isTakeScreenShotDuringEntryExit);
@@ -1039,17 +1039,17 @@ namespace Pegasus.Pages.UI_Pages
                 Login_Page_Window_Name);
             base.WaitForElement(By.Id(LoginPageResource.
                  Login_Page_UserName_TextBox_Id_Locator));
-            base.ClearTextByID(LoginPageResource.
+            base.ClearTextById(LoginPageResource.
                  Login_Page_UserName_TextBox_Id_Locator);
             //Insert User Name in Username TextBox
-            base.FillTextBoxByID(LoginPageResource.
+            base.FillTextBoxById(LoginPageResource.
                 Login_Page_UserName_TextBox_Id_Locator, userName);
             base.WaitForElement(By.Id(LoginPageResource.
                         Login_Page_Password_TextBox_Id_Locator));
             //Clear the text of text box
-            base.ClearTextByID(LoginPageResource.
+            base.ClearTextById(LoginPageResource.
                         Login_Page_Password_TextBox_Id_Locator);
-            base.FillTextBoxByID(LoginPageResource.
+            base.FillTextBoxById(LoginPageResource.
                          Login_Page_Password_TextBox_Id_Locator, password);
             base.SubmitButtonByClassName(LoginPageResource.
                Login_Page_Submit_Button_ClassName_Locator);
@@ -1108,7 +1108,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //set current window URL
-                getCurrentURL = base.CurrentUrl;
+                getCurrentURL = base.GetCurrentUrl;
             }
             catch (Exception e)
             {

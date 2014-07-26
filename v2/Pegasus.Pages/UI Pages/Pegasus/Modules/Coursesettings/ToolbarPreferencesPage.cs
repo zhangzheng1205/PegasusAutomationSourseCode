@@ -99,7 +99,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ToolbarPreferencesPageResource.
                         ToolbarPreferences_Page_MainTabs_Name_Id_Locator));
                 //Get Tabs Name
-                getTabsName = base.GetElementTextByID(ToolbarPreferencesPageResource.
+                getTabsName = base.GetElementTextById(ToolbarPreferencesPageResource.
                     ToolbarPreferences_Page_MainTabs_Name_Id_Locator);
                 if (getTabsName.Contains(tabName))
                 {
@@ -159,7 +159,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     //Wait for the element
                     base.WaitForElement(By.Id(selectorId));
-                    base.FocusOnElementByID(selectorId);
+                    base.FocusOnElementById(selectorId);
                     //Get CourseTool Tab Preference CheckBox Property
                     IWebElement getPreferenceDisplayCheckbox = base.GetWebElementPropertiesById
                         (selectorId);

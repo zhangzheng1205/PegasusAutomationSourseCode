@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_EnterQuestionTitle_Id_Locator));
             //Fill the Question Title
-            base.FillTextBoxByID(NumericPageResource.
+            base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("NumericPage", "EnterQuestionTitle",
                 base.isTakeScreenShotDuringEntryExit);
@@ -130,15 +130,15 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_ViewSource_Button_Id_Locator));
             //Click on View Source Button
-            base.ClickButtonByID(NumericPageResource.
+            base.ClickButtonById(NumericPageResource.
                 Numeric_Page_ViewSource_Button_Id_Locator);
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_EnterTextHTML_Id_Locator));
             //Enter data
-            base.FillTextBoxByID(NumericPageResource.
+            base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_EnterTextHTML_Id_Locator, questionText);
             //Click on View Source Button
-            base.ClickButtonByID(NumericPageResource.
+            base.ClickButtonById(NumericPageResource.
                 Numeric_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("NumericPage",
                 "ClickOnViewSourceAndEnterDataForNumericQuestion",
@@ -224,9 +224,9 @@ namespace Pegasus.Pages.UI_Pages
                base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_CorrectAnswer_Id_Locator));
-            base.ClearTextByID(NumericPageResource.
+            base.ClearTextById(NumericPageResource.
                 Numeric_Page_CorrectAnswer_Id_Locator);
-            base.FillTextBoxByID(NumericPageResource.
+            base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_CorrectAnswer_Id_Locator, scoreValue);
             logger.LogMethodExit("NumericPage", "FillCorrectScoreValue",
             base.isTakeScreenShotDuringEntryExit);
@@ -244,10 +244,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_FromRange_Id_Locator));
             //Clear the Text Box
-            base.ClearTextByID(NumericPageResource.
+            base.ClearTextById(NumericPageResource.
                  Numeric_Page_FromRange_Id_Locator);
             //Fill the Text Box with From Range Score Value
-            base.FillTextBoxByID(NumericPageResource.
+            base.FillTextBoxById(NumericPageResource.
                  Numeric_Page_FromRange_Id_Locator,
                  fromRangeScoreValue);
             logger.LogMethodExit("NumericPage", "FillFromRangeScoreValues",
@@ -266,10 +266,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_ToRange_Id_Locator));
             //Clear the Text Box
-            base.ClearTextByID(NumericPageResource.
+            base.ClearTextById(NumericPageResource.
                 Numeric_Page_ToRange_Id_Locator);
             //Fill the Text Box with to Range Score Value
-            base.FillTextBoxByID(NumericPageResource.
+            base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_ToRange_Id_Locator, toRangeScoreValue);
             logger.LogMethodExit("NumericPage", "FillToRangeScoreValues",
                base.isTakeScreenShotDuringEntryExit);
@@ -287,9 +287,9 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_CorrectScore_Id_Locator));
             //Clear the Text Box
-            base.ClearTextByID(NumericPageResource.
+            base.ClearTextById(NumericPageResource.
                 Numeric_Page_CorrectScore_Id_Locator);
-            base.FillTextBoxByID(NumericPageResource.
+            base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_CorrectScore_Id_Locator, correctScoreValue);
             logger.LogMethodExit("NumericPage", "FillScoreValueForCorrectAnswer",
                base.isTakeScreenShotDuringEntryExit);
@@ -307,10 +307,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_IncorrectAnswer_Id_Locator));
             //Clear the Text Box
-            base.ClearTextByID(NumericPageResource.
+            base.ClearTextById(NumericPageResource.
                 Numeric_Page_IncorrectAnswer_Id_Locator);
             //Fill The Text Box With Incorrect Score Value
-            base.FillTextBoxByID(NumericPageResource.
+            base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_IncorrectAnswer_Id_Locator,
                 inCorrectScoreValue);
             logger.LogMethodExit("NumericPage", "FillScoreValueForIncorrectAnswer",
@@ -328,10 +328,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_RangeScore_Id_Locator));
             //Clear Text Box
-            base.ClearTextByID(NumericPageResource.
+            base.ClearTextById(NumericPageResource.
                 Numeric_Page_RangeScore_Id_Locator);
             //Fill the Text Box with Range Score Value
-            base.FillTextBoxByID(NumericPageResource.
+            base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_RangeScore_Id_Locator, rangeScoreValue);
             logger.LogMethodExit("NumericPage", "FillRangeScoreValue",
                base.isTakeScreenShotDuringEntryExit);

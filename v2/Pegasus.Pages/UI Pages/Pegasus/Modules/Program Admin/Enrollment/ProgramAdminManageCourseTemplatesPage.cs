@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ProgramAdminManageCourseTemplatesPageResource.
                 ProgramAdminManageCourseTemplates_Page_Search_Button_Id_Locator));
             //Click on Search button
-            base.ClickButtonByID(ProgramAdminManageCourseTemplatesPageResource.
+            base.ClickButtonById(ProgramAdminManageCourseTemplatesPageResource.
                 ProgramAdminManageCourseTemplates_Page_Search_Button_Id_Locator);
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage",
                 "ClickSearchButton",
@@ -122,10 +122,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ProgramAdminManageCourseTemplatesPageResource.
                 ProgramAdminManageCourseTemplates_Page_SectionDetail_TextBox_Id_Locator));
             // Enter section name search textbox field
-            base.ClearTextByID(ProgramAdminManageCourseTemplatesPageResource.
+            base.ClearTextById(ProgramAdminManageCourseTemplatesPageResource.
                 ProgramAdminManageCourseTemplates_Page_SectionDetail_TextBox_Id_Locator);
             //Enter Section Name
-            base.FillTextBoxByID(ProgramAdminManageCourseTemplatesPageResource.
+            base.FillTextBoxById(ProgramAdminManageCourseTemplatesPageResource.
                 ProgramAdminManageCourseTemplates_Page_SectionDetail_TextBox_Id_Locator,
                 sectionName);
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage",

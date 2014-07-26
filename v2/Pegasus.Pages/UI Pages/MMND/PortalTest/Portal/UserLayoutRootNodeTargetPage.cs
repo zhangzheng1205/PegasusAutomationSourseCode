@@ -62,18 +62,18 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Search_RadioButton_Id_Locator));
                 //Click on the Search Radio Button
-                base.ClickButtonByID(UserLayoutRootNodeTargetPageResource.
+                base.ClickButtonById(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Search_RadioButton_Id_Locator);
                 //Wait for The Search Textbox
                 base.WaitForElement(By.Id(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Search_Textbox_Id_Locator));
-                base.ClearTextByID(UserLayoutRootNodeTargetPageResource.
+                base.ClearTextById(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Search_Textbox_Id_Locator);
-                base.FillTextBoxByID(UserLayoutRootNodeTargetPageResource.
+                base.FillTextBoxById(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Search_Textbox_Id_Locator,
                     getSearchTerm);
                 //Click on GO button
-                base.ClickButtonByID(UserLayoutRootNodeTargetPageResource.
+                base.ClickButtonById(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Go_Button_Id_Locator);
             }
             catch (Exception e)
@@ -265,7 +265,7 @@ namespace Pegasus.Pages.UI_Pages
                     //Enter Enroll Start Date
                     this.EnterEnrollmentStartAndEndDate(enrollStartDate, enrollEndDate);
                     //Select Available For Copy option
-                    base.ClickButtonByID(UserLayoutRootNodeTargetPageResource.
+                    base.ClickButtonById(UserLayoutRootNodeTargetPageResource.
                         UserLayoutRootNodeTargetPage_EnterCourseInformation_AvailableForCopy_RadioButton_Id_Locator);
                     break;
                 case Course.CourseTypeEnum.MMNDSection:
@@ -291,15 +291,15 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "EnterEnrollmentStartAndEndDate",
                 base.isTakeScreenShotDuringEntryExit);
             //Enter Enroll Start Date
-            base.ClearTextByID(UserLayoutRootNodeTargetPageResource.
+            base.ClearTextById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_EnrollStart_Id_Locator);
-            base.FillTextBoxByID(UserLayoutRootNodeTargetPageResource.
+            base.FillTextBoxById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_EnrollStart_Id_Locator,
                 enrollmentStartDate);
             //Fill Enroll End Date
-            base.ClearTextByID(UserLayoutRootNodeTargetPageResource.
+            base.ClearTextById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_EnrollEnd_Id_Locator);
-            base.FillTextBoxByID(UserLayoutRootNodeTargetPageResource.
+            base.FillTextBoxById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_EnrollEnd_Id_Locator,
                 enrollmentEndDate);
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "EnterEnrollmentStartAndEndDate",
@@ -317,15 +317,15 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "EnterCourseStartAndEndDate",
                 base.isTakeScreenShotDuringEntryExit);
             //Fill Course Start Date
-            base.ClearTextByID(UserLayoutRootNodeTargetPageResource.
+            base.ClearTextById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseStart_Id_Locator);
-            base.FillTextBoxByID(UserLayoutRootNodeTargetPageResource.
+            base.FillTextBoxById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseStart_Id_Locator,
                 courseStartDate);
             //Fill Course End Date
-            base.ClearTextByID(UserLayoutRootNodeTargetPageResource.
+            base.ClearTextById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseEnd_Id_Locator);
-            base.FillTextBoxByID(UserLayoutRootNodeTargetPageResource.
+            base.FillTextBoxById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseEnd_Id_Locator,
                 courseEndDate);
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "EnterCourseStartAndEndDate",
@@ -365,10 +365,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseName_Textbox_Id_Locator));
             //Clear the Text
-            base.ClearTextByID(UserLayoutRootNodeTargetPageResource.
+            base.ClearTextById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseName_Textbox_Id_Locator);
             //Enter Course Name
-            base.FillTextBoxByID(UserLayoutRootNodeTargetPageResource.
+            base.FillTextBoxById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseName_Textbox_Id_Locator,
                 courseNameGUID.ToString());
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "EnterCourseName",
@@ -541,7 +541,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_MyLabMasteringPearson_SignOut_Id_Locator));
                 //Focus On Sign Out
-                base.FocusOnElementByID(UserLayoutRootNodeTargetPageResource.
+                base.FocusOnElementById(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_MyLabMasteringPearson_SignOut_Id_Locator);
                 //Click on the Signout Link
                 base.ClickLinkById(UserLayoutRootNodeTargetPageResource.
@@ -819,7 +819,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select the 'CoordinatorButton' Radio button
                 base.WaitForElement(By.Id(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Section_RadioButton_Id_Locator));
-                base.ClickButtonByID(UserLayoutRootNodeTargetPageResource.
+                base.ClickButtonById(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Section_RadioButton_Id_Locator);
                 //Fetch the Course Details
                 Course course = Course.Get(courseTypeEnum);                
@@ -829,7 +829,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select the Coordinate Course base on the Course Id
                 this.SelectTheCoOrdinateCourseOption(course.ECollegeIntegrationId);            
                 //Click on GO button
-                base.ClickButtonByID(UserLayoutRootNodeTargetPageResource.
+                base.ClickButtonById(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Go_Button_Id_Locator);
             }
             catch (Exception e)
@@ -895,9 +895,9 @@ namespace Pegasus.Pages.UI_Pages
                 //Get GUID for Section
                 Guid section = Guid.NewGuid();
                 //Fill Section Name
-                base.ClearTextByID(UserLayoutRootNodeTargetPageResource.
+                base.ClearTextById(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_EnterCourseInformation_SectionName_Textbox_Id_Locator);
-                base.FillTextBoxByID(UserLayoutRootNodeTargetPageResource.
+                base.FillTextBoxById(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_EnterCourseInformation_SectionName_Textbox_Id_Locator,
                     section.ToString());                
                 //Enter Required Course Details

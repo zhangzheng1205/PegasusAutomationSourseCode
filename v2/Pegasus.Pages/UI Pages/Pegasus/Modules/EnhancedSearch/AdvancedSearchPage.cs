@@ -64,10 +64,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Clear TextBox
                 base.WaitForElement(By.Id(AdvancedSearchPageResource.
                     AdvancedSearch_Page_TextBox_Id_Locator));
-                base.ClearTextByID(AdvancedSearchPageResource.
+                base.ClearTextById(AdvancedSearchPageResource.
                     AdvancedSearch_Page_TextBox_Id_Locator);
                 //Enter Search Text
-                base.FillTextBoxByID(AdvancedSearchPageResource.
+                base.FillTextBoxById(AdvancedSearchPageResource.
                     AdvancedSearch_Page_TextBox_Id_Locator, activityName);
                 //Click on Search Button
                 base.WaitForElement(By.PartialLinkText(AdvancedSearchPageResource.
@@ -203,10 +203,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(AdvancedSearchPageResource.
                 AdvancedSearch_Page_TextBox_Id_Locator));
             //Clear Text Box
-            base.ClearTextByID(AdvancedSearchPageResource.
+            base.ClearTextById(AdvancedSearchPageResource.
                 AdvancedSearch_Page_TextBox_Id_Locator);
             //Fill Asset Name In Text Box
-            base.FillTextBoxByID(AdvancedSearchPageResource.
+            base.FillTextBoxById(AdvancedSearchPageResource.
                 AdvancedSearch_Page_TextBox_Id_Locator, assetname);
             logger.LogMethodExit("AdvancedSearchPage",
               "FillAssetNameInTextBox",

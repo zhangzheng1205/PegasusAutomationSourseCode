@@ -42,7 +42,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CreateClassCoursePageResource.
                     CreateClassCourse_Page_Checkbox_Id_Locator));
                 //Click Checkbox
-                base.ClickCheckBoxById(CreateClassCoursePageResource.
+                base.SelectCheckBoxById(CreateClassCoursePageResource.
                     CreateClassCourse_Page_Checkbox_Id_Locator);
                 //Wait for Element
                 base.WaitForElement(By.PartialLinkText(CreateClassCoursePageResource.
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(CreateClassCoursePageResource.
                     CreateClassCourse_Page_Enrollment_Message_Id_Locator));
-                getSuccessfullMessage = base.GetElementTextByID
+                getSuccessfullMessage = base.GetElementTextById
                     (CreateClassCoursePageResource.
                     CreateClassCourse_Page_Enrollment_Message_Id_Locator);
             }

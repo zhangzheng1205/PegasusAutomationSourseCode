@@ -37,7 +37,7 @@ namespace Pegasus.Pages.UI_Pages
                //Guid for eText the Activity
                Guid eText = Guid.NewGuid();
                //Fill Text Box With eText Name
-               base.FillTextBoxByID(AddeBookLinkPageResource.AddeBookLink_Page_eTextTitle_Id_Locator,
+               base.FillTextBoxById(AddeBookLinkPageResource.AddeBookLink_Page_eTextTitle_Id_Locator,
                eText.ToString());
                //Wait for the select book textbox
                base.WaitForElement(By.Id(AddeBookLinkPageResource.AddeBookLink_Page_SelectBook_Id_Locator));                 

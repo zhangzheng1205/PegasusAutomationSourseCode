@@ -466,10 +466,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(PrintToolPageResource.
                     PrintToolPage_CreateMmultipleVersions_Textbox_Id_Locator));
                 //Clear TextBox Value
-                base.ClearTextByID(PrintToolPageResource.
+                base.ClearTextById(PrintToolPageResource.
                     PrintToolPage_CreateMmultipleVersions_Textbox_Id_Locator);
                 //Enter Version Number
-                base.FillTextBoxByID(PrintToolPageResource.
+                base.FillTextBoxById(PrintToolPageResource.
                     PrintToolPage_CreateMmultipleVersions_Textbox_Id_Locator,
                     versionNumber.ToString(CultureInfo.InvariantCulture));
             }

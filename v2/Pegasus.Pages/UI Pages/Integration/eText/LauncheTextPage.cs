@@ -35,7 +35,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window
                 this.SelectPearsonETextWindow();
                 //Get the URL
-                getETextURL = base.CurrentUrl;
+                getETextURL = base.GetCurrentUrl;
                 string[] getSplitURL = getETextURL.Split(Convert.ToChar(LauncheTextPageResource.
                     LauncheText_Page_SpecialCharacter_Value));
                 getETextURL = getSplitURL[Convert.ToInt32(LauncheTextPageResource.

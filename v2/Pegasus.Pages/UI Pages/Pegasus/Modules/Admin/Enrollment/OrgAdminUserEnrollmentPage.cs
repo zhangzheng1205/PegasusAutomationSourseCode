@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Click on the advanced button
                 base.WaitForElement(By.Id(OrgAdminUserEnrollmentPageResource
                     .OrgAdminUserEnrollment_Page_AdvancedButton_Id_Locator));
-                base.ClickButtonByID(OrgAdminUserEnrollmentPageResource
+                base.ClickButtonById(OrgAdminUserEnrollmentPageResource
                     .OrgAdminUserEnrollment_Page_AdvancedButton_Id_Locator);
                 // Search the user name
                 SearchUserName(userName);
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
             // Search for the user name checkbox and click
             base.WaitForElement(By.Id(OrgAdminUserEnrollmentPageResource
                    .OrgAdminUserEnrollment_Page_UserNameCheckbox_Id_Locator));
-            base.ClickButtonByID(OrgAdminUserEnrollmentPageResource
+            base.ClickButtonById(OrgAdminUserEnrollmentPageResource
                 .OrgAdminUserEnrollment_Page_UserNameCheckbox_Id_Locator);
             //Switch to default content
             base.SwitchToDefaultPageContent();
@@ -91,12 +91,12 @@ namespace Pegasus.Pages.UI_Pages
             // Wait for the user name text box and click
             base.WaitForElement(By.Id(OrgAdminUserEnrollmentPageResource
                     .OrgAdminUserEnrollment_Page_UserNameTextbox_Id_Locator));
-            base.FillTextBoxByID(OrgAdminUserEnrollmentPageResource
+            base.FillTextBoxById(OrgAdminUserEnrollmentPageResource
                 .OrgAdminUserEnrollment_Page_UserNameTextbox_Id_Locator, userName);
             //Wait for search button and click 
             base.WaitForElement(By.Id(OrgAdminUserEnrollmentPageResource
                 .OrgAdminUserEnrollment_Page_SearchButton_Id_Locator));
-            base.ClickButtonByID(OrgAdminUserEnrollmentPageResource
+            base.ClickButtonById(OrgAdminUserEnrollmentPageResource
                 .OrgAdminUserEnrollment_Page_SearchButton_Id_Locator);
             //Search the user from advanced search
             logger.LogMethodExit("OrgAdminUserEnrollmentPage", "SearchUserName",
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Click on the advanced button
                 base.WaitForElement(By.Id(OrgAdminUserEnrollmentPageResource
                     .OrgAdminUserEnrollment_Page_AdvancedButton_Id_Locator));
-                base.ClickButtonByID(OrgAdminUserEnrollmentPageResource
+                base.ClickButtonById(OrgAdminUserEnrollmentPageResource
                     .OrgAdminUserEnrollment_Page_AdvancedButton_Id_Locator);
                 //Get User From Memory
                 User user = User.Get(userTypeEnum);

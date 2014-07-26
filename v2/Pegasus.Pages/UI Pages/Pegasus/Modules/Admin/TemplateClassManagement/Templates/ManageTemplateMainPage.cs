@@ -120,16 +120,16 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ManageTemplateMainPageResource.
                                           ManageTemplateMain_Page_SearchSection_Textbox_Id_Locator));
             //Clear TextBox
-            base.ClearTextByID(ManageTemplateMainPageResource.
+            base.ClearTextById(ManageTemplateMainPageResource.
                                    ManageTemplateMain_Page_SearchSection_Textbox_Id_Locator);
             //Fill Section Name In TextBox 
-            base.FillTextBoxByID(ManageTemplateMainPageResource.
+            base.FillTextBoxById(ManageTemplateMainPageResource.
                                      ManageTemplateMain_Page_SearchSection_Textbox_Id_Locator, templateName);
             //Wait For Element
             base.WaitForElement(By.Id(ManageTemplateMainPageResource.
                                           ManageTemplateMain_Page_Search_Button_Id_Locator));
             //Click on Search Button
-            base.ClickButtonByID(ManageTemplateMainPageResource.
+            base.ClickButtonById(ManageTemplateMainPageResource.
                                      ManageTemplateMain_Page_Search_Button_Id_Locator);
             //Wait For Element
             base.WaitForElement(By.Id(ManageTemplateMainPageResource.

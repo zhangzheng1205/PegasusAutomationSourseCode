@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(TrueFalsePageResource.
                     TrueFalse_Page_QuestionName_Title_Id_Locator));
                 //Fill the Question name title text
-                base.FillTextBoxByID(TrueFalsePageResource.
+                base.FillTextBoxById(TrueFalsePageResource.
                     TrueFalse_Page_QuestionName_Title_Id_Locator,
                     questionTrueFalse.ToString());
                 Thread.Sleep(Convert.ToInt32(TrueFalsePageResource.
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TrueFalsePageResource.
             TrueFalse_Page_HTMLEditorQues_ViewsourceButton_Id_Locator));
             // Click on ShowHTML button
-            base.FocusOnElementByID(TrueFalsePageResource.
+            base.FocusOnElementById(TrueFalsePageResource.
             TrueFalse_Page_HTMLEditorQues_ViewsourceButton_Id_Locator);
             IWebElement getHtmldesc = base.
                 GetWebElementPropertiesById(TrueFalsePageResource.
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TrueFalsePageResource.
                 TrueFalse_Page_QuestionDiscription_Id_Locator));
             //Fill the discription
-            base.FillTextBoxByID(TrueFalsePageResource.
+            base.FillTextBoxById(TrueFalsePageResource.
                 TrueFalse_Page_QuestionDiscription_Id_Locator,
                 questionTrueFalse.ToString());
             //Click the ViewSource button
@@ -137,17 +137,17 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(TrueFalsePageResource.
                TrueFalse_Page_SaveAndClose_Ques_Button_Id_Locator));
-            base.FocusOnElementByID(TrueFalsePageResource.
+            base.FocusOnElementById(TrueFalsePageResource.
                TrueFalse_Page_SaveAndClose_Ques_Button_Id_Locator);
             //Click the "SaveAndClose" button
-            base.ClickButtonByID(TrueFalsePageResource.
+            base.ClickButtonById(TrueFalsePageResource.
                TrueFalse_Page_SaveAndClose_Ques_Button_Id_Locator);
             //Select the frame
             new CustomContentPage().SelectCurriculumFrame();
             base.WaitForElement(By.Id(TrueFalsePageResource.
                TrueFalse_Page_Activity_SaveAndClose_Button_Id_Locator));
             //Click the "SaveAndClose" button
-            base.ClickButtonByID(TrueFalsePageResource.
+            base.ClickButtonById(TrueFalsePageResource.
                TrueFalse_Page_Activity_SaveAndClose_Button_Id_Locator);
             Thread.Sleep(Convert.ToInt32(TrueFalsePageResource.
                 TrueFalse_Page_Activity_SaveAndClose_Mesg_TimeValue));
@@ -172,10 +172,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(TrueFalsePageResource.
                     TrueFalse_Page_QuestionName_Title_Id_Locator));
-                base.FocusOnElementByID(TrueFalsePageResource.
+                base.FocusOnElementById(TrueFalsePageResource.
                         TrueFalse_Page_QuestionName_Title_Id_Locator);
                 //Fill the Question name title text
-                base.FillTextBoxByID(TrueFalsePageResource.
+                base.FillTextBoxById(TrueFalsePageResource.
                     TrueFalse_Page_QuestionName_Title_Id_Locator,
                     questionNameGuid.ToString());
                 Thread.Sleep(Convert.ToInt32(TrueFalsePageResource.
@@ -248,7 +248,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(TrueFalsePageResource.
                    TrueFalse_Page_SaveAndClose_Ques_Button_Id_Locator));
-                base.FocusOnElementByID(TrueFalsePageResource.
+                base.FocusOnElementById(TrueFalsePageResource.
                    TrueFalse_Page_SaveAndClose_Ques_Button_Id_Locator);
                 //Get web element
                 IWebElement getSaveCloseButton = base.GetWebElementPropertiesById
@@ -288,13 +288,13 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TrueFalsePageResource.
                 TrueFalse_Page_Feedback_Yes_Radiobutton_Id_Locator));
             //Enter Correct Feedback
-            base.FillTextBoxByID(TrueFalsePageResource.
+            base.FillTextBoxById(TrueFalsePageResource.
                 TrueFalse_Page_Feedback_Yes_Radiobutton_Id_Locator,
                 TrueFalsePageResource.TrueFalse_Page_Correct_Feedback_Value);
             base.WaitForElement(By.Id(TrueFalsePageResource.
                 TrueFalse_Page_Feedback_No_Radiobutton_Id_Locator));
             //Enter Wrong Feedback
-            base.FillTextBoxByID(TrueFalsePageResource.
+            base.FillTextBoxById(TrueFalsePageResource.
                 TrueFalse_Page_Feedback_No_Radiobutton_Id_Locator,
                 TrueFalsePageResource.TrueFalse_Page_Wrong_Feedback_Value);
             Logger.LogMethodExit("TrueFalsePage", "EnterFeedback",
@@ -360,10 +360,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(TrueFalsePageResource.
                 TrueFalse_Page_QuestionName_Title_Id_Locator));
-            base.FocusOnElementByID(TrueFalsePageResource.
+            base.FocusOnElementById(TrueFalsePageResource.
                     TrueFalse_Page_QuestionName_Title_Id_Locator);
             //Fill the Question name title text
-            base.FillTextBoxByID(TrueFalsePageResource.
+            base.FillTextBoxById(TrueFalsePageResource.
                 TrueFalse_Page_QuestionName_Title_Id_Locator,
                 questionTrueFalse.ToString());
             Thread.Sleep(Convert.ToInt32(TrueFalsePageResource.
@@ -388,7 +388,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(TrueFalsePageResource.
                TrueFalse_Page_SaveAndClose_Ques_Button_Id_Locator));
-            base.FocusOnElementByID(TrueFalsePageResource.
+            base.FocusOnElementById(TrueFalsePageResource.
                TrueFalse_Page_SaveAndClose_Ques_Button_Id_Locator);
             IWebElement getSaveCloseButton=base.GetWebElementPropertiesById
                 (TrueFalsePageResource.

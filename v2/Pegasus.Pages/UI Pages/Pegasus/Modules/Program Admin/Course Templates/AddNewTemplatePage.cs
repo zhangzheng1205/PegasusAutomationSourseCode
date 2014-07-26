@@ -35,7 +35,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AddNewTemplatePageResource.
                     AddNewTemplate_Page_AddTemplate_Button_Id_Locator));
                 //Click on the Add Template Button
-                base.ClickButtonByID(AddNewTemplatePageResource.
+                base.ClickButtonById(AddNewTemplatePageResource.
                     AddNewTemplate_Page_AddTemplate_Button_Id_Locator);
                 base.IsPopUpClosed(Convert.ToInt32(AddNewTemplatePageResource
                     .AddNewTemplate_Page_No_of_popups));

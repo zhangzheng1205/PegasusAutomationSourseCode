@@ -244,7 +244,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateUserPageResource.
                 CreateUser_Page_AddOrganization_Id_Locator));
             //Click On Add Button
-            base.ClickButtonByID(CreateUserPageResource.
+            base.ClickButtonById(CreateUserPageResource.
                 CreateUser_Page_AddOrganization_Id_Locator);
             Logger.LogMethodExit("CreateUserPage", "EnterUserDetails",
                 base.isTakeScreenShotDuringEntryExit);
@@ -281,7 +281,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateUserPageResource.
                 CreateUser_Page_Role_Add_Id_Locator));
             //Click On Add Button
-            base.ClickButtonByID(CreateUserPageResource.
+            base.ClickButtonById(CreateUserPageResource.
                 CreateUser_Page_Role_Add_Id_Locator);
             Logger.LogMethodExit("CreateUserPage", "SelectUserRole",
                 base.isTakeScreenShotDuringEntryExit);
@@ -342,9 +342,9 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateUserPageResource.
                                           CreateUser_Page_EnterUserName_Id_Locator));
             //Clear The Search text box And Fill The User Name
-            base.ClearTextByID(CreateUserPageResource.
+            base.ClearTextById(CreateUserPageResource.
                                    CreateUser_Page_EnterUserName_Id_Locator);
-            base.FillTextBoxByID(CreateUserPageResource.
+            base.FillTextBoxById(CreateUserPageResource.
                                      CreateUser_Page_EnterUserName_Id_Locator, userName);
             //Click On The Search Button
             base.WaitForElement(By.ClassName(CreateUserPageResource.

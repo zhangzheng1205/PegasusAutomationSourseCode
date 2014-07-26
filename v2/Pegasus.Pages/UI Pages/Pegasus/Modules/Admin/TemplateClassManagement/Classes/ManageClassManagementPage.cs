@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ManageClassManagementPageResource.
                     ManageClassManagement_Page_ClassName_Input_Id_Locator));
                 //Fill Text in Text Box
-                base.FillTextBoxByID(ManageClassManagementPageResource.
+                base.FillTextBoxById(ManageClassManagementPageResource.
                     ManageClassManagement_Page_ClassName_Input_Id_Locator, className);
                 //Get Button Property
                 IWebElement getSearchButtonProperty = base.GetWebElementPropertiesById(ManageClassManagementPageResource.

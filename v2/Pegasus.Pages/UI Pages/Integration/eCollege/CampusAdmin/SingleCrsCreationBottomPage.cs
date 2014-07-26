@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Name(SingleCrsCreationBottomPageResource
                                             .SingleCrsCreationBottom_Page_Submit_Button_Name_Locator));
             //Click on Button
-            base.ClickButtonByName(SingleCrsCreationBottomPageResource
+            base.SelectButtonByName(SingleCrsCreationBottomPageResource
                                        .SingleCrsCreationBottom_Page_Submit_Button_Name_Locator);
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
               "SubmitPreviewCourseInformation", base.isTakeScreenShotDuringEntryExit);
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
                 SingleCrsCreationBottomPageResource.
                     SingleCrsCreationBottom_Page_Next_button_Name_Locator));
             //Click on Next Button 
-            base.ClickButtonByName(SingleCrsCreationBottomPageResource.
+            base.SelectButtonByName(SingleCrsCreationBottomPageResource.
                      SingleCrsCreationBottom_Page_Next_button_Name_Locator);
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
                "ClickNextCourseButton", base.isTakeScreenShotDuringEntryExit);

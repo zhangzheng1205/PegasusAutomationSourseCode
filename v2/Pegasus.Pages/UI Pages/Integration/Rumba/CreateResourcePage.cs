@@ -136,7 +136,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CreateResourcePage", "SelectRumbaBusinessUnitFromAutoFill",
                base.isTakeScreenShotDuringEntryExit);
             //Clear Text Box Pre Filled Value
-            base.ClearTextByID(CreateResourcePageResource.
+            base.ClearTextById(CreateResourcePageResource.
                 CreateResource_Page_BusinessUnit_Id_Locator);
             getAutocompleteText.SendKeys(CreateResourcePageResource.
                 CreateResource_Page_BusinessUnit_Value);
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getAutoFillElement = WebDriver.FindElement(By.CssSelector
                 (CreateResourcePageResource.CreateResource_Page_BusinessUnit_CssSelector));
             getAutoFillElement.Click();
-            base.FocusOnElementByID(CreateResourcePageResource.
+            base.FocusOnElementById(CreateResourcePageResource.
                 CreateResource_Page_AuthorizationContextName_Id_Locator);
             //Select AutoFill Menu Item
             base.SelectDropDownValueThroughTextById(CreateResourcePageResource.
@@ -169,12 +169,12 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CreateResourcePage", "EnterNameDescriptionAndUrl",
                 base.isTakeScreenShotDuringEntryExit);
             //Fills the Resource Name
-            base.FillTextBoxByID(CreateResourcePageResource.
+            base.FillTextBoxById(CreateResourcePageResource.
                 CreateResource_Page_Resourcename_Text_Id_Locator, resourceName.ToString());
             base.WaitForElement(By.Id(CreateResourcePageResource.
                 CreateResource_Page_InternalDescription_Text_Id_Locator));
             //Fills the Description
-            base.FillTextBoxByID(CreateResourcePageResource.
+            base.FillTextBoxById(CreateResourcePageResource.
                 CreateResource_Page_InternalDescription_Text_Id_Locator,
                 resourceName.ToString());
             base.WaitForElement(By.Id(CreateResourcePageResource.
@@ -183,7 +183,7 @@ namespace Pegasus.Pages.UI_Pages
             string getDigitAssetUrl = AutomationConfigurationManager.CourseSpaceUrlRoot +
                 CreateResourcePageResource.CreateResource_Page_DigitAssetURL_Url;
             //Fills the Url
-            base.FillTextBoxByID(CreateResourcePageResource.
+            base.FillTextBoxById(CreateResourcePageResource.
                 CreateResource_Page_DigitAssetURL_Text_Id_Locator, getDigitAssetUrl);
             logger.LogMethodExit("CreateResourcePage", "EnterNameDescriptionAndUrl",
                 base.isTakeScreenShotDuringEntryExit);

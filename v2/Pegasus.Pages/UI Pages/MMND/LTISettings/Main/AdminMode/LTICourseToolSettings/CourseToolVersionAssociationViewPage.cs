@@ -42,7 +42,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CourseToolVersionAssociationViewPageResource.
                     CourseToolVersionAssociationView_Page_NextButton_Id_Locator));
                 //Click On Next Button
-                base.ClickButtonByID(CourseToolVersionAssociationViewPageResource.
+                base.ClickButtonById(CourseToolVersionAssociationViewPageResource.
                     CourseToolVersionAssociationView_Page_NextButton_Id_Locator);
             }
             catch (Exception e)

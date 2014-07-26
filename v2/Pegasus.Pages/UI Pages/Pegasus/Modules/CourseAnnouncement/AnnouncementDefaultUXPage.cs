@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
                 WaitForElement(By.Id(AnnouncementDefaultUXPageResource.
                         AnnouncementDefaultUX_Page_AnnouncementsClose_Button_Id_Locator));
                 //Focus on close button
-                base.FocusOnElementByID(AnnouncementDefaultUXPageResource.
+                base.FocusOnElementById(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_AnnouncementsClose_Button_Id_Locator);
                 //Intailize IWebElement for Close Button
                 IWebElement annoucementCloseButton = base.GetWebElementPropertiesById(
@@ -176,7 +176,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click Create Announcement Button
                 base.WaitForElement(By.Id(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_CreateAnnouncement_Button_Id_Locator));
-                base.FocusOnElementByID(AnnouncementDefaultUXPageResource.
+                base.FocusOnElementById(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_CreateAnnouncement_Button_Id_Locator);
                 //Intailize IWebElement for CreateAnnouncement Button
                 IWebElement createAnnouncementButton = base.GetWebElementPropertiesById(AnnouncementDefaultUXPageResource.
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AnnouncementDefaultUXPageResource.
                    AnnouncementDefaultUX_Page_SuccessMessage_Id_Locator));
                 // To get text of successfull message
-                getSuccessMessage = base.GetElementTextByID(AnnouncementDefaultUXPageResource.
+                getSuccessMessage = base.GetElementTextById(AnnouncementDefaultUXPageResource.
                      AnnouncementDefaultUX_Page_SuccessMessage_Id_Locator);
                 Thread.Sleep(Convert.ToInt32(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_ThreadSleep_Value));
@@ -240,7 +240,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click the 'Create Announcement' Button
                 base.WaitForElement(By.Id(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_CreateAnnouncement_Button_Id_Locator));
-                base.ClickButtonByID(AnnouncementDefaultUXPageResource.
+                base.ClickButtonById(AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_CreateAnnouncement_Button_Id_Locator);
             }
             catch (Exception e)
@@ -426,7 +426,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Get the Dropdown options
-                getDisplayDropdownOptions = base.GetElementTextByID
+                getDisplayDropdownOptions = base.GetElementTextById
                     (AnnouncementDefaultUXPageResource.
                     AnnouncementDefaultUX_Page_ViewBy_DropDown_Id_Locator);
                 if (getDisplayDropdownOptions.Contains(actualDropdownOption))

@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptStudentAllAssessmentsPageResource.
                     RptStudentAllAssessmentsPage_ActivityResult_Score_Id_Locator));
                 //Get Activity Score
-                getActivityScore = base.GetElementTextByID(
+                getActivityScore = base.GetElementTextById(
                     RptStudentAllAssessmentsPageResource.
                     RptStudentAllAssessmentsPage_ActivityResult_Score_Id_Locator);
                 getActivityScore = getActivityScore.Substring(Convert.ToInt32(

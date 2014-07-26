@@ -119,10 +119,10 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectRadioButtonById(OrganizationManagementPageResource.
                 OrganizationManagement_Page_Search_Organization_RadioButton_Id_Locator);
             //Clear the Text
-            base.FillEmptyTextByID(OrganizationManagementPageResource.
+            base.FillEmptyTextById(OrganizationManagementPageResource.
                 OrganizationManagement_Page_Search_DisplayName_Textbox_Id_Locator);
             //Filling the text 
-            base.FillTextBoxByID(OrganizationManagementPageResource.
+            base.FillTextBoxById(OrganizationManagementPageResource.
                 OrganizationManagement_Page_Search_DisplayName_Textbox_Id_Locator,
                 organizationName);
             logger.LogMethodExit("OrganizationManagementPage", "EnterOrganizationNameToSearch",
@@ -395,7 +395,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(OrganizationManagementPageResource.
                     OrganizationManagement_NoRecordFound_Message_Id_Locator));
                 //Get Validation Message
-                getMessage = base.GetElementTextByID(OrganizationManagementPageResource.
+                getMessage = base.GetElementTextById(OrganizationManagementPageResource.
                     OrganizationManagement_NoRecordFound_Message_Id_Locator);                
             }
             catch (Exception e)

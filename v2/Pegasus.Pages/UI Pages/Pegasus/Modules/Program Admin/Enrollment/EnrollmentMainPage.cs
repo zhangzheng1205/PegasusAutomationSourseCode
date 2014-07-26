@@ -35,7 +35,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(EnrollmentMainPageResource.
                     EnrollmentMain_Page_EnrollButton_Id_Locator));
                 //Click on Button
-                base.ClickButtonByID(EnrollmentMainPageResource.
+                base.ClickButtonById(EnrollmentMainPageResource.
                     EnrollmentMain_Page_EnrollButton_Id_Locator);
             }
             catch (Exception e)

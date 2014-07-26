@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ReportsAssessmentCertificatePageResource.
                     ReportsAssessment_Page_Certificate_Score_Id_Locator));
                 //Get Certificate Score
-                getCertificateScore = base.GetElementTextByID(
+                getCertificateScore = base.GetElementTextById(
                     ReportsAssessmentCertificatePageResource.
                     ReportsAssessment_Page_Certificate_Score_Id_Locator);
             }

@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AssetInformationPageResource.
                     AssetInfomation_Page_Title_Id_Locator));
                 //Get Activity Name
-                getActivityName = base.GetElementTextByID(AssetInformationPageResource.
+                getActivityName = base.GetElementTextById(AssetInformationPageResource.
                     AssetInfomation_Page_Title_Id_Locator);
             }
             catch (Exception e)

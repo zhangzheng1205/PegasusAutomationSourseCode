@@ -280,7 +280,7 @@ namespace Pegasus.Pages.UI_Pages
                             LTIToolsPreference_Page_Tool_Td_Class_Name_Locator));
                         //Get Status Of Tool
                         string getAvailableToolsStatus =
-                           base.GetElementTextByID(string.Format(LTIToolsPreferencesPageResource.
+                           base.GetElementTextById(string.Format(LTIToolsPreferencesPageResource.
                            LTIToolsPreferences_Page_LTI_Tool_Status_ID_Locator,
                            initializeToolCounter));
                         //Get the Enable Status of LTI Tool

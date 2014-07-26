@@ -51,10 +51,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(MathXLAssessmentPageResource.
                 MathXLAssessment_Page_ActivityName_TextBox_Id_Locator));
                 //Clear TextBox
-                base.ClearTextByID(MathXLAssessmentPageResource.
+                base.ClearTextById(MathXLAssessmentPageResource.
                     MathXLAssessment_Page_ActivityName_TextBox_Id_Locator);
                 //Fill TextBox
-                base.FillTextBoxByID(MathXLAssessmentPageResource.
+                base.FillTextBoxById(MathXLAssessmentPageResource.
                     MathXLAssessment_Page_ActivityName_TextBox_Id_Locator,
                   customizeActivityName.ToString());
                 //Wait for the Copy Message to Disappear
@@ -125,10 +125,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(MathXLAssessmentPageResource.
                     MathXLAssessment_Page_StudyPlanName_TextBox_Id_Locator));
                 //Clear TextBox
-                base.ClearTextByID(MathXLAssessmentPageResource.
+                base.ClearTextById(MathXLAssessmentPageResource.
                     MathXLAssessment_Page_StudyPlanName_TextBox_Id_Locator);
                 //Fill TextBox
-                base.FillTextBoxByID(MathXLAssessmentPageResource.
+                base.FillTextBoxById(MathXLAssessmentPageResource.
                     MathXLAssessment_Page_StudyPlanName_TextBox_Id_Locator,
                   customizeActivityName.ToString());
                 //Wait for page

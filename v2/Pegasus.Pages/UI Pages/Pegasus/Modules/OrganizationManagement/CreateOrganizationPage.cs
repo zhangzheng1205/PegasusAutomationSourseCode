@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
             base.GetWebElementPropertiesById(CreateOrganizationPageResource.
               CreateOrganization_Page_OrganizationdisplayName_TextBox_Id_Locator).Clear();
             //Focus on the display name
-            base.FocusOnElementByID(CreateOrganizationPageResource.
+            base.FocusOnElementById(CreateOrganizationPageResource.
              CreateOrganization_Page_OrganizationdisplayName_TextBox_Id_Locator);
             Logger.LogMethodExit("CreateOrganizationPage", "EnterOrganizationName",
              base.isTakeScreenShotDuringEntryExit);
@@ -365,7 +365,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateOrganizationPageResource.
                 CreateOrganization_Page_RemoveButton_Id_Locator));
             //Click On Remove Button
-            base.ClickButtonByID(CreateOrganizationPageResource.
+            base.ClickButtonById(CreateOrganizationPageResource.
                 CreateOrganization_Page_RemoveButton_Id_Locator);
             Logger.LogMethodExit("CreateOrganizationPage", "SelectSchoolLevelOrganization",
              base.isTakeScreenShotDuringEntryExit);
@@ -481,7 +481,7 @@ namespace Pegasus.Pages.UI_Pages
             base.GetWebElementPropertiesById(CreateOrganizationPageResource.
                 CreateOrganization_Page_OrganizationdisplayName_TextBox_Id_Locator).Clear();
             //Focus on the display name
-            base.FocusOnElementByID(CreateOrganizationPageResource.
+            base.FocusOnElementById(CreateOrganizationPageResource.
                 CreateOrganization_Page_OrganizationdisplayName_TextBox_Id_Locator);
             //Log Exit of the Method
             Logger.LogMethodExit("CreateOrganizationPage", "FillOrganizationDisplayName",
@@ -528,7 +528,7 @@ namespace Pegasus.Pages.UI_Pages
                 case Organization.OrganizationLevelEnum.PowerSchool:
                     base.WaitForElement(By.Id(CreateOrganizationPageResource
                         .CreateOrganization_Page_ThirdPartyCheckBox_Id));
-                    base.ClickCheckBoxById(CreateOrganizationPageResource
+                    base.SelectCheckBoxById(CreateOrganizationPageResource
                         .CreateOrganization_Page_ThirdPartyCheckBox_Id);
                     break;
             }
@@ -547,7 +547,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait For Element
             base.WaitForElement(By.Id(CreateOrganizationPageResource.
                 CreateOrganization_Page_Save_Button_Id_Locator));
-            base.FocusOnElementByID(CreateOrganizationPageResource.
+            base.FocusOnElementById(CreateOrganizationPageResource.
                 CreateOrganization_Page_Save_Button_Id_Locator);
             IWebElement getOrganizationName = base.GetWebElementPropertiesById
                 (CreateOrganizationPageResource.
@@ -587,7 +587,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill the Zip code
             base.GetWebElementPropertiesById(CreateOrganizationPageResource.
                                      CreateOrganization_Page_Zipcode_TextBox_Id_Locator).Clear();
-            base.FillTextBoxByID(CreateOrganizationPageResource.
+            base.FillTextBoxById(CreateOrganizationPageResource.
                 CreateOrganization_Page_Zipcode_TextBox_Id_Locator,
                 CreateOrganizationPageResource.
                 CreateOrganization_Page_Region_Zipcode_TextBox_Id_Locator_Value);

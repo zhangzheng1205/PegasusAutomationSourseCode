@@ -70,13 +70,13 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("BulkUploadQueuePage", "RemoveTheOlderFiles",
                 base.isTakeScreenShotDuringEntryExit);
             //Click on the Registration Queue
-            base.ClickButtonByID(ManageUserPageResource.
+            base.ClickButtonById(ManageUserPageResource.
                 ManageUser_Page_BulkRegistration_ViewRegistration_Data_Id_Locator);
             base.WaitUntilWindowLoads(BulkUploadQueuePageResource.
                 BulkUploadQueue_Page_Window_Title);
             base.SelectWindow(BulkUploadQueuePageResource.BulkUploadQueue_Page_Window_Title);
             //Check the Select all Checkbox
-            base.ClickCheckBoxById(BulkUploadQueuePageResource.
+            base.SelectCheckBoxById(BulkUploadQueuePageResource.
                 BulkUploadQueue_Page_SelectAll_CheckBox_Id_Locator);
             if ( base.IsElementPresent(By.Id(BulkUploadQueuePageResource.
                 BulkUploadQueue_Page_Remove_Link_Id_Locator)) )
@@ -107,7 +107,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectWindow(BulkUploadQueuePageResource.
                     BulkUploadQueue_Page_Window_Title);
                 //Check the Select all Checkbox
-                base.ClickCheckBoxById(BulkUploadQueuePageResource.
+                base.SelectCheckBoxById(BulkUploadQueuePageResource.
                     BulkUploadQueue_Page_SelectAll_CheckBox_Id_Locator);
                 //Click on the Remove link
                 base.WaitForElement(By.Id(BulkUploadQueuePageResource.

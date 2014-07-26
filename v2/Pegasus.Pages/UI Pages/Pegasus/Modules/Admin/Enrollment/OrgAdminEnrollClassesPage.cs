@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment
                 // Wait for Class name text box and fill the class name
                 base.WaitForElement(By.Id(OrgAdminEnrollClassesPageResource
                 .OrgAdminEnrollClasses_Page_ClassName_TextBox_Id_Locator));
-                base.FillTextBoxByID(OrgAdminEnrollClassesPageResource
+                base.FillTextBoxById(OrgAdminEnrollClassesPageResource
                    .OrgAdminEnrollClasses_Page_ClassName_TextBox_Id_Locator, className);
                 // wait for search button and click
                 base.WaitForElement(By.Id(OrgAdminEnrollClassesPageResource.

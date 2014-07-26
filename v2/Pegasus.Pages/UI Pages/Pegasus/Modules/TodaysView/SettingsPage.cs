@@ -37,11 +37,11 @@ namespace Pegasus.Pages.UI_Pages
                 base.GetWebElementPropertiesById(SettingsPageResource.
                     SettingsPageResource_Checkbox_NewGrades_Id_Locator).SendKeys(string.Empty);
                 //Check if the New Grades Checkbox is displayed with text 
-                if (base.IsElementDisplayedByID(SettingsPageResource.
+                if (base.IsElementDisplayedById(SettingsPageResource.
                     SettingsPageResource_Checkbox_NewGrades_Id_Locator))
                 {
                     //Click on the New Grades Checkbox with text 
-                    base.ClickCheckBoxById(SettingsPageResource.
+                    base.SelectCheckBoxById(SettingsPageResource.
                      SettingsPageResource_Checkbox_NewGrades_Id_Locator);
                     //Clicking on the Save and Close button
                     ClickToSaveAndCloseButton();

@@ -112,12 +112,12 @@ namespace Pegasus.Pages.UI_Pages
                 //Enter Search Text
                 base.WaitForElement(By.Id(ContentLibraryPageResource.
                     ContnetLibrary_Page_SearchTextBox_Id_Locator));
-                base.FillTextBoxByID(ContentLibraryPageResource.
+                base.FillTextBoxById(ContentLibraryPageResource.
                     ContnetLibrary_Page_SearchTextBox_Id_Locator, activityName);
                 //Click on Search Button
                 base.WaitForElement(By.Id(ContentLibraryPageResource.
                     ContnetLibrary_Page_SearchButton_Id_Locator));                
-                base.ClickButtonByID(ContentLibraryPageResource.
+                base.ClickButtonById(ContentLibraryPageResource.
                     ContnetLibrary_Page_SearchButton_Id_Locator);
             }
             catch (Exception e)
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Selects Window and Switch to Frame
                  this.SelectWindowAndFrame();  
                 //Get all the Asset Names
-                string getAssetNames = base.GetElementTextByID(ContentLibraryPageResource.
+                string getAssetNames = base.GetElementTextById(ContentLibraryPageResource.
                     ContnetLibrary_Page_Div_Id_Locator);
                 if (getAssetNames.Contains(ContentLibraryPageResource.
                     ContentLibrary_Page_AssignToCopy_Message))
@@ -285,7 +285,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ContentLibraryPageResource.
                        ContnetLibrary_Page_SearchedAssetName_Id_Locator));
                 //Get Asset Name From Application
-                getAssetName = base.GetElementTextByID(ContentLibraryPageResource.
+                getAssetName = base.GetElementTextById(ContentLibraryPageResource.
                     ContnetLibrary_Page_SearchedAssetName_Id_Locator);
             }
             catch (Exception e)
@@ -497,10 +497,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ContentLibraryPageResource.
                     ContnetLibrary_Page_Product_CmenuIcon_Id_Locator));
                 //Focus on Cmenu Icon
-                base.FocusOnElementByID(ContentLibraryPageResource.
+                base.FocusOnElementById(ContentLibraryPageResource.
                     ContnetLibrary_Page_Product_CmenuIcon_Id_Locator);
                 //Click on Cmenu Icon
-                base.ClickButtonByID(ContentLibraryPageResource.
+                base.ClickButtonById(ContentLibraryPageResource.
                     ContnetLibrary_Page_Product_CmenuIcon_Id_Locator);
                 base.WaitForElement(By.XPath(ContentLibraryPageResource.
                     ContnetLibrary_Page_CustomContentLink_Xpath_Locator));
@@ -530,14 +530,14 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchTextBox_Id_Locator));
             //Clear Textbox
-            base.ClearTextByID(ContentLibraryPageResource.
+            base.ClearTextById(ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchTextBox_Id_Locator);
-            base.FillTextBoxByID(ContentLibraryPageResource.
+            base.FillTextBoxById(ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchTextBox_Id_Locator, activityName);
             //Click on Search Button
             base.WaitForElement(By.Id(ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchButton_Id_Locator));
-            base.ClickButtonByID(ContentLibraryPageResource.
+            base.ClickButtonById(ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchButton_Id_Locator);
             logger.LogMethodExit("ContentLibraryPage", "SearchActivity",
                   base.isTakeScreenShotDuringEntryExit);

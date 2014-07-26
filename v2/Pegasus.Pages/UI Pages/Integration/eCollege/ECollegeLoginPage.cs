@@ -83,10 +83,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for UserName Textbox 
             base.WaitForElement(By.Id(ECollegeLoginPageResource.
                 ECollegeLoginPage_UserName_ID_Locator));
-            base.ClearTextByID(ECollegeLoginPageResource.
+            base.ClearTextById(ECollegeLoginPageResource.
                 ECollegeLoginPage_UserName_ID_Locator);
             // Enter UserName
-            base.FillTextBoxByID(ECollegeLoginPageResource.
+            base.FillTextBoxById(ECollegeLoginPageResource.
                 ECollegeLoginPage_UserName_ID_Locator, userName);
             Logger.LogMethodExit("ECollgeLoginPage",
                 "EnterECollegeUserName", base.isTakeScreenShotDuringEntryExit);
@@ -105,13 +105,13 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Password Textbox
             base.WaitForElement(By.Id(ECollegeLoginPageResource
                 .ECollegeLoginPage_Password_ID_Locator));
-            base.ClearTextByID(ECollegeLoginPageResource
+            base.ClearTextById(ECollegeLoginPageResource
                 .ECollegeLoginPage_Password_ID_Locator);
             //Enter Password
-            base.FillTextBoxByID(ECollegeLoginPageResource.
+            base.FillTextBoxById(ECollegeLoginPageResource.
                 ECollegeLoginPage_Password_ID_Locator, userPassword);
             // Login By using Enter key in Password text.
-            base.PressEnterKeyByID(ECollegeLoginPageResource.
+            base.PressEnterKeyById(ECollegeLoginPageResource.
                 ECollegeLoginPage_Password_ID_Locator);
             Logger.LogMethodExit("ECollegeLoginPage",
                 "EnterECollegeUserPassword", base.isTakeScreenShotDuringEntryExit);

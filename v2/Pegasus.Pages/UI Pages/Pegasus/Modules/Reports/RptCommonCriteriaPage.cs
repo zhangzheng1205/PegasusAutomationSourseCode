@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 //Wait for the element
                 base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
                     RptCommonCriteria_Page_SelectStudent_TextBox_Id_Locator));
-                string isStudentSelected = base.GetElementTextByID
+                string isStudentSelected = base.GetElementTextById
                     (RptCommonCriteriaPageResource.
                     RptCommonCriteria_Page_SelectStudent_TextBox_Id_Locator);                            
             }
@@ -296,7 +296,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 (RptCommonCriteriaPageResource.
                 RptCommonCriteria_Page_SelectSkills_Checkbox_Id_Locator);
             //Click the treeview checkbox
-            base.ClickCheckBoxById(RptCommonCriteriaPageResource.
+            base.SelectCheckBoxById(RptCommonCriteriaPageResource.
                 RptCommonCriteria_Page_SelectSkills_Checkbox_Id_Locator);
             logger.LogMethodExit("RptCommonCriteriaPage", "SelectSkillsFromTreeview",
                 base.isTakeScreenShotDuringEntryExit);

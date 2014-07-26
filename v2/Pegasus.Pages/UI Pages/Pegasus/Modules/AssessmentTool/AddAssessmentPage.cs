@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
                     AddAsessment_Page_ActivityName_Id_Locator));
                 //Fill the Activity Name in textbox
-                base.FillTextBoxByID(AddAssessmentPageResources.
+                base.FillTextBoxById(AddAssessmentPageResources.
                     AddAsessment_Page_ActivityName_Id_Locator, activityTest.ToString());
                 //Store the Activity content
                 this.StoreTheActivityContent(activityTest, getAssetType);
@@ -91,10 +91,10 @@ namespace Pegasus.Pages.UI_Pages
             //Click On SaveAndContinue Button
             logger.LogMethodEntry("AddAssessmentPage", "ClickOnSaveContinueButton",
                  base.isTakeScreenShotDuringEntryExit);
-            base.FocusOnElementByID(AddAssessmentPageResources.
+            base.FocusOnElementById(AddAssessmentPageResources.
                 AddAsessment_Page_SaveAndContinue_Button_Id_Locator);
             //Click on the "SaveAndContinue" Button
-            base.ClickButtonByID(AddAssessmentPageResources.
+            base.ClickButtonById(AddAssessmentPageResources.
                 AddAsessment_Page_SaveAndContinue_Button_Id_Locator);
             Thread.Sleep(Convert.ToInt32(AddAssessmentPageResources.
                  AddAsessment_Page_Asset_Question_Window_Time_Value));
@@ -448,7 +448,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(AddAssessmentPageResources.
                      AddAsessment_Page_ActivityName_Id_Locator));
             //Fill the Activity Name in textbox
-            base.FillTextBoxByID(AddAssessmentPageResources.
+            base.FillTextBoxById(AddAssessmentPageResources.
                 AddAsessment_Page_ActivityName_Id_Locator, assetName);
             logger.LogMethodExit("AddAssessmentPage", "FillAssetName",
                    base.isTakeScreenShotDuringEntryExit);
@@ -506,7 +506,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(AddAssessmentPageResources.
                      AddAsessment_Page_ActivityName_Id_Locator));
             //Fill the Activity Name in textbox
-            base.FillTextBoxByID(AddAssessmentPageResources.
+            base.FillTextBoxById(AddAssessmentPageResources.
                 AddAsessment_Page_ActivityName_Id_Locator, activityName);
             //Select Assignemt Radio Button
             this.SelectAssignmentRadioButton();
@@ -565,7 +565,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(AddAssessmentPageResources.
                      AddAsessment_Page_ActivityName_Id_Locator));
             //Fill the Activity Name in textbox
-            base.FillTextBoxByID(AddAssessmentPageResources.
+            base.FillTextBoxById(AddAssessmentPageResources.
                 AddAsessment_Page_ActivityName_Id_Locator, activityName);
             //Click The Basic Random Radio Button
             this.ClickTheBasicRandomRadioButton();
@@ -608,7 +608,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
                              AddAsessment_Page_ActivityName_Id_Locator));
                 //Fill the Activity Name in textbox
-                base.FillTextBoxByID(AddAssessmentPageResources.
+                base.FillTextBoxById(AddAssessmentPageResources.
                     AddAsessment_Page_ActivityName_Id_Locator, activityTitle.ToString());
             }
             catch (Exception e)
@@ -631,7 +631,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
                         AddAsessment_Page_SaveAndContinue_Button_Id_Locator));
-                base.FocusOnElementByID(AddAssessmentPageResources.
+                base.FocusOnElementById(AddAssessmentPageResources.
                     AddAsessment_Page_SaveAndContinue_Button_Id_Locator);
                 //Get Save And Continue Button Property
                 IWebElement getbuttonProperty = base.GetWebElementPropertiesById(
@@ -1108,14 +1108,14 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
                     AddAssement_Page_Begin_Message_Id_Locator));
                 //Fill the Begin message in textbox
-                base.FillTextBoxByID(AddAssessmentPageResources.
+                base.FillTextBoxById(AddAssessmentPageResources.
                     AddAssement_Page_Begin_Message_Id_Locator,
                     AddAssessmentPageResources.AddAssement_Page_Begin_Message);
                 //Wait for the end text element
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
                     AddAssement_Page_End_Message_Id_Locator));
                 //Fill the Activity Name in textbox
-                base.FillTextBoxByID(AddAssessmentPageResources.
+                base.FillTextBoxById(AddAssessmentPageResources.
                     AddAssement_Page_End_Message_Id_Locator,
                     AddAssessmentPageResources.AddAssement_Page_End_Message);
             }
@@ -1393,7 +1393,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
                         AddAssessment_Page_HelpLinks_Tab_Id_Locator));
                 //Focus control on the Help Links tab
-                base.FocusOnElementByID(AddAssessmentPageResources.
+                base.FocusOnElementById(AddAssessmentPageResources.
                     AddAssessment_Page_HelpLinks_Tab_Id_Locator);
                 //Get Save And Continue Button Property
                 IWebElement getbuttonProperty = base.GetWebElementPropertiesById(

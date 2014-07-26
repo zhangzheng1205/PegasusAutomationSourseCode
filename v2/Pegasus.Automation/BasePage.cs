@@ -22,7 +22,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Get a string representing the current URL that the browser is looking at.
         /// </summary>
-        protected String CurrentUrl
+        protected String GetCurrentUrl
         {
             get { return WebDriver.Url; }
         }
@@ -59,8 +59,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// it to be loaded and the caller should verify that a new page has been loaded.
         /// There are some preconditions for an element to be clicked. The element must be visible and it must have a height and width greater then 0.</see>
         /// <exception cref="StaleElementReferenceException">If the element no longer exists as initially defined.</exception>
-        private void ClickButton(By by)
+        private void ClickOnButton(By by)
         {
+            base.WaitForElement(by);
             WebDriver.FindElement(by).Click();
         }
 
@@ -68,9 +69,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Click the element by locating Id.
         /// </summary>
         /// <param name="idAttributeValue">This is the Id Attribute Value.</param>
-        protected void ClickButtonByID(String idAttributeValue)
+        protected void ClickButtonById(String idAttributeValue)
         {
-            ClickButton(By.Id(idAttributeValue));
+            ClickOnButton(By.Id(idAttributeValue));
         }
 
         /// <summary>
@@ -79,7 +80,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="classNameAttributeValue">This is the Class Name Attribute Value.</param>
         protected void ClickButtonByClassName(String classNameAttributeValue)
         {
-            ClickButton(By.ClassName(classNameAttributeValue));
+            ClickOnButton(By.ClassName(classNameAttributeValue));
         }
 
         /// <summary>
@@ -88,7 +89,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="partialLinkTextAttributeValue">This is the Partial Link Text Attribute Value.</param>
         protected void ClickButtonByPartialLinkText(String partialLinkTextAttributeValue)
         {
-            ClickButton(By.PartialLinkText(partialLinkTextAttributeValue));
+            ClickOnButton(By.PartialLinkText(partialLinkTextAttributeValue));
         }
 
         /// <summary>
@@ -97,7 +98,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="cssSelectorValue">This is the Css Selector Value.</param>
         protected void ClickButtonByCssSelector(String cssSelectorValue)
         {
-            ClickButton(By.CssSelector(cssSelectorValue));
+            ClickOnButton(By.CssSelector(cssSelectorValue));
         }
 
         /// <summary>
@@ -106,7 +107,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="linkTextAttributeValue">This is the Link text Attribute Value.</param>
         protected void ClickButtonByLinkText(String linkTextAttributeValue)
         {
-            ClickButton(By.LinkText(linkTextAttributeValue));
+            ClickOnButton(By.LinkText(linkTextAttributeValue));
         }
 
         /// <summary>
@@ -115,16 +116,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xPathValue">This is the Xpath Attribute Value.</param>
         protected void ClickButtonByXPath(String xPathValue)
         {
-            ClickButton(By.XPath(xPathValue));
+            ClickOnButton(By.XPath(xPathValue));
         }
 
         /// <summary>
         /// Click the element by locating Name.
         /// </summary>
         /// <param name="nameAttributeValue">This is the Name Attribute Value.</param>
-        protected void ClickButtonByName(String nameAttributeValue)
+        protected void SelectButtonByName(String nameAttributeValue)
         {
-            ClickButton(By.Name(nameAttributeValue));
+            ClickOnButton(By.Name(nameAttributeValue));
         }
 
         /// <summary>
@@ -133,16 +134,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="idAttributeValue">This is the Id Attribute Value.</param>
         protected void SelectRadioButtonById(String idAttributeValue)
         {
-            ClickButton(By.Id(idAttributeValue));
+            ClickOnButton(By.Id(idAttributeValue));
         }
 
         /// <summary>
         /// Select the Radio Button element by locating it's Name.
         /// </summary>
         /// <param name="nameAttributeValue">This is the Name Attribute Value.</param>
-        protected void ClickRadioButtonByName(String nameAttributeValue)
+        protected void SelectRadioButtonByName(String nameAttributeValue)
         {
-            ClickButton(By.Name(nameAttributeValue));
+            ClickOnButton(By.Name(nameAttributeValue));
         }
 
         /// <summary>
@@ -151,7 +152,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xPathValue">This is the XPath Value.</param>
         protected void SelectRadioButtonByXPath(String xPathValue)
         {
-            ClickButton(By.XPath(xPathValue));
+            ClickOnButton(By.XPath(xPathValue));
         }
 
         /// <summary>
@@ -160,7 +161,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="classNameAttributeValue">This is the ClassName Attribute Value.</param>
         protected void SelectRadioButtonByClassName(String classNameAttributeValue)
         {
-            ClickButton(By.ClassName(classNameAttributeValue));
+            ClickOnButton(By.ClassName(classNameAttributeValue));
         }
 
         /// <summary>
@@ -169,16 +170,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="cssSelectorValue">This is the CssSelector Value.</param>
         protected void SelectRadioButtonByCssSelector(String cssSelectorValue)
         {
-            ClickButton(By.CssSelector(cssSelectorValue));
+            ClickOnButton(By.CssSelector(cssSelectorValue));
         }
 
         /// <summary>
         /// Select the Check Box element by locating it's Id.
         /// </summary>
         /// <param name="idAttributeValue">This is the Id Attribute Value.</param>
-        protected void ClickCheckBoxById(String idAttributeValue)
+        protected void SelectCheckBoxById(String idAttributeValue)
         {
-            ClickButton(By.Id(idAttributeValue));
+            ClickOnButton(By.Id(idAttributeValue));
         }
 
         /// <summary>
@@ -187,9 +188,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xPathValue"> This is Xpath attribute value.</param>
         protected void SelectCheckBoxByXPath(String xPathValue)
         {
-            ClickButton(By.XPath(xPathValue));
+            ClickOnButton(By.XPath(xPathValue));
         }
-
 
         /// <summary>
         /// Select the Check Box element by locating it's class name.
@@ -197,7 +197,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="classNameAttributeValue"> This is class name attribute value.</param>
         protected void SelectCheckBoxByClassName(String classNameAttributeValue)
         {
-            ClickButton(By.ClassName(classNameAttributeValue));
+            ClickOnButton(By.ClassName(classNameAttributeValue));
         }
 
         /// <summary>
@@ -206,7 +206,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="cssSelectorValue"> This is Css Selector value.</param>
         protected void SelectCheckBoxByCssSelector(String cssSelectorValue)
         {
-            ClickButton(By.CssSelector(cssSelectorValue));
+            ClickOnButton(By.CssSelector(cssSelectorValue));
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="nameAttributeValue"> This is Name attribute value.</param>
         protected void SelectCheckBoxByName(String nameAttributeValue)
         {
-            ClickButton(By.Name(nameAttributeValue));
+            ClickOnButton(By.Name(nameAttributeValue));
         }
 
         /// <summary>
@@ -224,7 +224,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xPathValue">This is the Xpath Attribute Value.</param>
         protected void ClickImageByXPath(String xPathValue)
         {
-            ClickButton(By.XPath(xPathValue));
+            ClickOnButton(By.XPath(xPathValue));
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="idAttributeValue">This is the id attribute value.</param>
         protected void ClickImageById(String idAttributeValue)
         {
-            ClickButton(By.Id(idAttributeValue));
+            ClickOnButton(By.Id(idAttributeValue));
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="classNameAttributeValue">This is the class name attribute value.</param>
         protected void ClickImageByClassName(String classNameAttributeValue)
         {
-            ClickButton(By.ClassName(classNameAttributeValue));
+            ClickOnButton(By.ClassName(classNameAttributeValue));
         }
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="partialLinkTextAttributeValue">This is the Link text Attribute Value.</param>
         protected void ClickLinkByPartialLinkText(String partialLinkTextAttributeValue)
         {
-            ClickButton(By.PartialLinkText(partialLinkTextAttributeValue));
+            ClickOnButton(By.PartialLinkText(partialLinkTextAttributeValue));
         }
 
         /// <summary>
@@ -260,7 +260,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xPathValue">This is the Xpath Attribute Value.</param>
         protected void ClickLinkByXPath(String xPathValue)
         {
-            ClickButton(By.XPath(xPathValue));
+            ClickOnButton(By.XPath(xPathValue));
         }
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="idAttributeValue">This is the Id Attribute Value.</param>
         protected void ClickLinkById(String idAttributeValue)
         {
-            ClickButton(By.Id(idAttributeValue));
+            ClickOnButton(By.Id(idAttributeValue));
         }
 
         /// <summary>
@@ -278,7 +278,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="idAttributeValue">This is the Id Attribute Value.</param>
         protected void SelectTabById(String idAttributeValue)
         {
-            ClickButton(By.Id(idAttributeValue));
+            ClickOnButton(By.Id(idAttributeValue));
         }
 
         /// <summary>
@@ -287,7 +287,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="classNameAttributeValue">This is the Class Name Attribute Value.</param>
         protected void SelectTabByClassName(String classNameAttributeValue)
         {
-            ClickButton(By.ClassName(classNameAttributeValue));
+            ClickOnButton(By.ClassName(classNameAttributeValue));
         }
 
         /// <summary>
@@ -296,7 +296,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="partialLinkTextAttributeValue">This is the Link Text Attribute Value.</param>
         protected void SelectTabByPartialLinkText(String partialLinkTextAttributeValue)
         {
-            ClickButton(By.PartialLinkText(partialLinkTextAttributeValue));
+            ClickOnButton(By.PartialLinkText(partialLinkTextAttributeValue));
         }
 
         /// <summary>
@@ -305,7 +305,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="xPathValue">This is the XPath Value.</param>
         protected void SelectTabByXPath(String xPathValue)
         {
-            ClickButton(By.XPath(xPathValue));
+            ClickOnButton(By.XPath(xPathValue));
         }
 
 
@@ -322,6 +322,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// which may set its value.</see>
         private void FillTextBox(By by, String textToFill)
         {
+            base.WaitForElement(by);
             WebDriver.FindElement(by).SendKeys(textToFill);
         }
 
@@ -331,7 +332,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="idAttributeValue">This is the Id Attribute Value.</param>
         /// <param name="textToFill">This is text to fill in the textbox.</param>
-        protected void FillTextBoxByID(String idAttributeValue, String textToFill)
+        protected void FillTextBoxById(String idAttributeValue, String textToFill)
         {
             FillTextBox(By.Id(idAttributeValue), textToFill);
         }
@@ -388,6 +389,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <see cref="SendKeys">This method to simulate typing into an element, which may set its value.</see>
         protected void FillEmptyText(By by)
         {
+            base.WaitForElement(by);
             WebDriver.FindElement(by).SendKeys(String.Empty);
         }
 
@@ -396,7 +398,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// by Id attribute value, which may set its value.
         /// </summary>
         /// <param name="idAttributeValue">This is the Id Attribute Value.</param>
-        protected void FillEmptyTextByID(String idAttributeValue)
+        protected void FillEmptyTextById(String idAttributeValue)
         {
             FillEmptyText(By.Id(idAttributeValue));
         }
@@ -436,7 +438,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Id attribute value, which may set its value.
         /// </summary>
         /// <param name="idAttributeValue">This is the Id Attribute Value.</param>
-        protected void FocusOnElementByID(String idAttributeValue)
+        protected void FocusOnElementById(String idAttributeValue)
         {
             FillEmptyText(By.Id(idAttributeValue));
         }
@@ -568,6 +570,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="idAttributeValue">This is iFrame id atribute value.</param>
         protected void SwitchToIFrameById(String idAttributeValue)
         {
+            base.WaitForElement(By.Id(idAttributeValue));
             WebDriver.SwitchTo().Frame(idAttributeValue);
         }
         #endregion
@@ -629,6 +632,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Web Element Properties.</returns>
         private IWebElement GetWebElementProperties(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by);
         }
 
@@ -731,6 +735,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             try
             {
+                base.WaitForElement(by, 5);
                 return WebDriver.FindElement(by).Displayed;
             }
             catch (Exception)
@@ -754,7 +759,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="idAttributeValue">Retrieves HTML Element by Id attribute value.</param>
         /// <returns>Whether or not the element is displayed by Id Attribute Value.</returns>
-        protected Boolean IsElementDisplayedByID(string idAttributeValue)
+        protected Boolean IsElementDisplayedById(string idAttributeValue)
         {
             return IsElementDisplayed(By.Id(idAttributeValue));
         }
@@ -774,6 +779,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             try
             {
+                base.WaitForElement(by);
                 return WebDriver.FindElement(by).Enabled;
             }
             catch (Exception)
@@ -787,7 +793,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="idAttributeValue">Retrieves HTML Element by locating id attribute value.</param>
         /// <returns>True if the element is enabled, false otherwise by locating id attribute value.</returns>
-        protected Boolean IsElementEnabledByID(String idAttributeValue)
+        protected Boolean IsElementEnabledById(String idAttributeValue)
         {
             return IsElementEnabled(By.Id(idAttributeValue));
         }
@@ -816,6 +822,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <exception cref="NoSuchElementException">If the given element is not within a form</exception>
         private void SubmitButton(By by)
         {
+            base.WaitForElement(by);
             WebDriver.FindElement(by).Submit();
         }
 
@@ -881,6 +888,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>True if the value parameter occurs within this string, or if value is the empty string (""); otherwise, false.</returns>
         private Boolean IsElementContainsText(By by, string containsTextToFind)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).Text.Contains(containsTextToFind);
         }
 
@@ -970,6 +978,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
         private string GetTitleAttributeValueByLocator(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("Title");
         }
 
@@ -984,6 +993,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
         private string GetHrefAttributeValueByLocator(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("href");
         }
 
@@ -1008,6 +1018,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
         private string GetValueAttributeByLocator(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("value");
         }
 
@@ -1062,6 +1073,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
         private string GetInnerTextAttributeValueByLocator(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("innerText");
         }
 
@@ -1096,6 +1108,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
         private string GetClassAttributeValue(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("class");
         }
 
@@ -1142,6 +1155,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// in which case the value of the property with the same name is returned. If neither value is set, null is returned. </see>
         private string GetStyleAttributeValue(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).GetAttribute("style");
         }
 
@@ -1183,6 +1197,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </see>
         protected Boolean IsElementSelected(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).Selected;
         }
 
@@ -1217,6 +1232,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="value">The visible text to match against.</param>
         private void SelectDropDownValueByText(By by, String value)
         {
+            base.WaitForElement(by);
             new SelectElement(WebDriver.FindElement(by)).SelectByText(value);
         }
 
@@ -1248,6 +1264,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="indexValue">The option at this index will be selected.</param>
         private void SelectDropDownValueByIndex(By by, int indexValue)
         {
+            base.WaitForElement(by);
             new SelectElement(WebDriver.FindElement(by)).SelectByIndex(indexValue);
         }
 
@@ -1271,6 +1288,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Generally, all interesting operations to do with interacting with a page will be performed through this interface</see>
         private void SelectDropDownValueByTagNameOption(By by, string optionName)
         {
+            base.WaitForElement(by);
             IWebElement select = WebDriver.FindElement(by);
             IList<IWebElement> options = select.FindElements(By.TagName("option"));
             foreach (IWebElement option in options)
@@ -1344,6 +1362,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// To ensure you get a change event, consider following with a call to sendKeys(CharSequence...) with the tab key.</see>
         private void ClearText(By by)
         {
+            base.WaitForElement(by);
             WebDriver.FindElement(by).Clear();
         }
 
@@ -1351,7 +1370,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         ///  If this element is a text entry element, this will clear the value by element Id attribute value.
         /// </summary>
         /// <param name="idAttributeValue">This is Id attribute value.</param>
-        protected void ClearTextByID(String idAttributeValue)
+        protected void ClearTextById(String idAttributeValue)
         {
             ClearText(By.Id(idAttributeValue));
         }
@@ -1414,7 +1433,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="idAttributeValue">Retrieves HTML Element Attribute value by Id.</param>
         /// <returns>The innerText of this element by Id attribute value.</returns>
-        protected String GetElementTextByID(String idAttributeValue)
+        protected String GetElementTextById(String idAttributeValue)
         {
             return GetElementText(By.Id(idAttributeValue));
         }
@@ -1478,8 +1497,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             return GetElementText(By.TagName(tagNameValue));
         }
-
-
 
         /// <summary>
         ///  Retrieves specified inner text occurs within this string by attribute value of the element .
@@ -1614,6 +1631,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <see cref="FindElements">Finds all IWebElements within the current context using the given mechanism.</see>
         private int GetElementCount(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElements(by).Count;
         }
 
@@ -1833,7 +1851,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// The script fragment provided will be executed as the body of an fill text 
         /// value function by locating element Id.
         /// </summary>
-        /// <param name="iWebElementID">Represents an HTML element. Generally, 
+        /// <param name="iWebElementId">Represents an HTML element. Generally, 
         /// all interesting operations to do with interacting with a page by locating 
         /// Id will be performed through this interface.</param>
         /// <param name="textValue">This Text Vaule.</param>
@@ -1842,10 +1860,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// The script fragment provided will be executed as the body of an anonymous function.</see>
         /// <seealso cref="IJavaScriptExecutor">Indicates that a driver can execute JavaScript, providing 
         /// access to the mechanism to do so.</seealso>
-        protected void FillTextByIDThroughJavaScriptExecutor
-            (IWebElement iWebElementID, String textValue)
+        protected void FillTextByIdThroughJavaScriptExecutor
+            (IWebElement iWebElementId, String textValue)
         {
-            ((IJavaScriptExecutor)WebDriver).ExecuteScript(String.Format("document.getElementById('{0}').value='{1}'", iWebElementID, textValue));
+            ((IJavaScriptExecutor)WebDriver).ExecuteScript(String.Format("document.getElementById('{0}').value='{1}'", iWebElementId, textValue));
         }
 
         /// <summary>
@@ -1996,6 +2014,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <seealso cref="Keys.Enter">Represents the Enter key.</seealso>
         private void PressEnterKey(By by)
         {
+            base.WaitForElement(by);
             WebDriver.FindElement(by).SendKeys(Keys.Enter);
         }
 
@@ -2003,7 +2022,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Press Enter Key By locating element ID attribute value. 
         /// </summary>
         /// <param name="idAttributeValue">This is HTML Element ID Attribute value.</param>
-        protected void PressEnterKeyByID(String idAttributeValue)
+        protected void PressEnterKeyById(String idAttributeValue)
         {
             PressEnterKey(By.Id(idAttributeValue));
         }
@@ -2151,6 +2170,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Left position of the DOM-element based on the selector.</returns>
         private Double GetElementPositionTop(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).Location.X;
         }
 
@@ -2181,6 +2201,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Left position of the DOM-element based on the selector.</returns>
         private Double GetElementPositionLeft(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).Location.Y;
         }
 
@@ -2211,6 +2232,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Height of the DOM-element based on the selector.</returns>
         private Double GetElementHeight(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).Size.Height;
         }
 
@@ -2241,6 +2263,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Width of the DOM-element based on the selector.</returns>
         private Double GetElementWidth(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).Size.Width;
         }
 
@@ -2285,6 +2308,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <see cref="FindElements">Finds all IWebElements within the current context using the given mechanism.</see>
         private ICollection<IWebElement> GetWebElementsCollection(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElements(by);
         }
 

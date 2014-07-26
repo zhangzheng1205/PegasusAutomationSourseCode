@@ -34,7 +34,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Click save button.
                 base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.SaveButton_Id_for_SharedLibrary_Create));
-                base.ClickButtonByID(EditCopyTemplatesSectionsResource.SaveButton_Id_for_SharedLibrary_Create);
+                base.ClickButtonById(EditCopyTemplatesSectionsResource.SaveButton_Id_for_SharedLibrary_Create);
             }
             catch (Exception e)
             {
@@ -52,13 +52,13 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(EditCopyTemplatesSectionsResource.CopyAsSharedLibrary_Page_Window_Page_Title);
             //wait for the required element to come up and then populate it.
             base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.SL_create_start_date));
-            base.FillTextBoxByID(EditCopyTemplatesSectionsResource.SL_create_start_date, GetDateValue(DateType.StartDate));
+            base.FillTextBoxById(EditCopyTemplatesSectionsResource.SL_create_start_date, GetDateValue(DateType.StartDate));
             //Prepare the enddate/time with required format by adding 90 days to the current date.
             //String getSLEndDate = DateTime.Now.AddDays(90).ToString(
             //base.GetElementInnerTextById("txtStartDateId_lblDateFormat").ToLower());
             //Populate the enddate
             base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.SL_create_end_date));
-            base.FillTextBoxByID(EditCopyTemplatesSectionsResource.SL_create_end_date, GetDateValue(DateType.EndDate));
+            base.FillTextBoxById(EditCopyTemplatesSectionsResource.SL_create_end_date, GetDateValue(DateType.EndDate));
             ClickToCreateUpdate();
         }
 
@@ -114,15 +114,15 @@ namespace Pegasus.Pages.UI_Pages
                 EditCopyTemplatesSectionsResource.CopyAsSharedLibrary_Page_Date_Format);
             //wait for the required element to come up and then populate it.
             base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.SL_create_start_date));
-            base.ClearTextByID(EditCopyTemplatesSectionsResource.SL_create_start_date);
-            base.FillTextBoxByID(EditCopyTemplatesSectionsResource.SL_create_start_date, getSLStartDate);
+            base.ClearTextById(EditCopyTemplatesSectionsResource.SL_create_start_date);
+            base.FillTextBoxById(EditCopyTemplatesSectionsResource.SL_create_start_date, getSLStartDate);
             //Prepare the enddate/time with required format by adding 90 days to the current date.
             String getSLEndDate = DateTime.Now.AddDays(90).ToString(
             EditCopyTemplatesSectionsResource.CopyAsSharedLibrary_Page_Date_Format);
             //Populate the enddate
             base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.SL_create_end_date));
-            base.ClearTextByID(EditCopyTemplatesSectionsResource.SL_create_end_date);
-            base.FillTextBoxByID(EditCopyTemplatesSectionsResource.SL_create_end_date, getSLEndDate);
+            base.ClearTextById(EditCopyTemplatesSectionsResource.SL_create_end_date);
+            base.FillTextBoxById(EditCopyTemplatesSectionsResource.SL_create_end_date, getSLEndDate);
             ClickToCreateUpdate();
         }
         

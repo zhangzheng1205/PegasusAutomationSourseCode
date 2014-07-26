@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(PublishingNotesPageResource.
                                               PublishingNotes_Page_PublishingNotes_Id_Locator));
                 //Insert Publish Notes in Text Box                
-                base.FillTextBoxByID(PublishingNotesPageResource.
+                base.FillTextBoxById(PublishingNotesPageResource.
                  PublishingNotes_Page_PublishingNotes_Id_Locator, PublishingNotesPageResource.
                    PublishingNotes_Page_PublishCourse_Description_Text);
                 //Save Course Publishing Description As Browser Selected
@@ -149,10 +149,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PublishingNotesPageResource.
                                           PublishingNotes_Page_Save_Button_Id_Locator));
             //Insert Publishing Notes in Text Box
-            base.FillEmptyTextByID(PublishingNotesPageResource.
+            base.FillEmptyTextById(PublishingNotesPageResource.
                                        PublishingNotes_Page_Save_Button_Id_Locator);
             //Click on Button
-            base.ClickButtonByID(PublishingNotesPageResource.
+            base.ClickButtonById(PublishingNotesPageResource.
                                      PublishingNotes_Page_Save_Button_Id_Locator);
             Logger.LogMethodExit("PublishingNotesPage",
                                  "SaveCoursePublishDescriptionInFirefox",

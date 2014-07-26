@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
             //Created  HTML text guid
             Guid htmlEditorTextGuid = Guid.NewGuid();
             //Fill text in editor
-            base.FillTextBoxByID(QuestionSectionUXPageResource.
+            base.FillTextBoxById(QuestionSectionUXPageResource.
                 QuestionSectionUX_Page_HTMLEditor_TextArea_Id_Locator,
                 htmlEditorTextGuid.ToString());
             //Click on button
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(QuestionSectionUXPageResource.
                 QuestionSectionUX_Page_GroupName_TextBox_Id_Locator));
             //Enter group name
-            base.FillTextBoxByID(QuestionSectionUXPageResource.
+            base.FillTextBoxById(QuestionSectionUXPageResource.
                 QuestionSectionUX_Page_GroupName_TextBox_Id_Locator,
                 groupNameGuid.ToString());
             //Logger exit

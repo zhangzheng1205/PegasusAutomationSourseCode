@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(LessonPlanPreferencesPageResource.
                     LessonPlanPreferences_Page_InstructorOnlyAssets_Preference_Id_Locator));
                 //Click On 'Enable Instructor Only Assets' Preference Checkbox
-                base.ClickCheckBoxById(LessonPlanPreferencesPageResource.
+                base.SelectCheckBoxById(LessonPlanPreferencesPageResource.
                     LessonPlanPreferences_Page_InstructorOnlyAssets_Preference_Id_Locator);
                 //Save Preferences
                 generalPreferencesPage.SavePreferences();
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
                     LessonPlanPreferences_Page_InstructorOnlyAssets_Preference_Id_Locator));
                 //Status Of 'Enable Instructor Only Assets' Preference
                 isInstructorOnlyAssetsPreferenceDisabled =
-                    base.IsElementEnabledByID(LessonPlanPreferencesPageResource.
+                    base.IsElementEnabledById(LessonPlanPreferencesPageResource.
                     LessonPlanPreferences_Page_InstructorOnlyAssets_Preference_Id_Locator);
             }
             catch (Exception e)

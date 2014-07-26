@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PullDownListPageResource.
                 PullDownList_Page_EnterQuestionTitle_Id_Locator));
             //Enter Title
-            base.FillTextBoxByID(PullDownListPageResource.
+            base.FillTextBoxById(PullDownListPageResource.
                 PullDownList_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("PullDownListPage", "EnterDropDownListQuestionTitle",
            base.isTakeScreenShotDuringEntryExit);
@@ -99,23 +99,23 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PullDownListPageResource.
                 PullDownList_Page_EnterRowNo_Id_Locator));
             //Fous of Row text Box
-            base.FillEmptyTextByID(PullDownListPageResource.
+            base.FillEmptyTextById(PullDownListPageResource.
                 PullDownList_Page_EnterRowNo_Id_Locator);
-            base.ClearTextByID(PullDownListPageResource.
+            base.ClearTextById(PullDownListPageResource.
                 PullDownList_Page_EnterRowNo_Id_Locator);
             //Fill Row Number
-            base.FillTextBoxByID(PullDownListPageResource.
+            base.FillTextBoxById(PullDownListPageResource.
                 PullDownList_Page_EnterRowNo_Id_Locator, PullDownListPageResource.
                 PullDownList_Page_EnterRowAndColumn_Value);
             base.WaitForElement(By.Id(PullDownListPageResource.
                 PullDownList_Page_EnterColumnNo_Id_Locator));
             //Focus on Column Text Box
-            base.FillEmptyTextByID(PullDownListPageResource.
+            base.FillEmptyTextById(PullDownListPageResource.
                 PullDownList_Page_EnterColumnNo_Id_Locator);
-            base.ClearTextByID(PullDownListPageResource.
+            base.ClearTextById(PullDownListPageResource.
                 PullDownList_Page_EnterColumnNo_Id_Locator);
             //Enter Column Number
-            base.FillTextBoxByID(PullDownListPageResource.
+            base.FillTextBoxById(PullDownListPageResource.
                 PullDownList_Page_EnterColumnNo_Id_Locator, PullDownListPageResource.
                 PullDownList_Page_EnterRowAndColumn_Value);
             logger.LogMethodExit("PullDownListPage",
@@ -140,14 +140,14 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PullDownListPageResource.
                 PullDownList_Page_ViewSource_Button_Id_Locator));
             //Click on View Source Button
-            base.ClickButtonByID(PullDownListPageResource.
+            base.ClickButtonById(PullDownListPageResource.
                 PullDownList_Page_ViewSource_Button_Id_Locator);
             base.WaitForElement(By.Id(PullDownListPageResource.
                 PullDownList_Page_EnterTextHTML_Id_Locator));
             //Fill the Data
-            base.FillTextBoxByID(PullDownListPageResource.
+            base.FillTextBoxById(PullDownListPageResource.
                 PullDownList_Page_EnterTextHTML_Id_Locator, questionText);
-            base.ClickButtonByID(PullDownListPageResource.
+            base.ClickButtonById(PullDownListPageResource.
               PullDownList_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("PullDownListPage",
                 "ClickOnViewSourceAndEnterDataForQuestion",
@@ -194,19 +194,19 @@ namespace Pegasus.Pages.UI_Pages
                     PullDownList_Page_CreateDropdownList_Window_Name);
             base.WaitForElement(By.Id(PullDownListPageResource.
                 PullDownList_Page_AnswerValue_One_Id_Locator));
-            base.ClearTextByID(PullDownListPageResource.
+            base.ClearTextById(PullDownListPageResource.
                 PullDownList_Page_AnswerValue_One_Id_Locator);
             //Enter First Answer Value
-            base.FillTextBoxByID(PullDownListPageResource.
+            base.FillTextBoxById(PullDownListPageResource.
                 PullDownList_Page_AnswerValue_One_Id_Locator, PullDownListPageResource.
                 PulldownList_Page_AnswerScore_Value_One);
             base.WaitForElement(By.Id(PullDownListPageResource.
                 PullDownList_Page_AnswerValue_Two_Id_Locator));
             //Clear Text Bix
-            base.ClearTextByID(PullDownListPageResource.
+            base.ClearTextById(PullDownListPageResource.
                 PullDownList_Page_AnswerValue_Two_Id_Locator);
             //Enter Second Answer Value
-            base.FillTextBoxByID(PullDownListPageResource.
+            base.FillTextBoxById(PullDownListPageResource.
                 PullDownList_Page_AnswerValue_Two_Id_Locator, PullDownListPageResource.
                 PulldownList_Page_AnswerScore_Value_two);
             logger.LogMethodExit("PullDownListPage",
@@ -226,19 +226,19 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Text Box
             base.WaitForElement(By.Id(PullDownListPageResource.
                     PullDownList_Page_AnswerValue_Three_Id_Locator));
-            base.ClearTextByID(PullDownListPageResource.
+            base.ClearTextById(PullDownListPageResource.
                 PullDownList_Page_AnswerValue_Three_Id_Locator);
             //Enter Third Answer Value
-            base.FillTextBoxByID(PullDownListPageResource.
+            base.FillTextBoxById(PullDownListPageResource.
                 PullDownList_Page_AnswerValue_Three_Id_Locator, PullDownListPageResource.
                 PulldownList_Page_AnswerScore_Value_three);
             base.WaitForElement(By.Id(PullDownListPageResource.
                 PullDownList_Page_AnswerValue_Four_Id_Locator));
             //Clear Text Box
-            base.ClearTextByID(PullDownListPageResource.
+            base.ClearTextById(PullDownListPageResource.
                 PullDownList_Page_AnswerValue_Four_Id_Locator);
             //Enter Last Answer Value
-            base.FillTextBoxByID(PullDownListPageResource.
+            base.FillTextBoxById(PullDownListPageResource.
                 PullDownList_Page_AnswerValue_Four_Id_Locator, PullDownListPageResource.
                 PulldownList_Page_AnswerScore_Value_four);
             logger.LogMethodExit("PullDownListPage",

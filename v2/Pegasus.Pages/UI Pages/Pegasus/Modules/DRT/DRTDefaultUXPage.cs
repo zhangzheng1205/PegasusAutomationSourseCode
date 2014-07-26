@@ -42,7 +42,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Storing the Activity
                 Guid studyPlanName = Guid.NewGuid();
                 //Fill Text Box With Study Plan Name
-                base.FillTextBoxByID(DRTDefaultUXPageResource.
+                base.FillTextBoxById(DRTDefaultUXPageResource.
                     DRTDefaultUX_Page_StudyplanName_Input_Id_Locator,
                     studyPlanName.ToString());               
                 //Save Skill Study Plan in Memory
@@ -306,7 +306,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Storing the Activity
                 Guid studyPlanName = Guid.NewGuid();
                 //Fill Text Box With Study Plan Name
-                base.FillTextBoxByID(DRTDefaultUXPageResource.
+                base.FillTextBoxById(DRTDefaultUXPageResource.
                     DRTDefaultUX_Page_StudyplanName_Input_Id_Locator,
                     studyPlanName.ToString());
                 //Save Skill Study Plan in Memory
@@ -602,7 +602,7 @@ namespace Pegasus.Pages.UI_Pages
             //GUID for Studyplan Name
             Guid studyPlanName = Guid.NewGuid();
             //Fill Text Box With Study Plan Name
-            base.FillTextBoxByID(DRTDefaultUXPageResource.
+            base.FillTextBoxById(DRTDefaultUXPageResource.
                 DRTDefaultUX_Page_StudyplanName_Input_Id_Locator,
                 studyPlanName.ToString());
             //Storing the Activity

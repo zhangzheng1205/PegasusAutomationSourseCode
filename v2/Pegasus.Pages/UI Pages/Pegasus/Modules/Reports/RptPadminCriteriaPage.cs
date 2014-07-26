@@ -36,10 +36,10 @@ namespace Pegasus.Pages.UI_Pages
                //Wait for the class element
                base.WaitForElement(By.Id(RptPadminCriteriaPageResource.
                    RptPadminCriteria_Page_Class_Id_Locator));
-               base.FocusOnElementByID(RptPadminCriteriaPageResource.
+               base.FocusOnElementById(RptPadminCriteriaPageResource.
                    RptPadminCriteria_Page_Class_Id_Locator);
                //Click the class checkbox
-               base.ClickCheckBoxById(RptPadminCriteriaPageResource.
+               base.SelectCheckBoxById(RptPadminCriteriaPageResource.
                    RptPadminCriteria_Page_Class_Id_Locator);
                //Wait for the select students
                base.WaitForElement(By.Id(RptPadminCriteriaPageResource.
@@ -103,12 +103,12 @@ namespace Pegasus.Pages.UI_Pages
             base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(RptPadminCriteriaPageResource.
                    RptPadminCriteria_Page_PageSelect_RedioButton_Id_Locator));
-            base.FocusOnElementByID(RptPadminCriteriaPageResource.
+            base.FocusOnElementById(RptPadminCriteriaPageResource.
                 RptPadminCriteria_Page_PageSelect_RedioButton_Id_Locator);
             //Wait for the runreport element          
             base.WaitForElement(By.Id(RptPadminCriteriaPageResource.
                 RptPadminCriteria_Page_RunReport_Id_Locator));
-            base.FocusOnElementByID(RptPadminCriteriaPageResource.
+            base.FocusOnElementById(RptPadminCriteriaPageResource.
                 RptPadminCriteria_Page_RunReport_Id_Locator);
             IWebElement getRunReport = base.GetWebElementPropertiesById
                 (RptPadminCriteriaPageResource.

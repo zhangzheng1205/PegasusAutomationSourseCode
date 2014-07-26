@@ -42,16 +42,16 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AddNewSectionPageResource.
                     AddNewSection_Page_CourseName_TextName_Id_Locator));
                 // enter the section name
-                base.FillTextBoxByID(AddNewSectionPageResource.
+                base.FillTextBoxById(AddNewSectionPageResource.
                   AddNewSection_Page_CourseName_TextName_Id_Locator, sectionGuid.ToString());
                 // select template
                 this.SelectingTemplateFromDropDown(courseTypeEnum);
                 // enter no. of section count in text box 
                 this.EnterSectionCount(courseTypeEnum);
                 // get date format
-                string getStartDateFormat = base.GetElementTextByID(AddNewSectionPageResource.
+                string getStartDateFormat = base.GetElementTextById(AddNewSectionPageResource.
                     AddNewSection_Page_Section_StartDate_Format_Id_Locator);
-                string getEndDateFormat = base.GetElementTextByID(AddNewSectionPageResource.
+                string getEndDateFormat = base.GetElementTextById(AddNewSectionPageResource.
                     AddNewSection_Page_Section_EndDate_Format_Id_Locator);
 
                 // select section date based on acceptable format 
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
                 case Course.CourseTypeEnum.HedMilAcceptanceSIM5ProgramCourse:
                 case Course.CourseTypeEnum.MyITLabForOffice2013Master:
                     // Enter section count in Drop Down box
-                    base.FillTextBoxByID(AddNewSectionPageResource.
+                    base.FillTextBoxById(AddNewSectionPageResource.
                         AddNewSection_Page_NoList_Id_Locator, AddNewSectionPageResource.
                             AddNewSection_Page_MilCourse_Section_NoList_Value);
                     break;
@@ -139,7 +139,7 @@ namespace Pegasus.Pages.UI_Pages
                 case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
                 case Course.CourseTypeEnum.GraderITSIM5Course:
                     // Enter section count in Drop Down box
-                    base.FillTextBoxByID(AddNewSectionPageResource.
+                    base.FillTextBoxById(AddNewSectionPageResource.
                         AddNewSection_Page_NoList_Id_Locator, AddNewSectionPageResource.
                             AddNewSection_Page_CoreCourse_Section_NoList_Fill_Value);
                     break;
@@ -226,12 +226,12 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                AddNewSection_Page_StartDate_TextBox_Id_Locator));
             //Enter Start Date
-            base.FillTextBoxByID(AddNewSectionPageResource.
+            base.FillTextBoxById(AddNewSectionPageResource.
                                      AddNewSection_Page_StartDate_TextBox_Id_Locator, sectionStartDate);
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                                           AddNewSection_Page_EndDate_TextBox_Id_Locator));
             //Enter End Date
-            base.FillTextBoxByID(AddNewSectionPageResource.
+            base.FillTextBoxById(AddNewSectionPageResource.
                                      AddNewSection_Page_EndDate_TextBox_Id_Locator, sectionEndDate);
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                                           AddNewSection_Page_AddClose_Button_Id_Locator));

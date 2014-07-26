@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                         QuestionsPreferences_Page_LockIcon_Status_Value)
                     {
                         //Click On Lock Icon to Unlock Preference
-                        base.ClickButtonByID(QuestionsPreferencesPageResource.
+                        base.ClickButtonById(QuestionsPreferencesPageResource.
                         QuestionsPreferences_Page_Sim5Questions_LockIcon_Id_Locator);
                     }
                     //Select 'Enable SIM5 Questions' Preference Radiobutton
@@ -152,11 +152,11 @@ namespace Pegasus.Pages.UI_Pages
                         QuestionsPreferences_Page_LockIcon_Status_Value)
                     {
                         //Click On Lock Icon to Unlock Preference
-                        base.ClickButtonByID(QuestionsPreferencesPageResource.
+                        base.ClickButtonById(QuestionsPreferencesPageResource.
                         QuestionsPreferences_Page_GraderProject_LockIcon_Id_Locator);
                     }
                     //Select 'Grader Project' Question Type Preference Checkbox
-                    base.ClickCheckBoxById(QuestionsPreferencesPageResource.
+                    base.SelectCheckBoxById(QuestionsPreferencesPageResource.
                     QuestionsPreferences_Page_GraderProject_Preference_Id_Locator);
                 }
                 //Save Preferences

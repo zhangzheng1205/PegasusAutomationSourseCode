@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
                 CreatePeriodsPage_Order_DropDown_Id_Locator, Convert.ToInt32(
                 CreatePeriodsPageResource.CreatePeriodsPage_Order_DropDown_Index_Value));
             //Display Name
-            base.FillTextBoxByID(CreatePeriodsPageResource.
+            base.FillTextBoxById(CreatePeriodsPageResource.
                 CreatePeriodsPage_Textbox_PeriodName_Id_Locator, CreatePeriodsPageResource.
                 CreatePeriodsPage_Textbox_PeriodName_Value);
             logger.LogMethodExit("CreatePeriodsPage", "SelectOrderValueAndEnterPeriodName",

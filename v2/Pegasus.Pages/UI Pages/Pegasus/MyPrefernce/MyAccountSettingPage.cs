@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(MyAccountSettingPageResource.
                     MyAccountSetting_Page_Save_Button_Id_Locator));
                 //Click Save Button
-                base.FocusOnElementByID(MyAccountSettingPageResource.
+                base.FocusOnElementById(MyAccountSettingPageResource.
                     MyAccountSetting_Page_Save_Button_Id_Locator);
                 IWebElement getSaveButtonProperties=base.GetWebElementPropertiesById(
                     MyAccountSettingPageResource.MyAccountSetting_Page_Save_Button_Id_Locator);
@@ -89,10 +89,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectDropDownValueThroughTextById(MyAccountSettingPageResource.
                     MyAccountSetting_Page_TimeZone_DropDown_Id_Locator, timeZone);
                 //Click Save Button
-                base.FocusOnElementByID(MyAccountSettingPageResource.
+                base.FocusOnElementById(MyAccountSettingPageResource.
                     MyAccountSetting_Page_Save_Button_Id_Locator);
                 //Click on Button
-                base.ClickButtonByID(MyAccountSettingPageResource.
+                base.ClickButtonById(MyAccountSettingPageResource.
                     MyAccountSetting_Page_Save_Button_Id_Locator);
             }
             catch (Exception e)
@@ -368,16 +368,16 @@ namespace Pegasus.Pages.UI_Pages
                 //Switch to Iframe
                 this.SwitchToIFrame();
                 //Get MyProfile Text
-                getMyProfileText = base.GetElementTextByID(MyAccountSettingPageResource.
+                getMyProfileText = base.GetElementTextById(MyAccountSettingPageResource.
                     MyAccountSetting_Page_MyProfile_Id_Locator);
                 //Get Pearson Account Text
-                getMyPearsonAccountText = base.GetElementTextByID(MyAccountSettingPageResource.
+                getMyPearsonAccountText = base.GetElementTextById(MyAccountSettingPageResource.
                     MyAccountSetting_Page_MyPearsonAccount_Id_Locator);
                 //Get Time Zone Text
-                getTimeZoneText = base.GetElementTextByID(MyAccountSettingPageResource.
+                getTimeZoneText = base.GetElementTextById(MyAccountSettingPageResource.
                     MyAccountSetting_Page_TimeZone_Id_Locator);
                 //Get Localization Text
-                getLocalizationText = base.GetElementTextByID(MyAccountSettingPageResource.
+                getLocalizationText = base.GetElementTextById(MyAccountSettingPageResource.
                     MyAccountSetting_Page_Localization_Id_Locator);
                 base.RefreshTheCurrentPage();
             }

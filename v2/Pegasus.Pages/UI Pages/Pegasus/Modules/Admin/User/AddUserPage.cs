@@ -65,12 +65,12 @@ namespace Pegasus.Pages.UI_Pages
             // Enter First name and last name 
             EnterCsUserDetails(userInformation.ToString(), userInformation.ToString());
             //Fill Username
-            base.FillEmptyTextByID(AddUserPageResource.AddUser_Page_LoginNameTextBox_Id_Locator);
-            base.FillTextBoxByID(AddUserPageResource
+            base.FillEmptyTextById(AddUserPageResource.AddUser_Page_LoginNameTextBox_Id_Locator);
+            base.FillTextBoxById(AddUserPageResource
                 .AddUser_Page_LoginNameTextBox_Id_Locator, userInformation.ToString());
             this.AssociateProgram(userTypeEnum);
             //Fill Password            
-            base.FillTextBoxByID(AddUserPageResource
+            base.FillTextBoxById(AddUserPageResource
                 .AddUser_Page_PasswordTextBox_Id_Locator, AddUserPageResource.
                 AddUser_Page_PasswordTextbox_Value);
             this.ClickOnSaveAndFinishButtonInAddUserPage();
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
             if (userTypeEnum.ToString() == AddUserPageResource.
                 AddUser_Page_Administrator_Enum_Value)
             {
-                base.ClickButtonByID(AddUserPageResource.
+                base.ClickButtonById(AddUserPageResource.
                     AddUser_Page_Button_ManageAssociations_Id_Locator);
                 //Select the Program                
                 base.SwitchToIFrameByWebElement(base.GetWebElementPropertiesByClassName(AddUserPageResource.
@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
                     AddUser_Page_Program_Checkbox_Xpath_Locator);
                 }
                 //Click on the Save button
-                base.ClickButtonByID(AddUserPageResource.
+                base.ClickButtonById(AddUserPageResource.
                     AddUser_Page_Button_Save_Program_Id_Locator);
                 //Select Add User Window
                 this.SelectAddUserWindow();
@@ -207,20 +207,20 @@ namespace Pegasus.Pages.UI_Pages
             // Enter FirstName                  
             base.WaitForElement(By.Id(AddUserPageResource
                 .AddUser_Page_FirstNameTextBox_Id_Locator));
-            base.FillEmptyTextByID(AddUserPageResource.AddUser_Page_FirstNameTextBox_Id_Locator);
-            base.FillTextBoxByID(AddUserPageResource
+            base.FillEmptyTextById(AddUserPageResource.AddUser_Page_FirstNameTextBox_Id_Locator);
+            base.FillTextBoxById(AddUserPageResource
                 .AddUser_Page_FirstNameTextBox_Id_Locator, firstName);
             //Enter LastName
             base.WaitForElement(By.Id(AddUserPageResource
                 .AddUser_Page_LastNameTextBox_Id_Locator));
-            base.FillEmptyTextByID(AddUserPageResource.AddUser_Page_LastNameTextBox_Id_Locator);
-            base.FillTextBoxByID(AddUserPageResource
+            base.FillEmptyTextById(AddUserPageResource.AddUser_Page_LastNameTextBox_Id_Locator);
+            base.FillTextBoxById(AddUserPageResource
                 .AddUser_Page_LastNameTextBox_Id_Locator, lastName);
             //Enter Email
             base.WaitForElement(By.Id(AddUserPageResource
                 .AddUser_Page_EmailTextBox_Id_Locator));
-            base.FillEmptyTextByID(AddUserPageResource.AddUser_Page_EmailTextBox_Id_Locator);
-            base.FillTextBoxByID(AddUserPageResource.AddUser_Page_EmailTextBox_Id_Locator,
+            base.FillEmptyTextById(AddUserPageResource.AddUser_Page_EmailTextBox_Id_Locator);
+            base.FillTextBoxById(AddUserPageResource.AddUser_Page_EmailTextBox_Id_Locator,
                 AddUserPageResource.AddUser_Page_EmailTextbox_Value);
             logger.LogMethodExit("AddUserPage", "EnterCsUserDetails"
                 , base.isTakeScreenShotDuringEntryExit);

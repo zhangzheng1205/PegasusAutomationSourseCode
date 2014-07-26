@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                     CourseChannelPreferences_Page_InstructorCustomizeHomePage_Preference_Id_Locator))
                 {
                     //Enable 'Instructors can customize their Home Page' Option in Course Channel Preference
-                    base.ClickCheckBoxById(CourseChannelPreferencesPageResource.
+                    base.SelectCheckBoxById(CourseChannelPreferencesPageResource.
                     CourseChannelPreferences_Page_InstructorCustomizeHomePage_Preference_Id_Locator);
                 }
             }

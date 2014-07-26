@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Element
             base.WaitForElement(By.Id(subtabId));
             //Focus on Element
-            base.FocusOnElementByID(subtabId);
+            base.FocusOnElementById(subtabId);
             //Click on Subtab
             IWebElement getSubTabName = base.GetWebElementPropertiesById(subtabId);
             base.ClickByJavaScriptExecutor(getSubTabName);
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait For Element
             WaitForElement(By.Id(cmenuOptionId));
             //Focus on Element
-            base.FocusOnElementByID(cmenuOptionId);
+            base.FocusOnElementById(cmenuOptionId);
             //Click on Contextual Menu
             IWebElement getContextualMenueOption =
                 base.GetWebElementPropertiesById(cmenuOptionId);
@@ -334,7 +334,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_AvtivityName_Text_Id_Locator));
             //Enter Pretest Name
-            base.FillTextBoxByID(SIMStudyPlanDefaultUXPageResource.
+            base.FillTextBoxById(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_AvtivityName_Text_Id_Locator,
                 pretestName.ToString());
             switch (behavioralModeEnum)
@@ -447,13 +447,13 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_Studyplan_Name_Textbox_Name_Id_Locator));
             //Enter Studyplan Name
-            base.FillTextBoxByID(SIMStudyPlanDefaultUXPageResource.
+            base.FillTextBoxById(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_Studyplan_Name_Textbox_Name_Id_Locator,
                 studyplanName.ToString());            
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_SaveContinue_Button_Id_Locator));
             //Click On Save And Continue
-            base.ClickButtonByID(SIMStudyPlanDefaultUXPageResource.
+            base.ClickButtonById(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_SaveContinue_Button_Id_Locator);            
             base.WaitForElement(By.XPath(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_CreateTest_Link_Xpath_Locator));
@@ -629,7 +629,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_AvtivityName_Text_Id_Locator));
             //Enter Posttest Name
-            base.FillTextBoxByID(SIMStudyPlanDefaultUXPageResource.
+            base.FillTextBoxById(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_AvtivityName_Text_Id_Locator,
                 posttestName.ToString());
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.

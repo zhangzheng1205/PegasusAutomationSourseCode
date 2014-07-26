@@ -43,10 +43,10 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.FeedBack
                 base.WaitForElement(By.Id(FeedbackPageResource.
                     Feedback_Page_CourseMaterialsFeedback_Id_Locator));
                 //Get General Feedback Text
-                getGeneralFeedbackText = base.GetElementTextByID(FeedbackPageResource.
+                getGeneralFeedbackText = base.GetElementTextById(FeedbackPageResource.
                     Feedback_Page_GeneralFeedback_Id_Locator);
                 //Get Course Materials Feedback Text
-                getCourseMaterailsFeedbackText = base.GetElementTextByID(FeedbackPageResource.
+                getCourseMaterailsFeedbackText = base.GetElementTextById(FeedbackPageResource.
                     Feedback_Page_CourseMaterialsFeedback_Id_Locator);
             }
             catch (Exception e)

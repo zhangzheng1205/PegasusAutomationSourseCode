@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ProductSearchPageResource.
                     ProductSearch_Page_ProgramName_TextBox_Id_Locator));
                 //Insert Product Name in Text Box
-                base.FillTextBoxByID(ProductSearchPageResource.
+                base.FillTextBoxById(ProductSearchPageResource.
                     ProductSearch_Page_ProgramName_TextBox_Id_Locator, productName);
                 //Wait for Element
                 base.WaitForElement(By.Id(ProductSearchPageResource.

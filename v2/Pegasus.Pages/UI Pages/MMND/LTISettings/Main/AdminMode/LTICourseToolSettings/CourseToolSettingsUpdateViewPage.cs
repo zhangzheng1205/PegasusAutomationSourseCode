@@ -35,7 +35,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CourseToolSettingsUpdateViewPageResource.
                         CourseToolSettingsUpdateView_Page_EditButton_Id_Locator));
                 //Click On Edit Button
-                base.ClickButtonByID(CourseToolSettingsUpdateViewPageResource.
+                base.ClickButtonById(CourseToolSettingsUpdateViewPageResource.
                     CourseToolSettingsUpdateView_Page_EditButton_Id_Locator);
                 base.WaitForElement(By.Name(CourseToolSettingsUpdateViewPageResource.
                     CourseToolSettingsUPdateView_Page_Input_Course_Name_Locator));

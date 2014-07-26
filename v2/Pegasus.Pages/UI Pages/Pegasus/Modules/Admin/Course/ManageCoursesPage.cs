@@ -509,7 +509,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ManageCoursesPageResource.
                     ManageCourses_Page_NewSearch_Id_Locator));
                 //Get New Search Button Text 
-                getNewSearchButtonText = base.GetElementTextByID(ManageCoursesPageResource.
+                getNewSearchButtonText = base.GetElementTextById(ManageCoursesPageResource.
                     ManageCourses_Page_NewSearch_Id_Locator);
                 string[] getNewSearchButton = getNewSearchButtonText.Split(Convert.ToChar(
                     ManageCoursesPageResource.ManageCourses_Page_SpecialCharacter_NewSearch_Value));
@@ -547,7 +547,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ManageCoursesPageResource.
                     ManageCourses_Page_DeleteSelectedCourses_Id_Locator));
                 //Get Delete Course Button
-                getDeleteSelectedCourseButtonText = base.GetElementTextByID(ManageCoursesPageResource.
+                getDeleteSelectedCourseButtonText = base.GetElementTextById(ManageCoursesPageResource.
                     ManageCourses_Page_DeleteSelectedCourses_Id_Locator).Trim();
             }
             catch (Exception e)

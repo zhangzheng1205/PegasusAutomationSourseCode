@@ -259,7 +259,7 @@ namespace Pegasus.Pages.UI_Pages
                           TodaysViewUXPageResource_Custom_WaitTime)))
                 {
                     //Get Activity Name
-                    getActivityName = base.GetElementTextByID(TodaysViewUXPageResource.
+                    getActivityName = base.GetElementTextById(TodaysViewUXPageResource.
                          TodaysViewUXPageResource_NewGrades_SubmittedActivity_Table_Id_Locator);
                     //Get Only Activity Name
                     getActivityName = getActivityName.Substring(Convert.ToInt32
@@ -427,11 +427,11 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(TodaysViewUXPageResource.
                                              TodaysViewUXPageResource_Custom_WaitTime));
             //Click on Morelink if present           
-            if (base.IsElementDisplayedByID(TodaysViewUXPageResource.
+            if (base.IsElementDisplayedById(TodaysViewUXPageResource.
                                                 TodaysViewUXPageResource_MoreLink_Id_Locator))
             {
                 // Click on More Link
-                base.ClickButtonByID(TodaysViewUXPageResource.
+                base.ClickButtonById(TodaysViewUXPageResource.
                                          TodaysViewUXPageResource_MoreLink_Id_Locator);
             }
 
@@ -460,7 +460,7 @@ namespace Pegasus.Pages.UI_Pages
                                                                   TodaysViewUXPageResource_Custom_WaitTime)))
                 {
                     //Click On More Link if More Link Is Present
-                    base.ClickButtonByID(TodaysViewUXPageResource.
+                    base.ClickButtonById(TodaysViewUXPageResource.
                                              TodaysViewUXPageResource_MoreLink_Id_Locator);
                 }
             }
@@ -882,7 +882,7 @@ namespace Pegasus.Pages.UI_Pages
                                                               TodaysViewUXPageResource_Custom_WaitTime)))
                 {
                     //Get Activity Name
-                    string getActivityNameText = base.GetElementTextByID(TodaysViewUXPageResource.
+                    string getActivityNameText = base.GetElementTextById(TodaysViewUXPageResource.
                                                                              TodaysViewUXPageResource_NewGrades_Synapse_SubmittedActivity_Table_Id_Locator);
                     //Get Activity Name
                     int getExpectedActivityIndexValue = getActivityNameText.
@@ -1030,7 +1030,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodaysViewUX_Page_welcomeStudentMessage_Id_Locator));
                 //Get the welcome student text
-                string getWelcomeStudentMessagae = base.GetElementTextByID
+                string getWelcomeStudentMessagae = base.GetElementTextById
                     (TodaysViewUXPageResource.
                     TodaysViewUX_Page_welcomeStudentMessage_Id_Locator);
                 getWelcomeStudentText = getWelcomeStudentMessagae.Substring
@@ -1097,7 +1097,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Wait for given element load
                 base.WaitForElement(By.Id("divTreeContainer"));
                 // Get text of given element
-                name = base.GetElementTextByID(TodaysViewUXPageResource
+                name = base.GetElementTextById(TodaysViewUXPageResource
                     .TodaysViewUXPageResource_Tree_View_DivID).Contains(studentName) ? studentName : name;
             }
             catch (Exception ex)
@@ -1534,7 +1534,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_Page_TreeViewControlID));
-                _activityName = (base.GetElementTextByID(TodaysViewUXPageResource.
+                _activityName = (base.GetElementTextById(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_Page_TreeViewControlID).Contains(activityName) ? activityName : _activityName);
             }
             catch (Exception ex)
@@ -1594,7 +1594,7 @@ namespace Pegasus.Pages.UI_Pages
                 //get the Pop Up window Title
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodaysViewUX_Page_Customize_Notification_Title_ID_Locator));
-                getPopUpWindowTitle = base.GetElementTextByID(TodaysViewUXPageResource.
+                getPopUpWindowTitle = base.GetElementTextById(TodaysViewUXPageResource.
                     TodaysViewUX_Page_Customize_Notification_Title_ID_Locator);
             }
             catch (Exception e)
@@ -1645,13 +1645,13 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodaysViewUX_Page_NotifyMe_CheckBox_ID_Locator));
                 //focussing the Check box element
-                base.FocusOnElementByID(TodaysViewUXPageResource.
+                base.FocusOnElementById(TodaysViewUXPageResource.
                     TodaysViewUX_Page_NotifyMe_CheckBox_ID_Locator);
                 if (base.IsElementSelectedById(TodaysViewUXPageResource.
                     TodaysViewUX_Page_NotifyMe_CheckBox_ID_Locator))
                 {
                     //UnCheck the check box                
-                    base.ClickCheckBoxById(TodaysViewUXPageResource.
+                    base.SelectCheckBoxById(TodaysViewUXPageResource.
                         TodaysViewUX_Page_NotifyMe_CheckBox_ID_Locator);
                 }
             }
@@ -1740,13 +1740,13 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodaysViewUX_Page_NotifyMe_CheckBox_ID_Locator));
                 //focussing the Check box element
-                base.FocusOnElementByID(TodaysViewUXPageResource.
+                base.FocusOnElementById(TodaysViewUXPageResource.
                     TodaysViewUX_Page_NotifyMe_CheckBox_ID_Locator);
                 if (!base.IsElementSelectedById(TodaysViewUXPageResource.
                     TodaysViewUX_Page_NotifyMe_CheckBox_ID_Locator))
                 {
                     //Check the check box                
-                    base.ClickCheckBoxById(TodaysViewUXPageResource.
+                    base.SelectCheckBoxById(TodaysViewUXPageResource.
                         TodaysViewUX_Page_NotifyMe_CheckBox_ID_Locator);
                 }
             }
@@ -1825,7 +1825,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_SectionID_Id_Locator));
                 //Get Section ID
-                getSectionID = base.GetElementTextByID(TodaysViewUXPageResource.
+                getSectionID = base.GetElementTextById(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_SectionID_Id_Locator);
             }
             catch (Exception e)
@@ -1952,7 +1952,7 @@ namespace Pegasus.Pages.UI_Pages
                           TodaysViewUXPageResource_Custom_WaitTime)))
                 {
                     //Get Activity Name
-                    getActivityName = base.GetElementTextByID(TodaysViewUXPageResource.
+                    getActivityName = base.GetElementTextById(TodaysViewUXPageResource.
                         TodaysViewUXPageResource_Student_Newgrade_Id_Locator);
                 }
             }
@@ -2189,7 +2189,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodaysViewUXPageResource_GetNotificationText_Id_Locator));
             //Get Notification Text
-            getNotificationsText = base.GetElementTextByID(TodaysViewUXPageResource.
+            getNotificationsText = base.GetElementTextById(TodaysViewUXPageResource.
                 TodaysViewUXPageResource_GetNotificationText_Id_Locator);
             logger.LogMethodExit("TodaysViewUXPage", "GetNotificationsText",
             base.isTakeScreenShotDuringEntryExit);
@@ -2210,7 +2210,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodaysViewPageResource_GetCalendarText_Id_Locator));
             //Get Calendar Text
-            getCalendarText = base.GetElementTextByID(TodaysViewUXPageResource.
+            getCalendarText = base.GetElementTextById(TodaysViewUXPageResource.
                 TodaysViewPageResource_GetCalendarText_Id_Locator);
             logger.LogMethodExit("TodaysViewUXPage", "GetCalendarText",
             base.isTakeScreenShotDuringEntryExit);
@@ -2231,7 +2231,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodaysViewPageReosurce_GetAnnouncementText_Id_Locator));
             //Get Announcement Text
-            getAnnouncementText = base.GetElementTextByID(TodaysViewUXPageResource.
+            getAnnouncementText = base.GetElementTextById(TodaysViewUXPageResource.
                 TodaysViewPageReosurce_GetAnnouncementText_Id_Locator);
             logger.LogMethodExit("TodaysViewUXPage", "GetAnnouncementText",
             base.isTakeScreenShotDuringEntryExit);
@@ -2313,7 +2313,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodayViewUXPageResource_Tools_Dropdown_Id_Locator));
             //Click On Tools Dropdown
-            base.ClickButtonByID(TodaysViewUXPageResource.
+            base.ClickButtonById(TodaysViewUXPageResource.
                 TodayViewUXPageResource_Tools_Dropdown_Id_Locator);
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodayViewUXPageResource_VerbChart_Image_Id_Locator));
@@ -2337,7 +2337,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodayViewUXPageResource_Tools_Dropdown_Id_Locator));
             //Click On Tools Dropdown
-            base.ClickButtonByID(TodaysViewUXPageResource.
+            base.ClickButtonById(TodaysViewUXPageResource.
                 TodayViewUXPageResource_Tools_Dropdown_Id_Locator);
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodayViewUXPageResource_Glossary_Image_Id_Locator));

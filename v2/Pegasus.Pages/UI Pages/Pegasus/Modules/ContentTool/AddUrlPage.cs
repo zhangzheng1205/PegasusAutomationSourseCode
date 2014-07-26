@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
               base.WaitForElement(By.Id(AddUrlPageResource.
                   AddUrl_Page_Link_TitleName_Textbox_Id_Locator));
               //Fill the link Name in textbox
-              base.FillTextBoxByID(AddUrlPageResource.
+              base.FillTextBoxById(AddUrlPageResource.
                   AddUrl_Page_Link_TitleName_Textbox_Id_Locator, 
                   newLinkAsset.ToString());
               //Store the link Asset
@@ -71,16 +71,16 @@ namespace Pegasus.Pages.UI_Pages
           logger.LogMethodEntry("AddUrlPage", "ClickTheAddButton",
             base.isTakeScreenShotDuringEntryExit);
           //Fill the URL text
-          base.FillTextBoxByID(AddUrlPageResource.
+          base.FillTextBoxById(AddUrlPageResource.
               AddUrl_Page_URL_Textbox_Id_Locator, AddUrlPageResource.
               AddUrl_Page_URL_Textbox_Id_Locator_Value);         
           //Wait for the element
           base.WaitForElement(By.Id(AddUrlPageResource.
               AddUrl_Page_Link_CreateButton_Id_Locator));
-          base.FocusOnElementByID(AddUrlPageResource.
+          base.FocusOnElementById(AddUrlPageResource.
               AddUrl_Page_Link_CreateButton_Id_Locator);
           //Click the "Add" button
-          base.ClickButtonByID(AddUrlPageResource.
+          base.ClickButtonById(AddUrlPageResource.
               AddUrl_Page_Link_CreateButton_Id_Locator);
           logger.LogMethodExit("AddUrlPage", "ClickTheAddButton",
        base.isTakeScreenShotDuringEntryExit); 

@@ -146,7 +146,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_MsgBox_IFrame_Id_Locator));
                 //Switch To light box
                 base.SwitchToIFrame(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_MsgBox_IFrame_Id_Locator);
-                base.ClickButtonByID(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_MsgBox_Form_Id_Locator);
+                base.ClickButtonById(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_MsgBox_Form_Id_Locator);
                 //get the message displayed on light box.
                 return base.GetElementTextByXPath(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_MsgBox_SuccessSpan_XPath_Locator);
             }
@@ -187,33 +187,33 @@ namespace Pegasus.Pages.UI_Pages
                  DemoAccountRegistration_Page_Register_Button_Id_Locator));
 
              //User Name
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource.
+             base.FillTextBoxById(DemoAccountRegistrationPageResource.
                  DemoAccountRegistration_Page_Name_TextBox_Id_Locator,
                 DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Name_Value);
 
              //Email
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource.
+             base.FillTextBoxById(DemoAccountRegistrationPageResource.
                  DemoAccountRegistration_Page_Email_TextBox_Id_Locator,
                 DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Email_Value);
 
             //Login name
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource.
+             base.FillTextBoxById(DemoAccountRegistrationPageResource.
                  DemoAccountRegistration_Page_UserName_TextBox_Id_Locator,
                 userUniqueId);
 
             //Password
-             base.ClickButtonByID(DemoAccountRegistrationPageResource.
+             base.ClickButtonById(DemoAccountRegistrationPageResource.
                  DemoAccountRegistration_Page_PasswordWM_TextBox_IE_Id_Locator);
              base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
                  DemoAccountRegistration_Page_Password_TextBox_Id_Locator));
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource.
+             base.FillTextBoxById(DemoAccountRegistrationPageResource.
                  DemoAccountRegistration_Page_Password_TextBox_Id_Locator,
                 DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Password_Value);
 
             //Demo Access code
              base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
                  DemoAccountRegistration_Page_AccessCode_TextBox_Id_Locator));
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource.
+             base.FillTextBoxById(DemoAccountRegistrationPageResource.
                  DemoAccountRegistration_Page_AccessCode_TextBox_Id_Locator,
                 demoProduct.DemoAccessCode);   
           
@@ -224,9 +224,9 @@ namespace Pegasus.Pages.UI_Pages
                 DemoAccountRegistration_Page_State_Select_Index_Value));
 
              //Zip Code
-             base.IsElementEnabledByID(DemoAccountRegistrationPageResource.
+             base.IsElementEnabledById(DemoAccountRegistrationPageResource.
                  DemoAccountRegistration_Page_Zipcode_TextBox_Id_Locator);
-             base.FillTextBoxByID(DemoAccountRegistrationPageResource
+             base.FillTextBoxById(DemoAccountRegistrationPageResource
                  .DemoAccountRegistration_Page_Zipcode_TextBox_Id_Locator,
                  DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Zipcode_Value);
 

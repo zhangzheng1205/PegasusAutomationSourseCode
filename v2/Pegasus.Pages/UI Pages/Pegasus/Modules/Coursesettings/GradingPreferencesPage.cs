@@ -250,7 +250,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GradingPreferencesPageResource.
                     GradingPrefernces_Page_SavePreferences_Id_Locator));
                 //Click on save preferences button
-                base.ClickButtonByID(GradingPreferencesPageResource.
+                base.ClickButtonById(GradingPreferencesPageResource.
                     GradingPrefernces_Page_SavePreferences_Id_Locator);
             }
             catch (Exception e)
@@ -314,7 +314,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GradingPreferencesPageResource.
                     GradingPrefernces_Page_SavePreferences_Id_Locator));
                 //click on save preferences button
-                base.ClickButtonByID(GradingPreferencesPageResource.
+                base.ClickButtonById(GradingPreferencesPageResource.
                     GradingPrefernces_Page_SavePreferences_Id_Locator);
             }
             catch (Exception e)
@@ -769,12 +769,12 @@ namespace Pegasus.Pages.UI_Pages
                         QuestionsPreferences_Page_LockIcon_Status_Value)
                     {
                         //Click On Lock Icon to Unlock Preference
-                        base.ClickButtonByID(GradingPreferencesPageResource.
+                        base.ClickButtonById(GradingPreferencesPageResource.
                         GradingPrefernces_Page_IntegrityDetection_LockIcon_Id_Locator);
                     }
                     //Select 'Display Integrity detection to students
                     //automatically for Grader projects' Preference Checkbox
-                    base.ClickCheckBoxById(GradingPreferencesPageResource.
+                    base.SelectCheckBoxById(GradingPreferencesPageResource.
                     GradingPrefernces_Page_IntegrityDetection_Preference_Id_Locator);
                 }
                 //Click On Save Preferences Button

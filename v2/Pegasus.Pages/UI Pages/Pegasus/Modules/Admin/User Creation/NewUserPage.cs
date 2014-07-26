@@ -124,10 +124,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewUserPageResource
                                           .NewUser_Page_EmailTextBox_Id_Locator));
             //Clear Text Box
-            base.ClearTextByID(NewUserPageResource
+            base.ClearTextById(NewUserPageResource
                                                  .NewUser_Page_EmailTextBox_Id_Locator);
             //Fill Text Box Value
-            base.FillTextBoxByID(NewUserPageResource.
+            base.FillTextBoxById(NewUserPageResource.
                                                  NewUser_Page_EmailTextBox_Id_Locator,
                                                  NewUserPageResource.NewUser_Page_EmailOfUser_Value);
             logger.LogMethodExit("NewUserPage", "EnterUserEMailAddress"
@@ -147,10 +147,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewUserPageResource
                                           .NewUser_Page_LastNameTextBox_Id_Locator));
             //Clear Text Box
-            base.ClearTextByID(NewUserPageResource
+            base.ClearTextById(NewUserPageResource
                                                  .NewUser_Page_LastNameTextBox_Id_Locator);
             //Enter Value in Text Box
-            base.FillTextBoxByID(NewUserPageResource
+            base.FillTextBoxById(NewUserPageResource
                                                  .NewUser_Page_LastNameTextBox_Id_Locator, userLastName);
             logger.LogMethodEntry("NewUserPage", "EnterUserLastName"
                , base.isTakeScreenShotDuringEntryExit);
@@ -169,10 +169,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewUserPageResource
                                           .NewUser_Page_FirstNameTextBox_Id_Locator));
             //Clear Text Box
-            base.ClearTextByID(NewUserPageResource
+            base.ClearTextById(NewUserPageResource
                                                  .NewUser_Page_FirstNameTextBox_Id_Locator);
             //Enter Value n Text Box
-            base.FillTextBoxByID(NewUserPageResource
+            base.FillTextBoxById(NewUserPageResource
                                                    .NewUser_Page_FirstNameTextBox_Id_Locator, userFirstName);
             logger.LogMethodEntry("NewUserPage", "EnterUserFirstName"
                 , base.isTakeScreenShotDuringEntryExit);
@@ -342,7 +342,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewUserPageResource.
                                           NewUser_Page_SaveAndClose_Id_Locator));
             //Click on Button
-            base.ClickButtonByID(NewUserPageResource.
+            base.ClickButtonById(NewUserPageResource.
                                                  NewUser_Page_SaveAndClose_Id_Locator);
             logger.LogMethodExit("NewUserPage", "ClickEditUserSaveAndCloseButton",
                  base.isTakeScreenShotDuringEntryExit);

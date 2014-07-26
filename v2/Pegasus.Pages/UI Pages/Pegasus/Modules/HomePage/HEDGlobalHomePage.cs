@@ -261,7 +261,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_AnnouncementsManageAll_Button_Id_Locator));
             //Fill Text Box With Empty String
-            base.FillEmptyTextByID(HEDGlobalHomePageResource
+            base.FillEmptyTextById(HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_AnnouncementsManageAll_Button_Id_Locator);
             IWebElement getManageButton=base.GetWebElementPropertiesById
                 (HEDGlobalHomePageResource
@@ -325,7 +325,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(HEDGlobalHomePageResource
                          .HEDGlobalHome_Page_Course_Table_Id_Locator));
                 //Get Course Text
-                getCourseText = base.GetElementTextByID(HEDGlobalHomePageResource
+                getCourseText = base.GetElementTextById(HEDGlobalHomePageResource
                         .HEDGlobalHome_Page_Course_Table_Id_Locator);
                 //Select Global Home Window
                 base.SelectWindow(HEDGlobalHomePageResource

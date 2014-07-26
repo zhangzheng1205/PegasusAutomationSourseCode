@@ -160,10 +160,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(SkillBasedAssessmentResource.
                     SkillBasedAssessment_Time_Limit_TextBox_Id));
                 //Clear Minute Textbox
-                base.ClearTextByID(SkillBasedAssessmentResource.
+                base.ClearTextById(SkillBasedAssessmentResource.
                     SkillBasedAssessment_Time_Limit_TextBox_Id);
                 //Fill Text by expected time
-                base.FillTextBoxByID(SkillBasedAssessmentResource.
+                base.FillTextBoxById(SkillBasedAssessmentResource.
                     SkillBasedAssessment_Time_Limit_TextBox_Id, 
                     timeInMinute.ToString());
             }
@@ -197,7 +197,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(SkillBasedAssessmentResource.
                     SkillBasedAssessment_Page_SIMStudyPreTest_SaveAndResturn_Button_ID));
                 //Click On Save And Return
-                base.ClickButtonByID(SkillBasedAssessmentResource.
+                base.ClickButtonById(SkillBasedAssessmentResource.
                     SkillBasedAssessment_Page_SIMStudyPreTest_SaveAndResturn_Button_ID);
             }
             catch (Exception e)
@@ -222,10 +222,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Button
             base.WaitForElement(By.Id(SkillBasedAssessmentResource.
                 SkillBasedAssessment_Page_SIMPreTest_Pref_SaveAndResturn_Button_ID));
-            base.FocusOnElementByID(SkillBasedAssessmentResource.
+            base.FocusOnElementById(SkillBasedAssessmentResource.
                 SkillBasedAssessment_Page_SIMPreTest_Pref_SaveAndResturn_Button_ID);
             //Click On Save and Return
-            base.ClickButtonByID(SkillBasedAssessmentResource.
+            base.ClickButtonById(SkillBasedAssessmentResource.
                 SkillBasedAssessment_Page_SIMPreTest_Pref_SaveAndResturn_Button_ID);
             logger.LogMethodExit("SkillBasedAssessmentPage",
                "SaveThePreferenceSettings",
@@ -326,7 +326,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
                     AddAssement_Page_Select_PreferenceTab_Id_Locator));
-                base.FocusOnElementByID(AddAssessmentPageResources.
+                base.FocusOnElementById(AddAssessmentPageResources.
                     AddAssement_Page_Select_PreferenceTab_Id_Locator);
                 IWebElement getPreferenceTab = base.GetWebElementPropertiesById
                     (AddAssessmentPageResources.
@@ -355,7 +355,7 @@ namespace Pegasus.Pages.UI_Pages
                     SkillBasedAssessment_Page_PlayMode_Checkbox_Id_Locator))
             {
                 //Check 'Play Training Mode' Preference
-                base.ClickCheckBoxById(SkillBasedAssessmentResource.
+                base.SelectCheckBoxById(SkillBasedAssessmentResource.
                     SkillBasedAssessment_Page_PlayMode_Checkbox_Id_Locator);
             }
             logger.LogMethodExit("SkillBasedAssessmentPage",
@@ -376,7 +376,7 @@ namespace Pegasus.Pages.UI_Pages
                     SkillBasedAssessment_Page_PlayMode_Checkbox_Id_Locator))
             {
                 //Uncheck 'Play Training Mode' Preference
-                base.ClickCheckBoxById(SkillBasedAssessmentResource.
+                base.SelectCheckBoxById(SkillBasedAssessmentResource.
                     SkillBasedAssessment_Page_PlayMode_Checkbox_Id_Locator);
             }
             logger.LogMethodExit("SkillBasedAssessmentPage",
@@ -447,7 +447,7 @@ namespace Pegasus.Pages.UI_Pages
                     SkillBasedAssessment_ManualGrading_Preference_Id_Locator))
                 {
                     //Check 'Required Manual Grading' Preference
-                    base.ClickCheckBoxById(SkillBasedAssessmentResource.
+                    base.SelectCheckBoxById(SkillBasedAssessmentResource.
                     SkillBasedAssessment_ManualGrading_Preference_Id_Locator);
                 }
                 //Save The Preference Settings

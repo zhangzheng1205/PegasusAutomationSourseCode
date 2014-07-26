@@ -35,7 +35,7 @@ namespace Pegasus.Pages.UI_Pages
                     MyTestPreferences_Page_DisplayMyTestFolder_Option_Id_Locator).Selected))
                 {
                     //Click the checkbox of ' Display MyTest Folder in Course Materials Library'
-                    base.ClickButtonByID(MyTestPreferencesPageResource.
+                    base.ClickButtonById(MyTestPreferencesPageResource.
                     MyTestPreferences_Page_DisplayMyTestFolder_Option_Id_Locator);
                 }
             }

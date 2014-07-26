@@ -141,7 +141,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewProductPageResource.
                 NewProduct_Page_AccessCode_Textbox_Id_Locator));
             //Enter Access code in Textbox
-            base.FillTextBoxByID(NewProductPageResource.
+            base.FillTextBoxById(NewProductPageResource.
                 NewProduct_Page_AccessCode_Textbox_Id_Locator,
                 base.GetRandomNumber(NewProductPageResource.
                 NewProduct_Page_AccessCode_Characterset_Value, 7));
@@ -193,10 +193,10 @@ namespace Pegasus.Pages.UI_Pages
                 NewProduct_Page_Hed_ProductName_Id_Locator));
             //Get Program from Memory
             Program program = Program.Get(programTypeEnum);
-            base.FillTextBoxByID(NewProductPageResource.
+            base.FillTextBoxById(NewProductPageResource.
                 NewProduct_Page_Hed_ProductName_Id_Locator, program.Name);
             //Click Button
-            base.ClickButtonByID(NewProductPageResource.NewProduct_Page_SearchButton_Id_Locator);
+            base.ClickButtonById(NewProductPageResource.NewProduct_Page_SearchButton_Id_Locator);
             Logger.LogMethodExit("NewProductPage", "EnterProgramNameToSearch",
              base.isTakeScreenShotDuringEntryExit);
         }
@@ -240,7 +240,7 @@ namespace Pegasus.Pages.UI_Pages
                 NewProduct_Page_PegasusDataGrid_Ctrl1_Id_Locator))
             {
                 //Click Button
-                base.ClickButtonByID(NewProductPageResource.
+                base.ClickButtonById(NewProductPageResource.
                     NewProduct_Page_PegasusDataGrid_Ctrl1_Id_Locator);
             }
             //Select Default Page
@@ -283,7 +283,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewProductPageResource.
                 NewProduct_Page_SMSID_TextBox_Id_Locator));
             //Insert Text in Text Box
-            base.FillTextBoxByID(NewProductPageResource.
+            base.FillTextBoxById(NewProductPageResource.
                 NewProduct_Page_SMSID_TextBox_Id_Locator,
                 AutomationConfigurationManager.SmsMuduleId);
             //Wait For Element
@@ -308,7 +308,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewProductPageResource.
                                           NewProduct_Page_Discipline_DropDown_Id_Locator));
             //Insert Empty String
-            base.FillEmptyTextByID(NewProductPageResource.
+            base.FillEmptyTextById(NewProductPageResource.
                                        NewProduct_Page_Discipline_DropDown_Id_Locator);
             //Select Drop Down Value
             base.SelectDropDownValueThroughTextById(NewProductPageResource.
@@ -333,7 +333,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewProductPageResource.
                 NewProduct_Page_SMSID_TextBox_Id_Locator));
             //Insert Text in Text Box
-            base.FillTextBoxByID(NewProductPageResource.
+            base.FillTextBoxById(NewProductPageResource.
                 NewProduct_Page_SMSID_TextBox_Id_Locator,
                 AutomationConfigurationManager.SmsMuduleId);
             Logger.LogMethodExit("NewProductPage", "EnterDetailsForGeneralTypeProductForHed",
@@ -394,7 +394,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.Id(NewProductPageResource.
                                                   NewProduct_Page_School_ProductName_Id_Locator));
                     //Enter The Product Name
-                    base.FillTextBoxByID(NewProductPageResource.
+                    base.FillTextBoxById(NewProductPageResource.
                                              NewProduct_Page_School_ProductName_Id_Locator,
                                              productNameGuid.ToString());
                     break;
@@ -406,7 +406,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.Id(NewProductPageResource.
                                                  NewProduct_Page_Hed_ProductName_Id_Locator));
                     //Enter The Product Name
-                    base.FillTextBoxByID(NewProductPageResource.
+                    base.FillTextBoxById(NewProductPageResource.
                                              NewProduct_Page_Hed_ProductName_Id_Locator,
                                              productNameGuid.ToString());
                     break;
@@ -478,7 +478,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewProductPageResource.
                                                 NewProduct_Page_LicensingType_DropDown_Id_Locator));
             //Focus on Element
-            base.FocusOnElementByID(NewProductPageResource.
+            base.FocusOnElementById(NewProductPageResource.
                 NewProduct_Page_LicensingType_DropDown_Id_Locator);
             // Select Licensing Type
             base.SelectDropDownValueThroughTextById(NewProductPageResource.
@@ -499,7 +499,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewProductPageResource.
                                           NewProduct_Page_ProductType_DropDown_Id_Locator));
             //Focus On Product Type DropDown
-            base.FocusOnElementByID(NewProductPageResource.
+            base.FocusOnElementById(NewProductPageResource.
                                         NewProduct_Page_ProductType_DropDown_Id_Locator);
             //Select Product Type
             base.SelectDropDownValueThroughTextById(NewProductPageResource.
@@ -521,7 +521,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement((By.Id(NewProductPageResource.
                 NewProduct_Page_LicensingType_DropDown_Id_Locator)));
             //Focus on Element
-            base.FocusOnElementByID(NewProductPageResource.
+            base.FocusOnElementById(NewProductPageResource.
                 NewProduct_Page_LicensingType_DropDown_Id_Locator);
             // Select Licensing Type
             base.SelectDropDownValueThroughTextById(NewProductPageResource.
@@ -543,7 +543,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(NewProductPageResource.
                                           NewProduct_Page_ProductType_DropDown_Id_Locator));
             //Focus On Product Type DropDown
-            base.FocusOnElementByID(NewProductPageResource.
+            base.FocusOnElementById(NewProductPageResource.
                                         NewProduct_Page_ProductType_DropDown_Id_Locator);
             //Select Product Type
             base.SelectDropDownValueThroughTextById(NewProductPageResource.

@@ -93,12 +93,12 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CalendarDefaultUXPageResource.
                 CalendarDefaultUXPage_Textbox_Search_Id_Locator));
             //Fill textbox
-            base.FillTextBoxByID(CalendarDefaultUXPageResource.
+            base.FillTextBoxById(CalendarDefaultUXPageResource.
                 CalendarDefaultUXPage_Textbox_Search_Id_Locator, assetName);
             //Click on the GO button
             base.WaitForElement(By.Id(CalendarDefaultUXPageResource.
                 CalendarDefaultUXPage_Button_Go_Id_Locator));
-            base.ClickButtonByID(CalendarDefaultUXPageResource.
+            base.ClickButtonById(CalendarDefaultUXPageResource.
                 CalendarDefaultUXPage_Button_Go_Id_Locator);
             base.WaitForElement(By.Id(CalendarDefaultUXPageResource.
                 CalendarDefaultUXPage_Div_SearchedAssets_Id_Locator));
@@ -157,7 +157,7 @@ namespace Pegasus.Pages.UI_Pages
                     CalendarDefaultUXPage_AssignedToCopy_Text_Id_Locator),
                     Convert.ToInt32(CalendarDefaultUXPageResource.
                     CalendarDefaultUXPage_Customized_Wait_Time_Value)) &&
-                    base.GetElementTextByID(CalendarDefaultUXPageResource.
+                    base.GetElementTextById(CalendarDefaultUXPageResource.
                     CalendarDefaultUXPage_AssignedToCopy_Text_Id_Locator) ==
                     CalendarDefaultUXPageResource.
                     CalendarDefaultUXPage_AssignedToCopy_Text_Value)
@@ -231,7 +231,7 @@ namespace Pegasus.Pages.UI_Pages
                     (CalendarDefaultUXPageResource.
                     CalendarDefaultUXPage_AssignedToCopy_Text_Id_Locator));
                 //Get the message
-                getContentMessage = base.GetElementTextByID
+                getContentMessage = base.GetElementTextById
                     (CalendarDefaultUXPageResource.
                     CalendarDefaultUXPage_AssignedToCopy_Text_Id_Locator);              
             }
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CalendarDefaultUXPageResource.
                     CalendarDefaultUXPage_ViewBy_Dropdown_Id_Locator));
                 //Click On 'View By' Dropdown 
-                base.ClickButtonByID(CalendarDefaultUXPageResource.
+                base.ClickButtonById(CalendarDefaultUXPageResource.
                     CalendarDefaultUXPage_ViewBy_Dropdown_Id_Locator);                
                 //Select 'View By' Dropdown Option
                 base.SelectDropDownValueThroughTextByName(CalendarDefaultUXPageResource.

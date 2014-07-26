@@ -49,7 +49,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(PostIndexMixedPageResource.
                     PostIndexMixedPage_Lightbox_AddNewButton_Id_Locator));
                 //Focus on the Button
-                base.FocusOnElementByID(PostIndexMixedPageResource.
+                base.FocusOnElementById(PostIndexMixedPageResource.
                     PostIndexMixedPage_Lightbox_AddNewButton_Id_Locator);
                 IWebElement getAddNewItemButton = base.GetWebElementPropertiesById(PostIndexMixedPageResource.
                     PostIndexMixedPage_Lightbox_AddNewButton_Id_Locator);
@@ -140,9 +140,9 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PostIndexMixedPageResource.
                 PostIndexMixedPage_Lightbox_AddList_Textfield_Id_Locator));
             //Clear and fill The text
-            base.ClearTextByID(PostIndexMixedPageResource.
+            base.ClearTextById(PostIndexMixedPageResource.
                 PostIndexMixedPage_Lightbox_AddList_Textfield_Id_Locator);
-            base.FillTextBoxByID(PostIndexMixedPageResource.
+            base.FillTextBoxById(PostIndexMixedPageResource.
                 PostIndexMixedPage_Lightbox_AddList_Textfield_Id_Locator, subtabLinkName);
             logger.LogMethodExit("PostIndexMixedPage", "EnterSubTabDetails",
                 base.isTakeScreenShotDuringEntryExit);

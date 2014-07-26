@@ -40,7 +40,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the Element 
                 base.WaitForElement(By.Id(CourseBrowserPageResource.
                     CourseBrowserPage_Div_Id_Locator));
-                if (base.GetElementTextByID(CourseBrowserPageResource.
+                if (base.GetElementTextById(CourseBrowserPageResource.
                     CourseBrowserPage_Div_Id_Locator).Contains(courseName))
                 {
                     getTargetCourseDisplayed = courseName;

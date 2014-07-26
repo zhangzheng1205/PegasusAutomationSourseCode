@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait For The Add Button
             base.WaitForElement(By.Id(ProductsAndResourcesPageResource.
                 ProductsAndResources_Page_AddButton_Id_Locator));
-            base.FocusOnElementByID(ProductsAndResourcesPageResource.
+            base.FocusOnElementById(ProductsAndResourcesPageResource.
                 ProductsAndResources_Page_AddButton_Id_Locator);
             //Click on The Add Button            
             IWebElement getAddButton = base.GetWebElementPropertiesById
@@ -117,7 +117,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click OK button In The Add Resources Popup
             base.WaitForElement(By.Id(ProductsAndResourcesPageResource.
                 ProductsAndResources_Page_AddResourcesPopup_Ok_Button_Id_Locator));
-            base.ClickButtonByID(ProductsAndResourcesPageResource.
+            base.ClickButtonById(ProductsAndResourcesPageResource.
                 ProductsAndResources_Page_AddResourcesPopup_Ok_Button_Id_Locator);
             logger.LogMethodExit("ProductsAndResourcesPage ", "AddResource",
               base.isTakeScreenShotDuringEntryExit);
@@ -150,9 +150,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ProductsAndResourcesPageResource.
                     ProductsAndResources_Page_ResourcesearchTextBox_Id_Locator));
                 //Clear The Search text box And Fill The Resource Id
-                base.ClearTextByID(ProductsAndResourcesPageResource.
+                base.ClearTextById(ProductsAndResourcesPageResource.
                     ProductsAndResources_Page_ResourcesearchTextBox_Id_Locator);
-                base.FillTextBoxByID(ProductsAndResourcesPageResource.
+                base.FillTextBoxById(ProductsAndResourcesPageResource.
                     ProductsAndResources_Page_ResourcesearchTextBox_Id_Locator,
                     Convert.ToString(licenceResourceId.ResourceID));
                 IWebElement getSearchButton=base.GetWebElementPropertiesById
@@ -189,7 +189,7 @@ namespace Pegasus.Pages.UI_Pages
                 ProductsAndResources_Page_ResourceCheckbox_Id_Locator +
                 licenceResourceId.ResourceID.ToString(CultureInfo.InvariantCulture)));
             //Focus on Element
-            base.FocusOnElementByID(ProductsAndResourcesPageResource.
+            base.FocusOnElementById(ProductsAndResourcesPageResource.
                 ProductsAndResources_Page_ResourceCheckbox_Id_Locator +
                 licenceResourceId.ResourceID.ToString());
             IWebElement getSelectCheckbox=base.GetWebElementPropertiesById
@@ -220,10 +220,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for Element
                 base.WaitForElement(By.Id(ProductsAndResourcesPageResource.
                     ProductsAndResources_Page_Product_Search_Text_Id_Locator));
-                base.ClearTextByID(ProductsAndResourcesPageResource.
+                base.ClearTextById(ProductsAndResourcesPageResource.
                     ProductsAndResources_Page_Product_Search_Text_Id_Locator);
                 //Fills the Product Id
-                base.FillTextBoxByID(ProductsAndResourcesPageResource.
+                base.FillTextBoxById(ProductsAndResourcesPageResource.
                 ProductsAndResources_Page_Product_Search_Text_Id_Locator,
                     Convert.ToString(licenceProductId.ProductID));
                 IWebElement getSearchButton=base.GetWebElementPropertiesById

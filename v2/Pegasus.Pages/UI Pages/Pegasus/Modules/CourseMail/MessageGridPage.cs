@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Compose Button
                 base.WaitForElement(By.Id(MessageGridPageResource.
                     MessageGrid_Page_ComposeNewButton_Id_Locator));
-                base.ClickButtonByID(MessageGridPageResource.
+                base.ClickButtonById(MessageGridPageResource.
                     MessageGrid_Page_ComposeNewButton_Id_Locator);
                 //Enter Details to Create Mail
                 this.EnterDetailsToCreateMail(mailDetails);
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Recepient by Checking the CheckBox
             base.WaitForElement(By.Id(MessageGridPageResource.
                 MessageGrid_Page_SelectRecepients_CheckBox_Id_Locator));
-            base.ClickCheckBoxById(MessageGridPageResource.
+            base.SelectCheckBoxById(MessageGridPageResource.
                 MessageGrid_Page_SelectRecepients_CheckBox_Id_Locator);
             //Click on Add Recepients Button
             base.WaitForElement(By.PartialLinkText(MessageGridPageResource.
@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter the Subject
             base.WaitForElement(By.Id(MessageGridPageResource.
                 MessageGrid_Page_ComposeNewFrame_SubjectTextBox_Id_Locator));
-            base.FillTextBoxByID(MessageGridPageResource.
+            base.FillTextBoxById(MessageGridPageResource.
                 MessageGrid_Page_ComposeNewFrame_SubjectTextBox_Id_Locator,
                 mailDetails.ToString());
             //Click on View Source
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Message in Text Area
             base.WaitForElement(By.Id(MessageGridPageResource.
                 MessageGrid_Page_HTMLEditor_TextArea_Id_Locator));
-            base.FillTextBoxByID(MessageGridPageResource.
+            base.FillTextBoxById(MessageGridPageResource.
                 MessageGrid_Page_HTMLEditor_TextArea_Id_Locator, mailDetails.ToString());
             //Store Mail Message In Memory
             this.StoreMailDetailsInMemory(mailDetails);
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(MessageGridPageResource.
                     MessageGrid_Page_SuccessMessage_Id_Locator));
                 //Get Message from Application
-                successMessage = base.GetElementTextByID(MessageGridPageResource.
+                successMessage = base.GetElementTextById(MessageGridPageResource.
                     MessageGrid_Page_SuccessMessage_Id_Locator);
             }
             catch (Exception e)

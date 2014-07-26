@@ -48,13 +48,13 @@ namespace Pegasus.Pages.UI_Pages
                  //Enter Group Name
                  base.WaitForElement(By.Id(GBGroupsDefaultUXPageResource.
                      GBGroupsDefaultUX_Page_GroupName_Textbox_Id_Locator));
-                 base.FillTextBoxByID(GBGroupsDefaultUXPageResource.
+                 base.FillTextBoxById(GBGroupsDefaultUXPageResource.
                      GBGroupsDefaultUX_Page_GroupName_Textbox_Id_Locator,
                      GBGroupsDefaultUXPageResource.GBGroupsDefaultUX_Page_GroupName_Value);
                  base.WaitForElement(By.Id(GBGroupsDefaultUXPageResource.
                      GBGroupsDefaultUX_Page_SaveButton_Id__Locator));
                  //Click On Save Button
-                 base.ClickButtonByID(GBGroupsDefaultUXPageResource.
+                 base.ClickButtonById(GBGroupsDefaultUXPageResource.
                      GBGroupsDefaultUX_Page_SaveButton_Id__Locator);
              }
              catch (Exception e)
@@ -130,7 +130,7 @@ namespace Pegasus.Pages.UI_Pages
                          base.WaitForElement(By.Id(GBGroupsDefaultUXPageResource.
                              GBGroupsDefaultUX_Page_Add_Button_Id_Locator));
                          //Click On Add Button
-                         base.ClickButtonByID(GBGroupsDefaultUXPageResource.
+                         base.ClickButtonById(GBGroupsDefaultUXPageResource.
                              GBGroupsDefaultUX_Page_Add_Button_Id_Locator);
                          break;
                      }
@@ -326,13 +326,13 @@ namespace Pegasus.Pages.UI_Pages
              //Wait for the element
              base.WaitForElement(By.Id(GBGroupsDefaultUXPageResource.
                  GBGroupsDefaultUX_Page_SearchStudent_TextBox_Id_Locator));
-             base.FocusOnElementByID(GBGroupsDefaultUXPageResource.
+             base.FocusOnElementById(GBGroupsDefaultUXPageResource.
                  GBGroupsDefaultUX_Page_SearchStudent_TextBox_Id_Locator);
              //Clear the text box
              base.GetWebElementPropertiesById(GBGroupsDefaultUXPageResource.
                  GBGroupsDefaultUX_Page_SearchStudent_TextBox_Id_Locator).Clear();
              //Fill the textbox with user name
-             base.FillTextBoxByID(GBGroupsDefaultUXPageResource.
+             base.FillTextBoxById(GBGroupsDefaultUXPageResource.
                  GBGroupsDefaultUX_Page_SearchStudent_TextBox_Id_Locator, userName);
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                 "FillTheStudentNameInSearchTextBox",

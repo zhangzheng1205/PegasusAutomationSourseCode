@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
                     RandomAssessment_Page_Activity_AllowstudentstoTryAgain_PreferenceSet).Selected))
                 {
                     //Check the 'Display courses as folders on the Content page' Checkbox
-                    base.ClickButtonByID(RandomAssessmentResource.
+                    base.ClickButtonById(RandomAssessmentResource.
                     RandomAssessment_Page_Activity_AllowstudentstoTryAgain_PreferenceSet);
                 }
                 //Click On Save Return Button
@@ -109,7 +109,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(RandomAssessmentResource.
                 RandomAssessment_Page_ActivityPreference_Savebutton_Id_Locator));
-            base.FocusOnElementByID(RandomAssessmentResource.
+            base.FocusOnElementById(RandomAssessmentResource.
                 RandomAssessment_Page_ActivityPreference_Savebutton_Id_Locator);
             IWebElement getSavePreference = base.GetWebElementPropertiesById
                 (RandomAssessmentResource.
@@ -203,12 +203,12 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RandomAssessmentResource.
                     RandomAssessment_Page_InputAttemptValue_Id_Locator));
                 //Clear Text Box
-                base.ClearTextByID(RandomAssessmentResource.
+                base.ClearTextById(RandomAssessmentResource.
                     RandomAssessment_Page_InputAttemptValue_Id_Locator);
                 IWebElement getAttemptTextBoxProperty = base.GetWebElementPropertiesById(
                     RandomAssessmentResource.RandomAssessment_Page_InputAttemptValue_Id_Locator);
                 //Fill Attempt Value
-                base.FillTextBoxByID(RandomAssessmentResource.
+                base.FillTextBoxById(RandomAssessmentResource.
                     RandomAssessment_Page_InputAttemptValue_Id_Locator, activityAttempt);
             }
             catch (Exception e)
@@ -230,7 +230,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(RandomAssessmentResource.
                 RandomAssessment_Page_Select_PreferenceTab_Id_Locator));
-            base.FocusOnElementByID(RandomAssessmentResource.
+            base.FocusOnElementById(RandomAssessmentResource.
                 RandomAssessment_Page_Select_PreferenceTab_Id_Locator);
             IWebElement getPreferenceTab = base.GetWebElementPropertiesById
                 (RandomAssessmentResource.
@@ -275,10 +275,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RandomAssessmentResource.
                        RandomAssessment_Page_InputAtAttempt_Id_Locator));
                 //Clear Text Box
-                base.ClearTextByID(RandomAssessmentResource.
+                base.ClearTextById(RandomAssessmentResource.
                     RandomAssessment_Page_InputAtAttempt_Id_Locator);
                 //Enter Attempt Value
-                base.FillTextBoxByID(RandomAssessmentResource.
+                base.FillTextBoxById(RandomAssessmentResource.
                     RandomAssessment_Page_InputAtAttempt_Id_Locator, attemptValue);
             }
             catch (Exception e)
@@ -371,7 +371,7 @@ namespace Pegasus.Pages.UI_Pages
                         if(!isSaveForLaterReferenceSet)
                         {
                             // select preference
-                            base.ClickCheckBoxById(RandomAssessmentResource.
+                            base.SelectCheckBoxById(RandomAssessmentResource.
                             RandomAssessment_Page_Select_SaveForLater_Preference_Id_Locator);
                         }                         
                         break;

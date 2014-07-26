@@ -356,7 +356,7 @@ namespace Pegasus.Pages.UI_Pages
             //Class Name Guid
             Guid className = Guid.NewGuid();
             //Fill Text Box With Class Name
-            base.FillTextBoxByID(ClassUserControlsPageResource.
+            base.FillTextBoxById(ClassUserControlsPageResource.
                 ClassUserControls_Page_ClassName_Input_Id_Locator, className.ToString());
             //Click on Next BUtton
             this.ClickOnNextButton();

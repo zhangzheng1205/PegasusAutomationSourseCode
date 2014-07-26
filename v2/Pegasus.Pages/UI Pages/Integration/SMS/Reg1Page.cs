@@ -47,7 +47,7 @@ namespace Pegasus.Pages.UI_Pages
                 if (!base.IsElementSelectedById(Reg1PageResource.
                     Reg1_Page_AccountNo_RadioButton_Id_Locator))
                 {
-                    base.FocusOnElementByID(Reg1PageResource.
+                    base.FocusOnElementById(Reg1PageResource.
                         Reg1_Page_AccountNo_RadioButton_Id_Locator);
                     IWebElement getAccountNumRadioButton = base.GetWebElementPropertiesById
                         (Reg1PageResource.
@@ -80,17 +80,17 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Element
             base.WaitForElement(By.Id(Reg1PageResource.
                 Reg1_Page_New_SMSUser_Loginname_TextBox_Id_Locator));
-            base.ClearTextByID(Reg1PageResource.
+            base.ClearTextById(Reg1PageResource.
                 Reg1_Page_New_SMSUser_Loginname_TextBox_Id_Locator);
             //Fill the User name in Text Box 
-            base.FillTextBoxByID(Reg1PageResource.
+            base.FillTextBoxById(Reg1PageResource.
                 Reg1_Page_New_SMSUser_Loginname_TextBox_Id_Locator,
                 userNameSMSGuid.ToString());
             //Wait For Element
             base.WaitForElement(By.Id(Reg1PageResource.
                 Reg1_Page_CreateLoginPassword_TextBox_Id_Locator));
             //Clear the Text Box
-            base.ClearTextByID(Reg1PageResource.
+            base.ClearTextById(Reg1PageResource.
                 Reg1_Page_CreateLoginPassword_TextBox_Id_Locator);
             //Enter SMS User Details (Extracted Method)
             string getSMSUserPassword = this.EnterSMSUserLoginDetails(userType);
@@ -113,17 +113,17 @@ namespace Pegasus.Pages.UI_Pages
             string getSMSUserPassword = Reg1PageResource.
                 Reg1_Page_SMSUser_Password_Value;
             //Enter Password in Text Box
-            base.FillTextBoxByID(Reg1PageResource.
+            base.FillTextBoxById(Reg1PageResource.
                 Reg1_Page_CreateLoginPassword_TextBox_Id_Locator,
                 Reg1PageResource.Reg1_Page_SMSUser_Password_Value);
             //Wait For Element
             base.WaitForElement(By.Id(Reg1PageResource.
                 Reg1_Page_CreateLoginPasswordRetype_TextBox_Id_Locator));
             //Clear the Text Box
-            base.ClearTextByID(Reg1PageResource.
+            base.ClearTextById(Reg1PageResource.
                 Reg1_Page_CreateLoginPasswordRetype_TextBox_Id_Locator);
             //Enter Password in Re-Type Text Box
-            base.FillTextBoxByID(Reg1PageResource.
+            base.FillTextBoxById(Reg1PageResource.
                 Reg1_Page_CreateLoginPasswordRetype_TextBox_Id_Locator,
                                  Reg1PageResource.Reg1_Page_SMSUser_Password_Value);
             //Click on TextBox to Enter Access Code Details
@@ -167,10 +167,10 @@ namespace Pegasus.Pages.UI_Pages
                     //Wait for Next Button
                     base.WaitForElement((By.Id(Reg1PageResource.
                          Reg1_Page_Next_Button_Id_Locator)));
-                    base.FocusOnElementByID(Reg1PageResource.
+                    base.FocusOnElementById(Reg1PageResource.
                         Reg1_Page_Next_Button_Id_Locator);
                     //Click on Next Button
-                    base.ClickButtonByID(Reg1PageResource.
+                    base.ClickButtonById(Reg1PageResource.
                         Reg1_Page_Next_Button_Id_Locator);
                     //Wait untill next page
                     base.WaitUntilWindowLoads(Reg1PageResource.
@@ -232,7 +232,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(Reg1PageResource.Reg1_Page_AccessInformation_Window_Page_Title);
             base.WaitForElement(By.Id(Reg1PageResource.
                 Reg1_Page_Access1_TextBox_Id_Locator));
-            base.ClearTextByID(Reg1PageResource.
+            base.ClearTextById(Reg1PageResource.
                 Reg1_Page_Access1_TextBox_Id_Locator);
             // Fill SMS User Access Code by User Type
             switch (userType)
@@ -252,7 +252,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             base.WaitForElement((By.Id(Reg1PageResource.
                 Reg1_Page_Next_Button_Id_Locator)));
-            base.FocusOnElementByID(Reg1PageResource.
+            base.FocusOnElementById(Reg1PageResource.
                 Reg1_Page_Next_Button_Id_Locator);
             IWebElement getNextButton = base.GetWebElementPropertiesById
                 (Reg1PageResource.
@@ -277,7 +277,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("Reg1Page", "EnterSMSAccessCodeForStudent",
                 base.isTakeScreenShotDuringEntryExit);
             //Enter SMS Code in Text Box
-            base.FillTextBoxByID(Reg1PageResource.Reg1_Page_Access1_TextBox_Id_Locator,
+            base.FillTextBoxById(Reg1PageResource.Reg1_Page_Access1_TextBox_Id_Locator,
                                  AutomationConfigurationManager.SmsStudentAccessCode);
             logger.LogMethodExit("Reg1Page", "EnterSMSAccessCodeForStudent",
                 base.isTakeScreenShotDuringEntryExit);
@@ -293,7 +293,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("Reg1Page", "EnterSMSAccessCodeForInstructor",
                 base.isTakeScreenShotDuringEntryExit);
             //Enter SMS Code in Text Box
-            base.FillTextBoxByID(Reg1PageResource.Reg1_Page_Access1_TextBox_Id_Locator,
+            base.FillTextBoxById(Reg1PageResource.Reg1_Page_Access1_TextBox_Id_Locator,
                                  AutomationConfigurationManager.SmsInstructorAccessCode);
             logger.LogMethodExit("Reg1Page", "EnterSMSAccessCodeForInstructor",
                 base.isTakeScreenShotDuringEntryExit);
@@ -308,7 +308,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("Reg1Page", "EnterSMSAccessCodeForMMNDInstructor",
                 base.isTakeScreenShotDuringEntryExit);
             //Enter SMS code in the Text Box
-            base.FillTextBoxByID(Reg1PageResource.Reg1_Page_Access1_TextBox_Id_Locator,
+            base.FillTextBoxById(Reg1PageResource.Reg1_Page_Access1_TextBox_Id_Locator,
                                  getSMSMMNDInstructor);
             logger.LogMethodExit("Reg1Page", "EnterSMSAccessCodeForMMNDInstructor",
              base.isTakeScreenShotDuringEntryExit);
@@ -334,9 +334,9 @@ namespace Pegasus.Pages.UI_Pages
             if (!base.IsElementSelectedById(Reg1PageResource.
                 Reg1_Page_AccountNo_RadioButton_Id_Locator))
             {
-                base.FocusOnElementByID(Reg1PageResource.
+                base.FocusOnElementById(Reg1PageResource.
                     Reg1_Page_AccountNo_RadioButton_Id_Locator);
-                base.ClickButtonByID(Reg1PageResource.
+                base.ClickButtonById(Reg1PageResource.
                     Reg1_Page_AccountNo_RadioButton_Id_Locator);
             }
             //Enter User Name
@@ -359,17 +359,17 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Element
             base.WaitForElement(By.Id(Reg1PageResource.
                 Reg1_Page_New_SMSUser_Loginname_TextBox_Id_Locator));
-            base.ClearTextByID(Reg1PageResource.
+            base.ClearTextById(Reg1PageResource.
                 Reg1_Page_New_SMSUser_Loginname_TextBox_Id_Locator);
             //Fill the User name in Text Box 
-            base.FillTextBoxByID(Reg1PageResource.
+            base.FillTextBoxById(Reg1PageResource.
                 Reg1_Page_New_SMSUser_Loginname_TextBox_Id_Locator,
                 userNameSMSGuid.ToString());
             //Wait For Element
             base.WaitForElement(By.Id(Reg1PageResource.
                 Reg1_Page_CreateLoginPassword_TextBox_Id_Locator));
             //Clear the Text Box
-            base.ClearTextByID(Reg1PageResource.
+            base.ClearTextById(Reg1PageResource.
                 Reg1_Page_CreateLoginPassword_TextBox_Id_Locator);
             logger.LogMethodExit("Reg1Page", "EnterUserName",
                base.isTakeScreenShotDuringEntryExit);

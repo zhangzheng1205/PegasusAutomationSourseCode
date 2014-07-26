@@ -37,13 +37,13 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(AssessmentNamePageResource.
                     AssessmentName_Page_CreateNewTest_Name_Textbox_Id_Locator));
-                base.FillTextBoxByID(AssessmentNamePageResource.
+                base.FillTextBoxById(AssessmentNamePageResource.
                      AssessmentName_Page_CreateNewTest_Name_Textbox_Id_Locator,
                      activityNameGuid.ToString());
                 //Wait for the "Save" button
                 base.WaitForElement(By.Id(AssessmentNamePageResource.
                     AssessmentName_Page_CreateNewTest_SaveButton_Id_Locator));
-                base.FocusOnElementByID(AssessmentNamePageResource.
+                base.FocusOnElementById(AssessmentNamePageResource.
                      AssessmentName_Page_CreateNewTest_SaveButton_Id_Locator);
                 //Get web element
                 IWebElement getSaveButtonProperties = base.GetWebElementPropertiesById

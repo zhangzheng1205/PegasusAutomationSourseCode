@@ -149,9 +149,9 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CourseCatalogMainPageResource
                 .CourseCatalogMain_ProductTextBook_TextBox_Id_Locator));
             // clear text box
-            base.ClearTextByID(CourseCatalogMainPageResource
+            base.ClearTextById(CourseCatalogMainPageResource
                 .CourseCatalogMain_ProductTextBook_TextBox_Id_Locator);
-            base.FillTextBoxByID(CourseCatalogMainPageResource
+            base.FillTextBoxById(CourseCatalogMainPageResource
                 .CourseCatalogMain_ProductTextBook_TextBox_Id_Locator, productName);
             Logger.LogMethodExit("CourseCatalogMainPage", "SearchCourseByTextBookName",
                 base.isTakeScreenShotDuringEntryExit);
@@ -311,7 +311,7 @@ namespace Pegasus.Pages.UI_Pages
             // Click on the radio button
             base.WaitForElement(By.Id(CourseCatalogMainPageResource
                 .CourseCatalogMain_Page_Discipline_RadioButton_Id_Locator));
-            base.ClickButtonByID(CourseCatalogMainPageResource
+            base.ClickButtonById(CourseCatalogMainPageResource
                 .CourseCatalogMain_Page_Discipline_RadioButton_Id_Locator);
             //Select Art option in the drop down value
             base.SelectDropDownValueThroughTextById(CourseCatalogMainPageResource
@@ -335,10 +335,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for element
             base.WaitForElement(By.Id(CourseCatalogMainPageResource
                 .CourseCatalogMain_Page_ProductTextBook_TextBox_Id_Locator));
-            base.ClearTextByID(CourseCatalogMainPageResource
+            base.ClearTextById(CourseCatalogMainPageResource
                  .CourseCatalogMain_Page_ProductTextBook_TextBox_Id_Locator);
             //Enter the text book title to search
-            base.FillTextBoxByID(CourseCatalogMainPageResource
+            base.FillTextBoxById(CourseCatalogMainPageResource
                  .CourseCatalogMain_Page_ProductTextBook_TextBox_Id_Locator,
                  CourseCatalogMainPageResource.
                  CourseCatalogMain_Page_ProductTextBook_Name_value);
@@ -410,12 +410,12 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_SearchCatalog_Span_Id_Locator));
             // validate page number present or not 
-            if (base.IsElementDisplayedByID(CourseCatalogMainPageResource.
+            if (base.IsElementDisplayedById(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_Total_Pages_Id_Locator))
             {
                 // get page count
                 int getTotalPageCount = Convert.ToInt16(base.
-                    GetElementTextByID(CourseCatalogMainPageResource.
+                    GetElementTextById(CourseCatalogMainPageResource.
                     CourseCatalogMain_Page_Total_Pages_Id_Locator));
                 // check if the course name is visible on the page
                 for (int pageCount = Convert.ToInt16(CourseCatalogMainPageResource.
@@ -550,19 +550,19 @@ namespace Pegasus.Pages.UI_Pages
             // Enter instructor course/program course name and description
             base.WaitForElement(By.Id(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_ProductName_TextBox_Id_Locator));
-            base.ClearTextByID(CourseCatalogMainPageResource.
+            base.ClearTextById(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_ProductName_TextBox_Id_Locator);
             //Insert Course Name in Text Box
-            base.FillTextBoxByID(CourseCatalogMainPageResource.
+            base.FillTextBoxById(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_ProductName_TextBox_Id_Locator,
                                  newHedCourseName.ToString());
             //Enter Description of INS course / Program course
             base.WaitForElement(By.Id(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_ProductDescription_TextBox_Id_Locator));
             //Clear Text Box
-            base.ClearTextByID(CourseCatalogMainPageResource.
+            base.ClearTextById(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_ProductDescription_TextBox_Id_Locator);
-            base.FillTextBoxByID(
+            base.FillTextBoxById(
                 CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_ProductDescription_TextBox_Id_Locator,
                 CourseCatalogMainPageResource.
@@ -620,10 +620,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for element
                 base.WaitForElement(By.Id(CourseCatalogMainPageResource.
                     CourseCatalogMain_Page_ProductTextBook_TextBox_Id_Locator));
-                base.ClearTextByID(CourseCatalogMainPageResource.
+                base.ClearTextById(CourseCatalogMainPageResource.
                     CourseCatalogMain_Page_ProductTextBook_TextBox_Id_Locator);
                 //Fill Search Parameter
-                base.FillTextBoxByID(CourseCatalogMainPageResource
+                base.FillTextBoxById(CourseCatalogMainPageResource
                     .CourseCatalogMain_Page_ProductTextBook_TextBox_Id_Locator,
                     searchParameter);
             }
@@ -651,7 +651,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CourseCatalogMainPageResource.
                         CourseCatalogMain_Page_NorecordMessage_Value));
                 //Get message
-                getMessage = base.GetElementTextByID(CourseCatalogMainPageResource.
+                getMessage = base.GetElementTextById(CourseCatalogMainPageResource.
                     CourseCatalogMain_Page_NorecordMessage_Value);
             }
             catch (Exception e)

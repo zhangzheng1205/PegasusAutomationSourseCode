@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CourseEnrollmentModePageResource.
                                      CourseEnrollmentMode_Page_RumbaResourceId_Textbox_Id_Locator));
             //Fill Resourse Id in Text Box
-            base.FillTextBoxByID(CourseEnrollmentModePageResource.
+            base.FillTextBoxById(CourseEnrollmentModePageResource.
                                      CourseEnrollmentMode_Page_RumbaResourceId_Textbox_Id_Locator,
                                  resourceId.ToString(CultureInfo.InvariantCulture));
             Logger.LogMethodExit("CourseEnrollmentModePage",
@@ -158,7 +158,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CourseEnrollmentModePageResource.
                                           CourseEnrollmentMode_Page_RumbaProductId_Textbox_Id_Locator));
             //Fill the ProductId
-            base.FillTextBoxByID(CourseEnrollmentModePageResource.
+            base.FillTextBoxById(CourseEnrollmentModePageResource.
                                      CourseEnrollmentMode_Page_RumbaProductId_Textbox_Id_Locator,
                                  productId.ToString(CultureInfo.InvariantCulture));
             Logger.LogMethodExit("CourseEnrollmentModePage",
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.Id(CourseEnrollmentModePageResource.
                         CourseEnrollmentMode_Page_DeliveryMode_ECollege_CheckBox_Id_Locator));
                     //Select Delivery Mode Checbox
-                    base.ClickCheckBoxById(CourseEnrollmentModePageResource.
+                    base.SelectCheckBoxById(CourseEnrollmentModePageResource.
                         CourseEnrollmentMode_Page_DeliveryMode_ECollege_CheckBox_Id_Locator);
                     break;
             }
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CourseEnrollmentModePageResource.
                 CourseEnrollmentMode_Page_eCollege_IntegrationPoint_Id_Locator));
             //Get Integration Point Id
-            String getECollegeIntegrationPoint = base.GetElementTextByID(CourseEnrollmentModePageResource.
+            String getECollegeIntegrationPoint = base.GetElementTextById(CourseEnrollmentModePageResource.
                                                                              CourseEnrollmentMode_Page_eCollege_IntegrationPoint_Id_Locator);
             Logger.LogMethodEntry("CourseEnrollmentModePage",
                 "GetECollegeTpiIntegrationPointId", base.isTakeScreenShotDuringEntryExit);
@@ -301,7 +301,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CourseEnrollmentModePageResource.
                     CourseEnrollmentMode_Page_HideCatalog_Id_Locator));
                 //Select 'Hide in Catalog' Preference
-                base.ClickCheckBoxById(CourseEnrollmentModePageResource.
+                base.SelectCheckBoxById(CourseEnrollmentModePageResource.
                     CourseEnrollmentMode_Page_HideCatalog_Id_Locator);
                 base.WaitForElement(By.Id(CourseEnrollmentModePageResource.
                     CourseEnrollmentMode_Page_Update_Button_Id_Locator));
@@ -321,7 +321,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.Id(CourseEnrollmentModePageResource.
                         CourseEnrollmentMode_Page_Ok_Button_Id_Locator));
                     //Click on Ok button in Alert Popup
-                    base.ClickButtonByID(CourseEnrollmentModePageResource.
+                    base.ClickButtonById(CourseEnrollmentModePageResource.
                         CourseEnrollmentMode_Page_Ok_Button_Id_Locator);
                 }
             }

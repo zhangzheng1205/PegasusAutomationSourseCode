@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.SwitchToIFrame(FrmManageTemplatePageResource.
                         FrmManageTemplate_Page_InnerLeftFrame_Id_Locator);
                     //Get Assigned To Copy Text
-                    string getAssignedtoCopyText = base.GetElementTextByID(FrmManageTemplatePageResource.
+                    string getAssignedtoCopyText = base.GetElementTextById(FrmManageTemplatePageResource.
                         FrmManageTemplate_Page_Template_Grid_Id_Locator);
                     if (getAssignedtoCopyText.Contains(FrmManageTemplatePageResource.
                        FrmManageTemplate_Page_AssignedToCopy_Text) == false) break;

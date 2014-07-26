@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the Element
             base.WaitForElement(By.Id(PaperTestUXPageResource.
                 PaperTestUX_Page_CreateQuestionAndGroup_Id_Locator));
-            base.FocusOnElementByID(PaperTestUXPageResource.
+            base.FocusOnElementById(PaperTestUXPageResource.
                 PaperTestUX_Page_CreateQuestionAndGroup_Id_Locator);
             //Get the web element
             IWebElement getQuestionLinkProperty =
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(PaperTestUXPageResource.
                     PaperTestUX_Page_SaveButton_Id_Locator));
-                base.FocusOnElementByID(PaperTestUXPageResource.
+                base.FocusOnElementById(PaperTestUXPageResource.
                     PaperTestUX_Page_SaveButton_Id_Locator);
                 IWebElement getSaveButton=base.GetWebElementPropertiesById
                     (PaperTestUXPageResource.
@@ -192,7 +192,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PaperTestUXPageResource.
                 PaperTestUX_Page_SaveAndClose_Button_Id_Locator));
             //Focus on the "Save And Close" link
-            base.FocusOnElementByID(PaperTestUXPageResource.
+            base.FocusOnElementById(PaperTestUXPageResource.
                 PaperTestUX_Page_SaveAndClose_Button_Id_Locator);
             IWebElement getSaveCloseButton = base.GetWebElementPropertiesById
                 (PaperTestUXPageResource.
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("PaperTestUXPage", "ClickOnAddButton",
             base.isTakeScreenShotDuringEntryExit);
             //Wait for Add button 
-            base.IsElementEnabledByID(PaperTestUXPageResource.
+            base.IsElementEnabledById(PaperTestUXPageResource.
                 PaperTestUX_Page_Add_Button_Id_Locator);
             //Click Add button 
             IWebElement getHtmlPropertyOfAddButton = base.
@@ -282,10 +282,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PaperTestUXPageResource.
                 PaperTestUX_Page_Random_Question_TextBox_Id_Locator));
             //Focus on text Box
-            base.FocusOnElementByID(PaperTestUXPageResource.
+            base.FocusOnElementById(PaperTestUXPageResource.
                 PaperTestUX_Page_Random_Question_TextBox_Id_Locator);
             //Enter integer value in textbox
-            base.FillTextBoxByID(PaperTestUXPageResource.
+            base.FillTextBoxById(PaperTestUXPageResource.
                 PaperTestUX_Page_Random_Question_TextBox_Id_Locator,
                 randomQuestionNumber.ToString(CultureInfo.InvariantCulture));
             //Loger Exit
@@ -592,7 +592,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(PaperTestUXPageResource.
                     PaperTestUX_Page_Pegasus_Window_Message_Id_Locator));
                 //Get confirmation Message From Application
-                getConfirmationMessage = base.GetElementTextByID(PaperTestUXPageResource.
+                getConfirmationMessage = base.GetElementTextById(PaperTestUXPageResource.
                     PaperTestUX_Page_Pegasus_Window_Message_Id_Locator);
             }
             catch (Exception e)
@@ -829,7 +829,7 @@ namespace Pegasus.Pages.UI_Pages
                     PaperTestUX_Page_MYTest_Div_ID_Locator));
                 //Get the text of Div, that contain all buttons
                 string getTextofElement = base.
-                    GetElementTextByID(PaperTestUXPageResource.
+                    GetElementTextById(PaperTestUXPageResource.
                     PaperTestUX_Page_MYTest_Div_ID_Locator).
                     Replace(Environment.NewLine, string.Empty);
                 //Match the expected Button text

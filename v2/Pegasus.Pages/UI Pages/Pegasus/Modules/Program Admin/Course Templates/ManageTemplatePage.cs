@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ManageTemplatePageResource.
                     ManageTemplate_Page_TemplateSection__DivContent_Id_Locator));
                 //To get template name if present
-                String getCourseText = base.GetElementTextByID(ManageTemplatePageResource.
+                String getCourseText = base.GetElementTextById(ManageTemplatePageResource.
                         ManageTemplate_Page_TemplateSection__DivContent_Id_Locator);
                 if (!getCourseText.Contains(courseName))
                 {
@@ -226,15 +226,15 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ManageTemplatePageResource.
                 ManageTemplate_Page_SectionDetail_TextBox_Id_Locator));
             //Clear the Text of the Text box 'Section Detail'
-            base.ClearTextByID(ManageTemplatePageResource.
+            base.ClearTextById(ManageTemplatePageResource.
                 ManageTemplate_Page_SectionDetail_TextBox_Id_Locator);
             //Enter the Entity Name
-            base.FillTextBoxByID(ManageTemplatePageResource.
+            base.FillTextBoxById(ManageTemplatePageResource.
                 ManageTemplate_Page_SectionDetail_TextBox_Id_Locator, entityName);
             base.WaitForElement(By.Id(ManageTemplatePageResource.
                 ManageTemplate_Page_Search_Button_Id_Locator));
             //Click on the Search
-            base.ClickButtonByID(ManageTemplatePageResource.
+            base.ClickButtonById(ManageTemplatePageResource.
                 ManageTemplate_Page_Search_Button_Id_Locator);
             Logger.LogMethodExit("ManageTemplatePage", "SelectTemplate",
                 base.isTakeScreenShotDuringEntryExit);
@@ -376,10 +376,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ManageTemplatePageResource.
                          ManageTemplate_Page_SectionDetail_TextBox_Id_Locator));
-            base.ClearTextByID(ManageTemplatePageResource.
+            base.ClearTextById(ManageTemplatePageResource.
                          ManageTemplate_Page_SectionDetail_TextBox_Id_Locator);
             // Fill section name in Text box
-            base.FillTextBoxByID(ManageTemplatePageResource.
+            base.FillTextBoxById(ManageTemplatePageResource.
                          ManageTemplate_Page_SectionDetail_TextBox_Id_Locator, sectionName);
             Logger.LogMethodExit("ManageTemplatePage", "EnterValueInSectionSearchTextBox",
                 base.isTakeScreenShotDuringEntryExit);
@@ -535,10 +535,10 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectCopyasSectionWindow();
                 base.WaitForElement(By.Id(ManageTemplatePageResource.
                     ManageTemplate_Page_SectionName_Textbox_Id_Locator));
-                base.ClearTextByID(ManageTemplatePageResource.
+                base.ClearTextById(ManageTemplatePageResource.
                     ManageTemplate_Page_SectionName_Textbox_Id_Locator);
                 //Enter Section Name
-                base.FillTextBoxByID(ManageTemplatePageResource.
+                base.FillTextBoxById(ManageTemplatePageResource.
                     ManageTemplate_Page_SectionName_Textbox_Id_Locator,
                     sectionName.ToString());
                 //Enter Section Start And End Date And Save
@@ -570,18 +570,18 @@ namespace Pegasus.Pages.UI_Pages
                 ManageTemplate_Page_SectionStartEndDate_Format);
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                                      AddNewSection_Page_StartDate_TextBox_Id_Locator));
-            base.ClearTextByID(AddNewSectionPageResource.
+            base.ClearTextById(AddNewSectionPageResource.
                                      AddNewSection_Page_StartDate_TextBox_Id_Locator);
             //Enter Start Date
-            base.FillTextBoxByID(AddNewSectionPageResource.
+            base.FillTextBoxById(AddNewSectionPageResource.
                                      AddNewSection_Page_StartDate_TextBox_Id_Locator,
                                      getSectionStartDate);
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                                           AddNewSection_Page_EndDate_TextBox_Id_Locator));
-            base.ClearTextByID(AddNewSectionPageResource.
+            base.ClearTextById(AddNewSectionPageResource.
                                      AddNewSection_Page_EndDate_TextBox_Id_Locator);
             //Enter End Date
-            base.FillTextBoxByID(AddNewSectionPageResource.
+            base.FillTextBoxById(AddNewSectionPageResource.
                                      AddNewSection_Page_EndDate_TextBox_Id_Locator,
                                      getSectionEndDate);
             base.WaitForElement(By.Id(ManageTemplatePageResource.

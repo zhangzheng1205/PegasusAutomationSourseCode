@@ -39,7 +39,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(VerbChartUXPageResource.
                     VerbChartUX_Page_Resource_VerbChart_Label_Id_Locator));
                 //Get Verb Chart Label
-                getVerbChartLabel = base.GetElementTextByID(VerbChartUXPageResource.
+                getVerbChartLabel = base.GetElementTextById(VerbChartUXPageResource.
                     VerbChartUX_Page_Resource_VerbChart_Label_Id_Locator);
             }
             catch (Exception e)

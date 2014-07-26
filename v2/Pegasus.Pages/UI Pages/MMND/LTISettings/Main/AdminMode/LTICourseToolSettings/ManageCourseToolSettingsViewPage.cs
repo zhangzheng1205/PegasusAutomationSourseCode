@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ManageCourseToolSettingsViewPageResource.
                     ManageCourseToolSettingsView_Page_SaveButton_Id_Locator));
                 //Click on Save Button
-                base.ClickButtonByID(ManageCourseToolSettingsViewPageResource.
+                base.ClickButtonById(ManageCourseToolSettingsViewPageResource.
                     ManageCourseToolSettingsView_Page_SaveButton_Id_Locator);
             }
             catch (Exception e)

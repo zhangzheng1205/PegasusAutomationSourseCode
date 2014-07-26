@@ -38,7 +38,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RegisterPageResource.
                     Register_Page_Enter_Course_Id_Locator));
                 //Enter Seciton Id
-                base.FillTextBoxByID(RegisterPageResource.
+                base.FillTextBoxById(RegisterPageResource.
                     Register_Page_Enter_Course_Id_Locator, sectionId);
                 base.WaitForElement(By.XPath(RegisterPageResource.
                     Register_Page_RegisterCourse_XPath_Locator));
@@ -73,12 +73,12 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Rrgister Pearson My Lab Mastering Window
                 base.SelectWindow(RegisterPageResource.
                         Register_Page_RegisterPearsonMyLabMastering_Window_Name);                
-                while (base.IsElementDisplayedByID(RegisterPageResource.
+                while (base.IsElementDisplayedById(RegisterPageResource.
                     Register_Page_StepWait_Id_Locator))
                 {
                     Thread.Sleep(Convert.ToInt32(RegisterPageResource.Register_Page_Wait_Sleep_Value));
                 }
-                string getUrl = base.CurrentUrl;
+                string getUrl = base.GetCurrentUrl;
                 if ((getUrl.Contains(RegisterPageResource.Register_Page_Pending_GetURL)))
                 {
                     //Click On Portal Url
@@ -122,11 +122,11 @@ namespace Pegasus.Pages.UI_Pages
             base.isTakeScreenShotDuringEntryExit);
             //Select Registering Pearosn My Lab Mastering Widnow            
             base.WaitForElement(By.Id(RegisterPageResource.Register_Page_StepWait_Id_Locator));
-            while (base.IsElementDisplayedByID(RegisterPageResource.Register_Page_StepWait_Id_Locator))
+            while (base.IsElementDisplayedById(RegisterPageResource.Register_Page_StepWait_Id_Locator))
             {
                 Thread.Sleep(Convert.ToInt32(RegisterPageResource.Register_Page_Wait_Sleep_Value));
             }
-            string getTheUrl = base.CurrentUrl;
+            string getTheUrl = base.GetCurrentUrl;
             if ((getTheUrl.Contains(RegisterPageResource.Register_Page_Pending_GetURL)))
             {
                 //Click On Portal URL
@@ -169,10 +169,10 @@ namespace Pegasus.Pages.UI_Pages
             this.EntertheFirstThreeAccessCodeValues();
             base.WaitForElement(By.Id(RegisterPageResource.
                 Register_Page_AccessCode_FinishButton_Id_Locator));
-            base.FocusOnElementByID(RegisterPageResource.
+            base.FocusOnElementById(RegisterPageResource.
                 Register_Page_AccessCode_FinishButton_Id_Locator);
             //Click On Finish Button
-            base.ClickButtonByID(RegisterPageResource.
+            base.ClickButtonById(RegisterPageResource.
                 Register_Page_AccessCode_FinishButton_Id_Locator);
             //Select Register Pearosn My Lab Mastering Window
             base.SelectWindow(RegisterPageResource.

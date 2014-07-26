@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
                 IWebElement selectAllCheckbox=base.GetWebElementPropertiesById(AnnouncementRecipientListUXPageResource.
                      AnnouncementRecipientListUX_Page_SelectAll_CheckBox_Id_Locator);
                 if (!selectAllCheckbox.Selected)
-                {   base.ClickCheckBoxById(AnnouncementRecipientListUXPageResource.
+                {   base.SelectCheckBoxById(AnnouncementRecipientListUXPageResource.
                     AnnouncementRecipientListUX_Page_SelectAll_CheckBox_Id_Locator);}                              
                 //Click AddRecipients Button                
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesById

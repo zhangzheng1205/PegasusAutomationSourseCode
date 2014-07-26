@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(LoginContentPageResource.
                     LoginContent_Page_Login_Button_Id_Locator));
                 //Click on Login Button
-                base.ClickButtonByID(LoginContentPageResource.
+                base.ClickButtonById(LoginContentPageResource.
                     LoginContent_Page_Login_Button_Id_Locator);
             }
             catch (Exception e)
@@ -68,10 +68,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Password Textbox
             base.WaitForElement(By.Id(LoginContentPageResource.
                 LoginContent_Page_Password_Id_Locator));
-            base.ClearTextByID(LoginContentPageResource.
+            base.ClearTextById(LoginContentPageResource.
                 LoginContent_Page_Password_Id_Locator);
             //Enter Password
-            base.FillTextBoxByID(LoginContentPageResource.
+            base.FillTextBoxById(LoginContentPageResource.
                 LoginContent_Page_Password_Id_Locator, password);
             Logger.LogMethodExit("LoginContentPage", "EnterPassword",
               base.isTakeScreenShotDuringEntryExit);
@@ -89,10 +89,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for UserName TextBox
             base.WaitForElement(By.Id(LoginContentPageResource.
                 LoginContent_Page_UserName_Id_Locator));
-            base.ClearTextByID(LoginContentPageResource.
+            base.ClearTextById(LoginContentPageResource.
                 LoginContent_Page_UserName_Id_Locator);
             //Enter UserName
-            base.FillTextBoxByID(LoginContentPageResource.
+            base.FillTextBoxById(LoginContentPageResource.
                 LoginContent_Page_UserName_Id_Locator, userName);
             Logger.LogMethodExit("LoginContentPage", "EnterUserName",
              base.isTakeScreenShotDuringEntryExit);

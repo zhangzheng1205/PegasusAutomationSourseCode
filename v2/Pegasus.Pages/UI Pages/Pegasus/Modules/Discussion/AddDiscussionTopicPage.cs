@@ -49,7 +49,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AddDiscussionTopicPageResource.
                     AddDiscussionTopicPageResource_Title_Textbox_Id_Locator));
                 //Fill the FileName text
-                base.FillTextBoxByID(AddDiscussionTopicPageResource.
+                base.FillTextBoxById(AddDiscussionTopicPageResource.
                     AddDiscussionTopicPageResource_Title_Textbox_Id_Locator,
                     newDiscussionTopicName.ToString());
                 //Fill The HTML Description
@@ -81,16 +81,16 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(AddDiscussionTopicPageResource.
                 AddDiscussionTopicPageResource_HTML_Sourse_Id_Locator));
             // Click on ShowHTML button
-            base.FocusOnElementByID(AddDiscussionTopicPageResource.
+            base.FocusOnElementById(AddDiscussionTopicPageResource.
                 AddDiscussionTopicPageResource_HTML_Sourse_Id_Locator);
             //Click the sourse link
-            base.ClickButtonByID(AddDiscussionTopicPageResource.
+            base.ClickButtonById(AddDiscussionTopicPageResource.
                 AddDiscussionTopicPageResource_HTML_Sourse_Id_Locator);
             //Wait For HTML Editor
             base.WaitForElement(By.Id(AddDiscussionTopicPageResource.
                 AddDiscussionTopicPageResource_HTML_TextArea_Id_Locator));
             // Fill Description text in HTMLEditor textbox
-            base.FillTextBoxByID(AddDiscussionTopicPageResource.
+            base.FillTextBoxById(AddDiscussionTopicPageResource.
                 AddDiscussionTopicPageResource_HTML_TextArea_Id_Locator,
                 newHTMLDiscription.ToString());
             base.SwitchToDefaultPageContent();
@@ -109,7 +109,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(AddDiscussionTopicPageResource.
                 AddDiscussionTopicPageResource_SaveClose_Button_Id_Locator));
-            base.FocusOnElementByID(AddDiscussionTopicPageResource.
+            base.FocusOnElementById(AddDiscussionTopicPageResource.
                 AddDiscussionTopicPageResource_SaveClose_Button_Id_Locator);
             //Get the web element
             IWebElement getSaveCloseButton = base.GetWebElementPropertiesById

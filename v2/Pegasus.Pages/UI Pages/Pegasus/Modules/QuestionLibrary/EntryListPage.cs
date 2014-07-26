@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EntryListPageResource.
                 EntryList_Page_EnterQuestionTitle_Id_Locator));
             //Enter Title
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EntryList_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("EntryListPage", "EnterTitleForEntryList",
                base.isTakeScreenShotDuringEntryExit);
@@ -113,15 +113,15 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EntryListPageResource.
                 EntryList_Page_ViewSource_Button_Id_Locator));
             //Click on View Source Button
-            base.ClickButtonByID(EntryListPageResource.
+            base.ClickButtonById(EntryListPageResource.
                 EntryList_Page_ViewSource_Button_Id_Locator);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EntryList_Page_EnterTextHTML_Id_Locator));
             //Enter data
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EntryList_Page_EnterTextHTML_Id_Locator, questionText);
             //Click on View Source Button
-            base.ClickButtonByID(EntryListPageResource.
+            base.ClickButtonById(EntryListPageResource.
                 EntryList_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("EntryListPage",
                 "ClickOnViewSourceAndEnterDataForEntryListQuestion",
@@ -188,22 +188,22 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EntryListPageResource.
                 EntryList_Page_EnterText_One_Id_Locator));
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EntryList_Page_EnterText_One_Id_Locator);
             //Enter First Text Value in Text Box
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EntryList_Page_EnterText_One_Id_Locator, EntryListPageResource.
                 EnterList_Page_EnterText_TextValue_One);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EntryList_Page_EnterText_two_Id_Locator));
             //Focus On Text Box
-            base.FocusOnElementByID(EntryListPageResource.
+            base.FocusOnElementById(EntryListPageResource.
                 EntryList_Page_EnterText_two_Id_Locator);
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EntryList_Page_EnterText_two_Id_Locator);
             //Enter Second Text Value in Text Box
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EntryList_Page_EnterText_two_Id_Locator, EntryListPageResource.
                 EnterList_Page_EnterText_TextValue_Two);
             logger.LogMethodExit("EntryListPage", "EnterFirstTwoTextForEntryListQuestion",
@@ -222,24 +222,24 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EntryListPageResource.
                 EntryList_Page_EnterText_three_Id_Locator));
             //Focus on Text Box
-            base.FocusOnElementByID(EntryListPageResource.
+            base.FocusOnElementById(EntryListPageResource.
                 EntryList_Page_EnterText_three_Id_Locator);
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EntryList_Page_EnterText_three_Id_Locator);
             //Enter Third Text Value in Text Box
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EntryList_Page_EnterText_three_Id_Locator, EntryListPageResource.
                 EnterList_Page_EnterText_TextValue_Three);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EntryList_Page_EnterText_Four_Id_Locator));
             //Focus on Text Box
-            base.FocusOnElementByID(EntryListPageResource.
+            base.FocusOnElementById(EntryListPageResource.
                 EntryList_Page_EnterText_Four_Id_Locator);
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EntryList_Page_EnterText_Four_Id_Locator);
             //Enter Fourth Text Value in Text Box
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EntryList_Page_EnterText_Four_Id_Locator, EntryListPageResource.
                 EnterList_Page_EnterText_TextValue_Four);
             logger.LogMethodExit("EntryListPage", "EnterLastTwoTextForEntryListQuestion",
@@ -261,19 +261,19 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_one));
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_one);
             //Enter First Answer in Text box
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_one, EntryListPageResource.
                 EnterList_Page_Answer_Text_One);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_Two));
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_Two);
             //Enter Second Answer in Text Box
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_Two, EntryListPageResource.
                 EnterList_Page_Answer_Text_Two);
             logger.LogMethodExit("EntryListPage", "EnterFirstTwoAnswerForEntryListQuestion",
@@ -291,19 +291,19 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_Three));
             //Clear Text box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_Three);
             //Enter Third Answer in Text Box
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_Three, EntryListPageResource.
                 EnterList_Page_Answer_Text_Three);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_Four));
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_Four);
             //Enter Fourth Answer in Text Box
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_Four, EntryListPageResource.
                 EnterList_Page_Answer_Text_Four);
             logger.LogMethodExit("EntryListPage", "EnterLastTwoAnswerForEntryListQuestion",
@@ -326,19 +326,19 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_one));
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_one);
             //Enter First Correct Score
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_one, EntryListPageResource.
                 EnterList_Page_CorrectScore_Value);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_two));
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_two);
             //Enter Second Correct Score
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_two, EntryListPageResource.
                 EnterList_Page_CorrectScore_Value);
             logger.LogMethodExit("EntryListPage",
@@ -358,19 +358,19 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_three));
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_three);
             //Enter Third Correct Score Value
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_three, EntryListPageResource.
                 EnterList_Page_CorrectScore_Value);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_four));
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_four);
             //Enter fourth Correct score Value
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_four, EntryListPageResource.
                 EnterList_Page_CorrectScore_Value);
             logger.LogMethodExit("EntryListPage",
@@ -394,19 +394,19 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_one));
             //Clear Text Box
-            base.ClearTextByID((EntryListPageResource.
+            base.ClearTextById((EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_one));
             //Enter First Incorrect Score Value
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_one, EntryListPageResource.
                 EnterList_Page_IncorrectScore_Value);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_two));
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_two);
             //Enter Second Incorrect Score Value
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_two, EntryListPageResource.
                 EnterList_Page_IncorrectScore_Value);
             logger.LogMethodExit("EntryListPage",
@@ -427,19 +427,19 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_three));
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_three);
             //Enter Third Incorrect Score Value
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_three, EntryListPageResource.
                 EnterList_Page_IncorrectScore_Value);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_four));
             //Clear Text Box
-            base.ClearTextByID(EntryListPageResource.
+            base.ClearTextById(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_four);
             //Enter Fourth Incorrect Score Value
-            base.FillTextBoxByID(EntryListPageResource.
+            base.FillTextBoxById(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_four, EntryListPageResource.
                 EnterList_Page_IncorrectScore_Value);
             logger.LogMethodExit("EntryListPage",

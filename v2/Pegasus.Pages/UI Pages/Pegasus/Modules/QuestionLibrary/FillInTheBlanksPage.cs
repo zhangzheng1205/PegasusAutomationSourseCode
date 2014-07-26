@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
             //Add text for blank
             base.WaitForElement(By.Id(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_TextAndBlank_Field_AtTop_ID_Locator));
-            base.FillTextBoxByID(FillInTheBlanksPageResource.
+            base.FillTextBoxById(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_TextAndBlank_Field_AtTop_ID_Locator, textToEnterInTextField);
             logger.LogMethodExit("FillInTheBlanksPage", "AddTextForQuestionAndBlankAtTop",
                 base.isTakeScreenShotDuringEntryExit);
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_Question_Label_Id_Locator));
             //Fill the Question Title
-            base.FillTextBoxByID(FillInTheBlanksPageResource.
+            base.FillTextBoxById(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_Question_Label_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("FillInTheBlanksPage", "EnterQuestionTitle",
                 base.isTakeScreenShotDuringEntryExit);

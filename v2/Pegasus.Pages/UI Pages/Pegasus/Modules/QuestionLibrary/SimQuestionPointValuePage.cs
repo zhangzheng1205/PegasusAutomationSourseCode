@@ -40,10 +40,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(SimQuestionPointValuePageResource.
                     SimQuestionPointValue_Page_Resource_Score_Textbox_Id_Locator));
                 //Clear Score Textbox
-                base.ClearTextByID(SimQuestionPointValuePageResource.
+                base.ClearTextById(SimQuestionPointValuePageResource.
                     SimQuestionPointValue_Page_Resource_Score_Textbox_Id_Locator);
                 //Enter Score
-                base.FillTextBoxByID(SimQuestionPointValuePageResource.
+                base.FillTextBoxById(SimQuestionPointValuePageResource.
                     SimQuestionPointValue_Page_Resource_Score_Textbox_Id_Locator,
                     pointValue.ToString());
                 base.WaitForElement(By.Id(SimQuestionPointValuePageResource.
@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(SimQuestionPointValuePageResource.
                     SimQuestionPointValue_Page_Resource_PointValue_Id_Locator));
                 //Get Point Value
-                getPointValue = base.GetElementTextByID(SimQuestionPointValuePageResource.
+                getPointValue = base.GetElementTextById(SimQuestionPointValuePageResource.
                     SimQuestionPointValue_Page_Resource_PointValue_Id_Locator).Substring(
                     Convert.ToInt32(SimQuestionPointValuePageResource.
                     SimQuestionPointValue_Page_Resource_Substring_Initial_Value),

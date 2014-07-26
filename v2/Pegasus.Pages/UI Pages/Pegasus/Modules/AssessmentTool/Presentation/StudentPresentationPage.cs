@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(StudentPresentationPageResource.
                     StudentPresentation_Page_AssessmentHolder_Id_Locator));
                 // Is Activity Displayed in Presentation Window
-                isActivityPresentationPageDisplayed = base.IsElementDisplayedByID
+                isActivityPresentationPageDisplayed = base.IsElementDisplayedById
                     (StudentPresentationPageResource.
                     StudentPresentation_Page_AssessmentHolder_Id_Locator);
                 //Close The Window
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
                 // wait for try again button in presentation window
                 base.WaitForElement(By.Id(StudentPresentationPageResource
                     .StudentPresentation_Page_Try_Button_Id_Locator));
-                isQuestionSubmittedSuccessfully = base.IsElementDisplayedByID
+                isQuestionSubmittedSuccessfully = base.IsElementDisplayedById
                     (StudentPresentationPageResource
                          .StudentPresentation_Page_Try_Button_Id_Locator);
                 //Click On Return To Course Button
@@ -294,7 +294,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(StudentPresentationPageResource.
                      StudentPresentation_Page_PostTest_Id_Locator));
                 //Click on Button
-                base.ClickButtonByID(StudentPresentationPageResource.
+                base.ClickButtonById(StudentPresentationPageResource.
                     StudentPresentation_Page_PostTest_Id_Locator);
                 // Wait and Select Window
                 base.WaitUntilWindowLoads(StudentPresentationPageResource
@@ -1317,9 +1317,9 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the Cursor location to display the cursor
             Mouse.Click(getFirstTextExactCursorPosition);
             //Get text to move the cursor to the Last position           
-            string getText = base.GetElementTextByID(StudentPresentationPageResource.
+            string getText = base.GetElementTextById(StudentPresentationPageResource.
                 StudentPresentation_Page_FirstText_CursorPosition_Id_Locator);
-            getText = base.GetElementTextByID(StudentPresentationPageResource.
+            getText = base.GetElementTextById(StudentPresentationPageResource.
                 StudentPresentation_Page_SecondText_CursorPosition_Id_Locator) + getText;
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPresentation_Page_Sleep_Value));
@@ -2012,7 +2012,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(StudentPresentationPageResource.
                     StudentPrsentation_Page_FeedbackText_Id_Locator));
                 //Get Feedback Text
-                getFeedbackText = base.GetElementTextByID(
+                getFeedbackText = base.GetElementTextById(
                     StudentPresentationPageResource.
                     StudentPrsentation_Page_FeedbackText_Id_Locator);
                 if (getFeedbackText.Contains(feedbackOption))

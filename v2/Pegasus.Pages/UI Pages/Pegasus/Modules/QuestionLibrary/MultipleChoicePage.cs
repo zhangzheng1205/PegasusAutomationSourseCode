@@ -44,7 +44,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(MultipleChoicePageResource.
                     MultipleChoice_Page_AddAnswer_Id_Locator));
                 //Click on Button
-                base.ClickButtonByID(MultipleChoicePageResource.
+                base.ClickButtonById(MultipleChoicePageResource.
                     MultipleChoice_Page_AddAnswer_Id_Locator);
                 base.WaitForElement(By.XPath(MultipleChoicePageResource.
                     MultipleChoice_Page_Answer_Option_Count_Xpath_Locator));
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MultipleChoicePageResource.
                 MultipleChoice_Page_EnterQuestionTitle_Id_Locator));
             //Fill the Question Title
-            base.FillTextBoxByID(MultipleChoicePageResource.
+            base.FillTextBoxById(MultipleChoicePageResource.
                 MultipleChoice_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("MultipleChoicePage", "EnterQuestionTitle",
                 base.isTakeScreenShotDuringEntryExit);
@@ -182,15 +182,15 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MultipleChoicePageResource.
                 MultipleChoice_Page_ViewSource_Button_Id_Locator));
             //Click on View Source Button
-            base.ClickButtonByID(MultipleChoicePageResource.
+            base.ClickButtonById(MultipleChoicePageResource.
                 MultipleChoice_Page_ViewSource_Button_Id_Locator);
             base.WaitForElement(By.Id(MultipleChoicePageResource.
                 MultipleChoice_Page_EnterTextHTML_Id_Locator));
             //Enter data
-            base.FillTextBoxByID(MultipleChoicePageResource.
+            base.FillTextBoxById(MultipleChoicePageResource.
                 MultipleChoice_Page_EnterTextHTML_Id_Locator, questionText);
             //Click on View Source Button
-            base.ClickButtonByID(MultipleChoicePageResource.
+            base.ClickButtonById(MultipleChoicePageResource.
                 MultipleChoice_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("MultipleChoicePage",
                 "ClickOnViewSourceAndEnterDataForMultipleChoiceQuestion",
@@ -237,10 +237,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(string.Format(MultipleChoicePageResource.
                     MultipleChoice_Page_ChoiceTextField_Id_Locator, initialCount)));
                 //Clear the Textbox
-                base.ClearTextByID(string.Format(MultipleChoicePageResource.
+                base.ClearTextById(string.Format(MultipleChoicePageResource.
                     MultipleChoice_Page_ChoiceTextField_Id_Locator, initialCount));
                 //Fill the Text Box
-                base.FillTextBoxByID(string.Format(MultipleChoicePageResource.
+                base.FillTextBoxById(string.Format(MultipleChoicePageResource.
                     MultipleChoice_Page_ChoiceTextField_Id_Locator, initialCount),
                     MultipleChoicePageResource.MultipleChoice_Page_EnterText_TextValue +
                     initialCount.ToString());

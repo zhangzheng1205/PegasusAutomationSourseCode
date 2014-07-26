@@ -141,7 +141,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PostRestServiceResource.
                 PostRestService_Page_Response_TextBox_Id_Locator));
             // Get complete response status
-            String getResponseStatus = base.GetElementTextByID(PostRestServiceResource.
+            String getResponseStatus = base.GetElementTextById(PostRestServiceResource.
                 PostRestService_Page_Response_TextBox_Id_Locator);
             //Get the service status from the response
             String[] getServiceCodeStatus = getResponseStatus.Split('>');
@@ -170,19 +170,19 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PostRestServiceResource.
                 PostRestService_Page_PostServiceURL_TextBox_Id_Locator), 10);
             //Fill Relative Url In TextBox
-            base.FillTextBoxByID(PostRestServiceResource.
+            base.FillTextBoxById(PostRestServiceResource.
                 PostRestService_Page_PostServiceURL_TextBox_Id_Locator, serviceURL);
             //Wait For Element
             base.WaitForElement(By.Id(PostRestServiceResource.
                 PostRestService_Page_JsonRequest_TextBox_Id_Locator));
             //Fill Json Request In TextBox
-            base.FillTextBoxByID(PostRestServiceResource.
+            base.FillTextBoxById(PostRestServiceResource.
                 PostRestService_Page_JsonRequest_TextBox_Id_Locator, request);
             //Wait For Element
             base.WaitForElement(By.Id(PostRestServiceResource.
                 PostRestService_Page_Post_Button_Id_Locator));
             //Click Post Button
-            base.ClickButtonByID(PostRestServiceResource.
+            base.ClickButtonById(PostRestServiceResource.
                 PostRestService_Page_Post_Button_Id_Locator);
             Logger.LogMethodExit("PostRestServicePage", "CreateCmsSSubscription",
                 true);
@@ -372,7 +372,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(PostRestServiceResource.
                     PostRestServicePage_ExternalCourseId_TextBox_Id_Locator));
                 //Get Course Text
-                getCourseId = base.GetElementTextByID(PostRestServiceResource.
+                getCourseId = base.GetElementTextById(PostRestServiceResource.
                     PostRestServicePage_ExternalCourseId_TextBox_Id_Locator);
                 //Store External courseId in Memory
                 this.StoreExternalCourseIDInMemory(getCourseId);
@@ -669,7 +669,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(PostRestServiceResource.
                     PostRestServicePage_ResponseBody_TextBox_Id_Locator));
                 //Get Response Text
-                getResponseDetails = base.GetElementTextByID(PostRestServiceResource.
+                getResponseDetails = base.GetElementTextById(PostRestServiceResource.
                     PostRestServicePage_ResponseBody_TextBox_Id_Locator);
                 //Get the ItemId
                 string getItemId = Regex.Split(getResponseDetails, PostRestServiceResource.
@@ -736,7 +736,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(PostRestServiceResource.
                     PostRestServicePage_ResponseBody_TextBox_Id_Locator));
                 //Get Response Text
-                getResponseDetails = base.GetElementTextByID(PostRestServiceResource.
+                getResponseDetails = base.GetElementTextById(PostRestServiceResource.
                     PostRestServicePage_ResponseBody_TextBox_Id_Locator);
             }
             catch (Exception e)
@@ -787,7 +787,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 Activity activity = Activity.Get(activityTypeEnum);
                 //Get Response Text
-                getResponseDetails = base.GetElementTextByID("jsonContainer");
+                getResponseDetails = base.GetElementTextById("jsonContainer");
                 getResponseDetails = getResponseDetails.Substring(17);
                 //Get the ItemId
                 string[] getItemId = Regex.Split(getResponseDetails, "},{");

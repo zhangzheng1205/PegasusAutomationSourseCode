@@ -218,7 +218,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             IWebElement getSubtabname = 
                 base.GetWebElementPropertiesById(CommonStepsResource.
                 CommonSteps_Grades_Subtab_Id_Locator);
-            base.FocusOnElementByID(CommonStepsResource.
+            base.FocusOnElementById(CommonStepsResource.
                 CommonSteps_Grades_Subtab_Id_Locator);
             base.ClickByJavaScriptExecutor(getSubtabname);           
             Logger.LogMethodExit("CommonSteps", "SelectGradesSubtab",

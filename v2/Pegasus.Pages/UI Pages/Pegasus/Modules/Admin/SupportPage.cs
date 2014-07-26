@@ -40,7 +40,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(SupportPageResource.
                     Support_Page_Resource_Course_Id_Label_Id_Locator));
                 //Get Pegasus Course Id
-                string getPegasusCourseId = base.GetElementTextByID(SupportPageResource.
+                string getPegasusCourseId = base.GetElementTextById(SupportPageResource.
                     Support_Page_Resource_Course_Id_Label_Id_Locator);
                 string[] courseId = getPegasusCourseId.Split(Convert.ToChar(SupportPageResource.
                     Support_Page_Resource_Split_Value));

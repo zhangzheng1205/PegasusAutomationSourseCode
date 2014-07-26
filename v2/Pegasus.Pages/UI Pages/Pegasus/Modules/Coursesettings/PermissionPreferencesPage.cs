@@ -40,7 +40,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_PerformanceButton_Id_Locator));
                 //Click on Performance Expand Button
-                base.ClickButtonByID(PermissionPreferencesPageResource.
+                base.ClickButtonById(PermissionPreferencesPageResource.
                     PermissionPreferencesPage_Resource_PerformanceButton_Id_Locator);
                 //Enable Performance Permission Preferences
                 this.EnablePerformancePermissionPreferences();
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(PermissionPreferencesPageResource.
                     PermissionPreferencesPage_Resource_SavePreferences_Id_Locator));
                 //Click on Save Preferences
-                base.ClickButtonByID(PermissionPreferencesPageResource.
+                base.ClickButtonById(PermissionPreferencesPageResource.
                     PermissionPreferencesPage_Resource_SavePreferences_Id_Locator);
             }
             catch (Exception e)
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_ShowHideContent_Checkbox_Id_Locator))
             {
                 //Enable show/Hide Content in MyCourse Permission
-                base.ClickCheckBoxById(PermissionPreferencesPageResource.
+                base.SelectCheckBoxById(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_ShowHideContent_Checkbox_Id_Locator);
             }
             logger.LogMethodExit("PermissionPreferencesPage","EnableActivityPermissionPreferences",
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_ViewGradebook_Checkbox_Id_Locator))
             {
                 //Enable View Gradebook Permission
-                base.ClickCheckBoxById(PermissionPreferencesPageResource.
+                base.SelectCheckBoxById(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_ViewGradebook_Checkbox_Id_Locator);
             }
             logger.LogMethodExit("PermissionPreferencesPage","EnableGradebookPermissionPreferences",
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_ActivityResult_Checkbox_Id_Locator))
             {
                 //Enable Activity Results by Student Permission
-                base.ClickCheckBoxById(PermissionPreferencesPageResource.
+                base.SelectCheckBoxById(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_ActivityResult_Checkbox_Id_Locator);
             }
             base.WaitForElement(By.Id(PermissionPreferencesPageResource.
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_StudentResult_Checkbox_Id_Locator))
             {
                 //Enable Student Results by Activity Permission
-                base.ClickCheckBoxById(PermissionPreferencesPageResource.
+                base.SelectCheckBoxById(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_StudentResult_Checkbox_Id_Locator);
             }
             base.WaitForElement(By.Id(PermissionPreferencesPageResource.
@@ -158,7 +158,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_StudyPlanResults_Checkbox_Id_Locator))
             {
                 //Enable Study Plan Results Permission
-                base.ClickCheckBoxById(PermissionPreferencesPageResource.
+                base.SelectCheckBoxById(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_StudyPlanResults_Checkbox_Id_Locator);
             }
             base.WaitForElement(By.Id(PermissionPreferencesPageResource.
@@ -167,7 +167,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_AssignmentDetails_Checkbox_Id_Locator))
             {
                 //Enable Assignment Details Permission
-                base.ClickCheckBoxById(PermissionPreferencesPageResource.
+                base.SelectCheckBoxById(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_AssignmentDetails_Checkbox_Id_Locator);
             }            
             logger.LogMethodExit("PermissionPreferencesPage","EnablePerformancePermissionPreferences",
@@ -186,7 +186,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_OthersExpand_Button_Id_Locator));
             //Click on 'Others' Expand Button
-            base.ClickButtonByID(PermissionPreferencesPageResource.
+            base.ClickButtonById(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_OthersExpand_Button_Id_Locator);
             base.WaitForElement(By.Id(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_QuestionAnalysis_Checkbox_Id_Locator));
@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_QuestionAnalysis_Checkbox_Id_Locator))
             {
                 //Enable Question Analysis Permission
-                base.ClickCheckBoxById(PermissionPreferencesPageResource.
+                base.SelectCheckBoxById(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_QuestionAnalysis_Checkbox_Id_Locator);
             }
             logger.LogMethodExit("PermissionPreferencesPage",
@@ -218,7 +218,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_ViewStudentSubmission_Checkbox_Id_Locator))
             {
                 //Enable View Student Submission Permission
-                base.ClickCheckBoxById(PermissionPreferencesPageResource.
+                base.SelectCheckBoxById(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_ViewStudentSubmission_Checkbox_Id_Locator);
             }
             //Wait for the element Download and Print Student Submission Permission
@@ -228,7 +228,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_DownloadPrintStudentSubmission_Checkbox_Id_Locator))
             {
                 //Enable Download and Print Student Submission Permission
-                base.ClickCheckBoxById(PermissionPreferencesPageResource.
+                base.SelectCheckBoxById(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_DownloadPrintStudentSubmission_Checkbox_Id_Locator);
             }
             logger.LogMethodExit("PermissionPreferencesPage",
@@ -253,7 +253,7 @@ namespace Pegasus.Pages.UI_Pages
                     PermissionPreferencesPage_Resource_ScheduleActivities_Permission_Id_Locator))
                 {
                     //Enable 'Schedule Activities' Permission Preferences
-                    base.ClickCheckBoxById(PermissionPreferencesPageResource.
+                    base.SelectCheckBoxById(PermissionPreferencesPageResource.
                     PermissionPreferencesPage_Resource_ScheduleActivities_Permission_Id_Locator);
                 }
             }

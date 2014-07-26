@@ -54,9 +54,9 @@ namespace Pegasus.Pages.UI_Pages
                 //Enter Asset Name 
                 base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_SearchTextBox_Id_Locator));
-                base.ClearTextByID(CalendarDefaultGlobalUXPageResource.
+                base.ClearTextById(CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_SearchTextBox_Id_Locator);
-                base.FillTextBoxByID(CalendarDefaultGlobalUXPageResource.
+                base.FillTextBoxById(CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_SearchTextBox_Id_Locator, activityName);
                 //Click on Search Button
                 base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource.
@@ -289,24 +289,24 @@ namespace Pegasus.Pages.UI_Pages
             // Enter description
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
              .CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox));
-            base.FillTextBoxByID(CalendarDefaultGlobalUXPageResource
+            base.FillTextBoxById(CalendarDefaultGlobalUXPageResource
              .CalendarDefaultGlobalUX_Page_BlockOutday_Description_Textbox
              , CalendarDefaultGlobalUXPageResource
              .CalendarDefaultGlobalUX_Page_BlockOutday_Description);
             // Classes affeceted drop down
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
              .CalendarDefaultGlobalUX_Page_ClassesAffected_TriangleButton));
-            base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
              .CalendarDefaultGlobalUX_Page_ClassesAffected_TriangleButton);
             // Click on all check box
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
              .CalendarDefaultGlobalUX_Page_CheckboxAll_ID));
-            base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
              .CalendarDefaultGlobalUX_Page_CheckboxAll_ID);
             // Select ok button
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
              .CalendarDefaultGlobalUX_Page_ClassesAffected_OkButton_Id));
-            base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
              .CalendarDefaultGlobalUX_Page_ClassesAffected_OkButton_Id);
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "ConfigureBlockOutDay",
         base.isTakeScreenShotDuringEntryExit);
@@ -331,14 +331,14 @@ namespace Pegasus.Pages.UI_Pages
                 CalendarDefaultGlobalUXPageResource
             .CalendarDefaultGlobalUX_Page_DateFormat);
             // Clear and enter start date
-            base.ClearTextByID(CalendarDefaultGlobalUXPageResource
+            base.ClearTextById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_BlockOut_StartDate_Id);
-            base.FillTextBoxByID(CalendarDefaultGlobalUXPageResource
+            base.FillTextBoxById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_BlockOut_StartDate_Id, getStartDate);
             // Clear and enter End date
-            base.ClearTextByID(CalendarDefaultGlobalUXPageResource
+            base.ClearTextById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_BlockOut_EndDate_Id);
-            base.FillTextBoxByID(CalendarDefaultGlobalUXPageResource
+            base.FillTextBoxById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_BlockOut_EndDate_Id, getEndDate);
             // Configure schedule class set up on the calendar light box
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "ConfigureBlockOutDate",
@@ -369,9 +369,9 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
             .CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator));
             // Enter the display name
-            base.ClearTextByID(CalendarDefaultGlobalUXPageResource
+            base.ClearTextById(CalendarDefaultGlobalUXPageResource
            .CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator);
-            base.FillTextBoxByID(CalendarDefaultGlobalUXPageResource
+            base.FillTextBoxById(CalendarDefaultGlobalUXPageResource
            .CalendarDefaultGlobalUX_Page_DisplayName_Id_Locator, CalendarDefaultGlobalUXPageResource
             .CalendarDefaultGlobalUX_Page_DisplayNameText_Value);
             // Select order in order drop down
@@ -435,12 +435,12 @@ namespace Pegasus.Pages.UI_Pages
                 // Wait and click on the save calendar button
                 base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                     .CalendarDefaultGlobalUX_Page_SaveCalendar_Button_Id));
-                base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+                base.ClickButtonById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_SaveCalendar_Button_Id);
                 // Click on exit button
                 base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_ExitButton_Id));
-                base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+                base.ClickButtonById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_ExitButton_Id);
             }
             catch (Exception e)
@@ -532,30 +532,30 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_MondayLabel_Id));
             // Click on monday 
-            base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_MondayLabel_Id);
             // Click on Tuesday 
-            base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
               .CalendarDefaultGlobalUX_Page_TuesdayLabel_Id);
             // Click on wednesday
-            base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
               .CalendarDefaultGlobalUX_Page_WednesdayLabel_Id);
             // Click on thursday
-            base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
               .CalendarDefaultGlobalUX_Page_ThursdayLabel_Id);
             // Click on Friday
-            base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
               .CalendarDefaultGlobalUX_Page_FridayLabel_Id);
             // Click on Saturday
-            base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
               .CalendarDefaultGlobalUX_Page_SaturdayLabel_Id);
             // Click on Sunday
-            base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
               .CalendarDefaultGlobalUX_Page_SundayLabel_Id);
             // Wait and click on the important dates button
             base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
             .CalendarDefaultGlobalUX_Page_ImportantDatesButton_Id_Locator));
-            base.ClickButtonByID(CalendarDefaultGlobalUXPageResource
+            base.ClickButtonById(CalendarDefaultGlobalUXPageResource
             .CalendarDefaultGlobalUX_Page_ImportantDatesButton_Id_Locator);
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "ConfigureClassesPeriods",
                  base.isTakeScreenShotDuringEntryExit);
@@ -576,7 +576,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Selects Window and Switch to Frame
                 this.SelectWindowAndSwitchToFrame();
                 //Get all the Asset Names
-                string getAssetNames = base.GetElementTextByID(
+                string getAssetNames = base.GetElementTextById(
                     CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_Div_Id_Locator);
                 if (getAssetNames.Contains(CalendarDefaultGlobalUXPageResource.
@@ -795,7 +795,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource
                 .CalendarDefaultGlobalUX_Page_CalendarTitleHeader_Id));
                 // get the calendar title text 
-                getCalendarTitle = base.GetElementTextByID
+                getCalendarTitle = base.GetElementTextById
                       (CalendarDefaultGlobalUXPageResource
                       .CalendarDefaultGlobalUX_Page_CalendarTitleHeader_Id);
                 base.SwitchToDefaultPageContent();

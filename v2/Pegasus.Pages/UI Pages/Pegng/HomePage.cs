@@ -173,7 +173,7 @@ namespace Pegasus.Pages.UI_Pages
                         //Click on User Profile imagelink
                         base.WaitForElement(By.Id(HomePageResource.
                             HomePage_UserProfile_Image_Id_Locator));
-                        base.FocusOnElementByID(HomePageResource.
+                        base.FocusOnElementById(HomePageResource.
                             HomePage_UserProfile_Image_Id_Locator);
                         //Get Button Property
                         IWebElement getUserProfileButtonProperty = base.GetWebElementPropertiesById(HomePageResource.
@@ -373,10 +373,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Select the window name
                 base.WaitUntilWindowLoads(HomePageResource.Home_Page_Home_Window_Title);
                 base.SelectWindow(HomePageResource.Home_Page_Home_Window_Title);
-                base.FocusOnElementByID(HomePageResource.
+                base.FocusOnElementById(HomePageResource.
                     Home_Page_Product_AddButton_Id_Locator);
                 //Click on the "Add" button
-                base.ClickButtonByID(HomePageResource.
+                base.ClickButtonById(HomePageResource.
                     Home_Page_Product_AddButton_Id_Locator);
             }
             catch (Exception e)
@@ -461,15 +461,15 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
-                base.FocusOnElementByID(HomePageResource.
+                base.FocusOnElementById(HomePageResource.
                        Home_Page_Cancel_Button_Id_Locator);
                 //Click the "Cancel" button
-                base.ClickButtonByID(HomePageResource.
+                base.ClickButtonById(HomePageResource.
                     Home_Page_Cancel_Button_Id_Locator);
-                base.FocusOnElementByID(HomePageResource.
+                base.FocusOnElementById(HomePageResource.
                     Home_Page_YesCancel_Button_Id_Locator);
                 //Click on the"Yes,Cancel" button
-                base.ClickButtonByID(HomePageResource.
+                base.ClickButtonById(HomePageResource.
                     Home_Page_YesCancel_Button_Id_Locator);
             }
             catch (Exception e)
@@ -535,7 +535,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Button
                 base.WaitForElement(By.Id(HomePageResource.
                     HomePage_UserProfile_Image_Id_Locator));
-                base.ClickButtonByID(HomePageResource.
+                base.ClickButtonById(HomePageResource.
                     HomePage_UserProfile_Image_Id_Locator);
                 //Click on Sign Out Link
                 base.WaitForElement(By.Id(HomePageResource.
@@ -567,7 +567,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Button
                 base.WaitForElement(By.Id(HomePageResource.
                     HomePage_DownArrowLink_Id_locator));
-                base.ClickButtonByID(HomePageResource.
+                base.ClickButtonById(HomePageResource.
                     HomePage_DownArrowLink_Id_locator);
                 //Click on Sign Out Link
                 base.WaitForElement(By.PartialLinkText(linkSignOut));
@@ -646,7 +646,7 @@ namespace Pegasus.Pages.UI_Pages
 
             SelectLightBoxFrame();
             base.WaitForElement(By.Id(HomePageResource.HomePage_WelcomeMessage_Div_Id_Locator));
-            welcomeMessage = base.GetElementTextByID(
+            welcomeMessage = base.GetElementTextById(
                 HomePageResource.HomePage_WelcomeMessage_Div_Id_Locator);
 
             logger.LogMethodExit("HomePage", "GetWelcomeMessage",
@@ -666,7 +666,7 @@ namespace Pegasus.Pages.UI_Pages
 
             SelectLightBoxFrame();
             base.WaitForElement(By.Id(HomePageResource.HomePage_WelcomeBanner_Img_Id_Locator));
-            if (base.IsElementDisplayedByID(HomePageResource.HomePage_WelcomeBanner_Img_Id_Locator))
+            if (base.IsElementDisplayedById(HomePageResource.HomePage_WelcomeBanner_Img_Id_Locator))
             {
                 IWebElement bannerImage = base.GetWebElementPropertiesById(
                     HomePageResource.HomePage_WelcomeBanner_Img_Id_Locator);
@@ -691,7 +691,7 @@ namespace Pegasus.Pages.UI_Pages
 
             SelectLightBoxFrame();
             base.WaitForElement(By.Id(HomePageResource.HomePage_WelcomeMessage_Button_Id_Locator));
-            welcomeMessageButtonText = base.GetElementTextByID(HomePageResource.HomePage_WelcomeMessage_Button_Id_Locator);
+            welcomeMessageButtonText = base.GetElementTextById(HomePageResource.HomePage_WelcomeMessage_Button_Id_Locator);
 
             logger.LogMethodExit("HomePage", "GetWelcomeMessageButtonText",
               base.isTakeScreenShotDuringEntryExit);
@@ -727,7 +727,7 @@ namespace Pegasus.Pages.UI_Pages
             SelectLightBoxFrame();
             base.WaitForElement(By.Id(
                 HomePageResource.HomePage_WelcomeMessage_Button_Id_Locator));
-            base.ClickButtonByID(HomePageResource
+            base.ClickButtonById(HomePageResource
                 .HomePage_WelcomeMessage_Button_Id_Locator);
 
             logger.LogMethodExit("HomePage", "ClickWelcomeMessageBoxNavigationButton",

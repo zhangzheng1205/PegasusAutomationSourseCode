@@ -254,7 +254,7 @@ namespace Pegasus.Pages
                 base.WaitForElement(By.Id(RptAssessmentAllStudentsPageResource.
                     RptAssessmentAllStudent_Page_ManualGradeScore_Id_Locator));
                 //Get Manually Graded Score 
-                getManuallyGradedScore = base.GetElementTextByID(RptAssessmentAllStudentsPageResource.
+                getManuallyGradedScore = base.GetElementTextById(RptAssessmentAllStudentsPageResource.
                     RptAssessmentAllStudent_Page_ManualGradeScore_Id_Locator);
                 string[] activityScore = getManuallyGradedScore.Split(
                     Convert.ToChar(RptAssessmentAllStudentsPageResource.

@@ -39,9 +39,9 @@ namespace Pegasus.Pages.UI_Pages
                 // Enter the due date in due date text box
                 base.WaitForElement(By.Id(AssignContentPageResource
                .AssignContent_Page_DueDate_TextBox_Id_Locator));
-                base.ClearTextByID(AssignContentPageResource
+                base.ClearTextById(AssignContentPageResource
                .AssignContent_Page_DueDate_TextBox_Id_Locator);
-                base.FillTextBoxByID(AssignContentPageResource
+                base.FillTextBoxById(AssignContentPageResource
                 .AssignContent_Page_DueDate_TextBox_Id_Locator, getDueDate);
                 // Click on save and close button
                 base.WaitForElement(By.CssSelector(AssignContentPageResource
@@ -130,12 +130,12 @@ namespace Pegasus.Pages.UI_Pages
                 //Check the Assignd Radio Button
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_RadioButton_Assigned_Id_Locator));
-                base.ClickButtonByID(AssignContentPageResource.
+                base.ClickButtonById(AssignContentPageResource.
                     AssignContent_Page_RadioButton_Assigned_Id_Locator);
                 //Click on the Save button
-                base.FocusOnElementByID(AssignContentPageResource.
+                base.FocusOnElementById(AssignContentPageResource.
                     AssignContent_Page_Button_SaveAndAssign_Id_Locator);
-                base.ClickButtonByID(AssignContentPageResource.
+                base.ClickButtonById(AssignContentPageResource.
                     AssignContent_Page_Button_SaveAndAssign_Id_Locator);
                 //Check for the Window to Close
                 base.IsPopUpClosed(Convert.ToInt32(AssignContentPageResource.
@@ -241,7 +241,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_SetAvailabilityDateRange_Radiobutton_Id_Locator));
                 //Select Set Avalability Date Range Radiobutton
-                base.ClickButtonByID(AssignContentPageResource.
+                base.ClickButtonById(AssignContentPageResource.
                     AssignContent_Page_SetAvailabilityDateRange_Radiobutton_Id_Locator);
             }
             catch (Exception e)
@@ -379,7 +379,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait For Element
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_SetEndDateAsDueDate_Checkbox_Id_Locator));
-                if (base.IsElementEnabledByID(AssignContentPageResource.
+                if (base.IsElementEnabledById(AssignContentPageResource.
                     AssignContent_Page_SetEndDateAsDueDate_Checkbox_Id_Locator))
                 {
                     isElementEnabled = true;
@@ -566,7 +566,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_Text_Id_Locator));
                 //Get Text
-                getText = base.GetElementTextByID(AssignContentPageResource.
+                getText = base.GetElementTextById(AssignContentPageResource.
                     AssignContent_Page_Text_Id_Locator);
             }
             catch (Exception e)
@@ -687,7 +687,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_SelectedFrame_Content_Id_Locator));
                 //Get Content
-                getContent = base.GetElementTextByID(AssignContentPageResource.
+                getContent = base.GetElementTextById(AssignContentPageResource.
                     AssignContent_Page_SelectedFrame_Content_Id_Locator);
             }
             catch (Exception e)
@@ -801,7 +801,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Check the Assignd Radio Button
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_RadioButton_Assigned_Id_Locator));
-                base.ClickButtonByID(AssignContentPageResource.
+                base.ClickButtonById(AssignContentPageResource.
                     AssignContent_Page_RadioButton_Assigned_Id_Locator);
             }
             catch (Exception e)
@@ -832,14 +832,14 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_SetAvailabilityDateRange_Radiobutton_Id_Locator));
                 //Select Set Avalability Date Range Radiobutton
-                base.ClickButtonByID(AssignContentPageResource.
+                base.ClickButtonById(AssignContentPageResource.
                     AssignContent_Page_SetAvailabilityDateRange_Radiobutton_Id_Locator);
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_FromDate_TextField_Id_Locator));
-                base.ClearTextByID(AssignContentPageResource.
+                base.ClearTextById(AssignContentPageResource.
                     AssignContent_Page_FromDate_TextField_Id_Locator);
                 //Enter Current Date
-                base.FillTextBoxByID(AssignContentPageResource.
+                base.FillTextBoxById(AssignContentPageResource.
                     AssignContent_Page_FromDate_TextField_Id_Locator, getCurrentDate);
             }
             catch (Exception e)
@@ -867,12 +867,12 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_First_Checkbox_Id_Locator));
                 //Select 'Do Not Provide An End Date' Option
-                base.ClickCheckBoxById(AssignContentPageResource.
+                base.SelectCheckBoxById(AssignContentPageResource.
                     AssignContent_Page_First_Checkbox_Id_Locator);
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_Button_SaveAndAssign_Id_Locator));
                 //Click on 'Save' Button
-                base.ClickButtonByID(AssignContentPageResource.
+                base.ClickButtonById(AssignContentPageResource.
                     AssignContent_Page_Button_SaveAndAssign_Id_Locator);
             }
             catch (Exception e)
@@ -910,15 +910,15 @@ namespace Pegasus.Pages.UI_Pages
                     }
                     base.WaitForElement(By.Id(AssignContentPageResource.AssignContent_Page_DueDate_TextBox_Id_Locator));
                     // select current date
-                    base.FillTextBoxByID(AssignContentPageResource.AssignContent_Page_DueDate_TextBox_Id_Locator,
+                    base.FillTextBoxById(AssignContentPageResource.AssignContent_Page_DueDate_TextBox_Id_Locator,
                         DateTime.Now.ToString(AssignContentPageResource.AssignContent_Page_DateFormat));
-                    base.ClearTextByID(AssignContentPageResource.AssignContent_Page_Hours_TextBox_Id_Locator);
+                    base.ClearTextById(AssignContentPageResource.AssignContent_Page_Hours_TextBox_Id_Locator);
                     // enter current hours
-                    base.FillTextBoxByID(AssignContentPageResource.AssignContent_Page_Hours_TextBox_Id_Locator,
+                    base.FillTextBoxById(AssignContentPageResource.AssignContent_Page_Hours_TextBox_Id_Locator,
                         DateTime.Now.Hour.ToString());
-                    base.ClearTextByID(AssignContentPageResource.AssignContent_Page_Minutes_TextBox_Id_Locator);
+                    base.ClearTextById(AssignContentPageResource.AssignContent_Page_Minutes_TextBox_Id_Locator);
                     // enter after 3 minutes from current minute value
-                    base.FillTextBoxByID(AssignContentPageResource.AssignContent_Page_Minutes_TextBox_Id_Locator,
+                    base.FillTextBoxById(AssignContentPageResource.AssignContent_Page_Minutes_TextBox_Id_Locator,
                         DateTime.Now.AddMinutes(4).Minute.ToString());
                     // click on save button
                     base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText

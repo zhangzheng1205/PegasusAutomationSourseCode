@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
             //Add Answer
             base.WaitForElement(By.Id(FileUploadPageResource.
                 FileUploadPage_Add_Edit_Answer_Tab_Id_Locator));
-            base.ClickButtonByID(FileUploadPageResource.
+            base.ClickButtonById(FileUploadPageResource.
                 FileUploadPage_Add_Edit_Answer_Tab_Id_Locator);
             logger.LogMethodExit("FileUploadPage", "ClilckOnAddEditAnswer",
                 base.isTakeScreenShotDuringEntryExit);
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(FileUploadPageResource.
                 FileUploadPage_SaveAndReturn_Id_Locator));
             //Click On Save and Return Button
-            base.ClickButtonByID(FileUploadPageResource.
+            base.ClickButtonById(FileUploadPageResource.
                 FileUploadPage_SaveAndReturn_Id_Locator);
             logger.LogMethodExit("FileUploadPage", "ClickOnSaveAndReturnButton",
                 base.isTakeScreenShotDuringEntryExit);
@@ -127,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(FileUploadPageResource.
                 FileUploadPage_Question_MaxScore_Id_Locator));
             //Enter Score For Question
-            base.FillTextBoxByID(FileUploadPageResource.
+            base.FillTextBoxById(FileUploadPageResource.
                 FileUploadPage_Question_MaxScore_Id_Locator, FileUploadPageResource.
                 FileUploadPage_Question_MaxScore_Value);
             logger.LogMethodExit("FileUploadPage", "EnterScoreForQuestion",
@@ -146,7 +146,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the Question Text Area
             base.WaitForElement(By.Id(FileUploadPageResource.
                 FileUploadPage_Question_HTML_TextArea_Id_Locator));
-            base.FillTextBoxByID(FileUploadPageResource.
+            base.FillTextBoxById(FileUploadPageResource.
                 FileUploadPage_Question_HTML_TextArea_Id_Locator, questionText);
             logger.LogMethodExit("FileUploadPage", "EnterQuestionText",
                 base.isTakeScreenShotDuringEntryExit);
@@ -163,19 +163,19 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(FileUploadPageResource.
                 FileUploadPage_CharacterPallette_a_Id_Locator));
             //Add a character
-            base.ClickButtonByID(FileUploadPageResource.
+            base.ClickButtonById(FileUploadPageResource.
                 FileUploadPage_CharacterPallette_a_Id_Locator);
             //Add e character
-            base.ClickButtonByID(FileUploadPageResource.
+            base.ClickButtonById(FileUploadPageResource.
                 FileUploadPage_CharacterPallette_e_Id_Locator);
             //Add i character
-            base.ClickButtonByID(FileUploadPageResource.
+            base.ClickButtonById(FileUploadPageResource.
                 FileUploadPage_CharacterPallette_i_Id_Locator);
             //Add o character
-            base.ClickButtonByID(FileUploadPageResource.
+            base.ClickButtonById(FileUploadPageResource.
                 FileUploadPage_CharacterPallette_o_Id_Locator);
             //Add u character
-            base.ClickButtonByID(FileUploadPageResource.
+            base.ClickButtonById(FileUploadPageResource.
                 FileUploadPage_CharacterPallette_u_Id_Locator);
             logger.LogMethodExit("FileUploadPage", "AddCharactersFromCharacterPallette",
                 base.isTakeScreenShotDuringEntryExit);
@@ -198,7 +198,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the ViewSource button
             base.WaitForElement(By.Id(FileUploadPageResource.
                 FileUploadPage_HTMLEditor_ViewSource_Button_Id_Locator));
-            base.ClickButtonByID(FileUploadPageResource.
+            base.ClickButtonById(FileUploadPageResource.
                 FileUploadPage_HTMLEditor_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("FileUploadPage", "ClickHTMLViewSourceButton",
                 base.isTakeScreenShotDuringEntryExit);
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(FileUploadPageResource.
                 FileUploadPage_Question_Label_Id_Locator));
             //Fill the Question Title
-            base.FillTextBoxByID(FileUploadPageResource.
+            base.FillTextBoxById(FileUploadPageResource.
                 FileUploadPage_Question_Label_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("FileUploadPage", "EnterQuestionTitle",
                 base.isTakeScreenShotDuringEntryExit);

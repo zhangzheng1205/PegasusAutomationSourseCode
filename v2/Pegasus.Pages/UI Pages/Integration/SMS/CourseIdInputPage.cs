@@ -77,12 +77,12 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CourseIdInputPageResource.
                     CourseIdInput_Page_InputCourse_Id_Locator));
                 //Enter Course Id
-                base.FillTextBoxByID(CourseIdInputPageResource.
+                base.FillTextBoxById(CourseIdInputPageResource.
                     CourseIdInput_Page_InputCourse_Id_Locator, courseId);
                 base.WaitForElement(By.Id(CourseIdInputPageResource.
                     CourseIdInput_Page_FindCourse_Id_Locator));
                 //Click on Find Course Button
-                base.ClickButtonByID(CourseIdInputPageResource.
+                base.ClickButtonById(CourseIdInputPageResource.
                     CourseIdInput_Page_FindCourse_Id_Locator);
                 //Wait for the element
                 base.WaitForElement(By.Id(CourseIdInputPageResource.
@@ -116,24 +116,24 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait For Access Code button
                 base.WaitForElement(By.Id(CourseIdInputPageResource.
                         CourseIdInput_Page_Text_AccessCode_Id_Locator));
-                base.FocusOnElementByID(CourseIdInputPageResource.
+                base.FocusOnElementById(CourseIdInputPageResource.
                     CourseIdInput_Page_Text_AccessCode_Id_Locator);
                 //Click on Access Code Button
-                base.ClickButtonByID(CourseIdInputPageResource.
+                base.ClickButtonById(CourseIdInputPageResource.
                     CourseIdInput_Page_Text_AccessCode_Id_Locator);
                 base.WaitForElement(By.Id(CourseIdInputPageResource.
                     CourseIdInput_Page_Input_AccessCode_Id_Locator));
                 //Enter Access Code
-                base.FillTextBoxByID(CourseIdInputPageResource.
+                base.FillTextBoxById(CourseIdInputPageResource.
                     CourseIdInput_Page_Input_AccessCode_Id_Locator,
                     getSMSMMNDStudent);
                 //Wait for Next Button
                 base.WaitForElement(By.Id(CourseIdInputPageResource.
                     CourseIdInput_Page_NextButton_Id_Locator));
-                base.FocusOnElementByID(CourseIdInputPageResource.
+                base.FocusOnElementById(CourseIdInputPageResource.
                     CourseIdInput_Page_NextButton_Id_Locator);
                 //Click on Next Button
-                base.ClickButtonByID(CourseIdInputPageResource.
+                base.ClickButtonById(CourseIdInputPageResource.
                     CourseIdInput_Page_NextButton_Id_Locator);
             }
             catch (Exception e)
@@ -160,15 +160,15 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for Course Id Text
                 base.WaitForElement(By.Id(CourseIdInputPageResource.
                     CourseIdInput_Page_CourseId_Text_Id_Locator));
-                base.ClearTextByID(CourseIdInputPageResource.
+                base.ClearTextById(CourseIdInputPageResource.
                     CourseIdInput_Page_CourseId_Text_Id_Locator);
                 //Fill Course Id
-                base.FillTextBoxByID(CourseIdInputPageResource.
+                base.FillTextBoxById(CourseIdInputPageResource.
                     CourseIdInput_Page_CourseId_Text_Id_Locator, courseId);
                 base.WaitForElement(By.Id(CourseIdInputPageResource.
                     CourseIdInput_Page_CourseId_Continue_Button_Id_Locator));
                 //Click on Continue Button
-                base.ClickButtonByID(CourseIdInputPageResource.
+                base.ClickButtonById(CourseIdInputPageResource.
                     CourseIdInput_Page_CourseId_Continue_Button_Id_Locator);
             }
             catch (Exception e)

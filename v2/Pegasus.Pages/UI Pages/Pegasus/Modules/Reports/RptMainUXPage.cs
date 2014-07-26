@@ -883,7 +883,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptMainUXPageResource.
                     RptMainUX_Page_CourseReports_Table_Id_Locator));
                 //Get Reports Text
-                getReportText = base.GetElementTextByID(RptMainUXPageResource.
+                getReportText = base.GetElementTextById(RptMainUXPageResource.
                     RptMainUX_Page_CourseReports_Table_Id_Locator);
                 //Get Status of Enabled Permissions Status in Report
                 getEnabledOptionsStatus = getReportText.Contains(RptMainUXPageResource.

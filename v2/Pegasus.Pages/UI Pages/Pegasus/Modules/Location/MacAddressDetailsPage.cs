@@ -232,7 +232,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_InputComputerName_Id_locator));
             //Enter Computer Name
-            base.FillTextBoxByID(MacAddressDetailsPageResource.
+            base.FillTextBoxById(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_InputComputerName_Id_locator, computerName.ToString());
             logger.LogMethodExit("MacAddressDetailsPage", "EnterComputerName",
               base.isTakeScreenShotDuringEntryExit);
@@ -341,7 +341,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_InputLocation_Id_Locator));
             //Fill Location Name
-            base.FillTextBoxByID(MacAddressDetailsPageResource.
+            base.FillTextBoxById(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_InputLocation_Id_Locator, locatioName.ToString());
             logger.LogMethodExit("MacAddressDetailsPage", "EnterLocation",
               base.isTakeScreenShotDuringEntryExit);

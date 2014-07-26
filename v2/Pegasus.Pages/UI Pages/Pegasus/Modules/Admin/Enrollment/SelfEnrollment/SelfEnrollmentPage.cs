@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToIFrameByWebElement(frame);
                 base.WaitForElement(By.Id(SelfEnrollmentPageResource.
                     SelfEnrollment_Page_CourseID_TextBox_Id_Locator));
-                base.ClearTextByID(SelfEnrollmentPageResource.
+                base.ClearTextById(SelfEnrollmentPageResource.
                     SelfEnrollment_Page_CourseID_TextBox_Id_Locator);
                 //Get Course From Memory
                 Course course = Course.Get(courseTypeEnum);
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
                     case Course.CourseTypeEnum.HedMilAcceptanceSIM5ProgramCourse:
                     case Course.CourseTypeEnum.MyITLabOffice2013Program:
                         // Enter section id in the Textfield
-                        base.FillTextBoxByID(SelfEnrollmentPageResource.
+                        base.FillTextBoxById(SelfEnrollmentPageResource.
                             SelfEnrollment_Page_CourseID_TextBox_Id_Locator,
                             course.SectionId);
                         break;
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
                     case Course.CourseTypeEnum.MyItLabInstructorCourse:
                     case Course.CourseTypeEnum.MyTestInstructorCourse:
                         // Enter Instructor course id in the Text field
-                        base.FillTextBoxByID(SelfEnrollmentPageResource.
+                        base.FillTextBoxById(SelfEnrollmentPageResource.
                         SelfEnrollment_Page_CourseID_TextBox_Id_Locator,
                         course.InstructorCourseId);
                         break;
@@ -143,7 +143,7 @@ namespace Pegasus.Pages.UI_Pages
              base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_CancelButton_Id_Locator));
-            base.ClickButtonByID(SelfEnrollmentPageResource.
+            base.ClickButtonById(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_CancelButton_Id_Locator);
             Logger.LogMethodExit("SelfEnrollmentPage", "ClickOnCancelButton",
              base.isTakeScreenShotDuringEntryExit);

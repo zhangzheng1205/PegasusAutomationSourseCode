@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ProgramAdminManageUsersPageResource.
                                           ProgramAdminManageUsers_Page_Search_Button_Id_Locator));
             //Click search link
-            base.ClickButtonByID(ProgramAdminManageUsersPageResource.
+            base.ClickButtonById(ProgramAdminManageUsersPageResource.
                                      ProgramAdminManageUsers_Page_Search_Button_Id_Locator);
             logger.LogMethodExit("ProgramAdminManageUsersPage", "ClickSearchButton",
                base.isTakeScreenShotDuringEntryExit);
@@ -91,10 +91,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ProgramAdminManageUsersPageResource.
                                           ProgramAdminManageUsers_Page_UserDetail_TextBox_Id_Locator));
             // Enter username search textbox field
-            base.ClearTextByID(ProgramAdminManageUsersPageResource.
+            base.ClearTextById(ProgramAdminManageUsersPageResource.
                                    ProgramAdminManageUsers_Page_UserDetail_TextBox_Id_Locator);
             //Enter Username in Text Box
-            base.FillTextBoxByID(ProgramAdminManageUsersPageResource.
+            base.FillTextBoxById(ProgramAdminManageUsersPageResource.
                                      ProgramAdminManageUsers_Page_UserDetail_TextBox_Id_Locator, username);
             logger.LogMethodExit("ProgramAdminManageUsersPage", "EnterUserNameInSearchTextField",
                base.isTakeScreenShotDuringEntryExit);
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ProgramAdminManageUsersPageResource.
                  ProgramAdminManageUsers_Page_SearchCondition_DropDown_Id_Locator));
             // select username radio button
-            base.ClickButtonByID(ProgramAdminManageUsersPageResource
+            base.ClickButtonById(ProgramAdminManageUsersPageResource
                  .ProgramAdminManageUsers_Page_UserNameRadioButton_Id_Locator);
             logger.LogMethodExit("ProgramAdminManageUsersPage", "SelectContainsValueInDropDown",
                base.isTakeScreenShotDuringEntryExit);
@@ -197,7 +197,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Check SelectAll CheckBox
-                base.ClickCheckBoxById(ProgramAdminManageUsersPageResource.
+                base.SelectCheckBoxById(ProgramAdminManageUsersPageResource.
                     ProgramAdminManageUsers_Page_SelectAllUsers_CheckBox_Id_Locator);
                 //Switch To Default Page
                 base.SelectWindow(ProgramAdminUsersPageResource

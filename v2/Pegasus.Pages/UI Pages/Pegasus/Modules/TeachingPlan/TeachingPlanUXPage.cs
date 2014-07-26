@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectWindow(TeachingPlanUXPageResource.
                     TeachingPlanUX_Page_CourseMaterials_WindowName);
                 //Get the Copy Content text
-                getCopyContentTextDisplayed = base.GetElementTextByID(TeachingPlanUXPageResource.
+                getCopyContentTextDisplayed = base.GetElementTextById(TeachingPlanUXPageResource.
                     TeachingPlanUX_Page_CopyContent_Id_Locator);
             }
             catch (Exception e)
@@ -363,7 +363,7 @@ namespace Pegasus.Pages.UI_Pages
                         base.WaitForElement(By.Id(TeachingPlanUXPageResource.
                             TeachingPlanUX_Page_ContentLibrary_Table_Locator));
                         // get required assets avaliable in frame
-                        string getRequiredAssets = base.GetElementTextByID(TeachingPlanUXPageResource.
+                        string getRequiredAssets = base.GetElementTextById(TeachingPlanUXPageResource.
                             TeachingPlanUX_Page_ContentLibrary_Table_Locator);
                         if (getRequiredAssets.Contains(activityName))
                         {
@@ -411,7 +411,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement((By.Id(TeachingPlanUXPageResource.
                 TeachingPlanUX_Page_ContentLibrary_CheckBox_Id_Locator)));
             // select all content checkbox
-            base.ClickCheckBoxById(TeachingPlanUXPageResource.
+            base.SelectCheckBoxById(TeachingPlanUXPageResource.
                 TeachingPlanUX_Page_ContentLibrary_CheckBox_Id_Locator);
             Logger.LogMethodExit("TeachingPlanUXPage", "SelectContentLibraryCheckBoxForAllAssets",
               base.isTakeScreenShotDuringEntryExit);
@@ -499,7 +499,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(TeachingPlanUXPageResource.
                           TeachingPlanUX_Page_MyCourse_Table_Locator));
                 // get required assets avaliable in frame
-                string getHiddenAssets = base.GetElementTextByID(TeachingPlanUXPageResource.
+                string getHiddenAssets = base.GetElementTextById(TeachingPlanUXPageResource.
                     TeachingPlanUX_Page_MyCourse_Table_Locator);
                 if (getHiddenAssets.Contains(activityStatus))
                 {
@@ -528,7 +528,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement((By.Id(TeachingPlanUXPageResource.
                 TeachingPlanUX_Page_MyCourse_CheckBox_Id_Locator)));
             // select all content checkbox
-            base.ClickCheckBoxById(TeachingPlanUXPageResource.
+            base.SelectCheckBoxById(TeachingPlanUXPageResource.
                 TeachingPlanUX_Page_MyCourse_CheckBox_Id_Locator);
             Logger.LogMethodExit("TeachingPlanUXPage", "SelectMyCourseCheckBoxForAllAssets",
               base.isTakeScreenShotDuringEntryExit);

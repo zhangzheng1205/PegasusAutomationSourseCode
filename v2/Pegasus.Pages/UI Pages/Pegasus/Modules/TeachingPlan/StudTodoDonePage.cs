@@ -253,7 +253,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectSIM5ActivityPresentationWindow(activityName, user);
             while(stopWatch.Elapsed.TotalSeconds < getSecondsToWait)
             {
-                if (!base.IsElementDisplayedByID(StudTodoDonePageResource.
+                if (!base.IsElementDisplayedById(StudTodoDonePageResource.
                 StudToDoDone_Page_Loading_Image_Id_Locator))
                 {
                     break;
@@ -410,11 +410,11 @@ namespace Pegasus.Pages.UI_Pages
                     stopWatch.Start();
                     //Select Activity Presentation Window
                     this.SelectSIM5ActivityPresentationWindow(activityName, user);
-                    while (base.IsElementDisplayedByID(StudTodoDonePageResource.
+                    while (base.IsElementDisplayedById(StudTodoDonePageResource.
                         StudToDoDone_Page_Loading_Image_Id_Locator) &&
                         stopWatch.Elapsed.TotalSeconds < getSecondsToWait)
                     {
-                        if (!base.IsElementDisplayedByID(StudTodoDonePageResource.
+                        if (!base.IsElementDisplayedById(StudTodoDonePageResource.
                         StudToDoDone_Page_Loading_Image_Id_Locator))
                         {
                             break;

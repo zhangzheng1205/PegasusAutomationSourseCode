@@ -182,19 +182,19 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Question Bank Window
                 this.SelectQuestionBankWindow();
                 //Delete options displayed                
-                string getDeleteText = base.GetElementTextByID(QlGridUXPageResource.
+                string getDeleteText = base.GetElementTextById(QlGridUXPageResource.
                     QlGridUX_Page_Clipboard_Delete_Id_Locator).Trim();
                 //Copy options displayed                
-                string getCopyText = base.GetElementTextByID(QlGridUXPageResource.
+                string getCopyText = base.GetElementTextById(QlGridUXPageResource.
                     QlGridUX_Page_Clipboard_Copy_Id_Locator).Trim();
                 //Cut options displayed
-                string getCutText = base.GetElementTextByID(QlGridUXPageResource.
+                string getCutText = base.GetElementTextById(QlGridUXPageResource.
                     QlGridUX_Page_Clipboard_Cut_Id_Locator).Trim();
                 //Paste options displayed                
-                string getPasteText = base.GetElementTextByID(QlGridUXPageResource.
+                string getPasteText = base.GetElementTextById(QlGridUXPageResource.
                     QlGridUX_Page_Clipboard_Paste_Id_Locator).Trim();
                 //Reports options displayed                
-                string getReportsText = base.GetElementTextByID(QlGridUXPageResource.
+                string getReportsText = base.GetElementTextById(QlGridUXPageResource.
                     QlGridUX_Page_Clipboard_Report_Id_Locator).Trim();
                 //All clipboard items displayed
                 getClipBoardItemsTextDisplayed = getDeleteText + getCopyText + 
@@ -430,10 +430,10 @@ namespace Pegasus.Pages.UI_Pages
                   base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(QlGridUXPageResource.
                 QlGridUX_Page_SearchText_Id_Locator));
-            base.ClearTextByID(QlGridUXPageResource.
+            base.ClearTextById(QlGridUXPageResource.
                 QlGridUX_Page_SearchText_Id_Locator);
             //Fill Folder Name
-            base.FillTextBoxByID(QlGridUXPageResource.
+            base.FillTextBoxById(QlGridUXPageResource.
                 QlGridUX_Page_SearchText_Id_Locator, activityType);
             base.WaitForElement(By.Id(QlGridUXPageResource.
                 QlGridUX_Page_GoButton_Id_Locator));
@@ -501,7 +501,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Question Bank Window
                 this.SelectQuestionBankWindow();
                 //Paste options displayed
-                isPasteOptionDisplayedEnabledState=base.IsElementEnabledByID(
+                isPasteOptionDisplayedEnabledState=base.IsElementEnabledById(
                     QlGridUXPageResource.QlGridUX_Page_Clipboard_Paste_Id_Locator); 
             }
             catch (Exception e)
@@ -605,7 +605,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(QlGridUXPageResource.
                     QlGridUX_Page_Ok_Button_Id_Locator));
                 //Click on Ok Button
-                base.ClickButtonByID(QlGridUXPageResource.
+                base.ClickButtonById(QlGridUXPageResource.
                     QlGridUX_Page_Ok_Button_Id_Locator);
                 //Select Question Bank Window                
                 base.WaitUntilWindowLoads(QlGridUXPageResource.
@@ -636,12 +636,12 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("QlGridUXPage", "EnterScoreAndSave",
                base.isTakeScreenShotDuringEntryExit);
             //Select Checkbox
-            base.ClickCheckBoxById(QlGridUXPageResource. 
+            base.SelectCheckBoxById(QlGridUXPageResource. 
                 QlGridUX_Page_Score_Checkbox_Id_Locator);
             base.WaitForElement(By.Id(QlGridUXPageResource.
                 QlGridUX_Page_Score_Textbox_Id_Locator));
             //Fill Score in Textbox
-            base.FillTextBoxByID(QlGridUXPageResource.
+            base.FillTextBoxById(QlGridUXPageResource.
                 QlGridUX_Page_Score_Textbox_Id_Locator, score);
             IWebElement getApplyToAllButton = base.
                 GetWebElementPropertiesByPartialLinkText

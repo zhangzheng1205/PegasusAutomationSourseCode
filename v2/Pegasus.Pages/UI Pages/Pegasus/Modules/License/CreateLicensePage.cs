@@ -46,17 +46,17 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CreateLicensePageResource.
                     CreateLicense_Page_FromDate_Input_Id_Locator));
                 //Fill Start Date Value
-                base.FillTextBoxByID(CreateLicensePageResource.
+                base.FillTextBoxById(CreateLicensePageResource.
                     CreateLicense_Page_FromDate_Input_Id_Locator, getStartDate);
                 base.WaitForElement(By.Id(CreateLicensePageResource.
                     CreateLicense_Page_ToDate_Input_Id_Locator));
                 //Fill End Date Value
-                base.FillTextBoxByID(CreateLicensePageResource.
+                base.FillTextBoxById(CreateLicensePageResource.
                     CreateLicense_Page_ToDate_Input_Id_Locator, getEndDate);
                 base.WaitForElement(By.Id(CreateLicensePageResource.
                     CreateLicense_Page_Quantity_Input_Id_Locator));
                 //Fill License Qunatity
-                base.FillTextBoxByID(CreateLicensePageResource.
+                base.FillTextBoxById(CreateLicensePageResource.
                     CreateLicense_Page_Quantity_Input_Id_Locator, CreateLicensePageResource.
                     CreateLicense_Page_Quantity_Input_Value);
                 //Click on Save and Return Button

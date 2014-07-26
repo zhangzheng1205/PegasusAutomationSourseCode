@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
                        RptMastery_Page_SelectMasteryReport_Window_Name);
                 base.WaitForElement(By.Id(RptMasteryPageResource.
                     RptClassMastery_Page_SelectClassMastery_SkillName_Id_Locator));
-                skillName = base.GetElementTextByID(RptMasteryPageResource.
+                skillName = base.GetElementTextById(RptMasteryPageResource.
                     RptClassMastery_Page_SelectClassMastery_SkillName_Id_Locator).Trim();
             }
             catch (Exception e)

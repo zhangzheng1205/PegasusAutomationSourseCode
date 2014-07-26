@@ -335,7 +335,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ManageUserPageResource.
                 ManageUser_Page_Textbox_Username_Id_Locator));
             //Get user details from Memory           
-            base.FillTextBoxByID(ManageUserPageResource.
+            base.FillTextBoxById(ManageUserPageResource.
                 ManageUser_Page_Textbox_Username_Id_Locator, userName);
             IWebElement getSearctLink=base.GetWebElementPropertiesById
                 (ManageUserPageResource.
@@ -474,7 +474,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Switch to the Frame
                 base.SwitchToIFrame(ManageUserPageResource.ManageUser_Page_Iframe_Id_Locator);
                 //Get the Successfull Message
-                getSuccessfulMessage = GetElementTextByID(ManageUserPageResource.
+                getSuccessfulMessage = GetElementTextById(ManageUserPageResource.
                     ManageUser_Page_BulkRegistration_Successfull_Message_Id_Locator);
                 //Split the Message by Space
                 string[] getDisplayedMessage = getSuccessfulMessage.
@@ -507,7 +507,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait For Successfull Message To display For Bulk Registration
                 this.WaitForSuccessfullMessageToDisplayForBulkRegistration();
                 //Get Successfull Message After Bulk Registration of Users
-                getSuccessfulMessage = GetElementTextByID(ManageUserPageResource.
+                getSuccessfulMessage = GetElementTextById(ManageUserPageResource.
                         ManageUser_Page_BulkRegistration_Successfull_Message_Id_Locator);
             }
             catch (Exception e)
@@ -597,7 +597,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ManageUserPageResource.
                     ManageUser_Page_GetMessage_Id_Locator));
                 //Get Message
-                getMessage = base.GetElementTextByID(ManageUserPageResource.
+                getMessage = base.GetElementTextById(ManageUserPageResource.
                     ManageUser_Page_GetMessage_Id_Locator);
             }
             catch (Exception e)

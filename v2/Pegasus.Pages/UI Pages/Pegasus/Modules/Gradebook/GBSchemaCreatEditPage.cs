@@ -90,10 +90,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeValue_Id_Locator));
-            base.ClearTextByID(GBSchemaCreatEditPageResource.
+            base.ClearTextById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeValue_Id_Locator);
             //Enter Grade Value G
-            base.FillTextBoxByID(GBSchemaCreatEditPageResource.
+            base.FillTextBoxById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeValue_Id_Locator, 
                 GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_Grade_Value);
@@ -147,10 +147,10 @@ namespace Pegasus.Pages.UI_Pages
              base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeB_ToScore_Id_Locator));
-            base.ClearTextByID(GBSchemaCreatEditPageResource.
+            base.ClearTextById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeB_ToScore_Id_Locator);
             //Enter Grade B To Score Value
-            base.FillTextBoxByID(GBSchemaCreatEditPageResource.
+            base.FillTextBoxById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeB_ToScore_Id_Locator,
                 GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeB_ToScore_Value);
@@ -169,10 +169,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_Grade_Id_Locator));
-            base.ClearTextByID(GBSchemaCreatEditPageResource.
+            base.ClearTextById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_Grade_Id_Locator);
             //Enter Grade Value G
-            base.FillTextBoxByID(GBSchemaCreatEditPageResource.
+            base.FillTextBoxById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_Grade_Id_Locator, GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_Grade_Value);
             logger.LogMethodExit("GBSchemaCreatEditPage", "EnterGradeValueG",
@@ -191,10 +191,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_FromScore_Id_Locator));
-            base.ClearTextByID(GBSchemaCreatEditPageResource.
+            base.ClearTextById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_FromScore_Id_Locator);
             //Enter From value for Grade G
-            base.FillTextBoxByID(GBSchemaCreatEditPageResource.
+            base.FillTextBoxById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_FromScore_Id_Locator,
                 GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_FromScore_Value);
@@ -212,10 +212,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GrabeG_ToScore_Id_Locator));
-            base.ClearTextByID(GBSchemaCreatEditPageResource.
+            base.ClearTextById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GrabeG_ToScore_Id_Locator);
             //Enter To Score Value for Grade G
-            base.FillTextBoxByID(GBSchemaCreatEditPageResource.
+            base.FillTextBoxById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GrabeG_ToScore_Id_Locator,
                 GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_ToScore_Value);
@@ -234,10 +234,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_Feedback_Id_Locator));
-            base.ClearTextByID(GBSchemaCreatEditPageResource.
+            base.ClearTextById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_Feedback_Id_Locator);
             //Enter Feedback for Grade G
-            base.FillTextBoxByID(GBSchemaCreatEditPageResource.
+            base.FillTextBoxById(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_Feedback_Id_Locator,
                 GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_Feedback_Value);

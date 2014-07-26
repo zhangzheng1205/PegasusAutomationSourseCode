@@ -34,7 +34,7 @@ namespace Pegasus.Pages.UI_Pages
            //Wait for the organization checkbox
            base.WaitForElement(By.Id(RptSelectOrganisationsPageResource.
                RptSelectOrganisations_Page_Organization_Name_Id_Locator));
-           base.FocusOnElementByID(RptSelectOrganisationsPageResource.
+           base.FocusOnElementById(RptSelectOrganisationsPageResource.
                RptSelectOrganisations_Page_Organization_Name_Id_Locator);
            //Get web element
            IWebElement getOrganization=base.GetWebElementPropertiesById

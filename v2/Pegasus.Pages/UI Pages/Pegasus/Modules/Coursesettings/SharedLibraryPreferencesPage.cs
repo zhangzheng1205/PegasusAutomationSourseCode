@@ -65,14 +65,14 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_Checkbox_SearchedMasterLibrary_Id_Locator));
             //Click onthe checkbox for ML            
-            base.ClickCheckBoxById(SharedLibraryPreferencesPageResource.
+            base.SelectCheckBoxById(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_Checkbox_SearchedMasterLibrary_Id_Locator);
             //Select the Main Frame
             new CourseCopyPreferencesPage().SelectTheMainPreferencesFrame();
             //Click onthe Enroll button
-            base.FocusOnElementByID(SharedLibraryPreferencesPageResource.
+            base.FocusOnElementById(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_Image_AddMasterLibraryToCourse_Id_Locator);
-            base.ClickButtonByID(SharedLibraryPreferencesPageResource.
+            base.ClickButtonById(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_Image_AddMasterLibraryToCourse_Id_Locator);
             logger.LogMethodExit("SharedLibraryPreferencesPage",
                 "SelectTheCheckBoxAndAssociateTheMasterLibraryToCourse",
@@ -94,9 +94,9 @@ namespace Pegasus.Pages.UI_Pages
                 SharedLibraryPreferencesPage_Textbox_SharedLibraryCourse_Id_Locator));
             //Get the ML from Memory
             Course getMasterLibrary = Course.Get(Course.CourseTypeEnum.NovaNETMasterLibrary);
-            base.ClearTextByID(SharedLibraryPreferencesPageResource.
+            base.ClearTextById(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_Textbox_SharedLibraryCourse_Id_Locator);
-            base.FillTextBoxByID(SharedLibraryPreferencesPageResource.
+            base.FillTextBoxById(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_Textbox_SharedLibraryCourse_Id_Locator, 
                 getMasterLibrary.Name);
             //Click on the Search Button

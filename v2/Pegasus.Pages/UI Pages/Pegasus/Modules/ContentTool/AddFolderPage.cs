@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AddFolderPageResource.
                     AddFolder_Page_Fold_Name_Textbox_Id_Locator));
                 //Fill the Activity Folder Name in textbox
-                base.FillTextBoxByID(AddFolderPageResource.
+                base.FillTextBoxById(AddFolderPageResource.
                 AddFolder_Page_Fold_Name_Textbox_Id_Locator,
                 activityFolder.ToString());
                 //Store the Activity Folder content
@@ -53,14 +53,14 @@ namespace Pegasus.Pages.UI_Pages
                     if (!base.IsElementSelectedById(AddFolderPageResource.
                         AddFolder_Page_QuestionFolder_Checkbox_Id_Locator))
                     {
-                        base.ClickCheckBoxById(AddFolderPageResource.
+                        base.SelectCheckBoxById(AddFolderPageResource.
                         AddFolder_Page_QuestionFolder_Checkbox_Id_Locator);
                     }
                 }
-                base.FocusOnElementByID(AddFolderPageResource.
+                base.FocusOnElementById(AddFolderPageResource.
                     AddFolder_Page_Folder_Create_Button_Id_Locator);
                 //Click the "Create" Button
-                base.ClickButtonByID(AddFolderPageResource.
+                base.ClickButtonById(AddFolderPageResource.
                     AddFolder_Page_Folder_Create_Button_Id_Locator);
                 Thread.Sleep(Convert.ToInt32(AddFolderPageResource.
             AddFolder_Page_Create_ButtonClick_Time_value));

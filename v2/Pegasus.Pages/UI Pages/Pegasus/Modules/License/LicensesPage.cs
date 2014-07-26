@@ -95,20 +95,20 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Search Product Button
             base.WaitForElement(By.Id(LicensePageResource.
                 License_Page_SearchProducts_Button_Id_Locator));
-            base.FocusOnElementByID(LicensePageResource.
+            base.FocusOnElementById(LicensePageResource.
                 License_Page_SearchProducts_Button_Id_Locator);
             //Click on Search Product Button
-            base.ClickButtonByID(LicensePageResource.
+            base.ClickButtonById(LicensePageResource.
                 License_Page_SearchProducts_Button_Id_Locator);
             base.WaitForElement(By.Id(LicensePageResource.
                 License_Page_Product_Input_Id_Locator));
             //Fill Product Name
-            base.FillTextBoxByID(LicensePageResource.
+            base.FillTextBoxById(LicensePageResource.
                 License_Page_Product_Input_Id_Locator, product);
             base.WaitForElement(By.Id(LicensePageResource.
                 License_Page_Search_Button_Id_Locator));
             //Click on Search Button
-            base.ClickButtonByID(LicensePageResource.
+            base.ClickButtonById(LicensePageResource.
                 License_Page_Search_Button_Id_Locator);
             logger.LogMethodExit("LicensesPage", "ClickOnProductSearchButton",
                 base.isTakeScreenShotDuringEntryExit);

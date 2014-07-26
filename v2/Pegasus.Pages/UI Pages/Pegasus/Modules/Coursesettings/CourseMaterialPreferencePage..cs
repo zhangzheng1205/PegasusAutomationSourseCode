@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
             base.WaitForElement(By.Id(CourseMaterialPreferencePageResource.
                                           CourseMaterialPreference_Page_BookCode_Id_Locator));
             //Enter Book Code
-            base.FillTextBoxByID(CourseMaterialPreferencePageResource.
+            base.FillTextBoxById(CourseMaterialPreferencePageResource.
                                      CourseMaterialPreference_Page_BookCode_Id_Locator,
                                  CourseMaterialPreferencePageResource.
                                      CourseMaterialPreference_Page_BookCode_Value);
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
             base.WaitForElement(By.Id(CourseMaterialPreferencePageResource.
                                           CourseMaterialPreference_Page_BookId_Id_Locator));
             //Enter Book Id
-            base.FillTextBoxByID(CourseMaterialPreferencePageResource.
+            base.FillTextBoxById(CourseMaterialPreferencePageResource.
                                      CourseMaterialPreference_Page_BookId_Id_Locator,
                                  CourseMaterialPreferencePageResource.
                                      CourseMaterialPreference_Page_BookId_Id_Value);
@@ -169,7 +169,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
             base.WaitForElement(By.Id(CourseMaterialPreferencePageResource.
                                           CourseMaterialPreference_Page_BookTitle_Id_Locator));
             //Enter Book Title
-            base.FillTextBoxByID(CourseMaterialPreferencePageResource.
+            base.FillTextBoxById(CourseMaterialPreferencePageResource.
                                      CourseMaterialPreference_Page_BookTitle_Id_Locator,
                                  CourseMaterialPreferencePageResource.
                                      CourseMaterialPreference_Page_BookTitle_Id_Value);
@@ -189,7 +189,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
             base.WaitForElement(By.Id(CourseMaterialPreferencePageResource.
                                           CourseMaterialPreference_Page_AllowLinking_CheckBox_Id_Locator));
             //Select CheckBox
-            base.ClickCheckBoxById(CourseMaterialPreferencePageResource.
+            base.SelectCheckBoxById(CourseMaterialPreferencePageResource.
                                        CourseMaterialPreference_Page_AllowLinking_CheckBox_Id_Locator);
             Thread.Sleep(Convert.ToInt32(CourseMaterialPreferencePageResource.
                                              CourseMaterialPreferences_Page_Thread_Wait_Time));

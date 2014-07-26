@@ -37,9 +37,9 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateAnnouncementUXPageResource.
                 CreateAnnouncementUX_Page_SubjectTextbox_Id_Locator));
             // Fill Subject text
-            base.FocusOnElementByID(CreateAnnouncementUXPageResource.
+            base.FocusOnElementById(CreateAnnouncementUXPageResource.
                 CreateAnnouncementUX_Page_SubjectTextbox_Id_Locator);
-            base.FillTextBoxByID(CreateAnnouncementUXPageResource.
+            base.FillTextBoxById(CreateAnnouncementUXPageResource.
                 CreateAnnouncementUX_Page_SubjectTextbox_Id_Locator, courseAnnouncement);
             logger.LogMethodExit("CreateAnnouncementUXPage", "EnterAnnouncementSubject",
                             base.isTakeScreenShotDuringEntryExit);
@@ -60,15 +60,15 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateAnnouncementUXPageResource.
                 CreateAnnouncementUX_Page_ShowHTML_Image_Id_Locator));
             // Click on ShowHTML button
-            base.FocusOnElementByID(CreateAnnouncementUXPageResource.
+            base.FocusOnElementById(CreateAnnouncementUXPageResource.
                 CreateAnnouncementUX_Page_ShowHTML_Image_Id_Locator);
-            base.ClickButtonByID(CreateAnnouncementUXPageResource.
+            base.ClickButtonById(CreateAnnouncementUXPageResource.
                 CreateAnnouncementUX_Page_ShowHTML_Image_Id_Locator);
             //Wait For HTML Editor
             base.WaitForElement(By.Id(CreateAnnouncementUXPageResource.
                 CreateAnnouncementUX_Page_HTMLEditor_Id_Locator));
             // Fill Description text in HTMLEditor textbox
-            base.FillTextBoxByID(CreateAnnouncementUXPageResource.
+            base.FillTextBoxById(CreateAnnouncementUXPageResource.
                 CreateAnnouncementUX_Page_HTMLEditor_Id_Locator, description);
             base.SwitchToDefaultPageContent();
             logger.LogMethodExit("CreateAnnouncementUXPage", "EnterAnnouncementDescription",
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateAnnouncementUXPageResource.
             CreateAnnouncementUX_Page_Frame_HTMLEditor_Id_Locator));
             //Select HTML Editor Frame
-            base.FocusOnElementByID(CreateAnnouncementUXPageResource.
+            base.FocusOnElementById(CreateAnnouncementUXPageResource.
             CreateAnnouncementUX_Page_Frame_HTMLEditor_Id_Locator);
             //Switch to Frame
             base.SwitchToIFrame(CreateAnnouncementUXPageResource.
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateAnnouncementUXPageResource.
                 CreateAnnouncementUX_Page_To_Button_Id_Locator));
             // Focus To Button
-            base.FocusOnElementByID(CreateAnnouncementUXPageResource.
+            base.FocusOnElementById(CreateAnnouncementUXPageResource.
                      CreateAnnouncementUX_Page_To_Button_Id_Locator);
             //Click on To Button
             base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesById
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateAnnouncementUXPageResource.
                 CreateAnnouncementUX_Page_Create_Button_Id_Locator));
             //Focus on create button
-            base.FocusOnElementByID(CreateAnnouncementUXPageResource.
+            base.FocusOnElementById(CreateAnnouncementUXPageResource.
                 CreateAnnouncementUX_Page_Create_Button_Id_Locator);
             //Click on the Create Button
             base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesById(

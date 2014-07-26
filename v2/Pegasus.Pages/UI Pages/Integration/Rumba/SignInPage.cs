@@ -102,20 +102,20 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
                 SignInPage_Username_Text_id_Locator), Convert.ToInt32(
                     SignInPageResource.SignInPage_Custom_TimeToWait_Value));
             //Clear The UserName Text Box
-            base.ClearTextByID(SignInPageResource.
+            base.ClearTextById(SignInPageResource.
                 SignInPage_Username_Text_id_Locator);
             //Enter username
-            base.FillTextBoxByID(SignInPageResource.
+            base.FillTextBoxById(SignInPageResource.
                 SignInPage_Username_Text_id_Locator, username);
             //Wait For Password Text Box
             base.WaitForElement(By.Id(SignInPageResource.
                 SignInPage_Password_Text_id_Locator), Convert.ToInt32(
                 SignInPageResource.SignInPage_Custom_TimeToWait_Value));
             //Clear The Password Text Box
-            base.ClearTextByID(SignInPageResource.
+            base.ClearTextById(SignInPageResource.
                 SignInPage_Password_Text_id_Locator);
             //Enter password
-            base.FillTextBoxByID(SignInPageResource.
+            base.FillTextBoxById(SignInPageResource.
                 SignInPage_Password_Text_id_Locator, password);
             logger.LogMethodExit("SignInPage", "EnterUserNamePassword",
                base.isTakeScreenShotDuringEntryExit);
@@ -220,7 +220,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
                 base.WaitUntilWindowLoads(SignInPageResource.
                     SignInPage_Logout_Window_Title);
                 //Logic to populate dictionary 
-                String getUrl = base.CurrentUrl;
+                String getUrl = base.GetCurrentUrl;
                 String[] getUrlSegmentCollection = getUrl.Substring(getUrl.IndexOf(SignInPageResource.Url_Separator) + 1).
                     Split(SignInPageResource.QueryString_Separator.ToCharArray());
                 foreach (String urlSegment in getUrlSegmentCollection)

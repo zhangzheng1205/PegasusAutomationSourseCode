@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CourseContentUXPageResource.
                     CourseContentUXPage_SelectAll_CheckBox_Id_Locator));
                 //Click To Check The CheckBox
-                base.ClickCheckBoxById(CourseContentUXPageResource.
+                base.SelectCheckBoxById(CourseContentUXPageResource.
                     CourseContentUXPage_SelectAll_CheckBox_Id_Locator);
                 //Switch To Default Page
                 base.SwitchToDefaultPageContent();
@@ -291,7 +291,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CourseContentUXPageResource.
                     CourseContentUXPage_AddButton_Id_Locator));
                 //Click On Add Button
-                base.ClickButtonByID(CourseContentUXPageResource.
+                base.ClickButtonById(CourseContentUXPageResource.
                     CourseContentUXPage_AddButton_Id_Locator);
                 //Is Alert Pop Up Window Present
                 if (base.IsPopupPresent(CourseContentUXPageResource.
@@ -322,15 +322,15 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                 CourseContentUXPage_Pegasus_Checkbox_Id_Locator));
-            base.FocusOnElementByID(CourseContentUXPageResource.
+            base.FocusOnElementById(CourseContentUXPageResource.
                 CourseContentUXPage_Pegasus_Checkbox_Id_Locator);
             //Click the checkbox
-            base.ClickCheckBoxById(CourseContentUXPageResource.
+            base.SelectCheckBoxById(CourseContentUXPageResource.
                 CourseContentUXPage_Pegasus_Checkbox_Id_Locator);
             //Wait for the element
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                 CourseContentUXPage_Ok_Button_Id_Locator));
-            base.FocusOnElementByID(CourseContentUXPageResource.
+            base.FocusOnElementById(CourseContentUXPageResource.
                 CourseContentUXPage_Ok_Button_Id_Locator);
             //Get web element
             IWebElement getOkBtnProperty = base.GetWebElementPropertiesById
@@ -576,7 +576,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get the text in Table
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                 CourseContentUXPage_Searched_Table_ID_Locator));
-            string getTableText = base.GetElementTextByID(CourseContentUXPageResource.
+            string getTableText = base.GetElementTextById(CourseContentUXPageResource.
                 CourseContentUXPage_Searched_Table_ID_Locator);
             if (getTableText.Contains(folderName))
             {
@@ -949,7 +949,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.Id(CourseContentUXPageResource.
                         CourseContentUXPage_MyCourseFrameDiv_Id_Locator));
                     //Get Copy Message
-                    getCopyMessage = base.GetElementTextByID(CourseContentUXPageResource.
+                    getCopyMessage = base.GetElementTextById(CourseContentUXPageResource.
                         CourseContentUXPage_MyCourseFrameDiv_Id_Locator);
                     if (getCopyMessage.Contains(CourseContentUXPageResource.
                         CourseContentUXPage_CopyMessage_Value) == false) break;
@@ -1002,7 +1002,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CourseContentUXPageResource.
                     CourseContentUXPage_Content_CmenuOption_Xpath_Locator));
                 //Get Cmenu Text
-                getCmenuText = base.GetElementTextByID(CourseContentUXPageResource.
+                getCmenuText = base.GetElementTextById(CourseContentUXPageResource.
                     CourseContentUXPage_Content_CmenuOption_Xpath_Locator);
                 if (getCmenuText.Contains(contentCmenu))
                 {
@@ -1111,7 +1111,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CourseContentUXPageResource.
                     CourseContentUXPage_GetAssetName_Id_Locator));
                 //Get Asset Name
-                getAssetName = base.GetElementTextByID(CourseContentUXPageResource.
+                getAssetName = base.GetElementTextById(CourseContentUXPageResource.
                     CourseContentUXPage_GetAssetName_Id_Locator);
                 if (getAssetName != assetName)
                 {
@@ -1150,7 +1150,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Course Content table search
                 base.WaitForElement(By.Id(CourseContentUXPageResource.
                     CourseContentUXPage_Searched_Table_ID_Locator));
-                string getAssetName = base.GetElementTextByID(CourseContentUXPageResource.
+                string getAssetName = base.GetElementTextById(CourseContentUXPageResource.
                     CourseContentUXPage_Searched_Table_ID_Locator);
                 if (getAssetName.Contains(CourseContentUXPageResource.
                     CourseContentUXPage_Asset_State_ShowHide))
@@ -1443,10 +1443,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                 CourseContentUXPage_InputSearch_Textbox_Id_Locator));
             // clear search box
-            base.ClearTextByID(CourseContentUXPageResource.
+            base.ClearTextById(CourseContentUXPageResource.
                 CourseContentUXPage_InputSearch_Textbox_Id_Locator);
             //Fill Asset Name In Text Box
-            base.FillTextBoxByID(CourseContentUXPageResource.
+            base.FillTextBoxById(CourseContentUXPageResource.
                 CourseContentUXPage_InputSearch_Textbox_Id_Locator, assetName);
             Logger.LogMethodExit("CourseContentUXPage", "FillAssetNameInTextBox",
              base.isTakeScreenShotDuringEntryExit);
@@ -1490,7 +1490,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Course Content table search
                 base.WaitForElement(By.Id(CourseContentUXPageResource.
                     CourseContentUXPage_Searched_Table_ID_Locator));
-                string getAssetName = base.GetElementTextByID(CourseContentUXPageResource.
+                string getAssetName = base.GetElementTextById(CourseContentUXPageResource.
                     CourseContentUXPage_Searched_Table_ID_Locator);
                 if (getAssetName.Contains(CourseContentUXPageResource.
                     CourseContentUXPage_Asset_State_ShowHide))

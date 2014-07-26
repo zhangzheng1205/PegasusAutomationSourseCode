@@ -144,7 +144,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Add As Instructor link
             base.WaitForElement(By.Id(AdminToolPageResource.
                 AdminTool_Page_AddAsInstructor_Id_Locator));
-            base.FocusOnElementByID(AdminToolPageResource.
+            base.FocusOnElementById(AdminToolPageResource.
                 AdminTool_Page_AddAsInstructor_Id_Locator);
             IWebElement getInstructorLink = base.GetWebElementPropertiesById
                 (AdminToolPageResource.
@@ -387,7 +387,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AdminToolPageResource.
                     AdminTool_Page_MyProfile_Link_Id_Locator));
                 // Focus on My Profile Link
-                base.FocusOnElementByID(AdminToolPageResource.
+                base.FocusOnElementById(AdminToolPageResource.
                     AdminTool_Page_MyProfile_Link_Id_Locator);
                 // Get Element Property
                 IWebElement getMyProfileLink = base.GetWebElementPropertiesById(AdminToolPageResource.
@@ -575,7 +575,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Get the Tab Names
                 base.WaitForElement(By.Id((AdminToolPageResource.
                     AdminTool_Page_Workspaces_TabNames_Id_Locator)));
-                string getTabNames = base.GetElementTextByID(AdminToolPageResource.
+                string getTabNames = base.GetElementTextById(AdminToolPageResource.
                     AdminTool_Page_Workspaces_TabNames_Id_Locator);
                 isDefaultTabsPresent = (getTabNames.Contains(AdminToolPageResource.
                     AdminTool_Page_Workspaces_TabName_Workspaces_Text) &&
@@ -617,7 +617,7 @@ namespace Pegasus.Pages.UI_Pages
                 do
                 {
                     //Get the table text
-                    getElementtext = base.GetElementTextByID(AdminToolPageResource.
+                    getElementtext = base.GetElementTextById(AdminToolPageResource.
                         AdminTool_Page_Workspace_Table_ID_Locator);
                     if (!getElementtext.Contains(getWorkspaceName))
                     {

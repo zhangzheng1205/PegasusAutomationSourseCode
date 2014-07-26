@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the Maximum score
                 base.WaitForElement(By.Id(AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator));
-                base.FillTextBoxByID(AutoGraderPageResource.
+                base.FillTextBoxById(AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator,
                     AutoGraderPageResource.AutoGraderPageResourse_MaximumScore_Value);
                 //Click On SaveAndClose Button
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(AutoGraderPageResource.
                 AutoGraderPageResourse_CreateNewQuestion_TextBox_Id_Locator));
             //Fill the question  name
-            base.FillTextBoxByID(AutoGraderPageResource.
+            base.FillTextBoxById(AutoGraderPageResource.
                 AutoGraderPageResourse_CreateNewQuestion_TextBox_Id_Locator,
                 QuestionName.ToString());
             //Wait for the element
@@ -262,11 +262,11 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the Maximum score
                 base.WaitForElement(By.Id(AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator));
-                if (base.IsElementEnabledByID(string.Format((AutoGraderPageResource.
+                if (base.IsElementEnabledById(string.Format((AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator))))
                 {
                     //Fill Score for 2007 type question
-                    base.FillTextBoxByID(AutoGraderPageResource.
+                    base.FillTextBoxById(AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator,
                     AutoGraderPageResource.AutoGraderPageResourse_MaximumScore_Value);
                 }
@@ -326,7 +326,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(AutoGraderPageResource.
                 AutoGraderPageResourse_GradeIT_Projects_Search_Box_Id_Locator));
             //Fill the Project name
-            base.FillTextBoxByID(AutoGraderPageResource.
+            base.FillTextBoxById(AutoGraderPageResource.
                 AutoGraderPageResourse_GradeIT_Projects_Search_Box_Id_Locator,
                 projectName);
             //Wait for the element
@@ -432,7 +432,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.Id(AutoGraderPageResource.
                         AutoGraderPageResourse_Cancel_Button_Id_Locator));
                     //Click On Cancel Button
-                    base.ClickButtonByID(AutoGraderPageResource.
+                    base.ClickButtonById(AutoGraderPageResource.
                         AutoGraderPageResourse_Cancel_Button_Id_Locator);
                 }
             }
@@ -470,11 +470,11 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the Maximum score
                 base.WaitForElement(By.Id(AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator));
-                if (base.IsElementEnabledByID(string.Format((AutoGraderPageResource.
+                if (base.IsElementEnabledById(string.Format((AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator))))
                 {
                     //Fill Score for 2007 type question
-                    base.FillTextBoxByID(AutoGraderPageResource.
+                    base.FillTextBoxById(AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator,
                     AutoGraderPageResource.AutoGraderPageResourse_MaximumScore_Value);
                 }
@@ -501,7 +501,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the Element
                 base.WaitForElement(By.Id(AutoGraderPageResource.
                     AutoGraderPageResourse_Edit_Grader_Project_Instruction));
-                if (IsElementEnabledByID(AutoGraderPageResource.
+                if (IsElementEnabledById(AutoGraderPageResource.
                     AutoGraderPageResourse_Edit_Grader_Project_Instruction))
                 {
                     isElementPresent = true;
@@ -541,11 +541,11 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the Maximum score
                 base.WaitForElement(By.Id(AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator));
-                if (base.IsElementEnabledByID(string.Format((AutoGraderPageResource.
+                if (base.IsElementEnabledById(string.Format((AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator))))
                 {
                     //Fill Score for 2007 type question
-                    base.FillTextBoxByID(AutoGraderPageResource.
+                    base.FillTextBoxById(AutoGraderPageResource.
                     AutoGraderPageResourse_MaximumScore_TextBox_Id_Locator,
                     AutoGraderPageResource.AutoGraderPageResourse_MaximumScore_Value);
                 }

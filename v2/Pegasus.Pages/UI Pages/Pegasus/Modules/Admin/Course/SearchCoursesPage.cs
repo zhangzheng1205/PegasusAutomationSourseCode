@@ -234,7 +234,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(SearchCoursesPageResource.
                                      SearchCourses_Page_CourseDetail_TextBox_Id_Locator));
             //Enter Search parameter
-            base.FillTextBoxByID(SearchCoursesPageResource.
+            base.FillTextBoxById(SearchCoursesPageResource.
                                      SearchCourses_Page_CourseDetail_TextBox_Id_Locator, searchParameter);
             Logger.LogMethodExit("SearchCoursesPage", "EnterSearchParameterInTheSearchBox",
              base.isTakeScreenShotDuringEntryExit);
@@ -515,7 +515,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToIFrame(SearchCoursesPageResource.
                     SearchCourses_Page_RightFrame_Id_Locator);
                 // Get filters name 
-                String getFiltersName = base.GetElementTextByID(SearchCoursesPageResource
+                String getFiltersName = base.GetElementTextById(SearchCoursesPageResource
                                                                     .SearchCourses_Page_FiltersDropDown_Id_Locator);
                 getAllFilters = Regex.Replace(getFiltersName, @"\s*", string.Empty).Trim();
 

@@ -228,7 +228,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ProductManagementContainerPageResource.
                     ProductManagementContainer_Page_CCNGIntegrationPointID_Text));
                 //Get the Integration PointID
-                String getCCNGPointIDText = GetElementTextByID(
+                String getCCNGPointIDText = GetElementTextById(
                     ProductManagementContainerPageResource.
                     ProductManagementContainer_Page_CCNGIntegrationPointID_Text);
                 String[] getCCNGPointID = getCCNGPointIDText.Split(

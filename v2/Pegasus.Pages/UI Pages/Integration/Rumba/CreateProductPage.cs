@@ -110,17 +110,17 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CreateProductPageResource.
                     CreateProduct_Page_ProductResourseDisplay_Name_id_Locator));
                 //Enter Display Information Name
-                base.FillTextBoxByID(CreateProductPageResource.
+                base.FillTextBoxById(CreateProductPageResource.
                     CreateProduct_Page_ProductResourseDisplay_Name_id_Locator,
                     CreateProductPageResource.
                     CreateProduct_Page_ProductResourseDisplay_Name);
                 //Enter Short Description
-                base.FillTextBoxByID(CreateProductPageResource.
+                base.FillTextBoxById(CreateProductPageResource.
                     CreateProduct_Page_ShortDescriptionName_id_Locator,
                     CreateProductPageResource.
                     CreateProduct_Page_ShortDescriptionName);
                 //Enter Long Description
-                base.FillTextBoxByID(CreateProductPageResource.
+                base.FillTextBoxById(CreateProductPageResource.
                     CreateProduct_Page_LongDescriptionName_id_Locator,
                     CreateProductPageResource.
                     CreateProduct_Page_LongDescriptionName);
@@ -198,7 +198,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CreateProductPage", "SelectRumbaOrganizationFromAutoFill",
               base.isTakeScreenShotDuringEntryExit);
             //Clear Auto Complete Text Box            
-            base.ClearTextByID(CreateProductPageResource.
+            base.ClearTextById(CreateProductPageResource.
                 CreateProduct_Page_PearsonOrganizationandMarket_PearsonOrganization_Text_id_locator);
             autocomplete.SendKeys(CreateProductPageResource.
                 CreateProduct_Page_PearsonOrganizationandMarket_Value);
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateProductPageResource.
               CreateProduct_Page_ProductName_id_Locator));
             //Fills the product name
-            base.FillTextBoxByID(CreateProductPageResource.
+            base.FillTextBoxById(CreateProductPageResource.
               CreateProduct_Page_ProductName_id_Locator, productName.ToString());
             // Fill Product Description And Order Number
             this.FillProductDescriptionAndOrderNumber(productName);
@@ -255,24 +255,24 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CreateProductPageResource.
                CreateProduct_Page_InternalDescription_id_Locator));
             //Enter Description
-            base.FillTextBoxByID(CreateProductPageResource.
+            base.FillTextBoxById(CreateProductPageResource.
                 CreateProduct_Page_InternalDescription_id_Locator, productName.ToString());
             IWebElement getOrderBilling = base.GetWebElementPropertiesByXPath
                 (CreateProductPageResource.
                CreateProduct_Page_OrderingandBillingSystems_Xpath);
             base.ClickByJavaScriptExecutor(getOrderBilling);
-            base.FocusOnElementByID(CreateProductPageResource.
+            base.FocusOnElementById(CreateProductPageResource.
                 CreateProduct_Page_OrderingandBillingSystems_Dropdown_id_Locator);
             //Select Billing Type
             base.SelectDropDownValueThroughTextById(CreateProductPageResource.
                 CreateProduct_Page_OrderingandBillingSystems_Dropdown_id_Locator,
                 CreateProductPageResource.
                 CreateProduct_Page_OrderingandBillingSystems_Dropdown_Value);
-            base.ClearTextByID(CreateProductPageResource.
+            base.ClearTextById(CreateProductPageResource.
                CreateProduct_Page_OrderingandBillingSystems_Enter13digit_Text_id_Locator);
             string getOrderId = this.GetRandomOrderID();
             //Enters the 13 digit unique number
-            base.FillTextBoxByID(CreateProductPageResource.
+            base.FillTextBoxById(CreateProductPageResource.
                 CreateProduct_Page_OrderingandBillingSystems_Enter13digit_Text_id_Locator,
                 getOrderId);
             //Store The Order Id In Memory

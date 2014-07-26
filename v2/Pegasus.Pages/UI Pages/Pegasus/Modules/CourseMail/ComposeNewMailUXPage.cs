@@ -95,10 +95,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ComposeNewMailUXPageResource.
                         ComposeNewMailUX_Page_HTMLTextarea_Id_Locator));
                 //Clear Text Box
-                base.ClearTextByID(ComposeNewMailUXPageResource.
+                base.ClearTextById(ComposeNewMailUXPageResource.
                     ComposeNewMailUX_Page_HTMLTextarea_Id_Locator);
                 //Fill Text Box
-                base.FillTextBoxByID(ComposeNewMailUXPageResource.
+                base.FillTextBoxById(ComposeNewMailUXPageResource.
                     ComposeNewMailUX_Page_HTMLTextarea_Id_Locator, mailDetails);
             }
             catch (Exception e)
@@ -181,10 +181,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_Input_SubjectTextBox_Id_Locator));
             //Clear Text Box 
-            base.ClearTextByID(ComposeNewMailUXPageResource.
+            base.ClearTextById(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_Input_SubjectTextBox_Id_Locator);
             //Fill Text Box
-            base.FillTextBoxByID(ComposeNewMailUXPageResource.
+            base.FillTextBoxById(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_Input_SubjectTextBox_Id_Locator, mailDetails);
             logger.LogMethodExit("ComposeNewMailUXPage", "FillTitle",
                base.isTakeScreenShotDuringEntryExit);
@@ -272,17 +272,17 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ComposeNewMailUXPageResource.
                     ComposeNewMailUX_Page_Send_Id_Locator));
                 //Get Send Text
-                getSendtext = base.GetElementTextByID(ComposeNewMailUXPageResource.
+                getSendtext = base.GetElementTextById(ComposeNewMailUXPageResource.
                     ComposeNewMailUX_Page_Send_Id_Locator);
                 base.WaitForElement(By.Id(ComposeNewMailUXPageResource.
                     ComposeNewMailUX_Page_Saveasdraft_Id_Locator));
                 //Get Save as draft text
-                getSaveasdrafttext = base.GetElementTextByID(ComposeNewMailUXPageResource.
+                getSaveasdrafttext = base.GetElementTextById(ComposeNewMailUXPageResource.
                     ComposeNewMailUX_Page_Saveasdraft_Id_Locator);
                 base.WaitForElement(By.Id(ComposeNewMailUXPageResource.
                     ComposeNewMailUX_Page_Cancel_Id_Locator));
                 //Get Cancel text
-                getCanceltext = base.GetElementTextByID(ComposeNewMailUXPageResource.
+                getCanceltext = base.GetElementTextById(ComposeNewMailUXPageResource.
                     ComposeNewMailUX_Page_Cancel_Id_Locator);
             }
             catch (Exception e)

@@ -166,10 +166,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptSelectSectionsPageResource.
                     RptSelectSections_Page_AddandClose_Button_Id_Locator));
                 //Focus on AddandClose Button
-                base.FocusOnElementByID(RptSelectSectionsPageResource.
+                base.FocusOnElementById(RptSelectSectionsPageResource.
                       RptSelectSections_Page_AddandClose_Button_Id_Locator);
                 //Click on AddandClose Button
-                base.ClickButtonByID(RptSelectSectionsPageResource.
+                base.ClickButtonById(RptSelectSectionsPageResource.
                     RptSelectSections_Page_AddandClose_Button_Id_Locator);
                 //Check Select sections popup closed                
                 IsPopUpClosed(Convert.ToInt32(RptSelectSectionsPageResource.
@@ -197,10 +197,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptSelectSectionsPageResource.
                     RptSelectSections_Page_AddSections_Button_Id_Locator));
                 //Focus on Add Sections Button
-                base.FocusOnElementByID(RptSelectSectionsPageResource.
+                base.FocusOnElementById(RptSelectSectionsPageResource.
                     RptSelectSections_Page_AddSections_Button_Id_Locator);
                 //Click on Add Sections Button
-                base.ClickButtonByID(RptSelectSectionsPageResource.
+                base.ClickButtonById(RptSelectSectionsPageResource.
                     RptSelectSections_Page_AddSections_Button_Id_Locator);                
             }
             catch (Exception e)
@@ -224,10 +224,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptSelectSectionsPageResource.
                     RptSelectSections_Page_CancelButton_Id_locator));
                 //Focus on Cancel Button
-                base.FocusOnElementByID(RptSelectSectionsPageResource.
+                base.FocusOnElementById(RptSelectSectionsPageResource.
                     RptSelectSections_Page_CancelButton_Id_locator);
                 //Click on Cancel Button
-                base.ClickButtonByID(RptSelectSectionsPageResource.
+                base.ClickButtonById(RptSelectSectionsPageResource.
                     RptSelectSections_Page_CancelButton_Id_locator);
                 //Check Select sections popup closed                
                 IsPopUpClosed(Convert.ToInt32(RptSelectSectionsPageResource.
@@ -393,7 +393,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptSelectSectionsPageResource.
                     RptSelectSections_Page_Message_Id_Locator));
                 //Get Message
-                getMessage = base.GetElementTextByID(RptSelectSectionsPageResource.
+                getMessage = base.GetElementTextById(RptSelectSectionsPageResource.
                     RptSelectSections_Page_Message_Id_Locator);        
             }
             catch (Exception e)

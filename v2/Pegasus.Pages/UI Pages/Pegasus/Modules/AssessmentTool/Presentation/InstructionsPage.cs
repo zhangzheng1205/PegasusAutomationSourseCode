@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation
                 // Wait For Stop Button
                 base.WaitForElement(By.Id(InstructionsPageResource
                     .Instructions_Page_ActivityClose_Button_Id_Locator));
-                base.FocusOnElementByID(InstructionsPageResource
+                base.FocusOnElementById(InstructionsPageResource
                     .Instructions_Page_ActivityClose_Button_Id_Locator);
                 //Get Stop Button Properties
                 IWebElement getActivityStartButtonProperties =
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation
                 base.WaitForElement(By.Id(InstructionsPageResource
                     .Instructions_Page_ActivityStart_Button_Id_Locator));
                 //Get Button Text
-                getButtonText = base.GetElementTextByID(InstructionsPageResource
+                getButtonText = base.GetElementTextById(InstructionsPageResource
                     .Instructions_Page_ActivityStart_Button_Id_Locator);
             }
             catch (Exception e)

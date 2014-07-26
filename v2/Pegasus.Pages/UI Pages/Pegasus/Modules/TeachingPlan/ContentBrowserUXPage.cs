@@ -469,7 +469,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_Search_Textbox_Id_Locator));
-                base.FillTextBoxByID(ContentBrowserUXPageResource.
+                base.FillTextBoxById(ContentBrowserUXPageResource.
                     ContentBrowserUX_Page_Search_Textbox_Id_Locator, questionName);
                 //Wait for the 'GO' button
                 base.WaitForElement(By.Id(ContentBrowserUXPageResource.

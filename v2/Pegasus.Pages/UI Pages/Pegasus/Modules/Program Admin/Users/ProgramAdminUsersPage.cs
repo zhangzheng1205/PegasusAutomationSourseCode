@@ -62,17 +62,17 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ProgramAdminUsersPageResource
                 .ProgramAdminUsers_Page_UserName_RadioButton_Id_Locator));
             //Click on user name radio button
-            base.ClickButtonByID(ProgramAdminUsersPageResource
+            base.ClickButtonById(ProgramAdminUsersPageResource
                 .ProgramAdminUsers_Page_UserName_RadioButton_Id_Locator);
             base.WaitForElement(By.Id(ProgramAdminUsersPageResource.
                                           ProgramAdminUsers_Page_SectionDetail_TextBox_Id_Locator));
             // enter username search textbox field
-            base.ClearTextByID(ProgramAdminUsersPageResource.ProgramAdminUsers_Page_SectionDetail_TextBox_Id_Locator);
-            base.FillTextBoxByID(ProgramAdminUsersPageResource.
+            base.ClearTextById(ProgramAdminUsersPageResource.ProgramAdminUsers_Page_SectionDetail_TextBox_Id_Locator);
+            base.FillTextBoxById(ProgramAdminUsersPageResource.
                                      ProgramAdminUsers_Page_SectionDetail_TextBox_Id_Locator, username);
             //Click search button
             base.WaitForElement(By.Id(ProgramAdminUsersPageResource.ProgramAdminUsers_Page_Search_Button_Id_Locator));
-            base.ClickButtonByID(ProgramAdminUsersPageResource.ProgramAdminUsers_Page_Search_Button_Id_Locator);
+            base.ClickButtonById(ProgramAdminUsersPageResource.ProgramAdminUsers_Page_Search_Button_Id_Locator);
             logger.LogMethodExit("ProgramAdminUsersPage", "EnterUserSearchParameter",
            base.isTakeScreenShotDuringEntryExit);
         }
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToIFrame(ProgramAdminUsersPageResource.
                     ProgramAdminUsers_Page_IFrame_Middle_Name_Id_Locator);
                 //Get the User Name Text
-                getUserName = base.GetElementTextByID(ProgramAdminUsersPageResource.
+                getUserName = base.GetElementTextById(ProgramAdminUsersPageResource.
                     ProgramAdminUsers_Page_ProgramAdminGrid_Username_Id_Locator);
                 base.SelectWindow(ProgramAdminUsersPageResource
                     .ProgramAdminUsers_Page_Window_Title_Name);

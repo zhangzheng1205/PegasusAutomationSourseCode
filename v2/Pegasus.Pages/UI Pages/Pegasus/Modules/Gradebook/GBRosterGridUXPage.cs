@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(getCreateNewButton);
                 base.WaitForElement(By.Id(GBRosterGridUXPageResource.
                     GBRosterGridUX_Page_Student_Id_Locator));
-                base.FocusOnElementByID(GBRosterGridUXPageResource.
+                base.FocusOnElementById(GBRosterGridUXPageResource.
                     GBRosterGridUX_Page_Student_Id_Locator);
                 //Get element property
                 IWebElement getStudentOption = base.GetWebElementPropertiesById

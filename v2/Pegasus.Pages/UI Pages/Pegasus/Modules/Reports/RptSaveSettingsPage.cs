@@ -138,10 +138,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait For Report Name Textbox
                 base.WaitForElement(By.Id(RptSaveSettingsPageResource.
                     RptSaveSettingsPage_Resource_ReportName_Text_Id_Locator));
-                base.ClearTextByID(RptSaveSettingsPageResource.
+                base.ClearTextById(RptSaveSettingsPageResource.
                     RptSaveSettingsPage_Resource_ReportName_Text_Id_Locator);
                 //Fill Report Name
-                base.FillTextBoxByID(RptSaveSettingsPageResource.
+                base.FillTextBoxById(RptSaveSettingsPageResource.
                     RptSaveSettingsPage_Resource_ReportName_Text_Id_Locator,
                     reportName.ToString());                              
             }
@@ -233,7 +233,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_Cancel_Button_Id_locator));
             //Click On 'Cancel' Button
-            base.ClickButtonByID(RptSaveSettingsPageResource.
+            base.ClickButtonById(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_Cancel_Button_Id_locator);
             Thread.Sleep(Convert.ToInt32(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_Wait_Time_Value));
@@ -254,7 +254,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_SaveOnly_Button_Id_Locator));
             //Click On 'Save Only' Button
-            base.ClickButtonByID(RptSaveSettingsPageResource.
+            base.ClickButtonById(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_SaveOnly_Button_Id_Locator);
             Thread.Sleep(Convert.ToInt32(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_Wait_Time_Value));
@@ -275,7 +275,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_SaveandRun_Button_Id_locator));
             //Click On 'Save and Run' Button
-            base.ClickButtonByID(RptSaveSettingsPageResource.
+            base.ClickButtonById(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_SaveandRun_Button_Id_locator);
             Thread.Sleep(Convert.ToInt32(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_Wait_Time_Value));
@@ -305,7 +305,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectDropDownValueThroughTextById(RptSaveSettingsPageResource.
                     RptSaveSettingsPage_ReplaceExistingReport_Dropdown_Id_Locator, reportName);
                 //Get Report
-                string getReportName = base.GetElementTextByID(RptSaveSettingsPageResource.
+                string getReportName = base.GetElementTextById(RptSaveSettingsPageResource.
                     RptSaveSettingsPage_ReplaceExistingReport_Dropdown_Id_Locator);
                 if (getReportName.Contains(reportName))
                 {

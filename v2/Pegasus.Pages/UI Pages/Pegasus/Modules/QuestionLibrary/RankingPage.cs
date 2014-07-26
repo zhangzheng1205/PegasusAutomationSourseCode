@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(RankingPageResource.
                 Ranking_Page_EnterQuestionTitle_Id_Locator));
             //Fill the Question Title
-            base.FillTextBoxByID(RankingPageResource.
+            base.FillTextBoxById(RankingPageResource.
                 Ranking_Page_EnterQuestionTitle_Id_Locator, 
                 questionTitle.ToString());
             logger.LogMethodExit("RankingPage", "EnterQuestionTitle",
@@ -113,15 +113,15 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(RankingPageResource.
                 Ranking_Page_ViewSource_Button_Id_Locator));
             //Click on View Source Button
-            base.ClickButtonByID((RankingPageResource.
+            base.ClickButtonById((RankingPageResource.
                 Ranking_Page_ViewSource_Button_Id_Locator));
             base.WaitForElement(By.Id(RankingPageResource.
                 Ranking_Page_EnterTextHTML_Id_Locator));
             //Enter data
-            base.FillTextBoxByID(RankingPageResource.
+            base.FillTextBoxById(RankingPageResource.
                 Ranking_Page_EnterTextHTML_Id_Locator, questionText);
             //Click on View Source Button
-            base.ClickButtonByID(RankingPageResource.
+            base.ClickButtonById(RankingPageResource.
                 Ranking_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("RankingPage",
                 "ClickOnViewSourceAndEnterDataForRankingQuestion",
@@ -168,10 +168,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(string.Format(RankingPageResource.
                     Ranking_Page_ChoiceTextField_Id_Locator, initialCount)));
                 //Clear the Textbox
-                base.ClearTextByID(string.Format(RankingPageResource.
+                base.ClearTextById(string.Format(RankingPageResource.
                     Ranking_Page_ChoiceTextField_Id_Locator, initialCount));
                 //Fill the Text Box
-                base.FillTextBoxByID(string.Format(RankingPageResource.
+                base.FillTextBoxById(string.Format(RankingPageResource.
                     Ranking_Page_ChoiceTextField_Id_Locator, initialCount),
                     RankingPageResource.Ranking_Page_EnterText_TextValue +
                     initialCount.ToString());
@@ -193,10 +193,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(RankingPageResource.
                      Ranking_Page_TextBox_Score_Id_Locator));
-            base.ClearTextByID(RankingPageResource.
+            base.ClearTextById(RankingPageResource.
                      Ranking_Page_TextBox_Score_Id_Locator);
             //Enter the score
-            base.FillTextBoxByID(RankingPageResource.
+            base.FillTextBoxById(RankingPageResource.
                      Ranking_Page_TextBox_Score_Id_Locator, 
                 RankingPageResource.Ranking_Page_TextBox_ScoreValue);
             logger.LogMethodExit("RankingPage",

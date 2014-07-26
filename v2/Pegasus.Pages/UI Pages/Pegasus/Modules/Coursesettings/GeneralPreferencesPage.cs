@@ -279,7 +279,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                     GeneralPreference_SP_CustomizeStudyPlan));
                 // Get the text from given element
-                text = base.GetElementTextByID(GeneralPreferencesPageResource.
+                text = base.GetElementTextById(GeneralPreferencesPageResource.
                     GeneralPreference_SP_CustomizeStudyPlan);
             }
             catch (Exception e)
@@ -312,7 +312,7 @@ namespace Pegasus.Pages.UI_Pages
                 //wait for element                
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                     GeneralPreferences_Page_CheckBox_Id_Locator));
-                base.ClickCheckBoxById(GeneralPreferencesPageResource.
+                base.SelectCheckBoxById(GeneralPreferencesPageResource.
                     GeneralPreferences_Page_CheckBox_Id_Locator);
             }
             catch (Exception e)
@@ -367,14 +367,14 @@ namespace Pegasus.Pages.UI_Pages
                 //Enter TemplateID text field
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                     GeneralPreference_Page_TemplateID_By_ID_Locator));
-                base.FillTextBoxByID(GeneralPreferencesPageResource.
+                base.FillTextBoxById(GeneralPreferencesPageResource.
                     GeneralPreference_Page_TemplateID_By_ID_Locator,
                     GeneralPreferencesPageResource.
                     GeneralPreference_Page_TemplateID_Value);
                 //Enter the Badge Threshold Text field
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                     GeneralPreference_Page_BadgeThreshold_By_ID_Locator));
-                base.FillTextBoxByID(GeneralPreferencesPageResource.
+                base.FillTextBoxById(GeneralPreferencesPageResource.
                      GeneralPreference_Page_BadgeThreshold_By_ID_Locator,
                      GeneralPreferencesPageResource.
                      GeneralPreference_Page_BadgeThreshold_Value);
@@ -521,7 +521,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on And And Close button
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                     GeneralPreference_Page_AddAndClose_Btn_By_ID_Locator));
-                base.ClickButtonByID(GeneralPreferencesPageResource.
+                base.ClickButtonById(GeneralPreferencesPageResource.
                     GeneralPreference_Page_AddAndClose_Btn_By_ID_Locator);
             }
             catch (Exception e)
@@ -609,7 +609,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                     GeneralPreference_SP_Property_Timing));
                 // Check is given text presents in the element
-                searchText = (base.GetElementTextByID(GeneralPreferencesPageResource.
+                searchText = (base.GetElementTextById(GeneralPreferencesPageResource.
                     GeneralPreference_SP_Property_Timing).Contains(searchText) ? searchText : string.Empty);
             }
             catch (Exception e)
@@ -821,7 +821,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Get Lock Icon Status
                 base.WaitForElement(By.Id(lockIconIdProperty));
-                base.FocusOnElementByID(lockIconIdProperty);
+                base.FocusOnElementById(lockIconIdProperty);
                 string getPreferenceLockIconStatus =
                     base.GetClassAttributeValueById(lockIconIdProperty);
                 if (getPreferenceLockIconStatus == GeneralPreferencesPageResource.
@@ -866,14 +866,14 @@ namespace Pegasus.Pages.UI_Pages
                 GeneralPrefernces_Page_LockIcon_Status_Value)
             {
                 //Click On Lock Icon
-                base.ClickButtonByID(GeneralPreferencesPageResource.
+                base.ClickButtonById(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_AllowStudentSendMail_Lock_Id_Locator);
             }
             if (!base.IsElementSelectedById(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_StudentMail_Checkbox_Id_Locator))
             {
                 //Enable Allow Student To Send mail
-                base.ClickCheckBoxById(GeneralPreferencesPageResource.
+                base.SelectCheckBoxById(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_StudentMail_Checkbox_Id_Locator);
             }
             logger.LogMethodExit("GeneralPreferencesPage",
@@ -944,9 +944,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator));
                 //Enter First And Last Name
-                base.ClearTextByID(GeneralPreferencesPageResource.
+                base.ClearTextById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator);
-                base.FillTextBoxByID(GeneralPreferencesPageResource.
+                base.FillTextBoxById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_FirstLast_Name_Textbox_Id_Locator,
                     GeneralPreferencesPageResource.GeneralPrefernces_Page_FirstLast_Name_Value);
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
@@ -972,17 +972,17 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("GeneralPreferencesPage",
             "EnterMailAndBusinessUnit", base.isTakeScreenShotDuringEntryExit);
             //Enter Email
-            base.ClearTextByID(GeneralPreferencesPageResource.
+            base.ClearTextById(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_Email_Textbox_Id_Locator);
-            base.FillTextBoxByID(GeneralPreferencesPageResource.
+            base.FillTextBoxById(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_Email_Textbox_Id_Locator,
                 GeneralPreferencesPageResource.GeneralPrefernces_Page_Email_Value);
             base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_Businessunit_Textbox_Id_Locator));
             //Enter Business Unit
-            base.ClearTextByID(GeneralPreferencesPageResource.
+            base.ClearTextById(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_Businessunit_Textbox_Id_Locator);
-            base.FillTextBoxByID(GeneralPreferencesPageResource.
+            base.FillTextBoxById(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_Businessunit_Textbox_Id_Locator,
                 GeneralPreferencesPageResource.GeneralPrefernces_Page_BusinessUnit_Value);
             logger.LogMethodExit("GeneralPreferencesPage",
@@ -1033,25 +1033,25 @@ namespace Pegasus.Pages.UI_Pages
                 GeneralPrefernces_Page_Display_Checkbox_Id_Locator))
             {
                 //Select Display Checkbox
-                base.ClickCheckBoxById(GeneralPreferencesPageResource.
+                base.SelectCheckBoxById(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_Display_Checkbox_Id_Locator);
                 //Wait For Display textbox
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_Display_Textbox_Id_locator));
-                base.ClearTextByID(GeneralPreferencesPageResource.
+                base.ClearTextById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_Display_Textbox_Id_locator);
                 //Enter Display Name
-                base.FillTextBoxByID(GeneralPreferencesPageResource.
+                base.FillTextBoxById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_Display_Textbox_Id_locator,
                     GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_Display_Name_Value);
                 //Wait For Pct URL Textbox
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_PctUrl_Textbox_Id_Locator));
-                base.ClearTextByID(GeneralPreferencesPageResource.
+                base.ClearTextById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_PctUrl_Textbox_Id_Locator);
                 //Enter Pct Url
-                base.FillTextBoxByID(GeneralPreferencesPageResource.
+                base.FillTextBoxById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_PctUrl_Textbox_Id_Locator,
                     GeneralPreferencesPageResource.GeneralPrefernces_Page_PctUrl_Value);
             }
@@ -1076,7 +1076,7 @@ namespace Pegasus.Pages.UI_Pages
                 GeneralPrefernces_Page_InstructorResource_Checkbox_Id_Locator))
             {
                 //Select 'Enable Instructor Resource Toolbar For Course' Checkbox
-                base.ClickCheckBoxById(GeneralPreferencesPageResource.
+                base.SelectCheckBoxById(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_InstructorResource_Checkbox_Id_Locator);
             }
             logger.LogMethodExit("GeneralPreferencesPage",
@@ -1134,11 +1134,11 @@ namespace Pegasus.Pages.UI_Pages
                     GeneralPrefernces_Page_Calendar_Checkbox_Id_Locator);
                 //Status Of 'HED Calendar Layout' and 'Skip Calendar Setup' Preferences Unchecked and Disabled
                 isCalendarPreferencesUncheckedDisabled =
-                    base.IsElementEnabledByID(GeneralPreferencesPageResource.
+                    base.IsElementEnabledById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_HEDCalendar_Checkbox_Id_Locator)
                     && base.IsElementSelectedById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_HEDCalendar_Checkbox_Id_Locator) &&
-                    base.IsElementEnabledByID(GeneralPreferencesPageResource.
+                    base.IsElementEnabledById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_SkipCalendarSetup_Checkbox_Id_Locator)
                     && base.IsElementSelectedById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_SkipCalendarSetup_Checkbox_Id_Locator);
@@ -1216,7 +1216,7 @@ namespace Pegasus.Pages.UI_Pages
                 GeneralPrefernces_Page_Calendar_Checkbox_Id_Locator))
                 {
                     //Disable Calendar
-                    base.ClickCheckBoxById(GeneralPreferencesPageResource.
+                    base.SelectCheckBoxById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_Calendar_Checkbox_Id_Locator);
                     if (base.GetClassAttributeValueById(GeneralPreferencesPageResource.
                     GeneralPrefernces_Page_HEDCalendar_Lock_Id_Locator) ==
@@ -1318,14 +1318,14 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                     GeneralPreferences_Page_InstructorResourceToolbar_Display1_CheckBox_Id_Locator));
                 // click checkbox
-                base.ClickCheckBoxById(GeneralPreferencesPageResource.
+                base.SelectCheckBoxById(GeneralPreferencesPageResource.
                     GeneralPreferences_Page_InstructorResourceToolbar_Display1_CheckBox_Id_Locator);
 
                 //wait for element                
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                     GeneralPreferences_Page_InstructorResourceToolbar_Display2_CheckBox_Id_Locator));
                 // click checkbox
-                base.ClickCheckBoxById(GeneralPreferencesPageResource.
+                base.SelectCheckBoxById(GeneralPreferencesPageResource.
                     GeneralPreferences_Page_InstructorResourceToolbar_Display2_CheckBox_Id_Locator);
 
                 // call method to Assign appropriate values to text boxes
@@ -1384,9 +1384,9 @@ namespace Pegasus.Pages.UI_Pages
             // wait for element
             base.WaitForElement(By.Id(elementId));
             // clear text of element
-            base.ClearTextByID(elementId);
+            base.ClearTextById(elementId);
             // fill desired text in element provided as argument to the method
-            base.FillTextBoxByID(elementId, value);
+            base.FillTextBoxById(elementId, value);
 
             logger.LogMethodExit("GeneralPreferencesPage",
             "AssignPCTLaunchValuestoPreferenceTextBoxes", base.isTakeScreenShotDuringEntryExit);

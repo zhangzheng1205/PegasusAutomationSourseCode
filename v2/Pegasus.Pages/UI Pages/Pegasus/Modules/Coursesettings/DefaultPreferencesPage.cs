@@ -38,7 +38,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(DefaultPreferencesPageResource.
                     DefaultPreferences_Page_GetNumberOfAttemptsText_Id_Locator));
                 //Get Number Of Attempts Text
-                getNumberOfAttemptsText = base.GetElementTextByID(DefaultPreferencesPageResource.
+                getNumberOfAttemptsText = base.GetElementTextById(DefaultPreferencesPageResource.
                     DefaultPreferences_Page_GetNumberOfAttemptsText_Id_Locator);
             }
             catch (Exception e)

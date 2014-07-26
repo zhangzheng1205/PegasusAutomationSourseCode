@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Title_Id_Locator));
             //Fill the page Name in textbox
-            base.FillTextBoxByID(PegasusHTMLUXPageResource.
+            base.FillTextBoxById(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Title_Id_Locator,
                 newPageAsset.ToString());
             //Fill The HTML Description
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Sourse_Id_Locator));
             // Click on ShowHTML button
-            base.FocusOnElementByID(PegasusHTMLUXPageResource.
+            base.FocusOnElementById(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Sourse_Id_Locator);
             IWebElement getHTMLSourceButton = base.GetWebElementPropertiesById
                 (PegasusHTMLUXPageResource.
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_TextArea_Id_Locator));
             // Fill Description text in HTMLEditor textbox
-            base.FillTextBoxByID(PegasusHTMLUXPageResource.
+            base.FillTextBoxById(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_TextArea_Id_Locator,
                 newHTMLDiscription.ToString());
             base.SwitchToDefaultPageContent();

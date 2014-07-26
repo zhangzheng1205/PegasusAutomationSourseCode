@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
                 Thread.Sleep(Convert.ToInt32(DRTPreviewUXPageResource
                       .DRTPreviewUXPage_ThreadTime_Value));
                 //Focus on the "Option" cmenu
-                base.FocusOnElementByID(DRTPreviewUXPageResource.
+                base.FocusOnElementById(DRTPreviewUXPageResource.
                     DRTPreviewUXPage_Option_Id_Locator);
                 // Click on preview option
                 base.WaitForElement(By.LinkText(DRTPreviewUXPageResource
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on cancel button
                 base.WaitForElement(By.Id(DRTPreviewUXPageResource
                     .DRTPreviewUXPage_CancelButton_ID_Loactor));
-                base.ClickButtonByID(DRTPreviewUXPageResource
+                base.ClickButtonById(DRTPreviewUXPageResource
                     .DRTPreviewUXPage_CancelButton_ID_Loactor);
                 //Select Content window
                 base.WaitUntilWindowLoads(DRTPreviewUXPageResource

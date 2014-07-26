@@ -255,10 +255,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_BeginDefaultMessage_Id_Locator));
             // clear Begin Default message text box
-            base.ClearTextByID(ActivitiesPreferencesPageResource.
+            base.ClearTextById(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_BeginDefaultMessage_Id_Locator);
             // fill Begin Default Message text box
-            base.FillTextBoxByID(ActivitiesPreferencesPageResource.
+            base.FillTextBoxById(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_BeginDefaultMessage_Id_Locator,
                 ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_BeginDefaultMessage_Text);
 
@@ -266,10 +266,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_BeginInstructorMessage_Id_Locator));
             // clear Begin Instructor Message text box
-            base.ClearTextByID(ActivitiesPreferencesPageResource.
+            base.ClearTextById(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_BeginInstructorMessage_Id_Locator);
             // fill Begin Instructor Message text box
-            base.FillTextBoxByID(ActivitiesPreferencesPageResource.
+            base.FillTextBoxById(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_BeginInstructorMessage_Id_Locator,
                 ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_BeginInstructorMessage_Text);
 
@@ -313,10 +313,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_EndDefaultMessage_Id_Locator));
             // clear End Default Message text box
-            base.ClearTextByID(ActivitiesPreferencesPageResource.
+            base.ClearTextById(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_EndDefaultMessage_Id_Locator);
             // fill End Default Message Text box
-            base.FillTextBoxByID(ActivitiesPreferencesPageResource.
+            base.FillTextBoxById(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_EndDefaultMessage_Id_Locator,
                 ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_EndDefaultMessage_Text);
 
@@ -324,10 +324,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_EndInstructorMessage_Id_Locator));
             // clear End Instructor Message text box
-            base.ClearTextByID(ActivitiesPreferencesPageResource.
+            base.ClearTextById(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_EndInstructorMessage_Id_Locator);
             // fill End Instructor Message text box
-            base.FillTextBoxByID(ActivitiesPreferencesPageResource.
+            base.FillTextBoxById(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_EndInstructorMessage_Id_Locator,
                 ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_EndInstructorMessage_Text);
 

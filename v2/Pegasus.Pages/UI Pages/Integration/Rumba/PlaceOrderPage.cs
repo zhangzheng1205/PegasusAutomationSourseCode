@@ -36,7 +36,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for element
                 base.WaitForElement(By.Id(PlaceOrderPageResource.
                         PlaceOrder_Page_Select_OrderingSystem_Id_Locator));
-                base.FocusOnElementByID(PlaceOrderPageResource.
+                base.FocusOnElementById(PlaceOrderPageResource.
                     PlaceOrder_Page_Select_OrderingSystem_Id_Locator);
                 //Selects the Ordering system
                 base.SelectDropDownValueThroughTextById(PlaceOrderPageResource.
@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for element
                 base.WaitForElement(By.Id(PlaceOrderPageResource.
                     PlaceOrder_Page_OrderId_Id_Locator));
-                base.FocusOnElementByID(PlaceOrderPageResource.
+                base.FocusOnElementById(PlaceOrderPageResource.
                     PlaceOrder_Page_OrderId_Id_Locator);
                 //Enter Rumba Lincense Detail
                 this.EnterRumbaLicenseDetail(organizationLevelEnum, organizationTypeEnum);
@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Rumba License Information
             License license = License.Get(License.LicenseTypeEnum.Rumba);
             //Enter License Order ID
-            base.FillTextBoxByID(PlaceOrderPageResource.
+            base.FillTextBoxById(PlaceOrderPageResource.
                PlaceOrder_Page_OrderId_Id_Locator, license.OrderId);
             //Get State Level Organization
             Organization organization = Organization.
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Submit Button
             Logger.LogMethodEntry("PlaceOrderPage", "ClickOnSubmitButton",
                 base.isTakeScreenShotDuringEntryExit);
-            base.FocusOnElementByID(PlaceOrderPageResource.
+            base.FocusOnElementById(PlaceOrderPageResource.
                 PlaceOrder_page_SubmitButton_Id_Locator);
             //Get Button Property
             IWebElement getButtonProperty = base.GetWebElementPropertiesById
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PlaceOrderPageResource.
                 PlaceOrder_page_ProductExternalId_Id_Locator));
             //Fill 13 Digit Order ID
-            base.FillTextBoxByID(PlaceOrderPageResource.
+            base.FillTextBoxById(PlaceOrderPageResource.
                 PlaceOrder_page_ProductExternalId_Id_Locator,
                 license.OrderId);
             //Sleep for a Time
@@ -155,13 +155,13 @@ namespace Pegasus.Pages.UI_Pages
             string endDate = day[1] + string.Empty + day[2] + string.Empty +
                 endYear.ToString(CultureInfo.InvariantCulture);
             //Enter Start Date
-            base.FillTextBoxByID(PlaceOrderPageResource.
+            base.FillTextBoxById(PlaceOrderPageResource.
                 PlaceOrder_Page_StartDate_Id_Locator, startDate);
             //Enter End Date
-            base.FillTextBoxByID(PlaceOrderPageResource.
+            base.FillTextBoxById(PlaceOrderPageResource.
                 PlaceOrder_Page_EndDate_Id_Locator, endDate);
             //Enter License Quantity
-            base.FillTextBoxByID(PlaceOrderPageResource.
+            base.FillTextBoxById(PlaceOrderPageResource.
                 PlaceOrder_Page_LicenseQuantity_Id_Locator,
                 PlaceOrderPageResource.PlaceOrder_Page_LicenseQuantity_Value);
             Logger.LogMethodExit("PlaceOrderPage", "EnterlLicenseStartEndDateAndQuantity",
@@ -179,11 +179,11 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Line Item Id
             base.WaitForElement(By.Id(PlaceOrderPageResource.
                 PlaceOrder_Page_LineItemId_Text_Id_Locator));
-            base.FillTextBoxByID(PlaceOrderPageResource.
+            base.FillTextBoxById(PlaceOrderPageResource.
                 PlaceOrder_Page_LineItemId_Text_Id_Locator,
                 PlaceOrderPageResource.PlaceOrder_Page_LineItemId_Value);
             //Enter License Type
-            base.FocusOnElementByID(PlaceOrderPageResource.
+            base.FocusOnElementById(PlaceOrderPageResource.
                 PlaceOrder_Page_SelectLicenseType_Id_Locator);
             //Select Value
             base.SelectDropDownValueThroughTextById(PlaceOrderPageResource.
@@ -206,7 +206,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PlaceOrderPageResource.
                 PlaceOrder_Page_OrganizationName_Id_Locator));
             //Clear Text Box            
-            base.ClearTextByID(PlaceOrderPageResource.
+            base.ClearTextById(PlaceOrderPageResource.
                 PlaceOrder_Page_OrganizationName_Id_Locator);
             //Get Autocomplete Property
             IWebElement getAutocompleteElement = GetWebElementPropertiesById(PlaceOrderPageResource.

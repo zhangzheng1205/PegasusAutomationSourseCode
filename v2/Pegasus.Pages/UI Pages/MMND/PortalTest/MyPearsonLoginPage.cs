@@ -39,17 +39,17 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for The UserName text box
                 base.WaitForElement(By.Id(MyPearsonLoginPageResource.
                     MyPearsonLoginPage_Username_Textbox_Id_Locator));
-                base.ClearTextByID(MyPearsonLoginPageResource.
+                base.ClearTextById(MyPearsonLoginPageResource.
                     MyPearsonLoginPage_Username_Textbox_Id_Locator);
                 //Fill User Name
-                base.FillTextBoxByID(MyPearsonLoginPageResource.
+                base.FillTextBoxById(MyPearsonLoginPageResource.
                     MyPearsonLoginPage_Username_Textbox_Id_Locator, username);
                 base.WaitForElement(By.Id(MyPearsonLoginPageResource.
                     MyPearsonLoginPage_Password_Textbox_Id_Locator));
                 //Fill Password
-                base.ClearTextByID(MyPearsonLoginPageResource.
+                base.ClearTextById(MyPearsonLoginPageResource.
                     MyPearsonLoginPage_Password_Textbox_Id_Locator);
-                base.FillTextBoxByID(MyPearsonLoginPageResource.
+                base.FillTextBoxById(MyPearsonLoginPageResource.
                     MyPearsonLoginPage_Password_Textbox_Id_Locator, password);
                 //Click on Sign In
                 base.WaitForElement(By.XPath(MyPearsonLoginPageResource.
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the Successfull Message
                 base.WaitForElement(By.Id(MyPearsonLoginPageResource.
                     MyPearsonLoginPage_Successfull_LogOut_Message_Id_Locator));
-                getSuccessfullMessage = base.GetElementTextByID(MyPearsonLoginPageResource.
+                getSuccessfullMessage = base.GetElementTextById(MyPearsonLoginPageResource.
                     MyPearsonLoginPage_Successfull_LogOut_Message_Id_Locator);
             }
             catch (Exception e)

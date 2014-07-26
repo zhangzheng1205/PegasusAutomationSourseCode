@@ -458,7 +458,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     base.WaitForElement(By.Id(ContentLibraryUXPageResource.
                         ContentLibraryUXPage_Searched_Table_ID_Locator));
-                    getTableText = base.GetElementTextByID(ContentLibraryUXPageResource.
+                    getTableText = base.GetElementTextById(ContentLibraryUXPageResource.
                         ContentLibraryUXPage_Searched_Table_ID_Locator);
                     Thread.Sleep(Convert.ToInt32(ContentLibraryUXPageResource.
                             ContentLibraryUXPage_Search_Time_Value));
@@ -479,7 +479,7 @@ namespace Pegasus.Pages.UI_Pages
                             base.SelectDefaultWindow();
                             base.SwitchToIFrame(ContentLibraryUXPageResource.
                                 ContentLibraryUX_Page_Left_Frame_ID_Locator);
-                            getTableText = base.GetElementTextByID(ContentLibraryUXPageResource.
+                            getTableText = base.GetElementTextById(ContentLibraryUXPageResource.
                                 ContentLibraryUXPage_Searched_Table_ID_Locator);
                         }
                     }
@@ -749,7 +749,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectAndSwitchtoFrame(ContentLibraryUXPageResource.
                     ContentLibraryUX_Page_Left_Frame_ID_Locator);
                 //Get Asset Name
-                getAssetName = base.GetElementTextByID(ContentLibraryUXPageResource.
+                getAssetName = base.GetElementTextById(ContentLibraryUXPageResource.
                     ContentLibraryUXPage_GetAssetName_Id_Locator);
                 if (getAssetName != assetName)
                 {
@@ -1289,7 +1289,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectAndSwitchtoFrame(CourseContentUXPageResource.
           CourseContentUXPage_Frame_Right_Id_Locator);
             //Get Asset Name
-            getAssetName = base.GetElementTextByID(ContentLibraryUXPageResource.
+            getAssetName = base.GetElementTextById(ContentLibraryUXPageResource.
                 ContentLibraryUXPage_SearchedContent_Table_Id_Locator);            
             logger.LogMethodExit("ContentLibraryUXPage",
                 "SwitchtoFrameandGetAssetNameInCourseContent",
@@ -1335,7 +1335,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectAndSwitchtoFrame(ContentLibraryUXPageResource.
                 ContentLibraryUX_Page_Left_Frame_ID_Locator);
             //Get Asset Name
-            getAssetName = base.GetElementTextByID(ContentLibraryUXPageResource.
+            getAssetName = base.GetElementTextById(ContentLibraryUXPageResource.
                 ContentLibraryUXPage_GetAssetName_Id_Locator);           
             logger.LogMethodExit("ContentLibraryUXPage",
                 "SwitchtoFrameandGetAssetNameInContentLibrary",
@@ -1554,7 +1554,7 @@ namespace Pegasus.Pages.UI_Pages
 
             string buttonID = this.GetButtonIDOnHeaderByButtonType(buttonType);
             if (buttonID == null) return false;
-            return base.IsElementEnabledByID(buttonID); 
+            return base.IsElementEnabledById(buttonID); 
         }
 
         /// <summary>
@@ -1617,7 +1617,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
 
             int itemCount = 0;
-            int.TryParse(base.GetElementTextByID(ContentLibraryUXPageResource
+            int.TryParse(base.GetElementTextById(ContentLibraryUXPageResource
                 .ContentLibraryUXPage_AdvancedOptions_ClipBoard_Count_Span_ID_Locator)
                 , out itemCount);
 

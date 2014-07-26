@@ -168,10 +168,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(ViewSubmissionPageResource.
                 ViewSubmission_Page_ViewSubmission_Closebtn_Id_Locator));
-            base.FocusOnElementByID(ViewSubmissionPageResource.
+            base.FocusOnElementById(ViewSubmissionPageResource.
                 ViewSubmission_Page_ViewSubmission_Closebtn_Id_Locator);
             //Click the "Close" button
-            base.ClickButtonByID(ViewSubmissionPageResource.
+            base.ClickButtonById(ViewSubmissionPageResource.
                 ViewSubmission_Page_ViewSubmission_Closebtn_Id_Locator);
             Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.
                  ViewSubmission_Page_ViewGrade_Button_Time_Value));
@@ -388,7 +388,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ViewSubmissionPageResource.
                     ViewSubmission_Page_RevisedGrade_Id_Locator));
                 //Get Grade
-                getGrade = base.GetElementTextByID(ViewSubmissionPageResource.
+                getGrade = base.GetElementTextById(ViewSubmissionPageResource.
                     ViewSubmission_Page_RevisedGrade_Id_Locator);
             }
             catch (Exception e)
@@ -513,10 +513,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(ViewSubmissionPageResource.
                 ViewSubmission_Page_Input_ScoreValue_Id_Locator));
-            base.ClearTextByID(ViewSubmissionPageResource.
+            base.ClearTextById(ViewSubmissionPageResource.
                 ViewSubmission_Page_Input_ScoreValue_Id_Locator);
             //Fill The Score Value
-            base.FillTextBoxByID(ViewSubmissionPageResource.
+            base.FillTextBoxById(ViewSubmissionPageResource.
                 ViewSubmission_Page_Input_ScoreValue_Id_Locator, scoreValue);
             logger.LogMethodExit("ViewSubmissionPage", "FillEditGradeScoreValue",
             base.isTakeScreenShotDuringEntryExit);
@@ -534,10 +534,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(ViewSubmissionPageResource.
                 ViewSubmission_Page_Input_MaxScoreValue_Id_Locator));
-            base.ClearTextByID(ViewSubmissionPageResource.
+            base.ClearTextById(ViewSubmissionPageResource.
                 ViewSubmission_Page_Input_MaxScoreValue_Id_Locator);
             //Fill the Max Score Value
-            base.FillTextBoxByID(ViewSubmissionPageResource.
+            base.FillTextBoxById(ViewSubmissionPageResource.
                 ViewSubmission_Page_Input_MaxScoreValue_Id_Locator, maximumScoreValue);
             logger.LogMethodExit("ViewSubmissionPage", "FillEditGradeMaximumScoreValue",
             base.isTakeScreenShotDuringEntryExit);
@@ -752,7 +752,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ViewSubmissionPageResource.
                     ViewSubmission_Page_TimeTaken_Div_Id_Locator));
                 //Get Text of Time div
-                getTextOfDivTime = base.GetElementTextByID(ViewSubmissionPageResource.
+                getTextOfDivTime = base.GetElementTextById(ViewSubmissionPageResource.
                     ViewSubmission_Page_TimeTaken_Div_Id_Locator).
                     Remove(0, Convert.ToInt16(ViewSubmissionPageResource.
                     ViewSubmission_Page_Subsrting_End_Index));
@@ -798,7 +798,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ViewSubmissionPageResource.
                     ViewSubmission_Page_SubmissionCount_Id_Locator));
                 //Get Submission Count
-                getSubmissionCount = base.GetElementTextByID(ViewSubmissionPageResource.
+                getSubmissionCount = base.GetElementTextById(ViewSubmissionPageResource.
                     ViewSubmission_Page_SubmissionCount_Id_Locator);
             }
             catch (Exception e)
@@ -886,7 +886,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ViewSubmissionPageResource.
                     ViewSubmission_Page_SaveForLater_Message_Id_Locator));
                 //Get the message
-                getDisplayMessage = base.GetElementTextByID(ViewSubmissionPageResource.
+                getDisplayMessage = base.GetElementTextById(ViewSubmissionPageResource.
                     ViewSubmission_Page_SaveForLater_Message_Id_Locator);
                 //Close ViewSubmission Button
                 this.CloseViewSubmissionButton();
@@ -984,7 +984,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(ViewSubmissionPageResource.
                     ViewSubmission_Page_SubmissionCount_Id_Locator));
                 //Get Submission Count
-                getSubmissionCount = base.GetElementTextByID(ViewSubmissionPageResource.
+                getSubmissionCount = base.GetElementTextById(ViewSubmissionPageResource.
                     ViewSubmission_Page_SubmissionCount_Id_Locator);
             }
             catch (Exception e)

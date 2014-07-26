@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
                 do
                 {
                     //Get the table text
-                    getTableText = base.GetElementTextByID(EnrollmentPageResource.
+                    getTableText = base.GetElementTextById(EnrollmentPageResource.
                         Enrollment_Page_promotedUserTable_Id_Locator);
                     if (!getTableText.Contains(getPromotedUserName))
                     {
@@ -253,7 +253,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(EnrollmentPageResource.
                     Enrollment_Page_Unenroll_Id_Locator));
                 //Focus on Unenroll selected users link
-                base.FocusOnElementByID(EnrollmentPageResource.
+                base.FocusOnElementById(EnrollmentPageResource.
                     Enrollment_Page_Unenroll_Id_Locator);
                 IWebElement getUnEnrolledLink = base.GetWebElementPropertiesById
                     (EnrollmentPageResource.

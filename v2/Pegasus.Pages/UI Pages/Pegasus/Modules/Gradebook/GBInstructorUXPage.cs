@@ -388,7 +388,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Element
             base.WaitForElement(By.Id(GBInstructorUXPageResource.
                 GBINstructorUX_Page_ViewGradesButton_Id_Locator));
-            base.FocusOnElementByID(GBInstructorUXPageResource.
+            base.FocusOnElementById(GBInstructorUXPageResource.
                 GBINstructorUX_Page_ViewGradesButton_Id_Locator);
             //Get Element Property
             IWebElement getViewGrades = base.GetWebElementPropertiesById
@@ -752,7 +752,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Table_Cmenu_Options_Id_Locator));
                 //Get the Context Menu Options
-                string getContextMenuOptions = base.GetElementTextByID(GBInstructorUXPageResource.
+                string getContextMenuOptions = base.GetElementTextById(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Table_Cmenu_Options_Id_Locator);
                 if (getContextMenuOptions.Contains(contextMenuOption))
                 {
@@ -785,7 +785,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Window_imgDownLoad));
                 //To Get Foucs for the Download Button
-                base.FocusOnElementByID(GBInstructorUXPageResource.
+                base.FocusOnElementById(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Window_imgDownLoad);
                 IWebElement downLoadButton = base.GetWebElementPropertiesById(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Window_imgDownLoad);
@@ -1263,7 +1263,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Fill in the Column Name text box 
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Pop_Up_Column_Name_Id));
-                base.FillTextBoxByID(GBInstructorUXPageResource.
+                base.FillTextBoxById(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Pop_Up_Column_Name_Id, columName);
             }
             catch (Exception e)
@@ -1291,7 +1291,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Fill in the Column Number text box 
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Pop_Up_Column_Number_Id));
-                base.FillTextBoxByID(GBInstructorUXPageResource.
+                base.FillTextBoxById(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Pop_Up_Column_Number_Id, columNumber);
             }
             catch (Exception e)
@@ -1318,7 +1318,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Fill in the Column Number text box 
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Pop_Up_OK_Button_Id));
-                base.ClickButtonByID(GBInstructorUXPageResource.
+                base.ClickButtonById(GBInstructorUXPageResource.
                     GBInstructorUX_Page_Pop_Up_OK_Button_Id);
             }
             catch (Exception e)
@@ -2829,10 +2829,10 @@ namespace Pegasus.Pages.UI_Pages
                base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Input_ScoreValue_Id_Locator));
-            base.ClearTextByID(GBInstructorUXPageResource.
+            base.ClearTextById(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Input_ScoreValue_Id_Locator);
             //Fill The Score Value
-            base.FillTextBoxByID(GBInstructorUXPageResource.
+            base.FillTextBoxById(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Input_ScoreValue_Id_Locator, scoreValue);
             logger.LogMethodExit("GBInstructorUXPage", "FillEditGradeScoreValue",
               base.isTakeScreenShotDuringEntryExit);
@@ -2849,10 +2849,10 @@ namespace Pegasus.Pages.UI_Pages
               base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Input_MaxScoreValue_Id_Locator));
-            base.ClearTextByID(GBInstructorUXPageResource.
+            base.ClearTextById(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Input_MaxScoreValue_Id_Locator);
             //Fill the Max Score Value
-            base.FillTextBoxByID(GBInstructorUXPageResource.
+            base.FillTextBoxById(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Input_MaxScoreValue_Id_Locator, maxScoreValue);
             logger.LogMethodExit("GBInstructorUXPage", "FillEditGradeMaxScoreValue",
              base.isTakeScreenShotDuringEntryExit);
@@ -3174,7 +3174,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentTypes_Filter_Id_Locator));
                 //Click on 'Assignment Types' Filter Option
-                base.ClickButtonByID(GBInstructorUXPageResource.
+                base.ClickButtonById(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentTypes_Filter_Id_Locator);
                 base.WaitForElement(By.XPath(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentTypes_HomeworkCheckbox_Xpath_Locator));
@@ -3212,7 +3212,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentTypes_Filter_Id_Locator));
                 //Click on 'Assignment Types' Filter Option
-                base.ClickButtonByID(GBInstructorUXPageResource.
+                base.ClickButtonById(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentTypes_Filter_Id_Locator);
                 //Wait for 'Homework' Option in 'Assignment Types' Filter
                 base.WaitForElement(By.XPath(GBInstructorUXPageResource.
@@ -3432,7 +3432,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GBInstructorUXPageResource.
                     GBInstructorUX_Page_GradeCellCmenu_Options_Id_Locator));
                 //Get Grade Cell Cmenu Option
-                getGradeCellCmenuText = base.GetElementTextByID(GBInstructorUXPageResource.
+                getGradeCellCmenuText = base.GetElementTextById(GBInstructorUXPageResource.
                     GBInstructorUX_Page_GradeCellCmenu_Options_Id_Locator);
                 if (getGradeCellCmenuText.Contains(gradeCellCmenuOption))
                 {
@@ -3656,7 +3656,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Custom Column Title
             base.WaitForElement(By.Id(GBInstructorUXPageResource.GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator));
             //Fill the Custom Column Name in textbox
-            base.FillTextBoxByID(GBInstructorUXPageResource.GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator, calculatedColumnName.ToString());
+            base.FillTextBoxById(GBInstructorUXPageResource.GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator, calculatedColumnName.ToString());
             ColumnName = base.GetValueAttributeById(GBInstructorUXPageResource.GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator);
             this.StoreCustomColumnInMemory(ColumnName, Activity.ActivityTypeEnum.CalculatedColumn);
             logger.LogMethodExit("GBInstructorUXPage", "EnterCalculatedColumnName",

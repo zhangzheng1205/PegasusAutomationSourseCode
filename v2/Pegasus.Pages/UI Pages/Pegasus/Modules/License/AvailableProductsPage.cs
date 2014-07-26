@@ -81,12 +81,12 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(AvailableProductsPageResource.
                 AvailableProducts_Page_EmptyBox_Product_Id));
             //Fill Product Name
-            base.FillTextBoxByID(AvailableProductsPageResource.
+            base.FillTextBoxById(AvailableProductsPageResource.
                 AvailableProducts_Page_EmptyBox_Product_Id, product);
             base.WaitForElement(By.Id(AvailableProductsPageResource.
                 AvailableProducts_Page_Search_Button_Id));
             //Click on Search Button
-            base.ClickButtonByID(AvailableProductsPageResource.
+            base.ClickButtonById(AvailableProductsPageResource.
                 AvailableProducts_Page_Search_Button_Id);
             base.WaitForElement(By.ClassName(AvailableProductsPageResource.
                 AvailableProducts_Page_Select_ClassName));

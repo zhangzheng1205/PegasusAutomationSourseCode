@@ -243,7 +243,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Default Window
                 this.SelectGlobalHomePage();
                 // Focus on My Profile Link
-                base.FocusOnElementByID(MyPegasusUXPageResource.
+                base.FocusOnElementById(MyPegasusUXPageResource.
                     MyPegasusUX_Page_MyProfileLink_Id_Locator);
                 // Click My Profile Link
                 IWebElement myProfileLink = base.GetWebElementPropertiesById(

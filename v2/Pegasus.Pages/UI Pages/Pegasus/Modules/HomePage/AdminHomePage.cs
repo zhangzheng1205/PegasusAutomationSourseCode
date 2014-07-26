@@ -39,7 +39,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the Organization link
                 base.WaitForElement(By.Id(AdminHomePageResource.
                     AdminHome_Page_Organization_Link_Id_Locator));
-                base.FocusOnElementByID(AdminHomePageResource.
+                base.FocusOnElementById(AdminHomePageResource.
                     AdminHome_Page_Organization_Link_Id_Locator);
                 //Get web element
                 IWebElement getOrganizationNameLink = base.GetWebElementPropertiesById

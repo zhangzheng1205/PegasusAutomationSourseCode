@@ -134,7 +134,7 @@ namespace Pegasus.Pages.UI_Pages
                     CourseContentPreferences_Page_HideCourse_Content_Id_Locator)
                     .Selected))
                 {
-                    base.ClickCheckBoxById(CourseContentPreferencesPageResource.
+                    base.SelectCheckBoxById(CourseContentPreferencesPageResource.
                     CourseContentPreferences_Page_HideCourse_Content_Id_Locator);
                 }
                 //Save the Preferences

@@ -223,7 +223,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait For Successfull Message To Display After Bulk Registration
                 this.WaitForSuccessfullMessageToDisplayForBulkRegistration();
                 //Get the successfull Message
-                getSuccessfulMessage = GetElementTextByID(ManageStudentsDefaultPageResource.
+                getSuccessfulMessage = GetElementTextById(ManageStudentsDefaultPageResource.
                     ManageStudentsDefaultPage_BulkRegistration_Successfull_Message_Id_Locator);
             }
             catch (Exception e)
@@ -264,7 +264,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select The Roster Frame
                 this.SelectTheRosterFrame();
                 //Get the Successfull Message
-                getSuccessfulMessage = GetElementTextByID(ManageStudentsDefaultPageResource.
+                getSuccessfulMessage = GetElementTextById(ManageStudentsDefaultPageResource.
                     ManageStudentsDefaultPage_BulkRegistration_Successfull_Message_Id_Locator);
                 //Split the Message by Space
                 string[] getDisplayedMessage = getSuccessfulMessage.

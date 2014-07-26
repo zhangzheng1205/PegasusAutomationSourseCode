@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(UploadFilePageResource.
                     UploadFilePageResourse_File_TextBox_Id_Locator));
                 //Fill the FileName text
-                base.FillTextBoxByID(UploadFilePageResource.
+                base.FillTextBoxById(UploadFilePageResource.
                     UploadFilePageResourse_File_TextBox_Id_Locator,
                     newFileName.ToString());
                 //Store the link Asset
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for the element
             base.WaitForElement(By.Id(UploadFilePageResource.
                 UploadFilePageResourse_File_Add_button_Id_Locator));
-            base.FocusOnElementByID(UploadFilePageResource.
+            base.FocusOnElementById(UploadFilePageResource.
                 UploadFilePageResourse_File_Add_button_Id_Locator);
             //Get the web element
             IWebElement getAddButton = base.GetWebElementPropertiesById

@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MatchingPageResource.
                 Matching_Page_EnterQuestionTitle_Id_Locator));
             //Fill the Question Title
-            base.FillTextBoxByID(MatchingPageResource.
+            base.FillTextBoxById(MatchingPageResource.
                 Matching_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("MatchingPage", "EnterQuestionTitle",
                 base.isTakeScreenShotDuringEntryExit);
@@ -163,15 +163,15 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MatchingPageResource.
                 Matching_Page_ViewSource_Button_Id_Locator));
             //Click on View Source Button
-            base.ClickButtonByID(MatchingPageResource.
+            base.ClickButtonById(MatchingPageResource.
                 Matching_Page_ViewSource_Button_Id_Locator);
             base.WaitForElement(By.Id(MatchingPageResource.
                 Matching_Page_EnterTextHTML_Id_Locator));
             //Enter data
-            base.FillTextBoxByID(MatchingPageResource.
+            base.FillTextBoxById(MatchingPageResource.
                 Matching_Page_EnterTextHTML_Id_Locator, questionText);
             //Click on View Source Button
-            base.ClickButtonByID(MatchingPageResource.
+            base.ClickButtonById(MatchingPageResource.
                 Matching_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("MatchingPage",
                 "ClickOnViewSourceAndEnterDataForEntryListQuestion",
@@ -195,10 +195,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(string.Format(MatchingPageResource.
                     Matching_Page_TextField_TextBox_Id_Locator, initialCount)));
                 //Clear the Textbox
-                base.ClearTextByID(string.Format(MatchingPageResource.
+                base.ClearTextById(string.Format(MatchingPageResource.
                     Matching_Page_TextField_TextBox_Id_Locator, initialCount));
                 //Fill the Text Box
-                base.FillTextBoxByID(string.Format(MatchingPageResource.
+                base.FillTextBoxById(string.Format(MatchingPageResource.
                     Matching_Page_TextField_TextBox_Id_Locator, initialCount),
                     MatchingPageResource.Matching_Page_EnterText_TextValue +
                     initialCount.ToString());
@@ -225,10 +225,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(string.Format(MatchingPageResource.
                     Matching_Page_MatchingTextField_Id_Locator, initialCount)));
                 //Clear the Text Box
-                base.ClearTextByID(string.Format(MatchingPageResource.
+                base.ClearTextById(string.Format(MatchingPageResource.
                     Matching_Page_MatchingTextField_Id_Locator, initialCount));
                 //Fill the Texbox
-                base.FillTextBoxByID(string.Format(MatchingPageResource.
+                base.FillTextBoxById(string.Format(MatchingPageResource.
                     Matching_Page_MatchingTextField_Id_Locator, initialCount),
                     MatchingPageResource.Matching_Page_EnterMatchingText_TextValue
                     + initialCount.ToString());

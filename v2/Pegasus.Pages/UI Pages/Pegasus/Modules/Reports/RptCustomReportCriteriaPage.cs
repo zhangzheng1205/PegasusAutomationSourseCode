@@ -68,7 +68,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(RptCustomReportCriteriaPageResource.
                     RptCustomReportCriteria_Page_Select_Id_Locator));
-                base.FocusOnElementByID(RptCustomReportCriteriaPageResource.
+                base.FocusOnElementById(RptCustomReportCriteriaPageResource.
                     RptCustomReportCriteria_Page_Select_Id_Locator);
                 //Get web element
                 IWebElement getAllStudent = base.GetWebElementPropertiesById
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
                 //wait for the Select class columns element           
                 base.WaitForElement(By.Id(RptCustomReportCriteriaPageResource.
                     RptCustomReportCriteria_Page_Class_Column_Id_Locator));
-                base.FocusOnElementByID(RptCustomReportCriteriaPageResource.
+                base.FocusOnElementById(RptCustomReportCriteriaPageResource.
                     RptCustomReportCriteria_Page_Class_Column_Id_Locator);
                 //Get web element
                 IWebElement getClassSelect = base.GetWebElementPropertiesById
@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptCustomReportCriteriaPageResource.
                     RptCustomReportCriteria_Page_ReportName_textbox_Id_Locator));
                 //Fill the name
-                base.FillTextBoxByID(RptCustomReportCriteriaPageResource.
+                base.FillTextBoxById(RptCustomReportCriteriaPageResource.
                     RptCustomReportCriteria_Page_ReportName_textbox_Id_Locator,
                     reportName.ToString());
                 //Wait for the Run report btn

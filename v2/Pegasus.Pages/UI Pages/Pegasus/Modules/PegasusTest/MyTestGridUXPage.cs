@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MyTestGridUXPageResource.
                 MyTestGridUX_Page_CreateNewTest_Id_Locator));
             //Focus on element
-            base.FocusOnElementByID(MyTestGridUXPageResource.
+            base.FocusOnElementById(MyTestGridUXPageResource.
                 MyTestGridUX_Page_CreateNewTest_Id_Locator);
             IWebElement getCreateNewTestLinkProperty = base.
                 GetWebElementPropertiesById(MyTestGridUXPageResource.
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(MyTestGridUXPageResource.
                     MyTestGridUX_Page_MyTest_Tab_Message_Id_Locator));
                 //Get Success Message From Application
-                getSuccessMessage = base.GetElementTextByID(MyTestGridUXPageResource.
+                getSuccessMessage = base.GetElementTextById(MyTestGridUXPageResource.
                     MyTestGridUX_Page_MyTest_Tab_Message_Id_Locator);
             }
             catch (Exception e)
@@ -586,7 +586,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(PaperTestUXPageResource.
                     PaperTestUX_Page_MyTest_Table_Id_Locator));
                 //Get the displayed cmenu options
-                getCmenuOptionsDisplayed = base.GetElementTextByID(PaperTestUXPageResource.
+                getCmenuOptionsDisplayed = base.GetElementTextById(PaperTestUXPageResource.
                     PaperTestUX_Page_MyTest_Table_Id_Locator);
                 getCmenuOptionsDisplayed = getCmenuOptionsDisplayed.Replace
                         (Environment.NewLine, string.Empty).Trim();

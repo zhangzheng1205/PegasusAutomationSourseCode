@@ -525,7 +525,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(GBStudentUXPageResource.
                     GBStudentUXPage_Coursematerials_Text_Id_Locator));
                 // Get Grades Leftframe Course Materails 
-                getCourseMaterailsText = base.GetElementTextByID
+                getCourseMaterailsText = base.GetElementTextById
                     (GBStudentUXPageResource.
                     GBStudentUXPage_Coursematerials_Text_Id_Locator);
             }

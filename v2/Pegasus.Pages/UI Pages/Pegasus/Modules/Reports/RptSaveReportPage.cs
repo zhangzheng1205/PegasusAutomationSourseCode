@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptSaveReportPageResource.
                     RptSaveReport_Page_SelectStudents_Button_Id_Locator));
                 //Click on Button
-                base.ClickButtonByID(RptSaveReportPageResource.
+                base.ClickButtonById(RptSaveReportPageResource.
                     RptSaveReport_Page_SelectStudents_Button_Id_Locator);
             }
             catch (Exception e)
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Click SelectSections button
                 base.WaitForElement(By.Id(RptSaveReportPageResource.
                     RptSaveReport_Page_SelectSections_Button_Id_Locator));
-                base.ClickButtonByID(RptSaveReportPageResource.
+                base.ClickButtonById(RptSaveReportPageResource.
                     RptSaveReport_Page_SelectSections_Button_Id_Locator);
             }
             catch (Exception e)
@@ -243,7 +243,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptSaveReportPageResource.
                     RptSaveReport_Page_SaveSettingsToMyReports_Checkbox_Id_Locator));
                 //Select 'save settings to My Reports' Checkbox
-                base.ClickCheckBoxById(RptSaveReportPageResource.
+                base.SelectCheckBoxById(RptSaveReportPageResource.
                     RptSaveReport_Page_SaveSettingsToMyReports_Checkbox_Id_Locator);
             }
             catch (Exception e)
@@ -267,7 +267,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptSaveReportPageResource.
                     RptSaveReport_Page_SaveSettingsToMyReports_Option_Id_Locator));
                 //Select 'save settings to My Reports' Checkbox
-                base.ClickCheckBoxById(RptSaveReportPageResource.
+                base.SelectCheckBoxById(RptSaveReportPageResource.
                     RptSaveReport_Page_SaveSettingsToMyReports_Option_Id_Locator);
             }
             catch (Exception e)
@@ -316,25 +316,25 @@ namespace Pegasus.Pages.UI_Pages
                  base.isTakeScreenShotDuringEntryExit);
             string getAllFieldsText = string.Empty;
             //Get Select Sections Text
-            string getSelectSectionsText = base.GetElementTextByID(RptSaveReportPageResource.
+            string getSelectSectionsText = base.GetElementTextById(RptSaveReportPageResource.
                 RptSaveReport_Page_SelectSections_Button_Id_Locator);
             //Get Active Radiobutton Text
-            string getActiveRadiobuttonText = base.GetElementTextByID(RptSaveReportPageResource.
+            string getActiveRadiobuttonText = base.GetElementTextById(RptSaveReportPageResource.
                 RptSaveReport_Page_Active_Text_Id_Locator);
             //Get Inactive Radiobutton Text
-            string getInActiveRadiobuttonText = base.GetElementTextByID(RptSaveReportPageResource.
+            string getInActiveRadiobuttonText = base.GetElementTextById(RptSaveReportPageResource.
                 RptSaveReport_Page_Inactive_Text_Id_Locator);
             //Get AllStatuses Radiobutton Text
-            string getAllStatusRadiobuttonText = base.GetElementTextByID(RptSaveReportPageResource.
+            string getAllStatusRadiobuttonText = base.GetElementTextById(RptSaveReportPageResource.
                 RptSaveReport_Page_AllStatuses_Text_Id_Locator);
             //Get Show All Link Text
-            string getShowAllLinkText = base.GetElementTextByID(RptSaveReportPageResource.
+            string getShowAllLinkText = base.GetElementTextById(RptSaveReportPageResource.
                 RptSaveReport_Page_ShowCollapse_Link_Id_Locator);
             //Click On Show All Link
             base.ClickLinkById(RptSaveReportPageResource.
                 RptSaveReport_Page_ShowCollapse_Link_Id_Locator);
             //Get Collapse Link Text
-            string getCollapseLinkText = base.GetElementTextByID(RptSaveReportPageResource.
+            string getCollapseLinkText = base.GetElementTextById(RptSaveReportPageResource.
                 RptSaveReport_Page_ShowCollapse_Link_Id_Locator);
             //Get Placeholder Textbox Text
             string getPlaceHolderTextboxText = GetValueAttributeByXPath(RptSaveReportPageResource.
@@ -510,7 +510,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(RptSaveReportPageResource.
                 RptSaveReport_Page_Select_Activities_Button_Id_Locator));
             //Click On 'Select Activities' Button
-            base.ClickButtonByID(RptSaveReportPageResource.
+            base.ClickButtonById(RptSaveReportPageResource.
                 RptSaveReport_Page_Select_Activities_Button_Id_Locator);
             //Wait For Window
             base.WaitUntilWindowLoads(RptSelectAssessmentsResource.
@@ -581,12 +581,12 @@ namespace Pegasus.Pages.UI_Pages
             //Enter From Date
             base.WaitForElement(By.Id(RptSaveReportPageResource.
                 RptSaveReport_Page_FromDate_Textbox_Id_Locator));
-            base.FillTextBoxByID(RptSaveReportPageResource.
+            base.FillTextBoxById(RptSaveReportPageResource.
                 RptSaveReport_Page_FromDate_Textbox_Id_Locator, date);
             //Enter To Date
             base.WaitForElement(By.Id(RptSaveReportPageResource.
                 RptSaveReport_Page_ToDate_Textbox_Id_Locator));
-            base.FillTextBoxByID(RptSaveReportPageResource.
+            base.FillTextBoxById(RptSaveReportPageResource.
                 RptSaveReport_Page_ToDate_Textbox_Id_Locator, date);
             logger.LogMethodExit("RptSaveReportPage", "EnterFromToDate",
                   base.isTakeScreenShotDuringEntryExit);       
@@ -615,7 +615,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptSaveReportPageResource.
                     RptSaveReport_Page_SaveSettings_Checkbox_Id_Locator));
                 //Select 'save settings to My Reports' Checkbox
-                base.ClickCheckBoxById(RptSaveReportPageResource.
+                base.SelectCheckBoxById(RptSaveReportPageResource.
                     RptSaveReport_Page_SaveSettings_Checkbox_Id_Locator);
             }
             catch (Exception e)
@@ -731,7 +731,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(RptSaveReportPageResource.
                 RptSaveReport_Page_SelectSimStudyPlan_Button_Id_Locator));
             //Click On 'Select Sim Study Plan' Button
-            base.ClickButtonByID(RptSaveReportPageResource.
+            base.ClickButtonById(RptSaveReportPageResource.
                 RptSaveReport_Page_SelectSimStudyPlan_Button_Id_Locator);
             logger.LogMethodExit("RptSaveReportPage", "ClickOnSelectSimStudyPlanButton",
                   base.isTakeScreenShotDuringEntryExit);
@@ -898,14 +898,14 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(RptSaveReportPageResource.
                 RptSaveReport_Page_SelectTraining_Button_Id_Locator));
             //Click On 'Select Training' Button
-            base.ClickButtonByID(RptSaveReportPageResource.
+            base.ClickButtonById(RptSaveReportPageResource.
                 RptSaveReport_Page_SelectTraining_Button_Id_Locator);
             //Select 'Select Training' Window
             this.SelectTrainingWindow();
             base.WaitForElement(By.Id(RptSaveReportPageResource.
                 RptSaveReport_Page_Training_Checkbox_Id_Locator));
             //Select Training
-            base.ClickCheckBoxById(RptSaveReportPageResource.
+            base.SelectCheckBoxById(RptSaveReportPageResource.
                 RptSaveReport_Page_Training_Checkbox_Id_Locator);
             logger.LogMethodExit("RptSaveReportPage",
                 "ClickonSelectTrainingButtonandSelectTraining",

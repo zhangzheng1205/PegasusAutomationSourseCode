@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(StudentExplorePageResource.
                     StudentExplore_Page_ActivityText_Id_Locator));
                 //Get Activity Name
-                string getActivityName = base.GetElementTextByID(StudentExplorePageResource.
+                string getActivityName = base.GetElementTextById(StudentExplorePageResource.
                     StudentExplore_Page_ActivityText_Id_Locator).Trim();
                 if (getActivityName == activityName)
                 {

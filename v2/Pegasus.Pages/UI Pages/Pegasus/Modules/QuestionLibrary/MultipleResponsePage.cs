@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_EnterQuestionTitle_Id_Locator));
             //Fill the Question Title
-            base.FillTextBoxByID(MultipleResponsePageResource.
+            base.FillTextBoxById(MultipleResponsePageResource.
                 MultipleResponse_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("MultipleResponsePage", "EnterQuestionTitle",
                 base.isTakeScreenShotDuringEntryExit);
@@ -122,15 +122,15 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_ViewSource_Button_Id_Locator));
             //Click on View Source Button
-            base.ClickButtonByID(MultipleResponsePageResource.
+            base.ClickButtonById(MultipleResponsePageResource.
                 MultipleResponse_Page_ViewSource_Button_Id_Locator);
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_EnterTextHTML_Id_Locator));
             //Enter data
-            base.FillTextBoxByID(MultipleResponsePageResource.
+            base.FillTextBoxById(MultipleResponsePageResource.
                 MultipleResponse_Page_EnterTextHTML_Id_Locator, questionText);
             //Click on View Source Button
-            base.ClickButtonByID(MultipleResponsePageResource.
+            base.ClickButtonById(MultipleResponsePageResource.
                 MultipleResponse_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("MultipleResponsePage",
                 "ClickOnViewSourceAndEnterDataForMultipleResponseQuestion",
@@ -285,7 +285,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_EnterQuestionTextHTML_Id_Locator));
             //Fill Question Text
-            base.FillTextBoxByID(MultipleResponsePageResource.
+            base.FillTextBoxById(MultipleResponsePageResource.
                 MultipleResponse_Page_EnterQuestionTextHTML_Id_Locator, questionText);
             logger.LogMethodExit("MultipleResponsePage", "FillQuestionText",
             base.isTakeScreenShotDuringEntryExit);
@@ -505,10 +505,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(string.Format(MultipleResponsePageResource.
                     MultipleResponse_Page_FillScoreValue_Id_Locator, initialCount)));
                 //Clear the Text Box
-                base.ClearTextByID(string.Format(MultipleResponsePageResource.
+                base.ClearTextById(string.Format(MultipleResponsePageResource.
                     MultipleResponse_Page_FillScoreValue_Id_Locator, initialCount));
                 //Fill The First Score Value
-                base.FillTextBoxByID(string.Format(MultipleResponsePageResource.
+                base.FillTextBoxById(string.Format(MultipleResponsePageResource.
                     MultipleResponse_Page_FillScoreValue_Id_Locator, initialCount),
                     initialCount.ToString() + MultipleResponsePageResource.
                     MultipleResponse_Page_ZeroScoreValue);

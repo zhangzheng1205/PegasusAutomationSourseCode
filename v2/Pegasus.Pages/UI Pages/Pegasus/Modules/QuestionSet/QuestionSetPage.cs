@@ -297,7 +297,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select checkbox for all questions 
             base.WaitForElement(By.Id(QuestionSetPageResource.
                 QuestionSetPage_AllQuestion_Checkboc_Id));
-            base.ClickCheckBoxById(QuestionSetPageResource.
+            base.SelectCheckBoxById(QuestionSetPageResource.
                 QuestionSetPage_AllQuestion_Checkboc_Id);
             //Select Content_Window
             this.SelectContentWindow();

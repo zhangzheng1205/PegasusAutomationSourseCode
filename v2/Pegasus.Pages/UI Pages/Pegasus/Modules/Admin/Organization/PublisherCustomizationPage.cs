@@ -220,7 +220,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.Id(PublisherCustomizationPageResource.
                     PublisherCustomization_Page_WelcomeMessage_Id_Locator));
-                getWelcomeMessage = base.GetElementTextByID(
+                getWelcomeMessage = base.GetElementTextById(
                     PublisherCustomizationPageResource.
                     PublisherCustomization_Page_WelcomeMessage_Id_Locator);
             }

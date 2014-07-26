@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
            //Wait for the Select Class checkbox
            base.WaitForElement(By.Id(RptSelectCoursesPageResource.
                RptSelectCourses_Page_SelectClass_Checkbox_Id_Locator));
-           base.FocusOnElementByID(RptSelectCoursesPageResource.
+           base.FocusOnElementById(RptSelectCoursesPageResource.
                RptSelectCourses_Page_SelectClass_Checkbox_Id_Locator);
            //Get web element
            IWebElement getSelectAllClass = base.GetWebElementPropertiesById

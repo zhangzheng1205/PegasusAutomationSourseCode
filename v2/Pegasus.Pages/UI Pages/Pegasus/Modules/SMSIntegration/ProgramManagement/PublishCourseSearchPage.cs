@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PublishCourseSearchPageResource.
                 PublishCourseSearch_Page_CourseDetail_Id_Locator));
             //Enter Course Name in Text Box
-            base.FillTextBoxByID(PublishCourseSearchPageResource.
+            base.FillTextBoxById(PublishCourseSearchPageResource.
                 PublishCourseSearch_Page_CourseDetail_Id_Locator, courseName);
             base.WaitForElement(By.Id(PublishCourseSearchPageResource.
                  PublishCourseSearch_Page_ButtonSearch_Id_Locator));

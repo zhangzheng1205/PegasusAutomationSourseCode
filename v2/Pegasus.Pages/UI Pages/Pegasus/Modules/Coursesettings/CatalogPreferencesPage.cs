@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Publisher Dropdown Value
             base.WaitForElement(By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Publisher_Dropdown_Id_Locator));
-            base.FocusOnElementByID(CatalogPreferencesPageResource.
+            base.FocusOnElementById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Publisher_Dropdown_Id_Locator);
             base.SelectDropDownValueThroughTextById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Publisher_Dropdown_Id_Locator,
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Discipline Dropdown Value
             base.WaitForElement(By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Discipline_Dropdown_Id_Locator));
-            base.FocusOnElementByID(CatalogPreferencesPageResource.
+            base.FocusOnElementById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Discipline_Dropdown_Id_Locator);
             base.SelectDropDownValueThroughTextById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Discipline_Dropdown_Id_Locator,
@@ -97,19 +97,19 @@ namespace Pegasus.Pages.UI_Pages
             "EnterTextBookAuthorFirstLastName", base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBook_Author_Firstname_Text_Id_Locator));
-            base.ClearTextByID(CatalogPreferencesPageResource.
+            base.ClearTextById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBook_Author_Firstname_Text_Id_Locator);
             //Enter Text Book Author First Name
-            base.FillTextBoxByID(CatalogPreferencesPageResource.
+            base.FillTextBoxById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBook_Author_Firstname_Text_Id_Locator,
                 CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBook_Author_Firstname_Value);
             base.WaitForElement(By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBook_Author_Lastname_Text_Id_Locator));
-            base.ClearTextByID(CatalogPreferencesPageResource.
+            base.ClearTextById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBook_Author_Lastname_Text_Id_Locator);
             //Enter Text Book Author Last Name
-            base.FillTextBoxByID(CatalogPreferencesPageResource.
+            base.FillTextBoxById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBook_Author_Lastname_Text_Id_Locator,
                 CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBook_Author_Lastname_Value);
@@ -127,30 +127,30 @@ namespace Pegasus.Pages.UI_Pages
             "EnterTextBookTitleAndISBN", base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBookTitle_Text_Id_Locator));
-            base.ClearTextByID(CatalogPreferencesPageResource.
+            base.ClearTextById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBookTitle_Text_Id_Locator);
             Thread.Sleep(Convert.ToInt32(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Wait_Time_Value));
             //Enter Text Book Title
-            base.FillTextBoxByID(CatalogPreferencesPageResource.
+            base.FillTextBoxById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBookTitle_Text_Id_Locator,
                 CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBookTitle_Value);
             base.WaitForElement(By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_ISBN10_Text_Id_Locator));
-            base.ClearTextByID(CatalogPreferencesPageResource.
+            base.ClearTextById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_ISBN10_Text_Id_Locator);
             //Enter 10 Digit ISBN
-            base.FillTextBoxByID(CatalogPreferencesPageResource.
+            base.FillTextBoxById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_ISBN10_Text_Id_Locator,
                 CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_ISBN10_Value);
             base.WaitForElement(By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_ISBN13_Text_Id_Locator));
-            base.ClearTextByID(CatalogPreferencesPageResource.
+            base.ClearTextById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_ISBN13_Text_Id_Locator);
             //Enter 13 Digit ISBN
-            base.FillTextBoxByID(CatalogPreferencesPageResource.
+            base.FillTextBoxById(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_ISBN13_Text_Id_Locator,
                 CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_ISBN13_Value);

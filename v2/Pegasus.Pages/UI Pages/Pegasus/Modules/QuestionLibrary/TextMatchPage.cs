@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TextMatchPageResource.
                 TextMatch_Page_EnterQuestionTitle_Id_Locator));
             //Enter Title
-            base.FillTextBoxByID(TextMatchPageResource.
+            base.FillTextBoxById(TextMatchPageResource.
                 TextMatch_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("TextMatchPage", "EnterTitleForTextMatch",
                base.isTakeScreenShotDuringEntryExit);
@@ -94,15 +94,15 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TextMatchPageResource.
                 TextMatch_Page_ViewSource_Button_Id_Locator));
             //Click on View Source Button
-            base.ClickButtonByID(TextMatchPageResource.
+            base.ClickButtonById(TextMatchPageResource.
                 TextMatch_Page_ViewSource_Button_Id_Locator);
             base.WaitForElement(By.Id(TextMatchPageResource.
                 TextMatch_Page_EnterTextHTML_Id_Locator));
             //Enter data
-            base.FillTextBoxByID(TextMatchPageResource.
+            base.FillTextBoxById(TextMatchPageResource.
                 TextMatch_Page_EnterTextHTML_Id_Locator, questionText);
             //Click on View Source Button
-            base.ClickButtonByID(TextMatchPageResource.
+            base.ClickButtonById(TextMatchPageResource.
                 TextMatch_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("TextMatchPage",
                 "ClickOnViewSourceAndEnterDataForTextMatchQuestion",
@@ -191,10 +191,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(TextMatchPageResource.
                 TextMatch_Page_NumberOfLines_Id_Locator));
             //Clear Text Box
-            base.ClearTextByID(TextMatchPageResource.
+            base.ClearTextById(TextMatchPageResource.
                 TextMatch_Page_NumberOfLines_Id_Locator);
             //Fill Text With the Number of Lines
-            base.FillTextBoxByID(TextMatchPageResource.
+            base.FillTextBoxById(TextMatchPageResource.
                 TextMatch_Page_NumberOfLines_Id_Locator,
                 TextMatchPageResource.TextMatch_Page_NumberOfLines_Value);
             logger.LogMethodExit("TextMatchPage",
@@ -218,10 +218,10 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.Id(string.Format(
                         TextMatchPageResource.TextMatch_Page_KeyWord_Id_Locator, initialCount)));
                     //Clear Text Box
-                    base.ClearTextByID(string.Format(
+                    base.ClearTextById(string.Format(
                         TextMatchPageResource.TextMatch_Page_KeyWord_Id_Locator, initialCount));
                     //Fill Text Box with keyword value
-                    base.FillTextBoxByID(string.Format(
+                    base.FillTextBoxById(string.Format(
                         TextMatchPageResource.TextMatch_Page_KeyWord_Id_Locator,
                         initialCount), initialCount.ToString());
                 }
@@ -246,10 +246,10 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.Id(string.Format(TextMatchPageResource.
                         TextMatch_Page_Score_Id_Locator, initialCount)));
                     //Clear Text Box
-                    base.ClearTextByID(string.Format(TextMatchPageResource.
+                    base.ClearTextById(string.Format(TextMatchPageResource.
                         TextMatch_Page_Score_Id_Locator, initialCount));
                     //Fill Text box with Score Value
-                    base.FillTextBoxByID(string.Format(TextMatchPageResource.
+                    base.FillTextBoxById(string.Format(TextMatchPageResource.
                         TextMatch_Page_Score_Id_Locator, initialCount), initialCount.ToString());
                 }
             }

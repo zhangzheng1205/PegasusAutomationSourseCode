@@ -206,7 +206,7 @@ namespace Pegasus.Pages.UI_Pages
             bool getIsSaveButtonEnabled = false;
             do
             {
-                getIsSaveButtonEnabled = base.IsElementEnabledByID(
+                getIsSaveButtonEnabled = base.IsElementEnabledById(
                     EssayPageResource.Essay_Page_SaveAndClose_Id_Locator);
 
             } while (getIsSaveButtonEnabled == false);
@@ -254,19 +254,19 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_AudioInput_MinTime_Id_Locator));
             //Clear Minutes TextBox Value
-            base.ClearTextByID(EssayPageResource.
+            base.ClearTextById(EssayPageResource.
                 Essay_Page_AudioInput_MinTime_Id_Locator);
             //Enter Minutes TextBox Value
-            base.FillTextBoxByID(EssayPageResource.
+            base.FillTextBoxById(EssayPageResource.
                 Essay_Page_AudioInput_MinTime_Id_Locator,
                 EssayPageResource.Essay_Page_AudioInput_Minutes_Time_Value);
             base.WaitForElement(By.Id(EssayPageResource.
                Essay_Page_AudioInput_Seconds_Time_Id_Locator));
             //Clear Seconds TextBox Value
-            base.ClearTextByID(EssayPageResource.
+            base.ClearTextById(EssayPageResource.
                 Essay_Page_AudioInput_Seconds_Time_Id_Locator);
             //Enter Seconds TextBox Value
-            base.FillTextBoxByID(EssayPageResource.
+            base.FillTextBoxById(EssayPageResource.
                 Essay_Page_AudioInput_Seconds_Time_Id_Locator,
                 EssayPageResource.Essay_Page_AudioInput_Seconds_Time_Value);
             logger.LogMethodExit("EssayPage",
@@ -380,7 +380,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_EnterQuestionTitle_Id_Locator));
             //Enter Question Title
-            base.FillTextBoxByID(EssayPageResource.
+            base.FillTextBoxById(EssayPageResource.
                 Essay_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("EssayPage", "EnterTitleOfEssayQuestion",
                base.isTakeScreenShotDuringEntryExit);
@@ -443,28 +443,28 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_MaxScore_Id_Locator));
             //Clear Text Box of Max Score
-            base.ClearTextByID(EssayPageResource.
+            base.ClearTextById(EssayPageResource.
                 Essay_Page_MaxScore_Id_Locator);
             //Enter Max Score
-            base.FillTextBoxByID(EssayPageResource.
+            base.FillTextBoxById(EssayPageResource.
                 Essay_Page_MaxScore_Id_Locator, EssayPageResource.
                 Essay_Page_MaxScore_Value);
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_NumberOfWords_Id_Locator));
             //Clear Text Box of Number of Words
-            base.ClearTextByID(EssayPageResource.
+            base.ClearTextById(EssayPageResource.
                 Essay_Page_NumberOfWords_Id_Locator);
             //Enter Score Value for Number of Words
-            base.FillTextBoxByID(EssayPageResource.
+            base.FillTextBoxById(EssayPageResource.
                 Essay_Page_NumberOfWords_Id_Locator, EssayPageResource.
                 Essay_Page_NumberOfWords_Value);
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_NumberOfLines_Id_Locator));
             //Clear Text Box of Number of Lines
-            base.ClearTextByID(EssayPageResource.
+            base.ClearTextById(EssayPageResource.
                 Essay_Page_NumberOfLines_Id_Locator);
             //Enter Score value for Number of Lines
-            base.FillTextBoxByID(EssayPageResource.
+            base.FillTextBoxById(EssayPageResource.
                 Essay_Page_NumberOfLines_Id_Locator, EssayPageResource.
                 Essay_Page_NumberOfLines_Value);
             logger.LogMethodExit("EssayPage", 
@@ -512,7 +512,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_EnterText_HTML_Id_Locator));
             //Enter Text 
-            base.FillTextBoxByID(EssayPageResource.
+            base.FillTextBoxById(EssayPageResource.
                 Essay_Page_EnterText_HTML_Id_Locator, questionText);
             IWebElement getSourceButton=base.GetWebElementPropertiesById
                 (EssayPageResource.
@@ -556,29 +556,29 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_one));
             //Add a character
-            base.FocusOnElementByID(EssayPageResource.
+            base.FocusOnElementById(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_one);
-            base.ClickButtonByID(EssayPageResource.
+            base.ClickButtonById(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_one);
             //Add e character
-            base.FocusOnElementByID(EssayPageResource.
+            base.FocusOnElementById(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_two);
-            base.ClickButtonByID(EssayPageResource.
+            base.ClickButtonById(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_two);
             //Add i character
-            base.FocusOnElementByID(EssayPageResource.
+            base.FocusOnElementById(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_three);
-            base.ClickButtonByID(EssayPageResource.
+            base.ClickButtonById(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_three);
             //Add o character
-            base.FocusOnElementByID(EssayPageResource.
+            base.FocusOnElementById(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_four);
-            base.ClickButtonByID(EssayPageResource.
+            base.ClickButtonById(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_four);
             //Add u character
-            base.FocusOnElementByID(EssayPageResource.
+            base.FocusOnElementById(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_five);
-            base.ClickButtonByID(EssayPageResource.
+            base.ClickButtonById(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_five);
             logger.LogMethodExit("EssayPage", "AddPalletteCharacters",
             base.isTakeScreenShotDuringEntryExit);

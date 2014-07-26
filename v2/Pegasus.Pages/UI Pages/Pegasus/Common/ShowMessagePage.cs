@@ -193,7 +193,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.Id(ShowMessagePageResource.
                         ShowMessage_Page_Validation_MSG_Span_Id_Locator));
                     //Get The Text of validation message
-                    getTextOfValidationMessage = base.GetElementTextByID(
+                    getTextOfValidationMessage = base.GetElementTextById(
                         ShowMessagePageResource.
                         ShowMessage_Page_Validation_MSG_Span_Id_Locator).
                         Replace(Environment.NewLine, string.Empty);

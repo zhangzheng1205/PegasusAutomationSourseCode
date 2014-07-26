@@ -35,15 +35,15 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(CourseToolSettingsViewPageResource.
                     CourseToolSettingsView_Page_Input_Course_Id_Locator));
                 //Insert User Name in Username TextBox
-                base.ClearTextByID(CourseToolSettingsViewPageResource.
+                base.ClearTextById(CourseToolSettingsViewPageResource.
                     CourseToolSettingsView_Page_Input_Course_Id_Locator);
                 //Fill eCollege Course Id
-                base.FillTextBoxByID(CourseToolSettingsViewPageResource.
+                base.FillTextBoxById(CourseToolSettingsViewPageResource.
                     CourseToolSettingsView_Page_Input_Course_Id_Locator, ecollegeCourseId);
                 base.WaitForElement(By.Id(CourseToolSettingsViewPageResource.
                     CourseToolSettingsView_Page_SearchButton_Id_Locator));
                 //Click On Search Button
-                base.ClickButtonByID(CourseToolSettingsViewPageResource.
+                base.ClickButtonById(CourseToolSettingsViewPageResource.
                     CourseToolSettingsView_Page_SearchButton_Id_Locator);
                 //Switch to Course Frame
                 this.SwitchToCourseFrame();

@@ -45,10 +45,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(AddTemplatePageResource.
                                               AddTemplate_Page_TemplateName_Id_Locator));
                 //Fill Template Name in TextBox
-                base.FillTextBoxByID(AddTemplatePageResource.
+                base.FillTextBoxById(AddTemplatePageResource.
                    AddTemplate_Page_TemplateName_Id_Locator, templateDetails.ToString());
                 //Fill Template Description in Multi TextBox
-                base.FillTextBoxByID(AddTemplatePageResource.
+                base.FillTextBoxById(AddTemplatePageResource.
                    AddTemplate_Page_TemplateDescription_Id_Locator, templateDetails.ToString());
                 //Select Course To Create Template
                 SelectCourse(courseName);
@@ -101,7 +101,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Name(AddTemplatePageResource.
                     AddTemplate_Page_SelectTemplate_RadioButton_Name_Locator));
                 //Click on Radio Button To Select Course                
-                base.ClickRadioButtonByName(AddTemplatePageResource.
+                base.SelectRadioButtonByName(AddTemplatePageResource.
                     AddTemplate_Page_SelectTemplate_RadioButton_Name_Locator);
                 logger.LogMethodExit("AddTemplatePage", "SelectCourse",
               base.isTakeScreenShotDuringEntryExit);

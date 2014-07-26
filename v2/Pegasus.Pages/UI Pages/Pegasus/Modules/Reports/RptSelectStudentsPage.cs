@@ -173,9 +173,9 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Click Add button 
-                base.FocusOnElementByID(RptSelectStudentsResource.
+                base.FocusOnElementById(RptSelectStudentsResource.
                     RptSelectStudents_Page_PgA_Add_Button_Id_Locator);
-                base.ClickButtonByID(RptSelectStudentsResource.
+                base.ClickButtonById(RptSelectStudentsResource.
                     RptSelectStudents_Page_PgA_Add_Button_Id_Locator);
                 //Check 'Select Students' popup closed
                 base.IsPopUpClosed(Convert.ToInt32(RptSelectStudentsResource.
