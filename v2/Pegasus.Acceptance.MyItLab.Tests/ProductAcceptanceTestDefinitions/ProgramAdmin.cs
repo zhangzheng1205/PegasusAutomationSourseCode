@@ -223,7 +223,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        ///
+        /// To search the section
         /// </summary>
         /// <param name="courseTypeEnum"></param>
         [When(@"I search the section of ""(.*)""")]
@@ -240,7 +240,34 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             base.isTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Copying the section from section inside the program
+        /// </summary>
+        [When(@"I click Copy/Save button to copy")]
+        public void ClickonCopySectionButton()
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "ClickonCopySectionButton",
+            base.isTakeScreenShotDuringEntryExit);
+            //SaveUpdate method to create or update the course.
+            new EditCopyTemplatesSectionsPage().CopySection();
+            Logger.LogMethodExit("ProgramAdmin", "ClickonCopySectionButton",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+        ///// <summary>
+        ///// click on the copy/save button, during the copy of the template/section as template inside the program 
+        ///// </summary>
+        [When(@"I click Copy/Save button")]
+        public void ClickOnCopySaveButton()
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "ClickOnCopySaveButton",
+                base.isTakeScreenShotDuringEntryExit);
+            //SaveUpdate method to create or update the course.
+            new EditCopyTemplatesSectionsPage().ClickToCreateUpdate();
+            Logger.LogMethodExit("ProgramAdmin", "ClickOnCopySaveButton",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
     }
-
-
 }
