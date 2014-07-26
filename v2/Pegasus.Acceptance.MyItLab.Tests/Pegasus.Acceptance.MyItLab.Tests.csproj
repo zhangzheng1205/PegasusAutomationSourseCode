@@ -174,11 +174,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceInstructorCopyContent.Workflow.feature</DependentUpon>
     </Compile>
-    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorCourseMaterials.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CourseSpaceInstructorCourseMaterials.feature</DependentUpon>
-    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorGradebook.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -299,6 +294,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WorkSpaceInstructorTodaysView.Workflow.feature</DependentUpon>
     </Compile>
+    <Compile Include="TestBedAcceptanceFeature\TestBedPreparation.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestBedPreparation.feature</DependentUpon>
+    </Compile>
     <Compile Include="UserStoryAcceptanceTestFeatures\PEGASUS-18493.Acceptance.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -399,10 +399,6 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceInstructorCopyContent.Workflow.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorCourseMaterials.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CourseSpaceInstructorCourseMaterials.feature.cs</LastGenOutput>
-    </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorGradebook.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceInstructorGradebook.Workflow.feature.cs</LastGenOutput>
@@ -498,6 +494,10 @@
     <None Include="ProductAcceptanceTestFeatures\WorkSpaceInstructorTodaysView.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WorkSpaceInstructorTodaysView.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestBedAcceptanceFeature\TestBedPreparation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TestBedPreparation.feature.cs</LastGenOutput>
     </None>
     <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-18493.Acceptance.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

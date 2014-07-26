@@ -196,7 +196,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Upload the File
                 new ImportUsersPage().UploadBulkUserFile();
                 //Click on the Ok Button in Pegasus popup
-                new ShowMessagePage().ClickOnPegasusOkButton();
+                new ShowMessagePage().ClickOnPegasusAlertOkButton();
             }
             catch (Exception e)
             {

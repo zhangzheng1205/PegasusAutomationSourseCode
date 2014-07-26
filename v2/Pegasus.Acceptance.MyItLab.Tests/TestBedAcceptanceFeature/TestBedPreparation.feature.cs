@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
+namespace Pegasus.Acceptance.MyItLab.Tests.TestBedAcceptanceFeature
 {
     using TechTalk.SpecFlow;
     
@@ -19,21 +19,21 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.3.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CourseSpaceInstructorCourseMaterialsFeature
+    public partial class TestBedPreparationFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "CourseSpaceInstructorCourseMaterials.feature"
+#line 1 "TestBedPreparation.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorCourseMaterials", "               As a CS Instructor \r\n\t\t\tI want to manage all the course materials " +
-                    "workflow related usecases \r\n\t\t\tso that I would validate all the coursespace cour" +
-                    "se materials instructor workflow related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestBedPreparation", "\tIn order to preparation od bed that will takes care of particular activity \n\tAs " +
+                    "a different user roles\n\tSo that once the test bed is ready then we start executi" +
+                    "ng the test cases as already documented.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -48,9 +48,9 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
         public virtual void TestInitialize()
         {
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
-                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "CourseSpaceInstructorCourseMaterials")))
+                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "TestBedPreparation")))
             {
-                Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures.CourseSpaceInstructorCourseMaterialsFeature.FeatureSetup(null);
+                Pegasus.Acceptance.MyItLab.Tests.TestBedAcceptanceFeature.TestBedPreparationFeature.FeatureSetup(null);
             }
         }
         
@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Assign Content In My Course Frame")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorCourseMaterials")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "TestBedPreparation")]
         public virtual void AssignContentInMyCourseFrame()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign Content In My Course Frame", ((string[])(null)));
@@ -85,6 +85,8 @@ testRunner.And("I selected activity \"Access Chapter 1: End-of-Chapter Quiz\" an
                     "urse frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
 testRunner.Then("I should see the successfull message \"Content item is added to My Course\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+testRunner.When("I selected all activity and change status as shown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -190,7 +190,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             Logger.LogMethodEntry("CreateQuestion", "DeleteAutoGraderQuestion",
                  base.isTakeScreenShotDuringEntryExit);
             //Click on the alert OK button of Asset
-            new ShowMessagePage().ClickOnPegasusOkButton();
+            new ShowMessagePage().ClickOnPegasusAlertOkButton();
             Logger.LogMethodExit("CreateQuestion", "DeleteAutoGraderQuestion",
               base.isTakeScreenShotDuringEntryExit);
 

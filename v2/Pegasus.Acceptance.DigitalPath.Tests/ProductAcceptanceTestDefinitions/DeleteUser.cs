@@ -27,11 +27,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         [When(@"I select 'OK' option")]
         public void ClickOnOkOption()
         {
-            //Select Ok Option
+            // select Ok option
             Logger.LogMethodEntry("DeleteUser", "ClickOnOkOption",
               base.isTakeScreenShotDuringEntryExit);
-            //Click on Ok Button
-            new ShowMessagePage().ClickOnPegasusOkButton();
+            // click on Ok Button
+            new ShowMessagePage().ClickOnPegasusAlertOkButton();
             Logger.LogMethodExit("DeleteUser", "ClickOnOkOption",
             base.isTakeScreenShotDuringEntryExit);
         }

@@ -14,7 +14,7 @@ using Pegasus.Pages.UI_Pages;
 namespace Pegasus.Pages.UI_Pages
 {
     /// <summary>
-    /// This class handles TeachingPlanUX Page Actions
+    /// This class handles TeachingPlanUX Page Actions.
     /// </summary>
     public class TeachingPlanUxPage : BasePage
     {
@@ -334,55 +334,164 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="activityName">This is activity name.</param>
         public void SelectActivityInCourseMaterialsLibraryFrame(string activityName)
         {
+            // select activity in course materials library frame
+            Logger.LogMethodEntry("TeachingPlanUXPage", "SelectActivityInCourseMaterialsLibraryFrame",
+              base.isTakeScreenShotDuringEntryExit);
             switch (activityName)
             {
                 case "Access Chapter 1: End-of-Chapter Quiz":
                     // select the window
                     this.SelectCourseMaterialsWindow();
-                    base.SwitchToIFrameById(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_Course_Content_Left_IFrame_Id_Locator);
-                    base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level1));
-                    // select level 1 asset folder
-                    base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level1);
-                    base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level2));
-                    // select level 2 asset folder
-                    base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level2);
-                    base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level3));
-                    // select level 3 asset folder
-                    base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level3);
-                    
-                    string getRequiredAssets = base.GetElementTextByID("grdContentLibrary$divContent");
+                    this.NavigateMicrosoftAccess2013AssetFolder();
+                    base.WaitForElement(By.Id(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_ContentLibrary_Table_Locator));
+                    // get required assets avaliable in frame
+                    string getRequiredAssets = base.GetElementTextByID(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_ContentLibrary_Table_Locator);
                     if (getRequiredAssets.Contains(activityName))
                     {
-                        base.WaitForElement((By.Id("grdContentLibrary$_ctrl0")));
-                        base.ClickCheckBoxById("grdContentLibrary$_ctrl0");
-
+                        // select content library check box
+                        this.SelectContentLibraryCheckBoxForAllAssets();
                     }
-
-                    
-                    base.SwitchToDefaultPageContent();
-
-                    base.WaitForElement(By.Id("_ctl0:_ctl0:phBody:PageContent:imgbtnAddContent"));
-                    base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesById("_ctl0:_ctl0:phBody:PageContent:imgbtnAddContent"));
-                    
-
-
+                    // click add cvontent image button
+                    this.ClickAddContentImageButtonToAssignAssetInMyCourseFrame();
                     break;
             }
+            Logger.LogMethodExit("TeachingPlanUXPage", "SelectActivityInCourseMaterialsLibraryFrame",
+              base.isTakeScreenShotDuringEntryExit);
+
         }
 
+        /// <summary>
+        /// Click Add Content Image Button To Assign Asset In My Course Frame.
+        /// </summary>
+        private void ClickAddContentImageButtonToAssignAssetInMyCourseFrame()
+        {
+            Logger.LogMethodEntry("TeachingPlanUXPage", "ClickAddContentImageButtonToAssignAssetInMyCourseFrame",
+               base.isTakeScreenShotDuringEntryExit);
+            base.SwitchToDefaultPageContent();
+            // click add content button
+            base.WaitForElement(By.Id(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_AddContent_Image_Button_Locator));
+            base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesById(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_AddContent_Image_Button_Locator));
+            Logger.LogMethodExit("TeachingPlanUXPage", "ClickAddContentImageButtonToAssignAssetInMyCourseFrame",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Content Library Check Box For All Assets.
+        /// </summary>
+        private void SelectContentLibraryCheckBoxForAllAssets()
+        {
+            Logger.LogMethodEntry("TeachingPlanUXPage", "SelectContentLibraryCheckBoxForAllAssets",
+              base.isTakeScreenShotDuringEntryExit);
+            base.WaitForElement((By.Id(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_ContentLibrary_CheckBox_Id_Locator)));
+            // select all content checkbox
+            base.ClickCheckBoxById(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_ContentLibrary_CheckBox_Id_Locator);
+            Logger.LogMethodExit("TeachingPlanUXPage", "SelectContentLibraryCheckBoxForAllAssets",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate Microsoft Access 2013 Asset Folder.
+        /// </summary>
+        private void NavigateMicrosoftAccess2013AssetFolder()
+        {
+            Logger.LogMethodEntry("TeachingPlanUXPage", "NavigateMicrosoftAccess2013AssetFolder",
+             base.isTakeScreenShotDuringEntryExit);
+            base.SwitchToIFrameById(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Content_Left_IFrame_Id_Locator);
+            base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level1));
+            // select level 1 asset folder
+            base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level1);
+            base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level2));
+            // select level 2 asset folder
+            base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level2);
+            base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level3));
+            // select level 3 asset folder
+            base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level3);
+            base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level4));
+            // select level 4 asset folder
+            base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level4);
+            Logger.LogMethodExit("TeachingPlanUXPage", "NavigateMicrosoftAccess2013AssetFolder",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Course Materials Window.
+        /// </summary>
         private void SelectCourseMaterialsWindow()
         {
+            Logger.LogMethodEntry("TeachingPlanUXPage", "SelectCourseMaterialsWindow",
+               base.isTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(TeachingPlanUXPageResource.
                 TeachingPlanUX_Page_CourseMaterials_WindowName);
             base.SelectWindow(TeachingPlanUXPageResource.
                 TeachingPlanUX_Page_CourseMaterials_WindowName);
+            Logger.LogMethodExit("TeachingPlanUXPage", "SelectCourseMaterialsWindow",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To My Course Frame To Select The Activity.
+        /// </summary>
+        public void NavigateMyCourseFrameToSelectTheActivity()
+        {
+            Logger.LogMethodEntry("TeachingPlanUXPage", "SelectCourseMaterialsWindow",
+               base.isTakeScreenShotDuringEntryExit);
+            base.SwitchToIFrameById(TeachingPlanUXPageResource.
+               TeachingPlanUX_Page_Course_Content_Iframe_Id);
+            this.SelectMyCourseCheckBoxForAllAssets();
+            Logger.LogMethodExit("TeachingPlanUXPage", "SelectCourseMaterialsWindow",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click Asset Show Hide Button.
+        /// </summary>
+        public void ClickAssetShowHideButton()
+        {
+            Logger.LogMethodEntry("TeachingPlanUXPage", "ClickAssetShowHideButton",
+               base.isTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(TeachingPlanUXPageResource.
+                      TeachingPlanUX_Page_MyCourse_Table_Locator),5);
+            // get required assets avaliable in frame
+            string getHiddenAssets = base.GetElementTextByID(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_MyCourse_Table_Locator);
+            if (getHiddenAssets.Contains("Hidden"))
+            {
+                base.WaitForElement(By.PartialLinkText(" Show/Hide"));
+                base.ClickLinkByPartialLinkText("Show/Hide");
+            }
+            Logger.LogMethodExit("TeachingPlanUXPage", "ClickAssetShowHideButton",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select My Course Check Box For All Assets.
+        /// </summary>
+        private void SelectMyCourseCheckBoxForAllAssets()
+        {
+            Logger.LogMethodEntry("TeachingPlanUXPage", "SelectMyCourseCheckBoxForAllAssets",
+              base.isTakeScreenShotDuringEntryExit);
+            base.WaitForElement((By.Id(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_MyCourse_CheckBox_Id_Locator)));
+            // select all content checkbox
+            base.ClickCheckBoxById(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_MyCourse_CheckBox_Id_Locator);
+            Logger.LogMethodExit("TeachingPlanUXPage", "SelectMyCourseCheckBoxForAllAssets",
+              base.isTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -61,6 +61,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string a {
+            get {
+                return ResourceManager.GetString("a", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Course Materials.
         /// </summary>
         internal static string TeachingPlanUX_Page__CourseMaterial_Window_Name {
@@ -70,11 +79,38 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0:_ctl0:phBody:PageContent:imgbtnAddContent.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_AddContent_Image_Button_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_AddContent_Image_Button_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add from Library.
         /// </summary>
         internal static string TeachingPlanUX_Page_AddFromLibrary_Tab {
             get {
                 return ResourceManager.GetString("TeachingPlanUX_Page_AddFromLibrary_Tab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to grdContentLibrary$_ctrl0.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_ContentLibrary_CheckBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_ContentLibrary_CheckBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to grdContentLibrary$divContent.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_ContentLibrary_Table_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_ContentLibrary_Table_Locator", resourceCulture);
             }
         }
         
@@ -129,6 +165,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level3 {
             get {
                 return ResourceManager.GetString("TeachingPlanUX_Page_Course_Office2013_Microsoft Access 2013_AssetFolder_Level3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access Chapter 1: End-of-Chapter Activities.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level4 {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_Course_Office2013_Microsoft Access 2013_AssetFolder_Level4", resourceCulture);
             }
         }
         
@@ -255,6 +300,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string TeachingPlanUX_Page_MediaLibraryText_Id_Locator {
             get {
                 return ResourceManager.GetString("TeachingPlanUX_Page_MediaLibraryText_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to grdCourseContent$_ctrl0.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_MyCourse_CheckBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_MyCourse_CheckBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to grdCourseContent$divContent.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_MyCourse_Table_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_MyCourse_Table_Locator", resourceCulture);
             }
         }
         

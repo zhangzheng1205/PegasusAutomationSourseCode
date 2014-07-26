@@ -195,4 +195,25 @@
   <data name="TeachingPlanUX_Page_Course_Office2013_Microsoft Access 2013_AssetFolder_Level3" xml:space="preserve">
     <value>Access Chapter 1: Activities</value>
   </data>
+  <data name="a" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TeachingPlanUX_Page_Course_Office2013_Microsoft Access 2013_AssetFolder_Level4" xml:space="preserve">
+    <value>Access Chapter 1: End-of-Chapter Activities</value>
+  </data>
+  <data name="TeachingPlanUX_Page_AddContent_Image_Button_Locator" xml:space="preserve">
+    <value>_ctl0:_ctl0:phBody:PageContent:imgbtnAddContent</value>
+  </data>
+  <data name="TeachingPlanUX_Page_ContentLibrary_CheckBox_Id_Locator" xml:space="preserve">
+    <value>grdContentLibrary$_ctrl0</value>
+  </data>
+  <data name="TeachingPlanUX_Page_ContentLibrary_Table_Locator" xml:space="preserve">
+    <value>grdContentLibrary$divContent</value>
+  </data>
+  <data name="TeachingPlanUX_Page_MyCourse_CheckBox_Id_Locator" xml:space="preserve">
+    <value>grdCourseContent$_ctrl0</value>
+  </data>
+  <data name="TeachingPlanUX_Page_MyCourse_Table_Locator" xml:space="preserve">
+    <value>grdCourseContent$divContent</value>
+  </data>
 </root>

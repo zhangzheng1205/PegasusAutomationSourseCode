@@ -87,11 +87,11 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         ///Click on the Pegasus 'OK' button
         /// </summary>
-        public void ClickOnPegasusOkButton()
+        public void ClickOnPegasusAlertOkButton()
         {
             //Click on the Pegasus 'OK' button
             logger.LogMethodEntry("ShowMessagePage",
-                "ClickOnPegasusOkButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnPegasusAlertOkButton", base.isTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Pegasus Window
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ShowMessagePage",
-                "ClickOnPegasusOkButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnPegasusAlertOkButton", base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

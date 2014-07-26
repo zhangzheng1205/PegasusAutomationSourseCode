@@ -298,7 +298,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             Logger.LogMethodEntry("CreateUser", "ClickOnOkOption",
               base.isTakeScreenShotDuringEntryExit);
             //Click on Ok Button
-            new ShowMessagePage().ClickOnPegasusOkButton();
+            new ShowMessagePage().ClickOnPegasusAlertOkButton();
             Logger.LogMethodExit("CreateUser", "ClickOnOkOption",
             base.isTakeScreenShotDuringEntryExit);
         }

@@ -147,5 +147,27 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             "SelectedActivityAndAssignedInMyCourseFrame",
             base.isTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select All Activity And Change Status as Shown.
+        /// </summary>
+        [When(@"I selected all activity and change status as shown")]
+        public void SelectedAllActivityAndChangeStatusAsShown()
+        {
+            // show hidden activities
+            Logger.LogMethodEntry("ContentLibrary",
+                "SelectedAllActivityAndChangeStatusAsShown",
+                base.isTakeScreenShotDuringEntryExit);
+            // select asset
+            new Pages.UI_Pages.TeachingPlanUxPage().
+                NavigateMyCourseFrameToSelectTheActivity();
+            // click show hidden asset
+            new Pages.UI_Pages.TeachingPlanUxPage().
+                ClickAssetShowHideButton();
+            Logger.LogMethodExit("ContentLibrary",
+                "SelectedAllActivityAndChangeStatusAsShown",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

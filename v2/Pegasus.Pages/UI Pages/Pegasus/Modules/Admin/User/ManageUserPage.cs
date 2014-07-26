@@ -433,7 +433,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Upload the File
                 new ImportUsersPage().UploadBulkUserFile();
                 //Click on the Ok Button in Pegasus popup
-                new ShowMessagePage().ClickOnPegasusOkButton();
+                new ShowMessagePage().ClickOnPegasusAlertOkButton();
                 //Select the User tab
                 new ManageUserPage().ClickOnUsersTab();
             }
