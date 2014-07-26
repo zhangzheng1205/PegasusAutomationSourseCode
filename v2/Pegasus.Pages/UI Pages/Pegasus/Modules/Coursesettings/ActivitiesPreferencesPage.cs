@@ -4,7 +4,8 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.Exceptions;
 using System.Threading;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings;
-
+using System.Collections.Generic;
+using System.Linq;
 namespace Pegasus.Pages.UI_Pages
 {
     /// <summary>
@@ -220,6 +221,156 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("ActivitiesPreferencesPage",
                "ClickTheRemoveMultipleAttemptCheckBox",
                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On Messages Sub-Tab.
+        /// </summary>
+        public void ClickOnMessagesSubTab()
+        {
+            logger.LogMethodEntry("ActivitiesPreferencesPage",
+               "ClickOnMessagesSubTab", base.isTakeScreenShotDuringEntryExit);
+            // wait for Messages tab
+            base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_MessagesSubTab_Id_Locator));
+
+            //Get Messages sub-tab link
+            IWebElement getMessagesSubTab = base.GetWebElementPropertiesById(
+                ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_MessagesSubTab_Id_Locator);
+            //Click On Messages sub-tab link
+            base.ClickByJavaScriptExecutor(getMessagesSubTab);
+
+            logger.LogMethodExit("ActivitiesPreferencesPage",
+               "ClickOnMessagesSubTab", base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Enter Beginning Of Activity Default And Instructor Messages.
+        /// </summary>
+        public void EnterBeginningOfActivityDefaultAndInstructorMessages()
+        {
+            logger.LogMethodEntry("ActivitiesPreferencesPage",
+               "EnterBeginningOfActivityDefaultAndInstructorMessages", base.isTakeScreenShotDuringEntryExit);
+
+            // wait for Begin Default Message text box
+            base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_BeginDefaultMessage_Id_Locator));
+            // clear Begin Default message text box
+            base.ClearTextByID(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_BeginDefaultMessage_Id_Locator);
+            // fill Begin Default Message text box
+            base.FillTextBoxByID(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_BeginDefaultMessage_Id_Locator,
+                ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_BeginDefaultMessage_Text);
+
+            // wait for Begin Instructor Message text box
+            base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_BeginInstructorMessage_Id_Locator));
+            // clear Begin Instructor Message text box
+            base.ClearTextByID(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_BeginInstructorMessage_Id_Locator);
+            // fill Begin Instructor Message text box
+            base.FillTextBoxByID(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_BeginInstructorMessage_Id_Locator,
+                ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_BeginInstructorMessage_Text);
+
+            logger.LogMethodExit("ActivitiesPreferencesPage",
+               "EnterBeginningOfActivityDefaultAndInstructorMessages", base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// returns Activity Begin Default Message.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnActivityBeginDefaultMessage()
+        { return ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_BeginDefaultMessage_Text; }
+        /// <summary>
+        /// returns Activity Begin Instructor Message.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnActivityBeginInstructorMessage()
+        { return ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_BeginInstructorMessage_Text; }
+        /// <summary>
+        /// returns Activity End Default Message.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnActivityEndDefaultMessage()
+        { return ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_EndDefaultMessage_Text; }
+        /// <summary>
+        /// returns Activity End Instructor Message.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnActivityEndInstructorMessage()
+        { return ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_EndInstructorMessage_Text; }
+
+        /// <summary>
+        /// Enter End Of Activity Default And Instructor Messages.
+        /// </summary>
+        public void EnterEndOfActivityDefaultAndInstructorMessages()
+        {
+            logger.LogMethodEntry("ActivitiesPreferencesPage",
+               "EnterEndOfActivityDefaultAndInstructorMessages", base.isTakeScreenShotDuringEntryExit);
+
+            // wait for End Default Message text box
+            base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_EndDefaultMessage_Id_Locator));
+            // clear End Default Message text box
+            base.ClearTextByID(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_EndDefaultMessage_Id_Locator);
+            // fill End Default Message Text box
+            base.FillTextBoxByID(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_EndDefaultMessage_Id_Locator,
+                ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_EndDefaultMessage_Text);
+
+            // wait for End Instructor Message text box
+            base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_EndInstructorMessage_Id_Locator));
+            // clear End Instructor Message text box
+            base.ClearTextByID(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_EndInstructorMessage_Id_Locator);
+            // fill End Instructor Message text box
+            base.FillTextBoxByID(ActivitiesPreferencesPageResource.
+                ActivitiesPreferences_Page_EndInstructorMessage_Id_Locator,
+                ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_EndInstructorMessage_Text);
+
+            logger.LogMethodExit("ActivitiesPreferencesPage",
+               "EnterEndOfActivityDefaultAndInstructorMessages", base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On The Save Button in Activity type Default Preferences page.
+        /// </summary>
+        /// <param name="saveButton">save Button</param>
+        public void ClickOnTheSaveButton(string saveButton)
+        {
+            logger.LogMethodEntry("ActivitiesPreferencesPage",
+               "ClickOnTheSaveButton", base.isTakeScreenShotDuringEntryExit);
+
+            // wait for Save button
+            base.WaitForElement(By.LinkText(saveButton));
+
+            //Get Save button element
+            IWebElement getSaveButton = base.GetWebElementPropertiesById(saveButton);
+            //Click On Save button
+            base.ClickByJavaScriptExecutor(getSaveButton);
+
+            logger.LogMethodExit("ActivitiesPreferencesPage",
+               "ClickOnTheSaveButton", base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Enter New Activity Type Name.
+        /// </summary>
+        /// <param name="newActivityTypeName">new Activity Type Name</param>
+        public void EnterNewActivityTypeName(string newActivityTypeName)
+        {
+            logger.LogMethodEntry("ActivitiesPreferencesPage",
+               "EnterNewActivityTypeName", base.isTakeScreenShotDuringEntryExit);
+
+            ICollection<IWebElement> getAllAssetsInContentLibrary = base.GetWebElementsCollectionByPartialCssSelector(
+                    ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_NewActivityTypeName_CSSSelector);
+
+            IWebElement getLastActivityTypeName = getAllAssetsInContentLibrary.Last();
+            getLastActivityTypeName.SendKeys(newActivityTypeName);
+
+            logger.LogMethodExit("ActivitiesPreferencesPage",
+               "EnterNewActivityTypeName", base.isTakeScreenShotDuringEntryExit);
         }
     }
 }

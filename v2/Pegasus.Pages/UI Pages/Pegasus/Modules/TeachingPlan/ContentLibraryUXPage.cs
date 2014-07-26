@@ -1686,7 +1686,131 @@ namespace Pegasus.Pages.UI_Pages
                 "SelectPasteOption",
                base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>                                                                                           
+        /// Click On Add Course Materials Option.
+        /// </summary>
+        public void ClickOnAddCourseMaterialsOptioninContentLibrary()
+        {
+            //Click On Add Course Materails Option
+            logger.LogMethodEntry("ContentLibraryUXPage", "ClickOnAddCourseMaterialsOption",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Left Frame
+                this.SelectFrameInWindow(ContentLibraryUXPageResource.
+                    CourseContentUXPage_CourseMaterials_Window_Title,
+                    ContentLibraryUXPageResource.ContentLibraryUX_Page_Left_Frame_ID_Locator);
+                base.WaitForElement(By.ClassName(ContentLibraryUXPageResource.
+                    ContentLibraryUX_Page_AddContent_Button_Id_Locator));
+                //Get Add Course Materials Button Property
+                IWebElement getButtonProperty = base.GetWebElementPropertiesByClassName(
+                    ContentLibraryUXPageResource.
+                    ContentLibraryUX_Page_AddContent_Button_Id_Locator);
+                //Click On Add Course Materails Button
+                base.ClickByJavaScriptExecutor(getButtonProperty);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", "ClickOnAddCourseMaterialsOption",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Select iFrame In Window.
+        /// </summary>
+        /// <param name="windowName">Window Name.</param>
+        /// <param name="frame">iFrame Name.</param>
+        public void SelectFrameInWindow(string windowName, string frame)
+        {
+            //Select Frame In Window
+            logger.LogMethodEntry("ContentLibraryUXPage", "SelectFrameInWindow",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the Window
+                base.WaitUntilWindowLoads(windowName);
+                base.SelectWindow(windowName);
+                //Wait for the Frame
+                base.WaitForElement(By.Id(frame));
+                base.SwitchToIFrame(frame);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", "SelectFrameInWindow",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verify New Activity Type.
+        /// </summary>
+        /// <param name="activityType">This is Activity Type</param>
+        /// <returns>true if we find activity type in the menu</returns>
+        public string VerifyNewActivityType(string activityType)
+        {
+            //Click On Activity Type
+            logger.LogMethodEntry("ContentLibraryUXPage", "VerifyNewActivityType",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Get Link Count
+                int getLinkCount = base.GetElementCountByXPath(ContentLibraryUXPageResource.
+                        ContentLibraryUX_Page_AddContentOptionCount_Xpath_Locator);
+                for (int rowCount = Convert.ToInt32(ContentLibraryUXPageResource.
+                    ContentLibraryUXPage_Activity_RowCount_InitialValue_AfterSearch);
+                    rowCount <= getLinkCount; rowCount++)
+                {
+                    //Get the Name of the Link
+                    string getLinkName = base.GetElementTextByXPath(string.
+                        Format(ContentLibraryUXPageResource.
+                        ContentLibraryUX_Page_getLinkName_Xpath_Locator, rowCount));
+                    if (getLinkName == activityType)
+                    {
+                        return getLinkName;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", "VerifyNewActivityType",
+               base.isTakeScreenShotDuringEntryExit);
+            return "Not Found";
+        }
+        public void SelectLeftFrameInCourseMaterialsPage()
+        {
+            //Wait for the Frame
+            base.WaitForElement(By.Id(ContentLibraryUXPageResource.ContentLibraryUX_Page_Left_Frame_ID_Locator));
+            base.SwitchToIFrame(ContentLibraryUXPageResource.ContentLibraryUX_Page_Left_Frame_ID_Locator);
+        }
+        /// <summary>
+        /// Click On Last Activity in Content Library.
+        /// </summary>
+        public void ClickOnLastActivityinContentLibrary()
+        {
+            //Select Frame In Window
+            logger.LogMethodEntry("ContentLibraryUXPage", 
+                "ClickOnLastActivityinContentLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Gets the collection of all Help Link assets
+                ICollection<IWebElement> getAllAssetsInContentLibrary = base.GetWebElementsCollectionByPartialCssSelector(
+                    ContentLibraryUXPageResource.CourseContentUXPage_AssetPartial_Id_Locator);
 
+                IWebElement getLastAsset = getAllAssetsInContentLibrary.Last();
+                base.ClickByJavaScriptExecutor(getLastAsset);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ContentLibraryUXPage", 
+                "ClickOnLastActivityinContentLibrary",
+                base.isTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Clicks the button by its ID attribute.
         /// </summary>

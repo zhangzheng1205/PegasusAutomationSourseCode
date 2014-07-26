@@ -147,4 +147,25 @@
   <data name="CopyAsSection_Table_Id_Locator" xml:space="preserve">
     <value>tableOnlyCourseContent</value>
   </data>
+  <data name="DateFormat_Id_Locator" xml:space="preserve">
+    <value>txtStartDateId_lblDateFormat</value>
+  </data>
+  <data name="DateFormat_Type_1" xml:space="preserve">
+    <value>MM/dd/yyyy</value>
+  </data>
+  <data name="DateFormat_Type_2" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="DateFormat_Type_3" xml:space="preserve">
+    <value>dd/MM/yy</value>
+  </data>
+  <data name="DateFormat_Type_4" xml:space="preserve">
+    <value>dd-MM-yy</value>
+  </data>
+  <data name="DateFormat_Type_5" xml:space="preserve">
+    <value>dd-MM-yyyy</value>
+  </data>
+  <data name="DateFormat_Type_6" xml:space="preserve">
+    <value>yyyy-MM-dd</value>
+  </data>
 </root>

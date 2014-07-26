@@ -80,6 +80,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to cmdAddChoice1.
+        /// </summary>
+        internal static string RandomTopicList_Page_AddLinks_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomTopicList_Page_AddLinks_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to cmdAddChoice.
         /// </summary>
         internal static string RandomTopicList_Page_AddQuestion_Button_Id_Locator {

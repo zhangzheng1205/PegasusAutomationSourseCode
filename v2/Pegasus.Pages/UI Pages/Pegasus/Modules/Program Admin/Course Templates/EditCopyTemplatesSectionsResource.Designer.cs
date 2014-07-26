@@ -107,6 +107,69 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Course_Templates 
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to txtStartDateId_lblDateFormat.
+        /// </summary>
+        internal static string DateFormat_Id_Locator {
+            get {
+                return ResourceManager.GetString("DateFormat_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MM/dd/yyyy.
+        /// </summary>
+        internal static string DateFormat_Type_1 {
+            get {
+                return ResourceManager.GetString("DateFormat_Type_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dd/MM/yyyy.
+        /// </summary>
+        internal static string DateFormat_Type_2 {
+            get {
+                return ResourceManager.GetString("DateFormat_Type_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dd/MM/yy.
+        /// </summary>
+        internal static string DateFormat_Type_3 {
+            get {
+                return ResourceManager.GetString("DateFormat_Type_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dd-MM-yy.
+        /// </summary>
+        internal static string DateFormat_Type_4 {
+            get {
+                return ResourceManager.GetString("DateFormat_Type_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dd-MM-yyyy.
+        /// </summary>
+        internal static string DateFormat_Type_5 {
+            get {
+                return ResourceManager.GetString("DateFormat_Type_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to yyyy-MM-dd.
+        /// </summary>
+        internal static string DateFormat_Type_6 {
+            get {
+                return ResourceManager.GetString("DateFormat_Type_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to imgbtnSave.
         /// </summary>
         internal static string SaveButton_Id_for_SharedLibrary_Create {

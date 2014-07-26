@@ -17,6 +17,14 @@ namespace Pegasus.Pages.UI_Pages
         /// Click save button in the popup window to start copy as template
         /// </summary>
         /// <returns></returns>
+        /// 
+
+        private enum DateType
+        {
+            StartDate=1,
+            EndDate=2
+        }
+
         public void ClickToCreateUpdate()
         {
             //Copy as shared library
@@ -42,20 +50,57 @@ namespace Pegasus.Pages.UI_Pages
         {
             //TO select the pop window so as to set focus to its elements.
             base.SelectWindow(EditCopyTemplatesSectionsResource.CopyAsSharedLibrary_Page_Window_Page_Title);
-            //To set the start date to current date/time with required format.
-            String getSLStartDate = DateTime.Now.ToString(
-                EditCopyTemplatesSectionsResource.CopyAsSharedLibrary_Page_Date_Format);
             //wait for the required element to come up and then populate it.
             base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.SL_create_start_date));
-            base.FillTextBoxByID(EditCopyTemplatesSectionsResource.SL_create_start_date, getSLStartDate);
+            base.FillTextBoxByID(EditCopyTemplatesSectionsResource.SL_create_start_date, GetDateValue(DateType.StartDate));
             //Prepare the enddate/time with required format by adding 90 days to the current date.
-            String getSLEndDate = DateTime.Now.AddDays(90).ToString(
-            EditCopyTemplatesSectionsResource.CopyAsSharedLibrary_Page_Date_Format);
+            //String getSLEndDate = DateTime.Now.AddDays(90).ToString(
+            //base.GetElementInnerTextById("txtStartDateId_lblDateFormat").ToLower());
             //Populate the enddate
             base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.SL_create_end_date));
-            base.FillTextBoxByID(EditCopyTemplatesSectionsResource.SL_create_end_date, getSLEndDate);
+            base.FillTextBoxByID(EditCopyTemplatesSectionsResource.SL_create_end_date, GetDateValue(DateType.EndDate));
             ClickToCreateUpdate();
         }
+
+        /// <summary>
+        /// To get the date value
+        /// <parameter Name="DateType">0 for startdate, 1 for end date</parameter>
+        /// </summary>
+        private String GetDateValue(DateType DateType)
+        {
+            String OriginalDateFormat = base.GetElementInnerTextById(EditCopyTemplatesSectionsResource.DateFormat_Id_Locator);
+            String RequiredDateFormat = String.Empty;
+            String getStartDate = string.Empty;
+            String getEndDate = string.Empty;
+
+            switch (OriginalDateFormat)
+            {
+                case "MM/DD/YYYY":
+                    RequiredDateFormat = EditCopyTemplatesSectionsResource.DateFormat_Type_1;
+                    break;
+                case "DD/MM/YYYY":
+                    RequiredDateFormat = EditCopyTemplatesSectionsResource.DateFormat_Type_2;
+                    break;
+                case "DD/MM/YY":
+                    RequiredDateFormat = EditCopyTemplatesSectionsResource.DateFormat_Type_3;
+                    break;
+                case "DD-MM-YY":
+                    RequiredDateFormat = EditCopyTemplatesSectionsResource.DateFormat_Type_4;
+                    break;
+                case "DD-MM-YYYY":
+                    RequiredDateFormat = EditCopyTemplatesSectionsResource.DateFormat_Type_5;
+                    break;
+                case "YYYY-MM-DD":
+                    RequiredDateFormat = EditCopyTemplatesSectionsResource.DateFormat_Type_6;
+                    break;
+                    
+            }
+            if(DateType==DateType.StartDate)
+                return getStartDate = DateTime.Now.ToString(RequiredDateFormat);
+            else
+                return getEndDate = DateTime.Now.AddDays(90).ToString(RequiredDateFormat);
+        }
+
 
         /// <summary>
         /// Click Copy button in the popup window to copy section from section
@@ -116,10 +161,10 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Get the Section popup check box status
         /// </summary>
-        public Boolean IsVerifyCheckBoxStatusNotSelected()
+        public Boolean CopyMyCourseContentCheckBoxStatus()
         {
             //To get the Section popup check box status
-            logger.LogMethodEntry("EditCopyTemplatesSectionsPage", "IsVerifyCheckBoxStatusNotSelected",
+            logger.LogMethodEntry("EditCopyTemplatesSectionsPage", "CopyMyCourseContentCheckBoxStatus",
             base.isTakeScreenShotDuringEntryExit);
 
             //Variable Initialization
@@ -128,7 +173,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //TO select the pop window so as to set focus to its elements.
                 base.SelectWindow(EditCopyTemplatesSectionsResource.CopyAsSection_Page_Window_Page_Title);
-
+                base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.
+                    CopyAsSection_PopUpPage_Page_CheckBox_Id_Locator));
                 //Fetch the check box selection property
                 IsChecked = base.GetWebElementPropertiesById(EditCopyTemplatesSectionsResource.
                     CopyAsSection_PopUpPage_Page_CheckBox_Id_Locator).Selected;
@@ -139,7 +185,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
 
-            logger.LogMethodExit("EditCopyTemplatesSectionsPage", "IsVerifyCheckBoxStatusNotSelected",
+            logger.LogMethodExit("EditCopyTemplatesSectionsPage", "CopyMyCourseContentCheckBoxStatus",
             base.isTakeScreenShotDuringEntryExit);
 
             return IsChecked;

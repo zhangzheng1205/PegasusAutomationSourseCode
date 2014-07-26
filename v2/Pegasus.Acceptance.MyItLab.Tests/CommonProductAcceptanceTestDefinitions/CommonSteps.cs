@@ -472,8 +472,36 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             new TodaysViewUXPage().SelectTab(tabName);           
             Logger.LogMethodExit("CommonSteps", "NavigateToTab",
                base.isTakeScreenShotDuringEntryExit);
-        }        
+        }
+        /// <summary>
+        /// Enter As New Activity Type Name.
+        /// </summary>
+        /// <param name="activityTypeName">Activity Type Name</param>
+        [When(@"I enter ""(.*)"" as new activity type name")]
+        public void EnterNewActivityTypeName(string activityTypeName)
+        {
+            Logger.LogMethodEntry("CommonSteps", "EnterAsNewActivityTypeName",
+                isTakeScreenShotDuringEntryExit);
 
+            new ActivitiesPreferencesPage().EnterNewActivityTypeName(activityTypeName);
+
+            Logger.LogMethodExit("CommonSteps", "EnterNewActivityTypeName",
+                isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On Save Preferences Button On Preferences Page.
+        /// </summary>
+        [When(@"I click on Save Preferences button on Preferences page")]
+        public void ClickOnSavePreferencesButtonOnPreferencesPage()
+        {
+            Logger.LogMethodEntry("CommonSteps", "ClickOnSavePreferencesButtonOnPreferencesPage",
+                isTakeScreenShotDuringEntryExit);
+
+            new GeneralPreferencesPage().SavePreferences();
+
+            Logger.LogMethodExit("CommonSteps", "ClickOnSavePreferencesButtonOnPreferencesPage",
+                isTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

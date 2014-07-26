@@ -330,7 +330,62 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 "EnterTimeInSetTimeLimitForActivityPreference",
                     base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Click On The Activity Name In Content Library Frame.
+        /// </summary>
+        [When(@"I click on the Activity Name in Content Library frame")]
+        public void ClickOnTheActivityNameInContentLibraryFrame()
+        {
+            //Logger Entry
+            Logger.LogMethodEntry("EditActivity",
+                "ClickOnTheActivityNameInContentLibraryFrame",
+                    base.isTakeScreenShotDuringEntryExit);
 
+            new ContentLibraryUXPage().SelectLeftFrameInCourseMaterialsPage();
+            new ContentLibraryUXPage().ClickOnLastActivityinContentLibrary();
+
+            //Logger Exit
+            Logger.LogMethodExit("EditActivity",
+                "ClickOnTheActivityNameInContentLibraryFrame",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On The Help Links Activity Subtab.
+        /// </summary>
+        [When(@"I click on the HelpLinks activity subtab")]
+        public void ClickOnTheHelpLinksActivitySubtab()
+        {
+            //Logger Entry
+            Logger.LogMethodEntry("EditActivity",
+                "ClickOnTheHelpLinksActivitySubtab",
+                    base.isTakeScreenShotDuringEntryExit);
+
+            new AddAssessmentPage().ClickOnHelpLinksTab();
+
+            //Logger Exit
+            Logger.LogMethodExit("EditActivity",
+                "ClickOnTheHelpLinksActivitySubtab",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On Preview The Link In C-Menu Of Helplink.
+        /// </summary>
+        /// <param name="p0"></param>
+        [When(@"I click on the Preview link in c-menu of Helplink")]
+        public void ClickPreviewLinkInCMenuOfHelplink()
+        {
+            //Logger Entry
+            Logger.LogMethodEntry("EditActivity",
+                "ClickOnTheLinkInCMenuOfHelplink",
+                    base.isTakeScreenShotDuringEntryExit);
+
+            new AddAssessmentPage().PreviewHelpLinkOnEdit();
+
+            //Logger Exit
+            Logger.LogMethodExit("EditActivity",
+                "ClickOnTheLinkInCMenuOfHelplink",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]

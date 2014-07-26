@@ -273,4 +273,10 @@
   <data name="ContentLibraryUXPage_PasteOptions_Top_TD_ID_Locator" xml:space="preserve">
     <value>pstOpt1</value>
   </data>
+  <data name="CourseContentUXPage_CourseMaterials_Window_Title" xml:space="preserve">
+    <value>Course Materials</value>
+  </data>
+  <data name="CourseContentUXPage_AssetPartial_Id_Locator" xml:space="preserve">
+    <value>*[id ^='lnkName_']</value>
+  </data>
 </root>

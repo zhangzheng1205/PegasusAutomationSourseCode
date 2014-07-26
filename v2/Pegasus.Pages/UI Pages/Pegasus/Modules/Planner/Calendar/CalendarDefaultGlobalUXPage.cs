@@ -142,6 +142,8 @@ namespace Pegasus.Pages.UI_Pages
                    base.isTakeScreenShotDuringEntryExit);
             try
             {
+                base.WaitUntilWindowLoads(CalendarDefaultGlobalUXPageResource.
+                    CalendarDefaultGlobalUX_Page_Window_TitleName);
                 //Selects Window
                 base.SelectWindow(CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_Window_TitleName);

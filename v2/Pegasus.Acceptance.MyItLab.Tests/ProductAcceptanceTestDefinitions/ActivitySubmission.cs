@@ -354,7 +354,99 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Launch SIM5 Questions By Navigating        
             new StudTodoDonePage().LaunchSIM5QuestionsByNavigating(activityName, questionCount);
         }
-        
+        /// <summary>
+        /// Activity should get successfully Launched In Browser Normal Mode
+        /// </summary>
+        [Then(@"I should see the activity successfully launched in browser normal mode")]
+        public void ActivitySuccessfullyLaunchedInBrowserNormalMode()
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ActivitySuccessfullyLaunchedInBrowserNormalMode",
+                base.isTakeScreenShotDuringEntryExit);
+            //Verify that control switches from SIM5 activity launch popup to the 'Course Materials' page
+            new StudentPresentationPage().verifyWindowSwitching();
+
+            Logger.LogMethodEntry("ActivitySubmission", "ActivitySuccessfullyLaunchedInBrowserNormalMode",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+
+
+
+        [When(@"I launch the activity named as ""(.*)"" in Course Materials")]
+        public void OpenTheActivityToLaunch(string activityName)
+        {
+            // Open The Activity
+            Logger.LogMethodEntry("ActivitySubmission",
+            "OpenTheActivity",
+            base.isTakeScreenShotDuringEntryExit);
+            //Select Window And Frame
+            new StudentPresentationPage().SelectWindowAndFrame();
+            //wait for frame to load
+            new StudentPresentationPage().WaitForActivitytoLoad(activityName);
+
+            //Click The Activity In CourseMaterial
+            //new StudentPresentationPage().SelectActivityNameInCourseMaterialTab(activityName);
+            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivity", base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// </summary>
+        [Then(@"I should see the message ""(.*)"" in activity presentation page")]
+        public void VerifyMessageInActivityPresentationPage(string expectedPastDueActivityMessage)
+        {
+            //Verify PastDue Message
+            Logger.LogMethodEntry("ActivitySubmission",
+            "VerifyMessageInActivityPresentationPage",
+            base.isTakeScreenShotDuringEntryExit);
+
+            Logger.LogAssertion("VerifyActivitySubmission", ScenarioContext.
+            Current.ScenarioInfo.Title,
+
+            () => Assert.AreEqual(expectedPastDueActivityMessage,
+            new StudentPresentationPage().
+            GetActivityPastDueStatusMessage().Trim()));
+
+            Logger.LogMethodExit("ActivitySubmission",
+            "VerifyMessageInActivityPresentationPage",
+            base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+
+
+        [When(@"I submit the past due ""(.*)"" activity")]
+        public void WhenISubmitThePastDueActivity(string activityType)
+        {
+            //Submit the Activity
+            Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
+             base.isTakeScreenShotDuringEntryExit);
+            //Created Class Object
+            StudentPresentationPage studentpresentationpage =
+                new StudentPresentationPage();
+
+            //Attempt The Activity
+            //studentpresentationpage.AttemptTheBehavioralModeTypeActivity(activityType);
+
+            // studentpresentationpage.AttemptTheActivityInCourseMaterials(activityType);
+            studentpresentationpage.SubmitPastDueActivity();
+
+            //Finish and return to course selection
+            //studentpresentationpage.ClickOnFinishButtonInCourseMaterials();
+            //Click On Feedback Icon
+            // studentpresentationpage.ClickOnFeedbackIcon();
+            Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
+            base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+        [Then(@"I should return to parent window")]
+        public void ThenIShouldReturnToParentWindow()
+        {
+            new StudentPresentationPage().ReturnToParentWindow();
+        }
+
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

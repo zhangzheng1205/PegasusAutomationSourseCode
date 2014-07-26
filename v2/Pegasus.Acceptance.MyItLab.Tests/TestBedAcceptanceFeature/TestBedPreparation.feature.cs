@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.MyItLab.Tests.TestBedAcceptanceFeature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestBedPreparation", "\tIn order to preparation od bed that will takes care of particular activity \n\tAs " +
-                    "a different user roles\n\tSo that once the test bed is ready then we start executi" +
-                    "ng the test cases as already documented.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestBedPreparation", "\tIn order to preparation od bed that will takes care of particular activity \r\n\tAs" +
+                    " a different user roles\r\n\tSo that once the test bed is ready then we start execu" +
+                    "ting the test cases as already documented.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

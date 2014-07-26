@@ -151,38 +151,41 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 , base.isTakeScreenShotDuringEntryExit);
         }
 
+
         /// <summary>
-        /// To Get the checkbox status
+        /// To Get the CopyMyCourseContentCheckBoxStatus
         /// </summary>
-        [Then(@"I should see the check box as unchecked")]
-        public void CheckBoxUnchecked()
+        [Then(@"I should see the ""(.*)"" check box as unchecked")]
+        public void CopyMyCourseContentCheckBoxStatus()
         {
             Logger.LogMethodEntry("ProgramAdmin",
-               "CheckBoxUnchecked",
+               "CopyMyCourseContentCheckBoxStatus",
              base.isTakeScreenShotDuringEntryExit);
             // To Verify Checkbox Is Not Selected
-            Logger.LogAssertion("CheckBoxUnchecked",
+            Logger.LogAssertion("CopyMyCourseContentCheckBoxStatus",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
-               => Assert.IsFalse(new EditCopyTemplatesSectionsPage().IsVerifyCheckBoxStatusNotSelected()));
+               => Assert.IsFalse(new EditCopyTemplatesSectionsPage().CopyMyCourseContentCheckBoxStatus()));
             Logger.LogMethodExit("ProgramAdmin",
-           "CheckBoxUnchecked",
+           "CopyMyCourseContentCheckBoxStatus",
             base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// To search the template
+        /// Searching the template inside the program
         /// </summary>
-        /// <param name="TemplateName">Name of the template</param>
-        [When(@"I search the template ""(.*)""")]
-        public void SearchTemplate(string TemplateName)
+        [When(@"I search the Template of ""(.*)""")]
+        public void SearchTemplateCourse(Course.CourseTypeEnum courseTypeEnum)
         {
-            Logger.LogMethodEntry("ProgramAdmin",
-               "SearchTemplate",
-             base.isTakeScreenShotDuringEntryExit);
-            new ManageTemplatePage().SearchEntityInProgramAdministration(TemplateName);
-            Logger.LogMethodExit("ProgramAdmin",
-               "SearchTemplate",
-             base.isTakeScreenShotDuringEntryExit);
+            //Verify Section in Active State
+            Logger.LogMethodEntry("ProgramAdmin", "SearchTemplateCourse",
+                base.isTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Search the passed course
+            new ManageTemplatePage().SearchEntityInProgramAdministration(course.Name);
+
+            Logger.LogMethodExit("ProgramAdmin", "SearchTemplateCourse",
+                base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -190,7 +193,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name=""></param>
         [When(@"I click ""(.*)"" button to ""(.*)""")]
-        public void ClickToCreateUpdate(string Button, String Operation)
+        public void ClickToCreateUpdate()
         {
             Logger.LogMethodEntry("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
                 base.isTakeScreenShotDuringEntryExit);
@@ -220,7 +223,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        ///
+        /// To search the section
         /// </summary>
         /// <param name="courseTypeEnum"></param>
         [When(@"I search the section of ""(.*)""")]
@@ -237,7 +240,34 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             base.isTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Copying the section from section inside the program
+        /// </summary>
+        [When(@"I click Copy/Save button to copy")]
+        public void ClickonCopySectionButton()
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "ClickonCopySectionButton",
+            base.isTakeScreenShotDuringEntryExit);
+            //SaveUpdate method to create or update the course.
+            new EditCopyTemplatesSectionsPage().CopySection();
+            Logger.LogMethodExit("ProgramAdmin", "ClickonCopySectionButton",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+        ///// <summary>
+        ///// click on the copy/save button, during the copy of the template/section as template inside the program 
+        ///// </summary>
+        [When(@"I click Copy/Save button")]
+        public void ClickOnCopySaveButton()
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "ClickOnCopySaveButton",
+                base.isTakeScreenShotDuringEntryExit);
+            //SaveUpdate method to create or update the course.
+            new EditCopyTemplatesSectionsPage().ClickToCreateUpdate();
+            Logger.LogMethodExit("ProgramAdmin", "ClickOnCopySaveButton",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
     }
-
-
 }

@@ -462,5 +462,32 @@ namespace Pegasus.Pages.UI_Pages
                   "SelectCreatePostTestWindowAndFrame",
                 base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Click On Add Links link to add HelpLinks to activity.
+        /// </summary>
+        public void ClickOnAddLinksLink()
+        {
+            //Click On Add Question Link
+            logger.LogMethodEntry("RandomTopicListPage", "ClickOnAddLinksLink",
+                 base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait for Add Question Button
+                base.WaitForElement(By.Id(RandomTopicListPageResource.
+                    RandomTopicList_Page_AddLinks_Button_Id_Locator));
+                //Get Add Question Button Property
+                IWebElement getAddQuestionsButtonProperty = base.
+                    GetWebElementPropertiesById(RandomTopicListPageResource.
+                    RandomTopicList_Page_AddLinks_Button_Id_Locator);
+                //Click On Add Question
+                base.ClickByJavaScriptExecutor(getAddQuestionsButtonProperty);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomTopicListPage", "ClickOnAddLinksLink",
+              base.isTakeScreenShotDuringEntryExit);
+        }
     }
 }

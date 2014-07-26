@@ -369,6 +369,40 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         }
 
         /// <summary>
+        /// Navigate To Tab.
+        /// </summary>
+        /// <param name="tabName">This is Tab Name.</param>
+        [When(@"I navigate to ""(.*)"" tab")]
+        public void NavigateToTab(string tabName)
+        {
+            //Navigate to Tab
+            Logger.LogMethodEntry("CommonSteps", "NavigateToTab",
+                base.isTakeScreenShotDuringEntryExit);
+            //Select Tab
+            new TodaysViewUXPage().SelectTab(tabName);
+            Logger.LogMethodExit("CommonSteps", "NavigateToTab",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Course Space User Tabs.
+        /// </summary>
+        /// <param name="parentTabName">This is Parent Tab Name.</param>
+        /// <param name="childTabName">This is Child Tab Name.</param>      
+        [When(@"I navigate to ""(.*)"" tab and selected ""(.*)"" subtab")]
+        public void NavigateToCourseSpaceUserTabs(
+            string parentTabName, string childTabName)
+        {
+            //Navigate to Tab
+            Logger.LogMethodEntry("CommonSteps", "NavigateToCourseSpaceUserTabs",
+                base.isTakeScreenShotDuringEntryExit);
+            //Select Tab
+            new TodaysViewUXPage().SelectTab(parentTabName, childTabName);
+            Logger.LogMethodExit("CommonSteps", "NavigateToCourseSpaceUserTabs",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts
         /// </summary>
         [BeforeTestRun]

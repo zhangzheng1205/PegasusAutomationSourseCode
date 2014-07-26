@@ -1228,5 +1228,341 @@ namespace Pegasus.Pages.UI_Pages
                  "EnterTheMessageForActivity",
                      base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Enter Assignment Activity Details and Click Save and Continue button.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity type.</param>
+        public void EnterAssignmentActivityDetailsandClickSaveandContinue()
+        {
+            //Enter Activity Details and Click on Add Question
+            logger.LogMethodEntry("AddAssessmentPage",
+                "EnterAssignmentActivityDetailsandClickSaveandContinue",
+                  base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Generate Activity Name GUID
+                Guid activityName = Guid.NewGuid();
+                //Select Window
+                this.SelectCreateActivityWindow();
+                //Enter Activity Title
+                this.EnterActivityTitle(activityName);
+                //Click The Basic Random Radio Button
+                this.SelectAssignmentRadioButton();
+                //Click On Save and Continue Button
+                this.ClickOnSaveAndContinueButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage",
+                "EnterAssignmentActivityDetailsandClickSaveandContinue",
+                   base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// return Beginning of Activity Default Message Text.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnBeginningofActivityDefaultMessageText()
+        {
+            logger.LogMethodEntry("AddAssessmentPage",
+                "returnBeginningofActivityDefaultMessageText",
+               base.isTakeScreenShotDuringEntryExit);
+            //Gets Beginning of Activity Default Message Span
+            IWebElement BeginActivityDefaultMessage = base.GetWebElementPropertiesById(
+                AddAssessmentPageResources.AddAssessment_Page_BeginActivityDefaultMessage_Id_Locator);
+
+            logger.LogMethodExit("AddAssessmentPage",
+                "returnBeginningofActivityDefaultMessageText",
+                base.isTakeScreenShotDuringEntryExit);
+            return BeginActivityDefaultMessage.Text;
+        }
+        /// <summary>
+        /// return Beginning of Activity Instructor Message Text.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnBeginningofActivityInstructorMessageText()
+        {
+            logger.LogMethodEntry("AddAssessmentPage",
+                "returnBeginningofActivityInstructorMessageText",
+               base.isTakeScreenShotDuringEntryExit);
+            //Gets Beginning of Activity Instructor Message Text Box
+            IWebElement BeginActivityInstructorMessage = base.GetWebElementPropertiesById(
+                AddAssessmentPageResources.AddAssessment_Page_BeginActivityInstructorMessage_Id_Locator);
+
+            logger.LogMethodExit("AddAssessmentPage",
+                "returnBeginningofActivityInstructorMessageText",
+                base.isTakeScreenShotDuringEntryExit);
+            return BeginActivityInstructorMessage.Text;
+        }
+        /// <summary>
+        /// return End of Activity Default Message Text.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnEndofActivityDefaultMessageText()
+        {
+            logger.LogMethodEntry("AddAssessmentPage",
+                "returnEndofActivityDefaultMessageText",
+               base.isTakeScreenShotDuringEntryExit);
+            //Gets End of Activity Default Message Span
+            IWebElement EndActivityDefaultMessage = base.GetWebElementPropertiesById(
+                AddAssessmentPageResources.AddAssessment_Page_EndActivityDefaultMessage_Id_Locator);
+
+            logger.LogMethodExit("AddAssessmentPage",
+                "returnEndofActivityDefaultMessageText",
+                base.isTakeScreenShotDuringEntryExit);
+            return EndActivityDefaultMessage.Text;
+        }
+        /// <summary>
+        /// return End of Activity Instructor Message Text.
+        /// </summary>
+        /// <returns>string</returns>
+        public string returnEndofActivityInstructorMessageText()
+        {
+            logger.LogMethodEntry("AddAssessmentPage",
+                "returnEndofActivityInstructorMessageText",
+               base.isTakeScreenShotDuringEntryExit);
+            //Get End of Activity Instructor Message Text Box
+            IWebElement EndActivityInstructorMessage = base.GetWebElementPropertiesById(
+                AddAssessmentPageResources.AddAssessment_Page_EndActivityInstructorMessage_Id_Locator);
+
+            logger.LogMethodExit("AddAssessmentPage",
+                "returnEndofActivityInstructorMessageText",
+                base.isTakeScreenShotDuringEntryExit);
+            return EndActivityInstructorMessage.Text;
+        }
+        /// <summary>
+        /// Create the Activity With HelpLinks.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        public void CreateActivityWithHelpLinks(Activity.ActivityTypeEnum
+            activityTypeEnum)
+        {
+            //Create The Instructor Gradable Activity
+            logger.LogMethodEntry("AddAssessmentPage", "CreateActivityWithHelpLinks",
+                base.isTakeScreenShotDuringEntryExit);
+            SkillBasedAssessmentPage skillBasedAssessmentPage =
+                new SkillBasedAssessmentPage();
+            try
+            {
+                //Select the Question Type
+                this.ClickTheCreateQuestionLink();
+                //Select Question Type
+                new SelectQuestionTypePage().ClickTheTrueFalseQuestionType();
+                //Create True/False Question
+                new TrueFalsePage().CreateTrueFalseQuestion();
+                //Click on the HelpLinks tab
+                this.ClickOnHelpLinksTab();
+                //Click on the Add Links link
+                new RandomTopicListPage().ClickOnAddLinksLink();
+                //Open the Add Help Links popup
+                this.ClickTheSelectFromCourseMaterialsLibraryLink();
+                //Save Help Link
+                this.SaveHelpLink();
+                //Preview the added Help Link
+                this.PreviewHelpLink();
+                //Select Create Activity window
+                base.SelectWindow(AddAssessmentPageResources.AddAsessment_Page_CreateRandomActivity_Window_Name);
+                //Wait for Save and Return button on page
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                                    AddAssessment_Page_ActivityHelpLinksSaveAndReturn_Id_Locator));
+                IWebElement getSaveButton = base.GetWebElementPropertiesById
+                    (AddAssessmentPageResources.
+                                    AddAssessment_Page_ActivityHelpLinksSaveAndReturn_Id_Locator);
+                //Click Save and Return button to save the activity
+                base.ClickByJavaScriptExecutor(getSaveButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "CreateActivityWithHelpLinks",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        ///Click On HelpLinks Tab.
+        /// </summary>
+        public void ClickOnHelpLinksTab()
+        {
+            //Click On SaveAndContinue Button
+            logger.LogMethodEntry("AddAssessmentPage", "ClickOnHelpLinksTab",
+                 base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait for the Help Links tab
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                        AddAssessment_Page_HelpLinks_Tab_Id_Locator));
+                //Focus control on the Help Links tab
+                base.FocusOnElementByID(AddAssessmentPageResources.
+                    AddAssessment_Page_HelpLinks_Tab_Id_Locator);
+                //Get Save And Continue Button Property
+                IWebElement getbuttonProperty = base.GetWebElementPropertiesById(
+                    AddAssessmentPageResources.
+                    AddAssessment_Page_HelpLinks_Tab_Id_Locator);
+                //Click On Save And Continue Button
+                base.ClickByJavaScriptExecutor(getbuttonProperty);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "ClickOnHelpLinksTab",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click on Select From Course Materials Library link.
+        /// </summary>
+        private void ClickTheSelectFromCourseMaterialsLibraryLink()
+        {
+            logger.LogMethodEntry("AddAssessmentPage", "ClickTheAddLinkToWebsiteLink",
+                   base.isTakeScreenShotDuringEntryExit);
+            //Wait for the element             
+            base.WaitForElement(By.XPath(AddAssessmentPageResources.
+               AddAssessment_Page_SelectFromCourseMaterialsLibrary_XPath_Locator));
+            base.FocusOnElementByXPath(AddAssessmentPageResources.
+               AddAssessment_Page_SelectFromCourseMaterialsLibrary_XPath_Locator);
+            //Get web element
+            IWebElement getCreateQuesLinkProperty = base.GetWebElementPropertiesByXPath
+                (AddAssessmentPageResources.
+               AddAssessment_Page_SelectFromCourseMaterialsLibrary_XPath_Locator);
+            //Click the "Add Link to Website" link
+            base.ClickByJavaScriptExecutor(getCreateQuesLinkProperty);
+            logger.LogMethodExit("AddAssessmentPage", "ClickTheAddLinkToWebsiteLink",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Enter Name, URL and save the HelpLink.
+        /// </summary>
+        public void SaveHelpLink()
+        {
+            //Create The Instructor Gradable Activity
+            logger.LogMethodEntry("AddAssessmentPage", "SaveHelpLink",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait for the Add Link popup to load  
+                base.WaitUntilWindowLoads(AddAssessmentPageResources.AddAssessment_Page_SelectContentPopup_Title_Loactor);
+                //Select the Add Link popup
+                base.SelectWindow(AddAssessmentPageResources.AddAssessment_Page_SelectContentPopup_Title_Loactor);
+
+                //Wait for web element
+                base.WaitForElement(By.Id(AddAssessmentPageResources.
+                    AddAssessment_Page_HelpLinkAssetsIFrame_Id_Locator));
+                //Select the iFrame
+                base.SwitchToIFrame(AddAssessmentPageResources.
+                    AddAssessment_Page_HelpLinkAssetsIFrame_Id_Locator);
+
+                //Gets the collection of all Help Link assets
+                ICollection<IWebElement> getAllHelpLinkAssets = base.GetWebElementsCollectionById(
+                    AddAssessmentPageResources.AddAssessment_Page_HelpLinkAssets_CheckBox_Id_Locator);
+
+                //Check the first enabled checkbox for a Help Link asset to add it to HelpLinks grid in Activity
+                foreach (IWebElement HelpLinkAsset in getAllHelpLinkAssets)
+                {
+                    if (HelpLinkAsset.Enabled)
+                        HelpLinkAsset.Click();
+                    break;
+                }
+                //Select the Add Link popup
+                base.SwitchToDefaultPageContent();
+                //Wait for the element
+                base.WaitForElement(By.PartialLinkText(AddAssessmentPageResources.
+                    AddAssessment_Page_HelpLinkAddAndClose_PartialText_Locator));
+                IWebElement getSaveButton = base.GetWebElementPropertiesByLinkText
+                    (AddAssessmentPageResources.
+                    AddAssessment_Page_HelpLinkAddAndClose_PartialText_Locator);
+                //Click on the Save Add Link button
+                base.ClickByJavaScriptExecutor(getSaveButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "SaveHelpLink",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Preview the added HelpLink.
+        /// </summary>
+        public void PreviewHelpLink()
+        {
+            //Create The Instructor Gradable Activity
+            logger.LogMethodEntry("AddAssessmentPage", "PreviewHelpLink",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the Add Link popup
+                base.SelectWindow(AddAssessmentPageResources.
+                    AddAsessment_Page_CreateRandomActivity_Window_Name);
+
+                this.ClickOnPreviewHelpLink();
+
+                //Select the Add Link popup
+                base.SwitchToDefaultPageContent();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "PreviewHelpLink",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On Preview Help Link.
+        /// </summary>
+        private void ClickOnPreviewHelpLink()
+        {
+            logger.LogMethodEntry("AddAssessmentPage", "ClickOnPreviewHelpLink",
+                base.isTakeScreenShotDuringEntryExit);
+
+            //Wait for web element
+            base.WaitForElement(By.Id(AddAssessmentPageResources.
+                AddAssessment_Page_HelpLink_Frame_ID_Locator));
+            //Select the iFrame
+            base.SwitchToIFrame(AddAssessmentPageResources.
+                AddAssessment_Page_HelpLink_Frame_ID_Locator);
+
+            //Wait for the Help Link C-Menu
+            base.WaitForElement(By.XPath(AddAssessmentPageResources.
+                AddAssessment_Page_HelpLinkCMenu_XPath_Locator));
+            IWebElement getHelpLinkCMenu = base.GetWebElementPropertiesByXPath
+                (AddAssessmentPageResources.
+                AddAssessment_Page_HelpLinkCMenu_XPath_Locator);
+            //Click on the Help Link C-Menu
+            base.ClickByJavaScriptExecutor(getHelpLinkCMenu);
+
+            base.WaitForElement(By.XPath(AddAssessmentPageResources.
+                AddAssessment_Page_HelpLinkPreview_XPath_Locator));
+            //click on Help-Link Preview link
+            base.FocusOnElementByXPath(AddAssessmentPageResources.
+                AddAssessment_Page_HelpLinkPreview_XPath_Locator);
+            IWebElement previewHelpLink = base.GetWebElementPropertiesByXPath
+                (AddAssessmentPageResources.
+                AddAssessment_Page_HelpLinkPreview_XPath_Locator);
+            //Click on the Help Link C-Menu
+            base.ClickByJavaScriptExecutor(previewHelpLink);
+
+            logger.LogMethodExit("AddAssessmentPage", "ClickOnPreviewHelpLink",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Preview the added HelpLink when editing activity.
+        /// </summary>
+        public void PreviewHelpLinkOnEdit()
+        {
+            logger.LogMethodEntry("AddAssessmentPage", "PreviewHelpLinkOnEdit",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Preview the added HelpLink when editing activity
+                this.ClickOnPreviewHelpLink();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "PreviewHelpLinkOnEdit",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
     }
 }

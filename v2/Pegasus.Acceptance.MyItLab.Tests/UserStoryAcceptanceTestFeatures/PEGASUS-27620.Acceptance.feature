@@ -1,14 +1,17 @@
-﻿Feature: PEGASUS-27619:Automation: (Admin Modules) Stop and Start Copy functionality for Self Study courses
-					As a CS student
-					I want to view and enter into self study courses 
-					even when stop copy, stop enrollment are enabled to PMC course.
+﻿Feature: PEGASUS-27620: Automation: (Admin Modules) Validating PMCID for created shared Library course
+					As a CS Program admin
+					I want to search a Template 
+					so that I can create a shared library from the searched template.
+					
 
-#Purpose: To view and enter inside the self study course as SMS student when PMC is sent with stop copy and stop enrollment.
 
-Scenario: User Login as SMS Student and Navigate to Selfstudy course when PMC is set with stop copy and enrollment.
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "SelfStudyCourse" course from the Global Home page as "CsSmsStudent"
-Then I should be on the "Today's View" page
+
+
+#Purpose: To copy as shared library as SMS instructor.
+Scenario: To copy as shared library.
+When I search the Template of "MyITLabForOffice2013Master"
+And I click the "Copy as Shared Library" c-menu option
+Then I should be on the "Copy as Shared Library" page
+When I click "Save" button to "Copy as Shared Library"
+Then I should see the successfull message "Please wait… copying is in progress. This may take up to 24 hours. To see your copies, you may need to refresh your screen. To view items you copied as a Shared Library, go to the Sections tab."
+

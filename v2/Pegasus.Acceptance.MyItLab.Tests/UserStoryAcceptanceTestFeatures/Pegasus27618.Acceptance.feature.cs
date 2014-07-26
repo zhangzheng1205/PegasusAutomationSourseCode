@@ -31,8 +31,8 @@ namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Pegasus27618", "As a cs Instructor\n I want to search section and to create copy of section\n so th" +
-                    "at copy of section pop-up will be displayed and checkbox will not be checked.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Pegasus27618", "As a cs Instructor\r\n I want to search section and to create copy of section\r\n so " +
+                    "that copy of section pop-up will be displayed and checkbox will not be checked.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,11 +70,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To Check the fuctionality of the Copy as Section By CsSmsInstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To Check the functionality of the Copy as Section By CsSmsInstructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Pegasus27618")]
-        public virtual void ToCheckTheFuctionalityOfTheCopyAsSectionByCsSmsInstructor()
+        public virtual void ToCheckTheFunctionalityOfTheCopyAsSectionByCsSmsInstructor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Check the fuctionality of the Copy as Section By CsSmsInstructor", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Check the functionality of the Copy as Section By CsSmsInstructor", ((string[])(null)));
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -82,11 +82,11 @@ testRunner.When("I select the \"Sections\" tab", ((string)(null)), ((TechTalk.Sp
 #line 9
 testRunner.Then("I navigate to the \"Sections\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 10
-testRunner.When("I search the section of \"MyItLabProgramCourse\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I search the section of \"MyITLabOffice2013Program\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
 testRunner.And("I click the \"Copy as Section\" c-menu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
-testRunner.Then("I should see the check box as unchecked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Copy My Course Content Only.\" check box as unchecked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 13
 testRunner.And("I should see the message \"Copy My Course Content Only.\" on popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

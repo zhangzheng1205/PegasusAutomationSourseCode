@@ -16,7 +16,6 @@ Then I should see enrolled InstructorCourse in Global Home Page
 Scenario: To check the Saved Preferences changes to the activity By SMS Student
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
-When I open the "MyTest" activity in Course Materials
 
 #MyTestInstructorCourse Scenario	
 #Purpose: To check the grade schema functionality for the Test activity

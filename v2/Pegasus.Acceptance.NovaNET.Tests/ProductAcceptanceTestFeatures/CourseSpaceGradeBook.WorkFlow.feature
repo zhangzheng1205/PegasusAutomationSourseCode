@@ -7,7 +7,7 @@
 #NovaNETMasterLibrary Scenario					 
 #Purpose : To View Activity Score by CS Teacher
 Scenario: View Activity Score by CS Teacher
-When I navigate to the "Gradebook" tab
+When I navigate to "Gradebook" tab and selected "Grades" subtab
 Then I should be on the "Gradebook" page
 And I should see the grade under activity column of the submitted "01:Posttest" activity for "NovaNETCsStudent"
 
@@ -15,7 +15,7 @@ And I should see the grade under activity column of the submitted "01:Posttest" 
 #Purpose : To Verify The Functionality of Edit C-menu Options of Grade book column / Grade cell
 #TestCase Id: NN_PWF_456 
 Scenario: To Verify The Functionality of Edit C-menu Options of Grade Column by CS Teacher
-When I navigate to the "Gradebook" tab
+When I navigate to "Gradebook" tab and selected "Grades" subtab
 Then I should be on the "Gradebook" page
 When I click on cmenu "EditGrades" of asset "Test"
 And I edit the score in Edit Grade Window
@@ -25,7 +25,7 @@ Then I should see the successfull message "Batch update completed successfully. 
 #Purpose : To Verify The Functionality of Apply Grade Schema c-menu options of Grade Column by CS Teacher
 #TestCase Id: NN_PWF_457
 Scenario: To Verify The Functionality of Apply Grade Schema c-menu options of Grade Column by CS Teacher
-When I navigate to the "Gradebook" tab
+When I navigate to "Gradebook" tab and selected "Grades" subtab
 Then I should be on the "Gradebook" page
 When I click on cmenu "ApplyGradeSchema" of asset "Test"
 And I 'Apply' the grade schema for the submitted activity
@@ -36,7 +36,7 @@ And I should see the updated apply grade schema value "B" for Activity "Test"
 #Purpose :Digital path teacher selects View All Submissions c-menu options of column / Cell in Grade book
 #TestCase Id: NN_PWF_460 
 Scenario: To Verify The Functionality of View All Submissions c-menu options of Grade Column by CS Teacher
-When I navigate to the "Gradebook" tab
+When I navigate to "Gradebook" tab and selected "Grades" subtab
 Then I should be on the "Gradebook" page
 When I click on cmenu "ViewAllSubmissions" of asset "Test"
 And I edit the grade in view submission window
@@ -47,7 +47,7 @@ When I close the "View Submission" window
 #Purpose :Digital path teacher selects Search Student filtering options in grade book 
 #TestCase Id: NN_PWF_474 
 Scenario: To Verify teacher selects Search Student Filtering Options in GradeBook by CS Teacher
-When I navigate to the "Gradebook" tab
+When I navigate to "Gradebook" tab and selected "Grades" subtab
 Then I should be on the "Gradebook" page
 When I click the 'View Filters' link in gradebook
 
@@ -55,7 +55,7 @@ When I click the 'View Filters' link in gradebook
 #Purpose :Digital path teacher selects Show Status for all items filtering options in grade book 
 #TestCase Id: NN_PWF_475  
 Scenario: To Verify teacher selects Show Status for all items Filtering Options in GradeBook by CS Teacher
-When I navigate to the "Gradebook" tab
+When I navigate to "Gradebook" tab and selected "Grades" subtab
 Then I should be on the "Gradebook" page
 When I select 'Show Status for All Items' filter option
 Then I should see the "Test" activity in Gradebook for all the enrollled "NovaNETCsStudent"
@@ -64,7 +64,7 @@ Then I should see the "Test" activity in Gradebook for all the enrollled "NovaNE
 #Purpose :Digital path teacher selects Assignment type filtering options in grade book 
 #TestCase Id: NN_PWF_477
 Scenario: To verify teacher selects Assignment type filtering options in grade book by CS Teacher
-When I navigate to the "Gradebook" tab
+When I navigate to "Gradebook" tab and selected "Grades" subtab
 Then I should be on the "Gradebook" page
 When I click on 'Assignment Types' link in gradebook
 And I select "Test" Assignment Type
