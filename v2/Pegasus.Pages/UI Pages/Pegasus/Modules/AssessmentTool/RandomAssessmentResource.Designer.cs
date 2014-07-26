@@ -169,6 +169,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save and Return.
+        /// </summary>
+        internal static string RandomAssessment_Page_SaveandReturn_Button_PartialLinkText_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_SaveandReturn_Button_PartialLinkText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to cmdTabMessagesFinish.
         /// </summary>
         internal static string RandomAssessment_Page_SaveandReturn_Message_Tab_Id_Locator {
@@ -192,6 +201,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         internal static string RandomAssessment_Page_Select_PreferenceTab_Id_Locator {
             get {
                 return ResourceManager.GetString("RandomAssessment_Page_Select_PreferenceTab_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chksavelater.
+        /// </summary>
+        internal static string RandomAssessment_Page_Select_SaveForLater_Preference_Id_Locator {
+            get {
+                return ResourceManager.GetString("RandomAssessment_Page_Select_SaveForLater_Preference_Id_Locator", resourceCulture);
             }
         }
         

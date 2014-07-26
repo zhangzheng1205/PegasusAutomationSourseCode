@@ -1405,6 +1405,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>The innerText of this element.</returns>
         private String GetElementText(By by)
         {
+            base.WaitForElement(by);
             return WebDriver.FindElement(by).Text;
         }
 

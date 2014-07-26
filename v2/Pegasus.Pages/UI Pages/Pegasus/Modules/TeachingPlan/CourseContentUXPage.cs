@@ -1406,9 +1406,9 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Search Activity In My Course Frame
+        /// Search Activity In My Course Frame.
         /// </summary>
-        /// <param name="assetName">This is Asset Name</param>
+        /// <param name="assetName">This is Asset Name.</param>
         public void SearchAssetInMyCourseFrame(string assetName)
         {
             //Search Activity In My Course Frame
@@ -1432,9 +1432,9 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Fill Asset Name In Text Box
+        /// Fill Asset Name In Text Box.
         /// </summary>
-        /// <param name="assetName">This is Asset Name</param>
+        /// <param name="assetName">This is Asset Name.</param>
         private void FillAssetNameInTextBox(string assetName)
         {
             //Fill Asset Name In Text Box
@@ -1442,6 +1442,9 @@ namespace Pegasus.Pages.UI_Pages
              base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                 CourseContentUXPage_InputSearch_Textbox_Id_Locator));
+            // clear search box
+            base.ClearTextByID(CourseContentUXPageResource.
+                CourseContentUXPage_InputSearch_Textbox_Id_Locator);
             //Fill Asset Name In Text Box
             base.FillTextBoxByID(CourseContentUXPageResource.
                 CourseContentUXPage_InputSearch_Textbox_Id_Locator, assetName);

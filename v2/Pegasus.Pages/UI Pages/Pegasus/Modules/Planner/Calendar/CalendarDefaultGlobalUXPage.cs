@@ -154,7 +154,7 @@ namespace Pegasus.Pages.UI_Pages
                     CalendarDefaultGlobalUX_Page_Planner_Frame_Id_Locator);
                 base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_ClearResultLink_Id_Locator));
-                IWebElement getClearResult=base.GetWebElementPropertiesById
+                IWebElement getClearResult = base.GetWebElementPropertiesById
                     (CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_ClearResultLink_Id_Locator);
                 //Click on Clear Results Link
@@ -809,5 +809,6 @@ namespace Pegasus.Pages.UI_Pages
                   base.isTakeScreenShotDuringEntryExit);
             return getCalendarTitle;
         }
+
     }
 }

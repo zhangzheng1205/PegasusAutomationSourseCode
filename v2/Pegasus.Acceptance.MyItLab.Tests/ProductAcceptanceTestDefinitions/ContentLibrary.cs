@@ -133,7 +133,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// Selected Activity By Name And Assigned In My CourseFrame.
         /// </summary>
         /// <param name="activityName">This is activity name.</param>
-        [When(@"I selected activity ""(.*)"" and assigned in My Course frame")]
+        [When(@"I selected activity ""(.*)"" and add in My Course frame")]
         public void SelectedActivityAndAssignedInMyCourseFrame(string activityName)
         {
             // select activity and assign 
@@ -151,8 +151,8 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Select All Activity And Change Status as Shown.
         /// </summary>
-        [When(@"I selected all activity and change status as shown")]
-        public void SelectedAllActivityAndChangeStatusAsShown()
+         [When(@"I selected all activity and change the status from ""(.*)""")]
+        public void SelectedAllActivityAndChangeStatusAsShown(string activityStatus)
         {
             // show hidden activities
             Logger.LogMethodEntry("ContentLibrary",
@@ -163,7 +163,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 NavigateMyCourseFrameToSelectTheActivity();
             // click show hidden asset
             new Pages.UI_Pages.TeachingPlanUxPage().
-                ClickAssetShowHideButton();
+                ClickAssetShowHideButton(activityStatus);
             Logger.LogMethodExit("ContentLibrary",
                 "SelectedAllActivityAndChangeStatusAsShown",
                 base.isTakeScreenShotDuringEntryExit);

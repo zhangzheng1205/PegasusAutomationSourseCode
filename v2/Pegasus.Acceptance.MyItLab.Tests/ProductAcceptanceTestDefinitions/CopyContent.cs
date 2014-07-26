@@ -16,7 +16,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// The static instance of the logger for the class.
         /// </summary>
         private static Logger Logger =
-            Logger.GetInstance(typeof(CopyContent));        
+            Logger.GetInstance(typeof(CopyContent));
 
         /// <summary>
         /// Search Asset In Course Materials Library
@@ -83,7 +83,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             teachingPlanUxPage.ClickOnHomeButton();
             Logger.LogMethodExit("CopyContent", " SelectHomeButton",
              base.isTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         /// Search Asset In My Course Frame.
@@ -119,7 +119,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 "ClickTheActivityCmenuOptionInMyCourseFrame",
                 base.isTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Select The Activity CmenuOption In MyCourseFrame.
         /// </summary>
@@ -219,7 +219,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             contentLibraryUXPage.SelectAndSwitchtoFrame(CopyContentResource.
                 CopyContent_CourseMaterials_LeftFrame_Id_Locator);
             //Search Asset In Content Library Frame
-            contentLibraryUXPage.SearchTheActivity(activity.Name);            
+            contentLibraryUXPage.SearchTheActivity(activity.Name);
             Logger.LogMethodExit("CopyContent", " SearchAssetInContentLibrary",
               base.isTakeScreenShotDuringEntryExit);
         }
@@ -322,12 +322,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("CopyContent", "SearchSecondSection",
                 base.isTakeScreenShotDuringEntryExit);
             //Get Course From Memory
-            Course course = Course.Get(courseTypeEnum);            
+            Course course = Course.Get(courseTypeEnum);
             //Search Section
             new ManageTemplatePage().SearchSection(course.SectionName +
                 CopyContentResource.CopyContent_SecondSection_Value);
             Logger.LogMethodExit("CopyContent", " SearchSecondSection",
               base.isTakeScreenShotDuringEntryExit);
-        }        
+        }
     }
 }

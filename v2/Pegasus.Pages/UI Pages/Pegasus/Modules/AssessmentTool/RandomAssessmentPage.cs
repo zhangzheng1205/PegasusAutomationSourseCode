@@ -293,11 +293,11 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click Save and Return Button In Message Tab.
         /// </summary>
-        public void ClickSaveandReturnInMessageTab()
+        public void ClickSaveandReturnActivityPreferenceButtonInMessageTab()
         {
             //Click Save and Return Button In Message Tab
             logger.LogMethodEntry("RandomAssessmentPage",
-                  "ClickSaveandReturnInMessageTab",
+                  "ClickSaveandReturnActivityPreferenceButtonInMessageTab",
                  base.isTakeScreenShotDuringEntryExit);
             try
             {
@@ -314,7 +314,101 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomAssessmentPage",
-                  "ClickSaveandReturnInMessageTab",
+                  "ClickSaveandReturnActivityPreferenceButtonInMessageTab",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Activity Level Tab.
+        /// </summary>
+        /// <param name="activityWindowName">This is activity window name.</param>
+        /// <param name="selectActivityLevelTab">This is activity Tab name.</param>
+        public void SelectActivityLevelTab(string activityWindowName, string selectActivityLevelTab)
+        {
+            // select activity level Tabs
+            logger.LogMethodEntry("RandomAssessmentPage",
+                  "SelectActivityLevelTab",
+                 base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                // select activity window
+                base.WaitUntilWindowLoads(activityWindowName);
+                base.SelectWindow(activityWindowName);
+                // select activity level Tab 
+                base.WaitForElement(By.PartialLinkText(selectActivityLevelTab));
+                base.ClickByJavaScriptExecutor
+                    (base.GetWebElementPropertiesByPartialLinkText(selectActivityLevelTab));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomAssessmentPage",
+                  "SelectActivityLevelTab",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Set Activity Level Preferences.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        public void SetActivityLevelPreferences(string activityName)
+        {
+            // select activity level preference
+            logger.LogMethodEntry("RandomAssessmentPage",
+                  "SetActivityLevelPreferences",
+                 base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch(activityName)
+                {
+                    case "Access Chapter 1: End-of-Chapter Quiz":
+                        base.WaitForElement(By.Id(RandomAssessmentResource.
+                            RandomAssessment_Page_Select_SaveForLater_Preference_Id_Locator));
+                        // is preference selected
+                        bool isSaveForLaterReferenceSet = base.IsElementSelectedById(RandomAssessmentResource.
+                            RandomAssessment_Page_Select_SaveForLater_Preference_Id_Locator);
+                        if(!isSaveForLaterReferenceSet)
+                        {
+                            // select preference
+                            base.ClickCheckBoxById(RandomAssessmentResource.
+                            RandomAssessment_Page_Select_SaveForLater_Preference_Id_Locator);
+                        }                         
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomAssessmentPage",
+                  "SetActivityLevelPreferences",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click Save and Return Preference Button.
+        /// </summary>
+        public void ClickSaveandReturnActivityPreferenceButton()
+        {
+            // click save and return preference button
+            logger.LogMethodEntry("RandomAssessmentPage",
+                  "ClickSaveandReturnActivityPreferenceButton",
+                 base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.PartialLinkText(RandomAssessmentResource.
+                       RandomAssessment_Page_SaveandReturn_Button_PartialLinkText_Locator), 5);
+                // click on save and return button
+                base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText
+                    (RandomAssessmentResource.RandomAssessment_Page_SaveandReturn_Button_PartialLinkText_Locator));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomAssessmentPage",
+                  "ClickSaveandReturnActivityPreferenceButton",
                 base.isTakeScreenShotDuringEntryExit);
         }
     }

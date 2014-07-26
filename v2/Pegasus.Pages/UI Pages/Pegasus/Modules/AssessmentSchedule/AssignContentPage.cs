@@ -13,7 +13,7 @@ using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentSchedule;
 namespace Pegasus.Pages.UI_Pages
 {
     /// <summary>
-    /// This page handles functionality of the Assign window
+    /// This page handles functionality of the Assign window.
     /// </summary>
     public class AssignContentPage : BasePage
     {
@@ -38,11 +38,11 @@ namespace Pegasus.Pages.UI_Pages
                     (AssignContentPageResource.AssignContent_Page_DateFormat);
                 // Enter the due date in due date text box
                 base.WaitForElement(By.Id(AssignContentPageResource
-               .AssignContent_Page_DueDateTextbox_ID));
+               .AssignContent_Page_DueDate_TextBox_Id_Locator));
                 base.ClearTextByID(AssignContentPageResource
-               .AssignContent_Page_DueDateTextbox_ID);
+               .AssignContent_Page_DueDate_TextBox_Id_Locator);
                 base.FillTextBoxByID(AssignContentPageResource
-                .AssignContent_Page_DueDateTextbox_ID, getDueDate);
+                .AssignContent_Page_DueDate_TextBox_Id_Locator, getDueDate);
                 // Click on save and close button
                 base.WaitForElement(By.CssSelector(AssignContentPageResource
                 .AssignContent_Page_SaveandAssign_Button_CssSelector));
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
                     .AssignContent_Page_ClassesRow, rowCount));
                     if (getClassName.Contains(className))
                     {
-                        IWebElement getClassSelector=base.GetWebElementPropertiesByXPath
+                        IWebElement getClassSelector = base.GetWebElementPropertiesByXPath
                             (string.Format
                         (AssignContentPageResource
                         .AssignContent_Page_ClassesRadioButton_Td, rowCount));
@@ -141,7 +141,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsPopUpClosed(Convert.ToInt32(AssignContentPageResource.
                     AssignContent_Page_Window_Count));
             }
-            catch ( Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
@@ -185,7 +185,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-                ExceptionHandler.HandleException(e);                
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "getDueDateOfActivity",
                 base.isTakeScreenShotDuringEntryExit);
@@ -204,10 +204,10 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("AssignContentPage", "GetDueDateOfAssignedActivity",
                base.isTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AssignContentPageResource.
-                AssignContent_Page_DueDateTextbox_ID));
+                AssignContent_Page_DueDate_TextBox_Id_Locator));
             //Get Due Date Of Activity
             getDueDate = base.GetWebElementPropertiesById(AssignContentPageResource.
-                AssignContent_Page_DueDateTextbox_ID).GetAttribute(AssignContentPageResource.
+                AssignContent_Page_DueDate_TextBox_Id_Locator).GetAttribute(AssignContentPageResource.
                 AssignContent_Page_DueDate_Value);
             //wait for 5 seconds
             Thread.Sleep(Convert.ToInt32(AssignContentPageResource.
@@ -266,7 +266,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Assign Window
-                this.SelectAssignWindow();               
+                this.SelectAssignWindow();
                 //Check Status Of Start And End Date Fields
                 isStartEndDateFieldsPresent = base.IsElementPresent(By.Id(AssignContentPageResource.
                     AssignContent_Page_FromDate_TextField_Id_Locator)) &&
@@ -316,7 +316,7 @@ namespace Pegasus.Pages.UI_Pages
                 IWebElement getTimezoneLink = base.GetWebElementPropertiesById(AssignContentPageResource.
                     AssignContent_Page_TimezoneIcon_Id_Locator);
                 base.PerformMouseHoverByJavaScriptExecutor(getTimezoneLink);
-               //Get Timezone
+                //Get Timezone
                 getTimeZone = base.GetTitleAttributeValueById(AssignContentPageResource.
                     AssignContent_Page_TimezoneIcon_Id_Locator);
             }
@@ -416,7 +416,7 @@ namespace Pegasus.Pages.UI_Pages
                 getStartEndDateText = base.GetElementTextByXPath(AssignContentPageResource.
                     AssignContent_Page_StartDate_Text_Xpath_Locator) +
                     base.GetElementTextByXPath(AssignContentPageResource.
-                    AssignContent_Page_EndDate_Text_Xpath_Locator);               
+                    AssignContent_Page_EndDate_Text_Xpath_Locator);
             }
             catch (Exception e)
             {
@@ -469,7 +469,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Button In Assign Window
             logger.LogMethodEntry("AssignContentPage", "ClickOnButtonInAssignWindow",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.isTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Assign Window
@@ -483,7 +483,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "ClickOnButtonInAssignWindow",
-                base.isTakeScreenShotDuringEntryExit);           
+                base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -526,7 +526,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Selected Students' Option
             logger.LogMethodEntry("AssignContentPage",
                 "SelectSelectedStudentsOption",
-                base.isTakeScreenShotDuringEntryExit);           
+                base.isTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Assign Window
@@ -596,7 +596,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Assign Window
                 this.SelectAssignWindow();
                 base.WaitForElement(By.Id(AssignContentPageResource.
-                    AssignContent_Page_Viewby_Dropdown_Id_Locator));   
+                    AssignContent_Page_Viewby_Dropdown_Id_Locator));
                 //Get Dropdown Default Value
                 string getDropdownDefaultOption = base.GetValueAttributeByXPath(
                     AssignContentPageResource.
@@ -793,7 +793,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select 'Assigned' Radiobutton
             logger.LogMethodEntry("AssignContentPage", "SelectAssignedRadiobutton",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.isTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Properties Window
@@ -809,7 +809,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "SelectAssignedRadiobutton",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -840,7 +840,7 @@ namespace Pegasus.Pages.UI_Pages
                     AssignContent_Page_FromDate_TextField_Id_Locator);
                 //Enter Current Date
                 base.FillTextBoxByID(AssignContentPageResource.
-                    AssignContent_Page_FromDate_TextField_Id_Locator, getCurrentDate);                
+                    AssignContent_Page_FromDate_TextField_Id_Locator, getCurrentDate);
             }
             catch (Exception e)
             {
@@ -848,7 +848,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage",
                 "SelectSetavailabilitydaterangeRadiobutton",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -881,7 +881,52 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage",
                 "SelectDoNotProvideEndDateOption",
-                base.isTakeScreenShotDuringEntryExit);   
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Set Activity Property Settings.
+        /// </summary>
+        /// <param name="assetName">This is activity name.</param>
+        public void SetActivityPropertiesSettings(string assetName)
+        {
+            // set activity properties
+            logger.LogMethodEntry("AssignContentPage", "SetActivityPropertiesSettings",
+                base.isTakeScreenShotDuringEntryExit);
+            switch (assetName)
+            {
+
+                case "Access Chapter 1: End-of-Chapter Quiz":
+                    this.SelectPropertiesWindow();
+                    base.WaitForElement(By.Id(AssignContentPageResource.
+                        AssignContent_Page_DateAssigned_RadioButton_Id_Locator));
+                    bool isActivityAssigned = base.IsElementSelectedById(AssignContentPageResource.
+                        AssignContent_Page_DateAssigned_RadioButton_Id_Locator);
+                    // is activity already assigned
+                    if (!isActivityAssigned)
+                    {
+                        base.SelectRadioButtonById(AssignContentPageResource.
+                        AssignContent_Page_DateAssigned_RadioButton_Id_Locator);
+                    }
+                    base.WaitForElement(By.Id(AssignContentPageResource.AssignContent_Page_DueDate_TextBox_Id_Locator));
+                    // select current date
+                    base.FillTextBoxByID(AssignContentPageResource.AssignContent_Page_DueDate_TextBox_Id_Locator,
+                        DateTime.Now.ToString(AssignContentPageResource.AssignContent_Page_DateFormat));
+                    base.ClearTextByID(AssignContentPageResource.AssignContent_Page_Hours_TextBox_Id_Locator);
+                    // enter current hours
+                    base.FillTextBoxByID(AssignContentPageResource.AssignContent_Page_Hours_TextBox_Id_Locator,
+                        DateTime.Now.Hour.ToString());
+                    base.ClearTextByID(AssignContentPageResource.AssignContent_Page_Minutes_TextBox_Id_Locator);
+                    // enter after 3 minutes from current minute value
+                    base.FillTextBoxByID(AssignContentPageResource.AssignContent_Page_Minutes_TextBox_Id_Locator,
+                        DateTime.Now.AddMinutes(4).Minute.ToString());
+                    // click on save button
+                    base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText
+                        (AssignContentPageResource.AssignContent_Page_Button_Save_Id_Locator));
+                    break;
+            }
+            logger.LogMethodExit("AssignContentPage", "SetActivityPropertiesSettings",
+                base.isTakeScreenShotDuringEntryExit);
         }
     }
 }

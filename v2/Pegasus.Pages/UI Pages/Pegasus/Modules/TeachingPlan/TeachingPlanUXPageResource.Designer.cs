@@ -79,6 +79,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CC_icn_down_opt.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_Activity_CMenu_Image_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_Activity_CMenu_Image_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@title=&apos;{0}&apos;].
+        /// </summary>
+        internal static string TeachingPlanUX_Page_ActivityName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_ActivityName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0:_ctl0:phBody:PageContent:imgbtnAddContent.
         /// </summary>
         internal static string TeachingPlanUX_Page_AddContent_Image_Button_Locator {
@@ -124,15 +142,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ifrmRight.
-        /// </summary>
-        internal static string TeachingPlanUX_Page_Course_Content_Iframe_Id {
-            get {
-                return ResourceManager.GetString("TeachingPlanUX_Page_Course_Content_Iframe_Id", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ifrmLeft.
         /// </summary>
         internal static string TeachingPlanUX_Page_Course_Content_Left_IFrame_Id_Locator {
@@ -142,38 +151,47 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ifrmRight.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_Course_Content_Right_Iframe_Id {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_Course_Content_Right_Iframe_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to GO! with Microsoft Access 2013 Comprehensive.
         /// </summary>
-        internal static string TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level1 {
+        internal static string TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level1 {
             get {
-                return ResourceManager.GetString("TeachingPlanUX_Page_Course_Office2013_Microsoft Access 2013_AssetFolder_Level1", resourceCulture);
+                return ResourceManager.GetString("TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level1", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Access Chapter 1: Getting Started with Microsoft Access 2013.
         /// </summary>
-        internal static string TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level2 {
+        internal static string TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level2 {
             get {
-                return ResourceManager.GetString("TeachingPlanUX_Page_Course_Office2013_Microsoft Access 2013_AssetFolder_Level2", resourceCulture);
+                return ResourceManager.GetString("TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Access Chapter 1: Activities.
         /// </summary>
-        internal static string TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level3 {
+        internal static string TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level3 {
             get {
-                return ResourceManager.GetString("TeachingPlanUX_Page_Course_Office2013_Microsoft Access 2013_AssetFolder_Level3", resourceCulture);
+                return ResourceManager.GetString("TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level3", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Access Chapter 1: End-of-Chapter Activities.
         /// </summary>
-        internal static string TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level4 {
+        internal static string TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level4 {
             get {
-                return ResourceManager.GetString("TeachingPlanUX_Page_Course_Office2013_Microsoft Access 2013_AssetFolder_Level4", resourceCulture);
+                return ResourceManager.GetString("TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level4", resourceCulture);
             }
         }
         
@@ -304,11 +322,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdCourseContent&apos;]/tbody/tr[{0}].
+        /// </summary>
+        internal static string TeachingPlanUX_Page_MyCourse_Assets_Name_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_MyCourse_Assets_Name_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to grdCourseContent$_ctrl0.
         /// </summary>
         internal static string TeachingPlanUX_Page_MyCourse_CheckBox_Id_Locator {
             get {
                 return ResourceManager.GetString("TeachingPlanUX_Page_MyCourse_CheckBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdCourseContent&apos;]/tbody/tr.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_MyCourse_CourseContent_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_MyCourse_CourseContent_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -345,6 +381,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string TeachingPlanUX_Page_Section_WindowName {
             get {
                 return ResourceManager.GetString("TeachingPlanUX_Page_Section_WindowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show/Hide.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_ShowHide_PartialLinkText_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_ShowHide_PartialLinkText_Locator", resourceCulture);
             }
         }
         

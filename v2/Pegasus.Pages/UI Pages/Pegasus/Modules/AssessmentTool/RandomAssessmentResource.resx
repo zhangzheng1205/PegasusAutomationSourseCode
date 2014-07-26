@@ -153,6 +153,9 @@
   <data name="RandomAssessment_Page_QuestionsTab_ID" xml:space="preserve">
     <value>tdcmdTabTopics</value>
   </data>
+  <data name="RandomAssessment_Page_SaveandReturn_Button_PartialLinkText_Locator" xml:space="preserve">
+    <value>Save and Return</value>
+  </data>
   <data name="RandomAssessment_Page_SaveandReturn_Message_Tab_Id_Locator" xml:space="preserve">
     <value>cmdTabMessagesFinish</value>
   </data>
@@ -161,6 +164,9 @@
   </data>
   <data name="RandomAssessment_Page_Select_PreferenceTab_Id_Locator" xml:space="preserve">
     <value>cmdTabPreference</value>
+  </data>
+  <data name="RandomAssessment_Page_Select_SaveForLater_Preference_Id_Locator" xml:space="preserve">
+    <value>Chksavelater</value>
   </data>
   <data name="RandomAssessment_Page_WindowName" xml:space="preserve">
     <value>Edit Random activity</value>

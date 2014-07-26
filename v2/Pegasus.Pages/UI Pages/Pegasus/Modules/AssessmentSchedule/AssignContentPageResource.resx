@@ -144,7 +144,7 @@
   <data name="AssignContent_Page_Dropdown_Option_Value" xml:space="preserve">
     <value>Groups</value>
   </data>
-  <data name="AssignContent_Page_DueDateTextbox_ID" xml:space="preserve">
+  <data name="AssignContent_Page_DueDate_TextBox_Id_Locator" xml:space="preserve">
     <value>txtDueDate</value>
   </data>
   <data name="AssignContent_Page_DueDate_Value" xml:space="preserve">
@@ -263,5 +263,17 @@
   </data>
   <data name="AssignContent_Page_Properties_WindowTitle_Name" xml:space="preserve">
     <value>Properties</value>
+  </data>
+  <data name="AssignContent_Page_Button_Save_Id_Locator" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="AssignContent_Page_DateAssigned_RadioButton_Id_Locator" xml:space="preserve">
+    <value>rdAssigned</value>
+  </data>
+  <data name="AssignContent_Page_Hours_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtdHrs</value>
+  </data>
+  <data name="AssignContent_Page_Minutes_TextBox_Id_Locator" xml:space="preserve">
+    <value>txtdMins</value>
   </data>
 </root>

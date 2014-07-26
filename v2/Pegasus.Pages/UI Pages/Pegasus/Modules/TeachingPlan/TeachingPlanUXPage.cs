@@ -25,6 +25,21 @@ namespace Pegasus.Pages.UI_Pages
             Logger.GetInstance(typeof(TeachingPlanUxPage));
 
         /// <summary>
+        /// This is activity cmenu options enum.
+        /// </summary>
+        public enum ActivityCmenuEnum
+        {
+            Edit = 1,
+            Preview = 2,
+            Properties = 3,
+            Print = 4,
+            ViewGrades = 5,
+            ViewSubmissions = 6,
+            ShowHide = 7,
+            GetInformation = 8
+        }
+
+        /// <summary>
         /// Get the Tabs Window Title.
         /// </summary>        
         /// <param name="tabName">This is Tab Name</param>
@@ -151,10 +166,10 @@ namespace Pegasus.Pages.UI_Pages
                     TeachingPlanUX_Page_AddFromLibrary_Tab);
                 //Wait for Right Iframe
                 base.WaitForElement(By.Id(TeachingPlanUXPageResource.
-                     TeachingPlanUX_Page_Course_Content_Iframe_Id));
+                     TeachingPlanUX_Page_Course_Content_Right_Iframe_Id));
                 //Switch to Content Frame
                 base.SwitchToIFrame(TeachingPlanUXPageResource.
-                    TeachingPlanUX_Page_Course_Content_Iframe_Id);
+                    TeachingPlanUX_Page_Course_Content_Right_Iframe_Id);
                 //Click on The 'specific  Activity'
                 base.WaitForElement(By.PartialLinkText(activityName));
                 //Get Element Property
@@ -337,25 +352,32 @@ namespace Pegasus.Pages.UI_Pages
             // select activity in course materials library frame
             Logger.LogMethodEntry("TeachingPlanUXPage", "SelectActivityInCourseMaterialsLibraryFrame",
               base.isTakeScreenShotDuringEntryExit);
-            switch (activityName)
+            try
             {
-                case "Access Chapter 1: End-of-Chapter Quiz":
-                    // select the window
-                    this.SelectCourseMaterialsWindow();
-                    this.NavigateMicrosoftAccess2013AssetFolder();
-                    base.WaitForElement(By.Id(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_ContentLibrary_Table_Locator));
-                    // get required assets avaliable in frame
-                    string getRequiredAssets = base.GetElementTextByID(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_ContentLibrary_Table_Locator);
-                    if (getRequiredAssets.Contains(activityName))
-                    {
-                        // select content library check box
-                        this.SelectContentLibraryCheckBoxForAllAssets();
-                    }
-                    // click add cvontent image button
-                    this.ClickAddContentImageButtonToAssignAssetInMyCourseFrame();
-                    break;
+                switch (activityName)
+                {
+                    case "Access Chapter 1: End-of-Chapter Quiz":
+                        // select the window
+                        this.SelectCourseMaterialsWindow();
+                        this.NavigateMicrosoftAccess2013AssetFolder();
+                        base.WaitForElement(By.Id(TeachingPlanUXPageResource.
+                            TeachingPlanUX_Page_ContentLibrary_Table_Locator));
+                        // get required assets avaliable in frame
+                        string getRequiredAssets = base.GetElementTextByID(TeachingPlanUXPageResource.
+                            TeachingPlanUX_Page_ContentLibrary_Table_Locator);
+                        if (getRequiredAssets.Contains(activityName))
+                        {
+                            // select content library check box
+                            this.SelectContentLibraryCheckBoxForAllAssets();
+                        }
+                        // click add cvontent image button
+                        this.ClickAddContentImageButtonToAssignAssetInMyCourseFrame();
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+              ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("TeachingPlanUXPage", "SelectActivityInCourseMaterialsLibraryFrame",
               base.isTakeScreenShotDuringEntryExit);
@@ -405,25 +427,25 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrameById(TeachingPlanUXPageResource.
                 TeachingPlanUX_Page_Course_Content_Left_IFrame_Id_Locator);
             base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
-                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level1));
+                TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level1));
             // select level 1 asset folder
             base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
-                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level1);
+                TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level1);
             base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
-                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level2));
+                TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level2));
             // select level 2 asset folder
             base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
-                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level2);
+                TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level2);
             base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
-                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level3));
+                TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level3));
             // select level 3 asset folder
             base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
-                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level3);
+                TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level3);
             base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
-                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level4));
+                TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level4));
             // select level 4 asset folder
             base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
-                TeachingPlanUX_Page_Course_Office2013_Microsoft_Access_2013_AssetFolder_Level4);
+                TeachingPlanUX_Page_Course_Office2013_MicrosoftAccess2013_AssetFolder_Level4);
             Logger.LogMethodExit("TeachingPlanUXPage", "NavigateMicrosoftAccess2013AssetFolder",
                base.isTakeScreenShotDuringEntryExit);
         }
@@ -448,31 +470,49 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public void NavigateMyCourseFrameToSelectTheActivity()
         {
-            Logger.LogMethodEntry("TeachingPlanUXPage", "SelectCourseMaterialsWindow",
+            Logger.LogMethodEntry("TeachingPlanUXPage", "NavigateMyCourseFrameToSelectTheActivity",
                base.isTakeScreenShotDuringEntryExit);
-            base.SwitchToIFrameById(TeachingPlanUXPageResource.
-               TeachingPlanUX_Page_Course_Content_Iframe_Id);
-            this.SelectMyCourseCheckBoxForAllAssets();
-            Logger.LogMethodExit("TeachingPlanUXPage", "SelectCourseMaterialsWindow",
+            try
+            {
+                base.SwitchToIFrameById(TeachingPlanUXPageResource.
+                    TeachingPlanUX_Page_Course_Content_Right_Iframe_Id);
+                this.SelectMyCourseCheckBoxForAllAssets();
+            }
+            catch (Exception e)
+            {
+              ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TeachingPlanUXPage", "NavigateMyCourseFrameToSelectTheActivity",
                 base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Click Asset Show Hide Button.
+        /// <param name="activityStatus">This is activity status.</param>
         /// </summary>
-        public void ClickAssetShowHideButton()
+        public void ClickAssetShowHideButton(string activityStatus)
         {
-            Logger.LogMethodEntry("TeachingPlanUXPage", "ClickAssetShowHideButton",
-               base.isTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.Id(TeachingPlanUXPageResource.
-                      TeachingPlanUX_Page_MyCourse_Table_Locator),5);
-            // get required assets avaliable in frame
-            string getHiddenAssets = base.GetElementTextByID(TeachingPlanUXPageResource.
-                TeachingPlanUX_Page_MyCourse_Table_Locator);
-            if (getHiddenAssets.Contains("Hidden"))
+            try
             {
-                base.WaitForElement(By.PartialLinkText(" Show/Hide"));
-                base.ClickLinkByPartialLinkText("Show/Hide");
+                Logger.LogMethodEntry("TeachingPlanUXPage", "ClickAssetShowHideButton",
+                     base.isTakeScreenShotDuringEntryExit);
+                base.WaitForElement(By.Id(TeachingPlanUXPageResource.
+                          TeachingPlanUX_Page_MyCourse_Table_Locator));
+                // get required assets avaliable in frame
+                string getHiddenAssets = base.GetElementTextByID(TeachingPlanUXPageResource.
+                    TeachingPlanUX_Page_MyCourse_Table_Locator);
+                if (getHiddenAssets.Contains(activityStatus))
+                {
+                    base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_ShowHide_PartialLinkText_Locator));
+                    // click show/hide button
+                    base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_ShowHide_PartialLinkText_Locator);
+                }
+            }
+            catch (Exception e)
+            {
+               ExceptionHandler.HandleException(e);               
             }
             Logger.LogMethodExit("TeachingPlanUXPage", "ClickAssetShowHideButton",
                base.isTakeScreenShotDuringEntryExit);
@@ -492,6 +532,127 @@ namespace Pegasus.Pages.UI_Pages
                 TeachingPlanUX_Page_MyCourse_CheckBox_Id_Locator);
             Logger.LogMethodExit("TeachingPlanUXPage", "SelectMyCourseCheckBoxForAllAssets",
               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Activity Cmenu Option In My Course Frame.
+        /// </summary>
+        /// <param name="activityCmenuEnum">This is Activity Cmenu Type.</param>
+        /// <param name="activityName">This is activity Name.</param>
+        public void SelectActivityCmenuOptionInMyCourseFrame
+            (ActivityCmenuEnum activityCmenuEnum, String activityName)
+        {
+            // select activity cmenu option 
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "SelectActivityCmenuOptionInMyCourseFrame",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                // select course materials window
+                this.SelectCourseMaterialsWindow();
+                // click on activity Cmenu
+                this.PerformMouseHoverOnActivityCmenu(activityName);
+                switch (activityCmenuEnum)
+                {
+                    case TeachingPlanUxPage.ActivityCmenuEnum.Properties:
+                        // click on cmenu option properties
+                        this.ClickOnAssetCMenuOptionLink(activityCmenuEnum);
+                        break;
+                    case TeachingPlanUxPage.ActivityCmenuEnum.Edit:
+                        // click on cmenu option edit
+                        this.ClickOnAssetCMenuOptionLink(activityCmenuEnum);
+                        break;
+                    case TeachingPlanUxPage.ActivityCmenuEnum.Preview:
+                        // click on cmenu option preview
+                        this.ClickOnAssetCMenuOptionLink(activityCmenuEnum);
+                        break;
+                    case TeachingPlanUxPage.ActivityCmenuEnum.Print:
+                        // click on cmenu option print
+                        this.ClickOnAssetCMenuOptionLink(activityCmenuEnum);
+                        break;
+                    case TeachingPlanUxPage.ActivityCmenuEnum.ShowHide:
+                        // click on cmenu option showhide
+                        this.ClickOnAssetCMenuOptionLink(activityCmenuEnum);
+                        break;
+                    case TeachingPlanUxPage.ActivityCmenuEnum.ViewGrades:
+                        // click on cmenu option view grades
+                        this.ClickOnAssetCMenuOptionLink(activityCmenuEnum);
+                        break;
+                    case TeachingPlanUxPage.ActivityCmenuEnum.ViewSubmissions:
+                        // click on cmenu option view submissions
+                        this.ClickOnAssetCMenuOptionLink(activityCmenuEnum);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "SelectActivityCmenuOptionInMyCourseFrame",
+            base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Perform Mouse Hover On Activity Cmenu.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        private void PerformMouseHoverOnActivityCmenu(String activityName)
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "PerformMouseHoverOnActivityCmenu",
+                base.isTakeScreenShotDuringEntryExit);
+            // initialize activity counter variable
+            int activityCount;
+            // initialize activity name counter variable
+            string getActivityName = string.Empty;
+            // switch my course frame
+            base.WaitForElement(By.Id(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Content_Right_Iframe_Id));
+            base.SwitchToIFrameById(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_Course_Content_Right_Iframe_Id);
+            base.WaitForElement(By.Id(TeachingPlanUXPageResource.
+                    TeachingPlanUX_Page_MyCourse_Table_Locator),5);
+            // get activity count present in frame
+            activityCount = base.GetElementCountByXPath(TeachingPlanUXPageResource.
+                    TeachingPlanUX_Page_MyCourse_CourseContent_Xpath_Locator);
+            for (int assetNameCount = 1; assetNameCount <= activityCount; assetNameCount++)
+            {
+                // get activity name
+                getActivityName = base.GetElementTextByXPath
+                        (string.Format(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_MyCourse_Assets_Name_Xpath_Locator, assetNameCount));
+                if (getActivityName.Replace("\r\n", " ").Contains(activityName))
+                {
+                    // activity name element property 
+                    IWebElement getActivityProperty = base.GetWebElementPropertiesByXPath
+                        (string.Format(TeachingPlanUXPageResource.TeachingPlanUX_Page_ActivityName_Xpath_Locator, activityName));
+                    base.PerformMouseHoverByJavaScriptExecutor(getActivityProperty);
+                    base.WaitForElement(By.ClassName(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_Activity_CMenu_Image_ClassName_Locator));
+                    // get cmenu element property
+                    IWebElement getCmenuProperty = base.GetWebElementPropertiesByClassName(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_Activity_CMenu_Image_ClassName_Locator);
+                    base.ClickByJavaScriptExecutor(getCmenuProperty);
+                    break;
+                }
+                base.SwitchToDefaultPageContent();
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "PerformMouseHoverOnActivityCmenu",
+          base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On Asset CMenu Option Link.
+        /// </summary>
+        private void ClickOnAssetCMenuOptionLink(ActivityCmenuEnum activityCmenuEnum)
+        {
+            // click on cmenu option
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickOnAssetCMenuOptionLink",
+                    base.isTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.PartialLinkText(activityCmenuEnum.ToString()));
+            // click on cmenu option link
+            base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText
+                (activityCmenuEnum.ToString()));
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickOnAssetCMenuOptionLink",
+                   base.isTakeScreenShotDuringEntryExit);
         }
     }
 }

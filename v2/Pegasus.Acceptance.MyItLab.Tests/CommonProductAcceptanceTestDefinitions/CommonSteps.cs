@@ -439,7 +439,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToPublishingTab",
                base.isTakeScreenShotDuringEntryExit);
         }
-       
+
         /// <summary>
         /// Navigate To Course Space User Tabs.
         /// </summary>
@@ -469,7 +469,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "NavigateToTab",
                 base.isTakeScreenShotDuringEntryExit);
             //Select Tab
-            new TodaysViewUXPage().SelectTab(tabName);           
+            new TodaysViewUXPage().SelectTab(tabName);
             Logger.LogMethodExit("CommonSteps", "NavigateToTab",
                base.isTakeScreenShotDuringEntryExit);
         }
@@ -502,6 +502,89 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             Logger.LogMethodExit("CommonSteps", "ClickOnSavePreferencesButtonOnPreferencesPage",
                 isTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select Cmenu Option Of Activity.
+        /// </summary>
+        /// <param name="cmenuOptionName">This is Cmenu Option Name.</param>
+        /// <param name="activityTypeEnum">This is activity name.</param>
+        [When(@"I select cmenu ""(.*)"" option of activity ""(.*)""")]
+        public void SelectCmenuOptionOfActivity(string cmenuOptionName,
+            string activityName)
+        {
+            // select cmenu option
+            Logger.LogMethodEntry("LaunchActivity", "SelectCmenuOptionOfActivity",
+                base.isTakeScreenShotDuringEntryExit);
+            // select activity cmenu option
+            new TeachingPlanUxPage().SelectActivityCmenuOptionInMyCourseFrame((TeachingPlanUxPage.ActivityCmenuEnum)
+                Enum.Parse(typeof(TeachingPlanUxPage.ActivityCmenuEnum), cmenuOptionName), activityName);
+            Logger.LogMethodExit("LaunchActivity", "SelectCmenuOptionOfActivity",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Search Asset In My Course Frame.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Name..</param>
+        [When(@"I search the activity ""(.*)"" in My Course frame")]
+        public void SearchAssetInMyCourseFrame(string activityName)
+        {
+            // search asset in my course frame
+            Logger.LogMethodEntry("CopyContent", "SearchAssetInMyCourseFrame",
+              base.isTakeScreenShotDuringEntryExit);
+            new CourseContentUXPage().SearchAssetInMyCourseFrame(activityName);
+            Logger.LogMethodExit("CopyContent", " SearchAssetInMyCourseFrame",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Activity Tab. 
+        /// </summary>
+        /// <param name="activityWindowName">This is activity window name.</param>
+        /// <param name="selectActivityTabName">This is activity level Tab name.</param>
+        [When(@"I select ""(.*)"" page and select ""(.*)"" Tab")]
+        public void SelectActivityTab(string activityWindowName, string selectActivityTabName)
+        {
+            // select Tab
+            RandomAssessmentPage randomAssessmentPage =
+                new RandomAssessmentPage();
+            randomAssessmentPage.SelectActivityLevelTab
+                (activityWindowName, selectActivityTabName);
+
+        }
+
+        /// <summary>
+        /// Set The Activity Level Preferences.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        [When(@"I set the activity level preferences for ""(.*)""")]
+        public void SetTheActivityLevelPreferences(string activityName)
+        {
+            RandomAssessmentPage randomAssessmentPage
+                = new RandomAssessmentPage();
+            // set actvity level preferences
+            randomAssessmentPage.SetActivityLevelPreferences(activityName);
+            // save preferences
+            randomAssessmentPage.ClickSaveandReturnActivityPreferenceButton();
+        }
+
+        /// <summary>
+        /// Set Activity Properties.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// 
+        [When(@"I set the properties for activity ""(.*)""")]
+        public void SetPropertiesSettingsForTheActivity(string activityName)
+        {
+            //Assign the activity in calendar
+            Logger.LogMethodEntry("AssignmentCalendar", "SetPropertiesSettingsForTheActivity",
+                base.isTakeScreenShotDuringEntryExit);
+            new AssignContentPage().SetActivityPropertiesSettings(activityName);
+            Logger.LogMethodExit("AssignmentCalendar", "SetPropertiesSettingsForTheActivity",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

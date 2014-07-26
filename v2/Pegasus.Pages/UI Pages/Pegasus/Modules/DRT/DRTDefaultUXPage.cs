@@ -571,7 +571,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window
                 addAssessmentPage.SelectPretestWindow();
                 //Click On Save And Return Button
-                new RandomAssessmentPage().ClickSaveandReturnInMessageTab();
+                new RandomAssessmentPage().ClickSaveandReturnActivityPreferenceButtonInMessageTab();
                 //Select Window
                 this.SelectWindow();
                 //Click on Save and Close Button

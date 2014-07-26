@@ -244,7 +244,6 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                base.isTakeScreenShotDuringEntryExit);
         }
 
-
         /// <summary>
         /// Click On Calendar Icon
         /// </summary>
