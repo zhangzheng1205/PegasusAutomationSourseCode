@@ -64,7 +64,7 @@ Then I should be on the "Course Materials" page
 Scenario:To verify the attempts for past due activity by SMS student
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
-When I launch the activity named as "Excel Chapter 1: End-of-Chapter Quiz" in Course Materials
+When I launch the activity named as "Chapter 1 Check Your Understanding: Part 1" in Course Materials
 Then I should be on the "Objective-Based Question Only" page
 And I should see the message "This activity is past due." in activity presentation page
 When I submit the past due "Objective-Based Question Only" activity

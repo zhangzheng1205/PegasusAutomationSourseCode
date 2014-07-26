@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<OrderedTest name="orderedtest.buildverificationtest.myitlab" storage="e:\a$\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.buildverificationtest.myitlab.orderedtest" id="9415966f-f1ae-4cc1-8eda-5388faa3775a" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<OrderedTest name="orderedtest.buildverificationtest.myitlab" storage="f:\pegasus_automation_latest\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.buildverificationtest.myitlab.orderedtest" id="9415966f-f1ae-4cc1-8eda-5388faa3775a" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Execution id="b7c36b17-9c3c-444d-ab31-f92869a3903c" />
   <TestLinks>
-    <TestLink id="f3e9a737-d5c7-9fc1-8c49-d19e55193f70" name="UserLoginAsSMSInstructorAndNavigateToMyItLabProgramCourse" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <TestLink id="7fffeed0-d06e-ef46-f68c-f2b607cdc37c" name="AssignContentInMyCourseFrame" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="607df9d5-4fda-d6a5-e548-0fc830693f6e" name="UserLoginAsSMSStudentAndNavigateToMyITLabOffice2013ProgramCourse" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="c737180d-5056-85bd-99a3-a4a4dedcec7e" name="ToVerifyTheAttemptsForPastDueActivityBySMSStudent" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   </TestLinks>
 </OrderedTest>

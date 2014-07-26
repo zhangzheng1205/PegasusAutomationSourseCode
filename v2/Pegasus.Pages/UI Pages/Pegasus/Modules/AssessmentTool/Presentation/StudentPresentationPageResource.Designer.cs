@@ -332,6 +332,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to FINISH: Submit for Grading.
+        /// </summary>
+        internal static string StudentPresentation_Page_FINISHSubmitforGrading_Button {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_FINISHSubmitforGrading_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to calcelCurPos.
         /// </summary>
         internal static string StudentPresentation_Page_FirstText_CursorPosition_Id_Locator {

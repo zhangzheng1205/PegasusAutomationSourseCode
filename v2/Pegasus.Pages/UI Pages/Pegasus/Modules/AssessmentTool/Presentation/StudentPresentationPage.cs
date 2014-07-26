@@ -199,7 +199,42 @@ namespace Pegasus.Pages.UI_Pages
                 "AnswersSelectionInTestWindow",
               base.isTakeScreenShotDuringEntryExit);
         }
-
+        /// <summary>
+        /// Selects options/answers in Test window to complete submission
+        /// </summary>
+        private void AnswersFirstQuestionTestWindow()
+        {
+            //Selects options/answers in Test window to complete submission
+            logger.LogMethodEntry("StudentPresentationPage",
+                "AnswersSelectionInTestWindow",
+               base.isTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_QuestionCount_Presentation_Xpath_Locator));
+            //Get Number of count from the Div
+            int getDivCount = base.GetElementCountByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_QuestionCount_Presentation_Xpath_Locator);
+            // Loop to click options Div By Div
+            
+                //Checks whether div of question is present or not
+                Boolean isNonAttemptedQuestionPresent = base.IsElementPresent(By.XPath
+                        (string.Format(StudentPresentationPageResource
+                        .StudentPresentation_Page_QuestionRadioButton_Xpath_Locator,
+                        1)));
+                if (isNonAttemptedQuestionPresent)
+                {
+                    //Wait for radio button as per the DIV and clicks on it
+                    base.WaitForElement(By.XPath(string.Format(StudentPresentationPageResource
+                        .StudentPresentation_Page_QuestionRadioButton_Xpath_Locator,
+                        1)));
+                    //Clicks on the radio button of answers
+                    base.ClickButtonByXPath(string.Format(StudentPresentationPageResource.
+                        StudentPresentation_Page_QuestionRadioButton_Xpath_Locator,
+                        1));
+                }
+            logger.LogMethodExit("StudentPresentationPage",
+                "AnswersSelectionInTestWindow",
+              base.isTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         ///  Check for the Display of Teacher View tabs
         /// </summary>
@@ -360,7 +395,20 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSubmitForGradingButton",
                 base.isTakeScreenShotDuringEntryExit);
         }
-
+        /// <summary>
+        /// Click on Submit For Grade Button.
+        /// </summary>
+        private void ClickOnPastDueSubmitForGradingButton()
+        {
+            //Click on Submit Grade Button
+            logger.LogMethodEntry("StudentPresentationPage", "ClickOnSubmitForGradingButton",
+                base.isTakeScreenShotDuringEntryExit);
+            //Get Button Property
+            IWebElement getActivitySubmitButtonProperty = base.GetWebElementPropertiesByPartialLinkText(StudentPresentationPageResource.StudentPresentation_Page_FINISHSubmitforGrading_Button);
+            base.ClickByJavaScriptExecutor(getActivitySubmitButtonProperty);
+            logger.LogMethodExit("StudentPresentationPage", "ClickOnSubmitForGradingButton",
+                base.isTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Attempt the Activity By Student in view all content tab
         /// </summary>
@@ -2246,9 +2294,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window
                 base.SwitchToLastOpenedWindow();
                 //Answers Selection in Presention window
-                this.AnswersSelectionInTestWindow();
+                this.AnswersFirstQuestionTestWindow();
                 //Click the Submit button
-                this.ClickOnSubmitForGradingButton();
+                this.ClickOnPastDueSubmitForGradingButton();                
+
                 //Click on the Finish button
                 this.ClickOnFinishButton();
                 //Click On Return To Course Button

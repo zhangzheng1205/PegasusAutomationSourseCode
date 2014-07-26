@@ -218,8 +218,8 @@ testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((Te
 #line 66
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 67
-testRunner.When("I launch the activity named as \"Excel Chapter 1: End-of-Chapter Quiz\" in Course M" +
-                    "aterials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I launch the activity named as \"Chapter 1 Check Your Understanding: Part 1\" in Co" +
+                    "urse Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 68
 testRunner.Then("I should be on the \"Objective-Based Question Only\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 69
