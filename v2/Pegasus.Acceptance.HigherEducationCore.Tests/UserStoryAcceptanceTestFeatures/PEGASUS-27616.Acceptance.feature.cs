@@ -71,24 +71,6 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 6
-#line 7
-testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 8
-testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 9
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 10
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
-testRunner.When("I enter in the \"ProgramCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
-testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-        }
-        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Copying Templates as Tempalate inside Program when its parent PMC is set with Sto" +
             "p Copy")]
@@ -97,17 +79,19 @@ testRunner.Then("I should be on the \"Program Administration\" page", ((string)(
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copying Templates as Tempalate inside Program when its parent PMC is set with Sto" +
                     "p Copy", ((string[])(null)));
-#line 15
+#line 9
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 16
+#line 10
+testRunner.When("I navigate to \"Templates\" tab of the \"Program Administration\" page as PAdmin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
 testRunner.When("I click the \"Copy as Template\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
+#line 13
 testRunner.Then("I should be on the \"Copy as Template\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 18
+#line 14
 testRunner.When("I click \"Copy\" button \"Copy as Template\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
+#line 15
 testRunner.Then("I should see successfull message \"You cannot copy this course due to publisher re" +
                     "strictions.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -122,17 +106,19 @@ testRunner.Then("I should see successfull message \"You cannot copy this course 
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy Template as Shared Library inside Program when its parent PMC is set with St" +
                     "op Copy", ((string[])(null)));
-#line 22
+#line 19
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 23
+#line 20
+testRunner.When("I navigate to \"Templates\" tab of the \"Program Administration\" page as PAdmin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
+testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 22
 testRunner.When("I click the \"Copy as Shared Library\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
+#line 23
 testRunner.Then("I should be on the \"Copy as Shared Library\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 25
+#line 24
 testRunner.When("I click \"Save\" button to \"Copy as Shared Library\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
+#line 25
 testRunner.Then("I should see successfull message \"You cannot copy this course due to publisher re" +
                     "strictions.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -147,10 +133,8 @@ testRunner.Then("I should see successfull message \"You cannot copy this course 
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy Section as Section inside Program when its parent PMC is set with Stop Copy", ((string[])(null)));
 #line 29
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
 #line 30
-testRunner.When("I navigate to the \"Sections\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Sections\" tab of the \"Program Administration\" page as PAdmin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 31
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 32
@@ -174,21 +158,19 @@ testRunner.Then("I should see successfull message \"You cannot copy this course 
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy Section as Template inside Program when its parent PMC is set with Stop Copy" +
                     "", ((string[])(null)));
-#line 38
-this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
 #line 39
-testRunner.When("I navigate to the \"Sections\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 40
-testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Sections\" tab of the \"Program Administration\" page as PAdmin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 41
-testRunner.When("I click the \"Copy as Template\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 42
-testRunner.Then("I should be on the \"Copy as Template\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I click the \"Copy as Template\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 43
-testRunner.When("I click \"Copy\" button \"Copy as Template\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Copy as Template\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 44
+testRunner.When("I click \"Copy\" button \"Copy as Template\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 45
 testRunner.Then("I should see successfull message \"You cannot copy this course due to publisher re" +
                     "strictions.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

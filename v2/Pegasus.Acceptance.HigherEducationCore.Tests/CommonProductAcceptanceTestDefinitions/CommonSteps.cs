@@ -624,7 +624,25 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToTabAsProgramAdministrator",
                base.isTakeScreenShotDuringEntryExit);
         }
-        
+
+        /// <summary>
+        /// Navigate To Tab Of The Particular Page.
+        /// </summary>
+        /// <param name="tabName">This is Tab Name.</param>
+        /// <param name="pageName">This is Page Name.</param>
+        [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page as PAdmin")]
+        public void NavigateToTabInProgramAdminPage(
+            string subNavigationTabName, string subNavigationTabParentWindowName)
+        {
+            // navigate program administrator page
+            Logger.LogMethodEntry("AdminToolPage", "NavigateToTabOfTheParticularPage",
+                base.isTakeScreenShotDuringEntryExit);
+            new ProgramAdminToolPage().NavigateProgramAdminTabs(
+                subNavigationTabParentWindowName, subNavigationTabName);
+            Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfTheParticularPage",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

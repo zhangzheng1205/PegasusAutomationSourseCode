@@ -1,18 +1,14 @@
 ﻿Feature: PEGASUS-27620: Automation: (Admin Modules) Validating PMCID for created shared Library course
 					As a CS Program admin
 					I want to search a Template 
-					so that I can create a shared library from the searched template.
-					
+					so that I can create a shared library from the searched template.					
 
-#Purpose: Open CS Url and navigate to my course and test banks.
-Background:
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-When I enter in the "ProgramCourse" from the Global Home page as "CsSmsInstructor"
-Then I should be on the "Program Administration" page
 
+# Used ProgramCourse course
 #Purpose: To copy as shared library.
 Scenario: To copy as shared library.
+When I navigate to "Templates" tab of the "Program Administration" page as PAdmin
+Then I should be on the "Program Administration" page
 When I click the "Copy as Shared Library" option
 Then I should be on the "Copy as Shared Library" page
 When I click "Save" button to "Copy as Shared Library"
