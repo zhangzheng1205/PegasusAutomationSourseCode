@@ -585,6 +585,28 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         }
 
 
+
+        /// <summary>
+        /// To validate the alert message.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="window"></param>
+        [Then(@"I should see the message ""(.*)"" in ""(.*)"" window")]
+        public void ToValidateMessageOnPopUp(string message, string window)
+        {
+            // Method To Verify the Success Message 
+            Logger.LogMethodEntry("CommonSteps", "ToValidateMessageOnPopUp",
+                isTakeScreenShotDuringEntryExit);
+
+            Logger.LogAssertion("ToValidateTheMessageOnPopUp",
+                            ScenarioContext.Current.ScenarioInfo.Title, ()
+                           => Assert.AreEqual(message, new ShowMessagePage().GetTheValidationMessageOfAddingRandonQuestionToMyTest()));
+            new ShowMessagePage().ClickOnPegasusAlertOkButton();
+            Logger.LogMethodExit("CommonSteps", "ToValidateMessageOnPopUp",
+                isTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

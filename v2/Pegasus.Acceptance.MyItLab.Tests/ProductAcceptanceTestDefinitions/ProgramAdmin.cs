@@ -269,5 +269,22 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 base.isTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Create section  to validate the section count and give appropriate alert message.
+        /// </summary>
+        /// <param name="courseTypeEnum"></param>
+        /// <param name="count"></param>
+        [When(@"I create Section from ""(.*)"" Template with section count as ""(.*)""")]
+        public void CreateNewSectionWithCount(Course.CourseTypeEnum courseTypeEnum, int count)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "CreateNewSectionWithCount",
+                base.isTakeScreenShotDuringEntryExit);
+            //Create New Section 
+            new AddNewSectionPage().CreateNewSectionWithCount(courseTypeEnum, count);
+            Logger.LogMethodExit("ProgramAdmin", "CreateNewSectionWithCount",
+                  base.isTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
