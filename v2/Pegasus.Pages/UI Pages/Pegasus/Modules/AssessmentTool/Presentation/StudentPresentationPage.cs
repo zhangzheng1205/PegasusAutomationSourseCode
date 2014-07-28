@@ -2228,7 +2228,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.isTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(15000);                
+                Thread.Sleep(15000);//Need to replace with appropriate Wait method in framework                
                 //base.WaitUntilPopUpLoads("SIM 5 - ws student", 15);
                 base.SwitchToLastOpenedWindow();
                 string Sim5Title = WebDriver.Title;
