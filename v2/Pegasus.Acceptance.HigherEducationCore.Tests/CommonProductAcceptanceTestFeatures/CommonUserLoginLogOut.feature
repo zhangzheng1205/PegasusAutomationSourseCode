@@ -3,6 +3,13 @@
 				I want to manage all the Pegasus User related usecases 
 				so that I would validate all the Pegasus User scenarios are working fine.
 
+#Purpose:Verify The User Login As CTGPublisherAdmin
+Scenario: User Login As CTGPublisherAdmin
+Given I browsed the login url for "HEDCSCTGPPublisherAdmin"
+When I logged into the Pegasus as "HEDCSCTGPPublisherAdmin" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Workspaces" page
+
 #Purpose:Verify The User Login As WorkSpaceAdmin
 Scenario: User Login As WorkSpaceAdmin
 Given I browsed the login url for "HedWsAdmin"

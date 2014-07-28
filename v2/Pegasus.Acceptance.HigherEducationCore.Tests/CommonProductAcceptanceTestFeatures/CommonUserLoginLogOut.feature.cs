@@ -70,18 +70,38 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.CommonProductAcceptanceTe
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CTGPublisherAdmin")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
+        public virtual void UserLoginAsCTGPublisherAdmin()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CTGPublisherAdmin", ((string[])(null)));
+#line 7
+this.ScenarioSetup(scenarioInfo);
+#line 8
+testRunner.Given("I browsed the login url for \"HEDCSCTGPPublisherAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
+testRunner.When("I logged into the Pegasus as \"HEDCSCTGPPublisherAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+testRunner.Given("I am on the \"Workspaces\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As WorkSpaceAdmin")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
         public virtual void UserLoginAsWorkSpaceAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As WorkSpaceAdmin", ((string[])(null)));
-#line 7
+#line 14
 this.ScenarioSetup(scenarioInfo);
-#line 8
+#line 15
 testRunner.Given("I browsed the login url for \"HedWsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
+#line 16
 testRunner.When("I logged into the Pegasus as \"HedWsAdmin\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
+#line 17
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -93,11 +113,11 @@ testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.
         public virtual void UserLogOutAsWorkSpaceAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As WorkSpaceAdmin", ((string[])(null)));
-#line 13
+#line 20
 this.ScenarioSetup(scenarioInfo);
-#line 14
+#line 21
 testRunner.When("I \"Sign out\" from the \"HedWsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
+#line 22
 testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -110,13 +130,13 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void UserLoginAsWorkSpaceTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As WorkSpaceTeacher", ((string[])(null)));
-#line 18
+#line 25
 this.ScenarioSetup(scenarioInfo);
-#line 19
+#line 26
 testRunner.Given("I browsed the login url for \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 20
+#line 27
 testRunner.When("I logged into the Pegasus as \"HedWsInstructor\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 28
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -128,17 +148,17 @@ testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.
         public virtual void UserLoginAsWorkSpaceTeacherNavigateToGeneralCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As WorkSpaceTeacher Navigate to GeneralCourse", ((string[])(null)));
-#line 24
+#line 31
 this.ScenarioSetup(scenarioInfo);
-#line 25
+#line 32
 testRunner.Given("I browsed the login url for \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
+#line 33
 testRunner.When("I logged into the Pegasus as \"HedWsInstructor\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
+#line 34
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 28
+#line 35
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 29
+#line 36
 testRunner.When("I enter in the \"HEDGeneral\" from the Global Home page as \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -150,17 +170,17 @@ testRunner.When("I enter in the \"HEDGeneral\" from the Global Home page as \"He
         public virtual void UserLoginAsWorkSpaceTeacherNavigateToMasterCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As WorkSpaceTeacher Navigate to MasterCourse", ((string[])(null)));
-#line 32
+#line 39
 this.ScenarioSetup(scenarioInfo);
-#line 33
+#line 40
 testRunner.Given("I browsed the login url for \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 34
+#line 41
 testRunner.When("I logged into the Pegasus as \"HedWsInstructor\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
+#line 42
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 36
+#line 43
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 37
+#line 44
 testRunner.When("I enter in the \"MySpanishLabMaster\" from the Global Home page as \"HedWsInstructor" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
@@ -173,17 +193,17 @@ testRunner.When("I enter in the \"MySpanishLabMaster\" from the Global Home page
         public virtual void UserLoginAsWorkSpaceTeacherNavigateToEmptyCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As WorkSpaceTeacher Navigate to EmptyCourse", ((string[])(null)));
-#line 40
+#line 47
 this.ScenarioSetup(scenarioInfo);
-#line 41
+#line 48
 testRunner.Given("I browsed the login url for \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 42
+#line 49
 testRunner.When("I logged into the Pegasus as \"HedWsInstructor\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 43
+#line 50
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 44
+#line 51
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 45
+#line 52
 testRunner.When("I enter in the \"HedEmptyClass\" from the Global Home page as \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -195,11 +215,11 @@ testRunner.When("I enter in the \"HedEmptyClass\" from the Global Home page as \
         public virtual void UserLogOutAsWorkSpaceTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As WorkSpaceTeacher", ((string[])(null)));
-#line 48
+#line 55
 this.ScenarioSetup(scenarioInfo);
-#line 49
+#line 56
 testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 50
+#line 57
 testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -212,13 +232,13 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void UserLoginAsCourseSpaceAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CourseSpaceAdmin", ((string[])(null)));
-#line 53
+#line 60
 this.ScenarioSetup(scenarioInfo);
-#line 54
+#line 61
 testRunner.Given("I browsed the login url for \"HedCsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 55
+#line 62
 testRunner.When("I logged into the Pegasus as \"HedCsAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 63
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -230,11 +250,11 @@ testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.
         public virtual void UserLogOutAsCourseSpaceAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As CourseSpaceAdmin", ((string[])(null)));
-#line 59
+#line 66
 this.ScenarioSetup(scenarioInfo);
-#line 60
+#line 67
 testRunner.When("I \"Sign out\" from the \"HedCsAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 61
+#line 68
 testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -247,15 +267,15 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void UserLoginAsCsSMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSMSInstructor", ((string[])(null)));
-#line 65
+#line 72
 this.ScenarioSetup(scenarioInfo);
-#line 66
+#line 73
 testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 67
+#line 74
 testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 68
+#line 75
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 69
+#line 76
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
@@ -267,17 +287,17 @@ testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTal
         public virtual void UserLoginAsCsSMSInstructorNavigateToProgramCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSMSInstructor Navigate To ProgramCourse", ((string[])(null)));
-#line 73
+#line 80
 this.ScenarioSetup(scenarioInfo);
-#line 74
+#line 81
 testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 75
+#line 82
 testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 76
+#line 83
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 77
+#line 84
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 78
+#line 85
 testRunner.When("I enter in the \"ProgramCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -289,17 +309,17 @@ testRunner.When("I enter in the \"ProgramCourse\" from the Global Home page as \
         public virtual void UserLoginAsCsSMSInstructorNavigateToInstructorCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSMSInstructor Navigate To InstructorCourse", ((string[])(null)));
-#line 82
+#line 89
 this.ScenarioSetup(scenarioInfo);
-#line 83
+#line 90
 testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 84
+#line 91
 testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 85
+#line 92
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 86
+#line 93
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 87
+#line 94
 testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -311,11 +331,11 @@ testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page a
         public virtual void UserLogOutAsCsSMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As CsSMSInstructor", ((string[])(null)));
-#line 90
+#line 97
 this.ScenarioSetup(scenarioInfo);
-#line 91
+#line 98
 testRunner.When("I \"Sign out\" from the \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 92
+#line 99
 testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -328,15 +348,15 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void UserLoginAsCsSMSStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSMSStudent", ((string[])(null)));
-#line 96
+#line 103
 this.ScenarioSetup(scenarioInfo);
-#line 97
+#line 104
 testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 98
+#line 105
 testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 99
+#line 106
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 100
+#line 107
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
@@ -348,17 +368,17 @@ testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTal
         public virtual void UserLoginAsCsSMSStudentNavigateToInstructorCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSMSStudent Navigate To InstructorCourse", ((string[])(null)));
-#line 105
+#line 112
 this.ScenarioSetup(scenarioInfo);
-#line 106
+#line 113
 testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 107
+#line 114
 testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 108
+#line 115
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 109
+#line 116
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 110
+#line 117
 testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -370,11 +390,11 @@ testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page a
         public virtual void UserLogOutAsCsSMSStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As CsSMSStudent", ((string[])(null)));
-#line 113
+#line 120
 this.ScenarioSetup(scenarioInfo);
-#line 114
+#line 121
 testRunner.When("I \"Sign out\" from the \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 115
+#line 122
 testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -387,15 +407,15 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void UserLoginAsCsTAInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsTAInstructor", ((string[])(null)));
-#line 119
+#line 126
 this.ScenarioSetup(scenarioInfo);
-#line 120
+#line 127
 testRunner.Given("I browsed the login url for \"HedTeacherAssistant\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 121
+#line 128
 testRunner.When("I logged into the Pegasus as \"HedTeacherAssistant\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 122
+#line 129
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 123
+#line 130
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
@@ -407,17 +427,17 @@ testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTal
         public virtual void UserLoginAsCsTAInstructorNavigateToInstructorCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsTAInstructor Navigate To InstructorCourse", ((string[])(null)));
-#line 127
+#line 134
 this.ScenarioSetup(scenarioInfo);
-#line 128
+#line 135
 testRunner.Given("I browsed the login url for \"HedTeacherAssistant\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 129
+#line 136
 testRunner.When("I logged into the Pegasus as \"HedTeacherAssistant\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 130
+#line 137
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 131
+#line 138
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 132
+#line 139
 testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"HedTeacherAssista" +
                     "nt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
@@ -430,11 +450,11 @@ testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page a
         public virtual void UserLogOutAsCsTAInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As CsTAInstructor", ((string[])(null)));
-#line 135
+#line 142
 this.ScenarioSetup(scenarioInfo);
-#line 136
+#line 143
 testRunner.When("I \"Sign out\" from the \"HedTeacherAssistant\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 137
+#line 144
 testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
                     ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
