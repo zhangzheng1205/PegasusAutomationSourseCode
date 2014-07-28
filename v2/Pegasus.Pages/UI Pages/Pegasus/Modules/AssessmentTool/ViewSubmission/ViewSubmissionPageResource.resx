@@ -267,4 +267,19 @@
   <data name="ViewSubmission_Page_Index_Value_Zero" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="ViewSubmission_Page_Asset_Cmenuicon_Xpath_Locator" xml:space="preserve">
+    <value>&gt;//td[@assetid='assetId']/img</value>
+  </data>
+  <data name="ViewSubmission_Page_Asset_CmenuViewSubmission_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='PegMenu32']//div[@id='cmenuCont']//div[@title='View Submissions']</value>
+  </data>
+  <data name="ViewSubmission_Page_Asset_ToDo_Cmenuicon_Xpath_Locator" xml:space="preserve">
+    <value>//div[@assetid='assetId']/img</value>
+  </data>
+  <data name="ViewSubmission_Page_SleepTime_Value" xml:space="preserve">
+    <value>6000</value>
+  </data>
+  <data name="ViewSubmission_Page_ViewSubmission_Iframe_Id_Locator" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
+  </data>
 </root>

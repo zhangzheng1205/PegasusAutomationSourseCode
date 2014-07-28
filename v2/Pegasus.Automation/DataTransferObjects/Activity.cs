@@ -55,7 +55,8 @@ namespace Pegasus.Automation.DataTransferObjects
             PracticeTest=24,
             PreTest=25,
             CalculatedColumn=26,
-            QuestionFolder = 27
+            QuestionFolder = 27,
+            ObjectiveBasedQuestionOnly=28
         }
 
         /// <summary>

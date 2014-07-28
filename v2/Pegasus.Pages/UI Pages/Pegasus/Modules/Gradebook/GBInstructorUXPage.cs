@@ -79,7 +79,11 @@ namespace Pegasus.Pages.UI_Pages
             /// <summary>
             /// Asset cmenu option for Show for student
             /// </summary>
-            ShowforStudent = 11
+            ShowforStudent = 11,
+            /// <summary>
+            /// Asset cmenu option for View Submissions
+            /// </summary>
+            ViewSubmissions = 12
         }
 
         /// <summary>
