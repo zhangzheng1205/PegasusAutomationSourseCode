@@ -181,5 +181,42 @@ namespace Pegasus.Pages.UI_Pages
                 "InputEditScoreValueForActivity",
                      base.isTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Edit Grade.
+        /// </summary>
+        /// <param name="scoreValue">This is Score Value.</param>
+        public void EditGrade(string userScore, string maximumScore)
+        {
+            //Grade the Activity In NovaNet
+            logger.LogMethodEntry("GBGradeBatchUpdationPage", "EditGrade",
+                    base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Edit Grade Window
+                this.SelectEditGradeWindow();
+                base.ClearTextByXPath(GBGradeBatchUpdationPageResource.
+                    GBGradeBatchUpdate_Page_UserScore_Text_Xpath_Locator);
+                //Enter User Score
+                base.FillTextBoxByXPath(GBGradeBatchUpdationPageResource.
+                    GBGradeBatchUpdate_Page_UserScore_Text_Xpath_Locator, userScore);
+                base.ClearTextByXPath(GBGradeBatchUpdationPageResource.
+                    GBGradeBatchUpdate_Page_MaximumScore_Text_Xpath_Locator);
+                //Enter Maximum Score
+                base.FillTextBoxByXPath(GBGradeBatchUpdationPageResource.
+                    GBGradeBatchUpdate_Page_MaximumScore_Text_Xpath_Locator, maximumScore);
+                //Select Save Button
+                IWebElement getSaveButton = base.GetWebElementPropertiesById(
+                    GBGradeBatchUpdationPageResource.
+                    GBGradeBatchUpdate_Page_Button_Save_Id_Locator);
+                base.ClickByJavaScriptExecutor(getSaveButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBGradeBatchUpdationPage", "EditGrade",
+                   base.isTakeScreenShotDuringEntryExit);
+        }
     }
 }
