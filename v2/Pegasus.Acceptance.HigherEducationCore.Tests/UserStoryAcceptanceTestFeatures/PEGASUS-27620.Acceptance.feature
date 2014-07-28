@@ -6,7 +6,7 @@
 
 # Used ProgramCourse course
 #Purpose: To copy as shared library.
-Scenario: To copy as shared library.
+Scenario: To copy as shared library by CS Instructor
 When I navigate to "Templates" tab of the "Program Administration" page as PAdmin
 Then I should be on the "Program Administration" page
 When I click the "Copy as Shared Library" option

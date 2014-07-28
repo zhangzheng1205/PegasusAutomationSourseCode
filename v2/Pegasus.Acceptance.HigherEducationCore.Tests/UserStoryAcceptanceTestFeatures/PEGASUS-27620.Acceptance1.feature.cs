@@ -72,12 +72,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To copy as shared library.")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To copy as shared library by CS Instructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PEGASUS-27620: Automation: (Admin Modules) Validating PMCID for created shared Li" +
             "brary course")]
-        public virtual void ToCopyAsSharedLibrary_()
+        public virtual void ToCopyAsSharedLibraryByCSInstructor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To copy as shared library.", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To copy as shared library by CS Instructor", ((string[])(null)));
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 10

@@ -73,12 +73,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Copying Templates as Tempalate inside Program when its parent PMC is set with Sto" +
-            "p Copy")]
+            "p Copy by CS Instructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "27616")]
-        public virtual void CopyingTemplatesAsTempalateInsideProgramWhenItsParentPMCIsSetWithStopCopy()
+        public virtual void CopyingTemplatesAsTempalateInsideProgramWhenItsParentPMCIsSetWithStopCopyByCSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copying Templates as Tempalate inside Program when its parent PMC is set with Sto" +
-                    "p Copy", ((string[])(null)));
+                    "p Copy by CS Instructor", ((string[])(null)));
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 10
@@ -100,12 +100,12 @@ testRunner.Then("I should see successfull message \"You cannot copy this course 
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Copy Template as Shared Library inside Program when its parent PMC is set with St" +
-            "op Copy")]
+            "op Copy by CS Instructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "27616")]
-        public virtual void CopyTemplateAsSharedLibraryInsideProgramWhenItsParentPMCIsSetWithStopCopy()
+        public virtual void CopyTemplateAsSharedLibraryInsideProgramWhenItsParentPMCIsSetWithStopCopyByCSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy Template as Shared Library inside Program when its parent PMC is set with St" +
-                    "op Copy", ((string[])(null)));
+                    "op Copy by CS Instructor", ((string[])(null)));
 #line 19
 this.ScenarioSetup(scenarioInfo);
 #line 20
@@ -126,11 +126,13 @@ testRunner.Then("I should see successfull message \"You cannot copy this course 
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Copy Section as Section inside Program when its parent PMC is set with Stop Copy")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Copy Section as Section inside Program when its parent PMC is set with Stop Copy " +
+            "by CS Instructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "27616")]
-        public virtual void CopySectionAsSectionInsideProgramWhenItsParentPMCIsSetWithStopCopy()
+        public virtual void CopySectionAsSectionInsideProgramWhenItsParentPMCIsSetWithStopCopyByCSInstructor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy Section as Section inside Program when its parent PMC is set with Stop Copy", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy Section as Section inside Program when its parent PMC is set with Stop Copy " +
+                    "by CS Instructor", ((string[])(null)));
 #line 29
 this.ScenarioSetup(scenarioInfo);
 #line 30
@@ -152,12 +154,12 @@ testRunner.Then("I should see successfull message \"You cannot copy this course 
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Copy Section as Template inside Program when its parent PMC is set with Stop Copy" +
-            "")]
+            " by CS Instructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "27616")]
-        public virtual void CopySectionAsTemplateInsideProgramWhenItsParentPMCIsSetWithStopCopy()
+        public virtual void CopySectionAsTemplateInsideProgramWhenItsParentPMCIsSetWithStopCopyByCSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Copy Section as Template inside Program when its parent PMC is set with Stop Copy" +
-                    "", ((string[])(null)));
+                    " by CS Instructor", ((string[])(null)));
 #line 39
 this.ScenarioSetup(scenarioInfo);
 #line 40
