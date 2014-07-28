@@ -567,9 +567,6 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.FeatureAcceptanceTest.HedCore.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProductAcceptanceTest2.HedCore.orderedtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BTS.HedCore.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
