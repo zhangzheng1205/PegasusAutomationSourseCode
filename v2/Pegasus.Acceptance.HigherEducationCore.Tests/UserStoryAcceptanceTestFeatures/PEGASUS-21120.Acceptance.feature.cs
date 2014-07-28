@@ -70,21 +70,42 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line 8
+testRunner.Given("I browsed the login url for \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
+testRunner.When("I logged into the Pegasus as \"HedWsInstructor\" in \"WorkSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+testRunner.When("I enter in the \"MySpanishLabMaster\" from the Global Home page as \"HedWsInstructor" +
+                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+        }
+        
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Learnosity Enable Blackboard Collaborate Voice Authoring by Ws Teacher")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PEGASUS-21120 Learnosity Integrations")]
         public virtual void LearnosityEnableBlackboardCollaborateVoiceAuthoringByWsTeacher()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Learnosity Enable Blackboard Collaborate Voice Authoring by Ws Teacher", ((string[])(null)));
-#line 10
+#line 18
 this.ScenarioSetup(scenarioInfo);
-#line 11
+#line 6
+this.FeatureBackground();
+#line 19
 testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
+#line 20
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 13
+#line 21
 testRunner.When("I \'Enable Blackboard Collaborate Voice Authoring\' preference option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 14
+#line 22
 testRunner.Then("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -96,21 +117,23 @@ testRunner.Then("I should see the successfull message \"Preferences updated succ
         public virtual void LearnosityAudioEssayQuestionCreationInQuestionBankByWSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Learnosity Audio Essay Question Creation in Question Bank By WS Instructor", ((string[])(null)));
-#line 19
+#line 27
 this.ScenarioSetup(scenarioInfo);
-#line 20
+#line 6
+this.FeatureBackground();
+#line 28
 testRunner.When("I navigate to \"Course Materials\" tab and selected \"Manage Question Bank\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 29
 testRunner.Then("I should be on the \"Question Bank\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 22
+#line 30
 testRunner.When("I select \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
+#line 31
 testRunner.And("I select \"Essay\" question type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
+#line 32
 testRunner.Then("I should be on the \"Create Essay\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 25
+#line 33
 testRunner.When("I create \'Essay audio\' question type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
+#line 34
 testRunner.Then("I should see the successfull message \"Question added successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -122,22 +145,50 @@ testRunner.Then("I should see the successfull message \"Question added successfu
         public virtual void LearnosityRecordAudioFromHTMLPageByWSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Learnosity Record Audio from HTML Page By WS Instructor", ((string[])(null)));
-#line 31
+#line 39
 this.ScenarioSetup(scenarioInfo);
-#line 32
+#line 6
+this.FeatureBackground();
+#line 40
 testRunner.When("I navigate to \"Course Materials\" tab of the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 33
+#line 41
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 34
+#line 42
 testRunner.When("I click on the \'Add Course Materials\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
+#line 43
 testRunner.When("I click on the \"Add Page\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 36
+#line 44
 testRunner.Then("I should be on the \"Create page\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 37
+#line 45
 testRunner.When("I create the Audio \"Page\" AssetType in Content Library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 46
 testRunner.Then("I should see the successfull message \"Page saved successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Learnosity Play Audio From HTML Page Preview By WS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PEGASUS-21120 Learnosity Integrations")]
+        public virtual void LearnosityPlayAudioFromHTMLPagePreviewByWSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Learnosity Play Audio From HTML Page Preview By WS Instructor", ((string[])(null)));
+#line 50
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 51
+testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 52
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 53
+testRunner.When("I \'Preview\' the HTML Page Asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 54
+testRunner.Then("I should able to see the preview page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 55
+testRunner.When("I click on the Play button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 56
+testRunner.Then("I should play the audio successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

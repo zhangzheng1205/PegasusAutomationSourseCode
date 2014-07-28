@@ -54,11 +54,7 @@ namespace Pegasus.Automation.DataTransferObjects
         /// This is the question Id.
         /// </summary>
         public string QuestionId { get; set; }
-
-        ///<summary>
-        ///This is the audio essayquestion Id.
-        ///</summary>
-        public string AudioEssayQuestionId { get; set; }
+       
 
         /// <summary>
         /// This method creates a new question

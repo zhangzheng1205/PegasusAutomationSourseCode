@@ -3,6 +3,14 @@
 		 I want to manage all usercases related to Learnosity Integrations
 		 so that I would validate Audio Recording scenarios are working fine.
 
+Background:
+#Purpose: Open Ws Url 
+Given I browsed the login url for "HedWsInstructor"
+When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabMaster" from the Global Home page as "HedWsInstructor"
+Then I should be on the "Today's View" page
 
 # Used MySpanishLabMaster course
 #Purpose: UseCase To Enable Blackboard Collaborate Voice Authoring in course preference To Use Learnosity
@@ -36,6 +44,16 @@ When I click on the "Add Page" activity type
 Then I should be on the "Create page" page
 When I create the Audio "Page" AssetType in Content Library
 Then I should see the successfull message "Page saved successfully."
+
+#Purpose : Play Audio From HTML Page Preview By WS Instructor
+#PEGASUS-26117 Learnosity Automation : Play audio from HTML Page preview
+Scenario:Learnosity Play Audio From HTML Page Preview By WS Instructor
+When I navigate to the "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I 'Preview' the HTML Page Asset 
+Then I should able to see the preview page
+When I click on the Play button
+Then I should play the audio successfully
 
 
 

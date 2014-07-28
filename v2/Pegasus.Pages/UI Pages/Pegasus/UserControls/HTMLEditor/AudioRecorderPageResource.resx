@@ -117,85 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Essay_Page_Answer_Button_Id_Locator" xml:space="preserve">
-    <value>spnAnswer</value>
+  <data name="AudioRecorderPage_AudioRecord_Image_Id_Locator" xml:space="preserve">
+    <value>recordaudio</value>
   </data>
-  <data name="Essay_Page_AudioInput_Checkbox_Id_Locator" xml:space="preserve">
-    <value>_ctl1_chkAudio</value>
+  <data name="AudioRecorderPage_CurrentTime_ClassName" xml:space="preserve">
+    <value>lrn_currentTime</value>
   </data>
-  <data name="Essay_Page_AudioInput_MinTime_Id_Locator" xml:space="preserve">
-    <value>_ctl1_txtMin</value>
+  <data name="AudioRecorderPage_RecordAudio_Window_Name" xml:space="preserve">
+    <value>Record Audio</value>
   </data>
-  <data name="Essay_Page_AudioInput_Minutes_Time_Value" xml:space="preserve">
+  <data name="AudioRecorderPage_RecordButton_ClassName" xml:space="preserve">
+    <value>lrn_start_recording</value>
+  </data>
+  <data name="AudioRecorderPage_Recording_Time" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Essay_Page_AudioInput_Seconds_Time_Id_Locator" xml:space="preserve">
-    <value>_ctl1_txtSec</value>
-  </data>
-  <data name="Essay_Page_AudioInput_Seconds_Time_Value" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="Essay_Page_Browse_Button_Id_Locator" xml:space="preserve">
-    <value>_ctl1:btnImgbrow</value>
-  </data>
-  <data name="Essay_Page_CharacterPallete_Id_Locator_five" xml:space="preserve">
-    <value>tdCharPalette4</value>
-  </data>
-  <data name="Essay_Page_CharacterPallete_Id_Locator_four" xml:space="preserve">
-    <value>tdCharPalette3</value>
-  </data>
-  <data name="Essay_Page_CharacterPallete_Id_Locator_one" xml:space="preserve">
-    <value>tdCharPalette0</value>
-  </data>
-  <data name="Essay_Page_CharacterPallete_Id_Locator_three" xml:space="preserve">
-    <value>tdCharPalette2</value>
-  </data>
-  <data name="Essay_Page_CharacterPallete_Id_Locator_two" xml:space="preserve">
-    <value>tdCharPalette1</value>
-  </data>
-  <data name="Essay_Page_CreateEssay_Window_Name" xml:space="preserve">
-    <value>Create Essay</value>
-  </data>
-  <data name="Essay_Page_EnterQuestionTitle_Id_Locator" xml:space="preserve">
-    <value>_ctl1_txtQuestionLabel</value>
-  </data>
-  <data name="Essay_Page_EnterText_HTML_Id_Locator" xml:space="preserve">
-    <value>ucEditorA_textarea</value>
-  </data>
-  <data name="Essay_Page_HTMLFrame_Id_Locator" xml:space="preserve">
-    <value>_ctl1_ifrmEditor_A</value>
-  </data>
-  <data name="Essay_Page_MaxScore_Id_Locator" xml:space="preserve">
-    <value>_ctl1_txtMaxScore</value>
-  </data>
-  <data name="Essay_Page_MaxScore_Value" xml:space="preserve">
-    <value>99</value>
-  </data>
-  <data name="Essay_Page_NarrativeImage_Name" xml:space="preserve">
-    <value>Narrative Image</value>
-  </data>
-  <data name="Essay_Page_NumberOfLines_Id_Locator" xml:space="preserve">
-    <value>_ctl1_txtNumberOfLines</value>
-  </data>
-  <data name="Essay_Page_NumberOfLines_Value" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="Essay_Page_NumberOfWords_Id_Locator" xml:space="preserve">
-    <value>_ctl1_txtNumberOfWords</value>
-  </data>
-  <data name="Essay_Page_NumberOfWords_Value" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Essay_Page_Save_Button_Id_Locator" xml:space="preserve">
-    <value>imgReturnf</value>
-  </data>
-  <data name="Essay_Page_Select_CreateQuestion_Frame" xml:space="preserve">
-    <value>frmSelectQuestion</value>
-  </data>
-  <data name="Essay_Page_Select_CreateQuestion_Window_Name" xml:space="preserve">
-    <value>Create New Question</value>
-  </data>
-  <data name="Essay_Page_ViewSource_Button_Id_Locator" xml:space="preserve">
-    <value>viewsource</value>
+  <data name="AudioRecorderPage_SaveAndClose_Id_Locator" xml:space="preserve">
+    <value>btnSave</value>
   </data>
 </root>
