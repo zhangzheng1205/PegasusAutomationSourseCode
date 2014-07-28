@@ -14,6 +14,6 @@ Then I should be on the "Program Administration" page
 When I search the Template of "MyITLabForOffice2013Master"
 And I click the "Copy as Shared Library" c-menu option
 Then I should be on the "Copy as Shared Library" page
-When I click "Save" button to "Copy as Shared Library"
+When I click SAVE button to Copy as Shared Library
 Then I should see the successfull message "Please wait… copying is in progress. This may take up to 24 hours. To see your copies, you may need to refresh your screen. To view items you copied as a Shared Library, go to the Sections tab."
 

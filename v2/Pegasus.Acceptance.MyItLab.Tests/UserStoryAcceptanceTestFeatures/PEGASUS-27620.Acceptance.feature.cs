@@ -91,7 +91,7 @@ testRunner.And("I click the \"Copy as Shared Library\" c-menu option", ((string)
 #line 16
 testRunner.Then("I should be on the \"Copy as Shared Library\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 17
-testRunner.When("I click \"Save\" button to \"Copy as Shared Library\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click SAVE button to Copy as Shared Library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
 testRunner.Then("I should see the successfull message \"Please wait… copying is in progress. This m" +
                     "ay take up to 24 hours. To see your copies, you may need to refresh your screen." +

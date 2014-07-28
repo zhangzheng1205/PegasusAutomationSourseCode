@@ -192,7 +192,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// Save Button click to create course Manage Template section
         /// </summary>
         /// <param name=""></param>
-        [When(@"I click ""(.*)"" button to ""(.*)""")]
+        [When(@"I click SAVE button to Copy as Shared Library")]
         public void ClickToCreateUpdate()
         {
             Logger.LogMethodEntry("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
