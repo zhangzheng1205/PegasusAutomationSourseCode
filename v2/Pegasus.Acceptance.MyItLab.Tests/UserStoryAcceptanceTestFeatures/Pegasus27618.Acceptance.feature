@@ -3,10 +3,12 @@
 		 I want to search section and to create copy of section
 		 so that copy of section pop-up will be displayed and checkbox will not be checked.
 
+# US: Pegasus-27618
+#Used MyITLabOffice2013Program course
 #Purpose:  To Check the functionality of the Copy as Section By CsSmsInstructor
 Scenario: To Check the functionality of the Copy as Section By CsSmsInstructor
-When I select the "Sections" tab
-Then I navigate to the "Sections" tab
+When I navigate to "Sections" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
 When I search the section of "MyITLabOffice2013Program"
 And I click the "Copy as Section" c-menu option
 Then I should see the "Copy My Course Content Only." check box as unchecked

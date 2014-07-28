@@ -32,8 +32,8 @@ namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PEGASUS-27620: Automation: (Admin Modules) Validating PMCID for created shared Li" +
-                    "brary course", "\t\t\tAs a CS Program admin\n\t\t\tI want to search a Template \n\t\t\tso that I can create " +
-                    "a shared library from the searched template.", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "brary course", "\t\t\tAs a CS Program admin\r\n\t\t\tI want to search a Template \r\n\t\t\tso that I can creat" +
+                    "e a shared library from the searched template.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,23 +72,27 @@ namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To copy as shared library.")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To copy as shared library")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PEGASUS-27620: Automation: (Admin Modules) Validating PMCID for created shared Li" +
             "brary course")]
-        public virtual void ToCopyAsSharedLibrary_()
+        public virtual void ToCopyAsSharedLibrary()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To copy as shared library.", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To copy as shared library", ((string[])(null)));
 #line 11
 this.ScenarioSetup(scenarioInfo);
 #line 12
-testRunner.When("I search the Template of \"MyITLabForOffice2013Master\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Template\" tab of the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
-testRunner.And("I click the \"Copy as Shared Library\" c-menu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 14
-testRunner.Then("I should be on the \"Copy as Shared Library\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I search the Template of \"MyITLabForOffice2013Master\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 15
-testRunner.When("I click \"Save\" button to \"Copy as Shared Library\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I click the \"Copy as Shared Library\" c-menu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
+testRunner.Then("I should be on the \"Copy as Shared Library\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 17
+testRunner.When("I click \"Save\" button to \"Copy as Shared Library\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
 testRunner.Then("I should see the successfull message \"Please wait… copying is in progress. This m" +
                     "ay take up to 24 hours. To see your copies, you may need to refresh your screen." +
                     " To view items you copied as a Shared Library, go to the Sections tab.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

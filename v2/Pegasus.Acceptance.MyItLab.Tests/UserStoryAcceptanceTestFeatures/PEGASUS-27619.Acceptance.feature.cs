@@ -80,12 +80,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as SMS Student and Navigate to Selfstudy course when PMC is set with s" +
                     "top copy and enrollment.", ((string[])(null)));
-#line 7
-this.ScenarioSetup(scenarioInfo);
 #line 8
+this.ScenarioSetup(scenarioInfo);
+#line 9
 testRunner.When("I enter in the \"HedMilSelfStudy\" course from the Global Home page as \"CsSmsStuden" +
                     "t\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 9
+#line 10
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

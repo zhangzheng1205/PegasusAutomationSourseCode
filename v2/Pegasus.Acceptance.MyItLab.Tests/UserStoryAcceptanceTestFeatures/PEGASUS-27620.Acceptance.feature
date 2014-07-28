@@ -1,14 +1,16 @@
 ﻿Feature: PEGASUS-27620: Automation: (Admin Modules) Validating PMCID for created shared Library course
 					As a CS Program admin
 					I want to search a Template 
-					so that I can create a shared library from the searched template.
-					
+					so that I can create a shared library from the searched template.			
 
 
 
-
+#Pegasus-27620
+#Used MyITLabOffice2013Program course
 #Purpose: To copy as shared library as SMS instructor.
-Scenario: To copy as shared library.
+Scenario: To copy as shared library
+When I navigate to "Template" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
 When I search the Template of "MyITLabForOffice2013Master"
 And I click the "Copy as Shared Library" c-menu option
 Then I should be on the "Copy as Shared Library" page

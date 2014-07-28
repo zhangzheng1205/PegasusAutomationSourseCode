@@ -75,19 +75,19 @@ namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
         public virtual void ToCheckTheFunctionalityOfTheCopyAsSectionByCsSmsInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Check the functionality of the Copy as Section By CsSmsInstructor", ((string[])(null)));
-#line 7
-this.ScenarioSetup(scenarioInfo);
-#line 8
-testRunner.When("I select the \"Sections\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
-testRunner.Then("I navigate to the \"Sections\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 10
-testRunner.When("I search the section of \"MyITLabOffice2013Program\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Sections\" tab of the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
-testRunner.And("I click the \"Copy as Section\" c-menu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 12
-testRunner.Then("I should see the \"Copy My Course Content Only.\" check box as unchecked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I search the section of \"MyITLabOffice2013Program\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
+testRunner.And("I click the \"Copy as Section\" c-menu option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+testRunner.Then("I should see the \"Copy My Course Content Only.\" check box as unchecked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 15
 testRunner.And("I should see the message \"Copy My Course Content Only.\" on popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
