@@ -146,23 +146,39 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="newPageAsset">This is Page Name.</param>
         /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
-        private void StoreThePageAsset(Guid newPageAsset, 
+        private void StoreThePageAsset(Guid newPageAsset,
             Activity.ActivityTypeEnum activityTypeEnum)
         {
-            //Store The Page Asset
             logger.LogMethodEntry("PegasusHTMLUXPage", "StoreThePageAsset",
+                      base.isTakeScreenShotDuringEntryExit);
+            //Overloaded Method To Differentiate Normal Page and Audio Page
+            StoreThePageAsset(newPageAsset, activityTypeEnum, string.Empty);
+            logger.LogMethodExit("PegasusHTMLUXPage", "StoreThePageAsset",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Store The Audio Page Asset.
+        /// </summary>
+        /// <param name="newPageAsset">This is Page Name.</param>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        private void StoreThePageAsset(Guid newPageAsset,
+            Activity.ActivityTypeEnum activityTypeEnum, string PageAssetID)
+        {
+            //Store The Audio Page Asset
+            logger.LogMethodEntry("PegasusHTMLUXPage", "StoreTheAudioPageAsset",
                       base.isTakeScreenShotDuringEntryExit);
             //Store the Page in memory
             Activity newPage = new Activity
             {
+                ActivityID = PageAssetID,
                 Name = newPageAsset.ToString(),
                 ActivityType = activityTypeEnum,
                 IsCreated = true,
             };
             newPage.StoreActivityInMemory();
-            logger.LogMethodExit("PegasusHTMLUXPage", "StoreThePageAsset",
+            logger.LogMethodExit("PegasusHTMLUXPage", "StoreTheAudioPageAsset",
                      base.isTakeScreenShotDuringEntryExit);
-        }      
+        }
 
         /// <summary>
         /// Create Audio Page Asset.
@@ -180,11 +196,11 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Record Audio In Page
-                new EssayPage().RecordAudioforEssayQuestion();
+                new AudioRecorderPage().RecordAudio();
                 //Enter Page Name and Description Fields
                 this.EnterPageNameAndDescirptionFields(newPageAsset, newHTMLDiscription);
                 //Store the link Asset
-                this.StoreTheAudioPageAsset(newPageAsset, pageAssetTypeEnum);
+                this.StoreThePageAsset(newPageAsset, pageAssetTypeEnum, CommonResource.CommonResource.HigherEdCore_Audio_PageAseet_UC1);
                 //Click The Add Button
                 this.ClickTheCreateButton();
             }
@@ -195,29 +211,145 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("PegasusHTMLUXPage", "RecordAudioFromPageAssetType",
                      base.isTakeScreenShotDuringEntryExit);
         }
-        /// <summary>
-        /// Store The Audio Page Asset.
-        /// </summary>
-        /// <param name="newPageAsset">This is Page Name.</param>
-        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
-        private void StoreTheAudioPageAsset(Guid newPageAsset,
-            Activity.ActivityTypeEnum activityTypeEnum)
-        {
-            //Store The Audio Page Asset
-            logger.LogMethodEntry("PegasusHTMLUXPage", "StoreTheAudioPageAsset",
-                      base.isTakeScreenShotDuringEntryExit);
-            //Store the Page in memory
-            Activity newPage = new Activity
-            {
-                AudioPageAssetID = CommonResource.CommonResource.HigherEdCore_Audio_PageAseet_UC1,
-                Name = newPageAsset.ToString(),
-                ActivityType = activityTypeEnum,
-                IsCreated = true,
-            };
-            newPage.StoreActivityInMemory();
-            logger.LogMethodExit("PegasusHTMLUXPage", "StoreTheAudioPageAsset",
-                     base.isTakeScreenShotDuringEntryExit);
-        } 
 
+        /// <summary>
+        /// Search the HTML Page with Resource ID.
+        /// </summary>
+        public void SearchForAudioHTMLPage()
+        {
+            //Search the HTML Page with Resource ID
+            logger.LogMethodEntry("PegasusHTMLUXPage", "SearchForHTMLPage",
+                      base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Get The Page Name with ID resource
+                Activity pageAsset = Activity.Get(CommonResource.CommonResource.HigherEdCore_Audio_PageAseet_UC1);
+                //Select Left Frame in Course Materials
+                new ContentLibraryUXPage().SelectLeftFrameInContentWindow();
+                //Search the HTML Page with Name Details
+                new ContentLibraryUXPage().SearchTheActivity(pageAsset.Name);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("PegasusHTMLUXPage", "SearchForHTMLPage",
+                     base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Select The HTML Page Preview Window.
+        /// </summary>
+        public void SelectHTMLPreviewPage()
+        {
+            // Select The HTML Page Preview Window
+            logger.LogMethodEntry("PegasusHTMLUXPage", "SelectHTMLPreviewPage",
+                      base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.SwitchToLastOpenedWindow();
+                //Select The Page Preview Window Title
+                string getPageWindowName = base.GetPageTitle;
+                //Wait for Window
+                base.WaitUntilWindowLoads(getPageWindowName);
+                //select Page Preview Window
+                base.SelectWindow(getPageWindowName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("PegasusHTMLUXPage", "SelectHTMLPreviewPage",
+                     base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click The HTML Page Audio Play Button.
+        /// </summary>
+        public void ClickTheHTMLPlayButton()
+        {
+            // Click The HTML Page Audio Play Button
+            logger.LogMethodEntry("PegasusHTMLUXPage", "ClickTheHTMLPlayButton",
+                      base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait For Element
+                base.WaitForElement(By.XPath(
+                    PegasusHTMLUXPageResource.PegasusHTMLUXPageResource_HTML_Play_Button_XPath_Locator));
+                IWebElement getPlayButton = base.GetWebElementPropertiesByXPath(
+                    PegasusHTMLUXPageResource.PegasusHTMLUXPageResource_HTML_Play_Button_XPath_Locator);
+                //Click On Play Button
+                base.ClickByJavaScriptExecutor(getPlayButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("PegasusHTMLUXPage", "ClickTheHTMLPlayButton",
+                     base.isTakeScreenShotDuringEntryExit);
+
+        }
+        /// <summary>
+        /// Verify Player Working Scenario.
+        /// </summary>
+        public void VerifyTheAudioPlayer()
+        {
+            // Verify Player Working Scenario
+            logger.LogMethodEntry("PegasusHTMLUXPage", "VerifyTheAudioPlayer",
+                   base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait For Element
+                base.WaitForElement(By.ClassName(
+                    PegasusHTMLUXPageResource.PegasusHTMLUXPageResource_Start_PlayBack_ID_Locator));
+                IWebElement getStartButton = base.GetWebElementPropertiesByClassName(
+                    PegasusHTMLUXPageResource.PegasusHTMLUXPageResource_Start_PlayBack_ID_Locator);
+                //Click On Start PlayBack Button
+                base.ClickByJavaScriptExecutor(getStartButton);
+                //Play Audio for 20 seconds
+                PlayAudioForFewSeconds();
+                //Stop Audio Player
+                base.ClickByJavaScriptExecutor(getStartButton);
+                //Close Audio Player Window
+                base.CloseBrowserWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("PegasusHTMLUXPage", "VerifyTheAudioPlayer",
+                     base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Play Audio For Few Seconds.
+        /// </summary>
+        private void PlayAudioForFewSeconds()
+        {
+            // Play Audio For 20 Seconds
+            logger.LogMethodEntry("EssayPage", "PlayAudioForFewSeconds",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait For Current Time 
+                base.WaitForElement(By.ClassName(
+                    PegasusHTMLUXPageResource.PegasusHTMLUXPageResource_Audio_CurrentTime));
+                string getAudioCurretTime = base.GetElementTextByClassName(
+                    PegasusHTMLUXPageResource.PegasusHTMLUXPageResource_Audio_CurrentTime);
+                //Reccursive Method To Play Audio For 20 Seconds
+                if (Convert.ToInt32(getAudioCurretTime.Split(':')[1]) >=
+                    Convert.ToInt32(PegasusHTMLUXPageResource.PegasusHTMLUXPageResource_Audio_Play_Time))
+                {
+                    return;
+                }
+                else
+                {
+                    PlayAudioForFewSeconds();
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("EssayPage", "PlayAudioForFewSeconds",
+               base.isTakeScreenShotDuringEntryExit);
+        }
     }
 }

@@ -115,15 +115,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.QuestionLibrary {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to recordaudio.
-        /// </summary>
-        internal static string Essay_Page_AudioRecord_Image_Id_Locator {
-            get {
-                return ResourceManager.GetString("Essay_Page_AudioRecord_Image_Id_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to _ctl1:btnImgbrow.
         /// </summary>
         internal static string Essay_Page_Browse_Button_Id_Locator {
@@ -183,15 +174,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.QuestionLibrary {
         internal static string Essay_Page_CreateEssay_Window_Name {
             get {
                 return ResourceManager.GetString("Essay_Page_CreateEssay_Window_Name", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to lrn_currentTime.
-        /// </summary>
-        internal static string Essay_Page_CurrentTime_ClassName {
-            get {
-                return ResourceManager.GetString("Essay_Page_CurrentTime_ClassName", resourceCulture);
             }
         }
         
@@ -286,38 +268,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.QuestionLibrary {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Record Audio.
-        /// </summary>
-        internal static string Essay_Page_RecordAudio_Window_Name {
-            get {
-                return ResourceManager.GetString("Essay_Page_RecordAudio_Window_Name", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to lrn_start_recording.
-        /// </summary>
-        internal static string Essay_Page_RecordButton_ClassName {
-            get {
-                return ResourceManager.GetString("Essay_Page_RecordButton_ClassName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to imgReturnf.
         /// </summary>
         internal static string Essay_Page_Save_Button_Id_Locator {
             get {
                 return ResourceManager.GetString("Essay_Page_Save_Button_Id_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to btnSave.
-        /// </summary>
-        internal static string Essay_Page_SaveAndClose_Id_Locator {
-            get {
-                return ResourceManager.GetString("Essay_Page_SaveAndClose_Id_Locator", resourceCulture);
             }
         }
         

@@ -441,6 +441,65 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                       base.isTakeScreenShotDuringEntryExit);
         }
 
+        
+        /// <summary>
+        /// Preview The Audio Page Asset.
+        /// </summary>
+        /// <param name="cmenuOption">This is Page Cmenu Preview Option.</param>
+        [When(@"I '(.*)' the HTML Page Asset")]
+        public void PreviewTheHTMLPageAsset(string cmenuOption)
+        {            
+            Logger.LogMethodEntry("CreateActivity", "PreviewTheHTMLPageAsset",
+               base.isTakeScreenShotDuringEntryExit);
+           //Search For HTML Audio Page Asset
+            new PegasusHTMLUXPage().SearchForAudioHTMLPage();           
+            //Select Cmenu Option of Page Asset
+            new ContentLibraryUXPage().SelectCmenuOptionOfActivity(cmenuOption);
+            Logger.LogMethodExit("CreateActivity", "PreviewTheHTMLPageAsset",
+             base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select The HTML Preview Page.
+        /// </summary>
+        [Then(@"I should able to see the preview page")]
+        public void SelectHTMLPagePreviewPage()
+        {            
+            Logger.LogMethodEntry("CreateActivity", "SelectHTMLPagePreviewPage",
+               base.isTakeScreenShotDuringEntryExit);
+            // Select The HTML Preview Page
+            new PegasusHTMLUXPage().SelectHTMLPreviewPage();
+            Logger.LogMethodExit("CreateActivity", "SelectHTMLPagePreviewPage",
+             base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click The HTML Play Button.
+        /// </summary>
+        [When(@"I click on the Play button")]
+        public void ClickOnTheHTMLPlayButton()
+        {            
+            Logger.LogMethodEntry("CreateActivity", "ClickOnTheHTMLPlayButton",
+               base.isTakeScreenShotDuringEntryExit);
+            // Click The HTML Play Button
+            new PegasusHTMLUXPage().ClickTheHTMLPlayButton();
+            Logger.LogMethodExit("CreateActivity", "ClickOnTheHTMLPlayButton",
+             base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Play The Audio Successfully.
+        /// </summary>
+        [Then(@"I should play the audio successfully")]
+        public void VerifyTheHTMLAudioPlayer()
+        {
+            Logger.LogMethodEntry("CreateActivity", "VerifyTheHTMLAudioPlayer",
+               base.isTakeScreenShotDuringEntryExit);
+            //Play The Audio Successfully
+            new PegasusHTMLUXPage().VerifyTheAudioPlayer();
+            Logger.LogMethodExit("CreateActivity", "VerifyTheHTMLAudioPlayer",
+             base.isTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

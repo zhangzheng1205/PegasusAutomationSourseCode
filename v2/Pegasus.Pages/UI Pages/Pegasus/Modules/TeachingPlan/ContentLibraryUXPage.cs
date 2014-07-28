@@ -255,9 +255,9 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Selects the Default Window
                 base.WaitUntilWindowLoads(ContentLibraryUXPageResource.
-                   ContentLibraryUXPage_ContentWindow_Name);
+                   ContentLibraryUX_Page_CourseMaterials_Window_Name);
                 base.SelectWindow(ContentLibraryUXPageResource.
-                   ContentLibraryUXPage_ContentWindow_Name);
+                   ContentLibraryUX_Page_CourseMaterials_Window_Name);
                 //Wait for the Content Library Frame
                 base.WaitForElement(By.Id(ContentLibraryUXPageResource.
                         ContentLibraryUX_Page_Left_Frame_ID_Locator));
