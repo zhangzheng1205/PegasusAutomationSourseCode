@@ -212,6 +212,34 @@ testRunner.Then("I should see the successfull message \"Activity added successfu
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Show Hide functionality in My Course View for Multiple Assets by CS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorCopyContent")]
+        public virtual void ShowHideFunctionalityInMyCourseViewForMultipleAssetsByCSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Show Hide functionality in My Course View for Multiple Assets by CS Instructor", ((string[])(null)));
+#line 73
+this.ScenarioSetup(scenarioInfo);
+#line 74
+testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 75
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 76
+testRunner.When("I select checkbox of 3 assets in My Course View", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 77
+testRunner.Then("I should see \"ShowHide\" button on My Course View header \"Enabled\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 78
+testRunner.When("I select \"ShowHide\" button on My Course View header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 79
+testRunner.Then("I should see the assets which are shown should be hidden and assets which are hid" +
+                    "den should be shown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 80
+testRunner.And("I should see None or All should be displayed for the assets under Shown-To column" +
+                    " when they are Hidden or shown respectively", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

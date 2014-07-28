@@ -31,3 +31,33 @@ When I click on the "Cancel" button
 Then I should be on the "Cancel Activity" page
 When I click on the "Don't Save" button
 Then I should be on the "Course Materials" page
+
+#Purpose : To test functionality of Cut Copy Paste Delete, in Advanced Content Library for Multiple Assets by CS Instructor
+Scenario: Cut Copy Paste Delete functionality in Advanced Content Library for Multiple Assets by CS Instructor
+When I navigate to the "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select Advanced Options link
+And I select checkbox of 1 assets 
+Then I should see "Copy" button on Content Library header get "Enabled"
+When I select checkbox of 4 assets 
+Then I should see "Copy" button on Content Library header get "Enabled"
+When I select "Copy" button on Content Library header
+Then I should see Clipboard Items Count as 3
+And I should see Asset title in "Red" color and "Italic" style. 
+When I select "Paste" button on Content Library header
+And I Select "PasteAtTop" on Paste Advanced Options on Content Library
+Then I should see the successfull message "Items copied successfully."
+And I should see Asset displayed at "Top" place
+When I select checkbox of 3 assets 
+Then I should see "Cut" button on Content Library header get "Enabled"
+When I select "Cut" button on Content Library header
+Then I should see Clipboard Items Count as 3
+And I should see Asset title in "Red" color and "Italic" style. 
+When I select "Paste" button on Content Library header
+And I Select "PasteAtBottom" on Paste Advanced Options on Content Library
+When I select checkbox of 3 assets 
+Then I should see "Delete" button on Content Library header get "Enabled"
+When I select "Delete" button on Content Library header
+Then I should see a "Delete" confirmation pop up should display with "OK" button and "Cancel" button
+When I click on OK button on Delete confirmation pop up 
+Then I should see the successfull message "Items deleted successfully."

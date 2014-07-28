@@ -259,7 +259,7 @@
     <value>grdContentLibrary$_ctrl1</value>
   </data>
   <data name="ContentLibraryUXPage_AdvancedOptions_ItemReady_Wait_Value" xml:space="preserve">
-    <value>2000</value>
+    <value>2500</value>
   </data>
   <data name="ContentLibraryUXPage_PasteOptions_AfterSelected_TD_ID_Locator" xml:space="preserve">
     <value>pstOpt3</value>
@@ -278,5 +278,8 @@
   </data>
   <data name="CourseContentUXPage_AssetPartial_Id_Locator" xml:space="preserve">
     <value>*[id ^='lnkName_']</value>
+  </data>
+  <data name="ContentLibraryUXPage_PastedItem_TR_Class_Locator" xml:space="preserve">
+    <value>CC_Pasterowstyle</value>
   </data>
 </root>

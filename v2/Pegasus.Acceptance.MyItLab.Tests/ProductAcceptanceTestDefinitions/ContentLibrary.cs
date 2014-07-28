@@ -50,9 +50,9 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                base.isTakeScreenShotDuringEntryExit);
         }
 
-        [Then(@"""(.*)"" button on Content Library header should get ""(.*)""")]
+        [Then(@"I should see ""(.*)"" button on Content Library header get ""(.*)""")]
         public void VerifyStatusOfButtonOnContentLibraryHeader(
-            ContentLibraryUXPage.AdvancedOptionsButtonType buttonType,
+            ContentLibraryUXPage.AdvancedOptionsButtonType buttonType, 
             string buttonStatus)
         {
             Logger.LogMethodEntry("ContentLibrary",
@@ -87,7 +87,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                base.isTakeScreenShotDuringEntryExit);
         }
 
-        [Then(@"Count (.*) should be displayed in Clipboard Items")]
+        [Then(@"I should see Clipboard Items Count as (.*)")]
         public void VerifyClipboardItemsCount(int assetCount)
         {
             Logger.LogMethodEntry("ContentLibrary",
@@ -100,7 +100,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                base.isTakeScreenShotDuringEntryExit);
         }
 
-        [Then(@"Asset title should display in ""(.*)"" color and ""(.*)"" style\.")]
+        [Then(@"I should see Asset title in ""(.*)"" color and ""(.*)"" style\.")]
         public void VerifyAssetTitleColorAndFontStyle(
             string titleColor, string fontStyle)
         {
@@ -129,45 +129,52 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                base.isTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Selected Activity By Name And Assigned In My CourseFrame.
-        /// </summary>
-        /// <param name="activityName">This is activity name.</param>
-        [When(@"I selected activity ""(.*)"" and add in My Course frame")]
-        public void SelectedActivityAndAssignedInMyCourseFrame(string activityName)
+        [Then(@"I should see Asset displayed at ""(.*)"" place")]
+        public void VerifyAssetCopiedPosition(string position)
         {
-            // select activity and assign 
             Logger.LogMethodEntry("ContentLibrary",
-                 "SelectedActivityAndAssignedInMyCourseFrame",
-                 base.isTakeScreenShotDuringEntryExit);
-            // select and add activity in my course frame
-            new Pages.UI_Pages.TeachingPlanUxPage().
-                SelectActivityInCourseMaterialsLibraryFrame(activityName);
+                "VerifyAssetCopiedPosition",
+                base.isTakeScreenShotDuringEntryExit);
+            ContentLibraryUXPage contentLibrary = new ContentLibraryUXPage();
+            contentLibrary.SelectAndSwitchToContentLibrary();
+            Assert.AreEqual(contentLibrary.GetCountOfAssetTitleByColorAndFontStyle(
+                "Red", "Italic"),contentLibrary.GetPastedItemCount());
             Logger.LogMethodExit("ContentLibrary",
-            "SelectedActivityAndAssignedInMyCourseFrame",
-            base.isTakeScreenShotDuringEntryExit);
+               "VerifyAssetCopiedPosition",
+               base.isTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Select All Activity And Change Status as Shown.
-        /// </summary>
-         [When(@"I selected all activity and change the status from ""(.*)""")]
-        public void SelectedAllActivityAndChangeStatusAsShown(string activityStatus)
+        [Then(@"I should see a ""(.*)"" confirmation pop up should display with ""(.*)"" button and ""(.*)"" button")]
+        public void VerifyDisplayOfPopUpWithButtons(
+            string popUp, 
+            string firstButton, 
+            string secondButton)
         {
-            // show hidden activities
             Logger.LogMethodEntry("ContentLibrary",
-                "SelectedAllActivityAndChangeStatusAsShown",
-                base.isTakeScreenShotDuringEntryExit);
-            // select asset
-            new Pages.UI_Pages.TeachingPlanUxPage().
-                NavigateMyCourseFrameToSelectTheActivity();
-            // click show hidden asset
-            new Pages.UI_Pages.TeachingPlanUxPage().
-                ClickAssetShowHideButton(activityStatus);
+               "VerifyAssetCopiedPosition",
+               base.isTakeScreenShotDuringEntryExit);
+            ShowMessagePage showMessagePage = new ShowMessagePage();
+            Assert.AreEqual(firstButton, 
+                showMessagePage.GetOkButtonText());
+            Assert.AreEqual(secondButton, 
+                showMessagePage.GetCancelButtonText());
             Logger.LogMethodExit("ContentLibrary",
-                "SelectedAllActivityAndChangeStatusAsShown",
-                base.isTakeScreenShotDuringEntryExit);
+               "VerifyAssetCopiedPosition",
+               base.isTakeScreenShotDuringEntryExit);
         }
 
+
+        [When(@"I click on OK button on Delete confirmation pop up")]
+        public void ClickOKButtonOnDeleteConfirmationPopUp()
+        {
+            Logger.LogMethodEntry("ContentLibrary",
+               "ClickOKButtonOnDeleteConfirmationPopUp",
+               base.isTakeScreenShotDuringEntryExit);
+            new ShowMessagePage().ClickOkButton();
+            Logger.LogMethodExit("ContentLibrary",
+               "ClickOKButtonOnDeleteConfirmationPopUp",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+       
     }
 }

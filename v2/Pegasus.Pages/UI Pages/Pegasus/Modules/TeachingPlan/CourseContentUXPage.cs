@@ -28,6 +28,20 @@ namespace Pegasus.Pages.UI_Pages
             Logger.GetInstance(typeof(CourseContentUXPage));
 
         /// <summary>
+        /// Specifiyies different button types available on My Course header.
+        /// </summary>
+        public enum MyCourseButtonType
+        {
+            AssignUnassign = 1,
+            ShowHide = 2,
+            Remove = 3,
+            Copy = 4,
+            Cut = 5,            
+            Paste = 6
+        }
+
+        
+        /// <summary>
         /// This is the Broswer variable called from AppSettings.
         /// </summary>
         private int waitTimeOut = Convert.ToInt32(
@@ -1691,6 +1705,173 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("CourseContentUXPage",
                "AssignTheActivityInCourseContent",
                     base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select and swith to My Course.
+        /// </summary>
+        public void SelectAndSwitchToMyCourseHome()
+        {
+            Logger.LogMethodEntry("CourseContentUXPage",
+               "SelectAndSwitchToMyCourseHome",
+            base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(CourseContentUXPageResource
+                    .CourseContentUXPage_FrameRight_Id_Locator));
+                this.SelectFrameInWindow(CourseContentUXPageResource.
+                   CourseContentUXPage_CourseMaterials_Window_Title,
+                   CourseContentUXPageResource.CourseContentUXPage_FrameRight_Id_Locator);  
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CourseContentUXPage",
+                "SelectAndSwitchToMyCourseHome",
+             base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Selects check boxes in assets item listed in My Course home.
+        /// </summary>
+        /// <param name="assetCount">Number of assets to be selected.</param>
+        public void SelectCheckboxOfAssets(int assetCount)
+        {
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "SelectCheckboxOfAssets",
+             base.isTakeScreenShotDuringEntryExit);
+            if (assetCount <= 0) return;
+            base.WaitForElement(By.Id(CourseContentUXPageResource
+                .CourseContentUXPage_Activity_Checkbox_Id_Locator));
+            ICollection<IWebElement> assetCheckBoxs = base.GetWebElementsCollectionById(
+                CourseContentUXPageResource
+                .CourseContentUXPage_Activity_Checkbox_Id_Locator);
+            int counter = 0;
+            foreach (IWebElement assetCheckBox in assetCheckBoxs)
+            {
+                base.ClickByJavaScriptExecutor(assetCheckBox);
+                this.StoreSelectedActivityInMemory(assetCheckBox);
+                ++counter;
+                if (counter >= assetCount) break;
+            }
+
+            Logger.LogMethodExit("CourseContentUXPage",
+                "SelectCheckboxOfAssets",
+             base.isTakeScreenShotDuringEntryExit);
+        }
+
+        public bool IsButtonEnabled(MyCourseButtonType buttonType){
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "IsButtonEnabled",
+             base.isTakeScreenShotDuringEntryExit);
+
+            string buttonID = this.GetButtonIDByButtonType(buttonType);
+            if (buttonID == null) return false;
+            return base.IsElementEnabledById(buttonID); 
+        }
+
+        /// <summary>
+        /// Clicks button on header.
+        /// </summary>
+        /// <param name="buttonType">Type of the button.</param>
+        public void ClickButtonOnHeader(MyCourseButtonType buttonType)
+        {
+             Logger.LogMethodEntry("CourseContentUXPage",
+                "ClickButtonOnHeader",
+                 base.isTakeScreenShotDuringEntryExit);
+            this.ClickButtonByID(this
+                .GetButtonIDByButtonType(buttonType));
+            Thread.Sleep(Convert.ToInt32(CourseContentUXPageResource
+                .CourseContentUXPage_ShowHide_Status_Time_Value));
+            Logger.LogMethodExit("CourseContentUXPage",
+                "ClickButtonOnHeader",
+             base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Gets the show-hide status of the activity.
+        /// </summary>
+        /// <param name="activityID">Activity ID.</param>
+        /// <returns>Show-hide status.</returns>
+        public Activity.ShowHideStatusEnum GetAssetsShowHideStatus(string activityID)
+        {
+            base.WaitForElement(By.XPath(string.Format(
+                CourseContentUXPageResource.CourseContentUXPage_ActivityTitle_Table_XPath_Locator
+                , activityID)));
+            IWebElement assetTitleTable = base.GetWebElementPropertiesByXPath(string.Format(
+                CourseContentUXPageResource.CourseContentUXPage_ActivityTitle_Table_XPath_Locator
+                ,activityID));
+            return (Activity.ShowHideStatusEnum)
+                Convert.ToInt32(assetTitleTable.GetAttribute(
+                CourseContentUXPageResource.CourseContentUXPage_IsHiddenAttribute_Value));            
+        }
+
+        /// <summary>
+        /// Gets the text displayed in Shown To column.
+        /// </summary>
+        /// <param name="activityID">Activity ID</param>
+        /// <returns></returns>
+        public string GetTextInShownToColumn(string activityID)
+        {
+            Logger.LogMethodEntry("CourseContentUXPage",
+                "GetTextInShownToColumn",
+                 base.isTakeScreenShotDuringEntryExit);
+           return  base.GetElementTextByXPath(string.Format(CourseContentUXPageResource
+               .CourseContentUXPage_Activity_ShownToColumn_Span_XPath_Locator
+               ,activityID));
+            Logger.LogMethodExit("CourseContentUXPage",
+                "GetTextInShownToColumn",
+             base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Gets the ID attribute value of button by button type.
+        /// </summary>
+        /// <param name="buttonType">Type of the button.</param>
+        /// <returns>ID attribute value of the button.</returns>
+        private string GetButtonIDByButtonType(
+            MyCourseButtonType buttonType){
+            string buttonID = null;
+            if(buttonType == MyCourseButtonType.ShowHide){
+                buttonID = CourseContentUXPageResource
+                    .CourseContentUXPage_ShowHide_Link_ID_Locator;
+            }
+
+            return buttonID;
+        }
+
+         /// <summary>
+        /// Clicks the button by its ID attribute.
+        /// </summary>
+        /// <param name="buttonID">ID attribute of the button.</param>
+        private void ClickButtonByID(string buttonID)
+        {
+            if (buttonID != null)
+            {
+                base.WaitForElement(By.Id(buttonID));
+                IWebElement headerButton = base
+                    .GetWebElementPropertiesById(buttonID);
+                base.ClickByJavaScriptExecutor(headerButton);
+            }
+        }
+
+        /// <summary>
+        /// Stores select checkbox activity to memory.
+        /// </summary>
+        /// <param name="assetCheckBox"></param>
+        private void StoreSelectedActivityInMemory(IWebElement assetCheckBox)
+        {
+            string activityID = assetCheckBox.GetAttribute(
+                CourseContentUXPageResource.CourseContentUXPage_ValueAttribute_Value);
+            if(string.IsNullOrEmpty(activityID))return;
+            Activity activity = new Activity
+            {                
+                ActivityID = activityID,
+                ShowHideStatus = this.GetAssetsShowHideStatus(activityID),
+                IsCreated = true
+            };
+            activity.StoreActivityInMemory();
         }
     }
 }

@@ -141,6 +141,75 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Cut Copy Paste Delete functionality in Advanced Content Library for Multiple Asse" +
+            "ts by CS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorContentLibrary")]
+        public virtual void CutCopyPasteDeleteFunctionalityInAdvancedContentLibraryForMultipleAssetsByCSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cut Copy Paste Delete functionality in Advanced Content Library for Multiple Asse" +
+                    "ts by CS Instructor", ((string[])(null)));
+#line 36
+this.ScenarioSetup(scenarioInfo);
+#line 37
+testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 39
+testRunner.When("I select Advanced Options link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 40
+testRunner.And("I select checkbox of 1 assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
+testRunner.Then("I should see \"Copy\" button on Content Library header get \"Enabled\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 42
+testRunner.When("I select checkbox of 4 assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 43
+testRunner.Then("I should see \"Copy\" button on Content Library header get \"Enabled\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 44
+testRunner.When("I select \"Copy\" button on Content Library header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 45
+testRunner.Then("I should see Clipboard Items Count as 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 46
+testRunner.And("I should see Asset title in \"Red\" color and \"Italic\" style.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 47
+testRunner.When("I select \"Paste\" button on Content Library header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 48
+testRunner.And("I Select \"PasteAtTop\" on Paste Advanced Options on Content Library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 49
+testRunner.Then("I should see the successfull message \"Items copied successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 50
+testRunner.And("I should see Asset displayed at \"Top\" place", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 51
+testRunner.When("I select checkbox of 3 assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 52
+testRunner.Then("I should see \"Cut\" button on Content Library header get \"Enabled\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 53
+testRunner.When("I select \"Cut\" button on Content Library header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 54
+testRunner.Then("I should see Clipboard Items Count as 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 55
+testRunner.And("I should see Asset title in \"Red\" color and \"Italic\" style.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 56
+testRunner.When("I select \"Paste\" button on Content Library header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 57
+testRunner.And("I Select \"PasteAtBottom\" on Paste Advanced Options on Content Library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 58
+testRunner.When("I select checkbox of 3 assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 59
+testRunner.Then("I should see \"Delete\" button on Content Library header get \"Enabled\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 60
+testRunner.When("I select \"Delete\" button on Content Library header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 61
+testRunner.Then("I should see a \"Delete\" confirmation pop up should display with \"OK\" button and \"" +
+                    "Cancel\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 62
+testRunner.When("I click on OK button on Delete confirmation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 63
+testRunner.Then("I should see the successfull message \"Items deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

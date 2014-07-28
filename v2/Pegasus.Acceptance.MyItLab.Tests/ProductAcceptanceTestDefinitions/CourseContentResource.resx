@@ -117,34 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ShowMessage_Page_AlertWindow_Title_Name" xml:space="preserve">
-    <value>Alert</value>
+  <data name="CourseContent_All_Value" xml:space="preserve">
+    <value>All</value>
   </data>
-  <data name="ShowMessage_Page_Continue_Button_Id_Locator" xml:space="preserve">
-    <value>imgOk</value>
+  <data name="CourseContent_None_Value" xml:space="preserve">
+    <value>None</value>
   </data>
-  <data name="ShowMessage_Page_OkButton_Id_Locator" xml:space="preserve">
-    <value>imgOk</value>
+  <data name="CourseContent_Selected_Value" xml:space="preserve">
+    <value>Selected</value>
   </data>
-  <data name="ShowMessage_page_PageName" xml:space="preserve">
-    <value>Activity Alert</value>
-  </data>
-  <data name="ShowMessage_Page_Pegasus_Window_Title_Name" xml:space="preserve">
+  <data name="CourseContent_ShowHide_ConfirmationPopup_Name" xml:space="preserve">
     <value>Pegasus</value>
-  </data>
-  <data name="ShowMessage_Page_Sleep_Time" xml:space="preserve">
-    <value>2000</value>
-  </data>
-  <data name="ShowMessage_Page_Wait_Time_InSecond" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="ShowMessage_Page_Validation_MSG_Span_Id_Locator" xml:space="preserve">
-    <value>lblPageHead</value>
-  </data>
-  <data name="ShowMessage_Page_AlertWindow_Title_Value" xml:space="preserve">
-    <value>Pegasus</value>
-  </data>
-  <data name="ShowMessage_Page_CancelButton_Id_Locator" xml:space="preserve">
-    <value>imgCancel</value>
   </data>
 </root>

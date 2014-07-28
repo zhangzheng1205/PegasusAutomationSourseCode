@@ -277,7 +277,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2000.
+        ///   Looks up a localized string similar to 2500.
         /// </summary>
         internal static string ContentLibraryUXPage_AdvancedOptions_ItemReady_Wait_Value {
             get {
@@ -408,6 +408,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string ContentLibraryUXPage_Go_Button_Id_Locator {
             get {
                 return ResourceManager.GetString("ContentLibraryUXPage_Go_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CC_Pasterowstyle.
+        /// </summary>
+        internal static string ContentLibraryUXPage_PastedItem_TR_Class_Locator {
+            get {
+                return ResourceManager.GetString("ContentLibraryUXPage_PastedItem_TR_Class_Locator", resourceCulture);
             }
         }
         

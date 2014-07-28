@@ -210,5 +210,70 @@ namespace Pegasus.Pages.UI_Pages
             //Return the text of validation message 
             return getTextOfValidationMessage;
         }
+
+        /// <summary>
+        /// Gets text on Ok button.
+        /// </summary>
+        /// <returns></returns>
+        public string GetOkButtonText()
+        {
+            string buttonText = string.Empty;
+            logger.LogMethodEntry("ShowMessagePage",
+               "GetOkButtonText", 
+               base.isTakeScreenShotDuringEntryExit);
+            base.SelectWindow(ShowMessagePageResource.
+                      ShowMessage_Page_AlertWindow_Title_Value);
+            base.WaitForElement(By.Id(ShowMessagePageResource
+                .ShowMessage_Page_OkButton_Id_Locator));
+            buttonText = base.GetElementTextById(ShowMessagePageResource
+                .ShowMessage_Page_OkButton_Id_Locator);
+            logger.LogMethodExit("ShowMessagePage",
+               "GetOkButtonText", 
+               base.isTakeScreenShotDuringEntryExit);
+            return buttonText;
+        }
+
+        /// <summary>
+        /// Gets text on Cancel button.
+        /// </summary>
+        /// <returns></returns>
+        public string GetCancelButtonText()
+        {
+            string buttonText = string.Empty;
+            logger.LogMethodEntry("ShowMessagePage",
+               "GetOkButtonText",
+               base.isTakeScreenShotDuringEntryExit);
+            base.SelectWindow(ShowMessagePageResource.
+                      ShowMessage_Page_AlertWindow_Title_Value);
+            base.WaitForElement(By.Id(ShowMessagePageResource
+                .ShowMessage_Page_CancelButton_Id_Locator));
+            buttonText = base.GetElementTextById(ShowMessagePageResource
+                .ShowMessage_Page_CancelButton_Id_Locator);
+            logger.LogMethodExit("ShowMessagePage",
+               "GetOkButtonText",
+               base.isTakeScreenShotDuringEntryExit);
+            return buttonText;
+        }
+
+        /// <summary>
+        /// Clicks Ok button.
+        /// </summary>
+        public void ClickOkButton()
+        {
+            logger.LogMethodEntry("ShowMessagePage",
+              "ClickOkButton",
+              base.isTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(ShowMessagePageResource.
+                   ShowMessage_Page_OkButton_Id_Locator));
+            IWebElement alertOkButton = base.GetWebElementPropertiesById
+                (ShowMessagePageResource.
+                ShowMessage_Page_OkButton_Id_Locator);
+            base.ClickByJavaScriptExecutor(alertOkButton);
+            logger.LogMethodExit("ShowMessagePage",
+              "ClickOkButton",
+              base.isTakeScreenShotDuringEntryExit);
+
+        }
+        
     }
 }

@@ -76,6 +76,12 @@
       <DependentUpon>AssignmentCalendarResource.resx</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\ContentLibrary.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\CourseContent.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\CourseContentResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseContentResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\CreateActivityResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -579,6 +585,10 @@
     <EmbeddedResource Include="ProductAcceptanceTestDefinitions\CopyContentResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CopyContentResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\CourseContentResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseContentResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductAcceptanceTestDefinitions\CreateActivityResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

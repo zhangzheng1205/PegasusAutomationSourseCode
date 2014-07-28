@@ -59,6 +59,16 @@ namespace Pegasus.Automation.DataTransferObjects
         }
 
         /// <summary>
+        /// Specifies Shown /  hidden status.
+        /// </summary>
+        public enum ShowHideStatusEnum
+        {
+            None = 1,
+            Shown = 2,
+            Hidden = 3
+        }
+
+        /// <summary>
         /// This is the type of activity.
         /// </summary>
         public ActivityTypeEnum ActivityType { get; set; }
@@ -72,6 +82,11 @@ namespace Pegasus.Automation.DataTransferObjects
         /// This is the activity ID.
         /// </summary>
         public string ActivityID { get; set; }
+
+        /// <summary>
+        /// This is activity show-hide status.
+        /// </summary>
+        public ShowHideStatusEnum ShowHideStatus { get; set; }
 
         /// <summary>
         /// This is the Audio Page activity ID.
@@ -96,6 +111,18 @@ namespace Pegasus.Automation.DataTransferObjects
             return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Activity>(
                 x => x.ActivityType == activityType && x.IsCreated).OrderByDescending(
                 x => x.CreationDate).First();
+        }
+
+        /// <summary>
+        /// Gets activity based on show-hide status.
+        /// </summary>
+        /// <param name="showHideStatus">Show-hide status.</param>
+        /// <returns>Activity based on Show-hide status.</returns>
+        public static Activity Get(ShowHideStatusEnum showHideStatus)
+        {
+            return InMemoryDatabaseSingleton.DatabaseInstance
+                .SelectMany<Activity>(x => x.ShowHideStatus == showHideStatus && x.IsCreated)
+                .FirstOrDefault();
         }
 
         /// <summary>

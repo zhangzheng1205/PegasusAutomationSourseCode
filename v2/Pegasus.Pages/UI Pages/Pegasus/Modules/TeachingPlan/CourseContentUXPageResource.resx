@@ -247,7 +247,7 @@
     <value>_ctl0_InnerPageContent_lnkShowHide</value>
   </data>
   <data name="CourseContentUXPage_ShowHide_Status_Time_Value" xml:space="preserve">
-    <value>3000</value>
+    <value>5000</value>
   </data>
   <data name="CourseContentUXPage_eTextAssetName_ClassName" xml:space="preserve">
     <value>ES_cmenu_td</value>
@@ -344,5 +344,17 @@
   </data>
   <data name="CourseContentUXPage_Gradebook_Frame_Id_Locator" xml:space="preserve">
     <value>srcGBFrame</value>
+  </data>
+  <data name="CourseContentUXPage_ActivityTitle_Table_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblID_{0}']</value>
+  </data>
+  <data name="CourseContentUXPage_Activity_ShownToColumn_Span_XPath_Locator" xml:space="preserve">
+    <value>//tr[@values='{0}']/td[3]/span</value>
+  </data>
+  <data name="CourseContentUXPage_IsHiddenAttribute_Value" xml:space="preserve">
+    <value>ishidden</value>
+  </data>
+  <data name="CourseContentUXPage_ValueAttribute_Value" xml:space="preserve">
+    <value>value</value>
   </data>
 </root>

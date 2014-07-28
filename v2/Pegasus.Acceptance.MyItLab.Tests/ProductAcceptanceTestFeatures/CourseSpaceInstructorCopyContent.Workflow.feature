@@ -68,3 +68,13 @@ And I click on the "Homework" activity type
 Then I should be on the "Create activity" page
 When I create "SIM5Activity" activity of behavioral mode "SkillBased" type
 Then I should see the successfull message "Activity added successfully."
+
+#Purpose : To test functionality of Show/Hide, in My Course View for Multiple Assets by CS Instructor
+Scenario: Show Hide functionality in My Course View for Multiple Assets by CS Instructor
+When I navigate to the "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select checkbox of 3 assets in My Course View 
+Then I should see "ShowHide" button on My Course View header "Enabled"
+When I select "ShowHide" button on My Course View header
+Then I should see the assets which are shown should be hidden and assets which are hidden should be shown
+And I should see None or All should be displayed for the assets under Shown-To column when they are Hidden or shown respectively 
