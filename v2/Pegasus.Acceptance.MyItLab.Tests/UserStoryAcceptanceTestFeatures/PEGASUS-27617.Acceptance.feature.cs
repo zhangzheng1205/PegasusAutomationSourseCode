@@ -76,11 +76,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
         public virtual void CreateTemplateAsACourseSpaceInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Template as a Course Space Instructor", ((string[])(null)));
-#line 11
+#line 9
 this.ScenarioSetup(scenarioInfo);
-#line 12
+#line 10
+testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
 testRunner.When("I create Template using \"MySpanishLabMasterVm\" course as a program admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
+#line 12
 testRunner.Then("I should see the successfull message \"You cannot copy this course due to publishe" +
                     "r restrictions.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

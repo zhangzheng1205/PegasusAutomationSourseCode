@@ -4,11 +4,10 @@
 		 But I should see the message "You cannot copy this course due to publisher restrictions."
 		 As PMC is enabled with stop copy option.
          
-
-
-
+		 
 #purpose to open CsSmsInstructore Home Page
 Scenario: Create Template as a Course Space Instructor 
+Then I should be on the "Program Administration" page
 When I create Template using "MySpanishLabMasterVm" course as a program admin
 Then I should see the successfull message "You cannot copy this course due to publisher restrictions."
 
