@@ -2332,5 +2332,119 @@ namespace Pegasus.Pages.UI_Pages
             //.StudentPresentation_Page_BaseWindow_Title_Name);
 
         }
+
+          /// <summary>
+        /// Submit the activity in presentation window.
+        /// </summary>
+        public void AttemptActivityForSaveforlater()
+        {
+            //Opens Activity Presentation Window
+            logger.LogMethodEntry("StudentPresentationPage", "AttemptActivityForSaveforlater",
+                base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                base.SwitchToLastOpenedWindow();
+                //Answers Selection in Presention window
+                this.AnswersSelectionInTestWindowForSingleQuestion();
+                //Click the Submit button
+                this.ClickOnSubmitForSaveforlater();
+                //Click on the Finish button
+                this.ClickOnFinishButton();
+                // Switch to default window after closing of presentation pop up
+                base.WaitUntilWindowLoads(StudentPresentationPageResource
+                     .StudentPresentation_Page_BaseWindow_Title_Name);
+                base.SelectWindow(StudentPresentationPageResource
+                     .StudentPresentation_Page_BaseWindow_Title_Name);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "AttemptActivityForSaveforlater",
+                    base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Submit For Save for later.
+        /// </summary>
+        private void ClickOnSubmitForSaveforlater()
+        {
+            //Click on Submit Grade Button
+            logger.LogMethodEntry("StudentPresentationPage", "ClickOnSubmitForSaveforlater",
+                base.isTakeScreenShotDuringEntryExit);
+            //Wait For Submit For Grading Button
+            base.WaitForElement(By.Id(StudentPresentationPageResource.
+                StudentPresentation_Page_SubmitForSaveforlater_Button_Id_Locator));
+            //Get Button Property
+            IWebElement getActivitySubmitButtonProperty = base.GetWebElementPropertiesById
+                (StudentPresentationPageResource.
+                 StudentPresentation_Page_SubmitForSaveforlater_Button_Id_Locator);
+            //Click on Button
+            base.ClickByJavaScriptExecutor(getActivitySubmitButtonProperty);
+            logger.LogMethodExit("StudentPresentationPage", "ClickOnSubmitForGradingButton",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Get the assetid from the current url.
+        /// </summary>
+        /// <returns></returns>
+        public string GetAssetIdFromUrl()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "GetAssetIdFromUrl",
+            base.isTakeScreenShotDuringEntryExit);
+         // Switch Window
+            base.SwitchToLastOpenedWindow();
+         // Wait for window
+            base.WaitUntilWindowLoads(StudentPresentationPageResource.StudentPrsentation_Page_Presentation_Window_Name);
+            //Get the current url
+            string strURL = base.GetCurrentUrl;
+            int searchIndex = strURL.IndexOf("intAssetID=") + 11;
+            // Get the assetId
+            string assetId = strURL.Substring(searchIndex, strURL.IndexOf('&', searchIndex) - searchIndex);
+            logger.LogMethodExit("StudentPresentationPage", "GetAssetIdFromUrl",
+            base.isTakeScreenShotDuringEntryExit);
+            return assetId;
+        }
+
+        /// <summary>
+        /// Selects options/answers in Test window to complete submission
+        /// </summary>
+        private void AnswersSelectionInTestWindowForSingleQuestion()
+        {
+            //Selects options/answers in Test window to complete submission
+            logger.LogMethodEntry("StudentPresentationPage",
+                "AnswersSelectionInTestWindow",
+               base.isTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_QuestionCount_Presentation_Xpath_Locator));
+            //Get Number of count from the Div
+            int getDivCount = base.GetElementCountByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_QuestionCount_Presentation_Xpath_Locator);
+            // Loop to click options Div By Div
+   
+                //Checks whether div of question is present or not
+                Boolean isNonAttemptedQuestionPresent = base.IsElementPresent(By.XPath
+                        (string.Format(StudentPresentationPageResource
+                        .StudentPresentation_Page_QuestionRadioButton_Xpath_Locator,
+                        1)));
+                if (isNonAttemptedQuestionPresent)
+                {
+                    //Wait for radio button as per the DIV and clicks on it
+                    base.WaitForElement(By.XPath(string.Format(StudentPresentationPageResource
+                        .StudentPresentation_Page_QuestionRadioButton_Xpath_Locator,
+                        1)));
+                    //Clicks on the radio button of answers
+                    base.ClickButtonByXPath(string.Format(StudentPresentationPageResource.
+                        StudentPresentation_Page_QuestionRadioButton_Xpath_Locator,
+                        1));
+                }
+                
+           logger.LogMethodExit("StudentPresentationPage",
+                "AnswersSelectionInTestWindow",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+
     }
 }

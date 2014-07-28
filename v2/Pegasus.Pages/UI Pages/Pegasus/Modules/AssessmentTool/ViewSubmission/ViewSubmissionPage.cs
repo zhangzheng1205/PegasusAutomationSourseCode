@@ -1089,5 +1089,162 @@ namespace Pegasus.Pages.UI_Pages
               base.isTakeScreenShotDuringEntryExit);
             return getSplittedGrade;
         }
+
+        /// <summary>
+        /// Select The Cmenu Option Of Asset.
+        /// </summary>
+        /// <param name="assetCmenuOptionEnum">This is Asset cmenu options.</param>
+        /// <param name="assetName">This is Asset name.</param>
+        public void SelectAssetCMenuOption(
+          GBInstructorUXPage.AssetCmenuOptionEnum assetCmenuOptionEnum,
+          string assetName, Activity.ActivityTypeEnum activityTypeEnum, string assetId)
+        {
+            //Select The Cmenu Option Of Asset
+            logger.LogMethodEntry("ViewSubmissionPage", "SelectAssetCMenuOption",
+           base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click On Cmenu Of Asset
+                this.ClickOnCmenuOfAsset(assetCmenuOptionEnum, activityTypeEnum, assetName, assetId);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ViewSubmissionPage", "SelectAssetCMenuOption",
+             base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On Cmenu Of Asset.
+        /// </summary>
+        /// <param name="getActivityColumnCount">This is asset count.</param>
+        /// <param name="assetCmenuOptionEnum">Thia is asset cmenu option.</param>
+        private void ClickOnCmenuOfAsset(
+              GBInstructorUXPage.AssetCmenuOptionEnum assetCmenuOptionEnum,
+             Activity.ActivityTypeEnum activityTypeEnum, string assetName, string assetId)
+        {
+            //Click On Cmenu 
+            logger.LogMethodEntry("ViewSubmissionPage", "ClickOnCmenuOfAsset",
+            base.isTakeScreenShotDuringEntryExit);
+            // It opens the c-menu 
+            ClickOnCmenuAssetIcon(assetName, assetId);
+            switch (assetCmenuOptionEnum)
+            {
+                //Click the 'View Submission' cmenu
+                case GBInstructorUXPage.AssetCmenuOptionEnum.ViewSubmissions:
+                    this.SelectViewSubmissionCmenuOption();
+                    break;
+
+            }
+            logger.LogMethodExit("ViewSubmissionPage", "ClickOnCmenuOfAsset",
+            base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Select View Submission Cmenu Option.
+        /// </summary>
+        private void SelectViewSubmissionCmenuOption()
+        {
+            //Select View Submission Cmenu Option
+            logger.LogMethodEntry("ViewSubmissionPage", "SelectViewSubmissionCmenuOption",
+                                   base.isTakeScreenShotDuringEntryExit);
+            // Wait for the cmenu
+            base.WaitForElement(By.XPath(ViewSubmissionPageResource.
+                ViewSubmission_Page_Asset_CmenuViewSubmission_Xpath_Locator));
+            // Click on the ViewSubmission c-menu
+            IWebElement getViewAllSubmissionCmenu = base.GetWebElementPropertiesByXPath
+                (ViewSubmissionPageResource.
+                ViewSubmission_Page_Asset_CmenuViewSubmission_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(getViewAllSubmissionCmenu);
+            logger.LogMethodExit("ViewSubmissionPage", "SelectViewSubmissionCmenuOption",
+                                   base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click The Cmenu Icon In Asset.
+        /// </summary>
+        /// <param name="getActivityColumnCount">This is Asset column count.</param>
+        private void ClickOnCmenuAssetIcon(string assetName, string assetId)
+        {
+            // Click The Cmenu Icon In Asset
+            logger.LogMethodEntry("ViewSubmissionPage", "ClickTheCmenuIcon",
+                         base.isTakeScreenShotDuringEntryExit);
+
+            // This function is used to check the iframe and if exists then switch to that frame
+            this.SelectIFrame(assetName);
+
+            // This code checks the link exists
+            if (base.IsElementPresent(By.PartialLinkText(assetName), 5))
+            {
+                //Wait for element
+                base.WaitForElement(By.PartialLinkText(assetName));
+                //Perform Mouse Hover on Cmenu Icon
+                base.PerformMouseHoverAction(base.GetWebElementPropertiesByPartialLinkText(assetName));
+            }
+            // This function is used to click on c-menu image icon for Course Materials/Assingments/TO Do/Completed
+            string strViewSubmissionXpath = this.ClickOnImageIcon(assetId, assetName);
+
+            base.WaitForElement(By.XPath(strViewSubmissionXpath));
+            IWebElement getCmenuIconProperty = base.GetWebElementPropertiesByXPath(strViewSubmissionXpath);
+            //Perform Mouse Hover on Cmenu Icon
+            base.PerformMouseHoverAction(getCmenuIconProperty);
+            //Perform Mouse Click Action
+            base.PerformMouseClickAction(getCmenuIconProperty);
+            Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.ViewSubmission_Page_SleepTime_Value));
+            logger.LogMethodExit("ViewSubmissionPage", "ClickTheCmenuIcon",
+                          base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Iframe.
+        /// </summary>
+        private void SelectIFrame(string assetName)
+        {
+            //Select IFrame
+            logger.LogMethodEntry("ViewSubmissionPage", "SelectIFrame",
+               base.isTakeScreenShotDuringEntryExit);
+            //This condition checks Iframe exists  
+            if (base.IsElementPresent(By.Id(ViewSubmissionPageResource.
+                 ViewSubmission_Page_ViewSubmission_Iframe_Id_Locator), 5))
+            {
+                //Wait for the element    
+                base.WaitForElement(By.Id(ViewSubmissionPageResource.
+                ViewSubmission_Page_ViewSubmission_Iframe_Id_Locator));
+                // Switch to the To Do Iframe
+                base.SwitchToIFrameById(ViewSubmissionPageResource.
+                 ViewSubmission_Page_ViewSubmission_Iframe_Id_Locator);
+
+            }
+
+            logger.LogMethodExit("ViewSubmissionPage", "SelectIFrame",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On Image Icon.
+        /// </summary>
+        /// <returns></returns>
+        private string ClickOnImageIcon(string assetId, string assetName)
+        {
+            logger.LogMethodEntry("ViewSubmissionPage", "ClickOnImageIcon",
+            base.isTakeScreenShotDuringEntryExit);
+            string strViewSubmissionXpath;
+            // Modified the xpath for the To Do tab based on the assetid
+            strViewSubmissionXpath = ViewSubmissionPageResource.ViewSubmission_Page_Asset_ToDo_Cmenuicon_Xpath_Locator;
+            strViewSubmissionXpath = strViewSubmissionXpath.Replace("assetId", assetId);
+            if (base.IsElementPresent(By.XPath(strViewSubmissionXpath),5)) { }
+            else
+            {
+                // Modified the xpath for the Assignment/CourseMaterial/Completed based on the assetid
+                strViewSubmissionXpath = ViewSubmissionPageResource.ViewSubmission_Page_Asset_Cmenuicon_Xpath_Locator;
+                strViewSubmissionXpath = strViewSubmissionXpath.Replace("assetId", assetId);
+
+            }
+            logger.LogMethodExit("ViewSubmissionPage", "ClickOnImageIcon",
+            base.isTakeScreenShotDuringEntryExit);
+            return strViewSubmissionXpath;
+        }
+
+
+
     }
 }

@@ -70,3 +70,37 @@ And I should see the message "This activity is past due." in activity presentati
 When I submit the past due "Objective-Based Question Only" activity
 Then I should see the message "You submitted this activity after the due date. Your instructor must accept the submission before it is included in the gradebook or counted in any course scores." in activity presentation page
 And I should return to parent window
+
+
+#Purpose : To verify the functionality of View Submission option in student side for save for later
+Scenario: To verify the functionality of View Submission status of Activity  for save for later in student side By SMS Student
+
+When I navigate to the "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I open the activity named as "ObjectiveBasedQuestionOnly"
+And  I submit the activity "ObjectiveBasedQuestionOnly" for save for later
+Then I should see the "In Progress" status of the "ObjectiveBasedQuestionOnly" activity type
+When I click on cmenu "ViewSubmissions" of asset "ObjectiveBasedQuestionOnly" for save for later  
+Then I should be on the "View Submission" page
+When I click on submission list for save for later 
+Then I should see the message "Activity has been started and saved for later but not yet submitted." for save for later
+And  I should be on the "Course Materials" page
+
+When I navigate to the "Assignments" tab
+Then  I should be on the "Course Materials" page
+When I click on cmenu "ViewSubmissions" of asset "ObjectiveBasedQuestionOnly" for save for later  
+Then I should be on the "View Submission" page
+When I click on submission list for save for later 
+Then I should see the message "Activity has been started and saved for later but not yet submitted." for save for later
+And  I should be on the "Course Materials" page
+
+When I navigate to the "To Do" tab
+Then I should be on the "Assignments - To Do" page
+When I click on cmenu "ViewSubmissions" of asset "ObjectiveBasedQuestionOnly" for save for later  
+Then I should be on the "View Submission" page
+When I click on submission list for save for later 
+Then I should see the message "Activity has been started and saved for later but not yet submitted." for save for later
+And  I should be on the "Assignments - To Do" page
+
+
+

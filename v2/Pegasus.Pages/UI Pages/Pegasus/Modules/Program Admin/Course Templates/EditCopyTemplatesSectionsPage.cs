@@ -110,15 +110,13 @@ namespace Pegasus.Pages.UI_Pages
             //TO select the pop window so as to set focus to its elements.
             base.SelectWindow(EditCopyTemplatesSectionsResource.CopyAsSection_Page_Window_Page_Title);
             //To set the start date to current date/time with required format.
-            String getSLStartDate = DateTime.Now.ToString(
-                EditCopyTemplatesSectionsResource.CopyAsSharedLibrary_Page_Date_Format);
+            String getSLStartDate = GetDateValue(DateType.StartDate);            
             //wait for the required element to come up and then populate it.
             base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.SL_create_start_date));
             base.ClearTextById(EditCopyTemplatesSectionsResource.SL_create_start_date);
             base.FillTextBoxById(EditCopyTemplatesSectionsResource.SL_create_start_date, getSLStartDate);
             //Prepare the enddate/time with required format by adding 90 days to the current date.
-            String getSLEndDate = DateTime.Now.AddDays(90).ToString(
-            EditCopyTemplatesSectionsResource.CopyAsSharedLibrary_Page_Date_Format);
+            String getSLEndDate = GetDateValue(DateType.EndDate);
             //Populate the enddate
             base.WaitForElement(By.Id(EditCopyTemplatesSectionsResource.SL_create_end_date));
             base.ClearTextById(EditCopyTemplatesSectionsResource.SL_create_end_date);

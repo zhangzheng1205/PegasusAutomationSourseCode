@@ -21,7 +21,10 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         private static Logger Logger =
             Logger.GetInstance(typeof(ActivitySubmission));
-
+        /// <summary>
+        /// AssetId
+        /// </summary>
+        private string AssetId = string.Empty;
         /// <summary>
         /// Submit The Activity.
         /// </summary>
@@ -464,5 +467,108 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
 
         }
+
+        /// <summary>
+        /// Launch Activity Presentation Window.
+        /// </summary>
+        [Then(@"I should see the activity successfully launched")]
+        public void ActivitySuccessfullyLaunched()
+        {
+            //Launching of Activity Presentation Window
+            Logger.LogMethodEntry("ActivitySubmission",
+                "ActivitySuccessfullyLaunched"
+                , base.isTakeScreenShotDuringEntryExit);
+            //Assert Launch Activity Window
+            Logger.LogAssertion("VerifyActivityLaunched",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new StudentPresentationPage().
+                    IsActivityPresentationPageOpened()));
+            Logger.LogMethodExit("ActivitySubmission",
+                "ActivitySuccessfullyLaunched"
+                , base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Attempt The Activity For Save for later.
+        /// </summary>
+        /// <param name="activityType"></param>
+        [When(@"I submit the activity ""(.*)"" for save for later")]
+        public void AttemptTheActivityForSaveforlater(string activityType)
+        {
+            //Launching of Activity Presentation Window
+            Logger.LogMethodEntry("ActivitySubmission",
+                "AttemptTheActivityForSaveforlater"
+                , base.isTakeScreenShotDuringEntryExit);
+            //Select The Activity presentation window
+            //new StudentPresentationPage().ClickStartButtonOnPresentationWindow(
+            //    activityType);
+
+            this.AssetId = new StudentPresentationPage().GetAssetIdFromUrl();
+            // Attempt Activity 
+            new StudentPresentationPage().AttemptActivityForSaveforlater();
+            Logger.LogMethodExit("ActivitySubmission",
+                "AttemptTheActivityForSaveforlater"
+                , base.isTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Click On Submission List For Saveforlater.
+        /// </summary>
+        [When(@"I click on submission list for save for later")]
+        public void ClickOnSubmissionListForSaveforlater()
+        {
+            //Selecting the submission list for displaying the message
+            Logger.LogMethodEntry("ActivitySubmission",
+                "ClickOnSubmissionListForSaveforlater"
+                , base.isTakeScreenShotDuringEntryExit);
+            new ViewSubmissionPage().SelectTheSubmissionFrame();
+            Logger.LogMethodExit("ActivitySubmission",
+                "ClickOnSubmissionListForSaveforlater"
+                , base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify The SaveForLater Display Message.
+        /// </summary>
+        /// <param name="messageText">Display Message.</param>
+        [Then(@"I should see the message ""(.*)"" for save for later")]
+        public void VerifyTheSaveForLaterDisplayMessage(string messageText)
+        {
+            // Verify The SaveForLater Display Message
+            Logger.LogMethodEntry("ActivitySubmission", "VerifyTheSaveForLaterDisplayMessage",
+                base.isTakeScreenShotDuringEntryExit);
+            //Verify the InProgress Status
+            Logger.LogAssertion("VerifySendMessageButton",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(messageText.Trim(), new ViewSubmissionPage().
+                    GetSaveForLaterDisplayMessage().Trim()));
+            Logger.LogMethodExit("ActivitySubmission", "VerifyTheSaveForLaterDisplayMessage",
+               base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On Cmenu Of Asset From StudentSide.
+        /// </summary>
+        /// <param name="assetCmenu">This is Asset Cmenu type enum</param>
+        /// <param name="assetName">This is Asset name</param>
+        [When(@"I click on cmenu ""(.*)"" of asset ""(.*)"" for save for later")]
+        public void ClickOnCmenuOfAssetFromStudentSide(string assetCmenu,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Click On Cmenu Of Asset 
+            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInGradebook",
+                  isTakeScreenShotDuringEntryExit);
+            //Fetch Activity From Memory
+            Activity activity = Activity.Get(activityTypeEnum);
+            ViewSubmissionPage objViewSubmissionPage = new ViewSubmissionPage();
+            //Select The Cmenu Option Of Asset
+            objViewSubmissionPage.SelectAssetCMenuOption(
+                (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
+                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum, AssetId);
+            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebook",
+                 isTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

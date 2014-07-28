@@ -144,4 +144,10 @@
   <data name="GBGradeBatchUpdate_Page_Score_EditInput_Value_Second" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="GBGradeBatchUpdate_Page_MaximumScore_Text_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='Grid1']/tbody/tr/td[2]/input[@name='txteditMS']</value>
+  </data>
+  <data name="GBGradeBatchUpdate_Page_UserScore_Text_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='Grid1']/tbody/tr/td[2]/input[@name='txtedit']</value>
+  </data>
 </root>

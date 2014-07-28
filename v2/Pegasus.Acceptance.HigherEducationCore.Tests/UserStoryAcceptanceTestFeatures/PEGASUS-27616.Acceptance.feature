@@ -6,7 +6,7 @@
 
 # Used ProgramCourse course
 #Purpose: Copying Template as Template
-Scenario: Copying Templates as Tempalate inside Program when its parent PMC is set with Stop Copy
+Scenario: Copying Templates as Tempalate inside Program when its parent PMC is set with Stop Copy by CS Instructor
 When I navigate to "Templates" tab of the "Program Administration" page as PAdmin
 Then I should be on the "Program Administration" page
 When I click the "Copy as Template" option
@@ -16,7 +16,7 @@ Then I should see successfull message "You cannot copy this course due to publis
 
 # Used ProgramCourse course
 #Purpose: Copying Template as Shared Library
-Scenario: Copy Template as Shared Library inside Program when its parent PMC is set with Stop Copy
+Scenario: Copy Template as Shared Library inside Program when its parent PMC is set with Stop Copy by CS Instructor
 When I navigate to "Templates" tab of the "Program Administration" page as PAdmin
 Then I should be on the "Program Administration" page
 When I click the "Copy as Shared Library" option
@@ -26,7 +26,7 @@ Then I should see successfull message "You cannot copy this course due to publis
 
 # Used ProgramCourse course
 #Purpose: Copying Section as Section
-Scenario: Copy Section as Section inside Program when its parent PMC is set with Stop Copy
+Scenario: Copy Section as Section inside Program when its parent PMC is set with Stop Copy by CS Instructor
 When I navigate to "Sections" tab of the "Program Administration" page as PAdmin
 Then I should be on the "Program Administration" page
 When I click the "Copy as Section" option
@@ -36,7 +36,7 @@ Then I should see successfull message "You cannot copy this course due to publis
 
 # Used ProgramCourse course
 #Purpose: Copying Section as Template
-Scenario: Copy Section as Template inside Program when its parent PMC is set with Stop Copy
+Scenario: Copy Section as Template inside Program when its parent PMC is set with Stop Copy by CS Instructor
 When I navigate to "Sections" tab of the "Program Administration" page as PAdmin
 Then I should be on the "Program Administration" page
 When I click the "Copy as Template" option

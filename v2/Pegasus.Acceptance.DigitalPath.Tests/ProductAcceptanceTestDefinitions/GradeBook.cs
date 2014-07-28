@@ -195,6 +195,48 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 isTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Edit The Grade.
+        /// </summary>
+        /// <param name="userScore">This is User Score.</param>
+        /// <param name="maximumScore">This is Maximum Score.</param>
+        [When(@"I edit the grade with user score ""(.*)"" and maximum score ""(.*)""")]
+        public void EditTheGrade(string userScore, string maximumScore)
+        {
+            //Edit The Grade
+            Logger.LogMethodEntry("GradeBook", "EditTheGrade",
+                isTakeScreenShotDuringEntryExit);
+            //Edit Grade
+            new GBGradeBatchUpdationPage().EditGrade(userScore, maximumScore);
+            Logger.LogMethodExit("GradeBook", "EditTheGrade",
+                isTakeScreenShotDuringEntryExit);
+        }
+        
+        /// <summary>
+        /// Select Asset Cmenu.
+        /// </summary>
+        /// <param name="assetCmenu">This is Asset Cmenu.</param>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        [When(@"I select ""(.*)"" cmenu of ""(.*)""")]
+        public void SelectAssetCmenu(string assetCmenu,
+            Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Select Asset Cmenu
+            Logger.LogMethodEntry("GradeBook", "SelectAssetCmenu",
+                isTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            Activity activity = Activity.Get(activityTypeEnum);
+            GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
+            //Select Window and Frame
+            new TodaysViewUXPage().selectwindowandFrame();
+            //Select Cmenu Of Asset
+            gbInstructorPage.SelectCmenuOptionOfAssetinGradebook(
+                (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
+                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name);
+            Logger.LogMethodExit("GradeBook", "SelectAssetCmenu",
+                isTakeScreenShotDuringEntryExit);
+        }
+
 
     }
 }

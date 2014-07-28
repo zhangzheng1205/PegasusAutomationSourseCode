@@ -98,6 +98,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &gt;//td[@assetid=&apos;assetId&apos;]/img.
+        /// </summary>
+        internal static string ViewSubmission_Page_Asset_Cmenuicon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_Asset_Cmenuicon_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;PegMenu32&apos;]//div[@id=&apos;cmenuCont&apos;]//div[@title=&apos;View Submissions&apos;].
+        /// </summary>
+        internal static string ViewSubmission_Page_Asset_CmenuViewSubmission_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_Asset_CmenuViewSubmission_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@assetid=&apos;assetId&apos;]/img.
+        /// </summary>
+        internal static string ViewSubmission_Page_Asset_ToDo_Cmenuicon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_Asset_ToDo_Cmenuicon_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CV_DownImg.
         /// </summary>
         internal static string ViewSubmission_Page_Asset_TraingleOption_Cmenu_ClassName_Locator {
@@ -287,6 +314,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 6000.
+        /// </summary>
+        internal static string ViewSubmission_Page_SleepTime_Value {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_SleepTime_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to :.
         /// </summary>
         internal static string ViewSubmission_Page_StatusSpecialCharacter_Char {
@@ -436,6 +472,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         internal static string ViewSubmission_Page_ViewSubmission_Expand_Xpath_Locator {
             get {
                 return ResourceManager.GetString("ViewSubmission_Page_ViewSubmission_Expand_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ifrmCoursePreview.
+        /// </summary>
+        internal static string ViewSubmission_Page_ViewSubmission_Iframe_Id_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_ViewSubmission_Iframe_Id_Locator", resourceCulture);
             }
         }
         
