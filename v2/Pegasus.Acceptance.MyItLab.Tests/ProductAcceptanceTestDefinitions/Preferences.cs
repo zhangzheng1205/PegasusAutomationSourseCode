@@ -535,7 +535,88 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 "SetThePreferencesForCopyContent",
                 base.isTakeScreenShotDuringEntryExit);
         }
-        
+        /// <summary>
+        /// Click On The Edit Preferences Link.
+        /// </summary>
+        [When(@"I click on the Edit Preferences link")]
+        public void ClickOnTheEditPreferencesLink()
+        {
+            Logger.LogMethodEntry("Preferences",
+                "ClickOnTheEditPreferencesLink",
+                base.isTakeScreenShotDuringEntryExit);
+            //Click on Activity Edit Preferences Link
+            new ActivitiesPreferencesPage().ClickOnAssignmentActivityEditOption();
+
+            Logger.LogMethodExit("Preferences",
+                "ClickOnTheEditPreferencesLink",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On The Messages Sub-Tab.
+        /// </summary>
+        /// <param name="subTabName">Sub-Tab Name</param>
+        [When(@"I click on the ""(.*)"" sub-tab")]
+        public void ClickOnTheSubTab(string subTabName)
+        {
+            Logger.LogMethodEntry("Preferences",
+                "ClickOnTheSubTab",
+                base.isTakeScreenShotDuringEntryExit);
+            //Clik on the Messages sub tab in the default preferences window
+            new ActivitiesPreferencesPage().ClickOnMessagesSubTab();
+
+            Logger.LogMethodExit("Preferences",
+                "ClickOnTheSubTab",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Enter Beginning Of Activity Default And Instructor Messages.
+        /// </summary>
+        [When(@"I enter Beginning of activity Default and Instructor messages")]
+        public void EnterBeginningOfActivityDefaultAndInstructorMessages()
+        {
+            Logger.LogMethodEntry("Preferences",
+                "EnterBeginningOfActivityDefaultAndInstructorMessages",
+                base.isTakeScreenShotDuringEntryExit);
+
+            new ActivitiesPreferencesPage().EnterBeginningOfActivityDefaultAndInstructorMessages();
+
+            Logger.LogMethodExit("Preferences",
+                "EnterBeginningOfActivityDefaultAndInstructorMessages",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Enter End Of Activity Default And Instructor Messages.
+        /// </summary>
+        [When(@"I enter End of activity Default and Instructor messages")]
+        public void EnterEndOfActivityDefaultAndInstructorMessages()
+        {
+            Logger.LogMethodEntry("Preferences",
+                "EnterEndOfActivityDefaultAndInstructorMessages",
+                base.isTakeScreenShotDuringEntryExit);
+
+            new ActivitiesPreferencesPage().EnterEndOfActivityDefaultAndInstructorMessages();
+
+            Logger.LogMethodExit("Preferences",
+                "EnterEndOfActivityDefaultAndInstructorMessages",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On The Save Button.
+        /// </summary>
+        /// <param name="saveButton">saveButton</param>
+        [When(@"I click on the ""(.*)"" button")]
+        public void ClickOnTheSaveButton(string saveButton)
+        {
+            Logger.LogMethodEntry("Preferences",
+                "ClickOnTheButton",
+                base.isTakeScreenShotDuringEntryExit);
+
+            new ActivitiesPreferencesPage().ClickOnTheSaveButton(saveButton);
+
+            Logger.LogMethodExit("Preferences",
+                "ClickOnTheButton",
+                base.isTakeScreenShotDuringEntryExit);
+        }
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]

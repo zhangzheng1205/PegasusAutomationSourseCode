@@ -144,11 +144,11 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 #line 35
 testRunner.When("I click on the \'Add Course Materials\' option in Content Library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 36
-testRunner.And("I click on the \"Homework\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on the \"Grader Project [Homework]\" activity type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 37
 testRunner.Then("I should be on the \"Create activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 38
-testRunner.When("I enter the necessary details begin creation of Assignment behavioral type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I create activity with Assignment behavioral type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 39
 testRunner.Then("I should be on the \"Create Assignment activity\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40

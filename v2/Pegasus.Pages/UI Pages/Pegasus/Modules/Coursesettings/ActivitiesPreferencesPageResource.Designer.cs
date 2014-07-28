@@ -80,6 +80,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Grader Project [Homework].
+        /// </summary>
+        internal static string ActivitiesPreferences_Page_AssignmentActivityTypeName_Value {
+            get {
+                return ResourceManager.GetString("ActivitiesPreferences_Page_AssignmentActivityTypeName_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to txtMCBeginMsg.
         /// </summary>
         internal static string ActivitiesPreferences_Page_BeginDefaultMessage_Id_Locator {

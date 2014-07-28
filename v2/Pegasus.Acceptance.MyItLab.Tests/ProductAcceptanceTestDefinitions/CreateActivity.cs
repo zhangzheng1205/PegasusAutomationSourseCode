@@ -429,7 +429,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Enter The Necessary Details Begin Creation Of Assignment Behavioral Type.
         /// </summary>
-        [When(@"I enter the necessary details begin creation of Assignment behavioral type")]
+        [When(@"I create activity with Assignment behavioral type")]
         public void EnterTheNecessaryDetailsBeginCreationOfAssignmentBehavioralType()
         {
             Logger.LogMethodEntry("CommonSteps",

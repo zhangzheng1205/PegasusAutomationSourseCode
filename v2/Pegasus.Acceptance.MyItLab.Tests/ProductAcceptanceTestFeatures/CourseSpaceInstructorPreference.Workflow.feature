@@ -33,9 +33,9 @@ Then I should see the successfull message "Preference settings updated for selec
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option in Content Library
-And I click on the "Homework" activity type
+And I click on the "Grader Project [Homework]" activity type
 Then I should be on the "Create activity" page
-When I enter the necessary details begin creation of Assignment behavioral type
+When I create activity with Assignment behavioral type
 Then I should be on the "Create Assignment activity" page
 When I click on the Messages activity subtab
 Then I should see the activity Beginning and End messages set in Main Course Preferences

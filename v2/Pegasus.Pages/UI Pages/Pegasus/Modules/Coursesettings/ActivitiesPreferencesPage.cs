@@ -106,6 +106,77 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("ActivitiesPreferencesPage",
                 "ClickOnEditOption", base.isTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Click On Assignment Activity Edit Option.
+        /// </summary>
+        public void ClickOnAssignmentActivityEditOption()
+        {
+            //Click On Activity Edit Option
+            logger.LogMethodEntry("ActivitiesPreferencesPage",
+                "ClickOnAssignmentActivityEditOption", base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Prefernces Window
+                base.SelectWindow(ActivitiesPreferencesPageResource.
+                        ActivitiesPreferences_Page_Preferences_Window_Name);
+                base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
+                    ActivitiesPreferences_Page_Frame_Id_Locator));
+                //Switch to Iframe
+                base.SwitchToIFrame(ActivitiesPreferencesPageResource.
+                    ActivitiesPreferences_Page_Frame_Id_Locator);
+                //Click On Edit Option
+                this.ClickOnAssignmentEditOption();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ActivitiesPreferencesPage",
+               "ClickOnAssignmentActivityEditOption", base.isTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On Assignment behavioral activity Edit Option.
+        /// </summary>
+        private void ClickOnAssignmentEditOption()
+        {
+            //Click On Edit Option
+            logger.LogMethodEntry("ActivitiesPreferencesPage",
+               "ClickOnAssignmentEditOption", base.isTakeScreenShotDuringEntryExit);
+
+            // Activity Type Name Collection
+            ICollection<IWebElement> ActivityTypeEditCollection = base.GetWebElementsCollectionById(
+                    ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_EditButton_Id_Locator);
+            // Activity Type Name corresponding Edit Preferences Link Collection 
+            ICollection<IWebElement> ActivityTypesCollection = base.GetWebElementsCollectionByPartialCssSelector(
+                    ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_NewActivityTypeName_CSSSelector);
+            
+            int i = 0;
+            //click on the Edit Preferences Link for the desired Activity Type Name out of the Collection
+            foreach (IWebElement ActivityType in ActivityTypesCollection)
+            {
+                i++;
+
+                if (ActivityType.Enabled && ActivityType.GetAttribute("value") == 
+                    ActivitiesPreferencesPageResource.
+                    ActivitiesPreferences_Page_AssignmentActivityTypeName_Value)
+                {
+                    int j = 0;
+                    foreach(IWebElement ActivityTypeEdit in ActivityTypeEditCollection)
+                    {
+                        j++;
+                        if(i==j)
+                        {
+                            base.ClickByJavaScriptExecutor(ActivityTypeEdit);
+                            break;
+                        }
+                    }                    
+                    break;
+                }
+            }
+
+            logger.LogMethodExit("ActivitiesPreferencesPage",
+                "ClickOnAssignmentEditOption", base.isTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Select 'Allow Activity To Be Used As Pretest Or Posttest' Option.
@@ -347,7 +418,9 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.LinkText(saveButton));
 
             //Get Save button element
-            IWebElement getSaveButton = base.GetWebElementPropertiesById(saveButton);
+            IWebElement getSaveButton = base.GetWebElementPropertiesByLinkText(saveButton);
+            //Focus control on the "Save" button
+            base.FocusOnElementByPartialLinkText(saveButton);
             //Click On Save button
             base.ClickByJavaScriptExecutor(getSaveButton);
 

@@ -174,4 +174,7 @@
   <data name="ActivitiesPreferences_Page_NewActivityTypeName_CSSSelector" xml:space="preserve">
     <value>*[id ^='txtActivityName']</value>
   </data>
+  <data name="ActivitiesPreferences_Page_AssignmentActivityTypeName_Value" xml:space="preserve">
+    <value>Grader Project [Homework]</value>
+  </data>
 </root>
