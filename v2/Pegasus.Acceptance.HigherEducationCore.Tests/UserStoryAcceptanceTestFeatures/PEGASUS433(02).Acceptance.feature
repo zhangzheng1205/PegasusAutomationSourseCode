@@ -45,6 +45,7 @@ When I should click on Download icon
 Then I should save the downloaded file
 And I read the all pages saved file on WS to check if the downloaded values match with the UI settings
 
+# Used MySpanishLabMaster Course
 #Purpose: Check and lock the preference status in Work Space before the course is published 
 Scenario: Check and lock the preference status in Work Space before the course is published 	
 When I navigate to "Preferences" tab of the "Preferences" page
@@ -55,6 +56,7 @@ When I check the new preference checkbox
 Then I should see the check box as checked according to the user action
 And I should see the successfull message "Preferences updated successfully."
 
+# Used MySpanishLabMaster Course
 #Purpose: Uncheck and lock the preference status in Work Space before the course is published 
 Scenario: Uncheck and lock the preference status in Work Space before the course is published 	
 When I navigate to "Preferences" tab of the "Preferences" page
@@ -63,6 +65,7 @@ When I select 'Grading' sub tab/Option
 Then I should see the 'include email addresses in Gradebook export file' preference
 And I should see the successfull message "Preferences updated successfully."
 
+# Used MySpanishLabMaster Course
 #Purpose: Uncheck and unlock the preference status in Work Space before the course is published 
 Scenario: Uncheck and unlock the preference status in Work Space before the course is published	
 When I navigate to "Preferences" tab of the "Preferences" page
@@ -71,6 +74,7 @@ When I select 'Grading' sub tab/Option
 Then I should see the 'include email addresses in Gradebook export file' preference
 And I should see the new preference in unchecked state by default
 
+# Used MySpanishLabMaster Course
 #Purpose: Check and unlock the preference status in Work Space before the course is published 
 Scenario: Check and unlock the preference status in Work Space before the course is published 	
 When I navigate to "Preferences" tab of the "Preferences" page
@@ -80,7 +84,8 @@ Then I should see the 'include email addresses in Gradebook export file' prefere
 When I check the new preference checkbox
 Then I should see the check box as checked according to the user action
 And I should see the successfull message "Preferences updated successfully."
-	
+
+# Used MySpanishLabMaster Course	
 #Purpose: Check and lock the preference status in Work Space before the course is copied 
 Scenario: Check and lock the preference status in Work Space before the course is copied	
 When I navigate to "Preferences" tab of the "Preferences" page
@@ -91,6 +96,7 @@ When I check the new preference checkbox
 Then I should see the check box as checked according to the user action
 And I should see the successfull message "Preferences updated successfully."
 
+# Used MySpanishLabMaster Course
 #Purpose: Uncheck and lock the preference status in Work Space before the course is copied 
 Scenario: Uncheck and lock the preference status in Work Space before the course is copied 	
 When I navigate to "Preferences" tab of the "Preferences" page
@@ -99,6 +105,7 @@ When I select 'Grading' sub tab/Option
 Then I should see the 'include email addresses in Gradebook export file' preference
 And I should see the successfull message "Preferences updated successfully."
 
+# Used MySpanishLabMaster Course
 #Purpose: Uncheck and unlock the preference status in Work Space before the course is copied 
 Scenario: Uncheck and unlock the preference status in Work Space before the course is copied 	
 When I navigate to "Preferences" tab of the "Preferences" page
@@ -107,6 +114,7 @@ When I select 'Grading' sub tab/Option
 Then I should see the 'include email addresses in Gradebook export file' preference
 And I should see the new preference in unchecked state by default
 
+# Used MySpanishLabMaster Course
 #Purpose: Check and unlock the preference status in Work Space before the course is copied 
 Scenario: Check and unlock the preference status in Work Space before the course is copied 	
 When I navigate to "Preferences" tab of the "Preferences" page

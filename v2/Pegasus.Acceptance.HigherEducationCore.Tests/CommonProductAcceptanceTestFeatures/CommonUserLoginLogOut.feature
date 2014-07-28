@@ -10,6 +10,20 @@ When I logged into the Pegasus as "HEDCSCTGPPublisherAdmin" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Workspaces" page
 
+
+#Purpose:Verify The User Login As HedCoreAcceptanceInstructor
+Scenario: User Login As HedCoreAcceptanceInstructor
+Given I browsed the login url for "HedCoreAcceptanceInstructor"
+When I logged into the Pegasus as "HedCoreAcceptanceInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "HedCoreAcceptanceInstructorCourse" from the Global Home page as "HedCoreAcceptanceInstructor"
+
+#Purpose:Verify The User LogOut As HedCoreAcceptanceInstructor
+Scenario: User LogOut As HedCoreAcceptanceInstructor
+When I "Sign out" from the "HedCoreAcceptanceInstructor"
+Then I should see the successfull message "You have been signed out of the application."
+
 #Purpose:Verify The User Login As WorkSpaceAdmin
 Scenario: User Login As WorkSpaceAdmin
 Given I browsed the login url for "HedWsAdmin"

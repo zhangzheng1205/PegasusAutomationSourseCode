@@ -178,21 +178,21 @@ testRunner.And("I read the all pages saved file on WS to check if the downloaded
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check and lock the preference status in Work Space before the course is published" +
                     "", ((string[])(null)));
-#line 49
-this.ScenarioSetup(scenarioInfo);
 #line 50
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 51
-testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 52
-testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 53
-testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 54
-testRunner.When("I check the new preference checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 55
-testRunner.Then("I should see the check box as checked according to the user action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I check the new preference checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 56
+testRunner.Then("I should see the check box as checked according to the user action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 57
 testRunner.And("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -207,17 +207,17 @@ testRunner.And("I should see the successfull message \"Preferences updated succe
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Uncheck and lock the preference status in Work Space before the course is publish" +
                     "ed", ((string[])(null)));
-#line 59
-this.ScenarioSetup(scenarioInfo);
-#line 60
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 61
-testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 62
-testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 63
-testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 64
+testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 65
+testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 66
 testRunner.And("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -232,17 +232,17 @@ testRunner.And("I should see the successfull message \"Preferences updated succe
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Uncheck and unlock the preference status in Work Space before the course is publi" +
                     "shed", ((string[])(null)));
-#line 67
-this.ScenarioSetup(scenarioInfo);
-#line 68
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
-testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 70
-testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 71
-testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 72
+testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 73
+testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 74
+testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 75
 testRunner.And("I should see the new preference in unchecked state by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -257,21 +257,21 @@ testRunner.And("I should see the new preference in unchecked state by default", 
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check and unlock the preference status in Work Space before the course is publish" +
                     "ed", ((string[])(null)));
-#line 75
-this.ScenarioSetup(scenarioInfo);
-#line 76
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 77
-testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 78
-testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 79
-testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 80
-testRunner.When("I check the new preference checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 81
-testRunner.Then("I should see the check box as checked according to the user action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 82
+testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 83
+testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 84
+testRunner.When("I check the new preference checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 85
+testRunner.Then("I should see the check box as checked according to the user action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 86
 testRunner.And("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -284,21 +284,21 @@ testRunner.And("I should see the successfull message \"Preferences updated succe
         public virtual void CheckAndLockThePreferenceStatusInWorkSpaceBeforeTheCourseIsCopied()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check and lock the preference status in Work Space before the course is copied", ((string[])(null)));
-#line 85
-this.ScenarioSetup(scenarioInfo);
-#line 86
-testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 87
-testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 88
-testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 89
-testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 90
-testRunner.When("I check the new preference checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 91
-testRunner.Then("I should see the check box as checked according to the user action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 92
+testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 93
+testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 94
+testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 95
+testRunner.When("I check the new preference checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 96
+testRunner.Then("I should see the check box as checked according to the user action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 97
 testRunner.And("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -311,17 +311,17 @@ testRunner.And("I should see the successfull message \"Preferences updated succe
         public virtual void UncheckAndLockThePreferenceStatusInWorkSpaceBeforeTheCourseIsCopied()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Uncheck and lock the preference status in Work Space before the course is copied", ((string[])(null)));
-#line 95
+#line 101
 this.ScenarioSetup(scenarioInfo);
-#line 96
+#line 102
 testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 97
+#line 103
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 98
+#line 104
 testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 99
+#line 105
 testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 100
+#line 106
 testRunner.And("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -336,17 +336,17 @@ testRunner.And("I should see the successfull message \"Preferences updated succe
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Uncheck and unlock the preference status in Work Space before the course is copie" +
                     "d", ((string[])(null)));
-#line 103
+#line 110
 this.ScenarioSetup(scenarioInfo);
-#line 104
+#line 111
 testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 105
+#line 112
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 106
+#line 113
 testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 107
+#line 114
 testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 108
+#line 115
 testRunner.And("I should see the new preference in unchecked state by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -359,21 +359,21 @@ testRunner.And("I should see the new preference in unchecked state by default", 
         public virtual void CheckAndUnlockThePreferenceStatusInWorkSpaceBeforeTheCourseIsCopied()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check and unlock the preference status in Work Space before the course is copied", ((string[])(null)));
-#line 111
+#line 119
 this.ScenarioSetup(scenarioInfo);
-#line 112
+#line 120
 testRunner.When("I navigate to \"Preferences\" tab of the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 113
+#line 121
 testRunner.Then("I should be on the \"Preferences\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 114
+#line 122
 testRunner.When("I select \'Grading\' sub tab/Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 115
+#line 123
 testRunner.Then("I should see the \'include email addresses in Gradebook export file\' preference", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 116
+#line 124
 testRunner.When("I check the new preference checkbox", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 117
+#line 125
 testRunner.Then("I should see the check box as checked according to the user action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 118
+#line 126
 testRunner.And("I should see the successfull message \"Preferences updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
