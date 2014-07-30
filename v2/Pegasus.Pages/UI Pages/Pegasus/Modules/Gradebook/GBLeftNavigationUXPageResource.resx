@@ -129,6 +129,9 @@
   <data name="GBLeftNavigationUXPage_ChapterResources_LinkText_Locator" xml:space="preserve">
     <value>CHAPTER RESOURCES</value>
   </data>
+  <data name="GBLeftNavigationUXPage_ElementTime_Value" xml:space="preserve">
+    <value>3000</value>
+  </data>
   <data name="GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator" xml:space="preserve">
     <value>Frame1</value>
   </data>

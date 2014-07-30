@@ -40,10 +40,7 @@ namespace Pegasus.Pages.UI_Pages
                IWebElement activityFolder =  base.WebDriver.FindElement(By
                    .PartialLinkText(GBLeftNavigationUXPageResource
                     .GBLeftNavigationUXPage_ActivityFolder_LinkText_Locator));
-               base.ClickByJavaScriptExecutor(activityFolder);
-         
-                //Navigate To Activity Folder
-                this.NavigateInsideActivityFolder();
+               base.ClickByJavaScriptExecutor(activityFolder);         
             }
             catch (Exception e)
             {
@@ -76,9 +73,10 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Navigate In Activity Folder
+        /// Navigate In Activity Folder.
         /// </summary>
-        private void NavigateInsideActivityFolder()
+        /// <param name="folderName">This is Folder Name.</param>
+        private void NavigateInsideActivityFolder(string folderName)
         {
             //Navigate Inside Activity Folder
             logger.LogMethodEntry("GBLeftNavigationUXPage", "NavigateInsideActivityFolder",
@@ -86,24 +84,12 @@ namespace Pegasus.Pages.UI_Pages
             //Select Left Navigation Frame
             this.SelectLeftNavigationFrame();
             // Click on Additional practice
-            base.WaitForElement(By.PartialLinkText(GBLeftNavigationUXPageResource
-                .GBLeftNavigationUXPage_AdditionalPractice_LinkText_Locator));
-           IWebElement additionalPractice =  
-               base.WebDriver.FindElement(By.PartialLinkText(GBLeftNavigationUXPageResource
-                .GBLeftNavigationUXPage_AdditionalPractice_LinkText_Locator));
-           base.ClickByJavaScriptExecutor(additionalPractice);
+            base.WaitForElement(By.PartialLinkText(folderName));
+           IWebElement getFolderName =  base.WebDriver.FindElement
+               (By.PartialLinkText(folderName));
+           base.ClickByJavaScriptExecutor(getFolderName);
             Thread.Sleep(Convert.ToInt32(GBLeftNavigationUXPageResource
-                .GBLeftNavigationUXPage_ThreadTime_Value));
-            base.SwitchToDefaultPageContent();
-            // Select Root Window
-            base.SelectWindow(GBLeftNavigationUXPageResource
-                .GBLeftNavigationUXPage_WindowName_Title);
-            // Switch to Activity Frame
-            base.WaitForElement(By.Id(GBLeftNavigationUXPageResource
-               .GBLeftNavigationUXPage_ActivityGradesFrame_Id_Locator));
-            //Switch To Frame
-            base.SwitchToIFrame(GBLeftNavigationUXPageResource
-              .GBLeftNavigationUXPage_ActivityGradesFrame_Id_Locator);
+                .GBLeftNavigationUXPage_ElementTime_Value));            
             logger.LogMethodExit("GBLeftNavigationUXPage", "NavigateInsideActivityFolder",
                            base.isTakeScreenShotDuringEntryExit);
         }
