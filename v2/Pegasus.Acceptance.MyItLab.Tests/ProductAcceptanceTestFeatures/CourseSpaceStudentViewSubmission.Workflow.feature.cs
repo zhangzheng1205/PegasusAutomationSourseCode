@@ -305,6 +305,117 @@ testRunner.And("I should be on the \"Assignments - To Do\" page", ((string)(null
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student validating score in gradebook for SIM5 Excel activity By SMS Student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentViewSubmission")]
+        public virtual void StudentValidatingScoreInGradebookForSIM5ExcelActivityBySMSStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating score in gradebook for SIM5 Excel activity By SMS Student", ((string[])(null)));
+#line 107
+this.ScenarioSetup(scenarioInfo);
+#line 108
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 109
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 110
+testRunner.When("I navigate inside the folder level type \"Excel\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 111
+testRunner.Then("I should see the activity \"Excel Chapter 1 Skill-Based Training\" score \"100\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 112
+testRunner.When("I click on cmenu \"View Submissions\" of asset \"Excel Chapter 1 Skill-Based Trainin" +
+                    "g\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 113
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 114
+testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student validating score in gradebook for SIM5 PowerPoint activity By SMS Student" +
+            "")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentViewSubmission")]
+        public virtual void StudentValidatingScoreInGradebookForSIM5PowerPointActivityBySMSStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating score in gradebook for SIM5 PowerPoint activity By SMS Student" +
+                    "", ((string[])(null)));
+#line 118
+this.ScenarioSetup(scenarioInfo);
+#line 119
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 120
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 121
+testRunner.When("I navigate inside the folder level type \"PowerPoint\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 122
+testRunner.Then("I should see the activity \"PowerPoint Chapter 1 Skill-Based Training\" score \"70\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 123
+testRunner.When("I click on cmenu \"View Submissions\" of asset \"Excel Chapter 1 Skill-Based Trainin" +
+                    "g\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 124
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 125
+testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student validating score in gradebook for SIM5 Word activity By SMS Student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentViewSubmission")]
+        public virtual void StudentValidatingScoreInGradebookForSIM5WordActivityBySMSStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating score in gradebook for SIM5 Word activity By SMS Student", ((string[])(null)));
+#line 129
+this.ScenarioSetup(scenarioInfo);
+#line 130
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 131
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 132
+testRunner.When("I navigate inside the folder level type \"Word\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 133
+testRunner.Then("I should see the activity \"Word Chapter 1 Skill-Based Training\" score \"0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 134
+testRunner.When("I click on cmenu \"View Submissions\" of asset \"Excel Chapter 1 Skill-Based Trainin" +
+                    "g\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 135
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 136
+testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student validating score in gradebook for SIM5 Access activity By SMS Student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudentViewSubmission")]
+        public virtual void StudentValidatingScoreInGradebookForSIM5AccessActivityBySMSStudent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating score in gradebook for SIM5 Access activity By SMS Student", ((string[])(null)));
+#line 140
+this.ScenarioSetup(scenarioInfo);
+#line 141
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 142
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 143
+testRunner.When("I navigate inside the folder level type \"Access\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 144
+testRunner.Then("I should see the activity \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario" +
+                    " 1)\" score \"100\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 145
+testRunner.When("I click on cmenu \"View Submissions\" of asset \"Excel Chapter 1 Skill-Based Trainin" +
+                    "g\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 146
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 147
+testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

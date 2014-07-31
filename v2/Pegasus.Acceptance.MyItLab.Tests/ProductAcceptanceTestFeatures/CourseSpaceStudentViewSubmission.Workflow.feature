@@ -102,5 +102,49 @@ When I click on submission list for save for later
 Then I should see the message "Activity has been started and saved for later but not yet submitted." for save for later
 And  I should be on the "Assignments - To Do" page
 
+#MyITLabOffice2013Program
+#Purpose : Student validating score in gradebook for SIM5 Excel activity
+Scenario: Student validating score in gradebook for SIM5 Excel activity By SMS Student
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate inside the folder level type "Excel" in gradebook
+Then I should see the activity "Excel Chapter 1 Skill-Based Training" score "100"
+When I click on cmenu "View Submissions" of asset "Excel Chapter 1 Skill-Based Training" in gradebook
+Then I should be on the "View Submission" page
+When I close the "View Submission" window
+
+#MyITLabOffice2013Program
+#Purpose : Student validating score in gradebook for SIM5 PowerPoint activity
+Scenario: Student validating score in gradebook for SIM5 PowerPoint activity By SMS Student
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate inside the folder level type "PowerPoint" in gradebook
+Then I should see the activity "PowerPoint Chapter 1 Skill-Based Training" score "70"
+When I click on cmenu "View Submissions" of asset "Excel Chapter 1 Skill-Based Training" in gradebook
+Then I should be on the "View Submission" page
+When I close the "View Submission" window
+
+#MyITLabOffice2013Program
+#Purpose : Student validating score in gradebook for SIM5 Word activity
+Scenario: Student validating score in gradebook for SIM5 Word activity By SMS Student
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate inside the folder level type "Word" in gradebook
+Then I should see the activity "Word Chapter 1 Skill-Based Training" score "0"
+When I click on cmenu "View Submissions" of asset "Excel Chapter 1 Skill-Based Training" in gradebook
+Then I should be on the "View Submission" page
+When I close the "View Submission" window
+
+#MyITLabOffice2013Program
+#Purpose : Student validating score in gradebook for SIM5 Access activity
+Scenario: Student validating score in gradebook for SIM5 Access activity By SMS Student
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate inside the folder level type "Access" in gradebook
+Then I should see the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" score "100"
+When I click on cmenu "View Submissions" of asset "Excel Chapter 1 Skill-Based Training" in gradebook
+Then I should be on the "View Submission" page
+When I close the "View Submission" window
+
 
 

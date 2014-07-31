@@ -99,13 +99,13 @@ namespace Pegasus.Pages.UI_Pages
                             base.isTakeScreenShotDuringEntryExit);
             //Select Left Navigation Frame
             this.SelectLeftNavigationFrame();
+            base.FocusOnElementByPartialLinkText(folderName);
             // Click on Additional practice
             base.WaitForElement(By.PartialLinkText(folderName));
            IWebElement getFolderName =  base.WebDriver.FindElement
                (By.PartialLinkText(folderName));
            base.ClickByJavaScriptExecutor(getFolderName);
-            Thread.Sleep(Convert.ToInt32(GBLeftNavigationUXPageResource
-                .GBLeftNavigationUXPage_ElementTime_Value));            
+            Thread.Sleep(5000);            
             logger.LogMethodExit("GBLeftNavigationUXPage", "NavigateInsideActivityFolder",
                            base.isTakeScreenShotDuringEntryExit);
         }
@@ -179,17 +179,27 @@ namespace Pegasus.Pages.UI_Pages
             //Select Folder level type           
             try
             {
-                //Report Type
+                //MIL Folder level Type
                 switch (mILAuthoredCourseFolderLelevlTypeEnum)
                 {
-                    //Generate Activity Result by Student Report
+                    //Select Folder level type for Word
                     case MILAuthoredCourseFolderLelevlTypeEnum.Word:
+                        this.WordActivityFolderNavigationInGradebook();
                         break;
+                    //Select Folder level type for Access
                     case MILAuthoredCourseFolderLelevlTypeEnum.Access:
+                        //Access
+                        this.AccessActivityFolderNavigationInGradebook();
                         break;
+                    //Select Folder level type for Excel
                     case MILAuthoredCourseFolderLelevlTypeEnum.Excel:
+                        //Excel
+                        this.ExcelActivityFolderNavigationInGradebook();
                         break;
+                    //Select Folder level type for Powerpoint
                     case MILAuthoredCourseFolderLelevlTypeEnum.PowerPoint:
+                        //Powerpoint
+                        this.PowerPointActivityFolderNavigationInGradebook();
                         break;
                 }
             }
@@ -198,6 +208,103 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBLeftNavigationUXPage","ManageTheGradebookFolderNavigation",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Power Point Activity Folder Navigation In Gradebook. 
+        /// </summary>
+        private void PowerPointActivityFolderNavigationInGradebook()
+        {
+            //Power Point Activity Folder Navigation In Gradebook
+            logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "PowerPointActivityFolderNavigationInGradebook",
+               base.isTakeScreenShotDuringEntryExit);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel1_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel2_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel3_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel4_Name);
+            logger.LogMethodExit("GBLeftNavigationUXPage", 
+                "PowerPointActivityFolderNavigationInGradebook",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Excel Activity Folder Navigation In Gradebook. 
+        /// </summary>
+        private void ExcelActivityFolderNavigationInGradebook()
+        {
+            //Excel Activity Folder Navigation In Gradebook.
+            logger.LogMethodEntry("GBLeftNavigationUXPage", 
+                "ExcelActivityFolderNavigationInGradebook",
+               base.isTakeScreenShotDuringEntryExit);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel1_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel2_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel3_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel4_Name);
+            logger.LogMethodExit("GBLeftNavigationUXPage",
+                "ExcelActivityFolderNavigationInGradebook",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Access Activity Folder Navigation In Gradebook.
+        /// </summary>
+        private void AccessActivityFolderNavigationInGradebook()
+        {
+            //Access Activity Folder Navigation In Gradebook
+            logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "AccessActivityFolderNavigationInGradebook",
+               base.isTakeScreenShotDuringEntryExit);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Access_FolderLevel1_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Access_FolderLevel2_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Access_FolderLevel3_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Access_FolderLevel4_Name);
+            logger.LogMethodExit("GBLeftNavigationUXPage", 
+                "AccessActivityFolderNavigationInGradebook",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Word Activity Folder Navigation In Gradebook.
+        /// </summary>
+        private void WordActivityFolderNavigationInGradebook()
+        {
+            //Word Activity Folder Navigation In Gradebook
+            logger.LogMethodEntry("GBLeftNavigationUXPage", 
+                "WordActivityFolderNavigationInGradebook",
+               base.isTakeScreenShotDuringEntryExit);
+            //Navigate Inside the SubFolder Folder
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel1_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel2_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel3_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel4_Name);
+            logger.LogMethodExit("GBLeftNavigationUXPage", 
+                "WordActivityFolderNavigationInGradebook",
               base.isTakeScreenShotDuringEntryExit);
         }
     }

@@ -135,6 +135,57 @@
   <data name="GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator" xml:space="preserve">
     <value>Frame1</value>
   </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Access_FolderLevel1_Name" xml:space="preserve">
+    <value>Access 2013</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Access_FolderLevel2_Name" xml:space="preserve">
+    <value>Access Chapter 1: Getting Started with Microsoft Access</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Access_FolderLevel3_Name" xml:space="preserve">
+    <value>Access Chapter 1: Activities</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Access_FolderLevel4_Name" xml:space="preserve">
+    <value>Access Chapter 1: Simulation Activities</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name" xml:space="preserve">
+    <value>GO! with Microsoft Office 2013, Volume 1</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Excel_FolderLevel1_Name" xml:space="preserve">
+    <value>Excel 2013</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Excel_FolderLevel2_Name" xml:space="preserve">
+    <value>Excel Chapter 1: Creating a Worksheet and Charting Data</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Excel_FolderLevel3_Name" xml:space="preserve">
+    <value>Excel Chapter 1: Activities</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Excel_FolderLevel4_Name" xml:space="preserve">
+    <value>Excel Chapter 1: Simulation Activities</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel1_Name" xml:space="preserve">
+    <value>PowerPoint 2013</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel2_Name" xml:space="preserve">
+    <value>PowerPoint Chapter 1: Getting Started with Microsoft</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel3_Name" xml:space="preserve">
+    <value>PowerPoint Chapter 1: Activities</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel4_Name" xml:space="preserve">
+    <value>PowerPoint Chapter 1: Simulation Activities</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Word_FolderLevel1_Name" xml:space="preserve">
+    <value>Word 2013</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Word_FolderLevel2_Name" xml:space="preserve">
+    <value>Word Chapter 1: Creating Documents with Microsoft Word 2013</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Word_FolderLevel3_Name" xml:space="preserve">
+    <value>Word Chapter 1: Activities</value>
+  </data>
+  <data name="GBLeftNavigationUXPage_SIM5_Word_FolderLevel4_Name" xml:space="preserve">
+    <value>Word Chapter 1: Simulation Activities</value>
+  </data>
   <data name="GBLeftNavigationUXPage_ThreadTime_Value" xml:space="preserve">
     <value>20000</value>
   </data>
