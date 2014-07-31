@@ -168,7 +168,7 @@ namespace Pegasus.Pages.UI_Pages
                     string getActivityName = base.GetElementTextByXPath(
                         string.Format(GBStudentUXPageResource.
                         GBStudentUXPage_Activity_Name_Xpath_Locator, initialCount));
-                    if (getActivityName.Contains(activityName))
+                    if (getActivityName == activityName)
                     {
                         //Get Activity Score
                         getActivityScore = this.GetActivityScore(getActivityScore, initialCount).Trim();

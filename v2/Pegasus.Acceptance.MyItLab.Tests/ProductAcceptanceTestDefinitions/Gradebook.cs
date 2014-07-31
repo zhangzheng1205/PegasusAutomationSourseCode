@@ -105,7 +105,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// Verify Pre Test Score
+        /// Verify Pre Test Score.
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity Type Enum</param>
         /// <param name="activityScore">This is activity score</param>
@@ -128,7 +128,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                      (activity.Name + GradebookResource.Gradebook_Resource_PreTest_Name)));
             Logger.LogMethodExit("Gradebook", "VerifyThePreTestScore",
                 base.isTakeScreenShotDuringEntryExit);
-        }
+        }        
 
         /// <summary>
         /// Click On Cmenu of Asset.
@@ -151,7 +151,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 activity.Name + GradebookResource.Gradebook_Resource_PreTest_Name, assetCmenu);
             Logger.LogMethodExit("Gradebook", "ClickOnCmenuOfAsset",
                 base.isTakeScreenShotDuringEntryExit);
-        }        
+        } 
 
         /// <summary>
         /// Select The Cmenu Of Asset In GradeBook.
@@ -738,7 +738,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             User.UserTypeEnum userTypeEnum)
         {
             //Verify Grade of the Submitted Activity
-            Logger.LogMethodEntry("ViewGrades",
+            Logger.LogMethodEntry("Gradebook",
                 "VerifyGradeOfTheSubmittedActivity",
                 base.isTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityName);
@@ -752,9 +752,76 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                  (GradebookResource.GradeBook_ActivityGrade_Score_Value,
                     new GBInstructorUXPage().GetActivityStatus(
                     activity.Name, user.LastName, user.FirstName)));
-            Logger.LogMethodExit("ViewGrades",
+            Logger.LogMethodExit("Gradebook",
                 "VerifyGradeOfTheSubmittedActivity",
                 base.isTakeScreenShotDuringEntryExit);
-        }        
+        }
+
+        /// <summary>
+        ///Verify The Activity Score In Gradebook .
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="activityScore">This is Activitry Score.</param>
+        [Then(@"I should see the activity ""(.*)"" score ""(.*)""")]
+        public void VerifyTheActivityScoreInGradebook(string activityName, 
+            string activityScore)
+        {
+            //Verify The Activity Score In Gradebook
+            Logger.LogMethodEntry("Gradebook", "VerifyTheActivityScoreInGradebook",
+                base.isTakeScreenShotDuringEntryExit);
+            GBStudentUXPage gbStudentPage = new GBStudentUXPage();
+            //Select Gradebook Window
+            gbStudentPage.SelectGradebookWindow();
+            //Verify The Searched Asset Name
+            Logger.LogAssertion("VerifyAssetScore",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(activityScore,
+                     gbStudentPage.GetActivityScoreInGradebook
+                     (activityName)));
+            Logger.LogMethodExit("Gradebook", "VerifyTheActivityScoreInGradebook",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select The Cmenu Of Asset In Gradebook.
+        /// </summary>
+        /// <param name="assetCmenu">This is Cmenu Option.</param>
+        /// <param name="activityName">This is Activity Name.</param>
+        [When(@"I click on cmenu ""(.*)"" of asset ""(.*)"" in gradebook")]
+        public void SelectTheCmenuOfAssetInGradebook(string assetCmenu, string activityName)
+        {
+            //Select The Cmenu Of Asset In Gradebook
+            Logger.LogMethodEntry("Gradebook","SelectTheCmenuOfAssetInGradebook",
+                base.isTakeScreenShotDuringEntryExit);
+            GBStudentUXPage gbStudentPage = new GBStudentUXPage();
+            //Select Gradebook window
+            gbStudentPage.SelectGradebookWindow();
+            //Click On Activity Cmenu
+            gbStudentPage.ClickOnActivityCmenuOptionInGradeBookOfStudent(
+                activityName, assetCmenu);
+            Logger.LogMethodExit("Gradebook", "SelectTheCmenuOfAssetInGradebook",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Manage The Gradebook FolderLevel Navigation.
+        /// </summary>
+        /// <param name="navigateMILFolderLevelName">This is MIL Folder Level Type.</param>
+        [When(@"I navigate inside the folder level type ""(.*)"" in gradebook")]
+        public void ManageTheGradebookFolderLevelNavigation(string navigateMILFolderLevelType)
+        {
+            //Manage The Gradebook FolderLevel Navigation
+            Logger.LogMethodEntry("Gradebook",
+                "ManageTheGradebookFolderLevelNavigation",
+                base.isTakeScreenShotDuringEntryExit);
+            //Manage The Gradebook Folder Navigation
+            new GBLeftNavigationUXPage().ManageTheGradebookFolderNavigation(
+                (GBLeftNavigationUXPage.MILAuthoredCourseFolderLelevlTypeEnum)Enum.Parse(typeof
+                (GBLeftNavigationUXPage.MILAuthoredCourseFolderLelevlTypeEnum),
+                navigateMILFolderLevelType));
+            Logger.LogMethodExit("Gradebook", 
+                "ManageTheGradebookFolderLevelNavigation",
+                base.isTakeScreenShotDuringEntryExit);
+        }
     }
 }

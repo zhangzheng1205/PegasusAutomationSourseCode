@@ -22,6 +22,20 @@ namespace Pegasus.Pages.UI_Pages
         private static readonly Logger logger = Logger.GetInstance(typeof(GBLeftNavigationUXPage));
 
         /// <summary>
+        /// This is the Pegasus Intructor Certificate Types.
+        /// </summary>
+        public enum MILAuthoredCourseFolderLelevlTypeEnum
+        {
+            /// <summary>
+            /// 'Certificate of Completion(Training)' Certificate Type
+            /// </summary>
+            Excel = 1,
+            PowerPoint = 2,
+            Word=3,
+            Access=4
+        }
+
+        /// <summary>
         /// Navigate inside the Activity folder
         /// </summary>
         public void NavigateToActivityFolder()
@@ -59,6 +73,8 @@ namespace Pegasus.Pages.UI_Pages
             //Select Left Navigation Frame
             logger.LogMethodEntry("GBLeftNavigationUXPage", "SelectLeftNavigationFrame",
                                  base.isTakeScreenShotDuringEntryExit);
+            base.WaitUntilPopUpLoads(GBLeftNavigationUXPageResource
+                .GBLeftNavigationUXPage_WindowName_Title);
             //Select Window
             base.SelectWindow(GBLeftNavigationUXPageResource
                 .GBLeftNavigationUXPage_WindowName_Title);
@@ -148,6 +164,41 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAssetProperty);
             logger.LogMethodExit("GBLeftNavigationUXPage", "EnterInsideAsset",
                            base.isTakeScreenShotDuringEntryExit);
+        }        
+
+        /// <summary>
+        /// Manage The Gradebook Folder Navigation.
+        /// </summary>
+        /// <param name="mILAuthoredCourseFolderLelevlTypeEnum">This is MIL Folder Navigation Type Enum.</param>
+        public void ManageTheGradebookFolderNavigation(MILAuthoredCourseFolderLelevlTypeEnum 
+            mILAuthoredCourseFolderLelevlTypeEnum)
+        {
+            //Manage The Gradebook Folder Navigation
+            logger.LogMethodEntry("GBLeftNavigationUXPage","ManageTheGradebookFolderNavigation",
+               base.isTakeScreenShotDuringEntryExit);
+            //Select Folder level type           
+            try
+            {
+                //Report Type
+                switch (mILAuthoredCourseFolderLelevlTypeEnum)
+                {
+                    //Generate Activity Result by Student Report
+                    case MILAuthoredCourseFolderLelevlTypeEnum.Word:
+                        break;
+                    case MILAuthoredCourseFolderLelevlTypeEnum.Access:
+                        break;
+                    case MILAuthoredCourseFolderLelevlTypeEnum.Excel:
+                        break;
+                    case MILAuthoredCourseFolderLelevlTypeEnum.PowerPoint:
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBLeftNavigationUXPage","ManageTheGradebookFolderNavigation",
+              base.isTakeScreenShotDuringEntryExit);
         }
     }
 }
