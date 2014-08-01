@@ -263,6 +263,27 @@ testRunner.Then("I should see the grade under activity column of the submitted \
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor Validating student grade in instructor grade book By SMS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorGradebook")]
+        public virtual void InstructorValidatingStudentGradeInInstructorGradeBookBySMSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Validating student grade in instructor grade book By SMS Instructor", ((string[])(null)));
+#line 91
+this.ScenarioSetup(scenarioInfo);
+#line 92
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 93
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 94
+testRunner.When("I navigate inside the folder level type \"Word\" in instructor gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 95
+testRunner.Then("I should see the score \"0\" of \"Word Chapter 1 Project 1A Skill-Based Exam (Scenar" +
+                    "io 1)\" activity for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
