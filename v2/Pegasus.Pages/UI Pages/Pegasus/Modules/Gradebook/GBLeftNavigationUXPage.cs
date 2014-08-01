@@ -68,22 +68,29 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Select Left Navigation Frame
         /// </summary>
-        private void SelectLeftNavigationFrame()
+        public void SelectLeftNavigationFrame()
         {
             //Select Left Navigation Frame
             logger.LogMethodEntry("GBLeftNavigationUXPage", "SelectLeftNavigationFrame",
                                  base.isTakeScreenShotDuringEntryExit);
-            base.WaitUntilPopUpLoads(GBLeftNavigationUXPageResource
-                .GBLeftNavigationUXPage_WindowName_Title);
-            //Select Window
-            base.SelectWindow(GBLeftNavigationUXPageResource
-                .GBLeftNavigationUXPage_WindowName_Title);
-            //Wait for Element
-            base.WaitForElement(By.Id(GBLeftNavigationUXPageResource
-                .GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator));
-            //Switch to Frame
-            base.SwitchToIFrame(GBLeftNavigationUXPageResource
-                .GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator);
+            try
+            {
+                base.WaitUntilPopUpLoads(GBLeftNavigationUXPageResource
+                        .GBLeftNavigationUXPage_WindowName_Title);
+                //Select Window
+                base.SelectWindow(GBLeftNavigationUXPageResource
+                    .GBLeftNavigationUXPage_WindowName_Title);
+                //Wait for Element
+                base.WaitForElement(By.Id(GBLeftNavigationUXPageResource
+                    .GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator));
+                //Switch to Frame
+                base.SwitchToIFrame(GBLeftNavigationUXPageResource
+                    .GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("GBLeftNavigationUXPage", "SelectLeftNavigationFrame",
                                  base.isTakeScreenShotDuringEntryExit);
         }
@@ -305,6 +312,101 @@ namespace Pegasus.Pages.UI_Pages
                 GBLeftNavigationUXPage_SIM5_Word_FolderLevel4_Name);
             logger.LogMethodExit("GBLeftNavigationUXPage", 
                 "WordActivityFolderNavigationInGradebook",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Manage Instructor Gradebook Folder Navigation.
+        /// </summary>
+        /// <param name="mILAuthoredCourseFolderLelevlTypeEnum">
+        /// This is MIL Folder Navigation Type Enum.</param>
+        public void ManageInstructorGradebookFolderNavigation(
+            MILAuthoredCourseFolderLelevlTypeEnum mILAuthoredCourseFolderLelevlTypeEnum)
+        {
+            //Manage Instructor Gradebook Folder Navigation
+            logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "ManageInstructorGradebookFolderNavigation",
+               base.isTakeScreenShotDuringEntryExit);               
+            try
+            {                
+                switch (mILAuthoredCourseFolderLelevlTypeEnum)
+                {
+                    //Select Folder level of type Word
+                    case MILAuthoredCourseFolderLelevlTypeEnum.Word:
+                        this.WordActivityFolderNavigationInInstructorGradebook();
+                        break;                    
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBLeftNavigationUXPage",
+                "ManageInstructorGradebookFolderNavigation",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Word Activity Folder Navigation In Instructor Gradebook.
+        /// </summary>
+        private void WordActivityFolderNavigationInInstructorGradebook()
+        {
+            //Word Activity Folder Navigation In Instructor Gradebook
+            logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "WordActivityFolderNavigationInInstructorGradebook",
+               base.isTakeScreenShotDuringEntryExit);
+            //Navigate Inside the SubFolder Folder
+            this.NavigateToActivityFolderInInstructorGradebook(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name);
+            this.NavigateToActivityFolderInInstructorGradebook(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel1_Name);
+            this.NavigateToActivityFolderInInstructorGradebook(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel2_Name);
+            this.NavigateToActivityFolderInInstructorGradebook(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel3_Name);
+            this.NavigateToActivityFolderInInstructorGradebook(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel4_Name);
+            logger.LogMethodExit("GBLeftNavigationUXPage",
+                "WordActivityFolderNavigationInInstructorGradebook",
+              base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Activity Folder In Instructor Gradebook.
+        /// </summary>
+        private void NavigateToActivityFolderInInstructorGradebook(string folderName)
+        {
+            //Navigate To Activity Folder In Instructor Gradebook
+            logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "NavigateToActivityFolderInInstructorGradebook",
+               base.isTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            int getFolderCount = Convert.ToInt32(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_Folder_Count_Initial_Value);
+            string getFolderText = string.Empty;
+            //Get Folder Count
+            getFolderCount = base.GetElementCountByXPath(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_Folder_Count_Xpath_Locator);
+            for (int i = Convert.ToInt32(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_Loop_Initializer); i <= getFolderCount; i++)
+            {
+                //Get Folder Text
+                getFolderText = base.GetElementTextByXPath(string.Format(
+                    GBLeftNavigationUXPageResource.GBLeftNavigationUXPage_Folder_Text_Xpath_Locator, i));
+                if (getFolderText == folderName)
+                {
+                    //Click on Folder
+                    IWebElement getFolderNameProperty = base.GetWebElementPropertiesByXPath(
+                        string.Format(GBLeftNavigationUXPageResource.
+                        GBLeftNavigationUXPage_Folder_Name_Xpath_Locator, i));
+                    base.ClickByJavaScriptExecutor(getFolderNameProperty);
+                    Thread.Sleep(Convert.ToInt32(GBLeftNavigationUXPageResource.
+                        GBLeftNavigationUXPage_Wait_Time));
+                    break;
+                }
+            }
+            logger.LogMethodExit("GBLeftNavigationUXPage",
+                "NavigateToActivityFolderInInstructorGradebook",
               base.isTakeScreenShotDuringEntryExit);
         }
     }

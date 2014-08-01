@@ -259,13 +259,8 @@ namespace Pegasus.Pages.UI_Pages
                                  base.isTakeScreenShotDuringEntryExit);
             try
             {
-                //Wait for GradeBook Window
-                base.WaitUntilWindowLoads(GBFoldersPageResource.
-                    GBFolders_Page_Gradebook_WindowName);
-                base.SelectWindow(GBFoldersPageResource.GBFolders_Page_Gradebook_WindowName);
-                //Wait for Frame Id
-                base.WaitForElement(By.Id(GBFoldersPageResource.GBFolders_Page_Frame_Id_Locator));
-                base.SwitchToIFrame(GBFoldersPageResource.GBFolders_Page_Frame_Id_Locator);
+                //Select Gradebook Window and Frame
+                this.SelectGradebookWindowandFrame();
                 //Navigate Inside the SubFolder Folder
                 this.NavigateInsideActivityFolder(GBFoldersPageResource.
                     GBFolders_Page_Root_Folder_one);
@@ -279,6 +274,32 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBFoldersPage", "NavigateInsideParentActivityFolder",
+                                 base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Gradebook Window and Frame.
+        /// </summary>
+        public void SelectGradebookWindowandFrame()
+        {
+            //Select Gradebook Window and Frame
+            logger.LogMethodEntry("GBFoldersPage", "SelectGradebookWindowandFrame",
+                                 base.isTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait for GradeBook Window
+                base.WaitUntilWindowLoads(GBFoldersPageResource.
+                    GBFolders_Page_Gradebook_WindowName);
+                base.SelectWindow(GBFoldersPageResource.GBFolders_Page_Gradebook_WindowName);
+                //Wait for Frame Id
+                base.WaitForElement(By.Id(GBFoldersPageResource.GBFolders_Page_Frame_Id_Locator));
+                base.SwitchToIFrame(GBFoldersPageResource.GBFolders_Page_Frame_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBFoldersPage", "SelectGradebookWindowandFrame",
                                  base.isTakeScreenShotDuringEntryExit);
         }
 

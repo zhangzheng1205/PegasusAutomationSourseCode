@@ -106,11 +106,56 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 0.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Folder_Count_Initial_Value {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Folder_Count_Initial_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;rptrFolderContent&apos;]/div.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Folder_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Folder_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;rptrFolderContent&apos;]/div[{0}]/div[2].
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Folder_Name_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Folder_Name_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;rptrFolderContent&apos;]/div[{0}].
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Folder_Text_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Folder_Text_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Frame1.
         /// </summary>
         internal static string GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator {
             get {
                 return ResourceManager.GetString("GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Loop_Initializer {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Loop_Initializer", resourceCulture);
             }
         }
         
@@ -273,6 +318,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         internal static string GBLeftNavigationUXPage_ThreadTime_Value {
             get {
                 return ResourceManager.GetString("GBLeftNavigationUXPage_ThreadTime_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5000.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Wait_Time {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Wait_Time", resourceCulture);
             }
         }
         
