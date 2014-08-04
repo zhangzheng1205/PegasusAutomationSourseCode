@@ -13,7 +13,6 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Safari;
-using Pearson.Pegasus.TestAutomation.Frameworks;
 
 namespace Pearson.Pegasus.TestAutomation.Frameworks
 {
@@ -127,12 +126,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static DesiredCapabilities[] MultiBrowserWebDriver(ref IWebDriver webDriver)
         {
             // set each browser desired capabilities
-            DesiredCapabilities[] browserList;
-            browserList = new DesiredCapabilities[] { 
-                            DesiredCapabilities.Chrome(), 
-                            DesiredCapabilities.Firefox(),
-                            DesiredCapabilities.InternetExplorer()
-                        };
+            var browserList = new DesiredCapabilities[] { 
+                DesiredCapabilities.Chrome(), 
+                DesiredCapabilities.Firefox(),
+                DesiredCapabilities.InternetExplorer()
+            };
             foreach (DesiredCapabilities browser in browserList)
             {
                 if ((isChromeExecuted == false) || ((isChromeExecuted == true) && (counter == 2)))
@@ -204,7 +202,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             if (getExecutingPath != null)
                 ieservice.LogFile = Path.Combine(getExecutingPath, "Log", "IEDriver" + DateTime.Now.Ticks + ".log");
             // set internet explorer options
-            InternetExplorerOptions options = new InternetExplorerOptions
+            var options = new InternetExplorerOptions
                                                   {
                                                       IntroduceInstabilityByIgnoringProtectedModeSettings = true,
                                                       UnexpectedAlertBehavior = InternetExplorerUnexpectedAlertBehavior.Ignore,
@@ -277,40 +275,39 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Browser Name and Version List.</returns>
         private static Dictionary<string, string> GetBrowserDetails()
         {
-            object path;
-            Dictionary<string, string> BrowserList = new Dictionary<string, string>();
+            var browserList = new Dictionary<string, string>();
 
             // check in current user -- chrome
-            path = Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe", string.Empty, null);
+            object path = Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe", string.Empty, null);
             if (path == null)
             {
                 // check in local machine -- chrome
                 path = Registry.GetValue(@"HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe", string.Empty, null);
                 if (path != null)
                 {
-                    BrowserList.Add("Chrome", FileVersionInfo.GetVersionInfo(path.ToString()).FileVersion);
+                    browserList.Add("Chrome", FileVersionInfo.GetVersionInfo(path.ToString()).FileVersion);
                 }
             }
             else
             {
-                BrowserList.Add("Chrome", FileVersionInfo.GetVersionInfo(path.ToString()).FileVersion);
+                browserList.Add("Chrome", FileVersionInfo.GetVersionInfo(path.ToString()).FileVersion);
             }
 
             // check in local machine -- FF
             path = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\firefox.exe", string.Empty, null);
             if (path != null)
             {
-                BrowserList.Add("FireFox", FileVersionInfo.GetVersionInfo(path.ToString()).FileVersion);
+                browserList.Add("FireFox", FileVersionInfo.GetVersionInfo(path.ToString()).FileVersion);
             }
 
             // check in local machine --IE
             path = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\iexplore.exe", string.Empty, null);
             if (path != null)
             {
-                BrowserList.Add("IE", FileVersionInfo.GetVersionInfo(path.ToString()).FileVersion);
+                browserList.Add("IE", FileVersionInfo.GetVersionInfo(path.ToString()).FileVersion);
             }
 
-            return BrowserList;
+            return browserList;
         }
 
         /// <summary>
