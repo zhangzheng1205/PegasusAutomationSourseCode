@@ -224,7 +224,7 @@ namespace Pegasus.Integration.MLP.Tests.
                 "NavigateInsideTheFolder",
                 base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside the Folder
-            new GBLeftNavigationUXPage().NavigateInsideFolderHED();
+            new GBLeftNavigationUXPage().NavigateInsideFolderHed();
             Logger.LogMethodExit("ActivitySubmission",
                 "NavigateInsideTheFolder",
                 base.IsTakeScreenShotDuringEntryExit);

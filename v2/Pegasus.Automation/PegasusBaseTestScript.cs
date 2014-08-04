@@ -14,40 +14,40 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Instance of the web driver.
         /// </summary>
-        private IWebDriver webDriver = WebDriverSingleton.GetInstance().WebDriver;
+        private readonly IWebDriver _webDriver = WebDriverSingleton.GetInstance().WebDriver;
 
         /// <summary>
         /// Returns an instance of web driver.
         /// </summary>
         protected IWebDriver WebDriver
         {
-            get { return webDriver; }
+            get { return _webDriver; }
         }
 
         /// <summary>
         /// Instance of Selenium.
         /// </summary>
-        private ISelenium selenium = WebDriverSingleton.GetInstance().Selenium;
+        private readonly ISelenium _selenium = WebDriverSingleton.GetInstance().Selenium;
 
         /// <summary>
         /// Returns an instance of Selenium.
         /// </summary>
         protected ISelenium Selenium
         {
-            get { return selenium; }
+            get { return _selenium; }
         }
 
         /// <summary>
         /// This is the browser.
         /// </summary>
-        private String browser = WebDriverSingleton.GetInstance().Browser;
+        private readonly String _browser = WebDriverSingleton.GetInstance().Browser;
 
         /// <summary>
         /// This is the browser.
         /// </summary>
         public String Browser
         {
-            get { return browser; }
+            get { return _browser; }
         }
 
         /// <summary>
@@ -70,6 +70,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// This is the name of the user who is logged in.
         /// </summary>
         public static String UserName = "";
+
         /// <summary>
         /// This is the login space
         /// </summary>

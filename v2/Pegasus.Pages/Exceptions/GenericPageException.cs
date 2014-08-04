@@ -12,18 +12,18 @@ namespace Pegasus.Pages.Exceptions
     /// </summary>
     public class GenericPageException : BasePegasusAutomationException
     {
-        public override Pearson.Pegasus.TestAutomation.Frameworks.Logger logger
+        public override Logger Logger
         {
             get
             {
-                return exceptionLogger;
+                return ExceptionLogger;
             }
         }
 
         /// <summary>
         /// Static logger instance of the class.
         /// </summary>
-        private static Logger exceptionLogger = Logger.GetInstance(typeof(GenericPageException));
+        private static readonly Logger ExceptionLogger = Logger.GetInstance(typeof(GenericPageException));
 
         /// <summary>
         /// GenericPageException exception.

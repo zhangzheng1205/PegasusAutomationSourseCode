@@ -37,9 +37,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 case PegasusBaseTestFixture.Chrome: processes = Process.GetProcessesByName("chrome"); break;
             }
 
-            processes.Union(Process.GetProcessesByName("IEDriverServer.exe"));
-            processes.Union(Process.GetProcessesByName("chromedriver"));
+            if (processes != null)
+            {
+                processes.Union(Process.GetProcessesByName("IEDriverServer.exe"));
+                processes.Union(Process.GetProcessesByName("chromedriver"));
 
+            }
             return processes;
         }
     }

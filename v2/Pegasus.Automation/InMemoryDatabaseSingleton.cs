@@ -71,7 +71,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             // get xml data based on file path
             String getXmlData = File.ReadAllText(xmlTestDataFilePath);
-            XmlDocument xmlDocument = new XmlDocument();
+            var xmlDocument = new XmlDocument();
             // load xml data
             xmlDocument.LoadXml(getXmlData);
             // created xml serializer
@@ -104,9 +104,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             if (xmlNodeList != null && xmlNodeList.Count > 0)
             {
                 // created object xml node reader
-                XmlNodeReader reader = new XmlNodeReader(xmlNodeList.Item(0));
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
                 // get product list
-                List<Product> getProductList = (List<Product>)
+                var getProductList = (List<Product>)
                  xmlSerializer.Deserialize(reader);
                 foreach (Product products in getProductList)
                 {
@@ -133,9 +133,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             if (xmlNodeList != null && xmlNodeList.Count > 0)
             {
                 // created object xml node reader
-                XmlNodeReader reader = new XmlNodeReader(xmlNodeList.Item(0));
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
                 // get class list
-                List<Class> getClassList = (List<Class>)
+                var getClassList = (List<Class>)
                  xmlSerializer.Deserialize(reader);
                 foreach (Class classes in getClassList)
                 {
@@ -162,9 +162,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             if (xmlNodeList != null && xmlNodeList.Count > 0)
             {
                 // created object xml node reader
-                XmlNodeReader reader = new XmlNodeReader(xmlNodeList.Item(0));
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
                 // get activity list
-                List<Activity> getActivityList = (List<Activity>)
+                var getActivityList = (List<Activity>)
                  xmlSerializer.Deserialize(reader);
                 foreach (Activity activities in getActivityList)
                 {
@@ -191,9 +191,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             if (xmlNodeList != null && xmlNodeList.Count > 0)
             {
                 // created object xml node reader
-                XmlNodeReader reader = new XmlNodeReader(xmlNodeList.Item(0));
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
                 // get program list
-                List<Program> getProgramList = (List<Program>)
+                var getProgramList = (List<Program>)
                  xmlSerializer.Deserialize(reader);
                 foreach (Program programs in getProgramList)
                 {
@@ -220,9 +220,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             if (xmlNodeList != null && xmlNodeList.Count > 0)
             {
                 // created object xml node reader
-                XmlNodeReader reader = new XmlNodeReader(xmlNodeList.Item(0));
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
                 // get users list
-                List<User> getUserList = (List<User>)
+                var getUserList = (List<User>)
                  xmlSerializer.Deserialize(reader);
                 foreach (User users in getUserList)
                 {
@@ -249,9 +249,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             if (xmlNodeList != null && xmlNodeList.Count > 0)
             {
                 // created Object xml node reader
-                XmlNodeReader reader = new XmlNodeReader(xmlNodeList.Item(0));
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
                 // get course list
-                List<Course> getCourseList = (List<Course>)
+                var getCourseList = (List<Course>)
                  xmlSerializer.Deserialize(reader);
                 foreach (Course courses in getCourseList)
                 {
@@ -276,9 +276,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             if (xmlNodeList != null && xmlNodeList.Count > 0)
             {
                 // created object xml node reader
-                XmlNodeReader reader = new XmlNodeReader(xmlNodeList.Item(0));
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
                 // get organization list
-                List<Organization> organizationList = (List<Organization>)
+                var organizationList = (List<Organization>)
                  xmlSerializer.Deserialize(reader);
                 foreach (Organization organizations in organizationList)
                 {
@@ -295,12 +295,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static InMemoryDatabaseSingleton GetInstance()
         {
             //if the instance doesnt exist then create a new one
-            if (_inMemoryDatabaseSingleton == null)
-            {
-                _inMemoryDatabaseSingleton = new InMemoryDatabaseSingleton();
-            }
-
-            return _inMemoryDatabaseSingleton;
+            return _inMemoryDatabaseSingleton ?? (_inMemoryDatabaseSingleton = new InMemoryDatabaseSingleton());
         }
 
         /// <summary>

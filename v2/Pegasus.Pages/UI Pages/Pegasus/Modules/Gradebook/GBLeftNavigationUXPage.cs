@@ -19,15 +19,16 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// The Static Instance Of The Logger For The Class
         /// </summary>
-        private static readonly Logger logger = Logger.GetInstance(typeof(GBLeftNavigationUXPage));
+        private static readonly Logger Logger = 
+            Logger.GetInstance(typeof(GBLeftNavigationUXPage));
 
         /// <summary>
         /// This is the Pegasus Intructor Certificate Types.
         /// </summary>
-        public enum MILAuthoredCourseFolderLelevlTypeEnum
+        public enum MilAuthoredCourseFolderLelevlTypeEnum
         {
             /// <summary>
-            /// 'Certificate of Completion(Training)' Certificate Type
+            /// 'Certificate of Completion(Training)' Certificate Type.
             /// </summary>
             Excel = 1,
             PowerPoint = 2,
@@ -36,12 +37,12 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Navigate inside the Activity folder
+        /// Navigate inside the Activity folder.
         /// </summary>
         public void NavigateToActivityFolder()
         {
             //Navigate Inside The Folder
-            logger.LogMethodEntry("GBLeftNavigationUXPage", "NavigateToActivityFolder",
+            Logger.LogMethodEntry("GBLeftNavigationUXPage", "NavigateToActivityFolder",
                                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -60,18 +61,18 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("GBLeftNavigationUXPage", "NavigateToActivityFolder",
+            Logger.LogMethodExit("GBLeftNavigationUXPage", "NavigateToActivityFolder",
                              base.IsTakeScreenShotDuringEntryExit);
 
         }
 
         /// <summary>
-        /// Select Left Navigation Frame
+        /// Select Left Navigation Frame.
         /// </summary>
         private void SelectLeftNavigationFrame()
         {
             //Select Left Navigation Frame
-            logger.LogMethodEntry("GBLeftNavigationUXPage", "SelectLeftNavigationFrame",
+            Logger.LogMethodEntry("GBLeftNavigationUXPage", "SelectLeftNavigationFrame",
                                  base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilPopUpLoads(GBLeftNavigationUXPageResource
                 .GBLeftNavigationUXPage_WindowName_Title);
@@ -84,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
             //Switch to Frame
             base.SwitchToIFrame(GBLeftNavigationUXPageResource
                 .GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator);
-            logger.LogMethodExit("GBLeftNavigationUXPage", "SelectLeftNavigationFrame",
+            Logger.LogMethodExit("GBLeftNavigationUXPage", "SelectLeftNavigationFrame",
                                  base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -95,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
         private void NavigateInsideActivityFolder(string folderName)
         {
             //Navigate Inside Activity Folder
-            logger.LogMethodEntry("GBLeftNavigationUXPage", "NavigateInsideActivityFolder",
+            Logger.LogMethodEntry("GBLeftNavigationUXPage", "NavigateInsideActivityFolder",
                             base.IsTakeScreenShotDuringEntryExit);
             //Select Left Navigation Frame
             this.SelectLeftNavigationFrame();
@@ -106,17 +107,17 @@ namespace Pegasus.Pages.UI_Pages
            base.ClickByJavaScriptExecutor(getFolderName);
             Thread.Sleep(Convert.ToInt32(GBLeftNavigationUXPageResource
                 .GBLeftNavigationUXPage_ElementTime_Value));            
-            logger.LogMethodExit("GBLeftNavigationUXPage", "NavigateInsideActivityFolder",
+            Logger.LogMethodExit("GBLeftNavigationUXPage", "NavigateInsideActivityFolder",
                            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Navigate Inside the Folder
+        /// Navigate Inside the Folder.
         /// </summary>
-        public void NavigateInsideFolderHED( )
+        public void NavigateInsideFolderHed( )
         {
             //Navigate Inside Folder
-            logger.LogMethodEntry("GBLeftNavigationUXPage", "NavigateInsideFolderHED",
+            Logger.LogMethodEntry("GBLeftNavigationUXPage", "NavigateInsideFolderHed",
                             base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -141,18 +142,18 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);                
             }
-            logger.LogMethodExit("GBLeftNavigationUXPage", "NavigateInsideFolderHED",
+            Logger.LogMethodExit("GBLeftNavigationUXPage", "NavigateInsideFolderHed",
                            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Enter inside Asset
+        /// Enter inside Asset.
         /// </summary>
-        /// <param name="assetName">This is Asset Name</param>
+        /// <param name="assetName">This is Asset Name.</param>
         private void EnterInsideAsset(string assetName)
         {
             //Enter inside Asset
-            logger.LogMethodEntry("GBLeftNavigationUXPage", "EnterInsideAsset",
+            Logger.LogMethodEntry("GBLeftNavigationUXPage", "EnterInsideAsset",
                             base.IsTakeScreenShotDuringEntryExit);
             //Wait for Some Time
             Thread.Sleep(Convert.ToInt32(GBLeftNavigationUXPageResource
@@ -162,34 +163,34 @@ namespace Pegasus.Pages.UI_Pages
                 base.GetWebElementPropertiesByPartialLinkText(assetName);
             //Click on Asset Name
             base.ClickByJavaScriptExecutor(getAssetProperty);
-            logger.LogMethodExit("GBLeftNavigationUXPage", "EnterInsideAsset",
+            Logger.LogMethodExit("GBLeftNavigationUXPage", "EnterInsideAsset",
                            base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
         /// Manage The Gradebook Folder Navigation.
         /// </summary>
-        /// <param name="mILAuthoredCourseFolderLelevlTypeEnum">This is MIL Folder Navigation Type Enum.</param>
-        public void ManageTheGradebookFolderNavigation(MILAuthoredCourseFolderLelevlTypeEnum 
-            mILAuthoredCourseFolderLelevlTypeEnum)
+        /// <param name="milAuthoredCourseFolderLelevlTypeEnum">This is MIL Folder Navigation Type Enum.</param>
+        public void ManageTheGradebookFolderNavigation(MilAuthoredCourseFolderLelevlTypeEnum 
+            milAuthoredCourseFolderLelevlTypeEnum)
         {
             //Manage The Gradebook Folder Navigation
-            logger.LogMethodEntry("GBLeftNavigationUXPage","ManageTheGradebookFolderNavigation",
+            Logger.LogMethodEntry("GBLeftNavigationUXPage","ManageTheGradebookFolderNavigation",
                base.IsTakeScreenShotDuringEntryExit);
             //Select Folder level type           
             try
             {
                 //Report Type
-                switch (mILAuthoredCourseFolderLelevlTypeEnum)
+                switch (milAuthoredCourseFolderLelevlTypeEnum)
                 {
                     //Generate Activity Result by Student Report
-                    case MILAuthoredCourseFolderLelevlTypeEnum.Word:
+                    case MilAuthoredCourseFolderLelevlTypeEnum.Word:
                         break;
-                    case MILAuthoredCourseFolderLelevlTypeEnum.Access:
+                    case MilAuthoredCourseFolderLelevlTypeEnum.Access:
                         break;
-                    case MILAuthoredCourseFolderLelevlTypeEnum.Excel:
+                    case MilAuthoredCourseFolderLelevlTypeEnum.Excel:
                         break;
-                    case MILAuthoredCourseFolderLelevlTypeEnum.PowerPoint:
+                    case MilAuthoredCourseFolderLelevlTypeEnum.PowerPoint:
                         break;
                 }
             }
@@ -197,7 +198,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("GBLeftNavigationUXPage","ManageTheGradebookFolderNavigation",
+            Logger.LogMethodExit("GBLeftNavigationUXPage","ManageTheGradebookFolderNavigation",
               base.IsTakeScreenShotDuringEntryExit);
         }
     }

@@ -37,7 +37,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         static readonly string BrowserName = ConfigurationManager.AppSettings["Browser"];
         protected bool IsTakeScreenShotDuringEntryExit = Convert.ToBoolean
             (ConfigurationManager.AppSettings["TakeScreenShotDuringEntryExit"]);
-        private int waitTimeOut = Convert.ToInt32(
+        private readonly int _waitTimeOut = Convert.ToInt32(
             ConfigurationManager.AppSettings["ElementFindTimeOutInSeconds"]);
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             if (timeout == -1)
             {
-                timeout = this.waitTimeOut;
+                timeout = this._waitTimeOut;
             }
             return new WebDriverWait(WebDriver, TimeSpan.FromSeconds(timeout));
         }
@@ -66,7 +66,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             //Wait For Element
             if (timeOut == -1)
             {
-                timeOut = this.waitTimeOut;
+                timeOut = this._waitTimeOut;
             }
             try
             {
@@ -94,7 +94,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             //Wait Till Page Switched Successfully
             if (timeOut == -1)
             {
-                timeOut = this.waitTimeOut;
+                timeOut = this._waitTimeOut;
             }
             try
             {
@@ -242,7 +242,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             //Is Pop Up Close
             if (timeOut == -1)
             {
-                timeOut = this.waitTimeOut;
+                timeOut = this._waitTimeOut;
             }
             int waitTimeConsumed = 0;
             try
@@ -310,7 +310,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             stopWatch.Start();
             if (timeOut == -1)
             {
-                timeOut = this.waitTimeOut;
+                timeOut = this._waitTimeOut;
             }
             try
             {
@@ -356,7 +356,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             stopWatch.Start();
             if (timeOut == -1)
             {
-                timeOut = this.waitTimeOut;
+                timeOut = this._waitTimeOut;
             }
             try
             {
@@ -398,7 +398,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             stopWatch.Start();
             if (timeOut == -1)
             {
-                timeOut = this.waitTimeOut;
+                timeOut = this._waitTimeOut;
             }
             while (stopWatch.Elapsed.TotalSeconds < timeOut)
             {
@@ -496,7 +496,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             stopWatch.Start();
             if (timeOut == -1)
             {
-                timeOut = this.waitTimeOut;
+                timeOut = this._waitTimeOut;
             }
             try
             {
@@ -560,7 +560,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             stopWatch.Start();
             if (timeOut == -1)
             {
-                timeOut = this.waitTimeOut;
+                timeOut = this._waitTimeOut;
             }
             try
             {
@@ -607,7 +607,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             stopWatch.Start();
             if (timeOut == -1)
             {
-                timeOut = this.waitTimeOut;
+                timeOut = this._waitTimeOut;
             }
             bool isThinkingIndicatorProcessing = false;
             try
@@ -659,16 +659,5 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return results == -1 ? false : true;
         }
 
-        public void downloadFile(string url, string localPath)
-        {
-            var client = new WebClient();
-            client.Headers[HttpRequestHeader.Cookie] = cookieString(WebDriver);
-            client.DownloadFile(url, localPath);
-        }
-        string cookieString(IWebDriver driver)
-        {
-            var cookies = driver.Manage().Cookies.AllCookies;
-            return string.Join("; ", cookies.Select(c => string.Format("{0}={1}", c.Name, c.Value)));
-        }
     }
 }

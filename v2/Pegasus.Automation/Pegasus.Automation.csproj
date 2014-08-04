@@ -121,7 +121,6 @@
     <Content Include="InMemoryTestData\PegasusTestDataVM.xml" />
     <Content Include="TestData\Branding_Image.png" />
     <Content Include="TestData\CourseIconImage.png" />
-    <Content Include="TestData\IE.exe" />
     <Content Include="TestData\Product_Banner.png" />
     <Content Include="TestData\Product_Icon.png" />
   </ItemGroup>

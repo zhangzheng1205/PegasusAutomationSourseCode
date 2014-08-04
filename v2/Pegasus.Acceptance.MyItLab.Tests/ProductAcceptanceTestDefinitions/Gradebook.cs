@@ -18,7 +18,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// The Static Instance Of The Logger For The Class.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(Gradebook));
 
         /// <summary>
@@ -816,8 +816,8 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             //Manage The Gradebook Folder Navigation
             new GBLeftNavigationUXPage().ManageTheGradebookFolderNavigation(
-                (GBLeftNavigationUXPage.MILAuthoredCourseFolderLelevlTypeEnum)Enum.Parse(typeof
-                (GBLeftNavigationUXPage.MILAuthoredCourseFolderLelevlTypeEnum),
+                (GBLeftNavigationUXPage.MilAuthoredCourseFolderLelevlTypeEnum)Enum.Parse(typeof
+                (GBLeftNavigationUXPage.MilAuthoredCourseFolderLelevlTypeEnum),
                 navigateMILFolderLevelType));
             Logger.LogMethodExit("Gradebook", 
                 "ManageTheGradebookFolderLevelNavigation",

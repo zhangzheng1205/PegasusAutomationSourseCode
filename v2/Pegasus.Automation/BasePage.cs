@@ -514,7 +514,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Simulate focus on element xpath by Moves the mouse to the middle of the element. 
         /// The element is scrolled into view and its location is calculated using getBoundingClientRect.
         /// </summary>
-        /// <param name="xPathLocator">Defines the interface by locating element class name through which 
+        /// <param name="classNameLocator">Defines the interface by locating element class name through which 
         /// the user controls elements on the page.</param>
         /// <remarks>This is working with google chome and other browsers.</remarks>
         protected void PerformFocusOnElementActionByClassName(string classNameLocator)

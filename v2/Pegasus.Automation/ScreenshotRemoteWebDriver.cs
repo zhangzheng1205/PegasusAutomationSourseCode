@@ -20,7 +20,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Gets a <see cref="Screenshot"/> object representing the image of the page on the screen. 
         /// </summary> 
         /// <returns> screenshot<see cref="Screenshot"/> object containing the image.</returns> 
-        public Screenshot GetScreenshot()
+        public new Screenshot GetScreenshot()
         {
             // Get the screenshot as base64. 
             Response screenshotResponse = Execute(DriverCommand.Screenshot, null);

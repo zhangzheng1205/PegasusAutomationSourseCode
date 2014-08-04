@@ -21,7 +21,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <summary>
         /// This is the logger.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(ActivitySubmission));
 
         /// <summary>
@@ -265,7 +265,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "NavigateInsideTheFolder",
                 base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside the Folder
-            new GBLeftNavigationUXPage().NavigateInsideFolderHED();
+            new GBLeftNavigationUXPage().NavigateInsideFolderHed();
             Logger.LogMethodExit("ActivitySubmission",
                 "NavigateInsideTheFolder",
                 base.IsTakeScreenShotDuringEntryExit);

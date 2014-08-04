@@ -15,7 +15,7 @@ namespace Pegasus.Pages.Exceptions
         /// <summary>
         /// The logger  instance for the class.
         /// </summary>
-        public override Logger logger
+        public override Logger Logger
         {
             get
             {
