@@ -34,13 +34,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Click The Display All Courses Button
             Logger.LogMethodEntry("CreateCourse", "ClickTheDisplayAllLinkButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On The Display All Courses Button
             new SearchCoursesPage().ClickOnTheDisplayAllLinkButton
                 ((SearchCoursesPage.DisplayAllLinkTypeEnum)Enum.Parse
                 (typeof(SearchCoursesPage.DisplayAllLinkTypeEnum), displayLinkType));
             Logger.LogMethodExit("CreateCourse", "ClickTheDisplayAllLinkButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Search The Copy As Test Course 
             Logger.LogMethodEntry("CreateCourse", "SearchTheCopyAsTestCourse",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Get the Course from Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -65,7 +65,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 SearchCoursesPage.SearchRadioButtonEnum),
                 searchRadioButton), course.Name, dropdownOption);
             Logger.LogMethodExit("CreateCourse", "SearchTheCopyAsTestCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -76,11 +76,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click The Cmenu Option Of CTC Course 
             Logger.LogMethodEntry("CreateCourse", "ClickTheCmenuOptionOfCTCCourse",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Click On The Cmenu Option Of CTC Course 
             new ManageCoursesPage().ClickOnTheCmenuOptionOfCTCCourse();
             Logger.LogMethodExit("CreateCourse", "ClickTheCmenuOptionOfCTCCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Display The Default Cmenu Options Of CTC
             Logger.LogMethodEntry("CreateCourse",
                 "DisplayTheDefaultCmenuOptionsOfCTC",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of Default Cmenu Options
             Logger.LogAssertion("VerifyDisplayOfCmenuOptions",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.
@@ -100,7 +100,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     IsDefaultCmenuOptionsDisplayedInCTC()));
             Logger.LogMethodExit("CreateCourse",
                 "DisplayTheDefaultCmenuOptionsOfCTC",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Create Copy As Testing Course In Workspace 
             Logger.LogMethodEntry("CreateCourse",
                "CreateCopyAsTestingCourseInWorkspace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
              (CreateCourseResource.
@@ -123,7 +123,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new NewCoursePage().CopyCourseAsTestingCourse(courseTypeEnum);
             Logger.LogMethodExit("CreateCourse",
                 "CreateCopyAsTestingCourseInWorkspace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -135,12 +135,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Click On Cmenu Option
             Logger.LogMethodEntry("CreateCourse",
                 "ClickOnTheCmenuOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickOnTheCmenuOptionOfCTCCourse();
             Logger.LogMethodExit("CreateCourse",
                  "ClickOnTheCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -152,7 +152,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify Cmenu Option of Course
             Logger.LogMethodEntry("CreateCourse",
                 "VerifyCmenuOptionsOfCourse",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("VerifyCmenuOptions",
                  ScenarioContext.Current.ScenarioInfo.Title, () =>
                      Assert.AreEqual(CreateCourseResource.
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                      new ManageCoursesPage().GetCmenuOptionOfCourse()));
             Logger.LogMethodExit("CreateCourse",
                 "VerifyCmenuOptionsOfCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
                 /// <summary>
@@ -172,7 +172,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify Course Created,Type and Status
             Logger.LogMethodEntry("CreateCourse",
                  "VerifyCreatedTypeAndStatus",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify Course Type
             Logger.LogAssertion("VerifyCourseType", ScenarioContext.Current.ScenarioInfo.Title, ()
                 => Assert.AreEqual(CreateCourseResource.CreateCourseCopy_CourseType_Name
@@ -194,7 +194,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 new ManageCoursesPage().GetDateMonthYearFromManageFrame()));
             Logger.LogMethodExit("CreateCourse",
                "VerifyCreatedTypeAndStatus",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -206,7 +206,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify New Search and Delete Selected Course Button
             Logger.LogMethodEntry("CreateCourse",
                  "VerifyNewSearchAndDeleteSelectedCourseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify New Search Button
             Logger.LogAssertion("VerifyNewSearchButton", ScenarioContext.Current.ScenarioInfo.Title, ()
                 => Assert.AreEqual(CreateCourseResource.CreateCourseCopy_NewSearch_Name,
@@ -217,7 +217,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                  new ManageCoursesPage().GetDeleteSelectedCoursesButtonName()));
             Logger.LogMethodExit("CreateCourse",
                "VerifyNewSearchAndDeleteSelectedCourseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

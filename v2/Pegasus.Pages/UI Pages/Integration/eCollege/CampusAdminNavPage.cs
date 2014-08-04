@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Administrative Pages Link
             Logger.LogMethodEntry("AdministrationPage", "SelectAdministrativePagesLink",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -47,7 +47,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdministrationPage", "SelectAdministrativePagesLink",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -57,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             Logger.LogMethodEntry("CampusAdminNavPage",
-               "SelectAdministrationPagesWindow", base.isTakeScreenShotDuringEntryExit);
+               "SelectAdministrationPagesWindow", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Loads
             base.WaitUntilWindowLoads(CampusAdminNavPageResource.
                 CampusAdminNav_Page_AdministrationPages_Window_Title);
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(CampusAdminNavPageResource.
                                   CampusAdminNav_Page_AdministrationPages_Window_Title);
             Logger.LogMethodExit("CampusAdminNavPage",
-               "SelectAdministrationPagesWindow", base.isTakeScreenShotDuringEntryExit);
+               "SelectAdministrationPagesWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("CampusAdminNavPage",
                 "SelectTopContentAreaFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Name(CampusAdminNavPageResource.
                CampusAdminNav_Page_subnav_Frame_Name_Locator));
             //Select Frame SubNav
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
                 CampusAdminNav_Page_subnav_Frame_Name_Locator);
              Logger.LogMethodExit("CampusAdminNavPage",
                 "SelectTopContentAreaFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

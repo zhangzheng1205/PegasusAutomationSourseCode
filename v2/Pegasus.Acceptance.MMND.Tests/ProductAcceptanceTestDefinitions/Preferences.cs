@@ -27,12 +27,12 @@ namespace Pegasus.Acceptance.MMND.Tests.ProductAcceptanceTestDefinitions
         {
             // Select the preference sub tab
             Logger.LogMethodEntry("Preferences", "ClickOnPreferenceSubTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             // Navigating to given prefernce tab options from preference page
             new GeneralPreferencesPage().ClickonSubTabofPreference(subTabName);
             // Select the preference sub tab
             Logger.LogMethodExit("Preferences", "ClickOnPreferenceSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -43,11 +43,11 @@ namespace Pegasus.Acceptance.MMND.Tests.ProductAcceptanceTestDefinitions
         {
             //Enable The Grading Preference Settings
             Logger.LogMethodEntry("Preferences", "EnableTheGradingPreferenceSettings",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Enable Grading Preference Settings
             new GradingPreferencesPage().EnableGradingPreferenceSettings();
             Logger.LogMethodExit("Preferences", "EnableTheGradingPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -29,11 +29,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Select Enroll In Another Course Option
             Logger.LogMethodEntry("SMSUserEnrollement", "SelectEnrollInAnotherCourseOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Enroll In Another Course Button
             new UserLayoutRootNodePage().ClickOnEnrollInAnotherCourseButton();
             Logger.LogMethodExit("SMSUserEnrollement", "SelectEnrollInAnotherCourseOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -46,13 +46,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Enter Section Id
             Logger.LogMethodEntry("SMSUserEnrollement", "EnterTheSectionId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course Id From Memeory
             Course course = Course.Get(courseTypeEnum);
             //Enter Section Id
             new RegisterPage().EnterSectionId(course.ECollegeIntegrationId);
             Logger.LogMethodExit("SMSUserEnrollement", "EnterTheSectionId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -65,7 +65,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Verify the Username Text Box
             Logger.LogMethodEntry("SMSUserEnrollement", "VerifySectionEnrollement",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course Id From Memeory
             Course course = Course.Get(courseTypeEnum);
             //Verify The UserName Text
@@ -73,7 +73,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue(
                 new RegisterPage().IsSectionNameDisplayed(course.Name)));
             Logger.LogMethodExit("SMSUserEnrollement", "VerifySectionEnrollement",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             
         }
     }

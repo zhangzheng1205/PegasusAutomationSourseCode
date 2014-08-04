@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Text Match Question
             logger.LogMethodEntry("TextMatchPage", "CreateTextMatchQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter Question Title
             string questionDetails = this.EnterTitleForTextMatch().ToString();
             //Click on View Source Button and Enter data
@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store Question Details In Memory
             this.StoreQuestionDetailsInMemory(questionDetails);
             logger.LogMethodExit("TextMatchPage", "CreateTextMatchQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Title
             logger.LogMethodEntry("TextMatchPage", "EnterTitleForTextMatch",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Guid questionTitle = Guid.NewGuid();
             //Select Entry List Window
             base.SelectWindow(TextMatchPageResource.
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(TextMatchPageResource.
                 TextMatch_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("TextMatchPage", "EnterTitleForTextMatch",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return questionTitle;
         }
 
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On View Source Button and Enter Data
             logger.LogMethodEntry("TextMatchPage",
                 "ClickOnViewSourceAndEnterDataForTextMatchQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Frame
             base.WaitForElement(By.Id(TextMatchPageResource.
                 TextMatch_Page_Frame_Id_Locator));
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
                 TextMatch_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("TextMatchPage",
                 "ClickOnViewSourceAndEnterDataForTextMatchQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add pallette Characters
             logger.LogMethodEntry("TextMatchPage", "AddPalletteCharacters",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Add a character  
             this.ClickOnCharacterPalleteButton(TextMatchPageResource.
                 TextMatch_Page_CharacterPallete_Xpath_Locator_one);
@@ -133,7 +133,7 @@ namespace Pegasus.Pages.UI_Pages
             this.ClickOnCharacterPalleteButton(TextMatchPageResource.
                 TextMatch_Page_CharacterPallete_Xpath_Locator_Five);
             logger.LogMethodExit("TextMatchPage", "AddPalletteCharacters",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Character Pallette
             logger.LogMethodEntry("TextMatchPage", "ClickOnCharacterPalleteButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.XPath(locator));
             base.FocusOnElementByXPath(locator);
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("TextMatchPage", "ClickOnCharacterPalleteButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("TextMatchPage",
                 "ClickOnAddAnswerButtonOfTextmatchQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.SelectWindow(TextMatchPageResource.
                 TextMatch_Page_CreateTextMatch_Window_Name);
@@ -176,7 +176,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAddAnswerButton);
             logger.LogMethodExit("TextMatchPage",
                 "ClickOnAddAnswerButtonOfTextmatchQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Number Of Lines For Answer TextBox
             logger.LogMethodEntry("TextMatchPage",
                 "EnterTheNumberOfLinesForAnswerTextBox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(TextMatchPageResource.
                 TextMatch_Page_NumberOfLines_Id_Locator));
             //Clear Text Box
@@ -199,7 +199,7 @@ namespace Pegasus.Pages.UI_Pages
                 TextMatchPageResource.TextMatch_Page_NumberOfLines_Value);
             logger.LogMethodExit("TextMatchPage",
                 "EnterTheNumberOfLinesForAnswerTextBox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill Keyword Values
             logger.LogMethodEntry("TextMatchPage", "FillKeywordValues",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             for (int initialCount = Convert.ToInt32(TextMatchPageResource.
                 TextMatch_Page_InitialValue); initialCount <= Convert.ToInt32(
                 TextMatchPageResource.TextMatch_Page_MaxValue); initialCount++)
@@ -227,7 +227,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("TextMatchPage", "FillKeywordValues",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill Score Values
             logger.LogMethodEntry("TextMatchPage", "FillScoreValues",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             for (int initialCount = Convert.ToInt32(TextMatchPageResource.
                 TextMatch_Page_InitialValue); initialCount <= Convert.ToInt32(
                 TextMatchPageResource.TextMatch_Page_MaxValue); initialCount++)
@@ -254,7 +254,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("TextMatchPage", "FillScoreValues",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -265,7 +265,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Save and Close Button
             logger.LogMethodEntry("TextMatchPage",
                 "ClickONSaveAndCloseButtonOfTextMatchQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.WaitForElement(By.Id(TextMatchPageResource.
                 TextMatch_Page_Save_Button_Id_Locator));
@@ -277,7 +277,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("TextMatchPage",
                 "ClickONSaveAndCloseButtonOfTextMatchQuestion",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -288,7 +288,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Question Details in Memory
             logger.LogMethodEntry("MatchingPage", "storeQuestionDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Save Question Properties in Memory
             Question newQuestion = new Question
             {
@@ -298,7 +298,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newQuestion.StoreQuestionInMemory();
             logger.LogMethodExit("MatchingPage", "storeQuestionDetailsInMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
 

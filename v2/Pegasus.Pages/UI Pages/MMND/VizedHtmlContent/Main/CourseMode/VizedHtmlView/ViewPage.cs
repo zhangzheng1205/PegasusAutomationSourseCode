@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Preview Instructor Todays View Link
             logger.LogMethodEntry("ViewPage", "PreviewInstructorTodaysViewLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {                
                 //Select the Window
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ViewPage", "PreviewInstructorTodaysViewLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Press Enter Key
             logger.LogMethodEntry("ViewPage", "PressEnterKeyAndAcceptTheAlert",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on the "Todays View" link
@@ -79,7 +79,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ViewPage", "PressEnterKeyAndAcceptTheAlert",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Preview Student Course Calendar Link
             logger.LogMethodEntry("ViewPage", "PreviewStudentCourseCalendarLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Window
@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ViewPage", "PreviewStudentCourseCalendarLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get The Course Name From Pegasus Window
             logger.LogMethodEntry("ViewPage", "GetTheCourseNameFromPegasusWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getCourseName = string.Empty;
             try
@@ -146,7 +146,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ViewPage", "GetTheCourseNameFromPegasusWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCourseName;
         }
 
@@ -157,7 +157,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Sign Out From MMND
             logger.LogMethodEntry("ViewPage", "SignOutFromMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Default Window
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ViewPage", "SignOutFromMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -185,7 +185,7 @@ namespace Pegasus.Pages.UI_Pages
         {            
             //Preview Instructor Todays View Link
             logger.LogMethodEntry("ViewPage", "PreviewAssetLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Window
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ViewPage", "PreviewAssetLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Is Asset Tool Link Page Displayed
             logger.LogMethodEntry("ViewPage", "IsAssetToolLinkPageDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             bool isCoursePreviewLinkDisplayed = false;            
             try
@@ -244,7 +244,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ViewPage", "IsAssetToolLinkPageDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isCoursePreviewLinkDisplayed;
         }
 
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate Inside Sub Tab Link
             logger.LogMethodExit("ViewPage", "NavigateInsideSubTabLink",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Course Home Window
@@ -273,7 +273,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ViewPage", "NavigateInsideSubTabLink",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -283,14 +283,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Home Window
             logger.LogMethodExit("ViewPage", "SelectCourseHomeWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Course Home Window
             base.WaitUntilWindowLoads(ViewPageResource.
                 ViewPage_CourseHome_Window_Name);
             base.SelectWindow(ViewPageResource.
                 ViewPage_CourseHome_Window_Name);
             logger.LogMethodExit("ViewPage", "SelectCourseHomeWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

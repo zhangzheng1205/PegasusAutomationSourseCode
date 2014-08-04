@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Course Channel Option
             logger.LogMethodEntry("CourseChannelPreferencesPage", "EnableCourseChannelOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Preferences Window
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseChannelPreferencesPage", "EnableCourseChannelOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectPreferencesWindow()
         {
             logger.LogMethodEntry("CourseChannelPreferencesPage", "SelectPreferencesWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Preferences Window
             base.WaitUntilWindowLoads(CourseChannelPreferencesPageResource.
                 CourseChannelPreferences_Page_Window_Name);
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(CourseChannelPreferencesPageResource.
                 CourseChannelPreferences_Page_Window_Name);
             logger.LogMethodExit("CourseChannelPreferencesPage", "SelectPreferencesWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

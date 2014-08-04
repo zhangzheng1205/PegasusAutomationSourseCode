@@ -32,10 +32,10 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Enter inside the course
             logger.LogMethodEntry("AuthoreECollegeCourse", "EnterInsideECollegeCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new ECPWireframePage().SelectECollegeCourse(courseTypeEnum);
             logger.LogMethodExit("AuthoreECollegeCourse", "EnterInsideECollegeCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click on left frame option.
@@ -46,11 +46,11 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Click on left frame option 
             logger.LogMethodEntry("AuthoreECollegeCourse", "SelectLeftFrameOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Click on Author link 
             new DotNextLaunchPage().ClickOnLeftFrameOption(optionName);
             logger.LogMethodExit("AuthoreECollegeCourse", "SelectLeftFrameOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Authoring of course.
@@ -60,13 +60,13 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Authoring the course
             logger.LogMethodEntry("AuthoreECollegeCourse", "AuthoringTheECollegeCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on HTMl link and Save Changes
             DotNextLaunchPage dotNextLaunchPage = new DotNextLaunchPage();
             dotNextLaunchPage.ClickOnHtmlLinkInCourseIntroduction();
             dotNextLaunchPage.ClickOnSaveChangeButton();
             logger.LogMethodExit("AuthoreECollegeCourse", "AuthoringTheECollegeCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -79,14 +79,14 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Verification on Enter Course Link
             logger.LogMethodEntry("AuthoreECollegeCourse", "VerificationOfEnterCourseLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Course Link
             logger.LogAssertion("VerifyEnterCourseLink", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
                     (enterCourseLink, new DotNextLaunchPage().
                     VerficationOfCourseLink()));
             logger.LogMethodExit("AuthoreECollegeCourse", "VerificationOfEnterCourseLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -99,11 +99,11 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Click on left side button
             logger.LogMethodEntry("AuthoreECollegeCourse", "ClickOnButtonFromBottomLeftFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Click on left side button
             new DotNextLaunchPage().ClickOnLeftBottomButton(buttonBottomFrame);
             logger.LogMethodExit("AuthoreECollegeCourse", "ClickOnButtonFromBottomLeftFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -31,7 +31,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify the Contents Displayed In Preferences Page
             Logger.LogMethodEntry("MMNDBackdoorLogin",
                 "VerifyTheContentsDisplayedInPreferencesPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of Default contents in Preference page
             Logger.LogAssertion("VerifyDisplayOfDefaultcontentsinPreferencepage",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue(
@@ -39,7 +39,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     IsBackdoorContentsDisplayedInPreferencesPage()));
             Logger.LogMethodExit("MMNDBackdoorLogin",
                 "VerifyTheContentsDisplayedInPreferencesPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -51,12 +51,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Enter The Welcome Text for Backdoor login
             Logger.LogMethodEntry("MMNDBackdoorLogin",
                 "EnterTheBackdoorWelcomeText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fill Welcome Text for Backdoor login
             new PublisherCustomizationPage().FillBackdoorWelcomeText();
             Logger.LogMethodExit("MMNDBackdoorLogin",
                 "EnterTheBackdoorWelcomeText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,12 +68,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Click On The Save Button in Preference
             Logger.LogMethodEntry("MMNDBackdoorLogin",
                 "ClickOnTheSaveButtonInPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click The Save Button In Preference tab
             new PublisherCustomizationPage().ClickTheSaveButtonInPreferenceTab();
             Logger.LogMethodExit("MMNDBackdoorLogin",
                 "ClickOnTheSaveButtonInPreference",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Welcome Text Displayed In Login Page
             Logger.LogMethodEntry("MMNDBackdoorLogin",
                 "WelcomeTextDisplayedInLoginPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Welcome Message Displayed In Login Page
             Logger.LogAssertion("VerifyWelcomeMessageInLoginPage",
                ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(
@@ -94,7 +94,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                    new PublisherCustomizationPage().WelcomeMessageDisplayedInLoginPage()));
             Logger.LogMethodExit("MMNDBackdoorLogin",
                 "WelcomeTextDisplayedInLoginPage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify EnrollToCourse And SearchCatalog Button Visiblity
             Logger.LogMethodEntry("MMNDBackdoorLogin",
                 "VerifyEnrollToCourseAndSearchCatalogButtonVisiblity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert if buttons should not be visible on Courses channel
             Logger.LogAssertion("MMNDBackdoorLogin",
                 "VerifyEnrollToCourseAndSearchCatalogButtonVisiblity",
@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 Enum.Parse(typeof(User.UserTypeEnum), userRole))));
             Logger.LogMethodExit("MMNDBackdoorLogin",
                 "VerifyEnrollToCourseAndSearchCatalogButtonVisiblity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -127,14 +127,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //verify visibility of MyProfile and Feedback link on Global Home Page
             Logger.LogMethodEntry("MMNDBackdoorLogin", "VerifyFeedbackAndMyProfileLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert visibility of MyProfile and Feedback link on Global Home Page
             Logger.LogAssertion("MMNDBackdoorLogin",
                 "VerifyFeedbackAndMyProfileLink",
                 () => Assert.IsFalse(new HEDGlobalHomePage()
                     .IsFeedbackAndMyProfileLingPresent()));
             Logger.LogMethodExit("MMNDBackdoorLogin", "VerifyFeedbackAndMyProfileLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -146,14 +146,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //verify presence of Sign out link
             Logger.LogMethodEntry("MMNDBackdoorLogin", "VerifySignOutLinkPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Sign out link object should not be null
             Logger.LogAssertion("MMNDBackdoorLogin",
                 "VerifySignOutLinkPresent",
                 () => Assert.IsNotNull(new HEDGlobalHomePage()
                     .GetSignOutLink(linkSignOut)));
             Logger.LogMethodExit("MMNDBackdoorLogin", "VerifySignOutLinkPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

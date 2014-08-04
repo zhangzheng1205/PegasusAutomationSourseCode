@@ -25,7 +25,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services.SIM5ContentBrowse
         {
             //Select Question Folder
             logger.LogMethodEntry("SIMRepositoryPage", "AddQuestionFolder",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select SIM5 Select Questions Window
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services.SIM5ContentBrowse
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SIMRepositoryPage", "AddQuestionFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services.SIM5ContentBrowse
         {
             //Click On Close Button
             logger.LogMethodEntry("SIMRepositoryPage", "ClickOnCloseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(SIMRepositoryPageResource.
                 SIMRepository_Page_Close_Button_Id_Locator));
             //Get Close Button Property
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services.SIM5ContentBrowse
             //Click On Close Button
             base.ClickByJavaScriptExecutor(getCloseButtonProperty);
             logger.LogMethodExit("SIMRepositoryPage", "ClickOnCloseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services.SIM5ContentBrowse
         {
             //Click On Add Button
             logger.LogMethodEntry("SIMRepositoryPage", "ClickOnAddButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(SIMRepositoryPageResource.
                 SIMRepository_Page_Add_Button_Id_Locator));
             //Get Add Button Property
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services.SIM5ContentBrowse
             //Click On Add Button
             base.ClickByJavaScriptExecutor(getAddButtonProperty);
             logger.LogMethodExit("SIMRepositoryPage", "ClickOnAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -110,14 +110,14 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services.SIM5ContentBrowse
         {
             //Select SIM5 Select Questions Window
             logger.LogMethodEntry("SIMRepositoryPage", "SelectSIM5SelectQuestionsWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(SIMRepositoryPageResource.
                 SIMRepository_Page_SIM5SelectQuestions_Window_Name);
             //Select SIM5 Select Questions Window
             base.SelectWindow(SIMRepositoryPageResource.
                 SIMRepository_Page_SIM5SelectQuestions_Window_Name);
             logger.LogMethodExit("SIMRepositoryPage", "SelectSIM5SelectQuestionsWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -128,14 +128,14 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services.SIM5ContentBrowse
         {
             //Open the Folder
             logger.LogMethodEntry("SIMRepositoryPage", "OpenTheFolder",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(xpathOfFolder));
             //Get Folder Xpath
             IWebElement getXpath = base.GetWebElementPropertiesByXPath(xpathOfFolder);
             //Click On Folder
             base.ClickByJavaScriptExecutor(getXpath);
             logger.LogMethodExit("SIMRepositoryPage", "OpenTheFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services.SIM5ContentBrowse
         {
             //Click On Add And Close Button
             logger.LogMethodEntry("SIMRepositoryPage", "ClickOnAddAndCloseButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(SIMRepositoryPageResource.
                 SIMRepository_Page_AddandClose_Button_Id_Locator));
             //Get Add and Close button Property
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services.SIM5ContentBrowse
             Thread.Sleep(Convert.ToInt32(SIMRepositoryPageResource.
                 SIMRepository_Page_WaitTime));
             logger.LogMethodExit("SIMRepositoryPage", "ClickOnAddAndCloseButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

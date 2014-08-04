@@ -79,7 +79,7 @@ namespace Pegasus.Pages.UI_Pages
             String ownerId, String studentId, String rumbaProductId)
         {
             Logger.LogMethodEntry("PostRestServicePage", "ProcessRequest",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             // This is the request body 
             string getRequestBody = string.Empty;
             // This is the status
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages
             // Get the service status
             string getStatus = GetTheServiceStatus(getRequestBody);
             Logger.LogMethodExit("PostRestServicePage", "ProcessRequest",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             return getStatus;
         }
 
@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetTheServiceStatus(String request)
         {
             Logger.LogMethodEntry("PostRestServicePage", "GetCreateClassStatus",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             // This is the relative URL
             string getRelativeURL = PostRestServiceResource.
                 PostRestService_Page_Relative_Path;
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
             //Send CMS Subscription Request
             this.CreateCmsSSubscription(request, getCompleteURL);
             Logger.LogMethodExit("PostRestServicePage", "GetCreateClassStatus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return GetPostServiceResponse();
         }
 
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Service Response
             Logger.LogMethodEntry("PostRestServicePage", "GetPostServiceResponse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(PostRestServiceResource.
                 PostRestService_Page_Response_TextBox_Id_Locator));
             // Get complete response status
@@ -148,7 +148,7 @@ namespace Pegasus.Pages.UI_Pages
             // Get OK status
             String getOKStatus = getServiceCodeStatus[4].Substring(0, 2);
             Logger.LogMethodExit("PostRestServicePage", "GetPostServiceResponse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getOKStatus;
         }
 
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create CMS Subscription
             Logger.LogMethodEntry("PostRestServicePage", "CreateCmsSSubscription",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Open The CMS Url
             base.NavigateToBrowseUrl(getProsperoClassEventTestClientUrl);
             //Select Base Window
@@ -203,9 +203,9 @@ namespace Pegasus.Pages.UI_Pages
             String ownerId, String studentId, String rumbaProductId)
         {
             Logger.LogMethodEntry("PostRestServicePage", "GetJsonRequest",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             Logger.LogMethodExit("PostRestServicePage", "GetJsonRequest",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             // This is the JSON request 
             return string.Format(PostRestServiceResource.PostRestService_Page_JSON_Create_Request,
                 classId, className, organizationId, studentId, ownerId, rumbaProductId);
@@ -224,9 +224,9 @@ namespace Pegasus.Pages.UI_Pages
             String ownerId)
         {
             Logger.LogMethodEntry("PostRestServicePage", "GetJsonRequestToUpdateUserDetails",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             Logger.LogMethodExit("PostRestServicePage", "GetJsonRequestToUpdateUserDetails",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             // This is the JSON request 
             return string.Format(PostRestServiceResource.PostRestService_Page_JSON_Update_Request,
                 classId, className, organizationId, ownerId);
@@ -245,9 +245,9 @@ namespace Pegasus.Pages.UI_Pages
             String ownerId)
         {
             Logger.LogMethodEntry("PostRestServicePage", "GetJsonRequestToUnenrollUser",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             Logger.LogMethodExit("PostRestServicePage", "GetJsonRequestToUnenrollUser",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             // This is the JSON request 
             return string.Format(PostRestServiceResource.PostRestService_Page_JSON_Unenroll_Request,
                 classId, className, organizationId, ownerId);
@@ -259,7 +259,7 @@ namespace Pegasus.Pages.UI_Pages
         public void StoreSectionIDWithClassName()
         {
             Logger.LogMethodEntry("PostRestServicePage", "StoreSectionIDWithClassName",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             // This is the Class Section ID
             Guid classID = Guid.NewGuid();
             // This is the classname
@@ -274,7 +274,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             rumbaClass.StoreClassInMemory();
             Logger.LogMethodExit("PostRestServicePage", "StoreSectionIDWithClassName",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -286,7 +286,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter The Course Details To Mock Application
             Logger.LogMethodEntry("PostRestServicePage",
                 "EnterTheCourseDetailsInMockApplication",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -311,7 +311,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("PostRestServicePage",
                 "EnterTheCourseDetailsInMockApplication",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill The Mock Application Details Value
             Logger.LogMethodEntry("PostRestServicePage",
-                "FillTheMockApplicationDetailsValue", base.isTakeScreenShotDuringEntryExit);
+                "FillTheMockApplicationDetailsValue", base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(textBoxID));
             //Clear the textbox
@@ -332,7 +332,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter the value
             base.GetWebElementPropertiesById(textBoxID).SendKeys(mockDetailsValue);
             Logger.LogMethodExit("PostRestServicePage",
-                "FillTheMockApplicationDetailsValue", base.isTakeScreenShotDuringEntryExit);
+                "FillTheMockApplicationDetailsValue", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -342,7 +342,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The External CourseID Button
             Logger.LogMethodEntry("PostRestServicePage", "ClickTheExternalCourseIDButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the External CourseID button
             base.WaitForElement(By.Id(PostRestServiceResource.
                 PostRestServicePage_ExternalCourseId_Button_Id_Locator));
@@ -352,7 +352,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the 'External CourseID' button
             base.ClickByJavaScriptExecutor(getExternalCourseIdButton);
             Logger.LogMethodExit("PostRestServicePage", "ClickTheExternalCourseIDButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -363,7 +363,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get External CourseID
             Logger.LogMethodEntry("PostRestServicePage", "GetExternalCourseID",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Course Text
             string getCourseId = string.Empty;
             try
@@ -382,7 +382,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PostRestServicePage", "GetExternalCourseID",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCourseId;
         }
 
@@ -394,7 +394,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store External CourseID In Memory .
             Logger.LogMethodEntry("PostRestServicePage",
-                "StoreExternalCourseIDInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreExternalCourseIDInMemory", base.IsTakeScreenShotDuringEntryExit);
             //Store the CourseId into memory
             Course course = new Course
             {
@@ -404,7 +404,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             course.StoreCourseInMemory();
             Logger.LogMethodExit("PostRestServicePage",
-                "StoreExternalCourseIDInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreExternalCourseIDInMemory", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -416,7 +416,7 @@ namespace Pegasus.Pages.UI_Pages
             //Browse The Writing Spce Mock ApplicationURL
             Logger.LogMethodEntry("PostRestServicePage",
                 "BrowseTheWritingSpceMockApplicationURL",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Browse the url
@@ -428,7 +428,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("PostRestServicePage",
                 "BrowseTheWritingSpceMockApplicationURL",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -443,7 +443,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Url in Mock Application
             Logger.LogMethodEntry("PostRestServicePage", "EnterUrlInMockApplication",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getConcatenatedItemUrl = string.Empty;
             //Initialize Variable
@@ -483,7 +483,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PostRestServicePage", "EnterUrlInMockApplication",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -494,7 +494,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Request Type Option
             Logger.LogMethodEntry("PostRestServicePage", "SelectRequestTypeOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -511,7 +511,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PostRestServicePage", "SelectRequestTypeOption",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -524,7 +524,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Searched Course in Course Space
             Logger.LogMethodEntry("PostRestServicePage",
                 "SendTheRequestDetailsToAddActivityInGBR",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Fetch the Course ID from memory
@@ -561,7 +561,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("PostRestServicePage",
                 "SendTheRequestDetailsToAddActivityInGBR",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -575,7 +575,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter the course details in Requestbody
             Logger.LogMethodEntry("PostRestServicePage",
                 "EnterTheCourseDetailsToPostTheGradeInRequestBody",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // This is the request body 
             string getRequestBody = string.Empty;
             // this is the request body for add activity
@@ -592,7 +592,7 @@ namespace Pegasus.Pages.UI_Pages
                 PostRestServicePage_RequestBody_TextBox_Id_Locator);
             Logger.LogMethodExit("PostRestServicePage",
                "EnterTheCourseDetailsToPostTheGradeInRequestBody",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -607,7 +607,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter the course details in Requestbody
             Logger.LogMethodEntry("PostRestServicePage",
                 "EnterTheCourseDetailsInRequestBody",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // This is the request body 
             string getRequestBody = string.Empty;
             // this is the request body for add activity
@@ -626,7 +626,7 @@ namespace Pegasus.Pages.UI_Pages
                 PostRestServicePage_RequestBody_TextBox_Id_Locator);
             Logger.LogMethodExit("PostRestServicePage",
                "EnterTheCourseDetailsInRequestBody",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -636,7 +636,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Execute Button
             Logger.LogMethodEntry("PostRestServicePage", "ClickTheExecuteButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(PostRestServiceResource.
                 PostRestServicePage_MockApplication_ExecuteButton_Id_Locator));
@@ -648,7 +648,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(PostRestServiceResource.
                 PostRestServicePage_Element_Delay));
             Logger.LogMethodExit("PostRestServicePage", "ClickTheExecuteButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -660,7 +660,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get The Response From Mock Appication
             Logger.LogMethodEntry("PostRestServicePage",
                 "GetTheResponseFromMockAppication",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Response Text
             string getResponseDetails = string.Empty;
             try
@@ -689,7 +689,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("PostRestServicePage",
                 "GetTheResponseFromMockAppication",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getResponseDetails;
         }
 
@@ -701,7 +701,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store activityID In Memory
             Logger.LogMethodEntry("PostRestServicePage",
-                "StoreTheActivityIDInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreTheActivityIDInMemory", base.IsTakeScreenShotDuringEntryExit);
             //Store the Activity into memory
             Activity activity = new Activity
             {
@@ -711,7 +711,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             activity.StoreActivityInMemory();
             Logger.LogMethodExit("PostRestServicePage",
-                "StoreTheActivityIDInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreTheActivityIDInMemory", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -723,11 +723,11 @@ namespace Pegasus.Pages.UI_Pages
             //Get The GradePost Response From Mock Appication
             Logger.LogMethodEntry("PostRestServicePage",
                 "GetTheGradePostResponseFromMockApplication",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get The Response From Mock Appication
             Logger.LogMethodEntry("PostRestServicePage",
                 "GetTheResponseFromMockAppication",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Response Text
             string getResponseDetails = string.Empty;
             try
@@ -745,7 +745,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("PostRestServicePage",
                 "GetTheGradePostResponseFromMockApplication",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getResponseDetails;
         }
 
@@ -756,7 +756,7 @@ namespace Pegasus.Pages.UI_Pages
         public void BrowseTheLMSGradeSynchMockApplicationURL(string LMSGradeSynchSpaceMockUrl)
         {
             //Browse The LMS Grade Posting Mock ApplicationURL
-            Logger.LogMethodEntry("PostRestServicePage", "BrowseTheLMSGradeSynchMockApplicationURL", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("PostRestServicePage", "BrowseTheLMSGradeSynchMockApplicationURL", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Browse the url
@@ -766,7 +766,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("PostRestServicePage", "BrowseTheLMSGradeSynchMockApplicationURL", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("PostRestServicePage", "BrowseTheLMSGradeSynchMockApplicationURL", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -777,7 +777,7 @@ namespace Pegasus.Pages.UI_Pages
         public bool GetTheResponseFromLMSMockAppication(Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Get The Response From Mock Appication
-            Logger.LogMethodEntry("PostRestServicePage", "GetTheResponseFromLMSMockAppication", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("PostRestServicePage", "GetTheResponseFromLMSMockAppication", base.IsTakeScreenShotDuringEntryExit);
             //Initialized Response Text
             string getResponseDetails = string.Empty;
             String[] ResponseValues;
@@ -812,7 +812,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("PostRestServicePage", "GetTheResponseFromLMSMockAppication", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("PostRestServicePage", "GetTheResponseFromLMSMockAppication", base.IsTakeScreenShotDuringEntryExit);
             return ItemSavePresent;
         }
 

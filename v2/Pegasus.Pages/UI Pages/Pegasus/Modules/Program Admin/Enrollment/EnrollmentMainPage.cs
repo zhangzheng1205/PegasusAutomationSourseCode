@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Enroll Button
             logger.LogMethodEntry("EnrollmentMainPage", "ClickEnrollButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 new ProgramAdminToolPage().SelectFrame();
@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EnrollmentMainPage", "ClickEnrollButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click on Add User Option link
             logger.LogMethodEntry("EnrollmentMainPage", "ClickonAddUserOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Add User Option link
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EnrollmentMainPage", "ClickonAddUserOption",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

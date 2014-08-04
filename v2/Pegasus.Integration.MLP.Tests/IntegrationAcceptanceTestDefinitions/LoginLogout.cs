@@ -41,7 +41,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Browse Login Url
             Logger.LogMethodEntry("LoginLogout", "BrowsePegasusLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Pick Url based on user type enum
             loginPage = new BrowsePegasusUserURL((User.UserTypeEnum)
                 Enum.Parse(typeof(User.UserTypeEnum), userType));
@@ -55,7 +55,7 @@ namespace Pegasus.Integration.MLP.Tests.
                 loginPage.GoToLoginUrl();
             }
             Logger.LogMethodExit("LoginLogout", "BrowsePegasusLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Login in Pegasus
             Logger.LogMethodEntry("LoginLogout", "LoginIntoThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Boolean isUserAlreadyLoggedIn = base.IsElementPresent
                 (By.PartialLinkText(LoginLogoutResource.
                 LoginLogout_Signout_Link_Title_Locator),
@@ -113,7 +113,7 @@ namespace Pegasus.Integration.MLP.Tests.
             }
 
             Logger.LogMethodExit("LoginLogout", "LoginIntoThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Login Success
             Logger.LogMethodEntry("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert we have logged in successfully
             Logger.LogAssertion("VerifyLoginSuccess",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -132,7 +132,7 @@ namespace Pegasus.Integration.MLP.Tests.
                     LoginLogout_Window_Name_Title, new BrowsePegasusUserURL(
                         User.UserTypeEnum.HedWsAdmin).GetPageTitle()));
             Logger.LogMethodExit("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,12 +145,12 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Method to Clicks on SignOut link
             Logger.LogMethodEntry("LoginLogout", "SignOutFromThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click Sign out link 
             new BrowsePegasusUserURL(User.UserTypeEnum.
                 HedWsAdmin).ClickSignOutButton(linkSignOut);
             Logger.LogMethodExit("LoginLogout", "SignOutFromThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Method to Clicks on SignOut link
             Logger.LogMethodEntry("LoginLogout",
                 "SignOutByTheUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.HedWsAdmin:
@@ -187,7 +187,7 @@ namespace Pegasus.Integration.MLP.Tests.
                     break;
             }
             Logger.LogMethodExit("LoginLogout", "SignOutByTheUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Browse Login Url
             Logger.LogMethodEntry("LoginLogout", "BrowsedECollegeLoginURL",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Login  the type of the user
             Boolean isUserAlreadyLoggedIn = base.IsElementPresent(By.PartialLinkText
                 (LoginLogoutResource.LoginLogout_ECollege_Signoff_PartialTxt_Locator),
@@ -217,7 +217,7 @@ namespace Pegasus.Integration.MLP.Tests.
                 loginPage.GoToLoginUrl();
             }
             Logger.LogMethodExit("LoginLogout", "BrowsedECollegeLoginURL",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -231,10 +231,10 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Login to ECollege
             Logger.LogMethodEntry("LoginLogout", "LoginToPearsonTPICert",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new ECollegeLoginPage().ECollegeUserLogin(userTypeEnum);
             Logger.LogMethodExit("LoginLogout", "LoginToPearsonTPICert",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -246,14 +246,14 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Login Success
             Logger.LogMethodEntry("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert we have logged in successfully
             Logger.LogAssertion("VerifyLoginSuccess",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
                     Assert.AreNotEqual(LoginLogoutResource.
                     LoginLogout_ECollege_Window_Title, loginPage.GetPageTitle()));
             Logger.LogMethodExit("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

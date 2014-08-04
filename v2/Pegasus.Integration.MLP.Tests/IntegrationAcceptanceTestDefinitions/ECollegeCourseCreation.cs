@@ -32,12 +32,12 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Create Course
             Logger.LogMethodEntry("ECollegeCourseCreation", "CreateECollegeCourse",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Create a New eCollege Course 
             new SingleCrsCreationBottomPage().CreateSingleCourseRequest
                 (courseTypeEnum);
             Logger.LogMethodExit("ECollegeCourseCreation", "CreateECollegeCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,12 +50,12 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Verify Success Message
             Logger.LogMethodEntry("ECollegeCourseCreation", "ECollegeCourseCreationMessage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify Correct Message Present on the Page
             IsMessageExists(successMessage, CommonStepsResource.
                 CommanSteps_ECollegeCourseCreation_Confirmation_Text);
             Logger.LogMethodExit("ECollegeCourseCreation", "ECollegeCourseCreationMessage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

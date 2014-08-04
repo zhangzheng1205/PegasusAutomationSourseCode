@@ -35,11 +35,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click Message View All Link
             Logger.LogMethodEntry("ViewMailMessage", "EnterInTheMailInbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Link To Get Inbox
             new HomePage().ClickMessagesViewAllLink(userTypeEnum);
             Logger.LogMethodExit("ViewMailMessage", "EnterInTheMailInbox",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Mail.MailTypeEnum mailTypeEnum)
         {
             Logger.LogMethodEntry("ViewMailMessage", "SeeTheMailMessageSentByTheUser",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Mail Message Details From Memory
             Mail mailMessage = Mail.Get(mailTypeEnum);
             // Assert Mail Message Viewed Successfully
@@ -59,7 +59,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(mailMessage.Subject,
                     new MessageGridPage().GetMailMessageSubject()));
             Logger.LogMethodEntry("ViewMailMessage", "SeeTheMailMessageSentByTheUser",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

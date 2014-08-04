@@ -25,7 +25,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // To Check If Welcome Message Displyed
             logger.LogMethodEntry("WelcomeMessagesPage", "IsWelcomeMessageDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             Boolean isWelcomeMessageDisplayed = false;
             try
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("WelcomeMessagesPage", "IsWelcomeMessageDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Return Is Welcome Message
             return isWelcomeMessageDisplayed;
         }
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Close Welcome Message Popup
             logger.LogMethodEntry("WelcomeMessagesPage", "CloseWelcomeMessageLightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Wait For The "Do not show this again" CheckBox
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("WelcomeMessagesPage", "CloseWelcomeMessageLightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //To Check If The Welcome Message LightBox is Present
             logger.LogMethodEntry("WelcomeMessagesPage", "IsWelcomeMessageLightBoxPresent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initializing variable
             Boolean isWelcomeMessageLightBoxPresent = false;
             try
@@ -127,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("WelcomeMessagesPage", "IsWelcomeMessageLightBoxPresent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Return Welcome Message LightBox
             return isWelcomeMessageLightBoxPresent;
         }

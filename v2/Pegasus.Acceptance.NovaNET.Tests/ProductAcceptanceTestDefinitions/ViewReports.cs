@@ -33,14 +33,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
        {
            //Generate Student Activity Report
            Logger.LogMethodEntry("ViewReports", "GenerateStudentActivityReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            User userName = User.Get(userType);
            //Converting String to Enum to pass report by type
            new RptMainUXPage().ManageInstructorReport
                ((RptMainUXPage.PegasusInstructorReportEnum)Enum.Parse
                (typeof(RptMainUXPage.PegasusInstructorReportEnum), instructorReportType),userName.Name);
            Logger.LogMethodExit("ViewReports", "GenerateStudentActivityReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
        }
 
         /// <summary>
@@ -52,12 +52,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
            //Display The Grades Under Launched Report
            Logger.LogMethodEntry("ViewReports",
                "DisplayTheGradesUnderLaunchedReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            //Select Detailed Report
            new RptStudentActivityPage().SelectDetailedReport();
            Logger.LogMethodExit("ViewReports", 
                "DisplayTheGradesUnderLaunchedReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
            //Display Score Under Launched Report
            Logger.LogMethodEntry("ViewReports",
                "DisplayScoreUnderLaunchedReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            //Assert for score
            Logger.LogAssertion("VerifyTheScore", ScenarioContext.
                Current.ScenarioInfo.Title, () =>
@@ -77,7 +77,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 new RptDetailedStudentActivityPage().VerifyTheGradeDisplayed()));
            Logger.LogMethodExit("ViewReports",
                "DisplayScoreUnderLaunchedReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
         /// <summary>
@@ -88,13 +88,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
        {
            //Click On The Close Button
            Logger.LogMethodEntry("ViewReports","ClickOnTheCloseButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            //Detailed Student Activity Close Button
            new RptDetailedStudentActivityPage().DetailedStudentActivityCloseButton();        
            //Student Activity Report Close Button
            new RptStudentActivityPage().StudentActivityReportCloseButton();
            Logger.LogMethodExit("ViewReports","ClickOnTheCloseButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -105,12 +105,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
        {
            //Select Class Mastery Report link
            Logger.LogMethodEntry("ViewReports", "SelectInstructorReportsLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            new RptMainUXPage().ClickTheMasteryReportsLink
            ((RptMainUXPage.PegasusInstructorReportEnum)Enum.Parse
            (typeof(RptMainUXPage.PegasusInstructorReportEnum), instructorReportType));
            Logger.LogMethodExit("ViewReports", "SelectInstructorReportsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
        }
        /// <summary>
        ///Generate mastery report for the selected skill
@@ -120,7 +120,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
        {
            //Generate Class Mastery Report
            Logger.LogMethodEntry("ViewReports", "GenerateInstructorReports",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            //Converting String to Enum to pass report by type
            Logger.LogAssertion("VerifyMasteryReport", ScenarioContext.
                Current.ScenarioInfo.Title, () => Assert.AreEqual
@@ -129,7 +129,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
            ((RptMainUXPage.PegasusInstructorReportEnum)Enum.Parse
            (typeof(RptMainUXPage.PegasusInstructorReportEnum), instructorReportType), skillName)));
            Logger.LogMethodExit("ViewReports", "GenerateInstructorReports",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -140,11 +140,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
        {
            //Click On The Close Button of Class Mastery Report
            Logger.LogMethodEntry("ViewReports", "ClickTheCloseButtonOfCMReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            //Student Activity Report Close Button
            new RptMasteryPage().MasteryReportCloseButton();
            Logger.LogMethodExit("ViewReports", "ClickTheCloseButtonOfCMReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
        /// <summary>
        /// Initialize Pegasus test before test execution starts.

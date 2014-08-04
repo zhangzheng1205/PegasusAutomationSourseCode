@@ -33,11 +33,11 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Click on Enter Course Link 
             logger.LogMethodEntry("LaunchECollegeCourse", "ClickOnEnterCourseLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Instance of Dot Next Launch Page
             dotNextLaunchPage.ClickOnEnterCourseLink();
             logger.LogMethodExit("LaunchECollegeCourse", "ClickOnEnterCourseLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -49,11 +49,11 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Switch to expected window
             logger.LogMethodEntry("LaunchECollegeCourse", "SelectExpectedPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Instance of Dot Next Launch Page
             dotNextLaunchPage.SelectExpectedPage(pageName);
             logger.LogMethodExit("LaunchECollegeCourse", "SelectExpectedPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

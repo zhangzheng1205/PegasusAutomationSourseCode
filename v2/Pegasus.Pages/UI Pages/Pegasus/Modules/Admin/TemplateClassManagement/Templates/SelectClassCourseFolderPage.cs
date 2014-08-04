@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter inside the Course
             logger.LogMethodEntry("SelectClassCourseFolderPage", "EnterInsideCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(SelectClassCourseFolderPageResource.
@@ -57,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SelectClassCourseFolderPage", "EnterInsideCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

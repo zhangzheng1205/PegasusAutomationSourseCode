@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The "Class Mastery link"           
             logger.LogMethodEntry("RptMasteryPage","ClickTheClassMasteryLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click the "Class Mastery" Link
@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptMasteryPage","ClickTheClassMasteryLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The "Class Mastery link"           
             logger.LogMethodEntry("RptMasteryPage", "ClickTheStudentMasteryLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click the "Individual Student Mastery" Link
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptMasteryPage", "ClickTheStudentMasteryLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //
             logger.LogMethodEntry("RptMasteryPage", "MasteryReportCloseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click the "Close" button
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptMasteryPage", "MasteryReportCloseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
         public String ValidateSkillNameForMasteryReport()
         {
             logger.LogMethodEntry("RptMasteryPage", "ValidateSkillNameForMasteryReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             String skillName = String.Empty;
             try
             {
@@ -139,7 +139,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptMasteryPage", "ValidateSkillNameForMasteryReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return skillName;
         }
     }

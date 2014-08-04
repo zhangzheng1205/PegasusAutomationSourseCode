@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Roster Preference
             logger.LogMethodEntry("RosterPreferencesPage", "EnableRosterPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for element
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RosterPreferencesPage", "EnableRosterPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Manage Roster Preference Settings
             logger.LogMethodEntry("RosterPreferencesPage",
                 "SelectManageRosterPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select The Enable Manage Roster
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RosterPreferencesPage",
                 "SelectManageRosterPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

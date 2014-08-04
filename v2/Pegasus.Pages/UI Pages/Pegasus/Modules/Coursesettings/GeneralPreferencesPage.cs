@@ -37,7 +37,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Roster Preference
             logger.LogMethodEntry("GeneralPreferencesPage", "ClickonRosterPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select window
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage", "ClickonRosterPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On the Subtab
             logger.LogMethodEntry("GeneralPreferencesPage", "ClickOntheSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select window
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage", "ClickOntheSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The Preference with Frame
             logger.LogMethodEntry("GeneralPreferencesPage",
                 "SelectThePreferenceWindowWithFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the window loads
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
                 "SelectThePreferenceWindowWithFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Selected Subtab Name
             logger.LogMethodEntry("GeneralPreferencesPage", "GetSelectedSubtabName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getSubtabName = string.Empty;
             try
@@ -163,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage", "GetSelectedSubtabName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSubtabName;
         }
 
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save Preferences
             logger.LogMethodEntry("GeneralPreferencesPage", "SavePreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select The Main Frame
@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage", "SavePreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select the preferance sub tab
             logger.LogMethodEntry("GeneralPreferencesPage", "ClickonSubTabofPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select The Main Frame
@@ -223,7 +223,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             // Select the preferance sub tab
             logger.LogMethodExit("GeneralPreferencesPage", "ClickonSubTabofPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the title value in home page
             logger.LogMethodEntry("GeneralPreferencesPage", "GetTitleValueInHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized variable
             string getPageTitle = string.Empty;
             try
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage", "GetTitleValueInHomePage",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return getPageTitle;
         }
 
@@ -268,7 +268,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Get the title value in home page
             logger.LogMethodEntry("GeneralPreferencesPage", "GetElementTextDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Initialized variable
             string text = string.Empty;
             try
@@ -288,7 +288,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             // Get the title value in home page
             logger.LogMethodExit("GeneralPreferencesPage", "GetElementTextDisplayed",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             // Return element text
             return text;
         }
@@ -300,7 +300,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // check the Enable Badge check box
             logger.LogMethodEntry("GeneralPreferencesPage", "CheckEnableBadgeCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //select window
@@ -320,7 +320,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage", "CheckEnableBadgeCheckBox",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -331,7 +331,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Get the Select Content Button Status 
             logger.LogMethodEntry("GeneralPreferencesPage", "GetSelectContentButtonEnabled",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized variable
             string getSelectContentButtonStatus = string.Empty;
             try
@@ -350,7 +350,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage", "GetSelectContentButtonEnabled",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return getSelectContentButtonStatus;
         }
 
@@ -361,7 +361,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Enter the Value in TextBox Fields
             logger.LogMethodEntry("GeneralPreferencesPage", "EnterValueinTextBoxFields",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enter TemplateID text field
@@ -384,7 +384,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage", "EnterValueinTextBoxFields",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click the Select Content button   
             logger.LogMethodEntry("GeneralPreferencesPage", "ClickTheSelectContentButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on Select content button
@@ -415,7 +415,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage", "ClickTheSelectContentButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -426,7 +426,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Single activity from pop up
             logger.LogMethodEntry("GeneralPreferencesPage", "SelectSingleActivityFromPopUP",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get the total activity count
@@ -458,7 +458,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage", "SelectSingleActivityFromPopUP",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Get Activity Count
@@ -467,7 +467,7 @@ namespace Pegasus.Pages.UI_Pages
         private int GetActivityCount()
         {
             logger.LogMethodEntry("GeneralPreferencesPage", "GetActivityCount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //select window
             base.SelectWindow(GeneralPreferencesPageResource.
                 GeneralPreference_Page_Badge_Assignment_Selection_Window_Name);
@@ -480,7 +480,7 @@ namespace Pegasus.Pages.UI_Pages
             int getActivityCount = base.GetElementCountByXPath(GeneralPreferencesPageResource.
                 GeneralPreference_Page_ActivityCount_Xpath_Locator);
             logger.LogMethodExit("GeneralPreferencesPage", "GetActivityCount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getActivityCount;
         }
 
@@ -492,7 +492,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select activities from Left Iframe 
             logger.LogMethodEntry("GBInstuctorPage", "SelectTheActivityCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select The Activity CheckBox
             base.FocusOnElementByXPath(string.Format(GeneralPreferencesPageResource.
                GeneralPreference_Page_ActivityNameText_Xpath_Locator, rowCount));
@@ -502,7 +502,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(GeneralPreferencesPageResource.
                 GeneralPreference_Page_ActivitySelect_Thread_Time_Value));
             logger.LogMethodExit("GBInstructorPage", "SelectTheActivityCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -512,7 +512,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add the selected activity to SelectContent Text field
             logger.LogMethodEntry("GBInstuctorPage", "AddActivityToSelectContentTextField",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //select window
@@ -529,7 +529,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBInstructorPage", "AddActivityToSelectContentTextField",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -540,7 +540,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the Activity name from Select Content textbox field
             logger.LogMethodEntry("GeneralPreferencesPage", "getActivityNameInSelectContentTextbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getActivityName = string.Empty;
             try
@@ -561,7 +561,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage", "getActivityNameInSelectContentTextbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 
@@ -573,7 +573,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Fire click event on given link
             logger.LogMethodEntry("GeneralPreferencesPage", "ClickOnLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 string linkID = GetStudyPlanTestType(studyPlanEnum);
@@ -590,7 +590,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             // Fire click event on given link
             logger.LogMethodExit("GeneralPreferencesPage", "ClickOnLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -602,7 +602,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Check is given text presents in the page
             logger.LogMethodEntry("GeneralPreferencesPage", "GetGivenTextFromPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Wait for the element to check the given text presents
@@ -618,7 +618,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             // Check is given text presents in the page
             logger.LogMethodExit("GeneralPreferencesPage", "GetGivenTextFromPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Returning given element text
             return searchText;
         }
@@ -632,7 +632,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click on pegasus button, which is created using customize button
             logger.LogMethodEntry("GeneralPreferencesPage", "ClickOnLinkTypeButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select given sourcePage
@@ -649,7 +649,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             // Click on pegasus button, which is created using customize button
             logger.LogMethodExit("GeneralPreferencesPage", "ClickOnLinkTypeButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -661,7 +661,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Get edit link id based on the study plan test type
             logger.LogMethodEntry("GeneralPreferencesPage", "GetStudyPlanTestType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Initializing variable
             string editLinkID = string.Empty;
             switch (studyPlanEnum)
@@ -675,7 +675,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             // Get edit link id based on the study plan test type
             logger.LogMethodExit("GeneralPreferencesPage", "GetStudyPlanTestType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return editLinkID;
         }
 
@@ -685,7 +685,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable General Tab Embedded Report Preference Settings
             logger.LogMethodEntry("GeneralPreferencesPage",
             "EnableGeneralTabEmbeddedReportPreferenceSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enable Embedded report Preference                
@@ -700,7 +700,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableGeneralTabEmbeddedReportPreferenceSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -710,7 +710,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Character Palate Check Box
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnableCharacterPalateCheckBox", base.isTakeScreenShotDuringEntryExit);
+            "EnableCharacterPalateCheckBox", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Main Frame
@@ -735,7 +735,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnableCharacterPalateCheckBox", base.isTakeScreenShotDuringEntryExit);
+            "EnableCharacterPalateCheckBox", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -745,7 +745,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable General Preference Settings
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnableGeneralPreferenceSettings", base.isTakeScreenShotDuringEntryExit);
+            "EnableGeneralPreferenceSettings", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Main Frame
@@ -771,7 +771,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnableGeneralPreferenceSettings", base.isTakeScreenShotDuringEntryExit);
+            "EnableGeneralPreferenceSettings", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -781,7 +781,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Student Resource Toolbar Preferences
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnableStudentResourceToolbarPreferences", base.isTakeScreenShotDuringEntryExit);
+            "EnableStudentResourceToolbarPreferences", base.IsTakeScreenShotDuringEntryExit);
             //Enable Glossary Preference                
             this.EnableGeneralPreferenceSettings(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_GlossaryPreference_LockIcon_Id_Locator,
@@ -803,7 +803,7 @@ namespace Pegasus.Pages.UI_Pages
                 GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_StudentVerbChart_Preference_Checkbox_Id_Locator);
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnableStudentResourceToolbarPreferences", base.isTakeScreenShotDuringEntryExit);
+            "EnableStudentResourceToolbarPreferences", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -816,7 +816,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable General Preference Settings
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnableGeneralPreferenceSettings", base.isTakeScreenShotDuringEntryExit);
+            "EnableGeneralPreferenceSettings", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get Lock Icon Status
@@ -845,7 +845,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnableGeneralPreferenceSettings", base.isTakeScreenShotDuringEntryExit);
+            "EnableGeneralPreferenceSettings", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -855,7 +855,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Allow Student Send Mail Preference
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnableAllowStudentSendMailPreference", base.isTakeScreenShotDuringEntryExit);
+            "EnableAllowStudentSendMailPreference", base.IsTakeScreenShotDuringEntryExit);
             //Get Lock Icon Status
             base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_AllowStudentSendMail_Lock_Id_Locator));
@@ -877,7 +877,7 @@ namespace Pegasus.Pages.UI_Pages
                 GeneralPrefernces_Page_StudentMail_Checkbox_Id_Locator);
             }
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnableAllowStudentSendMailPreference", base.isTakeScreenShotDuringEntryExit);
+            "EnableAllowStudentSendMailPreference", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -888,7 +888,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable General Tab Calendar Preference Settings
             logger.LogMethodEntry("GeneralPreferencesPage",
             "EnableGeneralTabCalendarPreferenceSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enable Calendar Preference checkbox             
@@ -908,7 +908,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableGeneralTabCalendarPreferenceSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -918,7 +918,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable BlackBoard IM Preference
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnableBlackBoardIMPreference", base.isTakeScreenShotDuringEntryExit);
+            "EnableBlackBoardIMPreference", base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_BlackBoard_IM_Lock_Id_Locator));
             //Enable BlackBoard IM Preference           
@@ -929,7 +929,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill Black board Fname Lname Email TextBoxes
             this.EnterBlackBoardIMDetails();
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnableBlackBoardIMPreference", base.isTakeScreenShotDuringEntryExit);
+            "EnableBlackBoardIMPreference", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Fill Firstname Lastname Email TextBoxes
@@ -938,7 +938,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Fill Firstname Lastname Email TextBoxes
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnterBlackBoardIMDetails", base.isTakeScreenShotDuringEntryExit);
+            "EnterBlackBoardIMDetails", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(GeneralPreferencesPageResource.
@@ -960,7 +960,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnterBlackBoardIMDetails", base.isTakeScreenShotDuringEntryExit);
+            "EnterBlackBoardIMDetails", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -970,7 +970,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Mail And Business Unit
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnterMailAndBusinessUnit", base.isTakeScreenShotDuringEntryExit);
+            "EnterMailAndBusinessUnit", base.IsTakeScreenShotDuringEntryExit);
             //Enter Email
             base.ClearTextById(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_Email_Textbox_Id_Locator);
@@ -986,7 +986,7 @@ namespace Pegasus.Pages.UI_Pages
                 GeneralPrefernces_Page_Businessunit_Textbox_Id_Locator,
                 GeneralPreferencesPageResource.GeneralPrefernces_Page_BusinessUnit_Value);
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnterMailAndBusinessUnit", base.isTakeScreenShotDuringEntryExit);
+            "EnterMailAndBusinessUnit", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -997,7 +997,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable Instructor Resource Toolbar Preference
             logger.LogMethodEntry("GeneralPreferencesPage",
             "EnableInstructorResourceToolbarPreference",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Main Frame
@@ -1015,7 +1015,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableInstructorResourceToolbarPreference",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1026,7 +1026,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Display Checkbox And Enter Pct URL
             logger.LogMethodEntry("GeneralPreferencesPage",
                 "SelectDisplayCheckboxAndEnterPctUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_Display_Checkbox_Id_Locator));
             if (!base.IsElementSelectedById(GeneralPreferencesPageResource.
@@ -1057,7 +1057,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
              "EnableInstructorResourceToolbarPreference",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1068,7 +1068,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Enable Instructor Resource Toolbar For Course' Checkbox
             logger.LogMethodEntry("GeneralPreferencesPage",
             "SelectInstructorResourceToolbarCheckbox",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait For 'Enable Instructor Resource Toolbar For Course' Checkbox
             base.WaitForElement(By.Id(GeneralPreferencesPageResource.
                 GeneralPrefernces_Page_InstructorResource_Checkbox_Id_Locator));
@@ -1081,7 +1081,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "SelectInstructorResourceToolbarCheckbox",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1092,7 +1092,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable Calendar General Preference Settings
             logger.LogMethodEntry("GeneralPreferencesPage",
             "EnableCalendarGeneralPreferenceSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Selct window and frame
@@ -1108,7 +1108,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableCalendarGeneralPreferenceSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1120,7 +1120,7 @@ namespace Pegasus.Pages.UI_Pages
             // Verify Calendar Preferences Unchecked and Disabled
             logger.LogMethodEntry("GeneralPreferencesPage",
             "IsCalendarPreferencesUncheckedDisabled",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isCalendarPreferencesUncheckedDisabled = false;
             try
@@ -1149,7 +1149,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "IsCalendarPreferencesUncheckedDisabled",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return isCalendarPreferencesUncheckedDisabled;
         }
 
@@ -1162,7 +1162,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify Calendar Preferences Lock Status
             logger.LogMethodEntry("GeneralPreferencesPage",
             "IsCalendarPreferencesLockStatus",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string gethedCalendarPreferenceLockStatus = string.Empty;
             string getskipCalendarPreferenceLockStatus = string.Empty;
@@ -1195,7 +1195,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "IsCalendarPreferencesLockStatus",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return isPreferencesLocked;
         }
 
@@ -1207,7 +1207,7 @@ namespace Pegasus.Pages.UI_Pages
             // Disable 'HED Calendar' Preference
             logger.LogMethodEntry("GeneralPreferencesPage",
             "DisableHEDCalendarPreference",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Selct window and frame
@@ -1246,7 +1246,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "DisableHEDCalendarPreference",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1257,7 +1257,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable Blackboard IM Preference Settings
             logger.LogMethodEntry("GeneralPreferencesPage",
             "EnableBlackboardIMPreferenceSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enable Blackboard IM Preference Settings          
@@ -1269,7 +1269,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableBlackboardIMPreferenceSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1280,7 +1280,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable Character Palate Preference Settings
             logger.LogMethodEntry("GeneralPreferencesPage",
             "EnableCharacterPalatePreferenceSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enable Character Palate Preference                
@@ -1295,7 +1295,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnableCharacterPalatePreferenceSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enable Instructor Resource Toolbar Preference for Launch.
@@ -1304,7 +1304,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("GeneralPreferencesPage",
             "EnalbleInsResToolbarLaunchPreferences",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
 
             try
             {
@@ -1339,7 +1339,7 @@ namespace Pegasus.Pages.UI_Pages
 
             logger.LogMethodExit("GeneralPreferencesPage",
             "EnalbleInsResToolbarLaunchPreferences",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Assign appropriate values to text boxes for Instructor 
@@ -1349,7 +1349,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Assign Values to PCT Tool Txt Boxes in General Preferences tab
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "AssignPCTLaunchValue", base.isTakeScreenShotDuringEntryExit);
+            "AssignPCTLaunchValue", base.IsTakeScreenShotDuringEntryExit);
 
             // Wait for Title1 text box, clear it and fill text box from resource file 
             AssignPctLaunchValuestoPreferenceTextBoxes(GeneralPreferencesPageResource.
@@ -1369,7 +1369,7 @@ namespace Pegasus.Pages.UI_Pages
                 AutomationConfigurationManager.PctInstructorResourceToolsUrl);
 
             logger.LogMethodExit("GeneralPreferencesPage",
-            "AssignPCTLaunchValue", base.isTakeScreenShotDuringEntryExit);
+            "AssignPCTLaunchValue", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Assign PCT Launch Values to General Preference Instructor Resource Toolbar TextBoxes
@@ -1379,7 +1379,7 @@ namespace Pegasus.Pages.UI_Pages
         private void AssignPctLaunchValuestoPreferenceTextBoxes(string elementId, string value)
         {
             logger.LogMethodExit("GeneralPreferencesPage",
-            "AssignPCTLaunchValuestoPreferenceTextBoxes", base.isTakeScreenShotDuringEntryExit);
+            "AssignPCTLaunchValuestoPreferenceTextBoxes", base.IsTakeScreenShotDuringEntryExit);
 
             // wait for element
             base.WaitForElement(By.Id(elementId));
@@ -1389,7 +1389,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(elementId, value);
 
             logger.LogMethodExit("GeneralPreferencesPage",
-            "AssignPCTLaunchValuestoPreferenceTextBoxes", base.isTakeScreenShotDuringEntryExit);
+            "AssignPCTLaunchValuestoPreferenceTextBoxes", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enable the 'Enable Blackboard Collaborate Voice Authoring' Option
@@ -1399,7 +1399,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable The 'Enable Blackboard Collaborate Voice Authoring' Option 
             logger.LogMethodEntry("GradingPreferencesPage",
            "EnableBlackBoardCollaborateVoiceAuthoring",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enable Blackboard Collaborate Voice Authoring Preference                
@@ -1414,7 +1414,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GradingPreferencesPage",
               "EnableBlackBoardCollaborateVoiceAuthoring",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Set My Courses Preferences
             logger.LogMethodEntry("MyCoursesPreferencesPage", "SetMyCoursesPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on the My Courses Link
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyCoursesPreferencesPage", "SetMyCoursesPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selects My Courses Preferences Options
             logger.LogMethodEntry("MyCoursesPreferencesPage", "MyCoursesPreferencesOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the "Automatically enroll all students" checkbox
             base.WaitForElement(By.Id(MyCoursesPreferencesPageResource.
                 MyCoursesPreferencesPage_CheckBox_AutomaticallyEnrollAllStudents_Id_Locator));
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(getGroupCreation);
             }
             logger.LogMethodExit("MyCoursesPreferencesPage", "MyCoursesPreferencesOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the My Courses Link
             logger.LogMethodEntry("MyCoursesPreferencesPage", "ClickOnMyCoursesLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Main Preferences frame
             new CourseCopyPreferencesPage().SelectTheMainPreferencesFrame();
             //Wait for the element
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the My Courses Link
             base.ClickByJavaScriptExecutor(getMyCourseLink);
             logger.LogMethodExit("MyCoursesPreferencesPage", "ClickOnMyCoursesLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

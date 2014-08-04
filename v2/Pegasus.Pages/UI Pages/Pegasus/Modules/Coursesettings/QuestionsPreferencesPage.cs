@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable SIM5 Questions Preference
             logger.LogMethodEntry("QuestionsPreferencesPage",
-            "EnableSIM5QuestionsPreference", base.isTakeScreenShotDuringEntryExit);
+            "EnableSIM5QuestionsPreference", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 GeneralPreferencesPage generalPreferencesPage = new GeneralPreferencesPage();
@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("QuestionsPreferencesPage",
-            "EnableSIM5QuestionsPreference", base.isTakeScreenShotDuringEntryExit);
+            "EnableSIM5QuestionsPreference", base.IsTakeScreenShotDuringEntryExit);
         }
 
        /// <summary>
@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Entry
             logger.LogMethodEntry("QuestionsPreferencesPage",
             "EnableOriginalSIMQuestionPreference", 
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 GeneralPreferencesPage generalPreferencesPage = new 
@@ -121,7 +121,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             logger.LogMethodExit("QuestionsPreferencesPage",
-            "EnableOriginalSIMQuestionPreference", base.isTakeScreenShotDuringEntryExit);
+            "EnableOriginalSIMQuestionPreference", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable 'Grader Project' Question Type Preference
             logger.LogMethodEntry("QuestionsPreferencesPage",
-            "EnableGraderProjectQuestionTypePreference", base.isTakeScreenShotDuringEntryExit);
+            "EnableGraderProjectQuestionTypePreference", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 GeneralPreferencesPage generalPreferencesPage = new GeneralPreferencesPage();
@@ -167,7 +167,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("QuestionsPreferencesPage",
-            "EnableGraderProjectQuestionTypePreference", base.isTakeScreenShotDuringEntryExit);
+            "EnableGraderProjectQuestionTypePreference", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

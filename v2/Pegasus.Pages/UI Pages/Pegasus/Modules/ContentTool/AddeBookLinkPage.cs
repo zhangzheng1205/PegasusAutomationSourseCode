@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            //Create eText Link Asset
            logger.LogMethodEntry("AddeBookLinkPage", "CreateeTextLinkAsset",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            try
            {
                //Select eText Window
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
            }
            logger.LogMethodExit("AddeBookLinkPage", "CreateeTextLinkAsset",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            //Select The Save Copy To Window
            logger.LogMethodEntry("AddeBookLinkPage", "SelectTheSaveCopyToWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            //Wait for the window loads
            base.WaitUntilWindowLoads(AddeBookLinkPageResource.AddeBookLink_Page_SaveCopy_Window_Name);
            base.SelectWindow(AddeBookLinkPageResource.AddeBookLink_Page_SaveCopy_Window_Name);
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
            //Click the add and close button
            base.ClickByJavaScriptExecutor(AddAndCloseButton);
            logger.LogMethodExit("AddeBookLinkPage", "SelectTheSaveCopyToWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -92,12 +92,12 @@ namespace Pegasus.Pages.UI_Pages
        {
            //Select eText Window
            logger.LogMethodEntry("AddeBookLinkPage", "SelecteTextWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            base.WaitUntilWindowLoads(AddeBookLinkPageResource.AddeBookLink_Page_AddeText_Window_Name);
            //Select the eText window
            base.SelectWindow(AddeBookLinkPageResource.AddeBookLink_Page_AddeText_Window_Name);
            logger.LogMethodExit("AddeBookLinkPage", "SelecteTextWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -109,7 +109,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            //Store EText Link Asset Details In Memory
            logger.LogMethodEntry("AddeBookLinkPage", "StoreETextLinkAssetDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            Activity eTextlink = new Activity
            {
                Name = activityName,
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
            //Save Activity Name to Memory
            eTextlink.StoreActivityInMemory();
            logger.LogMethodExit("AddeBookLinkPage", "StoreETextLinkAssetDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
     }
 }

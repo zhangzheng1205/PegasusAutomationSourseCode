@@ -35,7 +35,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Launching The Activity
             Logger.LogMethodEntry("PlayerTestPage", "IsMGMTestActivityLauched",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isPlayerTestPresent = false;
             try
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PlayerTestPage", "IsMGMTestActivityLauched",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isPlayerTestPresent;
         }
 
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Launching The Activity
             Logger.LogMethodEntry("PlayerTestPage", "IsMGMTestActivityLauched",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isProductHeaderPresent = false;
             try
@@ -107,7 +107,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PlayerTestPage", "IsMGMTestActivityLauched",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isProductHeaderPresent;
 
         }
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean IsSkillStudyPlanPreTestPreviewLaunched()
         {
             Logger.LogMethodEntry("PlayerTestPage", "IsSkillStudyPlanPreTestPreviewLaunched",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isOverviewButtonPresent = false;
             try
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PlayerTestPage", "IsSkillStudyPlanPreTestPreviewLaunched",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isOverviewButtonPresent;
         }
 
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Presentation Window
             Logger.LogMethodEntry("PlayerTestPage", "SelectPresentationWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable to Get Window Name
             string getwindowName = string.Empty;
             //Initialize Variable to Get Base Window Name
@@ -183,7 +183,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Window
             base.SelectWindow(getwindowName);
             Logger.LogMethodExit("PlayerTestPage", "SelectPresentationWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

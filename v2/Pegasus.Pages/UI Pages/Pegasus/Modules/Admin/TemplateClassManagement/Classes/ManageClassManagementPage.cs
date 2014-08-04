@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Add Classes Option
             logger.LogMethodEntry("ManageClassManagementPage", "ClickAddClassesOptionLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window Loads
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageClassManagementPage", "ClickAddClassesOptionLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Class Search in Course Space
             logger.LogMethodEntry("ManageClassManagementPage", "ClassSearchInCoursespace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For ManageOrganization Window
@@ -107,7 +107,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageClassManagementPage", "ClassSearchInCoursespace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Searched Class Name
             logger.LogMethodEntry("ManageClassManagementPage", "GetSearchedClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing getClassName Variable
             string getClassName = string.Empty;
 
@@ -144,7 +144,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageClassManagementPage", "GetSearchedClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getClassName;
         }
 
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Class Cmenu Option Enter Class As Teacher
             logger.LogMethodEntry("ManageClassManagementPage",
                 "ClickOnClassCmenuOptionEnterClassAsTeacher",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window
@@ -186,7 +186,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ManageClassManagementPage",
                 "ClickOnClassCmenuOptionEnterClassAsTeacher",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Class as Teacher
             logger.LogMethodEntry("ManageClassManagementPage", "EnterClassAsTeacher",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(ManageClassManagementPageResource.
                 ManageClassManagement_Page_Cmenu_Image_Locator));
@@ -214,7 +214,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Add Classes Button
             base.ClickByJavaScriptExecutor(getEnterClassAsTeacherButtonProperty);
             logger.LogMethodExit("ManageClassManagementPage", "EnterClassAsTeacher",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -224,7 +224,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Window
             logger.LogMethodEntry("ManageClassManagementPage", "SelectCourseWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(SelectClassCourseFolderPageResource.
@@ -238,7 +238,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageClassManagementPage", "SelectCourseWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -248,7 +248,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Overview Window
             logger.LogMethodEntry("ManageClassManagementPage", "SelectOverviewWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(ManageClassManagementPageResource.
@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageClassManagementPage", "SelectOverviewWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -273,7 +273,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //To Search for Class Assigned to Copy
             logger.LogMethodEntry("ManageClassManagementPage", "SearchClassForAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Stopwatch stopWatch = new Stopwatch();
@@ -313,7 +313,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageClassManagementPage", "SearchClassForAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The CMenu Option
             logger.LogMethodEntry("ManageClassManagementPage", "SelectTheCMenuOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on Class Cmenu Option
@@ -341,7 +341,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageClassManagementPage", "SelectTheCMenuOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -351,7 +351,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Class Cmenu Option
             logger.LogMethodEntry("ManageClassManagementPage", "ClickOnClassCMenuIcon",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select 'Manage Organization' Window
             this.SelectManageOrganizationWindow();
             //Switch to Frame
@@ -371,7 +371,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Class CMenu Icon
             base.ClickByJavaScriptExecutor(getCmenuIconProperty);
             logger.LogMethodExit("ManageClassManagementPage", "ClickOnClassCMenuIcon",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -381,7 +381,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select 'Manage Organization' Window
             logger.LogMethodEntry("ManageClassManagementPage", "SelectManageOrganizationWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For 'Manage Organization' Window
             base.WaitUntilWindowLoads(ManageClassManagementPageResource.
                    ManageClassManagement_Page_ManageOrganization_Window_Title);
@@ -391,7 +391,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ManageClassManagementPageResource.
                 ManageClassManagement_Page_Frame_Id_Locator));
             logger.LogMethodExit("ManageClassManagementPage", "SelectManageOrganizationWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -68,7 +68,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Radiobutton In Save Settings Popup
             logger.LogMethodEntry("RptSaveSettingsPage", "SelectRadioButtonInSaveSettingsPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (SaveSettingsPopupRadiobuttonTypeEnum)
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSaveSettingsPage", "SelectRadioButtonInSaveSettingsPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -112,14 +112,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("RptSaveSettingsPage", "SelectWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.WaitUntilWindowLoads(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_Window_Name);
             base.SelectWindow(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_Window_Name);
             logger.LogMethodExit("RptSaveSettingsPage", "SelectWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Report Name
             logger.LogMethodEntry("RptSaveSettingsPage", "EnterReportName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {               
                 //Select Window
@@ -150,7 +150,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSaveSettingsPage", "EnterReportName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Report Details In Memory
             logger.LogMethodEntry("RptSaveSettingsPage", "StoreReportDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Report report = new Report
@@ -180,7 +180,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSaveSettingsPage", "StoreReportDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Button In Save Settings Popup
             logger.LogMethodEntry("RptSaveSettingsPage", "ClickOnButtonInSaveSettingsPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (SaveSettingsPopupButtonTypeEnum)
@@ -217,7 +217,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSaveSettingsPage", "ClickOnButtonInSaveSettingsPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Cancel
             logger.LogMethodEntry("RptSaveSettingsPage", "ClickOnCancel",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectWindow();
             base.WaitForElement(By.Id(RptSaveSettingsPageResource.
@@ -238,7 +238,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_Wait_Time_Value));
             logger.LogMethodExit("RptSaveSettingsPage", "ClickOnCancel",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -248,7 +248,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Save Only
             logger.LogMethodEntry("RptSaveSettingsPage", "ClickOnSaveOnly",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectWindow();
             base.WaitForElement(By.Id(RptSaveSettingsPageResource.
@@ -259,7 +259,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_Wait_Time_Value));
             logger.LogMethodExit("RptSaveSettingsPage", "ClickOnSaveOnly",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Save And Run
             logger.LogMethodEntry("RptSaveSettingsPage", "ClickOnSaveAndRun",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectWindow();
             base.WaitForElement(By.Id(RptSaveSettingsPageResource.
@@ -280,7 +280,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_Wait_Time_Value));
             logger.LogMethodExit("RptSaveSettingsPage", "ClickOnSaveAndRun",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -292,7 +292,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify Report Displayed In Dropdown
             logger.LogMethodEntry("RptSaveSettingsPage", "IsReportDisplayedInDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isReportDisplayed = false;
             try
@@ -317,7 +317,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSaveSettingsPage", "IsReportDisplayedInDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isReportDisplayed;
         }
        

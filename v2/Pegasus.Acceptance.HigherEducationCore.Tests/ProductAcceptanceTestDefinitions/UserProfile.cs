@@ -29,11 +29,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click On My Profile Link Option
             Logger.LogMethodEntry("UserProfile", "ClickMyProfileLinkOption",
-                base.isTakeScreenShotDuringEntryExit);  
+                base.IsTakeScreenShotDuringEntryExit);  
             //Click On My Profile Link Option
             new CalendarHEDDefaultUXPage().ClickOnMyProfileLink(userType);
             Logger.LogMethodExit("UserProfile", "ClickMyProfileLinkOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -44,11 +44,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Change the My Profile Settings
             Logger.LogMethodEntry("UserProfile", "ChangeTheMyProfileSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Change the User Profile Settings
             new MyAccountSettingPage().ChangeUserProfileSettings();
             Logger.LogMethodExit("UserProfile", "ChangeTheMyProfileSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -59,11 +59,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click On Edit Pearson Account
             Logger.LogMethodEntry("UserProfile", "ClickOnEditPearsonAccount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Edit the Pearson Account
             new MyAccountSettingPage().ClickOnEditPearsonAccountOption();
             Logger.LogMethodExit("UserProfile", "ClickOnEditPearsonAccount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

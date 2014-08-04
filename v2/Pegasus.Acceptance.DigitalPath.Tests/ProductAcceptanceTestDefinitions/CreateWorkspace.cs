@@ -36,7 +36,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Create The New Workspace
             Logger.LogMethodEntry("CreateWorkspace", "CreateTheNewWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click the Create New Workspace
             new AdminToolPage().ClickTheCreateNewWorkspaceLink(
                 (AdminToolPage.AdminWorkspaceTypeEnum)Enum.Parse
@@ -47,7 +47,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 (typeof(AdminToolPage.AdminWorkspaceTypeEnum),
                 adminType), workspaceName);
             Logger.LogMethodExit("CreateWorkspace", "CreateTheNewWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Update The Created Workspace
             Logger.LogMethodEntry("CreateWorkspace", "UpdateAndCreatedWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the workspace name 
             WorkSpace worspaceName = WorkSpace.Get(workspaceTypeEnum);
             //Searched created workspace 
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 (typeof(AdminToolPage.AdminWorkspaceTypeEnum),
                 adminType), worspaceName.Name);
             Logger.LogMethodExit("CreateWorkspace", "UpdateAndCreatedWorkspace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
       
         /// <summary>
@@ -81,13 +81,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Display Of Preference And Workspaces Tabs
             Logger.LogMethodEntry("CreateWorkspace", "DisplayOfPreferenceAndWorkspacesTabs",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of Preference And Workspaces Tabs for CTG Publisher Admin
             Logger.LogAssertion("VerifyDisplayOfPreferenceAndWorkspacesTabs", 
                 ScenarioContext.Current.ScenarioInfo.Title,()=> Assert.IsTrue(
                     new AdminToolPage().IsDefaultTabsDisplayedForCtgPublisherAdmin()));
             Logger.LogMethodExit("CreateWorkspace", "DisplayOfPreferenceAndWorkspacesTabs",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -98,13 +98,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Display Of Cmenu Options
             Logger.LogMethodEntry("CreateWorkspace", "DisplayOfCmenuOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of cmenu options in Workspace for CTG Publisher Admin
             Logger.LogAssertion("VerifyDisplayOfCmenuOptionsInWorkspace",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue(
                     new AdminToolPage().IsDisplayedTheCmenuOptions()));           
             Logger.LogMethodExit("CreateWorkspace", "DisplayOfCmenuOptions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,14 +115,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Default View As Workspaces Tab for CTG Publisher Admin
             Logger.LogMethodEntry("CreateWorkspace", "DefaultViewForCtgPublisherAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Default View As Workspaces Tab for CTG Publisher Admin
             Logger.LogAssertion("VerifyDefaultViewForCTGPublisherAdmin",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(
                     CreateWorkspaceResource.CreateWorkspace_Workspaces_Window_Title,
                     new ManageWorkspacesPage().GetThePageTitle()));
             Logger.LogMethodExit("CreateWorkspace", "DefaultViewForCtgPublisherAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -133,13 +133,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Display Of Default Contents Of Workspace Tab
             Logger.LogMethodEntry("CreateWorkspace", "DisplayOfDefaultContentsOfWorkspaceTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of Default Contents Of Workspace Tab for CTG Publisher Admin
             Logger.LogAssertion("VerifyDefaultViewForCTGPublisherAdmin",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>Assert.IsTrue(
                     new ManageWorkspacesPage().IsTheDefaultContentsInWorkspacesTabDisplayed()));
             Logger.LogMethodEntry("CreateWorkspace", "DisplayOfDefaultContentsOfWorkspaceTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -150,11 +150,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click On The Edit Workspace Cmenu Option
             Logger.LogMethodEntry("CreateWorkspace", "ClickOnTheEditWorkspaceCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click Edit Workspace info CmenuOption
             new AdminToolPage().ClickEditWorkspaceinfoCmenuOption();
             Logger.LogMethodEntry("CreateWorkspace", "ClickOnTheEditWorkspaceCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -165,13 +165,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Displayed Textbox Fields In EditWorkspace
             Logger.LogMethodEntry("CreateWorkspace", "DisplayedTextboxFieldsInEditWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of TextboxFields in Workspace for CTG Publisher Admin
             Logger.LogAssertion("VerifyDisplayOftextboxFieldsInEditWorkspace",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue(
                     new NewWorkspacePage().IsDisplayedOfTextboxInEditWorkspace()));
             Logger.LogMethodExit("CreateWorkspace", "DisplayedTextboxFieldsInEditWorkspace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -182,11 +182,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click The Workspace Delete Link
             Logger.LogMethodEntry("CreateWorkspace", "ClickTheWorkspaceDeleteLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Delete Link In CTGPublisher Admin
             new AdminToolPage().ClickOnDeleteLinkInCtgPublisherAdmin();
             Logger.LogMethodExit("CreateWorkspace", "ClickTheWorkspaceDeleteLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -198,7 +198,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify the Contents Displayed In Preferences Page
             Logger.LogMethodEntry("CreateWorkspace",
                 "VerifyTheContentsDisplayedInPreferencesPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of Default contents in Preference page
             Logger.LogAssertion("VerifyDisplayOfDefaultcontentsinPreferencepage",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue(
@@ -206,7 +206,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     IsDefaultContentsDisplayedInPreferencesPage()));       
             Logger.LogMethodExit("CreateWorkspace",
                 "VerifyTheContentsDisplayedInPreferencesPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -217,11 +217,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Upload The Branding Image
             Logger.LogMethodEntry("CreateWorkspace","UploadTheBrandingImage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Upload The Branding Image In Preference
             new PublisherCustomizationPage().UploadBrandingImageInPreference();
             Logger.LogMethodExit("CreateWorkspace", "UploadTheBrandingImage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -233,12 +233,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Enter The Welcome Text And Registration URL
             Logger.LogMethodEntry("CreateWorkspace",
                 "EnterTheWelcomeTextAndRegistrationURL",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fill Welcome Text And URL
             new PublisherCustomizationPage().FillWelcomeTextAndURL();
             Logger.LogMethodExit("CreateWorkspace", 
                 "EnterTheWelcomeTextAndRegistrationURL",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -250,12 +250,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Click On The Save Button in Preference
             Logger.LogMethodEntry("CreateWorkspace",
                 "ClickOnTheSaveButtonInPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click The Save Button In Preference tab
             new PublisherCustomizationPage().ClickTheSaveButtonInPreferenceTab();
             Logger.LogMethodExit("CreateWorkspace", 
                 "ClickOnTheSaveButtonInPreference",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -267,7 +267,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Welcome Text Displayed In Login Page
             Logger.LogMethodEntry("CreateWorkspace",
                 "WelcomeTextDisplayedInLoginPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Welcome Message Displayed In Login Page
             Logger.LogAssertion("VerifyWelcomeMessageInLoginPage",
                ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(
@@ -276,7 +276,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                    new PublisherCustomizationPage().WelcomeMessageDisplayedInLoginPage()));
             Logger.LogMethodExit("CreateWorkspace",
                 "WelcomeTextDisplayedInLoginPage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>

@@ -32,11 +32,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Create Users by Type in Pegasus
             Logger.LogMethodEntry("CreateUser", "CreateNewUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create New User 
             new NewUserPage().CreateNewUserInWorkSpace(userTypeEnum);
             Logger.LogMethodExit("CreateUser", "CreateNewUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,13 +48,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("CreateUser", "SearchWsUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get User Name from Memory
             User user = User.Get(userTypeEnum);
             // Search User in the Manage Users frame
             new AdminToolPage().UserSearch(user.Name);
             Logger.LogMethodExit("CreateUser", "SearchWsUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -67,14 +67,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Checks the display of correct User
             Logger.LogMethodEntry("CreateUser", "ShowUserInManageUsersFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get User From Memory
             User user = User.Get(userTypeEnum);
             //Verify Username
             Logger.LogAssertion("VerifyUserName", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(user.Name, new ManageUsersPage().GetSearchedUserName()));
             Logger.LogMethodExit("CreateUser", "ShowUserInManageUsersFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,12 +86,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Clicks on the sub Tab
             Logger.LogMethodEntry("CreateUser", "NavigateToSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigates to the sub tab
             new ManageUserPage().NavigateToSubTab((ManageUserPage.CreateUserTab)Enum.
                 Parse(typeof(ManageUserPage.CreateUserTab), tabName));
             Logger.LogMethodExit("CreateUser", "NavigateToSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -105,14 +105,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Select the User Option
             Logger.LogMethodEntry("CreateUser", "SelectUserOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Add/Create Users link
             new ManageUserPage().ClickOnAddCreateUsersLink((ManageUserPage.CreateUserTab)Enum.
                 Parse(typeof(ManageUserPage.CreateUserTab), tabName));
             //Select the userType
             new ManageUserPage().SelectUserType(userTypeEnum);
             Logger.LogMethodExit("CreateUser", "SelectUserOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -125,11 +125,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Create User in Coursespace
             Logger.LogMethodEntry("CreateUser", "CreateNewUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Cs User
             new AddUserPage().CreateNewUser(userTypeEnum);
             Logger.LogMethodExit("CreateUser", "CreateNewUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -143,12 +143,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Create New User In Course Space Global Home Page
             Logger.LogMethodEntry("CreateUser",
                 "CreateNewUserInCourseSpaceGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Cs User
             new AddUserPage().CreateNewUserInGlobalHome(userTypeEnum);
             Logger.LogMethodExit("CreateUser", 
                 "CreateNewUserInCourseSpaceGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }       
 
         /// <summary>
@@ -163,13 +163,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Search the User
             Logger.LogMethodEntry("CreateUser", "SearchUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Search User
             new ManageUserPage().SearchUserInCourseSpace(userTypeEnum,
                 (ManageUserPage.CreateUserTab)Enum.
                 Parse(typeof(ManageUserPage.CreateUserTab), tabName));
             Logger.LogMethodExit("CreateUser", "SearchUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Verify the Searched User
             Logger.LogMethodEntry("CreateUser", "DisplayOfUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the User From Memory
             User user = User.Get(userTypeEnum);
             //Verify the Searched User
@@ -194,7 +194,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     ((ManageUserPage.CreateUserTab)Enum.
                     Parse(typeof(ManageUserPage.CreateUserTab), tabName))));
             Logger.LogMethodExit("CreateUser", "DisplayOfUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -207,7 +207,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Bulk User Upload in Users Tab
             Logger.LogMethodEntry("CreateUser", "BulkUserUploadInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Delete the Older Uploaded Files
             new BulkUploadQueuePage().DeleteOlderUploadedFiles();
             //Click on the Add Users link
@@ -216,7 +216,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Upload the Users 
             new ManageUserPage().BulkUserUpload();
             Logger.LogMethodExit("CreateUser", "BulkUserUploadInCourseSpace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -229,13 +229,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Verify Successfull Message For Upload Users
             Logger.LogMethodEntry("CreateUser", "SuccessfullMessageForUploadUsers",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify the Successfull Message
             Logger.LogAssertion("VerifySuccessfullMessageAfterBulkRegistration",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(successMessage,
                     new ManageUserPage().GetSuccessfullMessageAfterBulkRegistration()));
             Logger.LogMethodExit("CreateUser", "SuccessfullMessageForUploadUsers",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -248,12 +248,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             // Create NewUser In CourseSpace Admin
             Logger.LogMethodEntry("CreateUser",
                 "CreateNewUserInCourseSpaceAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Cs User
             new AddUserPage().CreateNewUserInCourseSpaceAdmin(userTypeEnum);
             Logger.LogMethodExit("CreateUser",
                 "CreateNewUserInCourseSpaceAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -264,11 +264,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Click The User Cmenu Option In Manage User Frame
             Logger.LogMethodEntry("CreateUser", "ClickTheUserCmenuOptionInManageUserFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Delete The Created User In Manage User Frame
             new ManageUsersPage().DeleteTheCreatedUserInManageUserFrame();
             Logger.LogMethodExit("CreateUser", "ClickTheUserCmenuOptionInManageUserFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -281,11 +281,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Selec the Cmenu Option of User
             Logger.LogMethodEntry("CreateUser", "SelectTheCmenuOptionofUser",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Cmenu Option
             new ManageUsersPage().SelectCmenuOption(cmenuOption);
             Logger.LogMethodExit("CreateUser", "SelectTheCmenuOptionofUser",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -296,11 +296,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Select Ok Option
             Logger.LogMethodEntry("CreateUser", "ClickOnOkOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Click on Ok Button
             new ShowMessagePage().ClickOnPegasusAlertOkButton();
             Logger.LogMethodExit("CreateUser", "ClickOnOkOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

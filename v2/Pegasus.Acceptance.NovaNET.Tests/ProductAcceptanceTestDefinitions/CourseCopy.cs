@@ -32,7 +32,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Copies Course
             Logger.LogMethodEntry("CourseCopy", "CreateAuthoredCourseCopyInWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
                     (CourseCopyResource.
@@ -40,7 +40,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Create A Copy Of Master Course
             new NewCoursePage().CopyCourseAsMasterCourse(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy", "CreateAuthoredCourseCopyInWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Check Course for Assigned To Copy State
             Logger.LogMethodEntry("CourseCopy", 
                 "VerifyTheCourseForAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get The Copied Master Course Name Stored In Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 course.Name, dropdownOption);
             Logger.LogMethodExit("CourseCopy", 
                 "VerifyTheCourseForAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -84,7 +84,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Check Course Get Our Of Assigned To Copy State
             Logger.LogMethodEntry("CourseCopy", 
                 "CourseOutOfAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert [CourseForAssignedToCopy] Text Present
             Logger.LogAssertion("VerifyAssignedToCopyTextPresent",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -94,7 +94,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     GetAssignedToCopyTextPresentAfterSpecifiedTime()));
             Logger.LogMethodExit("CourseCopy", 
                 "CourseOutOfAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

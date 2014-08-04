@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fetch and Store Pegasus Course Id
             logger.LogMethodEntry("SupportPage","FetchAndStoreCourseId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SupportPage", "FetchAndStoreCourseId", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -64,14 +64,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("SupportPage", "SelectWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Support Window
             base.WaitUntilWindowLoads(SupportPageResource.
                 Support_Page_Resource_Support_Window_Title);
             base.SelectWindow(SupportPageResource.
                 Support_Page_Resource_Support_Window_Title);
             logger.LogMethodExit("SupportPage", "SelectWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Pegasus CourseID In Memory
             logger.LogMethodEntry("SupportPage",
-                "StorePegasusCourseIDInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StorePegasusCourseIDInMemory", base.IsTakeScreenShotDuringEntryExit);
             Course course = new Course
             {
                 PegasusCourseId = pegasusCourseId,
@@ -91,7 +91,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             course.StoreCourseInMemory();
             logger.LogMethodExit("SupportPage",
-                "StorePegasusCourseIDInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StorePegasusCourseIDInMemory", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

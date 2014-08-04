@@ -34,7 +34,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
         {
             //Method To Publish Course
             Logger.LogMethodEntry("PublishCourse", "PublishGeneralCourseInWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Course Cmenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
                     (PublishCourseResource.
@@ -42,7 +42,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Course Published Successfully
             new PublishingNotesPage().PublishCourseInWorkSpace(courseTypeEnum);
             Logger.LogMethodExit("PublishCourse", "PublishGeneralCourseInWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

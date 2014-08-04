@@ -35,12 +35,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Manage to navigate Organization Management Page
             Logger.LogMethodEntry("CreateOrganization",
                 "NavigateToOrganizationManagementPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate to Organization Management Page
             new AdminToolPage().NavigateOrganizationManagementPage();
             Logger.LogMethodExit("CreateOrganization",
                 "NavigateToOrganizationManagementPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,12 +52,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Click on the'Create New Organization' link
             Logger.LogMethodEntry("CreateOrganization",
                 "ClickTheCreateNewOrganizationLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click the 'Create New Organization' link          
             new OrganizationManagementPage().ClickOnTheCreateNewOrganizationLink();
             Logger.LogMethodExit("CreateOrganization",
                 "ClickTheCreateNewOrganizationLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Search the searched organization
             Logger.LogMethodEntry("CreateOrganization", "SearchTheOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Fetch the organization name 
@@ -87,7 +87,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
 
             }
             Logger.LogMethodExit("CreateOrganization", "SearchTheOrganization",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the display searched Organization
             Logger.LogMethodEntry("CreateOrganization", "VerifyTheDisplaySearchOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the organization name 
             Organization organization = Organization.Get(
                 organizationLevelEnum, organizationTypeEnum);
@@ -111,7 +111,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(organization.Name,
                     new OrganizationManagementPage().GetDisplayofSearchedOrganization()));
             Logger.LogMethodExit("CreateOrganization", "VerifyTheDisplaySearchOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -122,11 +122,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click on the 'select' button
             Logger.LogMethodEntry("CreateOrganization", "ClickTheSelectButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the 'Select' button
             new OrganizationManagementPage().ClickOnTheOrganizationSelectButton();
             Logger.LogMethodExit("CreateOrganization", "ClickTheSelectButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -139,11 +139,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click on the different 'Add' organization link
             Logger.LogMethodEntry("CreateOrganization", "ClickTheAddOrganizationLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the 'Add'_organization link
             new OrganizationSearchPage().ClickOnTheAddOrganizationLink();
             Logger.LogMethodExit("CreateOrganization", "ClickTheAddOrganizationLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -163,12 +163,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Create organization
             Logger.LogMethodEntry("CreateOrganization", "CreateTheOrganizationLevels",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create organization based on level
             new CreateOrganizationPage().CreateOrganizationInProductBasedOnLevel
                 (organizationLevelEnum, organizationTypeEnum, organizationCreationCondition);
             Logger.LogMethodExit("CreateOrganization", "CreateTheOrganizationLevels",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -179,11 +179,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click on the 'Select Organization' link
             Logger.LogMethodEntry("CreateOrganization", "ClickTheSelectOrganizationLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the 'Select Organization' link
             new OrganizationSearchPage().ClickOnTheSelectOrganizationLink();
             Logger.LogMethodExit("CreateOrganization", "ClickTheSelectOrganizationLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -194,13 +194,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Enter the School Level Organization
             Logger.LogMethodEntry("CreateOrganization", "EnterIntoTheSchool",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Click on the 'Select' button
             new OrganizationManagementPage().ClickOnTheOrganizationSelectButton();
             //Select the Manage Organization window
             new ManageOrganisationToolBarPage().SelectManageOrganizationWindow();
             Logger.LogMethodExit("CreateOrganization", "EnterIntoTheSchool",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -212,12 +212,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Navigate To Properties Sub Tab
             Logger.LogMethodEntry("CreateOrganization", "NavigateToPropertiesSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate To Properties Sub Tab In Management Organization
             new ManageOrganisationToolBarPage().
                 NavigateToPropertiesSubTabInManagementOrganization(tabName);
             Logger.LogMethodExit("CreateOrganization", "NavigateToPropertiesSubTab",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         ///  <summary>
@@ -232,14 +232,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Edit The Organization 
             Logger.LogMethodEntry("CreateOrganization", "EditTheOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select The Properties Organization Managment Frame
             new CreateOrganizationPage().SelectThePropertiesOrganizationManagmentFrame();
             //Create And Edit the organization
             new CreateOrganizationPage().CreateNewOrganizationForDifferentLevels(
                 organizationLevelEnum, organizationTypeEnum);
             Logger.LogMethodExit("CreateOrganization", "EditTheOrganization",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -250,11 +250,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Delete Organization
             Logger.LogMethodEntry("CreateOrganization", "DeleteTheOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Delete Organization
             new OrganizationManagementPage().DeleteOrganization();
             Logger.LogMethodExit("CreateOrganization", "DeleteTheOrganization",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -266,14 +266,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Deleted Organization
             Logger.LogMethodEntry("CreateOrganization", "VerifyDeletedOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Assert Deleted organization 
             Logger.LogAssertion("VerifySearchOrganization", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(message,
                     new OrganizationManagementPage().
                     GetValidationMessageonSearchingDeletedOrganization()));
             Logger.LogMethodExit("CreateOrganization", "VerifyDeletedOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -25,7 +25,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
         {
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
                 "SetETextPreferenceInCourseMaterialTab",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select window
@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
             }
             Logger.LogMethodExit("CourseMaterialPreferencePage",
                 "SetETextPreferenceInCourseMaterialTab",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
             //Switch To Frame
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
               "SwitchToFrame",
-         base.isTakeScreenShotDuringEntryExit);
+         base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(CourseMaterialPreferencePageResource.
                 CourseMaterialPreferences_Page_Frame_Id_Locator));
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
                 CourseMaterialPreferences_Page_Frame_Id_Locator);
             Logger.LogMethodExit("CourseMaterialPreferencePage",
               "SwitchToFrame",
-         base.isTakeScreenShotDuringEntryExit);
+         base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,12 +76,12 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
         {
             //Select Window
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
-             "SelectPreferencesWindow", base.isTakeScreenShotDuringEntryExit);
+             "SelectPreferencesWindow", base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(CourseMaterialPreferencePageResource.
                 CourseMaterialPreferences_Page_Window_Title);
             Logger.LogMethodExit("CourseMaterialPreferencePage",
-             "SelectPreferencesWindow", base.isTakeScreenShotDuringEntryExit);
+             "SelectPreferencesWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
         {
             //Enter EText Linking Preference
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
-            "SetETextLinkingContentPreference", base.isTakeScreenShotDuringEntryExit);
+            "SetETextLinkingContentPreference", base.IsTakeScreenShotDuringEntryExit);
             //Wait for element
             base.WaitForElement(By.Id(CourseMaterialPreferencePageResource.
                   CourseMaterialPreference_Page_EnableETextLinking_CheckBox_Id_Locator));
@@ -114,7 +114,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
                 this.SelectETextAllowLinkingCheckBox();
             }
             Logger.LogMethodExit("CourseMaterialPreferencePage",
-           "SetETextLinkingContentPreference", base.isTakeScreenShotDuringEntryExit);
+           "SetETextLinkingContentPreference", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
         {
             //Enter EText Book Code
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
-           "EnterETextBookCode", base.isTakeScreenShotDuringEntryExit);
+           "EnterETextBookCode", base.IsTakeScreenShotDuringEntryExit);
             //Fill the "Book Code"
             base.WaitForElement(By.Id(CourseMaterialPreferencePageResource.
                                           CourseMaterialPreference_Page_BookCode_Id_Locator));
@@ -134,7 +134,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
                                  CourseMaterialPreferencePageResource.
                                      CourseMaterialPreference_Page_BookCode_Value);
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
-           "EnterETextBookCode", base.isTakeScreenShotDuringEntryExit);
+           "EnterETextBookCode", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
         {
             //Enter Book Id
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
-           "EnterETextBookID", base.isTakeScreenShotDuringEntryExit);
+           "EnterETextBookID", base.IsTakeScreenShotDuringEntryExit);
             //Fill the "Book Id"
             base.WaitForElement(By.Id(CourseMaterialPreferencePageResource.
                                           CourseMaterialPreference_Page_BookId_Id_Locator));
@@ -154,7 +154,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
                                  CourseMaterialPreferencePageResource.
                                      CourseMaterialPreference_Page_BookId_Id_Value);
             Logger.LogMethodExit("CourseMaterialPreferencePage",
-           "EnterETextBookID", base.isTakeScreenShotDuringEntryExit);
+           "EnterETextBookID", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
         {
             //Enter Book Title
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
-           "EnterETextBookTitle", base.isTakeScreenShotDuringEntryExit);
+           "EnterETextBookTitle", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(CourseMaterialPreferencePageResource.
                                           CourseMaterialPreference_Page_BookTitle_Id_Locator));
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
                                  CourseMaterialPreferencePageResource.
                                      CourseMaterialPreference_Page_BookTitle_Id_Value);
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
-           "EnterETextBookTitle", base.isTakeScreenShotDuringEntryExit);
+           "EnterETextBookTitle", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
         {
             //Select Checkbox
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
-           "SelectETextAllowLinkingCheckBox", base.isTakeScreenShotDuringEntryExit);
+           "SelectETextAllowLinkingCheckBox", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(CourseMaterialPreferencePageResource.
                                           CourseMaterialPreference_Page_AllowLinking_CheckBox_Id_Locator));
@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
             Thread.Sleep(Convert.ToInt32(CourseMaterialPreferencePageResource.
                                              CourseMaterialPreferences_Page_Thread_Wait_Time));
             Logger.LogMethodExit("CourseMaterialPreferencePage",
-           "SelectETextAllowLinkingCheckBox", base.isTakeScreenShotDuringEntryExit);
+           "SelectETextAllowLinkingCheckBox", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
         {
             //Select Checkbox
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
-           "SelectEnableETextLinkingCheckBox", base.isTakeScreenShotDuringEntryExit);
+           "SelectEnableETextLinkingCheckBox", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(CourseMaterialPreferencePageResource.
                  CourseMaterialPreference_Page_EnableETextLinking_CheckBox_Id_Locator));
@@ -215,7 +215,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
             //Select CheckBox
             base.ClickByJavaScriptExecutor(getPropertyOfEnableETextcheckbox);
             Logger.LogMethodExit("CourseMaterialPreferencePage",
-           "SelectEnableETextLinkingCheckBox", base.isTakeScreenShotDuringEntryExit);
+           "SelectEnableETextLinkingCheckBox", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
         {
             //Disable Hide MyCourse Materials Preference
             Logger.LogMethodEntry("CourseMaterialPreferencePage",
-           "SelectEnableETextLinkingCheckBox", base.isTakeScreenShotDuringEntryExit);
+           "SelectEnableETextLinkingCheckBox", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select window
@@ -252,7 +252,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseMaterialPreferencePage",
-           "SelectEnableETextLinkingCheckBox", base.isTakeScreenShotDuringEntryExit);
+           "SelectEnableETextLinkingCheckBox", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

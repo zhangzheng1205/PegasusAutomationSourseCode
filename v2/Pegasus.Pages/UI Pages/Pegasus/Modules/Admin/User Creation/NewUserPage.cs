@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create New User(s) In WorkSpace
             logger.LogMethodEntry("NewUserPage", "CreateNewUserInWorkSpace"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Creating WS User
@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("NewUserPage", "CreateNewUserInWorkSpace"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -53,13 +53,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("NewUserPage", "SelectCreateNewUserWindow"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Load
             base.WaitUntilWindowLoads(NewUserPageResource.NewUser_Page_PopUpName);
             //Select Window
             base.SelectWindow(NewUserPageResource.NewUser_Page_PopUpName);
             logger.LogMethodExit("NewUserPage", "SelectCreateNewUserWindow"
-           , base.isTakeScreenShotDuringEntryExit);
+           , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
         private Guid EnterWorkSpaceUserLoginInformation()
         {
             logger.LogMethodEntry("NewUserPage", "EnterWorkSpaceUserLoginInformation"
-           , base.isTakeScreenShotDuringEntryExit);
+           , base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(NewUserPageResource
                                           .NewUser_Page_LoginNameTextBox_Id_Locator));
             base.GetWebElementPropertiesById(NewUserPageResource
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
                                                  .NewUser_Page_PasswordTextBox_Id_Locator).SendKeys
                 (NewUserPageResource.NewUser_Page_PasswordOfUser_Value);
             logger.LogMethodExit("NewUserPage", "EnterWorkSpaceUserLoginInformation"
-          , base.isTakeScreenShotDuringEntryExit);
+          , base.IsTakeScreenShotDuringEntryExit);
             return userLoginName;
         }
 
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter WS User Details in create new user pop up
             logger.LogMethodEntry("NewUserPage", "EnterWorkSpaceUserPersonalInformation"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             // Generate User Full Name Details Guid
             Guid userFullName = Guid.NewGuid();
             EnterUserFirstName(userFullName.ToString());
@@ -108,7 +108,7 @@ namespace Pegasus.Pages.UI_Pages
             EnterUserEMailAddress();
             ClickCreateNewUserSaveButton();          
             logger.LogMethodExit("NewUserPage", "EnterWorkSpaceUserPersonalInformation"
-                  , base.isTakeScreenShotDuringEntryExit);
+                  , base.IsTakeScreenShotDuringEntryExit);
             return userFullName;
         }
 
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Email Address
             logger.LogMethodEntry("NewUserPage", "EnterUserEMailAddress"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewUserPageResource
                                           .NewUser_Page_EmailTextBox_Id_Locator));
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
                                                  NewUser_Page_EmailTextBox_Id_Locator,
                                                  NewUserPageResource.NewUser_Page_EmailOfUser_Value);
             logger.LogMethodExit("NewUserPage", "EnterUserEMailAddress"
-                  , base.isTakeScreenShotDuringEntryExit);
+                  , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter User LastName
             logger.LogMethodEntry("NewUserPage", "EnterUserLastName"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewUserPageResource
                                           .NewUser_Page_LastNameTextBox_Id_Locator));
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(NewUserPageResource
                                                  .NewUser_Page_LastNameTextBox_Id_Locator, userLastName);
             logger.LogMethodEntry("NewUserPage", "EnterUserLastName"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Enter FirstName                  
             logger.LogMethodEntry("NewUserPage", "EnterUserFirstName"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewUserPageResource
                                           .NewUser_Page_FirstNameTextBox_Id_Locator));
@@ -175,7 +175,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(NewUserPageResource
                                                    .NewUser_Page_FirstNameTextBox_Id_Locator, userFirstName);
             logger.LogMethodEntry("NewUserPage", "EnterUserFirstName"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -185,7 +185,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click To Save Button
             logger.LogMethodEntry("NewUserPage", "ClickCreateNewUserSaveButton",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewUserPageResource
                                           .NewUser_Page_SaveButton_Id_Locator));
@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on button
             base.ClickByJavaScriptExecutor(getSaveButton);      
             logger.LogMethodExit("NewUserPage", "ClickCreateNewUserSaveButton",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save user in Memory
             logger.LogMethodEntry("NewUserPage", "StoreUserDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Save User Properties in Memory
             User newUser = new User
             {
@@ -224,7 +224,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save The User in Memory
             newUser.StoreUserInMemory();
             logger.LogMethodExit("NewUserPage", "StoreUserDetailsInMemory",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Edit User Details
             logger.LogMethodEntry("NewUserPage", "EditWorkSpaceUserDetails",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -258,7 +258,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("NewUserPage", "EditWorkSpaceUserDetails",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Link
             logger.LogMethodEntry("NewUserPage", "ClickResetPasswordLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.PartialLinkText(NewUserPageResource.
                                                        NewUser_Page_ResetPassword_Link_Locator));
             //Get Reset Password Button 
@@ -277,7 +277,7 @@ namespace Pegasus.Pages.UI_Pages
                                                              NewUser_Page_ResetPassword_Link_Locator);
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("NewUserPage", "ClickResetPasswordLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -287,7 +287,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("NewUserPage", "SelectUpdateUserWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Loads
             base.WaitUntilWindowLoads(NewUserPageResource.
                                   NewUser_Page_Updateuser_Window_Name);
@@ -295,7 +295,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(NewUserPageResource.
                                   NewUser_Page_Updateuser_Window_Name);
             logger.LogMethodEntry("NewUserPage", "SelectUpdateUserWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -305,7 +305,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Password
             logger.LogMethodEntry("NewUserPage", "ResetUserPasswordDetails",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Reset Password Window
             base.SelectWindow(NewUserPageResource.
                 NewUser_Page_ResetPassword_Link_Locator);
@@ -327,7 +327,7 @@ namespace Pegasus.Pages.UI_Pages
                 NewUser_Page_TxtReTypePassword_Id_Locator).
                 SendKeys(NewUserPageResource.NewUser_Page_EditPassword_Value);           
             logger.LogMethodExit("NewUserPage", "ResetUserPasswordDetails",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -337,7 +337,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Save and Close Button
             logger.LogMethodEntry("NewUserPage", "ClickEditUserSaveAndCloseButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewUserPageResource.
                                           NewUser_Page_SaveAndClose_Id_Locator));
@@ -345,7 +345,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonById(NewUserPageResource.
                                                  NewUser_Page_SaveAndClose_Id_Locator);
             logger.LogMethodExit("NewUserPage", "ClickEditUserSaveAndCloseButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

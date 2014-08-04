@@ -30,7 +30,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("InstructorSearchCatalog",
-                "SelectMasterCourseFromCatalog", base.isTakeScreenShotDuringEntryExit);
+                "SelectMasterCourseFromCatalog", base.IsTakeScreenShotDuringEntryExit);
             //Closing the Announcement(s)
             new AnnouncementPopUpLightBoxUXPage().CloseAnnouncementPopUp();
             //Click 'Create a Course' Link             
@@ -38,7 +38,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Adding Course From Instructor Search Catalog
             new CourseCatalogMainPage().AddCourseFromSearchCatalog(courseTypeEnum);
             Logger.LogMethodExit("InstructorSearchCatalog",
-                "SelectMasterCourseFromCatalog", base.isTakeScreenShotDuringEntryExit);
+                "SelectMasterCourseFromCatalog", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,14 +50,14 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Select Course To Validate Inactive State To Active State
             Logger.LogMethodEntry("InstructorSearchCatalog",
                 "ApproveInactiveStateOfCourseToActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Page Class Object
             HEDGlobalHomePage hedGlobalHomepage = new HEDGlobalHomePage();
             //Approves Course in Active State
             hedGlobalHomepage.ApproveCoursePresentInAssignedToCopyState();
             Logger.LogMethodExit("InstructorSearchCatalog",
                 "ApproveInactiveStateOfCourseToActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             Logger.LogMethodEntry("InstructorSearchCatalog",
                 "VerifyInstructorCourseOnTheGlobalHomePageInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Course Present In Active State
             Logger.LogAssertion("VerifyCoursePresentInActiveState",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -80,7 +80,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             new HEDGlobalHomePage().StoreInstructorCourseIDInMemory(courseTypeEnum);
             Logger.LogMethodExit("InstructorSearchCatalog",
                 "VerifyInstructorCourseOnTheGlobalHomePageInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("InstructorSearchCatalog",
-                "SelectProgramTypeProductFromCatalog", base.isTakeScreenShotDuringEntryExit);
+                "SelectProgramTypeProductFromCatalog", base.IsTakeScreenShotDuringEntryExit);
             //Closing the Announcement(s)
             new AnnouncementPopUpLightBoxUXPage().CloseAnnouncementPopUp();
             //Click 'Create a Course' Link             
@@ -101,7 +101,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Adding Product From Instructor Search Catalog
             new CourseCatalogMainPage().AddProductFromSearchCatalog(productTypeEnum);
             Logger.LogMethodExit("InstructorSearchCatalog",
-                "SelectProgramTypeProductFromCatalog", base.isTakeScreenShotDuringEntryExit);
+                "SelectProgramTypeProductFromCatalog", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage", "CreateSIMQuestionsSet",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Genrate Guid for Question set name 
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "CreateSIMQuestionsSet",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage", "SelectCreateQuestionSetWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select 'Create Question Set' window
             base.WaitUntilWindowLoads(QuestionSetPageResource.
                 QuestionSetPage_CreateQuestionSet_Window_name);
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
                 QuestionSetPage_CreateQuestionSet_Window_name);
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "SelectCreateQuestionSetWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage", "EnterQuestionSetName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Question Set Name textbox
             base.WaitForElement(By.Id(QuestionSetPageResource.
                 QuestionSetPage_QuestionSetName_Textbox_Id));
@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages
                   SendKeys(questionSetName.ToString());
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "EnterQuestionSetName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage", "ClickOnSaveAndReturnButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on save and return button
             base.WaitForElement(By.Id(QuestionSetPageResource.
                 QuestionSetPage_SaveAndReturn_Button_Id));
@@ -128,7 +128,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getPropertyOfSaveAndReturnButton);
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "ClickOnSaveAndReturnButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage", "ClickOnAddAndCloseButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Switch to "Select content" popup window
             this.SelectContentWindow();
             //Click on Add and close button 
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getPropertyOfAddandCloseButton);
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "ClickOnAddAndCloseButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage", "AddQuestionsFromQuestionFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select the diffrent Question Folder according to Question Set Enum
             switch (questionTypeEnum)
             {
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "AddQuestionsFromQuestionFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -221,13 +221,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add SIM2007 Question 
             Logger.LogMethodEntry("QuestionSetPage", "AddSIM2007Question",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On SIM2007 Question Folder
             this.ClickOnSIM2007QuestionFolder();
             //Select SIMQuestion Set From Select Content
             this.SelectSIMQuestionSetFromSelectContent(questionFolderName);
             Logger.LogMethodExit("QuestionSetPage", "AddSIM2007Question",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On SIM2007 Question Folder
             Logger.LogMethodEntry("QuestionSetPage", "ClickOnSIM2007QuestionFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Add Question Link on create Question set page
             this.ClickOnAddQuestionLink();
             //Switch to "Select content" popup window
@@ -251,7 +251,7 @@ namespace Pegasus.Pages.UI_Pages
                 QuestionSetPage_GOOffice2007_Folder_Name);
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "ClickOnSIM2007QuestionFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add SIM questions into question set from SIM Repository
             Logger.LogMethodEntry("QuestionSetPage", "AddSIM2010Question",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click On SIM2010 Question Folder
@@ -276,7 +276,7 @@ namespace Pegasus.Pages.UI_Pages
             }   
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "AddSIM2010Question",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -288,7 +288,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select SIMQuestion Set From Select Content
             Logger.LogMethodEntry("QuestionSetPage",
                 "SelectSIMQuestionSetFromSelectContent",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Click on expected Question type folder
             base.WaitForElement(By.PartialLinkText(questionFolderName));
             ClickLinkByPartialLinkText(questionFolderName);
@@ -303,7 +303,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectContentWindow();
             Logger.LogMethodExit("QuestionSetPage", 
                 "SelectSIMQuestionSetFromSelectContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -313,7 +313,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On SIM2010 Question Folder
             Logger.LogMethodEntry("QuestionSetPage", "ClickOnSIM2010QuestionFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Add Question Link on create Question set page
             this.ClickOnAddQuestionLink();
             //Switch to "Select content" popup window
@@ -327,7 +327,7 @@ namespace Pegasus.Pages.UI_Pages
                 QuestionSetPage_GOOffice2010_Folder_Name);
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "ClickOnSIM2010QuestionFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -337,7 +337,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage", "SelectContentWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select 'SelectContent' window
             base.WaitUntilWindowLoads(QuestionSetPageResource.
                QuestionSetPage_SelectContent_Window_name);
@@ -345,7 +345,7 @@ namespace Pegasus.Pages.UI_Pages
                QuestionSetPage_SelectContent_Window_name);
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "SelectContentWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -356,7 +356,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage",
                 "ValidateTheCheckBoxStatusOfQuestionFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for Checkbox corresponding to folder name  
             base.WaitForElement(By.XPath(QuestionSetPageResource.
                 QuestionSetPage_Folder_CheckBox_Xpath));
@@ -385,7 +385,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage",
                 "ValidateTheCheckBoxStatusOfQuestionFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -395,7 +395,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage", "ClickOnAddQuestionLink",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Wait for Add Questions link on Questions tab
             base.WaitForElement(By.Id(QuestionSetPageResource.
                 QuestionSetPage_AddQuestion_Link_Id));
@@ -403,7 +403,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickLinkById(QuestionSetPageResource.
                 QuestionSetPage_AddQuestion_Link_Id);
             Logger.LogMethodExit("QuestionSetPage", "ClickOnAddQuestionLink",  
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -413,7 +413,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage", "ClickOnSaveAndContinueButton",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Wait for save and continue button 
             base.WaitForElement(By.Id(QuestionSetPageResource.
                 QuestionSetPage_SaveAndContinue_Button_Id));
@@ -425,7 +425,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getPropertyOfSaveAndContinueButton);
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "ClickOnSaveAndContinueButton",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -435,7 +435,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage", "SwitchToQuestionSetGridIframe",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Wait for IfrmQuestionSetGrid Iframe
             base.WaitForElement(By.Id(QuestionSetPageResource.
                 QuestionSetPage_QuestionSetGrid_Iframe_Id));
@@ -444,7 +444,7 @@ namespace Pegasus.Pages.UI_Pages
                 QuestionSetPage_QuestionSetGrid_Iframe_Id);
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "SwitchToQuestionSetGridIframe",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -457,7 +457,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Store The SIM Question Set In Memory
             Logger.LogMethodEntry("QuestionSetPage", "StoreTheSIMQuestionSetInMemory",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Store the SIM Question Set
             Question newQuestionType = new Question
             {
@@ -467,7 +467,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newQuestionType.StoreQuestionInMemory();
             Logger.LogMethodExit("QuestionSetPage", "StoreTheSIMQuestionSetInMemory",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -477,7 +477,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("QuestionSetPage", "SelectEditQuestionSetWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select 'Create Question Set' window
             base.WaitUntilWindowLoads(QuestionSetPageResource.
                 QuestionSetPage_EditQuestionSet_Window_name);
@@ -485,7 +485,7 @@ namespace Pegasus.Pages.UI_Pages
                 QuestionSetPage_EditQuestionSet_Window_name);
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage", "SelectEditQuestionSetWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -497,7 +497,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Update The Question Set With QuestionType
             Logger.LogMethodEntry("QuestionSetPage", "UpdateTheSIMQuestionsSet",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Genrate Guid for Question set name 
@@ -517,7 +517,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QuestionSetPage", "UpdateTheSIMQuestionsSet",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -529,7 +529,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On EditedQuestion SaveAndReturn Button.
             Logger.LogMethodEntry("QuestionSetPage", 
                 "ClickOnEditedQuestionSaveAndReturnButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on save and return button
             base.WaitForElement(By.Id(QuestionSetPageResource.
                 QuestionSetPage_EditedQuestion_SaveAndReturn_Button_Id));
@@ -542,7 +542,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Exit
             Logger.LogMethodExit("QuestionSetPage",
                 "ClickOnEditedQuestionSaveAndReturnButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }        
     }
 }

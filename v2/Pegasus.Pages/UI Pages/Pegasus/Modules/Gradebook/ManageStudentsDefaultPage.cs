@@ -39,7 +39,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Display Of 'Manage Students' Page
             logger.LogMethodEntry("ManageStudentsDefaultPage", "GetManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string windowName = string.Empty;
             try
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageStudentsDefaultPage", "GetManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return windowName;
         }
 
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On 'Create New' Button in Manage Student
             logger.LogMethodEntry("ManageStudentsDefaultPage",
                 "ClickOnCreateNewButtonInManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select The Roster Frame
@@ -91,7 +91,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ManageStudentsDefaultPage",
                 "ClickOnCreateNewButtonInManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Roster Frame
             logger.LogMethodEntry("ManageStudentsDefaultPage", "SelectTheRosterFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Manage Students window
             base.SelectWindow(ManageStudentsDefaultPageResource.
                     ManageStudentsDefaultPage_Window_Title);
@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(ManageStudentsDefaultPageResource.
                 ManageStudentsDefaultPage_Frame_Roster_Id_Locator);
             logger.LogMethodExit("ManageStudentsDefaultPage", "SelectTheRosterFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The Option From 'Create New' Drop Down Options
             logger.LogMethodEntry("ManageStudentsDefaultPage",
                 "SelectTheOptionFromCreateNewDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click On 'Create New' Button
@@ -143,7 +143,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ManageStudentsDefaultPage",
                 "SelectTheOptionFromCreateNewDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Delete The Older Uploaded Files
             logger.LogMethodEntry("ManageStudentsDefaultPage", "DeleteTheOlderUploadedFiles",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select The Roster Frame
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageStudentsDefaultPage", "DeleteTheOlderUploadedFiles",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Import Users
             logger.LogMethodEntry("ManageStudentsDefaultPage", "ImportUsers",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Import Users window
@@ -203,7 +203,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageStudentsDefaultPage", "ImportUsers",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace Pegasus.Pages.UI_Pages
             //Display of Successfull Message After Bulk Registration
             logger.LogMethodEntry("ManageStudentsDefaultPage",
                 "GetSuccessfullMessageAfterBulkRegistration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable getSuccessfulMessage
             string getSuccessfulMessage = string.Empty;
             try
@@ -232,7 +232,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ManageStudentsDefaultPage",
                 "GetSuccessfullMessageAfterBulkRegistration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSuccessfulMessage;
         }
 
@@ -244,7 +244,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait For Successfull Message To Display For Bulk Registration
             logger.LogMethodEntry("ManageStudentsDefaultPage",
                 "WaitForSuccessfullMessageToDisplayForBulkRegistration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select The Roster Frame
             this.SelectTheRosterFrame();
             //Start the StopWatch
@@ -278,7 +278,7 @@ namespace Pegasus.Pages.UI_Pages
                 (stopWatch.Elapsed.TotalMinutes < getMinutesToWait));
             logger.LogMethodExit("ManageStudentsDefaultPage",
                 "WaitForSuccessfullMessageToDisplayForBulkRegistration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -290,7 +290,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get The Enrolled User
             logger.LogMethodEntry("ManageStudentsDefaultPage", "GetEnrolledUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getUserName = string.Empty;
             try
@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageStudentsDefaultPage", "GetEnrolledUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
 
@@ -338,7 +338,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get The Enrolled User
             logger.LogMethodEntry("ManageStudentsDefaultPage", "GetUnenrolledText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getUnenrolledText = string.Empty;
             try
@@ -382,7 +382,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageStudentsDefaultPage", "GetUnenrolledText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getUnenrolledText.Trim();
         }
     }

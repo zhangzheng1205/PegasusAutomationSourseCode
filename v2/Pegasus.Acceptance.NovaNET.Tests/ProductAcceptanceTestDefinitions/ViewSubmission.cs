@@ -34,7 +34,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Open the Activity in Different Tab's
             Logger.LogMethodEntry("ViewSubmission", "OpenTheActivityInTab",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Click To Open Activity
@@ -42,7 +42,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                  (CoursePreviewMainUXPage.OpenActivityTab)Enum.Parse
                  (typeof(CoursePreviewMainUXPage.OpenActivityTab), tabName));
             Logger.LogMethodEntry("ViewSubmission", "OpenTheActivityInTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Display of Grade for Submitted Activity
             Logger.LogMethodEntry("ViewSubmission", 
                 "DisplayOfGradeUnderGradeColumnforSubmittedActivity",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             GBStudentUXPage gbStudentUXpage = new GBStudentUXPage();
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     gbStudentUXpage.GetActivityScoreInGradebook(activity.Name)));
             Logger.LogMethodEntry("ViewSubmission", 
                 "DisplayOfGradeUnderGradeColumnforSubmittedActivity",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Display of Grade for Submitted Activity
             Logger.LogMethodEntry("ViewSubmission", "ActivityLaunchedSuccessfully",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Created Page Class Object
             InstructorPresentationPage instructorPresentationPage =
                 new InstructorPresentationPage();
@@ -92,7 +92,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Close Activity Presentaion Window
             instructorPresentationPage.CloseActivityPresentationWindow();
             Logger.LogMethodEntry("ViewSubmission", "ActivityLaunchedSuccessfully",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Submit the Activity Launched Successfully
             Logger.LogMethodEntry("ViewSubmission", "SubmitActivityLaunchedSuccessfully",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Created Page Class Object
             InstructorPresentationPage instructorPresentationPage =
                 new InstructorPresentationPage();
@@ -112,7 +112,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(instructorPresentationPage.IsPostTestActivityLaunchedInContentPage()));    
             Logger.LogMethodEntry("ViewSubmission", "SubmitActivityLaunchedSuccessfully",
-         base.isTakeScreenShotDuringEntryExit);
+         base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Submit the Activity
             Logger.LogMethodEntry("ViewSubmission", "SubmitTheActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             StudentPresentationPage studentpresentationpage =
                 new StudentPresentationPage();
@@ -131,7 +131,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             studentpresentationpage.SelectWebActivityWindow("Test");
             studentpresentationpage.AttemptTheActivityInStudentSide();            
             Logger.LogMethodEntry("ViewSubmission", "SubmitTheActivity",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Status Of Assets In View All Content
             Logger.LogMethodEntry("ActivityStatus",
-                "StatusOfAssetsInViewAllContent", base.isTakeScreenShotDuringEntryExit);
+                "StatusOfAssetsInViewAllContent", base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Assert the Activity Status
@@ -154,7 +154,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 () => Assert.AreEqual(activityStatus, new CoursePreviewMainUXPage().
                     GetStatusOfActivityInViewAllContentTab(activity.Name)));
             Logger.LogMethodExit("ActivityStatus",
-                "StatusOfAssetsInViewAllContent", base.isTakeScreenShotDuringEntryExit);
+                "StatusOfAssetsInViewAllContent", base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>

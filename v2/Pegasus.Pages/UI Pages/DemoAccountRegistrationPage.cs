@@ -37,14 +37,14 @@ namespace Pegasus.Pages.UI_Pages
         public DemoAccountRegistrationPage(User.UserTypeEnum userTypeEnum)
          {
              logger.LogMethodEntry("DemoAccountRegistrationPage", "DemoAccountRegistrationPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
              if (userTypeEnum == User.UserTypeEnum.DPDemoUser)
              {
                  demoAccountRegistrationURL = AutomationConfigurationManager.CourseSpaceUrlRoot
                      + DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_PageName;                
              }
-             logger.LogMethodExit("DemoAccountRegistrationPage", "DemoAccountRegistrationPage", base.isTakeScreenShotDuringEntryExit);
+             logger.LogMethodExit("DemoAccountRegistrationPage", "DemoAccountRegistrationPage", base.IsTakeScreenShotDuringEntryExit);
          }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
         public void GoToDemoAccountRegistrationUrl()
         {
             logger.LogMethodEntry("DemoAccountRegistrationPage", "GoToDemoAccountRegistrationUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get Url Successfully Browsed
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(ex);
             }
             logger.LogMethodExit("DemoAccountRegistrationPage", "GoToDemoAccountRegistrationUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
         public void RegisterDemoAccount(User.UserTypeEnum userTypeEnum)
         {
             logger.LogMethodEntry("DemoAccountRegistrationPage", "RegisterDemoAccount"
-             , base.isTakeScreenShotDuringEntryExit);
+             , base.IsTakeScreenShotDuringEntryExit);
 
             string userUniqueId = Guid.NewGuid().ToString();
             SelectDemoAccountRegistrationWindow();
@@ -91,7 +91,7 @@ namespace Pegasus.Pages.UI_Pages
             SaveUserInMemory(userUniqueId);
 
             logger.LogMethodExit("DemoAccountRegistrationPage", "RegisterDemoAccount",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetSuccessMessageFromMessageBox()
          {
              logger.LogMethodEntry("DemoAccountRegistrationPage", "GetSuccessMessageFromMessageBox"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
                        
             try
             {
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
             catch (Exception ex) { ExceptionHandler.HandleException(ex); }
 
             logger.LogMethodExit("DemoAccountRegistrationPage", "GetSuccessMessageFromMessageBox",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
 
              return String.Empty;
          }
@@ -164,11 +164,11 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectDemoAccountRegistrationWindow()
          {
              logger.LogMethodEntry("DemoAccountRegistrationPage", "SelectDemoAccountRegistrationWindow"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
              base.WaitUntilWindowLoads("");
              base.SelectWindow("");
              logger.LogMethodExit("DemoAccountRegistrationPage", "SelectDemoAccountRegistrationWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
          }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnterDemoUserDetails(string userUniqueId)
          {
              logger.LogMethodEntry("DemoAccountRegistrationPage", "EnterUserDetails"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
 
              base.RefreshTheCurrentPage();
              Product demoProduct = Product.Get(Product.ProductTypeEnum.DigitalPathDemo);
@@ -231,7 +231,7 @@ namespace Pegasus.Pages.UI_Pages
                  DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Zipcode_Value);
 
              logger.LogMethodExit("DemoAccountRegistrationPage", "EnterUserDetails"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
          }
        
         /// <summary>

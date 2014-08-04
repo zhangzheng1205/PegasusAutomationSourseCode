@@ -32,14 +32,14 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Copies Course
             Logger.LogMethodEntry("CourseCopy", "CreateCourseCopyInWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
                     (CourseCopyResource.CourseCopy_CopyasMasterCourse_CMenu_Option_Name);
             //Create A Copy Of Master Course
             new NewCoursePage().CopyCourseAsMasterCourse(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy", "CreateCourseCopyInWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Check Course for Assigned To Copy State
             Logger.LogMethodEntry("CourseCopy", "VerifiedTheCourseForAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -69,7 +69,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                 typeof(SearchCoursesPage.SearchRadioButtonEnum), searchRadioButton),
                 course.Name, dropdownOption);
             Logger.LogMethodExit("CourseCopy", "CreateAuthoredCourseCopyInWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }       
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Check Course Get Our Of Assigned To Copy State
             Logger.LogMethodEntry("CourseCopy", "OutOfAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert [CourseForAssignedToCopy] Text Present
             Logger.LogAssertion("VerifyAssignedToCopyTextPresent",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(
@@ -88,7 +88,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                     .CourseCopy_CopyAsMasterCourse_ReturnValue_Match
                     , new ManageCoursesPage().GetAssignedToCopyTextPresentAfterSpecifiedTime()));
             Logger.LogMethodExit("CourseCopy", "OutOfAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -101,14 +101,14 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Create Workspace Course Copy In Authored Course
             Logger.LogMethodEntry("CourseCopy", "CreateCourseCopyInDifferentWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
             (CourseCopyResource.CourseCopy_CopyasMasterCourse_CMenu_Option_Name);
             //Copy Workspace Course As MasterCourse
             new NewCoursePage().CopyMasterCourseInDifferentWorkspace(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy", "CreateCourseCopyInDifferentWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -122,14 +122,14 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Create Testing Course Copy In Workspace            
             Logger.LogMethodEntry("CourseCopy", "CreateTestingCourseCopyInWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
              (CourseCopyResource.CourseCopy_CopyasMasterCourse_CMenu_CTC_Option_Name);
             //Copy Course As Testing Course
             new NewCoursePage().CopyCourseAsTestingCourse(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy", "CreateTestingCourseCopyInWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search User 
             logger.LogMethodEntry("ProgramAdminManageUsersPage", "SearchUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Selecting Default Page
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProgramAdminManageUsersPage", "SearchUser",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -69,14 +69,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Clicking on Search Button
             logger.LogMethodEntry("ProgramAdminManageUsersPage", "ClickSearchButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ProgramAdminManageUsersPageResource.
                                           ProgramAdminManageUsers_Page_Search_Button_Id_Locator));
             //Click search link
             base.ClickButtonById(ProgramAdminManageUsersPageResource.
                                      ProgramAdminManageUsers_Page_Search_Button_Id_Locator);
             logger.LogMethodExit("ProgramAdminManageUsersPage", "ClickSearchButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Entering username is search textbox
             logger.LogMethodEntry("ProgramAdminManageUsersPage", "EnterUserNameInSearchTextField",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ProgramAdminManageUsersPageResource.
                                           ProgramAdminManageUsers_Page_UserDetail_TextBox_Id_Locator));
             // Enter username search textbox field
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(ProgramAdminManageUsersPageResource.
                                      ProgramAdminManageUsers_Page_UserDetail_TextBox_Id_Locator, username);
             logger.LogMethodExit("ProgramAdminManageUsersPage", "EnterUserNameInSearchTextField",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -107,14 +107,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Search user for selecting the contains value in Drop down
             logger.LogMethodEntry("ProgramAdminManageUsersPage", "SelectContainsValueInDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ProgramAdminManageUsersPageResource.
                  ProgramAdminManageUsers_Page_SearchCondition_DropDown_Id_Locator));
             // select username radio button
             base.ClickButtonById(ProgramAdminManageUsersPageResource
                  .ProgramAdminManageUsers_Page_UserNameRadioButton_Id_Locator);
             logger.LogMethodExit("ProgramAdminManageUsersPage", "SelectContainsValueInDropDown",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -124,14 +124,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Clicking on search link
             logger.LogMethodEntry("ProgramAdminManageUsersPage", "ClickSearchLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.PartialLinkText(ProgramAdminManageUsersPageResource.
                 ProgramAdminManageUsers_Page_Search_Link_Locator));
             // click search link
             base.ClickButtonByPartialLinkText(ProgramAdminManageUsersPageResource.
                 ProgramAdminManageUsers_Page_Search_Link_Locator);
             logger.LogMethodExit("ProgramAdminManageUsersPage", "ClickSearchLink",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -141,14 +141,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Left Frame
             logger.LogMethodEntry("ProgramAdminManageUsersPage", "SelectLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // selecting Left Frame
             base.WaitForElement(By.Id(ProgramAdminManageUsersPageResource.
                 ProgramAdminManageUsers_Page_LeftFrame_Id_Locator));
             base.SwitchToIFrame(ProgramAdminManageUsersPageResource.
                 ProgramAdminManageUsers_Page_LeftFrame_Id_Locator);
             logger.LogMethodExit("ProgramAdminManageUsersPage", "SelectLeftFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search User Present
             logger.LogMethodEntry("ProgramAdminManageUsersPage", "GetSearchedUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized User Name Variable
             string getUserName = string.Empty;
             try
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProgramAdminManageUsersPage", "GetSearchedUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
 
@@ -193,7 +193,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select All the CheckBox
             logger.LogMethodEntry("ProgramAdminManageUsersPage", "SelectAllUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Check SelectAll CheckBox
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProgramAdminManageUsersPage", "SelectAllUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnCourseToolSettings()
         {
             Logger.LogMethodEntry("CampusAdminNavPage", "ClickOnCourseToolSettings",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select AAdministrative Pages Window
@@ -42,7 +42,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CampusAdminNavPage", "ClickOnCourseToolSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

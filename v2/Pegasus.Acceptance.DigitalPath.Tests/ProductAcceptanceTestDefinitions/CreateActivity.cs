@@ -34,11 +34,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Create Skill Study Plan
             Logger.LogMethodEntry("CreateActivity", "ClickOnTheLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Add Content Button Options
             new ContentLibraryUXPage().ClickOnAddContentOption(optionName);
             Logger.LogMethodExit("CreateActivity", "ClickOnTheLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Create Skill Study Plan
             Logger.LogMethodEntry("CreateActivity", "CreateSkillStudyPlanActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Creating Object for Page Class
             DRTDefaultUXPage drtDefaultUXPage = new DRTDefaultUXPage();
             //Select Window
@@ -61,7 +61,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Save the Study Plan
             drtDefaultUXPage.ClickOnSaveCloseButtonOfSkillStudyPlan();
             Logger.LogMethodExit("CreateActivity", "CreateSkillStudyPlanActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Selects the Activity in Content Library Frame
             Logger.LogMethodEntry("CreateActivity", "SelectTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
             //Gets the Activity name from Memory
             Activity activity = Activity.Get(activityTypeEnum);
@@ -83,7 +83,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Selects the Activity
             contentLibraryUXPage.SelectActivity(activity.Name);
             Logger.LogMethodExit("CreateActivity", "SelectTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -95,14 +95,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify The Activity In Course Content
             Logger.LogMethodEntry("CreateActivity", "VerifyTheActivityInCourseContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
             //Select Window and Frame
             contentLibraryUXPage.SelectLeftFrameInContentWindow();
             //Selects the Activity
             contentLibraryUXPage.SelectActivity(activity);
             Logger.LogMethodExit("CreateActivity", "VerifyTheActivityInCourseContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -113,11 +113,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Clicks on the Add Button
             Logger.LogMethodEntry("CreateActivity", "ClickOnTheAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Add Button
             new ContentLibraryUXPage().ClickOnActivityAddButton();
             Logger.LogMethodExit("CreateActivity", "ClickOnTheAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the Activity Name added to the My Course Frame
             Logger.LogMethodEntry("CreateActivity", "DisplayOfActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Gets the Activity name from Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Asserts the Activity Name
@@ -138,7 +138,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activity.Name,
                     new CourseContentUXPage().GetActivityName(activity.Name)));
             Logger.LogMethodExit("CreateActivity", "DisplayOfActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -151,14 +151,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify The Activity In The MyCourse
             Logger.LogMethodEntry("CreateActivity",
                 "VerifyTheActivityInTheMyCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Asserts the Activity Name
             Logger.LogAssertion("VerifyAssignedActivityName", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activity,
                     new CourseContentUXPage().GetActivityName(activity)));
             Logger.LogMethodExit("CreateActivity",
                 "VerifyTheActivityInTheMyCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Click On Add Course Materials Option
             Logger.LogMethodEntry("CreateActivity",
                 "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
             //Select Window and Frame
             contentLibraryUXPage.SelectLeftFrameInContentWindow();
@@ -178,7 +178,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             contentLibraryUXPage.ClickOnAddCourseMaterialsLink();
             Logger.LogMethodExit("CreateActivity",
                 "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -190,11 +190,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click On Activity Type
             Logger.LogMethodEntry("CreateActivity", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Activity Type
             new ContentLibraryUXPage().ClickOnActivityType(activityType);
             Logger.LogMethodExit("CreateActivity", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -207,7 +207,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Create Activity
             Logger.LogMethodEntry("CreateActivity", "CreateTheActivityOfBehavioralModeType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Create Object for RandomTopicList Page
             RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
             AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
@@ -224,7 +224,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Enter the message
             addAssessmentPage.EnterTheMessageForActivity();
             Logger.LogMethodExit("CreateActivity", "CreateTheActivityOfBehavioralModeType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -239,7 +239,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Associate The Activity From Content Library To MyCourse
             Logger.LogMethodEntry("CreateActivity", 
                 "AssociateTheActivityFromContentLibraryToMyCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
@@ -251,7 +251,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             contentLibraryUXPage.ClickOnActivityAddButton();
             Logger.LogMethodExit("CreateActivity", 
                 "AssociateTheActivityFromContentLibraryToMyCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -265,7 +265,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Create Instructor Gradable Activity
             Logger.LogMethodEntry("CreateActivity",
                 "CreateGradableActivityWithEssayQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Declaration of object
             AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
             //Enter Activity Details and Click on Add Question Link
@@ -274,7 +274,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             addAssessmentPage.CreateGradableActivityUsingEssayQuestion(activityTypeEnum);
             Logger.LogMethodExit("CreateActivity",
                 "CreateGradableActivityWithEssayQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -286,11 +286,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Create Study Plan
             Logger.LogMethodEntry("ActivitySubmission", "CreateStudyplan",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Create Study Plan.
             new DRTDefaultUXPage().CreateStudyPlan(activityTypeEnum);
             Logger.LogMethodExit("ActivitySubmission", "CreateStudyplan",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

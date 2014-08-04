@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search Course and Course Found in Course Grid
             Logger.LogMethodEntry("SearchCoursesPage", "SearchCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SearchCoursesPage", "SearchCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Radio Button
             Logger.LogMethodEntry("SearchCoursesPage", "SelectRadioButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             switch (searchRadioButton)
             {
                 case SearchRadioButtonEnum.CourseName:
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("SearchCoursesPage", "SelectRadioButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -147,12 +147,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             Logger.LogMethodEntry("SearchCoursesPage", "SelectCourseEnrollmentWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(SearchCoursesPageResource.
                                   SearchCourses_Page_Window_Name_CourseEnrollment);
             Logger.LogMethodExit("SearchCoursesPage", "SelectCourseEnrollmentWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On New Search Link
             Logger.LogMethodEntry("SearchCoursesPage", "ClickOnNewSearchLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Click On Search Link if Displaying
             if (base.GetWebElementPropertiesById(SearchCoursesPageResource.
                                                      SearchCourses_Page_Search_Link_Id_Locator).Displayed)
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
                     (SearchCoursesPageResource.SearchCourses_Page_SleepTime_Value));
             }
             Logger.LogMethodExit("SearchCoursesPage", "ClickOnNewSearchLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select IFrame Right
             Logger.LogMethodEntry("SearchCoursesPage", "SelectIFrameRight",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.Id(SearchCoursesPageResource.
                                           SearchCourses_Page_RightFrame_Id_Locator));
@@ -196,7 +196,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(SearchCoursesPageResource.
                                     SearchCourses_Page_RightFrame_Id_Locator);
             Logger.LogMethodExit("SearchCoursesPage", "SelectIFrameRight",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -206,7 +206,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Course Search Button
             Logger.LogMethodEntry("SearchCoursesPage", "ClickOnSearchButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(SearchCoursesPageResource.
                                              SearchCourses_Page_CourseSearch_Image_XPath_Locator));
@@ -217,7 +217,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getImageProperty);
             Logger.LogMethodExit("SearchCoursesPage", "ClickOnSearchButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Search parameter In Search Box
             Logger.LogMethodEntry("SearchCoursesPage", "EnterSearchParameterInTheSearchBox",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(SearchCoursesPageResource.
                                      SearchCourses_Page_CourseDetail_TextBox_Id_Locator));
@@ -237,7 +237,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(SearchCoursesPageResource.
                                      SearchCourses_Page_CourseDetail_TextBox_Id_Locator, searchParameter);
             Logger.LogMethodExit("SearchCoursesPage", "EnterSearchParameterInTheSearchBox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On The Display All Link Button
             Logger.LogMethodEntry("SearchCoursesPage", "ClickOnTheDisplayAllLinkButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (displayAllLinkTypeEnum)
@@ -286,7 +286,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SearchCoursesPage", "ClickOnTheDisplayAllLinkButton",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -296,7 +296,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Display All Link
             Logger.LogMethodEntry("SearchCoursesPage", "ClickDisplayAllLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.ClassName(SearchCoursesPageResource.
                 SearchCourses_Page_Displayallcourse_Button_Class_Locator));
@@ -311,7 +311,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(SearchCoursesPageResource.
                             SearchCourses_Page_Search_Time_Value));
             Logger.LogMethodExit("SearchCoursesPage", "ClickDisplayAllLink",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -321,7 +321,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Enrollment Right Frame
             Logger.LogMethodEntry("SearchCoursesPage", "SelectCourseEnrollmentRightFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the window
@@ -338,7 +338,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SearchCoursesPage", "SelectCourseEnrollmentRightFrame",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -348,7 +348,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Administators Frame
             Logger.LogMethodEntry("SearchCoursesPage", "SelectAdministatorsFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the window
@@ -365,7 +365,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SearchCoursesPage", "SelectAdministatorsFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -380,7 +380,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Administators Frame
             Logger.LogMethodEntry("SearchCoursesPage", "IsButtonDisplayed",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             bool isButtonDisplayed = false;
             try
             {
@@ -421,7 +421,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SearchCoursesPage", "IsButtonDisplayed",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return isButtonDisplayed;
         }
 
@@ -435,7 +435,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Administators Frame
             Logger.LogMethodEntry("SearchCoursesPage", "IsRadioButtonDisplayed",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             bool isRadioButtonDisplayed = false;
             try
             {
@@ -456,7 +456,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SearchCoursesPage", "IsRadioButtonDisplayed",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return isRadioButtonDisplayed;
         }
 
@@ -468,7 +468,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Administators Frame
             Logger.LogMethodEntry("SearchCoursesPage", "IsTextFieldPresentInCourseFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             bool isTextFieldDisplayed = false;
             try
             {
@@ -490,7 +490,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SearchCoursesPage", "IsTextFieldPresentInCourseFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return isTextFieldDisplayed;
         }
 
@@ -502,7 +502,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Filters name in manage course frame
             Logger.LogMethodEntry("SearchCoursesPage", "GetFiltersName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             String getAllFilters = string.Empty;
             try
             {
@@ -525,7 +525,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SearchCoursesPage", "GetFiltersName",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return getAllFilters;
         }
 
@@ -537,14 +537,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Filter Dropdown Option
             Logger.LogMethodEntry("SearchCoursesPage", "SelectFilterDropdownOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(SearchCoursesPageResource
                 .SearchCourses_Page_FiltersDropDown_Id_Locator));
             //Select Dropdown Option
             base.SelectDropDownValueThroughTextById(SearchCoursesPageResource
                 .SearchCourses_Page_FiltersDropDown_Id_Locator, dropdownOption);
             Logger.LogMethodExit("SearchCoursesPage", "SelectFilterDropdownOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

@@ -27,14 +27,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Materials Window
             logger.LogMethodEntry("AssetInformationPage", "SelectCourseMaterialsWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(AssetInformationPageResource.
                 AssetInformation_Page_CourseMaterials_Window_Name);
             //Select Course Materials Window
             base.SelectWindow(AssetInformationPageResource.
                 AssetInformation_Page_CourseMaterials_Window_Name);
             logger.LogMethodExit("AssetInformationPage", "SelectCourseMaterialsWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -44,14 +44,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch To Iframe
             logger.LogMethodEntry("AssetInformationPage", "SwitchToIFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AssetInformationPageResource.
                 AssetInfomation_Page_Frame_Id_Locator));
             //Switch To Iframe
             base.SwitchToIFrameById(AssetInformationPageResource.
                 AssetInfomation_Page_Frame_Id_Locator);
             logger.LogMethodExit("AssetInformationPage", "SwitchToIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetActivityName()
         {
             logger.LogMethodEntry("AssetInformationPage", "GetActivityName",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getActivityName = string.Empty;
             //Select Course Materials Window
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssetInformationPage", "GetActivityName",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 

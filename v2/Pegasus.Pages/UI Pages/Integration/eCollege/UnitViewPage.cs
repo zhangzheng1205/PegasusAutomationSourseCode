@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on gradebook tab
             logger.LogMethodEntry("UnitViewPage", "ClickOnGradbookOnECollege"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Top Frame
@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UnitViewPage", "ClickOnGradbookOnECollege"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Dropdown's value
             logger.LogMethodEntry("UnitViewPage", "SelectDropDownItem"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch to Content Frame
@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UnitViewPage", "SelectDropDownItem"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify activity's grades in gradebook
             logger.LogMethodEntry("UnitViewPage", "VerifyGrade"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             //Define Variable for get activity garde
             String getGradesOfActivity = null;
             try
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UnitViewPage", "VerifyGrade"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             return getGradesOfActivity;
         }
 
@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Activity Name in Item summary table
             logger.LogMethodEntry("UnitViewPage", 
                 "SelectActivityNameInItemSummaryTable"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             //Define Variable for Activity Column Count
             int setActivityColumnCount;
             //Varify activity Title
@@ -164,7 +164,7 @@ namespace Pegasus.Pages.UI_Pages
             setActivityColumnCount--;
             logger.LogMethodExit("UnitViewPage", 
                 "SelectActivityNameInItemSummaryTable"
-             , base.isTakeScreenShotDuringEntryExit);
+             , base.IsTakeScreenShotDuringEntryExit);
             return setActivityColumnCount;
         }
 
@@ -175,7 +175,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch to Content Frame
             logger.LogMethodEntry("UnitViewPage", "SelectContentFrame"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             //Select default window
             base.SelectDefaultWindow();
             //Switch to Main Frame
@@ -186,7 +186,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(UnitViewPageResource.
                 UnitViewPage_Content_Frame_ID_locator);
             logger.LogMethodExit("UnitViewPage", "SelectContentFrame"
-             , base.isTakeScreenShotDuringEntryExit);
+             , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Top frame
             logger.LogMethodEntry("UnitViewPage", "SelectTopFrame"
-             , base.isTakeScreenShotDuringEntryExit);
+             , base.IsTakeScreenShotDuringEntryExit);
             //Select default window
             base.SelectDefaultWindow();
             //Select Main Frame
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(UnitViewPageResource.
                 UnitViewPage_Top_Frame_ID_locator);
             logger.LogMethodExit("UnitViewPage", "SelectTopFrame"
-            , base.isTakeScreenShotDuringEntryExit);
+            , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -217,14 +217,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select to Main Frame
             logger.LogMethodEntry("UnitViewPage", "SelectMainFrame"
-            , base.isTakeScreenShotDuringEntryExit);
+            , base.IsTakeScreenShotDuringEntryExit);
             //Switch to Main Frame
             base.WaitForElement(By.Id(UnitViewPageResource.
                 UnitViewPage_Main_Frame_ID_locator));
             base.SwitchToIFrame(UnitViewPageResource.
                 UnitViewPage_Main_Frame_ID_locator);
             logger.LogMethodExit("UnitViewPage", "SelectMainFrame"
-            , base.isTakeScreenShotDuringEntryExit);
+            , base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

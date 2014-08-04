@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
 
             //Select the calendar set up button
             logger.LogMethodEntry("EmptyCalendarPage", "SelectCalendarSetUp",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(EmptyCalendarPageResource
@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodEntry("EmptyCalendarPage", "SelectCalendarSetUp",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Clicks on the Calendar Setup Button
             logger.LogMethodEntry("EmptyCalendarPage", "ClickOnCalendarSetupButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {                          
                 //Select the 'Calendar' window
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }            
             logger.LogMethodExit("EmptyCalendarPage", "ClickOnCalendarSetupButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check The Status Of Calendar Setup Button 
             logger.LogMethodEntry("EmptyCalendarPage", "CheckTheStatusOfCalendarSetupButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(EmptyCalendarPageResource.
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
             }
          logger.LogMethodExit("EmptyCalendarPage", "CheckTheStatusOfCalendarSetupButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

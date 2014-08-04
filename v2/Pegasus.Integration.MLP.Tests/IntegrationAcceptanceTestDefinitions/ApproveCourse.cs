@@ -32,7 +32,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Search Course In Left Frame
             Logger.LogMethodEntry("ApproveCourse", 
                 "SearchCourseInCourseSpace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get the Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Search Course To Approve
@@ -41,7 +41,7 @@ namespace Pegasus.Integration.MLP.Tests.
             new PublishCourseSearchPage().SelectCourseToApprove(course.Name);
             Logger.LogMethodExit("ApproveCourse",
                 "SearchCourseInCourseSpace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Integration.MLP.Tests.
             // Verify Course Search In CourseSpace
             Logger.LogMethodEntry("ApproveCourse", 
                 "CheckSearchedCourseInCoreSpace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Get Course Name From InMemory
             Course course = Course.Get(courseTypeEnum);
             // Assert Course Search
@@ -64,7 +64,7 @@ namespace Pegasus.Integration.MLP.Tests.
                   new ListCoursesPage().
                   GetSearchedCourseNameInCourseSpace(courseTypeEnum)));
             Logger.LogMethodExit("ApproveCourse", "CheckSearchedCourseInCoreSpace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -78,12 +78,12 @@ namespace Pegasus.Integration.MLP.Tests.
             //Click Approve CMenu Option           
             Logger.LogMethodEntry("ApproveCourse", 
                 "ClickCMenuCourseOptionInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click on course cmenu in course space
             new ListCoursesPage().ClickCourseCMenuOption(optionName);
             Logger.LogMethodExit("ApproveCourse", 
                 "ClickCMenuCourseOptionInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Search Course in right frame
             Logger.LogMethodEntry("CreateCourse", "SearchTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course from Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -109,7 +109,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Select CourseEnrollement Window
             new ManageCoursesPage().SelectCourseEnrollementWindow();
             Logger.LogMethodExit("CreateCourse", "SearchTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //To Verify The Course Search
             Logger.LogMethodEntry("CreateCourse", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course Name From InMemory
             Course course = Course.Get(courseTypeEnum);
             // Assert Course Search
@@ -130,7 +130,7 @@ namespace Pegasus.Integration.MLP.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(course.Name,
                     new ManageCoursesPage().GetSearchedCourse(courseTypeEnum)));
             Logger.LogMethodExit("CreateCourse", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

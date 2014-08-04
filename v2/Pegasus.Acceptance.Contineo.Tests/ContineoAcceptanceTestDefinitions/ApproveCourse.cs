@@ -34,7 +34,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Search Course In Left Frame
             Logger.LogMethodEntry("ApproveCourse", "SearchCourseInCourseSpace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get the Course From Memory
              Course course = Course.Get(courseTypeEnum);
             //Search Course To Approve
@@ -42,7 +42,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //Select Course To Approve
              new PublishCourseSearchPage().SelectCourseToApprove(course.Name);
             Logger.LogMethodExit("ApproveCourse", "SearchCourseInCourseSpace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             // Verify Course Search In CourseSpace
             Logger.LogMethodEntry("ApproveCourse", "CheckSearchedCourseInCourseSpace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Get Course Name From InMemory
              Course course = Course.Get(courseTypeEnum);
             // Assert Course Search
@@ -63,7 +63,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(course.Name,
                     new ListCoursesPage().GetSearchedCourseNameInCourseSpace(courseTypeEnum)));
             Logger.LogMethodExit("ApproveCourse", "CheckSearchedCourseInCourseSpace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,11 +76,11 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Click Approve CMenu Option           
             Logger.LogMethodEntry("ApproveCourse", "ClickCourseCMenuOptionInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click on course cmenu in course space
             new ListCoursesPage().ClickCourseCMenuOption(controlMenuOptionName);
             Logger.LogMethodExit("ApproveCourse", "ClickCourseCMenuOptionInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

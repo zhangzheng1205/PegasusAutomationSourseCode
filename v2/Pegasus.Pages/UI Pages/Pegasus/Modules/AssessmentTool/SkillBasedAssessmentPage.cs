@@ -37,7 +37,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Validate Visibilty Questions Tab for Skill Based Activity
                 logger.LogMethodEntry("SkillBasedAssessmentPage",
                     "isQuestionsTabVisibile",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
                 //Wait for the Window
                 base.WaitUntilWindowLoads(SkillBasedAssessmentResource.
                     SkillBasedAssessment_Page_WindowName);
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("SkillBasedAssessmentPage",
                 "isQuestionsTabVisibile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isQuestionTabsDisplayed;
         }
 
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Validate Visibilty Questions Tab for  Skill Based Sim Study plan
                 logger.LogMethodEntry("SkillBasedAssessmentPage",
                     "isQuestionsTabVisibileInSimStudyPlan",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
                 string getWindowName;
                 if (testType == SkillBasedAssessmentResource.
                     SkillBasedAssessment_Page_PreTest)
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("SkillBasedAssessmentPage",
                 "isQuestionsTabVisibileInSimStudyPlan",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             return isQuestionTabsDisplayed;
         }
 
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
             //Entry Logger 
             logger.LogMethodEntry("SkillBasedAssessmentPage",
                "ClickOnTabOfEditSIMStudyPlanPreTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
 
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
             //Exit Logger
             logger.LogMethodExit("SkillBasedAssessmentPage",
                "ClickOnTabOfEditSIMStudyPlanPreTest",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Entry Logger 
             logger.LogMethodEntry("SkillBasedAssessmentPage",
-               "EnterTimeInActivityPreference",base.isTakeScreenShotDuringEntryExit);
+               "EnterTimeInActivityPreference",base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for set time limit Check box
@@ -173,7 +173,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Exit Logger
             logger.LogMethodExit("SkillBasedAssessmentPage",
-              "EnterTimeInActivityPreference", base.isTakeScreenShotDuringEntryExit);
+              "EnterTimeInActivityPreference", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Entry
             logger.LogMethodEntry("SkillBasedAssessmentPage",
             "ClickOnSaveAndReturnOfSIMStudyPlanPreTest",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Pretest Window
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Exit
             logger.LogMethodExit("SkillBasedAssessmentPage",
                "ClickOnSaveAndReturnOfSIMStudyPlanPreTest",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -218,7 +218,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save The Preference Settings
             logger.LogMethodEntry("SkillBasedAssessmentPage",
             "SaveThePreferenceSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for Button
             base.WaitForElement(By.Id(SkillBasedAssessmentResource.
                 SkillBasedAssessment_Page_SIMPreTest_Pref_SaveAndResturn_Button_ID));
@@ -229,7 +229,7 @@ namespace Pegasus.Pages.UI_Pages
                 SkillBasedAssessment_Page_SIMPreTest_Pref_SaveAndResturn_Button_ID);
             logger.LogMethodExit("SkillBasedAssessmentPage",
                "SaveThePreferenceSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -240,7 +240,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Entry
             logger.LogMethodEntry("SkillBasedAssessmentPage",
             "SelectSIMStudyplanWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
            //Wait for window
             base.WaitUntilWindowLoads(SkillBasedAssessmentResource.
                 SkillBasedAssessment_AddmyitlabStudyPlan_Window_Name);
@@ -250,7 +250,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Exit
             logger.LogMethodExit("SkillBasedAssessmentPage",
             "SelectSIMStudyplanWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Pretest Window
             logger.LogMethodEntry("SkillBasedAssessmentPage", 
                 "SelectSIMStudyPlanPretestWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitUntilWindowLoads(SkillBasedAssessmentResource.
                 SkillBasedAssessment_Page_Pre_Test_WindowName);
@@ -270,7 +270,7 @@ namespace Pegasus.Pages.UI_Pages
                 SkillBasedAssessment_Page_Pre_Test_WindowName);
             logger.LogMethodExit("SkillBasedAssessmentPage",
                 "SelectSIMStudyPlanPretestWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -283,7 +283,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify Play Training Mode Preference
             logger.LogMethodEntry("SkillBasedAssessmentPage",
                 "VerifyPlayTrainingModePreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click The Preference Tab
@@ -310,7 +310,7 @@ namespace Pegasus.Pages.UI_Pages
             }            
             logger.LogMethodExit("SkillBasedAssessmentPage",
                 "VerifyPlayTrainingModePreference",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -320,7 +320,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Preference Tab
             logger.LogMethodEntry("SkillBasedAssessmentPage", "ClickThePreferenceTab",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -339,7 +339,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SkillBasedAssessmentPage", "ClickThePreferenceTab",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -350,7 +350,7 @@ namespace Pegasus.Pages.UI_Pages
             //Check 'Play Training Mode' Preference
             logger.LogMethodEntry("SkillBasedAssessmentPage",
                 "CheckPlayTrainingModePreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             if (!base.IsElementSelectedById(SkillBasedAssessmentResource.
                     SkillBasedAssessment_Page_PlayMode_Checkbox_Id_Locator))
             {
@@ -360,7 +360,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("SkillBasedAssessmentPage",
                 "CheckPlayTrainingModePreference",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -371,7 +371,7 @@ namespace Pegasus.Pages.UI_Pages
             //Uncheck 'Play Training Mode' Preference
             logger.LogMethodEntry("SkillBasedAssessmentPage",
                 "UncheckPlayTrainingModePreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             if (base.IsElementSelectedById(SkillBasedAssessmentResource.
                     SkillBasedAssessment_Page_PlayMode_Checkbox_Id_Locator))
             {
@@ -381,7 +381,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("SkillBasedAssessmentPage",
                 "UncheckPlayTrainingModePreference",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -392,7 +392,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Create Activity' Widnow
             logger.LogMethodEntry("SkillBasedAssessmentPage",
                 "SelectCreateActivityWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(SkillBasedAssessmentResource.
                     SkillBasedAssessment_Page_WindowName);
             //Select Window
@@ -400,7 +400,7 @@ namespace Pegasus.Pages.UI_Pages
                     SkillBasedAssessment_Page_WindowName);
             logger.LogMethodExit("SkillBasedAssessmentPage",
                 "SelectCreateActivityWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -411,7 +411,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Question Type
             logger.LogMethodEntry("SkillBasedAssessmentPage", "SelectTheQuestionType",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -426,7 +426,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SkillBasedAssessmentPage", "SelectTheQuestionType",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -437,7 +437,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable The Manual Grading Preference
             logger.LogMethodEntry("SkillBasedAssessmentPage",
                 "EnableTheManualGradingPreference",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {  
                 //Wait for the element
@@ -459,7 +459,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("SkillBasedAssessmentPage", 
                 "EnableTheManualGradingPreference",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -470,7 +470,7 @@ namespace Pegasus.Pages.UI_Pages
             //Set Save for Later Preference
             logger.LogMethodEntry("SkillBasedAssessmentPage",
                 "SetSaveforLaterPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                //Wait for the element
@@ -497,7 +497,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("SkillBasedAssessmentPage",
                 "SetSaveforLaterPreference",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -508,7 +508,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable Feedback Never Preference
             logger.LogMethodEntry("SkillBasedAssessmentPage",
                 "EnableFeedbackNeverPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click the preference
@@ -533,7 +533,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("SkillBasedAssessmentPage",
                 "EnableFeedbackNeverPreference",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -544,7 +544,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Edit Random Activity' Window
             logger.LogMethodEntry("SkillBasedAssessmentPage",
                 "SelectEditRandomActivityWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(SkillBasedAssessmentResource.
                 SkillBasedAssessment_EditRandomActivity_WindowName);
             //Select Window
@@ -552,7 +552,7 @@ namespace Pegasus.Pages.UI_Pages
                 SkillBasedAssessment_EditRandomActivity_WindowName);
             logger.LogMethodExit("SkillBasedAssessmentPage",
                "SelectEditRandomActivityWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

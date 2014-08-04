@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //License the Product
             logger.LogMethodEntry("AvailableProductsPage", "LicenseProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(AvailableProductsPageResource.
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("AvailableProductsPage", "LicenseProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search the Product
             logger.LogMethodEntry("AvailableProductsPage", "SearchProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.ClassName(AvailableProductsPageResource.
                 AvailableProducts_Page_Search_Button_ClassName));
             //Get Button Property
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select the Product
             this.SelectProduct();
             logger.LogMethodExit("AvailableProductsPage", "SearchProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Product
             logger.LogMethodEntry("AvailableProductsPage", "SelectProduct",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Get Button Property
             IWebElement getSelectProperty = base.GetWebElementPropertiesByClassName(AvailableProductsPageResource.
                 AvailableProducts_Page_Select_ClassName);
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.XPath(AvailableProductsPageResource.
                 AvailableProducts_Page_Products_Xpath));
             logger.LogMethodExit("AvailableProductsPage", "SelectProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

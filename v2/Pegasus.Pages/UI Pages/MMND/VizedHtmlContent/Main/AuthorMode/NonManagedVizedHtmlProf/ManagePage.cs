@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Paste The CBOM Request
             logger.LogMethodEntry("ManagePage", "PasteTheCBOMRequest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click On the Tool Launch Subtab
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManagePage", "PasteTheCBOMRequest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Accept the Alert
             logger.LogMethodEntry("ManagePage", "AcceptTheAlertDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variables
             bool isAlertPresent = false;
             int getTimeElapsed = Convert.ToInt32(ManagePageResource.ManagePage_Alert_Sleep_Time);
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("ManagePage", "AcceptTheAlertDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //View The Links From CBOM Request
             logger.LogMethodEntry("ManagePage", "ViewTheLinksFromCBOMRequest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Window
             base.WaitUntilWindowLoads(subtabLinkName + ManagePageResource.
                 ManagePage_Text_Appended_To_Window_Title);
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickLinkByXPath(ManagePageResource.
                 ManagePage_Modify_View_Option_Xpath_Locator);
             logger.LogMethodExit("ManagePage", "ViewTheLinksFromCBOMRequest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 

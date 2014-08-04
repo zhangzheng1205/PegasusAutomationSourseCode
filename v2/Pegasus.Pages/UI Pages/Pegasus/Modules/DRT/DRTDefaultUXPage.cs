@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Study Plan
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "AddPreTestToSkillStudyPlan", base.isTakeScreenShotDuringEntryExit);
+                "AddPreTestToSkillStudyPlan", base.IsTakeScreenShotDuringEntryExit);
             //Create studyplan
             try
             {
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DRTDefaultUXPage",
-                "AddPreTestToSkillStudyPlan", base.isTakeScreenShotDuringEntryExit);
+                "AddPreTestToSkillStudyPlan", base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Activity Name in Memory
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "StoreActivityDetailsInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreActivityDetailsInMemory", base.IsTakeScreenShotDuringEntryExit);
             Activity studyPlan = new Activity
             {
                 ActivityID = CommonResource.CommonResource.DigitalPath_Activity_SkillStudyPlan_UC1,
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save Activity Name to Memory
             studyPlan.StoreActivityInMemory();
             logger.LogMethodExit("DRTDefaultUXPage",
-                "StoreActivityDetailsInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreActivityDetailsInMemory", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click On SaveClose Button Of SkillStudyPlan
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "ClickOnSaveCloseButtonOfSkillStudyPlan", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnSaveCloseButtonOfSkillStudyPlan", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Create Skill Studyplan Window
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DRTDefaultUXPage",
-                "ClickOnSaveCloseButtonOfSkillStudyPlan", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnSaveCloseButtonOfSkillStudyPlan", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Save and Close Button
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "ClickOnSaveCloseButtonOfSkillStudyPlan", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnSaveCloseButtonOfSkillStudyPlan", base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.Id(DRTDefaultUXPageResource.
                 DRTDefaultUX_page_content_SaveButton_Id_Locator));
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(DRTDefaultUXPageResource.
                 DRTDefaultUX_page_WaitElement_Thread_Time));
             logger.LogMethodExit("DRTDefaultUXPage",
-                "ClickOnSaveCloseButtonOfSkillStudyPlan", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnSaveCloseButtonOfSkillStudyPlan", base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Pre Test
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "CreatePreTest", base.isTakeScreenShotDuringEntryExit);
+                "CreatePreTest", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Add Existing Activity Link
@@ -154,7 +154,7 @@ namespace Pegasus.Pages.UI_Pages
                  ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DRTDefaultUXPage",
-                "CreatePreTest", base.isTakeScreenShotDuringEntryExit);
+                "CreatePreTest", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Begin Button
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "ClickBeginButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickBeginButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Study Plan Window
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DRTDefaultUXPage",
-                "ClickBeginButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickBeginButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -192,14 +192,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Study Plan Window
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "SelectStudyPlanWindow", base.isTakeScreenShotDuringEntryExit);
+                "SelectStudyPlanWindow", base.IsTakeScreenShotDuringEntryExit);
             //Select study plan window
             base.WaitUntilWindowLoads(DRTDefaultUXPageResource
                 .DRTDefaultUX_Page_Studyplan_WindowName);
             base.SelectWindow(DRTDefaultUXPageResource
                 .DRTDefaultUX_Page_Studyplan_WindowName);
             logger.LogMethodExit("DRTDefaultUXPage",
-                "SelectStudyPlanWindow", base.isTakeScreenShotDuringEntryExit);
+                "SelectStudyPlanWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Begin Button
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "ClickPostTestBeginButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickPostTestBeginButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Study Plan Window
@@ -228,7 +228,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DRTDefaultUXPage",
-                "ClickPostTestBeginButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickPostTestBeginButton", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Select return to course button
@@ -237,7 +237,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Pre Test
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "ClickReturnToCourseButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickReturnToCourseButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select study plan window
@@ -257,7 +257,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DRTDefaultUXPage",
-                "ClickReturnToCourseButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickReturnToCourseButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -267,7 +267,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click the Pre Test link
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "ClickTheCreatePreTestLink", base.isTakeScreenShotDuringEntryExit);           
+                "ClickTheCreatePreTestLink", base.IsTakeScreenShotDuringEntryExit);           
            try 
 	         {	        
 		        //Wait for pretest link
@@ -284,7 +284,7 @@ namespace Pegasus.Pages.UI_Pages
 		        ExceptionHandler.HandleException(e);
 	        }           
             logger.LogMethodExit("DRTDefaultUXPage",
-                "ClickTheCreatePreTestLink", base.isTakeScreenShotDuringEntryExit);
+                "ClickTheCreatePreTestLink", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Skill StudyPlan
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "CreateSkillStudyPlan", base.isTakeScreenShotDuringEntryExit);
+                "CreateSkillStudyPlan", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for TextBox of Study Plan name
@@ -318,7 +318,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DRTDefaultUXPage",
-                "CreateSkillStudyPlan", base.isTakeScreenShotDuringEntryExit);
+                "CreateSkillStudyPlan", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -332,7 +332,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store Activity Details In Memory
             logger.LogMethodEntry("DRTDefaultUXPage",
                "StoreActivityInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             Activity activity = new Activity
             {                
                 Name = activityName,
@@ -343,7 +343,7 @@ namespace Pegasus.Pages.UI_Pages
             activity.StoreActivityInMemory();
             logger.LogMethodExit("DRTDefaultUXPage",
                "StoreActivityInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -354,7 +354,7 @@ namespace Pegasus.Pages.UI_Pages
             //Customize the Content
             logger.LogMethodEntry("DRTDefaultUXPage",
                "CustomizeTheContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generates GUID
@@ -388,7 +388,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("DRTDefaultUXPage",
                "CustomizeTheContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -398,7 +398,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create PostTest Activity
             logger.LogMethodEntry("DRTDefaultUXPage", "CreatePostTestActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Generate Activity Name GUID
             Guid activityName = Guid.NewGuid();
             try
@@ -434,7 +434,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DRTDefaultUXPage", "CreatePostTestActivity",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -444,7 +444,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Add and Close Button
             logger.LogMethodEntry("DRTDefaultUXPage", "ClickonAddandCloseButton",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(DRTDefaultUXPageResource.
                 DRTDefaultUX_Page_AddandClose_Button_Id_Locator));
@@ -455,7 +455,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the save button
             base.ClickByJavaScriptExecutor(getAddandCloseButton);
             logger.LogMethodExit("DRTDefaultUXPage", "ClickonAddandCloseButton",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -465,7 +465,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question For Post Test
             logger.LogMethodEntry("DRTDefaultUXPage", "SelectQuestionForPostTest",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Click on Add Questions Link For Post Test
             new RandomTopicListPage().SelectAddQuestionsLinkForPostTest();
             //Select Question Window and Frame
@@ -475,7 +475,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Questions Window
             this.SelectQuestionsWindow();
             logger.LogMethodExit("DRTDefaultUXPage", "SelectQuestionForPostTest",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -485,14 +485,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Post Test Window
             logger.LogMethodEntry("DRTDefaultUXPage", "SelectPostTestWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(DRTDefaultUXPageResource.
                 DRTDefaultUX_Page_PostTest_Window_Name);
             //Select Window
             base.SelectWindow(DRTDefaultUXPageResource.
                 DRTDefaultUX_Page_PostTest_Window_Name);
             logger.LogMethodExit("DRTDefaultUXPage", "SelectPostTestWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -502,14 +502,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Questions Window
             logger.LogMethodEntry("DRTDefaultUXPage", "SelectQuestionsWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(DRTDefaultUXPageResource.
                 DRTDefaultUX_Page_SelectQuestions_Window_Name);
             //Select the window
             base.SelectWindow(DRTDefaultUXPageResource.
                 DRTDefaultUX_Page_SelectQuestions_Window_Name);
             logger.LogMethodExit("DRTDefaultUXPage", "SelectQuestionsWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -519,7 +519,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Skill Studyplan Window
             logger.LogMethodEntry("DRTDefaultUXPage", "SelectCreateSkillStudyplanWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Create Skill Study Plan Window Loads
@@ -534,7 +534,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DRTDefaultUXPage", "SelectCreateSkillStudyplanWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -545,7 +545,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Study Plan
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "CreateStudyPlan", base.isTakeScreenShotDuringEntryExit);          
+                "CreateStudyPlan", base.IsTakeScreenShotDuringEntryExit);          
             try
             {
                 RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
@@ -582,7 +582,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DRTDefaultUXPage",
-                "CreateStudyPlan", base.isTakeScreenShotDuringEntryExit);
+                "CreateStudyPlan", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -593,7 +593,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Studyplan Name and Store
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "EnterStudyplanNameandStore", base.isTakeScreenShotDuringEntryExit); 
+                "EnterStudyplanNameandStore", base.IsTakeScreenShotDuringEntryExit); 
             //Wait for TextBox of Study Plan name
             base.WaitForElement(By.Id(DRTDefaultUXPageResource.
                     DRTDefaultUX_Page_StudyplanName_Input_Id_Locator),
@@ -608,7 +608,7 @@ namespace Pegasus.Pages.UI_Pages
             //Storing the Activity
             this.StoreActivityInMemory(studyPlanName.ToString(), activityTypeEnum);
             logger.LogMethodExit("DRTDefaultUXPage",
-                "EnterStudyplanNameandStore", base.isTakeScreenShotDuringEntryExit);
+                "EnterStudyplanNameandStore", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -618,14 +618,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Studyplan Window
             logger.LogMethodEntry("DRTDefaultUXPage",
-                "SelectWindow", base.isTakeScreenShotDuringEntryExit); 
+                "SelectWindow", base.IsTakeScreenShotDuringEntryExit); 
             base.WaitUntilWindowLoads(DRTDefaultUXPageResource.
                 DRTDefaultUX_page_StudyPlan_Window_Name);
             //Select Window
             base.SelectWindow(DRTDefaultUXPageResource.
                 DRTDefaultUX_page_StudyPlan_Window_Name);
             logger.LogMethodExit("DRTDefaultUXPage",
-                "SelectWindow", base.isTakeScreenShotDuringEntryExit);
+                "SelectWindow", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

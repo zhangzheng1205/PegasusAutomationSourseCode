@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            //Click the question type
            logger.LogMethodEntry("SelectQuestionTypePage", "ClickTheQuestionType",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
            try
            {
                //Select Create New Question Window
@@ -49,7 +49,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
            }
            logger.LogMethodExit("SelectQuestionTypePage", "ClickTheQuestionType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            // Click The Essay QuestionType
            logger.LogMethodEntry("SelectQuestionTypePage", "ClickTheEssayQuestionType",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
            try
            {
                //Select Create New Question Window
@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
            }
            logger.LogMethodExit("SelectQuestionTypePage", "ClickTheEssayQuestionType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            //Select Create New Question Window
            logger.LogMethodEntry("SelectQuestionTypePage", "SelectCreateNewQuestionWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
            try
            {
                //Select the window  
@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
            }
            logger.LogMethodExit("SelectQuestionTypePage", "SelectCreateNewQuestionWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
        }
        /// <summary>
        /// Click The True-False QuestionType.
@@ -114,7 +114,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            // Click The Essay QuestionType
            logger.LogMethodEntry("SelectQuestionTypePage", "ClickTheTrueFalseQuestionType",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
            try
            {
                //Select Create New Question Window
@@ -133,7 +133,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
            }
            logger.LogMethodExit("SelectQuestionTypePage", "ClickTheTrueFalseQuestionType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
        }
     }
 }

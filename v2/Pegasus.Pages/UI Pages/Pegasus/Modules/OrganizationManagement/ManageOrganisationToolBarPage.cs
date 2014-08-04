@@ -22,7 +22,8 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// This is the static instance of logger
         /// </summary>
-        private static Logger logger = Logger.GetInstance(typeof(ManageOrganisationToolBarPage));        
+        private static readonly Logger Logger = 
+            Logger.GetInstance(typeof(ManageOrganisationToolBarPage));
 
         /// <summary>
         /// Selects the Manage Organization Window
@@ -30,22 +31,22 @@ namespace Pegasus.Pages.UI_Pages
         public void SelectManageOrganizationWindow()
         {
             //Selects the Manage Organization Window
-            logger.LogMethodEntry("ManageOrganisationToolBarPage", 
+            Logger.LogMethodEntry("ManageOrganisationToolBarPage",
                 "SelectManageOrganizationWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Manage Organization Window
                 base.SelectWindow(ManageOrganisationToolBarPageResource.
                     ManageOrganisationToolBar_Page_Window_Name);
             }
-            catch ( Exception e)
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ManageOrganisationToolBarPage", 
+            Logger.LogMethodExit("ManageOrganisationToolBarPage",
                 "SelectManageOrganizationWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,8 +56,8 @@ namespace Pegasus.Pages.UI_Pages
         public void CloseWindow(string windowName)
         {
             //Close the Window
-            logger.LogMethodEntry("ManageOrganisationToolBarPage", "CloseWindow",
-                base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("ManageOrganisationToolBarPage", "CloseWindow",
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Window
@@ -64,14 +65,14 @@ namespace Pegasus.Pages.UI_Pages
                 //Close the Window
                 base.CloseBrowserWindow();
                 //Switch to Default Window
-                base.SwitchToDefaultWindow();                
+                base.SwitchToDefaultWindow();
             }
-            catch ( Exception e )
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ManageOrganisationToolBarPage", "CloseWindow",
-                base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("ManageOrganisationToolBarPage", "CloseWindow",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -80,8 +81,8 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnEnrollmentTab()
         {
             //Click on the Enrollment Tab
-            logger.LogMethodEntry("ManageOrganisationToolBarPage", "ClickOnEnrollmentTab",
-                base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("ManageOrganisationToolBarPage", "ClickOnEnrollmentTab",
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Manage Organization Window
@@ -92,22 +93,22 @@ namespace Pegasus.Pages.UI_Pages
                 //Get Selected Tab Name
                 string getTabName = base.GetElementTextByClassName(ManageOrganisationToolBarPageResource.
                     ManageOrganisationToolBar_Page_Selected_Tab_ClassName_Locator);
-                if ( getTabName != ManageOrganisationToolBarPageResource.
-                    ManageOrganisationToolBar_Page_Enrollment_Tabname )
+                if (getTabName != ManageOrganisationToolBarPageResource.
+                    ManageOrganisationToolBar_Page_Enrollment_Tabname)
                 {
                     //Clicks on the Enrollment Tab
                     base.ClickButtonByPartialLinkText(ManageOrganisationToolBarPageResource.
                         ManageOrganisationToolBar_Page_Enrollment_Tabname);
                 }
                 //Switch to Left Frame 
-                this.SwitchToLeftFrame();                
+                this.SwitchToLeftFrame();
             }
-            catch ( Exception e )
+            catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ManageOrganisationToolBarPage", "ClickOnEnrollmentTab",
-                base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("ManageOrganisationToolBarPage", "ClickOnEnrollmentTab",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -116,8 +117,8 @@ namespace Pegasus.Pages.UI_Pages
         private void SwitchToLeftFrame()
         {
             //Select the Left frame
-            logger.LogMethodEntry("ManageOrganisationToolBarPage", "SwitchToLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("ManageOrganisationToolBarPage", "SwitchToLeftFrame",
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Manage Organization Window
             new ManageOrganisationToolBarPage().SelectManageOrganizationWindow();
             //Wait for the Frame
@@ -132,10 +133,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Create Users Link
             base.WaitForElement(By.Id(ManageOrganisationToolBarPageResource.
                 ManageOrganisationToolBar_Page_CreateUsers_Link_Id_Locator));
-            logger.LogMethodExit("ManageOrganisationToolBarPage", "SwitchToLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("ManageOrganisationToolBarPage", "SwitchToLeftFrame",
+                base.IsTakeScreenShotDuringEntryExit);
         }
-      
+
         /// <summary>
         ///Navigate To Properties Sub Tab In Management Organization
         /// </summary>
@@ -143,9 +144,9 @@ namespace Pegasus.Pages.UI_Pages
         public void NavigateToPropertiesSubTabInManagementOrganization(string tabName)
         {
             //Navigate To Properties Sub Tab In Management Organization
-            logger.LogMethodEntry("ManageOrganisationToolBarPage",
+            Logger.LogMethodEntry("ManageOrganisationToolBarPage",
                 "NavigateToPropertiesSubTabInManagementOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the window loads
@@ -167,9 +168,9 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ManageOrganisationToolBarPage",
+            Logger.LogMethodExit("ManageOrganisationToolBarPage",
                 "NavigateToPropertiesSubTabInManagementOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -178,8 +179,8 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnClassesTab()
         {
             //Click on the Classes Tab
-            logger.LogMethodEntry("ManageOrganisationToolBarPage", "ClickOnClassesTab",
-                base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("ManageOrganisationToolBarPage", "ClickOnClassesTab",
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Manage Organization Window
@@ -196,14 +197,14 @@ namespace Pegasus.Pages.UI_Pages
                     //Clicks on the Classes Tab
                     base.ClickButtonByPartialLinkText(ManageOrganisationToolBarPageResource.
                         ManageOrganisationToolBar_Page_Classes_Tabname);
-                }                
+                }
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("ManageOrganisationToolBarPage", "ClickOnClassesTab",
-                base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("ManageOrganisationToolBarPage", "ClickOnClassesTab",
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

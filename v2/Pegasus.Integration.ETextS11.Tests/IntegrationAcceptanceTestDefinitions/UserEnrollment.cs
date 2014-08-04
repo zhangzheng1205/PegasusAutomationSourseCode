@@ -30,7 +30,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment", "EnrollSMSStudentInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert student Help Text Window Closed
             new StudentHelpTextPage().ManageStudentHelpTextWindow();
             //Closing the Announcement(s)
@@ -40,7 +40,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             // To Enroll student depending on the course
             new SelfEnrollmentPage().SmsStudentEnrolledInCourse(courseTypeEnum);
             Logger.LogMethodExit("UserEnrollment", "EnrollSMSStudentInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Section Display in Global Home Page
             Logger.LogMethodEntry("UserEnrollment", 
                 "DisplayOfEnrolledSectionInGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
             //Assert section displays in global home page
@@ -62,7 +62,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                     Contains(course.SectionName)));
             Logger.LogMethodExit("UserEnrollment", 
                 "DisplayOfEnrolledSectionInGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //InstructorCourse Display in Global Home Page
             Logger.LogMethodEntry("UserEnrollment",
                "DisplayOfEnrolledInstructorCourseInGlobalHomePage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.InstructorCourse);
             //Assert course displays in global home page
@@ -84,7 +84,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                     Contains(course.Name)));
             Logger.LogMethodExit("UserEnrollment",
                 "DisplayOfEnrolledInstructorCourseInGlobalHomePage",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -97,13 +97,13 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment", "EnrollWSInstructorInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch course name from memory
             Course course = Course.Get(courseTypeEnum);
             //Selection of course in right frame
             new ManageCoursesPage().SelectCourse(course.Name);
             Logger.LogMethodExit("UserEnrollment", "EnrollWSInstructorInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment", "SelectWSUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch user name from memory
             User user = User.Get(userTypeEnum);
             // User search in left frame
@@ -124,7 +124,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Select user
             new ManageUsersPage().SelectUser(user.Name);
             Logger.LogMethodExit("UserEnrollment", "SelectWSUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -137,11 +137,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment", "EnrollTheUserAsTeacherInTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enroll user to the course
             new AdminToolPage().EnrollUserInCourse(userTypeEnum);
             Logger.LogMethodExit("UserEnrollment", "EnrollTheUserAsTeacherInTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -33,14 +33,14 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Open The Activity In Course Materials
             Logger.LogMethodEntry("ActivitySubmission",
                 "OpenTheActivityInCourseMaterials",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Fetch the activity from memory
             Activity activity = Activity.Get(activityTypeEnum);
             new CoursePreviewMainUXPage().
                 OpenTheActivityInStudentCourseMaterials(activity.Name);
             Logger.LogMethodExit("ActivitySubmission",
                 "OpenTheActivityInCourseMaterials",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -52,12 +52,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             // Submit The Activty In Course Materials Tab
             Logger.LogMethodEntry("ActivitySubmission", 
                 "SubmitTheActivtyInCourseMaterialsTab",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             // Submit The Activty In Course Materials Tab
             new StudentPresentationPage().SubmitTheActivityInCourseMaterialsTab();
             Logger.LogMethodExit("ActivitySubmission", 
                 "SubmitTheActivtyInCourseMaterialsTab",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             // Submit The Activty In Course Materials Tab
             Logger.LogMethodEntry("ActivitySubmission", 
                 "VerifyTheTryAgainButtonInSubmissionPage",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Asserts the Try Again Button
             Logger.LogAssertion("VerifyTryAgainButton",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -78,7 +78,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
                     IsDisplayedTryAgainBttonInSubmissionPage()));  
             Logger.LogMethodExit("ActivitySubmission", 
                 "VerifyTheTryAgainButtonInSubmissionPage",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Display The Grades For Submitted Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "DisplayTheGradesForSubmittedActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Creating object
             GBStudentUXPage gBStudentUXPage = new GBStudentUXPage();
             //Selecting the window
@@ -105,7 +105,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
                     ActivitySubmission_Page_MyTest_Activity_Name)));
             Logger.LogMethodExit("ActivitySubmission",
                "DisplayTheGradesForSubmittedActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
             // Logger Enrty
             Logger.LogMethodEntry("SIMStudyPlanStudentUXPage", 
                 "LaunchSIMStudyPlanPreTestByStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for 'Start Pre test' element 
@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Exit
             Logger.LogMethodExit("SIMStudyPlanStudentUXPage",
                "LaunchSIMStudyPlanPreTestByStudent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnCmenuOfAsset()
         {
             Logger.LogMethodEntry("SIMStudyPlanStudentUXPage", "ClickOnCmenuOfAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SIMStudyPlanStudentUXPage", "ClickOnCmenuOfAsset",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -110,14 +110,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             Logger.LogMethodEntry("SIMStudyPlanStudentUXPage", "SelectWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(SIMStudyPlanStudentUXPageResource.
                 SIMStudyPlanStudentUXPage_MyItLabStudyplan_Window_Name);
             //Select Window
             base.SelectWindow(SIMStudyPlanStudentUXPageResource.
                 SIMStudyPlanStudentUXPage_MyItLabStudyplan_Window_Name);
             Logger.LogMethodExit("SIMStudyPlanStudentUXPage", "SelectWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select View Grades Cmenu Option
             Logger.LogMethodEntry("SIMStudyPlanStudentUXPage", "SelectViewGradesCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Study Plan Window
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SIMStudyPlanStudentUXPage", "SelectViewGradesCmenuOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnPreTestCmenuOption()
         {
             Logger.LogMethodEntry("SIMStudyPlanStudentUXPage", "ClickOnPreTestCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Pre Test Cmenu Option 
             base.WaitForElement(By.XPath(SIMStudyPlanStudentUXPageResource.
                    SIMStudyPlanStudentUXPage_Submission_Expand_Xpath_Locator));
@@ -162,7 +162,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Cmenu Icon
             base.ClickByJavaScriptExecutor(getCmenuIconProperty);
             Logger.LogMethodExit("SIMStudyPlanStudentUXPage", "ClickOnPreTestCmenuOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On View Grades Option
             Logger.LogMethodEntry("SIMStudyPlanStudentUXPage", "ClickOnViewGradesOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(SIMStudyPlanStudentUXPageResource.
                 SIMStudyPlanStudentUXPage_ViewGrade_Cmenu_Option_Id_Locator));
             //Get View Grades Option
@@ -181,7 +181,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On View Grades Option
             base.ClickByJavaScriptExecutor(getViewGradesOption);
             Logger.LogMethodExit("SIMStudyPlanStudentUXPage", "ClickOnViewGradesOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check 'Start PreTest' Button Present
             Logger.LogMethodEntry("SIMStudyPlanStudentUXPage", "IsStartPreTestButtonPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isStartPreTestButtonPresent = false;
             try
@@ -213,7 +213,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SIMStudyPlanStudentUXPage", "IsStartPreTestButtonPresent",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isStartPreTestButtonPresent;
         }
     }

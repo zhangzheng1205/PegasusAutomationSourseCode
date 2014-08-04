@@ -24,7 +24,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Accept Agreement
             Logger.LogMethodEntry("UserConsentPage", "AcceptAgreement",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Check expected window is exist for 10 second
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("UserConsentPage", "AcceptAgreement",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("UserConsentPage",
                 "SelectEndUserLicenseAgreementAndPrivacyPolicyWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Loads
             base.WaitUntilWindowLoads(UserConsentPageResource.
                 UserConsent_Page_Window_Name);
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
                  UserConsent_Page_Window_Name);
             Logger.LogMethodExit("UserConsentPage",
                  "SelectEndUserLicenseAgreementAndPrivacyPolicyWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

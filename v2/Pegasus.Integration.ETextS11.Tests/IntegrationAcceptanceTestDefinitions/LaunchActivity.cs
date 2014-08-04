@@ -32,7 +32,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Verify the Activity Name added to the My Course Frame
             Logger.LogMethodEntry("LaunchActivity", "DisplayOfActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Gets the Activity name from Memory
              Activity activity = Activity.Get(activityTypeEnum);   
             //Asserts the Activity Name
@@ -40,7 +40,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activity.Name,
                     new CourseContentUXPage().GetActivityName(activity.Name)));
             Logger.LogMethodExit("LaunchActivity", "DisplayOfActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,12 +54,12 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Verify the click of Cmenu options in Content library frame for an activity
             Logger.LogMethodEntry("LaunchActivity", "ClickOnCmenuOptionOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Perform Mouse Over Mouse Over Activity action
             new CourseContentUXPage().PerformMouseOverOnCMenuOptionOfActivity
                 (cmenuOptionName, userTypeEnum);
             Logger.LogMethodExit("LaunchActivity", "ClickOnCmenuOptionOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -71,11 +71,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Close eText Presentation Window
             Logger.LogMethodEntry("LaunchActivity", "CloseeTextPresentationWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Close eText Presentation Window
             new CourseContentUXPage().CloseETextPresentationWindow(windowName);
             Logger.LogMethodExit("LaunchActivity", "CloseeTextPresentationWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,11 +86,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Accept the Agreement
             Logger.LogMethodEntry("LaunchActivity", "AcceptTheAgreement",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Accept Agreement
             new UserConsentPage().AcceptAgreement();
             Logger.LogMethodExit("LaunchActivity", "AcceptTheAgreement",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -102,13 +102,13 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Verify the Validation Message of eText
             Logger.LogMethodEntry("LaunchActivity", "VerifyValidationMessageofeText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Asserts the eText Messagehewsecondinstructor
             Logger.LogAssertion("VerifyeTextMessage", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(validationMessage,
                     new EbookIntegrationErrorPage().GetETextMessage()));
             Logger.LogMethodExit("LaunchActivity", "VerifyValidationMessageofeText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
       
         /// <summary>
@@ -120,11 +120,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Click The Cmenu of Activity
             Logger.LogMethodEntry("LaunchActivity", "ClickTheCmenuofActivity"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Click On Cmenu of Activity
             new CourseContentUXPage().ClickOnCmenuofActivity(cmenuOption);
             Logger.LogMethodExit("LaunchActivity", "ClickTheCmenuofActivity"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -136,12 +136,12 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Click The Enter Section As Instructor
             Logger.LogMethodEntry("LaunchActivity", "ClickTheEnterSectionAsInstructor"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Click On Cmenu of Enter Section As Instructor
             new ManageTemplatePage().
                 ClickOnCmenuOfSectionOrTemplate(cMenuOption);
             Logger.LogMethodExit("LaunchActivity", "ClickTheEnterSectionAsInstructor"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -153,11 +153,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             // Open The Activity As Student
             Logger.LogMethodEntry("LaunchActivity", "OpenTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Launch The Activity
             new CoursePreviewMainUXPage().OpenActivity(activityTypeEnum);
             Logger.LogMethodExit("LaunchActivity", "OpenTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             // Verify eText Launch
             Logger.LogMethodEntry("LaunchActivity", "VerifyeTextLaunch",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("VerifyETextURL", ScenarioContext.
           Current.ScenarioInfo.Title, () => Assert.AreEqual(
               LaunchActivityResource.LaunchActivity_Page_eTextLaunch_URL,
@@ -178,7 +178,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                Current.ScenarioInfo.Title, () => Assert.IsTrue
                    (new LauncheTextPage().IsETextFlashElementPresent()));
             Logger.LogMethodExit("LaunchActivity", "VerifyeTextLaunch",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -192,13 +192,13 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Select The Go to Student View Link In Global HomePage
             Logger.LogMethodEntry("LaunchActivity", 
                 "SelectTheGotoStudentViewLinkInGlobalHomePage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click The Go to Student View Link In Global HomePage
             new CalendarDefaultUXPage().
                 ClickTheGotoStudentViewLinkInGlobalHomePage(goToStudentViewLink);
             Logger.LogMethodEntry("LaunchActivity",
                 "SelectTheGotoStudentViewLinkInGlobalHomePage",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Create Course Option
             logger.LogMethodEntry("MyClassDefaultUXPage", "ClickOnCreateCourseOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodEntry("MyClassDefaultUXPage", "ClickOnCreateCourseOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

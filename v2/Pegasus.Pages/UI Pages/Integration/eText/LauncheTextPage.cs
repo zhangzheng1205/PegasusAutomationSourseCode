@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Launched eText URL
             Logger.LogMethodEntry("LauncheTextPage", "GetLaunchedeTextURL",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             String getETextURL;
             try
@@ -47,7 +47,7 @@ namespace Pegasus.Pages.UI_Pages
                 throw;
             }
             Logger.LogMethodExit("LauncheTextPage", "GetLaunchedeTextURL",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getETextURL;
         }
 
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             Logger.LogMethodEntry("LauncheTextPage", "SelectPearsonETextWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for Window
             base.WaitUntilWindowLoads(LauncheTextPageResource.
                                           LauncheText_Page_Window_Name);
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(LauncheTextPageResource.
                                   LauncheText_Page_Window_Name);
             Logger.LogMethodExit("LauncheTextPage", "SelectPearsonETextWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Find EText Activity Present In Launch Window
             Logger.LogMethodEntry("LauncheTextPage", "IsETextFlashElementPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isETextActivityPresent = false;
             try
@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LauncheTextPage", "IsETextFlashElementPresent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return isETextActivityPresent;
         }
     }

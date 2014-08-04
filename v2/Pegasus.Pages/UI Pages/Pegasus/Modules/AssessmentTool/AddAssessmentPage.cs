@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Global Custom Content Activity
             logger.LogMethodEntry("AddAssessmentPage", "CreateGlobalCustomContentActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Intialize Guid for Activity
             Guid activityTest = Guid.NewGuid();
             try
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "CreateGlobalCustomContentActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On SaveAndContinue Button
             logger.LogMethodEntry("AddAssessmentPage", "ClickOnSaveContinueButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             base.FocusOnElementById(AddAssessmentPageResources.
                 AddAsessment_Page_SaveAndContinue_Button_Id_Locator);
             //Click on the "SaveAndContinue" Button
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the Question type
             new SelectQuestionTypePage().ClickTheQuestionType();
             logger.LogMethodExit("AddAssessmentPage", "ClickOnSaveContinueButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the Radio button
             logger.LogMethodEntry("AddAssessmentPage",
                 "ClickTheBasicRandomRadioButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(AddAssessmentPageResources.
                  AddAsessment_Page_BehavioralMode_RedioButton_Id_Locator));
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getBasicRadioButton);
             logger.LogMethodExit("AddAssessmentPage",
                 "ClickTheBasicRandomRadioButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store the Activity content
             logger.LogMethodEntry("AddAssessmentPage", "StoreTheActivityContent",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             switch (getAssetType)
             {
                 //Storing the Licensed Activity
@@ -150,7 +150,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("AddAssessmentPage", "StoreTheActivityContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store NonLicensed Activity
             logger.LogMethodEntry("AddAssessmentPage", "StoreNonLicensedActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Store the activity in memory
             Activity newActivityTest = new Activity
             {
@@ -172,7 +172,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newActivityTest.StoreActivityInMemory();
             logger.LogMethodExit("AddAssessmentPage", "StoreNonLicensedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Licensed Activity
             logger.LogMethodEntry("AddAssessmentPage", "StoreLicensedActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Store the activity in memory
             Activity newActivityTest = new Activity
             {
@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newActivityTest.StoreActivityInMemory();
             logger.LogMethodExit("AddAssessmentPage", "StoreLicensedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Add Questions 
             logger.LogMethodEntry("AddAssessmentPage", "SelectAddQuestion",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the frame
@@ -231,7 +231,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "SelectAddQuestion",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Create Question link
             logger.LogMethodEntry("AddAssessmentPage", "ClickTheCreateQuestionLink",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element             
             base.WaitForElement(By.XPath(AddAssessmentPageResources.
                AddAsessment_Page_CreateQues_Link_Xpath_Locator));
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(AddAssessmentPageResources.
                 AddAsessment_Page_Asset_Question_Window_Time_Value));
             logger.LogMethodExit("AddAssessmentPage", "ClickTheCreateQuestionLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Activity
             logger.LogMethodEntry("AddAssessmentPage", "CreateActivity",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate Random Number
@@ -310,7 +310,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "CreateActivity",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -321,7 +321,7 @@ namespace Pegasus.Pages.UI_Pages
             Activity.ActivityBehavioralModesEnum behavioralModeEnum)
         {
             logger.LogMethodEntry("AddAssessmentPage", "CreateSIM5SkillBehavioralModeActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Create Object for ContentBrowserUXPage
             ContentBrowserUXPage contentBrowserUXPage = new ContentBrowserUXPage();
             //Create The Activity
@@ -342,7 +342,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save and Return Button
             new RandomTopicListPage().ClickOnSaveAndReturnButton();            
             logger.LogMethodExit("AddAssessmentPage", "CreateSIM5SkillBehavioralModeActivity",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -356,7 +356,7 @@ namespace Pegasus.Pages.UI_Pages
             //Create The Activity Using Behavioral ModeType.
             logger.LogMethodEntry("AddAssessmentPage", 
                 "CreateTheActivityUsingBehavioralModeType",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Select Create Activity Window
             this.SelectCreateActivityWindow();
             //Fill Asset name
@@ -380,7 +380,7 @@ namespace Pegasus.Pages.UI_Pages
             new RandomTopicListPage().ClickOnAddQuestionLink();
             logger.LogMethodExit("AddAssessmentPage", 
                 "CreateTheActivityUsingBehavioralModeType",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -393,7 +393,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create SIM Activity Of Behavioral ModeType
             logger.LogMethodEntry("AddAssessmentPage", "CreateSIMActivityOfBehavioralModeType",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Create Object for ContentBrowserUXPage
             ContentBrowserUXPage contentBrowserUXPage = new ContentBrowserUXPage();            
             //Create The Activity
@@ -416,7 +416,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }                               
             logger.LogMethodExit("AddAssessmentPage", "CreateSIMActivityOfBehavioralModeType",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -426,14 +426,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Activity Window
             logger.LogMethodEntry("AddAssessmentPage", "SelectCreateActivityWindow",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(AddAssessmentPageResources.
                 AddAsessment_Page_Createactivity_Window_Name);
             //Select Create Activity Window
             base.SelectWindow(AddAssessmentPageResources.
                 AddAsessment_Page_Createactivity_Window_Name);
             logger.LogMethodExit("AddAssessmentPage", "SelectCreateActivityWindow",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -444,14 +444,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill Asset Name
             logger.LogMethodEntry("AddAssessmentPage", "FillAssetName",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AddAssessmentPageResources.
                      AddAsessment_Page_ActivityName_Id_Locator));
             //Fill the Activity Name in textbox
             base.FillTextBoxById(AddAssessmentPageResources.
                 AddAsessment_Page_ActivityName_Id_Locator, assetName);
             logger.LogMethodExit("AddAssessmentPage", "FillAssetName",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -461,7 +461,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Skill Based Behavioral Mode
             logger.LogMethodEntry("AddAssessmentPage", "SelectSkillBasedBehavioralMode",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AddAssessmentPageResources.
                 AddAsessment_Page_SkillBased_RadioButton_Id_Locator));
             //Get Skill Based Radio Button Property
@@ -470,7 +470,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Skill Based Radio Button
             base.ClickByJavaScriptExecutor(getSkillRadioButtonProperty);
             logger.LogMethodExit("AddAssessmentPage", "SelectSkillBasedBehavioralMode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -480,7 +480,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Doc Based Behavioral Mode
             logger.LogMethodEntry("AddAssessmentPage", "SelectDocBasedBehavioralMode",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AddAssessmentPageResources.
                 AddAssement_Page_Select_DocBased_Mode_Id_Locator));
             //Get Doc Based Radio Button Property
@@ -489,7 +489,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Doc Based Radio Button
             base.ClickByJavaScriptExecutor(getDocRadioButtonProperty);
             logger.LogMethodExit("AddAssessmentPage", "SelectDocBasedBehavioralMode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -500,7 +500,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Assignment Behoiral Mode Activity
             logger.LogMethodEntry("AddAssessmentPage", "CreateAssignmentBehavioralModeActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select Create Activity Window
             this.SelectCreateActivityWindow();
             base.WaitForElement(By.Id(AddAssessmentPageResources.
@@ -531,7 +531,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save and Return Button
             new RandomTopicListPage().ClickOnSaveAndReturnButton();
             logger.LogMethodExit("AddAssessmentPage", "CreateAssignmentBehavioralModeActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -541,14 +541,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Assignment Activity Window
             logger.LogMethodEntry("AddAssessmentPage", "SelectCreateAssignmentActivityWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(AddAssessmentPageResources.
                  AddAsessment_Page_CreateAssignmentactivity_Window_Name);
             //Select Create Assignemt Activity Window
             base.SelectWindow(AddAssessmentPageResources.
                 AddAsessment_Page_CreateAssignmentactivity_Window_Name);
             logger.LogMethodExit("AddAssessmentPage", "SelectCreateAssignmentActivityWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -559,7 +559,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Basic Random Behavoiral Mode Activity
             logger.LogMethodEntry("AddAssessmentPage", "CreateBasicRandomBehavioralModeActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select Create Activity Window
             this.SelectCreateActivityWindow();
             base.WaitForElement(By.Id(AddAssessmentPageResources.
@@ -591,7 +591,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save And Return Button
             new RandomTopicListPage().ClickOnSaveAndReturnButton();
             logger.LogMethodExit("AddAssessmentPage", "CreateBasicRandomBehavioralModeActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -602,7 +602,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Activity Title
             logger.LogMethodEntry("AddAssessmentPage", "EnterActivityTitle",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
@@ -616,7 +616,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "EnterActivityTitle",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -626,7 +626,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On SaveAndContinue Button
             logger.LogMethodEntry("RandomTopicListPage", "ClickOnSaveAndContinueButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(AddAssessmentPageResources.
@@ -645,7 +645,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomTopicListPage", "ClickOnSaveAndContinueButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -655,14 +655,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click the Assignment Radio button
             logger.LogMethodEntry("AddAssessmentPage", "SelectAssignmentRadioButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AddAssessmentPageResources.
                 AddAsessment_Page_BehavioralMode_Assignment_RadioButton_Id_Locator));
             //Click the Radio button
             base.SelectRadioButtonById(AddAssessmentPageResources.
                 AddAsessment_Page_BehavioralMode_Assignment_RadioButton_Id_Locator);
             logger.LogMethodExit("AddAssessmentPage", "SelectAssignmentRadioButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -675,7 +675,7 @@ namespace Pegasus.Pages.UI_Pages
             Activity.ActivityBehavioralModesEnum behvioralModeTypeEnum, String activityName)
         {
             logger.LogMethodEntry("AddAssessmentPage", "StoreActivityDetails",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Store the activity in memory
@@ -693,7 +693,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "StoreActivityDetails",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -703,7 +703,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create PreTest Activity
             logger.LogMethodEntry("AddAssessmentPage", "CreatePreTestActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Generate Activity Name GUID
             Guid activityName = Guid.NewGuid();            
             try
@@ -722,7 +722,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "CreatePreTestActivity",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -732,7 +732,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Pretest Window
             logger.LogMethodEntry("AddAssessmentPage", "SelectPretestWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -746,7 +746,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "SelectPretestWindow",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -759,7 +759,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Activity Details and Click on Add Question
             logger.LogMethodEntry("AddAssessmentPage",
                 "EnterActivityDetailsandClickonAddQuestion",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate Activity Name GUID
@@ -785,7 +785,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AddAssessmentPage",
                 "EnterActivityDetailsandClickonAddQuestion",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -796,7 +796,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Create Random Activity
             logger.LogMethodEntry("AddAssessmentPage",
                 "SelectCreateRandomActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(AddAssessmentPageResources.
@@ -811,7 +811,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AddAssessmentPage",
                "SelectCreateRandomActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -825,7 +825,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store Activity Details
             logger.LogMethodEntry("AddAssessmentPage",
                 "StoreGradableAsset",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             Activity newActivity = new Activity
             {
                 Name = activityName.ToString(),
@@ -836,7 +836,7 @@ namespace Pegasus.Pages.UI_Pages
             newActivity.StoreActivityInMemory();
             logger.LogMethodExit("AddAssessmentPage",
                 "StoreGradableAsset",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -849,7 +849,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Random Activity
             logger.LogMethodEntry("AddAssessmentPage", "CreateSimGraderITActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Create Sim GraderIT Activity
@@ -875,7 +875,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "CreateSimGraderITActivity",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -886,7 +886,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Grader Checkbox
             logger.LogMethodEntry("AddAssessmentPage",
                 "SelectGraderCheckbox",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //wait for the element
             base.WaitForElement(By.Id(AddAssessmentPageResources.
                 AddAsessment_Page_MyItLabGrader_Checkbox_Id_Locator));
@@ -897,7 +897,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getGradeITCheckbox);
             logger.LogMethodExit("AddAssessmentPage",
                 "SelectGraderCheckbox",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -912,7 +912,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store Activity Details In Memory
             logger.LogMethodEntry("AddAssessmentPage",
                 "CreateSimGraderITActivity",
-                  base.isTakeScreenShotDuringEntryExit);            
+                  base.IsTakeScreenShotDuringEntryExit);            
                 //Store the activity in memory
                 Activity newActivityTest = new Activity
                 {
@@ -924,7 +924,7 @@ namespace Pegasus.Pages.UI_Pages
                 newActivityTest.StoreActivityInMemory();            
             logger.LogMethodExit("AddAssessmentPage",
                 "CreateSimGraderITActivity",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -935,7 +935,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On SaveAndReturn Button.
             logger.LogMethodEntry("AddAssessmentPage",
               "ClickOnSaveAndReturnButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Create Assignment Activity Window
@@ -949,7 +949,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AddAssessmentPage",
                 "ClickOnSaveAndReturnButton",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -962,7 +962,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create SIM Activity
             logger.LogMethodEntry("AddAssessmentPage", "CreateSIMActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate GUID for Activity Name
@@ -1000,7 +1000,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("AddAssessmentPage","CreateSIMActivity",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1012,7 +1012,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create The Instructor Gradable Activity
             logger.LogMethodEntry("AddAssessmentPage", "CreateTheInstructorGradableActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             SkillBasedAssessmentPage skillBasedAssessmentPage =
                 new SkillBasedAssessmentPage();
             try
@@ -1045,7 +1045,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "CreateTheInstructorGradableActivity",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1055,7 +1055,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter The Message
             logger.LogMethodEntry("AddAssessmentPage", "EnterActivityMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click The Activity Message SubTab
@@ -1072,7 +1072,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "EnterActivityMessage",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1082,7 +1082,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter The Message
             logger.LogMethodEntry("AddAssessmentPage", "MessageSaveCloseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(AddAssessmentPageResources.
                 AddAssement_Page_ActivityMessagae_SaveButton_Id_Locator));
@@ -1091,7 +1091,7 @@ namespace Pegasus.Pages.UI_Pages
                 AddAssement_Page_ActivityMessagae_SaveButton_Id_Locator);
             base.ClickByJavaScriptExecutor(getSaveButton);
             logger.LogMethodExit("AddAssessmentPage", "MessageSaveCloseButton",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1101,7 +1101,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Start and End Message
             logger.LogMethodEntry("AddAssessmentPage", "EnterStartandEndMessage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the begining text element
@@ -1124,7 +1124,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "EnterStartandEndMessage",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1135,14 +1135,14 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Activity Message SubTab
             logger.LogMethodEntry("AddAssessmentPage", 
                 "ClickTheActivityMessageSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Create Random Activity
             this.SelectCreateRandomActivity();
             //Click on Message Tab
             this.ClickonMessageTab();
             logger.LogMethodExit("AddAssessmentPage", 
                 "ClickTheActivityMessageSubTab",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1152,7 +1152,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Message Tab
             logger.LogMethodEntry("AddAssessmentPage","ClickonMessageTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -1169,7 +1169,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage","ClickonMessageTab",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1182,7 +1182,7 @@ namespace Pegasus.Pages.UI_Pages
             //Create Gradable Activity Using Essay Question
             logger.LogMethodEntry("AddAssessmentPage",
                 "CreateGradableActivityUsingEssayQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             SkillBasedAssessmentPage skillBasedAssessmentPage = 
                 new SkillBasedAssessmentPage();
             try
@@ -1206,7 +1206,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AddAssessmentPage",
                  "CreateGradableActivityUsingEssayQuestion",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1217,7 +1217,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter The Message For Activity
             logger.LogMethodEntry("AddAssessmentPage",
                 "EnterTheMessageForActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             SkillBasedAssessmentPage skillBasedAssessmentPage =
                 new SkillBasedAssessmentPage();
             //Select the Create Random Activity window
@@ -1226,7 +1226,7 @@ namespace Pegasus.Pages.UI_Pages
             this.EnterActivityMessage();           
             logger.LogMethodExit("AddAssessmentPage",
                  "EnterTheMessageForActivity",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enter Assignment Activity Details and Click Save and Continue button.
@@ -1237,7 +1237,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Activity Details and Click on Add Question
             logger.LogMethodEntry("AddAssessmentPage",
                 "EnterAssignmentActivityDetailsandClickSaveandContinue",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate Activity Name GUID
@@ -1257,7 +1257,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AddAssessmentPage",
                 "EnterAssignmentActivityDetailsandClickSaveandContinue",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// return Beginning of Activity Default Message Text.
@@ -1267,14 +1267,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("AddAssessmentPage",
                 "returnBeginningofActivityDefaultMessageText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Gets Beginning of Activity Default Message Span
             IWebElement BeginActivityDefaultMessage = base.GetWebElementPropertiesById(
                 AddAssessmentPageResources.AddAssessment_Page_BeginActivityDefaultMessage_Id_Locator);
 
             logger.LogMethodExit("AddAssessmentPage",
                 "returnBeginningofActivityDefaultMessageText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return BeginActivityDefaultMessage.Text;
         }
         /// <summary>
@@ -1285,14 +1285,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("AddAssessmentPage",
                 "returnBeginningofActivityInstructorMessageText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Gets Beginning of Activity Instructor Message Text Box
             IWebElement BeginActivityInstructorMessage = base.GetWebElementPropertiesById(
                 AddAssessmentPageResources.AddAssessment_Page_BeginActivityInstructorMessage_Id_Locator);
 
             logger.LogMethodExit("AddAssessmentPage",
                 "returnBeginningofActivityInstructorMessageText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return BeginActivityInstructorMessage.Text;
         }
         /// <summary>
@@ -1303,14 +1303,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("AddAssessmentPage",
                 "returnEndofActivityDefaultMessageText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Gets End of Activity Default Message Span
             IWebElement EndActivityDefaultMessage = base.GetWebElementPropertiesById(
                 AddAssessmentPageResources.AddAssessment_Page_EndActivityDefaultMessage_Id_Locator);
 
             logger.LogMethodExit("AddAssessmentPage",
                 "returnEndofActivityDefaultMessageText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return EndActivityDefaultMessage.Text;
         }
         /// <summary>
@@ -1321,14 +1321,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("AddAssessmentPage",
                 "returnEndofActivityInstructorMessageText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get End of Activity Instructor Message Text Box
             IWebElement EndActivityInstructorMessage = base.GetWebElementPropertiesById(
                 AddAssessmentPageResources.AddAssessment_Page_EndActivityInstructorMessage_Id_Locator);
 
             logger.LogMethodExit("AddAssessmentPage",
                 "returnEndofActivityInstructorMessageText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return EndActivityInstructorMessage.Text;
         }
         /// <summary>
@@ -1340,7 +1340,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create The Instructor Gradable Activity
             logger.LogMethodEntry("AddAssessmentPage", "CreateActivityWithHelpLinks",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             SkillBasedAssessmentPage skillBasedAssessmentPage =
                 new SkillBasedAssessmentPage();
             try
@@ -1377,7 +1377,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "CreateActivityWithHelpLinks",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         ///Click On HelpLinks Tab.
@@ -1386,7 +1386,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On SaveAndContinue Button
             logger.LogMethodEntry("AddAssessmentPage", "ClickOnHelpLinksTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the Help Links tab
@@ -1407,7 +1407,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "ClickOnHelpLinksTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click on Select From Course Materials Library link.
@@ -1415,7 +1415,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickTheSelectFromCourseMaterialsLibraryLink()
         {
             logger.LogMethodEntry("AddAssessmentPage", "ClickTheAddLinkToWebsiteLink",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element             
             base.WaitForElement(By.XPath(AddAssessmentPageResources.
                AddAssessment_Page_SelectFromCourseMaterialsLibrary_XPath_Locator));
@@ -1428,7 +1428,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the "Add Link to Website" link
             base.ClickByJavaScriptExecutor(getCreateQuesLinkProperty);
             logger.LogMethodExit("AddAssessmentPage", "ClickTheAddLinkToWebsiteLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enter Name, URL and save the HelpLink.
@@ -1437,7 +1437,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create The Instructor Gradable Activity
             logger.LogMethodEntry("AddAssessmentPage", "SaveHelpLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the Add Link popup to load  
@@ -1479,7 +1479,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "SaveHelpLink",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Preview the added HelpLink.
@@ -1488,7 +1488,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create The Instructor Gradable Activity
             logger.LogMethodEntry("AddAssessmentPage", "PreviewHelpLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Add Link popup
@@ -1505,7 +1505,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "PreviewHelpLink",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On Preview Help Link.
@@ -1513,7 +1513,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnPreviewHelpLink()
         {
             logger.LogMethodEntry("AddAssessmentPage", "ClickOnPreviewHelpLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
             //Wait for web element
             base.WaitForElement(By.Id(AddAssessmentPageResources.
@@ -1543,7 +1543,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(previewHelpLink);
 
             logger.LogMethodExit("AddAssessmentPage", "ClickOnPreviewHelpLink",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Preview the added HelpLink when editing activity.
@@ -1551,7 +1551,7 @@ namespace Pegasus.Pages.UI_Pages
         public void PreviewHelpLinkOnEdit()
         {
             logger.LogMethodEntry("AddAssessmentPage", "PreviewHelpLinkOnEdit",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Preview the added HelpLink when editing activity
@@ -1562,7 +1562,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddAssessmentPage", "PreviewHelpLinkOnEdit",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -39,12 +39,12 @@ namespace Pegasus.Acceptance.WritingSpace.
         {
             //Select Course Compass Next Generation from Drop Down
             Logger.LogMethodEntry("MMNDIntegration", "SelectCCNGFromTheDropDownList",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Course Compass Next Generation from Drop Down            
             new EPContentPage().SelectCourseCompassNextGeneration(
                 MMNDIntegrationResource.MMNDIntegration_CourseCompassNextGeneration_Name);
             Logger.LogMethodExit("MMNDIntegration", "SelectCCNGFromTheDropDownList",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,11 +55,11 @@ namespace Pegasus.Acceptance.WritingSpace.
         {
             //Select Course Settings Option
             Logger.LogMethodEntry("MMNDIntegration", "SelectCourseSettings",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Click On Course Tool Settings
             new CampusAdminNavPage().ClickOnCourseToolSettings();
             Logger.LogMethodExit("MMNDIntegration", "SelectCourseSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Pegasus.Acceptance.WritingSpace.
         {
             //Update the Integration Point Id
             Logger.LogMethodEntry("MMNDIntegration", "UpdateTheIntegrationPointIdForCourse",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Get Integration Point Id
             Course integrationPointId = Course.Get
                 (Course.CourseTypeEnum.IntegrationPointID);
@@ -104,7 +104,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                     break;
             }
             Logger.LogMethodExit("MMNDIntegration", "UpdateTheIntegrationPointIdForCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Verify Successfull Message
             Logger.LogMethodEntry("MMNDIntegration",
                 "VerifySuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify The message
             Logger.LogAssertion("VerifyThefailureMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -126,7 +126,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                     GetMessageFromMMND(message)));
             Logger.LogMethodExit("MMNDIntegration",
                 "VerifySuccessfullMessage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

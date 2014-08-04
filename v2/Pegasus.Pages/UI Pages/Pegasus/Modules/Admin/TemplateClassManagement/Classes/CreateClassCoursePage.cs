@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create the Course Using Master Library
             logger.LogMethodEntry("CreateClassCoursePage", "CreatetheCourseUsingMasterLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window Open
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CreateClassCoursePage", "CreatetheCourseUsingMasterLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Successfull Message From Create Class Window.
             logger.LogMethodEntry("CreateClassCoursePage",
                 "GetSuccessfullMessageFromCreateClassWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initializing Variable
             string getSuccessfullMessage = string.Empty;
             try
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CreateClassCoursePage",
                 "GetSuccessfullMessageFromCreateClassWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSuccessfullMessage;
         }
     }

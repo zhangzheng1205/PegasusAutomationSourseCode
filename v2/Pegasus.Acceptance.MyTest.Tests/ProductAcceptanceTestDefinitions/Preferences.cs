@@ -31,12 +31,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Navigate To Subtab In Preferences Page
             Logger.LogMethodEntry("Preferences",
                 "NavigateToSubtabInPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Subtab
             new GeneralPreferencesPage().ClickOntheSubtab(subtabName);
             Logger.LogMethodExit("Preferences",
                 "NavigateToSubtabInPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
         {
             //Display Of The Subtab
             Logger.LogMethodEntry("Preferences", "DisplayOfTheSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Subtab Name Displayed
             Logger.LogAssertion("VerifyTheDisplayOfSubtab",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
                     Assert.AreEqual(subtabName,
                     new GeneralPreferencesPage().GetSelectedSubtabName()));
             Logger.LogMethodExit("Preferences", "DisplayOfTheSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -66,11 +66,11 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
         {
             //Enable The MyTest Options
             Logger.LogMethodEntry("Preferences", "EnableTheMyTestOptions",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Enable The MyTest Options
             new MyTestPreferencesPage().EnableTheMyTestOptions();
             Logger.LogMethodExit("Preferences", "EnableTheMyTestOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,12 +82,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Click on the Save Preferences Button
             Logger.LogMethodEntry("Preferences",
                 "SaveThePreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Save the Preferences
             new MyTestPreferencesPage().SaveThePreferences();
             Logger.LogMethodExit("Preferences",
                 "SaveThePreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -100,13 +100,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Click On Tab From Preferences
             Logger.LogMethodEntry("Preferences",
                 "ClickOnTabFromPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Tab From Preferences
             new CourseCopyPreferencesPage().
                 ClickOnTabFromPreferences(tabName);
             Logger.LogMethodExit("Preferences",
                 "ClickOnTabFromPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Verify The Preferences Settings In Activity Preference
             Logger.LogMethodEntry("Preferences",
                 "VerifyThePreferencesSettingsInActivityPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Check Preferences Settings In Activity Preference.
             Logger.LogAssertion("VerifyPreferenceSettingsForActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -126,7 +126,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
                       IsPresentThePreferenceSettingsInActivity()));
             Logger.LogMethodExit("Preferences",
                 "VerifyThePreferencesSettingsInActivityPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -138,11 +138,11 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
         {
             //Navigating to 'Home' sub tab
             Logger.LogMethodEntry("Preferences", "ClickOnTheHomeTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Navigating to 'Home' sub tab options from preference page
             new GeneralPreferencesPage().ClickonSubTabofPreference(subTabName);
             Logger.LogMethodExit("Preferences", "ClickOnTheHomeTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Enable Necessary General Preference Settings
             Logger.LogMethodEntry("Preferences",
                 "EnableNecessaryGeneralTabPreferenceSettings",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Intialize the objects
             ToolbarPreferencesPage toolbarPreferencePage = new ToolbarPreferencesPage();
             GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
@@ -169,7 +169,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             generalPreferencePage.SavePreferences();
             Logger.LogMethodExit("Preferences",
                 "EnableNecessaryGeneralTabPreferenceSettings",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Enable Necessary MyTest Preference Settings
             Logger.LogMethodEntry("Preferences",
                 "EnableNecessaryMyTestPreferenceSettings",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Intialize the objects
             ToolbarPreferencesPage toolbarPreferencePage = new ToolbarPreferencesPage();
             GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
@@ -206,7 +206,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             generalPreferencePage.SavePreferences();
             Logger.LogMethodExit("Preferences",
                 "EnableNecessaryMyTestPreferenceSettings",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -218,12 +218,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Enable Necessary Catalog Preference Settings
             Logger.LogMethodEntry("Preference",
                 "EnableNecessaryCatalogPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable Catalog Preference Settings
             new CatalogPreferencesPage().EnableCatalogPreferenceSettings();
             Logger.LogMethodExit("Preference",
                 "EnableNecessaryCatalogPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -235,13 +235,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Preference settings For Copy Content
             Logger.LogMethodEntry("Preferences",
                 "SetThePreferencesForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Set The Preferences For Copy Content
             new CourseCopyPreferencesPage().
                 SetCopyContentPreference();
             Logger.LogMethodExit("Preferences",
                 "SetThePreferencesForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

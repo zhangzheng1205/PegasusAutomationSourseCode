@@ -17,7 +17,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         /// <summary>
         /// The Static Instance Of The Logger For The Class.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(CreateActivity));
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Click On Add Course Materials Option
             Logger.LogMethodEntry("CreateActivity", "ClickOnAddCourseMaterialsOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Declaration of object
             ContentLibraryUXPage contentLibrary = new ContentLibraryUXPage();
             //Select Window
@@ -40,7 +40,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Click On Add Course Materials Option
             new ContentLibraryUXPage().ClickOnAddCourseMaterialsLink();
             Logger.LogMethodExit("CreateActivity", "ClickOnAddCourseMaterialsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,11 +52,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Click On The Activity Type
             Logger.LogMethodEntry("CreateActivity", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Activity Type
             new ContentLibraryUXPage().ClickOnActivityType(activityType);
             Logger.LogMethodExit("CreateActivity", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,13 +65,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
         /// <param name="behavioralModeEnum">This is Activity Behavioral mode type Enum.</param>
         [When(@"I create ""(.*)"" of grader activity of behavioral mode ""(.*)"" type")]
-        public void CreateGraderITActivity(
+        public void CreateGraderItActivity(
             Activity.ActivityTypeEnum activityTypeEnum,
             Activity.ActivityBehavioralModesEnum behavioralModeEnum)
         {
             //Create GraderIT Activity
             Logger.LogMethodEntry("CreateActivity", "CreateGraderITActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Create Object for RandomTopicList Page
             RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
             //Create Object for AutoGrader Page
@@ -91,7 +91,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Click On SaveAndReturn Button
             addAssessmentPage.ClickOnSaveAndReturnButton();
             Logger.LogMethodExit("CreateActivity", "CreateGraderITActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -105,20 +105,20 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Search Asset In Content Library Frame
             Logger.LogMethodEntry("CreateActivity", "SearchAssetInContentLibrary",
-              base.isTakeScreenShotDuringEntryExit);
-            ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
+              base.IsTakeScreenShotDuringEntryExit);
+            ContentLibraryUXPage contentLibraryUxPage = new ContentLibraryUXPage();
             //Fetch the activity from memory
            Activity activity = Activity.Get(activityTypeEnum, behavioralTypeEnum);
             //Select Window
-            contentLibraryUXPage.SelectTheWindowName(CreateActivityResource.
+            contentLibraryUxPage.SelectTheWindowName(CreateActivityResource.
                 CreateActivity_CourseMaterials_Window_Title);
             //Select the frame
-            contentLibraryUXPage.SelectAndSwitchtoFrame(CreateActivityResource.
+            contentLibraryUxPage.SelectAndSwitchtoFrame(CreateActivityResource.
                 CreateActivity_CourseMaterials_Leftframe_Id_Locator);
             //Search Asset In Content Library Frame
-            contentLibraryUXPage.SearchTheActivity(activity.Name);
+            contentLibraryUxPage.SearchTheActivity(activity.Name);
             Logger.LogMethodExit("CreateActivity", " SearchAssetInContentLibrary",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,11 +130,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Select Cmenu Option of Activity
             Logger.LogMethodEntry("CreateActivity", "SelectCmenuOptionOfActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Cmenu Option of Activity
             new ContentLibraryUXPage().SelectCmenuOptionOfActivity(cmenuOption);
             Logger.LogMethodExit("CreateActivity", "SelectCmenuOptionOfActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -142,8 +142,9 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
         /// <param name="behavioralModeEnum">This is Activity Behavioral mode type Enum.</param>
+        /// <param name="projectName">This is grader project name.</param>
         [When(@"I create ""(.*)"" of grader activity of behavioral mode ""(.*)"" type using ""(.*)"" project in ""(.*)""")]
-        public void CreateGraderITActivity(
+        public void CreateGraderItActivity(
             Activity.ActivityTypeEnum activityTypeEnum,
             Activity.ActivityBehavioralModesEnum behavioralModeEnum, String projectName,
             string tabName
@@ -152,7 +153,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Create GraderIT Activity
             Logger.LogMethodEntry("CreateActivity", "CreateGraderITActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Create Object for RandomTopicList Page
             RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
             //Create Object for AutoGrader Page
@@ -176,7 +177,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
                 new ContentBrowserUXPage().ClickOnAddAndCloseButton();
             }
             Logger.LogMethodExit("CreateActivity", "CreateGraderITActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On Add Course Materials Link.
@@ -186,11 +187,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Click On Add Course Materials Link
             Logger.LogMethodEntry("CreateActivity", "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Add Course Materials Option
             new CourseContentUXPage().ClickOnAddCourseMaterialsOption();
             Logger.LogMethodExit("CreateActivity", "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -204,7 +205,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Search Asset In Content Library Frame
             Logger.LogMethodEntry("CreateActivity", "SearchAssetInContentLibrary",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
             //Fetch the activity from memory
              Activity activity = Activity.Get(activityTypeEnum, behavioralTypeEnum);
@@ -217,7 +218,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Search Asset In Content Library Frame
             contentLibraryUXPage.SearchTheActivity(activity.Name);
             Logger.LogMethodExit("CreateActivity", " SearchAssetInContentLibrary",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Associate The Activity From Content Library To MyCourse.
@@ -230,7 +231,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Associate The Activity From Content Library To MyCourse
             Logger.LogMethodEntry("CreateActivity",
                 "AssociateTheActivityFromContentLibraryToMyCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
@@ -242,7 +243,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             contentLibraryUXPage.ClickOnActivityAddButton();
             Logger.LogMethodExit("CreateActivity",
                 "AssociateTheActivityFromContentLibraryToMyCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
     }
 

@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On the 'Create/Copy Course' Option
             logger.LogMethodEntry("UserLayoutRootNodePage", "ClickOntheCreateCopyCourseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on the Refresh button if Present
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodePage", "ClickOntheCreateCopyCourseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the Refresh Button
             logger.LogMethodEntry("UserLayoutRootNodePage", "ClickOnRefreshButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for The Window
             base.WaitUntilWindowLoads(UserLayoutRootNodePageResource.
                 UserLayoutRootNodePage_Window_Title);
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
                 UserLayoutRootNodePage_ErrorRefresh_Button_Xpath_Locator);
             }
             logger.LogMethodExit("UserLayoutRootNodePage", "ClickOnRefreshButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Enroll In Another Course Button
             logger.LogMethodEntry("UserLayoutRootNodePage", "ClickOnEnrollInAnotherCourseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodePage", "ClickOnEnrollInAnotherCourseButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,14 +130,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Certificate Error Window
             logger.LogMethodEntry("UserLayoutRootNodePage", "SelectCertificateErrorWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(UserLayoutRootNodePageResource.
                 UserLayoutRootNodePage_CertificateErrorNavigationBlocked_Window_Title);
             //Select Window
             base.SelectWindow(UserLayoutRootNodePageResource.
                 UserLayoutRootNodePage_CertificateErrorNavigationBlocked_Window_Title);
             logger.LogMethodExit("UserLayoutRootNodePage", "SelectCertificateErrorWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -147,14 +147,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("UserLayoutRootNodePage", "SelectWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(UserLayoutRootNodePageResource.
                 UserLayoutRootNodePage_Window_Title);
             base.WaitForElement(By.PartialLinkText(UserLayoutRootNodePageResource.
                 UserLayoutRootNodePage_EnrollInAnotherCourse_Button_Locator));
             logger.LogMethodExit("UserLayoutRootNodePage", "SelectWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify if Course Name is Displayed
             logger.LogMethodEntry("UserLayoutRootNodePage", "IsCourseNameDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             Boolean isCourseNameDisplayed = false;
             try
@@ -181,7 +181,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodePage", "IsCourseNameDisplayed",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return isCourseNameDisplayed;
         }
 

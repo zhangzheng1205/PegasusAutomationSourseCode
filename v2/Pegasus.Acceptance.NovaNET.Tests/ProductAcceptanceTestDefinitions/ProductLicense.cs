@@ -28,12 +28,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click on Add Products Option
             Logger.LogMethodEntry("ProductLicense", 
                 "ClickOnTheAddProductsOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Add Product Link
             new LicensesPage().ClickAddProductOptionLink();
             Logger.LogMethodExit("ProductLicense", 
                 "ClickOnTheAddProductsOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -47,7 +47,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //License the Product
             Logger.LogMethodEntry("ProductLicense", "LicenseTheProduct",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //To select the product stored in memory
             Product product = Product.Get(productTypeEnum);
             //License the Product
@@ -55,7 +55,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Enter License Details
             new CreateLicensePage().EnterLicenseDetail(productTypeEnum);
             Logger.LogMethodExit("ProductLicense", "LicenseTheProduct",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
        
@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //License the Product
             Logger.LogMethodEntry("ProductLicense", "LicenseTheProduct",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //To select the product stored in memory
             List<Product> products = new List<Product>();
             products = Product.GetAll(productTypeEnum);
@@ -90,7 +90,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             }
 
             Logger.LogMethodExit("ProductLicense", "LicenseTheProduct",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -104,14 +104,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             Logger.LogMethodEntry("ProductLicense", 
                 "SearchLicensedProductInCoursespace",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //To select the product stored in memory
             License license = License.Get(licenseTypeEnum);
             //Search Licensed Product
             new LicensesPage().SearchLicensedProduct(license.Name);
             Logger.LogMethodExit("ProductLicense",
                 "SearchLicensedProductInCoursespace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             Logger.LogMethodEntry("ProductLicense", 
                 "VerifySearchedLicensedProduct",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //To select the product stored in memory
             License license = License.Get(licenseTypeEnum);
             // Assert Licensed Product Search
@@ -134,7 +134,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     new LicensesPage().GetLicensedProduct()));
             Logger.LogMethodExit("ProductLicense", 
                 "VerifySearchedLicensedProduct",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -146,12 +146,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Enter into the Organization
             Logger.LogMethodEntry("ProductLicense", 
                 "EnterIntoTheOrganization",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Click on Manage Button
             new OrganizationSearchPage().ClickOnManageButtonOfOrganization();
             Logger.LogMethodExit("ProductLicense", 
                 "EnterIntoTheOrganization",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

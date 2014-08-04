@@ -38,7 +38,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //View Grades For Submitted Activity
             logger.LogMethodEntry("GBFoldersPage", "GetActivityGrade",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Navigate Inside Folder Asset
@@ -49,7 +49,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBFoldersPage", "GetActivityGrade",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return this.GetGradePresentInCell();
         }
 
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate Inside Folder Asset
             logger.LogMethodEntry("GBFoldersPage", "NavigateInsideFolderAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select GradeBook Window
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBFoldersPage", "NavigateInsideFolderAsset",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate Inside Folder Asset
             logger.LogMethodEntry("GBFoldersPage", "NavigateInsideSubFolderAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {    
                 switch (subFolderAssetEnum)
@@ -114,7 +114,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBFoldersPage", "NavigateInsideSubFolderAsset",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Folder Asset In Gradebook
             logger.LogMethodEntry("GBFoldersPage", "SelectFolderAssetInGradebook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside Main Folder
             base.WaitForElement(By.XPath(GBFoldersPageResource.
                 GBFolders_Page_Student_Folder_Xpath_Locator));
@@ -146,7 +146,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(GBFoldersPageResource
            .GBFolders_Page_ThreadTime_Value));
             logger.LogMethodExit("GBFoldersPage", "SelectFolderAssetInGradebook",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Frame
             logger.LogMethodEntry("GBFoldersPage", "SelectActivityFolderIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Name(GBFoldersPageResource.
                                             GBFolders_Page_FoldersFrame_Iframe_Name_Locator));
@@ -164,7 +164,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(GBFoldersPageResource.
                                     GBFolders_Page_FoldersFrame_Iframe_Name_Locator);
             logger.LogMethodExit("GBFoldersPage", "SelectActivityFolderIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("GBFoldersPage", "SelectGradeBookWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For The Gradebook Window
             base.WaitUntilWindowLoads(GBFoldersPageResource.
                                           GBFolders_Page_Gradebook_WindowName);
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(GBFoldersPageResource.
                                   GBFolders_Page_Gradebook_WindowName);
             logger.LogMethodExit("GBFoldersPage", "SelectGradeBookWindow",
-         base.isTakeScreenShotDuringEntryExit);
+         base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate Inside Folders
             logger.LogMethodEntry("GBFoldersPage", "NavigateInsideQuestionFolder",
-                                base.isTakeScreenShotDuringEntryExit);
+                                base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside Main Folder
             base.WaitForElement(By.XPath(GBFoldersPageResource.
               GBFolders_Page_MainFolder_Xpath_Locator));
@@ -217,7 +217,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(GBFoldersPageResource
            .GBFolders_Page_ThreadTime_Value));
             logger.LogMethodExit("GBFoldersPage", "NavigateInsideQuestionFolder",
-                                base.isTakeScreenShotDuringEntryExit);
+                                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //View Grade in Activity Grade Cell
             logger.LogMethodEntry("GBFoldersPage", "GetGradePresentInCell",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getActivityGrade = string.Empty;
             string getActivityName = GBInstructorUXPageResource.
@@ -245,7 +245,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBFoldersPage", "GetGradePresentInCell",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             return getActivityGrade;
         }        
 
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate Inside the Folder
             logger.LogMethodEntry("GBFoldersPage", "NavigateInsideParentActivityFolder",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for GradeBook Window
@@ -279,7 +279,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBFoldersPage", "NavigateInsideParentActivityFolder",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -290,7 +290,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate Inside the Activity Folder
             logger.LogMethodEntry("GBFoldersPage", "NavigateInsideActivityFolder",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
             //Get Activity Folder Count
             int getActivityFolderCount = GetActivityFolderCount();
             for (int initailActivityFolderCount = Convert.ToInt32(GBFoldersPageResource.
@@ -306,7 +306,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("GBFoldersPage", "NavigateInsideActivityFolder",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -317,7 +317,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Activity Folder Count
             logger.LogMethodEntry("GBFoldersPage", "GetActivityFolderCount",
-                                base.isTakeScreenShotDuringEntryExit);
+                                base.IsTakeScreenShotDuringEntryExit);
             //Pause Code For Frame Loads
             Thread.Sleep(Convert.ToInt32(GBFoldersPageResource.GBFolders_Page_ThreadTime_Value));
             //Wait for Folder Element
@@ -327,7 +327,7 @@ namespace Pegasus.Pages.UI_Pages
             int getActivityFolderCount = GetElementCountByXPath(GBFoldersPageResource.
                 GBFolders_Page_Folder_Count_Xpath_Locator);
             logger.LogMethodExit("GBFoldersPage", "GetActivityFolderCount",
-                                base.isTakeScreenShotDuringEntryExit);
+                                base.IsTakeScreenShotDuringEntryExit);
             return getActivityFolderCount;
         }
 
@@ -340,7 +340,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Activity Folder Name
             logger.LogMethodEntry("GBFoldersPage", "GetActiivtyFolderName",
-                                base.isTakeScreenShotDuringEntryExit);
+                                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Folder 
             base.WaitForElement(By.XPath(string.Format(GBFoldersPageResource.
                 GBFolders_Page_GetFolderName_Xpath_Locator, initailActivityFolderCount)));
@@ -356,7 +356,7 @@ namespace Pegasus.Pages.UI_Pages
                 (GBFoldersPageResource.GBFolders_Page_GetFolderName_Xpath_Locator, 
                 initailActivityFolderCount));
             logger.LogMethodExit("GBFoldersPage", "GetActiivtyFolderName",
-                              base.isTakeScreenShotDuringEntryExit);
+                              base.IsTakeScreenShotDuringEntryExit);
             return getActiivtyFolderName;
         }
 
@@ -368,7 +368,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Activity Name
             logger.LogMethodEntry("GBFoldersPage", "ClickOnActivtyFolderName",
-                              base.isTakeScreenShotDuringEntryExit);
+                              base.IsTakeScreenShotDuringEntryExit);
             //Focus on Element
             base.FocusOnElementByXPath(string.Format(GBFoldersPageResource.
                 GBFolders_Page_GetFolderName_Xpath_Locator,
@@ -380,7 +380,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(GBFoldersPageResource.
                 GBFolders_Page_Activity_Click_ThreadTime_Value));
             logger.LogMethodExit("GBFoldersPage", "ClickOnActivtyFolderName",
-                              base.isTakeScreenShotDuringEntryExit);
+                              base.IsTakeScreenShotDuringEntryExit);
         }
 
         

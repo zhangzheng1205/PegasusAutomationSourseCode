@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save Preferences
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-               "SaveActivityPreferences", base.isTakeScreenShotDuringEntryExit);
+               "SaveActivityPreferences", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Thread.Sleep(Convert.ToInt32(StandardSkillPreferencesPageResource.
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ActivitiesPreferencesPage",
-               "SaveActivityPreferences", base.isTakeScreenShotDuringEntryExit);
+               "SaveActivityPreferences", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Activity Edit Option
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-                "ClickOnActivityEditOption", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnActivityEditOption", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Prefernces Window
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ActivitiesPreferencesPage",
-               "ClickOnActivityEditOption", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnActivityEditOption", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Edit Option
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-               "ClickOnEditOption", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnEditOption", base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_EditButton_Id_Locator));
             //Get Edit Option Property
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Edit Option
             base.ClickByJavaScriptExecutor(getEditOptionProperty);
             logger.LogMethodExit("ActivitiesPreferencesPage",
-                "ClickOnEditOption", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnEditOption", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On Assignment Activity Edit Option.
@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Activity Edit Option
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-                "ClickOnAssignmentActivityEditOption", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnAssignmentActivityEditOption", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Prefernces Window
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ActivitiesPreferencesPage",
-               "ClickOnAssignmentActivityEditOption", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnAssignmentActivityEditOption", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On Assignment behavioral activity Edit Option.
@@ -141,7 +141,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Edit Option
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-               "ClickOnAssignmentEditOption", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnAssignmentEditOption", base.IsTakeScreenShotDuringEntryExit);
 
             // Activity Type Name Collection
             ICollection<IWebElement> ActivityTypeEditCollection = base.GetWebElementsCollectionById(
@@ -175,7 +175,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("ActivitiesPreferencesPage",
-                "ClickOnAssignmentEditOption", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnAssignmentEditOption", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -186,7 +186,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Allow Activity To Be Used As Pretest Or Posttest' Option
             logger.LogMethodEntry("ActivitiesPreferencesPage",
                "SelectAllowActivityToBeUsedAsPretestOrPosttestOption", 
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on the Activities Link
@@ -211,7 +211,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ActivitiesPreferencesPage",
                 "SelectAllowActivityToBeUsedAsPretestOrPosttestOption", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On 'MGM Test' Edit Link
             logger.LogMethodEntry("ActivitiesPreferencesPage","ClickOnMGMTestEditLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Element
             base.WaitForElement(By.XPath(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_EditMathXLTestPreference_Link_Xpath_Locator));
@@ -230,7 +230,7 @@ namespace Pegasus.Pages.UI_Pages
                 GetWebElementPropertiesByXPath(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_EditMathXLTestPreference_Link_Xpath_Locator));            
             logger.LogMethodExit("ActivitiesPreferencesPage","ClickOnMGMTestEditLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -240,14 +240,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Preferences window
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-               "SelectPreferencesWindow", base.isTakeScreenShotDuringEntryExit);
+               "SelectPreferencesWindow", base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_Preferences_Window_Name);
             //Select Preferences Window
             base.SelectWindow(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_Preferences_Window_Name);
             logger.LogMethodExit("ActivitiesPreferencesPage",
-               "SelectPreferencesWindow", base.isTakeScreenShotDuringEntryExit);
+               "SelectPreferencesWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -257,14 +257,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Preferences Main Frame.
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-               "SelectPreferencesMainFrame", base.isTakeScreenShotDuringEntryExit);
+               "SelectPreferencesMainFrame", base.IsTakeScreenShotDuringEntryExit);
             //Switch to Iframe
             base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_Frame_Id_Locator));
             base.SwitchToIFrame(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_Frame_Id_Locator);
             logger.LogMethodExit("ActivitiesPreferencesPage",
-               "SelectPreferencesMainFrame", base.isTakeScreenShotDuringEntryExit);
+               "SelectPreferencesMainFrame", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Remove Multiple Attempt CheckBox
             logger.LogMethodEntry("ActivitiesPreferencesPage",
                "ClickTheRemoveMultipleAttemptCheckBox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enable 'Remove Multople attempt Preference                
@@ -291,7 +291,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ActivitiesPreferencesPage",
                "ClickTheRemoveMultipleAttemptCheckBox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On Messages Sub-Tab.
@@ -299,7 +299,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnMessagesSubTab()
         {
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-               "ClickOnMessagesSubTab", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnMessagesSubTab", base.IsTakeScreenShotDuringEntryExit);
             // wait for Messages tab
             base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
                 ActivitiesPreferences_Page_MessagesSubTab_Id_Locator));
@@ -312,7 +312,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getMessagesSubTab);
 
             logger.LogMethodExit("ActivitiesPreferencesPage",
-               "ClickOnMessagesSubTab", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnMessagesSubTab", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enter Beginning Of Activity Default And Instructor Messages.
@@ -320,7 +320,7 @@ namespace Pegasus.Pages.UI_Pages
         public void EnterBeginningOfActivityDefaultAndInstructorMessages()
         {
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-               "EnterBeginningOfActivityDefaultAndInstructorMessages", base.isTakeScreenShotDuringEntryExit);
+               "EnterBeginningOfActivityDefaultAndInstructorMessages", base.IsTakeScreenShotDuringEntryExit);
 
             // wait for Begin Default Message text box
             base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
@@ -345,7 +345,7 @@ namespace Pegasus.Pages.UI_Pages
                 ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_BeginInstructorMessage_Text);
 
             logger.LogMethodExit("ActivitiesPreferencesPage",
-               "EnterBeginningOfActivityDefaultAndInstructorMessages", base.isTakeScreenShotDuringEntryExit);
+               "EnterBeginningOfActivityDefaultAndInstructorMessages", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// returns Activity Begin Default Message.
@@ -378,7 +378,7 @@ namespace Pegasus.Pages.UI_Pages
         public void EnterEndOfActivityDefaultAndInstructorMessages()
         {
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-               "EnterEndOfActivityDefaultAndInstructorMessages", base.isTakeScreenShotDuringEntryExit);
+               "EnterEndOfActivityDefaultAndInstructorMessages", base.IsTakeScreenShotDuringEntryExit);
 
             // wait for End Default Message text box
             base.WaitForElement(By.Id(ActivitiesPreferencesPageResource.
@@ -403,7 +403,7 @@ namespace Pegasus.Pages.UI_Pages
                 ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_EndInstructorMessage_Text);
 
             logger.LogMethodExit("ActivitiesPreferencesPage",
-               "EnterEndOfActivityDefaultAndInstructorMessages", base.isTakeScreenShotDuringEntryExit);
+               "EnterEndOfActivityDefaultAndInstructorMessages", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On The Save Button in Activity type Default Preferences page.
@@ -412,7 +412,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnTheSaveButton(string saveButton)
         {
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-               "ClickOnTheSaveButton", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnTheSaveButton", base.IsTakeScreenShotDuringEntryExit);
 
             // wait for Save button
             base.WaitForElement(By.LinkText(saveButton));
@@ -425,7 +425,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSaveButton);
 
             logger.LogMethodExit("ActivitiesPreferencesPage",
-               "ClickOnTheSaveButton", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnTheSaveButton", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enter New Activity Type Name.
@@ -434,7 +434,7 @@ namespace Pegasus.Pages.UI_Pages
         public void EnterNewActivityTypeName(string newActivityTypeName)
         {
             logger.LogMethodEntry("ActivitiesPreferencesPage",
-               "EnterNewActivityTypeName", base.isTakeScreenShotDuringEntryExit);
+               "EnterNewActivityTypeName", base.IsTakeScreenShotDuringEntryExit);
 
             ICollection<IWebElement> getAllAssetsInContentLibrary = base.GetWebElementsCollectionByPartialCssSelector(
                     ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_NewActivityTypeName_CSSSelector);
@@ -443,7 +443,7 @@ namespace Pegasus.Pages.UI_Pages
             getLastActivityTypeName.SendKeys(newActivityTypeName);
 
             logger.LogMethodExit("ActivitiesPreferencesPage",
-               "EnterNewActivityTypeName", base.isTakeScreenShotDuringEntryExit);
+               "EnterNewActivityTypeName", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

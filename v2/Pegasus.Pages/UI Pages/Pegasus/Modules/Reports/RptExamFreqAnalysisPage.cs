@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Exam Frequency Analysis Score In Report
             logger.LogMethodEntry("RptExamFreqAnalysisPage",
                 "GetExamFrequencyAnalysisScoreInReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Activity Score Variable
             string getActivityScore = string.Empty;
             try
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RptExamFreqAnalysisPage",
                 "GetExamFrequencyAnalysisScoreInReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
     }

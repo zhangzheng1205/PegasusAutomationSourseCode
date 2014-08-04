@@ -34,11 +34,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         public void LoginToRumba(User.UserTypeEnum userTypeEnum)
         {   //Login to Rumba
             Logger.LogMethodEntry("RumbaLicensing", "LoginToRumba",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Login To Rumba
             new SignInPage().LoginToRumba(userTypeEnum);
             Logger.LogMethodExit("RumbaLicensing", "LoginToRumba",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,10 +50,10 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click on SignOut link
             Logger.LogMethodEntry("LoginLogout", "SignOutFromRumba",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new SignInPage().ClickSignOutLink(linkSignOut);
             Logger.LogMethodExit("LoginLogout", "SignOutFromRumba",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,13 +65,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Validate Logout From Rumba
             Logger.LogMethodEntry("LoginLogout", "ValidateLogoutFromRumba",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert Logout
             Logger.LogAssertion("ValidateLogout",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(signOutMessage, new SignInPage().GetRumbaUserSignOutMessage()));
             Logger.LogMethodExit("LoginLogout", "ValidateLogoutFromRumba",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,13 +82,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Create New Organizational Product
             Logger.LogMethodEntry("RumbaLicensing", "CreateOrganizationalProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Create Product Link
             new WelcometoRADminPage().ClickonCreateProductLink();
             //Creates Rumba Product
             new CreateProductPage().CreateRumbaProduct();
             Logger.LogMethodExit("RumbaLicensing", "CreateOrganizationalProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the product created successfully or not
             Logger.LogMethodEntry("RumbaLicensing", "ProductSuccessfullyCreated",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Gets the product id from memory
             License license = License.Get(License.LicenseTypeEnum.Rumba);
             //Assert the product creation
@@ -107,7 +107,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
                     (license.ProductID, new CreateProductPage().GetRumbaProductID()));
             Logger.LogMethodExit("RumbaLicensing", "ProductSuccessfullyCreated",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -119,13 +119,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Create resource
             Logger.LogMethodEntry("RumbaLicensing", "CreateRumbaOrganizationalResource",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on create resource link
             new WelcometoRADminPage().ClickCreateResourceLink();
             //Create Resource
             new CreateResourcePage().CreateRumbaResource();
             Logger.LogMethodExit("RumbaLicensing", "CreateRumbaOrganizationalResource",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the resource created successfuly or not
             Logger.LogMethodEntry("RumbaLicensing", "ResourceSuccessfullyCreated",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Gets the resource id from the memory
             License licenses = License.Get(License.LicenseTypeEnum.Rumba);
             //Asserts resource creation        
@@ -144,7 +144,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(licenses.ResourceID,
                     new CreateResourcePage().GetRumbaResourceId()));
             Logger.LogMethodExit("RumbaLicensing", "ResourceSuccessfullyCreated",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -155,7 +155,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Add the product id to resource id
             Logger.LogMethodEntry("RumbaLicensing", "AddRumbaResourceToRumbaProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Creating Page Class Object
             ProductsAndResourcesPage productAndResourcesPage = new ProductsAndResourcesPage();
             //Click on Product and Resource
@@ -163,7 +163,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //To add the product id to resource id
             productAndResourcesPage.AddProductIDToResourceID();
             Logger.LogMethodExit("RumbaLicensing", "AddRumbaResourceToRumbaProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -177,14 +177,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Place A New Order For A License To Use A Product
             Logger.LogMethodEntry("RumbaLicensing", "PlaceNewOrderForProductLicense",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Place An Order Link
             new WelcometoRADminPage().ClickOnPlaceAnOrderLink();
             //Place an product license order
             new PlaceOrderPage().PlaceOrganizationLicenseOrder(
                 organizationLevelEnum, organizationTypeEnum);
             Logger.LogMethodExit("RumbaLicensing", "PlaceNewOrderForProductLicense",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -195,13 +195,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // The Resource Added In The Ceated Product
             Logger.LogMethodEntry("RumbaLicensing", "ResourceAddedInTheCreatedProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("VerifyResourceAddedToProduct",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(RumbaLicensingResource.RumbaLicensing_AddResource_SuccessMessage,
                     new ProductsAndResourcesPage().GetSuccessMessage()));
             Logger.LogMethodExit("RumbaLicensing", "ResourceAddedInTheCreatedProduct",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -212,14 +212,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Product Order Placed Successfully
             Logger.LogMethodEntry("RumbaLicensing", "ProductOrderPlacedSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Success Message
             Logger.LogAssertion("VerifyProductOrderPlacedSuccessfully",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(true, new PlaceOrderPage().GetCreateLicenseSuccessMessage().
                 Contains(RumbaLicensingResource.RumbaLicensing_PlaceOrderSuccessMessage)));
             Logger.LogMethodExit("RumbaLicensing", "ProductOrderPlacedSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>

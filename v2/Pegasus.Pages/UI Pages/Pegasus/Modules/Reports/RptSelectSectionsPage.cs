@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SelectSection(string sectionName)
         {
             logger.LogMethodEntry("RptSelectSectionsPage", "SelectSection"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectSectionsPage", "SelectSection"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Expand Link
             logger.LogMethodEntry("RptSelectSectionsPage", "ClickOnExpandLink"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.XPath(RptSelectSectionsPageResource.
@@ -107,7 +107,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectSectionsPage", "ClickOnExpandLink"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Collapse Link
             logger.LogMethodEntry("RptSelectSectionsPage", "ClickOnCollapseLink"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.XPath(RptSelectSectionsPageResource.
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectSectionsPage", "ClickOnCollapseLink"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("RptSelectSectionsPage", "SelectWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitUntilWindowLoads(RptSelectSectionsPageResource.
                 RptSelectSections_Page_Window_Title);
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(RptSelectSectionsPageResource.
                 RptSelectSections_Page_Window_Title);
             logger.LogMethodExit("RptSelectSectionsPage", "SelectWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the AddandClose button
             logger.LogMethodEntry("RptSelectSectionsPage", "ClickAddandCloseButton"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Click Add and Close button
@@ -180,7 +180,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectSectionsPage", "ClickAddandCloseButton"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Add Sections button
             logger.LogMethodEntry("RptSelectSectionsPage", "ClickAddSectionsButton"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {   
                 //Wait for Add Sections Button
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectSectionsPage", "ClickAddSectionsButton"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -217,7 +217,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnCancelButton()
         {
             logger.LogMethodEntry("RptSelectSectionsPage", "ClickOnCancelButton"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Click on the Cancel button
@@ -238,7 +238,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectSectionsPage", "ClickOnCancelButton"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -248,7 +248,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Show/Hide Sections Link
             logger.LogMethodEntry("RptSelectSectionsPage", "ClickOnShowHideSectionLink"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -268,7 +268,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectSectionsPage", "ClickOnShowHideSectionLink"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -280,7 +280,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify Section Name Dispaly or Not
             logger.LogMethodEntry("RptSelectSectionsPage", "IsSectionNameDisplay"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getSectionName = string.Empty;
             bool sectionDisplayStatus = false;
@@ -313,7 +313,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectSectionsPage", "IsSectionNameDisplay"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             return sectionDisplayStatus;
         }
 
@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
         public bool IsSectionPresent()
         {
             logger.LogMethodEntry("RptSelectSectionsPage", "IsSectionPresent"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isSectionNamePresent = false;
             try
@@ -341,7 +341,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }       
             logger.LogMethodExit("RptSelectSectionsPage", "IsSectionPresent"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             return isSectionNamePresent;
         }
 
@@ -353,7 +353,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Expand/Collapse Button Title
             logger.LogMethodEntry("RptSelectSectionsPage", "GetExpandCollapseButtonTitle"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getButtonTitle = string.Empty;
             try
@@ -371,7 +371,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectSectionsPage", "GetExpandCollapseButtonTitle"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             return getButtonTitle;
         }
 
@@ -383,7 +383,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Select Sections Popup Message
             logger.LogMethodEntry("RptSelectSectionsPage", "GetSelectSectionsPopupMessage"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getMessage = string.Empty;
             try
@@ -401,7 +401,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectSectionsPage", "GetSelectSectionsPopupMessage"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             return getMessage;
         }
 
@@ -416,7 +416,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On The Button In Select Sections Popup
             logger.LogMethodEntry("RptSelectSectionsPage",
                 "ClickOnTheButtonInSelectSectionsPopup"
-                 , base.isTakeScreenShotDuringEntryExit);
+                 , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (selectSectionsPopupButtonTypeEnum)
@@ -437,7 +437,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RptSelectSectionsPage",
                 "ClickOnTheButtonInSelectSectionsPopup"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -449,7 +449,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Section And Click Add Button
             logger.LogMethodEntry("RptSelectSectionsPage",
                "SelectSectionAndClickAddButton"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Section
@@ -463,7 +463,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RptSelectSectionsPage",
                 "SelectSectionAndClickAddButton"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

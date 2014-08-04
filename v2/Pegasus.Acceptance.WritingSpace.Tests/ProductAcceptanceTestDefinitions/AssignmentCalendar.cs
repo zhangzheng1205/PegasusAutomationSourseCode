@@ -32,7 +32,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Search Content In Assignment Calendar
             Logger.LogMethodEntry("AssignmentCalendar", 
                 "SearchContentInAssignmentCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the activity from memory
             Activity activity = Activity.Get(activityTypeEnum);
             new CourseHomeListItemViewPage().SelectCourseHomeWindow();
@@ -40,7 +40,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             new CalendarHEDDefaultUXPage().SearchContent(activity.Name);
             Logger.LogMethodExit("AssignmentCalendar", 
                 "SearchContentInAssignmentCalendar",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Verify Searched Asset In Assignment Calendar Message
             Logger.LogMethodEntry("AssignmentCalendar",
                 "VerifySearchedAssetMessageInAssignmentCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify The message
             Logger.LogAssertion("VerifyThefailureMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -62,7 +62,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                     GetMessageFromAssignmentCalendarTab(message)));
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifySearchedAssetMessageInAssignmentCalendar",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }        
     }
 }

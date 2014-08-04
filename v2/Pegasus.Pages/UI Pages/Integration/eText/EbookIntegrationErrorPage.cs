@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get eText Message
             Logger.LogMethodEntry("EbookIntegrationErrorPage",
                 "GeteTextMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             string getElementTextByXPath = string.Empty;
             try
@@ -49,7 +49,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("EbookIntegrationErrorPage", "GeteTextMessage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getElementTextByXPath;
         }
 
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Window
             Logger.LogMethodExit("EbookIntegrationErrorPage",
                 "SelectPearsonETextSignInPageWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait Fow Window Loads
             base.WaitUntilWindowLoads(EbookIntegrationErrorPageResource.
                                      EbookIntegrationError_Page_Window_Name);
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
                                   EbookIntegrationError_Page_Window_Name);
             Logger.LogMethodExit("EbookIntegrationErrorPage",
                 "SelectPearsonETextSignInPageWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

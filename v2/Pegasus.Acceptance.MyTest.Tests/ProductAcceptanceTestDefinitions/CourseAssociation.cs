@@ -29,12 +29,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Select Course For Association
             Logger.LogMethodEntry("CourseAssociation",
                 "SelectCourseTypeInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Approved Course
             new ListCoursesPage().SelectApprovedCourse();
             Logger.LogMethodExit("CourseAssociation",
                 "SelectCourseTypeInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Select Product
             Logger.LogMethodEntry("CourseAssociation",
                 "SelectProductTypeInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Purpose: To pick the product stored in memory
             Product product = Product.Get(productTypeEnum);
             //Click Search Product Link
@@ -57,7 +57,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             new ProductSearchPage().SearchProduct(product.Name);
             Logger.LogMethodExit("CourseAssociation",
                 "SelectProductTypeInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Associate Course To Product
             Logger.LogMethodEntry("CourseAssociation",
                 "AssociateTheCourseToPegasusProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click Program Course Add Button
             new AddButtonPage().ClickProgramCoursesAddButton();
             //Click Enrollment Mode Option
@@ -83,7 +83,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             courseEnrollmentModePage.ClickEnrollmentSaveButton();
             Logger.LogMethodExit("CourseAssociation",
                 "AssociateTheCourseToPegasusProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

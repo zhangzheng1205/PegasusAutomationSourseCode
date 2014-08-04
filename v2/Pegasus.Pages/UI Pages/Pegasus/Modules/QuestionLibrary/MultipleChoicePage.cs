@@ -34,7 +34,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check Is Updated Score Correct
             logger.LogMethodEntry("MultipleChoicePage", "IsUpdatedScoreCorrect",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool updatedScoreStatus = false;
             try
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MultipleChoicePage", "IsUpdatedScoreCorrect",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return updatedScoreStatus;
         }
 
@@ -82,13 +82,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Edit Multiple Choice Window
             logger.LogMethodEntry("MultipleChoicePage", "SelectEditMultipleChoiceWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(MultipleChoicePageResource.
                     MultipleChoice_Page_Window_Title);
             base.SelectWindow(MultipleChoicePageResource.
                 MultipleChoice_Page_Window_Title);
             logger.LogMethodExit("MultipleChoicePage", "SelectEditMultipleChoiceWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Creaye Multiple Choice Question
             logger.LogMethodEntry("MultipleChoicePage", "CreateMultipleChoiceQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Create Multiple Choice Window
@@ -121,7 +121,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MultipleChoicePage", "CreateMultipleChoiceQuestion",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -131,14 +131,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Multiple Choice Window
             logger.LogMethodEntry("MultipleChoicePage", "SelectCreateMultipleChoiceWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(MultipleChoicePageResource.
                 MultipleChoice_Page_CreateMultipleChoice_Window);
             //Select Multiple Choice Window
             base.SelectWindow(MultipleChoicePageResource.
                 MultipleChoice_Page_CreateMultipleChoice_Window);
             logger.LogMethodExit("MultipleChoicePage", "SelectCreateMultipleChoiceWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Question Title
             logger.LogMethodEntry("MultipleChoicePage", "EnterQuestionTitle",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Generate Question Title Guid
             Guid questionTitle = Guid.NewGuid();
             base.WaitForElement(By.Id(MultipleChoicePageResource.
@@ -158,7 +158,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(MultipleChoicePageResource.
                 MultipleChoice_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("MultipleChoicePage", "EnterQuestionTitle",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return questionTitle;
         }
 
@@ -172,7 +172,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On View Source Button and Enter Data
             logger.LogMethodEntry("MultipleChoicePage",
                 "ClickOnViewSourceAndEnterDataForMultipleChoiceQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Frame
             base.WaitForElement(By.Id(MultipleChoicePageResource.
                 MultipleChoice_Page_Frame_Id_Locator));
@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages
                 MultipleChoice_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("MultipleChoicePage",
                 "ClickOnViewSourceAndEnterDataForMultipleChoiceQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Add Answer Button
             logger.LogMethodEntry("MultipleChoicePage", 
                 "ClickOnAddAnswerButtonOfMultipleChoiceQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Matching Window
             this.SelectCreateMultipleChoiceWindow();
             base.WaitForElement(By.Id(MultipleChoicePageResource.
@@ -217,7 +217,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAddAnswerButton);
             logger.LogMethodExit("MultipleChoicePage",
                 "ClickOnAddAnswerButtonOfMultipleChoiceQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -228,7 +228,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Text Value For Matching Question
             logger.LogMethodEntry("MultipleChoicePage",
                 "EnterTextValueForMultipleChoiceQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             for (int initialCount = Convert.ToInt32(MatchingPageResource.
                 Matching_Page_TextBox_InitialValue); initialCount <= Convert.ToInt32(
                 MatchingPageResource.Matching_Page_TextBox_MaxValue); initialCount++)
@@ -247,7 +247,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("MultipleChoicePage",
                 "EnterTextValueForMultipleChoiceQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -258,7 +258,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Save and Close Button
             logger.LogMethodEntry("MultipleChoicePage",
                 "ClickONSaveAndCloseButtonOfMultipleChoiceQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Matching Window            
             base.WaitForElement(By.Id(MultipleChoicePageResource.
                 MultipleChoice_Page_Save_Button_Id_Locator));
@@ -270,7 +270,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("MultipleChoicePage", 
                 "ClickONSaveAndCloseButtonOfMultipleChoiceQuestion",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -281,7 +281,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Question Details in Memory
             logger.LogMethodEntry("MultipleChoicePage", "StoreQuestionDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Save Question Properties in Memory
             Question newQuestion = new Question
             {
@@ -291,7 +291,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newQuestion.StoreQuestionInMemory();
             logger.LogMethodExit("MultipleChoicePage", "StoreQuestionDetailsInMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

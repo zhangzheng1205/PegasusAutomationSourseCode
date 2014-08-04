@@ -29,7 +29,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //VerifSy The CourseName In GlobalHome
             Logger.LogMethodEntry("ManageAnnouncement", "VerifSyTheCourseNameInGlobalHome",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Course course = Course.Get(courseTypeEnum);
             //Get MyCourse Name In GlobalHome
@@ -38,7 +38,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 () => Assert.AreEqual(course.Name,
                      new HEDGlobalHomePage().GetMyCourseNameInGlobalHome(course.Name)));
             Logger.LogMethodExit("ManageAnnouncement", "VerifSyTheCourseNameInGlobalHome",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify The ManageAll Buuton In Announcement Channel
             Logger.LogMethodEntry("ManageAnnouncement",
                 "VerifyTheManageAllBuutonInAnnouncementChannel",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify The Announcement Manage All Button
             Logger.LogAssertion("VerifyTheAnnouncementManageAllButton",
                ScenarioContext.Current.ScenarioInfo.Title,
@@ -58,7 +58,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                    IsAnnouncementChannelManageAllButtonDisplayed()));
             Logger.LogMethodExit("ManageAnnouncement",
                 "VerifyTheManageAllBuutonInAnnouncementChannel",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Changing Time Zone 
             Logger.LogMethodEntry("ManageAnnouncement",
                 "ChangeWSUserTimeZoneToIndianGmtInMyProfile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on My Profile Link
             new MyPegasusUXPage().ClickMyProfileLinkByWSUser();
             //Changing the Time Zone
@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 ManageAnnouncement_MyProfile_IndianTimeZone_Value);
             Logger.LogMethodExit("ManageAnnouncement",
                 "ChangeWSUserTimeZoneToIndianGmtInMyProfile",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verifying Display of Announcement in Announcement frame
             Logger.LogMethodEntry("ManageAnnouncement", "VerifyAnnouncementInAnnouncementFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get announcement From Memory
             Announcement announcement = Announcement.Get(announcementTypeEnum);
             //Declaration Page Class Object
@@ -107,7 +107,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Close the light box
             announcementDefaultUxPage.CloseAnnoucementLightBox();
             Logger.LogMethodExit("ManageAnnouncement", "VerifyAnnouncementInAnnouncementFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -121,13 +121,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Create Course Announcement In GlobalHome
             Logger.LogMethodEntry("ManageAnnouncement",
                 "CreateCourseAnnouncementInWorkspaceGlobalHome",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             //Course announcement creation in workspace global home
             new CreateAnnouncementUXPage().
                 CreateCourseAnnouncementInWorkSpaceGlobalHome(announcementTypeEnum);
             Logger.LogMethodExit("ManageAnnouncement",
                 "CreateCourseAnnouncementInWorkspaceGlobalHome",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -141,14 +141,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify Display of Announcement Creation successfull message 
             Logger.LogMethodEntry("ManageAnnouncement",
                 "VerifySuccessfullMessageInAnnouncementsFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Successfull Message Displayed
             Logger.LogAssertion("VerifyAnnouncementMessage", ScenarioContext.
                    Current.ScenarioInfo.Title, () => Assert.AreEqual(successMessage,
                    new AnnouncementDefaultUXPage().GetCourseAnnouncementSuccessfullMessage()));
             Logger.LogMethodExit("ManageAnnouncement",
                 "VerifySuccessfullMessageInAnnouncementsFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -160,13 +160,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click The View By Dropdown Of Announcement
             Logger.LogMethodEntry("ManageAnnouncement",
                 "ClickTheViewByDropdownOfAnnouncement",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click The View By Dropdown Of Announcement
             new AnnouncementDefaultUXPage().
                 SelectClassAnnouncementsTypeFromDropdown(announcementType);
             Logger.LogMethodExit("ManageAnnouncement",
                 "ClickTheViewByDropdownOfAnnouncement",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -179,7 +179,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify The Displayed Announcement Dropdown Options
             Logger.LogMethodEntry("ManageAnnouncement",
                 "VerifyTheDisplayedAnnouncementDropdownOptions",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             foreach (var tableRow in table.Rows)
             {
                 //Assert correct dropdown options are opened
@@ -194,7 +194,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     ManageAnnouncement_Actual_Result])));
                 Logger.LogMethodExit("ManageAnnouncement",
                    "VerifyTheDisplayedAnnouncementDropdownOptions",
-                         base.isTakeScreenShotDuringEntryExit);
+                         base.IsTakeScreenShotDuringEntryExit);
             }
         }
     }

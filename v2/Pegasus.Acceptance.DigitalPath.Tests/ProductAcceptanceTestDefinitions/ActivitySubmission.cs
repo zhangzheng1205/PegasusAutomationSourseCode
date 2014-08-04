@@ -35,7 +35,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Open the Activity in Different Tab's
             Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivity",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Fetctb Activity From Memory
             Activity activity = Activity.Get(Activity.ActivityTypeEnum.StudyPlan);
             //Select Content Window
@@ -44,7 +44,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new CoursePreviewMainUXPage().
                 ClickActivityInViewAllContentTab(activity.Name);
             Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Submit the Activity
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             StudentPresentationPage studentpresentationpage =
                 new StudentPresentationPage();
@@ -67,7 +67,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             // select close button on the Test window
             new InstructionsPage().ClickTestCloseButton();
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -78,13 +78,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Start pre test
             Logger.LogMethodEntry("ActivitySubmission", "StartPreTest",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             // Click on begin button
             new DRTDefaultUXPage().ClickBeginButton();
             // Click continue button on activity alert pop up
             new ShowMessagePage().ClickContinueInActivityAlert();
             Logger.LogMethodExit("ActivitySubmission", "StartPreTest",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -95,11 +95,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select return to course button to go back to Content page
             Logger.LogMethodEntry("ActivitySubmission", "ClickReturnToCourseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             // Click on return to course button
             new DRTDefaultUXPage().ClickReturnToCourseButton();
             Logger.LogMethodExit("ActivitySubmission", "ClickReturnToCourseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Status Of Assets In View All Content
             Logger.LogMethodEntry("ActivitySubmission",
-            "StatusOfAssetsInViewAllContent", base.isTakeScreenShotDuringEntryExit);
+            "StatusOfAssetsInViewAllContent", base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Assert the Activity Status
@@ -122,7 +122,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             () => Assert.AreEqual(activityStatus, new CoursePreviewMainUXPage().
             GetStatusOfActivityInViewAllContentTab(activity.Name)));
             Logger.LogMethodExit("ActivitySubmission",
-            "StatusOfAssetsInViewAllContent", base.isTakeScreenShotDuringEntryExit);
+            "StatusOfAssetsInViewAllContent", base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -135,13 +135,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Submit The Study Plan Activity
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheStudyPlanActivity",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             new StudentPresentationPage().SelectLastOpenedWindow();
             //Attempt The Activity            
            new StudentPresentationPage().SubmitActivity(); 
             Logger.LogMethodExit("ActivitySubmission", "SubmitTheStudyPlanActivity",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -32,7 +32,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Check availability of button
             Logger.LogMethodEntry("ManageCourse", "VerifyButtonAvailability",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of button in manage course frame
             Logger.LogAssertion("VerifyDisplayOfButtons",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.
@@ -40,7 +40,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     IsButtonDisplayed((SearchCoursesPage.ManageCourseFrameButtons)Enum.Parse
                 (typeof(SearchCoursesPage.ManageCourseFrameButtons), getButtonName), getButtonName)));
             Logger.LogMethodExit("ManageCourse", "VerifyButtonAvailability",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -53,14 +53,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Check availability of RadioButton
             Logger.LogMethodEntry("ManageCourse", "VerifyRadioButtonAvailability",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of radio button in manage course frame
             Logger.LogAssertion("VerifyDisplayOfRadioButtons",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.
                     IsTrue(new SearchCoursesPage().
                     IsRadioButtonDisplayed(radioButtonName)));
             Logger.LogMethodExit("ManageCourse", "VerifyRadioButtonAvailability",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -71,14 +71,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Check availability of text field
             Logger.LogMethodEntry("ManageCourse", "VerifyTextFieldInManageCourseFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert the availability of text field in manage course frame
             Logger.LogAssertion("VerifyDisplayOfTextField",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.
                     IsTrue(new SearchCoursesPage().
                     IsTextFieldPresentInCourseFrame()));
             Logger.LogMethodExit("ManageCourse", "VerifyTextFieldInManageCourseFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,14 +89,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Check availability of filters
             Logger.LogMethodEntry("ManageCourse", "VerifyFiltersInManageCourseFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert the availability of fitlers in manage course frame
             Logger.LogAssertion("VerifyDisplayOfFilters",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.
                     AreEqual(ManageCourseResource.ManageCourse_FiltersName, new SearchCoursesPage().
                     GetFiltersName()));
             Logger.LogMethodExit("ManageCourse", "VerifyFiltersInManageCourseFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify Activity Launched
             logger.LogMethodEntry("InstructorPresentationPage", "IsPostTestActivityLaunched",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize Bool Variable
             bool isActivityFinishButtonPresent = false;
             try
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("InstructorPresentationPage", "IsPostTestActivityLaunched",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             return isActivityFinishButtonPresent;
         }
 
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
         public void CloseActivityPresentationWindow()
         {
             logger.LogMethodEntry("InstructorPresentationPage", "CloseActivityPresentationWindow",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.CloseBrowserWindow();
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("InstructorPresentationPage", "CloseActivityPresentationWindow",
-         base.isTakeScreenShotDuringEntryExit);
+         base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Is PostTest Activity Launched In Content Page
             logger.LogMethodEntry("InstructorPresentationPage", "IsPostTestActivityLaunchedInContentPage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize Bool Variable
             bool isActivityCloseButtonPresent = false;
             try
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("InstructorPresentationPage", "IsPostTestActivityLaunchedInContentPage",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             return isActivityCloseButtonPresent;
         }
     }

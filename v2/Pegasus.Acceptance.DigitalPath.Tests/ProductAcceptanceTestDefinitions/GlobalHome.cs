@@ -34,13 +34,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Global Home Page Tabs
             Logger.LogMethodEntry("GlobalHome", "DisplayHomePageTabs",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Global Home Page tabs displayed
             Logger.LogAssertion("VerifyDisplayOfHomePageTabs", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
                 (true, new HomePage().IsGlobalHomeTabsPresent()));
             Logger.LogMethodExit("GlobalHome", "DisplayHomePageTabs",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the Enrolled Classes in the Clasees Frame
             Logger.LogMethodEntry("GlobalHome", "VerifyEnrolledClassesInClassesFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get The Class Name Stored In Memory
             Class className = Class.Get(classTypeEnum);
             //Assert Class Name Displayed
@@ -61,7 +61,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
                 (className.Name, new HomePage().GetClassName()));
             Logger.LogMethodExit("GlobalHome", "VerifyEnrolledClassesInClassesFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the Product in the curriculum channel
             Logger.LogMethodEntry("GlobalHome", "VerifyProductInTheCurriculumChannel",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Get the Product name from memory
             Product product = Product.Get(productTypeEnum);
             //Assert Product Name Displayed
@@ -82,19 +82,19 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
                 (product.Name, new ContentLibraryPage().GetProductName()));
             Logger.LogMethodExit("GlobalHome", "VerifyProductInTheCurriculumChannel",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         [Then(@"I should see display of welcome message for ""(.*)""")]
         public void VerifyWelcomeMessageText(Product.ProductTypeEnum productType)
         {
             Logger.LogMethodEntry("GlobalHome", "VerifyProductInTheCurriculumChannel",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
             VerifyDisplayOfWelcomeBannerImageAndMessageOneByOne(1);
 
             Logger.LogMethodExit("GlobalHome", "VerifyProductInTheCurriculumChannel",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         public void VerifyWelcomeMessageTextAndButtonType(int noOfProduct, string buttonText)
         {
             Logger.LogMethodEntry("GlobalHome", "VerifyWelcomeMessageTextAndButtonType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
             Product demoProduct = Product.Get(Product.ProductTypeEnum.DigitalPathDemo);
                         //Assert button type
@@ -117,7 +117,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             VerifyDisplayOfWelcomeBannerImageAndMessageOneByOne(1);
 
             Logger.LogMethodExit("GlobalHome", "VerifyWelcomeMessageTextAndButtonType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             Logger.LogMethodEntry("GlobalHome",
                "VerifyDisplayOfWelcomeBannerImagesOneByOne",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
 
             List<Product> demoProductList = Product.GetAll(
                 Product.ProductTypeEnum.DigitalPathDemo);
@@ -145,7 +145,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
 
             Logger.LogMethodExit("GlobalHome",
                 "VerifyDisplayOfWelcomeBannerImagesOneByOne",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             Logger.LogMethodEntry("GlobalHome",
               "VerifyDisplayOfWelcomeBannerImage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
 
             foreach(Product demoProduct in demoProductList)
             {
@@ -181,7 +181,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
 
             Logger.LogMethodExit("GlobalHome",
                 "VerifyDisplayOfWelcomeBannerImage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
        /// <summary>
@@ -194,7 +194,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             Logger.LogMethodEntry("GlobalHome",
               "VerifyDisplayOfProductBrandingImages",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
 
             IList<Product> demoProductList = Product.GetAll(productType);            
             IList<string> productIdList =  new HomePage().GetProductIdOfProductBrandingImagesDispayed();
@@ -202,7 +202,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Assert.AreEqual(productCount, result.Count());
             Logger.LogMethodExit("GlobalHome",
                 "VerifyDisplayOfProductBrandingImages",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
                 

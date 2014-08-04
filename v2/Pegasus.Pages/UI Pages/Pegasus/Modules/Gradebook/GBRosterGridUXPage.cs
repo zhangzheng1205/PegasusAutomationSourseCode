@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Create New Button to Create User
             logger.LogMethodEntry("GBRosterGridUXPage", "ClickonCreateNewButtonToCreateUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBRosterGridUXPage", "ClickonCreateNewButtonToCreateUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Success Message
             logger.LogMethodEntry("GBRosterGridUXPage", "GetSuccessMessage",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getSuccessMessage = string.Empty;
             try
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBRosterGridUXPage", "GetSuccessMessage",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             return getSuccessMessage;
         }
 
@@ -107,7 +107,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Roster Cmenu In SMSInstructor
             logger.LogMethodEntry("GBRosterGridUXPage", "ClickRosterCmenuInSMSInstructor",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Enrollment Window
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBRosterGridUXPage", "ClickRosterCmenuInSMSInstructor",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Grant TA Privileges Cmenu
             logger.LogMethodEntry("GBRosterGridUXPage", "SelectGrantTAPrivilegesCmenu",
-                  base.isTakeScreenShotDuringEntryExit);           
+                  base.IsTakeScreenShotDuringEntryExit);           
             //Wait for the element
             base.WaitForElement(By.XPath(string.Format
             (GBRosterGridUXPageResource.
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(GBRosterGridUXPageResource.
                     GBRosterGridUX_Page_UserRole_Time_Value));
             logger.LogMethodExit("GBRosterGridUXPage", "SelectGrantTAPrivilegesCmenu",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -198,7 +198,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Enrollment Window
             logger.LogMethodEntry("GBRosterGridUXPage", "SelectEnrollmentWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.WaitUntilWindowLoads(GBRosterGridUXPageResource.
                 GBRosterGridUX_Page_Window_Title);
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(GBRosterGridUXPageResource.
                 GBRosterGridUX_Page_Frame_Id_Locator);
             logger.LogMethodExit("GBRosterGridUXPage", "SelectEnrollmentWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Enrollment Window
             logger.LogMethodEntry("GBRosterGridUXPage", "GetUserRoleName",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Initialized User role Text
             string getUserRole = string.Empty;
             try
@@ -239,7 +239,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBRosterGridUXPage", "GetUserRoleName",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             return getUserRole;
         }
 
@@ -253,7 +253,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store The TA Details In Memory
             logger.LogMethodEntry("GBRosterGridUXPage", "StoreTheTADetailsInMemory",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Fetch the user details from Memory
@@ -270,7 +270,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBRosterGridUXPage", "StoreTheTADetailsInMemory",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

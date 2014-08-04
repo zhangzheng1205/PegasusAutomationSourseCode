@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.eCollege
         {
             //Click on ECollege course name
             logger.LogMethodEntry("ECPWireframePage", "SelectECollegeCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for form element
             base.WaitForElement(By.Name(ECPWireframePageResource.
                 CourseList_Form_Name_Locator));
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.eCollege
                 }
             }
             logger.LogMethodExit("ECPWireframePage", "SelectECollegeCourse",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get The Target Course Displayed
             logger.LogMethodEntry("CourseBrowserPage", "GetTheTargetCourseDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing the Variable
             string getTargetCourseDisplayed = string.Empty;
             try
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseBrowserPage", "GetTheTargetCourseDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getTargetCourseDisplayed;
         }
 
@@ -62,14 +62,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Frame
             logger.LogMethodEntry("CourseBrowserPage", "SelectTheFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Window
             base.SelectDefaultWindow();
             base.WaitForElement(By.Id(frameName));
             //Switch to Frame
             base.SwitchToIFrame(frameName);
             logger.LogMethodExit("CourseBrowserPage", "SelectTheFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
                 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Source Course for Copy Content
             logger.LogMethodEntry("CourseBrowserPage", "SelectTheSourceCourseForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Frame
@@ -114,7 +114,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseBrowserPage", "SelectTheSourceCourseForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 

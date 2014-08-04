@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Record Audio
             logger.LogMethodEntry("AudioRecorderPage", "RecordAudio",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select Record Audio Window
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AudioRecorderPage", "RecordAudio",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectRecordAudioWindow()
         {
             logger.LogMethodEntry("AudioRecorderPage", "SelectRecordAudioWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On Record Audio Image
             base.WaitForElement(By.Id(
                 AudioRecorderPageResource.AudioRecorderPage_AudioRecord_Image_Id_Locator));
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(
                 AudioRecorderPageResource.AudioRecorderPage_RecordAudio_Window_Name);
             logger.LogMethodExit("AudioRecorderPage", "SelectRecordAudioWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Record Audio for One Minute
             logger.LogMethodEntry("AudioRecorderPage", "RecordAudioForOneMinute",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Fetching The Recording Time Value
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AudioRecorderPage", "RecordAudioForOneMinute",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SaveAudioRecord()
         {
             logger.LogMethodEntry("AudioRecorderPage", "SaveAudioRecord",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait Till Record Saving Message Disappears
             bool IsSaveButtonEnabled = false;
             do
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save And Close Button
             base.ClickByJavaScriptExecutor(getSaveButtonId);
             logger.LogMethodExit("AudioRecorderPage", "SaveAudioRecord",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

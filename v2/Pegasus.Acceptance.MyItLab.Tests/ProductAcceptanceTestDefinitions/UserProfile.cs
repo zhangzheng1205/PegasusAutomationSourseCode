@@ -33,11 +33,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On My Profile Link Option
             Logger.LogMethodEntry("UserProfile", "ClickMyProfileLinkOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On My Profile Link Option
             new CalendarHEDDefaultUXPage().ClickOnMyProfileLink(userType);
             Logger.LogMethodExit("UserProfile", "ClickMyProfileLinkOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -50,13 +50,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //verify My Profile Options
             Logger.LogMethodEntry("UserProfile", "VerifyMyProfile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Created Question 
             Logger.LogAssertion("VerifyMyProfile", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(myProfileOptions, 
                     new MyAccountSettingPage().GetMyProfileFrameOptions()));
             Logger.LogMethodExit("UserProfile", "VerifyMyProfile",
-               base.isTakeScreenShotDuringEntryExit);            
+               base.IsTakeScreenShotDuringEntryExit);            
         }
 
 
@@ -68,11 +68,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On FeedBack Link Option
             Logger.LogMethodEntry("UserProfile", "ClickOnFeedBackOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On FeedBack Link Option
             new TodaysViewUXPage().ClickOnFeedBackLink();
             Logger.LogMethodExit("UserProfile", "ClickOnFeedBackOption",
-               base.isTakeScreenShotDuringEntryExit);      
+               base.IsTakeScreenShotDuringEntryExit);      
         }
 
 
@@ -85,12 +85,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Get Feedback Options Text
             Logger.LogMethodEntry("UserProfile", "VerifyFeedbackText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify Feed Back Text
             Logger.LogAssertion("VerifyFeedbackText", ScenarioContext.Current.ScenarioInfo.Title, () =>
                 Assert.AreEqual(feedBackOptionText,new FeedbackPage().GetFeedbackOptionsText()));
             Logger.LogMethodExit("UserProfile", "VerifyFeedbackText",
-              base.isTakeScreenShotDuringEntryExit);    
+              base.IsTakeScreenShotDuringEntryExit);    
         }
     }
 }

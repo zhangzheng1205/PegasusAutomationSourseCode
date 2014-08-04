@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Instructor Course Recipients
             logger.LogMethodEntry("GlobalRecipientListUXPage",
                 "SelectInstructorCourseRecipients",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch To IFrame
@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GlobalRecipientListUXPage",
                 "SelectInstructorCourseRecipients",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Instructor Course
             logger.LogMethodEntry("GlobalRecipientListUXPage", "SelectInstructorCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(GlobalRecipientListUXResource.
                 GlobalRecipientListUX_CourseCount_XPath_Locator));
             //Get Course Count
@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("GlobalRecipientListUXPage", "SelectInstructorCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Recipients
             logger.LogMethodEntry("GlobalRecipientListUXPage", "ClickOnAddRecipients",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GlobalRecipientListUXResource.
                 GlobalRecipientListUX_AddRecipient_Button_Id_Locator));
             //Get Add Recipients Button Property
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Add Recipients Button
             base.ClickByJavaScriptExecutor(getAddRecipientsButtonProperty);
             logger.LogMethodExit("GlobalRecipientListUXPage", "ClickOnAddRecipients",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -107,14 +107,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch To IFrame
             logger.LogMethodEntry("GlobalRecipientListUXPage", "SwitchToIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GlobalRecipientListUXResource.
                 GlobalRecipientListUX_Frame_Id_Locator));
             //Switch To IFrame
             base.SwitchToIFrameById(GlobalRecipientListUXResource.
                 GlobalRecipientListUX_Frame_Id_Locator);
             logger.LogMethodExit("GlobalRecipientListUXPage", "SwitchToIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

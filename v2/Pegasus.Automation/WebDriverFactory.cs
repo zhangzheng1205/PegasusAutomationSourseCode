@@ -38,10 +38,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// This is the time out for the load.
         /// </summary>
-        private static int timeOut = Convert.ToInt16(ConfigurationManager.AppSettings["WebDriverTimeOutInSeconds"]);
-        private static bool isRemote = false;
-        private static string browserName;
-        private static string remoteHubUrl;
+        private static readonly int TimeOut = Convert.ToInt16(ConfigurationManager.AppSettings["WebDriverTimeOutInSeconds"]);
+        private static bool _isRemote = false;
+        private static string _browserName;
+        private static string _remoteHubUrl;
+        private static readonly string DownloadFilePath = (AutomationConfigurationManager.DownloadFilePath + "\\ApplicationDownloadedFiles").Replace("file:\\", "");
 
         /// <summary>
         /// Get Environment Variables.
@@ -49,33 +50,33 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         public static void Init()
         {
             Console.Out.WriteLine(string.Format("Attempting to get ENV_PEG_AUTOMATION_REMOTE"));
-            bool success = Boolean.TryParse(Environment.GetEnvironmentVariable(ENV_PEG_AUTOMATION_REMOTE), out isRemote);
+            bool success = Boolean.TryParse(Environment.GetEnvironmentVariable(ENV_PEG_AUTOMATION_REMOTE), out _isRemote);
             if (!success)
             {
                 Console.Out.WriteLine(string.Format("Attempting to get APP_SETTINGS_REMOTE"));
-                Boolean.TryParse(ConfigurationManager.AppSettings[APP_SETTINGS_REMOTE], out isRemote);
+                Boolean.TryParse(ConfigurationManager.AppSettings[APP_SETTINGS_REMOTE], out _isRemote);
             }
-            Console.Out.WriteLine(string.Format("IS_REMOTE = {0}", isRemote));
+            Console.Out.WriteLine(string.Format("IS_REMOTE = {0}", _isRemote));
 
             Console.Out.WriteLine(string.Format("Attempting to get ENV_PEG_AUTOMATION_BROWSER"));
-            browserName = Environment.GetEnvironmentVariable(ENV_PEG_AUTOMATION_BROWSER);
-            if (string.IsNullOrEmpty(browserName))
+            _browserName = Environment.GetEnvironmentVariable(ENV_PEG_AUTOMATION_BROWSER);
+            if (string.IsNullOrEmpty(_browserName))
             {
                 Console.Out.WriteLine(string.Format("Attempting to get APP_SETTINGS_BROWSER"));
-                browserName = ConfigurationManager.AppSettings[APP_SETTINGS_BROWSER];
+                _browserName = ConfigurationManager.AppSettings[APP_SETTINGS_BROWSER];
             }
-            Console.Out.WriteLine(string.Format("BROWSER = {0}", browserName));
+            Console.Out.WriteLine(string.Format("BROWSER = {0}", _browserName));
 
-            if (isRemote)
+            if (_isRemote)
             {
                 Console.Out.WriteLine(string.Format("Attempting to get ENV_PEG_AUTOMATION_REMOTE_HUB_URL"));
-                remoteHubUrl = Environment.GetEnvironmentVariable(ENV_PEG_AUTOMATION_REMOTE_HUB_URL);
-                if (string.IsNullOrEmpty(remoteHubUrl))
+                _remoteHubUrl = Environment.GetEnvironmentVariable(ENV_PEG_AUTOMATION_REMOTE_HUB_URL);
+                if (string.IsNullOrEmpty(_remoteHubUrl))
                 {
                     Console.Out.WriteLine(string.Format("Attempting to get APP_SETTINGS_REMOTE_HUB_URL"));
-                    remoteHubUrl = ConfigurationManager.AppSettings[APP_SETTINGS_REMOTE_HUB_URL];
+                    _remoteHubUrl = ConfigurationManager.AppSettings[APP_SETTINGS_REMOTE_HUB_URL];
                 }
-                Console.Out.WriteLine(string.Format("REMOTE_HUB_URL = {0}", remoteHubUrl));
+                Console.Out.WriteLine(string.Format("REMOTE_HUB_URL = {0}", _remoteHubUrl));
             }
         }
 
@@ -87,10 +88,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             IWebDriver webDriver = null;
 
-            if (isRemote)
+            if (_isRemote)
             {
                 DesiredCapabilities remoteCapability;
-                switch (browserName)
+                switch (_browserName)
                 {
                     // get browser driver based on browserName
                     case PegasusBaseTestFixture.InternetExplorer: remoteCapability = DesiredCapabilities.InternetExplorer(); break;
@@ -100,19 +101,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     default: throw new ArgumentException("The suggested browser was not found");
                 }
                 // object representing the image of the page on the screen
-                webDriver = new ScreenShotRemoteWebDriver(new Uri(remoteHubUrl), remoteCapability);
+                webDriver = new ScreenShotRemoteWebDriver(new Uri(_remoteHubUrl), remoteCapability);
             }
             else
             {
-                DesiredCapabilities[] browserList;
-                switch (browserName)
+                switch (_browserName)
                 {
                     // get browser driver based on browserName
-                    case PegasusBaseTestFixture.InternetExplorer: webDriver = IEWebDriver(); break;
+                    case PegasusBaseTestFixture.InternetExplorer: webDriver = IeWebDriver(); break;
                     case PegasusBaseTestFixture.FireFox: webDriver = FireFoxWebDriver(); break;
                     case PegasusBaseTestFixture.Safari: webDriver = SafariWebDriver(); break;
                     case PegasusBaseTestFixture.Chrome: webDriver = ChromeWebDriver(); break;
-                    case PegasusBaseTestFixture.MultiBrowser: browserList = MultiBrowserWebDriver(ref webDriver); break;
+                    case PegasusBaseTestFixture.MultiBrowser: MultiBrowserWebDriver(ref webDriver); break;
                     default: throw new ArgumentException("The suggested browser was not found");
                 }
             }
@@ -159,7 +159,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 {
                     isChromeExecuted = false;
                     isFireFoxExecuted = false;
-                    webDriver = IEWebDriver(); break;
+                    webDriver = IeWebDriver(); break;
                 }
             }
             return browserList;
@@ -169,7 +169,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Returns an instance of IE based driver.
         /// </summary>
         /// <returns>IE based driver.</returns>
-        private static IWebDriver IEWebDriver()
+        private static IWebDriver IeWebDriver()
         {
             // get machine processor architecture
             String getProcessorArchitecture = Registry.GetValue(
@@ -229,14 +229,17 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static IWebDriver FireFoxWebDriver()
         {
             // create profile object
-            FirefoxProfile profile = new FirefoxProfile();
+            var profile = new FirefoxProfile();
             // get Log Execution Path
             String getExecutingPath = new FileInfo(Assembly.GetExecutingAssembly().Location).DirectoryName;
             // set profile preferences
             profile.SetPreference("FireFox" + DateTime.Now.Ticks + ".log", getExecutingPath);
+            profile.SetPreference("browser.download.folderList", 2);
+            profile.SetPreference("browser.download.dir", DownloadFilePath);
+            profile.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream doc docx xls xlsx pdf txt zip");
             IWebDriver webDriver = new FirefoxDriver(new FirefoxBinary(), profile, TimeSpan.FromMinutes(3));
             // set page load duration
-            webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(timeOut));
+            webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
             // set cursor position center of the screen
             Cursor.Position = new Point(Screen.PrimaryScreen.Bounds.Width / 2, Screen.PrimaryScreen.Bounds.Height / 2);
             return webDriver;
@@ -250,9 +253,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             // create safari browser object
             IWebDriver webDriver = new SafariDriver();
-            webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(timeOut));
+            webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
             return webDriver;
-        } 
+        }
 
         /// <summary>
         /// Returns an instance of Chrome based driver.
@@ -316,7 +319,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Browser instance.</returns>
         internal static string GetBrowser()
         {
-            return browserName;
+            return _browserName;
         }
     }
 }

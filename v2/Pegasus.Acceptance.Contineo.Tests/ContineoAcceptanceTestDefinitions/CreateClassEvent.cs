@@ -41,7 +41,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Check rest post call status
             Logger.LogMethodEntry("CreateClassEvent", "CreateClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //This is Organization Rumba ID
             Organization organizationID = Organization.Get(Organization.
                 OrganizationLevelEnum.PowerSchool, Organization.OrganizationTypeEnum.DigitalPath);
@@ -71,7 +71,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             // Wait for 10 minutes to get the data on pegasus UI
             Thread.Sleep(TimeSpan.FromMinutes(getThreadTime));
             Logger.LogMethodExit("CreateClassEvent", "CreateClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,11 +82,11 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             // Verify the required parameters
             Logger.LogMethodEntry("CreateClassEvent", "SendRawCMSMessageToPSN",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             // Store section id with its class name
             new PostRestServicePage().StoreSectionIDWithClassName();
             Logger.LogMethodExit("CreateClassEvent", "SendRawCMSMessageToPSN",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
 

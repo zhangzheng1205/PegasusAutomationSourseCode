@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Student Activity           
             logger.LogMethodEntry("RptStudentActivityPage",
                 "ClickTheStudentActivityLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Frame
@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
             } 
             logger.LogMethodExit("RptStudentActivityPage",
                 "ClickTheStudentActivityLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Detailed Report
             logger.LogMethodEntry("RptStudentActivityPage",
                "SelectDetailedReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Window
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RptStudentActivityPage",
                 "SelectDetailedReport",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
             //Student Activity Report Close Button
             logger.LogMethodEntry("RptStudentActivityPage",
               "StudentActivityReportCloseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.SelectWindow(RptStudentActivityPageResource.
@@ -121,7 +121,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RptStudentActivityPage",
                "StudentActivityReportCloseButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
             //Close Student Avtivity Report  Btn In Organization Admin
             logger.LogMethodEntry("RptStudentActivityPage",
               "CloseStudentAvtivityReportButtonInOrganizationAdmin",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -159,7 +159,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RptStudentActivityPage",
                "CloseStudentAvtivityReportButtonInOrganizationAdmin",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

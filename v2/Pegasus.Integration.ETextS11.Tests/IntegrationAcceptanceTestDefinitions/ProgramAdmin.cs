@@ -33,7 +33,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Create New Template
             Logger.LogMethodEntry("ProgramAdmin",
                 "CreateNewTemplateAsTheProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(
                 Course.CourseTypeEnum.MySpanishLabMaster);
@@ -41,7 +41,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             new ManageTemplatePage().CreatTemplate(course.Name);
             Logger.LogMethodExit("ProgramAdmin",
                 "CreateNewTemplateAsTheProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -53,12 +53,12 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Click on 'Add Sections' Link
             Logger.LogMethodEntry("ProgramAdmin",
                 "ClickOnAddSectionsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Add New Sections Link
             new ManageTemplatePage().ClickOnAddNewSectionsLink();
             Logger.LogMethodExit("ProgramAdmin",
                 "ClickOnAddSectionsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,12 +72,12 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Create New Section
             Logger.LogMethodEntry("ProgramAdmin",
                 "CreateSectionAsProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create New Section 
             new AddNewSectionPage().CreateNewSection(courseTypeEnum);
             Logger.LogMethodExit("ProgramAdmin",
                 "CreateSectionAsProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -88,14 +88,14 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Verify Section in Active State
             Logger.LogMethodEntry("ProgramAdmin", "SectionInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);          
             //Approve Section in Active State
             new ManageTemplatePage().
                 ApproveInActiveStateOfEntityInProgramAdministration(course.SectionName);
             Logger.LogMethodExit("ProgramAdmin", "SectionInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Verify Section in Active State
             Logger.LogMethodEntry("ProgramAdmin", "ApproveAssignedToCopyStateForSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);            
             //Assert Verify Template in Active State or not
@@ -116,7 +116,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                 (course.SectionName).Contains(ProgramAdminResource.
                 ProgramAdmin_Page_AssignToCopyState_Text_Value)));
             Logger.LogMethodExit("ProgramAdmin", "ApproveAssignedToCopyStateForSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -127,13 +127,13 @@ namespace Pegasus.Integration.ETextS11.Tests.
         public void TemplateInAssignedToCopyState()
         {
             Logger.LogMethodEntry("ProgramAdmin", "TemplateInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.MySpanishLabMaster);
             //Verify Template in Active State
             new ManageTemplatePage().ApproveInActiveStateOfEntityInProgramAdministration(course.Name);
             Logger.LogMethodExit("ProgramAdmin", "TemplateInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         public void ApproveAssignedToCopyStateForTemplate()
         {
             Logger.LogMethodEntry("ProgramAdmin", "ApproveAssignedToCopyStateForTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.MySpanishLabMaster);
             //Assert Verify Template in Active State or not
@@ -153,7 +153,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                 GetAssignToCopyStateText(course.Name).Contains(ProgramAdminResource.
                 ProgramAdmin_Page_AssignToCopyState_Text_Value)));
             Logger.LogMethodExit("ProgramAdmin", "ApproveAssignedToCopyStateForTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //To verify user is on Program Administration Page
             Logger.LogMethodEntry("ProgramAdmin",
                 "DisplayOfProgramAdministrationPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert to verify is user on Program Administration page 
             Logger.LogAssertion("ProgramAdmin",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -173,7 +173,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                     ProgramAdmin_Page_Window_Title_Name)));
             Logger.LogMethodExit("ProgramAdmin",
                 "DisplayOfProgramAdministrationPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -186,13 +186,13 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             // Search the user in Enrollment Tab
             Logger.LogMethodEntry("ProgramAdmin", "SearchTheUserInTheUsersFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Get user From Memory
             User user = User.Get(userTypeEnum);
             //Search user 
             new ProgramAdminManageUsersPage().SearchUser(user.Name);
             Logger.LogMethodExit("ProgramAdmin", "SearchTheUserInTheUsersFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Verification of display of searched user
             Logger.LogMethodEntry("ProgramAdmin", "SeeTheSearchedUserInTheUsersFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Get user From Memory
             User user = User.Get(User.UserTypeEnum.CsSmsStudent);
             string userNameTrimmed = user.Name.Substring(0, 8);
@@ -215,7 +215,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
              () => Assert.AreEqual(true, new ProgramAdminManageUsersPage().
                  GetSearchedUser().Contains(userNameTrimmed)));
             Logger.LogMethodExit("ProgramAdmin", "SeeTheSearchedUserInTheUsersFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -227,12 +227,12 @@ namespace Pegasus.Integration.ETextS11.Tests.
             // Selecting the searcged user under enrollment tab
             Logger.LogMethodEntry("ProgramAdmin",
                 "SelectTheSearchedUserInTheUsersFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             // Select searched User
             new ProgramAdminManageUsersPage().SelectAllUser();
             Logger.LogMethodExit("ProgramAdmin",
                 "SelectTheSearchedUserInTheUsersFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -243,11 +243,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Enter In Searched Section
             Logger.LogMethodEntry("ProgramAdmin", "EnterIntoTheSearchedSection",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Click on the searched section
             new ProgramAdminManageCourseTemplatesPage().EnterIntoSection();
             Logger.LogMethodExit("ProgramAdmin", "EnterIntoTheSearchedSection",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

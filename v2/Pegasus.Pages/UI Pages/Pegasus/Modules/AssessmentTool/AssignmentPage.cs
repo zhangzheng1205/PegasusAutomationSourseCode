@@ -36,7 +36,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Validate Visibilty Questions Tab for Assignment Activity
                 logger.LogMethodEntry("AssignmentPage",
                     "isQuestionsTabVisibile",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
                 //Wait for the Window
                 base.WaitUntilWindowLoads(AssignmentResource.
                     Assignment_Page_WindowName);
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignmentPage",
                 "isQuestionsTabVisibile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isQuestionTabsDisplayed;
         }
     }

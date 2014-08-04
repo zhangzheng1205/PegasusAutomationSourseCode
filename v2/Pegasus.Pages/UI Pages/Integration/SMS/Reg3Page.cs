@@ -24,7 +24,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Log In Now Button
             logger.LogMethodEntry("Reg3Page", "ClickOnLogInNowButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Confirmation and Summary Window
@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("Reg3Page", "ClickOnLogInNowButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

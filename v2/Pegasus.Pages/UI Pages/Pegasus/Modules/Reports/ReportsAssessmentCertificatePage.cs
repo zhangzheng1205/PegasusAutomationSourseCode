@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Certificate Of Completion Exam Window
             logger.LogMethodEntry("ReportsAssessmentCertificatePage",
                 "SelectCertificateOfCompletionExamWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(ReportsAssessmentCertificatePageResource.
@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ReportsAssessmentCertificatePage",
                 "SelectCertificateOfCompletionExamWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Certificate Score
             logger.LogMethodEntry("ReportsAssessmentCertificatePage", "GetCertificateScore",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Initialize varibale
             string getCertificateScore = string.Empty;            
             try
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ReportsAssessmentCertificatePage", "GetCertificateScore",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getCertificateScore;
         }
 
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Certificate Of Completion Training Window
             logger.LogMethodEntry("ReportsAssessmentCertificatePage",
                 "SelectCertificateOfCompletionTrainingWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(ReportsAssessmentCertificatePageResource.
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ReportsAssessmentCertificatePage",
                 "SelectCertificateOfCompletionTrainingWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

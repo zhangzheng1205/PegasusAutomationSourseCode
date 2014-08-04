@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            //Select Organization Name
            logger.LogMethodEntry("RptSelectOrganisationsPage", "SelectOrganizationName",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
            //Select Organizationb window opened
            base.SelectWindow(RptSelectOrganisationsPageResource.
                RptSelectOrganisations_Page_Organization_Window_Name);
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
            Thread.Sleep(Convert.ToInt32(RptMainUXPageResource.
                  RptMain_Page_StudentActivity_Window_Time));
            logger.LogMethodExit("RptSelectOrganisationsPage", "SelectOrganizationName",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
        }
     }
 }

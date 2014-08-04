@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment
         {
             //Select the class from right frame
             logger.LogMethodEntry("OrgAdminEnrollClassesPage", "SelectMasterLibraryClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Get the organization class
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment
             }
             //Select the class from right frame
             logger.LogMethodEntry("OrgAdminEnrollClassesPage", "SelectMasterLibraryClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment
         {
             //Search class from right frame
             logger.LogMethodEntry("OrgAdminEnrollClassesPage", "SearchClassName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Wait for search link & click
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment
             }
             //Search the class from right frame
             logger.LogMethodEntry("OrgAdminEnrollClassesPage", "SearchClassName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -121,7 +121,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment
         {
             //Search class from right frame
             logger.LogMethodEntry("OrgAdminEnrollClassesPage", "SelectDigitalPathClassNameCheckbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select checkbox of searched class
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment
             }
             //Search class from right frame
             logger.LogMethodEntry("OrgAdminEnrollClassesPage", "SelectDigitalPathClassNameCheckbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment
         {
             //Search class from right frame
             logger.LogMethodEntry("OrgAdminEnrollClassesPage", "SelectNovaNETClassNameCheckbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment
             }
             //Search class from right frame
             logger.LogMethodEntry("OrgAdminEnrollClassesPage", "SelectNovaNETClassNameCheckbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

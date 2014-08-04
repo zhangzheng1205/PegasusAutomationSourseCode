@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search Section
             logger.LogMethodEntry("ProgramAdminManageCourseTemplatesPage",
-                "SearchSection", base.isTakeScreenShotDuringEntryExit);
+                "SearchSection", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch To Default Page
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage",
-                "SearchSection", base.isTakeScreenShotDuringEntryExit);
+                "SearchSection", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
             //Clicking on the Search Button
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage",
                 "ClickSearchButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ProgramAdminManageCourseTemplatesPageResource.
                 ProgramAdminManageCourseTemplates_Page_Search_Button_Id_Locator));
             //Click on Search button
@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages
                 ProgramAdminManageCourseTemplates_Page_Search_Button_Id_Locator);
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage",
                 "ClickSearchButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -83,14 +83,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Clicking on the Search Link
             logger.LogMethodEntry("ProgramAdminManageCourseTemplatesPage",
-                "ClickSearchLink", base.isTakeScreenShotDuringEntryExit);
+                "ClickSearchLink", base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.PartialLinkText(ManageTemplatePageResource.
                 ManageTemplate_Page_Search_Link_Locator));
             // Click on Search link
             base.ClickButtonByPartialLinkText(ProgramAdminManageCourseTemplatesPageResource.
                 ProgramAdminManageCourseTemplates_Page_Search_Link_Locator);
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage",
-                "ClickSearchLink", base.isTakeScreenShotDuringEntryExit);
+                "ClickSearchLink", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -100,14 +100,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selecting the Right Frame
             logger.LogMethodEntry("ProgramAdminManageCourseTemplatesPage",
-                "SelectRightFrame", base.isTakeScreenShotDuringEntryExit);
+                "SelectRightFrame", base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ProgramAdminManageCourseTemplatesPageResource.
                 ProgramAdminManageCourseTemplates_Page_RightFrame_Id_Locator));
             //Select right frame
             base.SwitchToIFrame(ProgramAdminManageCourseTemplatesPageResource.
                 ProgramAdminManageCourseTemplates_Page_RightFrame_Id_Locator);
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage",
-                "SelectRightFrame", base.isTakeScreenShotDuringEntryExit);
+                "SelectRightFrame", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search of Section Name
             logger.LogMethodEntry("ProgramAdminManageCourseTemplatesPage",
-                "EnterSectionNameInTextbox", base.isTakeScreenShotDuringEntryExit);
+                "EnterSectionNameInTextbox", base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ProgramAdminManageCourseTemplatesPageResource.
                 ProgramAdminManageCourseTemplates_Page_SectionDetail_TextBox_Id_Locator));
             // Enter section name search textbox field
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
                 ProgramAdminManageCourseTemplates_Page_SectionDetail_TextBox_Id_Locator,
                 sectionName);
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage",
-                "EnterSectionNameInTextbox", base.isTakeScreenShotDuringEntryExit);
+                "EnterSectionNameInTextbox", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -139,12 +139,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search Section for Selecting 'contains' value from dropdown
             logger.LogMethodEntry("ProgramAdminManageCourseTemplatesPage",
-                "SelectContainsValueInDropDown", base.isTakeScreenShotDuringEntryExit);
+                "SelectContainsValueInDropDown", base.IsTakeScreenShotDuringEntryExit);
             //Select contains option in dropdown menu
             base.WaitForElement(By.Id(ProgramAdminManageCourseTemplatesPageResource.
                 ProgramAdminManageCourseTemplates_Page_SearchCondition_DropDown_Id_Locator));
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage",
-      "SelectContainsValueInDropDown", base.isTakeScreenShotDuringEntryExit);
+      "SelectContainsValueInDropDown", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
             //Search Section Text
             logger.LogMethodEntry("ProgramAdminManageCourseTemplatesPage",
                 "GetSearchedSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Section Name
             string getSectionName = string.Empty;
             try
@@ -179,7 +179,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage",
                 "GetSearchedSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSectionName;
         }
 
@@ -190,7 +190,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Clicking on Searched Section
             logger.LogMethodEntry("ProgramAdminManageCourseTemplatesPage", "EnterSection",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Click on searched section link
@@ -204,7 +204,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage", "EnterSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
             //Check Teaching Assistant present in section
             logger.LogMethodEntry("ProgramAdminManageCourseTemplatesPage",
                 "IsTeachingAssistantPresentinSection",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isTeachingAssistantPresent = false;
             try
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages
             }           
             logger.LogMethodExit("ProgramAdminManageCourseTemplatesPage",
                 "IsTeachingAssistantPresentinSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isTeachingAssistantPresent;
         }
     }

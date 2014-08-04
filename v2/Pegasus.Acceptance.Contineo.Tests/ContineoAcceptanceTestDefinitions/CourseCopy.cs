@@ -35,14 +35,14 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Copies Course
             Logger.LogMethodEntry("CourseCopy", "CreateAuthoredCourseCopyInWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
                     (CourseCopyResource.CourseCopy_CopyasmasterCourse_CMenu_Option_Name);
             //Create A Copy Of Master Course
             new NewCoursePage().CopyCourseAsMasterCourse(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy", "CreateAuthoredCourseCopyInWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Check Course for Assigned To Copy State
             Logger.LogMethodEntry("CourseCopy", "VerifyTheCourseForAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get The Copied Master Course Name Stored In Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 typeof(SearchCoursesPage.SearchRadioButtonEnum),searchRadioButton),
                 course.Name, dropdownOption);
             Logger.LogMethodExit("CourseCopy", "VerifyTheCourseForAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Check Course Get Our Of Assigned To Copy State
             Logger.LogMethodEntry("CourseCopy", "OutOfAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert [CourseForAssignedToCopy] Text Present
             Logger.LogAssertion("VerifyAssignedToCopyTextPresent",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -91,7 +91,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                     .CourseCopy_CopyAsMasterCourse_ReturnValue_Match
                     , new ManageCoursesPage().GetAssignedToCopyTextPresentAfterSpecifiedTime()));
             Logger.LogMethodExit("CourseCopy", "OutOfAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Search Course in right frame
             Logger.LogMethodEntry("CourseCopy", "SearchTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course from Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -117,7 +117,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //Select CourseEnrollement Window
             new ManageCoursesPage().SelectCourseEnrollementWindow();
             Logger.LogMethodExit("CourseCopy", "SearchTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -130,7 +130,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //To Verify The Course Search
             Logger.LogMethodEntry("CourseCopy", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course Name From InMemory
             Course course = Course.Get(courseTypeEnum);
             // Assert Course Search
@@ -138,7 +138,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(course.Name,
                     new ManageCoursesPage().GetSearchedCourse(courseTypeEnum)));
             Logger.LogMethodExit("CourseCopy", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //Create Workspace Course Copy In Authored Course
             Logger.LogMethodEntry("CourseCopy",
                 "CreateWorkspaceCourseCopyInAuthoredCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
             (CourseCopyResource.CourseCopy_CopyasmasterCourse_CMenu_Option_Name);
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             new NewCoursePage().CopyMasterCourseInDifferentWorkspace(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy",
                 "CreateWorkspaceCourseCopyInAuthoredCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

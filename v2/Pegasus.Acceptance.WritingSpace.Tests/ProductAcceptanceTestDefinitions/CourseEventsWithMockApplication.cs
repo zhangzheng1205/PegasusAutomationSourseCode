@@ -50,13 +50,13 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Browse The Mock Application External CourseID URL.
             Logger.LogMethodEntry("CourseEventsWithMockApplication",
                 "BrowseTheMockApplicationExternalCourseIDURL",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //  Browse The Mock Application External CourseID URL
             new PostRestServicePage().BrowseTheWritingSpceMockApplicationURL
                 (getExternalCourseIDUrl);
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "BrowseTheMockApplicationExternalCourseIDURL",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,13 +68,13 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Browse The WritingSpace Assessment Mock ApplicationURL
             Logger.LogMethodEntry("CourseEventsWithMockApplication",
                 "BrowseTheWritingSpaceAssessmentMockApplicationURL",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Browse The WritingSpace Assessment Mock ApplicationURL
             new PostRestServicePage().BrowseTheWritingSpceMockApplicationURL
                 (getWritingSpaceMockApplicationUrl);
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "BrowseTheWritingSpaceAssessmentMockApplicationURL",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Enter The Course Details To Mock Application
             Logger.LogMethodEntry("CourseEventsWithMockApplication",
                 "EnterTheCourseDetailsToMockApplication",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Fetch the courseId
             Course course = Course.Get(pegasusCourse);
             // Enter The Course Details To Mock Application
@@ -96,7 +96,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                 EnterTheCourseDetailsInMockApplication(course.PegasusCourseId);
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "EnterTheCourseDetailsToMockApplication",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -108,14 +108,14 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Verify The External CourseID
             Logger.LogMethodEntry("CourseEventsWithMockApplication",
                 "VerifyTheExternalCourseID",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Asserts the External CourseId
             Logger.LogAssertion("VerifyTheExternalCourseID", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreNotEqual(null,
                     new PostRestServicePage().GetExternalCourseID()));
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "VerifyTheExternalCourseID",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Enter Item URL In Mock Application
             Logger.LogMethodEntry("CourseEventsWithMockApplication",
                 "EnterItemURLInMockApplication",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get External Course Id
             Course course = Course.Get(Course.CourseTypeEnum.ExternalCourse);
             //Enter Item URL In Mock Application
@@ -140,7 +140,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                 CourseEventsWithMockApplication_Resource_Append_Value);
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "EnterItemURLInMockApplication",
-               base.isTakeScreenShotDuringEntryExit);            
+               base.IsTakeScreenShotDuringEntryExit);            
         }
 
         /// <summary>
@@ -153,14 +153,14 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Send The Request To Create The Activity In GBR
             Logger.LogMethodEntry("CourseEventsWithMockApplication",
                 "SendTheRequestToCreateTheActivityInGBR",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Send The Request Details GBR
             new PostRestServicePage().SendTheRequestDetailsToAddActivityInGBR
                 ((PostRestServicePage.PostingTheDataInMockEnum)Enum.Parse
                 (typeof(PostRestServicePage.PostingTheDataInMockEnum), postEventType));
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "SendTheRequestToCreateTheActivityInGBR",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
          /// <summary>
@@ -173,12 +173,12 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Select Request Type Dropdown Option
             Logger.LogMethodEntry("CourseEventsWithMockApplication",
                 "SelectRequestTypeDropdownOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Request Type Option
             new PostRestServicePage().SelectRequestTypeOption(requestType);
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "SelectRequestTypeDropdownOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Verify The Response In MockApplication
             Logger.LogMethodEntry("CourseEventsWithMockApplication",
                 "VerifyTheResponseInMockApplication",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Asserts the response
             Logger.LogAssertion("VerifyTheResponse", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(true,
@@ -199,7 +199,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                     CourseEventsWithMockApplication_Mock_Response_Text)));
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "VerifyTheResponseInMockApplication",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -211,7 +211,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Verify Grade Post Response In MockApplication
             Logger.LogMethodEntry("CourseEventsWithMockApplication",
                 "VerifyGradePostResponseInMockApplication",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Asserts the grdae post response
             Logger.LogAssertion("VerifyTheGrdaePostResponse", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(true,
@@ -220,7 +220,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                     CourseEventsWithMockApplication_MockGrade_Response_Value)));
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "VerifyGradePostResponseInMockApplication",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

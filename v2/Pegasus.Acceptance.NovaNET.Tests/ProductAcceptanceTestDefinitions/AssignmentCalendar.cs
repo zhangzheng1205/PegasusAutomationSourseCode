@@ -27,11 +27,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Sets Up The Calendar
             Logger.LogMethodEntry("AssignmentCalendar", "SetupTheCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the 'Calendar Setup' button            
             new EmptyCalendarPage().CheckTheStatusOfCalendarSetupButton();            
             Logger.LogMethodExit("AssignmentCalendar", "SetupTheCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -45,12 +45,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Drag And Drop the Asset
             Logger.LogMethodEntry("AssignmentCalendar", 
                 "DragAndDropTheAssetToTheCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Drag and Drop the Asset
             new CalendarDefaultUXPage().DragAndDropAsset(assetName);
             Logger.LogMethodExit("AssignmentCalendar", 
                 "DragAndDropTheAssetToTheCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Calendar Creation Content Message
             Logger.LogMethodEntry("AssignmentCalendar", "CalendarCreationContentMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert The Display Of Content message
             Logger.LogAssertion("VerifyAssignedContentMessage",
                 ScenarioContext.Current.ScenarioInfo.Title, () => 
@@ -71,7 +71,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     new CalendarDefaultUXPage().
                     GetAssignedAssetContentMessage(contentMessage)));
             Logger.LogMethodExit("AssignmentCalendar", "CalendarCreationContentMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -83,13 +83,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Display of Assigned Asset
             Logger.LogMethodEntry("AssignmentCalendar", "DisplayOfAssignedAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert The Display Of Assigned Asset
             Logger.LogAssertion("VerifyAssignedAsset",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(assetName,
                     new CalendarDefaultUXPage().GetAssignedAssetName(assetName)));
             Logger.LogMethodExit("AssignmentCalendar", "DisplayOfAssignedAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

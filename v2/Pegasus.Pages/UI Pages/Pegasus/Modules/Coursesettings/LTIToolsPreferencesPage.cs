@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // To Enable MGM MathXL In LTITools
             Logger.LogMethodEntry("LTIToolsPreferencesPage",
-               "EnableMGMMathXlInLtiTools", base.isTakeScreenShotDuringEntryExit);
+               "EnableMGMMathXlInLtiTools", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Preferences Window
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LTIToolsPreferencesPage",
-               "EnableMGMMathXlInLtiTools", base.isTakeScreenShotDuringEntryExit);
+               "EnableMGMMathXlInLtiTools", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,14 +69,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Default window
             Logger.LogMethodEntry("LTIToolsPreferencesPage",
-               "SelectPreferencesWindow", base.isTakeScreenShotDuringEntryExit);
+               "SelectPreferencesWindow", base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(LTIToolsPreferencesPageResource.
                 LTIToolsPreferences_Page_WindowName);
             //Select Default Window
             base.SelectWindow(LTIToolsPreferencesPageResource.
                 LTIToolsPreferences_Page_WindowName);
             Logger.LogMethodExit("LTIToolsPreferencesPage",
-               "SelectPreferencesWindow", base.isTakeScreenShotDuringEntryExit);
+               "SelectPreferencesWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,14 +86,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch to Iframe
             Logger.LogMethodEntry("LTIToolsPreferencesPage",
-               "SwitchToIFrame", base.isTakeScreenShotDuringEntryExit);
+               "SwitchToIFrame", base.IsTakeScreenShotDuringEntryExit);
             //Switch to Iframe
             base.WaitForElement(By.Id(LTIToolsPreferencesPageResource.
                 LTIToolsPreferences_Page_PreferencesPage_Iframe_Id_Locator));
             base.SwitchToIFrame(LTIToolsPreferencesPageResource.
                 LTIToolsPreferences_Page_PreferencesPage_Iframe_Id_Locator);
             Logger.LogMethodExit("LTIToolsPreferencesPage",
-               "SwitchToIFrame", base.isTakeScreenShotDuringEntryExit);
+               "SwitchToIFrame", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable LTI Preference
             Logger.LogMethodEntry("LTIToolsPreferencesPage",
-               "EnableLTIPreference", base.isTakeScreenShotDuringEntryExit);
+               "EnableLTIPreference", base.IsTakeScreenShotDuringEntryExit);
             //Initializing the Variable
             string getStatus = string.Empty;
             //Get the total Tool Displayed
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save Preferences
             this.SaveLTIPreferences();
             Logger.LogMethodExit("LTIToolsPreferencesPage",
-               "EnableLTIPreference", base.isTakeScreenShotDuringEntryExit);
+               "EnableLTIPreference", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save LTI Preferences
             Logger.LogMethodEntry("LTIToolsPreferencesPage",
-               "SaveLTIPreferences", base.isTakeScreenShotDuringEntryExit);
+               "SaveLTIPreferences", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Thread.Sleep(Convert.ToInt32(StandardSkillPreferencesPageResource.
@@ -173,7 +173,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LTIToolsPreferencesPage",
-               "SaveLTIPreferences", base.isTakeScreenShotDuringEntryExit);
+               "SaveLTIPreferences", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable The MGM MathXL for School option If It Is Not Enabled
             Logger.LogMethodEntry("LTIToolsPreferencesPage",
-               "EnableLtiForMGM", base.isTakeScreenShotDuringEntryExit);
+               "EnableLtiForMGM", base.IsTakeScreenShotDuringEntryExit);
             if (schoolOptionStatus != LTIToolsPreferencesPageResource.
                 LTIToolsPreferences_Page_MGMMathXLforSchoolStatus_Value)
             {
@@ -215,7 +215,7 @@ namespace Pegasus.Pages.UI_Pages
                 LTIToolsPreferences_Page_EnableTools_CheckBox_Id_Locator));
             }
             Logger.LogMethodExit("LTIToolsPreferencesPage",
-               "EnableLtiForMGM", base.isTakeScreenShotDuringEntryExit);
+               "EnableLtiForMGM", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -226,7 +226,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // To Veifiy the avialability of Etext Toll with enbale status in LTITools.
             Logger.LogMethodEntry("LTIToolsPreferencesPage",
-               "EnableETextlinLtiTools", base.isTakeScreenShotDuringEntryExit);
+               "EnableETextlinLtiTools", base.IsTakeScreenShotDuringEntryExit);
             // Initialize the variable to store Tool status
             string getEtextStatus = string.Empty;
             try
@@ -245,7 +245,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LTIToolsPreferencesPage",
-               "EnableETextlinLtiTools", base.isTakeScreenShotDuringEntryExit);
+               "EnableETextlinLtiTools", base.IsTakeScreenShotDuringEntryExit);
             // return the status of eText tool 
             return getEtextStatus;
         }
@@ -260,7 +260,7 @@ namespace Pegasus.Pages.UI_Pages
             string lTiToolType)
         {
             Logger.LogMethodEntry("LTIToolsPreferencesPage", "VerifyEnabledLTITool",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             IList<IWebElement> getAllToolRow = WebDriver.FindElements(
                 By.ClassName(LTIToolsPreferencesPageResource.
                 LTIToolsPreference_Page_ToolRow_ClassID));
@@ -296,7 +296,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             Logger.LogMethodExit("LTIToolsPreferencesPage", "VerifyEnabledLTITool",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return lTiToolStatus;
         }
 
@@ -307,13 +307,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Method Entry Log
             Logger.LogMethodEntry("LTIToolsPreferencesPage", "SelectLTIToolWidnow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window
             base.WaitUntilWindowLoads(LTIToolsPreferencesPageResource.LTITool_Tab_WindowName);
             base.SelectWindow(LTIToolsPreferencesPageResource.LTITool_Tab_WindowName);
             //Method Exit Log
             Logger.LogMethodExit("LTIToolsPreferencesPage", "SelectLTIToolWidnow",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // To Verify the avialability of Etext Tool with enbale status in LTITools.
             Logger.LogMethodEntry("LTIToolsPreferencesPage",
-               "EnableEtextTool", base.isTakeScreenShotDuringEntryExit);
+               "EnableEtextTool", base.IsTakeScreenShotDuringEntryExit);
             // Initialize the variable to store Tool status
             string getEtextStatus = string.Empty;
             try
@@ -346,7 +346,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LTIToolsPreferencesPage",
-               "EnableEtextTool", base.isTakeScreenShotDuringEntryExit);
+               "EnableEtextTool", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -356,7 +356,7 @@ namespace Pegasus.Pages.UI_Pages
         private void GetETexTltiToolStatus(string eTextTool)
         {
             Logger.LogMethodEntry("LTIToolsPreferencesPage",
-                "VerifyETextEnabledLTITool", base.isTakeScreenShotDuringEntryExit);
+                "VerifyETextEnabledLTITool", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element 
             base.WaitForElement(By.ClassName
                 (LTIToolsPreferencesPageResource.
@@ -387,7 +387,7 @@ namespace Pegasus.Pages.UI_Pages
            
             Logger.LogMethodExit("LTIToolsPreferencesPage", 
                 "VerifyETextEnabledLTITool",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
           }
 
         /// <summary>
@@ -397,7 +397,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnableTheToolStatus(int initializeToolCounter)
         {
             Logger.LogMethodEntry("LTIToolsPreferencesPage", "EnableTheToolStatus",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             ////Wait For Element 
             //base.WaitForElement(By.ClassName
             //    (LTIToolsPreferencesPageResource.
@@ -432,7 +432,7 @@ namespace Pegasus.Pages.UI_Pages
                 
             }
             Logger.LogMethodExit("LTIToolsPreferencesPage", "EnableTheToolStatus",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

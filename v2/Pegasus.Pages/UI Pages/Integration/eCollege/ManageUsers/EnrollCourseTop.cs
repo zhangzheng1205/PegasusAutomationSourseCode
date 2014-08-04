@@ -36,7 +36,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enroll ECollege user into Term and Course
             logger.LogMethodEntry("EnrollCourseTop", "EnrollUserToECollegeCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch to TopContentArea Frame 
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("EnrollCourseTop", "EnrollUserToECollegeCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -71,13 +71,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select course's checkbox
             logger.LogMethodEntry("EnrollCourseTop", "SelectCourseCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Switch to BottomContentArea Frame
             this.SelectBottomContentAreaFrame();
             // Get the ecollege course name
             this.SelectECollegeCourseName(courseTypeEnum);
             logger.LogMethodExit("EnrollCourseTop", "SelectCourseCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get ECollege course name fron table 
             logger.LogMethodEntry("EnrollCourseTop", "SelectECollegeCourseName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Table element that contain Coursename
             base.WaitForElement(By.XPath(EnrollCourseTopResource.
                 EnrollCourseTop_Page_SelectCourse_Table_Xpath_Locator));
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("EnrollCourseTop", "SelectECollegeCourseName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Find Course in select Course 
             logger.LogMethodEntry("EnrollCourseTop"
-                , "FindCourseNameInSelectCourse", base.isTakeScreenShotDuringEntryExit);
+                , "FindCourseNameInSelectCourse", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(EnrollCourseTopResource.
                 EnrollCourseTop_Page_SelectCourse_Table_Xpath_Locator));
@@ -157,7 +157,7 @@ namespace Pegasus.Pages.UI_Pages
                     EnrollCourseTop_Page_Thread_SleepTime_Value_Paging_NextLink));
             }
             logger.LogMethodExit("EnrollCourseTop",
-                "FindCourseNameInSelectCourse", base.isTakeScreenShotDuringEntryExit);
+                "FindCourseNameInSelectCourse", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnPagingNextButtonLink()
         {
             logger.LogMethodEntry("EnrollCourseTop",
-               "ClickOnPagingNextButtonLink", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnPagingNextButtonLink", base.IsTakeScreenShotDuringEntryExit);
             //Get Button Property
             IWebElement getLinkProperty = base.GetWebElementPropertiesByPartialLinkText
                 (EnrollCourseTopResource.
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.XPath(EnrollCourseTopResource.
                 EnrollCourseTop_Page_SelectCourse_Table_Xpath_Locator));
             logger.LogMethodExit("EnrollCourseTop",
-               "ClickOnPagingNextButtonLink", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnPagingNextButtonLink", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Checkbox corresponding to selected course
             logger.LogMethodEntry("EnrollCourseTop", "ClickOnCourseCheckbox",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for checkbox element
             base.WaitForElement(By.XPath(String.Format(EnrollCourseTopResource.
                 EnrollCourseTop_Page_SelectCourse_CheckBox_Xpath_Locator,
@@ -201,7 +201,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on checkbox
             base.ClickByJavaScriptExecutor(getCourseCheckBoxElementProperty);
             logger.LogMethodExit("EnrollCourseTop", "ClickOnCourseCheckbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -212,7 +212,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Enroll Button
             logger.LogMethodEntry("EnrollCourseTop", "ClickEnrollButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Switch to SelectTopContentAreaFrame
             this.SelectTopContentAreaFrame();
             //wait for element 
@@ -233,7 +233,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Enroll button
             base.ClickByJavaScriptExecutor(enrollelement);
             logger.LogMethodExit("EnrollCourseTop", "ClickEnrollButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select User Role from Dropdown
             logger.LogMethodEntry("EnrollCourseTop", "SelectUserRole",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Switch to Top Conten Area Frame
             this.SelectTopContentAreaFrame();
             //Select User Rool from User status drop down
@@ -270,7 +270,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("EnrollCourseTop", "SelectUserRole",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -280,14 +280,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Student role from dropdown
             logger.LogMethodEntry("EnrollCourseTop", "SelectStudentRoleFromDropdown",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.SelectDropDownValueThroughTextByName(
                 EnrollCourseTopResource.
                 EnrollCourseTop_Page_SelectUserStatus_DropDown_ID_Locator,
                 EnrollCourseTopResource.
                 EnrollCourseTop_Page_SelectUserStatus_DropDown_ID_Student_Value);
             logger.LogMethodExit("EnrollCourseTop", "SelectStudentRoleFromDropdown",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -297,14 +297,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Teacher role from dropdown
             logger.LogMethodEntry("EnrollCourseTop", "SelectTeacherRoleFromDropdown",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.SelectDropDownValueThroughTextByName(
                 EnrollCourseTopResource.
                 EnrollCourseTop_Page_SelectUserStatus_DropDown_ID_Locator,
                 EnrollCourseTopResource.
                 EnrollCourseTop_Page_SelectUserStatus_DropDown_ID_Teacher_Value);
             logger.LogMethodExit("EnrollCourseTop", "SelectTeacherRoleFromDropdown",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -314,7 +314,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Naxt button 
             logger.LogMethodEntry("EnrollCourseTop",
-           "ClickNextButtonOnSelectUserPage", base.isTakeScreenShotDuringEntryExit);
+           "ClickNextButtonOnSelectUserPage", base.IsTakeScreenShotDuringEntryExit);
             //Switch to TopContentAreaFrame
             this.SelectTopContentAreaFrame();
             //Wait for Next button 
@@ -326,7 +326,7 @@ namespace Pegasus.Pages.UI_Pages
                 EnrollCourseTop_Page_NextButton_Name_Locator);
             base.ClickByJavaScriptExecutor(nextbuttonElement);
             logger.LogMethodExit("EnrollCourseTop", "ClickNextButtonOnSelectUserPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -337,7 +337,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Checkbox corresponding to userName
             logger.LogMethodEntry("EnrollCourseTop",
            "SelectUserCheckBox",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             //Switch to SelectBottomContentFrame
             this.SelectBottomContentAreaFrame();
             //Wait for Select User Checkbox element
@@ -349,7 +349,7 @@ namespace Pegasus.Pages.UI_Pages
                  EnrollCourseTop_Page_SelectUser_CheckBox_Name_Locator);
             base.ClickByJavaScriptExecutor(userCheckboxElement);
             logger.LogMethodExit("EnrollCourseTop", "SelectUserCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -360,7 +360,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Term From DropDown 
             logger.LogMethodEntry("EnrollCourseTop",
             "SelectTermFromDropDown",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Name(EnrollCourseTopResource.
                 EnrollCourseTop_Page_SelectTerm_DropDown_ID_Locator));
             //Select Please Select Term DropDown value
@@ -369,7 +369,7 @@ namespace Pegasus.Pages.UI_Pages
                 EnrollCourseTopResource.
                 EnrollCourseTop_Page_SelectTerm_DropDown_Value);
             logger.LogMethodExit("EnrollCourseTop", "SelectTermFromDropDown",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -380,7 +380,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select BottomContentArea Frame
             logger.LogMethodEntry("EnrollCourseTop",
             "SelectBottomContentAreaFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Content frame
             this.SelectContentFrame();
             //Wait for BottomContentArea Frame
@@ -391,7 +391,7 @@ namespace Pegasus.Pages.UI_Pages
                 EnrollCourseTop_Page_BottomContentArea_Frame_Title);
             logger.LogMethodExit("EnrollCourseTop",
            "SelectBottomContentAreaFrame",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -402,7 +402,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select TopContentArea Frame
             logger.LogMethodEntry("EnrollCourseTop",
             "SelectTopContentAreaFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select ContentFrame
             this.SelectContentFrame();
             //Wait for TopContentArea Frame
@@ -413,7 +413,7 @@ namespace Pegasus.Pages.UI_Pages
                 EnrollCourseTop_Page_TopContentArea_Frame_Title);
             logger.LogMethodExit("EnrollCourseTop",
             "SelectTopContentAreaFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -424,7 +424,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select ContentFrame
             logger.LogMethodEntry("EnrollCourseTop",
             "SelectContentFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Gets Load
             base.WaitUntilWindowLoads(EnrollCourseTopResource.
                 EnrollCourseTop_Page_AdministrationPages_Window_Title);
@@ -439,7 +439,7 @@ namespace Pegasus.Pages.UI_Pages
                 EnrollCourseTop_Page_Content_Frame_Title);
             logger.LogMethodExit("EnrollCourseTop",
             "SelectContentFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

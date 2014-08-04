@@ -47,7 +47,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Accept License Agreement and Privacy Policy SMS
             logger.LogMethodEntry("ConsentPage", "ClickIAcceptButtonBySMSAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // select window
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ConsentPage", "ClickIAcceptButtonBySMSAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verfy Accept Button
             logger.LogMethodEntry("ConsentPage", "IsAcceptButtonPresent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             Boolean isAcceptButtonPresent = false;
             try
@@ -99,7 +99,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ConsentPage", "IsAcceptButtonPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isAcceptButtonPresent;
         }
     }

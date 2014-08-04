@@ -36,14 +36,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify The Customized Content Asset
             Logger.LogMethodEntry("ManageAssets",
                 "VerifyTheCustomizedContentAsset",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify Custom Content Asset
             new CustomContentPage().VerifyCustomContentAsset
                ((AddAssessmentPage.AssetTypeEnum)Enum.Parse
                (typeof(AddAssessmentPage.AssetTypeEnum), assetType), activityTypeEnum);
             Logger.LogMethodExit("ManageAssets",
                 "VerifyTheCustomizedContentAsset",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }      
       
       /// <summary>
@@ -55,13 +55,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select The Copy And Paste Link 
             Logger.LogMethodEntry("ManageAssets", "SelectTheCopyAndPasteLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select CopyPaste Link
             new CustomContentPage().SelectCopyPasteLink
               ((AddAssessmentPage.AssetTypeEnum)Enum.Parse
               (typeof(AddAssessmentPage.AssetTypeEnum), assetTypeEnum));
             Logger.LogMethodExit("ManageAssets", "SelectTheCopyAndPasteLink",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -73,12 +73,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Clear The Clear Clipboard 
             Logger.LogMethodEntry("ManageAssets",
                 "ClearTheClearClipboard",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click The Clear Clipboard Link
             new CustomContentPage().ClickTheClearClipboardLink();
             Logger.LogMethodExit("ManageAssets",
                 "ClearTheClearClipboard",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,12 +90,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Expand Button Of NonLicensed Folder 
             Logger.LogMethodEntry("ManageAssets",
                 "ExpandButtonOfNonLicensedFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click The Expand Button NonLicensed Folder
             new CustomContentPage().ClickTheExpandButtonNonLicensedFolder();
             Logger.LogMethodExit("ManageAssets",
                 "ExpandButtonOfNonLicensedFolder",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -107,13 +107,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Remove The Copied Content
             Logger.LogMethodEntry("ManageAssets", "RemoveTheCopiedContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Remove The Copied Content In Global
             new CustomContentPage().RemoveTheCopiedContentInGlobal
               ((AddAssessmentPage.AssetTypeEnum)Enum.Parse
               (typeof(AddAssessmentPage.AssetTypeEnum), assetTypeEnum));
            Logger.LogMethodExit("ManageAssets", "RemoveTheCopiedContent",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -125,13 +125,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select The Cut And Paste Link
             Logger.LogMethodEntry("ManageAssets", "SelectTheCutAndPasteLink",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select The CutPaste Link
             new CustomContentPage().SelectTheCutPasteLink
               ((AddAssessmentPage.AssetTypeEnum)Enum.Parse
               (typeof(AddAssessmentPage.AssetTypeEnum), assetType));
             Logger.LogMethodExit("ManageAssets", "SelectTheCutAndPasteLink",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
     }
  }

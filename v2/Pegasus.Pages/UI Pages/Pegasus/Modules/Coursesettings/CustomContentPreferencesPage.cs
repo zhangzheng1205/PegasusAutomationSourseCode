@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Set Custom Content Preferences
             logger.LogMethodEntry("CustomContentPreferencesPage", "SetCustomContentPreferences", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 this.ClickCustomContentLink();
@@ -44,7 +44,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CustomContentPreferencesPage", "SetCustomContentPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Sets 'Custom Content' Preferences Options
             logger.LogMethodEntry("CustomContentPreferencesPage", "CustomContentPreferencesOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for "Allow teacher to customize publisher content" check box
             base.WaitForElement(By.Id(CustomContentPreferencesPageResource.
                 CustomCopyPreferencesPage_Link_CustomizePublisherContent_Id_Locator));
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(getCreateOwnContent);
             }
             logger.LogMethodExit("CustomContentPreferencesPage", "CustomContentPreferencesOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Clicks on 'Custom Content' Link
             logger.LogMethodEntry("CustomContentPreferencesPage", "ClickCustomContentLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Main Window and Frame
             new CourseCopyPreferencesPage().SelectTheMainPreferencesFrame();
             //Click on the Custom Content Link
@@ -107,7 +107,7 @@ namespace Pegasus.Pages.UI_Pages
                 CustomCopyPreferencesPage_Link_CustomContent_Id_Locator);
             base.ClickByJavaScriptExecutor(getCustonContentLink);
             logger.LogMethodExit("CustomContentPreferencesPage", "ClickCustomContentLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

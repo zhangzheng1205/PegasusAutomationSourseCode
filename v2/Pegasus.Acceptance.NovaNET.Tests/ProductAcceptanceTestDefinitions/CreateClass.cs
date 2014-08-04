@@ -29,12 +29,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click on Add Classes Option
             Logger.LogMethodEntry("CreateClass", 
                 "ClickOnTheAddClassesOptionLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Add Classes Option
             new ManageClassManagementPage().ClickAddClassesOptionLink();
             Logger.LogMethodExit("CreateClass", 
                 "ClickOnTheAddClassesOptionLink",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Create Class Using Template.
             Logger.LogMethodEntry("CreateClass", "CreateClassUsingTemplate",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get the Template Name From Memory
             Course course = Course.Get(courseTypeEnum);
             //Declaration Page Class Object
@@ -57,7 +57,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click the Finish Button
             classUserControlsPage.ClickTheCreateClassFinishButton();
             Logger.LogMethodExit("CreateClass", "CreateClassUsingTemplate",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Create Class Using MasterLibrary Course
             Logger.LogMethodEntry("CreateClass", "CreateClassUsingMasterLibraryCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Template Name From Memory
             Course course = Course.Get(courseTypeEnum);
             //Declaration Page Class Object
@@ -77,7 +77,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Create Class Using Template
             classUserControlsPage.CreateClassUsingNovanetMasterLibrary(course.Name);
             Logger.LogMethodExit("CreateClass", "CreateClassUsingMasterLibraryCourse",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -92,7 +92,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Create Class Using Template In Global Home
             Logger.LogMethodEntry("CreateClass",
                 "CreateClassUsingTemplateInGlobalHome",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get the Template Name From Memory
             Course course = Course.Get(courseTypeEnum);
             //Declaration Page Class Object
@@ -101,7 +101,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             classUserControlsPage.CreateClassUsingTemplate(course.TemplateName);
             Logger.LogMethodExit("CreateClass", 
                 "CreateClassUsingTemplateInGlobalHome",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -113,14 +113,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Select The User From Create Class Window.
             Logger.LogMethodEntry("CreateClass",
                 "SelectTheUserFromCreateClassWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Declaration Page Class Object
             ClassUserControlsPage classUserControlsPage = new ClassUserControlsPage();
             //Click The 'Create New' Dropdown
             classUserControlsPage.ClickTheCreateNewDropdown();
             Logger.LogMethodExit("CreateClass",
                 "SelectTheUserFromCreateClassWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -133,14 +133,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Search class in Course Space
             Logger.LogMethodEntry("CreateClass", "SearchClassInCoursespace",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Get The Class Name Stored In Memory
             Class orgClass = Class.Get(classTypeEnum);
             //Search Class
             new ManageClassManagementPage().
                 ClassSearchInCoursespace(orgClass.Name);
             Logger.LogMethodExit("CreateClass", "SearchClassInCoursespace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             Class.ClassTypeEnum classTypeEnum)
         {
             Logger.LogMethodEntry("CreateClass", "VerifySearchedClass",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get The Class Name Stored In Memory
             Class orgClass = Class.Get(classTypeEnum);
             // Assert Class Search
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(orgClass.Name,
                     new ManageClassManagementPage().GetSearchedClass()));
             Logger.LogMethodExit("CreateClass", "VerifySearchedClass",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click on Cmenu option Enter Class as Teacher
             Logger.LogMethodEntry("CreateClass", 
                 "ClickOnCmenuOptionOfClassEnterClassAsTeacher",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On Class Cmenu Option Enter Class As Teacher
             new ManageClassManagementPage().
                 ClickOnClassCmenuOptionEnterClassAsTeacher();
@@ -180,7 +180,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             new ManageClassManagementPage().SelectOverViewWindow();
             Logger.LogMethodExit("CreateClass", 
                 "ClickOnCmenuOptionOfClassEnterClassAsTeacher",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -191,13 +191,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Move the Master Library to Right Frame
             Logger.LogMethodEntry("CreateClass", "MoveMasterLibraryToRightFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Master Library CheckBox
             new CourseContentUXPage().ClickOnMasterLibraryCheckBox();
             //Click on Add Button
             new CourseContentUXPage().ClickOnAddButton();
             Logger.LogMethodExit("CreateClass", "MoveMasterLibraryToRightFrame",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -209,11 +209,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Get the CLass in Available state
             Logger.LogMethodEntry("CreateClass", "GetClassInAvailableState",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for Master Library to Copy
             new CourseContentUXPage().WaitMasterLibraryToGetInPrepareState();
             Logger.LogMethodExit("CreateClass", "GetClassInAvailableState",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -224,11 +224,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Select Home Button
             Logger.LogMethodEntry("CreateClass", "SelectTheHomeButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select the Home Button
             new TodaysViewUXPage().SelectHomeButton();
             Logger.LogMethodExit("CreateClass", "SelectTheHomeButton",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -241,14 +241,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Wait for Class to Copy
             Logger.LogMethodEntry("CreateClass", "WaitForClassToCopy",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get The Class Name Stored In Memory
             Class orgClass = Class.Get(classTypeEnum);
             //Check For Class Assigned
             new ManageClassManagementPage().
                 SearchClassForAssignedToCopyState(orgClass.Name);
             Logger.LogMethodExit("CreateClass", "WaitForClassToCopy",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -260,12 +260,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click On Create Class Button In Global Home
             Logger.LogMethodEntry("CreateClass",
                 "ClickOnCreateClassButtonInGlobalHome",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Click On Create Class Button In Global Home
             new MyPegasusUXPage().ClickOnCretaeClassButtonInGlobalHome();
             Logger.LogMethodExit("CreateClass",
                 "ClickOnCreateClassButtonInGlobalHome",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -279,7 +279,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click On Create Class Button In Global Home
             Logger.LogMethodEntry("CreateClass",
                 "DisplayTheSuccessfullMessageInCreateClassPopup",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Assert for Successfull message
             Logger.LogAssertion("VerifySuccessfullMesssage", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(successMessage,
@@ -288,7 +288,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             new ClassUserControlsPage().ClickTheCreateClassFinishButton();
             Logger.LogMethodExit("CreateClass",
                 "DisplayTheSuccessfullMessageInCreateClassPopup",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

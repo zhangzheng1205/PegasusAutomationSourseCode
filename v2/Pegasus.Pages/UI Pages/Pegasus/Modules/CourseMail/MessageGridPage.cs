@@ -25,7 +25,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Mail in CourseSpace
             logger.LogMethodEntry("MessageGridPage", "CreateMailMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate Guid for Mail Details
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MessageGridPage", "CreateMailMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Enter Details to Create Message
             logger.LogMethodEntry("MessageGridPage", "EnterDetailsToCreateMail",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on To Button
             base.WaitForElement(By.PartialLinkText(MessageGridPageResource.
                 MessageGrid_Page_ToButton_PartialLinkText_Locator));
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Subject and Message
             this.EnterSubjectAndMessage(mailDetails);
             logger.LogMethodExit("MessageGridPage", "EnterDetailsToCreateMail",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Subject and Message
             logger.LogMethodEntry("MessageGridPage", "EnterSubjectAndMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter the Subject
             base.WaitForElement(By.Id(MessageGridPageResource.
                 MessageGrid_Page_ComposeNewFrame_SubjectTextBox_Id_Locator));
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store Mail Message In Memory
             this.StoreMailDetailsInMemory(mailDetails);
             logger.LogMethodExit("MessageGridPage", "EnterSubjectAndMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Gets the Success Message
             logger.LogMethodEntry("MessageGridPage", "GetSuccessMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             String successMessage = string.Empty;
             try
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MessageGridPage", "GetSuccessMessage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return successMessage;
         }
 
@@ -172,7 +172,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Close the Mail Popup
             logger.LogMethodEntry("MessageGridPage", "CloseMailPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on Close Button
@@ -186,7 +186,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MessageGridPage", "CloseMailPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Send Mail To CourseSpace Users
             logger.LogMethodEntry("MessageGridPage", "SendMailToCourseSpaceUsers",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on Send Button
@@ -214,7 +214,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MessageGridPage", "SendMailToCourseSpaceUsers",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -224,7 +224,7 @@ namespace Pegasus.Pages.UI_Pages
         private void StoreMailDetailsInMemory(Guid mailDetails)
         {
             logger.LogMethodEntry("MessageGridPage", "StoreMailDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             Mail newMail = new Mail
             {
                 //Store Mail Details
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newMail.StoreMailMessageInMemory();
             logger.LogMethodExit("MessageGridPage", "StoreMailDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -246,7 +246,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Mail Message
             logger.LogMethodExit("MessageGridPage", "GetMailMessageSubject",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             string getMailMessageSubject = string.Empty;
             try
             {
@@ -279,7 +279,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MessageGridPage", "GetMailMessageSubject",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return getMailMessageSubject;
         }
 
@@ -290,7 +290,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Mail Close Button
             logger.LogMethodExit("MessageGridPage", "CloseMailMessageInboxFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(MessageGridPageResource.
                 MessageGrid_Page_OverViewWindow_Title);
@@ -309,7 +309,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Close Button
             base.ClickByJavaScriptExecutor(getCloseButtonProperty);
             logger.LogMethodExit("MessageGridPage", "CloseMailMessageInboxFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -319,7 +319,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Compose New Option
             logger.LogMethodExit("MessageGridPage", "SelectComposeNewOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Course Mail Window
@@ -334,7 +334,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MessageGridPage", "SelectComposeNewOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -344,14 +344,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Mail Window
             logger.LogMethodExit("MessageGridPage", "SelectCourseMailWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(MessageGridPageResource.
                 MessageGrid_Page_CourseMail_Window_Name);
             //Select Course Mail Window
             base.SelectWindow(MessageGridPageResource.
                 MessageGrid_Page_CourseMail_Window_Name);
             logger.LogMethodExit("MessageGridPage", "SelectCourseMailWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -361,14 +361,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select IFrame
             logger.LogMethodExit("MessageGridPage", "SelectIFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MessageGridPageResource.
                 MessageGrid_Page_ComposeNewFrame_Id_Locator));
             //Switch To IFrame 
             base.SwitchToIFrameById(MessageGridPageResource.
                 MessageGrid_Page_ComposeNewFrame_Id_Locator);
             logger.LogMethodExit("MessageGridPage", "SelectIFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -378,7 +378,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Compose New Button
             logger.LogMethodExit("MessageGridPage", "ClickOnComposeNewButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MessageGridPageResource.
                 MessageGrid_Page_ComposeNewButton_Id_Locator));
             //Get Compose New Button Property 
@@ -387,7 +387,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Compose New Button
             base.ClickByJavaScriptExecutor(getComposeNewButtonProperty);
             logger.LogMethodExit("MessageGridPage", "ClickOnComposeNewButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -397,7 +397,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetMailSubjectFromInstructor(string mailSubject)
         {
             logger.LogMethodExit("MessageGridPage", "GetMailSubjectFromInstructor",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getSubjectTitle = string.Empty;
             //Select Course Mail Window
@@ -407,7 +407,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Subject Title
             getSubjectTitle = this.GetSubjectTitle(mailSubject);           
             logger.LogMethodExit("MessageGridPage", "GetMailSubjectFromInstructor",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getSubjectTitle;
         }
 
@@ -420,7 +420,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Subject Title
             logger.LogMethodExit("MessageGridPage", "GetSubjectTitle",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getSubjectTitle = string.Empty;
             base.WaitForElement(By.XPath(MessageGridPageResource.
@@ -444,7 +444,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("MessageGridPage", "GetSubjectTitle",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getSubjectTitle;
         }
     }

@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Window Title 
             logger.LogMethodEntry("CoursePreviewUXPage", "GetToDoTabWindowTitle",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initializing the variable
             string newTabName = tabName;
             if (tabName == CoursePreviewUXPageResource.
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Page Title
             string getWindowTitle = base.GetPageTitle;
             logger.LogMethodEntry("CoursePreviewUXPage", "GetToDoTabWindowTitle",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getWindowTitle;
         }
 
@@ -56,14 +56,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("CoursePreviewUXPage", "SelectCourseMaterialsWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_Window_Title_Name_HED);
             base.SelectWindow(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_Window_Title_Name_HED);
             logger.LogMethodExit("CoursePreviewUXPage", "SelectCourseMaterialsWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -73,14 +73,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch To Iframe
             logger.LogMethodEntry("CoursePreviewUXPage", "SwitchToIframe",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator));
             //Switch To Frame
             base.SwitchToIFrame(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_CoursePreview_IFrame_Id_Locator);
             logger.LogMethodExit("CoursePreviewUXPage", "SwitchToIframe",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Get Activity Name In Course Materials Tab
             logger.LogMethodEntry("CoursePreviewUXPage", "GetActivityNameInCourseMaterialsTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize getActivityText variable
             string getActivityName = string.Empty;
             try
@@ -133,7 +133,7 @@ namespace Pegasus.Pages.UI_Pages
                 
             }
             logger.LogMethodEntry("CoursePreviewUXPage", "GetActivityNameInCourseMaterialsTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
     }

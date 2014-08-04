@@ -34,7 +34,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Verify Enrolled Class In Overview Tab
             Logger.LogMethodEntry("ManageClass", "VerifyEnrolledClassInOverviewTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get The Class Name Stored In Memory
             Class className = Class.Get(classTypeEnum);
             //Assert Class Name
@@ -42,7 +42,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(className.Name,
                     new TodaysViewUXPage().GetClassName()));
             Logger.LogMethodExit("ManageClass", "VerifyEnrolledClassInOverviewTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Verify The Class
             Logger.LogMethodEntry("ManageClass", "VerifyTheClass",
-               isTakeScreenShotDuringEntryExit);
+               IsTakeScreenShotDuringEntryExit);
             //Get class from memory
             Class className = Class.Get(classTypeEnum);
             // Assert for classname
@@ -63,7 +63,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(className.Name,
                     new HomePage().GetDisplayClassName(className.Name)));
             Logger.LogMethodExit("ManageClass", "VerifyTheClass",
-              isTakeScreenShotDuringEntryExit);
+              IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,14 +74,14 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             // See The Welcome Message
             Logger.LogMethodEntry("ManageClass", "SeeTheWelcomeMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Welcome Message Should Be Displayed
             Logger.LogAssertion("VerifyTheWelcomeMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(true,
                 new WelcomeMessagesPage().IsWelcomeMessageDisplayed()));
             Logger.LogMethodExit("ManageClass", "SeeTheWelcomeMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,11 +92,11 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             // Close The Welcome Message Popup
             Logger.LogMethodEntry("ManageClass", "CloseTheWelcomeMessagePopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Close The Welcome Message LightBox
             new WelcomeMessagesPage().CloseWelcomeMessageLightBox();
             Logger.LogMethodExit("ManageClass", "CloseTheWelcomeMessagePopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //The Welcome Message Popup Should Be Closed
             Logger.LogMethodEntry("ManageClass", "WelcomeMessagePopupWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Check If The Poup Is Present
             Logger.LogAssertion("VerifyIfTheWelcomeMessagePopupIsClosed",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -117,7 +117,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //Closing the Announcement(s)
             new AnnouncementPopUpLightBoxUXPage().CloseAnnouncementPopUpInDigitalPath(userTypeEnum);
             Logger.LogMethodExit("ManageClass", "WelcomeMessagePopupWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 

@@ -29,12 +29,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Manage to navigate  Products Page
             Logger.LogMethodEntry("CreateProduct", 
                 "NavigateToManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate to Manage Products Page
             new AdminToolPage().NavigateManageProductsPage();
             Logger.LogMethodExit("CreateProduct", 
                 "NavigateToManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,13 +50,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Creation of DP Product
             Logger.LogMethodEntry("CreateProduct", "CreateProductUsingProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Create new Product Link
             new ManageProductsPage().ClickOnCreateNewProductLink();
             //Create DP Product
             new NewProductPage().CreateNewProduct(productTypeEnum, programTypeEnum);
             Logger.LogMethodExit("VerifyCreateNewProduct", "CreateProductUsingProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -67,11 +67,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Disable Course In Product
             Logger.LogMethodEntry("CreateProduct", "DisableCourseInProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable Hide In Catalog Preference
             new CourseEnrollmentModePage().EnableHideInCatalogPreference();
             Logger.LogMethodExit("CreateProduct", "DisableCourseInProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -85,14 +85,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Select Course Cmenu
             Logger.LogMethodEntry("CreateProduct", "SelectCmenuOfCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Select Course Cmenu
             new ProductCoursesPage().
                 SelectCourseContextualMenuOptionInProduct(course.Name, courseCmenuOption);
             Logger.LogMethodExit("CreateProduct", "SelectCmenuOfCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Search Product In Right Frame
             Logger.LogMethodEntry("CreateProduct",
                 "SearchProductInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Product FromMemory
             Product product = Product.Get(productTypeEnum);
             //Click Search Product Link
@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 EnterProductNameandClickonSearchButton(product.Name);
             Logger.LogMethodExit("CreateProduct",
                 "SearchProductInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -128,12 +128,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click The Product Cmenu Option
             Logger.LogMethodEntry("CreateProduct",
                 "ClickTheProductCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click The Product Cmenu Option
             new ProductCoursesPage().ClickTheProductCmenuOption();
             Logger.LogMethodExit("CreateProduct",
                 "ClickTheProductCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Verify The Display Of CMenu Options For Product.
             Logger.LogMethodEntry("CreateProduct",
                  "VerifyTheDisplayOfCMenuOptionsForProduct",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             foreach (var tableRow in table.Rows)
             {
                 //Assert Display of Activity Cmenu Options
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             }
             Logger.LogMethodExit("CreateProduct",
                 "VerifyTheDisplayOfCMenuOptionsForProduct",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
 

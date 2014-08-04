@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selecting the Student
             logger.LogMethodEntry("RptSelectStudentsPage", "SelectStudentInInstructorReport"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (reportType)
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectStudentsPage", "SelectStudentInInstructorReport"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selecting Checkbox of the Student As Instructor
             logger.LogMethodEntry("RptSelectStudentsPage", "SelectStudentToGenerateReport"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get Count of Total Students
@@ -130,7 +130,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectStudentsPage", "SelectStudentToGenerateReport"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Student for Program Admin Reports
             logger.LogMethodEntry("RptSelectStudentsPage", "SelectStudentInProgramAdminReport"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {              
                 //Click on the Expand button
@@ -159,7 +159,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectStudentsPage", "SelectStudentInProgramAdminReport"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -169,7 +169,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Button
             logger.LogMethodEntry("RptSelectStudentsPage", "ClickOnAddButton"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click Add button 
@@ -186,7 +186,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectStudentsPage", "ClickOnAddButton"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Student Window
             logger.LogMethodEntry("RptSelectStudentsPage", "SelectStudentWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select 'Select Student' window
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectStudentsPage", "SelectStudentWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -220,7 +220,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Student Window
             logger.LogMethodEntry("RptSelectStudentsPage", "SelectStudentsWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select 'Select Students' window
@@ -234,7 +234,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSelectStudentsPage", "SelectStudentsWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selecting the Checkbox of the Student
             logger.LogMethodEntry("RptSelectStudentsPage",
-                "SelectStudentToGenerateProgramAdminReport", base.isTakeScreenShotDuringEntryExit);
+                "SelectStudentToGenerateProgramAdminReport", base.IsTakeScreenShotDuringEntryExit);
             //Get Count of Total Students
             WaitForElement(By.XPath(RptSelectStudentsResource.
                      RptSelectStudents_Page_PgA_StudentCount_Xpath_Locator));
@@ -270,7 +270,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("RptSelectStudentsPage",
-                "SelectStudentToGenerateProgramAdminReport", base.isTakeScreenShotDuringEntryExit);
+                "SelectStudentToGenerateProgramAdminReport", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

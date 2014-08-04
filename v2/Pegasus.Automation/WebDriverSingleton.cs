@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System.IO;
+using OpenQA.Selenium;
 using Selenium;
 using System;
 using System.Diagnostics;
@@ -6,20 +7,27 @@ using System.Diagnostics;
 namespace Pearson.Pegasus.TestAutomation.Frameworks
 {
     /// <summary>
-    /// This is the base test script
+    /// This is the base test script.
     /// </summary>
     public class WebDriverSingleton : IDisposable
     {
-        private IWebDriver webDriver = null;
-        private ISelenium selenium = null;
-        private string browser;
+        private readonly IWebDriver _webDriver = null;
+        private readonly ISelenium _selenium = null;
+        private readonly string _browser;
 
+        // download file path
+        private static readonly string DownloadFilePath = (AutomationConfigurationManager.
+            DownloadFilePath + "\\ApplicationDownloadedFiles").Replace("file:\\", "");
+
+        /// <summary>
+        /// Get browser instance.
+        /// </summary>
         public string Browser
         {
-            get { return browser; }
+            get { return _browser; }
         }
 
-        private static WebDriverSingleton webDriverSingleton = null;
+        private static WebDriverSingleton _webDriverSingleton = null;
 
         /// <summary>
         /// This method returns an instance of web driver singleton.
@@ -27,12 +35,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns></returns>
         public static WebDriverSingleton GetInstance()
         {
-            if (webDriverSingleton == null)
+            if (_webDriverSingleton == null)
             {
-                webDriverSingleton = new WebDriverSingleton();
+                _webDriverSingleton = new WebDriverSingleton();
             }
 
-            return webDriverSingleton;
+            return _webDriverSingleton;
         }
 
         /// <summary>
@@ -42,11 +50,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             get
             {
-                if (webDriverSingleton == null)
+                if (_webDriverSingleton == null)
                 {
-                    webDriverSingleton = new WebDriverSingleton();
+                    _webDriverSingleton = new WebDriverSingleton();
                 }
-                return webDriver;
+                return _webDriver;
             }
         }
 
@@ -57,11 +65,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             get
             {
-                if (webDriverSingleton == null)
+                if (_webDriverSingleton == null)
                 {
-                    webDriverSingleton = new WebDriverSingleton();
+                    _webDriverSingleton = new WebDriverSingleton();
                 }
-                return selenium;
+                return _selenium;
             }
         }
 
@@ -71,7 +79,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         public void ResetSingleton()
         {
             Cleanup();
-            webDriverSingleton = new WebDriverSingleton();
+            _webDriverSingleton = new WebDriverSingleton();
         }
 
         /// <summary>
@@ -80,13 +88,13 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected WebDriverSingleton()
         {
             WebDriverFactory.Init();
-            browser = WebDriverFactory.GetBrowser();
-
-            webDriver = WebDriverFactory.GetInstance();
-            selenium = new WebDriverBackedSelenium(webDriver, AutomationConfigurationManager.WorkSpaceUrlRoot);
-            webDriver.Navigate().GoToUrl(AutomationConfigurationManager.WorkSpaceUrlRoot + "frmlogin.aspx?mode=admin");
-            webDriver.Manage().Cookies.DeleteAllCookies();
-            webDriver.Manage().Window.Maximize();
+            _browser = WebDriverFactory.GetBrowser();
+            _webDriver = WebDriverFactory.GetInstance();
+            Array.ForEach(Directory.GetFiles(DownloadFilePath), File.Delete);
+            _selenium = new WebDriverBackedSelenium(_webDriver, AutomationConfigurationManager.WorkSpaceUrlRoot);
+            _webDriver.Navigate().GoToUrl(AutomationConfigurationManager.WorkSpaceUrlRoot + "frmlogin.aspx?mode=admin");
+            _webDriver.Manage().Cookies.DeleteAllCookies();
+            _webDriver.Manage().Window.Maximize();
         }
 
         /// <summary>
@@ -96,7 +104,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             try
             {
-                if (webDriver != null) webDriver.Quit();
+                if (_webDriver != null) _webDriver.Quit();
                 Process[] processesToKill = BrowserProcessFactory.GetProcessInstance();
                 foreach (Process processToKill in processesToKill)
                 {

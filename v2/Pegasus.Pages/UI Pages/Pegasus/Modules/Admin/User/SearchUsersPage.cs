@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Searching User In The Left Frame
             logger.LogMethodEntry("SearchUsersPage", "SearchUser", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch To Left Frame
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
             }
            logger.LogMethodExit("SearchUsersPage", "SearchUser",
-               base.isTakeScreenShotDuringEntryExit);            
+               base.IsTakeScreenShotDuringEntryExit);            
         }
     }
 }

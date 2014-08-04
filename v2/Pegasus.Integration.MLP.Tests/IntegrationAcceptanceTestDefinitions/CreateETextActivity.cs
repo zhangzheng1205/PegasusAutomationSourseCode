@@ -30,7 +30,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Verify the Activity Name added to the My Course Frame
             Logger.LogMethodEntry("CreateETextActivity", "ActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Gets the Activity name from Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Asserts the Activity Name
@@ -38,7 +38,7 @@ namespace Pegasus.Integration.MLP.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activity.Name,
                     new CourseContentUXPage().GetETextActivityName(activityTypeEnum)));
             Logger.LogMethodExit("CreateETextActivity", "ActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

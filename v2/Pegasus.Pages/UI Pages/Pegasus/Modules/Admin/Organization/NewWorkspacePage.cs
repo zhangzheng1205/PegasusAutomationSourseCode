@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill UserName Details
             logger.LogMethodEntry("NewWorkspacePage", "FillUserNameDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fill the Admin Title
             base.WaitForElement(By.Id(NewWorkspacePageResource.
                 NewWorkspace_Page_CreateWorkspace_Title_Id_Locator));
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("NewWorkspacePage", "FillUserNameDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Workspace Details In Memory
             logger.LogMethodEntry("NewWorkspacePage", "StoreWorkspaceDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Intialize the workspace
             WorkSpace newWorkspace = new WorkSpace
             {
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("NewWorkspacePage", "StoreWorkspaceDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit); ;
+                base.IsTakeScreenShotDuringEntryExit); ;
         }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter First And LastName Details
             logger.LogMethodEntry("NewWorkspacePage", "EnterFirstAndLastNameDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (adminWorkspaceType)
             {
                 case AdminToolPage.AdminWorkspaceTypeEnum.Create:
@@ -146,7 +146,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("NewWorkspacePage", "EnterFirstAndLastNameDetails",
-                base.isTakeScreenShotDuringEntryExit); ;
+                base.IsTakeScreenShotDuringEntryExit); ;
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Save Button In Create Workspace Popup
             logger.LogMethodEntry("NewWorkspacePage", "ClickTheSaveButtonInCreateWorkspacePopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the save button element
             base.WaitForElement(By.Id(NewWorkspacePageResource.
                 NewWorkspace_Page_CreateWorkspace_SaveUpdate_Btn_Id_Locator));
@@ -171,7 +171,7 @@ namespace Pegasus.Pages.UI_Pages
             //Switch Default Window
             base.SwitchToDefaultWindow();
             logger.LogMethodExit("NewWorkspacePage", "ClickTheSaveButtonInCreateWorkspacePopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Is Displayed The TextBox Fields In Edit Workspace
             logger.LogMethodEntry("NewWorkspacePage", "IsDisplayedTheTextBoxFieldsInEditWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Is 'Title' textbox Displayed
             bool isTitleDisplayed = base.IsElementPresent(By.Id
                 (NewWorkspacePageResource.NewWorkspace_Page_CreateWorkspace_Title_Id_Locator));
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
             bool isUpdateDisplayed = base.IsElementPresent(By.Id
                 (NewWorkspacePageResource.NewWorkspace_Page_CreateWorkspace_SaveUpdate_Btn_Id_Locator));
             logger.LogMethodExit("NewWorkspacePage", "IsDisplayedTheTextBoxFieldsInEditWorkspace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return (isTitleDisplayed && isDescriptionDisplayed && isUserNameDisplayed &&
                 isPasswordDisplayed && isFirstNameDisplayed && isLastNameDisplayed &&
                 isEmailDisplayed && isUpdateDisplayed);
@@ -222,7 +222,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Displayed Of Textbox In EditWorkspace
             logger.LogMethodEntry("NewWorkspacePage", "IsDisplayedOfTextboxInEditWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing the Variable
             bool isDefaultTextboxsDisplayed = false;
             try
@@ -240,7 +240,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("NewWorkspacePage", "IsDisplayedOfTextboxInEditWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isDefaultTextboxsDisplayed;
         }
 
@@ -254,7 +254,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create and Update The Workspace
             logger.LogMethodEntry("NewWorkspacePage", "CreateAndUpdateTheWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Intialize Guid for workspace
             Guid workspaceUserName = Guid.NewGuid();
             try
@@ -290,7 +290,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("NewWorkspacePage", "CreateAndUpdateTheWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

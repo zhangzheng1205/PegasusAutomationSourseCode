@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create New Test
             Logger.LogMethodEntry("MyTestGridUXPage", "ClickOnLinkToSelect",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -44,7 +44,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("MyTestGridUXPage", "ClickOnLinkToSelect",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnCreateNewTestLink()
         {
             Logger.LogMethodEntry("MyTestGridUXPage", "ClickOnCreateNewTestLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(MyTestGridUXPageResource.
                 MyTestGridUX_Page_CreateNewTest_Id_Locator));
@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the "Create New Test" Link
             base.ClickByJavaScriptExecutor(getCreateNewTestLinkProperty);
             Logger.LogMethodExit("MyTestGridUXPage", "ClickOnCreateNewTestLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //This is logger entry
             Logger.LogMethodEntry("MyTestGridUXPage", "SelectMyTestGridFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(MyTestGridUXPageResource.
                 MyTestGridUX_Page_MyTest_Frame_Id_Locator));
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
                 MyTestGridUX_Page_MyTest_Frame_Id_Locator);
             //This is logger exit
             Logger.LogMethodExit("MyTestGridUXPage", "SelectMyTestGridFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //This is entry logger
             Logger.LogMethodEntry("MyTestGridUXPage", "SelectMyTestWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window
             base.WaitUntilWindowLoads(MyTestGridUXPageResource.
                 MyTestGridUX_Page_MyTest_Window_Name);
@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages
                 MyTestGridUX_Page_MyTest_Window_Name);
             //This is exit logger
             Logger.LogMethodExit("MyTestGridUXPage", "SelectMyTestWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Success Message In MyTest Tab
             Logger.LogMethodEntry("MyTestGridUXPage",
                 "GetSuccessMessageInMyTestTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getSuccessMessage = string.Empty;
             try
@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodEntry("MyTestGridUXPage",
                 "GetSuccessMessageInMyTestTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return getSuccessMessage;
         }
 
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click MyTest Activity Cmenu Option
             Logger.LogMethodEntry("MyTestGridUXPage", "ClickMyTestCMenuOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select MyTest Window
@@ -166,7 +166,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("MyTestGridUXPage", "ClickMyTestCMenuOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on MyTest activity cmenu option
             Logger.LogMethodEntry("MyTestGridUXPage", "ClickTestActivtyContextualMenuOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Get Activity
             Activity activity = Activity.Get(Activity.ActivityTypeEnum.MyTest);
             int getTestColumnCount = this.SelectMyTestInManageYourTest(activity.Name);
@@ -187,7 +187,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Cmenu Options In ManageYourTest
             this.SelectCmenuOptionsInManageYourTest(cMenuOptionName);
             Logger.LogMethodExit("MyTestGridUXPage", "ClickTestActivtyContextualMenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -200,7 +200,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select MyTest In Manage YourTest
             Logger.LogMethodEntry("MyTestGridUXPage", "SelectMyTestInManageYourTest",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             string newActivityName = activityName.Substring(Convert.ToInt32(
                 MyTestGridUXPageResource.MyTestGridUX_Page_IntIntializer_Value),
                 Convert.ToInt32(MyTestGridUXPageResource.
@@ -224,7 +224,7 @@ namespace Pegasus.Pages.UI_Pages
             activityColumnNumber = this.SelectMyTestActivityInManageYourTestFrame
                 (activityName);            
             Logger.LogMethodExit("MyTestGridUXPage", "SelectMyTestInManageYourTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return activityColumnNumber;
         }
 
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get The MyTest Activity Table Text
             Logger.LogMethodEntry("MyTestGridUXPage","GetTheMyTestActivityTableText",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             string getTextFromActivityText = string.Empty; 
             //Wait For Element
             base.WaitForElement(By.XPath(MyTestGridUXPageResource.
@@ -247,7 +247,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(MyTestGridUXPageResource.
                 MyTestGridUX_Page_Thred_Time));
             Logger.LogMethodExit("MyTestGridUXPage", "GetTheMyTestActivityTableText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getTextFromActivityText;
         }
 
@@ -261,7 +261,7 @@ namespace Pegasus.Pages.UI_Pages
             // Select MyTest Activity In Manage Your Test Frame
             Logger.LogMethodEntry("MyTestGridUXPage", 
                 "SelectMyTestActivityInManageYourTestFrame",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
             int activityColumnNumber = Convert.ToInt32(MyTestGridUXPageResource.
                 MyTestGridUX_Page_IntIntializer_Value);     
@@ -293,7 +293,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("MyTestGridUXPage", 
                 "SelectMyTestActivityInManageYourTestFrame",
-                         base.isTakeScreenShotDuringEntryExit);
+                         base.IsTakeScreenShotDuringEntryExit);
             return activityColumnNumber;
         }
 
@@ -304,7 +304,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The MyTest Next Link
             Logger.LogMethodEntry("MyTestGridUXPage", "ClickTheMyTestNextLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(MyTestGridUXPageResource.
                 MyTestGridUX_Page_MyTest_Next_Link_Id_Locator));
@@ -316,7 +316,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(MyTestGridUXPageResource.
                 MyTestGridUX_Page_Wait_Element_Thred_Time));
             Logger.LogMethodExit("MyTestGridUXPage", "ClickTheMyTestNextLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -329,7 +329,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get activity name from the table
             Logger.LogMethodEntry("MyTestGridUXPage", "GetMyTestGetActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Activity Row Text
             String getTextFromActivityRow =
                 base.GetElementTextByXPath(
@@ -341,7 +341,7 @@ namespace Pegasus.Pages.UI_Pages
                 Environment.NewLine, string.Empty);
             //Logger exit
             Logger.LogMethodExit("MyTestGridUXPage", "GetMyTestGetActivityName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 
@@ -355,7 +355,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on MyTest Activity CMenu Option
             Logger.LogMethodEntry("MyTestGridUXPage", "ClickMyTestActivityCMenuOpenOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(String.Format(
                  MyTestGridUXPageResource.
@@ -370,7 +370,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Image
             base.ClickByJavaScriptExecutor(getImageWebElementProperty);
             Logger.LogMethodExit("MyTestGridUXPage", "ClickMyTestActivityCMenuOpenOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -382,7 +382,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on MyTest Activity CMenu Option
             Logger.LogMethodEntry("MyTestGridUXPage", "SelectCmenuOptionsInManageYourTest",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.ClassName(MyTestGridUXPageResource.
                 MyTestGridUX_Page_CreateNewTest_Activity_CMenu_Options_ClassName_Locator));
             //Get CMenu Option Web Element Property
@@ -391,7 +391,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click CMenu Web Element
             base.ClickByJavaScriptExecutor(getCMenuWebElementProperty);
             Logger.LogMethodExit("MyTestGridUXPage", "SelectCmenuOptionsInManageYourTest",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Ok Button In Confirmation Popup           
             Logger.LogMethodEntry("MyTestGridUXPage", "ClickTheOkButtonInConfirmationPopup",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Pegasus Window
@@ -420,7 +420,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("MyTestGridUXPage", "ClickTheOkButtonInConfirmationPopup",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -431,7 +431,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Display Of Header Options In Manage Your Test.          
             Logger.LogMethodEntry("MyTestGridUXPage", "GetDisplayOfHeaderOptionsInManageYourTest",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getDisplayOfHeaderOptions = string.Empty;
             try
@@ -459,7 +459,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("MyTestGridUXPage", "GetDisplayOfHeaderOptionsInManageYourTest",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return getDisplayOfHeaderOptions;
         }
 
@@ -471,7 +471,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("MyTestGridUXPage", "DisplayOfManageYourTestFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize varialbe 
             string getTextofManageYourTestLink = string.Empty;
             try
@@ -495,7 +495,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("MyTestGridUXPage", "DisplayOfManageYourTestFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return getTextofManageYourTestLink;
         }
 
@@ -509,7 +509,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click MyTest CMenuOption In CourseSpace
             Logger.LogMethodEntry("MyTestGridUXPage", "ClickMyTestCMenuOptionInCourseSpace",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select MyTest Window
@@ -531,7 +531,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("MyTestGridUXPage", "ClickMyTestCMenuOptionInCourseSpace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -544,7 +544,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Image Cmenu Option From Test DropDown
             Logger.LogMethodEntry("MyTestGridUXPage",
                 "ClickTheImageCmenuOptionFromTestDropDown",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select MyTest Window
@@ -564,7 +564,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("MyTestGridUXPage", "ClickTheImageCmenuOptionFromTestDropDown",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -577,7 +577,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Display Of Cmenu Option For For Download
             Logger.LogMethodEntry("MyTestGridUXPage", "GetDisplayedCmenuOptionsForDownload",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getCmenuOptionsDisplayed = string.Empty;
             try
@@ -600,7 +600,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("MyTestGridUXPage", "GetDisplayedCmenuOptionsForDownload",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return getCmenuOptionsDisplayed;
         }
 
@@ -614,7 +614,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Display Of Cmenu Option For Created Test
             Logger.LogMethodEntry("MyTestGridUXPage", "GetDisplayOfCmenuOptionForCreatedTest",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getTestCmenuOptionsDisplayed = string.Empty;
             try
@@ -638,7 +638,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("MyTestGridUXPage", "GetDisplayOfCmenuOptionForCreatedTest",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return getTestCmenuOptionsDisplayed;
         }
     }

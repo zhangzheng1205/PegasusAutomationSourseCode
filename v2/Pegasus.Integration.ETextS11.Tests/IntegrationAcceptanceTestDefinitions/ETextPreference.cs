@@ -29,10 +29,10 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Display Of The Subtab.
             Logger.LogMethodEntry("ETextPreference", "SelectLTIToolSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new GeneralPreferencesPage().ClickOntheSubtab(subTabName);
             Logger.LogMethodExit("ETextPreference", "SelectLTIToolSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -42,11 +42,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         public void SetTheETextToolInEnableState(String ltiToolType)
         {
             Logger.LogMethodEntry("ETextPreference", "SetTheETextToolInEnableState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable LTI Tools Preference
             new LTIToolsPreferencesPage().GetLTIToolStatus(ltiToolType);
             Logger.LogMethodExit("ETextPreference", "SetTheETextToolInEnableState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -57,13 +57,13 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Enter EText Preference Details
             Logger.LogMethodEntry("ETextPreference", "EnterTheETextDetails",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Object created 
             CourseMaterialPreferencePage courseMaterialPreferencePage 
                 = new CourseMaterialPreferencePage();
             courseMaterialPreferencePage.SetETextPreferenceInCourseMaterialTab();
             Logger.LogMethodExit("ETextPreference", "EnterTheETextDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
             //Check if the Default Contents are Displayed In 'Preferences' Page
             logger.LogMethodEntry("PublisherCustomizationPage",
                 "IsDefaultContentsDisplayedInPreferencesPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             bool isDefaultContentsDisplayed = false;
             try
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
 
             logger.LogMethodExit("PublisherCustomizationPage",
                 "IsDefaultContentsDisplayedInPreferencesPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isDefaultContentsDisplayed;
         }
 
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Preference Frame
             logger.LogMethodEntry("PublisherCustomizationPage", "SelectPreferenceFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait and Select Preferences window
             base.WaitUntilWindowLoads(PublisherCustomizationPageResource.
                 PublisherCustomization_Page_Preference_Window_Name);
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(PublisherCustomizationPageResource.
                 PublisherCustomization_Page_Preference_Frame_Name);
             logger.LogMethodExit("PublisherCustomizationPage", "SelectPreferenceFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages
             //Upload The Branding Image In Preference
             logger.LogMethodEntry("PublisherCustomizationPage",
                 "UploadBrandingImageInPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the upload button
@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("PublisherCustomizationPage", 
                 "UploadBrandingImageInPreference",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill Welcome Text And URL
             logger.LogMethodEntry("PublisherCustomizationPage",
                "FillWelcomeTextAndURL",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Fill the Welcome text
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("PublisherCustomizationPage",
                 "FillWelcomeTextAndURL",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Save Button In PreferenceTab
             logger.LogMethodEntry("PublisherCustomizationPage", "ClickTheSaveButtonInPreferenceTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -195,7 +195,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PublisherCustomizationPage", "ClickTheSaveButtonInPreferenceTab",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
             //Welcome Message Displayed In Login Page
             logger.LogMethodEntry("PublisherCustomizationPage",
                "WelcomeMessageDisplayedInLoginPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Intialize the welcome message
             string getWelcomeMessage = string.Empty;
             try
@@ -231,7 +231,7 @@ namespace Pegasus.Pages.UI_Pages
 
             logger.LogMethodExit("PublisherCustomizationPage",
                "WelcomeMessageDisplayedInLoginPage",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return getWelcomeMessage;
         }
 
@@ -245,7 +245,7 @@ namespace Pegasus.Pages.UI_Pages
             //Check if the Default Contents are Displayed In 'Preferences' Page
             logger.LogMethodEntry("PublisherCustomizationPage",
                 "IsBackdoorContentsDisplayedInPreferencesPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             bool isDefaultContentsDisplayed = false;
             try
@@ -270,7 +270,7 @@ namespace Pegasus.Pages.UI_Pages
 
             logger.LogMethodExit("PublisherCustomizationPage",
                 "IsBackdoorContentsDisplayedInPreferencesPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isDefaultContentsDisplayed;
         }
 
@@ -282,7 +282,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill Welcome Text And URL
             logger.LogMethodEntry("PublisherCustomizationPage",
                "FillBackdoorWelcomeText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Backdoor signin Welcome text box
@@ -302,7 +302,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("PublisherCustomizationPage",
                 "FillBackdoorWelcomeText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

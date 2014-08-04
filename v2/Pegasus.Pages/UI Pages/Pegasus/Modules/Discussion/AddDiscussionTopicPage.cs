@@ -35,7 +35,7 @@ namespace Pegasus.Pages.UI_Pages
             // Create File Asset
             logger.LogMethodEntry("AddDiscussionTopicPage",
                 "CreateDiscussionTopicAsset",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Intialize Guid for File Asset
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AddDiscussionTopicPage",
                 "CreateDiscussionTopicAsset",
-              base.isTakeScreenShotDuringEntryExit); 
+              base.IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill The HTML Description
             logger.LogMethodEntry("AddDiscussionTopicPage", "FillTheHTMLDescription",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(AddDiscussionTopicPageResource.
                 AddDiscussionTopicPageResource_HTML_Sourse_Id_Locator));
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
                 newHTMLDiscription.ToString());
             base.SwitchToDefaultPageContent();
             logger.LogMethodExit("AddDiscussionTopicPage", "FillTheHTMLDescription",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Save And Close Button
             logger.LogMethodEntry("AddDiscussionTopicPage", "ClickOnSaveCloseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(AddDiscussionTopicPageResource.
                 AddDiscussionTopicPageResource_SaveClose_Button_Id_Locator));
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(AddDiscussionTopicPageResource.
                 AddDiscussionTopicPageResource_Time_Value));
             logger.LogMethodExit("AddDiscussionTopicPage", "ClickOnSaveCloseButton",
-              base.isTakeScreenShotDuringEntryExit); 
+              base.IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -134,7 +134,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store the Discussion topic Asset
             logger.LogMethodEntry("AddDiscussionTopicPage", 
                 "StoreTheDiscussionTopicAsset",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Store the Discussion Topic in memory
             Activity newFile = new Activity
             {
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
             newFile.StoreActivityInMemory();
             logger.LogMethodExit("AddDiscussionTopicPage", 
                 "StoreTheDiscussionTopicAsset",
-                 base.isTakeScreenShotDuringEntryExit); 
+                 base.IsTakeScreenShotDuringEntryExit); 
         }
     }
 }

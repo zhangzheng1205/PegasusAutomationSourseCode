@@ -29,11 +29,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Create Users by Type in Pegasus
             Logger.LogMethodEntry("CreateUser", "CreateNewUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create New User 
             new NewUserPage().CreateNewUserInWorkSpace(userTypeEnum);
             Logger.LogMethodExit("CreateUser", "CreateNewUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

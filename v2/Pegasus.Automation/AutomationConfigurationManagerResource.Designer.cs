@@ -160,6 +160,15 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PEG_DOWNLOAD_PATH.
+        /// </summary>
+        internal static string PEG_DOWNLOAD_PATH_Key {
+            get {
+                return ResourceManager.GetString("PEG_DOWNLOAD_PATH_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PEG_SMSAdminURLRoot.
         /// </summary>
         internal static string PEG_SMSAdminURLRoot_Key {

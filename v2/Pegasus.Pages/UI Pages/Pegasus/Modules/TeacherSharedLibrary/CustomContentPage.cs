@@ -34,7 +34,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Expand Button of ML In Custom Content View
             logger.LogMethodEntry("CustomContentPage",
                 "ClickOnExpandButtonofMLInCustomContentView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Frame
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                 "ClickOnExpandButtonofMLInCustomContentView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Master Library
             logger.LogMethodEntry("CustomContentPage", "GetMasterLibraryName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getMLName = string.Empty;
             try
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CustomContentPage", "GetMasterLibraryName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getMLName;
         }
 
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Customized Content Name
             logger.LogMethodEntry("CustomContentPage", "GetCustomizedContentName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getActivityTitle = string.Empty;
             try
@@ -136,7 +136,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CustomContentPage", "GetCustomizedContentName",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
             return getActivityTitle.TrimEnd();
         }
 
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search The Asset
             logger.LogMethodEntry("CustomContentPage", "SearchTheAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (activityTypeEnum)
             {
                 case Activity.ActivityTypeEnum.Test:
@@ -167,7 +167,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("CustomContentPage", "SearchTheAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch To Curriculum Frame.
             logger.LogMethodEntry("CustomContentPage", "SwitchToCurriculumFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(CustomContentPageResource.
                 CustomContent_Page_Window_Title_Name);
             //Select Window
@@ -189,7 +189,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(CustomContentPageResource.
                 CustomContent_Page_Frame_Id_Locator);
             logger.LogMethodExit("CustomContentPage", "SwitchToCurriculumFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Get the Master library course
             logger.LogMethodEntry("CustomContentPage", "GetTheMasterLibraryCourse",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Variable Declaration of Master Library course         
             string getMasterLibraryName = string.Empty;
             try
@@ -228,7 +228,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CustomContentPage", "GetTheMasterLibraryCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getMasterLibraryName;
         }
 
@@ -239,7 +239,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Curriculum Frame
             logger.LogMethodEntry("CustomContentPage", "SelectCurriculumFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -259,7 +259,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CustomContentPage", "SelectCurriculumFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -270,7 +270,7 @@ namespace Pegasus.Pages.UI_Pages
             //Mouse over on the Row of Master Library course
             logger.LogMethodEntry("CustomContentPage",
                 "MouseOverOnRowMLCourse",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get the Master Library course from memory 
@@ -284,7 +284,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                 "MouseOverOnRowMLCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -296,7 +296,7 @@ namespace Pegasus.Pages.UI_Pages
             //Mouse over on the licensed Master Library course
             logger.LogMethodEntry("CustomContentPage",
                 "MouseOverOnLicensedMasterLibraryCourse",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select the frame
             this.SelectCurriculumFrame();
             //Getting the counts of Master Library course                
@@ -316,7 +316,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
                 logger.LogMethodExit("CustomContentPage",
                     "MouseOverOnLicensedMasterLibraryCourse",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             }
         }
 
@@ -328,7 +328,7 @@ namespace Pegasus.Pages.UI_Pages
             //Perform Mouse Hover On Master Library Course
             logger.LogMethodEntry("CustomContentPage",
                 "PerformMouseHoverOnMLCourse",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Get the web element
             IWebElement getMLCourseTitleAttribute =
                 base.GetWebElementPropertiesByClassName
@@ -344,7 +344,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectTheContentMenu();
             logger.LogMethodExit("CustomContentPage",
                 "PerformMouseHoverOnMLCourse",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -355,7 +355,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the "Create Content" Button on row
             logger.LogMethodEntry("CustomContentPage",
                 "ClickTheCreateContentButtonOnRow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -378,7 +378,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                 "ClickTheCreateContentButtonOnRow",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -388,7 +388,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Conten Menu
             logger.LogMethodEntry("CustomContentPage", "SelectContentMenu",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -410,7 +410,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CustomContentPage", "SelectContentMenu",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -420,7 +420,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Licensed Checkbox 
             logger.LogMethodEntry("CustomContentPage", "SelectLicencedCheckBox",
-                 base.isTakeScreenShotDuringEntryExit);          
+                 base.IsTakeScreenShotDuringEntryExit);          
                 //Wait for the element
                 base.WaitForElement(By.XPath(CustomContentPageResource.
                     CustomContent_Page_Activity_Checkbox_Xpath_Locator));
@@ -430,7 +430,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectCheckBoxByXPath(CustomContentPageResource.
                     CustomContent_Page_Activity_Checkbox_Xpath_Locator);          
             logger.LogMethodExit("CustomContentPage", "SelectLicencedCheckBox",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -440,7 +440,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Copy Link
             logger.LogMethodEntry("CustomContentPage", "ClickTheCopyLink",
-                 base.isTakeScreenShotDuringEntryExit);           
+                 base.IsTakeScreenShotDuringEntryExit);           
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                       CustomContent_Page_Copy_Id_Locator));
@@ -450,7 +450,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickButtonById(CustomContentPageResource.
                     CustomContent_Page_Copy_Id_Locator);           
             logger.LogMethodExit("CustomContentPage", "ClickTheCopyLink",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -461,7 +461,7 @@ namespace Pegasus.Pages.UI_Pages
             //Mouse Over On Licensed Action Row Assets
             logger.LogMethodEntry("CustomContentPage",
                 "MouseOverOnLicensedActionRowAssets",
-                 base.isTakeScreenShotDuringEntryExit);           
+                 base.IsTakeScreenShotDuringEntryExit);           
                 //Get the Activity from memory           
                 Activity newActivity = Activity.Get(CommonResource.      
                    CommonResource.DigitalPath_Activity_Test_UC2);
@@ -475,7 +475,7 @@ namespace Pegasus.Pages.UI_Pages
                       CustomContent_Page_CustonContent_ButtonClick_Time_value));            
             logger.LogMethodExit("CustomContentPage",
                 "MouseOverOnLicensedActionRowAssets",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -487,7 +487,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The Licensed Activity Test
             logger.LogMethodEntry("CustomContentPage",
                 "SelectTheLicensedActivityTest",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Getting the counts of Activity
             int getActivityCount = base.
                 GetElementCountByXPath(CustomContentPageResource.
@@ -504,7 +504,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
                 logger.LogMethodExit("CustomContentPage",
                     "SelectTheLicensedActivityTest",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             }
         }      
        
@@ -516,7 +516,7 @@ namespace Pegasus.Pages.UI_Pages
             //MouseOver On Licensed Assets row
             logger.LogMethodEntry("CustomContentPage",
                 "MouseOverOnLicensedAssetsRow",
-              base.isTakeScreenShotDuringEntryExit);         
+              base.IsTakeScreenShotDuringEntryExit);         
             //Wait for the element
             base.WaitForElement(By.XPath(CustomContentPageResource.
                 CustomContent_Page_Activity_Name_Checkbox_Xpath_Locator));
@@ -530,7 +530,7 @@ namespace Pegasus.Pages.UI_Pages
                  CustomContent_Page_Activity_Name_Row_Time_value));          
             logger.LogMethodExit("CustomContentPage",
                 "MouseOverOnLicensedAssetsRow",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Select The Paste Button For Licensed Asset
@@ -540,7 +540,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The Paste Button For Licensed Asset
             logger.LogMethodEntry("CustomContentPage",
                 "SelectThePasteButtonForLicensedAsset",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element           
             base.WaitForElement(By.ClassName(CustomContentPageResource.
                 CustomContent_Page_Paste_Button_ClassName_Locator));
@@ -555,7 +555,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectTheOptionsInPasteDropDown();           
             logger.LogMethodExit("CustomContentPage",
                 "SelectThePasteButtonForLicensedAsset",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -566,7 +566,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The Options In Paste DropDown
             logger.LogMethodEntry("CustomContentPage",
                "SelectTheOptionsInPasteDropDown",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(CustomContentPageResource.
                 CustomContent_Page_Paste_Dropdown_Id_Locator));
@@ -589,7 +589,7 @@ namespace Pegasus.Pages.UI_Pages
             CustomContent_Page_CustonContent_ButtonClick_Time_value));
             logger.LogMethodExit("CustomContentPage",
                 "SelectTheOptionsInPasteDropDown",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }       
        
 
@@ -601,7 +601,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The CutPaste Button For NonLicensed Asset
             logger.LogMethodEntry("CustomContentPage",
                 "SelectTheCutPasteButtonForNonLicensedAsset",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
                 //Wait for the element
                 base.WaitForElement(By.XPath(CustomContentPageResource.
                     CustomContent_Page_CutPaste_Button_Xpath_Locator));
@@ -614,7 +614,7 @@ namespace Pegasus.Pages.UI_Pages
                     CustomContent_Page_CustonContent_ButtonClick_Time_value));  
             logger.LogMethodExit("CustomContentPage",
                 "SelectTheCutPasteButtonForNonLicensedAsset",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -625,7 +625,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Clear Clipboard Link
             logger.LogMethodEntry("CustomContentPage",
                 "ClickTheClearClipboardLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -650,7 +650,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                 "ClickTheClearClipboardLink",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -661,7 +661,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Create Button In Global
             logger.LogMethodEntry("CustomContentPage",
                 "ClickTheCreateButtonInGlobal",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -681,7 +681,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                 "ClickTheCreateButtonInGlobal",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -691,7 +691,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Assets Type Folder
             logger.LogMethodEntry("CustomContentPage", "SelectAssetsTypeFolder",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -713,7 +713,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CustomContentPage", "SelectAssetsTypeFolder",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -728,7 +728,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify Custom Content Asset
             logger.LogMethodEntry("CustomContentPage",
                 "VerifyCustomContentAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (getAssetType)
@@ -755,7 +755,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                 "VerifyCustomContentAsset",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -767,7 +767,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select the Licensed Activity Asset 
             logger.LogMethodEntry("CustomContentPage",
                 "SelectLicensedActivityTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Getting the counts of activity
             int getCourseCount = base.GetElementCountByXPath(CustomContentPageResource.
            CustomContent_Page_Activity_Count_Xpath_Locator);
@@ -785,7 +785,7 @@ namespace Pegasus.Pages.UI_Pages
 
             logger.LogMethodExit("CustomContentPage",
                 "SelectLicensedActivityTest",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -796,7 +796,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Expand Button NonLicensed Asset
             logger.LogMethodEntry("CustomContentPage",
                 "ClickTheExpandButtonNonLicensedFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Frame
@@ -819,7 +819,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                 "ClickTheExpandButtonNonLicensedFolder",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -830,7 +830,7 @@ namespace Pegasus.Pages.UI_Pages
             //Mouse Over On NonLecensed Folder
             logger.LogMethodEntry("CustomContentPage",
                 "MouseOverOnNonLecensedFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for a element
@@ -853,7 +853,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                "MouseOverOnNonLecensedFolder",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -864,7 +864,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click NonLicensed CreateContent Button    
             logger.LogMethodEntry("CustomContentPage",
                "ClickNonLicensedCreateContentButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(CustomContentPageResource.
                 CustomContent_Page_Folder_CreateContent_Button_Xpath_Locator));
@@ -878,7 +878,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(clickButton);
             logger.LogMethodExit("CustomContentPage",
                "ClickNonLicensedCreateContentButton",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -888,7 +888,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Link Asset
             logger.LogMethodEntry("CustomContentPage", "SelectLinkAsset",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element             
@@ -905,7 +905,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CustomContentPage", "SelectLinkAsset",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -916,7 +916,7 @@ namespace Pegasus.Pages.UI_Pages
             // Click The Curriculum Link In Home Page
             logger.LogMethodEntry("CustomContentPage",
                 "ClickTheCurriculumLinkInHomePage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -951,7 +951,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                "ClickTheCurriculumLinkInHomePage",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }      
 
         /// <summary>
@@ -963,7 +963,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select NonLicensed Activity Test
             logger.LogMethodEntry("CustomContentPage",
                 "SelectNonLicensedActivityTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Getting the counts of activity
             int getCourseCount = base.GetElementCountByXPath
                 (CustomContentPageResource.
@@ -981,7 +981,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                "SelectNonLicensedActivityTest",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -993,7 +993,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select NonLicensed CheckBox
             logger.LogMethodEntry("CustomContentPage",
                "SelectNonLicensedCheckBox",
-               base.isTakeScreenShotDuringEntryExit);           
+               base.IsTakeScreenShotDuringEntryExit);           
                 //Wait for the element
                 base.WaitForElement(By.XPath(CustomContentPageResource.
                     CustomContent_Page_NonLicensedActivity_Checkbox_Xpath_Locator));
@@ -1004,7 +1004,7 @@ namespace Pegasus.Pages.UI_Pages
                     CustomContent_Page_NonLicensedActivity_Checkbox_Xpath_Locator);           
             logger.LogMethodExit("CustomContentPage",
                "SelectNonLicensedCheckBox",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1015,7 +1015,7 @@ namespace Pegasus.Pages.UI_Pages
             //Mouse Over On NonLicensed Action Row Assets
             logger.LogMethodEntry("CustomContentPage",
                    "MouseOverOnNonLicensedActionRowAssets",
-              base.isTakeScreenShotDuringEntryExit);            
+              base.IsTakeScreenShotDuringEntryExit);            
                 //Get the Activity from memory           
               Activity newActivity = Activity.Get(CommonResource.
                   CommonResource.DigitalPath_Activity_Link_UC4);       
@@ -1029,7 +1029,7 @@ namespace Pegasus.Pages.UI_Pages
                  CustomContent_Page_CustonContent_ButtonClick_Time_value));            
             logger.LogMethodExit("CustomContentPage",
                           "MouseOverOnNonLicensedActionRowAssets",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
        
 
@@ -1041,7 +1041,7 @@ namespace Pegasus.Pages.UI_Pages
             //Mouse Over On NonLicensed Assets Row
             logger.LogMethodEntry("CustomContentPage",
               "MouseOverOnNonLicensedAssetsRow",
-            base.isTakeScreenShotDuringEntryExit);           
+            base.IsTakeScreenShotDuringEntryExit);           
                 //Wait for the element
             base.WaitForElement(By.XPath(CustomContentPageResource.
                     CustomContent_Page_NonLicensedActivity_Link_Xpath_Locator));
@@ -1053,7 +1053,7 @@ namespace Pegasus.Pages.UI_Pages
             base.PerformMouseHoverByJavaScriptExecutor(getTitleAsset);                        
             logger.LogMethodExit("CustomContentPage",
                "MouseOverOnNonLicensedAssetsRow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1063,7 +1063,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Cut Link
             logger.LogMethodEntry("CustomContentPage", "ClickTheCutLink",
-              base.isTakeScreenShotDuringEntryExit);           
+              base.IsTakeScreenShotDuringEntryExit);           
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_Cut_Link_Id_Locator));
@@ -1073,7 +1073,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickButtonById(CustomContentPageResource.
                     CustomContent_Page_Cut_Link_Id_Locator);           
             logger.LogMethodExit("CustomContentPage", "ClickTheCutLink",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1084,7 +1084,7 @@ namespace Pegasus.Pages.UI_Pages
             //Remove NonLicensed Copied Content
             logger.LogMethodEntry("CustomContentPage",
                 "RemoveNonLicensedCopiedContent",
-              base.isTakeScreenShotDuringEntryExit);                         
+              base.IsTakeScreenShotDuringEntryExit);                         
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_Activity_Remove_Checkbox_Id_Locator));
@@ -1095,7 +1095,7 @@ namespace Pegasus.Pages.UI_Pages
                     CustomContent_Page_Activity_Remove_Checkbox_Id_Locator); 
             logger.LogMethodExit("CustomContentPage",
                 "RemoveNonLicensedCopiedContent",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1105,7 +1105,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click The Remove Button
             logger.LogMethodEntry("CustomContentPage", "ClickTheRemoveButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
                 //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_RemoveButton_Id_Locator));
@@ -1115,7 +1115,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickButtonById(CustomContentPageResource.
                     CustomContent_Page_RemoveButton_Id_Locator);           
             logger.LogMethodExit("CustomContentPage", "ClickTheRemoveButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1125,7 +1125,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click OK Button
             logger.LogMethodEntry("CustomContentPage", "ClickOKButton",
-               base.isTakeScreenShotDuringEntryExit);          
+               base.IsTakeScreenShotDuringEntryExit);          
                 //Select window
                 base.SelectWindow(CustomContentPageResource.
                     CustomContent_Page_OK_Window_Title_Name);
@@ -1140,7 +1140,7 @@ namespace Pegasus.Pages.UI_Pages
                 Thread.Sleep(Convert.ToInt32(CustomContentPageResource.
                   CustomContent_Page_CustonContent_ButtonClick_Time_value));            
            logger.LogMethodExit("CustomContentPage", "ClickOKButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1151,7 +1151,7 @@ namespace Pegasus.Pages.UI_Pages
             //Remove Licensed Copied Content
             logger.LogMethodEntry("CustomContentPage",
                 "RemoveLicensedCopiedContent",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
                 base.WaitForElement(By.Id(CustomContentPageResource.
                     CustomContent_Page_Remove_Paste_LicensedAsset_Id_Locator));
@@ -1162,7 +1162,7 @@ namespace Pegasus.Pages.UI_Pages
                     CustomContent_Page_Remove_Paste_LicensedAsset_Id_Locator); 
             logger.LogMethodExit("CustomContentPage",
                 "RemoveLicensedCopiedContent",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1173,7 +1173,7 @@ namespace Pegasus.Pages.UI_Pages
             //Mouse Over On NonLicensed Cut Paste Asset
             logger.LogMethodEntry("CustomContentPage",
                 "MouseOverOnNonLicensedCutPasteAsset",
-             base.isTakeScreenShotDuringEntryExit);           
+             base.IsTakeScreenShotDuringEntryExit);           
                 //Get the Activity from memory           
                Activity newActivity = Activity.Get(CommonResource.
                   CommonResource.DigitalPath_Activity_Link_UC4);   
@@ -1189,7 +1189,7 @@ namespace Pegasus.Pages.UI_Pages
                   CustomContent_Page_CustonContent_ButtonClick_Time_value));            
             logger.LogMethodExit("CustomContentPage",
                "MouseOverOnNonLicensedCutPasteAsset",
-        base.isTakeScreenShotDuringEntryExit);
+        base.IsTakeScreenShotDuringEntryExit);
         }
 
       /// <summary>
@@ -1201,7 +1201,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select CopyPaste Link
             logger.LogMethodEntry("CustomContentPage","SelectCopyPasteLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select  Checkbox 
@@ -1226,7 +1226,7 @@ namespace Pegasus.Pages.UI_Pages
             {  ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CustomContentPage", "SelectCopyPasteLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1238,7 +1238,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select CheckBox
             logger.LogMethodEntry("CustomContentPage", "SelectCheckBox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             switch (getAssetType)
             {
                   //Checkbox select for Licensed Assets
@@ -1253,7 +1253,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("CustomContentPage", "SelectCheckBox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1266,7 +1266,7 @@ namespace Pegasus.Pages.UI_Pages
             //Remove The Copied Content In Global
             logger.LogMethodEntry("CustomContentPage",
                 "RemoveTheCopiedContentInGlobal",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (assetTypeEnum)
@@ -1292,7 +1292,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                 "RemoveTheCopiedContentInGlobal",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1305,7 +1305,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The CutPaste Link
             logger.LogMethodEntry("CustomContentPage",
                 "SelectTheCutPasteLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select  Checkbox 
@@ -1330,7 +1330,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                 "SelectTheCutPasteLink",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1342,7 +1342,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fetch Updated Activity Name From Memory
             logger.LogMethodEntry("CustomContentPage",
                 "FetchUpdatedActivityName",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getUpdatedActivityName = string.Empty;
             try
@@ -1359,7 +1359,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CustomContentPage",
                 "FetchUpdatedActivityName",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return getUpdatedActivityName;
         }
     }

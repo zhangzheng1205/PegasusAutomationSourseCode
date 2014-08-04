@@ -36,7 +36,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Customize the Content in Curriculum Tab
             Logger.LogMethodEntry("CustomizeContent", "CustomizeContentInCurriculumTab",
-                base.isTakeScreenShotDuringEntryExit);           
+                base.IsTakeScreenShotDuringEntryExit);           
             //Get Activity Name From Memory
              Activity activity = Activity.Get(activityTypeEnum);
             //Search Activity
@@ -48,7 +48,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Close Customized Item Saved Window
             new CustomizeNotificationPage().CloseCustomizedItemSavedWindow();                           
             Logger.LogMethodEntry("CustomizeContent", "CustomizeContentInCurriculumTab", 
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
         }
 
         /// <summary>
@@ -61,13 +61,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Successfull Message In Curriculum Tab
             Logger.LogMethodEntry("CustomizeContent", "VerifySuccessfullMessageInCurriculumTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Display of Success Message
             Logger.LogAssertion("VerifySuccessfullMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(successMessage, new ContentLibraryPage().GetSuccessMessage()));
             Logger.LogMethodExit("CustomizeContent", "VerifySuccessfullMessageInCurriculumTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -78,11 +78,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click On The CustomContent Link
             Logger.LogMethodEntry("CustomizeContent", "ClickOnTheCustomContentLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Custom Content Link
             new ContentLibraryPage().ClickOnCustomContentLink();
             Logger.LogMethodExit("CustomizeContent", "ClickOnTheCustomContentLink",
-               base.isTakeScreenShotDuringEntryExit);           
+               base.IsTakeScreenShotDuringEntryExit);           
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify ML In CustomContent View
             Logger.LogMethodEntry("CustomizeContent", "VerifyMLInCustomContentView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get MasterLibrary From Memory
             Course course = Course.Get(Course.CourseTypeEnum.MasterLibrary);
             //Assert ML Name In Custom Content View
@@ -101,7 +101,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(course.Name, new CustomContentPage().GetMasterLibraryName()));                                                           
             Logger.LogMethodExit("CustomizeContent", "VerifyMLInCustomContentView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -113,12 +113,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Click On Expand Button Of ML In The CustomContent View
             Logger.LogMethodEntry("CustomizeContent",
                 "ClickOnExpandButtonOfMLInTheCustomContentView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Expand Button of ML In CustomContent View
             new CustomContentPage().ClickOnExpandButtonofMLInCustomContentView();
             Logger.LogMethodExit("CustomizeContent",
                 "ClickOnExpandButtonOfMLInTheCustomContentView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -131,14 +131,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Customized Contents Of ML In Custom Content View
             Logger.LogMethodEntry("CustomizeContent", "VerifyCustomizedContentsOfMLInCustomContentView",
-                  base.isTakeScreenShotDuringEntryExit);            
+                  base.IsTakeScreenShotDuringEntryExit);            
             //Assert Customized Content Name In Custom Content View
             Logger.LogAssertion("VerifyCustomizedContentNameInCustomContentView",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(new CustomContentPage().FetchUpdatedActivityNameFromMemory(),
                     new CustomContentPage().GetCustomizedContentName(activityTypeEnum)));                     
             Logger.LogMethodExit("CustomizeContent", "VerifyCustomizedContentsOfMLInCustomContentView",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select Cmenu Of Asset In Table Of Contents
             Logger.LogMethodEntry("CustomizeContent", "SelectCmenuOfAssetInTableOfContents",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Get Activity Name From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Search Activity
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Select Asset Cmenu In Table of Content
             new ContentLibraryPage().SelectAssetCmenuInTableofContent(activity.Name, assetCmenu);
             Logger.LogMethodExit("CustomizeContent", "SelectCmenuOfAssetInTableOfContents",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Select Cmenu Of Asset In Table Of Contents
             Logger.LogMethodEntry("CustomizeContent",
                 "SetTheDueDateForTheActivityInCurriculum",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Get Activity Name From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             // fetch class name 
@@ -183,7 +183,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new ContentLibraryPage().SetDueDateForActivityInCurriculum(orgClass.Name);
             Logger.LogMethodExit("CustomizeContent",
                 "SetTheDueDateForTheActivityInCurriculum",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -196,14 +196,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify The Download Option In Print Window
             Logger.LogMethodEntry("CustomizeContent",
                 "VerifyTheDownloadOptionInPrintWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Assert Download Option In Print Window
             Logger.LogAssertion("VerifyTheDownloadOptionInPrintWindow",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new PrintToolPage().IsDownloadOptionPresent())); 
             Logger.LogMethodExit("CustomizeContent",
                 "VerifyTheDownloadOptionInPrintWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -216,14 +216,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
            //Verify The Download Option In Print Window
            Logger.LogMethodEntry("CustomizeContent",
                "VerifyTheDownloadOptionInPrintWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
            //Assert Download Option In Print Window
            Logger.LogAssertion("VerifyTheDownloadOptionInPrintWindow",
                ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.AreEqual(buttonName, new InstructionsPage().GetButtonText()));
            Logger.LogMethodExit("CustomizeContent",
                "VerifyTheDownloadOptionInPrintWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
        }
 
         

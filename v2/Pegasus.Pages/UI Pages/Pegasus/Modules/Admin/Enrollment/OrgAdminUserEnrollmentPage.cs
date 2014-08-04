@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the user from left frame
             logger.LogMethodEntry("OrgAdminUserEnrollmentPage", "SelectUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select default window and switch to main frame
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Select the user from left frame
             logger.LogMethodExit("OrgAdminUserEnrollmentPage", "SelectUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select the searched user
             logger.LogMethodEntry("OrgAdminUserEnrollmentPage", "SelectUserNameCheckbox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Search for the user name checkbox and click
             base.WaitForElement(By.Id(OrgAdminUserEnrollmentPageResource
                    .OrgAdminUserEnrollment_Page_UserNameCheckbox_Id_Locator));
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToDefaultPageContent();
             // Select the searched user
             logger.LogMethodExit("OrgAdminUserEnrollmentPage", "SelectUserNameCheckbox",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search the user from advanced search
             logger.LogMethodEntry("OrgAdminUserEnrollmentPage", "SearchUserName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Wait for the user name text box and click
             base.WaitForElement(By.Id(OrgAdminUserEnrollmentPageResource
                     .OrgAdminUserEnrollment_Page_UserNameTextbox_Id_Locator));
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
                 .OrgAdminUserEnrollment_Page_SearchButton_Id_Locator);
             //Search the user from advanced search
             logger.LogMethodExit("OrgAdminUserEnrollmentPage", "SearchUserName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the Create Users Link
             logger.LogMethodEntry("OrgAdminUserEnrollmentPage", "ClickOnTheCreateUsersLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Clicks on the Enrollment Tab
@@ -130,7 +130,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrgAdminUserEnrollmentPage", "ClickOnTheCreateUsersLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search User In Enrollment Sub Tab
             logger.LogMethodEntry("OrgAdminUserEnrollmentPage", "SearchUserInEnrollmentSubTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Left Frame
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrgAdminUserEnrollmentPage", "SearchUserInEnrollmentSubTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the Searched User Name in Enrollment tab
             logger.LogMethodEntry("OrgAdminUserEnrollmentPage", "GetSearchedUserInEnrollmentSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the variable getUserName
             string getUserName = string.Empty;
             try
@@ -197,7 +197,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrgAdminUserEnrollmentPage", "GetSearchedUserInEnrollmentSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
 
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Frame
             logger.LogMethodEntry("OrgAdminUserEnrollmentPage", "SelectLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Manage Organization window
             base.SelectWindow(OrgAdminUserEnrollmentPageResource
                 .OrgAdminUserEnrollment_Page_WindowName_Title);
@@ -219,7 +219,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(OrgAdminUserEnrollmentPageResource.
                 OrgAdminUserEnrollment_Page_LeftFrame_Id_Locator);
             logger.LogMethodExit("OrgAdminUserEnrollmentPage", "SelectLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
        /// <summary>
@@ -230,7 +230,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Successfull message on the enrollment window
             logger.LogMethodEntry("OrgAdminUserEnrollmentPage", "GetSuccessfulMessageText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the variable getSuccessMessage
             string getSuccessMessage = string.Empty;
             try
@@ -250,7 +250,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrgAdminUserEnrollmentPage", "GetSuccessfulMessageText",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return getSuccessMessage;
         }
 

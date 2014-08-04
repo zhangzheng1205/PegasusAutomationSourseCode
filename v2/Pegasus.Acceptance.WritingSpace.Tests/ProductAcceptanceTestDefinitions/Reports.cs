@@ -27,13 +27,13 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Report Type
             Logger.LogMethodEntry("Reports", "ClickOnReportType",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Click On Report Type Link
             new RptMainUXPage().ClickOnReportTypeLink(
                 (RptMainUXPage.PegasusInstructorReportEnum)Enum.Parse(typeof(
                 RptMainUXPage.PegasusInstructorReportEnum), reportType));
             Logger.LogMethodExit("Reports", "ClickOnReportType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             // Select Options to Generate Report By Instructor
             Logger.LogMethodEntry("Reports",
                 "SelectOptionstoGenerateReportByInstructor",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch the activity from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Select Report window and Frame
@@ -57,7 +57,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
                 SelectOptionstoGenerateActivityResultReport(activity.Name);
             Logger.LogMethodExit("Reports",
                 "SelectOptionstoGenerateReportByInstructor",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
       
         /// <summary>
@@ -69,11 +69,11 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Button In Reports
             Logger.LogMethodEntry("Reports", "ClickOnTheButtonInReports",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Button
             new RptSaveReportPage().ClickOnTheButtonInReports(buttonName);
             Logger.LogMethodExit("Reports", "ClickOnTheButtonInReports",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //To Verify The Score in Activity Result Single Student Report
             Logger.LogMethodEntry("Reports",
                 "ToVerifyScoreinActivityResultSingleStudentReport",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Assert To Verify Score in Generated Report
             Logger.LogAssertion("VerifyScoreInReport", ScenarioContext.
              Current.ScenarioInfo.Title, () => Assert.AreEqual(activityScore,
@@ -94,7 +94,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
                        GetActivityResultSingleStudentScoreInReport()));
             Logger.LogMethodExit("Reports",
                 "ToVerifyScoreinActivityResultSingleStudentReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
         {
             //Generate Instructor Report
             Logger.LogMethodEntry("Reports", "ManageInstructorReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch Username
             User userName = User.Get(userType);
             //Fetch Writing space Activity
@@ -119,7 +119,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
                 Parse(typeof(RptMainUXPage.PegasusInstructorReportEnum),
                 instructorReportType), userName.LastName, activityName.Name);
             Logger.LogMethodExit("Reports", "ManageInstructorReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Verify Score and Student Name in the Generated Report 
             Logger.LogMethodEntry("InstructorReports",
                 "VerifyStudentNameAndScoreUnderLaunchedReport",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Fetch User
             User user = User.Get(User.UserTypeEnum.MMNDStudent);            
             //Assert Activity Score
@@ -147,7 +147,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
                 (new RptAssessmentAllStudentsPage().GetWritingspaceStudentNameInReport())));
             Logger.LogMethodExit("InstructorReports",
                 "VerifyStudentNameAndScoreUnderLaunchedReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

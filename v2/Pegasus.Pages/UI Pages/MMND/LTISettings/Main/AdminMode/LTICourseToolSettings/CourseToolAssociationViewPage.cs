@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Tool Associated Button
             logger.LogMethodEntry("CourseToolAssociationViewPage", "ClickOnCourseToolAssociated",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.XPath(CourseToolAssociationViewPageResource.
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                  
             }
             logger.LogMethodExit("CourseToolAssociationViewPage", "ClickOnCourseToolAssociated",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

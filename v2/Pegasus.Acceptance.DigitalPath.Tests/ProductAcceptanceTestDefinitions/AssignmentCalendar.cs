@@ -33,11 +33,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select calendar set up button
             Logger.LogMethodEntry("AssignmentCalendar", "ClickCalendarSetUpButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // New instance of Emptycalendarpage to select calendar set up button
             new EmptyCalendarPage().SelectCalendarSetUp();
             Logger.LogMethodExit("AssignmentCalendar", "ClickCalendarSetUpButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -48,14 +48,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Assign the activity in calendar
             Logger.LogMethodEntry("AssignmentCalendar", "AssignActivityInCalendar",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
             // fetch class name 
             Class orgClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
             // Assign activity from left frame
             new CalendarDefaultGlobalUXPage().
                 SetDueDateOfActivity(activityName, orgClass.Name);
             Logger.LogMethodExit("AssignmentCalendar", "AssignActivityInCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -67,13 +67,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Assign the activity in calendar
             Logger.LogMethodEntry("AssignmentCalendar", "AssignTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             // Assign activity from left frame
             new CalendarDefaultGlobalUXPage().AssignActivityToCalendar(activity.Name);
             Logger.LogMethodExit("AssignmentCalendar", "AssignTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Assign the activity in calendar
             Logger.LogMethodEntry("AssignmentCalendar", "SetDueDateForTheActivityInCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityTypeEnum);
             // fetch class name 
             Class orgClass = Class.Get(Class.ClassTypeEnum.DigitalPathMasterLibrary);
@@ -94,7 +94,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new CalendarDefaultGlobalUXPage().
                 SetDueDateOfActivity(activity.Name, orgClass.Name);
             Logger.LogMethodExit("AssignmentCalendar", "SetDueDateForTheActivityInCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -105,14 +105,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Assign the activity in calendar
             Logger.LogMethodEntry("AssignmentCalendar", "VerifyAssignedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert assigned activity on the calendar frame
             Logger.LogAssertion("VerifyPrsentationLaunch", 
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new CalendarDefaultGlobalUXPage().
                     IsAssignedTextPresent()));
             Logger.LogMethodExit("AssignmentCalendar", "VerifyAssignedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the calendar title
             Logger.LogMethodEntry("AssignmentCalendar", "VerifyTheCalendarSetUp",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert calendar title on the calendar frame
             Logger.LogAssertion("VerifyPrsentationLaunch", 
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -132,7 +132,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     (AssignmentCalendarResource.
                     AssignmentCalendar_CalendarTitle_Value)));
             Logger.LogMethodExit("AssignmentCalendar", "VerifyTheCalendarSetUp",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

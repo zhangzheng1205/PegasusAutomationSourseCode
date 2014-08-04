@@ -32,13 +32,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
         {
             //Create Digital Type Program
             Logger.LogMethodEntry("CreateProgram", "CreateTheDigitalPathProgramInCoursespace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On New Program Link
             new ProgramManagementPage().ClickOnCreateNewProgramLink();
             //Create New Digital Path Program
             new ProgramCreatePage().CreateNewProgram(programTypeEnum);
             Logger.LogMethodExit("CreateProgram", "CreateTheDigitalPathProgramInCoursespace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,11 +50,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
         {
             //Navigate Manage Programs Page
             Logger.LogMethodEntry("CreateProgram", "NavigateManageProgramsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate to manage program page 
             new AdminToolPage().NavigateToManageProgramsPage();
             Logger.LogMethodExit("CreateProgram", "NavigateManageProgramsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

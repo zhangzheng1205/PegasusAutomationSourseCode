@@ -39,7 +39,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Check If Expected Page Is Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait Till Thinking Indicator Loads
             bool isThinkingIndicatorLoading = base.IsThinkingIndicatorLoading();
             //If Thinking Indicator In Process After Specified 
@@ -58,7 +58,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedPageTitle, getActualPageTitle));
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Click on the Link
             Logger.LogMethodEntry("CommonSteps", "ClickOnTheLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Switch To Frame
             base.SwitchToIFrame(CommonStepsResource.
                 CommonSteps_IFrame + frame + String.Empty);
@@ -81,7 +81,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click on the Link
             base.ClickButtonByPartialLinkText(linkName);
             Logger.LogMethodExit("CommonSteps", "ClickOnTheLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Verify Pop Up Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait untill window
             base.WaitUntilWindowLoads(popUpName);
             //Select Pop Up
@@ -105,7 +105,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(true, isPopUpExist));
             Logger.LogMethodExit("CommonSteps", "ShowThePopUpInPegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             // Method To Verify the Success Message     
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Page Get Refresh after Pop Up Close
             Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                 CommonSteps_SleepTime_Value));
@@ -127,7 +127,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Removed The Assert For Message Because Sometimes Message not comes 
             //but this is not the severe issue. So We, can ignore this.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             // Method To Verify the Success Message 
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Page Get Refresh after Pop Up Close
             Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                 CommonSteps_SleepTime_Value));
@@ -161,7 +161,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Removed The Assert For Message Because Sometimes Message not comes 
             //but this is not the severe issue. So We, can ignore this.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Method to Navigate to the Tab Window 
             Logger.LogMethodEntry("CommonSteps", "NavigateToTheTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.SelectDefaultWindow();
             //Click On More Link if More Link Is Present
             new TodaysViewUXPage().ClickMoreLinkIfPresent(tabName); 
@@ -199,7 +199,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                    CommonSteps_PageNotOpened_Message));
             }
             Logger.LogMethodExit("CommonSteps", "NavigateToTheTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         public void SelectGradesSubtab()
         {
             Logger.LogMethodEntry("CommonSteps", "SelectGradesSubtab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             base.SelectDefaultWindow();
             //Wait for the element
             base.WaitForElement(By.Id(CommonStepsResource.
@@ -222,7 +222,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 CommonSteps_Grades_Subtab_Id_Locator);
             base.ClickByJavaScriptExecutor(getSubtabname);           
             Logger.LogMethodExit("CommonSteps", "SelectGradesSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -234,13 +234,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         public void SelectTheSubTab(String subTab)
         {
             Logger.LogMethodEntry("CommonSteps", "SelectTheSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.PartialLinkText(subTab));
             //Click the SubTab
             WebDriver.FindElement(By.PartialLinkText(subTab)).Click();
             Logger.LogMethodExit("CommonSteps", "SelectTheSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -255,14 +255,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Enter in Course from Global Home Page
             Logger.LogMethodEntry("CommonSteps", "EnterIntoCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From  Memory 
             Course course = Course.Get(courseTypeEnum);
             //Enter Into The Course             
             new MyPegasusUXPage().EnterInCourseFromGobalHomePage(
                 course.Name, userTypeEnum);
             Logger.LogMethodExit("CommonSteps", "EnterIntoCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -275,11 +275,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Close the window
             Logger.LogMethodEntry("CommonSteps", "CloseThePresentWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Close the Window
             new ManageOrganisationToolBarPage().CloseWindow(windowName);
             Logger.LogMethodExit("CommonSteps", "CloseThePresentWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -294,7 +294,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Search and Select the Organization
             Logger.LogMethodEntry("CommonSteps", "SearchAndSelectOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch Organization Name From Memory
             Organization organizationLevel = Organization.Get(
                 organizationLevelEnum, organizationTypeEnum);
@@ -308,7 +308,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click on Organization Button
             organizationManagementPage.SelectOrganization(organizationLevelEnum);
             Logger.LogMethodExit("CommonSteps", "SearchAndSelectOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -321,14 +321,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Validate Logout From NN User
             Logger.LogMethodEntry("CommonSteps", "ValidateLogoutFromNovaNETUser",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert Logout
             Logger.LogAssertion("ValidateLogout",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(signOutMessage, new SignInPage().
                     GetRumbaUserSignOutMessage()));
             Logger.LogMethodExit("CommonSteps", "ValidateLogoutFromNovaNETUser",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -341,7 +341,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Navigate Administrator Tool Page
             Logger.LogMethodEntry("AdminToolPage", "NavigateToTabOfThePerticularPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Is The Page Open Already
@@ -365,7 +365,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfThePerticularPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -377,11 +377,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Navigate to Tab
             Logger.LogMethodEntry("CommonSteps", "NavigateToTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Tab
             new TodaysViewUXPage().SelectTab(tabName);
             Logger.LogMethodExit("CommonSteps", "NavigateToTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -395,11 +395,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Navigate to Tab
             Logger.LogMethodEntry("CommonSteps", "NavigateToCourseSpaceUserTabs",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Tab
             new TodaysViewUXPage().SelectTab(parentTabName, childTabName);
             Logger.LogMethodExit("CommonSteps", "NavigateToCourseSpaceUserTabs",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -36,7 +36,7 @@ namespace Pegasus.Pages.UI_Pages
             //Opens Activity Presentation Window
             logger.LogMethodEntry("StudentPresentationPage",
                 "IsActivityPresentationPageOpened",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Boolean isActivityPresentationPageDisplayed = false;
             try
             {
@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
                 "IsActivityPresentationPageOpened",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isActivityPresentationPageDisplayed;
         }
 
@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Opens Activity Presentation Window
             logger.LogMethodEntry("StudentPresentationPage", "AttemptActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {                
                 //Select Window
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "AttemptActivity",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("StudentPresentationPage", "SelectWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Pop Up Loads
             base.WaitUntilWindowLoads(StudentPresentationPageResource.
                 StudentPrsentation_Page_Test_Window_Name);
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(StudentPresentationPageResource.
                 StudentPrsentation_Page_Test_Window_Name);
             logger.LogMethodExit("StudentPresentationPage", "SelectWindow",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
             //Submit Activity Successfully
             logger.LogMethodEntry("IsPostTestActivitySubmittedSuccessfully",
                 "IsActivitySubmittedSuccessfully",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Intialized Variable
             Boolean isQuestionSubmittedSuccessfully = false;
             try
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage",
-                "IsPostTestActivitySubmittedSuccessfully", base.isTakeScreenShotDuringEntryExit);
+                "IsPostTestActivitySubmittedSuccessfully", base.IsTakeScreenShotDuringEntryExit);
             return isQuestionSubmittedSuccessfully;
         }
 
@@ -168,7 +168,7 @@ namespace Pegasus.Pages.UI_Pages
             //Selects options/answers in Test window to complete submission
             logger.LogMethodEntry("StudentPresentationPage",
                 "AnswersSelectionInTestWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_QuestionCount_Presentation_Xpath_Locator));
             //Get Number of count from the Div
@@ -197,7 +197,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
                 "AnswersSelectionInTestWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Selects options/answers in Test window to complete submission
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
             //Selects options/answers in Test window to complete submission
             logger.LogMethodEntry("StudentPresentationPage",
                 "AnswersSelectionInTestWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_QuestionCount_Presentation_Xpath_Locator));
             //Get Number of count from the Div
@@ -233,7 +233,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             logger.LogMethodExit("StudentPresentationPage",
                 "AnswersSelectionInTestWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         ///  Check for the Display of Teacher View tabs
@@ -242,7 +242,7 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean IsNextButtonPresent()
         {
             logger.LogMethodEntry("StudentPresentationPage", "IsNextButtonPresent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isNextButtonPresent = false;
             try
@@ -269,7 +269,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "IsNextButtonPresent",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isNextButtonPresent;
         }
 
@@ -280,7 +280,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Attempt The Activity
             logger.LogMethodEntry("StudentPresentationPage", "AttemptPostTestActivity",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the window loads
@@ -330,7 +330,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "AttemptPostTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -342,7 +342,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Answer Choice
             logger.LogMethodEntry("StudentPresentationPage", "SelectPostTestAnswerChoice",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(string.Format(StudentPresentationPageResource
                .StudentPresentation_Page_AnswerChoice_RadioButton_XPath_Locator,
@@ -352,7 +352,7 @@ namespace Pegasus.Pages.UI_Pages
                .StudentPresentation_Page_AnswerChoice_RadioButton_XPath_Locator,
                startQuestionNumber));
             logger.LogMethodExit("StudentPresentationPage", "SelectPostTestAnswerChoice",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -362,7 +362,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Next Question Button
             logger.LogMethodEntry("StudentPresentationPage", "ClickNextQuestionButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait For Next Question Button
             base.WaitForElement(By.Id(StudentPresentationPageResource
                .StudentPresentation_Page_NextQuestion_Button_Id_Locator));
@@ -372,7 +372,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getNextQuestionButtonProperty);
             logger.LogMethodExit("StudentPresentationPage", "ClickNextQuestionButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -382,7 +382,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Submit Grade Button
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSubmitForGradingButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Submit For Grading Button
             base.WaitForElement(By.Id(StudentPresentationPageResource.
                 StudentPresentation_Page_SubmitForGrading_Button_Id_Locator));
@@ -393,7 +393,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getActivitySubmitButtonProperty);
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSubmitForGradingButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click on Submit For Grade Button.
@@ -402,12 +402,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Submit Grade Button
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSubmitForGradingButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Button Property
             IWebElement getActivitySubmitButtonProperty = base.GetWebElementPropertiesByPartialLinkText(StudentPresentationPageResource.StudentPresentation_Page_FINISHSubmitforGrading_Button);
             base.ClickByJavaScriptExecutor(getActivitySubmitButtonProperty);
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSubmitForGradingButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Attempt the Activity By Student in view all content tab
@@ -418,7 +418,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Attempt The Activity
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTheActivityInDigitalPath",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Initialize div section count to one
@@ -451,7 +451,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "AttemptTheActivityInDigitalPath",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -463,7 +463,7 @@ namespace Pegasus.Pages.UI_Pages
             //Attempt The Behavioral Mode Type Activity
             logger.LogMethodEntry("StudentPresentationPage", 
                 "AttemptTheBehavioralModeTypeActivity",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             { 
                 //Click the start button
@@ -485,7 +485,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
                 "AttemptTheBehavioralModeTypeActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -497,7 +497,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Attempt The Activity
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTheActivityInCourseMaterials",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Initialize div section count to one
@@ -531,7 +531,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "AttemptTheActivityInCourseMaterials",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -542,7 +542,7 @@ namespace Pegasus.Pages.UI_Pages
             string activityType)
         {
             logger.LogMethodEntry("StudentPresentationPage", "ClickStartButtonOnPresentationWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Switch on the basis of activity type
@@ -591,7 +591,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "ClickStartButtonOnPresentationWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -605,7 +605,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Answer Choice
             logger.LogMethodEntry("StudentPresentationPage", "SelectAnswersChoiceOfActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             // Selection on the basis of activity
             switch (activityType)
             {
@@ -630,7 +630,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("StudentPresentationPage", "SelectAnswersChoiceOfActivity",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -640,7 +640,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Submit The Activity
             logger.LogMethodEntry("StudentPresentationPage", "SubmitThePostTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait Till Non-Titled Pop Up Window Load Properly
@@ -665,7 +665,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "SubmitThePostTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -675,7 +675,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Finish Activity and Return To Course
             logger.LogMethodEntry("StudentPresentationPage", "FinishAndReturnToCourse",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click On Finish Button In Course Materials
@@ -699,7 +699,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "FinishAndReturnToCourse",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -709,7 +709,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Return to Course
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnReturnToCourseInMyitlab",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -728,7 +728,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "ClickOnReturnToCourseInMyitlab",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -738,7 +738,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Finish And Return To Course
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnFinishAndReturnToCourse",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click On Finish Button In Course Materials
@@ -765,7 +765,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "ClickOnFinishAndReturnToCourse",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -775,14 +775,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select 'Open Study Plan' Window
             logger.LogMethodEntry("StudentPresentationPage", "SelectOpenStudyPlanWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(StudentPresentationPageResource.
                 StudentPresentation_Page_OpenStudyPlan_Window_Name);
             //Select Window
             base.SelectWindow(StudentPresentationPageResource.
                 StudentPresentation_Page_OpenStudyPlan_Window_Name);
             logger.LogMethodExit("StudentPresentationPage", "SelectOpenStudyPlanWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -792,7 +792,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Finish Button In Course Materials
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnFinishButtonInCourseMaterials",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -810,7 +810,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "ClickOnFinishButtonInCourseMaterials",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -820,7 +820,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Submit The Activity
             logger.LogMethodEntry("StudentPresentationPage", "SubmitTheActivityHED",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click On Submit Grade Button
@@ -833,7 +833,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "SubmitTheActivityHED",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -843,7 +843,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Return To Course Button
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnReturnToCourseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -861,7 +861,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "ClickOnReturnToCourseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -871,7 +871,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Submit Grade Button
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSubmitGradeButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(StudentPresentationPageResource.
                 StudentPresentation_Page_MasterFinish_Button_Id_Locator));
@@ -891,7 +891,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getFinishButtonProperty);
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSubmitGradeButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -901,7 +901,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Pretest Window
             logger.LogMethodEntry("StudentPresentationPage", "SelectPretestWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(StudentPresentationPageResource.
@@ -915,7 +915,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "SelectPretestWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -925,7 +925,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Posttest Window
             logger.LogMethodEntry("StudentPresentationPage", "SelectPosttestWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(StudentPresentationPageResource.
@@ -939,7 +939,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "SelectPosttestWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -950,7 +950,7 @@ namespace Pegasus.Pages.UI_Pages
             //Submit The Activity In Course Materials Tab
             logger.LogMethodEntry("StudentPresentationPage",
                 "SubmitTheActivityInCourseMaterialsTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -983,7 +983,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
                 "SubmitTheActivityInCourseMaterialsTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -994,7 +994,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Web Activity Window
             logger.LogMethodEntry("StudentPresentationPage", "SelectWebActivityWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -1006,7 +1006,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "SelectWebActivityWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1018,7 +1018,7 @@ namespace Pegasus.Pages.UI_Pages
             //Is Displayed Try Again Btton In Submission Page
             logger.LogMethodEntry("StudentPresentationPage",
                 "IsDisplayedTryAgainBttonInSubmissionPage",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
             bool isTryAgainButtonDisplayed = false;
             try
@@ -1043,7 +1043,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
                   "IsDisplayedTryAgainBttonInSubmissionPage",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             return isTryAgainButtonDisplayed;
         }
 
@@ -1054,7 +1054,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("StudentPresentationPage",
                 "AttemptQuestionInPresentationPage",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate GUID For Answer Text
@@ -1079,7 +1079,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
                   "AttemptQuestionInPresentationPage",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1089,7 +1089,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the Finish button
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnFinishButton",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
             //Wait for finish button
             base.WaitForElement(By.XPath(StudentPresentationPageResource
                 .StudentPresentation_Page_Finish_Button_Xpath_Locator));
@@ -1101,7 +1101,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                     StudentPresentation_Page_Sleep_Value));
             logger.LogMethodExit("StudentPresentationPage", "ClickOnFinishButton",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1111,14 +1111,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("StudentPresentationPage", "SelectTestWindow",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(StudentPresentationPageResource.
                 StudentPresentation_Page_TestTypeActivity_WindowName_Title);
             //Select Window
             base.SelectWindow(StudentPresentationPageResource.
                 StudentPresentation_Page_TestTypeActivity_WindowName_Title);
             logger.LogMethodExit("StudentPresentationPage", "SelectTestWindow",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1128,7 +1128,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SubmitSIMActivity(String activityName)
         {
             logger.LogMethodEntry("StudentPresentationPage", "SubmitSIMActivity",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 if (!Playback.IsInitialized)
@@ -1156,7 +1156,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "SubmitSIMActivity",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1167,7 +1167,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Activity
             logger.LogMethodEntry("StudentPresentationPage", "SubmitSIMActivity",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
                     StudentPresentation_Page_Activity_Count_Xpath_Locator));
             //Get Activity Count
@@ -1192,7 +1192,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("StudentPresentationPage", "SubmitSIMActivity",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1238,7 +1238,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add File
             logger.LogMethodEntry("StudentPresentationPage", "AddFile",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             Keyboard.SendKeys(StudentPresentationPageResource.
                 StudentPresentation_Page_Add_File_Name);
             base.PressKey(StudentPresentationPageResource.
@@ -1250,7 +1250,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPresentation_Page_MessageWindow_Ok_Button_Xpath_Locator));
             logger.LogMethodExit("StudentPresentationPage", "AddFile",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1261,7 +1261,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Insert Tab And Select Insert Object Dropdown Option
             logger.LogMethodEntry("StudentPresentationPage",
                 "SelectInsertTabAndSelectInsertObjectDropdownOption",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             //Click on the Insert tab
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPresentation_Page_InsertTab_SIM_Player_Xpath_Locator));
@@ -1289,7 +1289,7 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPresentation_Page_Sleep_Value));
             logger.LogMethodExit("StudentPresentationPage",
                 "SelectInsertTabAndSelectInsertObjectDropdownOption",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1299,7 +1299,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Set Text Cursor Position
             logger.LogMethodEntry("StudentPresentationPage", "SetTextCursorPosition",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPresentation_Page_Sleep_Value));
             //Get the Cursor Position
@@ -1333,7 +1333,7 @@ namespace Pegasus.Pages.UI_Pages
                     StudentPresentation_Page_RightKey_Value);
             }
             logger.LogMethodExit("StudentPresentationPage", "SetTextCursorPosition",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1343,7 +1343,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window And Frame
             logger.LogMethodEntry("StudentPresentationPage", "SelectWindowAndFrame",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
@@ -1362,7 +1362,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }          
             logger.LogMethodExit("StudentPresentationPage", "SelectWindowAndFrame",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1373,7 +1373,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetActivityStatus(String activityName)
         {
             logger.LogMethodEntry("StudentPresentationPage",
-                 "GetActivityStatus", base.isTakeScreenShotDuringEntryExit);
+                 "GetActivityStatus", base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getSubmittedActivityStatus = string.Empty;
             try
@@ -1389,7 +1389,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage",
-                  "GetActivityStatus", base.isTakeScreenShotDuringEntryExit);
+                  "GetActivityStatus", base.IsTakeScreenShotDuringEntryExit);
             return getSubmittedActivityStatus;
         }
 
@@ -1402,7 +1402,7 @@ namespace Pegasus.Pages.UI_Pages
             //Submit Training Material SIM StudyPlan Activity
             logger.LogMethodEntry("StudentPresentationPage",
                 "SubmitTrainingMaterialSIMStudyPlanActivity",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 if (!Playback.IsInitialized)
@@ -1436,7 +1436,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
                 "SubmitTrainingMaterialSIMStudyPlanActivity",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1448,7 +1448,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select StudyPlan Traning Material Window
             logger.LogMethodEntry("StudentPresentationPage",
                 "SelectStudyPlanTraningMaterialWindow",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.WaitUntilWindowLoads(activityName + StudentPresentationPageResource.
                 StudentPresentation_Page_TraingMaterial_Window_Name + 
@@ -1460,7 +1460,7 @@ namespace Pegasus.Pages.UI_Pages
                StudentPresentation_Page_SimPresentation_Window_Name);   
             logger.LogMethodExit("StudentPresentationPage",
                 "SelectStudyPlanTraningMaterialWindow",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1470,7 +1470,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Training Material Button
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnTrainingMaterialButton",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPresentation_Page_TraingMaterial_Button_Xpath_Locator));
@@ -1480,7 +1480,7 @@ namespace Pegasus.Pages.UI_Pages
             //Clicck on the 'Training Material' button
             base.ClickByJavaScriptExecutor(getTrainingMaterial);
             logger.LogMethodExit("StudentPresentationPage", "ClickOnTrainingMaterialButton",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1490,7 +1490,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Fill The Answer In TextBox
             logger.LogMethodEntry("StudentPresentationPage","FillTheAnswerInTextBox",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPresentation_Page_FillText_TextBoxPosition_Value));
             //Fill the Answer
@@ -1526,7 +1526,7 @@ namespace Pegasus.Pages.UI_Pages
             base.PressKey(StudentPresentationPageResource.
                 StudentPresentation_Page_EnterKey_Value);            
             logger.LogMethodExit("StudentPresentationPage", "FillTheAnswerInTextBox",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1537,7 +1537,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On PreTest Activity Button
             logger.LogMethodEntry("StudentPresentationPage",
                 "ClickOnPreTestActivityButton",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Select MyItLab Window
             this.SelectMyItLabWindow();            
             //Wait for the elemenet
@@ -1552,7 +1552,7 @@ namespace Pegasus.Pages.UI_Pages
             this.ClickOnActivityAlertWindow();
             logger.LogMethodExit("StudentPresentationPage",
                 "ClickOnPreTestActivityButton",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1562,14 +1562,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Selec tMyItLab Window
             logger.LogMethodEntry("StudentPresentationPage", "SelectMyItLabWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Select the Pretest window
             base.WaitUntilWindowLoads(StudentPresentationPageResource.
                 StudentPresentation_Page_StudyPlan_Window_Name);
             base.SelectWindow(StudentPresentationPageResource.
                 StudentPresentation_Page_StudyPlan_Window_Name);
             logger.LogMethodExit("StudentPresentationPage", "SelectMyItLabWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1579,7 +1579,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Activity Alert Window
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnActivityAlertWindow",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             //Select the Pretest window
             base.WaitUntilWindowLoads(StudentPresentationPageResource.
                 StudentPresentation_Page_Activity_Alert_Window_Name);
@@ -1594,7 +1594,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on 'Continue' button
             base.ClickByJavaScriptExecutor(getContinueButton);
             logger.LogMethodExit("StudentPresentationPage", "ClickOnActivityAlertWindow",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1605,7 +1605,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Asset Submission Ok Button
             logger.LogMethodEntry("StudentPresentationPage",
                 "ClickTheAssetSubmissionOkButton",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_Ok_Button_MessageBox_Xpath_Locator));
@@ -1620,7 +1620,7 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPresentation_Page_Sleep_Value));
             logger.LogMethodExit("StudentPresentationPage",
                 "ClickTheAssetSubmissionOkButton",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1630,7 +1630,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click the submit button
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSubmitButton",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
@@ -1651,7 +1651,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSubmitButton",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1664,7 +1664,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Status Of Submitted Activity In CourseMaterial
             logger.LogMethodEntry("StudentPresentationPage",
                 "GetStatusOfSubmittedActivityInCourseMaterial",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             //Initialize getStatusText variable
             string getActivitySubmittedStatus = string.Empty;
             try
@@ -1685,7 +1685,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
                 "GetStatusOfSubmittedActivityInCourseMaterial",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             return getActivitySubmittedStatus;
         }
 
@@ -1698,7 +1698,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The SIMStudyplan Window
             logger.LogMethodEntry("StudentPresentationPage",
                 "SelectTheSIMStudyplanWindow",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
             //Select Window
            base.WaitUntilWindowLoads(activityName + StudentPresentationPageResource.
               StudentPresentation_Page_SimPresentation_Window_Name);
@@ -1706,7 +1706,7 @@ namespace Pegasus.Pages.UI_Pages
               StudentPresentation_Page_SimPresentation_Window_Name);
             logger.LogMethodExit("StudentPresentationPage", 
                 "SelectTheSIMStudyplanWindow",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }       
 
         /// <summary>
@@ -1717,7 +1717,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click StudyPlan Cancel Button
             logger.LogMethodEntry("StudentPresentationPage",
                 "ClickStudyPlanCancelButton",
-                         base.isTakeScreenShotDuringEntryExit);
+                         base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPresentation_Page_FillText_TextBoxPosition_Value));
             //Wait for the element
@@ -1732,7 +1732,7 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPresentation_Page_FillText_TextBoxPosition_Value));
             logger.LogMethodExit("StudentPresentationPage",
                 "ClickStudyPlanCancelButton",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1744,7 +1744,7 @@ namespace Pegasus.Pages.UI_Pages
             //Submit SIM StudyPlan PreTest Activity
             logger.LogMethodEntry("StudentPresentationPage",
                 "SubmitSIMStudyPlanPreTestActivity",
-                         base.isTakeScreenShotDuringEntryExit);
+                         base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 if (!Playback.IsInitialized)
@@ -1781,7 +1781,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
                 "SubmitSIMStudyPlanPreTestActivity",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1793,7 +1793,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get The Activity Name In CourseMaterial
             logger.LogMethodEntry("StudentPresentationPage",
                 "GetTheActivityNameInCourseMaterial",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
              //Initialize VariableVariable
             int activityColumnNumber = Convert.ToInt32(StudentPresentationPageResource.
                 StudentPresentation_Page_Loop_Initializer_Value); 
@@ -1820,7 +1820,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
                 "GetTheActivityNameInCourseMaterial",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             return activityColumnNumber;
         }
 
@@ -1833,7 +1833,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Activity Name In CourseMaterial Tab
             logger.LogMethodEntry("StudentPresentationPage",
                 "SelectActivityNameInCourseMaterialTab",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get The Activity Name In CourseMaterial
@@ -1853,7 +1853,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage",
                 "SelectActivityNameInCourseMaterialTab",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1865,7 +1865,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Entry
             logger.LogMethodEntry("StudentPresentationPage",
                 "SubmitSIMStudyPlanPreTestActivityByStudent",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 if (!Playback.IsInitialized)
@@ -1892,7 +1892,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger Exit
             logger.LogMethodExit("StudentPresentationPage",
                 "SubmitSIMStudyPlanPreTestActivityByStudent",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1902,7 +1902,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Save For Later
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSaveForLater",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -1933,7 +1933,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSaveForLater",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1943,7 +1943,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On FeedBack Icon
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnFeedbackIcon",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Element
@@ -1959,7 +1959,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "ClickOnFeedbackIcon",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             
         }
 
@@ -1971,7 +1971,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Feedback Text
             logger.LogMethodEntry("StudentPresentationPage", "getFeedBackText",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getFeedbackText = string.Empty;            
             try
@@ -1990,7 +1990,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }        
             logger.LogMethodExit("StudentPresentationPage", "getFeedBackText",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             return getFeedbackText;
         }
 
@@ -2003,7 +2003,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify Feedback Text Present in Presentation Page
             logger.LogMethodEntry("StudentPresentationPage", "IsFeedbackTextPresent",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isFeedbackTextPresent = false;
             string getFeedbackText = string.Empty;
@@ -2025,7 +2025,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "IsFeedbackTextPresent",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             return isFeedbackTextPresent;
         }
 
@@ -2037,7 +2037,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Attempt The Gradable Asset
             logger.LogMethodEntry("StudentPresentationPage","AttemptTheGradableAsset",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click the start button
@@ -2057,7 +2057,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage","AttemptTheGradableAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -2067,7 +2067,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Essay Question Submission
             logger.LogMethodEntry("StudentPresentationPage", "EssayQuestionSubmission",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click the Start button
@@ -2082,7 +2082,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "EssayQuestionSubmission",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -2093,7 +2093,7 @@ namespace Pegasus.Pages.UI_Pages
             //Attempt Essay Question Submission
             logger.LogMethodEntry("StudentPresentationPage", 
                 "AttemptTheEssayQuestionSubmission",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.SwitchToLastOpenedWindow();
             //Select the window
             this.SelectWebActivityWindow("Quiz");
@@ -2106,7 +2106,7 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPrsentation_Page_Essay_Text);
             logger.LogMethodExit("StudentPresentationPage", 
                 "AttemptTheEssayQuestionSubmission",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -2116,7 +2116,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Submit The Activity In Course Material
             logger.LogMethodEntry("StudentPresentationPage", "SubmitTheActivityInCourseMaterial",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Submit Activity
@@ -2132,7 +2132,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "SubmitTheActivityInCourseMaterial",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -2142,7 +2142,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Submit Activity
             logger.LogMethodEntry("StudentPresentationPage", "SubmitActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {                
                 //Attempt The Activity In StudentSide
@@ -2153,7 +2153,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "SubmitActivity",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -2163,7 +2163,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Last Opened Window
             logger.LogMethodEntry("StudentPresentationPage", "SelectLastOpenedWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.SwitchToLastOpenedWindow();
@@ -2178,7 +2178,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "SelectLastOpenedWindow",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -2188,7 +2188,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Attempt The Activity In StudentSide
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTheActivityInStudentSide",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Declare the obejects
@@ -2217,7 +2217,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "AttemptTheActivityInStudentSide",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// verify Window Switching, which is a confirmation that activity is open in normal Browser mode
@@ -2225,7 +2225,7 @@ namespace Pegasus.Pages.UI_Pages
         public void verifyWindowSwitching()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTheActivityInStudentSide",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Thread.Sleep(15000);//Need to replace with appropriate Wait method in framework                
@@ -2245,7 +2245,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "AttemptTheActivityInStudentSide",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -2288,7 +2288,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Opens Activity Presentation Window
             logger.LogMethodEntry("StudentPresentationPage", "AttemptActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -2313,7 +2313,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "AttemptActivity",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -2340,7 +2340,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Opens Activity Presentation Window
             logger.LogMethodEntry("StudentPresentationPage", "AttemptActivityForSaveforlater",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -2362,7 +2362,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "AttemptActivityForSaveforlater",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -2372,7 +2372,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Submit Grade Button
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSubmitForSaveforlater",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Submit For Grading Button
             base.WaitForElement(By.Id(StudentPresentationPageResource.
                 StudentPresentation_Page_SubmitForSaveforlater_Button_Id_Locator));
@@ -2383,7 +2383,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getActivitySubmitButtonProperty);
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSubmitForGradingButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Get the assetid from the current url.
@@ -2392,7 +2392,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetAssetIdFromUrl()
         {
             logger.LogMethodEntry("StudentPresentationPage", "GetAssetIdFromUrl",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
          // Switch Window
             base.SwitchToLastOpenedWindow();
          // Wait for window
@@ -2403,7 +2403,7 @@ namespace Pegasus.Pages.UI_Pages
             // Get the assetId
             string assetId = strURL.Substring(searchIndex, strURL.IndexOf('&', searchIndex) - searchIndex);
             logger.LogMethodExit("StudentPresentationPage", "GetAssetIdFromUrl",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return assetId;
         }
 
@@ -2415,7 +2415,7 @@ namespace Pegasus.Pages.UI_Pages
             //Selects options/answers in Test window to complete submission
             logger.LogMethodEntry("StudentPresentationPage",
                 "AnswersSelectionInTestWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_QuestionCount_Presentation_Xpath_Locator));
             //Get Number of count from the Div
@@ -2442,7 +2442,7 @@ namespace Pegasus.Pages.UI_Pages
                 
            logger.LogMethodExit("StudentPresentationPage",
                 "AnswersSelectionInTestWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
 

@@ -32,11 +32,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Open the Activity Presentation Window
             Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivity"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             // Open Activity Window 
             new CoursePreviewMainUXPage().OpenActivity();
             Logger.LogMethodExit("ActivitySubmission", "OpenTheActivity"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Launching of Activity Presentation Window
             Logger.LogMethodEntry("ActivitySubmission",
                 "ActivitySuccessfullyLaunched"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Assert Launch Activity Window
             Logger.LogAssertion("VerifyActivityLaunched",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -56,7 +56,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     IsActivityPresentationPageOpened()));
             Logger.LogMethodExit("ActivitySubmission",
                 "ActivitySuccessfullyLaunched"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,12 +68,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Launching of Activity Presentation Window
             Logger.LogMethodEntry("ActivitySubmission",
                 "AttemptTheActivity"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             // Attempt Activity 
             new StudentPresentationPage().AttemptActivity();
             Logger.LogMethodExit("ActivitySubmission",
                 "AttemptTheActivity"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Submit the Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyActivitySubmission"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Assert Activity is submitted successfully
             Logger.LogAssertion("VerifyActivityIsSubmitted",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -93,7 +93,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     IsPostTestActivitySubmittedSuccessfully()));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifyActivitySubmission"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Correct Page Opened
             Logger.LogMethodEntry("ActivitySubmission",
                 "ActivityExtraPracticePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert we have correct page opened
             Logger.LogAssertion("VerifyExtraPracticePageTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -113,7 +113,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     IsActivityPresentationPageOpened()));
             Logger.LogMethodExit("ActivitySubmission",
                 "ActivityExtraPracticePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -125,12 +125,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Navigate inside activity folder on gradebook page
             Logger.LogMethodEntry("ActivitySubmission",
                 "NavigateInsideActivityInGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Navigated inside the activity
             new GBLeftNavigationUXPage().NavigateToActivityFolder();
             Logger.LogMethodExit("ActivitySubmission",
                 "NavigateInsideActivityInGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify grades are displayed
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyGradesOfSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert grades have been found for submitted activity
             decimal submittedGradeValue = new GBStudentUXPage().
                 GetGradeDisplayedForActivity();
@@ -158,7 +158,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     ActivitySubmision_SubmittedActivity_GradeValue));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifyGradesOfSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Open The Manually Gradable Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "OpenTheManuallyGradableActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Open The Manually Gradable Activity
             new CoursePreviewMainUXPage().LaunchTheActivityHED();
             //Attempt Essay Activity
@@ -179,7 +179,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 ActivitySubmision_EssayQuestion_Answer_Text_Value);
             Logger.LogMethodExit("ActivitySubmission",
                 "OpenTheManuallyGradableActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Submit the Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "SubmitTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Declaration of object
             StudentPresentationPage studentPresentationPage =
                 new StudentPresentationPage();
@@ -206,7 +206,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             new InstructionsPage().ClickTestCloseButton();
             Logger.LogMethodExit("ActivitySubmission",
                 "SubmitTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -218,7 +218,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Submit The Activity In Course Material
             Logger.LogMethodEntry("ActivitySubmission",
                 "SubmitTheActivityInCourseMaterial"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Declaration of object
             StudentPresentationPage studentPresentationPage =
                 new StudentPresentationPage();
@@ -229,7 +229,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             new StudentPresentationPage().SubmitTheActivityInCourseMaterial();            
             Logger.LogMethodExit("ActivitySubmission",
                 "SubmitTheActivityInCourseMaterial"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify the Status Of Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyStatusOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(Activity.ActivityTypeEnum.Quiz);
             //Assert the Activity Status
             Logger.LogAssertion("VerifyStatusOfActivity",
@@ -251,7 +251,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     GetStatusOfActivity(activity.Name)));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifyStatusOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -263,12 +263,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Navigate Inside the Folder
             Logger.LogMethodEntry("ActivitySubmission",
                 "NavigateInsideTheFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside the Folder
             new GBLeftNavigationUXPage().NavigateInsideFolderHED();
             Logger.LogMethodExit("ActivitySubmission",
                 "NavigateInsideTheFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -280,7 +280,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify the Score of Manually Graded Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyGradesForManuallyGradedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify Score of Manually Graded Activity
             Logger.LogAssertion("VerifyGradesForManuallyGradedActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -291,7 +291,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     ActivitySubmision_ManuallyGradable_Activity_Name)));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifyGradesForManuallyGradedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -304,14 +304,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify the Edited Grade in ViewSubmission Page
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyTheEditedGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Edited Grade in ViewSubmission Page
             Logger.LogAssertion("VerifyGradeinViewSubmission", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(editedGrade,
                     new ViewSubmissionPage().GetGradefromViewSubmissionPage()));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifyTheEditedGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -322,11 +322,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Open Activity In Course Materials Tab
             Logger.LogMethodEntry("ActivitySubmission", "OpenActivityInCourseMaterialsTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Open Activity In Course Materials
             new CoursePreviewMainUXPage().OpenActivityInCourseMaterials();
             Logger.LogMethodExit("ActivitySubmission", "OpenActivityInCourseMaterialsTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -338,7 +338,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Start pre test
             Logger.LogMethodEntry("ActivitySubmission", "StartPreTest",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             StudentPresentationPage studentpresentationpage =
                 new StudentPresentationPage();
@@ -353,7 +353,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Finish and return to course selection
             studentpresentationpage.ClickOnFinishAndReturnToCourse();
             Logger.LogMethodExit("ActivitySubmission", "StartPreTest",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -365,7 +365,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Submit the Activity
             Logger.LogMethodEntry("ActivitySubmission", "SubmitThepostActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             StudentPresentationPage studentpresentationpage =
                 new StudentPresentationPage();
@@ -380,7 +380,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Click on return to course button
             new DRTDefaultUXPage().ClickReturnToCourseButton();
             Logger.LogMethodEntry("ActivitySubmission", "SubmitThepostActivity",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Status Of Assets In Course Materials
             Logger.LogMethodEntry("ActivityStatus",
                 "StatusOfAssetsInCourseMaterials",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Activity Status
             Logger.LogAssertion("VerifyStatusOfActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -402,7 +402,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     GetStatusOfActivityInCourseMaterialsTab(assetName)));
             Logger.LogMethodExit("ActivityStatus",
                 "StatusOfAssetsInCourseMaterials",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -417,7 +417,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify The Activity In Course Materials Tab
             Logger.LogMethodEntry("ActivitySubmission", "ClickOnActivityInCourseMaterials",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch Avtivity From Memory
             Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModesEnum);
             //Click On Activity In CourseMaterials
@@ -425,7 +425,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Click On Continue in Activity Alert Popup
             new ShowMessagePage().ClickContinueInActivityAlert();
             Logger.LogMethodExit("ActivitySubmission", "ClickOnActivityInCourseMaterials",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -437,14 +437,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Submit The Activity
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             StudentPresentationPage studentPresentationPage = new StudentPresentationPage();
             //Click Start Button On Presentation Window
             studentPresentationPage.ClickStartButtonOnPresentationWindow(activityType);
             //Attempt Question In Presentation Page
             studentPresentationPage.AttemptQuestionInPresentationPage();            
             Logger.LogMethodExit("ActivitySubmission", "SubmitTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -456,12 +456,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Open The Activity As Student
             Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivityForSubmission",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Switch to default window after closing of presentation pop up            
             //Launch The Activity
             new CoursePreviewMainUXPage().OpenActivity(activityTypeEnum);
             Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityForSubmission",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
         }
 
         /// <summary>

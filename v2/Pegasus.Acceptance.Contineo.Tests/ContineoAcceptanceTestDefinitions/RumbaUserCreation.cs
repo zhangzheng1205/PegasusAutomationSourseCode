@@ -38,12 +38,12 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Create User As Radmin
             Logger.LogMethodEntry("RumbaUserCreation", "CreateUserByRadmin",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Create a User
             new CreateUserPage().CreateNewUser(userTypeEnum, organizationLevelEnum,
                 organizationTypeEnum);
             Logger.LogMethodExit("RumbaUserCreation", "CreateUserByRadmin",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,11 +55,11 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Search the User
             Logger.LogMethodEntry("RumbaUserCreation", "SearchTheUser",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Search the User
             new CreateUserPage().SearchTheUser(userTypeEnum);
             Logger.LogMethodExit("RumbaUserCreation", "SearchTheUser",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Verify the User
             Logger.LogMethodEntry("RumbaUserCreation", "VerifyTheCreatedUser",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.RumbaTeacher:
@@ -90,7 +90,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                     break;
             }
             Logger.LogMethodExit("RumbaUserCreation", "VerifyTheCreatedUser",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -102,11 +102,11 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //save the User ID
             Logger.LogMethodEntry("RumbaUserCreation", "SaveTheOwnerID",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             // save the User ID
             new CreateUserPage().StoreRumbaOwnerIdInMemory(userTypeEnum);
             Logger.LogMethodExit("RumbaUserCreation", "SaveTheOwnerID",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Verify the UserName in Manage Frame
             Logger.LogMethodEntry("RumbaUserCreation", "VerifyTheCreatedUserInManageFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.RumbaTeacher:
@@ -140,7 +140,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                     break;
             }
             Logger.LogMethodExit("RumbaUserCreation", "VerifyTheCreatedUserInManageFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>

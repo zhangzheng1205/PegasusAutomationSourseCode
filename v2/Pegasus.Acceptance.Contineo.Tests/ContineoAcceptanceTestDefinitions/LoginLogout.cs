@@ -45,7 +45,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Browse Login Url
             Logger.LogMethodEntry("LoginLogout", "BrowsePegasusLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Default Window
             base.SelectDefaultWindow();
             //Login  the type of the user
@@ -64,7 +64,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 loginPage.GoToLoginUrl();
             }
             Logger.LogMethodExit("LoginLogout", "BrowsePegasusLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
 
             //Login in Pegasus
             Logger.LogMethodEntry("LoginLogout", "LoginToThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Boolean isUserAlreadyLoggedIn = base.IsElementPresent
                 (By.PartialLinkText(LoginLogoutResource.
                 LoginLogout_Signout_Link_Title_Locator),
@@ -155,7 +155,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 }
             }
             Logger.LogMethodExit("LoginLogout", "LoginToThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -167,14 +167,14 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //To Check Login Success
             Logger.LogMethodEntry("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert User Has Logged In Successfully
             Logger.LogAssertion("VerifyLoginSuccess",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
                     Assert.AreNotEqual(LoginLogoutResource.
                     LoginLogout_Window_Name_Title, loginPage.GetPageTitle()));
             Logger.LogMethodExit("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Method to Clicks on SignOut link
             Logger.LogMethodEntry("LoginLogout", "SignOutFromThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             HomePage homePage = new HomePage();
             switch (userTypeEnum)
@@ -216,7 +216,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                     break;
             }
             Logger.LogMethodExit("LoginLogout", "SignOutFromThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -227,11 +227,11 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Method to Clicks on SignOut link
             Logger.LogMethodEntry("LoginLogout", "SignoutFromThePegasusAsDpUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click Sign out link 
             new HomePage().DigitalPathCsUserLogout();
             Logger.LogMethodExit("LoginLogout", "SignoutFromThePegasusAsDpUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Method to verify Required Contineo parameters in RUL page URL.
@@ -244,7 +244,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Log method entry
             Logger.LogMethodEntry("LoginLogout", "VerifyRequiredParametersInRULUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Intialized expected object in order to assert
             Dictionary<String, String> expectedObj=new Dictionary<string,string>();
             expectedObj.Add(LoginLogoutResource.Contineo_ProfileKey,
@@ -258,7 +258,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                      new SignInPage().GetRequiredParametersForRUL(profileKey, k12IntKey)));
             // Log method exit
             Logger.LogMethodExit("LoginLogout", "VerifyRequiredParametersInRULUrl",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Method to click on Sign In Button on RUL sign out page.
@@ -270,12 +270,12 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             // Log Method entry
             Logger.LogMethodEntry("LoginLogout", "ClickOnSignInOnRumbaPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Redirect to login page
             new SignInPage().RedirectToRULPage(buttonClass);
            // Log method exit
             Logger.LogMethodExit("LoginLogout", "VerifyRequiredParametersInRULUrl",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

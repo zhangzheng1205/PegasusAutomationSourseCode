@@ -37,7 +37,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetSearchedTemplate()
         {
             logger.LogMethodEntry("FrmManageTemplatePage", "GetSearchedTemplate",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialized the variable
             string getTemplateName = string.Empty;
             try
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("FrmManageTemplatePage", "GetSearchedTemplate",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             return getTemplateName;
         }
 
@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Validate Template From Assigned To Copy State
             logger.LogMethodEntry("FrmManageTemplatePage", "ApproveAssignedToCopyState",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Stopwatch stopWatch = new Stopwatch();
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("FrmManageTemplatePage", "ApproveAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Assigned To Copy Text If Present
             logger.LogMethodEntry("FrmManageTemplatePage", "GetAssignedToCopyStateText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialized null 
             IWebElement getAssignedToCopyText = null;
             try
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("FrmManageTemplatePage", "GetAssignedToCopyStateText",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             return getAssignedToCopyText.ToString();
         }
     }

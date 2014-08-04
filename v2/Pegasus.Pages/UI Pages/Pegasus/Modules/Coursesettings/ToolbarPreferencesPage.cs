@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Assignment Calendar Display as Main Tab Link
             logger.LogMethodEntry("ToolbarPreferencesPage",
                 "ClickOnAssignmentCalendarDisplayLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window and Frame
@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ToolbarPreferencesPage",
                 "ClickOnAssignmentCalendarDisplayLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Assignment Calendar Display Link
             logger.LogMethodEntry("ToolbarPreferencesPage",
                 "ClickOnTheAssignmentCalendarDisplayLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {               
                 base.WaitForElement(By.XPath(ToolbarPreferencesPageResource.
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ToolbarPreferencesPage",
                 "ClickOnTheAssignmentCalendarDisplayLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify Tab Display as Main Tab
             logger.LogMethodEntry("ToolbarPreferencesPage",
                  "IsTabDisplayAsMainTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isTabPresent = false;
             string getTabsName = string.Empty;
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ToolbarPreferencesPage",
                 "IsTabDisplayAsMainTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isTabPresent;
         }
 
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
             //Set Calendar CheckBox Preference
             logger.LogMethodEntry("ToolbarPreferencesPage",
                 "SetCalendarCheckBoxPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Assignment Calendar Display Link Property
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ToolbarPreferencesPage",
                 "SetCalendarCheckBoxPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select CourseTool Tab Preference CheckBox
             logger.LogMethodEntry("ToolbarPreferencesPage",
                 "SelectCourseToolTabPreferenceCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 if (base.IsElementPresent(By.Id(selectorId), 5))
@@ -173,7 +173,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ToolbarPreferencesPage",
                 "SelectCourseToolTabPreferenceCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

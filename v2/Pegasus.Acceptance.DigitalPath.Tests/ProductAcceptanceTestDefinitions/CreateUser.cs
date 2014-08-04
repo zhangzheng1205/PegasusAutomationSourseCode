@@ -36,11 +36,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Create Users by Type in Pegasus
             Logger.LogMethodEntry("CreateUser", "CreateNewUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create New User 
             new NewUserPage().CreateNewUserInWorkSpace(userTypeEnum);
             Logger.LogMethodExit("CreateUser", "CreateNewUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,13 +52,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("CreateUser", "SearchWsUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get User Name from Memory
             User user = User.Get(userTypeEnum);
             // Search User in the Manage Users frame
             new AdminToolPage().UserSearch(user.Name);
             Logger.LogMethodExit("CreateUser", "SearchWsUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Checks the display of correct User
             Logger.LogMethodEntry("CreateUser", "ShowUserInManageUsersFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get User From Memory
             User user = User.Get(userTypeEnum);
             //Verify Username
@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 () => Assert.AreEqual(user.Name,
                     new ManageUsersPage().GetSearchedUserName()));
             Logger.LogMethodExit("CreateUser", "ShowUserInManageUsersFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -91,12 +91,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Clicks on the sub Tab
             Logger.LogMethodEntry("CreateUser", "NavigateToSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigates to the sub tab
             new ManageUserPage().NavigateToSubTab((ManageUserPage.CreateUserTab)Enum.
                 Parse(typeof(ManageUserPage.CreateUserTab), tabName));
             Logger.LogMethodExit("CreateUser", "NavigateToSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select the User Option
             Logger.LogMethodEntry("CreateUser", "SelectUserOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Add/Create Users link
             new ManageUserPage().ClickOnAddCreateUsersLink((
                 ManageUserPage.CreateUserTab)Enum.
@@ -118,7 +118,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Select the userType
             new ManageUserPage().SelectUserType(userTypeEnum);
             Logger.LogMethodExit("CreateUser", "SelectUserOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,11 +130,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Create User in Coursespace
             Logger.LogMethodEntry("CreateUser", "CreateNewUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Cs User
             new AddUserPage().CreateNewUser(userTypeEnum);
             Logger.LogMethodExit("CreateUser", "CreateNewUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -148,13 +148,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Search the User
             Logger.LogMethodEntry("CreateUser", "SearchUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Search User
             new ManageUserPage().SearchUserInCourseSpace(userTypeEnum,
                 (ManageUserPage.CreateUserTab)Enum.
                 Parse(typeof(ManageUserPage.CreateUserTab), tabName));
             Logger.LogMethodExit("CreateUser", "SearchUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the Searched User
             Logger.LogMethodEntry("CreateUser", "DisplayOfUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the User From Memory
             User user = User.Get(userTypeEnum);
             //Verify the Searched User
@@ -178,7 +178,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     ((ManageUserPage.CreateUserTab)Enum.
                     Parse(typeof(ManageUserPage.CreateUserTab), tabName))));
             Logger.LogMethodExit("CreateUser", "DisplayOfUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Bulk User Upload in Users Tab
             Logger.LogMethodEntry("CreateUser", "BulkUserUploadInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Delete the Older Uploaded Files
             new BulkUploadQueuePage().DeleteOlderUploadedFiles();
             //Click on the Add Users link
@@ -200,7 +200,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Upload the Users 
             new ManageUserPage().BulkUserUpload();
             Logger.LogMethodExit("CreateUser", "BulkUserUploadInCourseSpace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -212,13 +212,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Successfull Message For Upload Users
             Logger.LogMethodEntry("CreateUser", "SuccessfullMessageForUploadUsers",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify the Successfull Message
             Logger.LogAssertion("VerifySuccessfullMessageAfterBulkRegistration",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(successMessage,
                     new ManageUserPage().GetSuccessfullMessageAfterBulkRegistration()));
             Logger.LogMethodExit("CreateUser", "SuccessfullMessageForUploadUsers",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -230,11 +230,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Clicks On The User Cmenu Link
             Logger.LogMethodEntry("CreateUser", "ClickOnTheUserCmenuLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Clicks On The User Cmenu Link
             new ManageUsersPage().ClickOnUserCmenuLinkIcon();
             Logger.LogMethodExit("CreateUser", "ClickOnTheUserCmenuLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -245,14 +245,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the Display of User CMenu Options
             Logger.LogMethodEntry("CreateUser", "DisplayOfUserCMenuOptions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify the Display of User CMenu Options
             Logger.LogAssertion("VerifyDisplayOfUserCMenuOptions",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(
                    CreateUserResource.CreateUserPage_ContextMenuOptions_Value,
                     new ManageUsersPage().GetCMenuOptionsOfUser()));
             Logger.LogMethodExit("CreateUser", "DisplayOfUserCMenuOptions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -265,11 +265,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Selec the Cmenu Option of User
             Logger.LogMethodEntry("CreateUser", "SelectTheCmenuOptionofUser",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Cmenu Option
             new ManageUsersPage().SelectCmenuOption(cmenuOption);
             Logger.LogMethodExit("CreateUser", "SelectTheCmenuOptionofUser",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -282,7 +282,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the Information of the User
             Logger.LogMethodEntry("CreateUser", "VerifyTheInformationOfUser",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Get the User From Memory
             User user = User.Get(userTypeEnum);
             //Verify the Display of User Information            
@@ -296,7 +296,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     user.Name,
                     new UserInformationPage().GetUserName()));
             Logger.LogMethodExit("CreateUser", "VerifyTheInformationOfUser",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -309,13 +309,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Search the User Created In Administrators Tab
             Logger.LogMethodEntry("CreateUser", "SearchTheCreatedUserInAdministratorsTab",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Get the User From Memory
             User user = User.Get(userTypeEnum);
             //Search the User Created In Administrators Tab
             new AdminToolPage().SearchUserInAdministratorsPage(user.Name);
             Logger.LogMethodExit("CreateUser", "SearchTheCreatedUserInAdministratorsTab",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -329,7 +329,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Checks the display of correct User
             Logger.LogMethodEntry("CreateUser", "VerifyTheUserInAdministratorsTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the User From Memory
             User user = User.Get(userTypeEnum);
             //Verify Username
@@ -337,7 +337,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 () => Assert.AreEqual(user.Name
                     , new ManageUsersPage().GetSearchedUserName()));
             Logger.LogMethodExit("CreateUser", "VerifyTheUserInAdministratorsTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -350,7 +350,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Checks the display unroll option in Cmenu
             Logger.LogMethodEntry("CreateUser", "ClickCmenuOfPromotedAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get User Name from Memory
             User user = User.Get(userTypeEnum);
             // Calling instance of Admin Enrollment Class
@@ -359,7 +359,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             // Click Cmenu image
             adminEnrollment.ClickCmenuImage(user.LastName);
             Logger.LogMethodExit("CreateUser", "ClickCmenuOfPromotedAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -372,14 +372,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Cmenu option "Unenroll" for admin
             Logger.LogMethodEntry("CreateUser", "VerifyCmenuOptionForPromotedAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify Unenroll Cmenu option
             Logger.LogAssertion("VerifyCmenuOption", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(getOptionName, new AdminEnrollment()
                     .GetCmenuOptionForWorkspaceAdmin()
                     ));
             Logger.LogMethodExit("CreateUser", "VerifyCmenuOptionForPromotedAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select The Class Cmenu Option
             Logger.LogMethodEntry("CreateUser", "SelectTheClassCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Class Name from Memory
             Class className = Class.Get(classTypeEnum);
             ManageClassManagementPage manageClassManagement =
@@ -404,7 +404,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Click on the cmenu option            
             manageClassManagement.SelectTheCMenuOption(cMenuOptionName);
             Logger.LogMethodExit("CreateUser", "SelectTheClassCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -415,7 +415,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Display Of 'Manage Students' Page
             Logger.LogMethodEntry("CreateUser", "DisplayOfManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify Display Of 'Manage Students' Page
             Logger.LogAssertion("VerifyDisplayOfManageStudentsPage",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -423,7 +423,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     CreateUserPage_ManageStudents_Window_Title,
                     new ManageStudentsDefaultPage().GetManageStudentsPage()));
             Logger.LogMethodExit("CreateUser", "DisplayOfManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -435,12 +435,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Delete Older Uploaded Files In 'Manage Students' Page
             Logger.LogMethodEntry("CreateUser",
                 "DeleteOlderUploadedFilesInManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Delete the Older Files
             new ManageStudentsDefaultPage().DeleteTheOlderUploadedFiles();
             Logger.LogMethodExit("CreateUser",
                 "DeleteOlderUploadedFilesInManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -454,13 +454,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Select the Option From The 'Create New' Drop Down Options
             Logger.LogMethodEntry("CreateUser",
                 "SelectOptionFromTheCreateNewDropDownOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Option From The 'Create New' Drop Down Options
             new ManageStudentsDefaultPage().
                 SelectTheOptionFromCreateNewDropDown(dropDownOption);
             Logger.LogMethodExit("CreateUser",
                 "SelectOptionFromTheCreateNewDropDownOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -471,11 +471,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Import A Bulk Users File
             Logger.LogMethodEntry("CreateUser", "ImportABulkUsersFile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Import the Users File
             new ManageStudentsDefaultPage().ImportUsers();
             Logger.LogMethodExit("CreateUser", "ImportABulkUsersFile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -489,14 +489,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Display of Successfull Message For Bulk Registration In 'Manage Students' Window
             Logger.LogMethodEntry("CreateUser",
                 "DisplaySuccessfullMessageForBulkRegistrationInManageStudentsWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify of Successfull Message For Bulk Registration In 'Manage Students' Window            
             Logger.LogAssertion("VerifySuccessfullMessageAfterBulkRegistration",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(successfullMessage,
                     new ManageStudentsDefaultPage().GetSuccessfullMessageAfterBulkRegistration()));
             Logger.LogMethodExit("CreateUser",
                 "DisplaySuccessfullMessageForBulkRegistrationInManageStudentsWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -507,11 +507,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Enter In To Organization Level In Admin HomePage
             Logger.LogMethodEntry("CreateUser", "EnterInToOrganizationLevelInAdminHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter In To Organization Level In Admin HomePage
             new AdminHomePage().EnterInToOrganizationLevelInAdminHomePage();
             Logger.LogMethodExit("CreateUser", "EnterInToOrganizationLevelInAdminHomePage",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -525,14 +525,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select the User Option
             Logger.LogMethodEntry("CreateUser", "SelectTheOptionInManageStudentPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Add/Create Users link
             new ManageUserPage().ClickOnAddCreateUsersLink((ManageUserPage.CreateUserTab)Enum.
                 Parse(typeof(ManageUserPage.CreateUserTab), tabName));
             //Select the userType in Manage Student page
             new ManageUserPage().SelectUserTypeInManageStudentPage(userTypeEnum);
             Logger.LogMethodExit("CreateUser", "SelectTheOptionInManageStudentPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -545,13 +545,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify The Successfull Message In Manage Students Page
             Logger.LogMethodEntry("CreateUser", "VerifyTheSuccessfullMessageInManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Display of Success Message            
             Logger.LogAssertion("VerifySuccessfullMessage",
                ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.AreEqual(successMessage, new GBRosterGridUXPage().GetSuccessMessage()));
             Logger.LogMethodExit("CreateUser", "VerifyTheSuccessfullMessageInManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -562,11 +562,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click The User Cmenu Option In Manage User Frame
             Logger.LogMethodEntry("CreateUser", "ClickTheUserCmenuOptionInManageUserFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Delete The Created User In Manage User Frame
             new ManageUsersPage().DeleteTheCreatedUserInManageUserFrame();
             Logger.LogMethodExit("CreateUser", "ClickTheUserCmenuOptionInManageUserFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 

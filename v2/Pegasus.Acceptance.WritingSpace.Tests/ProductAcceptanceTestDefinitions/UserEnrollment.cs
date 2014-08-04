@@ -31,13 +31,13 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment", "EnrollWSInstructorInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch course name from memory
             Course course = Course.Get(courseTypeEnum);
             //Selection of course in right frame
             new ManageCoursesPage().SelectCourse(course.Name);
             Logger.LogMethodExit("UserEnrollment", "EnrollWSInstructorInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment", "SelectWSUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch user name from memory
             User user = User.Get(userTypeEnum);
             // User search in left frame
@@ -58,7 +58,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Select user
             new ManageUsersPage().SelectUser(user.Name);
             Logger.LogMethodExit("UserEnrollment", "SelectWSUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,12 +72,12 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment",
                 "EnrollTheUserAsTeacherInTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enroll user to the course
             new AdminToolPage().EnrollUserInCourse(userTypeEnum);
             Logger.LogMethodExit("UserEnrollment",
                 "EnrollTheUserAsTeacherInTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

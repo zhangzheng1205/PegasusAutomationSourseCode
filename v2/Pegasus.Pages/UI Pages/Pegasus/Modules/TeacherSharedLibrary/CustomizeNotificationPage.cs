@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
             //Close the Customized Item Saved Window
             logger.LogMethodEntry("CustomizeNotificationPage", 
                 "CloseCustomizedItemSavedWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 if (IsPopupPresent(CustomizeNotificationPageResource.
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodEntry("CustomizeNotificationPage", 
                 "CloseCustomizedItemSavedWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

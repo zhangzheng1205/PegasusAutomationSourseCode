@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the'Create New Organization' link
             logger.LogMethodEntry("OrganizationManagementPage",
                 "ClickOnTheCreateNewOrganizationLink",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the frame
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("OrganizationManagementPage",
                 "ClickOnTheCreateNewOrganizationLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search the organization
             logger.LogMethodEntry("OrganizationManagementPage", "SearchTheOrganization",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Refresh The Page
@@ -101,7 +101,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrganizationManagementPage", "SearchTheOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnterOrganizationNameToSearch(string organizationName)
         {
             logger.LogMethodEntry("OrganizationManagementPage", "EnterOrganizationNameToSearch",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element to display
             base.WaitForElement(By.Id(OrganizationManagementPageResource.
                 OrganizationManagement_Page_Search_Organization_RadioButton_Id_Locator));
@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
                 OrganizationManagement_Page_Search_DisplayName_Textbox_Id_Locator,
                 organizationName);
             logger.LogMethodExit("OrganizationManagementPage", "EnterOrganizationNameToSearch",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get display of Searched organization result
             logger.LogMethodEntry("OrganizationManagementPage", "GetDisplayofSearchedOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Variable Declaration of organization 
             string getOrganizationName = string.Empty;
             try
@@ -164,7 +164,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrganizationManagementPage", "GetDisplayofSearchedOrganization",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             return getOrganizationName;
         }
 
@@ -175,7 +175,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the 'Select' button link
             logger.LogMethodEntry("OrganizationManagementPage", "ClickOnTheOrganizationSelectButton",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select The Main Window
@@ -198,7 +198,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrganizationManagementPage", "ClickOnTheOrganizationSelectButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search the Organization
             logger.LogMethodEntry("OrganizationManagementPage", "SearchOrganization",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 if (!base.IsPopupPresent(OrganizationManagementPageResource
@@ -234,7 +234,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrganizationManagementPage", "SearchOrganization",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -247,7 +247,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the 'Select' button link
             logger.LogMethodEntry("OrganizationManagementPage", "ClickOnTheSelectButtonofOrganization",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select The Main Window
@@ -290,7 +290,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrganizationManagementPage", "ClickOnTheSelectButtonofOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace Pegasus.Pages.UI_Pages
         public void DeleteOrganization()
         {
             logger.LogMethodEntry("OrganizationManagementPage", "DeleteOrganization",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Organization Management Window and Frame
@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrganizationManagementPage", "DeleteOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -334,7 +334,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Ok Button
             logger.LogMethodEntry("OrganizationManagementPage", "SelectOkButton",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(OrganizationManagementPageResource.
                 OrganizationManagement_Pegasus_Window_Name);
             //Sekect Pegasus Window
@@ -348,7 +348,7 @@ namespace Pegasus.Pages.UI_Pages
                 OrganizationManagement_Ok_Button_Id_Locator);
             base.ClickByJavaScriptExecutor(getOkButton);
             logger.LogMethodExit("OrganizationManagementPage", "SelectOkButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -359,7 +359,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Organization Management Window and Frame
             logger.LogMethodEntry("OrganizationManagementPage",
                 "SelectOrganizationManagementWindowandFrame",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window
             base.WaitUntilWindowLoads(OrganizationManagementPageResource.
                 OrganizationManagement_Page_OrganizationAdminWindow_Name);
@@ -374,7 +374,7 @@ namespace Pegasus.Pages.UI_Pages
                  OrganizationManagement_Page_Frame_Id_Locator);
             logger.LogMethodExit("OrganizationManagementPage",
                 "SelectOrganizationManagementWindowandFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -385,7 +385,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("OrganizationManagementPage",
                 "GetValidationMessageonSearchingDeletedOrganization",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Initialize String Variable
             string getMessage = string.Empty;
             try
@@ -404,7 +404,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("OrganizationManagementPage",
                 "GetValidationMessageonSearchingDeletedOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getMessage;
         }
     }

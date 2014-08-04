@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Login as ECollege Admin User.
             Logger.LogMethodEntry("ECollegeLoginPage", "ECollegeUserLogin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get User From Memory
@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(ex);
             }
             Logger.LogMethodExit("ECollegeLoginPage", "ECLECollegeUserLoginogin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectTPICertLoginWindow()
         {
             Logger.LogMethodEntry("ECollegeLoginPage",
-                "SelectTPICertLoginWindow", base.isTakeScreenShotDuringEntryExit);
+                "SelectTPICertLoginWindow", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Window Load
             base.WaitUntilWindowLoads(ECollegeLoginPageResource.
                 ECollegeLoginPage_LoginPage_Title);
@@ -68,7 +68,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(ECollegeLoginPageResource.
                 ECollegeLoginPage_LoginPage_Title);
             Logger.LogMethodExit("ECollegeLoginPage",
-                "SelectTPICertLoginWindow", base.isTakeScreenShotDuringEntryExit);
+                "SelectTPICertLoginWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter ECollege User Name
             Logger.LogMethodEntry("ECollegeLoginPage",
-                "EnterECollegeUserName", base.isTakeScreenShotDuringEntryExit);
+                "EnterECollegeUserName", base.IsTakeScreenShotDuringEntryExit);
             //Wait for UserName Textbox 
             base.WaitForElement(By.Id(ECollegeLoginPageResource.
                 ECollegeLoginPage_UserName_ID_Locator));
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(ECollegeLoginPageResource.
                 ECollegeLoginPage_UserName_ID_Locator, userName);
             Logger.LogMethodExit("ECollgeLoginPage",
-                "EnterECollegeUserName", base.isTakeScreenShotDuringEntryExit);
+                "EnterECollegeUserName", base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -101,7 +101,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter ECollege User Password
             Logger.LogMethodEntry("ECollegeLoginPage",
-                "EnterECollegeUserPassword", base.isTakeScreenShotDuringEntryExit);
+                "EnterECollegeUserPassword", base.IsTakeScreenShotDuringEntryExit);
             //Wait for Password Textbox
             base.WaitForElement(By.Id(ECollegeLoginPageResource
                 .ECollegeLoginPage_Password_ID_Locator));
@@ -114,7 +114,7 @@ namespace Pegasus.Pages.UI_Pages
             base.PressEnterKeyById(ECollegeLoginPageResource.
                 ECollegeLoginPage_Password_ID_Locator);
             Logger.LogMethodExit("ECollegeLoginPage",
-                "EnterECollegeUserPassword", base.isTakeScreenShotDuringEntryExit);
+                "EnterECollegeUserPassword", base.IsTakeScreenShotDuringEntryExit);
 
         }
     }

@@ -31,7 +31,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("InstructorSearchCatalog",
-                "AddCourseFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddCourseFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
             //Closing the Announcement(s)
             new AnnouncementPopUpLightBoxUXPage().CloseAnnouncementPopUp();
             //Click 'Search Catalog' Link 
@@ -39,7 +39,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Adding Course From Instructor Search Catalog
             new CourseCatalogMainPage().AddCourseFromSearchCatalog(courseTypeEnum);
             Logger.LogMethodExit("InstructorSearchCatalog",
-                "AddCourseFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddCourseFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("InstructorSearchCatalog",
-                "AddProductFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddProductFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
             //Closing the Announcement(s)
             new AnnouncementPopUpLightBoxUXPage().CloseAnnouncementPopUp();
             //Click 'Search Catalog' Link 
@@ -60,7 +60,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Adding Product From Instructor Search Catalog
             new CourseCatalogMainPage().AddProductFromSearchCatalog(productTypeEnum);
             Logger.LogMethodExit("InstructorSearchCatalog",
-                "AddProductFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddProductFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,14 +72,14 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Select Course To Validate Inactive State To Active State
             Logger.LogMethodEntry("InstructorSearchCatalog",
                 "ApproveInactiveStateOfCourseToActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Page Class Object
             HEDGlobalHomePage hedGlobalHomepage = new HEDGlobalHomePage();
             //Approves Course in Active State
             hedGlobalHomepage.ApproveCoursePresentInAssignedToCopyState();            
             Logger.LogMethodExit("InstructorSearchCatalog",
                 "ApproveInactiveStateOfCourseToActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             Logger.LogMethodEntry("HEDGlobalHomePage",
                 "VerifyInstructorCourseOnTheGlobalHomePageInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Course Present In Active State
             Logger.LogAssertion("VerifyCoursePresentInActiveState", 
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -102,7 +102,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             new HEDGlobalHomePage().StoreInstructorCourseIDInMemory(courseTypeEnum);
             Logger.LogMethodExit("HEDGlobalHomePage", 
                 "VerifyInstructorCourseOnTheGlobalHomePageInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

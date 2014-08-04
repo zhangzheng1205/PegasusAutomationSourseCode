@@ -44,7 +44,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click Search Catalog Link
             Logger.LogMethodEntry("HEDGlobalHomePage", "ClickSearchCatalogOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "ClickSearchCatalogOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Create a Course Link
             Logger.LogMethodEntry("HEDGlobalHomePage", "ClickCreateaCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Global Home Window
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                    
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "ClickCreateaCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
             //Approve The Course From InActive State To Active State
             Logger.LogMethodEntry("HEDGlobalHomePage",
                 "ApproveCoursePresentInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Set Thread To Wait
@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("HEDGlobalHomePage",
                 "ApproveCoursePresentInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait Through Stop Watch To Course Get Out of Assigned State
             Logger.LogMethodExit("HEDGlobalHomePage",
                "WaitForCourseGetOutOfAssignedToCopyState",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Start Stop Watch 
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("HEDGlobalHomePage",
                "WaitForCourseGetOutOfAssignedToCopyState",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace Pegasus.Pages.UI_Pages
             //Refresh The Page To Get The Course Displayed
             Logger.LogMethodEntry("HEDGlobalHomePage",
                 "RefreshTheGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Set Thread To Wait
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("HEDGlobalHomePage",
                 "RefreshTheGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace Pegasus.Pages.UI_Pages
             //Is Assigned To Copy Text Present
             Logger.LogMethodEntry("HEDGlobalHomePage",
                 "IsCoursePresentInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Bool Variable
             bool isAssignedToCopyTextPresent = false;
             try
@@ -244,7 +244,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("HEDGlobalHomePage",
                 "IsCoursePresentInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isAssignedToCopyTextPresent;
         }
 
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
             //Close Announcement page in verifying inactive state
             Logger.LogMethodEntry("HEDGlobalHomePage",
                 "OpenAndCloseAnnounmentPage"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.Id(HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_AnnouncementsManageAll_Button_Id_Locator));
@@ -275,7 +275,7 @@ namespace Pegasus.Pages.UI_Pages
                 HEDGlobalHome_Page_Window_Title_Name);
             Logger.LogMethodExit("HEDGlobalHomePage",
                 "OpenAndCloseAnnounmentPage"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -285,7 +285,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the Close button of the Announcement
             Logger.LogMethodEntry("HEDGlobalHomePage", "CloseAnnouncement",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Close button
             base.WaitForElement(By.Id(HEDGlobalHomePageResource
                     .HEDGlobalHome_Page_AnnouncementsClose_Link_Id_Locator));
@@ -299,7 +299,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_Course_Custom_TimeToWait));
             Logger.LogMethodEntry("HEDGlobalHomePage", "CloseAnnouncement",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -311,7 +311,7 @@ namespace Pegasus.Pages.UI_Pages
             // Course Present on Global Home Page
             Logger.LogMethodEntry("HEDGlobalHomePage"
                 , "GetCoursePresentInGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Course Text
             string getCourseText = string.Empty;
             try
@@ -336,7 +336,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "GetCoursePresentInGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCourseText;
 
         }
@@ -349,7 +349,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Instructor Course Id and Store In Memory
             Logger.LogMethodEntry("HEDGlobalHomePage", "StoreInstructorCourseIDInMemory"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (courseTypeEnum)
@@ -369,7 +369,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "StoreInstructorCourseIDInMemory"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -381,7 +381,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Instructor Course ID from Global Home Page
             Logger.LogMethodEntry("HEDGlobalHomePage", "GetInstructorCourseID"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Initialize Course Table Div Count
             const int getCourseDivCount = 1;
             //Select Window
@@ -397,7 +397,7 @@ namespace Pegasus.Pages.UI_Pages
             string getInstructorCourseId = GetInstructorCourseIDFromDiv(
                 getCourseDivCount, getCourseDivText, courseTypeEnum);
             Logger.LogMethodExit("HEDGlobalHomePage", "GetInstructorCourseID"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             return getInstructorCourseId;
         }
 
@@ -413,7 +413,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Instructor Course ID
             Logger.LogMethodEntry("HEDGlobalHomePage",
-                "GetInstructorCourseIDFromDiv", base.isTakeScreenShotDuringEntryExit);
+                "GetInstructorCourseIDFromDiv", base.IsTakeScreenShotDuringEntryExit);
             //Get Instructor Course Id
             string getInstructorCourseId;
             Course course = Course.Get(courseTypeEnum);
@@ -430,7 +430,7 @@ namespace Pegasus.Pages.UI_Pages
                 getInstructorCourseId = GetInstructorCourseIdFromFirstDiv(courseDivCount);
             }
             Logger.LogMethodExit("HEDGlobalHomePage",
-                 "GetInstructorCourseIDFromDiv", base.isTakeScreenShotDuringEntryExit);
+                 "GetInstructorCourseIDFromDiv", base.IsTakeScreenShotDuringEntryExit);
             return getInstructorCourseId;
         }
 
@@ -442,7 +442,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Instructor Course ID
             Logger.LogMethodEntry("HEDGlobalHomePage",
-                "GetInstructorCourseIdFromFirstDiv", base.isTakeScreenShotDuringEntryExit);
+                "GetInstructorCourseIdFromFirstDiv", base.IsTakeScreenShotDuringEntryExit);
             // Wait for the course name
             base.WaitForElement(By.XPath(string.Format(HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, courseDivCount)));
@@ -458,7 +458,7 @@ namespace Pegasus.Pages.UI_Pages
             int getInstructorCourseTextLineNumber = getInstructorCourseID.IndexOf(' ');
             getInstructorCourseID = getInstructorCourseID.Substring(getInstructorCourseTextLineNumber).Trim();
             Logger.LogMethodExit("HEDGlobalHomePage",
-                "GetInstructorCourseIdFromFirstDiv", base.isTakeScreenShotDuringEntryExit);
+                "GetInstructorCourseIdFromFirstDiv", base.IsTakeScreenShotDuringEntryExit);
             return getInstructorCourseID;
         }
 
@@ -474,7 +474,7 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement courseDivText, Course course)
         {
             Logger.LogMethodEntry("HEDGlobalHomePage", "GetInstructorCourseIdFromNonFirstDiv"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             while (!courseDivText.Text.Contains(course.Name))
             {
                 coursePresentDivNumber = coursePresentDivNumber + 1;
@@ -501,7 +501,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "GetInstructorCourseIdFromNonFirstDiv",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getInstructorCourseID;
         }
 
@@ -516,12 +516,12 @@ namespace Pegasus.Pages.UI_Pages
             //Save Instructor Course ID in Memory
             Logger.LogMethodEntry("HEDGlobalHomePage",
                 "StoreInstructorCourseIDInMemory",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             Course hedProductCourse = Course.Get(courseTypeEnum);
             hedProductCourse.InstructorCourseId = instructorCourseID;
             Logger.LogMethodExit("HEDGlobalHomePage",
         "StoreInstructorCourseIDInMemory"
-        , base.isTakeScreenShotDuringEntryExit);
+        , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -531,7 +531,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Enroll In a Course Link on Global Home Page
             Logger.LogMethodEntry("HEDGlobalHomePage", "ClickOnEnrollInCourseButton",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
@@ -553,7 +553,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "ClickOnEnrollInCourseButton"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -566,7 +566,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Inside the Course
             Logger.LogMethodEntry("HEDGlobalHomePage", "EnterInsideCourse"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get Course From Memory
@@ -636,7 +636,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "EnterInsideCourse"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -646,13 +646,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store User Last Login Details In Memory
             Logger.LogMethodEntry("HEDGlobalHomePage", "StoreUserLastLoginDetailsInMemory"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             //Get User From Memory
             User user = User.Get(User.UserTypeEnum.CsSmsStudent);
             //Update Last Login Date
             user.LastLogin = DateTime.Now;
             Logger.LogMethodExit("HEDGlobalHomePage", "StoreUserLastLoginDetailsInMemory"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -663,7 +663,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Open Course by clicking on course Link
             Logger.LogMethodEntry("HEDGlobalHomePage", "OpenTheCourse"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
@@ -680,7 +680,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "OpenTheCourse"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -691,7 +691,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Search and Click Course Link
             Logger.LogMethodEntry("HEDGlobalHomePage", "ClickOnCourseLink"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Get Course Row Counter
             const int getCourseRowCounter = 1;
             base.WaitForElement(
@@ -701,7 +701,7 @@ namespace Pegasus.Pages.UI_Pages
             // Click the course name
             ClickCourseNameOnHomePage(courseName, getCourseRowCounter);
             Logger.LogMethodExit("HEDGlobalHomePage", "ClickOnCourseLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -761,7 +761,7 @@ namespace Pegasus.Pages.UI_Pages
             // Get The User Name After Enter In Course
             string getCourseName = string.Empty;
             Logger.LogMethodEntry("HEDGlobalHomePage", "GetCourseName",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Default Window
@@ -778,7 +778,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "GetCourseName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCourseName;
         }
 
@@ -789,7 +789,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch To Announcement Iframe
             Logger.LogMethodEntry("HEDGlobalHomePage", "SwitchToAnnouncementIframe",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             // Wait for the IFrame
             base.WaitForElement(By.XPath(HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_AnnouncementFrame_XPath_Locator));
@@ -797,7 +797,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrameByWebElement(base.GetWebElementPropertiesByXPath(HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_AnnouncementFrame_XPath_Locator));
             Logger.LogMethodExit("HEDGlobalHomePage", "SwitchToAnnouncementIframe",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -807,7 +807,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On 'My Profile' Link
             Logger.LogMethodEntry("HEDGlobalHomePage", "ClickOnMyProfileLink",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Global Home window
@@ -823,7 +823,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "ClickOnMyProfileLink",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -835,7 +835,7 @@ namespace Pegasus.Pages.UI_Pages
             (User.UserTypeEnum userTypeEnum)
         {
             Logger.LogMethodEntry("HEDGlobalHomePage", "IsEnrollInCourseAndSearchCatalogButtonPresent",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             bool isDefaultContentsDisplayed = false;
             try
@@ -869,7 +869,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "IsEnrollInCourseAndSearchCatalogButtonPresent"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             return isDefaultContentsDisplayed;
         }
 
@@ -880,7 +880,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger enrty
             Logger.LogMethodEntry("HEDGlobalHomePage", "SelectHEDGlobalHomePageWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Wait for window
             base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
                 HEDGlobalHome_Page_Window_Title_Name);
@@ -889,7 +889,7 @@ namespace Pegasus.Pages.UI_Pages
                 HEDGlobalHome_Page_Window_Title_Name);
             //Logger exit
             Logger.LogMethodExit("HEDGlobalHomePage", "SelectHEDGlobalHomePageWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -898,7 +898,7 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean IsFeedbackAndMyProfileLingPresent()
         {
             Logger.LogMethodEntry("HEDGlobalHomePage", "IsFeedbackAndMyProfileLingPresent",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             bool isDefaultContentsDisplayed = false;
             try
@@ -923,7 +923,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "IsFeedbackAndMyProfileLingPresent"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             return isDefaultContentsDisplayed;
         }
 
@@ -936,7 +936,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Complete SingOut Process
             Logger.LogMethodEntry("HEDGlobalHomePage", "GetSignOutLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             IWebElement getLinkProperty = null;
             try
             {
@@ -953,7 +953,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "GetSignOutLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getLinkProperty;
         }
 
@@ -964,7 +964,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Help Link In Global Homepage 
             Logger.LogMethodEntry("HEDGlobalHomePage", "ClickTheHelpLinkInGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -980,7 +980,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "ClickTheHelpLinkInGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -990,7 +990,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click The Help Link In Global Homepage in TA
             Logger.LogMethodEntry("HEDGlobalHomePage", "ClickTheHelpLinkInGlobalHomePageInTA",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -1006,7 +1006,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "ClickTheHelpLinkInGlobalHomePageInTA",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1018,7 +1018,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("HEDGlobalHomePage", "ClickOnUpgradeAvailableOfTestBank",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select HED Global home page
@@ -1042,7 +1042,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exist
             Logger.LogMethodExit("HEDGlobalHomePage", "ClickOnUpgradeAvailableOfTestBank",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1056,7 +1056,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("HEDGlobalHomePage", "ClickOnUpgardeAvailableLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Search expected Testbank/Course Name 
             for (int setCourseDivCount = 1; setCourseDivCount <=
                 courseCount; setCourseDivCount++)
@@ -1086,7 +1086,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("HEDGlobalHomePage", "ClickOnUpgardeAvailableLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1097,7 +1097,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("HEDGlobalHomePage", "IsStatusOFKeepMeTestCourseCheckBoxEnabled",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             bool isCheckboxEnabled = false;
             try
             {
@@ -1119,7 +1119,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("HEDGlobalHomePage", "IsStatusOFKeepMeTestCourseCheckBoxEnabled",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isCheckboxEnabled;
         }
 
@@ -1130,7 +1130,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("HEDGlobalHomePage", "SelectUpgradePopupWindow",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Wait for Pop up Window
             base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
                 HEDGlobalHome_Page_Upgrade_Popup_Window_Name);
@@ -1139,7 +1139,7 @@ namespace Pegasus.Pages.UI_Pages
                 HEDGlobalHome_Page_Upgrade_Popup_Window_Name);
             //Logger Exit
             Logger.LogMethodExit("HEDGlobalHomePage", "SelectUpgradePopupWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1149,7 +1149,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("HEDGlobalHomePage", "CloseUpgradePopupWindow",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Close the popup window
@@ -1161,7 +1161,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("HEDGlobalHomePage", "CloseUpgradePopupWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1173,7 +1173,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Get MyCourse Name In GlobalHome
             Logger.LogMethodEntry("HEDGlobalHomePage", "GetMyCourseNameInGlobalHome",
-                   base.isTakeScreenShotDuringEntryExit);  
+                   base.IsTakeScreenShotDuringEntryExit);  
             //Initialize the vatiable
             string getCourseName = string.Empty;
             try
@@ -1207,7 +1207,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "GetMyCourseNameInGlobalHome",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             return getCourseName;
         }
 
@@ -1218,7 +1218,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Global Homepage.
             Logger.LogMethodEntry("HEDGlobalHomePage", "SelectGlobalHomepage",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Wait for window
             base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
                 HEDGlobalHome_Page_Window_Title_Name);
@@ -1226,7 +1226,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(HEDGlobalHomePageResource.
                 HEDGlobalHome_Page_Window_Title_Name);
             Logger.LogMethodExit("HEDGlobalHomePage", "SelectGlobalHomepage",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1238,7 +1238,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify The Announcement Manage All Button
             Logger.LogMethodEntry("HEDGlobalHomePage",
                 "IsAnnouncementChannelManageAllButtonDisplayed",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             bool isManageAllButtonDisplayedInAnnouncementChannel = false;
             try
@@ -1256,7 +1256,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("HEDGlobalHomePage",
                 "IsAnnouncementChannelManageAllButtonDisplayed",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             return isManageAllButtonDisplayedInAnnouncementChannel;
         }
     }

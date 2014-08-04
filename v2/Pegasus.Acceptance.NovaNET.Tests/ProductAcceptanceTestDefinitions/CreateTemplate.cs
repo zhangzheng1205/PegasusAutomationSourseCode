@@ -31,7 +31,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Create Template 
             Logger.LogMethodEntry("CreateTemplate", "CreateTheTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Add Template Link
             new ManageTemplateMainPage().ClickTemplateCreateLink();
             //Get Course Name From InMemory
@@ -39,7 +39,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Create New Template
             new AddTemplatePage().CreateOrganizationTemplate(course.Name);
             Logger.LogMethodEntry("CreateTemplate", "CreateTheTemplate",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -51,13 +51,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Search Template
             Logger.LogMethodEntry("CreateTemplate", 
                 "SearchTheCreatedTemplateInTheFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course Details From InMemory
             Course course = Course.Get(Course.CourseTypeEnum.Container);
             //Search Template by Template Name
             new ManageTemplateMainPage().SearchTemplate(course.TemplateName);
             Logger.LogMethodExit("CreateTemplate","SearchTheCreatedTemplateInTheFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Get The Search Template
             Logger.LogMethodEntry("CreateTemplate", 
                 "SeeTheCreatedTemplateInTheFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course Details From Memory            
             Course course = Course.Get(Course.CourseTypeEnum.Container);
             //Assert Template Created Successfully
@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     CreateTemplateResource_Template_Keyword,
                     new FrmManageTemplatePage().GetSearchedTemplate()));
             Logger.LogMethodExit("CreateTemplate", "SeeTheCreatedTemplateInTheFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -91,14 +91,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Validate Template From Assigned To Copy State
             Logger.LogMethodEntry("CreateTemplate", 
                 "VerifiyTheTemplateForAssignedToCopyState",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course Details From Memory
             Course course = Course.Get(Course.CourseTypeEnum.Container);
             //Validate For Assigned To Copy State
             new FrmManageTemplatePage().ApproveAssignedToCopyState(course.TemplateName);
             Logger.LogMethodExit("CreateTemplate", 
                 "VerifiyTheTemplateForAssignedToCopyState",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Template Out of Assigned o Copy State
             Logger.LogMethodEntry("CreateTemplate", 
                 "CreatedTemplateOutOfAssignedToCopyState",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert Template Assigned To Copy Validated
             Logger.LogAssertion("VerifyTemplateAssignedToCopyStateValidated", 
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -119,7 +119,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     CreateTemplateResource.
                     CreateTemplateResource_TemplateOutOfAssignedtoCopyState_Message));
             Logger.LogMethodExit("CreateTemplate", "CreatedTemplateOutOfAssignedToCopyState",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

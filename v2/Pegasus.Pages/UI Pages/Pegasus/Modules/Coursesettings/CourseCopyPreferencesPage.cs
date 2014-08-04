@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Main Preferences Frame
             logger.LogMethodEntry("CourseCopyPreferencesPage", "SelectTheMainPreferencesFrame", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(CourseCopyPreferencesPageResource.
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }            
             logger.LogMethodExit("CourseCopyPreferencesPage", "SelectTheMainPreferencesFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Set Copy Content Preference
             logger.LogMethodEntry("CourseCopyPreferencesPage", "SetCopyContentPreference", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Main Frame
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseCopyPreferencesPage", "SetCopyContentPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable 'Copy Content' Option from Content Library to Course Content
             logger.LogMethodEntry("CourseCopyPreferencesPage", "EnableCopyContentOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Main Frame
@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseCopyPreferencesPage", "EnableCopyContentOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Tab From Preferences
             logger.LogMethodExit("CourseCopyPreferencesPage", "ClickOnTabFromPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Window
@@ -147,7 +147,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseCopyPreferencesPage", "ClickOnTabFromPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

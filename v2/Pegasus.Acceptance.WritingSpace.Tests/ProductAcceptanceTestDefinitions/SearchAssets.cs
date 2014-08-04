@@ -32,14 +32,14 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
         {
             //Click The Add Course Materials Button
             Logger.LogMethodEntry("SearchAssets", "ClickTheAddCourseMaterialsButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Add Course Materials Button
             new ContentLibraryUXPage().ClickOnTheAddCourseMaterialsButton
                 ((ContentLibraryUXPage.CourseMaterialsTypeEnum)Enum.Parse
                 (typeof(ContentLibraryUXPage.CourseMaterialsTypeEnum),
                 courseMaterialsType));
             Logger.LogMethodExit("SearchAssets","ClickTheAddCourseMaterialsButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Search The Activity In Course Materials
             Logger.LogMethodEntry("SearchAssets",
                 "SearchTheActivityInCourseMaterials",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Search The Activity In Course Materials
@@ -64,7 +64,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                 courseMaterialsType),activity.Name);
             Logger.LogMethodExit("SearchAssets",
                 "SearchTheActivityInCourseMaterials",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Verify The Activity In Course Materials
             Logger.LogMethodEntry("SearchAssets",
                 "VerifyTheActivityInCourseMaterials",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify The Searched Asset Name
             Logger.LogAssertion("VerifyAssetName",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -91,7 +91,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                           courseMaterialsType),assetName)));
             Logger.LogMethodExit("SearchAssets",
                 "VerifyTheActivityInCourseMaterials",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Click on Advanced Search Link In Course Materials
             Logger.LogMethodEntry("SearchAssets",
                 "ClickOnTheAdvancedSearchLinkInCourseMaterials",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Advanced Search link Option
             new ContentLibraryUXPage().ClickTheAdvancedSearchLinkInCourseMaterials
                 ((ContentLibraryUXPage.CourseMaterialsTypeEnum)Enum.Parse
@@ -112,7 +112,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                 courseMaterialsType));
             Logger.LogMethodExit("SearchAssets",
                 "ClickOnTheAdvancedSearchLinkInCourseMaterials",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -125,7 +125,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Verify The Display OF Asset In Add Course Materials
             Logger.LogMethodEntry("SearchAssets",
                 "VerifyTheDisplayOfAssetInAddCourseMaterials",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify the Display Of Asset In Add Course Materials
             Logger.LogAssertion("VerifyTheAssetDisplayed",
                ScenarioContext.Current.ScenarioInfo.Title,
@@ -133,7 +133,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                    GetTheDisplayOfActivityNameInAddCourseMaterials(assetName)));
             Logger.LogMethodExit("SearchAssets",
                 "VerifyTheDisplayOfAssetInAddCourseMaterials",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Verify The Display Of Asset In Advanced Search Popup
             Logger.LogMethodEntry("SearchAssets",
                 "VerifyTheDisplayOfAssetInAdvancedSearchPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify the Display of asset In Advanced Search Popup
             Logger.LogAssertion("VerifyTheDisplayOfAsset",
                ScenarioContext.Current.ScenarioInfo.Title,
@@ -154,7 +154,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                    GetTheDisplayOfAssetTypeInAdvancedSearchPopup(assetName)));
             Logger.LogMethodExit("SearchAssets",
                 "VerifyTheDisplayOfAssetInAdvancedSearchPopup",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

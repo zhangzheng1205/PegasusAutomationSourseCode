@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search User 
             logger.LogMethodEntry("ProgramAdminUsersPage", "SearchUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.SwitchToDefaultPageContent();
             //Select Window
             base.SelectWindow(ProgramAdminUsersPageResource.ProgramAdminUsers_Page_Window_Title_Name);
@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter User Search Parameter
             EnterUserSearchParameter(username);
             logger.LogMethodExit("ProgramAdminUsersPage", "SearchUser",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Parameter To Search User
             logger.LogMethodEntry("ProgramAdminUsersPage", "EnterUserSearchParameter",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select contains option in dropdown menu
             base.WaitForElement(By.Id(ProgramAdminUsersPageResource
                 .ProgramAdminUsers_Page_UserName_RadioButton_Id_Locator));
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ProgramAdminUsersPageResource.ProgramAdminUsers_Page_Search_Button_Id_Locator));
             base.ClickButtonById(ProgramAdminUsersPageResource.ProgramAdminUsers_Page_Search_Button_Id_Locator);
             logger.LogMethodExit("ProgramAdminUsersPage", "EnterUserSearchParameter",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search User Present
             logger.LogMethodEntry("ProgramAdminUsersPage", "GetUserName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             string getUserName = string.Empty;
             try
             {
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProgramAdminUsersPage", "GetUserName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
 

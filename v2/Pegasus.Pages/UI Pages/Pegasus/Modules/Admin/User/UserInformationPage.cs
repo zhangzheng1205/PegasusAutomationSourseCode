@@ -34,7 +34,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify User Information
             logger.LogMethodEntry("UserInformationPage", "GetUserInformationDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable to get UserInformationDetails
             string getUserInformationDetails = string.Empty;
             //Initialize Variable to get UserName
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserInformationPage", "GetUserInformationDetails",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             getUserInformationDetails = getUserName + getUserEmail + getUserId + getSignIn + getUserAccess;
             return getUserInformationDetails;
         }
@@ -85,13 +85,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get User Mail
             logger.LogMethodEntry("UserInformationPage", "GetUserMail",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(UserInformationPageResource.
                 UserInformation_Page_EmailField_Xpath_Locator));
             userEmail = base.GetElementTextByXPath(UserInformationPageResource.
                 UserInformation_Page_EmailField_Xpath_Locator);
             logger.LogMethodExit("UserInformationPage", "GetUserMail",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return userEmail;
         }
 
@@ -104,13 +104,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get User Id
             logger.LogMethodEntry("UserInformationPage", "GetUserId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(UserInformationPageResource.
                     UserInformation_Page_UserIdField_Xpath_Locator));
             userId = base.GetElementTextByXPath(UserInformationPageResource.
                     UserInformation_Page_UserIdField_Xpath_Locator);
             logger.LogMethodExit("UserInformationPage", "GetUserId",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return userId;
         }
 
@@ -123,13 +123,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Sign In
             logger.LogMethodEntry("UserInformationPage", "GetSignIn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(UserInformationPageResource.
                     UserInformation_Page_SignInFiled_Xpath_Locator));
             signIn = base.GetElementTextByXPath(UserInformationPageResource.
                     UserInformation_Page_SignInFiled_Xpath_Locator);
             logger.LogMethodExit("UserInformationPage", "GetSignIn",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return signIn;
         }
 
@@ -142,13 +142,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get User Access
             logger.LogMethodEntry("UserInformationPage", "GetUserAccess",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(UserInformationPageResource
                     .USerInformation_Page_AccessField_Xpath_Locator));
             userAccess = base.GetElementTextByXPath(UserInformationPageResource
                     .USerInformation_Page_AccessField_Xpath_Locator);
             logger.LogMethodExit("UserInformationPage", "GetUserAccess",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return userAccess;
         }
 
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the User Name
             logger.LogMethodEntry("UserInformationPage", "GetUserName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             string getUserName = string.Empty;
             try
@@ -184,7 +184,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserInformationPage", "GetUserName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
 

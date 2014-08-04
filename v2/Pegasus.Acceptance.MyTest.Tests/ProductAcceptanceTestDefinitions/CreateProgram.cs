@@ -30,12 +30,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Navigate Manage Programs Page
             Logger.LogMethodEntry("CreateProgram",
                 "NavigateManageProgramsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate to manage program page 
             new AdminToolPage().NavigateToManageProgramsPage();
             Logger.LogMethodExit("CreateProgram",
                 "NavigateManageProgramsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -46,11 +46,11 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Method to click on the create new program link 
             Logger.LogMethodEntry("CreateProgram", "ClickOnTheCreateNewProgramLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on new program link
             new ProgramManagementPage().ClickOnCreateNewProgramLink();
             Logger.LogMethodExit("CreateProgram", "ClickOnTheCreateNewProgramLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -64,12 +64,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Create Hed Program
             Logger.LogMethodEntry("CreateProgram",
                 "CreateTheHedProgramInCoursespace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //New HED Core program create
             new ProgramCreatePage().CreateNewProgram(programTypeEnum);
             Logger.LogMethodExit("CreateProgram",
                 "CreateTheHedProgramInCoursespace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

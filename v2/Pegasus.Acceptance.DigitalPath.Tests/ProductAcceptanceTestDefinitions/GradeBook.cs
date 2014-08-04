@@ -32,10 +32,10 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Open Create Total column pop up window
             Logger.LogMethodEntry("GradeBook", "ClickOnTheCreateColumnDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new GBInstructorUXPage().ClickCreateColumnDropDown();
             Logger.LogMethodExit("GradeBook", "ClickOnTheCreateColumnDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,13 +48,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Select activities for adding
             Logger.LogMethodEntry("GradeBook", "SelectCheckboxOfActivities",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Sending first activity to for loop
             new GBInstructorUXPage().SelectActivityFromLeftFrame(activityName1);
             //Sending second activity to for loop
             new GBInstructorUXPage().SelectActivityFromLeftFrame(activityName2);
             Logger.LogMethodExit("GradeBook", "SelectCheckboxOfActivities",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click on Add button to Add selected Activities to right Iframe.
@@ -64,11 +64,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click on add button to add activities
             Logger.LogMethodEntry("GradeBook", "ClickAddButtonToAddActivities",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Add activities to right frame
             new GBInstructorUXPage().AddActivitiesinRightFrame();
             Logger.LogMethodExit("GradeBook", "ClickAddButtonToAddActivities",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Enter integer values in weight box 
             Logger.LogMethodEntry("GradeBook", "EnterValueInWeightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter value in First text box
             new GBInstructorUXPage().EnterTheValueInTotalWeightTextbox((
                 GBInstructorUXPage.TextTypeEnum)Enum.
@@ -93,7 +93,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                Parse(typeof(GBInstructorUXPage.TextTypeEnum),
                GradeBookResource.GradeBook_Page_Second_TextBox_Option), textOption2);
             Logger.LogMethodExit("GradeBook", "EnterValueInWeightBox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Check result in TotalWeight Textbox
             Logger.LogMethodEntry("GradeBook", "CheckTheResultInTotalWeightTextbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verifying the return value is correct.
             Logger.LogAssertion("VerifyResultInTotalWeightTextbox",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -112,7 +112,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                    GradeBook_Page_TotalWeight_TextBox_Result_Value,
                    new GBInstructorUXPage().GetRestulInTotalWeightTextBox()));
             Logger.LogMethodExit("GradeBook", "CheckTheResultInTotalWeightTextbox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select Cmenu Of Asset and Select Apply Button
             Logger.LogMethodEntry("GradeBook", "SelectCmenuOfAssetandSelectApplyButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();   
@@ -139,7 +139,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Click On Apply Button
             new GBSchemaPage().ClickOnApplyButton();
             Logger.LogMethodExit("GradeBook", "SelectCmenuOfAssetandSelectApplyButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify Activity Status in Gradebook for Enrollled Students
             Logger.LogMethodEntry("GradeBook",
                 "VerifyTheActivityStatusInGradebook",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Fetch the data from memory
@@ -171,7 +171,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                  (activity.Name, user.LastName, user.FirstName)));
             Logger.LogMethodExit("GradeBook",
                 "VerifyTheActivityStatusInGradebook",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click On View Grade Of Asset
             Logger.LogMethodEntry("GradeBook","ClickOnViewGradeOfAsset",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Select Window and Frame
@@ -192,7 +192,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Get Activity Name and Click On View Grade Of Asset
             new GBInstructorUXPage().GetActivityName(activity.Name);
             Logger.LogMethodExit("GradeBook","ClickOnViewGradeOfAsset",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -205,11 +205,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Edit The Grade
             Logger.LogMethodEntry("GradeBook", "EditTheGrade",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Edit Grade
             new GBGradeBatchUpdationPage().EditGrade(userScore, maximumScore);
             Logger.LogMethodExit("GradeBook", "EditTheGrade",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -223,7 +223,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select Asset Cmenu
             Logger.LogMethodEntry("GradeBook", "SelectAssetCmenu",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
@@ -234,7 +234,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name);
             Logger.LogMethodExit("GradeBook", "SelectAssetCmenu",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
 

@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Template
             logger.LogMethodEntry("AddTemplatePage", "CreateOrganizationTemplate",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate Template Details Guid
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddTemplatePage", "CreateOrganizationTemplate",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course
             logger.LogMethodEntry("AddTemplatePage", "SelectCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(AddTemplatePageResource.
                 AddTemplate_Page_CourseGrid_XPath_Locator));
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SelectRadioButtonByName(AddTemplatePageResource.
                     AddTemplate_Page_SelectTemplate_RadioButton_Name_Locator);
                 logger.LogMethodExit("AddTemplatePage", "SelectCourse",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             }
         }
 
@@ -116,12 +116,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Template Details in Memory
             logger.LogMethodEntry("AddTemplatePage", "StoreTemplateDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course Details from Memory
             Course course = Course.Get(Course.CourseTypeEnum.Container);
             course.TemplateName = templateName;            
             logger.LogMethodExit("AddTemplatePage", "StoreTemplateDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -28,11 +28,11 @@ namespace Pegasus.Integration.MLP.Tests.
             User.UserTypeEnum userTypeEnum)
         {
             Logger.LogMethodEntry("CreateECollegeUser", "CreateECollegeTeacher",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Instance of ManageUserContent 
             new ManageUsersContentPage().CreateECollegeUser(userTypeEnum);
             Logger.LogMethodExit("CreateECollegeUser", "CreateECollegeTeacher",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

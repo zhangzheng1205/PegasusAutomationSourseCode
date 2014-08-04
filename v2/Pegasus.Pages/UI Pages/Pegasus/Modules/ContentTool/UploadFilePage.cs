@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create File Asset
             logger.LogMethodEntry("UploadFilePage", "CreateFileAsset",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Intialize Guid for File Asset
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UploadFilePage", "CreateFileAsset",
-              base.isTakeScreenShotDuringEntryExit); 
+              base.IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Button
             logger.LogMethodEntry("UploadFilePage", "ClickOnAddButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(UploadFilePageResource.
                 UploadFilePageResourse_File_Add_button_Id_Locator));
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(UploadFilePageResource.
                 UploadFilePageResourse_File_ThreadTime));
             logger.LogMethodExit("UploadFilePage", "ClickOnAddButton",
-              base.isTakeScreenShotDuringEntryExit); 
+              base.IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Upload The Image File
             logger.LogMethodEntry("UploadFilePage", "UploadTheImageFile",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(UploadFilePageResource.
                 UploadFilePageResourse_Browse_Button_Id_Locator));
@@ -109,7 +109,7 @@ namespace Pegasus.Pages.UI_Pages
             base.UploadFile(getFileImageFilePath,By.Id(UploadFilePageResource.
                 UploadFilePageResourse_Browse_Button_Id_Locator));
             logger.LogMethodExit("UploadFilePage", "UploadTheImageFile",
-              base.isTakeScreenShotDuringEntryExit); 
+              base.IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store The File Asset
             logger.LogMethodEntry("UploadFilePage", "StoreTheFileAsset",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Store the File in memory
             Activity newFile = new Activity
             {
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newFile.StoreActivityInMemory();
             logger.LogMethodExit("UploadFilePage", "StoreTheFileAsset",
-                 base.isTakeScreenShotDuringEntryExit); 
+                 base.IsTakeScreenShotDuringEntryExit); 
         }
     }
 }

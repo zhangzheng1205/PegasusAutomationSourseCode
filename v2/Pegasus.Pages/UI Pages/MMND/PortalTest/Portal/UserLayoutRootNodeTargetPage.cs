@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Access Code and Seach The Courses
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "EnterAccessCodeId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the Window
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "EnterAccessCodeId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search Course From List
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "SearchCourseFromList",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for 'Select Course Materials'
@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "SearchCourseFromList",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Course Type Button
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "ClickOnCourseTypeButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get total Courses
             int getTotalCourses = base.GetElementCountByXPath(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_SelectCourseMaterials_TotalCourses_Xpath_Locator);
@@ -166,7 +166,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "ClickOnCourseTypeButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Course Details
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "EnterCourseDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Window
@@ -201,7 +201,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "EnterCourseDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -212,7 +212,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Required Course Details
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "EnterRequiredCourseDetails",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
             //Get Current Date
             string getCurrentDate = DateTime.Now.ToString(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_DateTime_Date_Parameter);
@@ -244,7 +244,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectCourseAndEnrollmentDate(courseTypeEnum, 
                 getEnrollmentStartDate, getEnrollmentEndDate);                        
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "EnterRequiredCourseDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -258,7 +258,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course/Enrollment Start and End Date
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "SelectCourseAndEnrollmentDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (courseTypeEnum)
             {
                 case Course.CourseTypeEnum.MMNDNonCoOrdinate:
@@ -276,7 +276,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Course Start And EndDate
             this.EnterCourseStartAndEndDate(enrollStartDate, enrollEndDate);
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "SelectCourseAndEnrollmentDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -289,7 +289,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Enrollment Start And End Date
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "EnterEnrollmentStartAndEndDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter Enroll Start Date
             base.ClearTextById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_EnrollStart_Id_Locator);
@@ -303,7 +303,7 @@ namespace Pegasus.Pages.UI_Pages
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_EnrollEnd_Id_Locator,
                 enrollmentEndDate);
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "EnterEnrollmentStartAndEndDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -315,7 +315,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Course Start And End Date
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "EnterCourseStartAndEndDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fill Course Start Date
             base.ClearTextById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseStart_Id_Locator);
@@ -329,7 +329,7 @@ namespace Pegasus.Pages.UI_Pages
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseEnd_Id_Locator,
                 courseEndDate);
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "EnterCourseStartAndEndDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -341,7 +341,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store The Course Details
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "StoreTheCourseDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Store the Course
             Course course = new Course
             {
@@ -350,7 +350,7 @@ namespace Pegasus.Pages.UI_Pages
                 CourseType = courseTypeEnum
             }; course.StoreCourseInMemory();
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "StoreTheCourseDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -361,7 +361,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Course Name
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "EnterCourseName",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
             base.WaitForElement(By.Id(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseName_Textbox_Id_Locator));
             //Clear the Text
@@ -372,7 +372,7 @@ namespace Pegasus.Pages.UI_Pages
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseName_Textbox_Id_Locator,
                 courseNameGUID.ToString());
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "EnterCourseName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -382,7 +382,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Create Course Button
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "ClickOnCreateCourseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.SelectWindow(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_Window_Title);            
             //Wait for "Create Course Now" option
@@ -391,7 +391,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByXPath(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CreateCourseNow_Button_Xpath_Locator);
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "ClickOnCreateCourseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -402,7 +402,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Course Creation Successful Message
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "GetsuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing the Variable
             string getConfirmationMessage = string.Empty;
             try
@@ -422,7 +422,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "GetsuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getConfirmationMessage;
         }
 
@@ -434,7 +434,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get CourseId
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "GetCourseId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getCourseId = string.Empty;
             try
@@ -463,7 +463,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "GetCourseId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCourseId;
         }
 
@@ -475,7 +475,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fetch the Section Course Id
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "GetSectionCourseId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             string getCourseId = base.GetElementTextByXPath(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_CourseCreateConfirmation_SectionDetail_Xpath_Locator);
             //Split the text
@@ -488,7 +488,7 @@ namespace Pegasus.Pages.UI_Pages
                 Trim(Convert.ToChar(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_CourseCreateConfirmation_Split_By_Bracket_Character));
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "GetSectionCourseId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCourseId;
         }
 
@@ -499,7 +499,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logout Of MMND
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "LogoutOfMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for 3 Seconds
@@ -522,7 +522,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "LogoutOfMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -532,7 +532,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logout Of MMND As Student
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "LogoutAsMMNDStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Mylab Mastering Pearson Window
@@ -552,7 +552,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "LogoutAsMMNDStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -563,7 +563,7 @@ namespace Pegasus.Pages.UI_Pages
         {            
             //Verify Course In Active State
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "VerifyCourseInActiveState",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
             try
             {                
                 //Get the Total Course count
@@ -578,7 +578,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "VerifyCourseInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -590,7 +590,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Wait For The Course In Active State
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "WaitForCourseInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Start the Stop Watch
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();            
@@ -644,7 +644,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "WaitForCourseInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -655,7 +655,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Total Course Count
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "GetTotalCourseCount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Mylab Mastering Pearson Window
             this.SelectMylabMasteringPearsonWindow();
             //Get the Total Courses Count
@@ -663,7 +663,7 @@ namespace Pegasus.Pages.UI_Pages
                 UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_CourseCreateConfirmation_TotalCourses_Xpath_Locator);
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "GetTotalCourseCount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getTotalCoursesCount;
         }
 
@@ -674,7 +674,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Refresh The page And Wait
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "RefreshCurrentPageAndWait",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Refresh And Wait
             base.RefreshTheCurrentPage();
             //Sleep for 10 secs
@@ -683,7 +683,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Mylab Mastering Pearson Window
             this.SelectMylabMasteringPearsonWindow();
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "RefreshCurrentPageAndWait",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -694,7 +694,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On 'Back To Your Courses Page' Button
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", 
                 "ClickOnBackToYourCoursesPageButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_CourseCreateConfirmation_Window_Title);
@@ -703,7 +703,7 @@ namespace Pegasus.Pages.UI_Pages
                 UserLayoutRootNodeTargetPage_CourseCreateConfirmation_BackToYourCoursesPage_Link_Text);
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", 
                 "ClickOnBackToYourCoursesPageButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -715,7 +715,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get The Course In Active State
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "IsTheCourseInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing Variables
             Boolean isAssignedToCopyIconPresent = true;            
             try
@@ -734,7 +734,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "IsTheCourseInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isAssignedToCopyIconPresent;
         }
 
@@ -748,7 +748,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Course in Active state
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "IsCourseInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing the Variables
             bool isAssignedToCopyIconPresent = true;
             string getCourseName = string.Empty;
@@ -796,7 +796,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "IsCourseInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isAssignedToCopyIconPresent;
         }
 
@@ -808,7 +808,7 @@ namespace Pegasus.Pages.UI_Pages
         {            
             //Select CoOrdinate Course
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "SelectCoOrdinateCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the Window
@@ -837,7 +837,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "SelectCoOrdinateCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -848,7 +848,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The CoOrdinate Course Option
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "SelectTheCoOrdinateCourseOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the total count of the Options
             int getTotalDropDownOptionsCount = base.GetElementCountByXPath(
                 UserLayoutRootNodeTargetPageResource.
@@ -873,7 +873,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "SelectTheCoOrdinateCourseOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -884,7 +884,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create MMND Section
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "CreateMMNDSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Window
@@ -912,7 +912,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "CreateMMNDSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -923,7 +923,7 @@ namespace Pegasus.Pages.UI_Pages
         {            
             //Enter Into Course
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "EnterIntoCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get the Course Name
@@ -938,7 +938,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "EnterIntoCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -949,7 +949,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Show Content Security Message
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage",
                 "ClickTheShowContentSecurityMessage",
-                base.isTakeScreenShotDuringEntryExit);                              
+                base.IsTakeScreenShotDuringEntryExit);                              
                 //Press TAB Key
                 base.PressKey(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodetargetPage_TabKey);
@@ -966,7 +966,7 @@ namespace Pegasus.Pages.UI_Pages
                     UserLayoutRootNodeTargetPage_ShowContent_Alert_DisplayTime));
             logger.LogMethodExit("UserLayoutRootNodeTargetPage",
                 "ClickTheShowContentSecurityMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -977,7 +977,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify The Display Of Show Content Button.
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage",
                 "VerifyTheDisplayOfShowContentButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Start Stop Watch
             Stopwatch stopWatch = new Stopwatch();            
             //Click The Show Content Security Message
@@ -1026,7 +1026,7 @@ namespace Pegasus.Pages.UI_Pages
             stopWatch.Stop();
             logger.LogMethodExit("UserLayoutRootNodeTargetPage",
                 "VerifyTheDisplayOfShowContentButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1037,7 +1037,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click Browser Confirmation Button
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage",
                 "ClickBrowserConfirmationButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //If Assigned To Copy Text Present 
             if (base.IsElementPresent(By.Id(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_BrowserConfirmation_Alert_Id_Locator),
@@ -1057,7 +1057,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(getSupportPageMessage2);
                 logger.LogMethodExit("UserLayoutRootNodeTargetPage",
                "ClickBrowserConfirmationButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             }
         }
 
@@ -1069,7 +1069,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify The Support Page Alert Message
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage",
                 "VerifyTheSupportPageAlertMessage",
-                base.isTakeScreenShotDuringEntryExit);           
+                base.IsTakeScreenShotDuringEntryExit);           
             //Start Stop Watch
             Stopwatch stopWatch = new Stopwatch();            
             this.ClickTheShowContentSecurityMessage();
@@ -1104,7 +1104,7 @@ namespace Pegasus.Pages.UI_Pages
             stopWatch.Stop();        
             logger.LogMethodExit("UserLayoutRootNodeTargetPage",
                 "VerifyTheSupportPageAlertMessage",
-                base.isTakeScreenShotDuringEntryExit); 
+                base.IsTakeScreenShotDuringEntryExit); 
         }
 
        
@@ -1116,7 +1116,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify The Course Home Loaded Completly
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage",
                 "VerifyTheCourseHomeLoadedCompletly",
-                base.isTakeScreenShotDuringEntryExit);           
+                base.IsTakeScreenShotDuringEntryExit);           
             {
                 switch (userTypeEnum)
                 {
@@ -1162,7 +1162,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage",
              "VerifyTheCourseHomeLoadedCompletly",
-             base.isTakeScreenShotDuringEntryExit);            
+             base.IsTakeScreenShotDuringEntryExit);            
         }
 
         /// <summary>
@@ -1173,7 +1173,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Mylab Mastering Pearson Window
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", 
                 "SelectMylabMasteringPearsonWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -1188,7 +1188,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", 
                 "SelectMylabMasteringPearsonWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1201,7 +1201,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Into MMND Course
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "EnterIntoMMNDCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get the Course Name
@@ -1242,7 +1242,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "EnterIntoMMNDCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Creates Resource
             logger.LogMethodEntry("CreateResourcePage", "CreateRumbaResource",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generating new guid for resource name
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CreateResourcePage", "CreateRumbaResource",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
         {
            //Enter The Display Information
             logger.LogMethodEntry("CreateResourcePage", "EnterTheDisplayInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(CreateResourcePageResource.
                 CreateResource_Page_DisplayInformation_Image_Xpath_Locator));
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter The Display Information Details
             new CreateProductPage().EnterTheDisplayInformationDetails();
             logger.LogMethodExit("CreateResourcePage", "EnterTheDisplayInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Enter Resource Details
             logger.LogMethodEntry("CreateResourcePage", "EnterResourceDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(CreateResourcePageResource.
                 CreateResource_Page_Window_Title_Name);
             //Selects the Window
@@ -123,7 +123,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Business Unit
             SelectRumbaBusinessUnitFromAutoFill(getAutocompleteText);
             logger.LogMethodExit("CreateResourcePage", "EnterResourceDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -134,7 +134,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Pearson Business Unit Menu Item
             logger.LogMethodEntry("CreateResourcePage", "SelectRumbaBusinessUnitFromAutoFill",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Clear Text Box Pre Filled Value
             base.ClearTextById(CreateResourcePageResource.
                 CreateResource_Page_BusinessUnit_Id_Locator);
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
                 CreateResource_Page_AuthorizationContextName_Id_Locator,
                 CreateResourcePageResource.CreateResource_Page_AuthorizationContextName_SelectText);
             logger.LogMethodExit("CreateResourcePage", "SelectRumbaBusinessUnitFromAutoFill",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Name Description And Url
             logger.LogMethodEntry("CreateResourcePage", "EnterNameDescriptionAndUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fills the Resource Name
             base.FillTextBoxById(CreateResourcePageResource.
                 CreateResource_Page_Resourcename_Text_Id_Locator, resourceName.ToString());
@@ -186,7 +186,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(CreateResourcePageResource.
                 CreateResource_Page_DigitAssetURL_Text_Id_Locator, getDigitAssetUrl);
             logger.LogMethodExit("CreateResourcePage", "EnterNameDescriptionAndUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -197,12 +197,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save the Resource Id in Memory
             logger.LogMethodEntry("CreateResourcePage", "StoreRumbaResourceIdInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Store the Resource Details in Memory
             License license = License.Get(License.LicenseTypeEnum.Rumba);
             license.ResourceID = resourceID;
             logger.LogMethodExit("CreateResourcePage", "StoreRumbaResourceIdInMemory",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -213,7 +213,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get The Resource ID
             logger.LogMethodEntry("CreateResourcePage", "GetRumbaResourceId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             int getResourceId = Convert.ToInt32(CreateResourcePageResource.
                 CreateResource_Page_ResourceId_DefaultValue);
@@ -232,7 +232,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CreateResourcePage", "GetRumbaResourceId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getResourceId;
         }
     }

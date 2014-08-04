@@ -31,7 +31,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("InstructorSearchCatalog",
-                "AddCourseFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddCourseFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
             //Closing the Announcement(s)
             new AnnouncementPopUpLightBoxUXPage().CloseAnnouncementPopUp();
             //Click 'Search Catalog' Link 
@@ -39,7 +39,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Adding TestBank Course From Instructor Search Catalog
             new CourseCatalogMainPage().AddTestBankFromSearchCatalog(courseTypeEnum);
             Logger.LogMethodExit("InstructorSearchCatalog",
-                "AddCourseFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddCourseFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("InstructorSearchCatalog",
-                "AddProductFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddProductFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
             //Closing the Announcement(s)
             new AnnouncementPopUpLightBoxUXPage().CloseAnnouncementPopUp();
             //Click 'Search Catalog' Link 
@@ -60,7 +60,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Adding Product From Instructor Search Catalog
             new CourseCatalogMainPage().AddProductFromSearchCatalog(productTypeEnum);
             Logger.LogMethodExit("InstructorSearchCatalog",
-                "AddProductFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddProductFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,14 +72,14 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Select Course To Validate Inactive State To Active State
             Logger.LogMethodEntry("InstructorSearchCatalog",
                 "ApproveInactiveStateOfCourseToActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Page Class Object
             HEDGlobalHomePage hedGlobalHomepage = new HEDGlobalHomePage();
             //Approves Course in Active State
             hedGlobalHomepage.ApproveCoursePresentInAssignedToCopyState();            
             Logger.LogMethodExit("InstructorSearchCatalog",
                 "ApproveInactiveStateOfCourseToActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             Logger.LogMethodEntry("HEDGlobalHomePage", 
                 "VerifyInstructorCourseOnTheGlobalHomePageInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Course Present In Active State
             Logger.LogAssertion("VerifyCoursePresentInActiveState", 
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -102,7 +102,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             new HEDGlobalHomePage().StoreInstructorCourseIDInMemory(courseTypeEnum);
             Logger.LogMethodExit("HEDGlobalHomePage", 
                 "VerifyInstructorCourseOnTheGlobalHomePageInActiveState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Verifies Sub tabs Under Main Tab
             Logger.LogMethodEntry("InstructorSearchCatalog",
                 "VerifySubTabsUnderMainTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             foreach (var tableRow in table.Rows)
             {
                 //Assert correct pages are opened
@@ -132,7 +132,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             }
             Logger.LogMethodExit("InstructorSearchCatalog", 
                 "VerifySubTabsUnderMainTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Verify Tabs in Course
             Logger.LogMethodEntry("InstructorSearchCatalog",
                 "VerifyTabsInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             foreach (var tableRow in table.Rows)
             {
                 //Assert correct pages are opened
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             }
             Logger.LogMethodExit("InstructorSearchCatalog",
                 "VerifyTabsInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -172,14 +172,14 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             Logger.LogMethodEntry("InstructorSearchCatalog",
                 "VerifyTheMessageInSearchCatalog",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("VerifyTheMessageInSearchCatalog", ScenarioContext.
                     Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(message,new CourseCatalogMainPage().
                     GetMessageInSearchCatalog()));
             Logger.LogMethodExit("InstructorSearchCatalog",
                 "VerifyTheMessageInSearchCatalog",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -192,14 +192,14 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Enter Invalid Search Parameter In Search Catalog
             Logger.LogMethodEntry("InstructorSearchCatalog",
                  "EnterInvalidSearchParameterInSearchCatalog",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Click 'Search Catalog' Button
             new HEDGlobalHomePage().ClickSearchCatalogOption();
             // Enter Search Parameter In Catalog
             new CourseCatalogMainPage().EnterSearchParameterInCatalog(searchParameter);
             Logger.LogMethodExit("InstructorSearchCatalog",
                 "EnterInvalidSearchParameterInSearchCatalog",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -211,12 +211,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Click On Next Button
             Logger.LogMethodEntry("InstructorSearchCatalog",
                   "ClickOnNextButton",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Click On Next Button
             new CourseCatalogMainPage().ClickOnNextButton();
             Logger.LogMethodExit("InstructorSearchCatalog",
                "ClickOnNextButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -228,12 +228,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Click On OK Button In UpgrdePage
             Logger.LogMethodEntry("InstructorSearchCatalog",
                   "ClickOnOKButtonInUpgradePage",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Click The OK Button In UpgrdePage
             new MyTestUXPage().ClickTheOkButtonInUpgradePage();
             Logger.LogMethodExit("InstructorSearchCatalog",
                "ClickOnOKButtonInUpgradePage",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment",
                 "EnrollSMSStudentInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert student Help Text Window Closed
             new StudentHelpTextPage().ManageStudentHelpTextWindow();
             //Closing the Announcement(s)
@@ -258,7 +258,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             new SelfEnrollmentPage().SmsStudentEnrolledInCourse(courseTypeEnum);
             Logger.LogMethodExit("UserEnrollment",
                 "EnrollSMSStudentInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -270,7 +270,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //InstructorCourse Display in Global Home Page
             Logger.LogMethodEntry("UserEnrollment",
                "DisplayOfEnrolledInstructorCourseInGlobalHomePage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.MyTestInstructorCourse);
             //Assert course displays in global home page
@@ -280,7 +280,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                     Contains(course.Name)));
             Logger.LogMethodExit("UserEnrollment",
                 "DisplayOfEnrolledInstructorCourseInGlobalHomePage",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

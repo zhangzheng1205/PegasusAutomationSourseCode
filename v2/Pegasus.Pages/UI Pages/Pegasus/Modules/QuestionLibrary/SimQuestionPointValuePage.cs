@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Set Point Value For Question
             Logger.LogMethodEntry("SimQuestionPointValuePage",
-                "SetPointValueForQuestion",base.isTakeScreenShotDuringEntryExit);
+                "SetPointValueForQuestion",base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select 'Set Point Value' Window
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SimQuestionPointValuePage",
-                "SetPointValueForQuestion",base.isTakeScreenShotDuringEntryExit);
+                "SetPointValueForQuestion",base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,14 +70,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select 'Set Point Value' Window
             Logger.LogMethodEntry("SimQuestionPointValuePage",
-                "SelectSetPointValueWindow", base.isTakeScreenShotDuringEntryExit);
+                "SelectSetPointValueWindow", base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(SimQuestionPointValuePageResource.
                 SimQuestionPointValue_Page_Resource_SetPointValue_Window);
             //Select Window
             base.SelectWindow(SimQuestionPointValuePageResource.
                 SimQuestionPointValue_Page_Resource_SetPointValue_Window);
             Logger.LogMethodExit("SimQuestionPointValuePage",
-                "SelectSetPointValueWindow", base.isTakeScreenShotDuringEntryExit);
+                "SelectSetPointValueWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Set Point Value For Question
             Logger.LogMethodEntry("SimQuestionPointValuePage",
-                "SetPointValueForQuestion", base.isTakeScreenShotDuringEntryExit);
+                "SetPointValueForQuestion", base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getPointValue = string.Empty;
             try
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SimQuestionPointValuePage",
-                "SetPointValueForQuestion", base.isTakeScreenShotDuringEntryExit);
+                "SetPointValueForQuestion", base.IsTakeScreenShotDuringEntryExit);
             return getPointValue;
         }
 
@@ -136,7 +136,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Searched Question
             Logger.LogMethodEntry("SimQuestionPointValuePage",
-               "ClickOnSearchedQuestion", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnSearchedQuestion", base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(SimQuestionPointValuePageResource.
                 SimQuestionPointValue_Page_Resource_SearchedQuestion_Xpath_Locator));
             //Get Searched Question Property
@@ -146,7 +146,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Searched Question
             base.ClickByJavaScriptExecutor(getQuestionName);
             Logger.LogMethodExit("SimQuestionPointValuePage",
-                "ClickOnSearchedQuestion", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnSearchedQuestion", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -156,14 +156,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question Bank Window
             Logger.LogMethodEntry("SimQuestionPointValuePage",
-              "SelectQuestionBankWindow", base.isTakeScreenShotDuringEntryExit);
+              "SelectQuestionBankWindow", base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(SimQuestionPointValuePageResource.
                 SimQuestionPointValue_Page_Resource_QuestionBank_Window);
             //Select Window
             base.SelectWindow(SimQuestionPointValuePageResource.
                 SimQuestionPointValue_Page_Resource_QuestionBank_Window);
             Logger.LogMethodExit("SimQuestionPointValuePage",
-                "SelectQuestionBankWindow", base.isTakeScreenShotDuringEntryExit);
+                "SelectQuestionBankWindow", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

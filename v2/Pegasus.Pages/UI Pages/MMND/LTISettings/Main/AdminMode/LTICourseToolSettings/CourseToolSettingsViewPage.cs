@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter eCollege Course Id
             Logger.LogMethodEntry("CourseToolSettingsViewPage", "EnterECollegeCourseId",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch to Course Frame
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);               
             }
             Logger.LogMethodExit("CourseToolSettingsViewPage", "EnterECollegeCourseId",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch to Course Frame
             Logger.LogMethodEntry("CourseToolSettingsViewPage", "SwitchToCourseFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Administrative Pages Window
             base.SelectWindow(CourseToolSettingsViewPageResource.
                 CourseToolSettingsView_Page_Window_Name);
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(CourseToolSettingsViewPageResource.
                 CourseToolSettingsView_Page_Frame_Name_Locator);
             Logger.LogMethodExit("CourseToolSettingsViewPage", "SwitchToCourseFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Message From MMND
             Logger.LogMethodEntry("CourseToolSettingsViewPage","GetMessageFromMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getMessageValidate = string.Empty;
             try
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseToolSettingsViewPage","GetMessageFromMMND",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getMessageValidate;
         }
     }

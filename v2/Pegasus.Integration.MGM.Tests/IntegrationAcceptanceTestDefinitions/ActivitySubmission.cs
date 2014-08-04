@@ -31,7 +31,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Open the Activity in Different Tab's
             Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivity",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Get The activity from In- Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Select Content Window
@@ -40,7 +40,7 @@ namespace Pegasus.Integration.MGM.Tests.
             new CoursePreviewMainUXPage().
                 ClickActivityInViewAllContentTab(activity.Name);
             Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Submit the Activity
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             StudentPresentationPage studentpresentationpage =
                 new StudentPresentationPage();
@@ -63,7 +63,7 @@ namespace Pegasus.Integration.MGM.Tests.
             // select close button on the Test window
             new InstructionsPage().ClickTestCloseButton();
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }      
 
         /// <summary>
@@ -74,13 +74,13 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Start pre test
             Logger.LogMethodEntry("ActivitySubmission", "StartPreTest",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             // Click on begin button
             new DRTDefaultUXPage().ClickBeginButton();
             // Click continue button on activity alert pop up
             new ShowMessagePage().ClickContinueInActivityAlert();
             Logger.LogMethodExit("ActivitySubmission", "StartPreTest",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -91,11 +91,11 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Select return to course button to go back to Content page
             Logger.LogMethodEntry("ActivitySubmission", "ClickReturnToCourseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             // Click on return to course button
             new DRTDefaultUXPage().ClickReturnToCourseButton();
             Logger.LogMethodExit("ActivitySubmission", "ClickReturnToCourseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

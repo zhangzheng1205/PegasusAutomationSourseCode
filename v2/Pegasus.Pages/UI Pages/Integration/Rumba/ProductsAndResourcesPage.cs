@@ -37,7 +37,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click products And Resources Tab
             logger.LogMethodEntry("ProductsAndResourcesPage ",
                 "ClickOnProductsAndResourcesTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ProductsAndResourcesPage ",
                 "ClickOnProductsAndResourcesTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Add product Id to resource Id
             logger.LogMethodEntry("ProductsAndResourcesPage ", "AddProductIDToResourceID",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get license from memory
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProductsAndResourcesPage ", "AddProductIDToResourceID",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add Resource To Product
             logger.LogMethodEntry("ProductsAndResourcesPage ", "AddResource",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For The Add Button
             base.WaitForElement(By.Id(ProductsAndResourcesPageResource.
                 ProductsAndResources_Page_AddButton_Id_Locator));
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonById(ProductsAndResourcesPageResource.
                 ProductsAndResources_Page_AddResourcesPopup_Ok_Button_Id_Locator);
             logger.LogMethodExit("ProductsAndResourcesPage ", "AddResource",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Search And Add Resource
             logger.LogMethodEntry("ProductsAndResourcesPage ", "SearchAndSelectResource",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(ProductsAndResourcesPageResource.
                 ProductsAndResources_Page_ResourcesTab_Xpath_locator));
@@ -172,7 +172,7 @@ namespace Pegasus.Pages.UI_Pages
             stopWatch.Stop();
             this.SelectSearchedResource(licenceResourceId);
             logger.LogMethodExit("ProductsAndResourcesPage ", "SearchAndSelectResource",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Searched Resource
             logger.LogMethodEntry("ProductsAndResourcesPage ", "SelectSearchedResource",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For The Searched Resource
             base.WaitForElement(By.Id(ProductsAndResourcesPageResource.
                 ProductsAndResources_Page_ResourceCheckbox_Id_Locator +
@@ -199,7 +199,7 @@ namespace Pegasus.Pages.UI_Pages
             // Select The Searched Resource
             base.ClickByJavaScriptExecutor(getSelectCheckbox);
             logger.LogMethodExit("ProductsAndResourcesPage ", "SelectSearchedResource",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search And Select Product
             logger.LogMethodEntry("ProductsAndResourcesPage ", "SearchAndSelectProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Start Stop Watch
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -252,7 +252,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click OnThe Searched Product
             base.ClickByJavaScriptExecutor(GetSearchedProduct);
             logger.LogMethodExit("ProductsAndResourcesPage ", "SearchAndSelectProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -263,7 +263,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Get Success Message
             logger.LogMethodEntry("ProductsAndResourcesPage ", "GetSuccessMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string successMessage = string.Empty;
             //Get Successmessage From Application
@@ -281,7 +281,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProductsAndResourcesPage ", "GetSuccessMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return successMessage;
         }
     }

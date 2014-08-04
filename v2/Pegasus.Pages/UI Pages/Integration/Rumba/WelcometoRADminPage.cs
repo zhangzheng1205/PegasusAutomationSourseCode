@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Create product
             logger.LogMethodEntry("WelcometoRADminPage", "ClickonCreateProductLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("WelcometoRADminPage", "ClickonCreateProductLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Create Resource
             logger.LogMethodEntry("WelcometoRADminPage", "ClickCreateResourceLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {                
                 String CurrentPage = base.GetPageTitle;
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("WelcometoRADminPage", "ClickCreateResourceLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Place An Order Link
             logger.LogMethodEntry("WelcometoRADminPage", "ClickOnPlaceAnOrderLink",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {                
                 //Wait For Element
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("WelcometoRADminPage", "ClickOnPlaceAnOrderLink",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

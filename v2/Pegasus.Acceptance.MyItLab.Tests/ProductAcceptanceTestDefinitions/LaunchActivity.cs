@@ -29,11 +29,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Open The Activity As Student
             Logger.LogMethodEntry("LaunchActivity", "OpenTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Launch The Activity
             new CoursePreviewMainUXPage().OpenActivity(activityTypeEnum);
             Logger.LogMethodExit("LaunchActivity", "OpenTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -45,13 +45,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Enrty
             Logger.LogMethodEntry("LaunchActivity", 
                 "LaunchPreTestOfSIMStudyPlanBySMSStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Launch SIM Study Plan Pre Test
             new SIMStudyPlanStudentUXPage().LaunchSIMStudyPlanPreTestByStudent();
             //Logger Exit
             Logger.LogMethodExit("LaunchActivity",
                 "LaunchPreTestOfSIMStudyPlanBySMSStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             
         }
 
@@ -65,7 +65,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Enrty
             Logger.LogMethodEntry("LaunchActivity",
                 "SubmitTheSIMStudyPlanPreTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Activity name from memeory
             Activity activity= Activity.Get(activityTyepEnum);
             //Launch SIM Study Plan Pre Test
@@ -73,7 +73,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Exit
             Logger.LogMethodExit("LaunchActivity",
                 "SubmitTheSIMStudyPlanPreTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -87,14 +87,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select Cmenu Option Of Activity
             Logger.LogMethodEntry("LaunchActivity","SelectCmenuOptionOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Activity Name from Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Select Activity Cmenu Option
             new CoursePreviewMainUXPage().SelectActivityCmenuOption((CoursePreviewMainUXPage.ActivityCmenuEnum)
                 Enum.Parse(typeof(CoursePreviewMainUXPage.ActivityCmenuEnum), cmenuOption), activity.Name);
             Logger.LogMethodExit("LaunchActivity","SelectCmenuOptionOfActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify Asset Information In Frame
             Logger.LogMethodEntry("LaunchActivity", "VerifyAssetInInformationFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Activity Name From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Verify Question Status
@@ -114,7 +114,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(activity.Name, new AssetInformationPage().GetActivityName()));
             Logger.LogMethodExit("LaunchActivity", "VerifyAssetInInformationFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
 

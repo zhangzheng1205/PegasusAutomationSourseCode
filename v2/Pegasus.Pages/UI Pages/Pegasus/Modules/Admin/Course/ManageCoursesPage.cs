@@ -37,7 +37,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Find Course Present In Course Grid
             Logger.LogMethodEntry("ManageCoursesPage", "SelectCourseEnrollementWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Getting Out Of The Frame
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "SelectCourseEnrollementWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //To Click On The Course Cmenu Option
             Logger.LogMethodEntry("ManageCoursesPage", "ClickCourseCMenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select Base Window
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "ClickCourseCMenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select IFrame
             Logger.LogMethodEntry("ManageCoursesPage", "SelectIFrameRight",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(ManageCoursesPageResource.
                  ManageCourses_Page_RightFrame_Id_Locator));
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(ManageCoursesPageResource
                                     .ManageCourses_Page_RightFrame_Id_Locator);
             Logger.LogMethodExit("ManageCoursesPage", "SelectIFrameRight",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Approve the course from [Assigned To Copy] State
             Logger.LogMethodEntry("ManageCoursesPage", "ApproveAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Stop Watch
@@ -157,7 +157,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "ApproveAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
             //Course [AssignedToCopy] text present after specified time
             Logger.LogMethodEntry("ManageCoursesPage",
                 "GetAssignedToCopyTextPresentAfterSpecifiedTime",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Get String Variable
             string getAssignedToCopyText = string.Empty;
             try
@@ -195,7 +195,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("ManageCoursesPage",
                 "GetAssignedToCopyTextPresentAfterSpecifiedTime",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getAssignedToCopyText;
         }
 
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selection Of Course From The Right Frame
             Logger.LogMethodEntry("ManageCoursesPage", "SelectCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch To Default Window
@@ -229,7 +229,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "SelectCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Searched Course Name
             Logger.LogMethodEntry("ManageCoursesPage", "GetSearchedCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Variable Declaration
             string getCourseName = string.Empty;
             try
@@ -279,7 +279,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "GetSearchedCourse",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             return getCourseName;
         }
 
@@ -290,7 +290,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On The Cmenu Option Of CTC Course 
             Logger.LogMethodEntry("ManageCoursesPage", "ClickOnTheCmenuOptionOfCTCCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select Course Enrollment Right Frame
@@ -311,7 +311,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "ClickOnTheCmenuOptionOfCTCCourse",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -322,7 +322,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Is Default Cmenu Options Displayed In CTC
             Logger.LogMethodEntry("ManageCoursesPage", "IsDefaultCmenuOptionsDisplayedInCTC",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             bool isDefaultCmenuOptionsDisplayed = false;
             try
@@ -351,7 +351,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "IsDefaultCmenuOptionsDisplayedInCTC",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             return isDefaultCmenuOptionsDisplayed;
         }
 
@@ -363,7 +363,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get cMenu Options of Courses
             Logger.LogMethodEntry("ManageCoursesPage", "GetCmenuOptionOfCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             string getCmenuOptions = string.Empty;
             try
             {
@@ -384,7 +384,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "GetCmenuOptionOfCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCmenuOptions;
         }
 
@@ -396,7 +396,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Course Type
             Logger.LogMethodEntry("ManageCoursesPage", "GetCourseType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getCourseType = string.Empty;
             try
@@ -420,7 +420,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "GetCourseType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getCourseType;
         }
 
@@ -432,7 +432,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Course Status
             Logger.LogMethodEntry("ManageCoursesPage", "GetCourseStatus",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getCourseStatus = string.Empty;
             try
@@ -453,7 +453,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "GetCourseStatus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCourseStatus;
         }
 
@@ -465,7 +465,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get DateMonthYear from Manage Frame
             Logger.LogMethodEntry("ManageCoursesPage", "GetDateMonthYearFromManageFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getDateMonthYear = string.Empty;
             try
@@ -486,7 +486,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "GetDateMonthYearFromManageFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return getDateMonthYear;
         }
 
@@ -498,7 +498,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get New Search Button Name
             Logger.LogMethodEntry("ManageCoursesPage", "GetNewSearchButtonName",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getNewSearchButtonText = string.Empty;
             try
@@ -522,7 +522,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "GetNewSearchButtonName",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return getNewSearchButtonText;
         }
 
@@ -534,7 +534,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Delete Course Button Name
             Logger.LogMethodEntry("ManageCoursesPage", "GetDeleteSelectedCoursesButtonName",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getDeleteSelectedCourseButtonText = string.Empty;
             try
@@ -555,7 +555,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "GetDeleteSelectedCoursesButtonName",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return getDeleteSelectedCourseButtonText;
         }
 
@@ -567,7 +567,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fetch And Store Course Workspace Id
             Logger.LogMethodEntry("ManageCoursesPage", "FetchAndStoreCourseWorkspaceId",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Initialize Variable
@@ -589,7 +589,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "FetchAndStoreCourseWorkspaceId",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -602,12 +602,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Workspace Id
             Logger.LogMethodEntry("ManageCoursesPage", "StoreWorkspaceId",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Store Workspace Id
             Course course = Course.Get(courseTypeEnum);
             course.WorkSpaceId = getWorkspaceId;
             Logger.LogMethodExit("ManageCoursesPage", "StoreWorkspaceId",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -617,14 +617,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Enrollment Window
             Logger.LogMethodEntry("ManageCoursesPage", "SelectCourseEnrollmentWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(ManageCoursesPageResource.
                             ManageCourses_Page_Window_Name_CourseEnrollment);
             //Select Window
             base.SelectWindow(ManageCoursesPageResource.
                             ManageCourses_Page_Window_Name_CourseEnrollment);           
             Logger.LogMethodExit("ManageCoursesPage", "SelectCourseEnrollmentWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -635,7 +635,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Column Headers In Manage Course Frame
             Logger.LogMethodEntry("ManageCoursesPage", "GetColumnHeadersInManageCourseFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getColumnHeadersText = string.Empty;            
             try
@@ -667,7 +667,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "GetColumnHeadersInManageCourseFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return getColumnHeadersText;
         }
 
@@ -679,7 +679,7 @@ namespace Pegasus.Pages.UI_Pages
             //Delete The Created Course In Manage Course Frame
             Logger.LogMethodEntry("ManageCoursesPage",
                 "DeleteTheCreatedCourseInManageCourseFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Default Window
@@ -700,7 +700,7 @@ namespace Pegasus.Pages.UI_Pages
             }           
             Logger.LogMethodExit("ManageCoursesPage",
                 "DeleteTheCreatedCourseInManageCourseFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -710,7 +710,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Pegasus Alert Ok Button
             Logger.LogMethodEntry("ManageCoursesPage","ClickThePegasusAlertOkButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(ManageCoursesPageResource.
                     ManageCourses_Page_Pegasus_WindowName);
             base.SelectWindow(ManageCoursesPageResource.
@@ -726,7 +726,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(ManageCoursesPageResource.
                 ManageCourses_Page_WaitElement_Value));
             Logger.LogMethodExit("ManageCoursesPage", "ClickThePegasusAlertOkButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -736,7 +736,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Delete Course Link
             Logger.LogMethodEntry("ManageCoursesPage", "ClickOnDeleteCourseLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(ManageCoursesPageResource.
                 ManageCourses_Page_DeleteLink_Id_Locator));
@@ -746,7 +746,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select the Delete link
             base.ClickByJavaScriptExecutor(getSelectDeleteLink);
             Logger.LogMethodExit("ManageCoursesPage", "ClickOnDeleteCourseLink",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -756,7 +756,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Checkbox
             Logger.LogMethodEntry("ManageCoursesPage", "SelectCourseCheckbox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(ManageCoursesPageResource.
                 ManageCourses_Page_SelectCourseCheckbox_Id_Locator));
@@ -766,7 +766,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select the checkbox
             base.ClickByJavaScriptExecutor(getSelectCourseCheckbox);
             Logger.LogMethodExit("ManageCoursesPage","SelectCourseCheckbox",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -778,7 +778,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Message In Manage Course Frame
             Logger.LogMethodEntry("ManageCoursesPage", "GetMessageInManageCourseFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Variable Declaration
             string getCourseMessage = string.Empty;
             try
@@ -797,7 +797,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageCoursesPage", "GetMessageInManageCourseFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getCourseMessage;
         }
     }

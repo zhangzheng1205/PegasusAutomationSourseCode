@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create Page Asset.
             logger.LogMethodEntry("PegasusHTMLUXPage", "CreatePageAsset",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Intialize Guid for Page Asset
             Guid newPageAsset = Guid.NewGuid();
             //Generate New Guid Page Name
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PegasusHTMLUXPage", "CreatePageAsset",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enter Page Name and Description Fields.
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill The HTML Description
             logger.LogMethodEntry("PegasusHTMLUXPage", "FillTheHTMLDescription",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Sourse_Id_Locator));
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
                 newHTMLDiscription.ToString());
             base.SwitchToDefaultPageContent();
             logger.LogMethodExit("PegasusHTMLUXPage", "FillTheHTMLDescription",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Select Create Page Window.
@@ -111,14 +111,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Page Window
             logger.LogMethodEntry("PegasusHTMLUXPage", "SelectCreatePageWindow",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             base.WaitUntilWindowLoads(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Window_Name);
             base.SelectWindow(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Window_Name);
             logger.LogMethodExit("PegasusHTMLUXPage", "SelectCreatePageWindow",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Create Button
             logger.LogMethodEntry("PegasusHTMLUXPage", "ClickTheCreateButton",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Wait For create button
             base.WaitForElement(By.Id(PegasusHTMLUXPageResource.
                 PegasusHTMLUXPageResource_HTML_Create_Button_Id_Locator));
@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the create button
             base.ClickByJavaScriptExecutor(getCreateButton);
             logger.LogMethodExit("PegasusHTMLUXPage", "ClickTheCreateButton",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -150,11 +150,11 @@ namespace Pegasus.Pages.UI_Pages
             Activity.ActivityTypeEnum activityTypeEnum)
         {
             logger.LogMethodEntry("PegasusHTMLUXPage", "StoreThePageAsset",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Overloaded Method To Differentiate Normal Page and Audio Page
             StoreThePageAsset(newPageAsset, activityTypeEnum, string.Empty);
             logger.LogMethodExit("PegasusHTMLUXPage", "StoreThePageAsset",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Store The Audio Page Asset.
@@ -166,7 +166,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store The Audio Page Asset
             logger.LogMethodEntry("PegasusHTMLUXPage", "StoreTheAudioPageAsset",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Store the Page in memory
             Activity newPage = new Activity
             {
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newPage.StoreActivityInMemory();
             logger.LogMethodExit("PegasusHTMLUXPage", "StoreTheAudioPageAsset",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create Page Asset.
             logger.LogMethodEntry("PegasusHTMLUXPage", "RecordAudioFromPageAssetType",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Intialize Guid for Page Asset
             Guid newPageAsset = Guid.NewGuid();
             //Generate New Guid Page Name
@@ -209,7 +209,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PegasusHTMLUXPage", "RecordAudioFromPageAssetType",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search the HTML Page with Resource ID
             logger.LogMethodEntry("PegasusHTMLUXPage", "SearchForHTMLPage",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get The Page Name with ID resource
@@ -234,7 +234,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PegasusHTMLUXPage", "SearchForHTMLPage",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Select The HTML Page Preview Window.
@@ -243,7 +243,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select The HTML Page Preview Window
             logger.LogMethodEntry("PegasusHTMLUXPage", "SelectHTMLPreviewPage",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.SwitchToLastOpenedWindow();
@@ -259,7 +259,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PegasusHTMLUXPage", "SelectHTMLPreviewPage",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click The HTML Page Audio Play Button.
@@ -268,7 +268,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click The HTML Page Audio Play Button
             logger.LogMethodEntry("PegasusHTMLUXPage", "ClickTheHTMLPlayButton",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Wait For Element
@@ -284,7 +284,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PegasusHTMLUXPage", "ClickTheHTMLPlayButton",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
 
         }
         /// <summary>
@@ -294,7 +294,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Verify Player Working Scenario
             logger.LogMethodEntry("PegasusHTMLUXPage", "VerifyTheAudioPlayer",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Wait For Element
@@ -316,7 +316,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PegasusHTMLUXPage", "VerifyTheAudioPlayer",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Play Audio For Few Seconds.
@@ -325,7 +325,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Play Audio For 20 Seconds
             logger.LogMethodEntry("EssayPage", "PlayAudioForFewSeconds",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Current Time 
@@ -349,7 +349,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EssayPage", "PlayAudioForFewSeconds",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

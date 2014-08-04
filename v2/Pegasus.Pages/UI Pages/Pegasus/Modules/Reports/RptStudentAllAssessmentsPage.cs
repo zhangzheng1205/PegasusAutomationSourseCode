@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Activity Result Single Student Score In Report
             logger.LogMethodEntry("RptStudentAllAssessmentsPage", 
                 "GetActivityResultSingleStudentScoreInReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Activity Score Variable
             string getActivityScore = string.Empty;
             try
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RptStudentAllAssessmentsPage",
                 "GetActivityResultSingleStudentScoreInReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
 
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Activity Results Window
             logger.LogMethodEntry("RptStudentAllAssessmentsPage",
                "SelectActivityResultsWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             base.WaitUntilWindowLoads(RptStudentAllAssessmentsPageResource.
                 RptStudentAllAssessmentsPage_ActivityResult_Window_name);
@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
                 RptStudentAllAssessmentsPage_ActivityResult_Window_name);
             logger.LogMethodExit("RptStudentAllAssessmentsPage",
                 "SelectActivityResultsWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

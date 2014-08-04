@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create 'Fill In The Blanks' Question
             logger.LogMethodEntry("FillInTheBlanksPage", "CreateFillInTheBlanksQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Window
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("FillInTheBlanksPage", "CreateFillInTheBlanksQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Question In Memory
             logger.LogMethodEntry("FillInTheBlanksPage", "StoreQuestionInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Question question = new Question
             {
                 Name = questionTitle,
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
                 IsCreated = true
             }; question.StoreQuestionInMemory();
             logger.LogMethodExit("FillInTheBlanksPage", "StoreQuestionInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,14 +90,14 @@ namespace Pegasus.Pages.UI_Pages
         private void AddTextForQuestionAndBlankAtTop(string textToEnterInTextField)
         {
             logger.LogMethodEntry("FillInTheBlanksPage", "AddTextForQuestionAndBlankAtTop",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Add text for blank
             base.WaitForElement(By.Id(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_TextAndBlank_Field_AtTop_ID_Locator));
             base.FillTextBoxById(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_TextAndBlank_Field_AtTop_ID_Locator, textToEnterInTextField);
             logger.LogMethodExit("FillInTheBlanksPage", "AddTextForQuestionAndBlankAtTop",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
                 
 
@@ -108,7 +108,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add Text Field At Top
             logger.LogMethodEntry("FillInTheBlanksPage", "AddTextFieldAtTop",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Add Text link
             base.WaitForElement(By.XPath(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_AddText_Link_XPath_Locator));
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the 'Add at Top' option
             base.ClickByJavaScriptExecutor(getAddTopLink);
             logger.LogMethodExit("FillInTheBlanksPage", "AddTextFieldAtTop",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add Blank Field At Top
             logger.LogMethodEntry("FillInTheBlanksPage", "AddBlankFieldAtTop",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_AddBlank_Link_XPath_Locator));
             IWebElement getAddBlankLink = base.GetWebElementPropertiesByXPath
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the 'Add at Top' option
             base.ClickByJavaScriptExecutor(getAddTopLink);
             logger.LogMethodExit("FillInTheBlanksPage", "AddBlankFieldAtTop",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
         private void AddPalletteCharacters()
         {
             logger.LogMethodEntry("FillInTheBlanksPage", "AddPalletteCharacters",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Add Pallette Characters
             base.WaitForElement(By.Id(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_CharacterPallette_a_Id_Locator));
@@ -190,7 +190,7 @@ namespace Pegasus.Pages.UI_Pages
             //Add u character
             base.ClickByJavaScriptExecutor(getCharacteru);
             logger.LogMethodExit("FillInTheBlanksPage", "AddPalletteCharacters",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Question Title
             logger.LogMethodEntry("FillInTheBlanksPage", "EnterQuestionTitle",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Generate Question Title Guid
             Guid questionTitle = Guid.NewGuid();
             base.WaitForElement(By.Id(FillInTheBlanksPageResource.
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_Question_Label_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("FillInTheBlanksPage", "EnterQuestionTitle",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return questionTitle;
         }
 
@@ -221,14 +221,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select 'Create File Upload' Window
             logger.LogMethodEntry("FillInTheBlanksPage", "SelectCreateFillInTheBlanksWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the window to load
             base.WaitUntilWindowLoads(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_CreateFillInTheBlank_Window_Title);
             base.SelectWindow(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_CreateFillInTheBlank_Window_Title);
             logger.LogMethodExit("FillInTheBlanksPage", "SelectCreateFillInTheBlanksWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -238,7 +238,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Save And Return Button
             logger.LogMethodEntry("FillInTheBlanksPage", "ClickOnSaveAndReturnButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Switch to the Parent Window
             base.SwitchToDefaultPageContent();
             //Wait and click on the Save Button
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages
                 FillInTheBlanksPage_SaveAndReturn_Id_Locator);
             base.ClickByJavaScriptExecutor(getSaveReturnButton);
             logger.LogMethodExit("FillInTheBlanksPage", "ClickOnSaveAndReturnButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On 'Add Score And FeedBack' Tab
             logger.LogMethodEntry("FillInTheBlanksPage", "ClickOnAddScoreAndFeedBackTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the 'Add Score And FeedBack'
             base.WaitForElement(By.Id(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_AddScoreAndFeedback_Tab_Id_Locator));
@@ -268,7 +268,7 @@ namespace Pegasus.Pages.UI_Pages
                 FillInTheBlanksPage_AddScoreAndFeedback_Tab_Id_Locator);
             base.ClickByJavaScriptExecutor(getScoreFeedback);
             logger.LogMethodExit("FillInTheBlanksPage", "ClickOnAddScoreAndFeedBackTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -278,7 +278,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select 'Partial Grading' Option
             logger.LogMethodEntry("FillInTheBlanksPage", "SelectPartialGradingOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the 'Partial Grading' Radio Button
             base.WaitForElement(By.Id(FillInTheBlanksPageResource.
                 FillInTheBlanksPage_PartialGrading_RadioButton_Id_Locator));
@@ -287,7 +287,7 @@ namespace Pegasus.Pages.UI_Pages
                 FillInTheBlanksPage_PartialGrading_RadioButton_Id_Locator);
             base.ClickByJavaScriptExecutor(getPartialRadioButton);
             logger.LogMethodExit("FillInTheBlanksPage", "SelectPartialGradingOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

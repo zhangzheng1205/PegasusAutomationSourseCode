@@ -25,13 +25,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("CourseContent",
                  "SelectCheckboxOfAssets",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             CourseContentUXPage courseContentPage = new CourseContentUXPage();
             courseContentPage.SelectAndSwitchToMyCourseHome();
             courseContentPage.SelectCheckboxOfAssets(assetCount);
             Logger.LogMethodExit("CourseContent",
               "SelectCheckboxOfAssets",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         [Then(@"I should see ""(.*)"" button on My Course View header ""(.*)""")]
@@ -41,7 +41,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("CourseContent",
                  "VerifyButtonStatusOnMyCourseViewHeader",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             bool isEnabled = new CourseContentUXPage()
                 .IsButtonEnabled(buttonType);
             if (buttonStatus.Equals("Enabled")){
@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             }           
             Logger.LogMethodExit("CourseContent",
               "VerifyButtonStatusOnMyCourseViewHeader",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         [When(@"I select ""(.*)"" button on My Course View header")]
@@ -60,11 +60,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("CourseContent",
                   "SelectButtonOnMyCourseViewHeader",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             new CourseContentUXPage().ClickButtonOnHeader(buttonType);
             Logger.LogMethodExit("CourseContent",
               "SelectButtonOnMyCourseViewHeader",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         [Then(@"I should see the assets which are shown should be hidden and assets which are hidden should be shown")]
@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("CourseContent",
                  "VerifyAssetsShowHideStatus",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             if (base.IsPopupPresent(CourseContentResource
                 .CourseContent_ShowHide_ConfirmationPopup_Name))
             {
@@ -98,7 +98,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             }
             Logger.LogMethodExit("CourseContent",
               "VerifyAssetsShowHideStatus",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         [Then(@"I should see None or All should be displayed for the assets under Shown-To column when they are Hidden or shown respectively")]
@@ -106,7 +106,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("CourseContent",
                  "VerifyDisplayOfTextInShownToColumn",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             string shownToText;            
             CourseContentUXPage courseContentUXPage = new CourseContentUXPage();
             Activity shownActivity = Activity.Get(Activity.ShowHideStatusEnum.Shown);
@@ -130,7 +130,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             }
             Logger.LogMethodExit("CourseContent",
               "VerifyDisplayOfTextInShownToColumn",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("CourseContent",
                "ClickOKButtonOnPegasusConfirmationPopUp",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //If assets are already attempted by student a show hide pop-up will appear.
             try
             {
@@ -149,7 +149,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             catch{}
             Logger.LogMethodExit("CourseContent",
                "ClickOKButtonOnPegasusConfirmationPopUp",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

@@ -32,12 +32,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Click on the Student Enrollment link
             Logger.LogMethodEntry("ProgramAdminReports",
                 "ClickedOnTheStudentEnrollmentLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Student Enrollment link
             new RptMainPage().SelectReport(getReportLink);
             Logger.LogMethodExit("ProgramAdminReports",
                 "ClickedOnTheStudentEnrollmentLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Select the section to generate the report
             Logger.LogMethodEntry("ProgramAdminReports", "SelectSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Select Sections button
             new RptSaveReportPage().SelectSectionToGenerateReport();
             //Get Course From Memory
@@ -58,7 +58,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Click AddandClose button to close SelectSections PopUp
             new RptSelectSectionsPage().ClickAddandCloseButton();
             Logger.LogMethodExit("ProgramAdminReports", "SelectSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Select the student to generate the report
             Logger.LogMethodEntry("ProgramAdminReports", "SelectStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Select students button
             new RptSaveReportPage().ClickOnSelectStudentButton();
             //Select Window
@@ -77,7 +77,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Select Student
             new RptSelectStudentsPage().SelectStudentInProgramAdminReport();
             Logger.LogMethodExit("ProgramAdminReports", "SelectStudent",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,13 +89,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click On Button In Reports
             Logger.LogMethodEntry("ProgramAdminReports", "ClickOnButtonInReports",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             new RptSaveReportPage().SelectWindowAndFrame();
             //Click on Button
             new RptSaveReportPage().ClickOnButtonInReports(buttonName);
             Logger.LogMethodExit("ProgramAdminReports", "ClickOnButtonInReports",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verification of tudent Enrollment report launched successfully
             Logger.LogMethodEntry("ProgramAdminReports", "ProgramAdminReportLaunchedSuccessfully",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Creating Object of class RptStudentUsagePage
             RptStudentUsagePage rptStudentUsagePage = new RptStudentUsagePage();
             //Get Course From Memory
@@ -126,7 +126,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                  ((RptStudentUsagePage.ProgramAdminReportType)Enum.
                 Parse(typeof(RptStudentUsagePage.ProgramAdminReportType), reportType))));
             Logger.LogMethodExit("ProgramAdminReports", "ProgramAdminReportLaunchedSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -137,11 +137,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Click On Select Sections
             Logger.LogMethodEntry("ProgramAdminReports", "ClickOnSelectSections",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Select Sections button
             new RptSaveReportPage().SelectSectionToGenerateReport();
             Logger.LogMethodExit("ProgramAdminReports", "ClickOnSelectSections",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -154,12 +154,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Click On Show/Hide Sections Link
             Logger.LogMethodEntry("ProgramAdminReports",
                 "ClickOnShowHideSectionsLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On Show/Hide Sections Link
             new RptSelectSectionsPage().ClickOnShowHideSectionLink();
             Logger.LogMethodExit("ProgramAdminReports",
                 "ClickOnShowHideSectionsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify The Display Of Section
             Logger.LogMethodEntry("ProgramAdminReports", "VerifyTheDisplayOfSection",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
             //Assert to verify section name
@@ -179,7 +179,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     new RptSelectSectionsPage().IsSectionNameDisplay(course.SectionName +
                     ProgramAdminReportsResource.ProgramAdminReports_Page_Space_Value_One)));
             Logger.LogMethodExit("ProgramAdminReports", "VerifyTheDisplayOfSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify The Hidden State Of Section
             Logger.LogMethodEntry("ProgramAdminReports",
                 "VerifyHiddenStateOfSectionAndDisplayOfExpandButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             RptSelectSectionsPage rptSelectSelectionsPage = new RptSelectSectionsPage();
             //Assert to Verify The Hidden State Of Section
             Logger.LogAssertion("VerifyTheHiddenStateOfSections", ScenarioContext.
@@ -205,7 +205,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     rptSelectSelectionsPage.GetExpandCollapseButtonTitle()));
             Logger.LogMethodExit("ProgramAdminReports",
                 "VerifyHiddenStateOfSectionAndDisplayOfExpandButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -218,14 +218,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify The Message In Select Sections PopUp
             Logger.LogMethodEntry("ProgramAdminReports",
                 "VerifyTheMessageInSelectSectionsPopUp",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert to verify message in select sections pop up
             Logger.LogAssertion("VerifyTheMessageInSelectSectionsPopUp", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(message,
                     new RptSelectSectionsPage().GetSelectSectionsPopupMessage()));
             Logger.LogMethodExit("ProgramAdminReports",
                 "VerifyTheMessageInSelectSectionsPopUp",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -236,11 +236,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click On Expand Link
             Logger.LogMethodEntry("ProgramAdminReports", "ClickOnExpandLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Expand Link
             new RptSelectSectionsPage().ClickOnExpandLink();
             Logger.LogMethodExit("ProgramAdminReports", "ClickOnExpandLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -251,11 +251,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click On Collapse Link
             Logger.LogMethodEntry("ProgramAdminReports", "ClickOnCollapseLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Collapse Link
             new RptSelectSectionsPage().ClickOnCollapseLink();
             Logger.LogMethodExit("ProgramAdminReports", "ClickOnCollapseLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -267,14 +267,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click On Button In Select Sections Popup
             Logger.LogMethodEntry("ProgramAdminReports", "ClickOnButtonInSelectSectionsPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Button In Select Sections Popup
             new RptSelectSectionsPage().ClickOnTheButtonInSelectSectionsPopup(
                 (RptSelectSectionsPage.
                 SelectSectionsPopupButtonTypeEnum)Enum.Parse(typeof(
                 RptSelectSectionsPage.SelectSectionsPopupButtonTypeEnum), buttonName));
             Logger.LogMethodExit("ProgramAdminReports", "ClickOnButtonInSelectSectionsPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -286,13 +286,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Select Radio Button In Section Options Frame
             Logger.LogMethodEntry("ProgramAdminReports", "SelectRadioButtonInSectionOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Radio Button In Section Options Frame
             new RptSaveReportPage().SelectSectionStatusRadioButton(
                 (RptSaveReportPage.SectionStatusRadioButtonTypeEnum)Enum.Parse(typeof(
                 RptSaveReportPage.SectionStatusRadioButtonTypeEnum), statusRadioButtonName));
             Logger.LogMethodExit("ProgramAdminReports", "SelectRadioButtonInSectionOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -304,7 +304,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Display Of Both Active And Inactive Sections
             Logger.LogMethodEntry("ProgramAdminReports",
                 "VerifyDisplayOfBothActiveAndInactiveSections",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
             //Assert to verify First section name
@@ -319,7 +319,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     ProgramAdminReportsResource.ProgramAdminReports_Page_Space_Value_Two)));
             Logger.LogMethodExit("ProgramAdminReports",
                 "VerifyDisplayOfBothActiveAndInactiveSections",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -331,12 +331,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select Save Settings To My Reports Option
             Logger.LogMethodEntry("ProgramAdminReports",
                 "SelectSaveSettingsToMyReportsOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Save Settings To My Reports Checkbox
             new RptSaveReportPage().SelectSaveSettingsToMyReportsCheckbox();
             Logger.LogMethodExit("ProgramAdminReports",
                 "SelectSaveSettingsToMyReportsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -348,14 +348,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             Logger.LogMethodEntry("ProgramAdminReports",
                 "SelectRadiobuttonInSaveSettingsToMyReportsPopup",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Radiobutton In Save Settings Popup
             new RptSaveSettingsPage().SelectRadioButtonInSaveSettingsPopup(
                 (RptSaveSettingsPage.SaveSettingsPopupRadiobuttonTypeEnum)Enum.Parse(typeof(
                 RptSaveSettingsPage.SaveSettingsPopupRadiobuttonTypeEnum), radiobuttonName));
             Logger.LogMethodExit("ProgramAdminReports",
                 "SelectRadiobuttonInSaveSettingsToMyReportsPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -367,7 +367,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Enter And Store Report Name
             Logger.LogMethodEntry("ProgramAdminReports", "EnterAndStoreReportName",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Generate GUID For Report Name
             Guid reportName = Guid.NewGuid();
             RptSaveSettingsPage rptSaveSettingsPage = new RptSaveSettingsPage();
@@ -376,7 +376,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Stor Report Name
             rptSaveSettingsPage.StoreReportDetailsInMemory(reportName, reportTypeEnum);
             Logger.LogMethodExit("ProgramAdminReports", "EnterAndStoreReportName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -388,13 +388,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click On Button In Save Settings Popup
             Logger.LogMethodEntry("ProgramAdminReports", "ClickOnTheButtonInSaveSettingsPopup",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Click On Button In Save Settings Popup
             new RptSaveSettingsPage().ClickOnButtonInSaveSettingsPopup(
                 (RptSaveSettingsPage.SaveSettingsPopupButtonTypeEnum)Enum.Parse(typeof(
                 RptSaveSettingsPage.SaveSettingsPopupButtonTypeEnum), buttonName));
             Logger.LogMethodExit("ProgramAdminReports", "ClickOnTheButtonInSaveSettingsPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -405,7 +405,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         public void VerifyTheDisplayOfReportInMyReportsGrid(Report.ReportTypeEnum reportTypeEnum)
         {
             Logger.LogMethodEntry("ProgramAdminReports", "VerifyTheDisplayOfReportInMyReportsGrid",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Get Report From Memory
             Report report = Report.Get(reportTypeEnum);
             //Assert to verify The Display Of Report In My Reports
@@ -413,7 +413,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(report.Name,
                     new RptMainPage().GetReportName()));
             Logger.LogMethodExit("ProgramAdminReports", "VerifyTheDisplayOfReportInMyReportsGrid",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -425,7 +425,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify The Enrollment Date In Student Enrollment Report
             Logger.LogMethodEntry("ProgramAdminReports",
                 "VerifyTheEnrollmentDateInStudentEnrollmentReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
             //Get Enrollment Date
@@ -437,7 +437,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     new RptStudentUsagePage().GetEnrollmentDate()));
             Logger.LogMethodExit("ProgramAdminReports",
                 "VerifyTheEnrollmentDateInStudentEnrollmentReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -449,7 +449,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify The Last Login Date In Student Enrollment Report
             Logger.LogMethodEntry("ProgramAdminReports",
                 "VerifyTheLastLoginDateInStudentEnrollmentReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get User From Memory            
             User user = User.Get(User.UserTypeEnum.CsSmsStudent);
             //Get Last Login Date
@@ -461,7 +461,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     new RptStudentUsagePage().GetLastLoginDate()));
             Logger.LogMethodExit("ProgramAdminReports",
                "VerifyTheLastLoginDateInStudentEnrollmentReport",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -473,13 +473,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify Popup Closed
             Logger.LogMethodEntry("ProgramAdminReports",
-                 "VerifyPopupClosed", base.isTakeScreenShotDuringEntryExit);
+                 "VerifyPopupClosed", base.IsTakeScreenShotDuringEntryExit);
             //Assert To Verify Popup Closed
             Logger.LogAssertion("VerifyPopupClosed", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.IsFalse(base.IsPopupPresent(windowName,
                     Convert.ToInt32(ProgramAdminReportsResource.ProgramAdminReports_Page_Wait_Time))));
             Logger.LogMethodExit("ProgramAdminReports",
-               "VerifyPopupClosed", base.isTakeScreenShotDuringEntryExit);
+               "VerifyPopupClosed", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -491,7 +491,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Display Of All The Fields In Student Enrollment Report
             Logger.LogMethodEntry("ProgramAdminReports",
                   "VerifyDisplayOfAllTheFieldsInStudentEnrollmentReport",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Fetch Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
             //Assert To Verify Display Of Section Options Fields
@@ -514,7 +514,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     new RptSaveReportPage().IsPagingOptionsFieldsPresent())); 
             Logger.LogMethodExit("ProgramAdminReports",
               "VerifyDisplayOfAllTheFieldsInStudentEnrollmentReport",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>

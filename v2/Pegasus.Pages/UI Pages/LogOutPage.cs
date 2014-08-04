@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Complete SingOut Process
             Logger.LogMethodEntry("LoginPage", "SignOutByNovaNetUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Base Page
@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LoginPage", "SignOutByNovaNetUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

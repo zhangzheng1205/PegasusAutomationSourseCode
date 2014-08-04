@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create Fill in the Blank Question
             Logger.LogMethodEntry("TrueFalsePage", "CreateFIBQuestion",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Intialize Guid for question
             Guid questionTrueFalse = Guid.NewGuid();
             try
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("TrueFalsePage", "CreateFIBQuestion",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Store the Question
             Logger.LogMethodEntry("TrueFalsePage", "StoreTheQuestion",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Store the TrueFalse Question
             Question newQuestionType = new Question
             {
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newQuestionType.StoreQuestionInMemory();
             Logger.LogMethodExit("TrueFalsePage", "StoreTheQuestion",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill the Discription for HTML Editor
             Logger.LogMethodEntry("TrueFalsePage",
                 "FillTheDiscriptionForHTMLEditor",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Intialize Guid for question
             Guid questionTrueFalse = Guid.NewGuid();
             //Select  the frame
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getHtmldesc);
             Logger.LogMethodExit("TrueFalsePage",
                 "FillTheDiscriptionForHTMLEditor",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Activity Save Button
             Logger.LogMethodEntry("TrueFalsePage", "ClickTheActivitySaveButton",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             base.SelectWindow(TrueFalsePageResource.
                 TrueFalse_Page_CreateNewQues_Window_Name);
@@ -152,7 +152,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(TrueFalsePageResource.
                 TrueFalse_Page_Activity_SaveAndClose_Mesg_TimeValue));
             Logger.LogMethodExit("TrueFalsePage", "ClickTheActivitySaveButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create MyTest Question
             Logger.LogMethodEntry("TrueFalsePage", "CreateMyTestQuestion",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate Guid for question
@@ -203,7 +203,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("TrueFalsePage", "CreateMyTestQuestion",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -213,7 +213,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //This is logger entry
             Logger.LogMethodExit("TrueFalsePage", "SelectTrueAndFalseWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for pop up to load
             base.WaitUntilWindowLoads(TrueFalsePageResource.
                 TrueFalse_Page_QuestionName_TF_Window_Name);
@@ -222,7 +222,7 @@ namespace Pegasus.Pages.UI_Pages
                 TrueFalse_Page_QuestionName_TF_Window_Name);
             //This is logger exit
             Logger.LogMethodExit("TrueFalsePage", "SelectTrueAndFalseWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -232,7 +232,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create True/False Question
             Logger.LogMethodEntry("TrueFalsePage", "CreateTrueFalseQuestion",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enter Question Title
@@ -266,7 +266,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("TrueFalsePage", "CreateTrueFalseQuestion",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -276,7 +276,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Feedback
             Logger.LogMethodEntry("TrueFalsePage", "EnterFeedback",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             new SelectQuestionTypePage().SelectCreateNewQuestionWindow();
             base.WaitForElement(By.Id(TrueFalsePageResource.
                 TrueFalse_Page_AddAnswer_Button_Id_Locator));
@@ -298,7 +298,7 @@ namespace Pegasus.Pages.UI_Pages
                 TrueFalse_Page_Feedback_No_Radiobutton_Id_Locator,
                 TrueFalsePageResource.TrueFalse_Page_Wrong_Feedback_Value);
             Logger.LogMethodExit("TrueFalsePage", "EnterFeedback",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -308,7 +308,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Add and Close
             Logger.LogMethodEntry("TrueFalsePage", "ClickonAddandClose",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             new SelectQuestionTypePage().SelectCreateNewQuestionWindow();
             //Wait for the 'Add and Close' button
@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Create'Random'Activity' Window
             this.SelectCreateRandomActivityWindow();
             Logger.LogMethodExit("TrueFalsePage", "ClickonAddandClose",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -334,14 +334,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select 'Create'Random'Activity' Window
             Logger.LogMethodEntry("TrueFalsePage", "SelectCreateRandomActivityWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(TrueFalsePageResource.
                 TrueFalse_Page_CreateRandomActivity_WindowName);
             //Select Window
             base.SelectWindow(TrueFalsePageResource.
                 TrueFalse_Page_CreateRandomActivity_WindowName);
             Logger.LogMethodExit("TrueFalsePage", "SelectCreateRandomActivityWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -352,7 +352,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Question Title
             Logger.LogMethodEntry("TrueFalsePage", "EnterQuestionTitle",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Generate Guid for question
             Guid questionTrueFalse = Guid.NewGuid();
             //Select Window
@@ -369,7 +369,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(TrueFalsePageResource.
             TrueFalse_Page_Activity_SaveAndClose_TimeValue));
             Logger.LogMethodExit("TrueFalsePage", "EnterQuestionTitle",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return questionTrueFalse;
         }
 
@@ -381,7 +381,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click Ques SaveAndClose Button
             Logger.LogMethodEntry("TrueFalsePage",
                 "ClickQuesSaveAndCloseButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             base.SelectWindow(TrueFalsePageResource.
                 TrueFalse_Page_QuestionName_TF_Window_Name);
@@ -397,7 +397,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSaveCloseButton);
             Logger.LogMethodExit("TrueFalsePage",
                 "ClickQuesSaveAndCloseButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

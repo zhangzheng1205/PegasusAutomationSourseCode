@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Add Course Materials Button
             Logger.LogMethodEntry("QlGridUXPage", "SelectAddCourseMaterialsButton",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {                
                 base.RefreshTheCurrentPage();
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "SelectAddCourseMaterialsButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question Type
             Logger.LogMethodEntry("QlGridUXPage", "SelectQuestionType",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Question Bank Window
@@ -79,7 +79,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "SelectQuestionType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question Bank Window
             Logger.LogMethodEntry("QlGridUXPage", "SelectQuestionBankWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(QlGridUXPageResource.
                     QlGridUX_Page_Question_Bank_WindowName_Locator);
             //Select Question Bank Window
@@ -101,7 +101,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(QlGridUXPageResource.
                 QlGridUX_Page_QuestionLibrary_Frame_Id_Locator);
             Logger.LogMethodExit("QlGridUXPage", "SelectQuestionBankWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Questions
             Logger.LogMethodEntry("QlGridUXPage", "CreateQuestions",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             switch (questionTypeEnum)
             {
                 case Question.QuestionTypeEnum.DropDownList:
@@ -163,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages
 
             }
             Logger.LogMethodExit("QlGridUXPage", "CreateQuestions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Is ClipBoard Items Displayed
             Logger.LogMethodEntry("QlGridUXPage", "GetClipBoardItemsTextDisplayed",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getClipBoardItemsTextDisplayed = string.Empty;
             try
@@ -205,7 +205,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "GetClipBoardItemsTextDisplayed",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return getClipBoardItemsTextDisplayed;
         }
 
@@ -218,7 +218,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Question From QuestionBank
             Logger.LogMethodEntry("QlGridUXPage", "SelectTheQuestionFromQuestionBank",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click On The Question Folder
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "SelectTheQuestionFromQuestionBank",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -246,14 +246,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Checkbox
             Logger.LogMethodEntry("QlGridUXPage", "SelectCheckbox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for Question Xpath
             base.WaitForElement(By.XPath(string.Format(QlGridUXPageResource.
               QlGridUX_Page_Select_Checkbox_QuestionName_Xpath_Locator, rowCount)));
             base.SelectCheckBoxByXPath(String.Format(QlGridUXPageResource.
               QlGridUX_Page_Select_Checkbox_QuestionName_Xpath_Locator, rowCount));
             Logger.LogMethodExit("QlGridUXPage", "SelectCheckbox",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -264,7 +264,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On The Question Folder
             Logger.LogMethodEntry("QlGridUXPage", "ClickOnTheQuestionFolder",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Question Bank Window
@@ -281,7 +281,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "ClickOnTheQuestionFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -292,7 +292,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Asset Row Count
             Logger.LogMethodEntry("QlGridUXPage", "GetAssetRowCount",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getAssetName = string.Empty;
             int getRowCount = Convert.ToInt32(QlGridUXPageResource.
@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
                 }                     
             }
             Logger.LogMethodExit("QlGridUXPage", "GetAssetRowCount",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             return getRowCount;
         }
 
@@ -336,7 +336,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Option In Course Materials
             Logger.LogMethodEntry("QlGridUXPage", "SelectOptionInCourseMaterials",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Question Bank Window                                         
@@ -353,7 +353,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "SelectOptionInCourseMaterials",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -365,7 +365,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Searched Folder Name
             Logger.LogMethodEntry("QlGridUXPage", "getSearchedFolderName",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getAssetName = string.Empty;
             try
@@ -389,7 +389,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "getSearchedFolderName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getAssetName;
         }
 
@@ -400,7 +400,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On search Link
             Logger.LogMethodEntry("QlGridUXPage", "ClickOnSearchLink",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             if (!base.IsElementPresent(By.Id(QlGridUXPageResource.
                 QlGridUX_Page_ClearResult_Link_Id_Locator),
                 Convert.ToInt32(QlGridUXPageResource.QlGridUX_Page_WaitforLocator)))
@@ -415,7 +415,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(getSearchButtonProperty);
             }
             Logger.LogMethodExit("QlGridUXPage", "ClickOnSearchLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -427,7 +427,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill Search Text And Click on Go Button
             Logger.LogMethodEntry("QlGridUXPage", "FillSearchTextAndClickonGoButton",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(QlGridUXPageResource.
                 QlGridUX_Page_SearchText_Id_Locator));
             base.ClearTextById(QlGridUXPageResource.
@@ -445,7 +445,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(QlGridUXPageResource.
                 QlGridUX_Page_Thread_WaitTime_Value));
             Logger.LogMethodExit("QlGridUXPage", "FillSearchTextAndClickonGoButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -456,7 +456,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Is ClipBoard Items Get Enabled State 
             Logger.LogMethodEntry("QlGridUXPage", "IsClipBoardItemsDisplayedEnabledState",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             bool isClipBoardItemsgetEnabledStateDisplayed = false;
             try
@@ -481,7 +481,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "IsClipBoardItemsDisplayedEnabledState",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isClipBoardItemsgetEnabledStateDisplayed;
         }
 
@@ -493,7 +493,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Paste Option Get Displayed Enabled State
             Logger.LogMethodEntry("QlGridUXPage", "IsPasteOptionGetDisplayedEnabledState",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             bool isPasteOptionDisplayedEnabledState = false;
             try
@@ -509,7 +509,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "IsPasteOptionGetDisplayedEnabledState",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isPasteOptionDisplayedEnabledState;
         }
 
@@ -520,7 +520,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Copy Clipboard Option
             Logger.LogMethodEntry("QlGridUXPage", "ClickOnCopyClipboardOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -537,7 +537,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "ClickOnCopyClipboardOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }      
 
         /// <summary>
@@ -550,7 +550,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Cmenu Of Folder
             Logger.LogMethodEntry("QlGridUXPage", "ClickOnCmenuOfAsset",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Initialize Variable
@@ -581,7 +581,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "ClickOnCmenuOfAsset",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -591,7 +591,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Set Score For Questions
             Logger.LogMethodEntry("QlGridUXPage", "SetScoreForQuestions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Folder Level Preferences Window
@@ -623,7 +623,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "SetScoreForQuestions",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -634,7 +634,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Score And Save
             Logger.LogMethodEntry("QlGridUXPage", "EnterScoreAndSave",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Checkbox
             base.SelectCheckBoxById(QlGridUXPageResource. 
                 QlGridUX_Page_Score_Checkbox_Id_Locator);
@@ -650,7 +650,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getApplyToAllButton);
             Logger.LogMethodExit("QlGridUXPage", "EnterScoreAndSave",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -660,12 +660,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Pegasus Window
             Logger.LogMethodEntry("QlGridUXPage", "SelectPegasusWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(QlGridUXPageResource.QlGridUX_Page_Pegasus_Window_Title);
             //Select Window
             base.SelectWindow(QlGridUXPageResource.QlGridUX_Page_Pegasus_Window_Title);
             Logger.LogMethodExit("QlGridUXPage", "SelectPegasusWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -675,14 +675,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Folder Level Preferences Window
             Logger.LogMethodEntry("QlGridUXPage", "SelectFolderLevelPreferencesWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(QlGridUXPageResource.
                 QlGridUX_Page_FolderLevelPreferences_Window_Title);
             //Select Window
             base.SelectWindow(QlGridUXPageResource.
                 QlGridUX_Page_FolderLevelPreferences_Window_Title);
             Logger.LogMethodExit("QlGridUXPage", "SelectFolderLevelPreferencesWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -694,7 +694,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Cmenu Of Question
             Logger.LogMethodEntry("QlGridUXPage", "ClickOnCmenuOfQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Question Bank Window                                         
@@ -711,7 +711,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "ClickOnCmenuOfQuestion",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -722,7 +722,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question Cmenu
             Logger.LogMethodEntry("QlGridUXPage", "SelectQuestionCmenu",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(QlGridUXPageResource.
                 QlGridUX_Page_Searched_QuestionName_Xpath_Locator));
             //Get Element Property
@@ -760,7 +760,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Cmenu Option
             base.ClickByJavaScriptExecutor(getCmenuOptionProperty);
             Logger.LogMethodExit("QlGridUXPage", "SelectQuestionCmenu",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Verify the question added in Map Learning Objectives to Questions tab.
@@ -770,7 +770,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify the question added
             Logger.LogMethodEntry("QlGridUXPage", "VerifyTheQuestionAdded",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             this.SelectQuestionBankWindow();
             bool returnValue = false;
             try
@@ -820,7 +820,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("QlGridUXPage", "VerifyTheQuestionAdded",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return returnValue;
         }
     }

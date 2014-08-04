@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment
         {
             //Select the user from left frame
             logger.LogMethodEntry("OrgEnrollmentPage", "SelectEnrollButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select default window and switch to main frame
@@ -57,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.Enrollment
             }
             //Select the user from left frame
             logger.LogMethodExit("OrgEnrollmentPage", "SelectEnrollButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -39,7 +39,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on left frame options
             logger.LogMethodEntry("DotNextLaunchPage", "ClickOnLeftFrameOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 SelectDefaultWindow();
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DotNextLaunchPage", "ClickOnLeftFrameOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter html link in text area
             logger.LogMethodEntry("DotNextLaunchPage", "ClickOnHtmlLinkInCourseIntroduction",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 SelectDefaultWindow();
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DotNextLaunchPage", "ClickOnHtmlLinkInCourseIntroduction",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on SaveChange button 
             logger.LogMethodEntry("DotNextLaunchPage", "ClickOnSaveChangeButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 SelectDefaultWindow();
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DotNextLaunchPage", "ClickOnSaveChangeButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify the Enter Course Link Text
             logger.LogMethodEntry("DotNextLaunchPage", "VerficationOfCourseLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             string getEnterCourseLinkTitle = null;
             try
             {
@@ -154,7 +154,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DotNextLaunchPage", "VerficationOfCourseLink",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             return getEnterCourseLinkTitle;
         }
 
@@ -165,13 +165,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch to Content sub frame
             logger.LogMethodEntry("DotNextLaunchPage", "SelectSubContentFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(DotNextLaunchPageResource.
                 DotNextLaunchPage_Left_SubContentFrame_Id_Locator));
             base.SwitchToIFrame(DotNextLaunchPageResource.
                 DotNextLaunchPage_Left_SubContentFrame_Id_Locator);
             logger.LogMethodExit("DotNextLaunchPage", "SelectSubContentFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -181,13 +181,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //switch to mail frame
             logger.LogMethodEntry("DotNextLaunchPage", "SelectMainFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(DotNextLaunchPageResource.
                 DotNextLaunchPage_Left_MainFrame_Id_Locator));
             base.SwitchToIFrame(DotNextLaunchPageResource.
                 DotNextLaunchPage_Left_MainFrame_Id_Locator);
             logger.LogMethodExit("DotNextLaunchPage", "SelectMainFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -197,13 +197,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Left frame
             logger.LogMethodEntry("DotNextLaunchPage", "SelectLeftFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(DotNextLaunchPageResource.
                 DotNextLaunchPage_Left_SubContentFrame_Id_Locator));
             base.SwitchToIFrame(DotNextLaunchPageResource.
                 DotNextLaunchPage_Left_SubContentFrame_Id_Locator);
             logger.LogMethodExit("DotNextLaunchPage", "SelectLeftFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -213,13 +213,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch to LeftTop frame
             logger.LogMethodEntry("DotNextLaunchPage", "SelectLeftTopFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(DotNextLaunchPageResource.
                 DotNextLaunchPage_Top_SubFrame_Id_Locator));
             base.SwitchToIFrame(DotNextLaunchPageResource.
                 DotNextLaunchPage_Top_SubFrame_Id_Locator);
             logger.LogMethodExit("DotNextLaunchPage", "SelectLeftTopFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -231,7 +231,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on LeftBottom button
             logger.LogMethodEntry("DotNextLaunchPage", "ClickOnLeftBottoButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select default window
@@ -258,7 +258,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DotNextLaunchPage", "ClickOnLeftBottoButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Enter HED Course link
             logger.LogMethodEntry("DotNextLaunchPage", "ClickOnEnterCourseLink",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select default window
@@ -298,7 +298,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DotNextLaunchPage", "ClickOnEnterCourseLink",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -312,7 +312,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch to expected page
             logger.LogMethodEntry("DotNextLaunchPage", "SelectExpectedPage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
 
             try
             {
@@ -355,7 +355,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("DotNextLaunchPage", "SelectExpectedPage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -366,7 +366,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Close Button
             logger.LogMethodEntry("DotNextLaunchPage", "ClickOnCloseButtonOnCourseNotReadyPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Switch to window
             base.SelectWindow(pageName);
             Thread.Sleep(Convert.ToInt16(DotNextLaunchPageResource.
@@ -374,7 +374,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on close window
             base.CloseBrowserWindow();
             logger.LogMethodExit("DotNextLaunchPage", "ClickOnCloseButtonOnCourseNotReadyPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

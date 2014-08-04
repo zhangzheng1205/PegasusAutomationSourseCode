@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Template Create Button
             logger.LogMethodEntry("ManageTemplateMainPage", "ClickTemplateCreateLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window To Loads
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageTemplateMainPage", "ClickTemplateCreateLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SearchTemplate(string templateName)
         {
             logger.LogMethodEntry("ManageTemplateMainPage", "SearchTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageTemplateMainPage", "SearchTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Template Search by Template Name
             logger.LogMethodEntry("ManageTemplateMainPage", "InputTemplateSearchParameter",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(ManageTemplateMainPageResource.
                                           ManageTemplateMain_Page_SearchSection_Textbox_Id_Locator));
@@ -141,7 +141,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ManageTemplateMainPageResource.
                                           ManageTemplateMain_Page_Template_Grid_Id_Locator));
             logger.LogMethodExit("ManageTemplateMainPage", "InputTemplateSearchParameter",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -28,14 +28,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Verify the Alert for New Grades
             Logger.LogMethodEntry("ActivityAlerts", "VerifyAlertForNewGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert New Grades Alert
             Logger.LogAssertion("VerifyAlertForNewGrades", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreNotEqual(ActivityAlertsResource.
                     TeacherDashBoard_NewGradesAlert_Value,
                     new TodaysViewUXPage().GetNewGradesAlert()));
             Logger.LogMethodExit("ActivityAlerts", "VerifyAlertForNewGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -46,11 +46,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Select New Grades Option
             Logger.LogMethodEntry("ActivityAlerts", "SelectNewGradesOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on New Grades Option
             new TodaysViewUXPage().ClickNewGradesOptionInOverViewTab();
             Logger.LogMethodExit("ActivityAlerts", "SelectNewGradesOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,13 +62,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Verify the Display of Submitted Activity Name
             Logger.LogMethodEntry("ActivityAlerts", "VerifyNameOfSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Display of Submitted Activity Name
             Logger.LogAssertion("VerifyNameofSubmittedActivity", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activityName,
                    new TodaysViewUXPage().GetSubmittedActivityName(activityName)));
             Logger.LogMethodExit("ActivityAlerts", "VerifyNameOfSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

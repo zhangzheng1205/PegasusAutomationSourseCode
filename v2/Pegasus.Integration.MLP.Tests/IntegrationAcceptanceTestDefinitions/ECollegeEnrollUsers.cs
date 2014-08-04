@@ -31,13 +31,13 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Enroll user into course
             logger.LogMethodEntry("ECollegeEnrollUsers", "EnrollToECollegeCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Instance of Manage Users Content Page to search users
             new ManageUsersContentPage().SearchECollegeUsers(userTypeEnum);
             //Instance of Enroll CourseTop to enroll users
             new EnrollCourseTop().EnrollUserToECollegeCourse(userTypeEnum, courseTypeEnum);
             logger.LogMethodExit("ECollegeEnrollUsers", "EnrollToECollegeCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

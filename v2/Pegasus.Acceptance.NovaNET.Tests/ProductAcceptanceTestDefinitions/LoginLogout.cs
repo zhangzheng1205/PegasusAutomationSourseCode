@@ -39,7 +39,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Browse Login Url
             logger.LogMethodEntry("LoginLogout", "BrowsePegasusLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Default Window
             base.SelectDefaultWindow();
             // Pick Url based on user type enum
@@ -55,7 +55,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 loginPage.GoToLoginUrl();
             }
             logger.LogMethodExit("LoginLogout", "BrowsePegasusLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Login in Pegasus
             logger.LogMethodEntry("LoginLogout", "LoginToThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Boolean isUserAlreadyLoggedIn = base.IsElementPresent
                 (By.PartialLinkText(LoginLogoutResource.
                 LoginLogout_Signout_Link_Title_Locator),
@@ -111,7 +111,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 }
             }
             logger.LogMethodExit("LoginLogout", "LoginToThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //To Check Login Success
             logger.LogMethodEntry("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert User Has Logged In Successfully
             logger.LogAssertion("VerifyLoginSuccess",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -130,7 +130,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     LoginLogout_Window_Name_Title, new BrowsePegasusUserURL
                         (User.UserTypeEnum.HedWsAdmin).GetPageTitle()));
             logger.LogMethodExit("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Method to Clicks on SignOut link
             logger.LogMethodEntry("LoginLogout", "SignOutFromThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 //Select Pegasus User by Type                
@@ -162,7 +162,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     break;
             }
             logger.LogMethodExit("LoginLogout", "SignOutFromThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

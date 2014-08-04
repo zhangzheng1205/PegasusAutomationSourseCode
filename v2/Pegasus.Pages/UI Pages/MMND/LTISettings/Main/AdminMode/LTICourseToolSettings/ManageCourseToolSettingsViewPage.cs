@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Insert Integration Point Id
             logger.LogMethodEntry("ManageCourseToolSettingsViewPage", "InsertIntegrationPointId",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Administrative Pages Window
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
                 throw;
             }
             logger.LogMethodExit("ManageCourseToolSettingsViewPage", "InsertIntegrationPointId",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

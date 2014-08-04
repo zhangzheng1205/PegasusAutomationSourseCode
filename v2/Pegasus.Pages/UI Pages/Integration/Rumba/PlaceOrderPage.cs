@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Place An Order for Organization License 
             Logger.LogMethodEntry("PlaceOrderPage", "PlaceOrganizationLicenseOrder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for element
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PlaceOrderPage", "PlaceOrganizationLicenseOrder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter License Details
             Logger.LogMethodEntry("PlaceOrderPage", "EnterRumbaLicenseDetail",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Rumba License Information
             License license = License.Get(License.LicenseTypeEnum.Rumba);
             //Enter License Order ID
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Submit
             this.ClickOnSubmitButton();
             Logger.LogMethodExit("PlaceOrderPage", "EnterRumbaLicenseDetail",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Submit Button
             Logger.LogMethodEntry("PlaceOrderPage", "ClickOnSubmitButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.FocusOnElementById(PlaceOrderPageResource.
                 PlaceOrder_page_SubmitButton_Id_Locator);
             //Get Button Property
@@ -108,7 +108,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Submit Button
             base.ClickByJavaScriptExecutor(getButtonProperty);
             Logger.LogMethodExit("PlaceOrderPage", "ClickOnSubmitButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Product External Id
             Logger.LogMethodEntry("PlaceOrderPage", "EnterProductExternalID",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get The Order Id From Memory
             License license = License.Get(License.LicenseTypeEnum.Rumba);
             //Wait For Element
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(PlaceOrderPageResource.
                 PlaceOrder_Page_ThreadSleepTime));
             Logger.LogMethodExit("PlaceOrderPage", "EnterProductExternalID",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Fill Start Date And End Date And License Quantity
             Logger.LogMethodEntry("PlaceOrderPage", "EnterlLicenseStartEndDateAndQuantity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Start Date And End Date
             string date = DateTime.Now.ToLongDateString();
             string[] day = date.Split(Convert.ToChar
@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
                 PlaceOrder_Page_LicenseQuantity_Id_Locator,
                 PlaceOrderPageResource.PlaceOrder_Page_LicenseQuantity_Value);
             Logger.LogMethodExit("PlaceOrderPage", "EnterlLicenseStartEndDateAndQuantity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Line Item Id And License Type            
             Logger.LogMethodEntry("PlaceOrderPage", "EnterLineItemIDAndLicenseType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter Line Item Id
             base.WaitForElement(By.Id(PlaceOrderPageResource.
                 PlaceOrder_Page_LineItemId_Text_Id_Locator));
@@ -190,7 +190,7 @@ namespace Pegasus.Pages.UI_Pages
                 PlaceOrder_Page_SelectLicenseType_Id_Locator,
                 PlaceOrderPageResource.PlaceOrder_Page_LicenseTypeValue);
             Logger.LogMethodExit("PlaceOrderPage", "EnterLineItemIDAndLicenseType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selects Organization
             Logger.LogMethodEntry("PlaceOrderPage", "SelectOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(PlaceOrderPageResource.
                 PlaceOrder_Page_OrganizationName_Id_Locator));
@@ -223,7 +223,7 @@ namespace Pegasus.Pages.UI_Pages
             //Clicks on selected text in autocomplete
             autocompleteElement.Click();
             Logger.LogMethodExit("PlaceOrderPage", "SelectOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Get Place Order Success Message
             Logger.LogMethodEntry("PlaceOrderPage", "GetCreateLicenseSuccessMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             string getSuccessMessage = string.Empty;
             try
@@ -254,7 +254,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PlaceOrderPage", "GetCreateLicenseSuccessMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSuccessMessage;
         }
     }

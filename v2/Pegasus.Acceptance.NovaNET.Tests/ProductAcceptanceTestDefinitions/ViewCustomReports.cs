@@ -33,7 +33,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Generate Student Report In Organization Admin
             Logger.LogMethodEntry("ViewCustomReports", 
                 "GenerateStudentReportInOrganizationAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             User user = User.Get(userType);
             //Converting String to Enum to pass report by type
             new RptMainUXPage().ManageInstructorReportInOrganizationAdmin
@@ -42,7 +42,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 instructorReportType),user.Name);
             Logger.LogMethodExit("ViewCustomReports", 
                 "GenerateStudentReportInOrganizationAdmin",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click The Close Button In Launched Report
             Logger.LogMethodEntry("ViewCustomReports", 
                 "ClickTheCloseButtonInLaunchedReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Close Report Button In Organization Admin
             new RptDetailedStudentActivityPage().
                 CloseReportButtonInOrganizationAdmin();
@@ -63,7 +63,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 CloseStudentAvtivityReportButtonInOrganizationAdmin();
             Logger.LogMethodExit("ViewCustomReports", 
                 "ClickTheCloseButtonInLaunchedReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -75,12 +75,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Select Download Report
             Logger.LogMethodEntry("ViewCustomReports", 
                 "SelectDownloadReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Download Report Option           
             new RptMainUXPage().SelectDownloadReportOption();
             Logger.LogMethodExit("ViewCustomReports", 
                 "SelectDownloadReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             // Verify The Class Name
             Logger.LogMethodEntry("ViewCustomReports", "VerifyTheClassName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get The Class Name Stored In Memory
           Class orgClass = Class.Get(classTypeEnum);
             // Assert Class name
@@ -103,7 +103,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Delete Download Report
             new RptMainUXPage().DeleteDownloadReport();
             Logger.LogMethodExit("ViewCustomReports", "VerifyTheClassName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

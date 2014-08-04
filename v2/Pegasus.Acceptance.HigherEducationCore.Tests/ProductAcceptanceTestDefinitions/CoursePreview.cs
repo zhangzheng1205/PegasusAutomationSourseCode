@@ -27,7 +27,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify Calendar Asset Icon
             Logger.LogMethodEntry("CoursePreview", "CalendarIconForAssignedAsset",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             CalendarFramePage calendarFramePage = new CalendarFramePage();
             //Select Course materials Window and Frame
             calendarFramePage.CoursematerialsWindowandFrame();
@@ -36,7 +36,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Current.ScenarioInfo.Title, () => Assert.IsTrue
             (calendarFramePage.IsCalendarIconPresent()));
             Logger.LogMethodExit("CoursePreview", "CalendarIconForAssignedAsset",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -47,14 +47,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click on Calendar Icon
             Logger.LogMethodEntry("CoursePreview", "ClickOnCalendarIconofAsset",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             CalendarFramePage calendarFramePage = new CalendarFramePage();
             //Select Course materials Window and Frame
             calendarFramePage.CoursematerialsWindowandFrame();
             //Click on Calendar Icon
             calendarFramePage.ClickOnCalendarIcon();
             Logger.LogMethodExit("CoursePreview", "ClickOnCalendarIconofAsset",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

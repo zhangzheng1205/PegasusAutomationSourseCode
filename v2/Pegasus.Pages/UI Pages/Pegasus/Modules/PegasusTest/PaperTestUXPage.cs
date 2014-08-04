@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Question
             Logger.LogMethodEntry("PaperTestUXPage", "SelectCreateQuestion",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select MyTest Window
@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodEntry("PaperTestUXPage", "SelectCreateQuestion",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnCreateQuestionAndGroupLink()
         {
             Logger.LogMethodEntry("PaperTestUXPage", "ClickOnCreateQuestionAndGroupLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Element
             base.WaitForElement(By.Id(PaperTestUXPageResource.
                 PaperTestUX_Page_CreateQuestionAndGroup_Id_Locator));
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the "Create Question" link
             base.ClickByJavaScriptExecutor(getQuestionLinkProperty);
             Logger.LogMethodExit("PaperTestUXPage", "ClickOnCreateQuestionAndGroupLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select MyTest Window.
             Logger.LogMethodEntry("PaperTestUXPage", "SelectMyTestWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window
             base.WaitUntilWindowLoads(PaperTestUXPageResource.
                 PaperTestUX_Page_MyTest_Window_Title);
@@ -91,7 +91,7 @@ namespace Pegasus.Pages.UI_Pages
                 PaperTestUX_Page_MyTest_Window_Title);
             //This is logger exit
             Logger.LogMethodExit("PaperTestUXPage", "SelectMyTestWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question Type
             Logger.LogMethodEntry("PaperTestUXPage", "SelectQuestionType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the cmenu options list
             base.WaitForElement(By.Id(PaperTestUXPageResource.
                 PaperTestUX_Page_CreateQuestion_CmenuList_Id_Locator));
@@ -139,7 +139,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("PaperTestUXPage", "SelectQuestionType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save The MyTest Activity
             Logger.LogMethodEntry("PaperTestUXPage", "SaveTheMyTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select MyTest Window
@@ -175,7 +175,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodEntry("PaperTestUXPage", "SaveTheMyTestActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -185,7 +185,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save And Close Activity
             Logger.LogMethodEntry("PaperTestUXPage", "SaveAndCloseActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(PaperTestUXPageResource.
                 PaperTestUX_Page_Save_Menu_Id_Locator));
@@ -202,7 +202,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(PaperTestUXPageResource.
                 PaperTestUX_Page_CreateMyTest_Mesg_Time_Value));
             Logger.LogMethodEntry("PaperTestUXPage", "SaveAndCloseActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -214,7 +214,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Entry Logger 
             Logger.LogMethodEntry("PaperTestUXPage", "EnterRandomNumberToAddQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select window
@@ -244,7 +244,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(ex);
             }
             Logger.LogMethodExit("PaperTestUXPage", "EnterRandomNumberToAddQuestion",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -254,7 +254,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Loger Entry
             Logger.LogMethodEntry("PaperTestUXPage", "ClickOnAddButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for Add button 
             base.IsElementEnabledById(PaperTestUXPageResource.
                 PaperTestUX_Page_Add_Button_Id_Locator);
@@ -265,7 +265,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getHtmlPropertyOfAddButton);
             //Loger Exit
             Logger.LogMethodExit("PaperTestUXPage", "ClickOnAddButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -277,7 +277,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Loger Entry
             Logger.LogMethodEntry("PaperTestUXPage", "EnterRandomQuestionNumber",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for Number of random question to add TextBox
             base.WaitForElement(By.Id(PaperTestUXPageResource.
                 PaperTestUX_Page_Random_Question_TextBox_Id_Locator));
@@ -290,7 +290,7 @@ namespace Pegasus.Pages.UI_Pages
                 randomQuestionNumber.ToString(CultureInfo.InvariantCulture));
             //Loger Exit
             Logger.LogMethodExit("PaperTestUXPage", "EnterRandomQuestionNumber",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -300,7 +300,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Loger Entry
             Logger.LogMethodEntry("PaperTestUXPage", "ClickOnCheckBoxOfQuestion",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for Check of Question
             base.WaitForElement(By.XPath(PaperTestUXPageResource.
                 PaperTestUX_Page_Checkbox_Xpath_Locator));
@@ -312,7 +312,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getPropertyOfCheckBox);
             //Loger Exit
             Logger.LogMethodExit("PaperTestUXPage", "ClickOnCheckBoxOfQuestion",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -325,7 +325,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry 
             Logger.LogMethodEntry("PaperTestUXPage", "HandlePopupWindowOnMyTest",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Validate popup window
@@ -354,7 +354,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit 
             Logger.LogMethodExit("PaperTestUXPage", "HandlePopupWindowOnMyTest",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -365,7 +365,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry 
             Logger.LogMethodEntry("PaperTestUXPage", "ClickOnFolderInFilterTestBank",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for element 
             base.WaitForElement(By.PartialLinkText(folderName));
             base.FillEmptyTextByPartialLinkText(folderName);
@@ -375,7 +375,7 @@ namespace Pegasus.Pages.UI_Pages
                 PaperTestUX_Page_CreateQuestion_Time_Value));
             // Logger Exit
             Logger.LogMethodExit("PaperTestUXPage", "ClickOnFolderInFilterTestBank",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -386,7 +386,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry 
             Logger.LogMethodEntry("PaperTestUXPage", "CloseTheMyTestActivity",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select window
@@ -410,7 +410,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             // Logger Exit
             Logger.LogMethodExit("PaperTestUXPage", "CloseTheMyTestActivity",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -421,7 +421,7 @@ namespace Pegasus.Pages.UI_Pages
             // Logger Entry
             Logger.LogMethodEntry("PaperTestUXPage",
                 "HandleCancelTestConfirmationPopupWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(Convert.ToInt32(PaperTestUXPageResource.
                 PaperTestUX_Page_Wait_Time_InSecond));
             //Select the window
@@ -447,7 +447,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("PaperTestUXPage",
                 "HandleCancelTestConfirmationPopupWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -459,7 +459,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Expand Button In Filter TestBank
             Logger.LogMethodEntry("PaperTestUXPage", "ClickOnExpandButtonInFilterTestBank",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select MyTest Window
@@ -472,7 +472,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PaperTestUXPage", "ClickOnExpandButtonInFilterTestBank",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -483,7 +483,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // DragAndDrop Question In MyTest.
             Logger.LogMethodEntry("PaperTestUXPage", "SelectTheQuestionToDragAndDropToMyTest",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the question to Drag and drop In MyTest
@@ -498,7 +498,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PaperTestUXPage", "SelectTheQuestionToDragAndDropToMyTest",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -509,7 +509,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // DragAndDrop The Question To Manage User Test
             Logger.LogMethodEntry("PaperTestUXPage", "DragAndDropTheQuestionToManageUserTest",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for the drag element path
             base.WaitForElement(By.XPath(string.Format(PaperTestUXPageResource.
                 PaperTestUX_Page_FilterTest_QuestionName_Xpath_Locator,
@@ -530,7 +530,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(PaperTestUXPageResource.
                 PaperTestUX_Page_CreateQuestion_Time_Value));
             Logger.LogMethodExit("PaperTestUXPage", "DragAndDropTheQuestionToManageUserTest",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -542,7 +542,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Question Count in  Filter Test Bank
             Logger.LogMethodEntry("PaperTestUXPage", "GetQuestionCountInFilterTestBank",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(PaperTestUXPageResource.
                 PaperTestUX_Page_FilterTest_QuestionCount_Xpath_Locator));
@@ -569,7 +569,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             Logger.LogMethodExit("PaperTestUXPage", "GetQuestionCountInFilterTestBank",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getTotalQuestionCount;
         }
 
@@ -581,7 +581,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //GetConfirmation Message In PegasusPopup
             Logger.LogMethodEntry("PaperTestUXPage", "GetConfirmationMessageInPegasusPopup",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getConfirmationMessage = string.Empty;
             try
@@ -600,7 +600,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PaperTestUXPage", "GetConfirmationMessageInPegasusPopup",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Return confirmation message 
             return getConfirmationMessage;
         }
@@ -612,14 +612,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Pegasus Window
             Logger.LogMethodEntry("PaperTestUXPage", "SelectPegasusWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             base.WaitUntilPopUpLoads(PaperTestUXPageResource.
                 PaperTestUX_Page_Popup_Pegasus_Window_Name);
             base.SelectWindow(PaperTestUXPageResource.
                 PaperTestUX_Page_Popup_Pegasus_Window_Name);
             Logger.LogMethodExit("PaperTestUXPage", "SelectPegasusWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -632,7 +632,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Question Name In MyTest
             Logger.LogMethodEntry("PaperTestUXPage", "GetQuestionNameInMyTest",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
             string getQuestionName = string.Empty;
             try
@@ -653,7 +653,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PaperTestUXPage", "GetQuestionNameInMyTest",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Return question name 
             return getQuestionName;
         }
@@ -668,7 +668,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("PaperTestUXPage", "FindQuestionInMyQuestionFolder",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
             string getQuestionName = string.Empty;
             //Wait for question list LI of My Question folder
@@ -683,7 +683,7 @@ namespace Pegasus.Pages.UI_Pages
                 getTotalQuestionRowCount);
             //Logger Exit
             Logger.LogMethodExit("PaperTestUXPage", "FindQuestionInMyQuestionFolder",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Return question name 
             return getQuestionName;
         }
@@ -700,7 +700,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("PaperTestUXPage", "GetTheQuestionName",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Checking the availability of question In My Question folder Grid
             for (int setQuestionRowCount = 1; setQuestionRowCount
                 <= getTotalQuestionRowCount;
@@ -726,7 +726,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("PaperTestUXPage", "GetTheQuestionName",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getQuestionName;
         }
 
@@ -739,7 +739,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // get The Question In Manage Your Test
             Logger.LogMethodEntry("PaperTestUXPage", "getTheQuestionInManageYourTest",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
             string getQuestionName = string.Empty;
             try
@@ -774,7 +774,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PaperTestUXPage", "getTheQuestionInManageYourTest",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getQuestionName;
         }
 
@@ -785,7 +785,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("PaperTestUXPage", "ClickOnViewAllTestButtonInsideTest",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the View all Tests element
@@ -803,7 +803,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("PaperTestUXPage", "ClickOnViewAllTestButtonInsideTest",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -817,7 +817,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("PaperTestUXPage", "IsButtonDisplayingInsideMyTestActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize Varaiable
             bool isButtonDisplaying = false;
             try
@@ -845,7 +845,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("PaperTestUXPage", "IsButtonDisplayingInsideMyTestActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return isButtonDisplaying;
         }
 
@@ -856,7 +856,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Download Option In ManageYourTest
             Logger.LogMethodEntry("PaperTestUXPage", "ClickTheDownloadOptionInManageYourTest",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select MyTest Window
@@ -875,7 +875,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PaperTestUXPage", "ClickTheDownloadOptionInManageYourTest",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

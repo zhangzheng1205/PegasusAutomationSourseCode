@@ -36,7 +36,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Copies Course
             Logger.LogMethodEntry("CourseCopy", 
                 "CreateAuthoredCourseCopyInWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
                     (CourseCopyResource.
@@ -45,7 +45,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new NewCoursePage().CopyCourseAsMasterCourse(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy", 
                 "CreateAuthoredCourseCopyInWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Check Course for Assigned To Copy State
             Logger.LogMethodEntry("CourseCopy", 
                 "VerifyTheCourseForAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get The Copied Master Course Name Stored In Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -77,7 +77,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 course.Name, dropdownOption);
             Logger.LogMethodExit("CourseCopy", 
                 "VerifyTheCourseForAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -88,7 +88,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Check Course Get Our Of Assigned To Copy State
             Logger.LogMethodEntry("CourseCopy", "OutOfAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert [CourseForAssignedToCopy] Text Present
             Logger.LogAssertion("VerifyAssignedToCopyTextPresent",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -97,7 +97,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     , new ManageCoursesPage().
                     GetAssignedToCopyTextPresentAfterSpecifiedTime()));
             Logger.LogMethodExit("CourseCopy", "OutOfAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Search Course in right frame
             Logger.LogMethodEntry("CourseCopy", "SearchTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course from Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -123,7 +123,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Select CourseEnrollement Window
             new ManageCoursesPage().SelectCourseEnrollementWindow();
             Logger.LogMethodExit("CourseCopy", "SearchTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -135,7 +135,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //To Verify The Course Search
             Logger.LogMethodEntry("CourseCopy", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course Name From InMemory
             Course course = Course.Get(courseTypeEnum);
             // Assert Course Search
@@ -143,7 +143,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(course.Name,
                     new ManageCoursesPage().GetSearchedCourse(courseTypeEnum)));
             Logger.LogMethodExit("CourseCopy", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -157,11 +157,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Creates a New Course
             Logger.LogMethodEntry("CourseCopy", "CreateNewCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Creates a new course of defined format
             new NewCoursePage().CreateNewCourse(courseTypeEnum, courseFormatOption);
             Logger.LogMethodExit("CourseCopy", "CreateNewCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Search Course in right frame
             Logger.LogMethodEntry("CourseCopy", "SearchTheCourseByCourseName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course from Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -187,7 +187,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Select CourseEnrollement Window
             new ManageCoursesPage().SelectCourseEnrollementWindow();
             Logger.LogMethodExit("CourseCopy", "SearchTheCourseByCourseName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Create Workspace Course Copy In Authored Course
             Logger.LogMethodEntry("CourseCopy",
                 "CreateWorkspaceCourseCopyInAuthoredCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
             (CourseCopyResource.CourseCopy_CopyasmasterCourse_CMenu_Option_Name);
@@ -209,7 +209,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new NewCoursePage().CopyMasterCourseInDifferentWorkspace(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy",
                 "CreateWorkspaceCourseCopyInAuthoredCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -221,12 +221,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
            //Delete The Created Course In Manage Course Frame
             Logger.LogMethodEntry("CourseCopy",
                 "DeleteTheCreatedCourseInManageCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Delete The Created Course In Manage Course Frame
             new ManageCoursesPage().DeleteTheCreatedCourseInManageCourseFrame();
             Logger.LogMethodExit("CourseCopy",
                 "DeleteTheCreatedCourseInManageCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -239,14 +239,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify The Course Message
             Logger.LogMethodEntry("CourseCopy",
                 "VerifyTheCourseMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Assert Course Search
             Logger.LogAssertion("VerifySearchCourse", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(message,
                     new ManageCoursesPage().GetMessageInManageCourseFrame(message)));
             Logger.LogMethodExit("CourseCopy",
                 "VerifyTheCourseMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

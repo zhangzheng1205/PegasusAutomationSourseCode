@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Login to MMND
             logger.LogMethodEntry("MyPearsonLoginPage", "LoginToMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {            
                 //Wait for The Window
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyPearsonLoginPage", "LoginToMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Successfully Logged Out Of MMND
             logger.LogMethodEntry("MyPearsonLoginPage", "GetSuccessfullyLoggedOutOfMMNDMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing the Variable
             string getSuccessfullMessage = string.Empty;
             try
@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyPearsonLoginPage", "GetSuccessfullyLoggedOutOfMMNDMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSuccessfullMessage;
         }
 
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Checks If User Logged In To MMND SuccessFully
             logger.LogMethodEntry("MyPearsonLoginPage", "IsUserLoggedInSuccessFully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing Variable
             Boolean isUserLoggedIn = false;
             try
@@ -128,7 +128,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyPearsonLoginPage", "IsUserLoggedInSuccessFully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isUserLoggedIn;
         }
     }

@@ -35,7 +35,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Edit Badged Activity 
             Logger.LogMethodEntry("EditActivity", "EditBagedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Activity Name
             String getBadgedActivityName = string.Empty;
             switch (activityBehavioralModesEnum)
@@ -69,7 +69,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Edit Activity
             EditTheActivity(getBadgedActivityName);
             Logger.LogMethodExit("EditActivity", "EditBagedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -84,7 +84,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Edit Pre test in Badged Study plan
             Logger.LogMethodEntry("EditActivity", "EditBadgedStudyPlan",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             String badgedStudyPlan = string.Empty;
             switch (activityBehavioralModesEnum)
             {
@@ -101,7 +101,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             }
             EditTheActivity(badgedStudyPlan);
             Logger.LogMethodExit("EditActivity", "EditBadgedStudyPlan",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Edit Post test in Badged Study plan
             Logger.LogMethodEntry("EditActivity", "EditPostTestBadgedStudyPlan",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             String badgedStudyPlan = string.Empty;
             switch (activityBehavioralModesEnum)
             {
@@ -133,7 +133,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             }
             EditTheActivity(badgedStudyPlan);
             Logger.LogMethodExit("EditActivity", "EditPostTestBadgedStudyPlan",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -148,7 +148,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Edit Post test in Badged Study plan having Training mode  
             Logger.LogMethodEntry("EditActivity", "EditTrainingPostTestBadgedStudyPlan",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             String badgedStudyPlan = string.Empty;
             switch (activityBehavioralModesEnum)
             {
@@ -166,7 +166,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             EditTheActivity(badgedStudyPlan);
             Logger.LogMethodExit("EditActivity",
                 "EditTrainingPostTestBadgedStudyPlan",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         ///  <summary>
@@ -177,11 +177,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
 
             Logger.LogMethodEntry("EditActivity", "EditTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Edit Activity 
             new Pages.UI_Pages.TeachingPlanUxPage().ClickOnActivity(activtyName);
             Logger.LogMethodExit("EditActivity", "EditTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -193,11 +193,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
 
             Logger.LogMethodEntry("EditActivity", "EditPreTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Edit pre test or post test in Study plan
             new SIMStudyPlanDefaultUXPage().EditSimStudyPlan(testType);
             Logger.LogMethodExit("EditActivity", "EditPreTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -212,7 +212,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Validate Visibilty Questions Tab for Badged Activity 
             Logger.LogMethodEntry("EditActivity", "ValidateVisibiltyQuestionsTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             bool isQuestionTabsDisplayed = false;
             switch (activityBehavioralModesEnum)
             {
@@ -248,7 +248,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 () => Assert.IsFalse(isQuestionTabsDisplayed));
 
             Logger.LogMethodExit("EditActivity", "ValidateVisibiltyQuestionsTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -263,7 +263,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Validate Visibilty Questions Tab for Badged Sim Study Plan 
             Logger.LogMethodEntry("EditActivity", "ValidateVisibiltyQuestionsTabSimStudyPlan",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             bool isQuestionTabsDisplayed = false;
             switch (activityBehavioralModesEnum)
             {
@@ -285,7 +285,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 () => Assert.IsFalse(isQuestionTabsDisplayed));
 
             Logger.LogMethodExit("EditActivity", "ValidateVisibiltyQuestionsTabSimStudyPlan",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -298,13 +298,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Logger Entry
             Logger.LogMethodEntry("EditActivity", "ClickOnTabOfEditSIMPreTest",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             //Click on tab of Edit SIM Study Plan 
             new SkillBasedAssessmentPage().
                 ClickOnTabOfEditSIMStudyPlanPreTest(tabName);
             //Logger Exit
             Logger.LogMethodExit("EditActivity", "ClickOnTabOfEditSIMPreTest",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -317,7 +317,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("EditActivity", 
                 "EnterTimeInSetTimeLimitForActivityPreference",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             //Instance of SkillBasedAssessmentPage
             SkillBasedAssessmentPage SkillBasedAssessmentPageObject=
                 new SkillBasedAssessmentPage();
@@ -328,7 +328,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Exit
             Logger.LogMethodExit("EditActivity", 
                 "EnterTimeInSetTimeLimitForActivityPreference",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On The Activity Name In Content Library Frame.
@@ -339,7 +339,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("EditActivity",
                 "ClickOnTheActivityNameInContentLibraryFrame",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
 
             new ContentLibraryUXPage().SelectLeftFrameInCourseMaterialsPage();
             new ContentLibraryUXPage().ClickOnLastActivityinContentLibrary();
@@ -347,7 +347,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Exit
             Logger.LogMethodExit("EditActivity",
                 "ClickOnTheActivityNameInContentLibraryFrame",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On The Help Links Activity Subtab.
@@ -358,14 +358,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("EditActivity",
                 "ClickOnTheHelpLinksActivitySubtab",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
 
             new AddAssessmentPage().ClickOnHelpLinksTab();
 
             //Logger Exit
             Logger.LogMethodExit("EditActivity",
                 "ClickOnTheHelpLinksActivitySubtab",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On Preview The Link In C-Menu Of Helplink.
@@ -377,14 +377,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("EditActivity",
                 "ClickOnTheLinkInCMenuOfHelplink",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
 
             new AddAssessmentPage().PreviewHelpLinkOnEdit();
 
             //Logger Exit
             Logger.LogMethodExit("EditActivity",
                 "ClickOnTheLinkInCMenuOfHelplink",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

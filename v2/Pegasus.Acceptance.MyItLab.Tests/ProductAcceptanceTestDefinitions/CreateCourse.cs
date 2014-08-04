@@ -31,11 +31,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Creates a New Course
             Logger.LogMethodEntry("CreateCourse", "CreateNewCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Creates a new course of defined format
             new NewCoursePage().CreateNewCourse(courseTypeEnum, courseFormatOption);
             Logger.LogMethodExit("CreateCourse", "CreateNewCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Search Course in right frame
             Logger.LogMethodEntry("CreateCourse", "SearchTheCourseByCourseName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course from Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -62,7 +62,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Select CourseEnrollement Window
             new ManageCoursesPage().SelectCourseEnrollementWindow();
             Logger.LogMethodExit("CreateCourse", "SearchTheCourseByCourseName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //To Verify The Course Search
             Logger.LogMethodEntry("CreateCourse", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course Name From InMemory
             Course course = Course.Get(courseTypeEnum);
             // Assert Course Search
@@ -84,7 +84,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(course.Name,
                     new ManageCoursesPage().GetSearchedCourse(courseTypeEnum)));
             Logger.LogMethodExit("CreateCourse", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -96,12 +96,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Delete The Created Course In Manage Course Frame
             Logger.LogMethodEntry("CreateCourse",
                 "DeleteTheCreatedCourseInManageCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Delete The Created Course In Manage Course Frame
             new ManageCoursesPage().DeleteTheCreatedCourseInManageCourseFrame();
             Logger.LogMethodExit("CreateCourse",
                 "DeleteTheCreatedCourseInManageCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -114,14 +114,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify The Course Message
             Logger.LogMethodEntry("CourseCopy",
                 "VerifyTheCourseMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Assert Course Search
             Logger.LogAssertion("VerifySearchCourse", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(message,
                     new ManageCoursesPage().GetMessageInManageCourseFrame(message)));
             Logger.LogMethodExit("CourseCopy",
                 "VerifyTheCourseMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

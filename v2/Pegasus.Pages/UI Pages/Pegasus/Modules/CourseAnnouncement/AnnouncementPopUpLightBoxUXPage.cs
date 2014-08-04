@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Close Announcement Pop Up If Present on Page
             logger.LogMethodEntry("AnnouncementPopUpLightBoxUXPage",
-                "CloseAnnouncementPopUp", base.isTakeScreenShotDuringEntryExit);
+                "CloseAnnouncementPopUp", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window
@@ -68,7 +68,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AnnouncementPopUpLightBoxUXPage", "CloseAnnouncementPopUp"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -79,7 +79,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Close Announcement Pop Up If Present on Page
             logger.LogMethodEntry("AnnouncementPopUpLightBoxUXPage",
-                "CloseAnnouncementPopUpInDigitalPath", base.isTakeScreenShotDuringEntryExit);
+                "CloseAnnouncementPopUpInDigitalPath", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (userTypeEnum)
@@ -121,7 +121,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AnnouncementPopUpLightBoxUXPage",
-                "CloseAnnouncementPopUpInDigitalPath", base.isTakeScreenShotDuringEntryExit);
+                "CloseAnnouncementPopUpInDigitalPath", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
             // Check For Announcement LightBox
             logger.LogMethodEntry("AnnouncementPopUpLightBoxUXPage",
                 "CheckForAnnouncementLightBox"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             // check next button on announcement page
             while (base.IsElementPresent(By.Id(AnnouncementPopUpLightBoxUXPageResource.
                 AnnouncementPopUpLightBoxUX_Page_Next_Link_Id_Locator),
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AnnouncementPopUpLightBoxUXPage",
                 "CheckForAnnouncementLightBox"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
         {
             //Login in Rumba
             logger.LogMethodEntry("SignInPage", "LoginToRumba",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Check whether the user already loggedin or not
@@ -47,7 +47,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SignInPage", "LoginToRumba",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
         {
             //User authentication
             logger.LogMethodEntry("SignInPage", "Authentication",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             bool isLoginSuccessful = false;
             while (!isLoginSuccessful)
             {
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
                 }
             }
             logger.LogMethodExit("SignInPage", "Authentication",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
         {
             //Enter User Name and Password
             logger.LogMethodEntry("SignInPage", "EnterUserNamePassword",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Username Text Box
             base.WaitForElement(By.Id(SignInPageResource.
                 SignInPage_Username_Text_id_Locator), Convert.ToInt32(
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
             base.FillTextBoxById(SignInPageResource.
                 SignInPage_Password_Text_id_Locator, password);
             logger.LogMethodExit("SignInPage", "EnterUserNamePassword",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,12 +130,12 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
         {
             //RADmin login validation
             logger.LogMethodEntry("SignInPage", "ValidateRAdminLogin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Check Is Login Sucessful
             bool isLoginSuccessful = base.IsWindowsExists(SignInPageResource.
                 SignInPage_HomePage_Title_Name);
             logger.LogMethodEntry("SignInPage", "ValidateRAdminLogin",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
 
@@ -147,7 +147,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
         {
             //Click Sign out link on the page
             logger.LogMethodEntry("LoginPage", "ClickSignOutLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for element
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("LoginPage", "ClickSignOutLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
         {
             //Get Sign Out Message
             logger.LogMethodEntry("LoginPage", "GetRumbaUserSignOutMessage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getSignOutMessage = string.Empty;
             try
@@ -197,7 +197,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("LoginPage", "GetRumbaUserSignOutMessage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Return Message
             return getSignOutMessage;
         }
@@ -211,7 +211,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
         {
             //Log Method entry
             logger.LogMethodEntry("SignInPage", "GetRequiredParametersForRUL",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             Dictionary<String, String> requiredParametrs = new Dictionary<String, String>();            
             try
@@ -241,7 +241,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
             }
             //Log Method exit
             logger.LogMethodExit("SignInPage", "GetRequiredParametersForRUL",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Return dictionary
             return requiredParametrs;     
         }
@@ -254,7 +254,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
         {
             // Log method entry
             logger.LogMethodEntry("SignInPage", "RedirectToRULPage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
 
             try
             {
@@ -269,7 +269,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.Rumba
             }
             // Log method exit
             logger.LogMethodExit("SignInPage", "RedirectToRULPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
 
         }

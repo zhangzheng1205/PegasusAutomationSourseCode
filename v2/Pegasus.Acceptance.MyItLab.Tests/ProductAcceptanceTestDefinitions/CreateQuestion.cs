@@ -32,12 +32,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Select Add Course Materails Button
             Logger.LogMethodEntry("CreateQuestion",
                 "SelectAddCourseMaterialsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Add Course Materials Button
             new QlGridUXPage().SelectAddCourseMaterialsButton();
             Logger.LogMethodExit("CreateQuestion",
                 "SelectAddCourseMaterialsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -49,11 +49,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select Question Type
             Logger.LogMethodEntry("CreateQuestion", "SelectQuestionType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Question Type
             new QlGridUXPage().SelectQuestionType(questionType);
             Logger.LogMethodExit("CreateQuestion", "SelectQuestionType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,11 +65,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select Option In Course Materials
             Logger.LogMethodEntry("CreateQuestion", "SelectOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Option In Course Materials
             new QlGridUXPage().SelectOptionInCourseMaterials(assetType);
             Logger.LogMethodExit("CreateQuestion", "SelectOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -79,11 +79,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         public void AddTheQuestionFolderFromSimRepository()
         {
             Logger.LogMethodEntry("CreateQuestion", "AddTheQuestionFolderFromSimRepository",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Question Folder
             new SIMRepositoryPage().AddQuestionFolder();
             Logger.LogMethodExit("CreateQuestion", "AddTheQuestionFolderFromSimRepository",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -95,14 +95,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Verify The Created Question Folder
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheCreatedQuestion",
-                 base.isTakeScreenShotDuringEntryExit);           
+                 base.IsTakeScreenShotDuringEntryExit);           
             //Assert Created Question 
             Logger.LogAssertion("VerifyTheCreatedQuestion", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(true,
                      new QlGridUXPage().GetSearchedFolderName(questionName).
                     Contains(questionName)));
             Logger.LogMethodExit("CreateQuestion", "VerifyTheCreatedQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,11 +115,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Cmenu Option of Asset
             Logger.LogMethodEntry("CreateQuestion", "SelectCmenuOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Click On Cmenu Option of Asset
             new QlGridUXPage().ClickOnCmenuOfAsset(questionName, cmenuOption);
             Logger.LogMethodExit("CreateQuestion", "SelectCmenuOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             
         }
 
@@ -135,13 +135,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             // Create Grader IT Question In Manage Question Bank
             Logger.LogMethodEntry("CreateQuestion", 
                 "CreateGraderITQuestionInManageQuestionBank",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Create The GraderIT Question In Manage Question Bank
             new AutoGraderPage().
                 CreateTheGraderITQuestionInManageQuestionBank(questionTypeEnum,projectName);
             Logger.LogMethodExit("CreateQuestion", 
                 "CreateGraderITQuestionInManageQuestionBank",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -154,13 +154,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("CreateQuestion",
                 "AddSIMQuestionFromSIMRepository",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Add SIM question from Repository
             new ContentBrowserUXPage().SelectSIMQuestionFolder(simQuestionFolderName);
             //Logger Exit
             Logger.LogMethodExit("CreateQuestion",
                 "AddSIMQuestionFromSIMRepository",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
            
         }
 
@@ -174,7 +174,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("CreateQuestion",
                 "VerifyTheSIMQuestionFolderInQuestionBankFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             Question questionSetName = Question.Get(questionTypeEnum);
             //Assert Created Question 
             Logger.LogAssertion("VerifyTheSIMQuestionFolderInQuestionBankFrame", ScenarioContext.
@@ -184,7 +184,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Exit
             Logger.LogMethodExit("CreateQuestion",
                 "VerifyTheSIMQuestionFolderInQuestionBankFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -198,13 +198,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Cmenu Option Of Question In Manage Question Bank
             Logger.LogMethodEntry("CreateQuestion", "ClickOnCmenuOptionOfQuestion"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Question question = Question.Get(questionTypeEnum);
             //Click On Cmenu Option Of Question
             new QlGridUXPage().ClickOnCmenuOfQuestion(question.Name, questionCmenuOption);
             Logger.LogMethodExit("CreateQuestion", "ClickOnCmenuOptionOfQuestion"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -215,13 +215,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify The Question Edit Page
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheQuestionEditPage"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             //Asserts To Verify The Question Edit Page
             Logger.LogAssertion("VerifyQuestionEditPage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new AutoGraderPage().IsQuestionTitleTextboxPresent()));
             Logger.LogMethodExit("CreateQuestion", "VerifyTheQuestionEditPage"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -234,12 +234,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Create Questions
             Logger.LogMethodEntry("CreateQuestion", "CreateQuestions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Questions
             new QlGridUXPage().CreateQuestions(questionTypeEnum);
             //Logger Exit
             Logger.LogMethodExit("CreateQuestion", "CreateQuestions",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -253,13 +253,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
            //Logger Entry
             Logger.LogMethodEntry("CreateQuestion",
                 "CraetedSIMQuestionSetWithQuestionType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create 2010 SIM Questions set 
             new QuestionSetPage().CreateSIMQuestionsSet(questionTypeEnum);
             //Logger Exit
             Logger.LogMethodExit("CreateQuestion", 
                 "CraetedSIMQuestionSetWithQuestionType",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -273,13 +273,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("CreateQuestion",
                 "UpdateTheQuestionSetWithQuestionType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Edit the SIM Questions set 
             new QuestionSetPage().UpdateTheSIMQuestionsSet(questionTypeEnum);
             //Logger Exit
             Logger.LogMethodExit("CreateQuestion",
                 "UpdateTheQuestionSetWithQuestionType",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -292,11 +292,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Cmenu Of Question
             Logger.LogMethodEntry("CreateQuestion", "ClickOnCmenuOfQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Cmenu Option Of Question
             new QlGridUXPage().ClickOnCmenuOfQuestion(questionName, cmenuOption);
             Logger.LogMethodExit("CreateQuestion", "ClickOnCmenuOfQuestion",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -308,12 +308,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Set Point Value For The Added Question
             Logger.LogMethodEntry("CreateQuestion", "SetPointValueForTheAddedQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Set Point Value For Question
             new SimQuestionPointValuePage().
                 SetPointValueForQuestion(pointValue);
             Logger.LogMethodExit("CreateQuestion", "SetPointValueForTheAddedQuestion",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -326,14 +326,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify The Question Point Value
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheQuestionPointValue",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Asserts To Verify The Question Point Value
             Logger.LogAssertion("VerifyQuestionPointValue",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(pointValue,
                     new SimQuestionPointValuePage().GetQuestionPointValue(questionName)));
             Logger.LogMethodExit("CreateQuestion", "VerifyTheQuestionPointValue",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

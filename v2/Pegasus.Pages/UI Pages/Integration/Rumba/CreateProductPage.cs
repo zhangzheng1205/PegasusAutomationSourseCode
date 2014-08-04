@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Product
             logger.LogMethodEntry("CreateProductPage", "CreateRumbaProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate new guid for product name
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CreateProductPage", "CreateRumbaProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill the Enter The Display Information
             logger.LogMethodEntry("CreateProductPage", "EnterTheDisplayInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(CreateProductPageResource.
                 CreateProduct_Page_DisplayInformation_Image_Xpath_Locator));
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter The Display Information Details
             this.EnterTheDisplayInformationDetails();
             logger.LogMethodExit("CreateProductPage", "EnterTheDisplayInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter The Display Information Details
             logger.LogMethodEntry("CreateProductPage", "EnterTheDisplayInformationDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the Display Information Name element
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
             }    
             logger.LogMethodExit("CreateProductPage", "EnterTheDisplayInformationDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Add Button In Display Information
             logger.LogMethodEntry("CreateProductPage", "ClickAddButtonInDisplayInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Add Button element
             base.WaitForElement(By.Id(CreateProductPageResource.
                 CreateProduct_Page_Add_Button_Id_Locator));
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Add button
             base.ClickByJavaScriptExecutor(getAddButton);
             logger.LogMethodExit("CreateProductPage", "ClickAddButtonInDisplayInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //To Select Organization
             logger.LogMethodEntry("CreateProductPage", "EnterOrganizationNameInRumba",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(CreateProductPageResource.
                 CreateProduct_Page_PearsonOrganizationandMarket_Xpath));
@@ -185,7 +185,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(CreateProductPageResource.
                 CreateProduct_Page_ThreadSleepTime));
             logger.LogMethodExit("CreateProductPage", "EnterOrganizationNameInRumba",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Pearson Organization From AutoFill Menu Items
             logger.LogMethodEntry("CreateProductPage", "SelectRumbaOrganizationFromAutoFill",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Clear Auto Complete Text Box            
             base.ClearTextById(CreateProductPageResource.
                 CreateProduct_Page_PearsonOrganizationandMarket_PearsonOrganization_Text_id_locator);
@@ -212,7 +212,7 @@ namespace Pegasus.Pages.UI_Pages
             //Clicks on selected text in autocomplete
             autocompleteElement.Click();
             logger.LogMethodExit("CreateProductPage", "SelectRumbaOrganizationFromAutoFill",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Product Details
             logger.LogMethodEntry("CreateProductPage", "EnterProductDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Selects the window
             base.SelectWindow(CreateProductPageResource.
                 CreateProduct_Page_Window_Title_Name);
@@ -240,7 +240,7 @@ namespace Pegasus.Pages.UI_Pages
             // Fill Product Description And Order Number
             this.FillProductDescriptionAndOrderNumber(productName);
             logger.LogMethodExit("CreateProductPage", "EnterProductDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fills the description And Order Number
             logger.LogMethodEntry("CreateProductPage", "FillProductDescriptionAndOrderNumber",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CreateProductPageResource.
                CreateProduct_Page_InternalDescription_id_Locator));
             //Enter Description
@@ -278,7 +278,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store The Order Id In Memory
             this.SaveOrderIdInMemory(getOrderId);
             logger.LogMethodExit("CreateProductPage", "FillProductDescriptionAndOrderNumber",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -289,13 +289,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save the product id in memory
             logger.LogMethodEntry("CreateProductPage", "SaveProductIdInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Save the product details
             License license = License.Get(License.LicenseTypeEnum.Rumba);
             license.ProductID = productId;
             //Stores the license details
             logger.LogMethodExit("CreateProductPage", "SaveProductIdInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save the Order id in memory
             logger.LogMethodEntry("CreateProductPage", "SaveOrderIdInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Save the product details
             License license = new License
             {
@@ -317,7 +317,7 @@ namespace Pegasus.Pages.UI_Pages
             //Stores the license details
             license.StoreLicenseInMemory();
             logger.LogMethodExit("CreateProductPage", "SaveOrderIdInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -328,7 +328,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Gets the product id
             logger.LogMethodEntry("CreateProductPage",
-                "GetRumbaProductID", base.isTakeScreenShotDuringEntryExit);
+                "GetRumbaProductID", base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             int getProductId = Convert.ToInt32(CreateProductPageResource.
                 CreateProduct_Page_ProductId_DefaultValue);
@@ -344,7 +344,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CreateProductPage",
-            "GetRumbaProductID", base.isTakeScreenShotDuringEntryExit);
+            "GetRumbaProductID", base.IsTakeScreenShotDuringEntryExit);
             return getProductId;
         }
 
@@ -356,13 +356,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Generates Random Order ID
             logger.LogMethodEntry("CreateProductPage",
-                "GetRandomOrderID", base.isTakeScreenShotDuringEntryExit);
+                "GetRandomOrderID", base.IsTakeScreenShotDuringEntryExit);
             //Get 13 Digit Order ID
             string getOrderId = base.GetRandomNumber(CreateProductPageResource.CreateProduct_Page_Random_CharacterSet_String,
                 Convert.ToInt32(CreateProductPageResource.CreateProduct_Page_Random_Number_Length)).
                 ToString(CultureInfo.InvariantCulture);
             logger.LogMethodExit("CreateProductPage",
-                 "GetRandomOrderID", base.isTakeScreenShotDuringEntryExit);
+                 "GetRandomOrderID", base.IsTakeScreenShotDuringEntryExit);
             //Return Order ID
             return getOrderId;
         }

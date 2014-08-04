@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Essay Question
             logger.LogMethodEntry("EssayPage", "CreateEssayQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 this.SelectEssayWindow();
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EssayPage", "CreateEssayQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }      
       
          /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Audio Essay Question
             logger.LogMethodEntry("EssayPage", "CreateAudioEssayQuestions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {  
                 this.SelectEssayWindow();
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EssayPage", "CreateAudioEssayQuestions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         ///<summary>
@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("EssayPage",
                 "EnableAudioInputCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable AudioInput Checkbox
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_AudioInput_Checkbox_Id_Locator));
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
             this.EnterAudioInputTimingsValue();
             logger.LogMethodExit("EssayPage",
                 "EnableAudioInputCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enter Audio Input Time to Record Value.      
@@ -139,7 +139,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Audio Input Time to Record Value
             logger.LogMethodEntry("EssayPage",
                 "EnterAudioInputTimingsValue",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_AudioInput_MinTime_Id_Locator));
             //Clear Minutes TextBox Value
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
                 EssayPageResource.Essay_Page_AudioInput_Seconds_Time_Value);
             logger.LogMethodExit("EssayPage",
                 "EnterAudioInputTimingsValue",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Storde Audio Essay Question Detials in Memory.
@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Audio Essay Question Details in Memory
             logger.LogMethodEntry("EssayPage", "storeAudioQuestionDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Save Audio Essay Question Properties in Memory
             Question newQuestion = new Question
             {
@@ -181,7 +181,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newQuestion.StoreQuestionInMemory();
             logger.LogMethodExit("EssayPage", "storeAudioQuestionDetailsInMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Create EssayQuestion Inside The Activity.
@@ -190,7 +190,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create EssayQuestion Inside The Activity
             logger.LogMethodEntry("EssayPage", "CreateEssayQuestionInsideTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Create New Question Window
@@ -217,7 +217,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EssayPage", "CreateEssayQuestionInsideTheActivity",
-               base.isTakeScreenShotDuringEntryExit);           
+               base.IsTakeScreenShotDuringEntryExit);           
         }
 
         /// <summary>
@@ -227,13 +227,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select HTML Window And Frame
             logger.LogMethodEntry("EssayPage", "SelectHTMLWindowAndFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Create New Question Window
             this.SelectCreateNewQuestionWindow();
             base.SwitchToIFrame(EssayPageResource.
                 Essay_Page_HTMLFrame_Id_Locator);
             logger.LogMethodExit("EssayPage", "SelectHTMLWindowAndFrame",
-               base.isTakeScreenShotDuringEntryExit);         
+               base.IsTakeScreenShotDuringEntryExit);         
         }
 
         /// <summary>
@@ -243,7 +243,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create New Question Window
             logger.LogMethodEntry("EssayPage", "SelectCreateNewQuestionWindow",
-                base.isTakeScreenShotDuringEntryExit);           
+                base.IsTakeScreenShotDuringEntryExit);           
             //Select Create Essay Window
             base.WaitUntilWindowLoads(EssayPageResource.
                 Essay_Page_Select_CreateQuestion_Window_Name);
@@ -253,7 +253,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(EssayPageResource.
                 Essay_Page_Select_CreateQuestion_Frame);
             logger.LogMethodExit("EssayPage", "SelectCreateNewQuestionWindow",
-               base.isTakeScreenShotDuringEntryExit);  
+               base.IsTakeScreenShotDuringEntryExit);  
         }
 
         /// <summary>
@@ -264,7 +264,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Question Title For Essay Question
             logger.LogMethodEntry("EssayPage", "EnterTitleOfEssayQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Guid questionTitle = Guid.NewGuid();            
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_EnterQuestionTitle_Id_Locator));
@@ -272,7 +272,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(EssayPageResource.
                 Essay_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("EssayPage", "EnterTitleOfEssayQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return questionTitle;
         }
 
@@ -283,7 +283,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //CLick On Browse Button of Essay Question
             logger.LogMethodEntry("EssayPage", "ClickOnBrowseButtonOfEssayQuestion",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(EssayPageResource.Essay_Page_CreateEssay_Window_Name);
             //Select Create Essay Window
             base.SelectWindow(EssayPageResource.Essay_Page_CreateEssay_Window_Name);
@@ -295,7 +295,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Button
             base.ClickByJavaScriptExecutor(getBrowseButtonProperty);
             logger.LogMethodExit("EssayPage", "ClickOnBrowseButtonOfEssayQuestion",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save and Close Button
             logger.LogMethodEntry("EssayPage", 
                 "ClickONSaveAndCloseButtonOfEssayQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_Save_Button_Id_Locator));
             //Get Button Property 
@@ -316,7 +316,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("EssayPage", 
                 "ClickONSaveAndCloseButtonOfEssayQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -327,7 +327,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Score Value for Essay Question
             logger.LogMethodEntry("EssayPage", 
                 "EnterScoreValueForEssayQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create Essay Window
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_MaxScore_Id_Locator));
@@ -358,7 +358,7 @@ namespace Pegasus.Pages.UI_Pages
                 Essay_Page_NumberOfLines_Value);
             logger.LogMethodExit("EssayPage", 
                 "EnterScoreValueForEssayQuestion",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -368,7 +368,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Text Settings
             logger.LogMethodEntry("EssayPage", "ClickOnAddTextSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_Answer_Button_Id_Locator));
             //Get Button Property
@@ -377,7 +377,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Button
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("EssayPage", "ClickOnAddTextSettings",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -389,7 +389,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On View Source Button of Essay Question
             logger.LogMethodEntry("EssayPage", 
                 "ClickOnViewSourceOfEssayQuestionandEnterText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_ViewSource_Button_Id_Locator));
@@ -410,7 +410,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSourceButton);
             logger.LogMethodExit("EssayPage", 
                 "ClickOnViewSourceOfEssayQuestionandEnterText",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -421,7 +421,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Question Details in Memory
             logger.LogMethodEntry("EssayPage", "storeQuestionDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Save Question Properties in Memory
             Question newQuestion = new Question
             {
@@ -431,7 +431,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newQuestion.StoreQuestionInMemory();
             logger.LogMethodExit("EssayPage", "storeQuestionDetailsInMemory",
-              base.isTakeScreenShotDuringEntryExit);            
+              base.IsTakeScreenShotDuringEntryExit);            
         }      
        
         /// <summary>
@@ -440,7 +440,7 @@ namespace Pegasus.Pages.UI_Pages
         private void AddPalletteCharacters()
         {
             logger.LogMethodEntry("EssayPage", "AddPalletteCharacters",
-            base.isTakeScreenShotDuringEntryExit);            
+            base.IsTakeScreenShotDuringEntryExit);            
             //Add Pallette Characters
             base.WaitForElement(By.Id(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_one));
@@ -470,7 +470,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonById(EssayPageResource.
                 Essay_Page_CharacterPallete_Id_Locator_five);
             logger.LogMethodExit("EssayPage", "AddPalletteCharacters",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -480,12 +480,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Essay Question window
             logger.LogMethodEntry("EssayPage", "SelectEssayWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Create Essay Window
             base.WaitUntilWindowLoads(EssayPageResource.Essay_Page_CreateEssay_Window_Name);
             base.SelectWindow(EssayPageResource.Essay_Page_CreateEssay_Window_Name);
             logger.LogMethodExit("EssayPage", "SelectEssayWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -495,14 +495,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select HTML Frame
             logger.LogMethodEntry("EssayPage", "SelectHTMLFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Create Essay Window
             base.SelectWindow(EssayPageResource.Essay_Page_CreateEssay_Window_Name);
             base.WaitForElement(By.Id(EssayPageResource.Essay_Page_HTMLFrame_Id_Locator));
             //Switch to Frame
             base.SwitchToIFrame(EssayPageResource.Essay_Page_HTMLFrame_Id_Locator);
             logger.LogMethodExit("EssayPage", "SelectHTMLFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }    
     }
 }

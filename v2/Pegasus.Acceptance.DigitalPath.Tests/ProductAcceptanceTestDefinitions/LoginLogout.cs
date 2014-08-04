@@ -43,7 +43,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Browse Login Url
             Logger.LogMethodEntry("LoginLogout", "BrowsePegasusLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Default Window
             base.SelectDefaultWindow();
             // Pick Url based on user type enum
@@ -59,7 +59,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 loginPage.GoToLoginUrl();
             }
             Logger.LogMethodExit("LoginLogout", "BrowsePegasusLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Login in Pegasus
             Logger.LogMethodEntry("LoginLogout", "LoginToThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Boolean isUserAlreadyLoggedIn = base.IsElementPresent
                 (By.PartialLinkText(LoginLogoutResource.
                 LoginLogout_Signout_Link_Title_Locator),
@@ -115,7 +115,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 }
             }
             Logger.LogMethodExit("LoginLogout", "LoginToThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -127,14 +127,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //To Check Login Success
             Logger.LogMethodEntry("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert User Has Logged In Successfully
             Logger.LogAssertion("VerifyLoginSuccess",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
                     Assert.AreNotEqual(LoginLogoutResource.
                     LoginLogout_Window_Name_Title, loginPage.GetPageTitle()));
             Logger.LogMethodExit("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Method to Clicks on SignOut link
             Logger.LogMethodEntry("LoginLogout", "SignOutFromThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             HomePage homePage = new HomePage();
             switch (userTypeEnum)
@@ -175,7 +175,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     break;
             }
             Logger.LogMethodExit("LoginLogout", "SignOutFromThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -186,11 +186,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Method to Clicks on SignOut link
             Logger.LogMethodEntry("LoginLogout", "SignoutFromThePegasusAsDpUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click Sign out link 
             new HomePage().DigitalPathCsUserLogout();
             Logger.LogMethodExit("LoginLogout", "SignoutFromThePegasusAsDpUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

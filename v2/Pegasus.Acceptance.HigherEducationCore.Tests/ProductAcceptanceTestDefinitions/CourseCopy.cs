@@ -32,14 +32,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Copies Course
             Logger.LogMethodEntry("CourseCopy", "CreateCourseCopyInWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
                     (CourseCopyResource.CourseCopy_CopyasMasterCourse_CMenu_Option_Name);
             //Create A Copy Of Master Course
             new NewCoursePage().CopyCourseAsMasterCourse(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy", "CreateCourseCopyInWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Check Course for Assigned To Copy State
             Logger.LogMethodEntry("CourseCopy", "VerifiedTheCourseForAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -69,7 +69,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 typeof(SearchCoursesPage.SearchRadioButtonEnum), searchRadioButton),
                 course.Name, dropdownOption);
             Logger.LogMethodExit("CourseCopy", "CreateAuthoredCourseCopyInWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Check Course Get Our Of Assigned To Copy State
             Logger.LogMethodEntry("CourseCopy", "OutOfAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             ManageCoursesPage manageCoursesPage = new ManageCoursesPage();
             //Assert [CourseForAssignedToCopy] Text Present
             Logger.LogAssertion("VerifyAssignedToCopyTextPresent",
@@ -93,7 +93,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Fetch And Store Course Workspace Id
             manageCoursesPage.FetchAndStoreCourseWorkspaceId(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy", "OutOfAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }       
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Create Workspace Course Copy In Authored Course
             Logger.LogMethodEntry("CourseCopy", "CreateCourseCopyInDifferentWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
             (CourseCopyResource.
@@ -115,7 +115,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             new NewCoursePage().
                 CopyMasterCourseInDifferentWorkspace(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy", "CreateCourseCopyInDifferentWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Create Testing Course Copy In Workspace            
             Logger.LogMethodEntry("CourseCopy",
                 "CreateTestingCourseCopyInWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click of CMenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
              (CourseCopyResource.
@@ -139,7 +139,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             new NewCoursePage().CopyCourseAsTestingCourse(courseTypeEnum);
             Logger.LogMethodExit("CourseCopy",
                 "CreateTestingCourseCopyInWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -151,7 +151,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify The Column Headers In Manage Users Frame
             Logger.LogMethodEntry("CourseCopy",
                  "VerifyTheColumnHeadersInManageUsersFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Verify The Column Headers In Manage Users Frame
             Logger.LogAssertion("VerifyTheColumnHeadersInManageUsersFrame",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -159,7 +159,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     new ManageCoursesPage().GetColumnHeadersInManageCourseFrame()));
             Logger.LogMethodExit("CourseCopy",
                "VerifyTheColumnHeadersInManageUsersFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>

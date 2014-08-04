@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create The Folder
             logger.LogMethodEntry("AddFolderPage", "CreateTheFolder",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Intialize Guid for Folder
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
             { ExceptionHandler.HandleException(e);
             }
           logger.LogMethodExit("AddFolderPage", "CreateTheFolder",
-           base.isTakeScreenShotDuringEntryExit); 
+           base.IsTakeScreenShotDuringEntryExit); 
         }
 
       /// <summary>
@@ -79,14 +79,14 @@ namespace Pegasus.Pages.UI_Pages
       {
           //Select Add Folder Window
           logger.LogMethodEntry("AddFolderPage", "SelectAddFolderWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
           //Select the folder window
           base.WaitUntilWindowLoads(AddFolderPageResource.
               AddFolder_Page_Folder_Window_Name);
           base.SelectWindow(AddFolderPageResource.
               AddFolder_Page_Folder_Window_Name);
           logger.LogMethodExit("AddFolderPage", "SelectAddFolderWindow",
-           base.isTakeScreenShotDuringEntryExit); 
+           base.IsTakeScreenShotDuringEntryExit); 
       }
 
       /// <summary>
@@ -99,7 +99,7 @@ namespace Pegasus.Pages.UI_Pages
           //Store The Activity Folder Content
           logger.LogMethodEntry("AddFolderPage",
               "StoreTheActivityFolderContent",
-              base.isTakeScreenShotDuringEntryExit);        
+              base.IsTakeScreenShotDuringEntryExit);        
           //Store the activity in memory
           Activity newActivityFolder = new Activity
           {
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
           newActivityFolder.StoreActivityInMemory();
           logger.LogMethodExit("AddFolderPage",
               "StoreTheActivityFolderContent",
-           base.isTakeScreenShotDuringEntryExit); 
+           base.IsTakeScreenShotDuringEntryExit); 
       }
 
     }

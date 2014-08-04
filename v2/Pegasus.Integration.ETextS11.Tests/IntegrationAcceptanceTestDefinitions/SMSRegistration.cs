@@ -33,12 +33,12 @@ namespace Pegasus.Integration.ETextS11.Tests.
             // I Accept Button Clicked by SMS Admin 
             Logger.LogMethodEntry("SMSRegistration",
                 "AcceptTheLicenseAgreementAndPrivacyPolicyOfSMS",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click I Accept Button
             new ConsentPage().ClickIAcceptButtonBySMSAdmin();
             Logger.LogMethodExit("SMSRegistration",
                 "AcceptTheLicenseAgreementAndPrivacyPolicyOfSMS",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,13 +50,13 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             // Create New SMS User
             Logger.LogMethodEntry("SMSRegistration", "RegisterNewSMSUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //submit Access Information 
             new Reg1Page().EnterSMSUserAccessInformation(userTypeEnum);
             //Submit Account Information
             new Reg2Page().EnterSMSUserAccountInformation();
             Logger.LogMethodExit("SMSRegistration", "RegisterNewSMSUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             // SMS User Created with Confirmation and Summary
             Logger.LogMethodEntry("SMSRegistration",
                 "DisplayTheConfirmationAndSummaryForSMSUserRegisteration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert SMS User Created and Saved in Memory
             Logger.LogAssertion("VerifySMSUserCreated",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -79,7 +79,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                     new ConsentPage().GetPageTitle));
             Logger.LogMethodExit("SMSRegistration",
                 "DisplayTheConfirmationAndSummaryForSMSUserRegisteration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

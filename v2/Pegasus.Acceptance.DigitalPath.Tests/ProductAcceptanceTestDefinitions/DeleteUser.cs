@@ -29,11 +29,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // select Ok option
             Logger.LogMethodEntry("DeleteUser", "ClickOnOkOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             // click on Ok Button
             new ShowMessagePage().ClickOnPegasusAlertOkButton();
             Logger.LogMethodExit("DeleteUser", "ClickOnOkOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

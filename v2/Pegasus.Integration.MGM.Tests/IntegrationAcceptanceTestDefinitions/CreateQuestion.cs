@@ -32,11 +32,11 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Imports the MGM Cartridge
             Logger.LogMethodEntry("CreateQuestion", "ImportTheMGMCartridge",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Uploads the MGM cartridge Zip file
             new ImportCartridgePage().ImportMGMCartridge();
             Logger.LogMethodExit("CreateQuestion", "ImportTheMGMCartridge",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Verifies the MGM Activity Name
             Logger.LogMethodEntry("CreateQuestion", "DisplayOfActivityInContentLibraryFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             IEnumerable<string> getActivities = activityTable.Rows.Select(o => o["ActivityType"]).ToList();
             foreach (String activities in getActivities)
             {
@@ -63,7 +63,7 @@ namespace Pegasus.Integration.MGM.Tests.
                     new ContentLibraryUXPage().GetActivityName(activityEnum)));
             }
             Logger.LogMethodExit("CreateQuestion", "DisplayOfActivityInContentLibraryFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

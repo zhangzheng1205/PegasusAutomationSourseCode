@@ -29,14 +29,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //To publish course
             Logger.LogMethodEntry("PublishCourse", "PublishTheCourse",
-         base.isTakeScreenShotDuringEntryExit);
+         base.IsTakeScreenShotDuringEntryExit);
             //Click on Course Cmenu Option
             new ManageCoursesPage().ClickCourseCMenuOption(PublishCourseResource.
                 PublishCourse_CmenuOption_Publish_Keyword + cmenuOptionName);
             //Course published successfully
             new PublishingNotesPage().PublishCourseInWorkSpace(courseTypeEnum);
             Logger.LogMethodExit("PublishCourse", "PublishTheCourse",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

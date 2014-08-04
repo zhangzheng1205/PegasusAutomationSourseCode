@@ -37,13 +37,13 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Search Enrolled Users In CourseSpace
             Logger.LogMethodEntry("SearchUsers", "SearchEnrolledUsersInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Search Enrolled Users In Course Space
             new ManageUserPage().SearchUserInCourseSpace(userTypeEnum,
                 (ManageUserPage.CreateUserTab)Enum.Parse(typeof
                 (ManageUserPage.CreateUserTab), tabName));
             Logger.LogMethodExit("SearchUsers", "SearchEnrolledUsersInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Verify the Searched User
             Logger.LogMethodEntry("SearchUsers", "VerifyUserNameInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the User Name
             User user = User.Get(userTypeEnum);
             //Verify the Searched User
@@ -67,7 +67,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                     ((ManageUserPage.CreateUserTab)Enum.
                     Parse(typeof(ManageUserPage.CreateUserTab), tabName))));
             Logger.LogMethodExit("SearchUsers", "VerifyUserNameInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Select The Class Cmenu Option
             Logger.LogMethodEntry("SearchUsers", "SelectTheClassCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Class Name from Memory
             Class className = Class.Get(classTypeEnum);
             ManageClassManagementPage manageClassManagement =
@@ -91,7 +91,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //Click on the cmenu option
             manageClassManagement.SelectTheCMenuOption(cMenuOptionName);
             Logger.LogMethodExit("SearchUsers", "SelectTheClassCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -102,14 +102,14 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Verify Display Of 'Manage Students' Page
             Logger.LogMethodEntry("SearchUsers", "VerifyDisplayOfManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify Display Of 'Manage Students' Page
             Logger.LogAssertion("VerifyDisplayOfManageStudentsPage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(SearchUsersResource.SearchUsersPage_ManageStudents_Window_Title,
                     new ManageStudentsDefaultPage().GetManageStudentsPage()));
             Logger.LogMethodExit("SearchUsers", "VerifyDisplayOfManageStudentsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Verify Verify the Enrolled User
             Logger.LogMethodEntry("SearchUsers", "DisplayOfEnrolledUserInManageStudentPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the User Name
             User user = User.Get(userTypeEnum);
             //Verify the Enrolled User
@@ -130,7 +130,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 () => Assert.AreEqual(user.Name,
                     new ManageStudentsDefaultPage().GetEnrolledUser(user.Name)));
             Logger.LogMethodExit("SearchUsers", "DisplayOfEnrolledUserInManageStudentPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -142,12 +142,12 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Verify the Message
             Logger.LogMethodEntry("SearchUsers", "VerifyTheMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify the Message
             Logger.LogAssertion("VerifyTheMessage", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(message, new ManageUserPage().GetMessage()));
             Logger.LogMethodExit("SearchUsers", "VerifyTheMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Verify The Un Enrolled User In 'Manage Student' Page
             Logger.LogMethodEntry("SearchUsers", "VerifyTheUnEnrolledUserInManageStudentPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the User Name
             User user = User.Get(userTypeEnum);
             //Verify the Enrolled User
@@ -169,7 +169,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                     SearchUsersResource.SearchUsersPage_UnenrolledText,
                     new ManageStudentsDefaultPage().GetUnenrolledText(user.Name)));
             Logger.LogMethodExit("SearchUsers", "VerifyTheUnEnrolledUserInManageStudentPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

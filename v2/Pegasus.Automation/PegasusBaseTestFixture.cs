@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Interactions;
+using System.Net;
 
 namespace Pearson.Pegasus.TestAutomation.Frameworks
 {
@@ -34,7 +35,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// This is the Broswer variable called from AppSettings.
         /// </summary>
         static readonly string BrowserName = ConfigurationManager.AppSettings["Browser"];
-        protected bool isTakeScreenShotDuringEntryExit = Convert.ToBoolean
+        protected bool IsTakeScreenShotDuringEntryExit = Convert.ToBoolean
             (ConfigurationManager.AppSettings["TakeScreenShotDuringEntryExit"]);
         private int waitTimeOut = Convert.ToInt32(
             ConfigurationManager.AppSettings["ElementFindTimeOutInSeconds"]);
@@ -589,7 +590,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 throw new Exception("File Still Loading After Specified Time.");
             }
         }
-        
+
         /// <summary>
         /// Wait until Thinking Indicator is loading on the page.
         /// </summary>
@@ -656,6 +657,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             int results = sourceString.IndexOf(compareString, StringComparison.CurrentCultureIgnoreCase);
             return results == -1 ? false : true;
+        }
+
+        public void downloadFile(string url, string localPath)
+        {
+            var client = new WebClient();
+            client.Headers[HttpRequestHeader.Cookie] = cookieString(WebDriver);
+            client.DownloadFile(url, localPath);
+        }
+        string cookieString(IWebDriver driver)
+        {
+            var cookies = driver.Manage().Cookies.AllCookies;
+            return string.Join("; ", cookies.Select(c => string.Format("{0}={1}", c.Name, c.Value)));
         }
     }
 }

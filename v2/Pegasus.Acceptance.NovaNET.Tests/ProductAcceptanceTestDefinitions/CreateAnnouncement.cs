@@ -28,12 +28,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             //Click On Manage All Button In GlobalHome
             Logger.LogMethodEntry("CreateAnnouncement",
                   "ClickOnManageAllButtonInGlobalHome",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             //Click The Manage All Button In GlobalHome
             new HomePage().ClickTheManageAllButtonInGlobalHome();
             Logger.LogMethodExit("CreateAnnouncement",
                   "ClickOnManageAllButtonInGlobalHome",
-                            base.isTakeScreenShotDuringEntryExit);
+                            base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Create Class Announcement In CourseSpace.
@@ -46,13 +46,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             //Create Class Announcement In CourseSpace
             Logger.LogMethodEntry("CreateAnnouncement", 
                 "CreateClassAnnouncementInCourseSpace",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Create the class Announcement           
             new CreateAnnouncementUXPage().
                 CreateClassAnnouncementInGlobalHome(announcementType);
             Logger.LogMethodExit("CreateAnnouncement", 
                 "CreateClassAnnouncementInCourseSpace",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Verifying successfull message for Course Announcement Creation.
@@ -65,7 +65,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             //Verify Display of Announcement Creation successfull message 
             Logger.LogMethodEntry("CreateAnnouncement",
                 "VerifySuccessfullMessageInAnnouncementsFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Successfull Message Displayed
             Logger.LogAssertion("", ScenarioContext.
                 Current.ScenarioInfo.Title, 
@@ -76,7 +76,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             new AnnouncementDefaultUXPage().CloseAnnoucementLightBox();
             Logger.LogMethodExit("CreateAnnouncement",
                 "VerifySuccessfullMessageInAnnouncementsFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,13 +89,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("CreateAnnouncement", 
                 "SelectAnnouncementsInDropDown",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Select 'System Announcements' in Dropdown
             new AnnouncementDefaultUXPage().
                 SelectClassAnnouncementsTypeFromDropdown(announcementType);
             Logger.LogMethodExit("CreateAnnouncement",
                 "SelectAnnouncementsInDropDown",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             //Verifying Display of Announcement in lightbox
             Logger.LogMethodEntry("CreateAnnouncement",
                 "VerifyAnnouncementInAnnouncementLightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get announcement From Memory
             Announcement announcement = Announcement.Get(announcementTypeEnum);
             //Declaration Page Class Object
@@ -125,7 +125,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             announcementDefaultUxPage.CloseAnnoucementLightBox();
             Logger.LogMethodExit("CreateAnnouncement",
                 "VerifyAnnouncementInAnnouncementLightBox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

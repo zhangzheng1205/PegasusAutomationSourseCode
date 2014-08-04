@@ -35,7 +35,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Class Name In Overview Tab
             Logger.LogMethodEntry("Overview", "ClassPresentInTheOverviewTab",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             //Get The Class Name Stored In Memory
             Class orgClass = Class.Get(classTypeEnum);
             // Assert Class Search
@@ -43,7 +43,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(orgClass.Name,
                     new TodaysViewUXPage().GetClassName()));
             Logger.LogMethodExit("Overview", "ClassPresentInTheOverviewTab",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Calendar Asset Icon
             Logger.LogMethodEntry("Overview", "CalendarIconForAssignedAsset",
-         base.isTakeScreenShotDuringEntryExit);
+         base.IsTakeScreenShotDuringEntryExit);
             CalendarFramePage calendarFramePage = new CalendarFramePage();
             //Select Overview Window and Frame
             calendarFramePage.SelectOverviewWindowandFrame();
@@ -63,7 +63,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.IsTrue
                 (calendarFramePage.IsCalendarIconPresent()));
             Logger.LogMethodExit("Overview", "CalendarIconForAssignedAsset",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,14 +74,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click on Calendar Icon
             Logger.LogMethodEntry("Overview", "ClickOnCalendarIconofAsset",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             CalendarFramePage calendarFramePage = new CalendarFramePage();
             //Select Overview Window and Frame
             calendarFramePage.SelectOverviewWindowandFrame();
             //Click on Calendar Icon
             calendarFramePage.ClickOnCalendarIcon();
             Logger.LogMethodExit("Overview", "ClickOnCalendarIconofAsset",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,14 +92,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         public void VerifyTheAssignedAsset(String activityName)
         {
             Logger.LogMethodEntry("Overview", "VerifyTheAssignedAsset",
-          base.isTakeScreenShotDuringEntryExit);            
+          base.IsTakeScreenShotDuringEntryExit);            
             // Assert Activity Search
             Logger.LogAssertion("VerifyActivityName", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activityName,
                     new CourseCalendarPage().GetActivityName(OverviewResource.
                     Overview_Content_Window_Name, activityName)));
             Logger.LogMethodExit("Overview", "VerifyTheAssignedAsset",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             
         }
     }

@@ -29,11 +29,11 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Open the Activity Presentation Window
             Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivity"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             // Open Activity Window 
             new CoursePreviewMainUXPage().OpenActivity();
             Logger.LogMethodExit("ActivitySubmission", "OpenTheActivity"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Launching of Activity Presentation Window
             Logger.LogMethodEntry("ActivitySubmission",
                 "ActivitySuccessfullyLaunched"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Assert Launch Activity Window
             Logger.LogAssertion("VerifyActivityLaunched",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -53,7 +53,7 @@ namespace Pegasus.Integration.MLP.Tests.
                     IsActivityPresentationPageOpened()));
             Logger.LogMethodExit("ActivitySubmission",
                 "ActivitySuccessfullyLaunched"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,12 +65,12 @@ namespace Pegasus.Integration.MLP.Tests.
             //Launching of Activity Presentation Window
             Logger.LogMethodEntry("ActivitySubmission",
                 "AttemptTheActivity"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             // Attempt Activity 
             new StudentPresentationPage().AttemptActivity();
             Logger.LogMethodExit("ActivitySubmission",
                 "AttemptTheActivity"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Submit the Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyActivitySubmission"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Assert Activity is submitted successfully
             Logger.LogAssertion("VerifyActivityIsSubmitted",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -90,7 +90,7 @@ namespace Pegasus.Integration.MLP.Tests.
                     IsPostTestActivitySubmittedSuccessfully()));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifyActivitySubmission"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Verify Correct Page Opened
             Logger.LogMethodEntry("ActivitySubmission",
                 "ActivityExtraPracticePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert we have correct page opened
             Logger.LogAssertion("VerifyExtraPracticePageTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -110,7 +110,7 @@ namespace Pegasus.Integration.MLP.Tests.
                     IsActivityPresentationPageOpened()));
             Logger.LogMethodExit("ActivitySubmission",
                 "ActivityExtraPracticePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -122,12 +122,12 @@ namespace Pegasus.Integration.MLP.Tests.
             //Navigate inside activity folder on gradebook page
             Logger.LogMethodEntry("ActivitySubmission",
                 "NavigateInsideActivityInGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Navigated inside the activity
             new GBLeftNavigationUXPage().NavigateToActivityFolder();
             Logger.LogMethodExit("ActivitySubmission",
                 "NavigateInsideActivityInGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Verify grades are displayed
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyGradesOfSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert grades have been found for submitted activity
             decimal submittedGradeValue = new GBStudentUXPage().
                 GetGradeDisplayedForActivity();
@@ -150,7 +150,7 @@ namespace Pegasus.Integration.MLP.Tests.
                     ActivitySubmision_SubmittedActivity_GradeValue)));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifyGradesOfSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Open The Manually Gradable Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "OpenTheManuallyGradableActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Open The Manually Gradable Activity
             new CoursePreviewMainUXPage().LaunchTheActivityHED();
             //Attempt Essay Activity
@@ -171,7 +171,7 @@ namespace Pegasus.Integration.MLP.Tests.
                 ActivitySubmision_EssayQuestion_Answer_Text_Value);
             Logger.LogMethodExit("ActivitySubmission",
                 "OpenTheManuallyGradableActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -183,12 +183,12 @@ namespace Pegasus.Integration.MLP.Tests.
             //Submit the Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "SubmitTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Submit the Activity
             new StudentPresentationPage().SubmitTheActivityHED();
             Logger.LogMethodExit("ActivitySubmission",
                 "SubmitTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Verify the Status Of Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyStatusOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Activity Status
             Logger.LogAssertion("VerifyStatusOfActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -210,7 +210,7 @@ namespace Pegasus.Integration.MLP.Tests.
                     ActivitySubmision_ManuallyGradable_Activity_Name)));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifyStatusOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -222,12 +222,12 @@ namespace Pegasus.Integration.MLP.Tests.
             //Navigate Inside the Folder
             Logger.LogMethodEntry("ActivitySubmission",
                 "NavigateInsideTheFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate Inside the Folder
             new GBLeftNavigationUXPage().NavigateInsideFolderHED();
             Logger.LogMethodExit("ActivitySubmission",
                 "NavigateInsideTheFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -239,7 +239,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Verify the Score of Manually Graded Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyGradesForManuallyGradedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify Score of Manually Graded Activity
             Logger.LogAssertion("VerifyGradesForManuallyGradedActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -250,7 +250,7 @@ namespace Pegasus.Integration.MLP.Tests.
                     ActivitySubmision_ManuallyGradable_Activity_Name)));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifyGradesForManuallyGradedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

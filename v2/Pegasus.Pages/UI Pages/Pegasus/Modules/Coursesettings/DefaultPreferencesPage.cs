@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Number Of Attempts Text
             logger.LogMethodEntry("DefaultPreferencesPage", "GetNumberOfAttemptsText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getNumberOfAttemptsText = string.Empty;
             try
@@ -47,7 +47,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("DefaultPreferencesPage", "GetNumberOfAttemptsText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getNumberOfAttemptsText.Trim();
         }
 

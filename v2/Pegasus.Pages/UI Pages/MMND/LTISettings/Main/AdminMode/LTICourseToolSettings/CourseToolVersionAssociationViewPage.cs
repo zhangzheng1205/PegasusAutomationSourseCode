@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Next button
             logger.LogMethodEntry("CourseToolVersionAssociationViewPage", "ClickOnNextButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Adminiatrative Pages Window
@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("CourseToolVersionAssociationViewPage", "ClickOnNextButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

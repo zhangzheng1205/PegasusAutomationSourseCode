@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Add Recipients
             logger.LogMethodEntry("AnnouncementRecipientListUXPage", "AddRecipients"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Adding Recipients
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);                     
             }
             logger.LogMethodExit("AnnouncementRecipientListUXPage", "AddRecipients",
-                            base.isTakeScreenShotDuringEntryExit);
+                            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

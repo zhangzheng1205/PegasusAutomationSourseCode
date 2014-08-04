@@ -30,7 +30,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Add Course Materials Option
             Logger.LogMethodEntry("CreateActivity", "ClickOnAddCourseMaterialsOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Declaration of object
             ContentLibraryUXPage contentLibrary = new ContentLibraryUXPage();
             //Select Window
@@ -42,7 +42,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click On Add Course Materials Option
             new ContentLibraryUXPage().ClickOnAddCourseMaterialsLink();
             Logger.LogMethodExit("CreateActivity", "ClickOnAddCourseMaterialsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -54,11 +54,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On The Activity Type
             Logger.LogMethodEntry("CreateActivity", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Activity Type
             new ContentLibraryUXPage().ClickOnActivityType(activityType);
             Logger.LogMethodExit("CreateActivity", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,11 +72,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Create Activity
             Logger.LogMethodEntry("CreateActivity", "CreateActivityOfBehavioralModeType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Create Activity
             new AddAssessmentPage().CreateActivity(activityTypeEnum, behavioralModeEnum);
             Logger.LogMethodExit("CreateActivity", "CreateActivityOfBehavioralModeType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -91,14 +91,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Create Instructor Gradable Activity
             Logger.LogMethodEntry("CreateActivity", "CreateInstructorGradableActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Enter Activity Details and Click on Add Question Link
             new AddAssessmentPage().EnterActivityDetailsandClickonAddQuestion(activityTypeEnum);
             //Create Activity
             new AddAssessmentPage().CreateTheInstructorGradableActivity(
                 activityTypeEnum);
             Logger.LogMethodExit("CreateActivity", "CreateInstructorGradableActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -114,12 +114,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Create SIMActivity Of Behavioral ModeType.
             Logger.LogMethodEntry("CreateActivity", 
                 "CreateSIMActivityOfBehavioralModeType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Create SIM Activity
             new AddAssessmentPage().CreateSIMActivity(activityTypeEnum, behavioralModeEnum);
             Logger.LogMethodExit("CreateActivity",
                 "CreateSIMActivityOfBehavioralModeType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,11 +130,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On ShowHide Status Option
             Logger.LogMethodEntry("CreateActivity", "ClickOnShowHideStatusOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Activity Type
             new CourseContentUXPage().ClickTheShowHideStatusOption();
             Logger.LogMethodExit("CreateActivity", "ClickOnShowHideStatusOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -149,12 +149,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Create SIM Studyplan
             Logger.LogMethodEntry("CreateActivity", "CreateSIMStudyplan",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create SIM Studyplan
             new SIMStudyPlanDefaultUXPage().CreateSIMStudyPlan(
                 activityTypeEnum, behavioralModeEnum);
             Logger.LogMethodExit("CreateActivity", "CreateSIMStudyplan",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -167,13 +167,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Logger Entry
             Logger.LogMethodEntry("CreateActivity", "SeeActivityInTheContentLibraryFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityTypeEnum);
             //Search SIM Study Plan activity
             new CourseContentUXPage().GetActivityName(activity.Name);
             //Logger Exit
             Logger.LogMethodExit("CreateActivity", "SeeActivityInTheContentLibraryFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -187,14 +187,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Logger Entry
             Logger.LogMethodEntry("CreateActivity", "ClickOnCmenuOptionOfActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Cmenu image of activity
             new CourseContentUXPage().ClickTheActivityCmneuImageIcon();
             //Click on cmenu option of activity
             new CourseContentUXPage().ClickTheCmenuOptionofActivity(cmenuOptionName);
             //Logger Exit
             Logger.LogMethodExit("CreateActivity", "ClickOnCmenuOptionOfActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -207,7 +207,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Create Activity
             Logger.LogMethodEntry("CreateActivity", "CreateTheActivityOfBehavioralModeType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Create Object for RandomTopicList Page
             RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
             //Enter Activity Details and Click on Add Question Link
@@ -225,7 +225,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click On Add And Close Button
             new ContentBrowserUXPage().ClickOnAddAndCloseButton();
             Logger.LogMethodExit("CreateActivity", "CreateTheActivityOfBehavioralModeType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -240,7 +240,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Create GraderIT Activity
             Logger.LogMethodEntry("CreateActivity", "CreateGraderITActivity",
-               base.isTakeScreenShotDuringEntryExit);    
+               base.IsTakeScreenShotDuringEntryExit);    
             //Create Object for RandomTopicList Page
             RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
             //Create Object for AutoGrader Page
@@ -260,7 +260,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click On SaveAndReturn Button
             addAssessmentPage.ClickOnSaveAndReturnButton();
             Logger.LogMethodExit("CreateActivity", "CreateGraderITActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -271,11 +271,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Add Course Materials Link
             Logger.LogMethodEntry("CreateActivity", "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Add Course Materials Option
             new CourseContentUXPage().ClickOnAddCourseMaterialsOption();
             Logger.LogMethodExit("CreateActivity", "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -289,12 +289,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Create The NonGradable Activity
             Logger.LogMethodEntry("CreateActivity",
                   "CreateTheNonGradableActivity",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             //Create The NonGradable Activity.
             new CourseContentUXPage().CreateTheNonGradableActivity(activityTypeEnum);
             Logger.LogMethodExit("CreateActivity",
                 "CreateTheNonGradableActivity",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify the Activity Name added to the My Course Frame
             Logger.LogMethodEntry("CreateActivity", "DisplayOfActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Gets the Activity name from Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Asserts the Activity Name
@@ -315,7 +315,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activity.Name,
                     new CourseContentUXPage().GetActivityName(activity.Name)));
             Logger.LogMethodExit("CreateActivity", "DisplayOfActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -329,7 +329,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify The Activity Of BehavioralMode Type
             Logger.LogMethodEntry("CreateActivity", "DisplayOfActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Gets the Activity name from Memory
             Activity activity = Activity.Get(activityTypeEnum,behavioralmode);
             //Asserts the Activity Name
@@ -337,7 +337,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activity.Name,
                     new CourseContentUXPage().GetActivityName(activity.Name)));
             Logger.LogMethodExit("CreateActivity", "DisplayOfActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -349,11 +349,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click The Cmenuof Activity
             Logger.LogMethodEntry("CreateActivity", "ClickTheCmenuofActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Cmenu of Activity
             new CourseContentUXPage().ClickOnCmenuofActivity(cmenuOption);
             Logger.LogMethodExit("CreateActivity", "ClickTheCmenuofActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -364,11 +364,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Assign The Activity In Mycourse
             Logger.LogMethodEntry("CreateActivity", "AssignTheActivityInMycourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assign The Activity In course content
             new CourseContentUXPage().AssignTheActivityInCourseContent();
             Logger.LogMethodExit("CreateActivity", "AssignTheActivityInMycourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -379,11 +379,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Set Feedback Preference
             Logger.LogMethodEntry("CreateActivity", "SetTheFeedbackPreference",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Enable Feedback 'Never' Preference
             new SkillBasedAssessmentPage().EnableFeedbackNeverPreference();
             Logger.LogMethodExit("CreateActivity", "SetTheFeedbackPreference",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Set The feedback for correct Answer preference
             Logger.LogMethodEntry("CreateActivity", "SetTheFeedbackCorrectAnswerPreference",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Create Object for RandomAssessment Page
             RandomAssessmentPage randomAssessmentpage = new RandomAssessmentPage();
             //Increae the Activity Attempt
@@ -408,7 +408,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click the Save and Return tab
             new RandomTopicListPage().ClickOnSaveAndReturnButtonInPreference();
             Logger.LogMethodExit("CreateActivity", "SetTheFeedbackCorrectAnswerPreference",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On Add Course Materials Link in Content Library.
@@ -418,13 +418,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Add Course Materials Link
             Logger.LogMethodEntry("CreateActivity", "ClickOnAddCourseMaterialsLinkInContentLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
             //Click On Add Course Materials Option
             new ContentLibraryUXPage().ClickOnAddCourseMaterialsOptioninContentLibrary();
 
             Logger.LogMethodExit("CreateActivity", "ClickOnAddCourseMaterialsLinkInContentLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enter The Necessary Details Begin Creation Of Assignment Behavioral Type.
@@ -434,13 +434,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("CommonSteps",
                 "EnterTheNecessaryDetailsBeginCreationOfAssignmentBehavioralType",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
 
             new AddAssessmentPage().EnterAssignmentActivityDetailsandClickSaveandContinue();
 
             Logger.LogMethodExit("CommonSteps",
                 "EnterTheNecessaryDetailsBeginCreationOfAssignmentBehavioralType",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On The Messages Activity Sub-tab.
@@ -450,13 +450,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("CommonSteps",
                 "ClickOnTheMessagesActivitySubtab",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
 
             new AddAssessmentPage().ClickonMessageTab();
 
             Logger.LogMethodExit("CommonSteps",
                 "ClickOnTheMessagesActivitySubtab",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Verify The Activity Beginning And End Messages are present in new activity
@@ -467,7 +467,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("CommonSteps",
                 "VerifyTheActivityBeginningAndEndMessagesSetInMainCoursePreferences",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
 
             //Asserts the Activity Name
             Logger.LogAssertion("VerifyBeginActivityDefaultMessage", ScenarioContext.
@@ -492,7 +492,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
 
             Logger.LogMethodExit("CommonSteps",
                 "VerifyTheActivityBeginningAndEndMessagesSetInMainCoursePreferences",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Verify New Activity Type In The Add Course Materials Menu.
@@ -502,7 +502,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         public void VerifyNewActivityTypeInTheAddCourseMaterialsMenu(string activityTypeName)
         {
             Logger.LogMethodEntry("CommonSteps", "VerifyNewActivityTypeInTheAddCourseMaterialsMenu",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
 
             //Assert we have correct page opened
             Logger.LogAssertion("VerifyNewActivityTypeName",
@@ -512,7 +512,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     VerifyNewActivityType(activityTypeName)));
 
             Logger.LogMethodExit("CommonSteps", "VerifyNewActivityTypeInTheAddCourseMaterialsMenu",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Create Basic Random Activity Using True-False Question And HelpLinks.
@@ -527,7 +527,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Create Instructor Gradable Activity
             Logger.LogMethodEntry("CreateActivity", 
                 "CreateBasicRandomActivityUsingTrueandFalseQuestionAndHelpLinks",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
             //Enter Activity Details and Click on Add Question Link
             new AddAssessmentPage().EnterActivityDetailsandClickonAddQuestion(activityTypeEnum);
@@ -536,7 +536,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
 
             Logger.LogMethodExit("CreateActivity", 
                 "CreateBasicRandomActivityUsingTrueandFalseQuestionAndHelpLinks",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

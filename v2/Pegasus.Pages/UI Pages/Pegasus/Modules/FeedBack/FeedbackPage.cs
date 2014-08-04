@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.FeedBack
         {
             //Get Feedback Options Text
             logger.LogMethodEntry("FeedbackPage", "GetFeedbackOptionsText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getFeedbackOptionsText = string.Empty;
             //Initialize Variable
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.FeedBack
                 ExceptionHandler.HandleException(e);      
             }
             logger.LogMethodExit("FeedbackPage", "GetFeedbackOptionsText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return getFeedbackOptionsText = getGeneralFeedbackText + getCourseMaterailsFeedbackText;
         }
 
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.FeedBack
         {
             //Select FeedBack Window
             logger.LogMethodEntry("FeedbackPage", "SelectFeedbackWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Window
             base.WaitUntilWindowLoads(FeedbackPageResource.
                 Feedback_Page_Window_Name);
@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.FeedBack
             base.SelectWindow(FeedbackPageResource.
                 Feedback_Page_Window_Name);
             logger.LogMethodExit("FeedbackPage", "SelectFeedbackWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

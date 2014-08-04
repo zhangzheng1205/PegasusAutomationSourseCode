@@ -35,7 +35,7 @@ namespace Pegasus.Pages.UI_Pages
             //Create SIM Studyplan
             Logger.LogMethodEntry("AutoGraderPage",
                 "SelectCreateNewQuestionWindowAndFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(Convert.ToInt32(AutoGraderPageResource.
                 AutoGraderPageResourse_GraderIt_Wait_Time_Value));
             //Select Create New Question Window And Frame
@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
                 AutoGraderPageResourse_CreateNewQuestion_Frame);
             Logger.LogMethodExit("AutoGraderPage",
                 "SelectCreateNewQuestionWindowAndFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create SIM Studyplan
             Logger.LogMethodEntry("AutoGraderPage", "CreateGraderITQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Create New Question Window And Frame
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AutoGraderPage", "CreateGraderITQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter The Grader Question Name
             Logger.LogMethodEntry("AutoGraderPage", "EnterTheGraderQuestionName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Sim GraderIT Activity
             Guid QuestionName = Guid.NewGuid();
             //Wait for the element
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store The Grader Question In Memory
             this.StoreTheGraderQuestionInMemory(questionTypeEnum, QuestionName);
             Logger.LogMethodExit("AutoGraderPage", "EnterTheGraderQuestionName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Store The Grader Question In Memory
             Logger.LogMethodEntry("AutoGraderPage", "StoreTheGraderQuestionInMemory",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Store the Grader Question
             Question newQuestionType = new Question
             {
@@ -148,7 +148,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newQuestionType.StoreQuestionInMemory();
             Logger.LogMethodExit("AutoGraderPage", "StoreTheGraderQuestionInMemory",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -158,7 +158,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On SaveAndClose Button
             Logger.LogMethodEntry("AutoGraderPage", "ClickOnSaveAndCloseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click The Question SaveButton
             this.ClickTheQuestionSaveButton();
             //Select Create New Question Window And Frame
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(AutoGraderPageResource.
                 AutoGraderPageResourse_ThreadTime_Value));
             Logger.LogMethodExit("AutoGraderPage", "ClickOnSaveAndCloseButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Question SaveButton
             Logger.LogMethodEntry("AutoGraderPage", "ClickTheQuestionSaveButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(AutoGraderPageResource.
                 AutoGraderPageResourse_SaveClose_Button_Id_Locator));
@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the 'Save And Close' button
             base.ClickByJavaScriptExecutor(getSaveAndCloseButton);
             Logger.LogMethodExit("AutoGraderPage", "ClickTheQuestionSaveButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Project Question From Project Creation Tool
             Logger.LogMethodEntry("AutoGraderPage",
                 "SelectProjectQuestionFromProjectCreationTool",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(Convert.ToInt32(AutoGraderPageResource.
                 AutoGraderPageResourse_Wait_Time_Value));
 
@@ -218,7 +218,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectTheProject(getProjectName);
             Logger.LogMethodExit("AutoGraderPage",
                 "SelectProjectQuestionFromProjectCreationTool",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -228,14 +228,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Project Creation Tool Window
             Logger.LogMethodEntry("AutoGraderPage", "SelectProjectCreationToolWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Project Creation tool window
             base.WaitUntilWindowLoads(AutoGraderPageResource.
                 AutoGraderPageResourse_ProjectCreationTool_WindowName);
             base.SelectWindow(AutoGraderPageResource.
                 AutoGraderPageResourse_ProjectCreationTool_WindowName);
             Logger.LogMethodExit("AutoGraderPage", "SelectProjectCreationToolWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages
             //Create The GraderIT Question In ManageQuestionBank
             Logger.LogMethodEntry("AutoGraderPage",
                 "CreateTheGraderITQuestionInManageQuestionBank",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enter The Grader Question Name
@@ -279,7 +279,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("AutoGraderPage",
                 "CreateTheGraderITQuestionInManageQuestionBank",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -290,7 +290,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Project
             Logger.LogMethodEntry("AutoGraderPage", "SelectTheProject",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Maxmize pop-up window
             base.MaximizeWindow();
             //Wait for project load
@@ -307,7 +307,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getGraderProjectsButton);
             SearchTheProject(projectName);
             Logger.LogMethodExit("AutoGraderPage", "SelectTheProject",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
          /// <summary>
@@ -318,7 +318,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Project
             Logger.LogMethodEntry("AutoGraderPage", "SearchTheProject",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for project load
             Thread.Sleep(Convert.ToInt32(AutoGraderPageResource.
                 AutoGraderPageResourse_GraderIt_Wait_Time_Value));
@@ -364,7 +364,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             Logger.LogMethodExit("AutoGraderPage", "SearchTheProject",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Perform Mouse Action For ProjectName.
@@ -375,7 +375,7 @@ namespace Pegasus.Pages.UI_Pages
             //Perform Mouse Action For ProjectName
             Logger.LogMethodEntry("AutoGraderPage",
                 "PerformMouseActionForProjectName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(string.Format(AutoGraderPageResource.
                  AutoGraderPageResourse_Project_Name_Mouseover_Xpath_Locator,
@@ -403,7 +403,7 @@ namespace Pegasus.Pages.UI_Pages
                 AutoGraderPageResourse_ThreadTime_Value));
             Logger.LogMethodExit("AutoGraderPage",
                 "PerformMouseActionForProjectName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -414,7 +414,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify Question Title Textbox In Edit Window
             Logger.LogMethodEntry("AutoGraderPage", "IsQuestionTitleTextboxPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isQuestionTitleTextboxPresent = false;
             try
@@ -441,7 +441,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AutoGraderPage", "IsQuestionTitleTextboxPresent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return isQuestionTitleTextboxPresent;
         }
         /// <summary>
@@ -454,7 +454,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Grader IT Question from  activity authoring
             Logger.LogMethodEntry("AutoGraderPage", "CreateGraderITQuestionFromActivityAuthoring",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Create New Question Window And Frame
@@ -486,7 +486,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AutoGraderPage", "CreateGraderITQuestionFromActivityAuthoring",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         ///  Verify the 'Edit Grader Project Instruction' control on the Page.
@@ -494,7 +494,7 @@ namespace Pegasus.Pages.UI_Pages
         public bool DisplayEditGraderProjectInstruction()
         {
             Logger.LogMethodEntry("AutoGraderPage", "DisplayEditGraderProjectInstruction",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             bool isElementPresent = false;
             try
             {
@@ -512,7 +512,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AutoGraderPage", "DisplayEditGraderProjectInstruction",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isElementPresent;
         }
         /// <summary>
@@ -526,7 +526,7 @@ namespace Pegasus.Pages.UI_Pages
             //Create The GraderIT Question In CourseSpace
             Logger.LogMethodEntry("AutoGraderPage",
                 "CreateTheGraderITQuestionInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enter The Grader Question Name
@@ -558,7 +558,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("AutoGraderPage",
                 "CreateTheGraderITQuestionInCourseSpace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

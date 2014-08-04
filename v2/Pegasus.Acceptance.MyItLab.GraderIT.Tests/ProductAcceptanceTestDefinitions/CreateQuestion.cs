@@ -30,12 +30,12 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Select Add Course Materails Button
             Logger.LogMethodEntry("CreateQuestion",
                 "SelectAddCourseMaterialsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Add Course Materials Button
             new QlGridUXPage().SelectAddCourseMaterialsButton();
             Logger.LogMethodExit("CreateQuestion",
                 "SelectAddCourseMaterialsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -47,11 +47,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Select Option In Course Materials
             Logger.LogMethodEntry("CreateQuestion", "SelectOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Option In Course Materials
             new QlGridUXPage().SelectOptionInCourseMaterials(assetType);
             Logger.LogMethodExit("CreateQuestion", "SelectOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -61,11 +61,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         public void AddTheQuestionFolderFromSimRepository()
         {
             Logger.LogMethodEntry("CreateQuestion", "AddTheQuestionFolderFromSimRepository",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Question Folder
             new SIMRepositoryPage().AddQuestionFolder();
             Logger.LogMethodExit("CreateQuestion", "AddTheQuestionFolderFromSimRepository",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -77,14 +77,14 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             // Verify The Created Question Folder
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheCreatedQuestion",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Assert Created Question 
             Logger.LogAssertion("VerifyTheCreatedQuestion", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(true,
                      new QlGridUXPage().GetSearchedFolderName(questionName).
                     Contains(questionName)));
             Logger.LogMethodExit("CreateQuestion", "VerifyTheCreatedQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -97,11 +97,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Click On Cmenu Option of Asset
             Logger.LogMethodEntry("CreateQuestion", "SelectCmenuOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Click On Cmenu Option of Asset
             new QlGridUXPage().ClickOnCmenuOfAsset(questionName, cmenuOption);
             Logger.LogMethodExit("CreateQuestion", "SelectCmenuOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
 
         }
         /// <summary>
@@ -116,13 +116,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             // Create Grader IT Question In Manage Question Bank
             Logger.LogMethodEntry("CreateQuestion",
                 "CreateGraderITQuestionInManageQuestionBank",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Create The GraderIT Question In Manage Question Bank
             new AutoGraderPage().
                 CreateTheGraderITQuestionInManageQuestionBank(questionTypeEnum, projectName);
             Logger.LogMethodExit("CreateQuestion",
                 "CreateGraderITQuestionInManageQuestionBank",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Create Grader IT Question In CourseSpace.
@@ -136,13 +136,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             // Create Grader IT Question In Manage Question Bank
             Logger.LogMethodEntry("CreateQuestion",
                 "CreateGraderITQuestionInManageQuestionBank",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Create The GraderIT Question In Manage Question Bank
             new AutoGraderPage().
                 CreateTheGraderITQuestionInCourseSpace(questionTypeEnum, projectName);
             Logger.LogMethodExit("CreateQuestion",
                 "CreateGraderITQuestionInManageQuestionBank",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On Cmenu Option Of Question.
@@ -155,13 +155,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Click On Cmenu Option Of Question In Manage Question Bank
             Logger.LogMethodEntry("CreateQuestion", "ClickOnCmenuOptionOfQuestion"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Question question = Question.Get(questionTypeEnum);
             //Click On Cmenu Option Of Question
             new QlGridUXPage().ClickOnCmenuOfQuestion(question.Name, questionCmenuOption);
             Logger.LogMethodExit("CreateQuestion", "ClickOnCmenuOptionOfQuestion"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -172,13 +172,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Verify The Question Edit Page
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheQuestionEditPage"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             //Asserts To Verify The Question Edit Page
             Logger.LogAssertion("VerifyQuestionEditPage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new AutoGraderPage().IsQuestionTitleTextboxPresent()));
             Logger.LogMethodExit("CreateQuestion", "VerifyTheQuestionEditPage"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click on the alert OK button
@@ -188,11 +188,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Click on the alert 'OK' button
             Logger.LogMethodEntry("CreateQuestion", "DeleteAutoGraderQuestion",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the alert OK button of Asset
             new ShowMessagePage().ClickOnPegasusAlertOkButton();
             Logger.LogMethodExit("CreateQuestion", "DeleteAutoGraderQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
 
         }
         /// <summary>
@@ -204,7 +204,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Verify the question added
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheQuestionAdded",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Question question = Question.Get(questionTypeEnum);
             //Asserts To Verify the question added
@@ -213,7 +213,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
                 () => Assert.IsTrue(new QlGridUXPage().
                VerifyTheQuestionAdded(question.Name)));
             Logger.LogMethodExit("CreateQuestion", "VerifyTheQuestionAdded",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -225,14 +225,14 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             // Method To Verify 'Edit Grader Project Instruction' control on the Page
             Logger.LogMethodEntry("CreateQuestion", "DisplayTheSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Asserts To Verify 'Edit Grader Project Instruction' control on the Page
             Logger.LogAssertion("VerifyTheEditGraderProjectInstruction",
                ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.IsTrue( new AutoGraderPage().
               DisplayEditGraderProjectInstruction()));           
             Logger.LogMethodExit("CreateQuestion", "DisplayTheSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

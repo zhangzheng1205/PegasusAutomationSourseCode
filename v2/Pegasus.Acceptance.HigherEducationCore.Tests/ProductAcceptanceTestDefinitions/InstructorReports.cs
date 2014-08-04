@@ -35,7 +35,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Method to Generate Activity Result By Student Report
             Logger.LogMethodEntry("InstructorReports", "ManageInstructorReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             User userName = User.Get(userType);
             //Converting String to Enum to pass report by type
             new RptMainUXPage().ManageInstructorReport((RptMainUXPage.
@@ -43,7 +43,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 Parse(typeof(RptMainUXPage.PegasusInstructorReportEnum),
                 instructorReportType),userName.Name);
             Logger.LogMethodExit("InstructorReports", "ManageInstructorReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
      
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Method to Check Score and Student Name in the Launched Report 
             Logger.LogMethodEntry("InstructorReports",
                 "SeeTheStudentNameAndScoreUnderLaunchedReport",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Assert Activity Score
             Logger.LogAssertion("VerifyScore", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(InstructorReportsResource.
@@ -71,7 +71,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 (new RptAssessmentAllStudentsPage().GetStudentName())));
             Logger.LogMethodExit("InstructorReports",
                 "SeeTheStudentNameAndScoreUnderLaunchedReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Method to Check Score and Student Name in the Launched Report 
             Logger.LogMethodEntry("InstructorReports",
                 "VerifyTheActivityNameAndScoreUnderLaunchedReport",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Assert Activity Score
             Logger.LogAssertion("VerifyActivityScore", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(InstructorReportsResource.
@@ -98,7 +98,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     new RptAssessmentAllStudentsPage().GetActivityName()));
             Logger.LogMethodExit("InstructorReports",
                "VerifyTheActivityNameAndScoreUnderLaunchedReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
        /// <summary>
@@ -111,14 +111,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select Report And Click On Select Activity Button
             Logger.LogMethodEntry("InstructorReports",
                 "SelectReportAndClickOnSelectActivityButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select Report
             new RptMainUXPage().SelectReport();
             //Select Activity Button In Report
             new RptGCOptionsUXPage().SelectButtonInReport(buttonName);
             Logger.LogMethodExit("InstructorReports",
                "SelectReportAndClickOnSelectActivityButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -134,7 +134,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Display Of Activity In Select Activities Window
             Logger.LogMethodEntry("InstructorReports",
                  "VerifyDisplayOfActivityInSelectActivitiesWindow",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModesEnum);
             //Assert To Verify The Display Of Activity In Select Activities Window
@@ -144,7 +144,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 (new RptSelectAssessmentsPage().GetActivityName(activity.Name))));            
             Logger.LogMethodExit("InstructorReports",
                "VerifyDisplayOfActivityInSelectActivitiesWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Method to Check Score and Student Name in the Launched Report 
             Logger.LogMethodEntry("InstructorReports",
                 "VerifyTheStudyPlanNameAndStudentNameUnderLaunchedReport",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             RptStuStudyPlanPage StuStudyPlanPage = new RptStuStudyPlanPage();
             //Assert StudyPlan Name
             Logger.LogAssertion("VerifyStudyPlanName", ScenarioContext.Current.ScenarioInfo.Title,
@@ -172,7 +172,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                      .InstructorReports_StudyPlan_Score, StuStudyPlanPage.GetAverageScore()));
             Logger.LogMethodExit("InstructorReports",
                "VerifyTheStudyPlanNameAndStudentNameUnderLaunchedReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 

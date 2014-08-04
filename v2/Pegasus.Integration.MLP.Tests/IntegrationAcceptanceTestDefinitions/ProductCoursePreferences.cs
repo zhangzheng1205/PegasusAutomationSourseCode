@@ -34,7 +34,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             Logger.LogMethodEntry("ProductCoursePreferences",
                "SelectTheCourseOptionFromTheCMenu",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Select Course Contextual Option
@@ -42,7 +42,7 @@ namespace Pegasus.Integration.MLP.Tests.
                 (course.Name, contextualMenuOptionName);
             Logger.LogMethodExit("ProductCoursePreferences",
               "SelectTheCourseOptionFromTheCMenu",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Verify ECollege Integration Point Id
             Logger.LogMethodEntry("ProductCoursePreferences",
                 "ValidateECollegeTpiIntegrationPointId",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Created Page Object
             CourseEnrollmentModePage courseEnrollmentModePage = 
                 new CourseEnrollmentModePage();
@@ -67,7 +67,7 @@ namespace Pegasus.Integration.MLP.Tests.
             courseEnrollmentModePage.ClickCancelButton();
             Logger.LogMethodExit("ProductCoursePreferences",
               "ValidateECollegeTpiIntegrationPointId",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

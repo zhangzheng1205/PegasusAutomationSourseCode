@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Periods
             logger.LogMethodEntry("CreatePeriodsPage", "CreatePeriods",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the 'Calendar' window
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CreatePeriodsPage", "CreatePeriods",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Class And Course Associations
             logger.LogMethodEntry("CreatePeriodsPage", "ClassAndCourseAssociation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Class Associations            
             if ( base.GetWebElementPropertiesById(CreatePeriodsPageResource.
                 CreatePeriodsPage_ClassAssociations_DropDown_Id_Locator).Enabled )
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
                 CreatePeriodsPage_CourseAssociations_DropDown_Index_Value));
             }
             logger.LogMethodExit("CreatePeriodsPage", "ClassAndCourseAssociation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Days
             logger.LogMethodEntry("CreatePeriodsPage", "SelectTheDays",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             IWebElement getMonday=base.GetWebElementPropertiesById
                 (CreatePeriodsPageResource.
                 CreatePeriodsPage_Checkbox_Monday_Id_Locator);
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select the Checkbox for Sunday
             base.ClickByJavaScriptExecutor(getSunday);           
             logger.LogMethodExit("CreatePeriodsPage", "SelectTheDays",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Order Value And Enter the Period Name
             logger.LogMethodEntry("CreatePeriodsPage", "SelectOrderValueAndEnterPeriodName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Drop down
             base.WaitForElement(By.Id(CreatePeriodsPageResource.
                 CreatePeriodsPage_Order_DropDown_Id_Locator));
@@ -159,7 +159,7 @@ namespace Pegasus.Pages.UI_Pages
                 CreatePeriodsPage_Textbox_PeriodName_Id_Locator, CreatePeriodsPageResource.
                 CreatePeriodsPage_Textbox_PeriodName_Value);
             logger.LogMethodExit("CreatePeriodsPage", "SelectOrderValueAndEnterPeriodName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

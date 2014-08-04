@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Question Link
             logger.LogMethodEntry("RandomTopicListPage", "ClickOnAddQuestionLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Thread.Sleep(Convert.ToInt32(RandomTopicListPageResource.
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomTopicListPage", "ClickOnAddQuestionLink",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question From Bank for Basic Random
             logger.LogMethodEntry("RandomTopicListPage", "SelectQuestionFromBankForBasicRandom",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.XPath(RandomTopicListPageResource.
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("RandomTopicListPage", "SelectQuestionFromBankForBasicRandom",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question From Bank for Assignment
             logger.LogMethodEntry("RandomTopicListPage", "SelectQuestionFromBankForAssignment",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Select Question From Bank Link 
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("RandomTopicListPage", "SelectQuestionFromBankForAssignment",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Wait For Question To Display
             logger.LogMethodEntry("RandomTopicListPage", "WaitForQuestionToDisplay",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(RandomTopicListPageResource.
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);               
             }
             logger.LogMethodExit("RandomTopicListPage", "WaitForQuestionToDisplay",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Save And Return Button
             logger.LogMethodEntry("RandomTopicListPage", "ClickOnSaveAndReturnButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -167,7 +167,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);               
             }
             logger.LogMethodExit("RandomTopicListPage", "ClickOnSaveAndReturnButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On SaveAndReturn Button In MessageTab
             logger.LogMethodEntry("RandomTopicListPage",
                 "ClickOnSaveAndReturnButtonInMessageTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -199,7 +199,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomTopicListPage",
                 "ClickOnSaveAndReturnButtonInMessageTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
          
@@ -211,7 +211,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Add Questions link
             logger.LogMethodEntry("RandomTopicListPage", "SelectAddQuestionsLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on Add Question Link
@@ -230,7 +230,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomTopicListPage", "SelectAddQuestionsLink",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -239,7 +239,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickonAddQuestionLink()
         {
             logger.LogMethodEntry("RandomTopicListPage", "ClickonAddQuestionLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomTopicListPage", "ClickonAddQuestionLink",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -272,7 +272,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create New Question Option
             logger.LogMethodEntry("RandomTopicListPage", "SelectCreateNewQuestionOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -292,7 +292,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomTopicListPage", "SelectCreateNewQuestionOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -304,7 +304,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Create New Question Option
             logger.LogMethodEntry("RandomTopicListPage",
                   "SelectTheCreateNewQuestionForAssetCreation",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Create Random Activity Window
@@ -322,7 +322,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomTopicListPage",
                    "SelectTheCreateNewQuestionForAssetCreation",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -333,7 +333,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Create Random Activity Window
             logger.LogMethodEntry("RandomTopicListPage",
                   "SelectCreateRandomActivityWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.WaitUntilWindowLoads(RandomTopicListPageResource.
                 RandomTopicList_Page_CreateRandomActivity_WindowName);
@@ -341,7 +341,7 @@ namespace Pegasus.Pages.UI_Pages
                 RandomTopicList_Page_CreateRandomActivity_WindowName);
             logger.LogMethodExit("RandomTopicListPage",
                    "SelectCreateRandomActivityWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -352,7 +352,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Create New Question Link
             logger.LogMethodEntry("RandomTopicListPage",
                   "ClickOnCreateNewQuestionLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //wait for the element
@@ -370,7 +370,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomTopicListPage",
                    "ClickOnCreateNewQuestionLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -381,7 +381,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On SaveAndReturn Button In Preference
             logger.LogMethodEntry("RandomTopicListPage",
                   "ClickOnSaveAndReturnButtonInPreference",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //wait for the element
@@ -399,7 +399,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomTopicListPage",
                    "ClickOnSaveAndReturnButtonInPreference",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -410,7 +410,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Add Questions Link For Post Test
             logger.LogMethodEntry("RandomTopicListPage",
                   "SelectAddQuestionsLinkForPostTest",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Create Post Test Window And Frame
@@ -436,7 +436,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomTopicListPage",
                   "SelectAddQuestionsLinkForPostTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -447,7 +447,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Create Post Test Window And Frame
             logger.LogMethodEntry("RandomTopicListPage",
                   "SelectCreatePostTestWindowAndFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(RandomTopicListPageResource.
                 RandomTopicList_Page_CreatePostTest_WindowName);
             //Select Window
@@ -460,7 +460,7 @@ namespace Pegasus.Pages.UI_Pages
                 RandomTopicList_Page_Frame_Id_Locator);
             logger.LogMethodExit("RandomTopicListPage",
                   "SelectCreatePostTestWindowAndFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On Add Links link to add HelpLinks to activity.
@@ -469,7 +469,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Question Link
             logger.LogMethodEntry("RandomTopicListPage", "ClickOnAddLinksLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Add Question Button
@@ -487,7 +487,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomTopicListPage", "ClickOnAddLinksLink",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -33,13 +33,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Display Of Preference And Workspaces Tabs
             Logger.LogMethodEntry("CreateWorkspace", "DisplayOfPreferenceAndWorkspacesTabs",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of Preference And Workspaces Tabs for CTG Publisher Admin
             Logger.LogAssertion("VerifyDisplayOfPreferenceAndWorkspacesTabs",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue(
                     new AdminToolPage().IsDefaultTabsDisplayedForCtgPublisherAdmin()));
             Logger.LogMethodExit("CreateWorkspace", "DisplayOfPreferenceAndWorkspacesTabs",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,14 +50,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Default View As Workspaces Tab for CTG Publisher Admin
             Logger.LogMethodEntry("CreateWorkspace", "DefaultViewForCtgPublisherAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Default View As Workspaces Tab for CTG Publisher Admin
             Logger.LogAssertion("VerifyDefaultViewForCTGPublisherAdmin",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(
                     CreateWorkspaceResource.CreateWorkspace_Workspaces_Window_Title,
                     new ManageWorkspacesPage().GetThePageTitle()));
             Logger.LogMethodExit("CreateWorkspace", "DefaultViewForCtgPublisherAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,13 +68,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Display Of Default Contents Of Workspace Tab
             Logger.LogMethodEntry("CreateWorkspace", "DisplayOfDefaultContentsOfWorkspaceTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of Default Contents Of Workspace Tab for CTG Publisher Admin
             Logger.LogAssertion("VerifyDefaultViewForCTGPublisherAdmin",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue(
                     new ManageWorkspacesPage().IsTheDefaultContentsInWorkspacesTabDisplayed()));
             Logger.LogMethodEntry("CreateWorkspace", "DisplayOfDefaultContentsOfWorkspaceTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Create The New Workspace
             Logger.LogMethodEntry("CreateWorkspace", "CreateTheNewWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click the Create New Workspace
             new AdminToolPage().ClickTheCreateNewWorkspaceLink(
                 (AdminToolPage.AdminWorkspaceTypeEnum)Enum.Parse
@@ -99,7 +99,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 (typeof(AdminToolPage.AdminWorkspaceTypeEnum),
                 adminType), workspaceName);            
             Logger.LogMethodExit("CreateWorkspace", "CreateTheNewWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

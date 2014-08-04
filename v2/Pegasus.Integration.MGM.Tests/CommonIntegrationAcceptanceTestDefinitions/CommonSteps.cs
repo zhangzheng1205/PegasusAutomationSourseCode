@@ -38,7 +38,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Check If Expected Page Is Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Wait Till Thinking Indicator Loads
             bool isThinkingIndicatorLoading = IsThinkingIndicatorLoading();
             //If Thinking Indicator In Process After Specified Time Interval then Fail This Step
@@ -56,7 +56,7 @@ namespace Pegasus.Integration.MGM.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedPageTitle, getActualPageTitle));
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Verify the Success Message Display on the Page.
@@ -67,7 +67,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             // Method To Verify the Success Message     
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Wait For Page Get Refresh after Pop Up Close
             Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                 CommonSteps_SleepTime_Value));
@@ -77,7 +77,7 @@ namespace Pegasus.Integration.MGM.Tests.
             //Removed The Assert For Message Because Sometimes Message not comes 
             //but this is not the severe issue. So We, can ignore this.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessage",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,13 +89,13 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Validate Logout From Rumba
             Logger.LogMethodEntry("LoginLogout", "ValidateLogoutFromRumba",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert Logout
             Logger.LogAssertion("ValidateLogout",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(signOutMessage, new SignInPage().GetRumbaUserSignOutMessage()));
             Logger.LogMethodExit("LoginLogout", "ValidateLogoutFromRumba",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             // Method To Verify the Success Message 
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Wait For Page Get Refresh after Pop Up Close
             Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                 CommonSteps_SleepTime_Value));
@@ -129,7 +129,7 @@ namespace Pegasus.Integration.MGM.Tests.
             //Removed The Assert For Message Because Sometimes Message not comes 
             //but this is not the severe issue. So We, can ignore this.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessage",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Click on the Link
             Logger.LogMethodEntry("CommonSteps", "ClickOnTheLink",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Switch To Frame
             SwitchToIFrame(CommonStepsResource.
                 CommonSteps_IFrame + frame + string.Empty);
@@ -155,7 +155,7 @@ namespace Pegasus.Integration.MGM.Tests.
             WaitUntilWindowLoads(CommonStepsResource.
                 CommonSteps_CreateNewUserWindow_Name_Locator);
             Logger.LogMethodExit("CommonSteps", "ClickOnTheLink",
-             isTakeScreenShotDuringEntryExit);
+             IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Verify Pop Up Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Wait Untill Window Loads
             WaitUntilWindowLoads(popUpName,
                 Convert.ToInt32(CommonStepsResource.CommonSteps_CustomTimeToWait));
@@ -178,7 +178,7 @@ namespace Pegasus.Integration.MGM.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(true, isPopUpExist));
             Logger.LogMethodExit("CommonSteps", "ShowThePopUpInPegasus",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Method to Navigate to the Tab Window 
             Logger.LogMethodEntry("CommonSteps", "NavigateToTheTab",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Click On More Link if More Link Is Present
             //And The Required Tab Is Not Present
             new TodaysViewUXPage().ClickMoreLinkIfPresent(tabName);
@@ -210,7 +210,7 @@ namespace Pegasus.Integration.MGM.Tests.
             Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                  CommonSteps_SleepTime_Value));
             Logger.LogMethodExit("CommonSteps", "NavigateToTheTab",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -224,13 +224,13 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Enter in Course from Global Home Page
             Logger.LogMethodEntry("CommonSteps", "EnterInCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Get Course From  Memory
             Course course = Course.Get(courseTypeEnum);
             //Enter Into The Course
             new MyPegasusUXPage().EnterInCourseFromGobalHomePage(course.Name, userTypeEnum);
             Logger.LogMethodExit("CommonSteps", " EnterInCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -242,13 +242,13 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Verify Page Default Tabs
             Logger.LogMethodEntry("CommonSteps", "ViewDefaultsTabs",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Assert defaults tabs displayed
             Logger.LogAssertion("VerifyDisplayOfDefaultsTabs", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
                 (true, new TodaysViewUXPage().IsDefaultTabsPresent(userTypeEnum)));
             Logger.LogMethodExit("CommonSteps", " ViewDefaultsTabs",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -259,11 +259,11 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Navigate To Page
             Logger.LogMethodEntry("CommonSteps", "NavigateBackToGlobalHomePage",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Navigate To Global Home Page
             new TodaysViewUXPage().NavigateToGlobalHomePage();
             Logger.LogMethodExit("CommonSteps", "NavigateBackToGlobalHomePage",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -275,13 +275,13 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Enter In Class
             Logger.LogMethodEntry("CommonSteps", "EnterIntoClass",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Get Class From Memory
             Class Class = Class.Get(classTypeEnum);
             //Enter Dp class
             new HomePage().EnterInClass(Class.Name);
             Logger.LogMethodExit("CommonSteps", "EnterIntoClass",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -293,11 +293,11 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Close the window
             Logger.LogMethodEntry("CreateUser", "CloseTheManageOrganizationWindow",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Close the Window
             new ManageOrganisationToolBarPage().CloseWindow(windowName);
             Logger.LogMethodExit("CreateUser", "CloseTheManageOrganizationWindow",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -312,7 +312,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Search and Select the Organization
             Logger.LogMethodEntry("UserEnrollment", "SearchandSelectOrganization",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Fetch Organization Name From Memory
             Organization organization = Organization.Get(
                 organizationLevelEnum, organizationTypeEnum);
@@ -326,7 +326,7 @@ namespace Pegasus.Integration.MGM.Tests.
             //Click on Organization Button
             organizationManagementPage.SelectOrganization(organizationLevelEnum);
             Logger.LogMethodExit("UserEnrollment", "SearchandSelectOrganization",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

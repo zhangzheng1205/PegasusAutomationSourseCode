@@ -31,12 +31,12 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Manage to navigate  Products Page
             Logger.LogMethodEntry("CreateProduct",
                 "NavigateToManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate to Manage Products Page
             new AdminToolPage().NavigateManageProductsPage();
             Logger.LogMethodExit("CreateProduct",
                 "NavigateToManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -47,14 +47,14 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
         {
             //Click on the Link
             Logger.LogMethodEntry("CreateProduct", "ClickOnTheLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Declaration Page Class Object
             ManageProductsPage manageProductsPage =
                 new ManageProductsPage();
             //Create New Product
             manageProductsPage.ClickOnCreateNewProductLink();
             Logger.LogMethodExit("CreateProduct", "ClickOnTheLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,13 +69,13 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Creation of Product
             Logger.LogMethodEntry("CreateProduct",
                 "CreateProductUsingProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Product
             new NewProductPage().CreateNewProduct(
                 productTypeEnum, programTypeEnum);
             Logger.LogMethodExit("VerifyCreateNewProduct",
                 "CreateProductUsingProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }        
     }
 }

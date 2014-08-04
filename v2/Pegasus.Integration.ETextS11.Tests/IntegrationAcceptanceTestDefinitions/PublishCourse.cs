@@ -33,7 +33,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Method To Publish Course
             Logger.LogMethodEntry("PublishCourse", "PublishAuthoredMasterCourseInWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Course Cmenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
                     (PublishCourseResource.
@@ -41,7 +41,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Course Published Successfully
             new PublishingNotesPage().PublishCourseInWorkSpace(courseTypeEnum);
             Logger.LogMethodExit("PublishCourse", "PublishAuthoredMasterCourseInWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Method To Search Course
             Logger.LogMethodEntry("PublishCourse", "SearchCourseInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course from Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -67,7 +67,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Select CourseEnrollement Window
             new ManageCoursesPage().SelectCourseEnrollementWindow();
             Logger.LogMethodExit("PublishCourse", "SearchCourseInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

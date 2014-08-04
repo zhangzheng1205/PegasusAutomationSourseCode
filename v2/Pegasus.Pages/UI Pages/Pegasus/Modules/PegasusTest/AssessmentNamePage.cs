@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create MyTest Activity
             Logger.LogMethodEntry("AssessmentNamePage", "CreateMyTestActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate Guid for Activity  Name
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AssessmentNamePage", "CreateMyTestActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //This is logger entry
             Logger.LogMethodEntry("AssessmentNamePage", "SelectCreateNewTestWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Pop Up Window
             base.WaitUntilWindowLoads(AssessmentNamePageResource.
                 AssessmentName_Page_CreateNewTest_Window_Name);
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
                 AssessmentName_Page_CreateNewTest_Window_Name);
             //This is logger exit
             Logger.LogMethodExit("AssessmentNamePage", "SelectCreateNewTestWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Store the Activity
             Logger.LogMethodEntry("TrueFalsePage", "StoreActivityInMemory",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Store the TrueFalse Question
             Activity activity = new Activity
             {
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             activity.StoreActivityInMemory();
             Logger.LogMethodExit("TrueFalsePage", "StoreActivityInMemory",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

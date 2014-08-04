@@ -35,13 +35,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment", "SelectCourseToEnrollUsers",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch course name from memory
             Course course = Course.Get(courseTypeEnum);
             //Selection of course in right frame
             new ManageCoursesPage().SelectCourse(course.Name);
             Logger.LogMethodExit("UserEnrollment", "SelectCourseToEnrollUsers",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment", "SelectWSUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch user name from memory
             User user = User.Get(userTypeEnum);   
             // User search in left frame
@@ -62,7 +62,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Select User
             new ManageUsersPage().SelectUser(user.Name);
             Logger.LogMethodExit("UserEnrollment", "SelectWSUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -75,11 +75,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment", "EnrollTheUserInTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enroll user to the course
             new AdminToolPage().EnrollUserInCourse(userTypeEnum);
             Logger.LogMethodExit("UserEnrollment", "EnrollTheUserInTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //To See The Enrolled User Inside The Course
             Logger.LogMethodEntry("UserEnrollment", "EnrollTheUserInTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch User's Last Name From Memory
             User user = User.Get(userTypeEnum);
             //Asert The Last Name Of The User
@@ -101,7 +101,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 () => Assert.AreEqual(user.LastName,
             new UserEnrollmentPage().GetEnrolledUserLastName(user.LastName)));
             Logger.LogMethodExit("UserEnrollment", "EnrollTheUserInTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -114,11 +114,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select master library class in right frame
             Logger.LogMethodEntry("UserEnrollment", "SelectMasterLibraryClass",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Master library class on the right frame
             new OrgAdminEnrollClassesPage().SelectMasterLibraryClass(classTypeEnum);
             Logger.LogMethodExit("UserEnrollment", "SelectMasterLibraryClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -131,13 +131,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select users in left frame
             Logger.LogMethodEntry("UserEnrollment", "SelectUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Get the user
             User user = User.Get(userTypeEnum);
             // Select the user in left frame
             new OrgAdminUserEnrollmentPage().SelectUserInLeftFrame(user.Name);
             Logger.LogMethodExit("UserEnrollment", "SelectUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -148,11 +148,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select enroll button
             Logger.LogMethodEntry("UserEnrollment", "SelectEnrollButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click on enroll button in middle frame
             new OrgEnrollmentPage().SelectEnrollButton();
             Logger.LogMethodExit("UserEnrollment", "SelectEnrollButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select enroll button
             Logger.LogMethodEntry("UserEnrollment", "CheckEnrollmentSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert we have correct message displayed
             Logger.LogAssertion("VerifySuccessMessageDisplay",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -171,7 +171,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     .GetSuccessfulMessageText().Contains(UserEnrollmentResource.
                     UserEnrollment_Enrollment_SuccessMessage_Text)));
             Logger.LogMethodExit("UserEnrollment", "CheckEnrollmentSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -184,13 +184,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select the User in the Right Frame
             Logger.LogMethodEntry("UserEnrollment", "SelectTheUserInTheEnrolledCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Get the user
             User user = User.Get(userTypeEnum);
             //Select the User in the Right Frame
             new UserEnrollmentPage().SelectUserInRightFrame(user.LastName);
             Logger.LogMethodExit("UserEnrollment", "SelectTheUserInTheEnrolledCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -201,11 +201,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Un Enroll the Selected User from the Course
             Logger.LogMethodEntry("UserEnrollment", "UnenrollTheInTheSelectedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Un Enroll Selected Users Option
             new UserEnrollmentPage().ClickOnUnEnrollSelectedUsersOption();
             Logger.LogMethodExit("UserEnrollment", "UnenrollTheInTheSelectedCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -216,11 +216,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click The Add Buttom In Administrator Tab
             Logger.LogMethodEntry("UserEnrollment", "ClickTheAddButtomInAdministratorTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On The Add Buttom In Administrator Tab
             new EnrollmentPage().ClickEnrollButton();
             Logger.LogMethodExit("UserEnrollment", "ClickTheAddButtomInAdministratorTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify The Promoted Workspace Admin
             Logger.LogMethodEntry("UserEnrollment", "VerifyThePromotedWorkspaceAdmin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get the user name from memory
               User user = User.Get(userTypeEnum);                    
             // Assert for Promoted workspace admin
@@ -242,7 +242,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     Assert.AreEqual(user.LastName,
                     new EnrollmentPage().GetPromotedWorkspaceAdminName(user.LastName)));           
             Logger.LogMethodExit("UserEnrollment", "VerifyThePromotedWorkspaceAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -254,11 +254,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Navigate To Administrator Tool Page
             Logger.LogMethodEntry("UserEnrollment", "NavigateToAdministratorToolPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Navigate Administrator Tool Page
             new AdminToolPage().NavigateAdministratorToolPage();
             Logger.LogMethodExit("UserEnrollment", "NavigateToAdministratorToolPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Search The Promoted Admin
             Logger.LogMethodEntry("UserEnrollment", "SearchThePromotedAdmin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get the user name from memory
              User user = User.Get(userTypeEnum); 
             //Declaration Page Class Object
@@ -288,7 +288,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     break;
             }
             Logger.LogMethodExit("UserEnrollment", "SearchThePromotedAdmin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -299,11 +299,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click On The Unenroll Selected User Button
             Logger.LogMethodEntry("UserEnrollment", "ClickOnTheUnenrollSelectedUserButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click UnEnroll Cmenu Option In Ws Admin
             new EnrollmentPage().ClickUnEnrollSelectedUsersInWsAdmin();
             Logger.LogMethodExit("UserEnrollment", "ClickOnTheUnenrollSelectedUserButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

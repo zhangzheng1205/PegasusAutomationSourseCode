@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get The Skill Name If Added Earlier
             logger.LogMethodEntry("StandardSkillsGridPage",
-              "GetSkillNameIsDisplayed", base.isTakeScreenShotDuringEntryExit);
+              "GetSkillNameIsDisplayed", base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getSkillName = string.Empty;
             try
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StandardSkillsGridPage",
-              "GetSkillNameIsDisplayed", base.isTakeScreenShotDuringEntryExit);
+              "GetSkillNameIsDisplayed", base.IsTakeScreenShotDuringEntryExit);
             return getSkillName;
         }
 
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get The Row Cont Of The Skill Standard Frame
             logger.LogMethodEntry("StandardSkillsGridPage",
-              "GetRowCountOfSkillStandardFrame", base.isTakeScreenShotDuringEntryExit);
+              "GetRowCountOfSkillStandardFrame", base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getSkillName = string.Empty;
             int rowCount = int.MinValue;
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StandardSkillsGridPage",
-              "GetRowCountOfSkillStandardFrame", base.isTakeScreenShotDuringEntryExit);
+              "GetRowCountOfSkillStandardFrame", base.IsTakeScreenShotDuringEntryExit);
             return rowCount;
         }
 
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Skill Framework
             logger.LogMethodEntry("StandardSkillsGridPage",
-             "SelectSkillFramework", base.isTakeScreenShotDuringEntryExit);
+             "SelectSkillFramework", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Skill Framework Window
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StandardSkillsGridPage",
-            "SelectSkillFramework", base.isTakeScreenShotDuringEntryExit);
+            "SelectSkillFramework", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The SaveClose Button
             logger.LogMethodEntry("StandardSkillsGridPage",
-             "SearchTheFrame", base.isTakeScreenShotDuringEntryExit);
+             "SearchTheFrame", base.IsTakeScreenShotDuringEntryExit);
             //Wait For The Skill Framework Name Textbox
             base.WaitForElement(By.Id(StandardSkillsGridPageResource.
                 StandardSkillGrid_Page_SkillFrameworkName_Input_Id_Locator),
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(StandardSkillsGridPageResource.
                 StandardSkillGrid_Page_SleepTime));
             logger.LogMethodExit("StandardSkillsGridPage",
-            "SearchTheFrame", base.isTakeScreenShotDuringEntryExit);
+            "SearchTheFrame", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The SaveClose Button
             logger.LogMethodEntry("StandardSkillsGridPage",
-             "ClickTheSaveCloseButton", base.isTakeScreenShotDuringEntryExit);
+             "ClickTheSaveCloseButton", base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(StandardSkillsGridPageResource.
                 StandardSkillGrid_Page_SaveAndClose_Link_Id_Locator));
             //Click On Save And Close Button
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(StandardSkillsGridPageResource.
                 StandardSkillGrid_Page_SleepTime));
             logger.LogMethodExit("StandardSkillsGridPage",
-            "ClickTheSaveCloseButton", base.isTakeScreenShotDuringEntryExit);
+            "ClickTheSaveCloseButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Framework CheckBox
             logger.LogMethodEntry("StandardSkillsGridPage",
-             "SelectFrameworkCheckBox", base.isTakeScreenShotDuringEntryExit);
+             "SelectFrameworkCheckBox", base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(string.Format(StandardSkillsGridPageResource.
                 StandardSkillGrid_Page_SkillCheckbox_Xpath_Locator, getRowNumber)));
@@ -202,7 +202,7 @@ namespace Pegasus.Pages.UI_Pages
                 StandardSkillGrid_Page_SkillCheckbox_Xpath_Locator, getRowNumber));
             base.ClickByJavaScriptExecutor(getChekox);
             logger.LogMethodExit("StandardSkillsGridPage",
-            "SelectFrameworkCheckBox", base.isTakeScreenShotDuringEntryExit);
+            "SelectFrameworkCheckBox", base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -213,7 +213,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Standard Framework
             logger.LogMethodEntry("StandardSkillsGridPage",
-              "SelectStandardFramework", base.isTakeScreenShotDuringEntryExit);
+              "SelectStandardFramework", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Standard Framework Window
@@ -233,7 +233,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StandardSkillsGridPage",
-            "SelectStandardFramework", base.isTakeScreenShotDuringEntryExit);
+            "SelectStandardFramework", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -245,14 +245,14 @@ namespace Pegasus.Pages.UI_Pages
             //Select Skill FrameWork Window
             logger.LogMethodEntry("StandardSkillsGridPage",
             "SelectSkillStandardFrameWorkWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             // Wait For The Skill Framework Popup
             base.WaitUntilWindowLoads(windowName);
             //Select Popup
             base.SelectWindow(windowName);
             logger.LogMethodExit("StandardSkillsGridPage",
             "SelectSkillStandardFrameWorkWindow", 
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

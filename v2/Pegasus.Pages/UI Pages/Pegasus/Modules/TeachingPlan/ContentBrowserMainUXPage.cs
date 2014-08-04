@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger entry
             logger.LogMethodEntry("ContentBrowserMainUXPage",
                 "ClickOnAddAndCloseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for element
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodEntry("ContentBrowserMainUXPage",
                 "ClickOnAddAndCloseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On 'Add And Close' Button
             logger.LogMethodEntry("ContentBrowserMainUXPage", "SelectSaveCopyToWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the 'Save copy to' window
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ContentBrowserMainUXPage", "SelectSaveCopyToWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question
             logger.LogMethodEntry("ContentBrowserMainUXPage", "SelectQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Question From Memory
             Question question = Question.Get(Question.QuestionTypeEnum.TrueFalse);
             try
@@ -108,7 +108,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ContentBrowserMainUXPage", "SelectQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Question
             logger.LogMethodEntry("ContentBrowserMainUXPage", "SelectTheQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ContentBrowserMainUXPageResource.
                 ContentBrowserMainUX_Page_QuestionWindow_Frame_Id_Locator));
             //Switch to Frame
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("ContentBrowserMainUXPage", "SelectTheQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -163,14 +163,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question Window
             logger.LogMethodEntry("ContentBrowserMainUXPage", "SelectQuestionWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Question Window
             base.WaitUntilWindowLoads(ContentBrowserMainUXPageResource.
                 ContentBrowserMainUX_Page_QuestionWindow);
             base.SelectWindow(ContentBrowserMainUXPageResource.
                 ContentBrowserMainUX_Page_QuestionWindow);
             logger.LogMethodExit("ContentBrowserMainUXPage", "SelectQuestionWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

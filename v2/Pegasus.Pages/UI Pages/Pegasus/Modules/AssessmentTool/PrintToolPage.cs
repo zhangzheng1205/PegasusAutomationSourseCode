@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //logger Entry
             Logger.LogMethodEntry("PrintToolPage", "IsPrintOptionsPresentOnPrintPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             bool isAllPrintDeatilsPresent = true;
             try
             {
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
             //logger Exit
             Logger.LogMethodExit("PrintToolPage",
                 "IsPrintOptionsPresentOnPrintPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isAllPrintDeatilsPresent;
         }
 
@@ -68,7 +68,7 @@ namespace Pegasus.Pages.UI_Pages
             //logger Entry
             Logger.LogMethodEntry("PrintToolPage",
                 "SelectDownloadLightBoxIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Iframe 
             base.WaitForElement(By.Id(PrintToolPageResource.
                 PrintToolPage_Iframe_Id_Locator));
@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
             //logger Exit
             Logger.LogMethodExit("PrintToolPage",
                 "SelectDownloadLightBoxIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
             //logger Entry
             Logger.LogMethodEntry("PrintToolPage",
                 "IsIncludeAnswerKeyInCheckBoxChecked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the variable
             bool isIncludeAnswerKeyInChecked = true;
             //Wait for 'Include answer key in' checkbox
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
             //logger Exit
             Logger.LogMethodExit("PrintToolPage",
                 "IsIncludeAnswerKeyInCheckBoxChecked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isIncludeAnswerKeyInChecked;
         }
 
@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
             //logger Entry
             Logger.LogMethodEntry("PrintToolPage",
                 "IsIncludeAreaForStudentResponseCheckBoxChecked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the variable
             bool isIncludeAreaForStudentResponseChecked = true;
             //Wait for Include area for student response checkbox
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
             //logger Exit
             Logger.LogMethodExit("PrintToolPage",
                 "IsIncludeAreaForStudentResponseCheckBoxChecked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isIncludeAreaForStudentResponseChecked;
         }
 
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
             //logger Entry
             Logger.LogMethodEntry("PrintToolPage",
                 "IsCreateMultipleVersionsCheckBoxChecked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the variable
             bool isCreateMultipleVersionsChecked = true;
             //Wait for 'Create multiple versions' checkbox
@@ -154,7 +154,7 @@ namespace Pegasus.Pages.UI_Pages
             //logger Exit
             Logger.LogMethodExit("PrintToolPage",
                 "IsCreateMultipleVersionsCheckBoxChecked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isCreateMultipleVersionsChecked;
         }
 
@@ -166,7 +166,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //logger Entry
             Logger.LogMethodEntry("PrintToolPage", "SelectCheckboxOfPrintOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for table element 
@@ -181,7 +181,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //logger Exit
             Logger.LogMethodExit("PrintToolPage", "SelectCheckboxOfPrintOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //logger Entry
             Logger.LogMethodEntry("PrintToolPage", "SelectCheckBoxOfOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Total rows count of table
             int getTotalRowCount = base.GetElementCountByXPath(
                 PrintToolPageResource.PrintToolPage_Table_Row_Xpath_Locator);
@@ -218,7 +218,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //logger Exit
             Logger.LogMethodExit("PrintToolPage", "SelectCheckBoxOfOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //logger Entry
             Logger.LogMethodEntry("PrintToolPage", "GetTextOfSelectedDropDownOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the variable
             String getTextOfDropdownOption = string.Empty;
             try
@@ -248,7 +248,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //logger Exit
             Logger.LogMethodExit("PrintToolPage", "GetTextOfSelectedDropDownOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getTextOfDropdownOption;
         }
 
@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("PrintToolPage", "IsRadioButtonChecked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize bool varialbe 
             bool isRadioButtonChecked = false;
             try
@@ -283,7 +283,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("PrintToolPage", "IsRadioButtonChecked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Return the radio button status
             return isRadioButtonChecked;
         }
@@ -301,7 +301,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("PrintToolPage", "GetStatusOfRadioButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Check the expected radio buton option
             for (int setRowCounter = 1; setRowCounter <= countOfTotalRow;
                 setRowCounter++)
@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("PrintToolPage", "GetStatusOfRadioButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return radioButtonCheckedStatus;
         }
 
@@ -337,7 +337,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("PrintToolPage", "IsFileRadioButtonChecked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             bool isRadioButtonChecked = false;
             try
@@ -359,7 +359,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("PrintToolPage", "IsFileRadioButtonChecked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isRadioButtonChecked;
         }
 
@@ -376,7 +376,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("PrintToolPage", "GetStatusOfRadioButtonOfIncludeAnswerKey",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Check the expected radio buton option
             for (int setCountOfSpan = 1; setCountOfSpan <= countOfTotalSpan;
                 setCountOfSpan++)
@@ -399,7 +399,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("PrintToolPage", "GetStatusOfRadioButtonOfIncludeAnswerKey",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return radioButtonCheckedSatus;
         }
 
@@ -410,7 +410,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("PrintToolPage", "ClickOnCancelButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch To Default Page Content
@@ -433,7 +433,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("PrintToolPage", "ClickOnCancelButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -444,7 +444,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("PrintToolPage", "CreateMultipleVersionsTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Thread.Sleep(Convert.ToInt32(PrintToolPageResource.
@@ -479,7 +479,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("PrintToolPage", "CreateMultipleVersionsTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -489,7 +489,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("PrintToolPage", "ClickOnDownloadButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -508,7 +508,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("PrintToolPage", "ClickOnDownloadButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -519,7 +519,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify Download Option Present
             Logger.LogMethodEntry("PrintToolPage", "ClickOnDownloadButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             bool isDownloadOptionPresent = false;
             try
             {
@@ -542,7 +542,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }           
             Logger.LogMethodExit("PrintToolPage", "ClickOnDownloadButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isDownloadOptionPresent;
         }
     }

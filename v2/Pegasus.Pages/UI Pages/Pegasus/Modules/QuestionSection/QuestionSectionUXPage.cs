@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger entry
             Logger.LogMethodEntry("QuestionSectionUXPage",
-                "CreateQuestionGroup", base.isTakeScreenShotDuringEntryExit);
+                "CreateQuestionGroup", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select window
@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger exit
             Logger.LogMethodExit("QuestionSectionUXPage",
-                "CreateQuestionGroup", base.isTakeScreenShotDuringEntryExit);
+                "CreateQuestionGroup", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger entry
             Logger.LogMethodEntry("QuestionSectionUXPage",
-                "ClickAddFromQuestionBank", base.isTakeScreenShotDuringEntryExit);
+                "ClickAddFromQuestionBank", base.IsTakeScreenShotDuringEntryExit);
             //Wait for web element
             base.WaitForElement(By.Id(QuestionSectionUXPageResource.
                 QuestionSectionUX_Page_AddQuestion_Tab_Id_Locator));
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(QuestionSectionUXPageResource.
                QuestionSectionUX_Page_Wait_Time_Value));
             Logger.LogMethodExit("QuestionSectionUXPage",
-                "ClickAddFromQuestionBank", base.isTakeScreenShotDuringEntryExit);
+                "ClickAddFromQuestionBank", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger entry
             Logger.LogMethodEntry("QuestionSectionUXPage",
-                "EnterTextInHTMLEditor", base.isTakeScreenShotDuringEntryExit);
+                "EnterTextInHTMLEditor", base.IsTakeScreenShotDuringEntryExit);
             //Wait for web element
             base.WaitForElement(By.Id(QuestionSectionUXPageResource.
                 QuestionSectionUX_Page_EditDirections_Div_Id_Locator));
@@ -123,7 +123,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getViewSourceButton);
             //Logger exit
             Logger.LogMethodExit("QuestionSectionUXPage",
-                "EnterTextInHTMLEditor", base.isTakeScreenShotDuringEntryExit);
+                "EnterTextInHTMLEditor", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger entry
             Logger.LogMethodEntry("QuestionSectionUXPage",
-                "EnterGroupName", base.isTakeScreenShotDuringEntryExit);
+                "EnterGroupName", base.IsTakeScreenShotDuringEntryExit);
             //Created group name guid
             Guid groupNameGuid = Guid.NewGuid();
             //Wait for web element
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
                 groupNameGuid.ToString());
             //Logger exit
             Logger.LogMethodExit("QuestionSectionUXPage",
-                "EnterGroupName", base.isTakeScreenShotDuringEntryExit);
+                "EnterGroupName", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger entry
             Logger.LogMethodEntry("QuestionSectionUXPage",
                 "SelectQuestionGroupWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for window
             base.WaitUntilWindowLoads(QuestionSectionUXPageResource.
                 QuestionSectionUX_Page_Window_Title);
@@ -166,7 +166,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger entry
             Logger.LogMethodEntry("QuestionSectionUXPage",
                 "SelectQuestionGroupWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger entry
             Logger.LogMethodEntry("QuestionSectionUXPage",
                 "ClickOnSaveAndCloseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -203,7 +203,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger entry
             Logger.LogMethodEntry("QuestionSectionUXPage",
                 "ClickOnSaveAndCloseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

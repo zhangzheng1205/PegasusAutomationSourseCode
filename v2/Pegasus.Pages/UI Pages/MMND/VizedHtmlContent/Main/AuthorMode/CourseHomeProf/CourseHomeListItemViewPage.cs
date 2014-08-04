@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Display Of Course Links
             logger.LogMethodEntry("CourseHomeListItemViewPage", "IsCourseLinksDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing the Variable
             Boolean isLinksDisplayed = false;
             try
@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseHomeListItemViewPage", "IsCourseLinksDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isLinksDisplayed;
         }
 
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click Pegasus Subtab Link In CourseHome
             logger.LogMethodEntry("CourseHomeListItemViewPage", 
                 "ClickPegasusSubtabLinkInCourseHome",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CourseHomeListItemViewPage", 
                 "ClickPegasusSubtabLinkInCourseHome",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Home Window
             logger.LogMethodEntry("CourseHomeListItemViewPage","SelectCourseHomeWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -108,7 +108,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseHomeListItemViewPage","SelectCourseHomeWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

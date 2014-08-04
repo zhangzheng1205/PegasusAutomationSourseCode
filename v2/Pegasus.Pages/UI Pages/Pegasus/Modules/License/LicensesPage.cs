@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Add Product Option
             logger.LogMethodEntry("LicensesPage", "ClickAddProductOptionLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.SelectWindow(LicensePageResource.
@@ -57,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("LicensesPage", "ClickAddProductOptionLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search License
             logger.LogMethodEntry("LicensesPage", "SearchLicensedProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(LicensePageResource.
                        License_Page_ManageOrganization_Window_Locator);
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Search Button of Product
             this.ClickOnProductSearchButton(licenseName);
             logger.LogMethodExit("LicensesPage", "SearchLicensedProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Search Button of Product
             logger.LogMethodEntry("LicensesPage", "ClickOnProductSearchButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for Search Product Button
             base.WaitForElement(By.Id(LicensePageResource.
                 License_Page_SearchProducts_Button_Id_Locator));
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonById(LicensePageResource.
                 License_Page_Search_Button_Id_Locator);
             logger.LogMethodExit("LicensesPage", "ClickOnProductSearchButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Licensed Product Name
             logger.LogMethodEntry("LicensesPage", "GetLicensedProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing getProductName Variable
             string getLicenseName = string.Empty;
             try
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("LicensesPage", "GetLicensedProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getLicenseName;
         }
     }

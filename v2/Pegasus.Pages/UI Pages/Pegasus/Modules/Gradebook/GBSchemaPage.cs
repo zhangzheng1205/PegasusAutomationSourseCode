@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Apply Button
             logger.LogMethodEntry("GBSchemaPage", "ClickOnApplyButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select GradeBook Schema Window
@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBSchemaPage", "ClickOnApplyButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Apply Button
             logger.LogMethodEntry("GBSchemaPage", "SelectApplyButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GBSchemaPageResource.
                 GBSchema_Page_Apply_Button_Id_Locator));
             IWebElement getApplyButtonProperty = base.GetWebElementPropertiesById(
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getApplyButtonProperty);
             Thread.Sleep(Convert.ToInt32(GBSchemaPageResource.GBSchema_Page_Wait_Time));
             logger.LogMethodExit("GBSchemaPage", "SelectApplyButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Update Schema 
             logger.LogMethodEntry("GBSchemaPage", "ClickOnUpdateSchema",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select GradeBook Schema Window
@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBSchemaPage", "ClickOnUpdateSchema",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -95,14 +95,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Gradebook Schema Window
             logger.LogMethodEntry("GBSchemaPage", "SelectGradeBookSchemaWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(GBSchemaPageResource.
                 GBSchema_Page_GradeBookSchema_Window_Name);
             //Select Gradebook schema Window
             base.SelectWindow(GBSchemaPageResource.
                 GBSchema_Page_GradeBookSchema_Window_Name);
             logger.LogMethodExit("GBSchemaPage", "SelectGradeBookSchemaWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Update Schema Option
             logger.LogMethodEntry("GBSchemaPage", "ClickOnUpdateSchemaOption",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
             base.WaitForElement(By.Id(GBSchemaPageResource.
                 GBSchema_Page_UpdateSchema_Button_Id_Locator));
             //Get Update Schema Button Property
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Update Schema Option
             base.ClickByJavaScriptExecutor(getUpdateSchemaProperty);
             logger.LogMethodExit("GBSchemaPage", "ClickOnUpdateSchemaOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Apply Button
             logger.LogMethodEntry("GBSchemaPage", "ClickonApplyButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch to Last Opened Window
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBSchemaPage", "ClickonApplyButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

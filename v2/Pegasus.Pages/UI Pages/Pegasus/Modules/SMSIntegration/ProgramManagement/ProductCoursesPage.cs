@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Product Course Contextual Menu Option
             Logger.LogMethodEntry("ProductCoursesPage",
                                   "SelectCoursePreferenceOption",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("ProductCoursesPage",
                                  "SelectCoursePreferenceOption",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select WorkSpace IFrame
             Logger.LogMethodEntry("ClickSearchProductLink", "SelectWorkSpaceIFrame",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(ProductManagementContainerPageResource.
                                           ProductManagementContainer_Page_SearchCourses_Frame_Locator));
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(ProductManagementContainerPageResource.
                                     ProductManagementContainer_Page_SearchCourses_Frame_Locator);
             Logger.LogMethodExit("ClickSearchProductLink", "SelectWorkSpaceIFrame",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select IFrame Right
             Logger.LogMethodEntry("ClickSearchProductLink", "SelectIFrameRight",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(ProductManagementContainerPageResource.
                                     ProductManagementContainer_Page_IFrameRight_Id_Locator));
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(ProductManagementContainerPageResource.
                                     ProductManagementContainer_Page_IFrameRight_Id_Locator);
             Logger.LogMethodExit("ClickSearchProductLink", "SelectIFrameRight",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -97,12 +97,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Manage Products Window
             Logger.LogMethodEntry("ProductCoursesPage", "SelectManageProductsWindow",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(ProductCoursesPageResource.
                                   ProductCourse_Page_ManageProducts_Window_Title);
             Logger.LogMethodExit("ProductCoursesPage", "SelectManageProductsWindow",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Product Course Contextual Menu
             Logger.LogMethodEntry("ProductCoursesPage", "ClickProductCourseContextualMenuOption",
-                                   base.isTakeScreenShotDuringEntryExit);
+                                   base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             WaitForElement(By.XPath(ProductCoursesPageResource.
                 ProductCourse_Page_ProgramCourse_Grid_XPath_Locator));
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select To Default Window 
             base.SwitchToDefaultPageContent();
             Logger.LogMethodExit("ProductCoursesPage", "ClickProductCourseContextualMenuOption",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Course Contextual Menu Option Name
             Logger.LogMethodEntry("ProductCoursesPage",
                 "ClickOnProductCourseContextualMenuOptionName",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.PartialLinkText(courseContextualMenuOptionName));
             //Get Element Property
@@ -169,7 +169,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getCourseControlMenuOptionProperty);
             Logger.LogMethodEntry("ProductCoursesPage",
                 "ClickOnProductCourseContextualMenuOptionName",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -180,7 +180,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Contextaul Icon
             Logger.LogMethodEntry("ProductCoursesPage", "ClickOnProductCourseContextualIcon",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(String.Format(ProductCoursesPageResource.
                 ProductCourse_Page_ProgramCourse_ContextualMenu_Icon_XPath_Locator,
@@ -195,7 +195,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the Course Contextual Menu Icon
             base.ClickByJavaScriptExecutor(getContextualImageProperty);
             Logger.LogMethodEntry("ProductCoursesPage", "ClickOnProductCourseContextualIcon",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Product Course Contextual Menu
             Logger.LogMethodEntry("ProductCoursesPage","ClickCourseContextualMenuOptionInProduct",
-                                   base.isTakeScreenShotDuringEntryExit);
+                                   base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(ProductCoursesPageResource.
                 ProductCourse_Page_ProgramCourse_Grid_XPath_Locator));
@@ -239,7 +239,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select To Default Window 
             base.SwitchToDefaultPageContent();
             Logger.LogMethodExit("ProductCoursesPage","ClickCourseContextualMenuOptionInProduct",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Product Course Contextual Menu Option
             Logger.LogMethodEntry("ProductCoursesPage",
                                   "SelectCourseContextualMenuOptionInProduct",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -272,7 +272,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("ProductCoursesPage",
                                  "SelectCourseContextualMenuOptionInProduct",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -284,7 +284,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Course State
             Logger.LogMethodEntry("ProductCoursesPage","GetCourseState",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getCourseState = string.Empty;
             try
@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }            
             Logger.LogMethodExit("ProductCoursesPage","GetCourseState",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
             return getCourseState;
         }
 
@@ -336,7 +336,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window And Get Course Count
             Logger.LogMethodEntry("ProductCoursesPage", "SelectWindowAndGetCourseCount",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectManageProductsWindow();
             //Select Product WorkSpace IFrame
@@ -351,7 +351,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.GetElementCountByXPath(ProductCoursesPageResource.
                 ProductCourse_Page_ProgramCourse_Grid_XPath_Locator);            
             Logger.LogMethodExit("ProductCoursesPage", "SelectWindowAndGetCourseCount",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
             return getTotalCourseRowCount;
         }
 
@@ -362,7 +362,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window And Get Course Count
             Logger.LogMethodEntry("ProductCoursesPage", "ClickTheProductCmenuOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -388,7 +388,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ProductCoursesPage", "ClickTheProductCmenuOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Display Of Product Cmenu Options
             Logger.LogMethodEntry("ProductCoursesPage",
                 "GetDisplayOfProductCmenuOptions",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize Activity Cmenuoptions Variable
             string getDisplayOfProductCmenuOptions = string.Empty;
             try
@@ -425,7 +425,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("ProductCoursesPage",
                 "GetDisplayOfProductCmenuOptions",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
             return getDisplayOfProductCmenuOptions;
         }
     }

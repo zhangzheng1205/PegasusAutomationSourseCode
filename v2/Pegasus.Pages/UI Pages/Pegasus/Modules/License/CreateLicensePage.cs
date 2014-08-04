@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter License Details
             logger.LogMethodEntry("CreateLicensePage", "EnterLicenseDetail",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get Start Date Value
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CreateLicensePage", "EnterLicenseDetail",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Save and Return button
             logger.LogMethodEntry("CreateLicensePage", "ClickOnSaveAndReturnButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CreateLicensePageResource.
                 CretaeLicense_Page_SaveandReturn_Id_Locator));
             //Get Save and Finish Button Property
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Save and Finish Button
             base.ClickByJavaScriptExecutor(getSaveandFinishButtonProperty);
             logger.LogMethodExit("CreateLicensePage", "ClickOnSaveAndReturnButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store the Activity content
             logger.LogMethodEntry("AddAssessmentPage", "StoreTheLicenseDetailsInMemory",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Get product from memory
             Product product = Product.Get(productType);
             //Store the activity in memory
@@ -121,7 +121,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newLicense.StoreLicenseInMemory();
             logger.LogMethodExit("AddAssessmentPage", "StoreTheLicenseDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

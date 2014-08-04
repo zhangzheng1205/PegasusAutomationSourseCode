@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the 'Add'Organization link
             logger.LogMethodEntry("OrganizationSearchPage", "ClickOnTheAddOrganizationLink",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrganizationSearchPage", "ClickOnTheAddOrganizationLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the 'Select Organization' link
             logger.LogMethodEntry("OrganizationSearchPage", "ClickOnTheSelectOrganizationLink",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -91,7 +91,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrganizationSearchPage", "ClickOnTheSelectOrganizationLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Manage Button Of Organization
             logger.LogMethodEntry("OrganizationSearchPage", "ClickOnManageButtonOfOrganization",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Organization Management window
@@ -134,7 +134,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("OrganizationSearchPage", "ClickOnManageButtonOfOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
     }

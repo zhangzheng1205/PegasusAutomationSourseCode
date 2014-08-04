@@ -39,7 +39,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create a User
             Logger.LogMethodEntry("CreateUserPage", "CreateNewUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CreateUserPage", "CreateNewUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Organization Name
             Logger.LogMethodEntry("CreateUserPage", "SelectOrganizationName",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.ClassName(CreateUserPageResource.
                 CreateUser_Page_OrganizationName_ClassName_Locator));
             //Wait for element
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByClassName(CreateUserPageResource.
                 CreateUser_Page_Organization_ClassName_Locator);
             Logger.LogMethodExit("CreateUserPage", "SelectOrganizationName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -94,12 +94,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create User Account Window
             Logger.LogMethodExit("CreateUserPage", "SelectCreateUserAccountWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create User Account Window
             base.SelectWindow(CreateUserPageResource.
                                   CreateUser_Page_CreateaUserAccount_Window_Name);
             Logger.LogMethodExit("CreateUserPage", "SelectCreateUserAccountWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Organization Name
             Logger.LogMethodEntry("CreateUserPage", "EnterOrganizationName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CreateUserPageResource.
                 CreateUser_Page_EnterOrganizationName_Id_Locator));
             // Fetch the organization name from the memory data base
@@ -127,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.ClassName(CreateUserPageResource.
                 CreateUser_Page_OrganizationName_ClassName_Locator));
             Logger.LogMethodExit("CreateUserPage", "EnterOrganizationName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
             organizationLevelEnum, Organization.OrganizationTypeEnum organizationTypeEnum)
         {
             Logger.LogMethodEntry("CreateUserPage", "GetAndStoreOrganizationID",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             // Get the Organization id
             String organizationId = base.GetValueAttributeByXPath(CreateUserPageResource.
                 CreateUser_Page_GetOrgID);
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
             Organization organization = Organization.Get(organizationLevelEnum, organizationTypeEnum);
             organization.RumbaOrgId = getRumbaOrganizationID;
             Logger.LogMethodExit("CreateUserPage", "GetAndStoreOrganizationID",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -164,7 +164,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Role and Create user
             Logger.LogMethodEntry("CreateUserPage", "SelectRoleAndCreateUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Role
             this.SelectUserRole(userTypeEnum);
             //Enter User Name and Password
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
                 CreateUser_Page_Password_Value,
                 userLoginInformation.ToString(), userLoginInformation.ToString(), userTypeEnum);
             Logger.LogMethodExit("CreateUserPage", "SelectRoleAndCreateUser",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -185,7 +185,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter UserName and Password
             Logger.LogMethodEntry("CreateUserPage", "EnterUserNameAndPassword",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for UserName Field
             base.WaitForElement(By.Id(CreateUserPageResource.
                 CreateUser_Page_Username_Id_Locator));
@@ -211,7 +211,7 @@ namespace Pegasus.Pages.UI_Pages
             base.GetWebElementPropertiesById(CreateUserPageResource.
                 Createuser_Page_CreateAccount_Id_Locator).Click();
             Logger.LogMethodExit("CreateUserPage", "EnterUserNameAndPassword",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -222,7 +222,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter User Details
             Logger.LogMethodEntry("CreateUserPage", "EnterUserDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for First Name Field
             base.WaitForElement(By.Id(CreateUserPageResource.
                 CreateUser_Page_Firstname_Id_Locator));
@@ -247,7 +247,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonById(CreateUserPageResource.
                 CreateUser_Page_AddOrganization_Id_Locator);
             Logger.LogMethodExit("CreateUserPage", "EnterUserDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -258,7 +258,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Role
             Logger.LogMethodEntry("CreateUserPage", "SelectUserRole",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for Role Element
             base.WaitForElement(By.Name(CreateUserPageResource.
                 CreateUser_Page_Role_Name_Locator));
@@ -284,7 +284,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonById(CreateUserPageResource.
                 CreateUser_Page_Role_Add_Id_Locator);
             Logger.LogMethodExit("CreateUserPage", "SelectUserRole",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -295,12 +295,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search the User
             Logger.LogMethodEntry("CreateUserPage", "SearchTheUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get User From Memory
             User user = User.Get(userTypeEnum);
             this.SearchUserName(user.Name);
             Logger.LogMethodExit("CreateUserPage ", "SearchTheUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -311,7 +311,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search the UserName
             Logger.LogMethodEntry("CreateUserPage", "SearchUserName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select People Window
             base.SelectWindow(CreateUserPageResource.
                 CreateUser_Page_People_Window_Name);
@@ -328,7 +328,7 @@ namespace Pegasus.Pages.UI_Pages
             //Stop The Watch
             stopWatch.Stop();
             Logger.LogMethodExit("CreateUserPage ", "SearchUserName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -338,7 +338,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnterUserNameInSearchBox(string userName)
         {
             Logger.LogMethodEntry("CreateUserPage ", "EnterUserNameInSearchBox",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CreateUserPageResource.
                                           CreateUser_Page_EnterUserName_Id_Locator));
             //Clear The Search text box And Fill The User Name
@@ -354,7 +354,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(CreateUserPageResource.
                                              Createuser_Page_ThreadTime_Value));
             Logger.LogMethodExit("CreateUserPage ", "EnterUserNameInSearchBox",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -365,7 +365,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the UserName
             Logger.LogMethodEntry("CreateUserPage", "GetUserName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getUserName = string.Empty;
             try
@@ -381,7 +381,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CreateUserPage", "GetUserName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
 
@@ -393,7 +393,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the DP UserName from Memory
             Logger.LogMethodEntry("CreateUserPage", "GetDigitalPathTeacherNameFromMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getRumbaTeacherName = string.Empty;
             try
@@ -407,7 +407,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CreateUserPage ", "GetDigitalPathTeacherNameFromMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getRumbaTeacherName;
         }
 
@@ -419,7 +419,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the Rumba User ID
             Logger.LogMethodEntry("CreateUserPage", "StoreRumbaOwnerIdInMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -440,7 +440,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CreateUserPage ", "StoreRumbaOwnerIdInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -451,7 +451,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the DP Student Name From Memory
             Logger.LogMethodEntry("CreateUserPage", "GetDigitalPathStudentNameFromMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getDPStudentName = string.Empty;
             try
@@ -464,7 +464,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CreateUserPage", "GetDigitalPathStudentNameFromMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getDPStudentName;
         }
 
@@ -477,7 +477,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the UserName From Manage Frame
             Logger.LogMethodEntry("CreateUserPage", "GetUserNameFromManageFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getUserName = string.Empty;
             try
@@ -496,7 +496,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CreateUserPage ", "GetUserNameFromManageFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
 
@@ -513,7 +513,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save User In Memory
             Logger.LogMethodEntry("CreateUserPage", "SaveRadminUserInMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             User newUser = new User
            {
                Name = userName.ToString(),
@@ -526,7 +526,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save The User Details
             newUser.StoreUserInMemory();
             Logger.LogMethodExit("CreateUserPage", "SaveRadminUserInMemory",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

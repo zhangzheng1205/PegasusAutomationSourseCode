@@ -35,7 +35,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Verify Grade of the Submitted Activity
             Logger.LogMethodEntry("ViewGrades", 
                 "VerifyGradeOfTheSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on View Grades Button of Submitted Activity
             new GBInstructorUXPage().ClickOnActivityViewGradesButton();
             //Assert Grades of Submitted Activity
@@ -48,7 +48,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     activityName, userTypeEnum)));
             Logger.LogMethodExit("ViewGrades", 
                 "VerifyGradeOfTheSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click The Activity Cmneu In GradeBook
             Logger.LogMethodEntry("ViewGrades", 
                 "ClickTheActivityCmneuInGradeBook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the activity from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Click On Activity Cmenu In GradeBook
@@ -71,7 +71,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 ClickOnActivityCmenuInGradeBook(activity.Name, cmenuOption);
             Logger.LogMethodExit("ViewGrades", 
                 "ClickTheActivityCmneuInGradeBook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Verify The Grade In View SubmissionPage
             Logger.LogMethodEntry("ViewGrades", 
                 "VerifyTheGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Edited Grade in ViewSubmission Page
             Logger.LogAssertion("VerifyGradeinViewSubmission", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(submittedGrade,
@@ -92,7 +92,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     GetSubmittedGradeInViewSubmissionPage()));
             Logger.LogMethodExit("ViewGrades", 
                 "VerifyTheGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }       
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Click On Cmenu Of Asset In Gradebook
             Logger.LogMethodEntry("ViewGrades", "ClickOnCmenuOfAssetInGradebook",
-                  isTakeScreenShotDuringEntryExit);
+                  IsTakeScreenShotDuringEntryExit);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Fetch the activity from memory
             Activity activity = Activity.Get(activityTypeEnum);
@@ -117,7 +117,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum);
             Logger.LogMethodExit("ViewGrades", "ClickOnCmenuOfAssetInGradebook",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -129,12 +129,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Edit The Score In Edit Grade Window
             Logger.LogMethodEntry("ViewGrades",
                 "EditTheScoreInEditGradeWindow",
-                  isTakeScreenShotDuringEntryExit);
+                  IsTakeScreenShotDuringEntryExit);
             //Grade the Activity
             new GBGradeBatchUpdationPage().GradetheActivityInNovaNet();
             Logger.LogMethodExit("ViewGrades",
                 "EditTheScoreInEditGradeWindow",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -146,12 +146,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Apply Grade Schema For the Submitted Activity
             Logger.LogMethodEntry("ViewGrades",
                "ApplyGradeSchemaForSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Apply Button
             new GBSchemaPage().ClickOnApplyButton();
             Logger.LogMethodExit("ViewGrades",
                "ApplyGradeSchemaForSubmittedActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Verify Searched Grade Of Submitted Activity
             Logger.LogMethodEntry("ViewGrades",
                "VerifySearchedGradeOfSubmittedActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Assert Grades of Submitted Activity
@@ -180,7 +180,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                  activity.Name, userTypeEnum)));            
             Logger.LogMethodExit("ViewGrades",
                 "VerifySearchedGradeOfSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             // Verify The Updated Apply Grade Schema For Activity
             Logger.LogMethodEntry("ViewGrades",
               "VerifyTheUpdatedApplyGradeSchemaForActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Verify Schema Value
@@ -206,7 +206,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                          GetGradeValuePresentInGradeCell(activity.Name)));
             Logger.LogMethodExit("ViewGrades",
                "VerifyTheUpdatedApplyGradeSchemaForActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -217,11 +217,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             // Edit The Grade In View Submission Window
             Logger.LogMethodEntry("ViewGrades", "EditTheGradeInViewSubmissionWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Edit Grades In View Submission page
             new ViewSubmissionPage().EditGradesInViewSubmissionPage();
             Logger.LogMethodExit("ViewGrades", "EditTheGradeInViewSubmissionWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -234,14 +234,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Verify the Edited Grade in ViewSubmission Page
             Logger.LogMethodEntry("ViewGrades",
                 "VerifyTheEditedGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Edited Grade in ViewSubmission Page
             Logger.LogAssertion("VerifyGradeinViewSubmission", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(editedGrade,
                     new ViewSubmissionPage().GetGradefromViewSubmissionPage()));
             Logger.LogMethodExit("ViewGrades",
                 "VerifyTheEditedGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -253,11 +253,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             // Click The View Filters Link In Gradebook
             Logger.LogMethodEntry("ViewGrades",
                 "ClickTheViewFiltersLinkInGradebook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new GBGroupsDefaultUXPage().ClickOnViewFiltersLinkInGradebook();
             Logger.LogMethodExit("ViewGrades",
                 "ClickTheViewFiltersLinkInGradebook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -269,13 +269,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Search The Student In Gradebook
             Logger.LogMethodEntry("ViewGrades", "SearchTheStudentInGradebook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From  Memory 
             User user = User.Get(userTypeEnum);
             //Search The Student In Gradebook
             new GBGroupsDefaultUXPage().SearchStudentInGradebook(user.Name);
             Logger.LogMethodExit("ViewGrades", "SearchTheStudentInGradebook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -287,12 +287,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click On Show Status for All Item Filter Option
             Logger.LogMethodEntry("ViewGrades",
                 "ClickOnShowStatusforAllItemFilterOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Show Status for All Item Filter Option
             new GBGroupsDefaultUXPage().ClickOnShowStatusforAllItemFilterOption();
             Logger.LogMethodExit("ViewGrades",
                 "ClickOnShowStatusforAllItemFilterOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Verify Show Status Of Activity Display In Gradebook
             Logger.LogMethodEntry("ViewGrades",
                 "VerifyShowStatusOfActivityDisplayInGradebook",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             User user = User.Get(userTypeEnum);
             Activity activity = Activity.Get(activityTypeEnum);
@@ -322,7 +322,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                  (activity.Name, user.LastName, user.FirstName)));
             Logger.LogMethodExit("ViewGrades",
                 "VerifyShowStatusOfActivityDisplayInGradebook",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -334,12 +334,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click On Assignment Types Link In Gradebook
             Logger.LogMethodEntry("ViewGrades",
                 "ClickOnAssignmentTypesLinkInGradebook",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
             // Click On Assignment Types Link In Gradebook
             new GBGroupsDefaultUXPage().ClickOnAssignmentTypesLinkInGradebook();
             Logger.LogMethodExit("ViewGrades",
                "ClickOnAssignmentTypesLinkInGradebook",
-               isTakeScreenShotDuringEntryExit);
+               IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -352,13 +352,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Select Assignment Type
             Logger.LogMethodEntry("ViewGrades",
                 "SelectAssignmentType",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
             // Click On Assignment Types Link In Gradebook
             new GBGroupsDefaultUXPage().
                 SelectAssignmentTypeInGradebook(assignmentType);
             Logger.LogMethodExit("ViewGrades",
                "SelectAssignmentType",
-               isTakeScreenShotDuringEntryExit);
+               IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -372,7 +372,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Verify Display Of Assignment Type Activity In Gradebook
             Logger.LogMethodEntry("ViewGrades",
                 "VerifyDisplayOfAssignmentTypeActivityInGradebook",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityTypeEnum);
             // Get Assignment Types Activity In Gradebook
             Logger.LogAssertion("VerifyAssetTypeActivityDisplayInGradebook",
@@ -381,7 +381,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 GetAssignmentTypeActivityInGradebook(activity.Name)));
             Logger.LogMethodExit("ViewGrades",
                "VerifyDisplayOfAssignmentTypeActivityInGradebook",
-               isTakeScreenShotDuringEntryExit);
+               IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

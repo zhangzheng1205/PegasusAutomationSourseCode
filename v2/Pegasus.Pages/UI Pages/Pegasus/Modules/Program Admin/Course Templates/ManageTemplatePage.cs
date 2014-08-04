@@ -35,7 +35,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create Template
             Logger.LogMethodEntry("ManageTemplatePage", "CreatTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // select window
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageTemplatePage", "CreatTemplate",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,14 +72,14 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectProgramAdministrationWindow()
         {
             Logger.LogMethodEntry("ManageTemplatePage", "SelectProgramAdministrationWindow",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             // selecting the Program Administration window
             base.WaitUntilWindowLoads(ManageTemplatePageResource.
                 ManageTemplate_Page_Window_Title_Name);
             base.SelectWindow(ManageTemplatePageResource.
                 ManageTemplate_Page_Window_Title_Name);
             Logger.LogMethodExit("ManageTemplatePage", "SelectProgramAdministrationWindow",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // create template
             Logger.LogMethodEntry("ManageTemplatePage", "TemplateCreation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // create New Template 
             base.SwitchToDefaultWindow();
             // select window
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
             // create new template
             new AddNewTemplatePage().CreateNewTemplate();
             Logger.LogMethodExit("ManageTemplatePage", "TemplateCreation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
             // To validate assign to copy state of template/section 
             Logger.LogMethodEntry("ManageTemplatePage",
                 "ApproveInActiveStateOfEntityInProgramAdministration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window And Frame
@@ -133,7 +133,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("ManageTemplatePage",
                 "ApproveInActiveStateOfEntityInProgramAdministration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Approve Entity in Active State
             Logger.LogMethodEntry("ManageTemplatePage", "ApproveEntityInProgramAdministration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // To start stopwatch
             var stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             Logger.LogMethodExit("ManageTemplatePage", "ApproveEntityInProgramAdministration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search Entity
             Logger.LogMethodEntry("ManageTemplatePage", "SearchEntityInProgramAdministration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.SwitchToDefaultPageContent();
@@ -206,7 +206,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageTemplatePage", "SearchEntityInProgramAdministration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -217,7 +217,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search Program Admin Entity
             Logger.LogMethodEntry("ManageTemplatePage", "SelectTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the 'Contains' Drop Down value
             base.WebDriver.FindElement(By.Id(ManageTemplatePageResource
             .ManageTemplate_Page_SearchCondition_DropDown_Id_Locator))
@@ -237,7 +237,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonById(ManageTemplatePageResource.
                 ManageTemplate_Page_Search_Button_Id_Locator);
             Logger.LogMethodExit("ManageTemplatePage", "SelectTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -250,7 +250,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check Template in Activite State or not
             Logger.LogMethodEntry("ManageTempaltePage", "GetAssignToCopyStateText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             String getAssignedToCopyText = String.Empty;
             try
@@ -272,7 +272,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageTempaltePage", "GetAssignToCopyStateText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getAssignedToCopyText;
         }
 
@@ -283,7 +283,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Add Sections Link
             Logger.LogMethodEntry("ManageTemplatePage", "ClickOnAddNewSectionsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // select window
@@ -306,7 +306,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageTemplatePage", "ClickOnAddNewSectionsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -317,7 +317,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Search Section
             Logger.LogMethodEntry("ManageTemplatePage", "SearchEntity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.SwitchToDefaultPageContent();
@@ -342,7 +342,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageTemplatePage", "SearchEntity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -352,7 +352,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Search button for searching section
             Logger.LogMethodEntry("ManageTemplatePage", "ClickSearchButtonForSectionSearch",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click on Search button
             base.WaitForElement(By.Id(ManageTemplatePageResource.
                           ManageTemplate_Page_Search_Button_Id_Locator));
@@ -361,7 +361,7 @@ namespace Pegasus.Pages.UI_Pages
                           ManageTemplate_Page_Search_Button_Id_Locator);
             base.ClickByJavaScriptExecutor(getSearchButton);
             Logger.LogMethodExit("ManageTemplatePage", "ClickSearchButtonForSectionSearch",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -373,7 +373,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter section Name for Search
             Logger.LogMethodEntry("ManageTemplatePage", "EnterValueInSectionSearchTextBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ManageTemplatePageResource.
                          ManageTemplate_Page_SectionDetail_TextBox_Id_Locator));
             base.ClearTextById(ManageTemplatePageResource.
@@ -382,7 +382,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(ManageTemplatePageResource.
                          ManageTemplate_Page_SectionDetail_TextBox_Id_Locator, sectionName);
             Logger.LogMethodExit("ManageTemplatePage", "EnterValueInSectionSearchTextBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -392,7 +392,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Clicking the Search Link for Searching Section 
             Logger.LogMethodEntry("ManageTemplatePage", "ClickSearchLinkForSectionSearch",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click search link
             base.WaitForElement(By.PartialLinkText(ManageTemplatePageResource.
                              ManageTemplate_Page_Search_Link_Locator));
@@ -402,7 +402,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByPartialLinkText(ManageTemplatePageResource.
                              ManageTemplate_Page_Search_Link_Locator);
             Logger.LogMethodExit("ManageTemplatePage", "ClickSearchLinkForSectionSearch",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -414,7 +414,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // store section details
             Logger.LogMethodEntry("ManageTemplatePage", "StoreSectionID",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // search section 
@@ -437,7 +437,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageTemplatePage", "StoreSectionID",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -451,13 +451,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save Section Name in Memory
             Logger.LogMethodEntry("ManageTemplatePage", "StoreSectionNameInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Course course = Course.Get(courseTypeEnum);
             //Store Section Details
             course.SectionId = sectionID;
             course.SectionName = sectionName;
             Logger.LogMethodExit("ManageTemplatePage", "StoreSectionNameInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -468,7 +468,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Cmenu of Section or Template.
             Logger.LogMethodEntry("ManageTemplatePage", "ClickOnCmenuOfSectionOrTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Middle Frame
@@ -497,7 +497,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageTemplatePage", "ClickOnCmenuOfSectionOrTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -507,7 +507,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Middle Frame
             Logger.LogMethodEntry("ManageTemplatePage", "SelectMiddleFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // select window
             this.SelectProgramAdministrationWindow();
             base.WaitForElement(By.Id(ManageTemplatePageResource.
@@ -516,7 +516,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(ManageTemplatePageResource.
                 ManageTemplate_Page_IFrame_Middle_Name_Id_Locator);
             Logger.LogMethodExit("ManageTemplatePage", "SelectMiddleFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -526,7 +526,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Derive Section From Parent Section
             Logger.LogMethodEntry("ManageTemplatePage", "DeriveSectionFromParentSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate GUID For Section Name
@@ -552,7 +552,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageTemplatePage", "DeriveSectionFromParentSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -562,7 +562,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Section Start And End Date And Save
             Logger.LogMethodEntry("ManageTemplatePage", "EnterSectionStartEndDateAndSave",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Getting the Date in Proper Format
             String getSectionStartDate = DateTime.Now.ToString(ManageTemplatePageResource.
                 ManageTemplate_Page_SectionStartEndDate_Format);
@@ -595,7 +595,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsPopUpClosed(Convert.ToInt32(AddNewSectionPageResource.
                 AddNewSection_Page_NumberOfWindows_Value));
             Logger.LogMethodExit("ManageTemplatePage", "EnterSectionStartEndDateAndSave",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -605,14 +605,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select 'Copy As Section' Window
             Logger.LogMethodEntry("ManageTemplatePage", "SelectCopyasSectionWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(ManageTemplatePageResource.
                 ManageTemplate_Page_CopySection_Window_Title_Name);
             //Select Window
             base.SelectWindow(ManageTemplatePageResource.
                 ManageTemplate_Page_CopySection_Window_Title_Name);
             Logger.LogMethodExit("ManageTemplatePage", "SelectCopyasSectionWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

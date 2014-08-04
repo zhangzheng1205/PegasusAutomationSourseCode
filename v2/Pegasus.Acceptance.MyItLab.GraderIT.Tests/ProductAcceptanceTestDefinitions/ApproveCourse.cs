@@ -30,7 +30,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Search Course In Left Frame
             Logger.LogMethodEntry("ApproveCourse", "SearchCourseInCourseSpace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get the Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Search Course To Approve
@@ -38,7 +38,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Select Course To Approve
             new PublishCourseSearchPage().SelectCourseToApprove(course.Name);
             Logger.LogMethodExit("ApproveCourse", "SearchCourseInCourseSpace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             // Verify Course Search In CourseSpace
             Logger.LogMethodEntry("ApproveCourse",
                 "CheckSearchedCourseInCoreSpace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Get Course Name From InMemory
             Course course = Course.Get(courseTypeEnum);
             // Assert Course Search
@@ -62,7 +62,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
                   GetSearchedCourseNameInCourseSpace(courseTypeEnum)));
             Logger.LogMethodExit("ApproveCourse",
                 "CheckSearchedCourseInCoreSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,12 +76,12 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Click Approve CMenu Option           
             Logger.LogMethodEntry("ApproveCourse",
                 "ClickCMenuCourseOptionInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click on course cmenu in course space
             new ListCoursesPage().ClickCourseCMenuOption(optionName);
             Logger.LogMethodExit("ApproveCourse",
                 "ClickCMenuCourseOptionInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

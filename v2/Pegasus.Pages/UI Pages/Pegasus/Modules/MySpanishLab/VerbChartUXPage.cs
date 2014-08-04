@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Verb Chart Label
             logger.LogMethodEntry("VerbChartUXPage", "GetVerbChartLabel",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getVerbChartLabel = string.Empty;
             try
@@ -47,7 +47,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("VerbChartUXPage", "GetVerbChartLabel",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getVerbChartLabel;
         }
     }

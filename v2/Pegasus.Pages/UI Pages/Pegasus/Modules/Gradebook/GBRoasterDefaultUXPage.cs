@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
             //Selects the Manage Organization Window
             logger.LogMethodEntry("GBRoasterDefaultUXPage",
                 "SelectRosterWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Roster Window
@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GBRoasterDefaultUXPage",
                 "SelectRosterWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

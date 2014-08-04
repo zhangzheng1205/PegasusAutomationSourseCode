@@ -24,7 +24,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Fill SMS User Account Information
             logger.LogMethodEntry("Reg2Page", "EnterSMSUserAccountInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("Reg2Page", "EnterSMSUserAccountInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Personal Information
             logger.LogMethodEntry("Reg2Page", "EnterSMSUserPersonalInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter First Name
             base.FillTextBoxById(Reg2PageResource.
                 Reg2_Page_FirstName_TextBox_Id_Locator,
@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Email Id
             this.EnterEmailIdForTheUser();
             logger.LogMethodExit("Reg2Page", "EnterSMSUserPersonalInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter the Email id details for the user
             logger.LogMethodEntry("Reg2Page", "EnterEmailIdForTheUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(Reg2PageResource.
                 Reg2_Page_Email_TextBox_Id_Locator));
             base.ClearTextById(Reg2PageResource.
@@ -108,7 +108,7 @@ namespace Pegasus.Pages.UI_Pages
                 Reg2_Page_EmailConfirm_TextBox_Id_Locator,
                 Reg2PageResource.Reg2_Page_Email_TextBox_Value);
             logger.LogMethodExit("Reg2Page", "EnterEmailIdForTheUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Enter SMS User School Information
             logger.LogMethodEntry("Reg2Page", "EnterSMSUserSchoolInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(Reg2PageResource.
                 Reg2_Page_OtherSchoolName_TextBox_Id_Locator));
             //Enter School Name
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter SMS Personal Account Information
             EnterSMSUserSecurityInformation();
             logger.LogMethodExit("Reg2Page", "EnterSMSUserSchoolInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -150,7 +150,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter SMS User Security Information
             logger.LogMethodEntry("Reg2Page", "EnterSMSUserSecurityInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element City textbox
             base.WaitForElement(By.Id(Reg2PageResource.
                                           Reg2_Page_Password3_TextBox_Id_Locator));
@@ -171,7 +171,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitUntilWindowLoads(Reg2PageResource.
                                      Reg2_Page_ConfirmationandSummary_Window_Title_Name);
             logger.LogMethodExit("Reg2Page", "EnterSMSUserSecurityInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

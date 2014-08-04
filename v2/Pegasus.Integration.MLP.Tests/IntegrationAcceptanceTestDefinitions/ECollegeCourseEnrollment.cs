@@ -24,7 +24,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             Logger.LogMethodEntry("ECollegeCourseEnrollment",
                 "AssociateTheCourseToPegasusProductBySelectingECollegeDeliveryMode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click Program Course Add Button
             new AddButtonPage().ClickProgramCoursesAddButton();
             //Click Enrollment Mode Option
@@ -43,7 +43,7 @@ namespace Pegasus.Integration.MLP.Tests.
             courseEnrollmentModePage.ClickEnrollmentSaveButton();
             Logger.LogMethodExit("ECollegeCourseEnrollment",
                 "AssociateTheCourseToPegasusProductBySelectingECollegeDeliveryMode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -32,14 +32,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // See The Welcome Message
             Logger.LogMethodEntry("WelcomeMessage", "SeeTheWelcomeMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Welcome Message Should Be Displayed
             Logger.LogAssertion("VerifyTheWelcomeMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(true,
                 new WelcomeMessagesPage().IsWelcomeMessageDisplayed()));
             Logger.LogMethodExit("WelcomeMessage", "SeeTheWelcomeMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,11 +50,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Close The Welcome Message Popup
             Logger.LogMethodEntry("WelcomeMessage", "CloseTheWelcomeMessagePopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Close The Welcome Message LightBox
             new WelcomeMessagesPage().CloseWelcomeMessageLightBox();
             Logger.LogMethodExit("WelcomeMessage", "CloseTheWelcomeMessagePopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //The Welcome Message Popup Should Be Closed
             Logger.LogMethodEntry("WelcomeMessage", "WelcomeMessagePopupWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Check If The Poup Is Present
             Logger.LogAssertion("VerifyIfTheWelcomeMessagePopupIsClosed",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -76,7 +76,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Closing the Announcement(s)
             new AnnouncementPopUpLightBoxUXPage().CloseAnnouncementPopUpInDigitalPath(userTypeEnum);
             Logger.LogMethodExit("WelcomeMessage", "WelcomeMessagePopupWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

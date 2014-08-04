@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Drop Down List Question
             logger.LogMethodEntry("PullDownListPage", "CreateDropDownListQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enter Question Title
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PullDownListPage", "CreateDropDownListQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Drop Down List Question Title
             logger.LogMethodEntry("PullDownListPage", "EnterDropDownListQuestionTitle",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Guid questionTitle = Guid.NewGuid();
             //Select Create Drop Down List Window
             base.SelectWindow(PullDownListPageResource.
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(PullDownListPageResource.
                 PullDownList_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("PullDownListPage", "EnterDropDownListQuestionTitle",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             return questionTitle;
         }
 
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Row and Column Value
             logger.LogMethodEntry("PullDownListPage",
                 "EnterRowAndColumnValueOfDropDownListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create Drop Down List Window
             base.SelectWindow(PullDownListPageResource.
                     PullDownList_Page_CreateDropdownList_Window_Name);
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
                 PullDownList_Page_EnterRowAndColumn_Value);
             logger.LogMethodExit("PullDownListPage",
                 "EnterRowAndColumnValueOfDropDownListQuestion",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -133,7 +133,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on View Source Button and Fill data
             logger.LogMethodEntry("PullDownListPage",
                 "ClickOnViewSourceAndEnterDataForQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Create Drop Down List Window
             base.SelectWindow(PullDownListPageResource.
                 PullDownList_Page_CreateDropdownList_Window_Name);
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
               PullDownList_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("PullDownListPage",
                 "ClickOnViewSourceAndEnterDataForQuestion",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -163,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Add Answer Button
             logger.LogMethodEntry("PullDownListPage",
                 "ClickOnAddAnswerButtonOfDropDownListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Window Create Drop Down List Window
             base.SelectWindow(PullDownListPageResource.
                 PullDownList_Page_CreateDropdownList_Window_Name);
@@ -176,7 +176,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAddAnswerButton);
             logger.LogMethodExit("PullDownListPage",
                 "ClickOnAddAnswerButtonOfDropDownListQuestion",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter First Two Answer Values
             logger.LogMethodEntry("PullDownListPage",
                 "EnterFirstTwoAnswerValueOfDropDownListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create Drop Down List Window
             base.SelectWindow(PullDownListPageResource.
                     PullDownList_Page_CreateDropdownList_Window_Name);
@@ -211,7 +211,7 @@ namespace Pegasus.Pages.UI_Pages
                 PulldownList_Page_AnswerScore_Value_two);
             logger.LogMethodExit("PullDownListPage",
                 "EnterFirstTwoAnswerValueOfDropDownListQuestion",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -222,7 +222,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Last Two Answer Value
             logger.LogMethodEntry("PullDownListPage",
                 "EnterLastTwoScoreValueOfDropDOwnListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for Text Box
             base.WaitForElement(By.Id(PullDownListPageResource.
                     PullDownList_Page_AnswerValue_Three_Id_Locator));
@@ -243,7 +243,7 @@ namespace Pegasus.Pages.UI_Pages
                 PulldownList_Page_AnswerScore_Value_four);
             logger.LogMethodExit("PullDownListPage",
                 "EnterLastTwoScoreValueOfDropDOwnListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -255,7 +255,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Save and Close Button
             logger.LogMethodEntry("PullDownListPage",
                 "ClickOnSaveAndCloseButtonOfDropDownListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create Drop Down List Window
             base.SelectWindow(PullDownListPageResource.
                 PullDownList_Page_CreateDropdownList_Window_Name);
@@ -268,7 +268,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("PullDownListPage",
                 "ClickOnSaveAndCloseButtonOfDropDownListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -280,7 +280,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Question Details in Memory
             logger.LogMethodEntry("PullDownListPage", "storeQuestionDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Save Question Properties in Memory
             Question newQuestion = new Question
             {
@@ -290,7 +290,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newQuestion.StoreQuestionInMemory();
             logger.LogMethodExit("PullDownListPage", "storeQuestionDetailsInMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -300,7 +300,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add pallette Characters
             logger.LogMethodEntry("PullDownListPage", "AddPalletteCharacters",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.SelectWindow(PullDownListPageResource.
                 PullDownList_Page_CreateDropdownList_Window_Name);
@@ -320,7 +320,7 @@ namespace Pegasus.Pages.UI_Pages
             this.ClickOnCharacterPalleteButton(PullDownListPageResource.
                 PullDownList_Page_CharacterPallete_Xpath_Locator_five);
             logger.LogMethodExit("PullDownListPage", "AddPalletteCharacters",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -332,7 +332,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Character Pallette
             logger.LogMethodEntry("PullDownListPage", "ClickOnCharacterPalleteButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.XPath(locator));
             base.FocusOnElementByXPath(locator);
@@ -341,7 +341,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("PullDownListPage", "ClickOnCharacterPalleteButton",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
     }
 

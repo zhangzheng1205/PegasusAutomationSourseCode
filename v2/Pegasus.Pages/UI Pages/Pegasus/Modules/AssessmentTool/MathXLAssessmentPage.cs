@@ -40,7 +40,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Customize the Content
             logger.LogMethodEntry("MathXLAssessmentPage", "CustomizeTheContentInCurriculumTab",
-                base.isTakeScreenShotDuringEntryExit);           
+                base.IsTakeScreenShotDuringEntryExit);           
             try
             {                
                 //Generate GUID for customize Activity Name
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodEntry("MathXLAssessmentPage", "CustomizeTheContentInCurriculumTab", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Wait For The Copy Message To Disappear.
             logger.LogMethodEntry("MathXLAssessmentPage", "WaitForTheCopyMessageToDisappear",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Stop Watch
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -101,7 +101,7 @@ namespace Pegasus.Pages.UI_Pages
                     MathXLAssessment_Page_Sleep_Time));
             }
             logger.LogMethodExit("MathXLAssessmentPage", "WaitForTheCopyMessageToDisappear",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace Pegasus.Pages.UI_Pages
             //Customize the Content
             logger.LogMethodEntry("MathXLAssessmentPage", 
                 "CustomizeTheSkillStudyPlanInCurriculumTab",
-                base.isTakeScreenShotDuringEntryExit); 
+                base.IsTakeScreenShotDuringEntryExit); 
              try
             {                
                 //Generate GUID for customize Activity Name
@@ -150,7 +150,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodEntry("MathXLAssessmentPage", "CustomizeTheSkillStudyPlanInCurriculumTab", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Update Activity Name In Memory
@@ -162,7 +162,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Update Activity Name In Memory
             logger.LogMethodEntry("MathXLAssessmentPage", "UpdateActivityNameInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Activity activity;
 
             switch (activityTypeEnum)
@@ -183,7 +183,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("MathXLAssessmentPage", "UpdateActivityNameInMemory",
-                base.isTakeScreenShotDuringEntryExit); 
+                base.IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window and Switch To Frame
             logger.LogMethodEntry("MathXLAssessmentPage", "SelectWindowAndSwitchToFrame",
-                base.isTakeScreenShotDuringEntryExit);       
+                base.IsTakeScreenShotDuringEntryExit);       
             base.WaitUntilWindowLoads(MathXLAssessmentPageResource.
                 MathXLAssessment_Page_Window_TitleName);
             //Select Window
@@ -206,7 +206,7 @@ namespace Pegasus.Pages.UI_Pages
                 MathXLAssessment_Page_Frame_Id_Locator);
            
             logger.LogMethodExit("MathXLAssessmentPage", "SelectWindowAndSwitchToFrame",
-                base.isTakeScreenShotDuringEntryExit);  
+                base.IsTakeScreenShotDuringEntryExit);  
         }
 
         /// <summary>
@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Customize the Single Content
             logger.LogMethodEntry("MathXLAssessmentPage", "CustomizeTheSingleContent",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generates GUID
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MathXLAssessmentPage", "CustomizeTheSingleContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

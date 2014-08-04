@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetWritingSpaceActivityNameInGradebook(string activityName)
         {
             logger.LogMethodEntry("GBDefaultUXPage", "GetWritingSpaceActivityNameInGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialized Variable
             string getActivityName = string.Empty;
             try
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBDefaultUXPage", "GetWritingSpaceActivityNameInGradebook",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 
@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetActivityNameInGradebook(string activityName)
         {
             logger.LogMethodEntry("GBDefaultUXPage", "GetActivityNameInGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialized Variable
             string getActivityName = string.Empty;
             try
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBDefaultUXPage", "GetActivityNameInGradebook",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Writing Space Activity Score
             logger.LogMethodEntry("GBDefaultUXPage", "GetWritingSpaceActivityScore",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
             string getActivityGrade = string.Empty;
             try
@@ -159,7 +159,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBDefaultUXPage", "GetWritingSpaceActivityScore",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
             return getActivityGrade;
         }
     }

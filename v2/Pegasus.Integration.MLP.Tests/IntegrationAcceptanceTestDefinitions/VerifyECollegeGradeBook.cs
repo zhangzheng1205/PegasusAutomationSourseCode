@@ -32,11 +32,11 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Click on GradeBook tab on ECollege Portal
             Logger.LogMethodEntry("VerifyECollegeGradeBook",
-                "SelectOptionOnECollegePortal", base.isTakeScreenShotDuringEntryExit);
+                "SelectOptionOnECollegePortal", base.IsTakeScreenShotDuringEntryExit);
             //Instance of UnitView Page
             unitViewPage.ClickOnGradbookOnECollege(optionName);
             Logger.LogMethodExit("VerifyECollegeGradeBook",
-               "SelectOptionOnECollegePortal", base.isTakeScreenShotDuringEntryExit);
+               "SelectOptionOnECollegePortal", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,11 +48,11 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Select value from dropdown 
             Logger.LogMethodEntry("VerifyECollegeGradeBook",
-               "SelectItemFromDropdown", base.isTakeScreenShotDuringEntryExit);
+               "SelectItemFromDropdown", base.IsTakeScreenShotDuringEntryExit);
             //Instance of UnitView Page
             unitViewPage.SelectDropDownValue(dropDownItemName);
             Logger.LogMethodExit("VerifyECollegeGradeBook",
-               "SelectItemFromDropdown", base.isTakeScreenShotDuringEntryExit);
+               "SelectItemFromDropdown", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -63,14 +63,14 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Verify grade in Item Summary 
             Logger.LogMethodEntry("VerifyECollegeGradeBook",
-               "VerifyTheGradesFromItemSummary", base.isTakeScreenShotDuringEntryExit);
+               "VerifyTheGradesFromItemSummary", base.IsTakeScreenShotDuringEntryExit);
             //Assert activity have correct grade
             Logger.LogAssertion("ViewGrades", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
                 (VerifyECollegeGradeBookResource.VerifyECollegeGradeBook_Activity_Grade,
                 unitViewPage.VerifyGrade()));
             Logger.LogMethodExit("VerifyECollegeGradeBook",
-               "VerifyTheGradesFromItemSummary", base.isTakeScreenShotDuringEntryExit);
+               "VerifyTheGradesFromItemSummary", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

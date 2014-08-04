@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter In To Organization Level In Admin HomePage
             logger.LogMethodEntry("AdminHomePage", "EnterInToOrganizationLevelInAdminHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the Admin Home page
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AdminHomePage", "EnterInToOrganizationLevelInAdminHomePage",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

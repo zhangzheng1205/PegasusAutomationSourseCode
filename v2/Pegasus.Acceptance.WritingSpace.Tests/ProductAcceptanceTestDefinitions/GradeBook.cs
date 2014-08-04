@@ -32,7 +32,7 @@ namespace Pegasus.Acceptance.WritingSpace.
         {
             //Verify The WritingSpace Activity In Gradebook
             Logger.LogMethodEntry("GradeBook", "VerifyWritingSpaceActivityInGradebook",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
             //Get the activity from memory
              Activity activity = Activity.Get(activityTypeEnum);
             //Asserts the Activity Name
@@ -41,7 +41,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                     new GBDefaultUXPage().
                               GetWritingSpaceActivityNameInGradebook(activity.Name)));
             Logger.LogMethodExit("GradeBook", "VerifyWritingSpaceActivityInGradebook",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }       
        
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Verify Activity Display in Gradebook for Enrollled Students
             Logger.LogMethodEntry("GradeBook",
                 "VerifyActivityScoreInGradebookForEnrollledStudents",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Fetch the data from memory
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                  (activity.Name, user.LastName,user.FirstName)));
             Logger.LogMethodExit("GradeBook",
                 "VerifyActivityScoreInGradebookForEnrollledStudents",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Click writing Space Activity Cmenu Option
             Logger.LogMethodEntry("GradeBook", 
                 "ClickwritingSpaceActivityCmenuOption", 
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Get the activity from memory
             Activity activity = Activity.Get(activityName);
             GBStudentUXPage gbStudentPage = new GBStudentUXPage();
@@ -93,7 +93,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                      ClickTheWritingSpaceActivityCmenuOption(activity.Name);
             Logger.LogMethodExit("GradeBook",
                 "ClickwritingSpaceActivityCmenuOption",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Verify The Display Of CMenu Options For Activity.
             Logger.LogMethodEntry("GradeBook",
                  "VerifyTheDisplayOfCMenuOptionsForActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             foreach (var tableRow in table.Rows)
             {
                 //Assert Display of Activity Cmenu Options
@@ -121,7 +121,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             }
             Logger.LogMethodExit("GradeBook",
                 "VerifyTheDisplayOfCMenuOptionsForActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Pegasus.Acceptance.WritingSpace.
         {
             //Verify Display of Writing Space Activity With Score
             Logger.LogMethodEntry("Gradebook", "VerifyWritingSpaceActivityWithScore",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             GBStudentUXPage gbStudentPage = new GBStudentUXPage();
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
@@ -148,7 +148,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                      gbStudentPage.GetActivityScoreInGradebook
                      (activity.Name)));
             Logger.LogMethodExit("Gradebook", "VerifyWritingSpaceActivityWithScore",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Verify The Display of Activity In Gradebook
             Logger.LogMethodEntry("Gradebook",
                 "VerifyDisplayofActivityInGradebook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             GBStudentUXPage gbStudentPage = new GBStudentUXPage();
@@ -175,7 +175,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                    GetAssetNameInGradebook(activity.Name)));
             Logger.LogMethodExit("Gradebook",
                 "VerifyDisplayofActivityInGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace Pegasus.Acceptance.WritingSpace.
         {
             //Click On Cmenu Of Asset In Gradebook
             Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInGradebook",
-                  isTakeScreenShotDuringEntryExit);
+                  IsTakeScreenShotDuringEntryExit);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Get Activity
             Activity activity = Activity.Get(activityTypeEnum);
@@ -200,7 +200,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum);            
             Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebook",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Verify Display of Cmenu Option in Asset Cmenu Options
             Logger.LogMethodEntry("GradeBook",
                 "VerifyDisplayofCmenuOptionInAssetCmenuOptions",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Get Activity
             Activity activity = Activity.Get(activityTypeEnum);
@@ -228,7 +228,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                     GetCmenuOptionofAsset(cmenuOption, activity.Name)));
             Logger.LogMethodExit("GradeBook",
                 "VerifyDisplayofCmenuOptionInAssetCmenuOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -240,12 +240,12 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Navigate to Custom View sub tab in a gradeBook
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "NavigateToCustomViewSubTab",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             // Navigate to Custom View Page in a GradeBook
             new GBInstructorUXPage().NavigateToCustomView();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "NavigateToCustomViewSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace Pegasus.Acceptance.WritingSpace.
         {
             //Click On Cmenu Of Asset in CustomView
             Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInCustomView",
-                  isTakeScreenShotDuringEntryExit);
+                  IsTakeScreenShotDuringEntryExit);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Get Activity
             Activity activity = Activity.Get(activityTypeEnum);   
@@ -270,7 +270,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum);
             Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInCustomView",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -284,7 +284,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Click On Activity Cmenu Option For Student
             Logger.LogMethodEntry("GradeBook",
                 "ClickOnActivityCmenuOptionForStudent",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Get the activity from memory
             Activity activity = Activity.Get(activityName);
             GBStudentUXPage gbStudentPage = new GBStudentUXPage();            
@@ -293,7 +293,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                 ClickOnWritingspaceActivityCmenuForStudent(activity.Name);                     
             Logger.LogMethodExit("GradeBook",
                 "ClickOnActivityCmenuOptionForStudent",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }       
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Verify Display of Activity Cmenu in Student Gradebook
             Logger.LogMethodEntry("GradeBook",
                 "VerifyDisplayofActivityCmenuInStudentGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Assert Display Of Context Menu Option in Student Gradebook
             Logger.LogAssertion("VerifyDisplayOfContextMenuOption",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -315,7 +315,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                     GetActivityCmenuOptionInStudentGradebook(activityCmenu)));
             Logger.LogMethodExit("GradeBook",
                 "VerifyDisplayofActivityCmenuInStudentGradebook",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -328,7 +328,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             //Verify Display of Success Message in Gradebook
             Logger.LogMethodEntry("GradeBook",
                 "VerifyTheSuccessfullMessageInGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Assert Success Message in Gradebook
             Logger.LogAssertion("VerifyDisplayOfContextMenuOption",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -336,7 +336,7 @@ namespace Pegasus.Acceptance.WritingSpace.
                     new GBInstructorUXPage().GetHideForStudentSuccessMessage()));
             Logger.LogMethodExit("GradeBook",
                 "VerifyTheSuccessfullMessageInGradebook",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -349,7 +349,7 @@ namespace Pegasus.Acceptance.WritingSpace.
         {
             //Click On Activity Grade Cmenu
             Logger.LogMethodEntry("GradeBook", "ClickOnActivityGradeCmenu",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Get the activity from memory
             Activity activity = Activity.Get(activityName);
             //Fetch User from memory
@@ -360,7 +360,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             new GBInstructorUXPage().ClickOnActivityGradeCellCmenu(
                 activity.Name, user.FirstName, user.LastName);
             Logger.LogMethodExit("GradeBook", "ClickOnActivityGradeCmenu",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -372,14 +372,14 @@ namespace Pegasus.Acceptance.WritingSpace.
         {
             //Verify The Display of Grade Cell Cmenu
             Logger.LogMethodEntry("GradeBook","VerifyGradeCellCmenu",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Assert Display of Grade Cell Cmenu in Gradebook
             Logger.LogAssertion("VerifyDisplayOfGradeCellCmenuOption",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(gradeCellCmenuOption,
                     new GBInstructorUXPage().GetGradeCellCmenuOption(gradeCellCmenuOption)));
             Logger.LogMethodExit("GradeBook","VerifyGradeCellCmenu",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -390,11 +390,11 @@ namespace Pegasus.Acceptance.WritingSpace.
         {
             //Apply Grade Schema For the Submitted Activity
             Logger.LogMethodEntry("GradeBook","ApplyGradeSchemaForSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);       
+                base.IsTakeScreenShotDuringEntryExit);       
             //Click On Apply Button
             new GBSchemaPage().ClickonApplyButton();
             Logger.LogMethodExit("GradeBook","ApplyGradeSchemaForSubmittedActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

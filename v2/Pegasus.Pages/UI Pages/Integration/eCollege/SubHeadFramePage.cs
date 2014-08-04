@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
             globalNavigationTabName)
         {
             Logger.LogMethodEntry("SubHeadFramePage", "ClickOnGlobalNavigationTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select to SelectAdministrationPages Window
@@ -49,7 +49,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SubHeadFramePage", "ClickOnGlobalNavigationTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnExitButton()
         {
             Logger.LogMethodEntry("SubHeadFramePage",
-               "ClickOnExitButton", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnExitButton", base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectAdministrationPagesWindow();
             //Select Frame
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByPartialLinkText(SubHeadFramePageResource
                 .SubHeadFrame_Page_ExitButton_PartialLinkText_Locator);
             Logger.LogMethodExit("SubHeadFramePage",
-               "ClickOnExitButton", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnExitButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             Logger.LogMethodEntry("SubHeadFramePage",
-             "SelectAdministrationPagesWindow", base.isTakeScreenShotDuringEntryExit);
+             "SelectAdministrationPagesWindow", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Gets Load
             base.WaitUntilWindowLoads(SubHeadFramePageResource.
                 SubHeadFrame_Page_AdministrationPages_Window_Title);
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(SubHeadFramePageResource.
                 SubHeadFrame_Page_AdministrationPages_Window_Title);
             Logger.LogMethodExit("SubHeadFramePage",
-             "SelectAdministrationPagesWindow", base.isTakeScreenShotDuringEntryExit);
+             "SelectAdministrationPagesWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select IFrame
             Logger.LogMethodEntry("SubHeadFramePage",
-               "SelectGlobalNavigationIFrame", base.isTakeScreenShotDuringEntryExit);
+               "SelectGlobalNavigationIFrame", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Name(SubHeadFramePageResource.
                 SubHeadFrame_Page_GlobalNav_Frame_Name_Locator));
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(SubHeadFramePageResource.
                 SubHeadFrame_Page_GlobalNav_Frame_Name_Locator);
             Logger.LogMethodExit("SubHeadFramePage",
-               "SelectGlobalNavigationIFrame", base.isTakeScreenShotDuringEntryExit);
+               "SelectGlobalNavigationIFrame", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

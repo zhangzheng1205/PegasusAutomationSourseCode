@@ -34,13 +34,13 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Creation of DP Product
             Logger.LogMethodEntry("CreateProduct", "CreateProductUsingProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Create new Product Link
             new ManageProductsPage().ClickOnCreateNewProductLink();
             //Create DP Product
             new NewProductPage().CreateNewProduct(productTypeEnum, programTypeEnum);
             Logger.LogMethodExit("VerifyCreateNewProduct", "CreateProductUsingProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -51,11 +51,11 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Manage to navigate  Products Page
             Logger.LogMethodEntry("CreateProduct", "NavigateToManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate to Manage Products Page
             new AdminToolPage().NavigateManageProductsPage();
             Logger.LogMethodExit("CreateProduct", "NavigateToManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>

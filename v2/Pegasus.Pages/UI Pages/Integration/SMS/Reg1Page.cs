@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Fill SMS User Access Information
             logger.LogMethodEntry("Reg1Page", "EnterSMSUserAccessInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Generate SMS User Login Name
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("Reg1Page", "EnterSMSUserAccessInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Enter the SMS user details
             logger.LogMethodEntry("Reg1Page", "EnterSMSUserDetails",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.Id(Reg1PageResource.
                 Reg1_Page_New_SMSUser_Loginname_TextBox_Id_Locator));
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter SMS User Access Code
             this.EnterSMSUserAccessCode(userType);
             logger.LogMethodExit("Reg1Page", "EnterSMSUserDetails",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getSMSUserPassword;
         }
 
@@ -108,7 +108,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter SMS User Details
             logger.LogMethodEntry("Reg1Page", "EnterSMSUserLoginDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Generate SMS User Password
             string getSMSUserPassword = Reg1PageResource.
                 Reg1_Page_SMSUser_Password_Value;
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on TextBox to Enter Access Code Details
             this.ClickTextBoxToEnterSMSAccessCode(userType);
             logger.LogMethodExit("Reg1Page", "EnterSMSUserLoginDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSMSUserPassword;
         }
 
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickTextBoxToEnterSMSAccessCode(User.UserTypeEnum userType)
         {
             logger.LogMethodEntry("Reg1Page", "ClickTextBoxToEnterSMSAccessCode",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on TextBox to Enter Access Code Details
             switch (userType)
             {
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("Reg1Page", "ClickTextBoxToEnterSMSAccessCode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click text Box For Enter Access Code
             logger.LogMethodEntry("Reg1Page", "ClickTextBoxToEnterSMSAccessCodeInFireFoxAndChrome",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(Reg1PageResource.
                 Reg1_Page_AcToggleSingle_Image_XPath_Locator));
@@ -196,7 +196,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickImageByXPath(Reg1PageResource.
                 Reg1_Page_AcToggleSingle_Image_XPath_Locator);
             logger.LogMethodExit("Reg1Page", "ClickTextBoxToEnterSMSAccessCodeInFireFoxAndChrome",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -206,7 +206,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Text Box For Enter Access Code
             logger.LogMethodEntry("Reg1Page", "ClickTextBoxToEnterSMSAccessCodeInInternetExplorer",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(Reg1PageResource.
                 Reg1_Page_AcToggleSingle_Image_XPath_Locator));
@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Text Box Link
             base.ClickByJavaScriptExecutor(getAccessCode);
             logger.LogMethodExit("Reg1Page", "ClickTextBoxToEnterSMSAccessCodeInInternetExplorer",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Fill SMS User Access Code
             logger.LogMethodEntry("Reg1Page", "EnterSMSUserAccessCode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(Reg1PageResource.Reg1_Page_AccessInformation_Window_Page_Title);
             base.WaitForElement(By.Id(Reg1PageResource.
@@ -265,7 +265,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitUntilWindowLoads(Reg1PageResource.
                 Reg1_Page_Next_Window_Page_Title);
             logger.LogMethodExit("Reg1Page", "EnterSMSUserAccessCode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -275,12 +275,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Student SMS Code
             logger.LogMethodEntry("Reg1Page", "EnterSMSAccessCodeForStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter SMS Code in Text Box
             base.FillTextBoxById(Reg1PageResource.Reg1_Page_Access1_TextBox_Id_Locator,
                                  AutomationConfigurationManager.SmsStudentAccessCode);
             logger.LogMethodExit("Reg1Page", "EnterSMSAccessCodeForStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -291,12 +291,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Instructor SMS Code
             logger.LogMethodEntry("Reg1Page", "EnterSMSAccessCodeForInstructor",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter SMS Code in Text Box
             base.FillTextBoxById(Reg1PageResource.Reg1_Page_Access1_TextBox_Id_Locator,
                                  AutomationConfigurationManager.SmsInstructorAccessCode);
             logger.LogMethodExit("Reg1Page", "EnterSMSAccessCodeForInstructor",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -306,12 +306,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter MMND Instructor SMS code
             logger.LogMethodEntry("Reg1Page", "EnterSMSAccessCodeForMMNDInstructor",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter SMS code in the Text Box
             base.FillTextBoxById(Reg1PageResource.Reg1_Page_Access1_TextBox_Id_Locator,
                                  getSMSMMNDInstructor);
             logger.LogMethodExit("Reg1Page", "EnterSMSAccessCodeForMMNDInstructor",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -322,7 +322,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill SMS User Access Information
             logger.LogMethodEntry("Reg1Page", "EnterSMSUserAccessInformationforMMNDStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Generate SMS User Login Name
             Guid userNameSMSGuid = Guid.NewGuid();
             base.SelectWindow(Reg1PageResource.
@@ -345,7 +345,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save SMS User Details in Memory
             StoreSMSUserInMemory(userType, userNameSMSGuid, getSMSUserPassword);
             logger.LogMethodExit("Reg1Page", "EnterSMSUserAccessInformationforMMNDStudent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -355,7 +355,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnterUserName(Guid userNameSMSGuid)
         {
             logger.LogMethodEntry("Reg1Page", "EnterUserName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.Id(Reg1PageResource.
                 Reg1_Page_New_SMSUser_Loginname_TextBox_Id_Locator));
@@ -372,7 +372,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClearTextById(Reg1PageResource.
                 Reg1_Page_CreateLoginPassword_TextBox_Id_Locator);
             logger.LogMethodExit("Reg1Page", "EnterUserName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -386,7 +386,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save SMS User in Memory
             logger.LogMethodEntry("Reg1Page", "StoreSMSUserInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (userType)
             {
                 //Save SMS Student
@@ -400,7 +400,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("Reg1Page", "StoreSMSUserInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -413,7 +413,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // save sms1 user 
             logger.LogMethodEntry("Reg1Page", "InsertUserDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             User userSMSInstructor = new User
                                          {
                                              // save sms user properties
@@ -424,7 +424,7 @@ namespace Pegasus.Pages.UI_Pages
                                          };
             userSMSInstructor.StoreUserInMemory();
             logger.LogMethodExit("Reg1Page", "InsertUserDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 

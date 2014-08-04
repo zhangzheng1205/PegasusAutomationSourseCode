@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Bulk User Upload
             logger.LogMethodEntry("ImportUsersPage", "UploadBulkUserFile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get the Bulk User File Path
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ImportUsersPage", "UploadBulkUserFile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select 'Import Users'Window
             logger.LogMethodEntry("ImportUsersPage", "UploadBulkUserFile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ImportUsersPage", "UploadBulkUserFile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

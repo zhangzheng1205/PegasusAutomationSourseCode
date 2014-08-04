@@ -34,14 +34,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         public void BrowseRegisterDemoAccountURL(String pageName)
         {
             Logger.LogMethodEntry("RegisterDemoAccount", "BrowseRegisterDemoAccountURL",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             if (pageName.Equals("RegisterYourDemoAccount"))
             {
                new DemoAccountRegistrationPage(User.UserTypeEnum.DPDemoUser).GoToDemoAccountRegistrationUrl();
               
             }
             Logger.LogMethodExit("RegisterDemoAccount", "BrowseRegisterDemoAccountURL",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,12 +52,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         public void RegisterNewDemoAccount(string userType)
         {
             Logger.LogMethodEntry("RegisterDemoAccount", "RegisterNewDemoAccount",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             User.UserTypeEnum userTypeEnum = (User.UserTypeEnum)Enum.Parse(typeof(User.UserTypeEnum), userType);
             new DemoAccountRegistrationPage(userTypeEnum).RegisterDemoAccount(userTypeEnum);
 
             Logger.LogMethodExit("RegisterDemoAccount", "RegisterNewDemoAccount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,13 +68,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         public void ThenIShouldSeeTheSuccessfulMessageBox(string message)
         {
             Logger.LogMethodEntry("RegisterDemoAccount", "ThenIShouldSeeTheSuccessfulMessageBox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
 
             Assert.AreEqual(message,
             new DemoAccountRegistrationPage(User.UserTypeEnum.DPDemoUser).GetSuccessMessageFromMessageBox());
 
             Logger.LogMethodExit("RegisterDemoAccount", "ThenIShouldSeeTheSuccessfulMessageBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             Logger.LogMethodEntry("RegisterDemoAccount",
                 "OneProductShouldBeLicensedInOrganization",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Ensure that product exists
             Product.Get(productType);
             User.GetAll(User.UserTypeEnum.DPDemoUser).Single(
@@ -96,7 +96,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 .CreationDate = DateTime.Now;          
             Logger.LogMethodExit("RegisterDemoAccount",
                 "OneProductShouldBeLicensedInOrganization",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             Logger.LogMethodEntry("RegisterDemoAccount",
                 "MultipleProductCreatedWithSameAccessCodeAndLicencesed",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             User.GetAll(User.UserTypeEnum.DPDemoUser).Single(
                 u => u.ProductInstance == "2")
                 .CreationDate = DateTime.Now;   
@@ -117,7 +117,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
            Assert.IsTrue( Product.GetAll(productType).Count >= productCount );
             Logger.LogMethodExit("RegisterDemoAccount",
                 "MultipleProductCreatedWithSameAccessCodeAndLicencesed",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
                    

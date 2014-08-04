@@ -28,13 +28,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             // Method to launch the PCT URL
             Logger.LogMethodEntry("PCTToolLaunch", "WhenIOpenPCTToolsDropDown",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
 
             // Open the PCT Tools drop down from resource tool bar
             new TodaysViewUXPage().OpenPCTToolsDropDown();
 
             Logger.LogMethodExit("PCTToolLaunch", "WhenIOpenPCTToolsDropDown",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// When I Click On PCT Tool In Tools DropDown.
@@ -44,10 +44,10 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             // Method to launch the PCT URL
             Logger.LogMethodEntry("PCTToolLaunch", "WhenIClickOnPCTToolInDropDown",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             new TodaysViewUXPage().LaunchPCTFromDropDown(PCTToolName);
             Logger.LogMethodExit("PCTToolLaunch", "WhenIClickOnPCTToolInDropDown",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Verify the PCT Window Width and Height.
@@ -59,7 +59,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Verify The PCT window size
             Logger.LogMethodEntry("PCTToolLaunch", "VerifyTheQuestionEditPage"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
 
             //Asserts To Verify The PCT window width
             Logger.LogAssertion("VerifyThePCTWindowWidth",
@@ -71,7 +71,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
                 () => Assert.IsTrue(new TodaysViewUXPage().GetPCTWindowHeight() >= height));
 
             Logger.LogMethodExit("PCTToolLaunch", "VerifyTheQuestionEditPage"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

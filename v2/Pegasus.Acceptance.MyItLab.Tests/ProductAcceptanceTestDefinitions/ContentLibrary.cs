@@ -25,14 +25,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ContentLibrary",
                "ExpandAdvancedOptionsLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibrary =
                 new ContentLibraryUXPage();
             contentLibrary.SelectAndSwitchToContentLibrary();
             contentLibrary.ExpandAdvancedOptions();
             Logger.LogMethodExit("ContentLibrary",
                "ExpandAdvancedOptionsLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         [When(@"I select checkbox of (.*) assets")]
@@ -40,14 +40,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ContentLibrary",
                 "SelectCheckboxOfAssets",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibrary =
                 new ContentLibraryUXPage();
             contentLibrary.SelectAndSwitchToContentLibrary();
             contentLibrary.SelectCheckboxOfAssets(assetCount);
             Logger.LogMethodExit("ContentLibrary",
                "SelectCheckboxOfAssets",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         [Then(@"I should see ""(.*)"" button on Content Library header get ""(.*)""")]
@@ -57,7 +57,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ContentLibrary",
                 "SelectCheckboxOfAssets",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
             bool isEnabled = new ContentLibraryUXPage()
                 .IsButtonEnabledOnHeader(buttonType);
@@ -71,7 +71,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             }
             Logger.LogMethodExit("ContentLibrary",
                "SelectCheckboxOfAssets",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         [When(@"I select ""(.*)"" button on Content Library header")]
@@ -80,11 +80,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ContentLibrary",
                 "SelectCheckboxOfAssets",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new ContentLibraryUXPage().ClickButtonOnHeader(buttonType);
             Logger.LogMethodExit("ContentLibrary",
                "SelectCheckboxOfAssets",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         [Then(@"I should see Clipboard Items Count as (.*)")]
@@ -92,12 +92,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ContentLibrary",
                 "SelectCheckboxOfAssets",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Assert.AreEqual(assetCount, new ContentLibraryUXPage()
                 .GetClipboardItemsCount());
             Logger.LogMethodExit("ContentLibrary",
                "SelectCheckboxOfAssets",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         [Then(@"I should see Asset title in ""(.*)"" color and ""(.*)"" style\.")]
@@ -106,14 +106,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ContentLibrary",
                 "SelectCheckboxOfAssets",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibrary = new ContentLibraryUXPage();
             Assert.AreEqual(contentLibrary.GetClipboardItemsCount(),
                 contentLibrary.GetCountOfAssetTitleByColorAndFontStyle(
                 titleColor, fontStyle));
             Logger.LogMethodExit("ContentLibrary",
                "SelectCheckboxOfAssets",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         [When(@"I Select ""(.*)"" on Paste Advanced Options on Content Library")]
@@ -122,11 +122,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ContentLibrary",
                  "SelectPasteAdvancedOptions",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             new ContentLibraryUXPage().SelectPasteOption(pasteOption);
             Logger.LogMethodExit("ContentLibrary",
                "SelectPasteAdvancedOptions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         [Then(@"I should see Asset displayed at ""(.*)"" place")]
@@ -134,14 +134,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ContentLibrary",
                 "VerifyAssetCopiedPosition",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibrary = new ContentLibraryUXPage();
             contentLibrary.SelectAndSwitchToContentLibrary();
             Assert.AreEqual(contentLibrary.GetCountOfAssetTitleByColorAndFontStyle(
                 "Red", "Italic"),contentLibrary.GetPastedItemCount());
             Logger.LogMethodExit("ContentLibrary",
                "VerifyAssetCopiedPosition",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         [Then(@"I should see a ""(.*)"" confirmation pop up should display with ""(.*)"" button and ""(.*)"" button")]
@@ -152,7 +152,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ContentLibrary",
                "VerifyAssetCopiedPosition",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             ShowMessagePage showMessagePage = new ShowMessagePage();
             Assert.AreEqual(firstButton, 
                 showMessagePage.GetOkButtonText());
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 showMessagePage.GetCancelButtonText());
             Logger.LogMethodExit("ContentLibrary",
                "VerifyAssetCopiedPosition",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -169,11 +169,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ContentLibrary",
                "ClickOKButtonOnDeleteConfirmationPopUp",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             new ShowMessagePage().ClickOkButton();
             Logger.LogMethodExit("ContentLibrary",
                "ClickOKButtonOnDeleteConfirmationPopUp",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
        
     }

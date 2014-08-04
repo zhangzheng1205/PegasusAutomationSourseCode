@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On 'Enable Instructor Only Assets' Preference Checkbox
             logger.LogMethodEntry("LessonPlanPreferencesPage",
             "ClickOnInstructorOnlyAssetsPreferenceCheckbox",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 GeneralPreferencesPage generalPreferencesPage = new GeneralPreferencesPage();
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("LessonPlanPreferencesPage",
             "ClickOnInstructorOnlyAssetsPreferenceCheckbox",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify Instructor Only Assets Preference Enabled
             logger.LogMethodEntry("LessonPlanPreferencesPage",
              "IsInstructorOnlyAssetsPreferenceEnabled",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isInstructorOnlyAssetsPreferenceDisabled = false;
             try
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("LessonPlanPreferencesPage",
             "IsInstructorOnlyAssetsPreferenceEnabled",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return isInstructorOnlyAssetsPreferenceDisabled;
         }
     }

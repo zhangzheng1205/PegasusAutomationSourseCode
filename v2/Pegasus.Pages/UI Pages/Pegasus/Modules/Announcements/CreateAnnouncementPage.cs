@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create System Announcement
             logger.LogMethodEntry("CreateAnnouncementPage", "CreateSystemAnnouncement",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate New Guid announcement Name
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CreateAnnouncementPage", "CreateSystemAnnouncement",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -87,14 +87,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter subject for announcement
             logger.LogMethodEntry("CreateAnnouncementPage", "EnterSubject",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CreateAnnouncementPageResource.
                CreateAnnouncement_Page_Subject_TextBox_Id_Locator));
             // Enter subject
             base.FillTextBoxById(CreateAnnouncementPageResource.
                 CreateAnnouncement_Page_Subject_TextBox_Id_Locator, announcement);
             logger.LogMethodExit("CreateAnnouncementPage", "EnterSubject",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -104,14 +104,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selecting Create Announcement Window
             logger.LogMethodEntry("CreateAnnouncementPage", "SelectCreateAnnouncementWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(CreateAnnouncementPageResource.
                 CreateAnnouncement_Page_Window_Title);
             //Select Window
             base.SelectWindow(CreateAnnouncementPageResource.
                 CreateAnnouncement_Page_Window_Title);
             logger.LogMethodExit("CreateAnnouncementPage", "SelectCreateAnnouncementWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -122,14 +122,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Entering Description for announcement
             logger.LogMethodEntry("CreateAnnouncementPage", "EnterDescriptionForAnnouncement",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             WaitForElement(By.Id(CreateAnnouncementPageResource.
                   CreateAnnouncement_Page_HTMLEditor_TextArea_Id_Locator));
             //Enter Description in HTMLEditor TextArea
             base.FillTextBoxById(CreateAnnouncementPageResource.
                   CreateAnnouncement_Page_HTMLEditor_TextArea_Id_Locator, announcementGuid.ToString());
             logger.LogMethodExit("CreateAnnouncementPage", "EnterDescriptionForAnnouncement",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnterAnnouncementFromAndToMinute(DateTime fromDate, DateTime toDate)
         {
             logger.LogMethodEntry("CreateAnnouncementPage", "EnterAnnouncementFromAndToMinute",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Focus on element
             base.FocusOnElementById(CreateAnnouncementPageResource.
                        CreateAnnouncement_Page_StartMinute_TextBox_Id_Locator);
@@ -162,7 +162,7 @@ namespace Pegasus.Pages.UI_Pages
                  toDate.ToString(CreateAnnouncementPageResource.
                 CreateAnnouncement_Page_MinuteFormat_Value));
             logger.LogMethodExit("CreateAnnouncementPage", "EnterAnnouncementFromAndToMinute",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnterAnnouncementFromAndToHour(DateTime fromDate, DateTime toDate)
         {
             logger.LogMethodEntry("CreateAnnouncementPage", "EnterAnnouncementFromAndToHour",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Focus on element
             base.FocusOnElementById(CreateAnnouncementPageResource.
                       CreateAnnouncement_Page_StartHour_TextBox_Id_Locator);
@@ -193,7 +193,7 @@ namespace Pegasus.Pages.UI_Pages
                   CreateAnnouncement_Page_EndHour_TextBox_Id_Locator,
                   toDate.Hour.ToString());
             logger.LogMethodExit("CreateAnnouncementPage", "EnterAnnouncementFromAndToHour",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Entering Start and End Date  for Announcement
             logger.LogMethodEntry("CreateAnnouncementPage", "EnterAnnouncementFromAndToDate",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             switch (announcementTypeEnum)
             {
                 case Announcement.AnnouncementTypeEnum.CsSystem:
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("CreateAnnouncementPage", "EnterAnnouncementFromAndToDate",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace Pegasus.Pages.UI_Pages
             Announcement.AnnouncementTypeEnum announcementTypeEnum)
         {
             logger.LogMethodEntry("CreateAnnouncementPage", "StoreAnnouncementDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Code need to be added
             Announcement announcement = new Announcement
             {
@@ -258,7 +258,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             announcement.StoreAnnouncementInMemory();
             logger.LogMethodExit("CreateAnnouncementPage", "StoreAnnouncementDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

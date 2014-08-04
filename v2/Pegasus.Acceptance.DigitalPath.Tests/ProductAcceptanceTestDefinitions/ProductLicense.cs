@@ -27,12 +27,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
             //Click on Add Products Option
             Logger.LogMethodEntry("ProductLicense",
                 "ClickOnTheAddProductsOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Add Product Link
             new LicensesPage().ClickAddProductOptionLink();
             Logger.LogMethodExit("ProductLicense",
                 "ClickOnTheAddProductsOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -47,7 +47,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
         {
             //License the Product
             Logger.LogMethodEntry("ProductLicense", "LicenseTheProduct",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //To select the product stored in memory
             Product product = Product.Get(productTypeEnum);
             //To add same product Multiple Times
@@ -66,7 +66,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
             }
 
             Logger.LogMethodExit("ProductLicense", "LicenseTheProduct",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -80,14 +80,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ProductLicense",
                 "SearchLicensedProductInCoursespace",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //To select the product stored in memory
             License license = License.Get(licenseTypeEnum);
             //Search Licensed Product
             new LicensesPage().SearchLicensedProduct(license.Name);
             Logger.LogMethodExit("ProductLicense",
                 "SearchLicensedProductInCoursespace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("ProductLicense",
                 "VerifySearchedLicensedProduct",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //To select the product stored in memory
             License license = License.Get(licenseTypeEnum);
             // Assert Licensed Product Search
@@ -110,7 +110,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
                     new LicensesPage().GetLicensedProduct()));
             Logger.LogMethodExit("ProductLicense",
                 "VerifySearchedLicensedProduct",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
         {
             //License the Product
             Logger.LogMethodEntry("ProductLicense", "LicenseTheProduct",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //To select the product stored in memory
             List<Product> products = new List<Product>();
             products = Product.GetAll(productTypeEnum);
@@ -143,7 +143,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.ProductAcceptanceTestDefinitions
             }
 
             Logger.LogMethodExit("ProductLicense", "LicenseTheProduct",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Writing Assistant Preference Settings
             logger.LogMethodEntry("WritingCoachPreferencesPage",
-            "EnableWritingAssistantPreferenceSettings", base.isTakeScreenShotDuringEntryExit);
+            "EnableWritingAssistantPreferenceSettings", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Declare the obeject for page
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("WritingCoachPreferencesPage",
-             "EnableWritingAssistantPreferenceSettings", base.isTakeScreenShotDuringEntryExit);
+             "EnableWritingAssistantPreferenceSettings", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

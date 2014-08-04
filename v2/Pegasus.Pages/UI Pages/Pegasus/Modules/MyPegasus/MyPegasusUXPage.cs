@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selecting  Announcement
             logger.LogMethodEntry("MyPegasusUXPage", "SelectAnnouncement"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyPegasusUXPage", "SelectAnnouncement",
-                            base.isTakeScreenShotDuringEntryExit);
+                            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on  ManageAll Button
             logger.LogMethodEntry("MyPegasusUXPage", "ClickAnnouncementManageAllButton"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Selecting default window
@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyPegasusUXPage", "ClickAnnouncementManageAllButton",
-                            base.isTakeScreenShotDuringEntryExit);
+                            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Open Course by clicking on course Link
             logger.LogMethodEntry("MyPegasusUXPage", "EnterInCourseFromGobalHomePage"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyPegasusUXPage", "EnterInCourseFromGobalHomePage"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Search and Click Course Link
             logger.LogMethodEntry("MyPegasusUXPage", "EnterInSideCourse"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             // Switch Statement to enter course according to user role
             switch (userTypeEnum)
             {
@@ -159,7 +159,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("MyPegasusUXPage", "EnterInSideCourse",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Open Course Through Course cmenu option Open
             logger.LogMethodEntry("MyPegasusUXPage", "EnterInCourseThroughClickCmenuOption"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.PartialLinkText(courseName));
             //Intialization of IWebElement for courseName Link
@@ -199,7 +199,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("MyPegasusUXPage", "EnterInCourseThroughClickCmenuOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickCourseCMenuOption(IWebElement getcourseNameLink)
         {
             logger.LogMethodEntry("MyPegasusUXPage", "ClickCourseCMenuOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Mouse Hover at Course Cmenu 
             base.PerformMouseHoverAction(getcourseNameLink);
             //Wait For Element
@@ -227,7 +227,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByXPath(MyPegasusUXPageResource.
                 MyPegasusUX_Page_Course_OpenCmenu_Xpath_Locator);
             logger.LogMethodExit("MyPegasusUXPage", "ClickCourseCMenuOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Selecting MyProfile Link
             logger.LogMethodEntry("MyPegasusUXPage", "ClickMyProfileLinkByWSUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Default Window
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyPegasusUXPage", "ClickMyProfileLinkByWSUser",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -268,7 +268,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Inside the Course
             logger.LogMethodEntry("MyPegasusUXPage", "EnterInToTheCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -304,7 +304,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyPegasusUXPage", "EnterInToTheCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -314,12 +314,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Global Home Page
             logger.LogMethodEntry("MyPegasusUXPage", "SelectGlobalHomePage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for GLobal Home Page Window
             base.WaitUntilWindowLoads(MyPegasusUXPageResource.MyPegasusUX_Page_Window_Title);
             base.SelectWindow(MyPegasusUXPageResource.MyPegasusUX_Page_Window_Title);
             logger.LogMethodExit("MyPegasusUXPage", "SelectGlobalHomePage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -330,7 +330,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter In To The NovanetCourse
             logger.LogMethodEntry("MyPegasusUXPage", "EnterInToTheNovanetCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for GLobal Home Page Window
             this.SelectGlobalHomePage();
             //Get Count of Master Library row
@@ -354,7 +354,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("MyPegasusUXPage", "EnterInToTheNovanetCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -365,7 +365,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter in to Template Class
             logger.LogMethodEntry("MyPegasusUXPage", "EnterInToTemplateClass",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select window
@@ -381,7 +381,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyPegasusUXPage", "EnterInToTemplateClass",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -392,7 +392,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Class Name and Click on Class Name
             logger.LogMethodEntry("MyPegasusUXPage", "GetClassNameAndClickClassName",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Get class count
             int getClassCount = base.GetElementCountByXPath(MyPegasusUXPageResource.
                 MyPegasusUX_Page_MasterLibrary_Table_Xpath_Locator);
@@ -419,7 +419,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("MyPegasusUXPage", "GetClassNameAndClickClassName",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -430,7 +430,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on class name
             logger.LogMethodEntry("MyPegasusUXPage", "ClickOnClassName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.XPath(string.Format(MyPegasusUXPageResource.
                 MyPegasusUX_Page_Class_Xpath_Locator, classCount)));
@@ -441,7 +441,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on class name
             base.ClickByJavaScriptExecutor(getClassNameLink);
             logger.LogMethodExit("MyPegasusUXPage", "ClickOnClassName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -451,7 +451,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Create Class Button In Global Home.
             logger.LogMethodEntry("MyPegasusUXPage", "ClickOnCretaeClassButtonInGlobalHome",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -470,7 +470,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyPegasusUXPage", "ClickOnCretaeClassButtonInGlobalHome",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

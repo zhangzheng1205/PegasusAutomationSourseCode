@@ -34,11 +34,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Create Mail in CourseSpace
             Logger.LogMethodEntry("SendingMessages", "CreateMailInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Mail in CourseSpace
             new MessageGridPage().CreateMailMessage(userTypeEnum);
             Logger.LogMethodExit("SendingMessages", "CreateMailInCourseSpace", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -49,11 +49,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Send Mail to CourseSpace Users
             Logger.LogMethodEntry("SendingMessages", "SendMailToCourseSpaceUsers", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Send Mail to CourseSpace Users
             new MessageGridPage().SendMailToCourseSpaceUsers();
             Logger.LogMethodExit("SendingMessages", "SendMailToCourseSpaceUsers", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -66,14 +66,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //To Check Successful message in Send Mail Popup
             Logger.LogMethodEntry("SendingMessages", "CheckSuccessfullMessageInSendMailPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Display of Success Message
             Logger.LogAssertion("VerifySuccessMessageforMailSent",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(successMessage,new MessageGridPage().
                     GetSuccessMessage()));
             Logger.LogMethodExit("SendingMessages", "CheckSuccessfullMessageInSendMailPopup",
-                base.isTakeScreenShotDuringEntryExit);           
+                base.IsTakeScreenShotDuringEntryExit);           
         }
 
         /// <summary>
@@ -84,11 +84,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Close Mail Pop Up
             Logger.LogMethodEntry("SendingMessages", "CloseMailPopUp",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Close mail Popup
             new MessageGridPage().CloseMailPopup();
             Logger.LogMethodExit("SendingMessages", "CloseMailPopUp",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -99,13 +99,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Mail Popup Closed or Not
             Logger.LogMethodEntry("SendingMessages", "MailPopUpSuccessfullyClosed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Mail Popup present or Not
             Logger.LogAssertion("VerifyMailPopupPresent",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(false,new HomePage().IsMailPopupPresent()));
             Logger.LogMethodExit("SendingMessages", "MailPopUpSuccessfullyClosed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             
         }
 

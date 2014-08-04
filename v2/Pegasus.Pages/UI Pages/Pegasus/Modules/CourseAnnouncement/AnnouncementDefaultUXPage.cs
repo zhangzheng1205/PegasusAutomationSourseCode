@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Get Announcement Text
             logger.LogMethodEntry("AnnouncementDefaultUXPage", "GetAnnouncementDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Intialization of string to get Announcement text
             string getAnnouncementText = string.Empty;
             try
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AnnouncementDefaultUXPage", "GetAnnouncementDetails",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getAnnouncementText;
         }
 
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click close button
             logger.LogMethodEntry("AnnouncementDefaultUXPage", "CloseAnnoucementLightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 WaitForElement(By.Id(AnnouncementDefaultUXPageResource.
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AnnouncementDefaultUXPage", "CloseAnnoucementLightBox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selecting  Announcement Frame
             logger.LogMethodEntry("AnnouncementDefaultUXPage", "SelectAnnouncementFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select default content of page 
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AnnouncementDefaultUXPage", "SelectAnnouncementFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selecting  Announcement Frame
             logger.LogMethodEntry("AnnouncementDefaultUXPage", "SelectAnnouncementFrameInCs",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select default content of page 
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AnnouncementDefaultUXPage", "SelectAnnouncementFrameInCs",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select CreateAnnouncement Button
             logger.LogMethodEntry("AnnouncementDefaultUXPage", "ClickCreateAnnouncementButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {               
                 //Click Create Announcement Button
@@ -189,7 +189,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AnnouncementDefaultUXPage", "ClickCreateAnnouncementButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -202,7 +202,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get success full message text
             logger.LogMethodEntry("AnnouncementDefaultUXPage", 
                 "GetCourseAnnouncementSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialization of string getSuccessMsg
             string getSuccessMessage = string.Empty;
             try
@@ -221,7 +221,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AnnouncementDefaultUXPage",
                 "GetCourseAnnouncementSuccessfullMessage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getSuccessMessage;
         }
 
@@ -233,7 +233,7 @@ namespace Pegasus.Pages.UI_Pages
             // Select 'Create Announcement' Button
             logger.LogMethodEntry("AnnouncementDefaultUXPage",
                 "ClickOnTheCreateAnnouncementButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 this.SelectAnnouncementLightBoxFrame();
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AnnouncementDefaultUXPage",
                 "ClickOnTheCreateAnnouncementButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -261,7 +261,7 @@ namespace Pegasus.Pages.UI_Pages
             // Select Announcement frame
             logger.LogMethodEntry("AnnouncementDefaultUXPage",
                 "SelectAnnouncementLightBoxFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select default content of page 
@@ -279,7 +279,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AnnouncementDefaultUXPage",
                 "SelectAnnouncementLightBoxFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -291,7 +291,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select SystemAnnouncements In Dropdown
             logger.LogMethodEntry("AnnouncementDefaultUXPage",
                 "SelectAnnouncementsTypeInDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Selecting frame
@@ -310,7 +310,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AnnouncementDefaultUXPage",
                 "SelectAnnouncementsTypeInDropdown",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -322,7 +322,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Announcements Type In Dropdown HED
             logger.LogMethodEntry("AnnouncementDefaultUXPage",
                 "SelectAnnouncementsTypeInDropDownHED",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(AnnouncementDefaultUXPageResource.
@@ -337,7 +337,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodEntry("AnnouncementDefaultUXPage",
                 "SelectAnnouncementsTypeInDropDownHED",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -348,7 +348,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Announcements Type In Dropdown HED
             logger.LogMethodEntry("AnnouncementDefaultUXPage",
                 "SelectGlobalAnnouncementframe",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -371,7 +371,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodEntry("AnnouncementDefaultUXPage",
                 "SelectGlobalAnnouncementframe",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -383,7 +383,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Class Announcements Type From Dropdown
             logger.LogMethodEntry("AnnouncementDefaultUXPage",
                 "SelectClassAnnouncementsTypeFromDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {                
                 //Declaration of class object
@@ -406,7 +406,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AnnouncementDefaultUXPage",
                 "SelectClassAnnouncementsTypeFromDropdown",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -420,7 +420,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Display Of Announcement DropdownOptions
             logger.LogMethodEntry("AnnouncementDefaultUXPage",
                 "GetDisplayOfAnnouncementDropdownOptions",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Initialize Activity Cmenuoptions Variable
             string getDisplayDropdownOptions = string.Empty;
             try
@@ -440,7 +440,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AnnouncementDefaultUXPage",
                 "GetDisplayOfAnnouncementDropdownOptions",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             return getDisplayDropdownOptions;
         }
     }

@@ -28,11 +28,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Select 'Create/Copy Course' Option
             Logger.LogMethodEntry("CreateCourse", "SelectCreateCopyCourseOption", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the 'Create/Copy Course' button
             new UserLayoutRootNodePage().ClickOntheCreateCopyCourseButton();
             Logger.LogMethodExit("CreateCourse", "SelectCreateCopyCourseOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -43,11 +43,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Enter The Access Code Id
             Logger.LogMethodEntry("CreateCourse", "EnterTheAccessCodeId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter The Access Code
             new UserLayoutRootNodeTargetPage().EnterAccessCodeId();
             Logger.LogMethodExit("CreateCourse", "EnterTheAccessCodeId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Select Course From The List
             Logger.LogMethodEntry("CreateCourse", "SelectCourseFromTheList",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Search the Course From List
             new UserLayoutRootNodeTargetPage().SearchCourseFromList(courseTypeEnum);
             Logger.LogMethodExit("CreateCourse", "SelectCourseFromTheList",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -77,11 +77,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Enter The Course Details
             Logger.LogMethodEntry("CreateCourse", "CreateMMNDCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter The Course Details
             new UserLayoutRootNodeTargetPage().EnterCourseDetails(courseTypeEnum);
             Logger.LogMethodExit("CreateCourse", "CreateMMNDCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,14 +92,14 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Course Created Successfully
             Logger.LogMethodEntry("CreateCourse", "CourseCreatedSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Course Creation
             Logger.LogAssertion("VerifyCourseCreation",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(
                     CreateCourseResource.CreateCourse_CourseCopy_Confirmation_Message, 
                     new UserLayoutRootNodeTargetPage().GetSuccessfullMessage()));
             Logger.LogMethodExit("CreateCourse", "CourseCreatedSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -112,11 +112,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Fetch the Course Id
             Logger.LogMethodEntry("CreateCourse", "FetchCourseIdOfCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch the Course Id
             new UserLayoutRootNodeTargetPage().GetCourseId(courseTypeEnum);
             Logger.LogMethodExit("CreateCourse", "FetchCourseIdOfCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -129,11 +129,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Verify The Course
             Logger.LogMethodEntry("CreateCourse", "VerifyTheCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify The Course in Active state
             new UserLayoutRootNodeTargetPage().VerifyCourseInActiveState(courseTypeEnum);
             Logger.LogMethodExit("CreateCourse", "VerifyTheCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -146,11 +146,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Verify The Section
             Logger.LogMethodEntry("CreateCourse", "VerifyTheSectionInActiveState",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify The Section in Active state
             new UserLayoutRootNodeTargetPage().VerifyCourseInActiveState(courseTypeEnum);
             Logger.LogMethodExit("CreateCourse", "VerifyTheSectionInActiveState",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -161,14 +161,14 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Verify The Course
             Logger.LogMethodEntry("CreateCourse", "LogoutSuccesfullyFromMMND",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify The Succesfully Logout From MMND
             Logger.LogAssertion("VerifySuccessfulLogout",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual(
                     CreateCourseResource.CreateCourse_Logout_Confirmation_Message,
                     new MyPearsonLoginPage().GetSuccessfullyLoggedOutOfMMNDMessage()));
             Logger.LogMethodExit("CreateCourse", "LogoutSuccesfullyFromMMND",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -181,13 +181,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Verify Display Of Course In Active State
             Logger.LogMethodEntry("CreateCourse", "DisplayOfCourseInActiveState",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify The Course In Active State
             Logger.LogAssertion("VerifyCourseInActiveState",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsFalse(
                 new UserLayoutRootNodeTargetPage().IsTheCourseInActiveState(courseTypeEnum)));
             Logger.LogMethodExit("CreateCourse", "DisplayOfCourseInActiveState",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -200,11 +200,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Select CoOrdinate Course From The Dropdown
             Logger.LogMethodEntry("CreateCourse", "SelectCoOrdinateCourseFromTheDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Course
             new UserLayoutRootNodeTargetPage().SelectCoOrdinateCourse(courseTypeEnum);
             Logger.LogMethodExit("CreateCourse", "SelectCoOrdinateCourseFromTheDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -217,11 +217,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Create MMND Section
             Logger.LogMethodEntry("CreateCourse", "CreateMMNDSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create MMND Section
             new UserLayoutRootNodeTargetPage().CreateMMNDSection(courseTypeEnum);
             Logger.LogMethodExit("CreateCourse", "CreateMMNDSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>

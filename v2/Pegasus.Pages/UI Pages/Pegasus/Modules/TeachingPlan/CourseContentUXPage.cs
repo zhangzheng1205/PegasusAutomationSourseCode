@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Gets the Activity Name
             Logger.LogMethodEntry("CourseContentUXPage", "GetActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Activity Name Variable
             string getActivityName = string.Empty;
             try
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "GetActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }       
         
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Gets the Searched Activity
             Logger.LogMethodEntry("CourseContentUXPage", "GetSearchedActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Gets the First Activity from My Course Frame
             string getSearchedActivityName = string.Empty;
             //Get Count of Activity
@@ -117,7 +117,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             Logger.LogMethodExit("CourseContentUXPage", "GetSearchedActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSearchedActivityName;
         }
 
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the Activity Count 
             Logger.LogMethodEntry("CourseContentUXPage", "GetActivityCountAfterSearch",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                CourseContentUXPage_Button_Search_ID_Locator));
             //Get property of serch button
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
                    CourseContentUXPage_SearchedActivityCount_XPath_Locator);
             }
             Logger.LogMethodExit("CourseContentUXPage", "GetActivityCountAfterSearch",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getActivityCount;
         }
 
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Perform Mouse Over on CMenu option of Activity
             Logger.LogMethodEntry("CourseContentUXPage", "PerformMouseOverOnCMenuOptionOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (userTypeEnum)
@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "PerformMouseOverOnCMenuOptionOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Master Library Checkbox
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnCmenuOptionsInContentLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the drop down option when it is visble
             base.WaitForElement(By.ClassName(CourseContentUXPageResource.
                 CourseContentUX_Page_Activity_Cmenu_Class_Locator));
@@ -255,7 +255,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnCmenuOptionsInContentLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -265,7 +265,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Master Library Checkbox
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnMasterLibraryCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Right Frame
@@ -286,7 +286,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnMasterLibraryCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -296,7 +296,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Button
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Content Window
@@ -321,7 +321,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -330,7 +330,7 @@ namespace Pegasus.Pages.UI_Pages
         private void HandlePegasusAlertWindow()
         {
             Logger.LogMethodEntry("CourseContentUXPage", "HandlePegasusAlertWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Alert Window
             base.SelectWindow(CourseContentUXPageResource.CourseContentUXPage_Pegasus_Window_Name);
             //Wait for the element
@@ -352,7 +352,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the Ok button
             base.ClickByJavaScriptExecutor(getOkBtnProperty);
             Logger.LogMethodExit("CourseContentUXPage", "HandlePegasusAlertWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -363,7 +363,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Wait for Master Library to Copy
             Logger.LogMethodEntry("CourseContentUXPage", "WaitMasterLibraryToGetInPrepareState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Stopwatch stopWatch = new Stopwatch();
@@ -403,7 +403,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "WaitMasterLibraryToGetInPrepareState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -413,7 +413,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Set the Course As Shown state
             Logger.LogMethodEntry("CourseContentUXPage", "SetTheCourseAsShownState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the course name element
             base.WaitForElement(By.XPath(CourseContentUXPageResource.
                 CourseContentUXPage_ContentTab_CourseName_Xpath_Locator));
@@ -442,7 +442,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the Show/Hide Cmenu option
             base.ClickByJavaScriptExecutor(getShowProperty);
             Logger.LogMethodExit("CourseContentUXPage", "SetTheCourseAsShownState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -453,7 +453,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Activity For 'CopyContent'
             Logger.LogMethodEntry("CourseContentUXPage", "SelectTheActivityForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {               
                 //Select Frame In Window
@@ -481,7 +481,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "SelectTheActivityForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -492,7 +492,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On The Asset CheckBox
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnTheAssetCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the total count of Activity
             base.WaitForElement(By.XPath(CourseContentUXPageResource.
                 CourseContentUXPage_SearchedActivityCount_XPath_Locator));
@@ -518,7 +518,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnTheAssetCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -530,7 +530,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Frame In Window
             Logger.LogMethodEntry("CourseContentUXPage", "SelectFrameInWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Window
@@ -545,7 +545,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "SelectFrameInWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -555,7 +555,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Gradebook Window In Course Home
             Logger.LogMethodEntry("CourseContentUXPage", "SelectGradebookWindowInCourseHome",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -571,7 +571,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "SelectGradebookWindowInCourseHome",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -582,7 +582,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On The Folder In Content Library
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnTheFolderInContentLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Frame
             this.SelectFrameInWindow(CourseContentUXPageResource.
                     CourseContentUXPage_CourseMaterials_Window_Title, CourseContentUXPageResource.
@@ -604,7 +604,7 @@ namespace Pegasus.Pages.UI_Pages
                     folderName)));
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnTheFolderInContentLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -616,7 +616,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Display of Activity in the My Course Frame
             Logger.LogMethodEntry("CourseContentUXPage", "GetAssetNameFromCourseContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getCopiedAssetName = string.Empty;
             try
@@ -648,7 +648,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "GetAssetNameFromCourseContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCopiedAssetName;
         }
 
@@ -659,7 +659,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Course Materails Option
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnAddCourseMaterialsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Right Frame
@@ -680,7 +680,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnAddCourseMaterialsOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -692,7 +692,7 @@ namespace Pegasus.Pages.UI_Pages
             //Close eText Presentation Window
             Logger.LogMethodEntry("CourseContentUXPage",
                 "CloseETextPresentationWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -706,7 +706,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseContentUXPage",
                 "CloseETextPresentationWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -716,7 +716,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click The ShowHide Status Option
             Logger.LogMethodEntry("CourseContentUXPage", "ClickTheShowHideStatusOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Right Frame
@@ -746,7 +746,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickTheShowHideStatusOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -757,7 +757,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click On Cmenu of Activity
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnCmenuofActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Right Frame
@@ -787,7 +787,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnCmenuofActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -800,7 +800,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Gets the Activity Name
             Logger.LogMethodEntry("CourseContentUXPage", "GetETextActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Activity Name Variable
             String getActivityName = null;
             Activity getActivity = Activity.Get(activityTypeEnum);
@@ -820,7 +820,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "GetETextActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 
@@ -831,7 +831,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click on MasterLibrary
             Logger.LogMethodEntry("CourseContentUXPage", "ClickonMasterLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Right Frame
@@ -854,7 +854,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickonMasterLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -865,7 +865,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Activity
             Logger.LogMethodEntry("CourseContentUXPage", "SelectActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getActivityname = string.Empty;
             try
@@ -904,7 +904,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "SelectActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -916,7 +916,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Gets the Activity Name
             Logger.LogMethodEntry("CourseContentUXPage", "GetActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Activity Name Variable
             string getActivityName = string.Empty;
             try
@@ -934,7 +934,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "GetActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 
@@ -945,7 +945,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify Copy State for Content in Mycourse Frame
             Logger.LogMethodEntry("CourseContentUXPage", "VerifyCopyStateforContentsinMycourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getCopyMessage = string.Empty;
             try
@@ -980,7 +980,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "VerifyCopyStateforContentsinMycourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -991,7 +991,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check Cmenu Option Present or not
             Logger.LogMethodEntry("CourseContentUXPage", "IsCmenuOptionofContentPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool getCmenuOptionStatus = false;
             string getCmenuText = string.Empty;
@@ -1028,7 +1028,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "IsCmenuOptionofContentPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCmenuOptionStatus;
         }
 
@@ -1039,7 +1039,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Search View Option
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnSearchViewOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Refersh the Current Page
@@ -1056,7 +1056,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnSearchViewOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1066,7 +1066,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Search View Button
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnSearchViewButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                 CourseContentUXPage_Button_Search_ID_Locator));
             //Get Search View Button property
@@ -1074,7 +1074,7 @@ namespace Pegasus.Pages.UI_Pages
                 CourseContentUXPageResource.CourseContentUXPage_Button_Search_ID_Locator);
             base.ClickByJavaScriptExecutor(getSearchViewButtonProperty);
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnSearchViewButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -1084,7 +1084,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Advanced Search Option
             Logger.LogMethodEntry("CourseContentUXPage", "ClickAdvanceSearchOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(CourseContentUXPageResource.
@@ -1100,7 +1100,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickAdvanceSearchOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1113,7 +1113,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Asset Name From My Course Tab
             Logger.LogMethodEntry("CourseContentUXPage",
                 "GetAssetNameFromMyCourseTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getAssetName = string.Empty;
             try
@@ -1143,7 +1143,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseContentUXPage",
                 "GetAssetNameFromMyCourseTab",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getAssetName;
         }
 
@@ -1154,7 +1154,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click The Activity ShowHide Cmenu Option In MyCourse Frame
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnTheActivityCmenuInMyCourseFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             { 
                 //Select Right Frame
@@ -1180,7 +1180,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnTheActivityCmenuInMyCourseFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1191,7 +1191,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click The Activity Cmenu Option In MyCourse Frame
             Logger.LogMethodEntry("CourseContentUXPage", "ClickTheCmenuOptionofActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 IWebElement getCmneuOption = base.GetWebElementPropertiesByPartialLinkText
@@ -1206,7 +1206,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickTheCmenuOptionofActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1217,7 +1217,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On ShowHide Cmenu Option In CourseSpace
             Logger.LogMethodEntry("CourseContentUXPage",
                 "ClickTheShowHideCmenuOptionInCourseSpace",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -1235,7 +1235,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseContentUXPage",
                 "ClickTheShowHideCmenuOptionInCourseSpace",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1245,7 +1245,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Activity Cmneu Image Icon
             Logger.LogMethodEntry("CourseContentUXPage", "ClickTheActivityCmneuImageIcon",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Right Frame
@@ -1277,7 +1277,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickTheActivityCmneuImageIcon",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1289,7 +1289,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Display Of Activity CmenuOptions
             Logger.LogMethodEntry("CourseContentUXPage", "GetDisplayOfActivityCmenuOptions",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Activity Cmenuoptions Variable
             string getDisplayOfActivityCmenuOptions = string.Empty;
             try
@@ -1313,7 +1313,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "GetDisplayOfActivityCmenuOptions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getDisplayOfActivityCmenuOptions;
         }
 
@@ -1324,7 +1324,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Remove Asset From Course Content
             Logger.LogMethodEntry("CourseContentUXPage", "RemoveAssetFromCourseContent",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Right Frame
@@ -1346,7 +1346,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "RemoveAssetFromCourseContent",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1355,7 +1355,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectAllAssetCheckBox()
         {
             Logger.LogMethodEntry("CourseContentUXPage", "SelectAllAssetCheckBox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                     CourseContentUXPage_SelectAll_CheckBox_Id_Locator));
             //Get All Asset CheckBox Property 
@@ -1364,7 +1364,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On All Asse Check Box
             base.ClickByJavaScriptExecutor(getAllAssetCheckBoxProperty);
             Logger.LogMethodExit("CourseContentUXPage", "SelectAllAssetCheckBox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1374,7 +1374,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Delete Option
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnDeleteOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                 CourseContentUXPage_DeleteOption_Id_Locator));
             //Get Delete Button Property
@@ -1382,7 +1382,7 @@ namespace Pegasus.Pages.UI_Pages
                 CourseContentUXPageResource.CourseContentUXPage_DeleteOption_Id_Locator);
             base.ClickByJavaScriptExecutor(getDeleteButtonOption);
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnDeleteOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1391,14 +1391,14 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectPegasusWindow()
         {
             Logger.LogMethodEntry("CourseContentUXPage", "SelectPegasusWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(CourseContentUXPageResource.
                 CourseContentUXPage_Pegasus_Window_Name);
             //Select Pegasus Window
             base.SelectWindow(CourseContentUXPageResource.
                 CourseContentUXPage_Pegasus_Window_Name);
             Logger.LogMethodExit("CourseContentUXPage", "SelectPegasusWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1407,7 +1407,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOkButton()
         {
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOkButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                 CourseContentUXPage_Ok_Button_Id_Locator));
             //Get Ok Button Property
@@ -1416,7 +1416,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Ok Button
             base.ClickByJavaScriptExecutor(getOkButtonProperty);
             Logger.LogMethodExit("CourseContentUXPage", "ClickOkButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1427,7 +1427,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search Activity In My Course Frame
             Logger.LogMethodEntry("CourseContentUXPage", "SearchActivityInMyCourseFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click On Search View Option
@@ -1442,7 +1442,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "SearchActivityInMyCourseFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1453,7 +1453,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill Asset Name In Text Box
             Logger.LogMethodEntry("CourseContentUXPage", "FillAssetNameInTextBox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                 CourseContentUXPage_InputSearch_Textbox_Id_Locator));
             // clear search box
@@ -1463,7 +1463,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(CourseContentUXPageResource.
                 CourseContentUXPage_InputSearch_Textbox_Id_Locator, assetName);
             Logger.LogMethodExit("CourseContentUXPage", "FillAssetNameInTextBox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1473,7 +1473,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Go Button
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnGoButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CourseContentUXPageResource.
                 CourseContentUXPage_Go_Button_Id_Locator));
             //Get Go Button Property
@@ -1482,7 +1482,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Go Button
             base.ClickByJavaScriptExecutor(getGoButtonProperty);
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnGoButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -1493,7 +1493,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click The Activity ShowHide Cmenu Option In MyCourse Frame
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnShowHideCmenuOptionforAssetInFireFox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Right Frame
@@ -1520,7 +1520,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnShowHideCmenuOptionforAssetInFireFox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1531,7 +1531,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On ShowHide Cmenu Option In CourseSpace
             Logger.LogMethodEntry("CourseContentUXPage",
                 "ClickTheShowHideCmenuOptionInFireFox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -1549,7 +1549,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseContentUXPage",
                 "ClickTheShowHideCmenuOptionInFireFox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1562,7 +1562,7 @@ namespace Pegasus.Pages.UI_Pages
             //Create The NonGradable Activity
             Logger.LogMethodEntry("CourseContentUXPage",
                 "CreateTheNonGradableActivity",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (activityTypeEnum)
@@ -1600,7 +1600,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseContentUXPage",
                 "CreateTheNonGradableActivity",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1612,7 +1612,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Content Order In My Course
             Logger.LogMethodEntry("CourseContentUXPage",
                 "GetContentOrderInMyCourse",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variables
             string getAssetText = string.Empty;
             string getAssetsName = string.Empty;
@@ -1639,7 +1639,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseContentUXPage",
                 "GetContentOrderInMyCourse",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
             return getAssetsName;
         }
 
@@ -1651,7 +1651,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On 'Add from Library' tab
             Logger.LogMethodEntry("CourseContentUXPage",
                "ClickOnAddFromLibraryTab",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.PartialLinkText(CourseContentUXPageResource.
                 CourseContentUXPage_AddfromLibrary_Tab_Name));
             //Get Tab Link Property
@@ -1662,7 +1662,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getTabNameProperty);
             Logger.LogMethodExit("CourseContentUXPage",
                "ClickOnAddFromLibraryTab",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1673,7 +1673,7 @@ namespace Pegasus.Pages.UI_Pages
             //Assign The Activity In CourseContent
             Logger.LogMethodEntry("CourseContentUXPage",
                "AssignTheActivityInCourseContent",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Right Frame
@@ -1704,7 +1704,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseContentUXPage",
                "AssignTheActivityInCourseContent",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1714,7 +1714,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("CourseContentUXPage",
                "SelectAndSwitchToMyCourseHome",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(CourseContentUXPageResource
@@ -1729,7 +1729,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseContentUXPage",
                 "SelectAndSwitchToMyCourseHome",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1740,7 +1740,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("CourseContentUXPage",
                 "SelectCheckboxOfAssets",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             if (assetCount <= 0) return;
             base.WaitForElement(By.Id(CourseContentUXPageResource
                 .CourseContentUXPage_Activity_Checkbox_Id_Locator));
@@ -1758,13 +1758,13 @@ namespace Pegasus.Pages.UI_Pages
 
             Logger.LogMethodExit("CourseContentUXPage",
                 "SelectCheckboxOfAssets",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         public bool IsButtonEnabled(MyCourseButtonType buttonType){
             Logger.LogMethodEntry("CourseContentUXPage",
                 "IsButtonEnabled",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
 
             string buttonID = this.GetButtonIDByButtonType(buttonType);
             if (buttonID == null) return false;
@@ -1779,14 +1779,14 @@ namespace Pegasus.Pages.UI_Pages
         {
              Logger.LogMethodEntry("CourseContentUXPage",
                 "ClickButtonOnHeader",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             this.ClickButtonByID(this
                 .GetButtonIDByButtonType(buttonType));
             Thread.Sleep(Convert.ToInt32(CourseContentUXPageResource
                 .CourseContentUXPage_ShowHide_Status_Time_Value));
             Logger.LogMethodExit("CourseContentUXPage",
                 "ClickButtonOnHeader",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1816,13 +1816,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("CourseContentUXPage",
                 "GetTextInShownToColumn",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
            return  base.GetElementTextByXPath(string.Format(CourseContentUXPageResource
                .CourseContentUXPage_Activity_ShownToColumn_Span_XPath_Locator
                ,activityID));
             Logger.LogMethodExit("CourseContentUXPage",
                 "GetTextInShownToColumn",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

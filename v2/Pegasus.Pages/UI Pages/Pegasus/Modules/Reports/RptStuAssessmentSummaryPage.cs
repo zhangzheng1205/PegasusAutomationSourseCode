@@ -23,7 +23,7 @@ namespace Pegasus.Pages.UI_Pages
        public string GetActivitySummaryReportData()
         {
             logger.LogMethodEntry("RptStuAssessmentSummaryPage", 
-                "GetActivitySummaryReportData",isTakeScreenShotDuringEntryExit);
+                "GetActivitySummaryReportData",IsTakeScreenShotDuringEntryExit);
             string Title = string.Empty;
             try{
                 //Wait for the Report Pop up
@@ -44,7 +44,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e) { ExceptionHandler.HandleException(e); }
             logger.LogMethodExit("RptStuAssessmentSummaryPage", 
-             "GetActivitySummaryReportData",isTakeScreenShotDuringEntryExit);
+             "GetActivitySummaryReportData",IsTakeScreenShotDuringEntryExit);
             return Title;
         }
 
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
        private string GetActivityName()
        {
            logger.LogMethodEntry("RptStuAssessmentSummaryPage", 
-               "GetActivityName",isTakeScreenShotDuringEntryExit);
+               "GetActivityName",IsTakeScreenShotDuringEntryExit);
            // Get "HomeWork" Text by Xpath
            string GetAssetTitle = base.GetElementTextByXPath(
                           RptStuAssessmentSummaryPageResource.
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
                }
            }
            logger.LogMethodExit("RptStuAssessmentSummaryPage", 
-               "GetActivityName",isTakeScreenShotDuringEntryExit);
+               "GetActivityName",IsTakeScreenShotDuringEntryExit);
            return GetAssetTitle;
        }
     }

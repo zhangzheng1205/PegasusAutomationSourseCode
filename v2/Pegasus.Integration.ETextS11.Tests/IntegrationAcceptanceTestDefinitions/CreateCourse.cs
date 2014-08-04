@@ -32,7 +32,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //To Verify The Course Search
             Logger.LogMethodEntry("CreateCourse", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course Name From InMemory
             Course course = Course.Get(courseTypeEnum);
             // Assert Course Search
@@ -40,7 +40,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(course.Name,
                     new ManageCoursesPage().GetSearchedCourse(courseTypeEnum)));
             Logger.LogMethodExit("CreateCourse", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,11 +54,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Creates a New Course
             Logger.LogMethodEntry("CreateCourse", "CreateNewCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Creates a new course of defined format
             new NewCoursePage().CreateNewCourse(courseTypeEnum, courseFormatOption);
             Logger.LogMethodExit("CreateCourse", "CreateNewCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Search Course in right frame
             Logger.LogMethodEntry("CreateCourse", "SearchTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course from Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -85,7 +85,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Select CourseEnrollement Window
             new ManageCoursesPage().SelectCourseEnrollementWindow();
             Logger.LogMethodExit("CreateCourse", "SearchTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>

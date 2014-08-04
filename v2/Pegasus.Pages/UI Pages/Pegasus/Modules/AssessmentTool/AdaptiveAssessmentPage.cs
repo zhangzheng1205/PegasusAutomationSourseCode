@@ -36,7 +36,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Validate Visibilty Questions Tab for Adaptive Activity
                 logger.LogMethodEntry("AdaptiveAssessmentPage",
                     "isQuestionsTabVisible",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
                 //Wait for the Window
                 base.WaitUntilWindowLoads(AdaptiveAssessmentResource.
                     AdaptiveAssessment_Page_WindowName);
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AdaptiveAssessmentPage",
                 "isQuestionsTabVisible",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isQuestionTabsDisplayed;
         }
     }

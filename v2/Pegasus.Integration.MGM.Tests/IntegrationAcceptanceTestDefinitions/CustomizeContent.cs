@@ -37,7 +37,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Customize the Content in Curriculum Tab
             Logger.LogMethodEntry("CustomizeContent", "CustomizeContentInCurriculumTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Activity Name From Memory By Activity ID
             Activity activity = Activity.Get(CommonStepsResource.
                 CommonSteps_DigitalPath_Activity_Test_UC1);
@@ -50,7 +50,7 @@ namespace Pegasus.Integration.MGM.Tests.
             //Close Customized Item Saved Window
             new CustomizeNotificationPage().CloseCustomizedItemSavedWindow();
             Logger.LogMethodExit("CustomizeContent", "CustomizeContentInCurriculumTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Customize the Content in Curriculum Tab
             Logger.LogMethodEntry("CustomizeContent", "CustomizeContentInCurriculumTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Activity Name From Memory by Activity ID
             Activity activity = Activity.Get(CommonStepsResource.
                 CommonSteps_DigitalPath_Activity_SkillStudyPlan_UC1);
@@ -78,7 +78,7 @@ namespace Pegasus.Integration.MGM.Tests.
             //Close Customized Item Saved Window
             new CustomizeNotificationPage().CloseCustomizedItemSavedWindow();
             Logger.LogMethodExit("CustomizeContent", "CustomizeContentInCurriculumTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Verify Successfull Message In Curriculum Tab.
@@ -90,7 +90,7 @@ namespace Pegasus.Integration.MGM.Tests.
             //Verify Successfull Message In Curriculum Tab
             Logger.LogMethodEntry("CustomizeContent",
                 "VerifySuccessfullMessageInCurriculumTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Display of Success Message
             Logger.LogAssertion("VerifySuccessfullMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -98,7 +98,7 @@ namespace Pegasus.Integration.MGM.Tests.
                     new ContentLibraryPage().GetSuccessMessage()));
             Logger.LogMethodExit("CustomizeContent", 
                 "VerifySuccessfullMessageInCurriculumTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -109,11 +109,11 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Click On The CustomContent Link
             Logger.LogMethodEntry("CustomizeContent", "ClickOnTheCustomContentLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Custom Content Link
             new ContentLibraryPage().ClickOnCustomContentLink();
             Logger.LogMethodExit("CustomizeContent", "ClickOnTheCustomContentLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Verify ML In CustomContent View
             Logger.LogMethodEntry("CustomizeContent", "VerifyMLInCustomContentView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get MasterLibrary From Memory
             Course course = Course.Get(Course.CourseTypeEnum.MasterLibrary);
             //Assert ML Name In Custom Content View
@@ -133,7 +133,7 @@ namespace Pegasus.Integration.MGM.Tests.
                 () => Assert.AreEqual(course.Name, new 
                     CustomContentPage().GetMasterLibraryName()));
             Logger.LogMethodExit("CustomizeContent", "VerifyMLInCustomContentView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,12 +145,12 @@ namespace Pegasus.Integration.MGM.Tests.
             //Click On Expand Button Of ML In The CustomContent View
             Logger.LogMethodEntry("CustomizeContent",
                 "ClickOnExpandButtonOfMLInTheCustomContentView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Expand Button of ML In CustomContent View
             new CustomContentPage().ClickOnExpandButtonofMLInCustomContentView();
             Logger.LogMethodExit("CustomizeContent",
                 "ClickOnExpandButtonOfMLInTheCustomContentView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace Pegasus.Integration.MGM.Tests.
             //Verify Customized Contents Of ML In Custom Content View
             Logger.LogMethodEntry("CustomizeContent", 
                 "VerifyCustomizedContentsOfMLInCustomContentView",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             switch (activityTypeEnum)
             {
                 case Activity.ActivityTypeEnum.Test:
@@ -188,7 +188,7 @@ namespace Pegasus.Integration.MGM.Tests.
                     break;
             }
             Logger.LogMethodExit("CustomizeContent", "VerifyCustomizedContentsOfMLInCustomContentView",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

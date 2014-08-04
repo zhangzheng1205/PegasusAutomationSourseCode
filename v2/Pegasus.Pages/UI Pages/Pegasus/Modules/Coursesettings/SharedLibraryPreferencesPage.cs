@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Sets 'Shared Libraries' Preferences
             logger.LogMethodEntry("SharedLibraryPreferencesPage", "SetSharedLibrariesPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on the Shared Library Link
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SharedLibraryPreferencesPage", "SetSharedLibrariesPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The Check Box And Associate The Master Library to Course
             logger.LogMethodEntry("SharedLibraryPreferencesPage",
                 "SelectTheCheckBoxAndAssociateTheMasterLibraryToCourse", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Frame leftSCLFrame
             base.WaitForElement(By.Id(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_Frame_SharedLibraries_Id_Locator));
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
                 SharedLibraryPreferencesPage_Image_AddMasterLibraryToCourse_Id_Locator);
             logger.LogMethodExit("SharedLibraryPreferencesPage",
                 "SelectTheCheckBoxAndAssociateTheMasterLibraryToCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search The Master Library
             logger.LogMethodEntry("SharedLibraryPreferencesPage","SearchTheMasterLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Main Frame
             new CourseCopyPreferencesPage().SelectTheMainPreferencesFrame();
             //Wait for the textbox
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickLinkById(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_Button_Search_Id_Locator);
             logger.LogMethodExit("SharedLibraryPreferencesPage", "SearchTheMasterLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Shared Libraries Link
             logger.LogMethodEntry("SharedLibraryPreferencesPage", "ClickOnSharedLibrariesLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Main Frame
             new CourseCopyPreferencesPage().SelectTheMainPreferencesFrame();
             //Click on the Shared Libraries link
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickLinkById(SharedLibraryPreferencesPageResource.
                 SharedLibraryPreferencesPage_SharedLibraries_Link_Id_Locator);
             logger.LogMethodExit("SharedLibraryPreferencesPage", "ClickOnSharedLibrariesLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 

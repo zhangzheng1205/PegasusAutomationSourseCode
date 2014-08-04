@@ -32,13 +32,13 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Default Preferences' Window
             logger.LogMethodEntry("LTIDefaultPreferencesPage",
                 "SelectLTIDefaultPreferencesWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select 'LTI Default Preferences' window
             base.WaitUntilWindowLoads(string.Empty);
             base.SelectWindow(string.Empty);
             logger.LogMethodExit("LTIDefaultPreferencesPage",
                "SelectLTIDefaultPreferencesWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The LTI Option.
             logger.LogMethodEntry("LTIDefaultPreferencesPage", "SelectTheLTIOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select 'LTI Default Preferences' Window
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("LTIDefaultPreferencesPage", "SelectTheLTIOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Option
             logger.LogMethodEntry("LTIDefaultPreferencesPage", "SelectTheOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Total options count
             int getTotalCount =
                 base.GetElementCountByXPath(LTIDefaultPreferencesPageResource.
@@ -107,7 +107,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("LTIDefaultPreferencesPage", "SelectTheOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //UnLock The Option If Locked
             logger.LogMethodEntry("LTIDefaultPreferencesPage", "UnLockTheOptionIfLocked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Lock status
             base.WaitForElement(By.XPath(String.Format(LTIDefaultPreferencesPageResource.
                 LTIDefaultPreferences_Page_LTIPreferences_Lock_Status_XPath_Locator,
@@ -139,7 +139,7 @@ namespace Pegasus.Pages.UI_Pages
                     LTIDefaultPreferences_Page_Sleep_TimeToWait_Value));
             }
             logger.LogMethodExit("LTIDefaultPreferencesPage", "UnLockTheOptionIfLocked",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the 'Apply to All' button
             logger.LogMethodEntry("LTIDefaultPreferencesPage",
-                "ClickOnApplyAllButton",base.isTakeScreenShotDuringEntryExit);
+                "ClickOnApplyAllButton",base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on the 'Apply to All' button
@@ -164,7 +164,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("LTIDefaultPreferencesPage",
-               "ClickOnApplyAllButton",base.isTakeScreenShotDuringEntryExit);
+               "ClickOnApplyAllButton",base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

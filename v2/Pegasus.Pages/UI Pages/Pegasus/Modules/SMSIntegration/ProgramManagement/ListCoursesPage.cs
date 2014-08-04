@@ -36,7 +36,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click CMenu option of Course
             Logger.LogMethodEntry("ListCoursesPage", "ClickCourseCMenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Browser
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ListCoursesPage", "ClickCourseCMenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click CMenu Option Name in FireFox Browser
             Logger.LogMethodEntry("ListCoursesPage", "ClickCourseCmenuInFireFox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(ListCoursesPageResource.
                 ListCourse_Page_Course_Grid_Id_Locator));
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
                 ListCourse_Page_CMenu_Image_XPath_Locator);
             base.ClickByJavaScriptExecutor(getCourseCmenu);            
             Logger.LogMethodExit("ListCoursesPage", "ClickCourseCmenuInFireFox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click CMenu Option Name in FireFox Browser
             Logger.LogMethodEntry("ListCoursesPage", "ClickCourseCmenuInInternetExplorer",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(ListCoursesPageResource.
                 ListCourse_Page_Course_Grid_Id_Locator));
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on CMenu Option
             base.ClickByJavaScriptExecutor(getCmenuImage);
             Logger.LogMethodExit("ListCoursesPage", "ClickCourseCmenuInInternetExplorer",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click CMenu Option Name in Chrome Browser
             Logger.LogMethodEntry("ListCoursesPage", "ClickCourseCmenuInChrome",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.Id(ListCoursesPageResource.
                 ListCourse_Page_Course_Grid_Id_Locator));
@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickImageByXPath(ListCoursesPageResource.
                 ListCourse_Page_CMenu_Image_XPath_Locator);
             Logger.LogMethodExit("ListCoursesPage", "ClickCourseCmenuInChrome",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Approved Course
             Logger.LogMethodEntry("ListCoursesPage", "SelectApprovedCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the Approved Course element
@@ -180,7 +180,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ListCoursesPage", "SelectApprovedCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Searched Course in Course Space
             Logger.LogMethodEntry("ListCoursesPage", "GetSearchedCourseNameInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Course Name Variable 
             String getcourseName = string.Empty;
             try
@@ -246,7 +246,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ListCoursesPage", "GetSearchedCourseNameInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getcourseName;
         }
     }

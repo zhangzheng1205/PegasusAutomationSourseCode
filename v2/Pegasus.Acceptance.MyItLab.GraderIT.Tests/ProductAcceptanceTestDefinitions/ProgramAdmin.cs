@@ -32,13 +32,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Create New Template
             Logger.LogMethodEntry("ProgramAdmin", "CreateNewTemplateAsTheProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Assert Create New Template 
             new ManageTemplatePage().CreatTemplate(course.Name);
             Logger.LogMethodExit("ProgramAdmin", "CreateNewTemplateAsTheProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,13 +50,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             Course.CourseTypeEnum courseTypeEnum)
         {
             Logger.LogMethodEntry("ProgramAdmin", "TemplateInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Verify Template in Active State
             new ManageTemplatePage().ApproveInActiveStateOfEntityInProgramAdministration(course.Name);
             Logger.LogMethodExit("ProgramAdmin", "TemplateInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             Course.CourseTypeEnum courseTypeEnum)
         {
             Logger.LogMethodEntry("ProgramAdmin", "ApproveAssignedToCopyStateForTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Assert Verify Template in Active State or not
@@ -78,7 +78,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
                 GetAssignToCopyStateText(course.Name).Contains(ProgramAdminResource.
                 ProgramAdmin_Page_AssignToCopyState_Text_Value)));
             Logger.LogMethodExit("ProgramAdmin", "ApproveAssignedToCopyStateForTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,11 +89,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Click on 'Add Sections' Link
             Logger.LogMethodEntry("ProgramAdmin", "ClickOnAddSectionsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Add New Sections Link
             new ManageTemplatePage().ClickOnAddNewSectionsLink();
             Logger.LogMethodExit("ProgramAdmin", "ClickOnAddSectionsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -106,11 +106,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Create New Section
             Logger.LogMethodEntry("ProgramAdmin", "CreateSectionAsProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create New Section 
             new AddNewSectionPage().CreateNewSection(courseTypeEnum);
             Logger.LogMethodExit("ProgramAdmin", "CreateSectionAsProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -123,14 +123,14 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Verify Section in Active State
             Logger.LogMethodEntry("ProgramAdmin", "SectionInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Approve Section in Active State
             new ManageTemplatePage().ApproveInActiveStateOfEntityInProgramAdministration(
                 course.SectionName);
             Logger.LogMethodExit("ProgramAdmin", "SectionInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

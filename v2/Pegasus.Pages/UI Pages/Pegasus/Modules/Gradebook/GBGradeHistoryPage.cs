@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Instructor Updated View Grade History NewScore
             Logger.LogMethodEntry("GBGradeHistoryPage", "GetInstructorUpdatedViewGradeHistoryNewScore",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
             string getViewGradeNewScoreValue = string.Empty;
             try
@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("GBGradeHistoryPage", "GetInstructorUpdatedViewGradeHistoryNewScore",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return getViewGradeNewScoreValue;
         }
 
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Instructor Updated View Grade History OldScore
           Logger.LogMethodEntry("GBGradeHistoryPage", "GetInstructorUpdatedViewGradeHistoryOldScore",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
             string getViewGradeOldScoreValue= string.Empty;
             try
@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
          Logger.LogMethodExit("GBGradeHistoryPage", "GetInstructorUpdatedViewGradeHistoryOldScore",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             return getViewGradeOldScoreValue;
         }
        
@@ -96,14 +96,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select View Grade History Window
             Logger.LogMethodEntry("GBGradeHistoryPage", "SelectViewGradeHistoryWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             base.WaitUntilWindowLoads(GBGradeHistoryPageResource.
                 GBGradeHistory_Page_Window_Name);
             base.SelectWindow(GBGradeHistoryPageResource.
                 GBGradeHistory_Page_Window_Name);
             Logger.LogMethodExit("GBGradeHistoryPage", "SelectViewGradeHistoryWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            // Get User RowCount
            Logger.LogMethodEntry("GBGradeHistoryPage", "GetUserRowCount",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
            //Initialize VariableVariable
            int userRowNumber = Convert.ToInt32(GBGradeHistoryPageResource.
                GBGradeHistory_Page_Initial_Count);
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
            Logger.LogMethodExit("GBGradeHistoryPage", "GetUserRowCount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
            return userRowNumber;
        }
     }

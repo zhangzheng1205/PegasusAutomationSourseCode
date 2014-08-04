@@ -25,7 +25,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Activity
             logger.LogMethodEntry("StudentExplorePage", "OpenActivityInPracticeTab",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Practice Window
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodEntry("StudentExplorePage", "OpenActivityInPracticeTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
         private void NavigateInsideActivityFolder()
         {
             logger.LogMethodEntry("StudentExplorePage", "NavigateInsideActivityFolder",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(StudentExplorePageResource.
                 StudentExplore_Page_ActivityFolder_Id_Locator));
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickLinkById(StudentExplorePageResource.
                 StudentExplore_Page_ActivityFolder_Id_Locator);
             logger.LogMethodExit("StudentExplorePage", "NavigateInsideActivityFolder",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -93,13 +93,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Window Title
             logger.LogMethodEntry("StudentExplorePage", "GetPracticeTabWindowTitle",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Page To Get Switched
             base.WaitUntilPageGetSwitchedSuccessfully(tabName);
             //Get Page Title
             string getWindowTitle = base.GetPageTitle;
             logger.LogMethodEntry("StudentExplorePage", "GetPracticeTabWindowTitle",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getWindowTitle;
         }
     }

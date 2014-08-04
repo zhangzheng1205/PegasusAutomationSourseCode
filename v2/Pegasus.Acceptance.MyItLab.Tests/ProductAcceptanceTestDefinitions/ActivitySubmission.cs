@@ -36,7 +36,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Submit The Activity
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             CalendarFramePage calendarFramePage = new CalendarFramePage();
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, behavioralModeEnum);
@@ -47,7 +47,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Submit SIM Activity
             new StudentPresentationPage().SubmitSIMActivity(activity.Name);
             Logger.LogMethodExit("ActivitySubmission", "SubmitTheActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify Sim Activity Submission In CourseMaterials
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifySimActivitySubmissionInCourseMaterials",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, behavioralModeEnum);
             // Assert Activity Submission
@@ -74,7 +74,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     GetStatusOfSubmittedActivityInCourseMaterial(activity.Name)));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifySimActivitySubmissionInCourseMaterials",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify Sim Activity Submission In Calendar
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifySimActivitySubmissionInCalendar",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, behavioralModeEnum);
             // Assert Activity Submission
@@ -101,7 +101,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     GetStatusOfSubmittedActivityInCalendar(activity.Name)));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifySimActivitySubmissionInCalendar",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Submit The StudyPlan Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "SubmitTheTrainingMaterialStudyPlanActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, behavioralModeEnum);
             //Submit SIM StudyPlan Activity
@@ -125,7 +125,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 SubmitTrainingMaterialSIMStudyPlanActivity(activity.Name);
             Logger.LogMethodExit("ActivitySubmission",
                 "SubmitTheTrainingMaterialStudyPlanActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Submit The StudyPlan Pretest Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "SubmitTheStudyPlanPretestActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, behavioralModeEnum);
             //Submit SIM StudyPlan Activity
@@ -149,7 +149,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 SubmitSIMStudyPlanPreTestActivity(activity.Name);
             Logger.LogMethodExit("ActivitySubmission",
                 "SubmitTheStudyPlanPretestActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Submit the Activity
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             StudentPresentationPage studentpresentationpage =
                 new StudentPresentationPage();
@@ -172,7 +172,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click On Feedback Icon
             studentpresentationpage.ClickOnFeedbackIcon();
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             // Verify Status Of The Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyStatusOfTheActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             // Assert Activity Submission
@@ -197,7 +197,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     GetStatusOfSubmittedActivityInCourseMaterial(activity.Name)));
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifyStatusOfTheActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             // Open The Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "OpenTheActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Select Window And Frame
@@ -220,7 +220,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 SelectActivityNameInCourseMaterialTab(activity.Name);
             Logger.LogMethodExit("ActivitySubmission",
                 "OpenTheActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Submit The Activity Save For Later.
             Logger.LogMethodEntry("ActivitySubmission",
                 "SubmitTheActivitySaveForLater",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             StudentPresentationPage studentpresentationpage =
                 new StudentPresentationPage();
@@ -244,7 +244,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             studentpresentationpage.ClickOnSaveForLater();
             Logger.LogMethodExit("ActivitySubmission",
                 "SubmitTheActivitySaveForLater",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -258,14 +258,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify Feedback Option In Presentation Page
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyFeedbackInPresentationPage",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             StudentPresentationPage studentpresentationpage = new StudentPresentationPage();
             Logger.LogAssertion("VerifyFeedbackInPresentationPage", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(feedBackOption,
                     studentpresentationpage.getFeedBackText()));
             Logger.LogMethodExit("ActivitySubmission", "VerifyFeedbackInPresentationPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -278,13 +278,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Close the Test Presentation Page
             Logger.LogMethodEntry("ActivitySubmission",
                 "CloseTheTestPresentationPage",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Click On Return To Course
             new StudentPresentationPage().ClickOnReturnToCourseInMyitlab();
             // select close button on the Test window
             new InstructionsPage().ClickTestCloseButton();
             Logger.LogMethodExit("ActivitySubmission", "CloseTheTestPresentationPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -297,7 +297,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify Feedback Text In Student Presentation Page
             Logger.LogMethodEntry("ActivitySubmission",
                 "VerifyFeedbackTextInStudentPresentationPage",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Assert to Verify Feedback Text In Student Presentation Page
             Logger.LogAssertion("VerifyFeedbackTextInPresentationPage", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.IsFalse(
@@ -307,7 +307,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 ActivitySubmission_Resource_Homework_Window_Name);
             Logger.LogMethodExit("ActivitySubmission",
                 "VerifyFeedbackTextInStudentPresentationPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -319,7 +319,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Submit The Manual Gradable Activity
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheManualGradableActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             StudentPresentationPage studentpresentationpage =
                 new StudentPresentationPage();
@@ -332,7 +332,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             // select close button on the Test window
             new InstructionsPage().ClickTestCloseButton();
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheManualGradableActivity",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -364,12 +364,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         public void ActivitySuccessfullyLaunchedInBrowserNormalMode()
         {
             Logger.LogMethodEntry("ActivitySubmission", "ActivitySuccessfullyLaunchedInBrowserNormalMode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify that control switches from SIM5 activity launch popup to the 'Course Materials' page
             new StudentPresentationPage().verifyWindowSwitching();
 
             Logger.LogMethodEntry("ActivitySubmission", "ActivitySuccessfullyLaunchedInBrowserNormalMode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -382,7 +382,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             // Open The Activity
             Logger.LogMethodEntry("ActivitySubmission",
             "OpenTheActivity",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Window And Frame
             new StudentPresentationPage().SelectWindowAndFrame();
             //wait for frame to load
@@ -390,7 +390,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
 
             //Click The Activity In CourseMaterial
             //new StudentPresentationPage().SelectActivityNameInCourseMaterialTab(activityName);
-            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivity", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivity", base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -401,7 +401,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify PastDue Message
             Logger.LogMethodEntry("ActivitySubmission",
             "VerifyMessageInActivityPresentationPage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
 
             Logger.LogAssertion("VerifyActivitySubmission", ScenarioContext.
             Current.ScenarioInfo.Title,
@@ -412,7 +412,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
 
             Logger.LogMethodExit("ActivitySubmission",
             "VerifyMessageInActivityPresentationPage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -423,7 +423,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Submit the Activity
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Created Class Object
             StudentPresentationPage studentpresentationpage =
                 new StudentPresentationPage();
@@ -439,7 +439,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click On Feedback Icon
             // studentpresentationpage.ClickOnFeedbackIcon();
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -477,7 +477,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Launching of Activity Presentation Window
             Logger.LogMethodEntry("ActivitySubmission",
                 "ActivitySuccessfullyLaunched"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Assert Launch Activity Window
             Logger.LogAssertion("VerifyActivityLaunched",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -485,7 +485,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     IsActivityPresentationPageOpened()));
             Logger.LogMethodExit("ActivitySubmission",
                 "ActivitySuccessfullyLaunched"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -498,7 +498,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Launching of Activity Presentation Window
             Logger.LogMethodEntry("ActivitySubmission",
                 "AttemptTheActivityForSaveforlater"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Select The Activity presentation window
             //new StudentPresentationPage().ClickStartButtonOnPresentationWindow(
             //    activityType);
@@ -508,7 +508,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             new StudentPresentationPage().AttemptActivityForSaveforlater();
             Logger.LogMethodExit("ActivitySubmission",
                 "AttemptTheActivityForSaveforlater"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -521,11 +521,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Selecting the submission list for displaying the message
             Logger.LogMethodEntry("ActivitySubmission",
                 "ClickOnSubmissionListForSaveforlater"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             new ViewSubmissionPage().SelectTheSubmissionFrame();
             Logger.LogMethodExit("ActivitySubmission",
                 "ClickOnSubmissionListForSaveforlater"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -537,14 +537,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Verify The SaveForLater Display Message
             Logger.LogMethodEntry("ActivitySubmission", "VerifyTheSaveForLaterDisplayMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify the InProgress Status
             Logger.LogAssertion("VerifySendMessageButton",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(messageText.Trim(), new ViewSubmissionPage().
                     GetSaveForLaterDisplayMessage().Trim()));
             Logger.LogMethodExit("ActivitySubmission", "VerifyTheSaveForLaterDisplayMessage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -558,7 +558,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Cmenu Of Asset 
             Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInGradebook",
-                  isTakeScreenShotDuringEntryExit);
+                  IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             ViewSubmissionPage objViewSubmissionPage = new ViewSubmissionPage();
@@ -567,7 +567,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum, AssetId);
             Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebook",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
         }
 
     }

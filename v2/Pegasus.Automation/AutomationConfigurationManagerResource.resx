@@ -150,6 +150,9 @@
   <data name="PEG_AUTOMATION_WSURL_Key" xml:space="preserve">
     <value>PEG_AUTOMATION_WSURL</value>
   </data>
+  <data name="PEG_DOWNLOAD_PATH_Key" xml:space="preserve">
+    <value>PEG_DOWNLOAD_PATH</value>
+  </data>
   <data name="PEG_SMSAdminURLRoot_Key" xml:space="preserve">
     <value>PEG_SMSAdminURLRoot</value>
   </data>

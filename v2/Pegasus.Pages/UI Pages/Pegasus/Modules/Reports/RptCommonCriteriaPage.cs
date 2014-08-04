@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             //Select The Students From LightBox
             logger.LogMethodEntry("RptCommonCriteriaPage",
                 "SelectTheStudentsFromLightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select The Report frame
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             }        
             logger.LogMethodExit("RptCommonCriteriaPage",
                 "SelectTheStudentsFromLightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
       
         /// <summary>
@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             //Click The Student CheckBox
             logger.LogMethodEntry("RptCommonCriteriaPage",
              "ClickTheStudentCheckBox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the expand button
             base.WaitForElement(By.XPath(RptCommonCriteriaPageResource.
                 RptCommonCriteria_Page_SelectStudent_Expandbtn_Xpath_Locator));
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             base.ClickByJavaScriptExecutor(getAddButton);
             logger.LogMethodExit("RptCommonCriteriaPage",
                "ClickTheStudentCheckBox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             //Select Report LightBox Frame
             logger.LogMethodEntry("RptCommonCriteriaPage",
               "SelectReportLightBoxFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             base.SelectWindow(RptCommonCriteriaPageResource.
                RptCommonCriteria_Page_Report_Window_Name); 
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 RptCommonCriteria_Page_SelectStudent_Iframe_Id_Locator);
             logger.LogMethodExit("RptCommonCriteriaPage",
                "SelectReportLightBoxFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         #region Mastery reports
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             //Select The Report frame
             logger.LogMethodEntry("RptCommonCriteriaPage",
                "SelectTheReportFrameForSkills",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(RptCommonCriteriaPageResource.
@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             }
             logger.LogMethodExit("RptCommonCriteriaPage",
                "SelectTheReportFrameForSkills",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             //Select The Report frame
             logger.LogMethodEntry("RptCommonCriteriaPage",
                "SelectStudentFrameForMastery",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(RptCommonCriteriaPageResource.
@@ -196,7 +196,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             }
             logger.LogMethodExit("RptCommonCriteriaPage",
                "SelectStudentFrameForMastery",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -206,7 +206,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         {
             //
             logger.LogMethodEntry("RptCommonCriteriaPage", "SelectSkillStdOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 this.SelectTheReportFrame();
@@ -220,7 +220,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptCommonCriteriaPage", "SelectSkillStdOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         {
             //Click the "Select Skills" button
             logger.LogMethodEntry("RptCommonCriteriaPage", "ClickSelectSkillButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.ClassName(RptCommonCriteriaPageResource.
                 RptCommonCriteria_Page_SelectSkills_Id_Locator));
             IWebElement getSkillsProperties = base.GetWebElementPropertiesByClassName
@@ -239,7 +239,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             Thread.Sleep(Convert.ToInt32(RptCommonCriteriaPageResource.
                     RptCommonCriteria_Page_RunReport_Button_TimeValue));
             logger.LogMethodExit("RptCommonCriteriaPage", "ClickSelectSkillButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         {
             //Select The Students From LightBox
             logger.LogMethodEntry("RptCommonCriteriaPage", "SelectTheSkillsFromLightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Report LightBox Frame
@@ -279,7 +279,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptCommonCriteriaPage", "SelectTheSkillsFromLightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -288,7 +288,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         private void SelectSkillsFromTreeview()
         {
             logger.LogMethodEntry("RptCommonCriteriaPage", "SelectSkillsFromTreeview",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the skills from tree view
             base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
                 RptCommonCriteria_Page_SelectSkills_Checkbox_Id_Locator));
@@ -299,7 +299,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             base.SelectCheckBoxById(RptCommonCriteriaPageResource.
                 RptCommonCriteria_Page_SelectSkills_Checkbox_Id_Locator);
             logger.LogMethodExit("RptCommonCriteriaPage", "SelectSkillsFromTreeview",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -308,7 +308,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         private void AddSkillsFromLeftToRight()
         {
             logger.LogMethodEntry("RptCommonCriteriaPage", "AddSkillsFromLeftToRight",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click the "Add" button
             base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
                 RptCommonCriteria_Page_SelectSkills_AddImage_Id_Locator));
@@ -319,7 +319,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
                     RptCommonCriteria_Page_CheckSkills_Checkbox_Id_Locator));
             logger.LogMethodExit("RptCommonCriteriaPage", "AddSkillsFromLeftToRight",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -328,7 +328,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         private void ClickUseSelectedSkills()
         {
             logger.LogMethodEntry("RptCommonCriteriaPage", "ClickUseSelectedSkills",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on "UseSelectedSkills" button
             base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
                RptCommonCriteria_Page_SelectSkills_UseSelectedSkills_Id_Locator));
@@ -337,7 +337,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                RptCommonCriteria_Page_SelectSkills_UseSelectedSkills_Id_Locator);
             base.ClickByJavaScriptExecutor(getSelectedSkillsProperties);
             logger.LogMethodExit("RptCommonCriteriaPage", "ClickUseSelectedSkills",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -348,7 +348,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             //Select The Students From LightBox
             logger.LogMethodEntry("RptCommonCriteriaPage",
                 "SelectTheStudentsForSkillsFromLightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 this.SelectTheReportFrame();
@@ -372,7 +372,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             }
             logger.LogMethodExit("RptCommonCriteriaPage",
                 "SelectTheStudentsForSkillsFromLightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -382,7 +382,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         {
             //Select The Students From LightBox
             logger.LogMethodEntry("RptCommonCriteriaPage",
-                "ClickStudentsForMasteryReports", base.isTakeScreenShotDuringEntryExit);
+                "ClickStudentsForMasteryReports", base.IsTakeScreenShotDuringEntryExit);
             //Click The "Select Students" Button
             base.WaitForElement(By.PartialLinkText(RptCommonCriteriaPageResource.
                 RptCommonCriteria_Page_SelectStudent_Button_Link_Locator));
@@ -391,7 +391,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 RptCommonCriteria_Page_SelectStudent_Button_Link_Locator);
             base.ClickByJavaScriptExecutor(getStudentProperties);
             logger.LogMethodExit("RptCommonCriteriaPage",
-                "ClickStudentsForMasteryReports", base.isTakeScreenShotDuringEntryExit);
+                "ClickStudentsForMasteryReports", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         {
 
             logger.LogMethodEntry("RptCommonCriteriaPage",
-                "SelectStudentsForMasteryReports", base.isTakeScreenShotDuringEntryExit);
+                "SelectStudentsForMasteryReports", base.IsTakeScreenShotDuringEntryExit);
             //Select All Studets Check Box
             base.WaitForElement(By.Id(RptCommonCriteriaPageResource.
                     RptCommonCriteria_Page_SelectStudentForMastery_CheckboxId_Locator));
@@ -418,7 +418,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             base.ClickByJavaScriptExecutor(addStudentForMastery);
 
             logger.LogMethodExit("RptCommonCriteriaPage",
-                "SelectStudentsForMasteryReports", base.isTakeScreenShotDuringEntryExit);
+                "SelectStudentsForMasteryReports", base.IsTakeScreenShotDuringEntryExit);
         }
 
         #endregion
@@ -431,7 +431,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             //Select The Report frame
             logger.LogMethodEntry("RptCommonCriteriaPage",
                "SelectTheReportFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Report Window
@@ -449,7 +449,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             }
              logger.LogMethodExit("RptCommonCriteriaPage",
                 "SelectTheReportFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -459,7 +459,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         {
             //Click Run Report
             logger.LogMethodEntry("RptCommonCriteriaPage","ClickRunReport",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -478,7 +478,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptCommonCriteriaPage","ClickRunReport",
-               base.isTakeScreenShotDuringEntryExit);            
+               base.IsTakeScreenShotDuringEntryExit);            
         }
     }
 }

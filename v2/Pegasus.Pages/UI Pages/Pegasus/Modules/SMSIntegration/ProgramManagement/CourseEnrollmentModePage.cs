@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Purpose: To Click Save Button to Enroll Course To Product
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-                "SelectEnrollmentMode", base.isTakeScreenShotDuringEntryExit);
+                "SelectEnrollmentMode", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseEnrollmentModePage",
-                "SelectEnrollmentMode", base.isTakeScreenShotDuringEntryExit);
+                "SelectEnrollmentMode", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Save Button
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-                "ClickEnrollmentSaveButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickEnrollmentSaveButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseEnrollmentModePage",
-                "ClickEnrollmentSaveButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickEnrollmentSaveButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-               "SelectEnrollmentModePopUpWindow", base.isTakeScreenShotDuringEntryExit);
+               "SelectEnrollmentModePopUpWindow", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Pop Up Window Load
             base.WaitUntilWindowLoads(CourseEnrollmentModePageResource.
               CourseEnrollmentMode_Page_EnrollmentMode_Window_Title_Name);
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(CourseEnrollmentModePageResource.
               CourseEnrollmentMode_Page_EnrollmentMode_Window_Title_Name);
             Logger.LogMethodExit("CourseEnrollmentModePage",
-               "SelectEnrollmentModePopUpWindow", base.isTakeScreenShotDuringEntryExit);
+               "SelectEnrollmentModePopUpWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill the productId and ResourceId
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-                 "CreateLicensing", base.isTakeScreenShotDuringEntryExit);
+                 "CreateLicensing", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Fill Rimba Product Id 
@@ -123,7 +123,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseEnrollmentModePage",
-                "CreateLicensing", base.isTakeScreenShotDuringEntryExit);
+                "CreateLicensing", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnterRumbaResourceId(int resourceId)
         {
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-             "EnterRumbaResourceId", base.isTakeScreenShotDuringEntryExit);
+             "EnterRumbaResourceId", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(CourseEnrollmentModePageResource.
                                      CourseEnrollmentMode_Page_RumbaResourceId_Textbox_Id_Locator));
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
                                      CourseEnrollmentMode_Page_RumbaResourceId_Textbox_Id_Locator,
                                  resourceId.ToString(CultureInfo.InvariantCulture));
             Logger.LogMethodExit("CourseEnrollmentModePage",
-             "EnterRumbaResourceId", base.isTakeScreenShotDuringEntryExit);
+             "EnterRumbaResourceId", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Product Id
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-        "EnterRumbaProductId", base.isTakeScreenShotDuringEntryExit);
+        "EnterRumbaProductId", base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(CourseEnrollmentModePageResource.
                                           CourseEnrollmentMode_Page_RumbaProductId_Textbox_Id_Locator));
@@ -162,7 +162,7 @@ namespace Pegasus.Pages.UI_Pages
                                      CourseEnrollmentMode_Page_RumbaProductId_Textbox_Id_Locator,
                                  productId.ToString(CultureInfo.InvariantCulture));
             Logger.LogMethodExit("CourseEnrollmentModePage",
-                "EnterRumbaProductId", base.isTakeScreenShotDuringEntryExit);
+                "EnterRumbaProductId", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Product Id
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-        "SelectDeliveryPreference", base.isTakeScreenShotDuringEntryExit);
+        "SelectDeliveryPreference", base.IsTakeScreenShotDuringEntryExit);
             switch (deliveryModeTypeEnum)
             {
                 case DeliveryModeTypeEnum.eCollege:
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Enter Product Id
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-        "SelectDeliveryPreference", base.isTakeScreenShotDuringEntryExit);
+        "SelectDeliveryPreference", base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -200,7 +200,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Integration Point Id
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-                "GetECollegeTpiIntegrationPointId", base.isTakeScreenShotDuringEntryExit);
+                "GetECollegeTpiIntegrationPointId", base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectEditEnrollmentModePopUpWindow();
             //Wait For Element
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
             String getECollegeIntegrationPoint = base.GetElementTextById(CourseEnrollmentModePageResource.
                                                                              CourseEnrollmentMode_Page_eCollege_IntegrationPoint_Id_Locator);
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-                "GetECollegeTpiIntegrationPointId", base.isTakeScreenShotDuringEntryExit);
+                "GetECollegeTpiIntegrationPointId", base.IsTakeScreenShotDuringEntryExit);
             return getECollegeIntegrationPoint;
         }
 
@@ -221,7 +221,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-               "SelectEditEnrollmentModePopUpWindow", base.isTakeScreenShotDuringEntryExit);
+               "SelectEditEnrollmentModePopUpWindow", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Pop Up Window Load
             base.WaitUntilWindowLoads(CourseEnrollmentModePageResource.
               CourseEnrollmentMode_Page_EditEnrollmentMode_Window_Title_Name);
@@ -229,7 +229,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(CourseEnrollmentModePageResource.
               CourseEnrollmentMode_Page_EditEnrollmentMode_Window_Title_Name);
             Logger.LogMethodExit("CourseEnrollmentModePage",
-               "SelectEditEnrollmentModePopUpWindow", base.isTakeScreenShotDuringEntryExit);
+               "SelectEditEnrollmentModePopUpWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -238,7 +238,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickCancelButton()
         {
             Logger.LogMethodEntry("CourseEnrollmentModePage",
-               "ClickCancelButton", base.isTakeScreenShotDuringEntryExit);
+               "ClickCancelButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -253,7 +253,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseEnrollmentModePage",
-               "ClickCancelButton", base.isTakeScreenShotDuringEntryExit);
+               "ClickCancelButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -264,7 +264,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select CCNGIntegration PointID Checkbox
             Logger.LogMethodEntry("CourseEnrollmentModePage",
                 "SelectCCNGIntegrationPointIDCheckbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -282,7 +282,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseEnrollmentModePage",
               "SelectCCNGIntegrationPointIDCheckbox", 
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -293,7 +293,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable Hide In Catalog Preference
             Logger.LogMethodEntry("CourseEnrollmentModePage",
                 "EnableHideInCatalogPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -331,7 +331,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseEnrollmentModePage",
               "EnableHideInCatalogPreference",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -342,7 +342,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Pegasus Window
             Logger.LogMethodEntry("CourseEnrollmentModePage",
                 "SelectPegasusWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.WaitUntilWindowLoads(CourseEnrollmentModePageResource.
                 CourseEnrollmentMode_Page_Pegasus_Window_Name);
@@ -350,7 +350,7 @@ namespace Pegasus.Pages.UI_Pages
                 CourseEnrollmentMode_Page_Pegasus_Window_Name);
             Logger.LogMethodExit("CourseEnrollmentModePage",
               "SelectPegasusWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

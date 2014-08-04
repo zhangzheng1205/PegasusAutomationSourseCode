@@ -33,7 +33,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
             //Verify The Display Of Activity In View All Content
             Logger.LogMethodEntry("CopyContent",
                 "VerifyTheDisplayOfActivityInViewAllContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Verify the status activity
@@ -43,7 +43,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                    GetDisplayOfActivityNameInViewAllContent(activity.Name)));
             Logger.LogMethodExit("CopyContent",
                 "VerifyTheDisplayOfActivityInViewAllContent",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

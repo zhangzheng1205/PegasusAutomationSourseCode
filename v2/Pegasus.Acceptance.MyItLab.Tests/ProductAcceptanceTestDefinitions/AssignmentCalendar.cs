@@ -28,11 +28,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On View Advanced Calendar
             Logger.LogMethodEntry("AssignmentCalendar", "ClickViewAdvancedCalendar",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on View Advanced Calendar
             new CalendarHEDDefaultUXPage().ClickOnViewAdvancedCalendar();
             Logger.LogMethodExit("AssignmentCalendar", "ClickViewAdvancedCalendar",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -43,11 +43,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select Current Date
             Logger.LogMethodEntry("AssignmentCalendar", "SelectCurrentDate",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Current Date
             new CalendarHEDDefaultUXPage().SelectCurrentDateFromCalendar();
             Logger.LogMethodExit("AssignmentCalendar", "SelectCurrentDate",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify AssignCourseMaterials And DayWeekMonth option
             Logger.LogMethodEntry("AssignmentCalendar", "VerifyAddCourseMaterialsAndDayWeekMonth",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify Assign Course Materials
             Logger.LogAssertion("VerifyAssignCourseMaterials",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -77,7 +77,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("VerifyAddNote", ScenarioContext.Current.ScenarioInfo.Title, () =>
                 Assert.AreEqual(addNoteoption, new CalendarHEDDefaultUXPage().GetAddNoteText()));
             Logger.LogMethodExit("AssignmentCalendar", "VerifyAddCourseMaterialsAndDayWeekMonth",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify Assign Message
             Logger.LogMethodEntry("AssignmentCalendar", "VerifyAssignMessage",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Verify Assign Count Message
             Logger.LogAssertion("VerifyAssignCountMessage",
                ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -102,7 +102,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                Assert.AreEqual(assignTextMessage,
                new CalendarHEDDefaultUXPage().getAssignedTextInCalendarFrame()));
             Logger.LogMethodExit("AssignmentCalendar", "VerifyAssignMessage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -117,13 +117,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Search the Activity
             Logger.LogMethodEntry("AssignmentCalendar", "SearchActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
             //Search the Activity            
             new CalendarHEDDefaultUXPage().SearchTheActivity(activity.Name);
             Logger.LogMethodExit("AssignmentCalendar", "SearchActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Display Of Searched Activity
             Logger.LogMethodEntry("AssignmentCalendar",
                 "DisplayOfSearchedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity =
                 Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
@@ -151,7 +151,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 GetSearchedActivityName()));
             Logger.LogMethodExit("AssignmentCalendar",
                 "DisplayOfSearchedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //'Drag And Drop' The Activity On Current Day
             Logger.LogMethodEntry("AssignmentCalendar",
                 "DragAndDropTheActivityOnCurrentDay",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity =
                 Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
@@ -175,7 +175,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             new CalendarHEDDefaultUXPage().DragAndDropActivity(activity.Name);
             Logger.LogMethodExit("AssignmentCalendar",
                 "DragAndDropTheActivityOnCurrentDay",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Display Of Assigned Activity On Current Day
             Logger.LogMethodEntry("AssignmentCalendar",
                 "DisplayOfAssignedActivityInDayView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
             //Assert the Assigned Activity            
@@ -201,7 +201,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     GetAssignedActivityNameOnCurrentDay(activity.Name), activity.Name));
             Logger.LogMethodExit("AssignmentCalendar",
                 "DisplayOfAssignedActivityInDayView",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -213,7 +213,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify Assigned Content Count
             Logger.LogMethodEntry("AssignmentCalendar", "VerifyAssignedContentCount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter Inside Day View
             new CalendarHEDDefaultUXPage().EnterTheDayViewForAssignedActivity();
             //Verify Assign Count Message
@@ -222,7 +222,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                Assert.AreEqual(assignedContentCountMessage,
                new CalendarHEDDefaultUXPage().getAssignedCountwithText()));
             Logger.LogMethodExit("AssignmentCalendar", "VerifyAssignedContentCount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -234,14 +234,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify The Status Of Assigned Content In Status Column
             Logger.LogMethodEntry("AssignmentCalendar",
                 "VerifyTheStatusOfAssignedContentInStatusColumn",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert the Display Of status of assigned content
             Logger.LogAssertion("VerifyTheStatusOfAssignedContent",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue(
                     new CalendarHEDDefaultUXPage().IsActivityDueDateStatusPresent()));
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyTheStatusOfAssignedContentInStatusColumn",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -253,12 +253,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click On Calendar Icon
             Logger.LogMethodEntry("AssignmentCalendar",
                 "ClickOnCalendarIcon",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On Calendar Icon
             new CalendarHEDDefaultUXPage().ClickOnCalendarIcon();
             Logger.LogMethodExit("AssignmentCalendar",
                 "ClickOnCalendarIcon",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -270,12 +270,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Select Cmenu Option 'Set Scheduling Options' Of Content
             Logger.LogMethodEntry("AssignmentCalendar",
                 "SelectSetSchedulingOptionsCmenuOfContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Cmenu Option 'Set Scheduling Options' Of Content
             new CalendarHEDDefaultUXPage().SelectSetSchedulingOptionsCmenu();
             Logger.LogMethodExit("AssignmentCalendar",
                 "SelectSetSchedulingOptionsCmenuOfContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -287,7 +287,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify The Due Date Of Assigned Content
             Logger.LogMethodEntry("AssignmentCalendar",
                 "VerifyTheDueDateOfAssignedContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Current Date
             string currentDate = DateTime.Now.ToString(AssignmentCalendarResource.
                 AssignmentCalendar_Resource_Date_Format);
@@ -297,7 +297,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     new AssignContentPage().GetDueDateOfAssignedContent()));
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyTheDueDateOfAssignedContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -309,11 +309,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select Option In View By Dropdown
             Logger.LogMethodEntry("AssignmentCalendar", "SelectOptionInViewByDropdown",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Option In 'View By' Dropdown
             new CalendarDefaultUXPage().SelectViewByDropdownOption(dropdownOption);
             Logger.LogMethodExit("AssignmentCalendar", "SelectOptionInViewByDropdown",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -325,7 +325,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify Contents Order In The Content Frame
             Logger.LogMethodEntry("AssignmentCalendar",
                 "VerifyContentsOrderInTheContentFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify Contents Order In The Content Frame
             Logger.LogAssertion("VerifyContentsInContentFrame",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -333,7 +333,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     new CourseContentUXPage().GetContentOrderInMyCourse()));
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyContentsOrderInTheContentFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -346,7 +346,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Select The ContentType From ShowDropdown
             Logger.LogMethodEntry("AssignmentCalendar",
                 "SelectTheContentTypeFromShowDropdown",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select The ContentType From ShowDropdown
             new CalendarHEDDefaultUXPage().SelectTheContentTypeFromShowDropdown((
                 CalendarHEDDefaultUXPage.ShowDropdownTypeEnum)Enum.Parse
@@ -354,7 +354,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 showContentType));
             Logger.LogMethodExit("AssignmentCalendar",
                 "SelectTheContentTypeFromShowDropdown",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -366,7 +366,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify Contents In The Calendar Frame
             Logger.LogMethodEntry("AssignmentCalendar",
                 "VerifyTheContentsInCaledarFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify Contents Order In The Content Frame
             Logger.LogAssertion("VerifyContentsInContentFrame",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -375,7 +375,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     new CourseContentUXPage().GetContentOrderInMyCourse()));
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyTheContentsInCaledarFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -387,7 +387,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify The Assigned Contents In The Calendar Frame
             Logger.LogMethodEntry("AssignmentCalendar",
                   "VerifyTheAssignedContentsInCaledarFrame",
-                           base.isTakeScreenShotDuringEntryExit);
+                           base.IsTakeScreenShotDuringEntryExit);
             //Fetch the dat from memory
             Activity activity = Activity.Get(
                 Activity.ActivityTypeEnum.SIMStudyPlan2010,
@@ -399,7 +399,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                                   GetAssetNameInCalendar(activity.Name)));
             Logger.LogMethodExit("AssignmentCalendar",
                   "VerifyTheAssignedContentsInCaledarFrame",
-                           base.isTakeScreenShotDuringEntryExit);
+                           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -411,7 +411,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             // Verify The Instructor Graded Contents In CaledarFrame
             Logger.LogMethodEntry("AssignmentCalendar",
                   "VerifyTheInstructorGradedContentsInCaledarFrame",
-                           base.isTakeScreenShotDuringEntryExit);
+                           base.IsTakeScreenShotDuringEntryExit);
             //Fetch the dat from memory
             Activity activity = Activity.Get(
                 Activity.ActivityTypeEnum.HomeWork);
@@ -422,7 +422,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                                   GetAssetNameInCalendar(activity.Name)));
             Logger.LogMethodExit("AssignmentCalendar",
                   "VerifyTheInstructorGradedContentsInCaledarFrame",
-                           base.isTakeScreenShotDuringEntryExit);
+                           base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

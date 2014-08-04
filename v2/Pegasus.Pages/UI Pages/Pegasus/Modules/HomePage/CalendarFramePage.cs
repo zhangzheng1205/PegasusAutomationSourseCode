@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify Calendar Icon
             logger.LogMethodEntry("CalendarFramePage", "IsCalendarIconPresent",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isCalendarIconPresent = false;
             try
@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarFramePage", "IsCalendarIconPresent",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return isCalendarIconPresent;
         }
 
@@ -57,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Overview Window and Frame
             logger.LogMethodEntry("CalendarFramePage", "SelectOverviewWindowandFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Overview Window
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarFramePage", "SelectOverviewWindowandFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Materials Window and Frame
             logger.LogMethodEntry("CalendarFramePage", "CoursematerialsWindowandFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Course Materials Window
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarFramePage", "CoursematerialsWindowandFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Calendar Icon
             logger.LogMethodEntry("CalendarFramePage", "ClickOnCalendarIcon",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {               
                 //Wait for Icon
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarFramePage", "ClickOnCalendarIcon",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window And Frame            
             logger.LogMethodEntry("CalendarFramePage", "SelectWindowAndFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(CalendarFramePageResource.
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarFramePage", "SelectWindowAndFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

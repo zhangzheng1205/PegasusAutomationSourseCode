@@ -28,13 +28,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Preference settings For Copy Content
             Logger.LogMethodEntry("Preferences",
                 "SetThePreferencesForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Set The Preferences For Copy Content
             new CourseCopyPreferencesPage().
                 SetCopyContentPreference();
             Logger.LogMethodExit("Preferences",
                 "SetThePreferencesForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -46,12 +46,12 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             // Select the preference sub tab
             Logger.LogMethodEntry("Preferences", "ClickOnPreferenceSubTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             // Navigating to given prefernce tab options from preference page
             new GeneralPreferencesPage().ClickonSubTabofPreference(subTabName);
             // Select the preference sub tab
             Logger.LogMethodExit("Preferences", "ClickOnPreferenceSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -63,12 +63,12 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Enable Necessary General Preference Settings
             Logger.LogMethodEntry("Preference",
                 "EnableNecessaryGeneralPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable General Preference Settings
             new GeneralPreferencesPage().EnableGeneralPreferenceSettings();
             Logger.LogMethodExit("Preference",
                 "EnableNecessaryGeneralPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -80,12 +80,12 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Enable Necessary Catalog Preference Settings
             Logger.LogMethodEntry("Preference",
                 "EnableNecessaryCatalogPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable Catalog Preference Settings
             new CatalogPreferencesPage().EnableCatalogPreferenceSettings();
             Logger.LogMethodExit("Preference",
                 "EnableNecessaryCatalogPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -97,13 +97,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Disable 'Hide MyCourse Materials on Creation' Preference
             Logger.LogMethodEntry("Preference",
                 "DisableHideMyCourseMaterialsonCreationPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Disable 'Hide MyCourse Materials on Creation' Preference
             new CourseMaterialPreferencePage().
                 DisableHideMyCourseMaterialsPreference();
             Logger.LogMethodExit("Preference",
                 "DisableHideMyCourseMaterialsonCreationPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Enable Necessary Grades Preference Settings
             Logger.LogMethodEntry("Preference",
                 "EnableNecessaryGradingPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Declare object
             GradingPreferencesPage gradePreferencesPage =
                 new GradingPreferencesPage();
@@ -129,7 +129,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             new GeneralPreferencesPage().SavePreferences();
             Logger.LogMethodExit("Preference",
                 "EnableNecessaryGradingPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -140,11 +140,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Enable 'Enable SIM5 Questions' Preference
             Logger.LogMethodEntry("Preference", "EnableSIM5QuestionsPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable 'Enable SIM5 Questions' Preference
             new QuestionsPreferencesPage().EnableSIM5QuestionsPreference();
             Logger.LogMethodExit("Preference", "EnableSIM5QuestionsPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -156,12 +156,12 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Enable 'Grader Project' Question Type Preference
             Logger.LogMethodEntry("Preference",
                 "EnableGraderProjectQuestionTypePreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable 'Grader Project' Question Type Preference
             new QuestionsPreferencesPage().EnableGraderProjectQuestionTypePreference();
             Logger.LogMethodExit("Preference",
                 "EnableGraderProjectQuestionTypePreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -175,13 +175,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //automatically for Grader projects' Preference
             Logger.LogMethodEntry("Preference",
                 "EnableDisplayIntegrityDetectionPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable 'Display Integrity detection to students
             //automatically for Grader projects' Preference
             new GradingPreferencesPage().EnableDisplayIntegrityDetectionPreference();
             Logger.LogMethodExit("Preference",
                 "EnableDisplayIntegrityDetectionPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }        
     }
 }

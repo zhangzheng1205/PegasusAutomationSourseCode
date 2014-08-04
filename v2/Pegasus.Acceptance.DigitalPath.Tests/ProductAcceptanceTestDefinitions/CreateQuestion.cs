@@ -32,11 +32,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Imports the MGM Cartridge
             Logger.LogMethodEntry("CreateQuestion", "ImportTheMGMCartridge", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Uploads the MGM cartridge Zip file
             new ImportCartridgePage().ImportMGMCartridge();
             Logger.LogMethodExit("CreateQuestion", "ImportTheMGMCartridge",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,13 +48,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verifies the MGM Activity Name
             Logger.LogMethodEntry("CreateQuestion", "DisplayOfActivityInContentLibraryFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Asserts the Activity Name
             Logger.LogAssertion("VerifyActivityName", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(CreateQuestionResource.CreateQuestionResource_Activity_Name,
                     new ContentLibraryUXPage().GetAndStoreMGMTestActivity(activityName)));
             Logger.LogMethodExit("CreateQuestion", "DisplayOfActivityInContentLibraryFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

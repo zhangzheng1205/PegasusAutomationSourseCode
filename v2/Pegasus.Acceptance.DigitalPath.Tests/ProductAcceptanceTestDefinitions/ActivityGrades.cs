@@ -33,7 +33,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify The Grade In View Submission Page  
             Logger.LogMethodEntry("ActivityGrades",
                 "VerifyTheGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for score
             Logger.LogAssertion("VerifyTheScore", ScenarioContext.
                 Current.ScenarioInfo.Title, () =>
@@ -42,7 +42,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                  new ViewSubmissionPage().GetScoreResultInViewSubmissionPage()));           
             Logger.LogMethodExit("ActivityGrades",
                 "VerifyTheGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify The Grade In GradeBook Page
             Logger.LogMethodEntry("ActivityGrades",
                 "VerifyTheGradeInGradeBookPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Grade
             Logger.LogAssertion("VerifyTheScore", ScenarioContext.
                 Current.ScenarioInfo.Title, () =>
@@ -66,7 +66,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                  GetScoreResultInGradeBookPage(assetTypeEnum)));
             Logger.LogMethodExit("ActivityGrades",
                 "VerifyTheGradeInGradeBookPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -80,13 +80,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
            //Click On The Grades Tab Cmenu Option  
            Logger.LogMethodEntry("ActivityGrades",
                "ClickOnTheGradesTabCmenuOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            //Click The Grades Tab Cmenu Option          
            new ViewSubmissionPage().
                ClickTheGradesTabCmenuOption(activityTypeEnum);
            Logger.LogMethodExit("ActivityGrades",
                "ClickOnTheGradesTabCmenuOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
        
         /// <summary>
@@ -99,12 +99,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
        {
            // Check The Assets Name In Grades Tab
            Logger.LogMethodEntry("ActivityGrades","CheckTheAssetsNameInGradesTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            //Check The Asset Name Contains In Grades Tab       
            new ViewSubmissionPage().
                CheckTheAssetNameContainsInGradesTab(activityTypeEnum);
            Logger.LogMethodExit("ActivityGrades","CheckTheAssetsNameInGradesTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
         /// <summary>
@@ -118,13 +118,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Open The StudyPaln Activity In Grades Tab
             Logger.LogMethodEntry("ActivityGrades", 
                 "OpenTheStudyPalnActivityInGradesTab",
-               isTakeScreenShotDuringEntryExit);
+               IsTakeScreenShotDuringEntryExit);
             //Check The Asset Name Contains In Grades Tab       
             new ViewSubmissionPage().
                 CheckTheAssetNameContainsInGradesTab(activityTypeEnum);
             Logger.LogMethodExit("ActivityGrades", 
                 "OpenTheStudyPalnActivityInGradesTab",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

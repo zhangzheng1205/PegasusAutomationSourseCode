@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
         public BrowsePegasusUserURL(User.UserTypeEnum userTypeEnum)
         {
             Logger.LogMethodEntry("LoginPage", "BrowsePegasusUserURL",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (userTypeEnum)
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("Login", "BrowsePegasusUserURL", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("Login", "BrowsePegasusUserURL", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -244,7 +244,7 @@ namespace Pegasus.Pages.UI_Pages
         public void GoToLoginUrl()
         {
             Logger.LogMethodEntry("LoginPage", "GoToLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get Url Successfully Browsed
@@ -263,7 +263,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LoginPage", "GoToLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -277,7 +277,7 @@ namespace Pegasus.Pages.UI_Pages
             PegasusLoginSpace loginSpace, User.UserTypeEnum userTypeEnum)
         {
             //User Login
-            Logger.LogMethodEntry("LoginPage", "Authenticate", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("LoginPage", "Authenticate", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //First we try to login into the application
@@ -293,7 +293,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LoginPage", " Authenticate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -331,7 +331,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Handling First Login Attempt by User
             Logger.LogMethodEntry("LoginPage", "HandleUsersFirstLoginAttempt",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (loginSpace)
             {
                 // Purpose: Login with Ws Teacher for First Time
@@ -354,7 +354,7 @@ namespace Pegasus.Pages.UI_Pages
                 user.Password = LoginPageResource.Login_Page_NewPasswordOfUser_Value;
             }
             Logger.LogMethodExit("LoginPage", "HandleUsersFirstLoginAttempt",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -370,7 +370,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Handling First Time User in CS
             Logger.LogMethodEntry("LoginPage", "HandleFirstTimeLoginAttemptForCoursepsace"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             // This check is to handle DP course space promoted admin login
             if (userType.Equals(User.UserTypeEnum.DPCourseSpacePramotedAdmin))
             {
@@ -404,7 +404,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             Logger.LogMethodExit("LoginPage", "HandleFirstTimeLoginAttemptForCoursepsace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -420,12 +420,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Handling First Time User Login
             Logger.LogMethodEntry("LoginPage", "HandleFirstTimeLoginAttemptForWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Handling Reset Password
             ResetPasswordForWorkSpaceUser(userName, existingPassword,
                 newPassword, userType);
             Logger.LogMethodExit("LoginPage", "HandleFirstTimeLoginAttemptForWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -440,7 +440,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Reset Password For WS User
             Logger.LogMethodEntry("LoginPage", "ResetPasswordForWorkSpaceUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_CurrentPassword_Textbox_Locator));
             //Insert Old Password
@@ -470,7 +470,7 @@ namespace Pegasus.Pages.UI_Pages
                 Authenticate(userName, newPassword, userType);
             }
             Logger.LogMethodExit("LoginPage", "ResetPasswordForWorkSpaceUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -483,7 +483,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Reset Password Details For First Time by CS Admin
             Logger.LogMethodEntry("LoginPage", "ResetPasswordForCourseSpaceUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_NewPassword_Textbox_Id_Locator));
             //Insert Existing Password
@@ -501,7 +501,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByClassName(LoginPageResource.
                 Login_Page_Next_Button_Class_Locator);
             Logger.LogMethodExit("LoginPage", "ResetPasswordForCourseSpaceUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -511,7 +511,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Handling User Consent Page
             Logger.LogMethodEntry("LoginPage", "HandleUserConsentAction",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(LoginPageResource.LoginPage_Consent_Window_Title);
             //Wait For Element
@@ -531,7 +531,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click Next Button 
             base.ClickByJavaScriptExecutor(getNextButtonProperty);
             Logger.LogMethodExit("LoginPage", "HandleUserConsentAction",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -549,7 +549,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Authenticate User Login
             Logger.LogMethodEntry("LoginPage", "Authenticate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             const int count = 0;
             //Initialize Variable
             bool isLoginSuccessful = false;
@@ -578,7 +578,7 @@ namespace Pegasus.Pages.UI_Pages
                     userType, count, isLoginSuccessful);
             }
             Logger.LogMethodExit("LoginPage", "Authenticate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
 
@@ -595,7 +595,7 @@ namespace Pegasus.Pages.UI_Pages
             User.UserTypeEnum userTypeEnum, int count, bool isLoginSuccessful)
         {
             Logger.LogMethodEntry("LoginPage", "DefaultUserLoginAuthentication",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Clear and Enter Password   
             base.ClearTextById(LoginPageResource.
                          Login_Page_Password_TextBox_Id_Locator);
@@ -630,7 +630,7 @@ namespace Pegasus.Pages.UI_Pages
                     userName, password));
             }
             Logger.LogMethodExit("LoginPage", "DefaultUserLoginAuthentication",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
 
@@ -642,14 +642,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter User Name
             Logger.LogMethodEntry("LoginPage", "EnterDefaultUserName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_UserName_TextBox_Id_Locator));
             //Insert User Name in Username TextBox
             base.FillTextBoxById(LoginPageResource.
                 Login_Page_UserName_TextBox_Id_Locator, userName);
             Logger.LogMethodExit("LoginPage", "EnterDefaultUserName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -660,7 +660,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter User Name
             Logger.LogMethodEntry("LoginPage", "EnterSMSUserName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_LoginName_TextBox_Id_Locator));
             //Clear the text of text box
@@ -670,7 +670,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(LoginPageResource.
                 Login_Page_LoginName_TextBox_Id_Locator, userName);
             Logger.LogMethodExit("LoginPage", "EnterSMSUserName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -680,7 +680,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click SignIn Button
             Logger.LogMethodEntry("LoginPage", "ClickSynapseSignInButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.ClassName(LoginPageResource.
                 Login_Page_Synapse_CSUser_SignIn_Button_Class_Locator));
@@ -690,7 +690,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click SignIn Button
             base.ClickByJavaScriptExecutor(getSignInButton);
             Logger.LogMethodExit("LoginPage", "ClickSynapseSignInButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -702,7 +702,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Complete SingOut Process
             Logger.LogMethodEntry("LoginPage", "ClickSignOutButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement((By.PartialLinkText(linkSignOut)));
@@ -714,7 +714,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LoginPage", "ClickSignOutButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -726,7 +726,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Validate Login Success
             Logger.LogMethodEntry("LoginPage", "ValidateLogin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Boolean isLoginSuccessful = false;
             switch (userTypeEnum)
             {
@@ -797,7 +797,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("LoginPage", "ValidateLogin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
 
         }
@@ -811,7 +811,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Checks After LoggedIn Window Present    
             Logger.LogMethodEntry("LoginPage", "IsSMSUserLoggedIn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             if (base.IsElementLoadedInWindow(LoginPageResource.
                 Login_Page_PageTitle_Locator_GlobalHome,
                     By.XPath(LoginPageResource.Login_Page_LogOut_Locator)))
@@ -819,7 +819,7 @@ namespace Pegasus.Pages.UI_Pages
                 isLoginSuccessful = true;
             }
             Logger.LogMethodExit("LoginPage", "IsSMSUserLoggedIn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
 
@@ -832,7 +832,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Checks After LoggedIn Window Present    
             Logger.LogMethodEntry("LoginPage", "IsCSAdminLoginValidated",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Login Window
             if (base.IsElementLoadedInWindow(LoginPageResource.
                 Login_Page_PageTitle_Locator_CourseEnrollment,
@@ -847,7 +847,7 @@ namespace Pegasus.Pages.UI_Pages
                 isLoginSuccessful = true;
             }
             Logger.LogMethodExit("LoginPage", "IsCSAdminLoginValidated",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
 
@@ -860,7 +860,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Checks After LoggedIn Window Present
             Logger.LogMethodEntry("LoginPage", "IsWsAdminValidated",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Login Window
             if (base.IsElementLoadedInWindow(LoginPageResource.
                 Login_Page_PageTitle_Locator_CourseEnrollment,
@@ -872,7 +872,7 @@ namespace Pegasus.Pages.UI_Pages
                 isLoginSuccessful = true;
             }
             Logger.LogMethodExit("LoginPage", "IsWsAdminValidated",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
 
@@ -885,7 +885,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Checks After LoggedIn Window Present    
             Logger.LogMethodEntry("LoginPage", "IsSMSUserLoggedIn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Login Window
             if (base.IsElementLoadedInWindow(LoginPageResource.
                 Login_Page_PageTitle_Locator_GlobalHome,
@@ -897,7 +897,7 @@ namespace Pegasus.Pages.UI_Pages
                 isLoginSuccessful = true;
             }
             Logger.LogMethodExit("LoginPage", "IsSMSUserLoggedIn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
 
@@ -910,7 +910,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Checks After LoggedIn Window Present    
             Logger.LogMethodEntry("LoginPage", "IsDigitalPathCsUserLoggedIn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Login Window
             if (base.IsElementLoadedInWindow(LoginPageResource.
                 Login_Page_DPUser_HomePageTitle_Name,
@@ -923,7 +923,7 @@ namespace Pegasus.Pages.UI_Pages
                 isLoginSuccessful = true;
             }
             Logger.LogMethodExit("LoginPage", "IsDigitalPathCsUserLoggedIn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
 
@@ -936,7 +936,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Checks After LoggedIn Window Present    
             Logger.LogMethodEntry("LoginPage", "IsDigitalPathCsDemoUserLoggedIn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For consent Window
@@ -956,7 +956,7 @@ namespace Pegasus.Pages.UI_Pages
                 isLoginSuccessful = IsDigitalPathCsUserLoggedIn(isLoginSuccessful);
             }
             Logger.LogMethodExit("LoginPage", "IsDigitalPathCsDemoUserLoggedIn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
 
@@ -969,7 +969,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Checks After LoggedIn Window Present    
             Logger.LogMethodEntry("LoginPage", "IsRumbaUserLoggedIn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Login Window
             if (base.IsElementLoadedInWindow(LoginPageResource.Login_Page_DPUser_HomePageTitle_Name
                 , By.Id(LoginPageResource.Login_Page_LicenseAgreement_CheckBox_Id_Locator),
@@ -985,7 +985,7 @@ namespace Pegasus.Pages.UI_Pages
                 isLoginSuccessful = true;
             }
             Logger.LogMethodExit("LoginPage", "IsRumbaUserLoggedIn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
 
@@ -999,7 +999,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Login as Workspace Teacher
             Logger.LogMethodEntry("LoginPage", "LoginAsWorkspaceTeacher",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (passwordTypeEnum)
@@ -1022,7 +1022,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodEntry("LoginPage", "LoginAsWorkspaceTeacher",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1034,7 +1034,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //User Login
             Logger.LogMethodEntry("LoginPage", "UserLogin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.SelectWindow(LoginPageResource.
                 Login_Page_Window_Name);
             base.WaitForElement(By.Id(LoginPageResource.
@@ -1054,7 +1054,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SubmitButtonByClassName(LoginPageResource.
                Login_Page_Submit_Button_ClassName_Locator);
             Logger.LogMethodExit("LoginPage", "UserLogin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1102,7 +1102,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetCurrentURL()
         {
             Logger.LogMethodEntry("LoginPage", "UserLogin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             String getCurrentURL = string.Empty;
             try
@@ -1115,7 +1115,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LoginPage", "UserLogin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCurrentURL;
         }
 
@@ -1128,7 +1128,7 @@ namespace Pegasus.Pages.UI_Pages
             //Check if the Default Contents are Displayed In 'Login' Page
             Logger.LogMethodEntry("LoginPage",
                 "IsForgotPasswordAndRegistrationLinkPresntInLoginPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             bool isDefaultContentsDisplayed = false;
             try
@@ -1151,7 +1151,7 @@ namespace Pegasus.Pages.UI_Pages
 
             Logger.LogMethodExit("LoginPage",
                 "IsForgotPasswordAndRegistrationLinkPresntInLoginPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isDefaultContentsDisplayed;
         }
     }

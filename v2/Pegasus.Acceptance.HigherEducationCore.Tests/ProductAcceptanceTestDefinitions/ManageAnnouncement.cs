@@ -31,7 +31,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Changing Time Zone to Indian GMT
             Logger.LogMethodEntry("ManageAnnouncement",
                 "ChangeWSAdminTimeZoneToIndianGmt",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on My Profile Link
             new AdminToolPage().ClickMyProfileLinkByWSAdmin();
             //Changing the Time Zone
@@ -40,7 +40,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 ManageAnnouncement_MyProfile_IndianTimeZone_Value);
             Logger.LogMethodExit("ManageAnnouncement",
                 "ChangeWSAdminTimeZoneToIndianGmt",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Creation of Announcement
             Logger.LogMethodEntry("ManageAnnouncement", "CreateAnnouncement",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (announcementTypeEnum)
             {
                 case Announcement.AnnouncementTypeEnum.CsSystem:
@@ -74,7 +74,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     break;
             }
             Logger.LogMethodExit("ManageAnnouncement", "CreateAnnouncement",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Changing Time Zone 
             Logger.LogMethodEntry("ManageAnnouncement",
                 "ChangeCourseSpaceUserTimeZoneToIndianGmtInMyProfile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on My Profile Link
             new HomePage().ClickMyProfileLink(userTypeEnum);
             //Changing the Time Zone
@@ -97,7 +97,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 ManageAnnouncement_MyProfile_IndianTimeZone_Value);
             Logger.LogMethodExit("ManageAnnouncement",
                 "ChangeCourseSpaceUserTimeZoneToIndianGmtInMyProfile",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Display of Announcement Creation successfull message
             Logger.LogMethodEntry("ManageAnnouncement",
                 "VerifySuccessfullMessageInAnnouncementsFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Successfull Message Displayed
             Logger.LogAssertion("VerifySuccessfullMessage",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -122,7 +122,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             new AnnouncementDefaultUXPage().CloseAnnoucementLightBox();
             Logger.LogMethodExit("ManageAnnouncement",
                 "VerifySuccessfullMessageInAnnouncementsFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select Annoucement Type in Drop Down
             Logger.LogMethodEntry("ManageAnnouncement",
                 "SelectAnnouncementTypeInDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click ManageAll Button
             new TodaysViewUXPage().ClickOnManageAllButtonHED();
             //Select Announcement Frame
@@ -146,7 +146,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 SelectAnnouncementsTypeInDropDownHED(announcementType);
             Logger.LogMethodExit("ManageAnnouncement",
                 "SelectAnnouncementTypeInDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Display Of Announcement
             Logger.LogMethodEntry("ManageAnnouncement",
                 "VerifyDisplayOfAnnouncement",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Verify Announcement Display
             new CreateAnnouncementUXPage().SelectAnnouncmentFrame();
             //Get Announcement Details from Memory
@@ -175,7 +175,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Close Annoucement LightBox
             new AnnouncementDefaultUXPage().CloseAnnoucementLightBox();
             Logger.LogMethodExit("ManageAnnouncement", "VerifyDisplayOfAnnouncement",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Changing Time Zone 
             Logger.LogMethodEntry("ManageAnnouncement",
                 "ChangeWSUserTimeZoneToIndianGmtInMyProfile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on My Profile Link
             new MyPegasusUXPage().ClickMyProfileLinkByWSUser();
             //Changing the Time Zone
@@ -195,7 +195,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 ManageAnnouncementResource.ManageAnnouncement_MyProfile_IndianTimeZone_Value);
             Logger.LogMethodExit("ManageAnnouncement",
                 "ChangeWSUserTimeZoneToIndianGmtInMyProfile",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -209,12 +209,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Selecting announcement in global home page
             Logger.LogMethodEntry("ManageAnnouncement",
                 "SelectAnnouncementInAnnouncementChannel",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Announcement 
             new MyPegasusUXPage().SelectAnnouncement(announcementTypeEnum);
             Logger.LogMethodExit("ManageAnnouncement",
                 "SelectAnnouncementInAnnouncementChannel",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verifying Display of Announcement in Announcement frame
             Logger.LogMethodEntry("ManageAnnouncement", "VerifyAnnouncementInAnnouncementFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get announcement From Memory
             Announcement announcement = Announcement.Get(announcementTypeEnum);
             //Declaration Page Class Object
@@ -242,7 +242,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Close Annoucement LightBox
             announcementDefaultUxPage.CloseAnnoucementLightBox();
             Logger.LogMethodExit("ManageAnnouncement", "VerifyAnnouncementInAnnouncementFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

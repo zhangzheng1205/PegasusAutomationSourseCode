@@ -38,13 +38,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
             //Browse The Mock Application for LMS Grade Synch URL
             Logger.LogMethodEntry("CourseEventsWithMockApplication",
                 "BrowseTheLMSGradeSynchMockApplicationURL",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //  Browse The Mock Application for LMS Grade Synch URL
             new PostRestServicePage().BrowseTheLMSGradeSynchMockApplicationURL
                 (getLMSGradeSynchMockApplicationUrl);
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "BrowseTheLMSGradeSynchMockApplicationURL",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         [Then(@"I should see the LMS Grade Synch Mock Application with Item Save event posted for ""(.*)"" activity")]
@@ -53,7 +53,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
             //Browse The Mock Application for LMS Grade Synch URL.
             Logger.LogMethodEntry("CourseEventsWithMockApplication",
                 "BrowseTheLMSGradeSynchMockApplicationURL",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             PostRestServicePage objPostRestServicePage = new PostRestServicePage();
             objPostRestServicePage.LoadWindow(); 
             Logger.LogAssertion("VerifyTheItemSaveResponse", ScenarioContext.
@@ -61,7 +61,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                    objPostRestServicePage.GetTheResponseFromLMSMockAppication(activityTypeEnum)));
             Logger.LogMethodExit("CourseEventsWithMockApplication",
                 "BrowseTheLMSGradeSynchMockApplicationURL",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

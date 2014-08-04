@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Imports the MGM Cartridge
             logger.LogMethodEntry("ImportCartridgePage", "ImportMGMCartridge",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on the Import LTI Activity Links option
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ImportCartridgePage", "ImportMGMCartridge",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Uploads the MGM Cartridge
             logger.LogMethodEntry("ImportCartridgePage", "UploadMGMCartridge",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.SelectDefaultWindow();
             //Wait for the Frame
             base.WaitForElement(By.Id(ImportCartridgePageResource.
@@ -101,7 +101,7 @@ namespace Pegasus.Pages.UI_Pages
             //Switch To Default Page Content
             base.SwitchToDefaultPageContent();
             logger.LogMethodExit("ImportCartridgePage", "UploadMGMCartridge",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

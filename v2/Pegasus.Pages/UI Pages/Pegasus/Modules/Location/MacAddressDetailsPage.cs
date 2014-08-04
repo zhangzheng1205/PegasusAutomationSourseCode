@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add Computer Mac Address
             logger.LogMethodEntry("MacAddressDetailsPage", "AddComputerMacAddress",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Prefernce Window
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MacAddressDetailsPage", "AddComputerMacAddress",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Preferences Window
             logger.LogMethodEntry("MacAddressDetailsPage", "SelectPreferencesWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait fot Window
             base.WaitUntilWindowLoads(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_Prefernces_Window_Name);
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_Prefernces_Window_Name);
             logger.LogMethodExit("MacAddressDetailsPage", "SelectPreferencesWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch To Outer IFrame
             logger.LogMethodEntry("MacAddressDetailsPage", "SwitchToOuterIFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Frame
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_OuterFrame_Id_Locator));
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrameById(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_OuterFrame_Id_Locator);
             logger.LogMethodExit("MacAddressDetailsPage", "SwitchToOuterIFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -102,14 +102,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch To Inner IFrame
             logger.LogMethodEntry("MacAddressDetailsPage", "SwitchToInnerIFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_InnerFrame_Id_Locator));
             //Switch To Inner IFrame
             base.SwitchToIFrameById(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_InnerFrame_Id_Locator);
             logger.LogMethodExit("MacAddressDetailsPage", "SwitchToInnerIFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -119,14 +119,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch To Left Frame
             logger.LogMethodEntry("MacAddressDetailsPage", "SwitchToLeftFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_LeftFrame_Id_Locator));
             //Switch To Left Frame
             base.SwitchToIFrameById(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_LeftFrame_Id_Locator);
             logger.LogMethodExit("MacAddressDetailsPage", "SwitchToLeftFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -136,14 +136,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch To Right Frame
             logger.LogMethodEntry("MacAddressDetailsPage", "SwitchToRightFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_RightFrame_Id_Locator));
             //Switch To Right Frame
             base.SwitchToIFrameById(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_RightFrame_Id_Locator);
             logger.LogMethodExit("MacAddressDetailsPage", "SwitchToRightFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Computer
             logger.LogMethodEntry("MacAddressDetailsPage", "ClickOnAddComputer",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_AddComputer_Id_Locator));
             //Get Add Computer Property
@@ -162,7 +162,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Add Computer
             base.ClickByJavaScriptExecutor(getAddComputerProperty);
             logger.LogMethodExit("MacAddressDetailsPage", "ClickOnAddComputer",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -172,14 +172,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Add Computer Window
             logger.LogMethodEntry("MacAddressDetailsPage", "SelectAddComputerWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_AddComputer_Window_Name);
             //Select Add Computer Window
             base.SelectWindow(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_AddComputer_Window_Name);
             logger.LogMethodExit("MacAddressDetailsPage", "SelectAddComputerWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Address CheckBox
             logger.LogMethodEntry("MacAddressDetailsPage", "SelectAddressCheckBox",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_AddressCheckBox_Id_Locator));
             //Get Address CheckBox
@@ -198,7 +198,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Address Checkbox
             base.ClickByJavaScriptExecutor(getAddressCheckBox);
             logger.LogMethodExit("MacAddressDetailsPage", "SelectAddressCheckBox",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Mac Address
             logger.LogMethodEntry("MacAddressDetailsPage", "EnterMacAddress",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Name(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_InputAddressDetails_Name_Locator));
             //FIll Mac Address
@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
                 MacAddressDetails_Page_InputAddressDetails_Name_Locator,
                 MacAddressDetailsPageResource.MacAddressDetails_Page_MacAddress_Value);
             logger.LogMethodExit("MacAddressDetailsPage", "EnterMacAddress",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -226,7 +226,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Computer Name
             logger.LogMethodEntry("MacAddressDetailsPage", "EnterComputerName",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Generate GUID for Computer Name
             Guid computerName = Guid.NewGuid();
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_InputComputerName_Id_locator, computerName.ToString());
             logger.LogMethodExit("MacAddressDetailsPage", "EnterComputerName",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Button
             logger.LogMethodEntry("MacAddressDetailsPage", "ClickOnAddButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.LinkText(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_Add_LinkText_Locator));
             //Get Add Button Property
@@ -254,7 +254,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Add Button
             base.ClickByJavaScriptExecutor(getAddButtonProperty);
             logger.LogMethodExit("MacAddressDetailsPage", "ClickOnAddButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -264,7 +264,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add Location
             logger.LogMethodEntry("MacAddressDetailsPage", "AddLocation",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select prefernces Window
@@ -289,7 +289,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MacAddressDetailsPage", "AddLocation",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Location 
             logger.LogMethodEntry("MacAddressDetailsPage", "ClickOnAddLocation",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_AddLocation_Id_Locator));
             //Get Add Location Property
@@ -308,7 +308,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Add Lcoation 
             base.ClickByJavaScriptExecutor(getAddLocationProperty);
             logger.LogMethodExit("MacAddressDetailsPage", "ClickOnAddLocation",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -318,14 +318,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Add Location Window
             logger.LogMethodEntry("MacAddressDetailsPage", "SelectAddLocationWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_AddLocation_Window_Name);
             //Select Add Lcoation Window
             base.SelectWindow(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_AddLocation_Window_Name);
             logger.LogMethodExit("MacAddressDetailsPage", "SelectAddLocationWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -335,7 +335,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Location 
             logger.LogMethodEntry("MacAddressDetailsPage", "EnterLocation",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Generate Guid for Location Name
             Guid locatioName = Guid.NewGuid();
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
@@ -344,7 +344,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_InputLocation_Id_Locator, locatioName.ToString());
             logger.LogMethodExit("MacAddressDetailsPage", "EnterLocation",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -354,7 +354,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Associate Computer to Location 
             logger.LogMethodEntry("MacAddressDetailsPage", "AssociateComputerToLocation",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Prefernces Window
@@ -391,7 +391,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MacAddressDetailsPage", "AssociateComputerToLocation",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -401,7 +401,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Location
             logger.LogMethodEntry("MacAddressDetailsPage", "SelectLocation",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.ClassName(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_SelectLocation_ClassName_Locator));
             //Get Location Property
@@ -410,7 +410,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Location
             base.ClickByJavaScriptExecutor(getLocationProperty);
             logger.LogMethodExit("MacAddressDetailsPage", "SelectLocation",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -420,7 +420,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Computer
             logger.LogMethodEntry("MacAddressDetailsPage", "SelectComputer",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_SelectComputer_Id_Locator));
             //Get Computer Property
@@ -429,7 +429,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Computer
             base.ClickByJavaScriptExecutor(getComputerCheckBoxProperty);
             logger.LogMethodExit("MacAddressDetailsPage", "SelectComputer",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -440,7 +440,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Image Button
             logger.LogMethodEntry("MacAddressDetailsPage", "ClickOnAddImage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MacAddressDetailsPageResource.
                 MacAddressDetails_Page_ImageAddButton_Id_Locator));
             //Get Add Image Property
@@ -449,7 +449,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Add Image Button
             base.ClickByJavaScriptExecutor(getAddButtonProperty);
             logger.LogMethodExit("MacAddressDetailsPage", "ClickOnAddImage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

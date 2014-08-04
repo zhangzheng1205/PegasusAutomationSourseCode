@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // configure the classes periods
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "ConfigureDueDate",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Get the due date
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "ConfigureDueDate",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // configure the classes periods
             logger.LogMethodEntry("CalendarDefaultGlobalUXPage", "SelectClassOnAssignWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 int rowCount = 1;
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarDefaultGlobalUXPage", "SelectClassOnAssignWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
 
         }
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Assign The Activity On Current Date
             logger.LogMethodEntry("AssignContentPage", "AssignTheActivityOnCurrentDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Assign Window
@@ -146,7 +146,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "AssignTheActivityOnCurrentDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -156,14 +156,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Assign Window
             logger.LogMethodEntry("AssignContentPage", "SelectAssignWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Assign Window
             base.WaitUntilWindowLoads(AssignContentPageResource.
                 AssignContent_Page_WindowTitle_Name);
             base.SelectWindow(AssignContentPageResource.
                 AssignContent_Page_WindowTitle_Name);
             logger.LogMethodExit("AssignContentPage", "SelectAssignWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace Pegasus.Pages.UI_Pages
         public String getDueDateOfActivity()
         {
             logger.LogMethodEntry("AssignContentPage", "getDueDateOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getDueDate = string.Empty;
             try
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "getDueDateOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return new CalendarHEDDefaultUXPage().GetConvertedDate(getDueDate);
 
         }
@@ -202,7 +202,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Due Date Of Assigned Activity
             logger.LogMethodEntry("AssignContentPage", "GetDueDateOfAssignedActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AssignContentPageResource.
                 AssignContent_Page_DueDate_TextBox_Id_Locator));
             //Get Due Date Of Activity
@@ -221,7 +221,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(AssignContentPageResource.
                 AssignContent_Page_Calendar_Window_Name);
             logger.LogMethodExit("AssignContentPage", "GetDueDateOfAssignedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getDueDate;
         }
 
@@ -232,7 +232,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Set Avalability Date Range Radiobutton
             logger.LogMethodEntry("AssignContentPage", "SelectSetAvalabilityDateRangeRadiobutton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Assign Window
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "SelectSetAvalabilityDateRangeRadiobutton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -260,7 +260,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check Start And End Date Fields Present
             logger.LogMethodEntry("AssignContentPage", "IsStartEndDateFieldPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isStartEndDateFieldsPresent = false; ;
             try
@@ -294,7 +294,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "IsStartEndDateFieldPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isStartEndDateFieldsPresent;
         }
 
@@ -306,7 +306,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Timezone
             logger.LogMethodEntry("AssignContentPage", "GetTimezone",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getTimeZone = string.Empty;
             try
@@ -325,7 +325,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "GetTimezone",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getTimeZone;
         }
 
@@ -336,7 +336,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Not Assigned Radiobutton
             logger.LogMethodEntry("AssignContentPage", "SelectNotAssignedRadiobutton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Assign Window
@@ -357,7 +357,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "SelectNotAssignedRadiobutton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -369,7 +369,7 @@ namespace Pegasus.Pages.UI_Pages
             //Check Status Of 'Set End Date As Due Date' Option
             logger.LogMethodEntry("AssignContentPage",
                 "IsStatusOfSetEndDateAsDueDateOptionDisabled",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             bool isElementEnabled = false;
             try
@@ -391,7 +391,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage",
                 "IsStatusOfSetEndDateAsDueDateOptionDisabled",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isElementEnabled;
         }
 
@@ -403,7 +403,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Start End Date Text
             logger.LogMethodEntry("AssignContentPage", "GetStartEndDateText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             string getStartEndDateText = string.Empty;
             try
@@ -423,7 +423,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "GetStartEndDateText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getStartEndDateText;
         }
 
@@ -436,7 +436,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify Checkboxes Present In Restrict Availability Frame
             logger.LogMethodEntry("AssignContentPage",
                 "IsCheckboxesPresentInRestrictAvailabilityFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             bool isCheckboxesPresent = false;
             try
@@ -457,7 +457,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage",
                 "IsCheckboxesPresentInRestrictAvailabilityFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isCheckboxesPresent;
         }
 
@@ -469,7 +469,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Button In Assign Window
             logger.LogMethodEntry("AssignContentPage", "ClickOnButtonInAssignWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Assign Window
@@ -483,7 +483,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "ClickOnButtonInAssignWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -495,7 +495,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify Display Of 'All Students' and 'Selected Students' Radiobuttons
             logger.LogMethodEntry("AssignContentPage",
                 "IsAllStudentsSelectedStudentsOptionsPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             bool isOptionsPresent = false;
             try
@@ -514,7 +514,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage",
                 "IsAllStudentsSelectedStudentsOptionsPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isOptionsPresent;
         }
 
@@ -526,7 +526,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Selected Students' Option
             logger.LogMethodEntry("AssignContentPage",
                 "SelectSelectedStudentsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Assign Window
@@ -543,7 +543,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage",
                 "SelectSelectedStudentsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -555,7 +555,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Text In Assign Window
             logger.LogMethodEntry("AssignContentPage",
                 "GetTextInAssignWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getText = string.Empty;
             try
@@ -575,7 +575,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage",
                 "GetTextInAssignWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getText;
         }
 
@@ -588,7 +588,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Student In 'View by' Frame
             logger.LogMethodEntry("AssignContentPage",
                 "GetStudentInViewbyFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getUserName = string.Empty;
             try
@@ -610,7 +610,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage",
                 "GetStudentInViewbyFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
 
@@ -623,7 +623,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Student Name
             logger.LogMethodEntry("AssignContentPage", "GetStudentName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getUserName = string.Empty;
             if (getDropdownDefaultOption == AssignContentPageResource.
@@ -659,7 +659,7 @@ namespace Pegasus.Pages.UI_Pages
                 getUserName = string.Empty;
             }
             logger.LogMethodExit("AssignContentPage", "GetStudentName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
 
@@ -672,7 +672,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Content In Select Students Frame
             logger.LogMethodEntry("AssignContentPage",
                 "GetStudentInViewbyFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getContent = string.Empty;
             try
@@ -696,7 +696,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage",
                 "GetStudentInViewbyFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getContent;
         }
 
@@ -708,7 +708,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Group Name
             logger.LogMethodEntry("AssignContentPage", "GetGroupName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getGroupName = string.Empty;
             try
@@ -738,7 +738,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "GetGroupName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getGroupName;
         }
 
@@ -750,7 +750,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Due Date Of Assigned Content
             logger.LogMethodEntry("AssignContentPage", "GetDueDateOfAssignedContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getDueDate = string.Empty;
             try
@@ -765,7 +765,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "GetDueDateOfAssignedContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getDueDate;
         }
 
@@ -776,14 +776,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Properties Window
             logger.LogMethodEntry("AssignContentPage", "SelectPropertiesWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(AssignContentPageResource.
                 AssignContent_Page_Properties_WindowTitle_Name);
             //Select Window
             base.SelectWindow(AssignContentPageResource.
                 AssignContent_Page_Properties_WindowTitle_Name);
             logger.LogMethodExit("AssignContentPage", "SelectPropertiesWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -793,7 +793,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select 'Assigned' Radiobutton
             logger.LogMethodEntry("AssignContentPage", "SelectAssignedRadiobutton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Properties Window
@@ -809,7 +809,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage", "SelectAssignedRadiobutton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -820,7 +820,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Set availability date range' Radiobutton
             logger.LogMethodEntry("AssignContentPage",
                 "SelectSetavailabilitydaterangeRadiobutton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Get the Current date
@@ -848,7 +848,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage",
                 "SelectSetavailabilitydaterangeRadiobutton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -859,7 +859,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Do Not Provide An End Date' Option
             logger.LogMethodEntry("AssignContentPage",
                 "SelectDoNotProvideEndDateOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Properties Window
@@ -881,7 +881,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage",
                 "SelectDoNotProvideEndDateOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -892,7 +892,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // set activity properties
             logger.LogMethodEntry("AssignContentPage", "SetActivityPropertiesSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (assetName)
             {
 
@@ -926,7 +926,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("AssignContentPage", "SetActivityPropertiesSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

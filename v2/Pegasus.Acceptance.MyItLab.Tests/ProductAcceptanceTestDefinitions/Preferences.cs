@@ -30,12 +30,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Navigate To Subtab In Preferences Page
             Logger.LogMethodEntry("Preferences",
                 "NavigateToSubtabInPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Subtab
             new GeneralPreferencesPage().ClickOntheSubtab(subtabName);
             Logger.LogMethodExit("Preferences",
                 "NavigateToSubtabInPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -47,14 +47,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Display Of The Subtab
             Logger.LogMethodEntry("Preferences", "DisplayOfTheSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Subtab Name Displayed
             Logger.LogAssertion("VerifyTheDisplayOfSubtab",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
                     Assert.AreEqual(subtabName,
                     new GeneralPreferencesPage().GetSelectedSubtabName()));
             Logger.LogMethodExit("Preferences", "DisplayOfTheSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -66,12 +66,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Select the preference sub tab
             Logger.LogMethodEntry("Preferences", "ClickOnPreferenceSubTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             // Navigating to given prefernce tab options from preference page
             new GeneralPreferencesPage().ClickonSubTabofPreference(subTabName);
             // Select the preference sub tab
             Logger.LogMethodExit("Preferences", "ClickOnPreferenceSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -83,14 +83,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Validate given text present in the page
             Logger.LogMethodEntry("Preferences", "ValidateTextInThePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Verifying the return text value is correct
             Logger.LogAssertion("VerifyTheText",
                 ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.AreEqual(text, new GeneralPreferencesPage().GetElementTextDisplayed()));
             // Validate given text present in the page
             Logger.LogMethodExit("Preferences", "ValidateTextInThePage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -103,13 +103,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Click on given link
             Logger.LogMethodEntry("Preferences", "ClickOnLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click on link
             new GeneralPreferencesPage().ClickOnLink((GeneralPreferencesPage.StudyPlanEnum)Enum.
                 Parse(typeof(GeneralPreferencesPage.StudyPlanEnum), parentName));
             // Click on given link
             Logger.LogMethodExit("Preferences", "ClickOnLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Check is given text presents in the page
             Logger.LogMethodEntry("Preferences", "ValidateExitanceOfText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // To check given text is not exits in page
             Logger.LogAssertion("VerifyExitanceOfText",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -129,7 +129,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                  GetGivenTextFromPage(searchText)));
             // Check is given text presents in the page
             Logger.LogMethodExit("Preferences", "ValidateExitanceOfText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -142,12 +142,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Click on pegasus button, which is created using customize button
             Logger.LogMethodEntry("Preference", "ClickOnLinkTypeButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click event get fire on given button, based on their ID ibtnCancel
             new GeneralPreferencesPage().ClickOnLinkTypeButton(buttonName, sourcePageTitle);
             // Click on pegasus button, which is created using customize button
             Logger.LogMethodExit("Preference", "ClickOnLinkTypeButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -159,12 +159,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Enable Necessary General Preference Settings
             Logger.LogMethodEntry("Preference",
                 "EnableNecessaryGeneralPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable General Preference Settings
             new GeneralPreferencesPage().EnableGeneralPreferenceSettings();
             Logger.LogMethodExit("Preference",
                 "EnableNecessaryGeneralPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -176,12 +176,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Enable Necessary Catalog Preference Settings
             Logger.LogMethodEntry("Preference",
                 "EnableNecessaryCatalogPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable Catalog Preference Settings
             new CatalogPreferencesPage().EnableCatalogPreferenceSettings();
             Logger.LogMethodExit("Preference",
                 "EnableNecessaryCatalogPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -193,13 +193,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Disable 'Hide MyCourse Materials on Creation' Preference
             Logger.LogMethodEntry("Preference",
                 "DisableHideMyCourseMaterialsonCreationPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Disable 'Hide MyCourse Materials on Creation' Preference
             new CourseMaterialPreferencePage().
                 DisableHideMyCourseMaterialsPreference();
             Logger.LogMethodExit("Preference",
                 "DisableHideMyCourseMaterialsonCreationPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -211,7 +211,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Enable Necessary Grades Preference Settings
             Logger.LogMethodEntry("Preference",
                 "EnableNecessaryGradingPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Declare object
             GradingPreferencesPage gradePreferencesPage =
                 new GradingPreferencesPage();
@@ -225,7 +225,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             new GeneralPreferencesPage().SavePreferences();
             Logger.LogMethodExit("Preference",
                 "EnableNecessaryGradingPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -236,11 +236,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Enable 'Enable SIM5 Questions' Preference
             Logger.LogMethodEntry("Preference", "EnableSIM5QuestionsPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable 'Enable SIM5 Questions' Preference
             new QuestionsPreferencesPage().EnableSIM5QuestionsPreference();
             Logger.LogMethodExit("Preference", "EnableSIM5QuestionsPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -251,11 +251,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Enable 'Enable original SIM questions' Preference
             Logger.LogMethodEntry("Preference", "EnableOriginalSIMQuestionsPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable 'Enable original SIM questions' Preference
             new QuestionsPreferencesPage().EnableOriginalSIMQuestionPreference();
             Logger.LogMethodExit("Preference", "EnableOriginalSIMQuestionsPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -267,12 +267,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Enable 'Grader Project' Question Type Preference
             Logger.LogMethodEntry("Preference",
                 "EnableGraderProjectQuestionTypePreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable 'Grader Project' Question Type Preference
             new QuestionsPreferencesPage().EnableGraderProjectQuestionTypePreference();
             Logger.LogMethodExit("Preference",
                 "EnableGraderProjectQuestionTypePreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -286,13 +286,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //automatically for Grader projects' Preference
             Logger.LogMethodEntry("Preference",
                 "EnableDisplayIntegrityDetectionPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable 'Display Integrity detection to students
             //automatically for Grader projects' Preference
             new GradingPreferencesPage().EnableDisplayIntegrityDetectionPreference();
             Logger.LogMethodExit("Preference",
                 "EnableDisplayIntegrityDetectionPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -304,12 +304,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Create Mac Address For Computer
             Logger.LogMethodEntry("Preference",
                 "CreateTheMacAddressForComputer",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Add Mac Address For Computer
             new MacAddressDetailsPage().AddComputerMacAddress();
             Logger.LogMethodExit("Preference",
                 "CreateTheMacAddressForComputer",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -321,12 +321,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Create the Location
             Logger.LogMethodEntry("Preference",
                 "CreateTheLocation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Add Location
             new MacAddressDetailsPage().AddLocation();
             Logger.LogMethodExit("Preference",
                "CreateTheLocation",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -338,12 +338,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Associate The Computer To Location
             Logger.LogMethodEntry("Preference",
                 "AssociateTheComputerToLocation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Associate the Computer To Location
             new MacAddressDetailsPage().AssociateComputerToLocation();
             Logger.LogMethodExit("Preference",
                "AssociateTheComputerToLocation",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -354,11 +354,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Enable Instructor Resource Toolbar Preference
             Logger.LogMethodEntry("Preference", "EnableInstructorResourceToolbarPreference"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Enable Instructor Resource Toolbar Preference
             new GeneralPreferencesPage().EnableInstructorResourceToolbarPreference();
             Logger.LogMethodExit("Preference", "EnableInstructorResourceToolbarPreference"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -370,14 +370,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click On 'Display as tab on main navigation row' Link
             Logger.LogMethodEntry("Preference",
                 "ClickOnAssignmentCalendarDisplayLink"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Click On 'Display as tab on main navigation row' Link
             new ToolbarPreferencesPage().ClickOnAssignmentCalendarDisplayLink();
             //Click on 'Save Preferences' Button
             new GeneralPreferencesPage().SavePreferences();
             Logger.LogMethodExit("Preference",
                 "ClickOnAssignmentCalendarDisplayLink"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -389,14 +389,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify the Display of Tab
             Logger.LogMethodEntry("Preference", "VerifyTheDisplayOfTab"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             // To Verify the Display of Tab
             Logger.LogAssertion("VerifyDisplayOfTab",
                 ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.IsTrue(new ToolbarPreferencesPage().
                    IsTabDisplayAsMainTab(tabName)));
             Logger.LogMethodExit("Preference", "VerifyTheDisplayOfTab"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -408,7 +408,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click On 'Display under Content tab' Link Under
             Logger.LogMethodEntry("Preference",
                 "ClickOnCalendarDisplayLinkUnderContentTab"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
             //Select Main Frame
             generalPreferencePage.SelectThePreferenceWindowWithFrame();
@@ -418,7 +418,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             generalPreferencePage.SavePreferences();
             Logger.LogMethodExit("Preference",
                 "ClickOnCalendarDisplayLinkUnderContentTab"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -430,12 +430,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Enable Calendar General Preference Settings.
             Logger.LogMethodEntry("Preference",
                 "EnableCalendarGeneralPreferenceSettings"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Enable Calendar General Preference Settings.
             new GeneralPreferencesPage().EnableCalendarGeneralPreferenceSettings();
             Logger.LogMethodExit("Preference",
                 "EnableCalendarGeneralPreferenceSettings"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -447,13 +447,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click On The 'Enable Instructor Only assets' Preference Checkbox
             Logger.LogMethodEntry("Preference",
                 "ClickOnTheInstructorOnlyassetsPreferenceCheckbox"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Click On The 'Enable Instructor Only assets' Preference Checkbox
             new LessonPlanPreferencesPage().
                 ClickOnInstructorOnlyAssetsPreferenceCheckbox();
             Logger.LogMethodExit("Preference",
                 "ClickOnTheInstructorOnlyassetsPreferenceCheckbox"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -465,7 +465,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify Calendar Prefernces Unchecked Locked And Disabled
             Logger.LogMethodEntry("Preference",
                 "VerifyCalendarPreferncesUncheckedLockedAndDisabled"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             // To Verify Calendar Prefernces Unchecked And Disabled
             Logger.LogAssertion("VerifyCalendarPreferencesStatus",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -478,7 +478,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                    IsCalendarPreferencesLockStatus()));
             Logger.LogMethodExit("Preference",
                 "VerifyCalendarPreferncesUncheckedLockedAndDisabled"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -490,7 +490,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify Instructor Only assets Preference Status
             Logger.LogMethodEntry("Preference",
                 "VerifyInstructorOnlyassetsPreferenceStatus"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             // To Verify Instructor Only assets Preference Status
             Logger.LogAssertion("VerifyInstructorOnlyAssetsPreferencesStatus",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -498,7 +498,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                    IsInstructorOnlyAssetsPreferenceEnabled()));
             Logger.LogMethodExit("Preference",
                 "VerifyInstructorOnlyassetsPreferenceStatus"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -510,12 +510,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Disable 'HED Calendar' Preference
             Logger.LogMethodEntry("Preference",
                 "DisableTheHEDCalendarPreference"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             // Disable 'HED Calendar' Preference
             new GeneralPreferencesPage().DisableHedCalendarPreference();
             Logger.LogMethodExit("Preference",
                 "DisableTheHEDCalendarPreference"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -527,13 +527,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Preference settings For Copy Content
             Logger.LogMethodEntry("Preferences",
                 "SetThePreferencesForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Set The Preferences For Copy Content
             new CourseCopyPreferencesPage().
                 SetCopyContentPreference();
             Logger.LogMethodExit("Preferences",
                 "SetThePreferencesForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On The Edit Preferences Link.
@@ -543,13 +543,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("Preferences",
                 "ClickOnTheEditPreferencesLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Activity Edit Preferences Link
             new ActivitiesPreferencesPage().ClickOnAssignmentActivityEditOption();
 
             Logger.LogMethodExit("Preferences",
                 "ClickOnTheEditPreferencesLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On The Messages Sub-Tab.
@@ -560,13 +560,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("Preferences",
                 "ClickOnTheSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Clik on the Messages sub tab in the default preferences window
             new ActivitiesPreferencesPage().ClickOnMessagesSubTab();
 
             Logger.LogMethodExit("Preferences",
                 "ClickOnTheSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enter Beginning Of Activity Default And Instructor Messages.
@@ -576,13 +576,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("Preferences",
                 "EnterBeginningOfActivityDefaultAndInstructorMessages",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
             new ActivitiesPreferencesPage().EnterBeginningOfActivityDefaultAndInstructorMessages();
 
             Logger.LogMethodExit("Preferences",
                 "EnterBeginningOfActivityDefaultAndInstructorMessages",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enter End Of Activity Default And Instructor Messages.
@@ -592,13 +592,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("Preferences",
                 "EnterEndOfActivityDefaultAndInstructorMessages",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
             new ActivitiesPreferencesPage().EnterEndOfActivityDefaultAndInstructorMessages();
 
             Logger.LogMethodExit("Preferences",
                 "EnterEndOfActivityDefaultAndInstructorMessages",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click On The Save Button.
@@ -609,13 +609,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("Preferences",
                 "ClickOnTheButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
             new ActivitiesPreferencesPage().ClickOnTheSaveButton(saveButton);
 
             Logger.LogMethodExit("Preferences",
                 "ClickOnTheButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

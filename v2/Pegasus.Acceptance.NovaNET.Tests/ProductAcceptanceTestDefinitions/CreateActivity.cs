@@ -32,12 +32,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             //Select Asset Type From Add Content Link
             Logger.LogMethodEntry("CreateActivity", 
                 "SelectAssetTypeFromAddContentLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Add Content Button Options
             new ContentLibraryUXPage().ClickOnAddContentOption(optionName);
             Logger.LogMethodExit("CreateActivity", 
                 "SelectAssetTypeFromAddContentLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             //Create Instructor Gradable Activity
             Logger.LogMethodEntry("CreateActivity",
                 "CreateGradableActivityWithEssayQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Declaration of object
             AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
             //Enter Activity Details and Click on Add Question Link
@@ -60,7 +60,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             addAssessmentPage.CreateGradableActivityUsingEssayQuestion(activityTypeEnum);
             Logger.LogMethodExit("CreateActivity",
                 "CreateGradableActivityWithEssayQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
         {
             //Create Activity
             Logger.LogMethodEntry("CreateActivity", "CreateTheActivityOfBehavioralModeType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Create Object for RandomTopicList Page
             RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
             AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
@@ -90,7 +90,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             //Enter the message
             addAssessmentPage.EnterTheMessageForActivity();
             Logger.LogMethodExit("CreateActivity", "CreateTheActivityOfBehavioralModeType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             //Associate The Activity From Content Library To MyCourse
             Logger.LogMethodEntry("CreateActivity",
                 "AssociateTheActivityFromContentLibraryToMyCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestDefinitions
             contentLibraryUXPage.ClickOnActivityAddButton();
             Logger.LogMethodExit("CreateActivity",
                 "AssociateTheActivityFromContentLibraryToMyCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
     }
 }

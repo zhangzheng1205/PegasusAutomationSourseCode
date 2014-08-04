@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create ECollege user
             Logger.LogMethodEntry("ManageUsersContentPage", "CreateECollegeUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Administrator Window
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageUsersContentPage", "CreateECollegeUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Select Content frame.
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch to Frame
             Logger.LogMethodEntry("ManageUsersContentPage", "SelectContentFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Name(ManageUsersContentPageResource.
                 MangeUsersContent_Content_Frame_Name));
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(ManageUsersContentPageResource.
                 MangeUsersContent_Content_Frame_Name);
             Logger.LogMethodExit("ManageUsersContentPage", "SelectContentFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select ECollge User role from dropdown
             Logger.LogMethodEntry("ManageUsersContentPage", "SelectECollegeUserRole",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             IWebElement getManageUserDropDownProperty = base.GetWebElementPropertiesById
                     (ManageUsersContentPageResource.MangeUsersContent_DropDown_Id_Locator);
             //Click on Drop Down 
@@ -101,7 +101,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("ManageUsersContentPage", "SelectECollegeUserRole",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter User Information
             Logger.LogMethodEntry("ManageUsersContentPage", "EnterECollegeUserInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Default Window
             this.SelectAdministrationPagesWindow();
             //Select Conetent frame
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter User Login Information
             this.EnterUserLoginInformation(userLoginInformationGuid);
             Logger.LogMethodExit("ManageUsersContentPage", "EnterECollegeUserInformation",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return userLoginInformationGuid;
         }
 
@@ -134,7 +134,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Username and Password on Loginpage
             Logger.LogMethodEntry("ManageUsersContentPage","EnterUserLoginInformation",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Fill user Login name
             base.WaitForElement(By.Name(ManageUsersContentPageResource.
                  MangeUsersContent_LoginId_Name_Locator));
@@ -157,7 +157,7 @@ namespace Pegasus.Pages.UI_Pages
                   MangeUsersContent_ConfirmPassword_Name_TextLocator).
                  SendKeys(userLoginInformationGuid.ToString());
             Logger.LogMethodExit("ManageUsersContentPage","EnterUserLoginInformation",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -169,7 +169,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter ECollege Personal information
             Logger.LogMethodEntry("ManageUsersContentPage",
                 "EnterECollegeUserPersonalInformation",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Generate Full name guid
             Guid userFullName = Guid.NewGuid();
             this.EnterUserFirstName(userFullName.ToString());
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
             this.EnterUserEMailAddress();
             Logger.LogMethodExit("ManageUsersContentPage",
                 "EnterECollegeUserPersonalInformation"
-                  , base.isTakeScreenShotDuringEntryExit);
+                  , base.IsTakeScreenShotDuringEntryExit);
             return userFullName;
         }
 
@@ -189,7 +189,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click To Next Button
             Logger.LogMethodEntry("ManageUsersContentPage",
                 "ClickCreateNewUserNextButton"
-                   , base.isTakeScreenShotDuringEntryExit);
+                   , base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ManageUsersContentPageResource.
                 MangeUsersContent_NextButton_Id_Locator));
             IWebElement nextButton = base.GetWebElementPropertiesById(
@@ -198,7 +198,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(nextButton);
             Logger.LogMethodExit("ManageUsersContentPage",
                 "ClickCreateNewUserNextButton"
-                   , base.isTakeScreenShotDuringEntryExit);
+                   , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -208,14 +208,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Email ID
             Logger.LogMethodEntry("ManageUsersContentPage", "EnterUserEMailAddress"
-                   , base.isTakeScreenShotDuringEntryExit);
+                   , base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Name(ManageUsersContentPageResource.
                 MangeUsersContent_EmailId_Name_TextLocator));
             base.FillTextBoxByName(ManageUsersContentPageResource.
                 MangeUsersContent_EmailId_Name_TextLocator,
                 ManageUsersContentPageResource.MangeUsersContent_EmailIdOfUser_Value);
             Logger.LogMethodExit("ManageUsersContentPage", "EnterUserEMailAddress"
-                   , base.isTakeScreenShotDuringEntryExit);
+                   , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -226,7 +226,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter user Last Name
             Logger.LogMethodEntry("ManageUsersContentPage", "EnterUserLastName"
-                   , base.isTakeScreenShotDuringEntryExit);
+                   , base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Name(ManageUsersContentPageResource.
                 MangeUsersContent_LastName_Name_TextLocator));
             base.GetWebElementPropertiesByName(ManageUsersContentPageResource.
@@ -234,7 +234,7 @@ namespace Pegasus.Pages.UI_Pages
             base.GetWebElementPropertiesByName(ManageUsersContentPageResource.
                 MangeUsersContent_LastName_Name_TextLocator).SendKeys(userLastName);
             Logger.LogMethodExit("ManageUsersContentPage", "EnterUserLastName"
-                   , base.isTakeScreenShotDuringEntryExit);
+                   , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter First Name
             Logger.LogMethodEntry("ManageUsersContentPage", "EnterUserFirstName"
-                   , base.isTakeScreenShotDuringEntryExit);
+                   , base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Name(ManageUsersContentPageResource.
                 MangeUsersContent_FirstName_Name_TextLocator));
             base.GetWebElementPropertiesByName(ManageUsersContentPageResource.
@@ -253,7 +253,7 @@ namespace Pegasus.Pages.UI_Pages
             base.GetWebElementPropertiesByName(ManageUsersContentPageResource.
                 MangeUsersContent_FirstName_Name_TextLocator).SendKeys(userFirstName);
             Logger.LogMethodExit("ManageUsersContentPage", "EnterUserFirstName"
-                   , base.isTakeScreenShotDuringEntryExit);
+                   , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -264,7 +264,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Save button
             Logger.LogMethodEntry("ManageUsersContentPage",
                 "ClickOnSaveButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             this.SelectAdministrationPagesWindow();
             base.SwitchToIFrame(ManageUsersContentPageResource.
                 MangeUsersContent_Content_Frame_Name);
@@ -278,7 +278,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(saveButton);
             Logger.LogMethodExit("ManageUsersContentPage",
                 "ClickOnSaveButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -293,7 +293,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save user in Memory
             Logger.LogMethodEntry("ManageUsersContentPage",
                 "StoreUserDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Save User Properties in Memory
             User newUser = new User
             {
@@ -306,7 +306,7 @@ namespace Pegasus.Pages.UI_Pages
             newUser.StoreUserInMemory();
             Logger.LogMethodExit("ManageUsersContentPage",
                 "StoreUserDetailsInMemory",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -317,7 +317,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Window
             Logger.LogMethodEntry("ManageUsersContentPage",
              "SelectAdministrationPagesWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Gets Load
             base.WaitUntilWindowLoads(ManageUsersContentPageResource.
                 ManageUsersContent_Page_AdministrationPages_Window_Title);
@@ -326,7 +326,7 @@ namespace Pegasus.Pages.UI_Pages
                 ManageUsersContent_Page_AdministrationPages_Window_Title);
             Logger.LogMethodEntry("ManageUsersContentPage",
              "SelectAdministrationPagesWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -338,7 +338,7 @@ namespace Pegasus.Pages.UI_Pages
             //Search Users
             Logger.LogMethodEntry("ManageUsersContentPage",
              "SearchECollegeUsers",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Administration Pages Window
             this.SelectAdministrationPagesWindow();
             //Select Content Frame
@@ -361,7 +361,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(nextButtonElement);
             Logger.LogMethodExit("ManageUsersContentPage",
              "SearchECollegeUsers",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             
         }
     }

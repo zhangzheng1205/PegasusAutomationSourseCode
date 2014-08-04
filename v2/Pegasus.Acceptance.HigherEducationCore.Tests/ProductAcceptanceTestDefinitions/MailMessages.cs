@@ -29,12 +29,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select Mail Option
             Logger.LogMethodEntry("MailMessages",
                 "SelectMailOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On Mail Option
             new ProntoChatPage().ClickOnMailOption();
             Logger.LogMethodExit("MailMessages",
                 "SelectMailOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Create Mail By Course Space Instructor
             Logger.LogMethodEntry("MailMessages",
                 "CreateMailByInCourseSpaceInstructor",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Compose New Option
             new MessageGridPage().SelectComposeNewOption();
             //Click On 'TO' Button
@@ -62,7 +62,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             new ComposeNewMailUXPage().EnterSubjectTitleAndHtmlText(mailTypeEnum);
             Logger.LogMethodExit("MailMessages",
                 "CreateMailByInCourseSpaceInstructor",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,12 +74,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Send Mail to CourseSpace Users
             Logger.LogMethodEntry("MailMessages",
                 "SendMailToCourseSpaceUsers",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On Send Button
             new ComposeNewMailUXPage().ClickOnSendButton();
             Logger.LogMethodExit("MailMessages",
                 "SendMailToCourseSpaceUsers",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Mail Sent By Instructor
             Logger.LogMethodEntry("MailMessages",
                 "VerifyMailSentByInstructor",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Mail Message Details From Memory
             Mail mailMessage = Mail.Get(mailTypeEnum);
             // Assert Course Search
@@ -101,7 +101,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                   new MessageGridPage().GetMailSubjectFromInstructor(mailMessage.Subject)));
             Logger.LogMethodExit("MailMessages",
                "VerifyMailSentByInstructor",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 

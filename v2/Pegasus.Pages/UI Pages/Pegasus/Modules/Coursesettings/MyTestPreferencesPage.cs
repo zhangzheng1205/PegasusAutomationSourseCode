@@ -23,7 +23,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable The MyTest Options
             Logger.LogMethodEntry("MyTestPreferencesPage", "EnableTheMyTestOptions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Preference window
@@ -44,7 +44,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }          
             Logger.LogMethodExit("MyTestPreferencesPage", "EnableTheMyTestOptions",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save The Preferences
             Logger.LogMethodEntry("MyTestPreferencesPage", "SaveThePreferences",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the preference window
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("MyTestPreferencesPage", "SaveThePreferences",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

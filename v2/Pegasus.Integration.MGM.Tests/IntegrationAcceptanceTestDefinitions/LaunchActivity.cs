@@ -32,12 +32,12 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //Verify the click of Cmenu options in my course frame for an activity
             Logger.LogMethodEntry("LaunchActivity", "ClickOnCmenuOptionOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Launch activity action
             new CourseContentUXPage().PerformMouseOverOnCMenuOptionOfActivity(
                 cmenuOptionName, userTypeEnum);
             Logger.LogMethodExit("LaunchActivity", "ClickOnCmenuOptionOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             // Open The Activity 
             Logger.LogMethodEntry("LaunchActivity", "LaunchTheSkillStudyPlanPreTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Launch of PreTest Presentation window
             Logger.LogAssertion("VerifyPrsentationLaunch", ScenarioContext.
                 Current.ScenarioInfo.Title,
@@ -69,7 +69,7 @@ namespace Pegasus.Integration.MGM.Tests.
                     break;
             }
             Logger.LogMethodExit("LaunchActivity", "LaunchTheSkillStudyPlanPreTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -80,13 +80,13 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             // Open The Activity 
             Logger.LogMethodEntry("LaunchActivity", "LaunchTheTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Launch of Presentation window
             Logger.LogAssertion("VerifyPrsentationLaunch", ScenarioContext.
                 Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new PlayerTestPage().IsMGMTestActivityLauched()));
             Logger.LogMethodExit("LaunchActivity", "LaunchTheTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -97,14 +97,14 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             // Open The Activity 
             Logger.LogMethodEntry("LaunchActivity", "LaunchMGMTestActivityByStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Launch of Presentation window
             Logger.LogAssertion("VerifyPrsentationLaunch",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new PlayerTestPage().
                     IsMGMTestActivityLauchedByStudent()));
             Logger.LogMethodExit("LaunchActivity", "LaunchMGMTestActivityByStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

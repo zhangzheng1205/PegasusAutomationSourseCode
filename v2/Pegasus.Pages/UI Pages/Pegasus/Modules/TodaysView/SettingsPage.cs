@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enabling the New Grades Option
             logger.LogMethodEntry("SettingsPage", "EnableNewGradesOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch to Frame
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SettingsPage", "EnableNewGradesOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Saving the settings for New Grades
             logger.LogMethodEntry("SettingsPage", "ClickToSaveAndCloseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             IWebElement getSaveCloseButton = base.GetWebElementPropertiesByPartialLinkText
                 (SettingsPageResource.
                 SettingsPageResource_Button_SaveandClose_Title);
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSaveCloseButton);
             base.IsPopUpClosed(2);
             logger.LogMethodExit("SettingsPage", "ClickToSaveAndCloseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

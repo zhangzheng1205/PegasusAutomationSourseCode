@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Method To click on the Search Courses Link
             Logger.LogMethodEntry("ProductManagementContainerPage", "ClickSearchCoursesLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Parent Window
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ProductManagementContainerPage", "ClickSearchCoursesLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Method To click on the Search Product Link
             Logger.LogMethodEntry("ProductManagementContainerPage", "ClickSearchProductLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Product Window
@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ProductManagementContainerPage", "ClickSearchProductLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             Logger.LogMethodEntry("ProductManagementContainerPage", "SelectProductWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ProductManagementContainerPage", "SelectProductWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select IFrame Right
             Logger.LogMethodEntry("ProductManagementContainerPage", "SelectIFrameRight",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -143,7 +143,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ProductManagementContainerPage", "SelectIFrameRight",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select WorkSpace IFrame
             Logger.LogMethodEntry("ProductManagementContainerPage", "SelectWorkSpaceIFrame",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -168,7 +168,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ProductManagementContainerPage", "SelectWorkSpaceIFrame",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Product Course Preference Option
             Logger.LogMethodEntry("ProductManagementContainerPage",
-                "ClickonProductCoursePreferenceOption", base.isTakeScreenShotDuringEntryExit);
+                "ClickonProductCoursePreferenceOption", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Product Window
@@ -209,7 +209,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ProductManagementContainerPage",
-                "ClickonProductCoursePreferenceOption", base.isTakeScreenShotDuringEntryExit);
+                "ClickonProductCoursePreferenceOption", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Integration PointID
             Logger.LogMethodEntry("ProductManagementContainerPage",
-                "GetIntegrationPointID", base.isTakeScreenShotDuringEntryExit);
+                "GetIntegrationPointID", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Edit Enrollment Window
@@ -246,7 +246,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ProductManagementContainerPage",
-               "GetIntegrationPointID", base.isTakeScreenShotDuringEntryExit);
+               "GetIntegrationPointID", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Edit Enrollment Window
             Logger.LogMethodEntry("ProductManagementContainerPage",
-                "SelectEditEnrollmentWindow", base.isTakeScreenShotDuringEntryExit);
+                "SelectEditEnrollmentWindow", base.IsTakeScreenShotDuringEntryExit);
             //Wait for the window
             base.WaitUntilWindowLoads(ProductManagementContainerPageResource.
                 ProductManagementContainer_Page_EditEnrollmentWindow_Title);
@@ -264,7 +264,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(ProductManagementContainerPageResource.
                 ProductManagementContainer_Page_EditEnrollmentWindow_Title);
             Logger.LogMethodExit("ProductManagementContainerPage",
-               "SelectEditEnrollmentWindow", base.isTakeScreenShotDuringEntryExit);
+               "SelectEditEnrollmentWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Integration PointID In Memory
             Logger.LogMethodEntry("ProductManagementContainerPage",
-                "StoreIntegrationPointIDInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreIntegrationPointIDInMemory", base.IsTakeScreenShotDuringEntryExit);
             Course course = new Course
             {
                 IntegrationPointId = CCNGIntegrationPointID,
@@ -284,7 +284,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             course.StoreCourseInMemory();
             Logger.LogMethodExit("ProductManagementContainerPage",
-                "StoreIntegrationPointIDInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreIntegrationPointIDInMemory", base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

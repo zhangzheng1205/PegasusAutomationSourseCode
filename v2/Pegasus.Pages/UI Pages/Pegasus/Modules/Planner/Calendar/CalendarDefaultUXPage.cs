@@ -40,7 +40,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Drag and Drop the Asset to The Calendar
             logger.LogMethodEntry("CalendarDefaultUXPage", "DragAndDropAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(EmptyCalendarPageResource.
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarDefaultUXPage", "DragAndDropAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search The Asset
             logger.LogMethodEntry("CalendarDefaultUXPage", "SearchTheAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Search the asset
             base.WaitForElement(By.Id(CalendarDefaultUXPageResource.
                 CalendarDefaultUXPage_Textbox_Search_Id_Locator));
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(CalendarDefaultUXPageResource.
                 CalendarDefaultUXPage_Div_SearchedAssets_Id_Locator));
             logger.LogMethodExit("CalendarDefaultUXPage", "SearchTheAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Display Of Assigned Asset
             logger.LogMethodEntry("CalendarDefaultUXPage", "GetAssignedAssetName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             string getAssetName = string.Empty;
             try
             {
@@ -127,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("CalendarDefaultUXPage", "GetAssignedAssetName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getAssetName;
         }
 
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Searched Asset Name
             logger.LogMethodEntry("CalendarDefaultUXPage", "GetSearchedAssetName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             string getAssetName = string.Empty;
             //Start the StopWatch
             Stopwatch stopWatch = new Stopwatch();
@@ -179,7 +179,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("CalendarDefaultUXPage", "GetSearchedAssetName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getAssetName;
         }
 
@@ -192,7 +192,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Go to Student View Link In Global HomePage
             logger.LogMethodEntry("CalendarDefaultUXPage",
                 "ClickTheGotoStudentViewLinkInGlobalHomePage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the 'Go to Student View' link
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarDefaultUXPage",
                 "ClickTheGotoStudentViewLinkInGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -220,7 +220,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Assigned Asset Content Message
             logger.LogMethodEntry("CalendarDefaultUXPage", "GetAssignedAssetContentMessage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             string getContentMessage = string.Empty;
             {
                 //Select the Window
@@ -236,7 +236,7 @@ namespace Pegasus.Pages.UI_Pages
                     CalendarDefaultUXPage_AssignedToCopy_Text_Id_Locator);              
             }
             logger.LogMethodExit("CalendarDefaultUXPage", "GetAssignedAssetContentMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getContentMessage;
         }
 
@@ -248,7 +248,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select 'View By' Dropdown Option
             logger.LogMethodEntry("CalendarDefaultUXPage", "SelectViewByDropdownOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Calendar Window
@@ -267,7 +267,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarDefaultUXPage", "SelectViewByDropdownOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -277,14 +277,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Calendar Window
             logger.LogMethodEntry("CalendarDefaultUXPage", "SelectCalendarWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(CalendarDefaultUXPageResource.
                 CalendarDefaultUXPage_Calendar_Window_Name);
             //Select Window
             base.SelectWindow(CalendarDefaultUXPageResource.
                 CalendarDefaultUXPage_Calendar_Window_Name);
             logger.LogMethodExit("CalendarDefaultUXPage", "SelectCalendarWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Contents Order In Content Frame
             logger.LogMethodEntry("CalendarDefaultUXPage", "GetContentsOrderInContentFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variables
             string getAssetsName = string.Empty;
             string getAssetText = string.Empty;
@@ -326,7 +326,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarDefaultUXPage", "GetContentsOrderInContentFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getAssetsName;
         }
 
@@ -339,7 +339,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Display Of Assigned Asset
             logger.LogMethodEntry("CalendarDefaultUXPage", "GetAssetNameInCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             string getAssetName = string.Empty;
             try
             {
@@ -350,7 +350,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarDefaultUXPage", "GetAssetNameInCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getAssetName;
         }
 
@@ -363,7 +363,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get AssetName From Calendar
             logger.LogMethodEntry("CalendarDefaultUXPage", "GetAssetNameFromCalendar",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variables           
             string getAssetText = string.Empty;
             //Select Calendar Window
@@ -389,7 +389,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("CalendarDefaultUXPage", "GetAssetNameFromCalendar",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getAssetText;            
         }
     }

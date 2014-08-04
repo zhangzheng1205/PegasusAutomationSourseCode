@@ -37,7 +37,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Browse Login Url
             Logger.LogMethodEntry("LoginLogout", "BrowseMMNDCertLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Default Window
             base.SelectDefaultWindow();
             // Pick Url based on user type enum
@@ -53,7 +53,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                 loginPage.GoToLoginUrl();
             }
             Logger.LogMethodExit("LoginLogout", "BrowseMMNDCertLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Login to MMND
             Logger.LogMethodEntry("LoginLogout", "LoginToMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get User details from memory
             User user = User.Get(userTypeEnum);
             switch (userTypeEnum)
@@ -83,7 +83,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                     break;
             }
             Logger.LogMethodExit("LoginLogout", "LoginToMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //To Check Login Success
             Logger.LogMethodEntry("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing the Variable
             Boolean isUserLoggedIn = false;
             switch (userTypeEnum)
@@ -118,7 +118,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
             Logger.LogAssertion("VerifyLoginSuccess",
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.IsTrue(isUserLoggedIn));
             Logger.LogMethodExit("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Log out of MMND
             Logger.LogMethodEntry("LoginLogout", "LogOutFromMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.MMNDInstructor:
@@ -148,7 +148,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                     break;
             }
             Logger.LogMethodExit("LoginLogout", "LogOutFromMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -160,13 +160,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Verify SUccessfull Message
             Logger.LogMethodEntry("LoginLogout", "VerifyTheMessage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert Message
             Logger.LogAssertion("VerifyMessage", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(message,
                     new IndexPage().GetSuccessfullMessageAfterCourseIntegration()));
             Logger.LogMethodExit("LoginLogout", "VerifyTheMessage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Browse Login Url
             Logger.LogMethodEntry("LoginLogout", "BrowsePegasusLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Pick Url based on user type enum
             loginPage = new BrowsePegasusUserURL((User.UserTypeEnum)
                 Enum.Parse(typeof(User.UserTypeEnum), userType));
@@ -195,7 +195,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                 loginPage.GoToLoginUrl();
             }
             Logger.LogMethodExit("LoginLogout", "BrowsePegasusLoginUrl",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Login in Pegasus
             Logger.LogMethodEntry("LoginLogout", "LoginIntoThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Boolean isUserAlreadyLoggedIn = base.IsElementPresent
                 (By.PartialLinkText(LoginLogoutResource.
                 LoginLogout_Signout_Link_Title_Locator),
@@ -253,7 +253,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
             }
 
             Logger.LogMethodExit("LoginLogout", "LoginIntoThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -264,14 +264,14 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Login Success
             Logger.LogMethodEntry("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert we have logged in successfully
             Logger.LogAssertion("VerifyLoginSuccess",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
                     Assert.AreNotEqual(LoginLogoutResource.
                     LoginLogout_Window_Name_Title, new BrowsePegasusUserURL(User.UserTypeEnum.HedWsAdmin).GetPageTitle()));
             Logger.LogMethodExit("LoginLogout", "LoggedInSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -286,7 +286,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Method to Clicks on SignOut link
             Logger.LogMethodEntry("LoginLogout", "SignOutFromThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.HedWsAdmin:
@@ -301,7 +301,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                     break;
             }
             Logger.LogMethodExit("LoginLogout", "SignOutFromThePegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

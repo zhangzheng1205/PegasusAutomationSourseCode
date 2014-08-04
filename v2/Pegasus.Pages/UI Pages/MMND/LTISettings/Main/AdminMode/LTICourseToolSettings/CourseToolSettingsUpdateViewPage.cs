@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Edit Button
             logger.LogMethodEntry("CourseToolSettingsUpdateViewPage", "ClickOnEditButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Edit Button
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                   
             }
             logger.LogMethodExit("CourseToolSettingsUpdateViewPage", "ClickOnEditButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get SuccessFull Message
             logger.LogMethodEntry("CourseToolSettingsUpdateViewPage", "GetSuccessfullMessage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initializing Variable
             string getSuccessMessage = string.Empty;
             try
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                 
             }
             logger.LogMethodExit("CourseToolSettingsUpdateViewPage", "GetSuccessfullMessage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getSuccessMessage;
         }
     }

@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create a Class
             logger.LogMethodEntry("ClassUserControlsPage", "CreateClassUsingMasterLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get the Class Name
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ClassUserControlsPage", "CreateClassUsingMasterLibrary",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Class Using Template
             logger.LogMethodEntry("ClassUserControlsPage", "CreateClassUsingTemplate",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get the Class Name
@@ -101,7 +101,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ClassUserControlsPage", "CreateClassUsingTemplate",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Template and Save the Class
             logger.LogMethodEntry("ClassUserControlsPage", "SelectTemplate",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select the Template
             this.ClickOnTemplate(template);
             //Click on Next Button
@@ -128,7 +128,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.PartialLinkText(ClassUserControlsPageResource.
                 ClassUserControls_Page_CreateNew_Link_Locator));
             logger.LogMethodExit("ClassUserControlsPage", "SelectTemplate",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Create Class Finish Button
             logger.LogMethodEntry("ClassUserControlsPage", "ClickTheCreateClassFinishButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on Next Button
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ClassUserControlsPage", "ClickTheCreateClassFinishButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -163,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Template
             logger.LogMethodEntry("ClassUserControlsPage", "ClickOnTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.IsElementLoadedInWindow(ClassUserControlsPageResource.
                 ClassUserControls_Page_CreateClass_Window_Name, 
                 By.Id(ClassUserControlsPageResource.
@@ -176,7 +176,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Template Radio Button
             this.ClickOnTemplatedRadioButton(templateName);
             logger.LogMethodExit("ClassUserControlsPage", "ClickOnTemplate",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Template Radio Button
             logger.LogMethodEntry("ClassUserControlsPage", "ClickOnTemplatedRadioButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(ClassUserControlsPageResource.
                                              ClassUserControls_Page_Template_Xpath_Locator));
@@ -214,7 +214,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("ClassUserControlsPage", "ClickOnTemplatedRadioButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -226,7 +226,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select MasterLibrary and Save the Class
             logger.LogMethodEntry("ClassUserControlsPage", "SelectMasterLibrary",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Click on MasterLibrary Radio Button
             this.ClickOnMasterLibrary(masterLibrary);
             //Click on Next button
@@ -246,7 +246,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Finish Button
             this.ClickOnFinishButton();
             logger.LogMethodExit("ClassUserControlsPage", "SelectMasterLibrary",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Finish Button
             logger.LogMethodEntry("ClassUserControlsPage", "ClickOnFinishButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Create Class Window
             this.SelectCreateClassWindow();
             Thread.Sleep(Convert.ToInt32(ClassUserControlsPageResource.
@@ -272,7 +272,7 @@ namespace Pegasus.Pages.UI_Pages
             //Check Create Class Popup Closed
             base.IsPopUpClosed(3);
             logger.LogMethodExit("ClassUserControlsPage", "ClickOnFinishButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -282,14 +282,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Class Frame
             logger.LogMethodEntry("ClassUserControlsPage", "SelectCreateClassFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Creat class Frame
             base.WaitForElement(By.Id(ClassUserControlsPageResource.
                 ClassUserControls_Page_Frame_Id_Locator));
             base.SwitchToIFrame(ClassUserControlsPageResource.
                 ClassUserControls_Page_Frame_Id_Locator);
             logger.LogMethodExit("ClassUserControlsPage", "SelectCreateClassFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Next Button
             logger.LogMethodEntry("ClassUserControlsPage", "ClickOnNextButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Create Class Window
             this.SelectCreateClassWindow();
             base.WaitForElement(By.Id(ClassUserControlsPageResource.
@@ -311,7 +311,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Next Button
             base.ClickByJavaScriptExecutor(getNextButtonProperty);
             logger.LogMethodExit("ClassUserControlsPage", "ClickOnNextButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -321,7 +321,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Class Window
             logger.LogMethodEntry("ClassUserControlsPage", "SelectCreateClassWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -335,7 +335,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ClassUserControlsPage", "SelectCreateClassWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -346,7 +346,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the Class Name
             logger.LogMethodEntry("ClassUserControlsPage", "GetClassName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Create Class Window Loads
             this.SelectCreateClassWindow();
             //Select the Create Class Frame
@@ -361,7 +361,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Next BUtton
             this.ClickOnNextButton();
             logger.LogMethodExit("ClassUserControlsPage", "GetClassName",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             return className.ToString();
         }
 
@@ -374,7 +374,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Class Name in Memory
             logger.LogMethodEntry("ClassUserControlsPage",
-                "StoreMasterLibraryClassDetailsInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreMasterLibraryClassDetailsInMemory", base.IsTakeScreenShotDuringEntryExit);
             Class userClass = new Class
             {
                 Name = className,
@@ -384,7 +384,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save Class Name to Memory
             userClass.StoreClassInMemory();
             logger.LogMethodExit("ClassUserControlsPage",
-                "StoreMasterLibraryClassDetailsInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreMasterLibraryClassDetailsInMemory", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -395,7 +395,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Class Name in Memory
             logger.LogMethodEntry("ClassUserControlsPage",
-                "StoreTemplateClassNameInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreTemplateClassNameInMemory", base.IsTakeScreenShotDuringEntryExit);
             Class templateClass = new Class
             {
                 Name = templateClassName,
@@ -404,7 +404,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             templateClass.StoreClassInMemory();
             logger.LogMethodExit("ClassUserControlsPage",
-                "StoreClassDetailsInMemory", base.isTakeScreenShotDuringEntryExit);
+                "StoreClassDetailsInMemory", base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -417,7 +417,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the Master Library
             logger.LogMethodEntry("ClassUserControlsPage", "ClickOnMasterLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ClassUserControlsPageResource.
                 ClassUserControls_Page_Frame_Id_Locator));
             //Switch to Frame
@@ -428,7 +428,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On The Master Library Radio Button
             this.ClickOnMasterLibraryRadioButton(masterLibrary);
             logger.LogMethodExit("ClassUserControlsPage", "ClickOnMasterLibrary",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -439,7 +439,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Master Library Radio Button
             logger.LogMethodEntry("ClassUserControlsPage", "ClickOnMasterLibraryRadioButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Count of Master Library
             int getCourseCount = base.GetElementCountByXPath(ClassUserControlsPageResource.
                 ClassUserControls_Page_CourseCount_Xpath_Locator);
@@ -480,7 +480,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("ClassUserControlsPage", "ClickOnMasterLibraryRadioButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -490,7 +490,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The 'Create New' Dropdown
             logger.LogMethodEntry("ClassUserControlsPage", "ClickTheCreateNewDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -515,7 +515,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ClassUserControlsPage", "ClickTheCreateNewDropdown",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -528,7 +528,7 @@ namespace Pegasus.Pages.UI_Pages
             //Create Class Using Novanet MasterLibrary
             logger.LogMethodEntry("ClassUserControlsPage", 
                 "CreateClassUsingNovanetMasterLibrary",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get the Class Name
@@ -559,7 +559,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ClassUserControlsPage",
                 "CreateClassUsingNovanetMasterLibrary",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -570,7 +570,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select MasterLibrary Checkbox
             logger.LogMethodEntry("ClassUserControlsPage", "SelectMasterLibraryCheckbox",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select the Create Class Frame
             this.SelectCreateClassFrame();
             //Click MasterLibrary Checkbox
@@ -586,7 +586,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select the Create Class Frame
             this.SelectCreateClassFrame();
             logger.LogMethodExit("ClassUserControlsPage", "SelectMasterLibraryCheckbox",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -597,7 +597,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click MasterLibrary Checkbox
             logger.LogMethodEntry("ClassUserControlsPage", "ClickMasterLibraryCheckbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(ClassUserControlsPageResource.
                 ClassUserControls_Page_CourseName_Xpath_Locator));
@@ -617,7 +617,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.ClickByJavaScriptExecutor(getCourseCheckbox);                    
                 }
             logger.LogMethodExit("ClassUserControlsPage", "ClickMasterLibraryCheckbox",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

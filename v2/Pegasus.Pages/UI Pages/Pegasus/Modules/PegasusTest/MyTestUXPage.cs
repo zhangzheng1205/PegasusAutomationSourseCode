@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("MyTestUXPage",
-              "ClickOnUpgradeToTextInsideCourse",base.isTakeScreenShotDuringEntryExit);
+              "ClickOnUpgradeToTextInsideCourse",base.IsTakeScreenShotDuringEntryExit);
             //wait for element 
             base.WaitForElement(By.ClassName(MyTestUXPageResource.
                 MyTestPage_UpgradeTo_ClassID_Locator));
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getPropertyOfUpgradeToLink);
             //Logger Exit
             Logger.LogMethodExit("MyTestUXPage",
-              "ClickOnUpgradeToTextInsideCourse", base.isTakeScreenShotDuringEntryExit);
+              "ClickOnUpgradeToTextInsideCourse", base.IsTakeScreenShotDuringEntryExit);
         }
 
        /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
        {
          //Click The OK Button In UpgrdePage
          Logger.LogMethodEntry("MyTestUXPage",
-              "ClickTheOkButtonInUpgradePage", base.isTakeScreenShotDuringEntryExit);
+              "ClickTheOkButtonInUpgradePage", base.IsTakeScreenShotDuringEntryExit);
          try
          {
              //Select the window
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
              ExceptionHandler.HandleException(e);
          }
          Logger.LogMethodExit("MyTestUXPage",
-              "ClickTheOkButtonInUpgradePage", base.isTakeScreenShotDuringEntryExit);
+              "ClickTheOkButtonInUpgradePage", base.IsTakeScreenShotDuringEntryExit);
         }
 
        /// <summary>
@@ -86,14 +86,14 @@ namespace Pegasus.Pages.UI_Pages
        {
            //Select Upgrade Window
            Logger.LogMethodEntry("MyTestUXPage",
-                "SelectUpgradeWindow", base.isTakeScreenShotDuringEntryExit);
+                "SelectUpgradeWindow", base.IsTakeScreenShotDuringEntryExit);
            //Select the window
            base.WaitUntilWindowLoads(MyTestUXPageResource.
                MyTestPage_Upgrade_Window_Name);
            base.SelectWindow(MyTestUXPageResource.
                MyTestPage_Upgrade_Window_Name);
            Logger.LogMethodExit("MyTestUXPage",
-             "SelectUpgradeWindow", base.isTakeScreenShotDuringEntryExit);
+             "SelectUpgradeWindow", base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            //Store The Upgraded MyTest Course
            Logger.LogMethodEntry("MyTestUXPage","StoreTheUpgradedMyTestCourse", 
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            //Fetch the data from memory
            Course course = Course.Get(Course.CourseTypeEnum.MyTestBankCourse);
            Course newCourse = new Course
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages
            };
            newCourse.StoreCourseInMemory();
            Logger.LogMethodExit("MyTestUXPage","StoreTheUpgradedMyTestCourse", 
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
     }
 }

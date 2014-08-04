@@ -30,10 +30,10 @@ namespace Pegasus.Integration.ETextS11.Tests.
             User.UserTypeEnum userTypeEnum)
         {
             //Create Users by Type in Pegasus
-            Logger.LogMethodEntry("CreateUser", "CreateNewUser", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("CreateUser", "CreateNewUser", base.IsTakeScreenShotDuringEntryExit);
             //Create New User 
             new NewUserPage().CreateNewUserInWorkSpace(userTypeEnum);
-            Logger.LogMethodExit("CreateUser", "CreateNewUser", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("CreateUser", "CreateNewUser", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

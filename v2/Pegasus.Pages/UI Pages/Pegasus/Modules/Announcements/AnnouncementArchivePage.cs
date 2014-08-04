@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Clicking Create Announcement Link.
             logger.LogMethodEntry("AnnouncementArchivePage", "ClickCreateAnnouncementLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Default Page Content
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AnnouncementArchivePage", "ClickCreateAnnouncementLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,12 +55,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Announcement Window
             logger.LogMethodEntry("AnnouncementArchivePage", "SelectAnnouncementWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Select Parent window
             base.SelectWindow(AnnouncementArchivePageResource.
                 AnnouncementArchive_Page_Window_Title);
             logger.LogMethodExit("AnnouncementArchivePage", "SelectAnnouncementWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }  
     }
 }

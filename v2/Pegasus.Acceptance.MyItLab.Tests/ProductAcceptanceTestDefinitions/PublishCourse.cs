@@ -30,7 +30,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Method To Publish Course
             Logger.LogMethodEntry("PublishCourse", "PublishAuthoredMasterCourseInWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Course Cmenu Option
             new ManageCoursesPage().ClickCourseCMenuOption
                     (PublishCourseResource.
@@ -38,7 +38,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Course Published Successfully
             new PublishingNotesPage().PublishCourseInWorkSpace(courseTypeEnum);
             Logger.LogMethodExit("PublishCourse", "PublishAuthoredMasterCourseInWorkSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

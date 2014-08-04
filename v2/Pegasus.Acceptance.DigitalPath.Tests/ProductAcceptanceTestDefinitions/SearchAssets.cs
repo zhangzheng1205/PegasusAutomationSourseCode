@@ -37,7 +37,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Search the Asset
             Logger.LogMethodEntry("SearchAssets", "SearchAssetByCriteria",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Activity Name From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Check Activity Assign To Copy State
@@ -47,7 +47,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 (ContentLibraryPage.SearchCriteriaEnum)Enum.Parse
                 (typeof(ContentLibraryPage.SearchCriteriaEnum), searchCriteriaLinkName));
             Logger.LogMethodExit("SearchAssets", "SearchAssetByCriteria",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Asset Searched Successfully
             Logger.LogMethodEntry("SearchAssets", "VerifyAssetSearchedSuccessfully",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get the Activity Name From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Assert Asset Searched Successfully
@@ -69,7 +69,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 () => Assert.AreEqual(activity.Name, new ContentLibraryPage().
                     GetAssetName()));
             Logger.LogMethodExit("SearchAssets", "VerifyAssetSearchedSuccessfully",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -80,11 +80,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Clear Searched Result
             Logger.LogMethodEntry("SearchAssets", "ClearSearchedResult",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Clear Searched Result
             new ContentLibraryPage().ClearSearchedResult();
             Logger.LogMethodExit("SearchAssets", "ClearSearchedResult",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -95,14 +95,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Searched Result Present
             Logger.LogMethodEntry("SearchAssets", "VerifySearchedResultPresent",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Assert for Searched Result Present or Not
             Logger.LogAssertion("VerifyAssetSearchedSuccessfully",
                ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.AreEqual(false, new ContentLibraryPage().
                    CheckClearResultLinkPresent()));
             Logger.LogMethodExit("SearchAssets", "VerifySearchedResultPresent",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Search Asset Using Advanced Search
             Logger.LogMethodEntry("SearchAssets", "SearchAssetUsingAdvancedSearch",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Get the Activity Name From Memory
             Activity activity = Activity.Get(activityTypeEnum);            
             //Search Asset Using Advanced Search
@@ -125,7 +125,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 (AdvancedSearchPage.SearchTab)Enum.Parse
                 (typeof(AdvancedSearchPage.SearchTab),tabName));
             Logger.LogMethodExit("SearchAssets", "SearchAssetUsingAdvancedSearch",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -138,12 +138,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Search Asset in Planner Tab
             Logger.LogMethodEntry("SearchAssets", "SearchAssetInPlannerTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityTypeEnum);
             //Search Asset in Planner Tab
             new CalendarDefaultGlobalUXPage().SearchAssetInPlannerTab(activity.Name);
             Logger.LogMethodExit("SearchAssets", "SearchAssetInPlannerTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Verify Asset Searched Successfully in Planner Tab
             Logger.LogMethodEntry("SearchAssets", "VerifySearchedAssetSuccessfullyInPlannerTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Activity Name From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Assert Asset Searched Successfully
@@ -165,7 +165,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 () => Assert.AreEqual(activity.Name, new CalendarDefaultGlobalUXPage().
                     GetAssetName()));
             Logger.LogMethodExit("SearchAssets", "VerifySearchedAssetSuccessfullyInPlannerTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -176,11 +176,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Clear Searched result in Planner Tab
             Logger.LogMethodEntry("SearchAssets", "ClearSearchedResultInPlannerTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Clear Searched result in Planner Tab
             new CalendarDefaultGlobalUXPage().ClearSearchedResult();
             Logger.LogMethodExit("SearchAssets", "ClearSearchedResultInPlannerTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -191,14 +191,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Searched Result Present In Planner Tab
             Logger.LogMethodEntry("SearchAssets", "VerifySearchedResultPresentInPlannerTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Assert for Searched Result Present or Not
             Logger.LogAssertion("VerifyAssetSearchedSuccessfully",
                ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.AreEqual(false, new CalendarDefaultGlobalUXPage().
                    CheckClearResultLinkPresent()));
             Logger.LogMethodExit("SearchAssets", "VerifySearchedResultPresentInPlannerTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }       
 
         /// <summary>
@@ -211,7 +211,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify Searched Asset In Planner Tab
             Logger.LogMethodEntry("SearchAssets", "VerifySearchedAssetInPlannerTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Get the Activity Name From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Assert Asset Searched Successfully
@@ -220,7 +220,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 () => Assert.AreEqual(activity.Name, new CalendarDefaultGlobalUXPage().
                     GetAssetName()));
             Logger.LogMethodExit("SearchAssets", "VerifySearchedAssetInPlannerTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

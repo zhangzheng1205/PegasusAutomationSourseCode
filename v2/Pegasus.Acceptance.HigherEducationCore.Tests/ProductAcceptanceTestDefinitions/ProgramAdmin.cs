@@ -34,13 +34,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Create New Template
             Logger.LogMethodEntry("ProgramAdmin", "CreateNewTemplateAsTheProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Assert Create New Template 
             new ManageTemplatePage().CreatTemplate(course.Name);
             Logger.LogMethodExit("ProgramAdmin", "CreateNewTemplateAsTheProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -51,11 +51,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click on 'Add Sections' Link
             Logger.LogMethodEntry("ProgramAdmin", "ClickOnAddSectionsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Add New Sections Link
             new ManageTemplatePage().ClickOnAddNewSectionsLink();
             Logger.LogMethodExit("ProgramAdmin", "ClickOnAddSectionsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,11 +68,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Create New Section
             Logger.LogMethodEntry("ProgramAdmin", "CreateSectionAsProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create New Section 
             new AddNewSectionPage().CreateNewSection(courseTypeEnum);
             Logger.LogMethodExit("ProgramAdmin", "CreateSectionAsProgramAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -85,14 +85,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify Section in Active State
             Logger.LogMethodEntry("ProgramAdmin", "SectionInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Approve Section in Active State
             new ManageTemplatePage().ApproveInActiveStateOfEntityInProgramAdministration(
                 course.SectionName);
             Logger.LogMethodExit("ProgramAdmin", "SectionInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify Section in Active State
             Logger.LogMethodEntry("ProgramAdmin", "ApproveAssignedToCopyStateForSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Assert Verify Template in Active State or not
@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 (course.SectionName).Contains(ProgramAdminResource.
                 ProgramAdmin_Page_AssignToCopyState_Text_Value)));
             Logger.LogMethodExit("ProgramAdmin", "ApproveAssignedToCopyStateForSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -129,14 +129,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify Template in Active State
             Logger.LogMethodEntry("ProgramAdmin", "TemplateInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Verify Template in Active State
             new ManageTemplatePage().
                 ApproveInActiveStateOfEntityInProgramAdministration(course.Name);
             Logger.LogMethodExit("ProgramAdmin", "TemplateInAssignedToCopyState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Course.CourseTypeEnum courseTypeEnum)
         {
             Logger.LogMethodEntry("ProgramAdmin", "ApproveAssignedToCopyStateForTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Assert Verify Template in Active State or not
@@ -158,7 +158,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 GetAssignToCopyStateText(course.Name).Contains(ProgramAdminResource.
                 ProgramAdmin_Page_AssignToCopyState_Text_Value)));
             Logger.LogMethodExit("ProgramAdmin", "ApproveAssignedToCopyStateForTemplate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -169,14 +169,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //To verify user is on Program Administration Page
             Logger.LogMethodEntry("ProgramAdmin", "DisplayOfProgramAdministrationPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert to verify is user on Program Administration page 
             Logger.LogAssertion("ProgramAdmin",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(base.IsWindowsExists(ProgramAdminResource.
                     ProgramAdmin_Page_Window_Title_Name)));
             Logger.LogMethodExit("ProgramAdmin", "DisplayOfProgramAdministrationPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Verification of user display in Users Tab
             Logger.LogMethodEntry("ProgramAdmin", "DisplayEnrolledUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get user From Memory
             User user = User.Get(userTypeEnum);
             string studentUserName = new ProgramAdminUsersPage().
@@ -202,7 +202,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
               () => Assert.AreEqual(true,
                   studentUserName.Contains(userNameMemory)));
             Logger.LogMethodExit("ProgramAdmin", "DisplayEnrolledUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -216,14 +216,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Search the user in Enrollment Tab
             Logger.LogMethodEntry("ProgramAdmin",
                 "SearchTheUserInTheUsersFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Get user From Memory
             User user = User.Get(userTypeEnum);
             //Search user 
             new ProgramAdminManageUsersPage().SearchUser(user.Name);
             Logger.LogMethodExit("ProgramAdmin",
                 "SearchTheUserInTheUsersFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verification of display of searched user
             Logger.LogMethodEntry("ProgramAdmin",
                 "SeeTheSearchedUserInTheUsersFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Get user From Memory
             User user = User.Get(User.UserTypeEnum.CsSmsStudent);            
             //Assert display of user
@@ -247,7 +247,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                  GetSearchedUser().Contains(user.Name)));
             Logger.LogMethodExit("ProgramAdmin",
                 "SeeTheSearchedUserInTheUsersFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -259,12 +259,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Selecting the searcged user under enrollment tab
             Logger.LogMethodEntry("ProgramAdmin",
                 "SelectTheSearchedUserInTheUsersFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             // Select searched User
             new ProgramAdminManageUsersPage().SelectAllUser();
             Logger.LogMethodExit("ProgramAdmin",
                 "SelectTheSearchedUserInTheUsersFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -276,7 +276,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Searching the section2
             Logger.LogMethodEntry("ProgramAdmin",
                 "SearchTheSection2InTheSectionsFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Get course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
             //Search section2
@@ -285,7 +285,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 ProgramAdmin_Page_SecondSection_Value);
             Logger.LogMethodExit("ProgramAdmin",
                 "SearchTheSection2InTheSectionsFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -296,7 +296,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Display of Seached Section Name
             Logger.LogMethodEntry("ProgramAdmin", "SeeTheSearchedSectionInSectionFrame",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Get course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);            
             // Assert for display of searched section 
@@ -308,7 +308,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 (course.SectionName)));
             Logger.LogMethodExit("ProgramAdmin",
                 "SeeTheSearchedSectionInSectionFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -320,13 +320,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Enter In Searched Section
             Logger.LogMethodEntry("ProgramAdmin",
                 "EnterIntoTheSearchedSection",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Click on the searched section
             new ProgramAdminManageCourseTemplatesPage().
                 EnterIntoSection();
             Logger.LogMethodExit("ProgramAdmin",
                 "EnterIntoTheSearchedSection",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -339,7 +339,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Enrol User in Different Section
             Logger.LogMethodEntry("ProgramAdmin",
                 "EnrollUsertoSection",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Creating object of page class
             EnrollmentMainPage enrollmentMainPage =
                 new EnrollmentMainPage();
@@ -349,7 +349,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             enrollmentMainPage.ClickonAddUserOption(addUserOption);
             Logger.LogMethodExit("ProgramAdmin",
                 "EnrollUsertoSection",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -361,12 +361,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click on Cmenu of Section or Template
             Logger.LogMethodEntry("ProgramAdmin", "ClickOnCmenuOfSectionOrTemplate"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Click on Cmenu of Section or Template
             new ManageTemplatePage().
                 ClickOnCmenuOfSectionOrTemplate(cMenuOption);
             Logger.LogMethodExit("ProgramAdmin", "ClickOnCmenuOfSectionOrTemplate"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -380,7 +380,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify the Section Name and ID After Enter Inside the Section
             Logger.LogMethodEntry("ProgramAdmin",
                 "VerifySectionNameandIDAfterEnterInsideSection"
-                 , base.isTakeScreenShotDuringEntryExit);
+                 , base.IsTakeScreenShotDuringEntryExit);
             //Get course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
             //Get Section Name
@@ -397,7 +397,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                new TodaysViewUXPage().GetSectionIDAfterEnterInsideSection()));
             Logger.LogMethodExit("ProgramAdmin",
                 "VerifySectionNameandIDAfterEnterInsideSection"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -409,7 +409,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Verify the Display Of Course Name 
             Logger.LogMethodEntry("ProgramAdmin", "DisplayOfCourseName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Get the Course Name
             Course course = Course.Get(courseTypeEnum);
             // Assert Course Name 
@@ -417,7 +417,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(course.Name,new TodaysViewUXPage().GetCourseName()));
             Logger.LogMethodExit("ProgramAdmin", "DisplayOfCourseName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -429,7 +429,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Search the section
             Logger.LogMethodEntry("ProgramAdmin",
                 "SearchTheSection1InSectionsFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Get course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
             //Search section1
@@ -438,7 +438,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 ProgramAdmin_Page_First_Section_Value));
             Logger.LogMethodExit("ProgramAdmin",
                 "SearchTheSection1InSectionsFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -450,7 +450,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify the Student Promoted as Teaching Assistant in Section
             Logger.LogMethodEntry("ProgramAdmin",
                  "VerifyTheStudentPromotedasTeachingAssistantInSection",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             // Assert the Student Promoted as Teaching Assistant in Section
             Logger.LogAssertion("ProgramAdmin",
               ScenarioContext.Current.ScenarioInfo.Title,
@@ -459,7 +459,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                IsTeachingAssistantPresentinSection()));
             Logger.LogMethodExit("ProgramAdmin",
                "VerifyTheStudentPromotedasTeachingAssistantInSection",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -471,12 +471,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Derive Section From Parent Section
             Logger.LogMethodEntry("ProgramAdmin",
                  "DeriveSectionFromParentSection",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Derive Section From Parent Section
             new ManageTemplatePage().DeriveSectionFromParentSection();
             Logger.LogMethodExit("ProgramAdmin",
                "DeriveSectionFromParentSection",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -486,13 +486,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         public void SearchTheSection()
         {
             Logger.LogMethodEntry("ProgramAdmin", "SearchTheSection",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.MySpanishLabMaster);
             //Search Section
             new ManageTemplatePage().SearchSection(course.SectionName);
             Logger.LogMethodExit("ProgramAdmin", "SearchTheSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Save Button click to create course Manage Template section
@@ -502,12 +502,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         public void ClickToCreateUpdate(string Button, String Operation)
         {
             Logger.LogMethodEntry("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //SaveUpdate method to create or update the course.
             new EditCopyTemplatesSectionsPage().CreateSharedLibrary();
 
             Logger.LogMethodExit("ProgramAdmin", "ClickSaveToCreateSharedLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -519,11 +519,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         public void ClickOnCopyButton(string Button, string Oparation)
         {
             Logger.LogMethodEntry("ProgramAdmin", "ClickOnCopyButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //SaveUpdate method to create or update the course.
             new EditCopyTemplatesSectionsPage().ClickToCreateUpdate();
             Logger.LogMethodExit("ProgramAdmin", "ClickOnCopyButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -535,11 +535,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         public void ClickonCopySectionButton(string Button, string Oparation)
         {
             Logger.LogMethodEntry("ProgramAdmin", "ClickonCopySectionButton",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             //SaveUpdate method to create or update the course.
             new EditCopyTemplatesSectionsPage().CopySection();
             Logger.LogMethodExit("ProgramAdmin", "ClickonCopySectionButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 

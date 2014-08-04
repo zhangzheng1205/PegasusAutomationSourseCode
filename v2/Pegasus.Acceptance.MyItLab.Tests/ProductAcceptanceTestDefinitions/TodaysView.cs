@@ -26,11 +26,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Clicking the New Grades link
             Logger.LogMethodEntry("TodaysView", "ClickNewGradesAlertOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Clicking on the New Grades Link
             new TodaysViewUXPage().ClickNewGradesOption();
             Logger.LogMethodExit("TodaysView", "ClickNewGradesAlertOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -41,11 +41,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Click View Submission Cmenu Option
             Logger.LogMethodEntry("TodaysView", "ClickViewSubmissionCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click The View Submission Cmenu Option
             new TodaysViewUXPage().ClickTheViewSubmissionCmenuOption();
             Logger.LogMethodEntry("TodaysView", "ClickViewSubmissionCmenuOption",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -57,13 +57,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify the Grade in ViewSubmission Page
             Logger.LogMethodEntry("TodaysView", "VerifyTheGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Edited Grade in ViewSubmission Page
             Logger.LogAssertion("VerifyGradeinViewSubmission", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(newGrade,
                     new ViewSubmissionPage().GetSubmittedGradeInViewSubmissionPage()));
             Logger.LogMethodExit("TodaysView", "VerifyTheGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Verify The Submitted Activity Name
             Logger.LogMethodEntry("TodaysView", "VerifyTheSubmittedActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
             //Assert Submitted Activity name present            
@@ -87,7 +87,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 () => Assert.AreEqual(activity.Name,
                     new TodaysViewUXPage().GetSubmittedActivityNameByStudent()));
             Logger.LogMethodEntry("TodaysView", "VerifyTheSubmittedActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -99,13 +99,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify Channels in Today's View Page
             Logger.LogMethodEntry("TodaysView", "VerifyChanneslInTodaysViewPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify Channels in Today's View Page
             Logger.LogAssertion("VerifyChannels",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(channels, new TodaysViewUXPage().GetChannelsInTodaysView()));
             Logger.LogMethodEntry("TodaysView", "VerifyChanneslInTodaysViewPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verifies Sub tabs Under Main Tab
             Logger.LogMethodEntry("TodaysView", "VerifySubTabsUnderMainTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             foreach (var tableRow in table.Rows)
             {
                 //Assert correct pages are opened
@@ -134,7 +134,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     TodaysViewResource_WindowTitle_Text])));
             }
             Logger.LogMethodExit("TodaysView", "VerifySubTabsUnderMainTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Displaying the Alert for New Grades
             Logger.LogMethodEntry("TodaysView", "DisplayAlertForNewGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Asserts if New Grades alerts are displayed
             Logger.LogAssertion("VerifyDisplayOfNewGrades",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -153,7 +153,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     TodaysViewResource_NewGrade_Value,
                     new TodaysViewUXPage().GetNewGradesAlert()));
             Logger.LogMethodExit("TodaysView", "DisplayAlertForNewGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -165,13 +165,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select Resource Tool From 'Tools' Dropdown
             Logger.LogMethodEntry("TodaysView", "SelectResourceToolFromDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Resource Tool From 'Tools' Dropdown            
             new TodaysViewUXPage().SelectResourceToolFromToolsDropdown
                ((TodaysViewUXPage.ResourceToolsTypeEnum)Enum.Parse
                (typeof(TodaysViewUXPage.ResourceToolsTypeEnum), resourceToolName));
             Logger.LogMethodExit("TodaysView", "SelectResourceToolFromDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -182,11 +182,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select My Progress Option
             Logger.LogMethodEntry("TodaysView", "SelectMyProgressOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select My Progress option
             new TodaysViewUXPage().SelectMyProgressOption();
             Logger.LogMethodExit("TodaysView", "SelectMyProgressOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -198,21 +198,21 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Cmenu Option of Activity
             Logger.LogMethodEntry("TodaysView", "ClickOnCmenuOptionOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityTypeEnum);
             new TodaysViewUXPage().ClickOnCmenuOptionOfAsset(activity.Name);
             Logger.LogMethodExit("TodaysView", "ClickOnCmenuOptionOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         [When(@"I select the cmenu option ""(.*)"" of the activity")]
         public void SelectCmenuOfTheActivity(string cmenuOption)
         {
             Logger.LogMethodEntry("TodaysView", "SelectMyProgressOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             new TodaysViewUXPage().SelectCmenuOption(cmenuOption);
             Logger.LogMethodExit("TodaysView", "SelectMyProgressOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -224,7 +224,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify 'Verb Chart' Tool Launched Successfully
             Logger.LogMethodEntry("TodaysView",
                 "VerifyVerbChartToolLaunchedSuccessfully",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Asserts to Verify 'Verb Chart' Tool Launched Successfully
             Logger.LogAssertion("VerifyVerbChartToolLaunchedSuccessfully",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -233,7 +233,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     new VerbChartUXPage().GetVerbChartLabel()));
             Logger.LogMethodExit("TodaysView",
                 "VerifyVerbChartToolLaunchedSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }      
 
     }

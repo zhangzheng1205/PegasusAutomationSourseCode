@@ -30,12 +30,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Navigate To Subtab In Preferences Page
             Logger.LogMethodEntry("Preferences",
                 "NavigateToSubtabInPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Subtab
             new GeneralPreferencesPage().ClickOntheSubtab(subtabName);
             Logger.LogMethodExit("Preferences",
                 "NavigateToSubtabInPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -47,14 +47,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Display Of The Subtab
             Logger.LogMethodEntry("Preferences", "DisplayOfTheSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert the Subtab Name Displayed
             Logger.LogAssertion("VerifyTheDisplayOfSubtab",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
                     Assert.AreEqual(subtabName,
                     new GeneralPreferencesPage().GetSelectedSubtabName()));
             Logger.LogMethodExit("Preferences", "DisplayOfTheSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,11 +65,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Enable 'Apply Grade Schema' Option
             Logger.LogMethodEntry("Preferences", "EnableApplyGradeSchemaOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable 'Apply Grade Schema' Option
             new GradingPreferencesPage().EnableApplyGradeSchemaOption();
             Logger.LogMethodExit("Preferences", "EnableApplyGradeSchemaOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -80,11 +80,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Save The Preferences
             Logger.LogMethodEntry("Preferences", "SaveThePreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Save The Preferences
             new GeneralPreferencesPage().SavePreferences();
             Logger.LogMethodExit("Preferences", "SaveThePreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -95,11 +95,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Enable 'Copy Content' Option
             Logger.LogMethodEntry("Preferences", "EnableCopyContentOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable 'Copy Content' Option From Content Library to Course Content
             new CourseCopyPreferencesPage().EnableCopyContentOption();
             Logger.LogMethodExit("Preferences", "EnableCopyContentOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         public void EnableEmbededReporting()
         {
             Logger.LogMethodEntry("Preferences", "EnableEmbededReporting",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable Embedded Report in General Preferences Page
             GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
             //Select the Window
@@ -117,7 +117,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Enable Embedded Report in General Preferences Page
             generalPreferencePage.EnableGeneralTabEmbeddedReportPreferenceSettings();
             Logger.LogMethodExit("Preferences", "EnableEmbededReporting",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -129,12 +129,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Click On Edit Link Option of Activity
             Logger.LogMethodEntry("Preferences",
                 "ClickEditLinkOptionOfActivityInThePreferencesColumn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Edit Link Option Of Activity
             new ActivitiesPreferencesPage().ClickOnActivityEditOption();
             Logger.LogMethodExit("Preferences",
                 "ClickEditLinkOptionOfActivityInThePreferencesColumn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Default Option Of Activity
             Logger.LogMethodEntry("Preferences",
                 "VerifyDefaultOptionOfTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Submitted Activity name present            
             Logger.LogAssertion("VerifyDefaultOptionOfTheActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -155,7 +155,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     new DefaultPreferencesPage().GetNumberOfAttemptsText()));            
             Logger.LogMethodExit("Preferences",
                 "VerifyDefaultOptionOfTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -166,11 +166,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Enable desired Permissions for Teaching Assistant
             Logger.LogMethodEntry("Preferences","EnablePermissionsForTeachingAssistant",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable Permission Preferences
             new PermissionPreferencesPage().EnablePermissionPreferences();
             Logger.LogMethodExit("Preferences","EnablePermissionsForTeachingAssistant",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -182,14 +182,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Enabled Permission Preferences in Reports Tab
             Logger.LogMethodEntry("Preferences",
                 "VerifyEnabledPermissionPreferencesInReportsTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Enabled Permission Preferences in Reports Tab are Present
             Logger.LogAssertion("VerifyEnabledPermissionsInReports",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new RptMainUXPage().IsPermissionsEnabledInReports()));             
             Logger.LogMethodExit("Preferences",
                 "VerifyEnabledPermissionPreferencesInReportsTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -202,7 +202,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Verify Cmenu Option of Content in Mycourse
             Logger.LogMethodEntry("Preferences",
                 "VerifyCmenuOfContentInMycourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Cmenu Option of Content in Mycourse
             Logger.LogAssertion("VerifyCmenuOfContentInMycourse",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -210,7 +210,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     IsCmenuOptionofContentPresent(contentCmenu)));    
             Logger.LogMethodExit("Preferences",
                 "VerifyCmenuOfContentInMycourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -222,11 +222,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Navigating to 'Home' sub tab
             Logger.LogMethodEntry("Preferences", "ClickOnTheHomeTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Navigating to 'Home' sub tab options from preference page
             new GeneralPreferencesPage().ClickonSubTabofPreference(subTabName);
             Logger.LogMethodExit("Preferences", "ClickOnTheHomeTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -238,14 +238,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Validate Course Listing Options present in home page
             Logger.LogMethodEntry("Preferences", "ValidateDisplayOfTitleInPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verifying the return title value is correct
             Logger.LogAssertion("VerifyTitleValueInHomePage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.AreEqual(title, new GeneralPreferencesPage().
                  GetTitleValueInHomePage()));
             Logger.LogMethodExit("Preferences", "ValidateDisplayOfTitleInPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -256,11 +256,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Select the 'Enable Badge' checkbox            
             Logger.LogMethodEntry("Preferences", "SelectEnableBadgeCheckbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Check the Enable badge checkbox
             new GeneralPreferencesPage().CheckEnableBadgeCheckBox();
             Logger.LogMethodExit("Preferences", "SelectEnableBadgeCheckbox",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -272,14 +272,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Check Select Content button is enabled          
             Logger.LogMethodEntry("Preferences", "ValidateStateOfSelectContentButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Check select content button is enabled
             Logger.LogAssertion("VerifyValidateStateOfSelectContentButton",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(null, new GeneralPreferencesPage().
                     GetSelectContentButtonStatus()));
             Logger.LogMethodExit("Preferences", "ValidateStateOfSelectContentButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -290,11 +290,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Enter the value in textbox fields
             Logger.LogMethodEntry("Preferences", "EnterTheTextboxFields",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Check the textbox fields are entered
             new GeneralPreferencesPage().EnterValueinTextBoxFields();
             Logger.LogMethodExit("Preferences", "EnterTheTextboxFields",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -305,11 +305,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click the Select Content button            
             Logger.LogMethodEntry("Preferences", "ClickOnSelectContentButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click the Select Content button
             new GeneralPreferencesPage().ClickTheSelectContentButton();
             Logger.LogMethodExit("Preferences", "ClickOnSelectContentButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -322,11 +322,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Select the single activity from pop up window
             Logger.LogMethodEntry("Preferences", "SelectSingleActivityFromCheckbox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select activity from checkbox
             new GeneralPreferencesPage().SelectSingleActivityFromPopUP(activityName);
             Logger.LogMethodExit("Preferences", "SelectSingleActivityFromCheckbox",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -337,11 +337,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click on Add and Close button to add activities to textbox field            
             Logger.LogMethodEntry("Preferences", "ClickOnAddAndCloseButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click the add and Close button
             new GeneralPreferencesPage().AddActivityToSelectContentTextField();
             Logger.LogMethodExit("Preferences", "ClickOnAddAndCloseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -354,14 +354,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Validate the activity name in the SelectContent Textbox field
             Logger.LogMethodEntry("Preferences", "ValidateActivityNameInSelectContentTextbox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Check activityName is Same
             Logger.LogAssertion("VerifyActivityNameInSelectContentTextbox",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(activityName, new GeneralPreferencesPage().
                 getActivityNameInSelectContentTextbox()));
             Logger.LogMethodExit("Preferences", "ValidateActivityNameInSelectContentTextbox",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -376,14 +376,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Select the multiple activities from pop up window
             Logger.LogMethodEntry("Preferences", "SelectMultipleActivitiesFromCheckbox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
             //Select first activity from checkbox
             generalPreferencePage.SelectSingleActivityFromPopUP(firstActivityName);
             //Select second activity from checkbox
             generalPreferencePage.SelectSingleActivityFromPopUP(secondActivityName);
             Logger.LogMethodExit("Preferences", "SelectMultipleActivitiesFromCheckbox",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -395,14 +395,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Check The Prefernces Option For Character Palate
             Logger.LogMethodEntry("Preferences", "CheckThePreferenceOptionForcharacterpalate",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
             //Enable Character Palate Check Box
             generalPreferencePage.EnableCharacterPalateCheckBox();
             //Click On Save Preferences
             generalPreferencePage.SavePreferences();
             Logger.LogMethodExit("Preferences", "CheckThePreferenceOptionForcharacterpalate",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -413,13 +413,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Enable Course Channel Preference
             Logger.LogMethodEntry("Preferences", "EnableCourseChannelPreference",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Enable Course Channel Option
             new CourseChannelPreferencesPage().EnableCourseChannelOption();
             //Save The Preferences
             new GeneralPreferencesPage().SavePreferences();
             Logger.LogMethodExit("Preferences", "EnableCourseChannelPreference",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -431,11 +431,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click On Move Down Option Of Channel
             Logger.LogMethodEntry("Preferences", "ClickOnMoveDownOptionOfCalendarChannel",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Click On Move Down Option Of Channel
             new TodaysViewUXPage().ClickOnChannelMoveDownOption(option);
             Logger.LogMethodExit("Preferences", "ClickOnMoveDownOptionOfCalendarChannel",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -448,7 +448,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Display Of Channel
             Logger.LogMethodEntry("Preferences",
                 "VerifyDisplayOfChannel",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Verify Display Of Channel
             Logger.LogAssertion("VerifyDisplayOfChannel",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -456,7 +456,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     new TodaysViewUXPage().getCourseChannelName()));
             Logger.LogMethodExit("Preferences",
                 "VerifyDisplayOfChannel",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -469,12 +469,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            //Click On Option Of Course Channel
            Logger.LogMethodEntry("Preferences",
                "ClickOnMoveUpOptionOfCalendarCourseChannel",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
            //Click On Course Channel Option
            new TodaysViewUXPage().ClickOnCourseChannelMOveUpOption(option);
            Logger.LogMethodExit("Preferences",
                "ClickOnMoveUpOptionOfCalendarCourseChannel",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
        }
 
         /// <summary>
@@ -485,11 +485,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
        {
            //Remove Calendar Channel From Course Channel
            Logger.LogMethodEntry("Preferences", "RemoveCalendarChannelFromCourseChannel",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
            // Remove Calendar Channel From Course Channel
            new TodaysViewUXPage().RemoveCalendarChannel();
            Logger.LogMethodExit("Preferences", "RemoveCalendarChannelFromCourseChannel",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
        }
 
         /// <summary>
@@ -501,14 +501,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
        {
            //Verify Removed Channel
            Logger.LogMethodEntry("Preferences", "VerifyRemovedChannel",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
            //Assert Removed Channel
            Logger.LogAssertion("VerifyRemovedChannel",
                ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.AreNotEqual(channelName,
                    new TodaysViewUXPage().getCourseChannelName()));
            Logger.LogMethodExit("Preferences", "VerifyRemovedChannel",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
        }       
 
        /// <summary>
@@ -519,11 +519,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
        {
            //Enable Schedule Activities Option
            Logger.LogMethodEntry("Preferences", "EnableScheduleActivitiesOption",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
            //Enable 'Schedule Activities' Permission
            new PermissionPreferencesPage().EnableScheduleActivitiesPermission();
            Logger.LogMethodExit("Preferences", "EnableScheduleActivitiesOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -535,7 +535,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            //Enable Necessary General Preference Settings
            Logger.LogMethodEntry("Preferences", 
                "EnableNecessaryGeneralTabPreferenceSettings",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
            GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
            //Select Main Frame
            generalPreferencePage.SelectThePreferenceWindowWithFrame();
@@ -551,7 +551,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            generalPreferencePage.SavePreferences();
            Logger.LogMethodExit("Preferences",
                "EnableNecessaryGeneralTabPreferenceSettings",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
        }
 
         /// <summary>
@@ -563,7 +563,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            //Enable Necessary MyTest Preference Settings
            Logger.LogMethodEntry("Preferences",
                "EnableNecessaryRosterPreferenceSettings",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
            GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
            //Select Main Frame
            generalPreferencePage.SelectThePreferenceWindowWithFrame();
@@ -573,7 +573,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            generalPreferencePage.SavePreferences();
            Logger.LogMethodExit("Preferences",
                "EnableNecessaryRosterPreferenceSettings",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -585,7 +585,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            //Enable Necessary Grades Preference Settings
            Logger.LogMethodEntry("Preference",
                "EnableNecessaryGradingTabPreferenceSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
            //Select Main Frame
            generalPreferencePage.SelectThePreferenceWindowWithFrame();
@@ -600,7 +600,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            generalPreferencePage.SavePreferences();
            Logger.LogMethodExit("Preference",
                "EnableNecessaryGradingTabPreferenceSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
         /// <summary>
@@ -612,7 +612,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            //Enable Necessary Course Tools Tab Preference Settings
            Logger.LogMethodEntry("Preference",
                "EnableNecessaryCourseToolsTabPreferenceSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            ToolbarPreferencesPage toolbarPreferencePage = new ToolbarPreferencesPage();
            GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
            //Select Main Frame
@@ -652,7 +652,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            generalPreferencePage.SavePreferences();
            Logger.LogMethodExit("Preference",
                "EnableNecessaryCourseToolsTabPreferenceSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
         /// <summary>
@@ -664,7 +664,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            //Enable Necessary Course Tools Tab Preference Settings
            Logger.LogMethodEntry("Preference",
                "EnableNecessaryActivitiesTabPreferenceSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
            //Select Main Frame
            generalPreferencePage.SelectThePreferenceWindowWithFrame();
@@ -675,7 +675,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            generalPreferencePage.SavePreferences();
            Logger.LogMethodExit("Preference",
                "EnableNecessaryActivitiesTabPreferenceSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
         /// <summary>
@@ -687,7 +687,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            //Enable Necessary StandardsAndSkills Tab Preference Settings
            Logger.LogMethodEntry("Preference",
                "EnableNecessaryStandardsAndSkillsTabPreferenceSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
            //Select Main Frame
            generalPreferencePage.SelectThePreferenceWindowWithFrame();
@@ -698,7 +698,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            generalPreferencePage.SavePreferences();
            Logger.LogMethodExit("Preference",
                "EnableNecessaryStandardsAndSkillsTabPreferenceSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -710,12 +710,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            //Enable Necessary Catalog Preference Settings
            Logger.LogMethodEntry("Preference",
                "EnableNecessaryCatalogPreferenceSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            //Enable Catalog Preference Settings
            new CatalogPreferencesPage().EnableCatalogPreferenceSettings();
            Logger.LogMethodExit("Preference",
                "EnableNecessaryCatalogPreferenceSettings",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -727,13 +727,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            //Preference settings For Copy Content
            Logger.LogMethodEntry("Preferences",
                "SetThePreferencesForCopyContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            //Set The Preferences For Copy Content
            new CourseCopyPreferencesPage().
                SetCopyContentPreference();
            Logger.LogMethodExit("Preferences",
                "SetThePreferencesForCopyContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
        }
        /// <summary>
        /// Enable Blackboard Collaborate Voice Authoring Preference option.
@@ -744,7 +744,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            // Enable Blackboard Collaborate Voice Authoring Preference option
            Logger.LogMethodEntry("Preference",
                "EnableBlackboardVoiceAuthoringOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
            GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
            //Select The Main Frame
            generalPreferencePage.SelectThePreferenceWindowWithFrame();
@@ -756,7 +756,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            generalPreferencePage.SavePreferences();
            Logger.LogMethodExit("Preference",
               "EnableBlackboardVoiceAuthoringOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
        }
     }
 }

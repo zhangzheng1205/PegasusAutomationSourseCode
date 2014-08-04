@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verfy Accept Button
             logger.LogMethodEntry("CourseIdInputPage", "IsFindCourseButtonPresent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             bool isFindCourseButtonPresent = false;
             try
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("CourseIdInputPage", "IsFindCourseButtonPresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isFindCourseButtonPresent;
         }
 
@@ -68,7 +68,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Course Id
             logger.LogMethodEntry("CourseIdInputPage", "EnterCourseId",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Product Selection Window
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("CourseIdInputPage", "EnterCourseId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Access Code
             logger.LogMethodEntry("CourseIdInputPage", "EnterAccessCode",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Access Code button
@@ -141,7 +141,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                   
             }
             logger.LogMethodExit("CourseIdInputPage", "EnterAccessCode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter NonCoordinator Course Id
             logger.LogMethodEntry("CourseIdInputPage", "EnterNonCoordinatorCourseId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -176,7 +176,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseIdInputPage", "EnterNonCoordinatorCourseId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -186,14 +186,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("CourseIdInputPage", "SelectWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(CourseIdInputPageResource.
                 CourseIdInput_Page_Window_Title);
             //Select Window
             base.SelectWindow(CourseIdInputPageResource.
                 CourseIdInput_Page_Window_Title);
             logger.LogMethodExit("CourseIdInputPage", "SelectWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Student Enrollment Confirmation Message
             logger.LogMethodEntry("CourseIdInputPage", "GetStudentEnrollmentConfirmationMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable            
             string getConfirmationMessageText = string.Empty;
             try
@@ -223,7 +223,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseIdInputPage", "GetStudentEnrollmentConfirmationMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getConfirmationMessageText;
         }
         

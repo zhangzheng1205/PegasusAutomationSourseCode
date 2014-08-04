@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Questions From SkillFrame
             logger.LogMethodEntry("SkillStandardAlignedAssetsUXPage", "SelectQuestionsFromSkillFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {   
                 //Select Window and Frame
@@ -57,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }         
             logger.LogMethodExit("SkillStandardAlignedAssetsUXPage", "SelectQuestionsFromSkillFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Question Checkbox
             logger.LogMethodEntry("SkillStandardAlignedAssetsUXPage", "SelectQuestionCheckbox",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.XPath(SkillStandardAlignedAssetsUXResource.
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SkillStandardAlignedAssetsUXPage", "SelectQuestionCheckbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
             // Select Questions Frame
             logger.LogMethodEntry("SkillStandardAlignedAssetsUXPage",
                 "ClickOnSaveButtonInSelectQuestionPopup",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(SkillStandardAlignedAssetsUXResource.
                 SkillStandardAlignedAssetsUX_Page_SelectQues_SaveClose_Button_Id_Locator));
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
                 SkillStandardAlignedAssetsUX_Page_CreateSkillStudyPlan_Window_Name);
             logger.LogMethodExit("SkillStandardAlignedAssetsUXPage", 
                 "ClickOnSaveButtonInSelectQuestionPopup",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Questions Frame
             logger.LogMethodEntry("SkillStandardAlignedAssetsUXPage", "SelectQuestionFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }    
             logger.LogMethodExit("SkillStandardAlignedAssetsUXPage", "SelectQuestionFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace Pegasus.Pages.UI_Pages
         { 
             // Map Question To The Skill
             logger.LogMethodEntry("SkillStandardAlignedAssetsUXPage", "MapQuestionToTheSkill",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Navigate Inside Skill In Skill Frame
@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SkillStandardAlignedAssetsUXPage", "MapQuestionToTheSkill",
-                base.isTakeScreenShotDuringEntryExit); 
+                base.IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate Inside Skill
             logger.LogMethodEntry("SkillStandardAlignedAssetsUXPage", "NavigateInsideSkill",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectAlignContentToSkilllWindow();
             base.WaitForElement(By.Id(SkillStandardAlignedAssetsUXResource.
@@ -205,7 +205,7 @@ namespace Pegasus.Pages.UI_Pages
                 SkillStandardAlignedAssetsUX_Page_Skill_Xpath_Locator);
             base.ClickByJavaScriptExecutor(getSkillProperty);
             logger.LogMethodExit("SkillStandardAlignedAssetsUXPage", "NavigateInsideSkill",
-                base.isTakeScreenShotDuringEntryExit); 
+                base.IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Add Button
             logger.LogMethodEntry("SkillStandardAlignedAssetsUXPage", "ClickonAddButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectAlignContentToSkilllWindow();
             base.WaitForElement(By.Id(SkillStandardAlignedAssetsUXResource.
@@ -226,7 +226,7 @@ namespace Pegasus.Pages.UI_Pages
                 SkillStandardAlignedAssetsUX_Page_Add_Button_Id_Locator);
             base.ClickByJavaScriptExecutor(getAddButtonProperty);
             logger.LogMethodExit("SkillStandardAlignedAssetsUXPage", "ClickonAddButton",
-                base.isTakeScreenShotDuringEntryExit); 
+                base.IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question In Question Bank
             logger.LogMethodEntry("SkillStandardAlignedAssetsUXPage", "SelectQuestionInQuestionBank",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectAlignContentToSkilllWindow();
             base.WaitForElement(By.Id(SkillStandardAlignedAssetsUXResource.
@@ -276,14 +276,14 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("SkillStandardAlignedAssetsUXPage", "SelectQuestionInQuestionBank",
-                base.isTakeScreenShotDuringEntryExit); 
+                base.IsTakeScreenShotDuringEntryExit); 
         }
 
         private void SelectAlignContentToSkilllWindow()
         {
             logger.LogMethodEntry("SkillStandardAlignedAssetsUXPage",
                 "SelectAlignContentToSkilllWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             base.WaitUntilWindowLoads(SkillStandardAlignedAssetsUXResource.
                 SkillStandardAlignedAssetsUX_Page_Window_Name);
@@ -292,7 +292,7 @@ namespace Pegasus.Pages.UI_Pages
                 SkillStandardAlignedAssetsUX_Page_Window_Name);
             logger.LogMethodExit("SkillStandardAlignedAssetsUXPage",
                 "SelectAlignContentToSkilllWindow",
-               base.isTakeScreenShotDuringEntryExit); 
+               base.IsTakeScreenShotDuringEntryExit); 
         }
     }
 }

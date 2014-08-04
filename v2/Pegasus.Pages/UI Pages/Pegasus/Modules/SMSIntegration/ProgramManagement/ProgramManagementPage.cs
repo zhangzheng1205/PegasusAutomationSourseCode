@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Create New Program Link
             logger.LogMethodEntry("ProgramManagementPage", "ClickOnCreateNewProgramLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProgramManagementPage", "ClickOnCreateNewProgramLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

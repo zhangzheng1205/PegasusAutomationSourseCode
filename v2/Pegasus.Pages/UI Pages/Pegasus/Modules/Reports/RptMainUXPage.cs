@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Manage Instructor Reports by Types
             Logger.LogMethodEntry("RptMainUXPage", "ManageInstructorReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select According to Pegasus Report type            
             try
             {
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodEntry("RptMainUXPage", "ManageInstructorReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         ///Select Mastery Report link.
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickTheMasteryReportsLink(PegasusInstructorReportEnum reportTypeEnum)
         {
             Logger.LogMethodEntry("RptMainUXPage", "ClickTheInstructorReportsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (reportTypeEnum)
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "ClickTheInstructorReportsLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "GenerateMasteryReportForSkill",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return skillName;
         }
 
@@ -198,7 +198,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Student Activity Report
             Logger.LogMethodEntry("RptMainUXPage", "GenerateClassMasteryReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             RptCommonCriteriaPage rptCommonCriteriaPage = new RptCommonCriteriaPage();
             //Select "Skills" or "Standard" radio button and click on "Select Skills" button            
             rptCommonCriteriaPage.SelectSkillStdOption();
@@ -211,7 +211,7 @@ namespace Pegasus.Pages.UI_Pages
             //Validate skill name
             skillName = new RptMasteryPage().ValidateSkillNameForMasteryReport();
             Logger.LogMethodEntry("RptMainUXPage", "GenerateClassMasteryReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return skillName;
         }
 
@@ -222,7 +222,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Student Activity Report
             Logger.LogMethodEntry("RptMainUXPage", "GenerateStudentMasteryReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             RptCommonCriteriaPage rptCommonCriteriaPage = new RptCommonCriteriaPage();
             //Select The Students From LightBox
             rptCommonCriteriaPage.SelectTheStudentsForSkillsFromLightBox();
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
             //Validate skill name
             skillName = new RptMasteryPage().ValidateSkillNameForMasteryReport();
             Logger.LogMethodEntry("RptMainUXPage", "GenerateStudentMasteryReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return skillName;
         }
 
@@ -250,7 +250,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The Student Activity Report
             Logger.LogMethodEntry("InstructorReports",
                 "SelectStudentActivityReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click The Student Activity Link
             new RptStudentActivityPage().ClickTheStudentActivityLink();
             //Select The Students From LightBox
@@ -259,7 +259,7 @@ namespace Pegasus.Pages.UI_Pages
             new RptCommonCriteriaPage().ClickRunReport();
             Logger.LogMethodEntry("RptMainUXPage",
                 "SelectStudentActivityReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -272,7 +272,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Generating the Activity Result By Student Report
             Logger.LogMethodEntry("InstructorReports", "ActivityResultbyStudentReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Activity Result by Student Report
             this.SelectReport();
             //Select the Activity
@@ -282,7 +282,7 @@ namespace Pegasus.Pages.UI_Pages
             //Generate the Activity Result By Student Report
             new RptGCOptionsUXPage().GenerateReport();
             Logger.LogMethodExit("InstructorReports", "ActivityResultbyStudentReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -292,7 +292,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Activity Result by Student type Report
             Logger.LogMethodEntry("RptMainUXPage", "SelectReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch to Default Page
@@ -305,7 +305,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "SelectReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -315,7 +315,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Activity Result By Student Report Link
             Logger.LogMethodEntry("RptMainUXPage", "ClickonActivityResultByStudentReportLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Frame
             base.WaitForElement(By.Id(RptMainUXPageResource.
                 RptMain_Page_Frame_Id_Locator));
@@ -327,7 +327,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByXPath(RptMainUXPageResource.
                 RptMainUX_Page_Report_Xpath_Locator);
             Logger.LogMethodExit("RptMainUXPage", "ClickonActivityResultByStudentReportLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -339,7 +339,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Generate Student Result By Activity Type Report
             Logger.LogMethodEntry("RptMainUXPage", "StudentResultByActivityReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Student Results By Activity Report
             this.SelectStudentResultByActivityReport();
             //Select the Student
@@ -350,7 +350,7 @@ namespace Pegasus.Pages.UI_Pages
             //Generate the Report
             new RptGCOptionsUXPage().GenerateReport();
             Logger.LogMethodExit("RptMainUXPage", "StudentResultByActivityReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -361,7 +361,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Student Results By Activity Report
             Logger.LogMethodEntry("RptMainUXPage",
                 "SelectStudentResultByActivityReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Reports Window    
             base.SelectWindow(RptMainUXPageResource.
                 RptMainUX_Page_Report_Window_Name);
@@ -378,7 +378,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByXPath(RptMainUXPageResource.
                 RptMainUX_Page_StudentResultByActivityReport_Xpath_Locator);
             Logger.LogMethodExit("RptMainUXPage", "SelectStudentResultByActivityReport",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -389,7 +389,7 @@ namespace Pegasus.Pages.UI_Pages
             PegasusInstructorReportEnum reportTypeEnum)
         {
             Logger.LogMethodEntry("RptMainUXPage", "StudyPlanResultsReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Study Plan Results Report Link
             this.SelectStudyPlanResultsReport();
             //Select the Study Plan 
@@ -400,7 +400,7 @@ namespace Pegasus.Pages.UI_Pages
             //Generate the Report
             new RptGCOptionsUXPage().GenerateReport();
             Logger.LogMethodExit("RptMainUXPage", "StudyPlanResultsReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -410,7 +410,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("RptMainUXPage",
                 "SelectStudyPlanResultsReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Reports Window    
             base.SelectWindow(RptMainUXPageResource.
                 RptMainUX_Page_Report_Window_Name);
@@ -427,7 +427,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByXPath(RptMainUXPageResource.
                 RptMainUX_Page_StudyPlanReport_Xpath_Locator);
             Logger.LogMethodExit("RptMainUXPage", "SelectStudyPlanResultsReport",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -440,7 +440,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Manage Instructor Report In Organization Admin
             Logger.LogMethodEntry("RptMainUXPage", "ManageInstructorReportInOrganizationAdmin",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select According to Pegasus Report type            
             try
             {
@@ -462,7 +462,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "ManageInstructorReportInOrganizationAdmin",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -474,7 +474,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Student Activity Report In Organization Admin
             Logger.LogMethodEntry("RptMainUXPage",
                 "SelectStudentActivityReportInOrganizationAdmin",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Report Frame
             this.SelectReportFrame();
             //Wait for the Student Activity link
@@ -490,7 +490,7 @@ namespace Pegasus.Pages.UI_Pages
             new RptPadminCriteriaPage().SelectAddClass(userType);
             Logger.LogMethodExit("RptMainUXPage",
                 "SelectStudentActivityReportInOrganizationAdmin",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -500,7 +500,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Report Frame
             Logger.LogMethodEntry("RptMainUXPage", "SelectReportFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the window loads
             base.WaitUntilWindowLoads(RptMainUXPageResource.
                 RptMain_Page_ManageOrg_Window_Name);
@@ -512,7 +512,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(RptMainUXPageResource.
                 RptMain_Page_ManageOrg_Window_MainFrame_Name);
             Logger.LogMethodExit("RptMainUXPage", "SelectReportFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -523,7 +523,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Custom Report In Organization Admin              
             Logger.LogMethodEntry("RptMainUXPage",
                 "SelectCustomReportInOrgnizationAdmin",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Report Frame
             this.SelectReportFrame();
             //Wait for the Custom report link
@@ -550,7 +550,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Ok Button
             this.ClickTheOkButton();
             Logger.LogMethodExit("RptMainUXPage", "SelectCustomReportInOrgnizationAdmin",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -560,7 +560,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click The Ok Button
             Logger.LogMethodEntry("RptMainUXPage", "ClickTheOkButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for the OK btn
             base.WaitForElement(By.Id(RptMainUXPageResource.
                 RptMain_Page_Ok_Btn_Id_Locator));
@@ -589,7 +589,7 @@ namespace Pegasus.Pages.UI_Pages
                 RptMain_Page_CustomReport_AssignCopystate_Mesg) &&
                         stopwatch.Elapsed.TotalMinutes < GetMinutesToWait);
             Logger.LogMethodExit("RptMainUXPage", "ClickTheOkButton",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -599,7 +599,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Custom Frame
             Logger.LogMethodEntry("RptMainUXPage", "SelectCustomFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the window loads
@@ -616,7 +616,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "SelectCustomFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -626,7 +626,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Download Report Option
             Logger.LogMethodEntry("RptMainUXPage", "SelectDownloadReportOption",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Report Frame
@@ -666,7 +666,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "SelectDownloadReportOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -710,7 +710,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Read Custom Report Data
             Logger.LogMethodEntry("RptMainUXPage", "ReadCustomReportData",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             //Initialized String
             String getDataFromSheet = String.Empty;
             try
@@ -747,7 +747,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "ReadCustomReportData",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return getDataFromSheet;
         }
 
@@ -761,7 +761,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Kill Excel Process
             Logger.LogMethodEntry("RptMainUXPage", "KillExcelProcess",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 foreach (Process clsProcess in Process.GetProcesses())
@@ -777,7 +777,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "KillExcelProcess",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -788,7 +788,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get ClassName
             Logger.LogMethodEntry("RptMainUXPage", "GetClassName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing getClassName Variable
             string getClassName = string.Empty;
             try
@@ -825,7 +825,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "GetClassName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getClassName;
         }
 
@@ -836,7 +836,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Delete Download Report
             Logger.LogMethodEntry("RptMainUXPage", "DeleteDownloadReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Path of the Excel file need to saved
@@ -861,7 +861,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "DeleteDownloadReport",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -872,7 +872,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check Permissions Enabled in Reports
             Logger.LogMethodEntry("RptMainUXPage", "IsPermissionsEnabledInReports",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool getEnabledOptionsStatus = false;
             string getReportText = string.Empty;
@@ -902,7 +902,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "IsPermissionsEnabledInReports",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             return getEnabledOptionsStatus;
         }
 
@@ -913,7 +913,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Reports Window and Frame
             Logger.LogMethodEntry("RptMainUXPage", "SelectReportsWindowandFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Reports Window    
@@ -930,7 +930,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "SelectReportsWindowandFrame",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -940,7 +940,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click On Study Plan Single Student Report
             Logger.LogMethodEntry("RptMainUXPage", "ClickOnStudyPlanSingleStudentReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Reports Window and Frame
@@ -959,7 +959,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "ClickOnStudyPlanSingleStudentReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -971,7 +971,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Report Name
             Logger.LogMethodEntry("RptMainUXPage", "GetReportName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getReportName = string.Empty;
             try
@@ -1003,7 +1003,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "GetReportName",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             return getReportName;
         }
 
@@ -1015,7 +1015,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Report Type Link
             Logger.LogMethodEntry("RptMainUXPage", "ClickOnReportTypeLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window and Frame
@@ -1042,7 +1042,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "ClickOnReportTypeLink",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1053,7 +1053,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Exam Frequency Analysis Report
             Logger.LogMethodEntry("RptMainUXPage",
                "ClickTheExamFrequencyAnalysisReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(RptMainUXPageResource.
                 RptMainUX_Page_ExamsFrequencyAnalysis_Link_Id_Locator));
@@ -1065,7 +1065,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getExamFrequencyAnalysisReport);
             Logger.LogMethodExit("RptMainUXPage",
                 "ClickTheExamFrequencyAnalysisReport",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1076,7 +1076,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Activity Results Single Student Report
             Logger.LogMethodEntry("RptMainUXPage",
                 "ClickTheActivityResultsSingleStudentReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(RptMainUXPageResource.
                 RptMainUX_Page_ActivityResultSingleStudent_Link_Id_Locator));
@@ -1087,7 +1087,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getActivityResulyReport);
             Logger.LogMethodExit("RptMainUXPage",
                 "ClickTheActivityResultsSingleStudentReport",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1098,7 +1098,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Training Frequency Analysis Report
             Logger.LogMethodEntry("RptMainUXPage",
                 "ClickTheTrainingFrequencyAnalysisReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(RptMainUXPageResource.
                 RptMainUX_Page_TrainingFrequencyAnalysis_Link_Id_Locator));
@@ -1109,7 +1109,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getTrainingFrequencyReport);
             Logger.LogMethodExit("RptMainUXPage",
                 "ClickTheTrainingFrequencyAnalysisReport",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1121,7 +1121,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Certificate Type Link
             Logger.LogMethodEntry("RptMainUXPage", "ClickOnCertificateTypeLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window and Frame
@@ -1147,7 +1147,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "ClickOnCertificateTypeLink",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1157,7 +1157,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Certificate Of Completion Exam
             Logger.LogMethodEntry("RptMainUXPage", "ClickTheCertificateCompletionExam",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(RptMainUXPageResource.
                 RptMain_Page_CertificateOfExam_Id_Locator));
@@ -1166,7 +1166,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On 'Certificate of Completion(Exam)' Certificate Link
             base.ClickByJavaScriptExecutor(getExamCertificateLink);
             Logger.LogMethodExit("RptMainUXPage", "ClickTheCertificateCompletionExam",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1177,7 +1177,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Certificate Completion Training
             Logger.LogMethodEntry("RptMainUXPage",
                 "ClickTheCertificateCompletionTraining",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(RptMainUXPageResource.
                 RptMainUX_Page_CertificationofCompletionTraining_Link_Id_Locator));
@@ -1188,7 +1188,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getTrainingCertificateLink);
             Logger.LogMethodExit("RptMainUXPage",
                 "ClickTheCertificateCompletionTraining",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1199,7 +1199,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Data For Exam Frequency Analysis Report
             Logger.LogMethodEntry("RptMainUXPage",
                 "ClickTheExamFrequencyAnalysisReportLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window and Frame
@@ -1221,7 +1221,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("RptMainUXPage",
                 "ClickTheExamFrequencyAnalysisReportLink",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1231,7 +1231,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Select Exams
             Logger.LogMethodEntry("RptMainUXPage", "ClickTheSelectExams",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(RptMainUXPageResource.
                 RptMainUX_Page_SelectExam_Button_Id_Locator));
@@ -1241,7 +1241,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the 'Select Exams' button
             base.ClickByJavaScriptExecutor(getSelectExamsButton);
             Logger.LogMethodExit("RptMainUXPage", "ClickTheSelectExams",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1256,7 +1256,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Generate Instructor Reports by Types
             Logger.LogMethodEntry("RptMainUXPage", "GenerateInstructorReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (pegasusInstructorReportEnum)
@@ -1279,7 +1279,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodEntry("RptMainUXPage", "GenerateInstructorReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1290,7 +1290,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Student
             Logger.LogMethodEntry("RptMainUXPage", "SelectStudent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             new CourseHomeListItemViewPage().SelectCourseHomeWindow();
             new RptGCOptionsUXPage().ClickonSelectStudent();
             base.SwitchToLastOpenedWindow();
@@ -1298,7 +1298,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Add Button
             this.ClickonAddButton();
             Logger.LogMethodEntry("RptMainUXPage", "SelectStudent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1309,7 +1309,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Activity
             Logger.LogMethodEntry("RptMainUXPage", "SelectActivityInReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             new CourseHomeListItemViewPage().SelectCourseHomeWindow();
             //Click on Activity Result By Student Report Link
@@ -1319,7 +1319,7 @@ namespace Pegasus.Pages.UI_Pages
             new RptSelectAssessmentsPage().
                 SelectWtritingspaceActivityToGenerateReport(activityName);
             Logger.LogMethodEntry("RptMainUXPage", "SelectActivityInReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1329,7 +1329,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Add Button
             Logger.LogMethodEntry("RptMainUXPage", "ClickonAddButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.PartialLinkText(RptSelectStudentsResource.
                   RptSelectStudents_Page_Ins_AddLinkText_Locator));
             //Click on Add Button 
@@ -1339,7 +1339,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsPopUpClosed(Convert.ToInt32(RptSelectStudentsResource.
                 RptSelectStudents_Page_Ins_Window_Count));
             Logger.LogMethodEntry("RptMainUXPage", "ClickonAddButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

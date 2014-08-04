@@ -30,7 +30,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //View Grades by Instructor
             Logger.LogMethodEntry("GradeBook",
                 "DisplayGradesForSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Display Grade's For Submitted Activity
             Logger.LogAssertion("ViewGrades", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
@@ -38,7 +38,7 @@ namespace Pegasus.Integration.MLP.Tests.
                 new GBFoldersPage().GetActivityGrade()));
             Logger.LogMethodExit("GradeBook",
                 "DisplayGradesForSubmittedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Manually Grade the Activity
             Logger.LogMethodEntry("GradeBook",
                 "ManuallyGradeTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Naviagte Inside the Folder
             new GBFoldersPage().NavigateInsideParentActivityFolder();
             //Open the Activity For Grading
@@ -59,7 +59,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Grade the Activity
             new GBGradeBatchUpdationPage().GradetheActivityInHED();
             Logger.LogMethodExit("GradeBook", "ManuallyGradeTheActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
        /// <summary>
@@ -71,12 +71,12 @@ namespace Pegasus.Integration.MLP.Tests.
             //Click On The Content Cmenu Icon
             Logger.LogMethodEntry("GradeBook",
                 "ClickOnTheContentCmenuIcon",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Click On The Content Cmenu Icon
             new GBInstructorUXPage().ClickOnTheFirstColumnCmenuIcon();
             Logger.LogMethodExit("GradeBook",
                 "ClickOnTheContentCmenuIcon",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,14 +89,14 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Verify the Display Of Context Menu Option
             Logger.LogMethodEntry("GradeBook", "DisplayOfContextMenuOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Assert Display Of Context Menu Option
             Logger.LogAssertion("VerifyDisplayOfContextMenuOption",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(contextMenuOption, new GBInstructorUXPage().
                     GetContextMenuOptionDisplayed(contextMenuOption)));
             Logger.LogMethodExit("GradeBook", "DisplayOfContextMenuOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -107,11 +107,11 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Enable Synchronize with LMS of submitted activity.
             Logger.LogMethodEntry("GradeBook", "EnableSynchronizeWithLMSPreference",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Insatance of GBFolder Page
             new GBInstructorUXPage().EnableLMSSynchronizeOption();
             Logger.LogMethodExit("GradeBook", "EnableSynchronizeWithLMSPreference",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

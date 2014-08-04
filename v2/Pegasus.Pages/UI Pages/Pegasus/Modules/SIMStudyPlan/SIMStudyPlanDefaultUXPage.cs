@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Edit Study plan
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage", "EditSimStudyPlan",
-                                   base.isTakeScreenShotDuringEntryExit);
+                                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the Window
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage", "EditSimStudyPlan",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate to Subtabs
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-               "NavigateToSubTabs", base.isTakeScreenShotDuringEntryExit);
+               "NavigateToSubTabs", base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.Id(subtabId));
             //Focus on Element
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getSubTabName = base.GetWebElementPropertiesById(subtabId);
             base.ClickByJavaScriptExecutor(getSubTabName);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
-               "NavigateToSubTabs", base.isTakeScreenShotDuringEntryExit);
+               "NavigateToSubTabs", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on PreTest Contextual Menu. 
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-              "ClickContextualMenu", base.isTakeScreenShotDuringEntryExit);
+              "ClickContextualMenu", base.IsTakeScreenShotDuringEntryExit);
             string getXpathContextualMenu;
             if (testType == SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_PreTest)
@@ -108,7 +108,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.GetWebElementPropertiesByXPath(getXpathContextualMenu);
             base.ClickByJavaScriptExecutor(getContextualMenue);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
-              "ClickContextualMenu", base.isTakeScreenShotDuringEntryExit);
+              "ClickContextualMenu", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
 
             //Click on PreTest Contextual Menu Option. 
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-             "ClickContextualMenuOption", base.isTakeScreenShotDuringEntryExit);
+             "ClickContextualMenuOption", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             WaitForElement(By.Id(cmenuOptionId));
             //Focus on Element
@@ -130,7 +130,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.GetWebElementPropertiesById(cmenuOptionId);
             base.ClickByJavaScriptExecutor(getContextualMenueOption);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
-               "ClickContextualMenuOption", base.isTakeScreenShotDuringEntryExit);
+               "ClickContextualMenuOption", base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create SIM StudyPlan
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-             "CreateSIMStudyPlan", base.isTakeScreenShotDuringEntryExit);
+             "CreateSIMStudyPlan", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 ContentBrowserUXPage contentBrowserUXPage = new ContentBrowserUXPage();
@@ -168,7 +168,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
-               "CreateSIMStudyPlan", base.isTakeScreenShotDuringEntryExit);
+               "CreateSIMStudyPlan", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create SIM5StudyPlan Using SIMQuestions
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-            "CreateSIM5StudyPlanUsingSIMQuestions", base.isTakeScreenShotDuringEntryExit);
+            "CreateSIM5StudyPlanUsingSIMQuestions", base.IsTakeScreenShotDuringEntryExit);
             //Generate GUID For Studyplan Name
             Guid studyplanName = Guid.NewGuid();
             ContentBrowserUXPage contentBrowserUXPage = new ContentBrowserUXPage();
@@ -203,7 +203,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store Pretest Details
             this.StorePretestDetails(pretestName);  
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
-              "CreateSIM5StudyPlanUsingSIMQuestions", base.isTakeScreenShotDuringEntryExit);
+              "CreateSIM5StudyPlanUsingSIMQuestions", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -214,7 +214,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search The SIM Questions
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-              "SearchTheSIMQuestions", base.isTakeScreenShotDuringEntryExit);
+              "SearchTheSIMQuestions", base.IsTakeScreenShotDuringEntryExit);
             //Click On Add Question Link
             new RandomTopicListPage().ClickOnAddQuestionLink();
             //Select the Question Type
@@ -241,7 +241,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
-               "SearchTheSIMQuestions", base.isTakeScreenShotDuringEntryExit);
+               "SearchTheSIMQuestions", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create PreTest StudyPlan
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-              "CreatePreTestStudyPlan", base.isTakeScreenShotDuringEntryExit);
+              "CreatePreTestStudyPlan", base.IsTakeScreenShotDuringEntryExit);
             //Generate GUID For Pretest Name
             Guid pretestName = Guid.NewGuid();
             //Select Pretest Window
@@ -264,7 +264,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store Pretest Details
             this.StorePretestDetails(pretestName);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
-               "CreatePreTestStudyPlan", base.isTakeScreenShotDuringEntryExit);
+               "CreatePreTestStudyPlan", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Pretest Details In Memory
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-            "StorePretestDetails", base.isTakeScreenShotDuringEntryExit);
+            "StorePretestDetails", base.IsTakeScreenShotDuringEntryExit);
             //Store the Pretest in memory
             Activity newPreTest = new Activity
             {
@@ -285,7 +285,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newPreTest.StoreActivityInMemory();
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
-               "StorePretestDetails", base.isTakeScreenShotDuringEntryExit);
+               "StorePretestDetails", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -296,7 +296,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Save And Return
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-            "ClickOnSaveAndReturn", base.isTakeScreenShotDuringEntryExit); 
+            "ClickOnSaveAndReturn", base.IsTakeScreenShotDuringEntryExit); 
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_SaveReturn_Id_Locator));
             //Get web element
@@ -316,7 +316,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save And Return
             base.ClickByJavaScriptExecutor(getSaveButton);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
-               "ClickOnSaveAndReturn", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnSaveAndReturn", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -330,7 +330,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Pretest Name And Select Skillbased Radiobutton 
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
              "EnterPretestNameAndSelectSkillbasedRadiobutton",
-             base.isTakeScreenShotDuringEntryExit);            
+             base.IsTakeScreenShotDuringEntryExit);            
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_AvtivityName_Text_Id_Locator));
             //Enter Pretest Name
@@ -352,7 +352,7 @@ namespace Pegasus.Pages.UI_Pages
             this.ClickOnSaveAndContinueButton();            
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
                "EnterPretestNameAndSelectSkillbasedRadiobutton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -363,7 +363,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Save And Continue Button
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
                 "ClickOnSaveAndContinueButton",
-                      base.isTakeScreenShotDuringEntryExit); 
+                      base.IsTakeScreenShotDuringEntryExit); 
             //Wait for the element
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_SaveAndContinue_Id_Locator));
@@ -374,7 +374,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSaveContinueButton);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
                "ClickOnSaveAndContinueButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -385,7 +385,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select DocumentBased Behavioral Mode
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage", 
                 "SelectDocumnetBasedBehavioralMode",
-                      base.isTakeScreenShotDuringEntryExit);    
+                      base.IsTakeScreenShotDuringEntryExit);    
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
                    SIMStudyPlanDefaultUX_Page_Docbased_Radiobutton_Id_Locator));
             //Select Skill Based Radiobutton
@@ -393,7 +393,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIMStudyPlanDefaultUX_Page_Docbased_Radiobutton_Id_Locator);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
                "SelectDocumnetBasedBehavioralMode",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -404,7 +404,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select SkillBased Behavioral Mode
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage", 
                 "SelectSkillBasedBehavioralMode",
-                    base.isTakeScreenShotDuringEntryExit);    
+                    base.IsTakeScreenShotDuringEntryExit);    
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
                   SIMStudyPlanDefaultUX_Page_Skillbased_Radiobutton_Id_Locator));
             //Select Skill Based Radiobutton
@@ -412,7 +412,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIMStudyPlanDefaultUX_Page_Skillbased_Radiobutton_Id_Locator);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
                "SelectSkillBasedBehavioralMode",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -423,7 +423,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Pretest Window
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
                 "SelectCreatePretestWindow",
-             base.isTakeScreenShotDuringEntryExit);            
+             base.IsTakeScreenShotDuringEntryExit);            
             base.WaitUntilWindowLoads(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_Create_Pretest_Window_Name);
             //Select Window
@@ -431,7 +431,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIMStudyPlanDefaultUX_Page_Create_Pretest_Window_Name);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage", 
                 "SelectCreatePretestWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -443,7 +443,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Studyplan Name And Click On Create Test
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
                 "EnterStudyplanNameAndClickOnCreateTest",
-             base.isTakeScreenShotDuringEntryExit);            
+             base.IsTakeScreenShotDuringEntryExit);            
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_Studyplan_Name_Textbox_Name_Id_Locator));
             //Enter Studyplan Name
@@ -462,7 +462,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIMStudyPlanDefaultUX_Page_CreateTest_Link_Xpath_Locator);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
                 "EnterStudyplanNameAndClickOnCreateTest",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -472,14 +472,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Studyplan Window
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage", "SelectStudyplanWindow",
-             base.isTakeScreenShotDuringEntryExit);            
+             base.IsTakeScreenShotDuringEntryExit);            
             base.WaitUntilWindowLoads(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_WindowName);
             //Select Window
             base.SelectWindow(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_WindowName);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage", "SelectStudyplanWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -493,7 +493,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create SIMStudyPlan Using SIMQuestions
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-            "CreateSIMStudyPlanUsingSIMQuestions", base.isTakeScreenShotDuringEntryExit);
+            "CreateSIMStudyPlanUsingSIMQuestions", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Generate GUID For Studyplan Name
@@ -520,7 +520,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
-               "CreateSIMStudyPlanUsingSIMQuestions", base.isTakeScreenShotDuringEntryExit);
+               "CreateSIMStudyPlanUsingSIMQuestions", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -530,14 +530,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Pretest Window
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage", "SelectPretestWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_Pretest_Window_Name);
             //Select Pre Test Window
             base.SelectWindow(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_Pretest_Window_Name);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage", "SelectPretestWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -546,7 +546,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SearchAndSelectTheSIM2007Questions()
         {
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-             "SearchAndSelectTheSIM2007Questions", base.isTakeScreenShotDuringEntryExit);
+             "SearchAndSelectTheSIM2007Questions", base.IsTakeScreenShotDuringEntryExit);
             //Click On Add Question Link
             new RandomTopicListPage().ClickOnAddQuestionLink();
             //Select the Question Type
@@ -557,7 +557,7 @@ namespace Pegasus.Pages.UI_Pages
             new ContentBrowserUXPage().SearchTheQuestionInSelectQuestionWindow(
                 SIMStudyPlanDefaultUXPageResource.SIMStudyPlanDefaultUX_Page_SIM2007_Question_Name);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage", "SearchAndSelectTheSIM2007Questions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -566,7 +566,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnSaveAndReturnInCreatePreTestWindow()
         {
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-             "ClickOnSaveAndReturnInCreatePreTestWindow", base.isTakeScreenShotDuringEntryExit);
+             "ClickOnSaveAndReturnInCreatePreTestWindow", base.IsTakeScreenShotDuringEntryExit);
             //Select Create PreTest Window
             this.SelectCreatePretestWindow();
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
@@ -578,7 +578,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save and Return
             base.ClickByJavaScriptExecutor(getSaveReturnButton);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage", "ClickOnSaveAndReturnInCreatePreTestWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -587,7 +587,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnPostTestCreateTestButton()
         {
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-            "ClickOnPostTestCreateTestButton", base.isTakeScreenShotDuringEntryExit);
+            "ClickOnPostTestCreateTestButton", base.IsTakeScreenShotDuringEntryExit);
             //Click On Post Test Creation Test Button
             base.WaitForElement(By.ClassName(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_CreatePostTest_ClassName_Locator));
@@ -597,7 +597,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Create Post Test Button
             base.ClickByJavaScriptExecutor(getCreateTestProperty);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage", "ClickOnPostTestCreateTestButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -606,14 +606,14 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectPostTestWindow()
         {
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage","SelectPostTestWindow", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Post Test Window
             base.WaitUntilWindowLoads(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_CreatePostTest_Window_Name);
             base.SelectWindow(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_CreatePostTest_Window_Name);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage", "SelectPostTestWindow",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -625,7 +625,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Posttest Name And Select Skillbased Radiobutton 
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
              "EnterPosttestNameAndSelectSkillbasedRadiobutton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
                 SIMStudyPlanDefaultUX_Page_AvtivityName_Text_Id_Locator));
             //Enter Posttest Name
@@ -649,7 +649,7 @@ namespace Pegasus.Pages.UI_Pages
             this.StorePosttestDetails(posttestName);
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
                "EnterPosttestNameAndSelectSkillbasedRadiobutton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -660,7 +660,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save And Return In Create Post Test Window
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
              "ClickOnSaveAndReturnInCreatePostTestWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Post Test Window
             this.SelectPostTestWindow();
             base.WaitForElement(By.Id(SIMStudyPlanDefaultUXPageResource.
@@ -673,7 +673,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSaveReturnButton);
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
              "ClickOnSaveAndReturnInCreatePostTestWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -684,7 +684,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save And Return In Add MyitLab Study Plan Window
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
              "ClickOnSaveAndReturnInAddmyitLabStudyPlanWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Studyplan Window
             this.SelectStudyplanWindow();
             //Wait for the element
@@ -697,7 +697,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSaveButton);
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
             "ClickOnSaveAndReturnInAddmyitLabStudyPlanWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -711,7 +711,7 @@ namespace Pegasus.Pages.UI_Pages
             //Create SIM Study Plan Using 2007 SIM Questions
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
             "CreateSIMStudyPlanUsing2007SIMQuestions",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             Guid studyplanName = Guid.NewGuid();
             //Generate GUID For Pretest Name
             Guid posttestName = Guid.NewGuid();
@@ -754,7 +754,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
             "CreateSIMStudyPlanUsing2007SIMQuestions",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -766,7 +766,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Posttest Details In Memory
             logger.LogMethodEntry("SIMStudyPlanDefaultUXPage",
-            "StorePretestDetails", base.isTakeScreenShotDuringEntryExit);
+            "StorePretestDetails", base.IsTakeScreenShotDuringEntryExit);
             //Store the Posttest in memory
             Activity newPostTest = new Activity
             {
@@ -776,7 +776,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newPostTest.StoreActivityInMemory();
             logger.LogMethodExit("SIMStudyPlanDefaultUXPage",
-               "StorePretestDetails", base.isTakeScreenShotDuringEntryExit);
+               "StorePretestDetails", base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

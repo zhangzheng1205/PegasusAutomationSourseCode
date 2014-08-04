@@ -51,7 +51,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Check If Expected Page Is Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Wait Till Thinking Indicator Loads
             bool isThinkingIndicatorLoading = IsThinkingIndicatorLoading();
             //If Thinking Indicator In Process After Specified Time Interval then Fail This Step
@@ -69,7 +69,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedPageTitle, getActualPageTitle));
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             // Method To Verify the Success Message     
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Verify Correct Message Present on the Page
             IsMessageExists(successMessage,
                                  CommonStepsResource.
@@ -90,7 +90,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //Removed The Assert For Message Because Sometimes Message not comes 
             //but this is not the severe issue. So We, can ignore this.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessage",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Verify Pop Up Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Wait Untill Window Loads
             WaitUntilWindowLoads(popUpName,
                 Convert.ToInt32(CommonStepsResource.
@@ -115,7 +115,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(true, isPopUpExist));
             Logger.LogMethodExit("CommonSteps", "ShowThePopUpInPegasus",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Method to Navigate to the Tab Window 
             Logger.LogMethodEntry("CommonSteps", "NavigateToTheTab",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Click On More Link if More Link Is Present
             //And The Required Tab Is Not Present
             new TodaysViewUXPage().ClickMoreLinkIfPresent(tabName);
@@ -143,7 +143,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                  CommonSteps_SleepTime_Value));
             Logger.LogMethodExit("CommonSteps", "NavigateToTheTab",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -158,7 +158,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Click on the Link
             Logger.LogMethodEntry("CommonSteps", "ClickOnTheLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Switch To Frame
             base.SwitchToIFrame(CommonStepsResource.
                 CommonSteps_IFrame + frame + string.Empty);
@@ -178,7 +178,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                     break;
             }
             Logger.LogMethodExit("CommonSteps", "ClickOnTheLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Show Course On The MyCourses and Testbanks Page In Active State
             Logger.LogMethodEntry("CommonSteps", "ShowCourseOnTheGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Assert Course Present on Global Home Page
@@ -200,7 +200,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                 () => Assert.AreEqual(true, new HEDGlobalHomePage().
                     GetCoursePresentInGlobalHomePage().Contains(course.Name)));
             Logger.LogMethodExit("CommonSteps", " ShowCourseOnTheGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -215,12 +215,12 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Enter in Course from Global Home Page 
             Logger.LogMethodEntry("CommonSteps", "EnterInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter Into The Course
             new HEDGlobalHomePage().EnterInsideCourse(
                 courseTypeEnum, userTypeEnum);
             Logger.LogMethodExit("CommonSteps", " EnterInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

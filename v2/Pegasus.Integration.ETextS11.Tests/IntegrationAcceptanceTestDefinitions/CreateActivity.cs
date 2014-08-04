@@ -28,11 +28,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Click On Add Course Materials Link
             Logger.LogMethodEntry("CreateActivity", "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Add Course Materials Option
             new CourseContentUXPage().ClickOnAddCourseMaterialsOption();
             Logger.LogMethodExit("CreateActivity", "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -44,11 +44,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Click On The Activity Type
             Logger.LogMethodEntry("CreateActivity", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Activity Type
             new ContentLibraryUXPage().ClickOnActivityType(activityType);
             Logger.LogMethodExit("CreateActivity", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -61,11 +61,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Create EText Link Asset
             Logger.LogMethodEntry("CreateActivity", "CreateETextLinkAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create eText Link Activity 
             new AddeBookLinkPage().CreateeTextLinkAsset(activityTypeEnum);
             Logger.LogMethodExit("CreateActivity", "CreateETextLinkAsset",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,11 +76,11 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Click On ShowHide Status Option
             Logger.LogMethodEntry("CreateActivity", "ClickOnShowHideStatusOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Activity Type
             new CourseContentUXPage().ClickTheShowHideStatusOption();
             Logger.LogMethodExit("CreateActivity", "ClickOnShowHideStatusOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

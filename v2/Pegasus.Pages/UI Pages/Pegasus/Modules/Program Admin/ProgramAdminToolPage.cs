@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Page Content Middle Frame
             logger.LogMethodEntry("ProgramAdminToolPage", "SelectFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.SelectWindow(ProgramAdminManageUsersPageResource
@@ -42,7 +42,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProgramAdminToolPage", "SelectFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch To Main Frame
             logger.LogMethodEntry("ProgramAdminToolPage", "SwitchToMainFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select frame
             base.WaitForElement(By.Id(ProgramAdminToolPageResource.
                 ProgramAdminTool_Page_Main_Frame_Id_Locator));
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(ProgramAdminToolPageResource.
                 ProgramAdminTool_Page_Main_Frame_Id_Locator);
             logger.LogMethodExit("ProgramAdminToolPage", "SwitchToMainFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Select Exam
             logger.LogMethodEntry("ProgramAdminToolPage", "ClickOnSelectExam",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Frame
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProgramAdminToolPage", "ClickOnSelectExam",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // select program admin sub tabs 
             logger.LogMethodEntry("ProgramAdminToolPage", "NavigateProgramAdminTabs",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // wait for window
             base.WaitUntilWindowLoads(selectWindowName);
             // select window
@@ -143,7 +143,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("ProgramAdminToolPage", "NavigateProgramAdminTabs",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
         }
     }

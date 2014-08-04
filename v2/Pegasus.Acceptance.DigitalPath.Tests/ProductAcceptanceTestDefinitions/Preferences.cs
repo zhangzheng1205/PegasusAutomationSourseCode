@@ -30,11 +30,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //To Set The LTI Tools Preferences For The Course
             Logger.LogMethodEntry("Preferences", "SetTheLtiToolsPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Set The LTI Tools Preference
             new LTIToolsPreferencesPage().EnableMGMMathXlInLtiTools();
             Logger.LogMethodExit("Preferences", "SetTheLtiToolsPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -46,11 +46,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Navigating to 'Home' sub tab
             Logger.LogMethodEntry("Preferences", "ClickOnTheHomeTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Navigating to 'Home' sub tab options from preference page
             new GeneralPreferencesPage().ClickonSubTabofPreference(subTabName);
             Logger.LogMethodExit("Preferences", "ClickOnTheHomeTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //To Set The Standards and Skills Preferences For The Course
             Logger.LogMethodEntry("Preferences","SetTheStandardsAndSkillsPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Set The Standards and Skills Preference
             GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
             //Select Main Frame
@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 PreferencesResource.PreferencesPage_StandardFramework_Name);
             generalPreferencePage.SavePreferences();
             Logger.LogMethodExit("Preferences", "SetTheStandardsAndSkillsPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -83,12 +83,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //To Set the LTI Option For MGM Test Activities
             Logger.LogMethodEntry("Preferences", "SetTheLTIOptionForMGMTestActivities",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Set The LTI Option for MGM Test Activities
             new ActivitiesPreferencesPage().
                 SelectAllowActivityToBeUsedAsPretestOrPosttestOption();
             Logger.LogMethodExit("Preferences", "SetTheLTIOptionForMGMTestActivities",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -100,13 +100,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Preference settings For Copy Content
             Logger.LogMethodEntry("Preferences",
                 "SetThePreferencesForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Set The Preferences For Copy Content
             new CourseCopyPreferencesPage().
                 SetCopyContentPreference();
             Logger.LogMethodExit("Preferences",
                 "SetThePreferencesForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -118,13 +118,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Set Preference settings For Custom Content
             Logger.LogMethodEntry("Preferences",
                 "SetThePreferencesForCustomContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Set The Preferences For Custom Content
             new CustomContentPreferencesPage().
                 SetCustomContentPreferences();
             Logger.LogMethodExit("Preferences",
                 "SetThePreferencesForCustomContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -136,12 +136,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Set The Preferences For My Course
             Logger.LogMethodEntry("Preferences",
                 "SetThePreferencesForMyCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Set The Preferences For My Course
             new MyCoursesPreferencesPage().SetMyCoursesPreferences();
             Logger.LogMethodExit("Preferences",
                 "SetThePreferencesForMyCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -153,13 +153,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Set The Preferences For Content
             Logger.LogMethodEntry("Preferences",
                 "SetThePreferencesForContent",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Set The Preferences For Content
             new CourseContentPreferencesPage().
                 SetTheContentPreferences();
             Logger.LogMethodExit("Preferences",
                 "SetThePreferencesForContent",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

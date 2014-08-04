@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create New Section 
             Logger.LogMethodEntry("AddNewSectionPage", "CreateNewSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
                 string sectionName = string.Empty;
             try
             {
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AddNewSectionPage", "CreateNewSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Enter section count 
             Logger.LogMethodEntry("AddNewSectionPage", "EnterSectionCount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                      AddNewSection_Page_NoList_Id_Locator));
             switch (courseTypeEnum)
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("AddNewSectionPage", "EnterSectionCount",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -107,14 +107,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Add New Section window
             Logger.LogMethodEntry("AddNewSectionPage", "SelectAddNewSectionWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(AddNewSectionPageResource.
                           AddNewSection_Page_PopUp_Page_Title);
             // Select Window
             base.SelectWindow(AddNewSectionPageResource.
                         AddNewSection_Page_PopUp_Page_Title);
             Logger.LogMethodExit("AddNewSectionPage", "SelectAddNewSectionWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Template
             Logger.LogMethodEntry("AddNewSectionPage", "SelectingTemplateFromDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                      AddNewSection_Page_TemplateList_Id_Locator));
             //Get Course Properties
@@ -136,7 +136,7 @@ namespace Pegasus.Pages.UI_Pages
                      AddNewSection_Page_TemplateList_Id_Locator, course.Name +
                      AddNewSectionPageResource.AddNewSection_Page_Template_Text_Value);
             Logger.LogMethodExit("AddNewSectionPage", "SelectingTemplateFromDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SaveAndCloseAddNewSection()
         {
             Logger.LogMethodEntry("AddNewSectionPage", "SaveAndCloseAddNewSection",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                 AddNewSection_Page_AddClose_Button_Id_Locator));
             //Get Element Property
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(AddNewSectionPageResource
                 .AddNewSection_Page_ParentWindow_Page_Title);
             Logger.LogMethodExit("AddNewSectionPage", "SaveAndCloseAddNewSection",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enters Start and End Date
             Logger.LogMethodEntry("AddNewSectionPage", "AddSectionStartAndEndDate",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                AddNewSection_Page_StartDate_TextBox_Id_Locator));
             //Enter Start Date
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                                           AddNewSection_Page_AddClose_Button_Id_Locator));
             Logger.LogMethodExit("AddNewSectionPage", "AddSectionStartAndEndDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create New Section 
             Logger.LogMethodEntry("AddNewSectionPage", "CreateNewSectionWithCount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 string sectionGuid = FillingSectionDetails(courseTypeEnum);
@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AddNewSectionPage", "CreateNewSectionWithCount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -228,7 +228,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create New Section 
             Logger.LogMethodEntry("AddNewSectionPage", "FillingSectionDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             string sectionName = string.Empty;
 
             try
@@ -291,7 +291,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AddNewSectionPage", "FillingSectionDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
             return sectionName;
         }
@@ -302,7 +302,7 @@ namespace Pegasus.Pages.UI_Pages
         private void OnClickOfSaveAddCloseWithSectionCount()
         {
             Logger.LogMethodEntry("AddNewSectionPage", "SaveAndCloseNewSectionWithCount",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AddNewSectionPageResource.
                 AddNewSection_Page_AddClose_Button_Id_Locator));
             //Get Element Property
@@ -312,7 +312,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getCloseElementButtonProperty);
             Logger.LogMethodExit("AddNewSectionPage", "SaveAndCloseNewSectionWithCount",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

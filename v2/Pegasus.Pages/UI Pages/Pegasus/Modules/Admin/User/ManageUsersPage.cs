@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select User From The Left Frame
             logger.LogMethodEntry("ManageUsersPage", "SelectUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For element
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUsersPage", "SelectUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the User Name
             logger.LogMethodEntry("ManageUsersPage", "GetSearchedUserName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing the variable
             String getUserName = string.Empty;
             try
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUsersPage", "GetSearchedUserName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Returns User Name
             return getUserName;
         }
@@ -136,7 +136,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On User Cmenu Link Icon
             logger.LogMethodEntry("ManageUsersPage", "ClickOnUserCmenuLinkIcon"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Default Window
@@ -163,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUsersPage", "ClickOnUserCmenuLinkIcon"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check If the User CMenu Options are Displayed
             logger.LogMethodEntry("ManageUsersPage", "GetUserCMenuOptions"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getContextMenus = string.Empty;
             try
@@ -192,7 +192,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUsersPage", "GetUserCMenuOptions"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             return getContextMenus;
         }
 
@@ -204,7 +204,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Cmenu Option
             logger.LogMethodEntry("ManageUsersPage", "SelectCmenuOption"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Administration Tool Window
@@ -248,7 +248,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUsersPage", "SelectCmenuOption"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -258,11 +258,11 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectEditOption(UserCmenuOption cmenuOption)
         {
             logger.LogMethodEntry("ManageUsersPage", "SelectEditOption"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.PartialLinkText(cmenuOption.ToString()));
             base.ClickButtonByPartialLinkText(cmenuOption.ToString());
             logger.LogMethodExit("ManageUsersPage", "SelectEditOption"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -272,14 +272,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Deny Access Option
             logger.LogMethodEntry("ManageUsersPage", "SelectDenyAccessOption"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.PartialLinkText(ManageUsersPageResource.
                 ManageUsersPage_CMenuOption_DenyAccess_Link_Text));
             //Click On Deny Access
             base.ClickButtonByPartialLinkText(ManageUsersPageResource.
                 ManageUsersPage_CMenuOption_DenyAccess_Link_Text);
             logger.LogMethodExit("ManageUsersPage", "SelectDenyAccessOption"
-            , base.isTakeScreenShotDuringEntryExit);
+            , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -289,14 +289,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Grant Access Option
             logger.LogMethodEntry("ManageUsersPage", "SelectGrantAccessOption"
-             , base.isTakeScreenShotDuringEntryExit);
+             , base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.PartialLinkText(ManageUsersPageResource.
                 ManageUsersPage_CMenuOption_GrantAccess_Link_Text));
             //Click On Grant Access Option
             base.ClickButtonByPartialLinkText(ManageUsersPageResource.
                 ManageUsersPage_CMenuOption_GrantAccess_Link_Text);
             logger.LogMethodExit("ManageUsersPage", "SelectGrantAccessOption"
-            , base.isTakeScreenShotDuringEntryExit);
+            , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Delete Option
             logger.LogMethodEntry("ManageUsersPage", "SelectDeleteOption"
-             , base.isTakeScreenShotDuringEntryExit);
+             , base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(ManageUsersPageResource.
                 ManagerUsersPage_DeleteOption_Xpath_Locator));
             IWebElement getDeleteCmenu = base.GetWebElementPropertiesByXPath
@@ -315,7 +315,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Delete Option
             base.ClickByJavaScriptExecutor(getDeleteCmenu);
             logger.LogMethodExit("ManageUsersPage", "SelectDeleteOption"
-            , base.isTakeScreenShotDuringEntryExit);
+            , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -325,14 +325,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select User Information Option
             logger.LogMethodEntry("ManageUsersPage", "SelectUserInformationOption"
-             , base.isTakeScreenShotDuringEntryExit);
+             , base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.PartialLinkText(ManageUsersPageResource.
                 ManageUsersPage_CMenuOption_UserInformation_Link_Text));
             //Click on User Information Option
             base.ClickButtonByPartialLinkText(ManageUsersPageResource.
                 ManageUsersPage_CMenuOption_UserInformation_Link_Text);
             logger.LogMethodExit("ManageUsersPage", "SelectUserInformationOption"
-            , base.isTakeScreenShotDuringEntryExit);
+            , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -343,7 +343,7 @@ namespace Pegasus.Pages.UI_Pages
             //Delete The Created User In Manage User Frame
             logger.LogMethodEntry("ManageUsersPage",
                 "DeleteTheCreatedUserInManageUserFrame"
-             , base.isTakeScreenShotDuringEntryExit);
+             , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 this.ClickOnUserCmenuLinkIcon();
@@ -354,7 +354,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ManageUsersPage",
                 "DeleteTheCreatedUserInManageUserFrame"
-            , base.isTakeScreenShotDuringEntryExit);
+            , base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

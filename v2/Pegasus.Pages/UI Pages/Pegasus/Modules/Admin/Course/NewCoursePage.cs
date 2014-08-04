@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Creating Master Course Copy
             logger.LogMethodEntry("NewCoursePage", "CopyCourseAsMasterCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Created Guid Copy Course Name
@@ -43,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("NewCoursePage", "CopyCourseAsMasterCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Creating New Course
             logger.LogMethodEntry("NewCoursePage", "CreateNewCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("NewCoursePage", "CreateNewCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Copy Master Course In Different Workspace
             logger.LogMethodEntry("NewCoursePage", "CopyMasterCourseInDifferentWorkspace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -107,7 +107,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("NewCoursePage", "CopyMasterCourseInDifferentWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Copy Course As Testing Course
             logger.LogMethodEntry("NewCoursePage", "CopyCourseAsTestingCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -136,7 +136,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("NewCoursePage", "CopyCourseAsTestingCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Type Format
             logger.LogMethodEntry("NewCoursePage", "SelectCourseFormat",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewCoursePageResource.
                                           NewCourse_Page_CourseType_ComboBox_Id_Locator));
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectDropDownValueThroughTextByName(NewCoursePageResource.
                 NewCourse_Page_CourseType_ComboBox_Id_Locator, courseFormatName);
             logger.LogMethodExit("NewCoursePage", "SelectCourseFormat",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select New Course Window
             logger.LogMethodEntry("NewCoursePage", "SelectCreateNewCoursesWindow",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Loads
             base.WaitUntilWindowLoads(NewCoursePageResource.
                                           NewCourse_Page_CreateNewCourses_PopUp_Name);
@@ -173,7 +173,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(NewCoursePageResource.
                                   NewCourse_Page_CreateNewCourses_PopUp_Name);
             logger.LogMethodExit("NewCoursePage", "SelectCreateNewCoursesWindow",
-         base.isTakeScreenShotDuringEntryExit);
+         base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Course Save Button
             logger.LogMethodEntry("NewCoursePage", "ClickOnSaveCourseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewCoursePageResource.
                                      NewCourse_Page_Save_Button_Id_Locator));
@@ -193,7 +193,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On The save Button
             base.ClickByJavaScriptExecutor(getSaveButtonProperty);           
             logger.LogMethodExit("NewCoursePage", "ClickOnSaveCourseButton",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter and Get Course Name
             logger.LogMethodEntry("NewCoursePage", "GetCourseName",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewCoursePageResource.
                                           NewCourse_Page_CourseName_TextBox_Id_Locator));
@@ -217,7 +217,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(NewCoursePageResource.
                 NewCourse_Page_CourseName_TextBox_Id_Locator, courseNameGuid.ToString());
             logger.LogMethodExit("NewCoursePage", "GetCourseName",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             return courseNameGuid.ToString();
         }
 
@@ -228,7 +228,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Copy Course Window
             logger.LogMethodEntry("NewCoursePage", "SelectCopyAsMasterCourseWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Loads
             base.WaitUntilWindowLoads(NewCoursePageResource.
                                           NewCourse_Page_CopyAsMasterCoursePopUp_Name);
@@ -236,7 +236,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(NewCoursePageResource.
                                   NewCourse_Page_CopyAsMasterCoursePopUp_Name);
             logger.LogMethodEntry("NewCoursePage", "SelectCopyAsMasterCourseWindow",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -246,7 +246,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select WorkSpace Name
             logger.LogMethodEntry("NewCoursePage", "SelectWorkSpaceName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Drop down of workspace
             base.WaitForElement(By.Name(NewCoursePageResource.
                 NewCourse_Page_CopyAsMasterCoursePopUp_Dropdown_Name));
@@ -255,7 +255,7 @@ namespace Pegasus.Pages.UI_Pages
                 NewCourse_Page_CopyAsMasterCoursePopUp_Dropdown_Name,
                 NewCoursePageResource.NewCourse_Page_CopyAsMasterCoursePopUp_Dropdown_Name_Value);
             logger.LogMethodEntry("NewCoursePage", "SelectWorkSpaceName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -265,7 +265,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Copy To Another WorkSpace Option
             logger.LogMethodEntry("NewCoursePage", "SelectCopyToAnotherWorkspaceOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the checkbox copy to another workspace
             base.WaitForElement(By.Id(NewCoursePageResource.
                                           NewCourse_Page_CopyAsMasterCoursePopUp_Checkbox_Id_Locator));
@@ -278,7 +278,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(NewCoursePageResource.
                                              NewCourse_Page_Total_Window_TimeValue));
             logger.LogMethodExit("NewCoursePage", "SelectCopyToAnotherWorkspaceOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -288,7 +288,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Copy As Testing Course Window
             logger.LogMethodEntry("NewCoursePage", "SelectCopyAsTestingCourseWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Loads
             base.WaitUntilWindowLoads(NewCoursePageResource.
                                           NewCourse_Page_CopyAsTestingCoursePopUp_Name);
@@ -296,7 +296,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(NewCoursePageResource.
                                   NewCourse_Page_CopyAsTestingCoursePopUp_Name);
             logger.LogMethodExit("NewCoursePage", "SelectCopyAsTestingCourseWindow",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -308,7 +308,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save Course in Memory
             logger.LogMethodEntry("NewCoursePage", "StoreCourseDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Save Course Properties in Memory
             Course newCourse = new Course
                         {
@@ -321,7 +321,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save the Course Name
             newCourse.StoreCourseInMemory();
             logger.LogMethodExit("NewCoursePage", "StoreCourseDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

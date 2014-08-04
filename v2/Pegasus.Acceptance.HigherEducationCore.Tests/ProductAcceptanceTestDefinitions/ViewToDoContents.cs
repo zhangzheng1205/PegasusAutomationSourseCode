@@ -31,7 +31,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Open the Activity Presentation Window
             Logger.LogMethodEntry("ViewToDoContents", "DisplayTheAssignedAssetInToDoTab"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Verify The Assigned Content In To Do Tab         
@@ -39,7 +39,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activity.Name,
                     new StudTodoDonePage().GetAssignedContentInToDoTab(activity.Name)));
             Logger.LogMethodExit("ViewToDoContents", "DisplayTheAssignedAssetInToDoTab"
-                 , base.isTakeScreenShotDuringEntryExit);
+                 , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,14 +52,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Assigned Completed Asset In Completed Tab
             Logger.LogMethodEntry("ViewToDoContents",
                 "VerifyAssignedCompletedAssetInCompletedTab"
-                   , base.isTakeScreenShotDuringEntryExit);
+                   , base.IsTakeScreenShotDuringEntryExit);
             //Verify The Assigned Completed Content In Completed Tab         
             Logger.LogAssertion("VerifyAssignedCompletedAssetName", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(assetName,
                     new StudTodoDonePage().GetAssignedCompletedContentInCompletedTab(assetName)));
             Logger.LogMethodExit("ViewToDoContents",
                 "VerifyAssignedCompletedAssetInCompletedTab"
-                 , base.isTakeScreenShotDuringEntryExit);
+                 , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

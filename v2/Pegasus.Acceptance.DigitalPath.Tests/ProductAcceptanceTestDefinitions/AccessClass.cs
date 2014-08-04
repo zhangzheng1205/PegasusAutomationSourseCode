@@ -34,7 +34,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify The Product
             Logger.LogMethodEntry("AccessClass", "VerifyTheProduct",
-               isTakeScreenShotDuringEntryExit);
+               IsTakeScreenShotDuringEntryExit);
             //Get product from memory
             Product product = Product.Get(productTypeEnum);   
             //Assert for product name           
@@ -42,7 +42,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual
                 (product.Name, new HomePage().GetTheProduct(product.Name)));
             Logger.LogMethodExit("AccessClass", "VerifyTheProduct",
-              isTakeScreenShotDuringEntryExit); 
+              IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -53,11 +53,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click on the "Add" button
             Logger.LogMethodEntry("AccessClass", "ClickOnTheAddButton",
-               isTakeScreenShotDuringEntryExit);
+               IsTakeScreenShotDuringEntryExit);
             //Click the "Add" button
             new HomePage().ClickTheAddButton();
             Logger.LogMethodExit("AccessClass", "ClickOnTheAddButton",
-              isTakeScreenShotDuringEntryExit); 
+              IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -68,11 +68,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click on the "Cancel" button 
             Logger.LogMethodEntry("AccessClass", "ClickOnTheCancelButton",
-               isTakeScreenShotDuringEntryExit);
+               IsTakeScreenShotDuringEntryExit);
             //Click the "Cancel" button
             new HomePage().ClickTheCancelButton();
             Logger.LogMethodExit("AccessClass", "ClickOnTheCancelButton",
-              isTakeScreenShotDuringEntryExit); 
+              IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify The Class
             Logger.LogMethodEntry("AccessClass", "VerifyTheClass",
-               isTakeScreenShotDuringEntryExit);
+               IsTakeScreenShotDuringEntryExit);
             //Get class from memory
             Class className = Class.Get(classTypeEnum);
             // Assert for classname
@@ -93,7 +93,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(className.Name,
                     new HomePage().GetDisplayClassName(className.Name)));
             Logger.LogMethodExit("AccessClass", "VerifyTheClass",
-              isTakeScreenShotDuringEntryExit); 
+              IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>

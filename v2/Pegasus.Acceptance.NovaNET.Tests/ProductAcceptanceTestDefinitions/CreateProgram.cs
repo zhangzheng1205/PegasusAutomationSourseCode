@@ -28,12 +28,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Navigate Manage Programs Page
             Logger.LogMethodEntry("CreateProgram",
                 "NavigateToManageProgramsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate to Manage Program page 
             new AdminToolPage().NavigateToManageProgramsPage();
             Logger.LogMethodExit("CreateProgram",
                 "NavigateToManageProgramsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,14 +48,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Create New Program
             Logger.LogMethodEntry("CreateProgram",
                 "CreateProgramInCoursespace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On 'Create New Program' Link
             new ProgramManagementPage().ClickOnCreateNewProgramLink();
             //Create New Program
             new ProgramCreatePage().CreateNewProgram(programTypeEnum);
             Logger.LogMethodExit("CreateProgram",
                 "CreateProgramInCoursespace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

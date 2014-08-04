@@ -27,11 +27,11 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //To Set The LTI Tools Preferences For The Course
             Logger.LogMethodEntry("Preferences", "SetTheLtiToolsPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Set The LTI Tools Preference
             new LTIToolsPreferencesPage().EnableMGMMathXlInLtiTools();
             Logger.LogMethodExit("Preferences", "SetTheLtiToolsPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace Pegasus.Integration.MGM.Tests.
         {
             //To Set The Standards and Skills Preferences For The Course
             Logger.LogMethodEntry("Preferences", "SetTheStandardsAndSkillsPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
             //Select Main Frame
             generalPreferencePage.SelectThePreferenceWindowWithFrame();
@@ -52,7 +52,7 @@ namespace Pegasus.Integration.MGM.Tests.
                 PreferencesResource.PreferencesPage_StandardFramework_Name);
             generalPreferencePage.SavePreferences();
             Logger.LogMethodExit("Preferences", "SetTheStandardsAndSkillsPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

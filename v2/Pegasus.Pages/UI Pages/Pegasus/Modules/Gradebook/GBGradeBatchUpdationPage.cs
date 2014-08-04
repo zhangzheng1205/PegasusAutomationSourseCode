@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Manually Grade the Activity
             logger.LogMethodEntry("GBGradeBatchUpdationPage", "GradetheActivityInHED",
-                                   base.isTakeScreenShotDuringEntryExit);
+                                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Edit Grade Window
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBGradeBatchUpdationPage", "GradetheActivityInHED",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Edit Save Button
             logger.LogMethodEntry("GBGradeBatchUpdationPage", "ClickTheEditSaveButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GBGradeBatchUpdationPageResource.
                       GBGradeBatchUpdate_Page_Button_Save_Id_Locator));
             IWebElement getSaveButton = base.GetWebElementPropertiesById
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(GBInstructorUXPageResource.
                GBInstructorUX_Page_WaitWindowTime_Value));
             logger.LogMethodExit("GBGradeBatchUpdationPage", "ClickTheEditSaveButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,14 +76,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Edit Grade Window
             logger.LogMethodEntry("GBGradeBatchUpdationPage", "SelectEditGradeWindow",
-                                   base.isTakeScreenShotDuringEntryExit);
+                                   base.IsTakeScreenShotDuringEntryExit);
             //Wait for Edit Grades Window
             base.WaitUntilWindowLoads(GBGradeBatchUpdationPageResource.
                     GBGradeBatchUpdate_Page_EditGrades_Window_Name);
             base.SelectWindow(GBGradeBatchUpdationPageResource.
             GBGradeBatchUpdate_Page_EditGrades_Window_Name);
             logger.LogMethodExit("GBGradeBatchUpdationPage", "SelectEditGradeWindow",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Input Score for Activity
             logger.LogMethodEntry("GBGradeBatchUpdationPage", "InputScoreValueForActivity",
-                                   base.isTakeScreenShotDuringEntryExit);
+                                   base.IsTakeScreenShotDuringEntryExit);
             //Wait for Score Input TextBox
             base.WaitForElement(By.XPath(GBGradeBatchUpdationPageResource.
                     GBGradeBatchUpdate_Page_Input_Textboxone_Xpath_Locator));
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages
             gettextbox2Property.SendKeys(GBGradeBatchUpdationPageResource.
                 GBGradeBatchUpdate_Page_Score_Input_Value_two);
             logger.LogMethodExit("GBGradeBatchUpdationPage", "InputScoreValueForActivity",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
             //Grade the Activity In NovaNet
             logger.LogMethodEntry("GBGradeBatchUpdationPage",
                 "GradetheActivityInNovaNet",                
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Edit Grade Window
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GBGradeBatchUpdationPage",
                 "GradetheActivityInNovaNet",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
             //Input Edit Score Value For Activity
             logger.LogMethodEntry("GBGradeBatchUpdationPage", 
                 "InputEditScoreValueForActivity",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Wait for Score Input TextBox
             base.WaitForElement(By.XPath(GBGradeBatchUpdationPageResource.
                     GBGradeBatchUpdate_Page_Input_Textboxone_Xpath_Locator));
@@ -179,7 +179,7 @@ namespace Pegasus.Pages.UI_Pages
                 GBGradeBatchUpdate_Page_Score_EditInput_Value_Second);
             logger.LogMethodExit("GBGradeBatchUpdationPage", 
                 "InputEditScoreValueForActivity",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Grade the Activity In NovaNet
             logger.LogMethodEntry("GBGradeBatchUpdationPage", "EditGrade",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Edit Grade Window
@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBGradeBatchUpdationPage", "EditGrade",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

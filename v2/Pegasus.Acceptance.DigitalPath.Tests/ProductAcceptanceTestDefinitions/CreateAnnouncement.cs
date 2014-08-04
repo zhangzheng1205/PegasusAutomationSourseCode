@@ -34,7 +34,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Changing Time Zone 
             Logger.LogMethodEntry("CreateAnnouncement",
                 "ChangeWSAdminTimeZoneToIndianGmtInMyProfile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on My Profile Link
             new AdminToolPage().ClickMyProfileLinkByWSAdmin();
             //Changing the Time Zone
@@ -43,7 +43,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 CreateAnnouncement_MyProfile_IndianTimeZone_Value);
             Logger.LogMethodExit("CreateAnnouncement",
                 "ChangeWSAdminTimeZoneToIndianGmtInMyProfile",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Changing Time Zone 
             Logger.LogMethodEntry("CreateAnnouncement",
                 "ChangeWSUserTimeZoneToIndianGmtInMyProfile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on My Profile Link
             new MyPegasusUXPage().ClickMyProfileLinkByWSUser();
             //Changing the Time Zone
@@ -64,7 +64,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 CreateAnnouncement_MyProfile_IndianTimeZone_Value);
             Logger.LogMethodExit("CreateAnnouncement",
                 "ChangeWSUserTimeZoneToIndianGmtInMyProfile",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -77,13 +77,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Creation of Announcement
             Logger.LogMethodEntry("CreateAnnouncement", "CreateSystemAnnouncement",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Create Announcement Link
             new AnnouncementArchivePage().ClickCreateAnnouncementLink();
             //Creation of System Announcement
             new CreateAnnouncementPage().CreateSystemAnnouncement(announcementTypeEnum);
             Logger.LogMethodExit("CreateAnnouncement", "CreateSystemAnnouncement",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -97,12 +97,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Selecting announcement in global home page
             Logger.LogMethodEntry("CreateAnnouncement",
                 "SelectAnnouncementInAnnouncementChannel",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Announcement 
             new MyPegasusUXPage().SelectAnnouncement(announcementTypeEnum);
             Logger.LogMethodExit("CreateAnnouncement",
                 "SelectAnnouncementInAnnouncementChannel",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verifying Display of Announcement in Announcement frame
             Logger.LogMethodEntry("CreateAnnouncement", "VerifyAnnouncementInAnnouncementFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get announcement From Memory
             Announcement announcement = Announcement.Get(announcementTypeEnum);
             //Declaration Page Class Object
@@ -130,7 +130,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             // Close Annoucement LightBox
             announcementDefaultUxPage.CloseAnnoucementLightBox();
             Logger.LogMethodExit("CreateAnnouncement", "VerifyAnnouncementInAnnouncementFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -145,7 +145,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verifying Display of Announcement in lightbox
             Logger.LogMethodEntry("CreateAnnouncement",
                 "VerifyAnnouncementInAnnouncementLightBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get announcement From Memory
             Announcement announcement = Announcement.Get(announcementTypeEnum);
             //Declaration Page Class Object
@@ -161,7 +161,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             announcementDefaultUxPage.CloseAnnoucementLightBox();
             Logger.LogMethodExit("CreateAnnouncement",
                 "VerifyAnnouncementInAnnouncementLightBox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -172,11 +172,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Creating Course Announcement
             Logger.LogMethodEntry("CreateAnnouncement", "CreateCourseAnnouncement",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Course announcement creation
             new CreateAnnouncementUXPage().CreateCourseAnnouncement();
             Logger.LogMethodExit("CreateAnnouncement", "CreateCourseAnnouncement",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify Display of Announcement Creation successfull message 
             Logger.LogMethodEntry("CreateAnnouncement",
                 "VerifySuccessfullMessageInAnnouncementsFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Successfull Message Displayed
             Logger.LogAssertion("VerifyAnnouncementDisplay", ScenarioContext.
                    Current.ScenarioInfo.Title, () => Assert.AreEqual(successMessage,
@@ -199,7 +199,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             new AnnouncementDefaultUXPage().CloseAnnoucementLightBox();
             Logger.LogMethodExit("CreateAnnouncement",
                 "VerifySuccessfullMessageInAnnouncementsFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -213,12 +213,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Click on the 'Messeges' link
             Logger.LogMethodEntry("CreateAnnouncement",
                 "ClickMessegesLinkAndSelectViewAllLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the 'Messeges' Link and Select ViewAll Link
             new HomePage().SelectAnnouncementViewAllLink(userTypeEnum);
             Logger.LogMethodExit("CreateAnnouncement",
                 "ClickMessegesLinkAndSelectViewAllLink",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -231,11 +231,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Click on the 'Create Announcement' button
             Logger.LogMethodEntry("CreateAnnouncement", "CreateClassAnnouncementInCourseSpace",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Create the class Announcement           
             new CreateAnnouncementUXPage().CreateClassAnnouncement(announcementType);
             Logger.LogMethodExit("CreateAnnouncement", "CreateClassAnnouncementInCourseSpace",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -247,11 +247,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             String announcementType)
         {
             Logger.LogMethodEntry("CreateAnnouncement", "SelectAnnouncementsInDropDown",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Select 'System Announcements' in Dropdown
             new AnnouncementDefaultUXPage().SelectAnnouncementsTypeInDropdown(announcementType);
             Logger.LogMethodExit("CreateAnnouncement", "SelectAnnouncementsInDropDown",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -263,14 +263,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Changing Time Zone 
             Logger.LogMethodEntry("CreateAnnouncement", "ChangeCsUserTimeZoneToIndianGmtInMyProfile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on My Profile Link
             new HomePage().ClickMyProfileLink(userType);
             //Changing the Time Zone
             new MyAccountSettingPage().ChangeTimeZoneInMyProfile(CreateAnnouncementResource.
                 CreateAnnouncement_MyProfile_IndianTimeZone_Value);
             Logger.LogMethodExit("CreateAnnouncement", "ChangeCsUserTimeZoneToIndianGmtInMyProfile",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -280,13 +280,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         public void CreateCsCourseAnnouncement()
         {
             Logger.LogMethodEntry("CreateAnnouncement", "CreateCsCourseAnnouncement",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click ManageAll Button
             new TodaysViewUXPage().ClickAnnouncementManageAllButton();
             //Create Course Announcement in CS
             new CreateAnnouncementUXPage().CreateCourseAnnouncementInCs();
             Logger.LogMethodExit("CreateAnnouncement", "CreateCsCourseAnnouncement",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

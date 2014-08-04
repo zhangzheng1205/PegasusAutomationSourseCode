@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Delete the Older files
             logger.LogMethodEntry("BulkUploadQueuePage", "DeleteOlderUploadedFiles",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on the Users tab
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }         
             logger.LogMethodExit("BulkUploadQueuePage", "DeleteOlderUploadedFiles",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Remove The Older Files
             logger.LogMethodEntry("BulkUploadQueuePage", "RemoveTheOlderFiles",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Registration Queue
             base.ClickButtonById(ManageUserPageResource.
                 ManageUser_Page_BulkRegistration_ViewRegistration_Data_Id_Locator);
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.CloseBrowserWindow();
             }
             logger.LogMethodExit("BulkUploadQueuePage", "RemoveTheOlderFiles",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
             //Delete Older Uploaded File In 'Manage Students' Window
             logger.LogMethodEntry("BulkUploadQueuePage", 
                 "DeleteOlderUploadedFileInManageStudentsWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the Window
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("BulkUploadQueuePage", 
                 "DeleteOlderUploadedFileInManageStudentsWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

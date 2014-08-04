@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Change of Time Zone 
             logger.LogMethodEntry("MyAccountSettingPage", "ChangeTimeZoneInMyProfile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Changing the Time Zone                
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyAccountSettingPage", "ChangeTimeZoneInMyProfile",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Change of Time Zone 
             logger.LogMethodEntry("MyAccountSettingPage", "ChangeTimeZoneInCsAdminMyProfile",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch To Default Page Element
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyAccountSettingPage", "ChangeTimeZoneInCsAdminMyProfile",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Change User Profile Settings
             logger.LogMethodEntry("MyAccountSettingPage", "ChangeUserProfileSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Close the Current Browser Window
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyAccountSettingPage", "ChangeUserProfileSettings",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         
 
@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Change Locale Preferences
             logger.LogMethodEntry("MyAccountSettingPage", "ChangeLocalPrefernces",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Changing the Time Zone                
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("MyAccountSettingPage", "ChangeLocalPrefernces",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -199,14 +199,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Change Screen Language
             logger.LogMethodEntry("MyAccountSettingPage", "ChangeScreenLanguage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_ScreenLanguage_Id_Locator));
             //Select Language
             base.SelectDropDownValueThroughTextById(MyAccountSettingPageResource.
                 MyAccountSetting_Page_ScreenLanguage_Id_Locator, languageType);
             logger.LogMethodExit("MyAccountSettingPage", "ChangeScreenLanguage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -218,14 +218,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Change Help Language
             logger.LogMethodEntry("MyAccountSettingPage", "ChangeHelpLanguage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_HelpLanguage_Id_Locator));
             //Select Help Language
             base.SelectDropDownValueThroughTextById(MyAccountSettingPageResource.
                 MyAccountSetting_Page_HelpLanguage_Id_Locator, helpLanguageType);
             logger.LogMethodExit("MyAccountSettingPage", "ChangeHelpLanguage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Change Locale Perefernce Number Value
             logger.LogMethodEntry("MyAccountSettingPage", "ChangeLocalePrefernceNumberValue",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocalePrefernceNumber_Id_Locator));
             //Select Locale Prefernce Number Value
@@ -243,7 +243,7 @@ namespace Pegasus.Pages.UI_Pages
                 MyAccountSetting_Page_LocalePrefernceNumber_Id_Locator, Convert.ToInt32(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocalePrefernces_DropDownValue));
             logger.LogMethodExit("MyAccountSettingPage", "ChangeLocalePrefernceNumberValue",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Change Locale Prefernce Time Display
             logger.LogMethodEntry("MyAccountSettingPage", "ChangeLocalePrefernceTimeDisplay",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocaleTimeDisplay_Id_Locator));
             //Change Locale Prefernce Time Display
@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
                 Convert.ToInt32(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocalePrefernces_DropDownValue));
             logger.LogMethodExit("MyAccountSettingPage", "ChangeLocalePrefernceTimeDisplay",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -272,7 +272,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Change Locale Prefernce Date Display
             logger.LogMethodEntry("MyAccountSettingPage", "ChangeLocalePreferenceDateDisplay",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocaleDateDisplay_Id_Locator));
             //Change Locale Prefernce Date Display
@@ -281,7 +281,7 @@ namespace Pegasus.Pages.UI_Pages
                 Convert.ToInt32(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocalePrefernces_DropDownValue));
             logger.LogMethodExit("MyAccountSettingPage", "ChangeLocalePreferenceDateDisplay",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -291,7 +291,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Change Locale prefernce Long Date
             logger.LogMethodEntry("MyAccountSettingPage", "ChangeLocalePreferenceLongDate",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocaleLongDate_Id_Locator));
             //Change Locale prefernce Long Date
@@ -300,7 +300,7 @@ namespace Pegasus.Pages.UI_Pages
                 Convert.ToInt32(MyAccountSettingPageResource.
                 MyAccountSetting_Page_LocalePrefernces_DropDownValue));
             logger.LogMethodExit("MyAccountSettingPage", "ChangeLocalePreferenceLongDate",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -310,7 +310,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Edit Pearson Account Option
             logger.LogMethodEntry("MyAccountSettingPage", "ClickOnEditPearsonAccountOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {            
                 //Wait for the Frame                
@@ -341,7 +341,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyAccountSettingPage", "ClickOnEditPearsonAccountOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -352,7 +352,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get My Profile Frame Options
             logger.LogMethodEntry("MyAccountSettingPage", "GetMyProfileFrameOptions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get My Profile Frame Options
             string getMyProfileFrameOptions = string.Empty;
             //Get My Profile Text
@@ -386,7 +386,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MyAccountSettingPage", "GetMyProfileFrameOptions",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return getMyProfileFrameOptions = getMyProfileText + getMyPearsonAccountText 
                 + getTimeZoneText + getLocalizationText;
         }              
@@ -398,7 +398,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switch to Iframe
             logger.LogMethodEntry("MyAccountSettingPage", "SwitchToIFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(MyAccountSettingPageResource.
                     MyAccountSetting_Page_MyProfile_Frame_Xpath_Locator));
             //Get properties of IFrame
@@ -408,7 +408,7 @@ namespace Pegasus.Pages.UI_Pages
             //Switching to Frame
             base.SwitchToIFrameByWebElement(frameProperties);
             logger.LogMethodExit("MyAccountSettingPage", "SwitchToIFrame",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

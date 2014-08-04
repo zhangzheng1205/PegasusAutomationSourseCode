@@ -29,12 +29,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select grading tab in the preferences
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "SelectGradingTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Grading Option
             new GradingPreferencesPage().ClickOnGradingOption();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "SelectGradingTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Get default state of the email preference
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "CheckDefaultValue",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify default state of the email preference
             Logger.LogAssertion("CheckDefaultValue",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
@@ -54,7 +54,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                IsVerifyTheIncludeMailCheckBoxStatus()));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "CheckDefaultValue",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify the email preference presence
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "CheckPreferenceText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Assert email preference
             Logger.LogAssertion("CheckPreferenceText", ScenarioContext.
                 Current.ScenarioInfo.Title, ()
@@ -75,7 +75,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 new GradingPreferencesPage().GetIncludeMailText()));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "CheckPreferenceText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -87,12 +87,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Click the new preference check box with saving
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "ModifyCheckBoxAndSave",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Click on Check box
             new GradingPreferencesPage().ClickTheMailCheckBoxAndSavePreference();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "ModifyCheckBoxAndSave",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Get check status of the email preference
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "GetCheckedStatusAfterUserAction",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify check status of the email preference
             Logger.LogAssertion("GetCheckedStatusAfterUserAction",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
@@ -112,7 +112,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                IsVerifyTheIncludeMailCheckBoxStatus()));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "GetCheckedStatusAfterUserAction",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Get uncheck status of the email preference
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "GetUnCheckedStatusAfterUserAction",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify uncheck status of the email preference
             Logger.LogAssertion("GetUnCheckedStatusAfterUserAction",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
@@ -132,7 +132,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                IsVerifyTheIncludeMailCheckBoxStatus()));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "GetUnCheckedStatusAfterUserAction",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -144,12 +144,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Click on download of preferences icon
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "ClickOnDownloadIcon",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Click on download of preferences icon
             new GradingPreferencesPage().ClickOnDownloadIcon();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "ClickOnDownloadIcon",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -161,12 +161,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select Current Page option
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "SelectCurrentPageOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Current Page Option
             new GradingPreferencesPage().SelectCurrentPageOption();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "SelectCurrentPageOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -178,12 +178,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Save the downloaded preferences file
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "SaveTheDownloadedFile",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Save the downloaded preferences file
             new GradingPreferencesPage().SaveTheDownloadedPreferences();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "SaveTheDownloadedFile",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Check if Current Page option for download of preferences is selected or not
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "CheckCurrentPagesOptionSelected",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify Current Page option for download of preferences is selected or not
             Logger.LogAssertion("CheckCurrentPagesOptionSelected",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
@@ -204,7 +204,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
              IsCurrentPageSelected()));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "CheckCurrentPagesOptionSelected",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -216,12 +216,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select All Pages option
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "SelectAllPagesOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select All Pages option
             new GradingPreferencesPage().SelectAllPages();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "SelectAllPagesOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Check if All Pages option for download of preferences is selected or not
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "CheckAllPagesOptionSelected",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify All Pages option for download of preferences is selected or not
             Logger.LogAssertion("CheckAllPagesOptionSelected",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
@@ -242,7 +242,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
              IsAllPagesSelected()));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "CheckAllPagesOptionSelected",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -255,7 +255,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Check if Current Page download values match with the UI preference settings
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "ReadCurrentPageSavedFile",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify Current Page download values match with the UI preference settings
             Logger.LogAssertion("ReadCurrentPageSavedFile", ScenarioContext.Current.
                 ScenarioInfo.Title, ()
@@ -263,7 +263,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 CheckDataWithCurrentPage()));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "ReadCurrentPageSavedFile",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Check if All Pages download values match with the UI preference settings
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "ReadAllPagesSavedFile",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify All Pages download values match with the UI preference settings
             Logger.LogAssertion("ReadAllPagesSavedFile", ScenarioContext.Current.
                 ScenarioInfo.Title, ()
@@ -283,7 +283,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 CheckDataWithAllPages()));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "ReadAllPagesSavedFile",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -296,12 +296,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //To read the email preference status before downloading the preferences
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "CheckStatusBeforeDownload",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify email preference status before downloading the preferences
             new GradingPreferencesPage().VerifyCheckLockStatusBeforeDownload();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "CheckStatusBeforeDownload",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -313,7 +313,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Check if the preference is not available in the published course
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "PreferenceAbsentAfterPublishing",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify preference availability in the published course
             Logger.LogAssertion("PreferenceAbsentAfterPublishing",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
@@ -321,7 +321,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 IsPreferencePresent()));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "PreferenceAbsentAfterPublishing",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -332,11 +332,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Select Student ID option from the drop down in the grade book page
             Logger.LogMethodEntry("GBemailAddressPreference", "click on studentID selection",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             // Select Student ID option from the drop down in the grade book page
             new GBInstructorUXPage().SelectStudentId();
             Logger.LogMethodExit("GBemailAddressPreference", "click on studentID selection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -349,12 +349,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select Student ID and Student NAME option from the drop down in the grade book page
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "StudentIDAndStudentNameSelection",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Student ID and Student NAME option from the drop down in the grade book page
             new GBInstructorUXPage().SelectStudentIdAndName();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "StudentIDAndStudentNameSelection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -366,12 +366,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Select Student name option from the drop down in the grade book page
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "StudentNameSelection",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             // Select Student name option from the drop down in the grade book page
             new GBInstructorUXPage().SelectStudentName();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "StudentNameSelection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -383,7 +383,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify the absence of EmailAddress column in the exported excel file
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "CheckEmailAddressColumnAbsence",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Assert absence of EmailAddress column in the exported excel file
             Logger.LogAssertion("CheckEmailAddressColumnAbsence",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
@@ -391,7 +391,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 EmailAddressColumnAbsent()));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "CheckEmailAddressColumnAbsence",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -403,7 +403,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "CheckIfTheEmailAddressColumnIsInColTwo",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("CheckIfTheEmailAddressColumnIsInColTwo",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
                 => Assert.IsTrue(new GBInstructorUXPage().EmailAddressColumnPresent
@@ -411,7 +411,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 GBemailAddressPrefernce_FirstColumn_Value))));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "CheckIfTheEmailAddressColumnIsInColTwo",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -424,7 +424,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Verify the presence of EmailAddress column in the exported excel file in the THIRD position
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "CheckIfTheEmailAddressColumnIsInColThree",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Assert presence of EmailAddress column in the exported excel file in the THIRD position
             Logger.LogAssertion("CheckIfTheEmailAddressColumnIsInColThree",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
@@ -433,7 +433,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 GBemailAddressPrefernce_ThirdColumn_Value))));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "CheckIfTheEmailAddressColumnIsInColThree",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -446,7 +446,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify the presence of EmailAddress column in the exported excel file in the FOURTH position
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "CheckIfTheEmailAddressColumnIsInColFour",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Assert presence of EmailAddress column in the exported excel file in the FOURTH position
             Logger.LogAssertion("CheckIfTheEmailAddressColumnIsInColFour",
                 ScenarioContext.Current.ScenarioInfo.Title, ()
@@ -456,7 +456,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 GBemailAddressPrefernce_FourthColumn_Value))));
             Logger.LogMethodExit("GBemailAddressPreference",
                 "CheckIfTheEmailAddressColumnIsInColFour",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -468,12 +468,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Save the downloaded Grade Book file
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "SaveTheDownloadedGbFile",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             // Save the downloaded Grade Book file
             new GBInstructorUXPage().SaveDownloadedGradeBook();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "SaveTheDownloadedGbFile",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -485,12 +485,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Download the grade book based on the file type selection
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "DownloadGradeBook",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Download Gradebook
             new GBInstructorUXPage().DownloadGradeBook();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "DownloadGradeBook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -503,12 +503,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Select import grades option from the create column dropdown in the grade book
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "SelectImportGrades",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             // Select import grades option from the create column dropdown in the grade book
             new GBInstructorUXPage().SelectImportGrades();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "SelectImportGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -520,12 +520,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Select the file to be uploaded in the import grades pop up
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "SelectFileForUpload",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Select the file to be uploaded in the import grades pop up
             new GBInstructorUXPage().SelectFileToUpload();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "SelectFileForUpload",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -536,13 +536,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Fill Column Name in the import grades pop up
             Logger.LogMethodEntry("GBemailAddressPreference", "FillInColumnName",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             // Fill Column Name in the import grades pop up
             new GBInstructorUXPage().FillColumnName(
                 GBemailAddressPreferenceResource.
                 GBemailAddressPrefernce_New_Column_Name);
             Logger.LogMethodExit("GBemailAddressPreference", "FillInColumnName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -554,14 +554,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Fill the Column Number in the import grades pop up
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "FillInColumnNumber",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             // Fill the Column Number in the import grades pop up
             new GBInstructorUXPage().FillColumnNumber(
                 GBemailAddressPreferenceResource.
                 GBemailAddressPrefernce_New_Column_Number);
             Logger.LogMethodExit("GBemailAddressPreference",
                 "FillInColumnNumber",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -573,12 +573,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Click on OK button in the import grades pop up
             Logger.LogMethodEntry("GBemailAddressPreference",
                 "ClickOKToUpload",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             // Click on OK button in the import grades pop up
             new GBInstructorUXPage().ClickOKButton();
             Logger.LogMethodExit("GBemailAddressPreference",
                 "ClickOKToUpload",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>

@@ -26,12 +26,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Select Create Course Option
             Logger.LogMethodEntry("CourseCreation", 
                 "SelectCreateCourseOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Create Course Option
             new MyClassDefaultUXPage().ClickOnCreateCourseOption();
             Logger.LogMethodExit("CourseCreation", 
                 "SelectCreateCourseOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -43,12 +43,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Create Course Using Master Libraries
             Logger.LogMethodEntry("CourseCreation", 
                 "CreateCourseUsingMasterLibraries",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create the Course Using Master Libraries
             new CreateClassCoursePage().CreatetheCourseUsingMasterLibrary();
             Logger.LogMethodExit("CourseCreation", 
                 "CreateCourseUsingMasterLibraries",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

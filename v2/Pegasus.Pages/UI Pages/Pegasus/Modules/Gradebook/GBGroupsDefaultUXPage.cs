@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
              //Create Group
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "CreateGroup",
-                 base.isTakeScreenShotDuringEntryExit);             
+                 base.IsTakeScreenShotDuringEntryExit);             
              try
              {
                  //Select Window And Frame
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
              }
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                  "CreateGroup",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
              //Select Window And Frame
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "SelectWindowAndFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
              //Select Window
              base.WaitUntilWindowLoads(GBGroupsDefaultUXPageResource.
                  GBGroupsDefaultUX_Page_ManageGroups_Window_Title);
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
                  GBGroupsDefaultUX_Page_Frame_Id_Locator);
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                  "SelectWindowAndFrame",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
              //Enroll Student To Group
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "EnrollStudentToGroup",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
              try
              {
                  //Select Window Frame And Click On Group.
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
              }
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                  "EnrollStudentToGroup",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
              //Select Window Frame And Click On Group
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "SelectWindowFrameAndClickOnGroup",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
              //Select Window And Frame
              this.SelectWindowAndFrame();
              base.WaitForElement(By.XPath(GBGroupsDefaultUXPageResource.
@@ -172,7 +172,7 @@ namespace Pegasus.Pages.UI_Pages
                  GBGroupsDefaultUX_Page_Roster_Frame_Id_Locator);
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                 "SelectWindowFrameAndClickOnGroup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -183,7 +183,7 @@ namespace Pegasus.Pages.UI_Pages
              //Click On ViewFilters Link In Gradebook
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "ClickOnViewFiltersLinkInGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
              try
              {
                  //Select Gradebook Window
@@ -209,7 +209,7 @@ namespace Pegasus.Pages.UI_Pages
              }
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                 "ClickOnViewFiltersLinkInGradebook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -220,7 +220,7 @@ namespace Pegasus.Pages.UI_Pages
              //Click Vieew Filters Link
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "ClickVieewFiltersLink",
-                 base.isTakeScreenShotDuringEntryExit);            
+                 base.IsTakeScreenShotDuringEntryExit);            
              //Wait for the element
              base.WaitForElement(By.Id(GBGroupsDefaultUXPageResource.
                  GBGroupsDefaultUX_Page_ViewFilter_Link_Id_Locator));
@@ -231,7 +231,7 @@ namespace Pegasus.Pages.UI_Pages
              base.ClickByJavaScriptExecutor(getViewFiltersLink);
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                 "ClickVieewFiltersLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -242,7 +242,7 @@ namespace Pegasus.Pages.UI_Pages
              //Select Gradebook Window
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "SelectGradebookWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
              //Select the window
              base.WaitUntilWindowLoads(GBGroupsDefaultUXPageResource.
                  GBGroupsDefaultUX_Page_Gradebook_WindowName);
@@ -250,7 +250,7 @@ namespace Pegasus.Pages.UI_Pages
                  GBGroupsDefaultUX_Page_Gradebook_WindowName);
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                 "SelectGradebookWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
              //Search Student In Gradebook
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "SearchStudentInGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
              try
              {
                  //Select Gradebook Window
@@ -287,7 +287,7 @@ namespace Pegasus.Pages.UI_Pages
              }
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                 "SearchStudentInGradebook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -299,7 +299,7 @@ namespace Pegasus.Pages.UI_Pages
              //Fill The Student Name In Search TextBox
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "ClickOnSearchButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
              //Wait for the element
              base.WaitForElement(By.Id(GBGroupsDefaultUXPageResource.
                  GBGroupsDefaultUX_Page_Search_Button_Id_Locator));
@@ -310,7 +310,7 @@ namespace Pegasus.Pages.UI_Pages
              base.ClickByJavaScriptExecutor(getSaveButton);
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                "ClickOnSearchButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -322,7 +322,7 @@ namespace Pegasus.Pages.UI_Pages
              //Fill The Student Name In Search TextBox
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "FillTheStudentNameInSearchTextBox",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
              //Wait for the element
              base.WaitForElement(By.Id(GBGroupsDefaultUXPageResource.
                  GBGroupsDefaultUX_Page_SearchStudent_TextBox_Id_Locator));
@@ -336,7 +336,7 @@ namespace Pegasus.Pages.UI_Pages
                  GBGroupsDefaultUX_Page_SearchStudent_TextBox_Id_Locator, userName);
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                 "FillTheStudentNameInSearchTextBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -347,7 +347,7 @@ namespace Pegasus.Pages.UI_Pages
              //Click On Show Status for All Item Filter Option
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "ClickOnShowStatusforAllItemFilterOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
              try
              {
                  //Select the window
@@ -366,7 +366,7 @@ namespace Pegasus.Pages.UI_Pages
              }
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                 "ClickOnShowStatusforAllItemFilterOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -377,7 +377,7 @@ namespace Pegasus.Pages.UI_Pages
              //Click On Assignment Types Link In Gradebook.
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                  "ClickOnAssignmentTypesLinkInGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
              try
              {
                  //Select the window
@@ -397,7 +397,7 @@ namespace Pegasus.Pages.UI_Pages
              }
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                 "ClickOnAssignmentTypesLinkInGradebook",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -409,7 +409,7 @@ namespace Pegasus.Pages.UI_Pages
              //Select Assignment Type In Gradebook.
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                 "SelectAssignmentTypeInGradebook",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
              //Initialize VariableVariable
              string getAssignmentTypeName = string.Empty;
              try
@@ -446,7 +446,7 @@ namespace Pegasus.Pages.UI_Pages
              }
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                "SelectAssignmentTypeInGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
          }
 
          /// <summary>
@@ -458,7 +458,7 @@ namespace Pegasus.Pages.UI_Pages
              //Select Assignment Type Checkbox
              logger.LogMethodEntry("GBGroupsDefaultUXPage",
                 "SelectAssignmentTypeCheckbox",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
              //Wait for the element
              base.WaitForElement(By.XPath(string.Format(GBGroupsDefaultUXPageResource.
              GBGroupsDefaultUX_Page_AssignmentType_Checkbox_Xpath_Locator,
@@ -470,7 +470,7 @@ namespace Pegasus.Pages.UI_Pages
              base.ClickByJavaScriptExecutor(getAssignmentTypeCheckbox);
              logger.LogMethodExit("GBGroupsDefaultUXPage",
                "SelectAssignmentTypeCheckbox",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
          }
     }
 }

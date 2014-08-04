@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Enroll SMS Student In a Course 
             Logger.LogMethodEntry("SelfEnrollmentPage", "SMSStudentEnrolledInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SelfEnrollmentPage", "SMSStudentEnrolledInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger entry
             Logger.LogMethodEntry("SelfEnrollmentPage", "SelectGlobalHomeWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window
             base.WaitUntilWindowLoads(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_GlobalHome_Window_Title_Name);
@@ -99,7 +99,7 @@ namespace Pegasus.Pages.UI_Pages
                 SelfEnrollment_Page_GlobalHome_Window_Title_Name);
             //Logger exit
             Logger.LogMethodExit("SelfEnrollmentPage", "SelectGlobalHomeWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Course And Enroll User
             Logger.LogMethodEntry("SelfEnrollmentPage", "EnrollSMSUserInCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Wait For Element
             base.WaitForElement(By.CssSelector(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_CourseID_Span_CssSelector_Locator));
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
             // Select Window
             this.SelectGlobalHomeWindow();
             Logger.LogMethodExit("SelfEnrollmentPage", "EnrollSMSUserInCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -140,13 +140,13 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnCancelButton()
         {
             Logger.LogMethodEntry("SelfEnrollmentPage", "ClickOnCancelButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_CancelButton_Id_Locator));
             base.ClickButtonById(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_CancelButton_Id_Locator);
             Logger.LogMethodExit("SelfEnrollmentPage", "ClickOnCancelButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnConfirmButton()
         {
             Logger.LogMethodEntry("SelfEnrollmentPage", "ClickOnConfirmButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait For Confirm Button
             base.WaitForElement(
                 By.CssSelector(SelfEnrollmentPageResource.
@@ -164,7 +164,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByCssSelector(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_CourseID_Confirm_Button_CssSelector_Locator);
             Logger.LogMethodExit("SelfEnrollmentPage", "ClickOnConfirmButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -176,14 +176,14 @@ namespace Pegasus.Pages.UI_Pages
             //Logger entry
             Logger.LogMethodEntry("IsUserAlreadyEnrolledInCourse",
                 "IsUserAlreadyEnrolledInCourseMessagePresent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Is Message Present
             bool isErrorMessagePresent = base.IsElementPresent(By.Id(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_UserAlreadyEnrolled_ErrorMessage_Id_Locator), 5);
             //Logger exit
             Logger.LogMethodExit("SelfEnrollmentPage",
                 "IsUserAlreadyEnrolledInCourseMessagePresent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isErrorMessagePresent;
         }
     }

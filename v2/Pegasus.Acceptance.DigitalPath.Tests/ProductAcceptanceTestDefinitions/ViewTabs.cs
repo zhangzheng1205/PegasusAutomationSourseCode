@@ -33,7 +33,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the Accessibility of Tab
             Logger.LogMethodEntry("ViewTabs", "AccessTheTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initializing the variable
             string newTabName = tabWindowTitle;
             if (tabWindowTitle == ViewTabsResource.ViewTabs_AssignmentsToDo_Window_Title)
@@ -47,7 +47,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 ((TodaysViewUXPage.TodaysViewTabType)Enum.Parse
                 (typeof(TodaysViewUXPage.TodaysViewTabType), newTabName))));
             Logger.LogMethodExit("ViewTabs", "AccessTheTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

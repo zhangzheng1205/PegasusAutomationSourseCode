@@ -524,7 +524,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
 
-        #endregion
+        #endregion`
 
         #region WebDriver SwitchToFrame
 

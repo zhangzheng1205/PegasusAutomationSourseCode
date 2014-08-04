@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Compass Next Generation
             logger.LogMethodEntry("EPContentPage", "SelectCourseCompassNextGeneration",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Administrative Page Window
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EPContentPage", "SelectCourseCompassNextGeneration",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Sign Out From Application
             logger.LogMethodEntry("EPContentPage", "SignOutFromApplication",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Administrative Page Window
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("EPContentPage", "SignOutFromApplication",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -106,14 +106,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Administrative Page Window
             logger.LogMethodEntry("EPContentPage", "SelectAdministrativePageWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Administrative Pages Window
             base.WaitUntilWindowLoads(EPContentPageResource.
                 EPContent_Page_AdministrationPages_Window_Name);
             base.SelectWindow(EPContentPageResource.
                 EPContent_Page_AdministrationPages_Window_Name);
             logger.LogMethodExit("EPContentPage", "SelectAdministrativePageWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify Exit Link
             logger.LogMethodEntry("EPContentPage", "IsVerifyExitButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialiaze variable
             Boolean isUserLoggedIn = false;
             try
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);      
             }
             logger.LogMethodExit("EPContentPage", "IsVerifyExitButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return isUserLoggedIn;
         }
     }

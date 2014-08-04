@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get The Last Name Of The Enrolled User
             logger.LogMethodEntry("UserEnrollmentPage", "GetEnrolledUserLastName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable To Get Last Name Of The User
             string getLastName = string.Empty;
             try
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserEnrollmentPage", "GetEnrolledUserLastName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Return Last Name Of The User
             return getLastName;
         }
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Last Name Of User
             logger.LogMethodEntry("UserEnrollmentPage", "GetUserLastName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getLastName = string.Empty;
             for (int rowCount = Convert.ToInt32(
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("UserEnrollmentPage", "GetUserLastName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Return Last Name
             return getLastName;
         }
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the User In the Right Frame
             logger.LogMethodEntry("UserEnrollmentPage", "SelectUserInRightFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getLastName = string.Empty;
             try
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("UserEnrollmentPage", "SelectUserInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -150,7 +150,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Un Enroll Select Users option 
             logger.LogMethodEntry("UserEnrollmentPage", "ClickOnUnEnrollSelectedUsersOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Un Enroll Select Users Option
@@ -166,7 +166,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                 
             }
             logger.LogMethodExit("UserEnrollmentPage", "ClickOnUnEnrollSelectedUsersOption",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

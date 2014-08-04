@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Add Class
            logger.LogMethodEntry("RptPadminCriteriaPage", "SelectAddClass",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
            try
            {
                //Select Manage organization Frame
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
            }
           logger.LogMethodExit("RptPadminCriteriaPage", "SelectAddClass",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Students Window
             logger.LogMethodEntry("RptPadminCriteriaPage", "SelectStudentsWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select the Select Students window
             base.WaitUntilWindowLoads(RptPadminCriteriaPageResource.
                 RptPadminCriteria_Page_SelectStudent_Window_Name);
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(RptPadminCriteriaPageResource.
                 RptPadminCriteria_Page_SelectStudent_TimeValue));
             logger.LogMethodExit("RptPadminCriteriaPage", "SelectStudentsWindow",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click Run Report In Admin
             logger.LogMethodEntry("RptPadminCriteriaPage", "ClickRunReportInAdmin",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(RptPadminCriteriaPageResource.
                    RptPadminCriteria_Page_PageSelect_RedioButton_Id_Locator));
             base.FocusOnElementById(RptPadminCriteriaPageResource.
@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the runreport button
             base.ClickByJavaScriptExecutor(getRunReport);
             logger.LogMethodExit("RptPadminCriteriaPage", "ClickRunReportInAdmin",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Manage organization Frame
             logger.LogMethodEntry("RptPadminCriteriaPage", "SelectManageorganizationFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             base.SelectWindow(RptMainUXPageResource.
                 RptMain_Page_ManageOrg_Window_Name);
@@ -134,7 +134,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(RptMainUXPageResource.
                 RptMain_Page_ManageOrg_Window_Frame_Name);
             logger.LogMethodExit("RptPadminCriteriaPage", "SelectManageorganizationFrame",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Student To View Report
             logger.LogMethodEntry("RptPadminCriteriaPage", "SelectStudentsToViewTheReport",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Get Count of students
             int getStudentCount = base.GetElementCountByXPath
                 (RptPadminCriteriaPageResource.RptPadminCriteria_Page_Student_Count_Xpath_Locator);
@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Add Close Button
             this.ClickOnAddCloseButton();           
             logger.LogMethodExit("RptPadminCriteriaPage", "SelectStudentsToViewTheReport",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -180,7 +180,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Close Button
             logger.LogMethodEntry("RptPadminCriteriaPage", "ClickOnAddCloseButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for the add button
             base.WaitForElement(By.Id(RptPadminCriteriaPageResource.
                 RptPadminCriteria_Page_Student_Add_Button_Id_Locator));
@@ -196,7 +196,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the Add And Close button
             base.ClickByJavaScriptExecutor(getAddCloseButton);
             logger.LogMethodExit("RptPadminCriteriaPage", "ClickOnAddCloseButton",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

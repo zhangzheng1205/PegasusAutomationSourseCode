@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the 'Messeges' link
             logger.LogMethodEntry("HomePage", "SelectAnnouncementViewAllLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the default window
@@ -49,7 +49,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "SelectAnnouncementViewAllLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the 'View All' link
             logger.LogMethodEntry("HomePage", "ClickAnnouncementViewAllLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 // Click view all link by csteacher
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("HomePage", "ClickAnnouncementViewAllLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check for Global Home Page Tabs
             logger.LogMethodEntry("HomePage", "IsGlobalHomeTabsPresent",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Intialization of bool 'isHomeTabsPresent'
             bool isHomeTabsPresent = false;
             try
@@ -117,7 +117,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "IsGlobalHomeTabsPresent",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return isHomeTabsPresent;
         }
 
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Class name
             logger.LogMethodEntry("HomePage", "GetClassName",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Initialized Class Name Variable
             string getClassName = string.Empty;
             try
@@ -150,7 +150,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("HomePage", "GetClassName",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return getClassName;
         }
 
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on My Profile link
             logger.LogMethodEntry("HomePage", "ClickMyProfileLink",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (userType)
@@ -214,7 +214,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "ClickMyProfileLink",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -224,7 +224,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Messages Link
             logger.LogMethodEntry("HomePage", "ClickOnMessagesLink",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Message Link
@@ -257,7 +257,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "ClickOnMessagesLink",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify Mail Popup Present or Not
             logger.LogMethodEntry("MessageGridPage", "IsMailPopupPresent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             Boolean isMailPopupPresent = false;
             try
             {
@@ -282,7 +282,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MessageGridPage", "IsMailPopupPresent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return isMailPopupPresent;
         }
 
@@ -294,7 +294,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Enter into the Class
             logger.LogMethodEntry("HomePage", "EnterInClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window               
@@ -325,7 +325,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "EnterInClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -335,7 +335,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Logout by DigitalPath Cs User
             logger.LogMethodEntry("HomePage", "DigitalPathCsUserLogout",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Click on UserProfile image
@@ -357,7 +357,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "DigitalPathCsUserLogout",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -367,7 +367,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click the "Add" button
             logger.LogMethodEntry("HomePage", "ClickTheAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window name
@@ -384,7 +384,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "ClickTheAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -396,7 +396,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the product
             logger.LogMethodEntry("HomePage", "GetTheProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Variable Declaration of product          
             string getProductName = string.Empty;
             try
@@ -423,7 +423,7 @@ namespace Pegasus.Pages.UI_Pages
             catch (Exception e)
             { ExceptionHandler.HandleException(e); }
             logger.LogMethodExit("HomePage", "GetTheProduct",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getProductName;
         }
 
@@ -434,7 +434,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the lightbox frame
             logger.LogMethodEntry("HomePage", "SelectLightBoxFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select the window name
             base.WaitUntilWindowLoads(HomePageResource.Home_Page_Home_Window_Title);
             base.SelectWindow(HomePageResource.Home_Page_Home_Window_Title);
@@ -448,7 +448,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception ex) { logger.LogMessage("HomePage", "SelectLightBoxFrame", "Error in switching setup wizard frame"); }
             logger.LogMethodExit("HomePage", "SelectLightBoxFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -458,7 +458,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click the "Cancel" button
             logger.LogMethodEntry("HomePage", "ClickTheCancelButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.FocusOnElementById(HomePageResource.
@@ -477,7 +477,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "ClickTheCancelButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -489,7 +489,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Get Displayof the class name
             logger.LogMethodEntry("HomePage", "GetDisplayClassName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Variable Declaration of get class name
             string getClassNameText = string.Empty;
             try
@@ -516,7 +516,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "GetDisplayClassName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getClassNameText;
         }
 
@@ -527,7 +527,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Signout from application by DP CS Teacher
             logger.LogMethodEntry("HomePage", "SignoutByDigitalPathCSTeacher",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Default Window
@@ -548,7 +548,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodEntry("HomePage", "SignoutByDigitalPathCSTeacher",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -559,7 +559,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Signout from application by DP CS Student
             logger.LogMethodEntry("HomePage", "SignOutByDigitalPathCSStudent",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Default Window
@@ -578,7 +578,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "SignOutByDigitalPathCSStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -588,7 +588,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Message View All Link
             logger.LogMethodEntry("HomePage", "ClickMessagesViewAllLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on Link
@@ -599,7 +599,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "ClickMessagesViewAllLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -609,7 +609,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Manage All Button In GlobalHome
             logger.LogMethodEntry("HomePage", "ClickTheManageAllButtonInGlobalHome",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -631,7 +631,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("HomePage", "ClickTheManageAllButtonInGlobalHome",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -641,7 +641,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetWelcomeMessage()
         {
             logger.LogMethodEntry("HomePage", "GetWelcomeMessage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             string welcomeMessage;
 
             SelectLightBoxFrame();
@@ -650,7 +650,7 @@ namespace Pegasus.Pages.UI_Pages
                 HomePageResource.HomePage_WelcomeMessage_Div_Id_Locator);
 
             logger.LogMethodExit("HomePage", "GetWelcomeMessage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return welcomeMessage;
         }
 
@@ -661,7 +661,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetWelcomeBannerSrcAttribute()
         {
             logger.LogMethodEntry("HomePage", "GetWelcomeBannerSrcAttribute",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             string welcomeBannerSrc = String.Empty;
 
             SelectLightBoxFrame();
@@ -675,7 +675,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("HomePage", "GetWelcomeBannerSrcAttribute",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return welcomeBannerSrc;
         }
 
@@ -686,7 +686,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetWelcomeMessageButtonText()
         {
             logger.LogMethodEntry("HomePage", "GetWelcomeMessageButtonText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             string welcomeMessageButtonText;
 
             SelectLightBoxFrame();
@@ -694,7 +694,7 @@ namespace Pegasus.Pages.UI_Pages
             welcomeMessageButtonText = base.GetElementTextById(HomePageResource.HomePage_WelcomeMessage_Button_Id_Locator);
 
             logger.LogMethodExit("HomePage", "GetWelcomeMessageButtonText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return welcomeMessageButtonText;
         }
 
@@ -722,7 +722,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickWelcomeMessageBoxNavigationButton()
         {
             logger.LogMethodEntry("HomePage", "ClickWelcomeMessageBoxNavigationButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
 
             SelectLightBoxFrame();
             base.WaitForElement(By.Id(
@@ -731,7 +731,7 @@ namespace Pegasus.Pages.UI_Pages
                 .HomePage_WelcomeMessage_Button_Id_Locator);
 
             logger.LogMethodExit("HomePage", "ClickWelcomeMessageBoxNavigationButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

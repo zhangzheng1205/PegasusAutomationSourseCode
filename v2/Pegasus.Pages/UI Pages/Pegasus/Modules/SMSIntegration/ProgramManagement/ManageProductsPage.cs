@@ -24,7 +24,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Create New Product Link
             Logger.LogMethodEntry("ManageProductsPage", "ClickOnCreateNewProductLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageProductsPage", "ClickOnCreateNewProductLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Right IFrame
             Logger.LogMethodEntry("ManageProductsPage", "SelectRightIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(ManageProductsPageResource.
                                           ManageProducts_Page_IFrameRight_Id_Locator));
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(ManageProductsPageResource.
                                     ManageProducts_Page_IFrameRight_Id_Locator);
             Logger.LogMethodExit("ManageProductsPage", "SelectRightIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Frame
             Logger.LogMethodEntry("ManageProductsPage", "SelectManageProductsIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(ManageProductsPageResource.
                                           ManageProducts_Page_IFrame_Id_Locator));
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(ManageProductsPageResource.
                                     ManageProducts_Page_IFrame_Id_Locator);
             Logger.LogMethodExit("ManageProductsPage", "SelectManageProductsIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Find Search Product in Product Frame
             Logger.LogMethodEntry("ManageProductsPage", "SelectProductInProductFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Variable Declaration
             string getSubstring = string.Empty;
             try
@@ -123,7 +123,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageProductsPage", "SelectProductInProductFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -134,7 +134,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Product Cmenu Option
             Logger.LogMethodEntry("ManageProductsPage", "SelectProductCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 ProductManagementContainerPage productManagementContainerPage
@@ -167,7 +167,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageProductsPage", "SelectProductCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Message Ok Button
             Logger.LogMethodEntry("ManageProductsPage", "ClickOnMessageOkButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Pegasus Window
@@ -195,7 +195,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ManageProductsPage", "ClickOnMessageOkButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -205,14 +205,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Pegasus Window
             Logger.LogMethodEntry("ManageProductsPage", "SelectPegasusWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(ManageProductsPageResource.
                     ManageProducts_Page_Window_Name);
             //Select Window
             base.SelectWindow(ManageProductsPageResource.
                 ManageProducts_Page_Window_Name);            
             Logger.LogMethodExit("ManageProductsPage", "SelectPegasusWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Enroll Button
             logger.LogMethodEntry("EnrollmentPage", "ClickEnrollButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Switch to Middle Frame
@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EnrollmentPage", "ClickEnrollButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Promoted Workspace Admin Name
             logger.LogMethodEntry("EnrollmentPage", "GetPromotedWorkspaceAdminName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Variable Declaration of User
             string getUserName = string.Empty;
             try
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EnrollmentPage", "GetPromotedWorkspaceAdminName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
        
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search The Promoted Admin
             logger.LogMethodEntry("EnrollmentPage", "SearchThePromotedAdmin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Intialize the promoted user name
             string getPromotedUserName = userName.Substring(
                Convert.ToInt32(EnrollmentPageResource.
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EnrollmentPage", "SearchThePromotedAdmin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search The Promoted User In Administrator Tab
             logger.LogMethodEntry("EnrollmentPage", "SearchThePromotedUserInAdministratorTab",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Get Promoted User's Row Counts 
             int count = base.GetElementCountByXPath(EnrollmentPageResource.
                 Enrollment_Page_EnrolledUser_Rowcount_Xpath_Locator);
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("EnrollmentPage", "SearchThePromotedUserInAdministratorTab",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Checkbox For UnEnrolled Select User
             logger.LogMethodEntry("EnrollmentPage", "ClickCheckboxForUnEnrolledSelectUser",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for the selected user checkbox
             base.WaitForElement(By.XPath(string.Format(EnrollmentPageResource.
                 Enrollment_Page_UnenrolledUser_Checkbox_Xpath_Locator, setRowCount)));
@@ -212,7 +212,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the selected user checkbox
             base.ClickByJavaScriptExecutor(getCmenuProperty);
             logger.LogMethodExit("EnrollmentPage", "ClickCheckboxForUnEnrolledSelectUser",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }       
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click UnEnrolled Frame Image Cmenu Option
             logger.LogMethodEntry("EnrollmentPage", "ClickUnEnrolledFrameImageCmenuOption",
-              base.isTakeScreenShotDuringEntryExit);           
+              base.IsTakeScreenShotDuringEntryExit);           
             //Wait for the img cmenu
             base.WaitForElement(By.XPath(string.Format(EnrollmentPageResource.
                 Enrollment_Page_PromotedAdmin_ImgCmenu_Xpath_Locator, setRowCount)));
@@ -236,7 +236,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the img cmenu
             base.ClickByJavaScriptExecutor(getCmenuProperty);
             logger.LogMethodExit("EnrollmentPage", "ClickUnEnrolledFrameImageCmenuOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -246,7 +246,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click UnEnroll Selected Users In WsAdmin
             logger.LogMethodEntry("EnrollmentPage", "ClickUnEnrollSelectedUsersInWsAdmin",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the Unenroll selected users link              
@@ -268,7 +268,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EnrollmentPage", "ClickUnEnrollSelectedUsersInWsAdmin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -278,14 +278,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Administrator Right Frame
             logger.LogMethodEntry("EnrollmentPage", "SelectAdministratorRightFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             base.SelectWindow(EnrollmentPageResource.
                 Enrollment_Page_Administrator_Window_Name);
             base.SwitchToIFrame(EnrollmentPageResource.
                 Enrollment_Page_RightFrame_Id_Locator);
             logger.LogMethodExit("EnrollmentPage", "SelectAdministratorRightFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The ManageAccess Cmenu In Administrator Tab
             logger.LogMethodEntry("EnrollmentPage", "ClickTheManageAccessCmenuInAdministratorTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wai for the cmenu option
@@ -317,7 +317,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EnrollmentPage", "ClickTheManageAccessCmenuInAdministratorTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -327,7 +327,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save The Manage Access Save Button
             logger.LogMethodEntry("EnrollmentPage", "SaveTheManageAccessSaveButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the window loads
@@ -350,7 +350,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EnrollmentPage", "SaveTheManageAccessSaveButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

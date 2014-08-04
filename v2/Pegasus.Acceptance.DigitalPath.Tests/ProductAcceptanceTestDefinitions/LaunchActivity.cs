@@ -36,11 +36,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify the click of Cmenu options in my course frame for an activity
             Logger.LogMethodEntry("LaunchActivity", "ClickOnCmenuOptionOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Launch activity action
             new CourseContentUXPage().PerformMouseOverOnCMenuOptionOfActivity(cmenuOptionName,userTypeEnum);
             Logger.LogMethodExit("LaunchActivity", "ClickOnCmenuOptionOfActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Open The Activity 
             Logger.LogMethodEntry("LaunchActivity", "LaunchTheSkillStudyPlanPreTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Launch of PreTest Presentation window
             Logger.LogAssertion("VerifyPrsentationLaunch", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new PlayerTestPage().IsSkillStudyPlanPreTestPreviewLaunched()));
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                     break;
             }
             Logger.LogMethodExit("LaunchActivity", "LaunchTheSkillStudyPlanPreTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -81,12 +81,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Open The Activity 
             Logger.LogMethodEntry("LaunchActivity", "LaunchTheTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert for Launch of Presentation window
             Logger.LogAssertion("VerifyPrsentationLaunch", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new PlayerTestPage().IsMGMTestActivityLauched()));
             Logger.LogMethodExit("LaunchActivity", "LaunchTheTestActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -100,11 +100,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Open The Activity As Student
             Logger.LogMethodEntry("LaunchActivity", "OpenTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Launch The Activity
             new CoursePreviewMainUXPage().OpenActivity(activityTypeEnum);
             Logger.LogMethodExit("LaunchActivity", "OpenTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,11 +115,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Open The Pretest As Student
             Logger.LogMethodEntry("LaunchActivity", "LaunchPretest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Launch The Pretest
             new CoursePreviewMainUXPage().LaunchPretest();
             Logger.LogMethodExit("LaunchActivity", "LaunchPretest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,11 +130,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             // Preview the Pretest As WS teacher
             Logger.LogMethodEntry("LaunchActivity", "PreviewSkillStudyPlanPreTestByTeacher",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Launch The Pretest
             new DRTPreviewUXPage().PreviewPreTestInStudyPlan();
             Logger.LogMethodExit("LaunchActivity", "PreviewSkillStudyPlanPreTestByTeacher",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Catalog Preference Settings
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnableCatalogPreferenceSettings", base.isTakeScreenShotDuringEntryExit);
+            "EnableCatalogPreferenceSettings", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window And Main Frame
@@ -52,7 +52,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnableCatalogPreferenceSettings", base.isTakeScreenShotDuringEntryExit);
+            "EnableCatalogPreferenceSettings", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Publisher And Discipline Dropdown Value
             logger.LogMethodEntry("GeneralPreferencesPage",
             "SelectPublisherAndDisciplineDropdownValue",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Publisher Dropdown Value
             base.WaitForElement(By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Publisher_Dropdown_Id_Locator));
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
                 CatalogPreferences_Page_Resource_Discipline_Dropdown_Value);
             logger.LogMethodExit("GeneralPreferencesPage",
             "SelectPublisherAndDisciplineDropdownValue",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Text Book Author First Last Name
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnterTextBookAuthorFirstLastName", base.isTakeScreenShotDuringEntryExit);
+            "EnterTextBookAuthorFirstLastName", base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBook_Author_Firstname_Text_Id_Locator));
             base.ClearTextById(CatalogPreferencesPageResource.
@@ -114,7 +114,7 @@ namespace Pegasus.Pages.UI_Pages
                 CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBook_Author_Lastname_Value);
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnterTextBookAuthorFirstLastName", base.isTakeScreenShotDuringEntryExit);
+            "EnterTextBookAuthorFirstLastName", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Text Book Title And ISBN
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "EnterTextBookTitleAndISBN", base.isTakeScreenShotDuringEntryExit);
+            "EnterTextBookTitleAndISBN", base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_TextBookTitle_Text_Id_Locator));
             base.ClearTextById(CatalogPreferencesPageResource.
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
                 CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_ISBN13_Value);
             logger.LogMethodExit("GeneralPreferencesPage",
-            "EnterTextBookTitleAndISBN", base.isTakeScreenShotDuringEntryExit);
+            "EnterTextBookTitleAndISBN", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Upload Course Icon Image
             logger.LogMethodEntry("GeneralPreferencesPage",
-            "UploadCourseIconImage", base.isTakeScreenShotDuringEntryExit);
+            "UploadCourseIconImage", base.IsTakeScreenShotDuringEntryExit);
             //Wait for the upload button
             base.WaitForElement(By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_CatalogIcon_Browse_Button_Id_Locator));
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
                 By.Id(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_CatalogIcon_Browse_Button_Id_Locator));
             logger.LogMethodExit("GeneralPreferencesPage",
-            "UploadCourseIconImage", base.isTakeScreenShotDuringEntryExit);
+            "UploadCourseIconImage", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window And Main Frame
             logger.LogMethodEntry("GeneralPreferencesPage", "SelectTheMainFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.WaitUntilWindowLoads(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Window_Title);
@@ -200,7 +200,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(CatalogPreferencesPageResource.
                 CatalogPreferences_Page_Resource_Page_MiddleFrame_Id_Locator);
             logger.LogMethodExit("GeneralPreferencesPage", "SelectTheMainFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

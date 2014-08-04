@@ -30,13 +30,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select The Go to Student View Link In Global HomePage
             Logger.LogMethodEntry("StudentView", 
                 "SelectTheGotoStudentViewLinkInGlobalHomePage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click The Go to Student View Link In Global HomePage
            new CalendarDefaultUXPage().
                ClickTheGotoStudentViewLinkInGlobalHomePage(goToStudentViewLink);
             Logger.LogMethodEntry("StudentView",
                 "SelectTheGotoStudentViewLinkInGlobalHomePage",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify The Instructor Should Turned As Student
             Logger.LogMethodEntry("StudentView", 
                 "VerifyTheInstructorShouldTurnedAsStudent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Verify welcome Student text
             Logger.LogAssertion("VerifyWelcomeStudentText", 
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -59,7 +59,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     GetWelcomeStudentTextMessage(welcomeStudentText))); 
             Logger.LogMethodEntry("StudentView",
                 "VerifyTheInstructorShouldTurnedAsStudent",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

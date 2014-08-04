@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Standard Skill Radio Button
             logger.LogMethodEntry("StandardSkillPreferencesPage",
-              "SelectStandardSkillRadioButton", base.isTakeScreenShotDuringEntryExit);
+              "SelectStandardSkillRadioButton", base.IsTakeScreenShotDuringEntryExit);
             //Wait For The Skills and Standards radio Button
             base.WaitForElement(By.Id(StandardSkillPreferencesPageResource.
                 StandardSkillPreferences_Page_SkillsandStandards_RadioButton_Id_Locator));
@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enble The Skills and Standards radio Button
             base.ClickByJavaScriptExecutor(getSkillstandard);
             logger.LogMethodExit("StandardSkillPreferencesPage",
-              "SelectStandardSkillRadioButton", base.isTakeScreenShotDuringEntryExit);
+              "SelectStandardSkillRadioButton", base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Add framework Button
             logger.LogMethodEntry("StandardSkillPreferencesPage",
              "ClickTheSkillstandardAddFrameworkButton", 
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(frameId));
             //Switch To Skills Iframe
             base.SwitchToIFrame(frameId);
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAddSkillFramework);
             logger.LogMethodExit("StandardSkillPreferencesPage",
               "ClickTheSkillstandardAddFrameworkButton", 
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save Skill Preferences
             logger.LogMethodEntry("StandardSkillPreferencesPage",
-               "SaveSkillPreferences", base.isTakeScreenShotDuringEntryExit);
+               "SaveSkillPreferences", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Thread.Sleep(Convert.ToInt32(StandardSkillPreferencesPageResource.
@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StandardSkillPreferencesPage",
-               "SaveSkillPreferences", base.isTakeScreenShotDuringEntryExit);
+               "SaveSkillPreferences", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Set The Course Standard Skill Preferences
             logger.LogMethodEntry("StandardSkillPreferencesPage",
-              "SetTheCourseStandardSkillPreferences", base.isTakeScreenShotDuringEntryExit);
+              "SetTheCourseStandardSkillPreferences", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 StandardSkillsGridPage standardSkillsGridpPage = new StandardSkillsGridPage();
@@ -148,7 +148,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StandardSkillPreferencesPage",
-              "SetTheCourseStandardSkillPreferences", base.isTakeScreenShotDuringEntryExit);
+              "SetTheCourseStandardSkillPreferences", base.IsTakeScreenShotDuringEntryExit);
         } 
     }
 }

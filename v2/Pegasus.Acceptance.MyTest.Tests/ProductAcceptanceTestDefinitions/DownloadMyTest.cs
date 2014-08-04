@@ -30,7 +30,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("DownloadMyTest",
                 "DisplayOfPrintDetailsOnMyTestDownloadPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verift the display of print default settign details on download popup
             Logger.LogAssertion("VerifyCoursePresent",
                ScenarioContext.Current.ScenarioInfo.Title,
@@ -39,7 +39,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Looger Exit
             Logger.LogMethodExit("DownloadMyTest",
                "DisplayOfPrintDetailsOnMyTestDownloadPopup",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -52,13 +52,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("DownloadMyTest",
                 "SelectTheCheckboxOnMyTestDownload",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select checkbox of print option
             new PrintToolPage().SelectCheckboxOfPrintOption(printOptionName);
             //Looger Exit
             Logger.LogMethodExit("DownloadMyTest",
                "SelectTheCheckboxOnMyTestDownload",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("DownloadMyTest",
                 "IsRadiobuttonSelectedBydefault",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify the status of radio button.
             Logger.LogAssertion("IsRadiobuttonSelectedBydefault",
                ScenarioContext.Current.ScenarioInfo.Title,
@@ -81,7 +81,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Looger Exit
             Logger.LogMethodExit("DownloadMyTest",
                "IsRadiobuttonSelectedBydefault",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("DownloadMyTest",
                 "IsDropDownOptionSeletced",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify the selected dropdown element in Create Multiple Versions section
             Logger.LogAssertion("VerifyCoursePresent",
                ScenarioContext.Current.ScenarioInfo.Title,
@@ -102,7 +102,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
                    .GetTextOfSelectedDropDownOption()));
             //Logger Exit
             Logger.LogMethodExit("DownloadMyTest",
-                "IsDropDownOptionSeletced",base.isTakeScreenShotDuringEntryExit);
+                "IsDropDownOptionSeletced",base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("DownloadMyTest",
                 "IsDropDownOptionSeletced",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify the status of expected radio button.
             Logger.LogAssertion("IsIncludeAnswerKeyRadioOptionSelected",
                ScenarioContext.Current.ScenarioInfo.Title,
@@ -124,7 +124,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
                    IsFileRadioButtonChecked(nameOfRadioButtonOption)));
             //Logger Exit
             Logger.LogMethodExit("DownloadMyTest",
-                "IsDropDownOptionSeletced", base.isTakeScreenShotDuringEntryExit);
+                "IsDropDownOptionSeletced", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -136,13 +136,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             //Logger Entry
             Logger.LogMethodEntry("DownloadMyTest",
                 "ClickOnCancelButtonOnMyTestDownloadPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on available button on MY test download popup.
             new PrintToolPage().ClickOnCancelButton();
             //Logger Exit
             Logger.LogMethodExit("DownloadMyTest",
                 "ClickOnCancelButtonOnMyTestDownloadPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

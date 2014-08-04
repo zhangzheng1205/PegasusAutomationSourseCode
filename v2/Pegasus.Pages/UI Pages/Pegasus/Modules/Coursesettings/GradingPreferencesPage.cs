@@ -37,7 +37,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Grading Option
             logger.LogMethodEntry("GradingPreferencesPage", "ClickOnGradingOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Grade Sub Tab Frame
@@ -56,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "ClickOnGradingOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the email preference text 
             logger.LogMethodEntry("GradingPreferencesPage", "GetIncludeMailText",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Variable Initialization
             string getMailText = string.Empty;
             try
@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "GetIncludeMailText",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getMailText;
         }
 
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //To get the email preference check box status
             logger.LogMethodEntry("GradingPreferencesPage", "IsVerifyTheIncludeMailCheckBoxStatus",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Variable Initialization
             bool IsChecked = false;
             try
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "IsVerifyTheIncludeMailCheckBoxStatus",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return IsChecked;
         }
 
@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Grade Sub Tab Frame  
             logger.LogMethodEntry("GradingPreferencesPage", "SelectGradeSubTabFrame",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(GradingPreferencesPageResource.
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "SelectGradeSubTabFrame",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //To click on the mail check box and save the preferences
             logger.LogMethodEntry("GradingPreferencesPage", "ClickTheMailCheckBoxAndSavePreference",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Grade Sub Tab Frame
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "ClickTheMailCheckBoxAndSavePreference",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Save Preferences Button
             logger.LogMethodEntry("GradingPreferencesPage", "ClickOnSavePreferencesButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Click on save preference button
             base.WaitForElement(By.Id(GradingPreferencesPageResource.
                 GradingPrefernces_Page_SavePreferences_Id_Locator));
@@ -197,7 +197,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the IwebElement selected
             base.ClickByJavaScriptExecutor(savePrefHeader);
             logger.LogMethodExit("GradingPreferencesPage", "ClickOnSavePreferencesButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //To click on download icon in order to download the preferences
             logger.LogMethodEntry("GradingPreferencesPage", "ClickOnDownloadIcon",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Grade Sub Tab Frame
@@ -226,7 +226,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "ClickOnDownloadIcon",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -236,7 +236,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //To select Current Page option for preference download
             logger.LogMethodEntry("GradingPreferencesPage", "SelectCurrentPageOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Grade Sub Tab Frame
@@ -258,7 +258,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "SelectCurrentPageOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //To verify if Current Page option is selected for preference download
             logger.LogMethodEntry("GradingPreferencesPage", "IsCurrentPageSelected",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Variable Initialization
             bool isValueisCurrentPageOptionSelected = false;
             try
@@ -290,7 +290,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "IsCurrentPageSelected",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return isValueisCurrentPageOptionSelected;
         }
 
@@ -300,7 +300,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SelectAllPages()
         {
             logger.LogMethodEntry("GradingPreferencesPage", "SelectAllPages",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Grade Sub Tab Frame
@@ -322,7 +322,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "SelectAllPages",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -332,7 +332,7 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean IsAllPagesSelected()
         {
             logger.LogMethodEntry("GradingPreferencesPage", "IsAllPagesSelected",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             bool isAllPagesOptionSelected = false;
             try
             {
@@ -350,7 +350,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "IsAllPagesSelected",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return isAllPagesOptionSelected;
         }
 
@@ -361,7 +361,7 @@ namespace Pegasus.Pages.UI_Pages
         {
 
             logger.LogMethodEntry("GradingPreferencesPage", "SaveTheDownloadedPreferences",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get Excelsheet File Path 
@@ -392,7 +392,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "SaveTheDownloadedPreferences",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -403,7 +403,7 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean CheckDataWithCurrentPage()
         {
             logger.LogMethodEntry("GradingPreferencesPage", "CheckDataWithCurrentPage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //variable Initialization
             bool valueDataMatch = false;
             try
@@ -442,7 +442,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "CheckDataWithCurrentPage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return valueDataMatch;
         }
 
@@ -454,7 +454,7 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean CheckDataWithAllPages()
         {
             logger.LogMethodEntry("GradingPreferencesPage", "CheckDataWithAllPages",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             bool valueDataMatch = false;
             try
             {
@@ -496,7 +496,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "CheckDataWithAllPages",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return valueDataMatch;
         }
 
@@ -509,9 +509,9 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean IsChkMatch(string getExcelCheckBoxValue)
         {
             logger.LogMethodEntry("GradingPreferencesPage", "IsChkMatch",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             logger.LogMethodExit("GradingPreferencesPage", "IsChkMatch",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //comparing the check status before and after download
             //comparing the UI values to the excel file values
             if ((!this.IsCheckedBeforeDL && getExcelCheckBoxValue == 
@@ -532,9 +532,9 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean IslockMatch(string excelcheckboxlockstatus)
         {
             logger.LogMethodEntry("GradingPreferencesPage", "IslockMatch",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             logger.LogMethodExit("GradingPreferencesPage", "IslockMatch",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //comparing the lock status before and after download
             //comparing the UI values to the excel file values
             if ((this.IsLockedBeforeDL && excelcheckboxlockstatus == 
@@ -559,7 +559,7 @@ namespace Pegasus.Pages.UI_Pages
 
             //Read Preference File Data
             logger.LogMethodEntry("GradingPreferencesPage", "ReadDownloadedPreferenceFileData",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             string data = string.Empty;
 
             try
@@ -601,7 +601,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "ReadDownloadedPreferenceFileData",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return data.ToString();
 
         }
@@ -615,13 +615,13 @@ namespace Pegasus.Pages.UI_Pages
         public string GetWordFromIndex(string csv, int index)
         {
             logger.LogMethodEntry("GradingPreferencesPage", "GetWordFromIndex",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //split the csv string by the occurence of comma and fill the array
             string[] words = csv.Split(',');
             //log a message after individual data words retrieval is complete
             logger.LogMessage("GradingPreferencesPage", "GetWordFromIndex", "Data retrieved to array from CSV", true);
             logger.LogMethodExit("GradingPreferencesPage", "GetWordFromIndex",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return words[index];
         }
 
@@ -633,7 +633,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Kill Excel Process
             logger.LogMethodEntry("GradingPreferencesPage", "killprocess",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 foreach (Process clsProcess in Process.GetProcesses())
@@ -649,7 +649,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "killprocess",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -659,7 +659,7 @@ namespace Pegasus.Pages.UI_Pages
         public void VerifyCheckLockStatusBeforeDownload()
         {
             logger.LogMethodEntry("GradingPreferencesPage", "VerifyCheckLockStatusBeforeDownload",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Grade Sub Tab Frame
@@ -683,7 +683,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "VerifyCheckLockStatusBeforeDownload",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -693,7 +693,7 @@ namespace Pegasus.Pages.UI_Pages
         public Boolean IsPreferencePresent()
         {
             logger.LogMethodEntry("GradingPreferencesPage", "IsPreferencePresent",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Variable Initialization
             bool isPreferencePresent = false;
             try
@@ -710,7 +710,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage", "IsPreferencePresent",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return isPreferencePresent;
         }
         /// <summary>
@@ -721,7 +721,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable 'Apply Grade Schema' Option
             logger.LogMethodEntry("GradingPreferencesPage", 
                 "EnableApplyGradeSchemaOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enable Glossary Preference                
@@ -737,7 +737,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GradingPreferencesPage", 
                 "EnableApplyGradeSchemaOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -748,7 +748,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable Display Integrity Detection Preference
             logger.LogMethodEntry("GradingPreferencesPage",
                 "EnableDisplayIntegrityDetectionPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window And Frame
@@ -786,7 +786,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GradingPreferencesPage",
                 "EnableDisplayIntegrityDetectionPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -798,7 +798,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable Folder Level Calculation Checkbox
             logger.LogMethodEntry("GradingPreferencesPage",
               "EnableFolderLevelCalculationCheckbox",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 if (!base.IsElementSelectedById(GradingPreferencesPageResource.
@@ -818,7 +818,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GradingPreferencesPage",
                 "EnableFolderLevelCalculationCheckbox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -828,7 +828,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Grading Preference Settings
             logger.LogMethodEntry("GradingPreferencesPage",
-            "EnableGradingPreferenceSettings", base.isTakeScreenShotDuringEntryExit);
+            "EnableGradingPreferenceSettings", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Declare the obeject for page
@@ -851,7 +851,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GradingPreferencesPage",
-             "EnableGradingPreferenceSettings", base.isTakeScreenShotDuringEntryExit);
+             "EnableGradingPreferenceSettings", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -861,7 +861,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Raw Score Grades
             logger.LogMethodEntry("GradingPreferencesPage",
-            "SelectRawScoreGrades", base.isTakeScreenShotDuringEntryExit);
+            "SelectRawScoreGrades", base.IsTakeScreenShotDuringEntryExit);
             //wait for the element
             base.WaitForElement(By.Id(GradingPreferencesPageResource.
                 GradingPreferences_Page_Rawscore_Radiobutton_Id_Locator));
@@ -875,7 +875,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(getRawScore);
             }
             logger.LogMethodExit("GradingPreferencesPage",
-              "SelectRawScoreGrades", base.isTakeScreenShotDuringEntryExit);
+              "SelectRawScoreGrades", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -886,7 +886,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable Filter Content Type Preference Option
             logger.LogMethodEntry("GradingPreferencesPage",
             "EnableFilterContentTypePreferenceOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enable 'Filter Content Type' Preference                
@@ -902,7 +902,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GradingPreferencesPage",
               "EnableFilterContentTypePreferenceOption", 
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

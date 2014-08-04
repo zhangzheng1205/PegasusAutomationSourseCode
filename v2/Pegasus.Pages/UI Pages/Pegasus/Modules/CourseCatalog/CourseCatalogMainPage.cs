@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Add Course From Instructor Search Catalog
             Logger.LogMethodEntry("CourseCatalogMainPage",
-                "AddCourseFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddCourseFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get Course from Memory
@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseCatalogMainPage",
-                "AddCourseFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddCourseFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // add course from instructor search catalog
             Logger.LogMethodEntry("CourseCatalogMainPage",
-                "AddProductFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddProductFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // get product from memory
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseCatalogMainPage",
-                "AddProductFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddProductFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Catalog Search Parameter
             Logger.LogMethodEntry("CourseCatalogMainPage",
                 "SearchCourseByTextBookName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click on the radio button
             base.WaitForElement(By.Id(CourseCatalogMainPageResource
                 .CourseCatalogMain_ProductTextBook_TextBox_Id_Locator));
@@ -154,7 +154,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(CourseCatalogMainPageResource
                 .CourseCatalogMain_ProductTextBook_TextBox_Id_Locator, productName);
             Logger.LogMethodExit("CourseCatalogMainPage", "SearchCourseByTextBookName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Add Course From Instructor Search Catalog
             Logger.LogMethodEntry("CourseCatalogMainPage",
-                "AddTestBankFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddTestBankFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get Course from Memory
@@ -197,7 +197,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseCatalogMainPage",
-                "AddTestBankFromSearchCatalog", base.isTakeScreenShotDuringEntryExit);
+                "AddTestBankFromSearchCatalog", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("CourseCatalogMainPage",
-                "SearchCourseInCatalogToAddTestBank", base.isTakeScreenShotDuringEntryExit);
+                "SearchCourseInCatalogToAddTestBank", base.IsTakeScreenShotDuringEntryExit);
             //Wait for element 
             base.WaitForElement(By.Id(CourseCatalogMainPageResource
                .CourseCatalogMain_Page_SearchCatalog_Span_Id_Locator));
@@ -238,7 +238,7 @@ namespace Pegasus.Pages.UI_Pages
 
             //Logger Exist
             Logger.LogMethodExit("CourseCatalogMainPage",
-            "SearchCourseInCatalogToAddTestBank", base.isTakeScreenShotDuringEntryExit);
+            "SearchCourseInCatalogToAddTestBank", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -250,7 +250,7 @@ namespace Pegasus.Pages.UI_Pages
 
             //Logger Entry
             Logger.LogMethodEntry("CourseCatalogMainPage",
-                "ClickOnSelectTestBank", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnSelectTestBank", base.IsTakeScreenShotDuringEntryExit);
             //Wait for element
             base.WaitForElement(By.XPath(string.Format(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_SelectTestBank_Button_XPath_Locator,
@@ -268,7 +268,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSelectCourseButtonProperty);
             //Logger Exist
             Logger.LogMethodExit("CourseCatalogMainPage",
-                "ClickOnSelectTestBank", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnSelectTestBank", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -278,7 +278,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Next Button
             Logger.LogMethodEntry("CourseCatalogMainPage",
-                "ClickOnNextButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnNextButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Wait and Click on Next button
@@ -296,7 +296,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseCatalogMainPage",
-                "ClickOnNextButton", base.isTakeScreenShotDuringEntryExit);
+                "ClickOnNextButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Catalog Search Parameter
             Logger.LogMethodEntry("CourseCatalogMainPage",
                 "BrowseCourseByDiscipline",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click on the radio button
             base.WaitForElement(By.Id(CourseCatalogMainPageResource
                 .CourseCatalogMain_Page_Discipline_RadioButton_Id_Locator));
@@ -320,7 +320,7 @@ namespace Pegasus.Pages.UI_Pages
                     .CourseCatalogMain_Page_Discipline_DropDown_Text_Value);
             Logger.LogMethodExit("CourseCatalogMainPage",
                 "BrowseCourseByDiscipline",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -331,7 +331,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Catalog Search Parameter
             Logger.LogMethodEntry("CourseCatalogMainPage",
                 "EnterInstructorCourseSearchCatalogParameter",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for element
             base.WaitForElement(By.Id(CourseCatalogMainPageResource
                 .CourseCatalogMain_Page_ProductTextBook_TextBox_Id_Locator));
@@ -344,7 +344,7 @@ namespace Pegasus.Pages.UI_Pages
                  CourseCatalogMain_Page_ProductTextBook_Name_value);
             Logger.LogMethodExit("CourseCatalogMainPage",
                 "EnterInstructorCourseSearchCatalogParameter",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -356,7 +356,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // search course in instructor catalog
             Logger.LogMethodEntry("CourseCatalogMainPage"
-                , "SearchCourseInInstructorCatalog", base.isTakeScreenShotDuringEntryExit);
+                , "SearchCourseInInstructorCatalog", base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CourseCatalogMainPageResource
                 .CourseCatalogMain_Page_SearchCatalog_Span_Id_Locator));
             // start stop watch
@@ -390,7 +390,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             stopWatch.Stop();
             Logger.LogMethodExit("CourseCatalogMainPage"
-                , "SearchCourseInInstructorCatalog", base.isTakeScreenShotDuringEntryExit);
+                , "SearchCourseInInstructorCatalog", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -403,7 +403,7 @@ namespace Pegasus.Pages.UI_Pages
             // search and select course in catalog
             Logger.LogMethodEntry("CourseCatalogMainPage",
                 "HandlePagingToFindCourseNameOnCatalogPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // wait for catalog loads
             Thread.Sleep(Convert.ToInt32(CourseCatalogMainPageResource.
                     CourseCatalogMain_Page_Thread_SleepTime_Value_Paging_NextLink));
@@ -437,7 +437,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseCatalogMainPage",
                 "HandlePagingToFindCourseNameOnCatalogPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -447,7 +447,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the "Next>>" Link.
             Logger.LogMethodEntry("CourseCatalogMainPage", "ClickOnNextLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_Paging_NextLink_Id_Locator));
             //Get Button Property.
@@ -459,7 +459,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_Thread_SleepTime_Value_Paging_NextLink));
             Logger.LogMethodExit("CourseCatalogMainPage", "ClickOnNextLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -470,7 +470,7 @@ namespace Pegasus.Pages.UI_Pages
             // Search Catalog Course Mail Error
             Logger.LogMethodEntry("CourseCatalogMainPage",
                 "InstructorCatalogCourseMailErrorDisappeared"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             // Check the mail server error on the catalog page 
             if (base.IsElementPresent(By.ClassName(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_MessageBoard_Text_ClassName_Locator),
@@ -508,7 +508,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
                 Logger.LogMethodExit("CourseCatalogMainPage",
                     "InstructorCatalogCourseMailErrorDisappeared"
-                    , base.isTakeScreenShotDuringEntryExit);
+                    , base.IsTakeScreenShotDuringEntryExit);
             }
         }
 
@@ -519,7 +519,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Switching to the Search Catalog Iframe
             Logger.LogMethodEntry("CourseCatalogMainPage", "SwitchToCatalogIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Waiting for the Search Catalog Frame
@@ -535,7 +535,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseCatalogMainPage", "SwitchToCatalogIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -546,7 +546,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Catalog Finish Button Still Present After Clicks on Finish Button
             Logger.LogMethodEntry("CourseCatalogMainPage", "CatalogFinishButtonAvailability"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             // Enter instructor course/program course name and description
             base.WaitForElement(By.Id(CourseCatalogMainPageResource.
                 CourseCatalogMain_Page_ProductName_TextBox_Id_Locator));
@@ -579,7 +579,7 @@ namespace Pegasus.Pages.UI_Pages
             //Verify Course Mail Error Exists
             InstructorCatalogCourseMailErrorDisappeared();
             Logger.LogMethodExit("CourseCatalogMainPage", "CatalogFinishButtonAvailability",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -592,7 +592,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save Product  Course in Memory
             Logger.LogMethodEntry("CourseCatalogMainPage", "StoreCourseInMemory"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             Course hedProductCourse;
             hedProductCourse = new Course
             {
@@ -603,7 +603,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             hedProductCourse.StoreCourseInMemory();
             Logger.LogMethodExit("CourseCatalogMainPage", "StoreCourseInMemory"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -614,7 +614,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Search Parameter In Catalog
             Logger.LogMethodEntry("CourseCatalogMainPage", "EnterSearchParameterInCatalog"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for element
@@ -632,7 +632,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseCatalogMainPage", "EnterSearchParameterInCatalog"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -643,7 +643,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Message In Search Catalog
             Logger.LogMethodEntry("CourseCatalogMainPage", "GetMessageInSearchCatalog"
-                 , base.isTakeScreenShotDuringEntryExit);
+                 , base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getMessage = string.Empty;
             try
@@ -659,7 +659,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CourseCatalogMainPage", "GetMessageInSearchCatalog"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             return getMessage;
         }
     }

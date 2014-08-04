@@ -34,7 +34,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Check rest post call status
             Logger.LogMethodEntry("SchedularService", "ProcessUserDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //This is Organization Rumba ID
             Organization organizationID = Organization.Get(Organization.
                 OrganizationLevelEnum.PowerSchool, Organization.OrganizationTypeEnum.DigitalPath);
@@ -68,7 +68,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             // Wait for 10 minutes to get the data on pegasus UI
             Thread.Sleep(TimeSpan.FromMinutes(10));
             Logger.LogMethodExit("SchedularService", "ProcessUserDetails",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

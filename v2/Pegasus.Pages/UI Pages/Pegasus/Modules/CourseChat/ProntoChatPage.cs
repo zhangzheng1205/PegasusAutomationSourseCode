@@ -28,14 +28,14 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Mail Option
             logger.LogMethodEntry("ProntoChatPage",
                 "ClickOnMailOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Communicate Window
             this.SelectCommunicateWindow();
             //Click On Mail Button
             this.ClickOnMailButton();
             logger.LogMethodExit("ProntoChatPage",
                 "ClickOnMailOption",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Communicate Window
             logger.LogMethodEntry("ProntoChatPage",
                 "SelectCommunicateWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(ProntoChatPageResource.
                 ProntoChat_Page_Communicate_Window_Name);
             //Select Communicate Window
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
                 ProntoChat_Page_Communicate_Window_Name);
             logger.LogMethodExit("ProntoChatPage",
                 "SelectCommunicateWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Mail Button
             logger.LogMethodEntry("ProntoChatPage",
                 "ClickOnMailButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Name(ProntoChatPageResource.
                 PronotoChat_Page_MailButton_Name_Locator));
             //Get Mail Button Property
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getMailButtonProperty);
             logger.LogMethodExit("ProntoChatPage",
                 "ClickOnMailButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

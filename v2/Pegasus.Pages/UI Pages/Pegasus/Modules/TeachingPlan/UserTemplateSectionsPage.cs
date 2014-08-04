@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan
         {
             //Select All Sections Check Box and Click Add Button
             logger.LogMethodEntry("UserTemplateSectionsPage",
-                "SelectSectionsCheckBoxAndClickAddButton", base.isTakeScreenShotDuringEntryExit);
+                "SelectSectionsCheckBoxAndClickAddButton", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Sections Check Box
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodEntry("UserTemplateSectionsPage",
-                "SelectSectionsCheckBoxAndClickAddButton", base.isTakeScreenShotDuringEntryExit);
+                "SelectSectionsCheckBoxAndClickAddButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan
         private void SelectSectionsCheckBox()
         {
             logger.LogMethodEntry("UserTemplateSectionsPage",
-                "SelectSectionsCheckBox", base.isTakeScreenShotDuringEntryExit);
+                "SelectSectionsCheckBox", base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectWindow();
             base.WaitForElement(By.XPath(UserTemplateSectionsPageResource.
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan
                 UserTemplateSections_Section_CheckAll_Xpath_Locator);
             base.ClickByJavaScriptExecutor(getsectionCheckAll);            
             logger.LogMethodEntry("UserTemplateSectionsPage", "SelectSectionsCheckBox",
-                                   base.isTakeScreenShotDuringEntryExit);
+                                   base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -75,14 +75,14 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan
         private void SelectWindow()
         {
             logger.LogMethodEntry("UserTemplateSectionsPage",
-                "SelectWindow", base.isTakeScreenShotDuringEntryExit);
+                "SelectWindow", base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilPopUpLoads(UserTemplateSectionsPageResource.
                 UserTemplateSections_Page_Window_Name);
             //Select Window
             base.SelectWindow(UserTemplateSectionsPageResource.
                 UserTemplateSections_Page_Window_Name);
             logger.LogMethodEntry("UserTemplateSectionsPage",
-                "SelectWindow",base.isTakeScreenShotDuringEntryExit);
+                "SelectWindow",base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan
         private void ClickOnAddButton()
         {
             logger.LogMethodEntry("UserTemplateSectionsPage", "ClickOnAddButton",
-                                   base.isTakeScreenShotDuringEntryExit);
+                                   base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectWindow();
             base.WaitForElement(By.CssSelector(UserTemplateSectionsPageResource.
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan
             Thread.Sleep(Convert.ToInt32(UserTemplateSectionsPageResource.
                 UserTemplateSections_Page_ElementTime_Value));
             logger.LogMethodEntry("UserTemplateSectionsPage", "ClickOnAddButton",
-                                   base.isTakeScreenShotDuringEntryExit);
+                                   base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

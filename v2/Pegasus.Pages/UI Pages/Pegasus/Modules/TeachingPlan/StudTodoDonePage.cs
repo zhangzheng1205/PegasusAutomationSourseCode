@@ -47,7 +47,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Assigned Content In To Do Tab
             logger.LogMethodEntry("StudTodoDonePage", "GetAssignedContentInToDoTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getActivityName = string.Empty;
             try
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudTodoDonePage", "GetAssignedContentInToDoTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 
@@ -109,7 +109,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Assigned and Completed Content In Completed Tab
             logger.LogMethodEntry("StudTodoDonePage", "GetAssignedCompletedContentInCompletedTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getActivityName = string.Empty;
             try
@@ -143,7 +143,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudTodoDonePage", "GetAssignedCompletedContentInCompletedTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 
@@ -154,7 +154,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window and Frame
             logger.LogMethodEntry("StudTodoDonePage", "SelectDoneWindowAndFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for the window
             base.WaitUntilWindowLoads(StudTodoDonePageResource.
                 StudToDoDone_Page_Done_WindowName);
@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(StudTodoDonePageResource.
                 StudToDoDone_Page_ToDo_Frame_Name);
             logger.LogMethodExit("StudTodoDonePage", "SelectDoneWindowAndFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Browser Information
             CurrentBrowserName = base.GetCurrentBrowserInformationByJavaScriptExecutor();
             logger.LogMethodExit("StudTodoDonePage", "SelectActivityInAssignments",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
 
@@ -433,7 +433,7 @@ namespace Pegasus.Pages.UI_Pages
                                     getQuestionLaunchTime.ToString() + StudTodoDonePageResource.
                                     StudToDoDone_Page_Time_Metric;       
                     logger.LogMethodExit("StudTodoDonePage", "LaunchSIM5QuestionsByNavigating",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
                 }
                 //Click on Submit Button
                 this.ClickonSubmitButton();

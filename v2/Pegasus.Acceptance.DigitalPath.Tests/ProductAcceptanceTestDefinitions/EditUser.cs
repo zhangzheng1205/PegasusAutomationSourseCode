@@ -36,7 +36,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Login as Workspace Teacher
             Logger.LogMethodEntry("LoginLogout", "LoginToPegasusAsWorkspaceTeacher",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get the User From Memory
             User user = User.Get(userTypeEnum);
             //Login as Workspace Teacher
@@ -44,7 +44,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 LoginAsWorkspaceTeacher((BrowsePegasusUserURL.PasswordTypeEnum)Enum.
                 Parse(typeof(BrowsePegasusUserURL.PasswordTypeEnum), passwordTypeEnum), user.Name);
             Logger.LogMethodExit("LoginLogout", "LoginToPegasusAsWorkspaceTeacher",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -57,11 +57,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Edit the Details of User
             Logger.LogMethodEntry("CreateUser", "EditTheDetailsOfUser",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Edit the Details of User
             new NewUserPage().EditWorkSpaceUserDetails();
             Logger.LogMethodExit("CreateUser", "EditTheDetailsOfUser",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -30,14 +30,14 @@ namespace Pegasus.Acceptance.MMND.
         public void VerifyActivityInGradebook(Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Verify The Activity In Gradebook
-            Logger.LogMethodEntry("GradeBook", "VerifyActivityInGradebook", isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("GradeBook", "VerifyActivityInGradebook", IsTakeScreenShotDuringEntryExit);
             //Get the activity from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Asserts the Activity Name
             Logger.LogAssertion("VerifyActivityName", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activity.Name,
                     new GBDefaultUXPage().GetActivityNameInGradebook(activity.Name)));
-            Logger.LogMethodExit("GradeBook", "VerifyActivityInGradebook", isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("GradeBook", "VerifyActivityInGradebook", IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,13 +48,13 @@ namespace Pegasus.Acceptance.MMND.
         public void ClickActivityCmenuOption(Activity.ActivityTypeEnum activityName)
         {
             //Click Activity Cmenu Option
-            Logger.LogMethodEntry("GradeBook", "ClickwritingSpaceActivityCmenuOption", isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("GradeBook", "ClickwritingSpaceActivityCmenuOption", IsTakeScreenShotDuringEntryExit);
             //Get the activity from memory
             Activity activity = Activity.Get(activityName);
             GBStudentUXPage gbStudentPage = new GBStudentUXPage();
             //Click on Activity Cmenu
             new GBInstructorUXPage().ClickTheActivityCmenuOption(activity.Name);
-            Logger.LogMethodExit("GradeBook", "ClickwritingSpaceActivityCmenuOption", isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("GradeBook", "ClickwritingSpaceActivityCmenuOption", IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Pegasus.Acceptance.MMND.
         public void VerifyTheDisplayOfCMenuOptionsForActivity(Table table)
         {
             //Verify The Display Of CMenu Options For Activity.
-            Logger.LogMethodEntry("GradeBook", "VerifyTheDisplayOfCMenuOptionsForActivity", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("GradeBook", "VerifyTheDisplayOfCMenuOptionsForActivity", base.IsTakeScreenShotDuringEntryExit);
             foreach (var tableRow in table.Rows)
             {
                 //Assert Display of Activity Cmenu Options
@@ -76,7 +76,7 @@ namespace Pegasus.Acceptance.MMND.
                     new GBInstructorUXPage().GetDisplayOfWritingSpaceActivityCmenuOptions
                     (row[GradeBookResource.GradebookPage_Activity_Actual_Cmenu_Options_Displayed])));
             }
-            Logger.LogMethodExit("GradeBook", "VerifyTheDisplayOfCMenuOptionsForActivity", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("GradeBook", "VerifyTheDisplayOfCMenuOptionsForActivity", base.IsTakeScreenShotDuringEntryExit);
         } 
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Pegasus.Acceptance.MMND.
             string assetCmenu, Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Click On Cmenu Of Asset In Gradebook
-            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfActivityInGradebook", isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfActivityInGradebook", IsTakeScreenShotDuringEntryExit);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Get Activity
             Activity activity = Activity.Get(activityTypeEnum);
@@ -99,7 +99,7 @@ namespace Pegasus.Acceptance.MMND.
             gbInstructorPage.SelectTheCmenuOptionOfActivity(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum);
-            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfActivityInGradebook", isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfActivityInGradebook", IsTakeScreenShotDuringEntryExit);
         }                
 
         /// <summary>
@@ -110,13 +110,13 @@ namespace Pegasus.Acceptance.MMND.
         public void VerifyTheSuccessfullMessageInGradebook(string successMessage)
         {
             //Verify Display of Success Message in Gradebook
-            Logger.LogMethodEntry("GradeBook", "VerifyTheSuccessfullMessageInGradebook", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("GradeBook", "VerifyTheSuccessfullMessageInGradebook", base.IsTakeScreenShotDuringEntryExit);
             //Assert Success Message in Gradebook
             Logger.LogAssertion("VerifyDisplayOfContextMenuOption",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(successMessage,
                     new GBInstructorUXPage().GetHideForStudentSuccessMessage()));
-            Logger.LogMethodExit("GradeBook", "VerifyTheSuccessfullMessageInGradebook", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("GradeBook", "VerifyTheSuccessfullMessageInGradebook", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -127,13 +127,13 @@ namespace Pegasus.Acceptance.MMND.
         {
             // Open Create Total column pop up window
             Logger.LogMethodEntry("GradeBook", "ClickOnCustomColumn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new GBInstructorUXPage().ClickOnCustomColumn(
                 (GBInstructorUXPage.CustomColumnTypeEnum)Enum.Parse(typeof(
                 GBInstructorUXPage.CustomColumnTypeEnum), customColumnCmenu)
                 );
             Logger.LogMethodExit("GradeBook", "ClickOnCustomColumn",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -144,10 +144,10 @@ namespace Pegasus.Acceptance.MMND.
         {
             // Open Create Total column pop up window
             Logger.LogMethodEntry("GradeBook", "EnterCalculatedColumnName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new GBInstructorUXPage().EnterCalculatedColumnName();            
             Logger.LogMethodExit("GradeBook", "EnterCalculatedColumnName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.MMND.
         {
             // Select activities for adding
             Logger.LogMethodEntry("GradeBook", "SelectCheckboxOfActivities",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Sending first activity to for loop
             Activity activity1 = Activity.Get(activityTypeEnum1);
             new GBInstructorUXPage().SelectActivityFromLeftFrameForCustomColumn(activity1.Name);
@@ -168,7 +168,7 @@ namespace Pegasus.Acceptance.MMND.
             Activity activity2 = Activity.Get(activityTypeEnum2);
             new GBInstructorUXPage().SelectActivityFromLeftFrameForCustomColumn(activity2.Name);
             Logger.LogMethodExit("GradeBook", "SelectCheckboxOfActivities",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -179,11 +179,11 @@ namespace Pegasus.Acceptance.MMND.
         {
             // Select activities for adding
             Logger.LogMethodEntry("GradeBook", "ClickOnAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Add activities to right frame
             new GBInstructorUXPage().AddActivitiesinRightFrame();
             Logger.LogMethodExit("GradeBook", "ClickOnAddButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -194,11 +194,11 @@ namespace Pegasus.Acceptance.MMND.
         {
             // Select activities for adding
             Logger.LogMethodEntry("GradeBook", "ClickOnAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Add activities to right frame
             new GBInstructorUXPage().ClickOnsaveButton();
             Logger.LogMethodExit("GradeBook", "ClickOnAddButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 

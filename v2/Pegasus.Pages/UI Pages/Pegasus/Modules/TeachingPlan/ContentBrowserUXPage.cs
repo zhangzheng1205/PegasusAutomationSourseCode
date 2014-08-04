@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Activity for Study Plan Pre Test
             Logger.LogMethodEntry("ContentBrowserUXPage", "SelectActivityForPreTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Content Browser Window
             try
             {
@@ -63,7 +63,7 @@ namespace Pegasus.Pages.UI_Pages
             } 
 
             Logger.LogMethodExit("ContentBrowserUXPage", "SelectActivityForPreTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger Entry
             Logger.LogMethodEntry("ContentBrowserUXPage", "SelectSIMQuestionFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
            
             try
             {
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Logger Exit
             Logger.LogMethodExit("ContentBrowserUXPage", "SelectSIMQuestionFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger entry
             Logger.LogMethodEntry("ContentBrowserUXPage",
                 "SwitchToPopupPageContentIFrameLeft",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for web element
             base.WaitForElement(By.Id(ContentBrowserUXPageResource.
                 ContentBrowserUX_Page_Frame_Id_Locator));
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger exit
             Logger.LogMethodExit("ContentBrowserUXPage",
                 "SwitchToPopupPageContentIFrameLeft",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectCheckBoxOfActivity(String activityName)
         {
             Logger.LogMethodEntry("ContentBrowserUXPage", "GetActivityCount",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(Convert.ToInt32(ContentBrowserUXPageResource.
                 ContentBrowserUX_Page_Sleep_Time));
             //Get Activity Count Present
@@ -171,7 +171,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             Logger.LogMethodExit("ContentBrowserUXPage", "GetActivityCount",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selective Narative Image
             Logger.LogMethodEntry("ContentBrowserUXPage", "SelectNarativeImage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Select Content Window
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ContentBrowserUXPage", "SelectNarativeImage",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Question 
             Logger.LogMethodEntry("ContentBrowserUXPage", "SelectQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -251,7 +251,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ContentBrowserUXPage", "SelectQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Logger entry
             Logger.LogMethodEntry("ContentBrowserUXPage", "SelectQuestionsWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for pop up window
             base.WaitUntilWindowLoads(ContentBrowserUXPageResource.
                 ContentBrowserUX_Page_SelectQuestions_Window_Name);
@@ -270,7 +270,7 @@ namespace Pegasus.Pages.UI_Pages
                 ContentBrowserUX_Page_SelectQuestions_Window_Name);
             //Logger exit
             Logger.LogMethodExit("ContentBrowserUXPage", "SelectQuestionsWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -280,7 +280,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On 'Add And Close' Button
             Logger.LogMethodEntry("ContentBrowserUXPage", "ClickOnAddAndCloseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the 'Save copy to' window
@@ -304,7 +304,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ContentBrowserUXPage", "ClickOnAddAndCloseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -315,7 +315,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger entry
             Logger.LogMethodEntry("ContentBrowserUXPage",
                 "SelectQuestionsFromQuestionBankInHed",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.SwitchToLastOpenedWindow();
@@ -343,7 +343,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger exit
             Logger.LogMethodExit("ContentBrowserUXPage",
                 "SelectQuestionsFromQuestionBankInHed",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -356,7 +356,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger entry
             Logger.LogMethodEntry("ContentBrowserUXPage",
                 "ClickOnQuestionFolderInHed",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for row element
             base.WaitForElement(By.XPath(ContentBrowserUXPageResource.
                 ContentBrowserUX_Page_QuestionContainer_Row_XPath_Locator));
@@ -394,7 +394,7 @@ namespace Pegasus.Pages.UI_Pages
                 ContentBrowserUX_Page_Sleep_Time));
             Logger.LogMethodExit("ContentBrowserUXPage",
                 "ClickOnQuestionFolderInHed",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -405,7 +405,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger entry
             Logger.LogMethodEntry("ContentBrowserUXPage",
                 "SelectTheQuestions",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for element
             base.WaitForElement(By.Id(ContentBrowserUXPageResource.
                 ContentBrowserUX_Page_SelectQuestion_Checkbox_Id_Locator));
@@ -420,7 +420,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger exit
             Logger.LogMethodEntry("ContentBrowserUXPage",
                 "SelectTheQuestions",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -431,7 +431,7 @@ namespace Pegasus.Pages.UI_Pages
             //Logger entry
             Logger.LogMethodEntry("ContentBrowserUXPage",
                 "ClickOnAddAndCloseButtonToSelectQuestions",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectQuestionsWindow();
             //Wait for element
@@ -448,7 +448,7 @@ namespace Pegasus.Pages.UI_Pages
                 ContentBrowserUX_Page_Sleep_Time));
             Logger.LogMethodEntry("ContentBrowserUXPage",
                 "ClickOnAddAndCloseButtonToSelectQuestions",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -460,7 +460,7 @@ namespace Pegasus.Pages.UI_Pages
             //Search The Question In SelectQuestion Window
             Logger.LogMethodEntry("ContentBrowserUXPage",
                 "SearchTheQuestionInSelectQuestionWindow",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select The Question Window
@@ -490,7 +490,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodEntry("ContentBrowserUXPage",
                 "SearchTheQuestionInSelectQuestionWindow",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -500,7 +500,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Slect The Question Checkbox
             Logger.LogMethodEntry("ContentBrowserUXPage", "SlectTheQuestionCheckbox",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Checkbox
             base.WaitForElement(By.Id(ContentBrowserUXPageResource.
                 ContentBrowserUX_Page_Question_Checkbox_Id_Locator));
@@ -512,7 +512,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On AddClose Button
             this.ClickOnAddCloseButton();
             Logger.LogMethodEntry("ContentBrowserUXPage", "SlectTheQuestionCheckbox",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -522,7 +522,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On AddClose Button
             Logger.LogMethodEntry("ContentBrowserUXPage", "ClickOnAddCloseButton",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
             //Select Questions Window
             this.SelectQuestionsWindow();
             //Wait for the element
@@ -537,7 +537,7 @@ namespace Pegasus.Pages.UI_Pages
                     ContentBrowserUX_Page_AfterClickSave_Button_Sleep_Time));
             base.IsPopUpClosed(2);
             Logger.LogMethodEntry("ContentBrowserUXPage", "ClickOnAddCloseButton",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

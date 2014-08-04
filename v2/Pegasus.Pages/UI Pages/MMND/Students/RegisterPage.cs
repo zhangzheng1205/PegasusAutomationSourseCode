@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         public void EnterSectionId(string sectionId)
         {
             logger.LogMethodEntry("RegisterPage", "EnterSectionId",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Register Pearson my Mastering Window
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RegisterPage", "EnterSectionId",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify Is Section name is Displayed
             logger.LogMethodEntry("RegisterPage", "IsSectionNameDisplayed",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize Varibale
             Boolean isSectionDisplayed = false;
             try
@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RegisterPage", "IsSectionNameDisplayed",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return isSectionDisplayed;
         }
 
@@ -119,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Access Code
             logger.LogMethodEntry("RegisterPage", "IsSectionPresent",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Registering Pearosn My Lab Mastering Widnow            
             base.WaitForElement(By.Id(RegisterPageResource.Register_Page_StepWait_Id_Locator));
             while (base.IsElementDisplayedById(RegisterPageResource.Register_Page_StepWait_Id_Locator))
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
                 isSectionDisplayed = base.IsElementPresent(By.PartialLinkText(sectionName));
             }
             logger.LogMethodExit("RegisterPage", "IsSectionPresent",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return isSectionDisplayed;
         }
 
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
         {   
             //Enter Access Code and Register
             logger.LogMethodEntry("RegisterPage", "EnterAccessCodeAndRegister",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Register Pearson My Lab Mastering Window
             base.SelectWindow(RegisterPageResource.
             Register_Page_RegisterPearsonMyLabMastering_Window_Name);
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(RegisterPageResource.
               Register_Page_RegisterPearsonMyLabMastering_Window_Name);
             logger.LogMethodExit("RegisterPage", "EnterAccessCodeAndRegister",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Go To Button
             logger.LogMethodEntry("RegisterPage", "ClickOnGoToButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Register Pearson Lab Mastering Window
             base.SelectWindow(RegisterPageResource.
              Register_Page_RegisterPearsonMyLabMastering_Window_Name);
@@ -202,7 +202,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(RegisterPageResource.
                Register_Page_MyLabMasteringPearson_Window_Name);
             logger.LogMethodExit("RegisterPage", "ClickOnGoToButton",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -213,7 +213,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter First Three Access Code
             logger.LogMethodEntry("RegisterPage", "EntertheFirstThreeAccessCodeValues",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             IWebElement textbox1 = base.GetWebElementPropertiesByXPath(
                     RegisterPageResource.Register_Page_EnterAccessCode_one_Xpath_Locator);
             //Enter Access Code 
@@ -232,7 +232,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Access Code
             this.EnterRestoftheAccessCodeValues();
             logger.LogMethodExit("RegisterPage", "EntertheFirstThreeAccessCodeValues",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Rest of the Access Code
             logger.LogMethodEntry("RegisterPage", "EnterRestoftheAccessCodeValues",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(RegisterPageResource.
                 Register_Page_EnterAccessCode_four_Xpath_Locator));
             IWebElement textbox4 = base.GetWebElementPropertiesByXPath(RegisterPageResource.
@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Access Code
             textbox6.SendKeys(RegisterPageResource.Register_Page_EnterAccessCode_six_Enter);
             logger.LogMethodExit("RegisterPage", "EnterRestoftheAccessCodeValues",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -272,7 +272,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Portal URL
             logger.LogMethodEntry("RegisterPage", "ClickOnPortalUrlLink",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Register Pearson My Lab Mastering Window
             base.SelectWindow(RegisterPageResource.
             Register_Page_RegisterPearsonMyLabMastering_Window_Name);
@@ -296,7 +296,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(RegisterPageResource.
                 Register_Page_MyLabMasteringPearson_Window_Name);
             logger.LogMethodExit("RegisterPage", "ClickOnPortalUrlLink",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -26,13 +26,13 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
         {
             //Clicking the New Grades link
             Logger.LogMethodEntry("TodaysView", "ClickNewGradesAlertOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             new CourseHomeListItemViewPage().SelectCourseHomeWindow();          
             //Click on the New Grades Link
             new TodaysViewUXPage().ClickNewGradesOption();
             Logger.LogMethodExit("TodaysView", "ClickNewGradesAlertOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Verify Display of Writingspace Assessment in New Grades
             Logger.LogMethodEntry("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInNewGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Activity
             Activity activity = Activity.Get(activityTypeEnum);
            // Assert Display of Writingspace Assessment in New Grades
@@ -56,7 +56,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
                     GetWritingspaceAssessmentInNewGrades(activity.Name)));
             Logger.LogMethodExit("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInNewGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Verify The Display of Writingspace Assessment in New Grades for Student
             Logger.LogMethodEntry("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInNewGradesForStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Activity
             Activity activity = Activity.Get(activityTypeEnum);
             // Assert Display of Writingspace Assessment in New Grades for Student
@@ -80,7 +80,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
                     GetWritingspaceAssessmentInNewGradesForStudent(activity.Name)));
             Logger.LogMethodExit("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInNewGradesForStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Verify Display of Writingspace Assessment In Course Performance Channel
             Logger.LogMethodEntry("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInCoursePerformance",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Activity
             Activity activity = Activity.Get(activityTypeEnum);
             //Assert Display of Writingspace Assessment in Course Performance Channel
@@ -104,7 +104,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
                     GetAssessmentInCoursePerformance(activity.Name)));
             Logger.LogMethodExit("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInCoursePerformance",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -116,11 +116,11 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Performance Channel Option
             Logger.LogMethodEntry("TodaysView", "ClickOnPerformanceChannelOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Performance channel Option
             new TodaysViewUXPage().ClickonPerformanceChannelOption(channelOption);
             Logger.LogMethodExit("TodaysView", "ClickOnPerformanceChannelOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -134,7 +134,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Verify Display of Writingspace Assessment In Student Performance Channel
             Logger.LogMethodEntry("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInStudentPerformance",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Activity
             Activity activity = Activity.Get(activityTypeEnum);
             //Get MMND Student
@@ -146,7 +146,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
                     GetAssessmentInStudentPerformance(activity.Name, mmndStudent.FirstName)));
             Logger.LogMethodExit("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInStudentPerformance",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Verify Display of Writingspace Assessment in My Progress Channel
             Logger.LogMethodEntry("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInMyProgress",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Activity
             Activity activity = Activity.Get(activityTypeEnum);
             //Assert Display of Writingspace Assessment in My Progress Channel
@@ -170,7 +170,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
                     GetWritingspaceAssessmentInMyProgress(activity.Name)));
             Logger.LogMethodExit("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInMyProgress",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Essay Question
             logger.LogMethodEntry("EntryListPage", "CreateEntryListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enter Question Title
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EntryListPage", "CreateEntryListQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Title
             logger.LogMethodEntry("EntryListPage", "EnterTitleForEntryList",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Guid questionTitle = Guid.NewGuid();
             //Select Entry List Window
             base.SelectWindow(EntryListPageResource.
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(EntryListPageResource.
                 EntryList_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("EntryListPage", "EnterTitleForEntryList",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return questionTitle;
         }
 
@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On View Source Button and Enter Data
             logger.LogMethodEntry("EntryListPage",
                 "ClickOnViewSourceAndEnterDataForEntryListQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.SelectWindow(EntryListPageResource.
                 EntryList_Page_CreateEntryList_Id_Locator);
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
                 EntryList_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("EntryListPage",
                 "ClickOnViewSourceAndEnterDataForEntryListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnAddAnswerButtonOfEntryListQuestion()
         {
             logger.LogMethodEntry("EntryListPage", "ClickOnAddAnswerButtonOfEntryListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.SelectWindow(EntryListPageResource.
                 EntryList_Page_CreateEntryList_Id_Locator);
@@ -147,7 +147,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getAddAnswerButton);
             logger.LogMethodExit("EntryListPage", "ClickOnAddAnswerButtonOfEntryListQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -158,7 +158,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Save and Close Button
             logger.LogMethodEntry("EntryListPage", "ClickONSaveAndCloseButtonOfEntryListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.SelectWindow(EntryListPageResource.
                 EntryList_Page_CreateEntryList_Id_Locator);
@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("EntryListPage", "ClickONSaveAndCloseButtonOfEntryListQuestion",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -181,7 +181,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter First Two Text Value
             logger.LogMethodEntry("EntryListPage", "EnterFirstTwoTextForEntryListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.SelectWindow(EntryListPageResource.
                 EntryList_Page_CreateEntryList_Id_Locator);
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
                 EntryList_Page_EnterText_two_Id_Locator, EntryListPageResource.
                 EnterList_Page_EnterText_TextValue_Two);
             logger.LogMethodExit("EntryListPage", "EnterFirstTwoTextForEntryListQuestion",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -217,7 +217,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Last Two Text 
             logger.LogMethodEntry("EntryListPage", "EnterLastTwoTextForEntryListQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for Text Box
             base.WaitForElement(By.Id(EntryListPageResource.
                 EntryList_Page_EnterText_three_Id_Locator));
@@ -243,7 +243,7 @@ namespace Pegasus.Pages.UI_Pages
                 EntryList_Page_EnterText_Four_Id_Locator, EntryListPageResource.
                 EnterList_Page_EnterText_TextValue_Four);
             logger.LogMethodExit("EntryListPage", "EnterLastTwoTextForEntryListQuestion",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -254,7 +254,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter First Two Answer for Entry List
             logger.LogMethodEntry("EntryListPage", "EnterFirstTwoAnswerForEntryListQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.SelectWindow(EntryListPageResource.
                 EntryList_Page_CreateEntryList_Id_Locator);
@@ -277,7 +277,7 @@ namespace Pegasus.Pages.UI_Pages
                 EnterList_Page_AnswerTextBox_Id_Locator_Two, EntryListPageResource.
                 EnterList_Page_Answer_Text_Two);
             logger.LogMethodExit("EntryListPage", "EnterFirstTwoAnswerForEntryListQuestion",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -287,7 +287,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Last Two Answer In Entry List
             logger.LogMethodEntry("EntryListPage", "EnterLastTwoAnswerForEntryListQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_AnswerTextBox_Id_Locator_Three));
             //Clear Text box
@@ -307,7 +307,7 @@ namespace Pegasus.Pages.UI_Pages
                 EnterList_Page_AnswerTextBox_Id_Locator_Four, EntryListPageResource.
                 EnterList_Page_Answer_Text_Four);
             logger.LogMethodExit("EntryListPage", "EnterLastTwoAnswerForEntryListQuestion",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -319,7 +319,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Correct Score Value
             logger.LogMethodEntry("EntryListPage",
                 "EnterFirstTwoCorrectScoreValueOfEntryListQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.SelectWindow(EntryListPageResource.
                 EntryList_Page_CreateEntryList_Id_Locator);
@@ -343,7 +343,7 @@ namespace Pegasus.Pages.UI_Pages
                 EnterList_Page_CorrectScore_Value);
             logger.LogMethodExit("EntryListPage",
                 "EnterFirstTwoCorrectScoreValueOfEntryListQuestion",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -354,7 +354,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Last Two Correct Score Value
             logger.LogMethodEntry("EntryListPage",
                 "EnterLastTwoCorrectScoreValueOfEntryListQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_CorrectAnswer_Id_Locator_three));
             //Clear Text Box
@@ -375,7 +375,7 @@ namespace Pegasus.Pages.UI_Pages
                 EnterList_Page_CorrectScore_Value);
             logger.LogMethodExit("EntryListPage",
                 "EnterLastTwoCorrectScoreValueOfEntryListQuestion",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -387,7 +387,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Incorrect Score Value
             logger.LogMethodEntry("EntryListPage",
                 "EnterFirstTwoIncorrectScoreValueOfEntryListQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.SelectWindow(EntryListPageResource.
                 EntryList_Page_CreateEntryList_Id_Locator);
@@ -411,7 +411,7 @@ namespace Pegasus.Pages.UI_Pages
                 EnterList_Page_IncorrectScore_Value);
             logger.LogMethodExit("EntryListPage",
                 "EnterFirstTwoIncorrectScoreValueOfEntryListQuestion",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -423,7 +423,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Last Two Incorrect Score Value
             logger.LogMethodEntry("EntryListPage",
                 "EnterLastTwoIncorrectScoreValueOfEntryListQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(EntryListPageResource.
                 EnterList_Page_IncorrectAnswer_Id_Locator_three));
             //Clear Text Box
@@ -444,7 +444,7 @@ namespace Pegasus.Pages.UI_Pages
                 EnterList_Page_IncorrectScore_Value);
             logger.LogMethodExit("EntryListPage",
                 "EnterLastTwoIncorrectScoreValueOfEntryListQuestion",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -456,7 +456,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Question Details in Memory
             logger.LogMethodEntry("EntryListPage", "storeQuestionDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Save Question Properties in Memory
             Question newQuestion = new Question
             {
@@ -466,7 +466,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newQuestion.StoreQuestionInMemory();
             logger.LogMethodExit("EntryListPage", "storeQuestionDetailsInMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -477,7 +477,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add pallette Characters
             logger.LogMethodEntry("EntryListPage", "AddPalletteCharacters",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.SelectWindow(EntryListPageResource.
                 EntryList_Page_CreateEntryList_Id_Locator);
@@ -497,7 +497,7 @@ namespace Pegasus.Pages.UI_Pages
             this.ClickOnCharacterPalleteButton(EntryListPageResource.
                 EntryList_Page_CharacterPallete_Xpath_Locator_Five);
             logger.LogMethodExit("EntryListPage", "AddPalletteCharacters",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -509,7 +509,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Character Pallette
             logger.LogMethodEntry("EntryListPage", "ClickOnCharacterPalleteButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.XPath(locator));
             base.FocusOnElementByXPath(locator);
@@ -518,7 +518,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("EntryListPage", "ClickOnCharacterPalleteButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

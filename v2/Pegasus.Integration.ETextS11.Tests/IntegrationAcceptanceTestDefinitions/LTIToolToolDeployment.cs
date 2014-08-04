@@ -30,7 +30,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
         {
             //Verify The LTI Tool Status
             Logger.LogMethodEntry("LTIToolToolDeployment", "LTIToolInEnabledState",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             // Get LTI Tool is deployed in LTI tab with Enabled Status
             LTIToolsPreferencesPage lTiToolsPreferencesPage =
                 new LTIToolsPreferencesPage();
@@ -42,7 +42,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                     , lTiToolsPreferencesPage.
                 GetEnabledLTITools(lTiToolType)));
             Logger.LogMethodExit("LTIToolToolDeployment", "LTIToolInEnabledState",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
 
         }
 

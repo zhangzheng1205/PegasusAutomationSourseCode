@@ -31,11 +31,11 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Select Coursetype from left frame
             Logger.LogMethodEntry("CourseAssociation", "SelectCourseTypeInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Approved Course
             new ListCoursesPage().SelectApprovedCourse();
             Logger.LogMethodExit("CourseAssociation", "SelectCourseTypeInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
         {
             //Search and select Product in right frame
             Logger.LogMethodEntry("CourseAssociation", "SelectProductTypeInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //To select the product stored in memory
              Product product = Product.Get(productTypeEnum);
             //Click Search Product Link
@@ -56,7 +56,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //Search the Product
             new ProductSearchPage().SearchProduct(product.Name);
             Logger.LogMethodExit("CourseAssociation", "SelectProductTypeInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //Course association to the product
             Logger.LogMethodEntry("CourseAssociation",
                 "AssociateTheCourseToPegasusProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click Program Course Add Button
             new AddButtonPage().ClickProgramCoursesAddButton();
             //Click Enrollment Mode Option
@@ -88,7 +88,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             new ShowMessagePage().ClickTheAlertOkButton();
             Logger.LogMethodExit("CourseAssociation",
                 "AssociateTheCourseToPegasusProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
        }     
    }
 }

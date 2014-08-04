@@ -35,7 +35,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Validate Visibilty Questions Tab for Basic Random Activity
                 logger.LogMethodEntry("RandomAssessmentPage",
                     "isQuestionsTabVisible",
-                           base.isTakeScreenShotDuringEntryExit);
+                           base.IsTakeScreenShotDuringEntryExit);
                 //Wait for the Window
                 this.SelectEditRandomActivtyWindow();
                 //Validate Visibilty Questions Tab
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomAssessmentPage",
                 "isQuestionsTabVisible",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isQuestionTabsDisplayed;
         }
 
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
             //Is Present The Preference Settings In Activity
             logger.LogMethodEntry("RandomAssessmentPage",
                 "IsPresentThePreferenceSettingsInActivity",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             bool isAllowstudentstoTryAgainDisplayed = false;
             try
             {
@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomAssessmentPage",
                 "IsPresentThePreferenceSettingsInActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isAllowstudentstoTryAgainDisplayed;
         }
 
@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Save Return Button
             logger.LogMethodEntry("RandomAssessmentPage", "ClickOnSaveReturnButton",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(RandomAssessmentResource.
                 RandomAssessment_Page_ActivityPreference_Savebutton_Id_Locator));
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(RandomAssessmentResource.
                 RandomAssessment_Page_Activity_Prepare_Time));
             logger.LogMethodExit("RandomAssessmentPage", "ClickOnSaveReturnButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -128,14 +128,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Is Present The Preference Settings In Activity
             logger.LogMethodEntry("RandomAssessmentPage", "SelectEditRandomActivtyWindow",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             base.WaitUntilWindowLoads(RandomAssessmentResource.
                      RandomAssessment_Page_WindowName);
             base.SelectWindow(RandomAssessmentResource.
                     RandomAssessment_Page_WindowName);
             logger.LogMethodExit("RandomAssessmentPage", "SelectEditRandomActivtyWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Eanble Never Preference Option For Correct Answer
             logger.LogMethodEntry("RandomAssessmentPage", "EnableNeverPreferenceForCorrectAnswer",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.Id(RandomAssessmentResource.
                 RandomAssessment_Page_NeverCorrectAnswer_RadioButton_Id_Locator));
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Radio Button
             base.ClickByJavaScriptExecutor(getRadioButtonProperty);
             logger.LogMethodExit("RandomAssessmentPage", "EnableNeverPreferenceForCorrectAnswer",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable At Attempt Option for Correct Answer
             logger.LogMethodEntry("RandomAssessmentPage", "EnableAtAttemptOptionForCorrectAnswer",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(RandomAssessmentResource.
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("RandomAssessmentPage", "EnableAtAttemptOptionForCorrectAnswer",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Increase the Activity Attempt
             logger.LogMethodEntry("RandomAssessmentPage", "IncreaseActivityAttempt",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click On Prefernces Tab
@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RandomAssessmentPage", "IncreaseActivityAttempt",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -226,7 +226,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Preference Tab
             logger.LogMethodEntry("RandomAssessmentPage", "ClickThePreferenceTab",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(RandomAssessmentResource.
                 RandomAssessment_Page_Select_PreferenceTab_Id_Locator));
@@ -238,7 +238,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Preference tab
             base.ClickByJavaScriptExecutor(getPreferenceTab);
             logger.LogMethodExit("RandomAssessmentPage", "ClickThePreferenceTab",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Edit Random Activity' Window
             logger.LogMethodEntry("RandomAssessmentPage",
                 "SelectEditRandomActivityWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(RandomAssessmentResource.
                 RandomAssessment_Page_EditRandomActivity_WindowName);
             //Select Window
@@ -257,7 +257,7 @@ namespace Pegasus.Pages.UI_Pages
                 RandomAssessment_Page_EditRandomActivity_WindowName);
             logger.LogMethodExit("RandomAssessmentPage",
                "SelectEditRandomActivityWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Correct Answer Attempt Value
             logger.LogMethodEntry("RandomAssessmentPage",
                 "EnterCorrectAnswerAttemptValue",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(RandomAssessmentResource.
@@ -287,7 +287,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomAssessmentPage",
               "EnterCorrectAnswerAttemptValue",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -298,7 +298,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click Save and Return Button In Message Tab
             logger.LogMethodEntry("RandomAssessmentPage",
                   "ClickSaveandReturnActivityPreferenceButtonInMessageTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(RandomAssessmentResource.
@@ -315,7 +315,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomAssessmentPage",
                   "ClickSaveandReturnActivityPreferenceButtonInMessageTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -328,7 +328,7 @@ namespace Pegasus.Pages.UI_Pages
             // select activity level Tabs
             logger.LogMethodEntry("RandomAssessmentPage",
                   "SelectActivityLevelTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // select activity window
@@ -345,7 +345,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomAssessmentPage",
                   "SelectActivityLevelTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -357,7 +357,7 @@ namespace Pegasus.Pages.UI_Pages
             // select activity level preference
             logger.LogMethodEntry("RandomAssessmentPage",
                   "SetActivityLevelPreferences",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch(activityName)
@@ -383,7 +383,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomAssessmentPage",
                   "SetActivityLevelPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace Pegasus.Pages.UI_Pages
             // click save and return preference button
             logger.LogMethodEntry("RandomAssessmentPage",
                   "ClickSaveandReturnActivityPreferenceButton",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.PartialLinkText(RandomAssessmentResource.
@@ -409,7 +409,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RandomAssessmentPage",
                   "ClickSaveandReturnActivityPreferenceButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On To Button
             logger.LogMethodEntry("ComposeNewMailUXPage", "ClickOnToButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(ComposeNewMailUXPageResource.
@@ -44,7 +44,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ComposeNewMailUXPage", "ClickOnToButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Subject Title and HTML Text
             logger.LogMethodEntry("ComposeNewMailUXPage", "EnterSubjectTitleAndHtmlText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Generate Guid for Mail Details
             Guid mailDetails = Guid.NewGuid();
             try
@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ComposeNewMailUXPage", "EnterSubjectTitleAndHtmlText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill HTML Text
             logger.LogMethodEntry("ComposeNewMailUXPage", "FillHtmlText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(ComposeNewMailUXPageResource.
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ComposeNewMailUXPage", "FillHtmlText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Send Button
             logger.LogMethodEntry("ComposeNewMailUXPage", "ClickOnSendButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(ComposeNewMailUXPageResource.
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ComposeNewMailUXPage", "ClickOnSendButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -142,14 +142,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select IFrame
             logger.LogMethodEntry("ComposeNewMailUXPage", "SelectIFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_Frame_Id_Locator));
             //Switch To IFrame
             base.SwitchToIFrameById(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_Frame_Id_Locator);
             logger.LogMethodExit("ComposeNewMailUXPage", "SelectIFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -159,14 +159,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Course Mail Window
             logger.LogMethodEntry("ComposeNewMailUXPage", "SelectCourseMailWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_CourseMail_Window_Name);
             //Select Course Mail Window
             base.SelectWindow(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_CourseMail_Window_Name);
             logger.LogMethodExit("ComposeNewMailUXPage", "SelectCourseMailWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill Title
             logger.LogMethodEntry("ComposeNewMailUXPage", "FillTitle",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_Input_SubjectTextBox_Id_Locator));
             //Clear Text Box 
@@ -187,7 +187,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_Input_SubjectTextBox_Id_Locator, mailDetails);
             logger.LogMethodExit("ComposeNewMailUXPage", "FillTitle",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -197,7 +197,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On View Source Button
             logger.LogMethodEntry("ComposeNewMailUXPage", "ClickOnViewSourceButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_ViewSourceButton_Id_Locator));
             //Get View Source Button
@@ -206,7 +206,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On View Source Button
             base.ClickByJavaScriptExecutor(getViewSourceButtonProperty);
             logger.LogMethodExit("ComposeNewMailUXPage", "ClickOnViewSourceButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -218,7 +218,7 @@ namespace Pegasus.Pages.UI_Pages
             Mail.MailTypeEnum mailTypeEnum)
         {
             logger.LogMethodEntry("ComposeNewMailUXPage", "StoreMailDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             Mail newMail = new Mail
             {
                 //Store Mail Details
@@ -229,7 +229,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newMail.StoreMailMessageInMemory();
             logger.LogMethodExit("ComposeNewMailUXPage", "StoreMailDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -239,13 +239,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Send Message Window
             logger.LogMethodEntry("ComposeNewMailUXPage", "SelectSendMessageWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_SendMessage_Window_Name);
             base.SelectWindow(ComposeNewMailUXPageResource.
                 ComposeNewMailUX_Page_SendMessage_Window_Name);
             logger.LogMethodExit("ComposeNewMailUXPage", "SelectSendMessageWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get 'Send' 'Saveasdraft' 'Cancel' button text
             logger.LogMethodEntry("ComposeNewMailUXPage", "GetSendSaveasdraftCancelButtonText",
-              base.isTakeScreenShotDuringEntryExit); 
+              base.IsTakeScreenShotDuringEntryExit); 
             //Initialize variable
             string getSendSaveasdraftCanceltext = string.Empty;
             //Initialize variable
@@ -290,7 +290,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ComposeNewMailUXPage", "GetSendSaveasdraftCancelButtonText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return getSendSaveasdraftCanceltext = getSendtext + getSaveasdrafttext + getCanceltext;
         }
     }

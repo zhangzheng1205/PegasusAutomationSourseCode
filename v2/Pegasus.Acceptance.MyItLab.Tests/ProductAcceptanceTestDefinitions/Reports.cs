@@ -27,13 +27,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Report In Activity Reports Panel
             Logger.LogMethodEntry("Reports", "ClickOnReportInActivityReportsPanel",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Frame
             new RptMainPage().SelectReportFrame();
             //Click On Report In Activity Results Panel
             new RptMainPage().ClickOnReportInActivityResultsPanel(reportType);
             Logger.LogMethodExit("Reports", "ClickOnReportInActivityReportsPanel",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select Options To Generate Report
             Logger.LogMethodEntry("Reports", "SelectOptionsToGenerateReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Select Sections button
             new RptSaveReportPage().SelectSectionToGenerateReport();
             //Get Course From Memory
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Select Date
             new RptSaveReportPage().SelectDate();
             Logger.LogMethodExit("Reports", "SelectOptionsToGenerateReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -82,13 +82,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Button In Reports
             Logger.LogMethodEntry("Reports", "ClickOnButtonInReports",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select the window
             new RptSaveReportPage().SelectWindowAndFrame();
             //Click on Button
             new RptSaveReportPage().ClickOnButtonInReports(buttonName);
             Logger.LogMethodExit("Reports", "ClickOnButtonInReports",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify The Activity Details Under Launched Report
             Logger.LogMethodEntry("Reports", "VerifyTheActivityDetailsUnderLaunchedReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum, activityBehavioralModeEnum);
             //Assert Activity Score
@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 () => Assert.AreEqual(activity.Name, new RptAssessmentAllStudentsPage().
                     GetSubmittedActivityName()));
             Logger.LogMethodExit("Reports", "VerifyTheActivityDetailsUnderLaunchedReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -127,11 +127,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Study Plan Report Single Student Link
             Logger.LogMethodEntry("Reports", "ClickOnStudyPlanReportSingleStudentLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On Study Plan Report Single Student Link
             new RptMainUXPage().ClickOnStudyPlanSingleStudentReport();
             Logger.LogMethodExit("Reports", "ClickOnStudyPlanReportSingleStudentLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -142,11 +142,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Create Study Plan Report
             Logger.LogMethodEntry("Reports", "CreateStudyPlanReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Create Study Plan Report
             new RptSaveReportPage().CreateStudyPlanReport();
             Logger.LogMethodExit("Reports", "CreateStudyPlanReport",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -158,14 +158,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("Reports",
                 "SelectRadiobuttonInSaveSettingsToMyReportsPopup",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Radiobutton In Save Settings Popup
             new RptSaveSettingsPage().SelectRadioButtonInSaveSettingsPopup(
                 (RptSaveSettingsPage.SaveSettingsPopupRadiobuttonTypeEnum)Enum.Parse(typeof(
                 RptSaveSettingsPage.SaveSettingsPopupRadiobuttonTypeEnum), radiobuttonName));
             Logger.LogMethodExit("Reports",
                 "SelectRadiobuttonInSaveSettingsToMyReportsPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -177,13 +177,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Button In Save Settings Popup
             Logger.LogMethodEntry("Reports", "ClickOnTheButtonInSaveSettingsPopup",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Click On Button In Save Settings Popup
             new RptSaveSettingsPage().ClickOnButtonInSaveSettingsPopup(
                 (RptSaveSettingsPage.SaveSettingsPopupButtonTypeEnum)Enum.Parse(typeof(
                 RptSaveSettingsPage.SaveSettingsPopupButtonTypeEnum), buttonName));
             Logger.LogMethodExit("Reports", "ClickOnTheButtonInSaveSettingsPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Enter And Store Report Name
             Logger.LogMethodEntry("Reports", "EnterAndStoreReportName",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Generate GUID For Report Name
             Guid reportName = Guid.NewGuid();
             RptSaveSettingsPage rptSaveSettingsPage = new RptSaveSettingsPage();
@@ -204,7 +204,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Stor Report Name
             rptSaveSettingsPage.StoreReportDetailsInMemory(reportName, reportTypeEnum);
             Logger.LogMethodExit("Reports", "EnterAndStoreReportName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -216,11 +216,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Button In Reports
             Logger.LogMethodEntry("Reports", "ClickOnTheButtonInReports",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click on Button
             new RptSaveReportPage().ClickOnTheButtonInReports(buttonName);
             Logger.LogMethodExit("Reports", "ClickOnTheButtonInReports",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -232,14 +232,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify Popup Closed
             Logger.LogMethodEntry("Reports",
-                 "VerifyPopupClosed", base.isTakeScreenShotDuringEntryExit);
+                 "VerifyPopupClosed", base.IsTakeScreenShotDuringEntryExit);
             //Assert To Verify Popup Closed
             Logger.LogAssertion("VerifyPopupClosed", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.IsFalse(
                     base.IsPopupPresent(windowName,
                     Convert.ToInt32(ReportsResource.Report_Resource_TimeToWait_Value))));
             Logger.LogMethodExit("Reports",
-               "VerifyPopupClosed", base.isTakeScreenShotDuringEntryExit);
+               "VerifyPopupClosed", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify Report In Dropdown
             Logger.LogMethodEntry("Reports", "VerifyReportInDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Report From Memory
             Report report = Report.Get(reportTypeEnum);
             //Assert To Verify Existing Report In Dropdown
@@ -259,7 +259,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 Current.ScenarioInfo.Title, () => Assert.IsTrue(
                     new RptSaveSettingsPage().IsReportDisplayedInDropdown(report.Name)));
             Logger.LogMethodExit("Reports", "VerifyReportInDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify Report In MyReports Grid
             Logger.LogMethodEntry("Reports", "VerifyReportInMyReportsGrid",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Report From Memory
             Report report = Report.Get(reportTypeEnum);
             //Assert To Verify Saved Report In My Reports Grid
@@ -279,7 +279,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(report.Name,
                     new RptMainUXPage().GetReportName(report.Name)));
             Logger.LogMethodExit("Reports", "VerifyReportInMyReportsGrid",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -291,13 +291,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Report Type
             Logger.LogMethodEntry("Reports", "ClickOnReportType",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Click On Report Type Link
             new RptMainUXPage().ClickOnReportTypeLink(
                 (RptMainUXPage.PegasusInstructorReportEnum)Enum.Parse(typeof(
                 RptMainUXPage.PegasusInstructorReportEnum), reportType));
             Logger.LogMethodExit("Reports", "ClickOnReportType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -308,11 +308,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Enter Valid Data In Fields To Generate Report
             Logger.LogMethodEntry("Reports", "EnterValidDataInFieldsToGenerateReport",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Enter Data In Fields To Generate Report
             new RptSaveReportPage().EnterDataInFieldsToGenerateReport();
             Logger.LogMethodExit("Reports", "EnterValidDataInFieldsToGenerateReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -323,13 +323,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Enter Valid Data In Fields To Generate Report
             Logger.LogMethodEntry("Reports", "EnterDataToGenerateTrainingFrequencyReport",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Training Most Recent Radio Button
             new RptSaveReportPage().SelectTrainingMostRecentRadioButton();
             //Enter Data In Fields To Generate Report
             new RptSaveReportPage().EnterDataInFieldsToGenerateReport();
             Logger.LogMethodExit("Reports", "EnterDataToGenerateTrainingFrequencyReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -341,13 +341,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify The Score In Generated Report
             Logger.LogMethodEntry("Reports", "VerifyTheScoreInGeneratedReport",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Assert To Verify Score in Generated Report
             Logger.LogAssertion("VerifyScoreInReport", ScenarioContext.
              Current.ScenarioInfo.Title, () => Assert.AreEqual(activityScore,
              new RptTrainingFreqAnalysisPage().GetActivityScoreFromGeneratedReport()));
             Logger.LogMethodExit("Reports", "VerifyTheScoreInGeneratedReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -361,7 +361,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             // Activity Result Generate Report By Instructor
             Logger.LogMethodEntry("Reports",
                 "ActivityResultGenerateReportByInstructor",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch the activity from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Select Report window and Frame
@@ -371,7 +371,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 SelectOptionstoGenerateActivityResultReport(activity.Name);
             Logger.LogMethodExit("Reports",
                 "ActivityResultGenerateReportByInstructor",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -384,7 +384,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //To Verify The Score of Activity Result Single Student
             Logger.LogMethodEntry("Reports",
                 "ToVerifyTheScoreofActivityResultSingleStudent",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Assert To Verify Score in Generated Report
             Logger.LogAssertion("VerifyScoreInReport", ScenarioContext.
              Current.ScenarioInfo.Title, () => Assert.AreEqual(activityScore,
@@ -392,7 +392,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                        GetActivityResultSingleStudentScoreInReport()));
             Logger.LogMethodExit("Reports",
                 "ToVerifyTheScoreofActivityResultSingleStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -404,14 +404,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Enter The Data For Exam Frequency Analysis Report
             Logger.LogMethodEntry("Reports",
                 "EnterTheDataForExamFrequencyAnalysisReport",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Click the Exam Frequency Analysis Generate Report
             new RptMainUXPage().ClickTheExamFrequencyAnalysisReportLink();
             //Select The Exams Activity In Report
             new RptSelectAssessmentsPage().SelectTheExamsActivityInReport();
             Logger.LogMethodExit("Reports",
                 "EnterTheDataForExamFrequencyAnalysisReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -424,14 +424,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //To Verify The Score of Activity Result Single Student
             Logger.LogMethodEntry("Reports",
                 "VerifyTheScoreInExamFrequencyAnalysisReport",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Assert To Verify Score in Generated Report
             Logger.LogAssertion("VerifyScoreInReport", ScenarioContext.
              Current.ScenarioInfo.Title, () => Assert.AreEqual(activityScore,
                  new RptExamFreqAnalysisPage().GetExamFrequencyAnalysisScoreInReport()));
             Logger.LogMethodExit("Reports",
                 "VerifyTheScoreInExamFrequencyAnalysisReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -442,11 +442,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         public void ClickOnCertificateReportInPanel(string reportType)
         {
             Logger.LogMethodEntry("Reports", "ClickTheCloseButtonInReportPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click On Certificate In Activity Results Panel
             new RptMainPage().ClickOnCertificateInActivityResultsPanel(reportType);
             Logger.LogMethodExit("Reports", "ClickTheCloseButtonInReportPage",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -457,7 +457,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select Options for Certificate Of Completion
             Logger.LogMethodEntry("Reports", "SelectOptionsForCertificateOfCompletion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Create Object
             RptSaveReportPage saveReportPage = new RptSaveReportPage();
             //Create Object
@@ -488,7 +488,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Select Date
             saveReportPage.SelectDate();
             Logger.LogMethodExit("Reports", "SelectOptionsForCertificateOfCompletion",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -500,7 +500,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify the Exam Score
             Logger.LogMethodEntry("Reports", "VerifyTheExamScore",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select 'Certificate Of Completion Exam' Window
             new ReportsAssessmentCertificatePage().
                 SelectCertificateOfCompletionExamWindow();
@@ -510,7 +510,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                  Assert.AreEqual(score,
                  new ReportsAssessmentCertificatePage().GetCertificateScore()));
             Logger.LogMethodExit("Reports", "VerifyTheExamScore",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -522,13 +522,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Certificate Type
             Logger.LogMethodEntry("Reports", "ClickOnCertificateType",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Click On Certificate Type Link
             new RptMainUXPage().ClickOnCertificateTypeLink(
                 (RptMainUXPage.PegasusInstructorCertificateTypeEnum)Enum.Parse(typeof(
                 RptMainUXPage.PegasusInstructorCertificateTypeEnum), certificateType));
             Logger.LogMethodExit("Reports", "ClickOnCertificateType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -540,12 +540,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Enter Valid Data In Fields To Generate Certificate
             Logger.LogMethodEntry("Reports",
                 "EnterValidDataInFieldsToGenerateCertificate",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Enter Valid Data In Fields To Generate Certificate
             new RptSaveReportPage().EnterDataInFieldsToGenerateCertificate();
             Logger.LogMethodExit("Reports",
                 "EnterValidDataInFieldsToGenerateCertificate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -557,7 +557,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify The Score In Generated Certificate
             Logger.LogMethodEntry("Reports", "VerifyTheTrainingScore",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select 'Certificate Of Completion Training' Window
             new ReportsAssessmentCertificatePage().
                 SelectCertificateOfCompletionTrainingWindow();
@@ -567,7 +567,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 () => Assert.AreEqual(score,
                     new ReportsAssessmentCertificatePage().GetCertificateScore()));
             Logger.LogMethodExit("Reports", "VerifyTheTrainingScore",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -579,7 +579,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Enter The Valid Data In The Fields To Generate Exam Report
             Logger.LogMethodEntry("Reports", 
                 "EnterTheValidDataInTheFieldsToGenerateExamReport",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             RptSaveReportPage rptSaveReportPage = new RptSaveReportPage();
             //Select Report Window and Frame
             rptSaveReportPage.SelectReportWindowAndFrame();
@@ -587,7 +587,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             rptSaveReportPage.EnterTheDataFieldsToGenerateExamReport();
             Logger.LogMethodExit("Reports", 
                 "EnterTheValidDataInTheFieldsToGenerateExamReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -598,14 +598,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select 'save settings to My Reports' Option
             Logger.LogMethodEntry("Reports", "SelectSaveSettingsToMyReportsOption",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             RptSaveReportPage rptSaveReportPage = new RptSaveReportPage();
             //Select Report Window and Frame
             rptSaveReportPage.SelectReportWindowAndFrame();
             //Select Save Settings To My Reports Checkbox
             rptSaveReportPage.SelectSaveSettingsToMyReportsOption();
             Logger.LogMethodExit("Reports", "SelectSaveSettingsToMyReportsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Verify Correct Page Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //wait for the window
             base.WaitUntilWindowLoads(expectedPageTitle);
             //Get current opened page title
@@ -60,7 +60,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedPageTitle, actualPageTitle));
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Verify Correct Pop Up Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Is Pop Up Present
             Boolean isPopUpExist = base.IsWindowsExists(popUpName);
             //Assert We Have Correct Pop Up Window Opened
@@ -81,7 +81,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(true, isPopUpExist));
             Logger.LogMethodExit("CommonSteps", "ShowThePopUpInPegasus",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Click on the Link
             Logger.LogMethodEntry("CommonSteps", "ClickOnTheLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Switch To Frame
             base.SwitchToIFrame(CommonStepsResource.
                 CommonSteps_IFrame + frame + string.Empty);
@@ -121,7 +121,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
                     break;
             }
             Logger.LogMethodExit("CommonSteps", "ClickOnTheLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Method to Navigate to the Tab Window 
             Logger.LogMethodEntry("CommonSteps", "NavigateToTheTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On More Link if More Link Is Present
             //And The Required Tab Is Not Present
             new TodaysViewUXPage().ClickTheMoreLinkIfPresent(tabName);
@@ -159,7 +159,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
                () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
             }
             Logger.LogMethodExit("CommonSteps", "NavigateToTheTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -172,14 +172,14 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             // Method To Verify the Success Message 
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify Correct Message Present on the Page
             bool isSuccessMessageExist = base.IsMessageExists(successMessage,
                 CommonStepsResource.CommonSteps_SuccessMessage_Class_Locator);
             //Removed The Assert For Message Because Sometimes Message not comes 
             //but this is not the severe issue. So We, can ignore this.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Show Course On The MyCourses and Testbanks Page In Active State
             Logger.LogMethodEntry("CommonSteps", "ShowCourseOnTheGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Assert Course Present on Global Home Page
@@ -200,7 +200,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
                 () => Assert.AreEqual(true, new HEDGlobalHomePage().
                     GetCoursePresentInGlobalHomePage().Contains(course.Name)));
             Logger.LogMethodExit("CommonSteps", " ShowCourseOnTheGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -212,12 +212,12 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
             Course.CourseTypeEnum courseTypeEnum)
         {
             //Enter in Course from Global Home Page 
-            Logger.LogMethodEntry("CommonSteps", "EnterInCourse", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodEntry("CommonSteps", "EnterInCourse", base.IsTakeScreenShotDuringEntryExit);
             //Get Course From  Memory
             Course course = Course.Get(courseTypeEnum);
             //Enter Into The Course
             new HEDGlobalHomePage().OpenTheCourse(course.Name);
-            Logger.LogMethodExit("CommonSteps", " EnterInCourse", base.isTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("CommonSteps", " EnterInCourse", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Verify user entered into course from Global Home Page
             Logger.LogMethodEntry("CommonSteps", "EnterIntoTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From  Memory
             Course course = Course.Get(courseTypeEnum);
             //Assert Course Name Present After User Entered In Course 
@@ -239,7 +239,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
                     Assert.AreEqual(course.Name, new HEDGlobalHomePage().
                     GetCourseName()));
             Logger.LogMethodExit("CommonSteps", "EnterIntoTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -250,11 +250,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Closing the Currently Opened Window
             Logger.LogMethodEntry("CommonSteps", "CloseTheWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Close Window
             base.CloseBrowserWindow();
             Logger.LogMethodExit("CommonSteps", "CloseTheWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -265,11 +265,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //To Click On The Home Link
             Logger.LogMethodEntry("CommonSteps", "ClickHomeLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Home Link
             new TodaysViewUXPage().ClickOnHomeLink();
             Logger.LogMethodExit("CommonSteps", "ClickHomeLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -282,14 +282,14 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Successfull Message In MyTest Tab
             Logger.LogMethodEntry("CommonSteps", "SuccessfullMessageInMyTestTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Display of Success Message
             Logger.LogAssertion("VerifySuccessfullMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(successMessage,
                     new MyTestGridUXPage().GetSuccessMessageInMyTestTab()));
             Logger.LogMethodEntry("CommonSteps", "SuccessfullMessageInMyTestTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -302,11 +302,11 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Close the window
             Logger.LogMethodEntry("CommonSteps", "CloseTheManageOrganizationWindow",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Close the Window
             new ManageOrganisationToolBarPage().CloseWindow(windowName);
             Logger.LogMethodExit("CommonSteps", "CloseTheManageOrganizationWindow",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -320,12 +320,12 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Enter in Course from Global Home Page 
             Logger.LogMethodEntry("CommonSteps", "EnterInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter Into The Course
             new HEDGlobalHomePage().EnterInsideCourse(
                 courseTypeEnum, userTypeEnum);
             Logger.LogMethodExit("CommonSteps", " EnterInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Verify Section in Active State or not.
@@ -337,7 +337,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Verify Section in Active State
             Logger.LogMethodEntry("CommonSteps", "ApproveAssignedToCopyStateForSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Assert Verify Template in Active State or not
@@ -347,7 +347,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
                 (course.SectionName).Contains(CommonStepsResource.
                 CommonSteps_AssignToCopyState_Text_Value)));
             Logger.LogMethodExit("CommonSteps", "ApproveAssignedToCopyStateForSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -359,12 +359,12 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             //Click The Enter Section As Instructor
             Logger.LogMethodEntry("CommonSteps", "ClickTheEnterSectionAsInstructor"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Click On Cmenu of Enter Section As Instructor
             new ManageTemplatePage().
                 ClickOnCmenuOfSectionOrTemplate(cMenuOption);
             Logger.LogMethodExit("CommonSteps", "ClickTheEnterSectionAsInstructor"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -379,7 +379,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         {
             // Method To Verify the Success Message 
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessageInWindow",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Wait For Page Get Refresh after Pop Up Close
             Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                 CommonSteps_SleepTime_Value));
@@ -399,7 +399,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
             //Removed The Assert For Message Because Sometimes Message not comes 
             //but this is not the severe issue. So We, can ignore this.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessageInWindow",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

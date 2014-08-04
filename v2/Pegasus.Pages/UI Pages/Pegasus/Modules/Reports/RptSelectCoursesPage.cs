@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            //Select The Course
            logger.LogMethodEntry("RptSelectCoursesPage", "SelectTheCourse",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
            try
            {
                //Select Custom Frame
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
            }          
            logger.LogMethodExit("RptSelectCoursesPage", "SelectTheCourse",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
        }
 
        /// <summary>
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
        {
            //Select Class CheckBox
            logger.LogMethodEntry("RptSelectCoursesPage", "SelectClassCheckBox",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
            //Wait for the Select Class checkbox
            base.WaitForElement(By.Id(RptSelectCoursesPageResource.
                RptSelectCourses_Page_SelectClass_Checkbox_Id_Locator));
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
            Thread.Sleep(Convert.ToInt32(RptSelectCoursesPageResource.
              RptSelectCourses_Page_SelectCourse_Window_Time));
            logger.LogMethodExit("RptSelectCoursesPage", "SelectClassCheckBox",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
        }
     }
 }

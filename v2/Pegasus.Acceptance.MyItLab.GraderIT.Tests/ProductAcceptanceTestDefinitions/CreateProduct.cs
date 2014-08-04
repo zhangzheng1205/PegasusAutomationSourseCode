@@ -29,12 +29,12 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Manage to navigate  Products Page
             Logger.LogMethodEntry("CreateProduct",
                 "NavigateToManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate to Manage Products Page
             new AdminToolPage().NavigateManageProductsPage();
             Logger.LogMethodExit("CreateProduct",
                 "NavigateToManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -45,14 +45,14 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         {
             //Click on the Link
             Logger.LogMethodEntry("CreateProduct", "ClickOnTheLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Declaration Page Class Object
             ManageProductsPage manageProductsPage =
                 new ManageProductsPage();
             //Create New Product
             manageProductsPage.ClickOnCreateNewProductLink();
             Logger.LogMethodExit("CreateProduct", "ClickOnTheLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -67,13 +67,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Creation of Product
             Logger.LogMethodEntry("CreateProduct",
                 "CreateProductUsingProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Product
             new NewProductPage().CreateNewProduct(
                 productTypeEnum, programTypeEnum);
             Logger.LogMethodExit("VerifyCreateNewProduct",
                 "CreateProductUsingProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Search Product In Right Frame
             Logger.LogMethodEntry("CreateProduct",
                 "SearchProductInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Product FromMemory
             Product product = Product.Get(productTypeEnum);
             //Click Search Product Link
@@ -97,7 +97,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
                 EnterProductNameandClickonSearchButton(product.Name);
             Logger.LogMethodExit("CreateProduct",
                 "SearchProductInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -110,12 +110,12 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Select Cmenu Option Of Product In Coursespace
             Logger.LogMethodEntry("CreateProduct",
                 "SelectCmenuOptionOfProductInCoursespace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Product Cmenu Option
             new ManageProductsPage().SelectProductCmenuOption(cmenuOption);
             Logger.LogMethodExit("CreateProduct",
                 "SelectCmenuOptionOfProductInCoursespace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

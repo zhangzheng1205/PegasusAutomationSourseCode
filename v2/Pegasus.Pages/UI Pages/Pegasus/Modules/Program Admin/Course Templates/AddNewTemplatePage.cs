@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
            //Create New Template
             logger.LogMethodEntry("AddNewTemplatePage", "CreateNewTemplate", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Add New Template Window
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodEntry("AddNewTemplatePage", "CreateNewTemplate", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

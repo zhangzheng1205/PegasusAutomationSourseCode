@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Permission Preferences
             logger.LogMethodEntry("PermissionPreferencesPage","EnablePermissionPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Preferences Window
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PermissionPreferencesPage","EnablePermissionPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Activity Permission Preferences
             logger.LogMethodEntry("PermissionPreferencesPage","EnableActivityPermissionPreferences",
-                base.isTakeScreenShotDuringEntryExit);                    
+                base.IsTakeScreenShotDuringEntryExit);                    
             base.WaitForElement(By.Id(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_ShowHideContent_Checkbox_Id_Locator));
             if (!base.IsElementSelectedById(PermissionPreferencesPageResource.
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_ShowHideContent_Checkbox_Id_Locator);
             }
             logger.LogMethodExit("PermissionPreferencesPage","EnableActivityPermissionPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Preferences Window
             logger.LogMethodEntry("PermissionPreferencesPage", "SelectPreferencesWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(PermissionPreferencesPageResource.
                PermissionPreferencesPage_Resource_Window_Name);
             //Select Window
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_Frame_Id_Locator);
             logger.LogMethodExit("PermissionPreferencesPage", "SelectPreferencesWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Gradebook Permission Preferences
             logger.LogMethodEntry("PermissionPreferencesPage","EnableGradebookPermissionPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_ViewGradebook_Checkbox_Id_Locator));
             if (!base.IsElementSelectedById(PermissionPreferencesPageResource.
@@ -123,7 +123,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_ViewGradebook_Checkbox_Id_Locator);
             }
             logger.LogMethodExit("PermissionPreferencesPage","EnableGradebookPermissionPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enable Performance Permission Preferences
             logger.LogMethodEntry("PermissionPreferencesPage","EnablePerformancePermissionPreferences", 
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
             base.WaitForElement(By.Id(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_ActivityResult_Checkbox_Id_Locator));
             if (!base.IsElementSelectedById(PermissionPreferencesPageResource.
@@ -171,7 +171,7 @@ namespace Pegasus.Pages.UI_Pages
                 PermissionPreferencesPage_Resource_AssignmentDetails_Checkbox_Id_Locator);
             }            
             logger.LogMethodExit("PermissionPreferencesPage","EnablePerformancePermissionPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable Question Analysis Permission Preference
             logger.LogMethodEntry("PermissionPreferencesPage",
                 "EnableQuestionAnalysisPermissionPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_OthersExpand_Button_Id_Locator));
             //Click on 'Others' Expand Button
@@ -199,7 +199,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("PermissionPreferencesPage",
                 "EnableQuestionAnalysisPermissionPreference",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable Submissions Permission Preferences
             logger.LogMethodEntry("PermissionPreferencesPage",
                 "EnableSubmissionsPermissionPreferences", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element View Student Submission Permission
             base.WaitForElement(By.Id(PermissionPreferencesPageResource.
                 PermissionPreferencesPage_Resource_ViewStudentSubmission_Checkbox_Id_Locator));
@@ -233,7 +233,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("PermissionPreferencesPage",
                 "EnableSubmissionsPermissionPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -244,7 +244,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enable 'Schedule Activities' Permission Preferences
             logger.LogMethodEntry("PermissionPreferencesPage",
                 "EnableScheduleActivitiesPermission",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(PermissionPreferencesPageResource.
@@ -263,7 +263,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("PermissionPreferencesPage",
                 "EnableScheduleActivitiesPermission",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

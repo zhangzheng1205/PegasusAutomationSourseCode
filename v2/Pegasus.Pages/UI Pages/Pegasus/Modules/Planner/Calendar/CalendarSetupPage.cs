@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //SetUp the Calendar
             logger.LogMethodEntry("CalendarSetupPage", "SetUpCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the 'Calendar' window
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarSetupPage", "SetUpCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Finish Button
             logger.LogMethodEntry("CalendarSetupPage", "ClickOnFinishButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the 'Calendar' window
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarSetupPage", "ClickOnFinishButton",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
         }
     }
 }

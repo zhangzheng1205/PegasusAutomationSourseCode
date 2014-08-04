@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Numeric Question
             logger.LogMethodEntry("NumericPage", "CreateNumericQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Create Numeric Window
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("NumericPage", "CreateNumericQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -80,13 +80,13 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Numeric Window
             logger.LogMethodEntry("NumericPage", "SelectCreateNumericWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(NumericPageResource.
                 Numeric_Page_CreateNumeric_Window_Name);
             base.SelectWindow(NumericPageResource.
                 Numeric_Page_CreateNumeric_Window_Name);
             logger.LogMethodExit("NumericPage", "SelectCreateNumericWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Question Title
             logger.LogMethodEntry("NumericPage", "EnterQuestionTitle",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Generate Question Title Guid
             Guid questionTitle = Guid.NewGuid();
             base.WaitForElement(By.Id(NumericPageResource.
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("NumericPage", "EnterQuestionTitle",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return questionTitle;
         }
 
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On View Source Button and Enter Data
             logger.LogMethodEntry("NumericPage",
                 "ClickOnViewSourceAndEnterDataForNumericQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Frame
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_Frame_Id_Locator));
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
                 Numeric_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("NumericPage",
                 "ClickOnViewSourceAndEnterDataForNumericQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add Pallette Characters
             logger.LogMethodEntry("NumericPage", "AddPalletteCharacters",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Add a character
             this.ClickOnCharacterPalleteButton(NumericPageResource.
                 Numeric_Page_CharacterPalletea_Xpath_Locator_one);
@@ -169,7 +169,7 @@ namespace Pegasus.Pages.UI_Pages
             this.ClickOnCharacterPalleteButton(NumericPageResource.
                 Numeric_Page_CharacterPalleteu_Xpath_Locator_five);
             logger.LogMethodExit("NumericPage", "AddPalletteCharacters",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -180,7 +180,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Character Pallette
             logger.LogMethodEntry("NumericPage", "ClickOnCharacterPalleteButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.XPath(locator));
             base.FocusOnElementByXPath(locator);
@@ -189,7 +189,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("NumericPage", "ClickOnCharacterPalleteButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Add Answer Button
             logger.LogMethodEntry("NumericPage", "ClickOnAddAnswerButtonOfNumericQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             this.SelectCreateNumericWindow();
             base.WaitForElement(By.Id(NumericPageResource.
@@ -210,7 +210,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getAddAnswerButton);
             logger.LogMethodExit("NumericPage", "ClickOnAddAnswerButtonOfNumericQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill The Correct Score Value
             logger.LogMethodEntry("NumericPage", "FillCorrectScoreValue",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_CorrectAnswer_Id_Locator));
             base.ClearTextById(NumericPageResource.
@@ -229,7 +229,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_CorrectAnswer_Id_Locator, scoreValue);
             logger.LogMethodExit("NumericPage", "FillCorrectScoreValue",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -240,7 +240,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill From Range Score Value
             logger.LogMethodEntry("NumericPage", "FillFromRangeScoreValues",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_FromRange_Id_Locator));
             //Clear the Text Box
@@ -251,7 +251,7 @@ namespace Pegasus.Pages.UI_Pages
                  Numeric_Page_FromRange_Id_Locator,
                  fromRangeScoreValue);
             logger.LogMethodExit("NumericPage", "FillFromRangeScoreValues",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill To Range Score Value
             logger.LogMethodEntry("NumericPage", "FillToRangeScoreValues",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_ToRange_Id_Locator));
             //Clear the Text Box
@@ -272,7 +272,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_ToRange_Id_Locator, toRangeScoreValue);
             logger.LogMethodExit("NumericPage", "FillToRangeScoreValues",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -283,7 +283,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill Score Value For Correct Answer
             logger.LogMethodEntry("NumericPage", "FillScoreValueForCorrectAnswer",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_CorrectScore_Id_Locator));
             //Clear the Text Box
@@ -292,7 +292,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_CorrectScore_Id_Locator, correctScoreValue);
             logger.LogMethodExit("NumericPage", "FillScoreValueForCorrectAnswer",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -303,7 +303,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill Score Value For InCorrect Answer
             logger.LogMethodEntry("NumericPage", "FillScoreValueForIncorrectAnswer",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_IncorrectAnswer_Id_Locator));
             //Clear the Text Box
@@ -314,7 +314,7 @@ namespace Pegasus.Pages.UI_Pages
                 Numeric_Page_IncorrectAnswer_Id_Locator,
                 inCorrectScoreValue);
             logger.LogMethodExit("NumericPage", "FillScoreValueForIncorrectAnswer",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -324,7 +324,7 @@ namespace Pegasus.Pages.UI_Pages
         private void FillRangeScoreValue(string rangeScoreValue)
         {
             logger.LogMethodEntry("NumericPage", "FillRangeScoreValue",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_RangeScore_Id_Locator));
             //Clear Text Box
@@ -334,7 +334,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(NumericPageResource.
                 Numeric_Page_RangeScore_Id_Locator, rangeScoreValue);
             logger.LogMethodExit("NumericPage", "FillRangeScoreValue",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -344,7 +344,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Save and Close Button
             logger.LogMethodEntry("NumericPage", "ClickONSaveAndCloseButtonOfNumericQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Matching Window            
             base.WaitForElement(By.Id(NumericPageResource.
                 Numeric_Page_Save_Button_Id_Locator));
@@ -354,7 +354,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("NumericPage", "ClickONSaveAndCloseButtonOfNumericQuestion",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -365,7 +365,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Question Details in Memory
             logger.LogMethodEntry("NumericPage", "StoreQuestionDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Save Question Properties in Memory
             Question newQuestion = new Question
             {
@@ -375,7 +375,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newQuestion.StoreQuestionInMemory();
             logger.LogMethodExit("NumericPage", "StoreQuestionDetailsInMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

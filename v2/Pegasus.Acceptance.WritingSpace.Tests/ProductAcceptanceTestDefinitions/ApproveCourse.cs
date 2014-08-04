@@ -33,7 +33,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
         {
             //Search Course In Left Frame
             Logger.LogMethodEntry("ApproveCourse", "SearchCourseInCourseSpace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             PublishCourseSearchPage publishCourseSearchPage = new PublishCourseSearchPage();
             //Get the Course From Memory
             Course course = Course.Get(courseTypeEnum);
@@ -42,7 +42,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Select Course To Approve
             publishCourseSearchPage.SelectCourseToApprove(course.Name);
             Logger.LogMethodExit("ApproveCourse", "SearchCourseInCourseSpace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             // Verify Course Search In CourseSpace
             Logger.LogMethodEntry("ApproveCourse",
                 "CheckSearchedCourseInCoreSpace",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Get Course Name From InMemory
             Course course = Course.Get(courseTypeEnum);
             // Assert Course Search
@@ -66,7 +66,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
                   GetSearchedCourseNameInCourseSpace(courseTypeEnum)));
             Logger.LogMethodExit("ApproveCourse",
                 "CheckSearchedCourseInCoreSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -80,12 +80,12 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Click Approve CMenu Option           
             Logger.LogMethodEntry("ApproveCourse",
                 "ClickCMenuCourseOptionInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click on course cmenu in course space
             new ListCoursesPage().ClickCourseCMenuOption(optionName);
             Logger.LogMethodExit("ApproveCourse",
                 "ClickCMenuCourseOptionInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -97,12 +97,12 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Select Course For Association
             Logger.LogMethodEntry("ApproveCourse",
                 "SelectCourseTypeInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Approved Course
             new ListCoursesPage().SelectApprovedCourse();
             Logger.LogMethodExit("ApproveCourse",
                 "SelectCourseTypeInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Select Product
             Logger.LogMethodEntry("ApproveCourse",
                 "SelectProductTypeInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Purpose: To pick the product stored in memory
             Product product = Product.Get(productTypeEnum);
             //Click Search Product Link
@@ -125,7 +125,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             new ProductSearchPage().SearchProduct(product.Name);
             Logger.LogMethodExit("ApproveCourse",
                 "SelectProductTypeInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -137,7 +137,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Associate The Course Through CCNGIntegration To Product
             Logger.LogMethodEntry("ApproveCourse",
                 "AssociateTheCourseThroughCCNGIntegrationToProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click Program Course Add Button
             new AddButtonPage().ClickProgramCoursesAddButton();
             //Click Enrollment Mode Option
@@ -153,7 +153,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             courseEnrollmentModePage.ClickEnrollmentSaveButton();
             Logger.LogMethodExit("ApproveCourse",
                 "AssociateTheCourseThroughCCNGIntegrationToProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Get Integration PointID In General Product
             Logger.LogMethodEntry("ApproveCourse",
                 "GetIntegrationPointIDInGeneralProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             ProductManagementContainerPage productManagementContainerPage =
                     new ProductManagementContainerPage();
             //Click on Product Course Preference Option
@@ -174,7 +174,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             productManagementContainerPage.GetIntegrationPointID();
             Logger.LogMethodExit("ApproveCourse",
                 "GetIntegrationPointIDInGeneralProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

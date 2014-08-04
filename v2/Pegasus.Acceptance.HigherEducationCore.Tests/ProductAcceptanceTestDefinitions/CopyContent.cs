@@ -31,13 +31,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Click On Tab From Preferences
             Logger.LogMethodEntry("CopyContent",
                 "ClickOnTabFromPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Tab From Preferences
             new CourseCopyPreferencesPage().
                 ClickOnTabFromPreferences(tabName);
             Logger.LogMethodExit("CopyContent", 
                 "ClickOnTabFromPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Display Of 'Copy Content' Option Text
             Logger.LogMethodEntry("CopyContent", 
                 "DisplayOfCopyContentOptionText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert The Display Of 'Copy Content' Option Text
             Logger.LogAssertion("VerifyTheDisplayOfCopyContentOptionText",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -60,7 +60,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     GetTheCopyContentOptionTextDisplayed()));            
             Logger.LogMethodExit("CopyContent",
                 "DisplayOfCopyContentOptionText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,12 +72,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Click on the 'Change Source' option
             Logger.LogMethodEntry("CopyContent",
                 "ClickOnTheChangeSourceOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the 'Change Source' option
             new TeachingPlanUxPage().ClickOnTheChangeSourceOption();
             Logger.LogMethodExit("CopyContent",
                 "ClickOnTheChangeSourceOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Display Of Target Course In The Copy Content Dropdown
             Logger.LogMethodEntry("CopyContent",
                 "DisplayOfTargetCourseInTheCopyContentDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course
             Course course = Course.Get(courseTypeEnum);
             //Assert The Display Of Target Course In The Copy Content Dropdown
@@ -100,7 +100,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     new CourseBrowserPage().GetTheTargetCourseDisplayed(course.Name)));
             Logger.LogMethodExit("CopyContent", 
                 "DisplayOfTargetCourseInTheCopyContentDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,14 +115,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Click On The Source Course
             Logger.LogMethodEntry("CopyContent", 
                 "ClickOnTheSourceCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course Name
             Course course = Course.Get(courseTypeEnum);
             //Click On the Source Course
             new CourseBrowserPage().
                 SelectTheSourceCourseForCopyContent(course.Name);
             Logger.LogMethodExit("CopyContent", "ClickOnTheSourceCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -135,13 +135,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select The Activity From Source Course
             Logger.LogMethodEntry("CopyContent", 
                 "SelectTheActivityFromSourceCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select The Activity From Source Course
             new CourseContentUXPage().
                 SelectTheActivityForCopyContent(activityName);
             Logger.LogMethodExit("CopyContent", 
                 "SelectTheActivityFromSourceCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -153,12 +153,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Save the Activity to Course Content
             Logger.LogMethodEntry("CopyContent", 
                 "AddTheActivityToCourseContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Save the Activity to Course Content
             new ContentBrowserUXPage().ClickOnAddAndCloseButton();
             Logger.LogMethodExit("CopyContent", 
                 "AddTheActivityToCourseContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -170,11 +170,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Click on The Activity Add Button
             Logger.LogMethodEntry("CopyContent", 
                 "ClickOnTheAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on The Activity Add Button
             new ContentLibraryUXPage().ClickOnActivityAddButton();
             Logger.LogMethodExit("CopyContent", "ClickOnTheAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Display Of Copied Activity In 'Course Content'
             Logger.LogMethodEntry("CopyContent", 
                 "DisplayOfCopiedActivityInCourseContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert The Display Of Target Course In The Copy Content Dropdown
             Logger.LogAssertion("VerifyTheDisplayOfCopiedActivityInCourseContent",
                 ScenarioContext.Current.ScenarioInfo.Title,() => 
@@ -197,7 +197,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     GetAssetNameFromCourseContent(activityName)));
             Logger.LogMethodExit("CopyContent",
                 "DisplayOfCopiedActivityInCourseContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

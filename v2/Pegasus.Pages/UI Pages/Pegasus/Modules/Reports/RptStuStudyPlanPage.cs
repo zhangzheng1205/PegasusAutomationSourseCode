@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The View Button In Report
             logger.LogMethodEntry("RptStuStudyPlanPage", "ClickTheViewButtonInReport",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the StudyPlan Summary Report Window
@@ -47,7 +47,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptStuStudyPlanPage", "ClickTheViewButtonInReport",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The View Button
             logger.LogMethodEntry("RptStuStudyPlanPage", "ClickTheViewButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.XPath(string.Format
              (RptStuStudyPlanPageResource.
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the view button
             base.ClickByJavaScriptExecutor(getViewButton);  
             logger.LogMethodExit("RptStuStudyPlanPage", "ClickTheViewButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Activity Column Count
             logger.LogMethodEntry("GBInstructorUXPage", "GetActivityColumnCount",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
             string getActivityName = string.Empty;
             //Initialize VariableVariable
@@ -109,7 +109,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("GBInstructorUXPage", "GetActivityColumnCount",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return activityColumnNumber;
         }
 
@@ -121,7 +121,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select the StudyPlan Summary Report Window
             logger.LogMethodEntry("RptStuStudyPlanPage", 
                 "SelectStudyplanSummaryReportWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //StudyPlan Summary Report
             base.WaitUntilWindowLoads(RptStuStudyPlanPageResource.
                 RptStuStudyPlanPage_Studyplan_WindowName);
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
                 RptStuStudyPlanPage_Studyplan_WindowName);
             logger.LogMethodExit("RptStuStudyPlanPage",
                 "SelectStudyplanSummaryReportWindow",
-              base.isTakeScreenShotDuringEntryExit);  
+              base.IsTakeScreenShotDuringEntryExit);  
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Close Button In Report Page
             logger.LogMethodEntry("RptStuStudyPlanPage",
                 "ClickOnCloseButtonInReportPage",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select StudyPlan Summary Report window
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RptStuStudyPlanPage",
                 "ClickOnCloseButtonInReportPage",
-              base.isTakeScreenShotDuringEntryExit);              
+              base.IsTakeScreenShotDuringEntryExit);              
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Student Name
             logger.LogMethodEntry("RptStuStudyPlanPage", "GetStudentName"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Intialized Get Student Name Variable
             string getStudentName = string.Empty;
             try
@@ -191,7 +191,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptStuStudyPlanPage", "GetStudentName"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Name of the Student
             return getStudentName;
         }
@@ -205,7 +205,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get StudyPlan Name
             logger.LogMethodEntry("RptStuStudyPlanPage", "GetStudyPlanName"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Intialized Get Studyplan Name Variable
             string getStudyPlanName = string.Empty;
             try
@@ -224,7 +224,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptStuStudyPlanPage", "GetStudyPlanName"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Name of the studyplan
             return getStudyPlanName;
         }
@@ -236,7 +236,7 @@ namespace Pegasus.Pages.UI_Pages
         {           
             logger.LogMethodEntry("RptStuStudyPlanPage",
                 "SelectStudyPlanResultsWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Wait Until Window
             base.WaitUntilWindowLoads(RptStuStudyPlanPageResource
                     .RptStuStudyPlanPage_StudyplanResults_WindowName);
@@ -245,7 +245,7 @@ namespace Pegasus.Pages.UI_Pages
                 .RptStuStudyPlanPage_StudyplanResults_WindowName);
             logger.LogMethodExit("RptStuStudyPlanPage",
                 "SelectStudyPlanResultsWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetAverageScore()
         {
             logger.LogMethodEntry("RptStuStudyPlanPage", "GetAverageScore"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Intialized Get average score Variable
             string getAverageScore = string.Empty;
             try
@@ -275,7 +275,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptStuStudyPlanPage", "GetAverageScore"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Name of the Student
             return getAverageScore;
         }
@@ -288,7 +288,7 @@ namespace Pegasus.Pages.UI_Pages
         private string GetStudentNameInStudyPlanReport(string getStudentName)
         {
             logger.LogMethodEntry("RptStuStudyPlanPage", "GetStudentNameInStudyPlanReport"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Get Student Name in (Lname, Fname) format
             getStudentName = base.GetElementTextByXPath(RptStuStudyPlanPageResource.
                  RptStuStudyPlanResultsPage_Student_Name_Xpath_Locator);
@@ -298,7 +298,7 @@ namespace Pegasus.Pages.UI_Pages
             getStudentName = name[Convert.ToInt32(
                 RptStuStudyPlanPageResource.RptStuStudyPlanPage_Ins_Score_Value)];
             logger.LogMethodExit("RptStuStudyPlanPage", "GetStudentNameInStudyPlanReport"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             return getStudentName;
         }
 
@@ -311,12 +311,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Study Plan In Report
             logger.LogMethodEntry("RptStuStudyPlanPage", "GetStudyPlanNameInStudyPlanReport"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Get Study Plan Name
             studyPlanName = base.GetElementTextByXPath(RptStuStudyPlanPageResource.
                  RptStuStudyPlanResultsPage_StudyPlan_Name_Xpath_Locator);
             logger.LogMethodExit("RptStuStudyPlanPage", "GetStudyPlanNameInStudyPlanReport"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             return studyPlanName;
         }
 
@@ -328,7 +328,7 @@ namespace Pegasus.Pages.UI_Pages
         private string GetAverageScoreInStudyPlanReport(string getAverageScore)
         {
             logger.LogMethodEntry("RptStuStudyPlanPage", "GetAverageScoreInStudyPlanReport"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Get Student score in % format
             getAverageScore = base.GetElementTextByXPath(RptStuStudyPlanPageResource.
                  RptStuStudyPlanResultsPage_Student_Score_Xpath_Locator);
@@ -338,7 +338,7 @@ namespace Pegasus.Pages.UI_Pages
             getAverageScore = name[Convert.ToInt32(
                 RptStuStudyPlanPageResource.RptStuStudyPlanPage_Ins_Score_Value)];            
             logger.LogMethodExit("RptStuStudyPlanPage", "GetAverageScoreInStudyPlanReport"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             return getAverageScore;
         }
 
@@ -348,7 +348,7 @@ namespace Pegasus.Pages.UI_Pages
         private void CloseStudyPlanResultsWindow()
         {
             logger.LogMethodEntry("RptStuStudyPlanPage", "CloseStudyPlanResultsWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //click on close button in the report window
             base.WaitForElement(By.PartialLinkText(RptStuStudyPlanPageResource.
                 RptStuStudyPlanPage_Close_Link_Locator));
@@ -359,7 +359,7 @@ namespace Pegasus.Pages.UI_Pages
                 RptStuStudyPlanPage_Close_Link_Locator);
             base.IsPopUpClosed(2);
             logger.LogMethodExit("RptStuStudyPlanPage", "CloseStudyPlanResultsWindow"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
         
     }

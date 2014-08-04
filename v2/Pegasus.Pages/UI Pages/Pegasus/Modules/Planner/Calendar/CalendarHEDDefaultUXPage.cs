@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Clicking Todays View Option form then 'More' DropDown
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickOnTodaysViewOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //If More button Exist then Click
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "ClickOnTodaysViewOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search The Activity
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SearchTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.RefreshTheCurrentPage();
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "SearchTheActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search Content
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SearchContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {               
                 //Enter text in the Search Text box
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "SearchContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Searched Activity
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetSearchedActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getSearchedActivityName = string.Empty;
             try
@@ -169,7 +169,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetSearchedActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSearchedActivityName;
         }
 
@@ -181,7 +181,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //'Drag And Drop' Activity
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "DragAndDropActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Calendar Window
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "DragAndDropActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -220,7 +220,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Assigned Activity
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetAssignedActivityNameOnCurrentDay",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string getAssignedActivityName = string.Empty;
             try
@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetAssignedActivityNameOnCurrentDay",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getAssignedActivityName;
         }
 
@@ -273,7 +273,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Accept The Alert
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "AcceptTheAlert",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPage_SleepTime));
             try
@@ -284,7 +284,7 @@ namespace Pegasus.Pages.UI_Pages
             catch
             { }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "AcceptTheAlert",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter The Day View For Assigned Activity
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "EnterTheDayViewForAssignedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Calendar Window
@@ -320,7 +320,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "EnterTheDayViewForAssignedActivity",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -330,7 +330,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Assign Activity Through Cmenu Option
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "AssignActivityThroughCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Calendar Window
@@ -348,7 +348,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "AssignActivityThroughCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -358,7 +358,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On 'Assignment Properties'
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickOnAssignmentProperties",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Div_SearchedAssetTitle_Id_Locator));
@@ -375,7 +375,7 @@ namespace Pegasus.Pages.UI_Pages
                 GetWebElementPropertiesById(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPage_AssignmentProperties_Link_Id_Locator));
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "ClickOnAssignmentProperties",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -386,7 +386,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click The Support Link In Global Homepage
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickTheSuportLinkInGlobalHomepage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -403,7 +403,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "ClickTheSuportLinkInGlobalHomepage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -414,7 +414,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get UserName In Support Popup
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetUserNameInSupportPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing the variable
             String getUserName = string.Empty;
             try
@@ -445,7 +445,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetUserNameInSupportPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Returns User Name
             return getUserName;
         }
@@ -458,7 +458,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On My Profile Link Option
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickOnMyProfileLink",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (userType)
@@ -493,7 +493,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "ClickOnMyProfileLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -503,7 +503,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Multiple Assets to Drag and Drop
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SelectMultipleAssetsToDragAndDrop",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Fetch SkillStudyplan From Memory
@@ -544,7 +544,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "SelectMultipleAssetsToDragAndDrop",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -555,7 +555,7 @@ namespace Pegasus.Pages.UI_Pages
             //Navigate Inside Folder And SubFolder
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "NavigateInsideFolderAndSubFolder",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Click On Asset Root Folder
             this.ClickOnAsset(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPage_ActivityRootFolder_XPath_Locator);
@@ -564,7 +564,7 @@ namespace Pegasus.Pages.UI_Pages
                 CalendarHEDDefaultUXPage_ActivitySubFolder_Xpath_Locator);
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "NavigateInsideFolderAndSubFolder",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -575,7 +575,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Drag and Drop of Multiple Assets
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "DragAndDropMultipleAssets",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Get Asset Row Count
             int getRowCount = this.GetAssetRowCount(assetName);
             base.WaitForElement(By.XPath(string.Format(CalendarHEDDefaultUXPageResource.
@@ -597,7 +597,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPage_SleepTime));
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "DragAndDropMultipleAssets",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -608,7 +608,7 @@ namespace Pegasus.Pages.UI_Pages
         private int GetAssetRowCount(string assetName)
         {
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetAssetRowCount",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             int getAssetRowCount = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPage_DueDate_Row_Value);
@@ -632,7 +632,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetAssetRowCount",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return getAssetRowCount;
         }
 
@@ -644,7 +644,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Asset
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickOnAsset",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for Xpath
             base.WaitForElement(By.XPath(locatorXpath));
             IWebElement getAssetProperty = base.GetWebElementPropertiesByXPath
@@ -652,7 +652,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Asset
             base.ClickByJavaScriptExecutor(getAssetProperty);
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "ClickOnAsset",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -663,7 +663,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get My Profile Date
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetMyProfileProfileDate",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getProfileDate = string.Empty;
             try
@@ -697,7 +697,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetMyProfileProfileDate",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return this.GetConvertedDate(getProfileDate);
         }
 
@@ -709,7 +709,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetConvertedDate(string dateString)
         {
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetConvertedDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variables
             int getDateString = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPage_DueDate_Row_Value);
@@ -753,7 +753,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetConvertedDate",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             return getDateString.ToString();
         }
 
@@ -765,7 +765,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Is Activity Due Date Status Present
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "IsActivityDueDateStatusPresent",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool IsActivityDueDateStatusPresent = false;
             try
@@ -781,7 +781,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "IsActivityDueDateStatusPresent",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return IsActivityDueDateStatusPresent;
         }
 
@@ -793,7 +793,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Option In View By Dropdown
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SelectOptionInViewByDropdown",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Calendar Window
@@ -811,7 +811,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "SelectOptionInViewByDropdown",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -821,7 +821,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Calendar Window
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SelectCalendarWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitUntilWindowLoads(CalendarHEDDefaultUXPageResource.
@@ -835,7 +835,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "SelectCalendarWindow",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -846,7 +846,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Option In Show DropDown
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SelectOptionInShowDropDown",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Calendar Window
@@ -884,7 +884,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "SelectOptionInShowDropDown",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -896,7 +896,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Show Dropdown And Get Option Count
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "ClickOnShowDropdownAndGetOptionCount",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPageResource_Show_Dropdown_Id_Locator));
             //Click On Dropdown
@@ -912,7 +912,7 @@ namespace Pegasus.Pages.UI_Pages
                 CalendarHEDDefaultUXPageResource_Show_Dropdown_OptionCount_Xpath_Locator);
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "ClickOnShowDropdownAndGetOptionCount",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return getShowDropdownOptionCount;
         }
 
@@ -924,7 +924,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select The Content Type
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SelectTheContentType",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Calendar Window
@@ -962,7 +962,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "SelectTheContentType",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -973,7 +973,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Contents Order In Course Content
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetContentsOrderInCourseContent",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getFirstContentName = string.Empty;
             string getSecondContentName = string.Empty;
@@ -995,7 +995,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetContentsOrderInCourseContent",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return (getFirstContentName + getSecondContentName);
         }
 
@@ -1008,7 +1008,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Assigned Content Order In Calendar
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "GetAssignedContentsOrderInCalendar",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable            
             string getAssignedContentsOrder = string.Empty;
             try
@@ -1032,7 +1032,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "GetAssignedContentsOrderInCalendar",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return getAssignedContentsOrder;
         }
 
@@ -1045,7 +1045,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Order Of Assigned Activities
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetOrderOfAssignedActivities",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable 
             string getAssignedContentsOrder = string.Empty;
             int rowCount = Convert.ToInt32(CalendarHEDDefaultUXPageResource.
@@ -1073,7 +1073,7 @@ namespace Pegasus.Pages.UI_Pages
                      CalendarHEDDefaultUXPage_AssignedActivityNameInDayView_Xpath_Locator,
                      rowCount));
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetOrderOfAssignedActivities",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return getAssignedContentsOrder;
         }
 
@@ -1086,7 +1086,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Content In Calendar
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SelectContentInCalendar",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Check Expand Button And Navigate Inside Folders
@@ -1124,7 +1124,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "SelectContentInCalendar",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1135,7 +1135,7 @@ namespace Pegasus.Pages.UI_Pages
             //Check Expand Button And Navigate Inside Folders
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "CheckExpandButtonAndNavigateInsideFolders",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Calendar Window
             this.SelectCalendarWindow();
             if (base.IsElementPresent(By.XPath(CalendarHEDDefaultUXPageResource.
@@ -1148,7 +1148,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "CheckExpandButtonAndNavigateInsideFolders",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1159,7 +1159,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Button In Calendar
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickOnButtonInCalendar",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Calendar Window
@@ -1177,7 +1177,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "ClickOnButtonInCalendar",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1190,7 +1190,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Content Status
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "GetContentStatus",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string contentStatus = string.Empty;
             try
@@ -1226,7 +1226,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "GetContentStatus",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return contentStatus;
         }
 
@@ -1238,7 +1238,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check Assign/Unassign Button Is In Disabled State
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "IsAssignUnassignButtonDisabled",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             bool isAssignUnassignButtonDisabled = false;
             try
@@ -1258,7 +1258,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "IsAssignUnassignButtonDisabled",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isAssignUnassignButtonDisabled;
         }
 
@@ -1270,7 +1270,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On View Advanced Calendar
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "ClickOnViewAdvancedCalendar",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
@@ -1290,7 +1290,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "ClickOnViewAdvancedCalendar",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1301,7 +1301,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Current Date
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "SelectCurrentDateFromCalendar",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
@@ -1321,7 +1321,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
              "SelectCurrentDateFromCalendar",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1333,7 +1333,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Assign Course Materials Text
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "GetAssignCourseMaterialsText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getAssignCourseMaterialsText = string.Empty;
             try
@@ -1350,7 +1350,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
              "GetAssignCourseMaterialsText",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             return getAssignCourseMaterialsText;
 
         }
@@ -1364,7 +1364,7 @@ namespace Pegasus.Pages.UI_Pages
             // Get Day Month Week Text
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "getDayWeekMonthText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable for Day
             string getdayText = string.Empty;
             //Initialize Variable for Week
@@ -1397,7 +1397,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
              "getDayWeekMonthText",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             return getDayWeekMonthText = getdayText + getWeekText + getMonthText;
         }
 
@@ -1410,7 +1410,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Assigned Count with Text
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "getAssignedCountwithText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getAssignedCountWithText = string.Empty;
             try
@@ -1428,7 +1428,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
              "getAssignedCountwithText",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             return getAssignedCountWithText;
         }
 
@@ -1441,7 +1441,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Assigned Text In Calendar Frame
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "getAssignedTextInCalendarFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getAssignedTextInCalendarFrame = string.Empty;
             try
@@ -1459,7 +1459,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
              "getAssignedTextInCalendarFrame",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             return getAssignedTextInCalendarFrame;
         }
 
@@ -1471,7 +1471,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Add Note Text
             logger.LogMethodEntry("CalendarHEDDefaultUXPage","GetAddNoteText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getAddNoteText = string.Empty;
             try
@@ -1487,7 +1487,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage","GetAddNoteOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return getAddNoteText;
         }
 
@@ -1498,7 +1498,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Calendar Icon
             logger.LogMethodEntry("CalendarHEDDefaultUXPage", "ClickOnCalendarIcon",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.ClassName(CalendarHEDDefaultUXPageResource.
@@ -1514,7 +1514,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "ClickOnCalendarIcon",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1525,7 +1525,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Set Scheduling Options' Cmenu
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "SelectSetSchedulingOptionsCmenu",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Calendar Window
@@ -1557,7 +1557,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "SelectSetSchedulingOptionsCmenu",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1570,7 +1570,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The ContentType From ShowDropdown.
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "SelectTheContentTypeFromShowDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Calendar Window
             this.SelectCalendarWindow();
             //Click The Show Dropdown
@@ -1598,7 +1598,7 @@ namespace Pegasus.Pages.UI_Pages
             this.ClickTheApplyButton();
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "SelectTheContentTypeFromShowDropdown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1609,7 +1609,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Instructor Graded option
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                "SelectInstructorGradedOption",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Wait for the 'Instructor Graded' options
             base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPageResource_InstructorGraded_Id_Locator));
@@ -1620,7 +1620,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAllItems);
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "SelectInstructorGradedOption",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1631,7 +1631,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Shown Items option
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                "SelectShownItemsOption",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Wait for the 'Shown Items' options
             base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPageResource_ShownItems_Option_Id_Locator));
@@ -1642,7 +1642,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAllItems);
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "SelectShownItemsOption",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1653,7 +1653,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Items Assigned Option
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                "SelectItemsAssignedOption",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Wait for the 'Items Assigned' options
             base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPageResource_ItemsAssigned_Option_Id_Locator));
@@ -1664,7 +1664,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAllItems);
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "SelectItemsAssignedOption",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1675,7 +1675,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Apply Button
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                "ClickTheApplyButton",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Wait for the 'Apply' options
             base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPageResource_Show_Apply_Button_Id_Locator));
@@ -1686,7 +1686,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getApplyButton);
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "ClickTheApplyButton",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1697,7 +1697,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select All Items Option
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                "SelectAllItemsOption",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Wait for the 'All Items' options
             base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefaultUXPageResource_AllItems_Option_Id_Locator));
@@ -1708,7 +1708,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAllItems);
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "SelectAllItemsOption",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1719,7 +1719,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Show Dropdown
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                   "ClickTheShowDropdown",
-                         base.isTakeScreenShotDuringEntryExit);
+                         base.IsTakeScreenShotDuringEntryExit);
             //Wait for the 'Showdropdown' element
             base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
                CalendarHEDDefaultUXPageResource_Show_Dropdown_Id_Locator));
@@ -1730,7 +1730,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getShowdropdown);
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                    "ClickTheShowDropdown",
-                         base.isTakeScreenShotDuringEntryExit);
+                         base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1743,7 +1743,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Message From Assignment Calendar Tab
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "GetMessageFromAssignmentCalendarTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getMessageValidate = string.Empty;
             try
@@ -1759,7 +1759,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                 "GetMessageFromAssignmentCalendarTab",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getMessageValidate;
         }
     }

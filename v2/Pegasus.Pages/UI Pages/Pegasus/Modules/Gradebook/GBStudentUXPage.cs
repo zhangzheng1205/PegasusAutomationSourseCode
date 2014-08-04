@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check Grade Of Submitted Activity
             logger.LogMethodEntry("GBStudentUXPage", "GetGradeDisplayedForActivity",
-                               base.isTakeScreenShotDuringEntryExit);
+                               base.IsTakeScreenShotDuringEntryExit);
             // Initialize the gradeScore 
             decimal getActivityScore = 0;
             //Get Grade Table Row Count
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(GBLeftNavigationUXPageResource
                  .GBLeftNavigationUXPage_WindowName_Title);
             logger.LogMethodExit("GBStudentUXPage", " GetGradeDisplayedForActivity",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
 
@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Grades from the Activity table under grades tab
             logger.LogMethodEntry("GBStudentUXPage", "GetGradesValueFromActivityTable",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             while (!getActivityMatchedInRow.Contains
                         (GBStudentUXPageResource.GBStudentUXPage_Activity_Title_Name))
             {
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("GBStudentUXPage", " GetGradesValueFromActivityTable",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
 
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Post Test Score
             logger.LogMethodEntry("GBStudentUXPage", "GetPostTestScore",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             string getActivityScore = string.Empty;
             //Variable Declaration for Studyplan Name
             string studyPlanName = GBStudentUXPageResource.
@@ -130,7 +130,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "GetPostTestScore",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
 
@@ -143,7 +143,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Activity Score In Gradebook
             logger.LogMethodEntry("GBStudentUXPage", "GetActivityScoreInGradebook",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getActivityScore = string.Empty;
             try
@@ -181,7 +181,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "GetActivityScoreInGradebook",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
 
@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Activity Score
             logger.LogMethodEntry("GBStudentUXPage", "GetActivityScore",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             //Wait for Activity Score 
             base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
                 GBStudentUXPage_GetActivityScore_Xpath_Locator, initialCount)));
@@ -202,7 +202,7 @@ namespace Pegasus.Pages.UI_Pages
             getActivityScore = base.GetElementTextByXPath(string.Format(GBStudentUXPageResource.
                 GBStudentUXPage_GetActivityScore_Xpath_Locator, initialCount).Trim());
             logger.LogMethodExit("GBStudentUXPage", "GetActivityScore",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
 
@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Activity Score
             logger.LogMethodEntry("GBStudentUXPage", "GetActivityTestScore",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.XPath(ViewSubmissionPageResource.
                           ViewSubmission_Page_Activity_Table_XPath_Count_Locator));
@@ -245,7 +245,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
             logger.LogMethodExit("GBStudentUXPage", "GetActivityTestScore",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
 
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Gradebook Window
             logger.LogMethodEntry("GBStudentUXPage", "SelectGradebookWindow",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Gradebook Window
@@ -275,7 +275,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", " SelectGradebookWindow",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -284,7 +284,7 @@ namespace Pegasus.Pages.UI_Pages
         public void NavigateInsideViewGrade(string studyPlanName)
         {
             logger.LogMethodEntry("GBStudentUXPage", " NavigateInsideViewGrade",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             //Variable Declaration of Assets     
             string getAssetNameName = string.Empty;
             try
@@ -318,7 +318,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", " NavigateInsideViewGrade",
-                     base.isTakeScreenShotDuringEntryExit);
+                     base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -330,7 +330,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Manually Graded Score
             logger.LogMethodEntry("GBStudentUXPage", "GetManuallyGradedScore",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             //Initialize getManuallyGradedScore Variable
             string getManuallyGradedScore = string.Empty;
             try
@@ -369,7 +369,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "GetManuallyGradedScore",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             return getManuallyGradedScore;
         }
       
@@ -381,7 +381,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Asset Cmenu In Grade Tab
             logger.LogMethodEntry("GBStudentUXPage", "VerifyTheAssetNameInGradeTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -410,7 +410,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "VerifyTheAssetNameInGradeTab",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -423,7 +423,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Score Result In GradeBook Page
             logger.LogMethodEntry("GBStudentUXPage", "GetScoreResultInGradeBookPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Intialize the activity grade variable
             string getActivityGrade = string.Empty;
             try
@@ -447,7 +447,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "GetScoreResultInGradeBookPage",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             return getActivityGrade;
         }
 
@@ -459,7 +459,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify AssetName And Triangle Cmenu In Grade Tab
             logger.LogMethodEntry("GBStudentUXPage", "VerifyAssetNameAndClickTriangleOptionCmenu",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for Element
@@ -498,7 +498,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "VerifyAssetNameAndClickTriangleOptionCmenu",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -508,7 +508,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetCourseMaterailsText()
         {
             logger.LogMethodEntry("GBStudentUXPage", "GetCourseMaterailsText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize string Variable
             string getCourseMaterailsText = string.Empty;
             try {
@@ -531,7 +531,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e) { ExceptionHandler.HandleException(e); }
             logger.LogMethodExit("GBStudentUXPage", "GetCourseMaterailsText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getCourseMaterailsText;
         }
 
@@ -542,7 +542,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetActivityColumnText(string Items)
         {
             logger.LogMethodEntry("GBStudentUXPage", "GetActivityColumnText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize string Variable
             string getActivityColumnText = string.Empty;
             try  {
@@ -566,7 +566,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e) { ExceptionHandler.HandleException(e); }
             logger.LogMethodExit("GBStudentUXPage", "GetActivityColumnText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getActivityColumnText;
         }
 
@@ -574,7 +574,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnCompletedItems()
         {
             logger.LogMethodEntry("GBStudentUXPage", "ClickOnCompletedItems",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try{
                 //Student Grades tab Right Frame
                 this.LoadStudentGradesInRightFrame();
@@ -589,14 +589,14 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e) { ExceptionHandler.HandleException(e); }
             logger.LogMethodExit("GBStudentUXPage", "ClickOnCompletedItems",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         //Click On Assigned items
         public void ClickOnAssignedItems()
         {
             logger.LogMethodEntry("GBStudentUXPage", "ClickOnAssignedItems",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try{
                 //Student Grades tab Right Frame
                 this.LoadStudentGradesInRightFrame();
@@ -612,14 +612,14 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e) { ExceptionHandler.HandleException(e); }
             logger.LogMethodExit("GBStudentUXPage", "ClickOnAssignedItems",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// Load Student Grades tab Right Frame
         private void LoadStudentGradesInRightFrame()
         {
             logger.LogMethodEntry("GBStudentUXPage", "LoadStudentGradesInRightFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait For Gradebook Window
             base.SelectWindow(GBStudentUXPageResource.
             GBStudentUXPage_Gradebook_Name_Locator);
@@ -630,14 +630,14 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(GBStudentUXPageResource.
                 GBStudentUXPage_ActivityFrame_Id_Locator);
             logger.LogMethodExit("GBStudentUXPage", "LoadStudentGradesInRightFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         //Click On HomeWork Traingle Cmenu Image
         private void ClickHomeWorkTraingleImage()
         {
             logger.LogMethodEntry("GBStudentUXPage", "ClickHomeWorkTraingleImage",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
                 base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
                      GBStudentUXPage_HomeWork_Cmenu_Option_Name_Xpath_Locator)));
                 //Title Attribute  "HomeWork" on the First Row in Gradebook
@@ -661,7 +661,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on View Report Cmenu Option
                 base.ClickByJavaScriptExecutor(getViewReportOption);
             logger.LogMethodExit("GBStudentUXPage", "ClickHomeWorkTraingleImage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -672,7 +672,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check Columns Displayed in Gradebook
             logger.LogMethodEntry("GBStudentUXPage", "IsColumnsDisplayedInGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialze Variable
             bool isColumnsDisplayed = false;
             try
@@ -693,7 +693,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "IsColumnsDisplayedInGradebook",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isColumnsDisplayed;
         }
 
@@ -705,7 +705,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check Filter options Displayed in Gradebook
             logger.LogMethodEntry("GBStudentUXPage", "IsFilterOptionsDisplayedInGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialze Variable
             bool isFilterColumnsDisplayed = false;
             try
@@ -729,7 +729,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "IsFilterOptionsDisplayedInGradebook",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return isFilterColumnsDisplayed;
         }
 
@@ -740,7 +740,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Student Folder Navigation Frame
             logger.LogMethodEntry("GBStudentUXPage", "SelectStudentFolderNavigationFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Gradebook Window
@@ -760,7 +760,7 @@ namespace Pegasus.Pages.UI_Pages
              ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "SelectStudentFolderNavigationFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -771,7 +771,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Folder navigation Frame Displayed In Gradebook
             logger.LogMethodEntry("GBStudentUXPage", "IsFoldernavigationFrameDisplayedInGradebook",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialze Variable
             bool isFolderNavigationFrameDisplayed = false;
             try
@@ -787,7 +787,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }       
             logger.LogMethodExit("GBStudentUXPage", "IsFoldernavigationFrameDisplayedInGradebook",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isFolderNavigationFrameDisplayed;
         }
 
@@ -799,7 +799,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Filter DropDown Displayed In Gradebook
             logger.LogMethodEntry("GBStudentUXPage", "IsFilterDropDownDisplayedInGradebook",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialze Variable
             bool isFilterDropdownDisplayed = false;
             try
@@ -814,7 +814,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "IsFilterDropDownDisplayedInGradebook",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return isFilterDropdownDisplayed;
         }
 
@@ -827,7 +827,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Option From Filter Content Type DropDown.
             logger.LogMethodEntry("GBStudentUXPage", 
                 "SelectOptionFromFilterContentTypeDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select gradebook window
@@ -847,7 +847,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GBStudentUXPage", 
                 "SelectOptionFromFilterContentTypeDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -859,7 +859,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify The Asset Name In Gradebook
             logger.LogMethodEntry("GBStudentUXPage", "VerifyTheAssetNameInGradebook",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize VariableVariable
             string getActivityName = string.Empty;
             try
@@ -892,7 +892,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "VerifyTheAssetNameInGradebook",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 
@@ -906,7 +906,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get The Grades For Activity In Gradebook
             logger.LogMethodEntry("GBStudentUXPage",
                 "GetActivityRowcountInGradebook",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
             int getActivityCount = Convert.ToInt32(GBStudentUXPageResource.
                 GBStudentUXPage_Rowcount_Initial_Value); 
@@ -935,7 +935,7 @@ namespace Pegasus.Pages.UI_Pages
             }  
             logger.LogMethodExit("GBStudentUXPage",
                 "GetActivityRowcountInGradebook",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             return getActivityCount;
         }
 
@@ -948,7 +948,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Activity Cmenu In GradeBook
             logger.LogMethodEntry("GBStudentUXPage", "ClickOnActivityCmenuInGradeBook",
-                            base.isTakeScreenShotDuringEntryExit);
+                            base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
             int getRowCount = Convert.ToInt32(GBStudentUXPageResource.
                 GBStudentUXPage_Rowcount_Initial_Value);           
@@ -966,7 +966,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "ClickOnActivityCmenuInGradeBook",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -978,7 +978,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Asset Name In GradeBook
             logger.LogMethodEntry("GBStudentUXPage", "GetAssetScoreInGradeBook",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
             string getActivityScore = string.Empty;
             int getRowCount = Convert.ToInt32(GBStudentUXPageResource.
@@ -995,7 +995,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "GetAssetScoreInGradeBook",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
 
@@ -1008,7 +1008,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Activity Grade
             logger.LogMethodEntry("GBStudentUXPage", "GetActivityGrade",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             //Initialize the variable
             string getActivityScore = string.Empty;
             //Wait for Activity Score 
@@ -1018,7 +1018,7 @@ namespace Pegasus.Pages.UI_Pages
             getActivityScore = base.GetElementTextByXPath(string.Format(GBStudentUXPageResource.
                 GBStudentUXPage_Activity_Grade_Displayed_Xpath_Locator, initialCount));
             logger.LogMethodExit("GBStudentUXPage", "GetActivityGrade",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
         
@@ -1031,7 +1031,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click The Cmenu Of Activity In GradeBook
             logger.LogMethodEntry("GBStudentUXPage", "ClickTheCmenuOfActivityInGradeBook",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             //Initialize the variable
             string getActivityScore = string.Empty;
             //Wait for Activity Score 
@@ -1058,7 +1058,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the 'View Submission' link
             base.ClickByJavaScriptExecutor(getViewSubmissionLink); 
             logger.LogMethodExit("GBStudentUXPage", "ClickTheCmenuOfActivityInGradeBook",
-                    base.isTakeScreenShotDuringEntryExit);           
+                    base.IsTakeScreenShotDuringEntryExit);           
         }
 
         /// <summary>
@@ -1072,7 +1072,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Activity Cmenu Option In GradeBook Of Student
             logger.LogMethodEntry("GBStudentUXPage", 
                 "ClickOnActivityCmenuOptionInGradeBookOfStudent",
-                             base.isTakeScreenShotDuringEntryExit);
+                             base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
             int getRowCount = Convert.ToInt32(GBStudentUXPageResource.
                 GBStudentUXPage_Rowcount_Initial_Value);
@@ -1089,7 +1089,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GBStudentUXPage",
                 "ClickOnActivityCmenuOptionInGradeBookOfStudent",
-                   base.isTakeScreenShotDuringEntryExit);  
+                   base.IsTakeScreenShotDuringEntryExit);  
         }
         
         /// <summary>
@@ -1101,7 +1101,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Asset Name In Gradebook
             logger.LogMethodEntry("GBStudentUXPage", "GetAssetNameInGradebook",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Initialize string varialbe 
             string getAssetNameInGradebook = string.Empty;
             try
@@ -1117,7 +1117,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBStudentUXPage", "GetAssetNameInGradebook",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
             return getAssetNameInGradebook;
         }
 
@@ -1130,7 +1130,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Writingspace Activity Cmenu For Student
             logger.LogMethodEntry("GBStudentUXPage",
                 "ClickOnWritingspaceActivityCmenuForStudent",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {                
                 //Get Activity Score
@@ -1144,7 +1144,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GBStudentUXPage",
                 "ClickOnWritingspaceActivityCmenuForStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1156,7 +1156,7 @@ namespace Pegasus.Pages.UI_Pages
             //Mouse hover and Click on Activity Cmenu
             logger.LogMethodEntry("GBStudentUXPage",
                 "MousehoverandClickonActivityCmenu",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for an Element
             base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
                 GBStudentUXPage_Studyplanasset_Name_Xpath_Locator, getRowCount)));
@@ -1177,7 +1177,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getCmenu);
             logger.LogMethodExit("GBStudentUXPage",
                 "MousehoverandClickonActivityCmenu",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1190,7 +1190,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Activity Cmenu Option In Student Gradebook
             logger.LogMethodEntry("GBStudentUXPage",
                 "GetActivityCmenuOptionInStudentGradebook",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getActivityCmenuOption = string.Empty;
             try
@@ -1206,7 +1206,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("GBStudentUXPage",
                 "GetActivityCmenuOptionInStudentGradebook",
-                          base.isTakeScreenShotDuringEntryExit);
+                          base.IsTakeScreenShotDuringEntryExit);
             return getActivityCmenuOption;
         }
     }

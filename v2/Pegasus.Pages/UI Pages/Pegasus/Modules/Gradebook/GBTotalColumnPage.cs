@@ -25,7 +25,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Value In Total Weight Field
             logger.LogMethodEntry("GBTotalColumnPage", "GetValueInTotalWeightField",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized variable
             string totalWeight = string.Empty;
             try
@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBTotalColumnPage", "GetValueInTotalWeightField",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return totalWeight;
         }
 
@@ -59,11 +59,11 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Total Column Window
             logger.LogMethodEntry("GBTotalColumnPage", "SelectCreateTotalColumnWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(GBTotalColumnPageResource.GBTotalColumn_Page_WindowName);
             logger.LogMethodExit("GBTotalColumnPage", "SelectCreateTotalColumnWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

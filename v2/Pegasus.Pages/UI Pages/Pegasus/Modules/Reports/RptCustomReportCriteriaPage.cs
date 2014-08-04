@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Organisations 
             logger.LogMethodEntry("RptCustomReportCriteriaPage", "SelectOrganization",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Selct the custom frame
@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptCustomReportCriteriaPage", "SelectOrganization",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Organisations 
             logger.LogMethodEntry("RptCustomReportCriteriaPage", "SelectAllStudent",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Selct the custom frame
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptCustomReportCriteriaPage", "SelectAllStudent",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Class Columns
             logger.LogMethodEntry("RptCustomReportCriteriaPage", "SelectClassColumns",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //wait for the Select class columns element           
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptCustomReportCriteriaPage", "SelectClassColumns",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }        
     }
 }

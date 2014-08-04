@@ -37,7 +37,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Method To Search Course
                 logger.LogMethodEntry("PublishCourseSearchPage", "SelectSearchCourseFrame",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
                 //Select Default Window
                 base.SelectDefaultWindow();
                 //Wait For Element
@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PublishCourseSearchPage", "SelectSearchCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Course Displayed After Search
             logger.LogMethodEntry("PublishCourseSearchPage", "SearchCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(PublishCourseSearchPageResource.
                 PublishCourseSearch_Page_CourseDetail_Id_Locator));
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(PublishCourseSearchPageResource.
                 PublishCourseSearch_Page_CourseGrid_Id_Locator));
             logger.LogMethodExit("PublishCourseSearchPage", "SearchCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Method To Select Course To Approve
             logger.LogMethodEntry("PublishCourseSearchPage", "SelectCourseToApprove",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Start Stop Watch
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PublishCourseSearchPage", "SelectCourseToApprove",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -27,13 +27,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Search Asset In Course Materials Library
             Logger.LogMethodEntry("CopyContent", "SearchAssetInCourseMaterialsLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Search Asset
             new ContentLibraryUXPage().GetActivityNameInContentLibrary(activity.Name);
             Logger.LogMethodExit("CopyContent", "SearchAssetInCourseMaterialsLibrary",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -45,11 +45,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select Cmenu Option of Activity
             Logger.LogMethodEntry("CopyContent", "SelectCmenuOptionOfActivity",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Cmenu Option of Activity
             new ContentLibraryUXPage().SelectCmenuOptionOfActivity(cmenuOption);
             Logger.LogMethodExit("CopyContent", "SelectCmenuOptionOfActivity",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select Sections
             Logger.LogMethodEntry("CopyContent", "SelectSections",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Sections
             new UserTemplateSectionsPage().SelectSectionsCheckBoxAndClickAddButton();
             Logger.LogMethodExit("CopyContent", " SelectSections",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -75,14 +75,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select Home Button
             Logger.LogMethodEntry("CopyContent", "SelectHomeButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             Pages.UI_Pages.TeachingPlanUxPage teachingPlanUxPage = new Pages.UI_Pages.TeachingPlanUxPage();
             //Select Course Materials Window
             teachingPlanUxPage.SelectWindow();
             //Click On Home Button
             teachingPlanUxPage.ClickOnHomeButton();
             Logger.LogMethodExit("CopyContent", " SelectHomeButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -94,13 +94,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Search Asset In My Course Frame
             Logger.LogMethodEntry("CopyContent", "SearchAssetInMyCourseFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Search Asset In My Course Frame
             new CourseContentUXPage().SearchAssetInMyCourseFrame(activity.Name);
             Logger.LogMethodExit("CopyContent", " SearchAssetInMyCourseFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -112,12 +112,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Click The Activity Cmenu Option In MyCourse Frame
             Logger.LogMethodEntry("CopyContent",
                 "ClickTheActivityCmenuOptionInMyCourseFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Click On The Activity Cmenu In MyCourse Frame
             new CourseContentUXPage().ClickOnShowHideCmenuOptionforAssetInFireFox();
             Logger.LogMethodExit("CopyContent",
                 "ClickTheActivityCmenuOptionInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -129,12 +129,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Select The Activity CmenuOption In MyCourseFrame
             Logger.LogMethodEntry("CopyContent",
                 "SelectTheActivityCmenuOptionInMyCourseFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Click On The Activity Cmenu In MyCourse Frame
             new CourseContentUXPage().ClickTheActivityCmneuImageIcon();
             Logger.LogMethodExit("CopyContent",
                 "SelectTheActivityCmenuOptionInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify The Asset Name In 'My Course' Frame
             Logger.LogMethodEntry("CopyContent", "VerifyAssetNameInMyCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Verify The Searched Asset Name
@@ -155,7 +155,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 () => Assert.AreEqual(activity.Name,
                     new CourseContentUXPage().GetAssetNameFromMyCourseTab(activity.Name)));
             Logger.LogMethodExit("CopyContent", "VerifyAssetNameInMyCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -167,11 +167,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click The Cmenu of Activity
             Logger.LogMethodEntry("CopyContent", "ClickTheCmenuofActivity"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Click On Cmenu of Activity
             new CourseContentUXPage().ClickTheCmenuOptionofActivity(cmenuOption);
             Logger.LogMethodExit("CopyContent", "ClickTheCmenuofActivity"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -184,7 +184,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Verify Activity Name
             Logger.LogMethodEntry("CopyContent", "VerifyActivityName"
-              , base.isTakeScreenShotDuringEntryExit);
+              , base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Asserts the Ativity Name
@@ -194,7 +194,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     new CoursePreviewUXPage().
                     GetActivityNameInCourseMaterialsTab(activity.Name)));
             Logger.LogMethodExit("CopyContent", "VerifyActivityName"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Search Asset In Content Library Frame
             Logger.LogMethodEntry("CopyContent", "SearchAssetInContentLibrary",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
             //Fetch the activity from memory
             Activity activity = Activity.Get(activityTypeEnum, behavioralTypeEnum);
@@ -221,7 +221,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Search Asset In Content Library Frame
             contentLibraryUXPage.SearchTheActivity(activity.Name);
             Logger.LogMethodExit("CopyContent", " SearchAssetInContentLibrary",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -232,11 +232,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Select 'Assigned' Radiobutton
             Logger.LogMethodEntry("CopyContent", "SelectAssignedRadiobutton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select 'Assigned' Radiobutton
             new AssignContentPage().SelectAssignedRadiobutton();
             Logger.LogMethodExit("CopyContent", " SelectAssignedRadiobutton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -248,12 +248,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Select 'Set availability date range' Radiobutton
             Logger.LogMethodEntry("CopyContent",
                 "SelectSetavailabilitydaterangeRadiobutton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select 'Set availability date range' Radiobutton
             new AssignContentPage().SelectSetavailabilitydaterangeRadiobutton();
             Logger.LogMethodExit("CopyContent",
                 " SelectSetavailabilitydaterangeRadiobutton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -265,12 +265,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Enable 'Do Not Provide An End Date' Option
             Logger.LogMethodEntry("CopyContent",
                 "EnableDoNotProvideAnEndDateOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select 'Do Not Provide An End Date' Option
             new AssignContentPage().SelectDoNotProvideEndDateOption();
             Logger.LogMethodExit("CopyContent",
                 " EnableDoNotProvideAnEndDateOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -282,7 +282,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify The 'Start PreTest' Button
             Logger.LogMethodEntry("CopyContent",
                 "VerifyTheStartPreTestButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Verify The 'Start PreTest' Button
             Logger.LogAssertion("VerifyStartPretestButton",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -290,7 +290,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                     IsStartPreTestButtonPresent()));
             Logger.LogMethodExit("CopyContent",
                 " VerifyTheStartPreTestButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -302,13 +302,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Search Section
             Logger.LogMethodEntry("CopyContent", "SearchFirstSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Search Section
             new ManageTemplatePage().SearchSection(course.SectionName);
             Logger.LogMethodExit("CopyContent", " SearchFirstSection",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -320,14 +320,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Search Section
             Logger.LogMethodEntry("CopyContent", "SearchSecondSection",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Search Section
             new ManageTemplatePage().SearchSection(course.SectionName +
                 CopyContentResource.CopyContent_SecondSection_Value);
             Logger.LogMethodExit("CopyContent", " SearchSecondSection",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

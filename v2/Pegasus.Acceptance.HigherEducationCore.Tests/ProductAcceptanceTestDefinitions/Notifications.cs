@@ -32,11 +32,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Navigate to the Todays View page 
             Logger.LogMethodEntry("Notifications", "NavigateToTodaysViewTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Today's view option
             new CalendarHEDDefaultUXPage().ClickOnTodaysViewOption(tabName);
             Logger.LogMethodExit("Notifications", "NavigateToTodaysViewTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Displaying the Alert for New Grades
             Logger.LogMethodEntry("Notifications", "DisplayAlertForNewGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Asserts if New Grades alerts are displayed
             Logger.LogAssertion("VerifyDisplayOfNewGrades",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -55,7 +55,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     NotificationsResource_Submitted_Grades,
                     new TodaysViewUXPage().GetNewGradesAlert()));
             Logger.LogMethodExit("Notifications", "DisplayAlertForNewGrades",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -66,11 +66,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Clicking the New Grades link
             Logger.LogMethodEntry("Notifications", "ClickNewGradesAlertOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Clicking on the New Grades Link
             new TodaysViewUXPage().ClickNewGradesOption();
             Logger.LogMethodExit("Notifications", "ClickNewGradesAlertOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Display of Activity Name as Notification
             Logger.LogMethodEntry("Notifications", "DisplayOfSubmittedActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Submitted Activity name present            
             Logger.LogAssertion("VerifySubmittedActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -89,7 +89,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     NotificationsResource_Submitted_ActivityName,
                     new TodaysViewUXPage().GetSubmittedActivityName()));
             Logger.LogMethodEntry("Notifications", "DisplayOfSubmittedActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -102,11 +102,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click The Support Link In Global Homepage
             Logger.LogMethodEntry("Notifications", "ClickTheSupportLinkInGlobalHomepage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click The Support Link In Global Homepage
             new CalendarHEDDefaultUXPage().ClickTheSuportLinkInGlobalHomepage(userTypeEnum);
             Logger.LogMethodEntry("Notifications", "ClickTheSupportLinkInGlobalHomepage",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
        
         /// <summary>
@@ -118,13 +118,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Click The Link In Global Homepage.
             Logger.LogMethodEntry("Notifications", "ClickTheLinkInGlobalHomepage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click The Link In Global Homepage 
             new TodaysViewUXPage().ClickTheLinkInGlobalHomePage(
                 (TodaysViewUXPage.GlobalHomePageLinkTypeEnum)Enum.Parse
                 (typeof(TodaysViewUXPage.GlobalHomePageLinkTypeEnum), globalHomePageLink));
             Logger.LogMethodEntry("Notifications", "ClickTheLinkInGlobalHomepage",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify The UserName In Support Popup
             Logger.LogMethodEntry("Notifications", "VerifyTheUserNameInSupportPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get User Name from Memory
             User user = User.Get(userTypeEnum);
             //Assert for user name present            
@@ -146,7 +146,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 () => Assert.AreEqual(user.Name, new CalendarHEDDefaultUXPage().
                     GetUserNameInSupportPopup()));
             Logger.LogMethodEntry("Notifications", "VerifyTheUserNameInSupportPopup",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -157,12 +157,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify The Help PageText
             Logger.LogMethodEntry("Notifications", "VerifyTheHelpPageText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Verify Help PageText
             Logger.LogAssertion("VerifyHomePageText", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new TodaysViewUXPage().IsVerifyTheHelpLinkPageTextPresent()));    
             Logger.LogMethodExit("Notifications", "VerifyTheHelpPageText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Verify The Submitted Activity Name
             Logger.LogMethodEntry("Notifications", "VerifyTheSubmittedActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Assert Submitted Activity name present            
@@ -183,7 +183,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 () => Assert.AreEqual(activity.Name,
                     new TodaysViewUXPage().GetSubmittedActivityNameByStudent()));
             Logger.LogMethodEntry("Notifications", "VerifyTheSubmittedActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -194,11 +194,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Click View Submission Cmenu Option
             Logger.LogMethodEntry("Notifications", "ClickViewSubmissionCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click The View Submission Cmenu Option
             new TodaysViewUXPage().ClickTheViewSubmissionCmenuOption();                             
             Logger.LogMethodEntry("Notifications", "ClickViewSubmissionCmenuOption",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {            
             //Verify the Grade in ViewSubmission Page
             Logger.LogMethodEntry("Notifications", "VerifyTheGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Submission Grade          
             new ViewSubmissionPage().ClickonSubmissionGrade();
             //Assert Edited Grade in ViewSubmission Page
@@ -218,7 +218,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(newGrade,
                     new ViewSubmissionPage().GetGradeInStudentViewSubmissionPage()));
             Logger.LogMethodExit("Notifications", "VerifyTheGradeInViewSubmissionPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

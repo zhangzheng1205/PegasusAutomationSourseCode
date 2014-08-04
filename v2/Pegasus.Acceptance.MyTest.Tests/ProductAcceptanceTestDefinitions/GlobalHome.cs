@@ -30,13 +30,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
         {
             //Logger Enrty
             Logger.LogMethodEntry("GlobalHome", "ClickOnUpgradeAvailableLinkOfTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Instance of HEDGlobalHomePage
             //Click on Upgrade Available Link of TestBank
             new HEDGlobalHomePage().ClickOnUpgradeAvailableOfTestBank(courseTypeEnum);
             //Logger Exit 
             Logger.LogMethodExit("GlobalHome", "ClickOnUpgradeAvailableLinkOfTheCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
         {
             //Logger Enrty
             Logger.LogMethodEntry("GlobalHome", "VerifyTheCheckBoxStateOnUpgradePopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Instance of HEDGlobalHomePage
             HEDGlobalHomePage hedGlobalHomePage = new HEDGlobalHomePage();
             //Assert the checkbox is enable on Upgrade Popup
@@ -60,7 +60,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
             hedGlobalHomePage.CloseUpgradePopupWindow();
             //Logger Exit 
             Logger.LogMethodExit("GlobalHome", "VerifyTheCheckBoxStateOnUpgradePopup",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
         }
 

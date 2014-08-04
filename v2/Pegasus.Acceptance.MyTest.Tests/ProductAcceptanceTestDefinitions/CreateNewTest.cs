@@ -36,7 +36,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Logger entry
             Logger.LogMethodEntry("CreateNewTest", "CreateMyTestActivityUsingQuestion",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Create New Test
             new MyTestGridUXPage().ClickOnLinkToSelect();
             //Created Page Class Object
@@ -57,7 +57,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             paperTestUXPage.SaveTheMyTestActivity();
             //Logger exit
             Logger.LogMethodExit("CreateNewTest", "CreateMyTestActivityUsingQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -70,12 +70,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Logger entry
             Logger.LogMethodEntry("CreateNewTest", "ClickCMenuOptionInTheMyTestActivity",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Click on cmenu option
             new MyTestGridUXPage().ClickMyTestCMenuOption(cMenuOptionName);
             //Logger exit
             Logger.LogMethodExit("CreateNewTest", "ClickCMenuOptionInTheMyTestActivity",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -90,14 +90,14 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger entry
             Logger.LogMethodEntry("CreateNewTest",
                 "ClickCMenuOptionInTheMyTestActivityInCourseSpace",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Click on cmenu option in CourseSpace
             new MyTestGridUXPage().ClickMyTestCMenuOptionInCourseSpace
                 (cMenuOptionName, activityTypeEnum);
             //Logger exit
             Logger.LogMethodExit("CreateNewTest",
                 "ClickCMenuOptionInTheMyTestActivityInCourseSpace",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -110,12 +110,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Logger entry
             Logger.LogMethodEntry("CreateNewTest", "ClickOnLinkInTheManageYourTestFrame",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Select Create Question
             new PaperTestUXPage().SelectCreateQuestion(questionTypeEnum);
             //Logger exit
             Logger.LogMethodExit("CreateNewTest", "ClickOnLinkInTheManageYourTestFrame",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -126,14 +126,14 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Logger entry
             Logger.LogMethodEntry("CreateNewTest", "SelectMultipleFromQuestionBank",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Create question group
             new QuestionSectionUXPage().CreateQuestionGroup();
             //Click on save button
             new QuestionSectionUXPage().ClickOnSaveAndCloseButton();
             //Logger exit
             Logger.LogMethodExit("CreateNewTest", "SelectMultipleFromQuestionBank",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -145,13 +145,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger entry
             Logger.LogMethodEntry("CreateNewTest",
                 "ClickOnSaveButtonInActionRowOfManageYourTestFrame",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Save The MyTest Activity
             new PaperTestUXPage().SaveTheMyTestActivity();
             //Logger exit
             Logger.LogMethodExit("CreateNewTest",
                 "ClickOnSaveButtonInActionRowOfManageYourTestFrame",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -163,13 +163,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger entry
             Logger.LogMethodEntry("CreateNewTest",
                 "ClickOnCloseButtonInActionRowOfManageYourTestFrame",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             //Close The MyTest Activity
             new PaperTestUXPage().CloseTheMyTestActivity();
             //Logger exit
             Logger.LogMethodExit("CreateNewTest",
                 "ClickOnCloseButtonInActionRowOfManageYourTestFrame",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger entry
             Logger.LogMethodEntry("CreateNewTest",
                 "EnterNumberInTheNumberOfRandomQuestionsToAdd",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             PaperTestUXPage paperTextpageObject = new PaperTestUXPage();
             //Enter Random number to add question in My test
             paperTextpageObject.EnterRandomNumberToAddQuestion(
@@ -196,7 +196,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger exit
             Logger.LogMethodExit("CreateNewTest",
                 "EnterNumberInTheNumberOfRandomQuestionsToAdd",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -208,13 +208,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Logger entry
             Logger.LogMethodEntry("CreateNewTest",
-                "AddRandomQuestionToMyTest", base.isTakeScreenShotDuringEntryExit);
+                "AddRandomQuestionToMyTest", base.IsTakeScreenShotDuringEntryExit);
             //Add random question to My test
             new PaperTestUXPage().EnterRandomNumberToAddQuestion(
                 questionNumber);
             //Logger exit
             Logger.LogMethodExit("CreateNewTest",
-                "AddRandomQuestionToMyTest", base.isTakeScreenShotDuringEntryExit);
+                "AddRandomQuestionToMyTest", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -225,11 +225,11 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Click On Ok Button in Confirmation Popup 
             Logger.LogMethodEntry("CreateNewTest", "ClickOkButtonInConfirmationPopup",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Click the OK button
             new MyTestGridUXPage().ClickTheOkButtonInConfirmationPopup();
             Logger.LogMethodExit("CreateNewTest", "ClickOkButtonInConfirmationPopup",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -241,11 +241,11 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Click On Ok Button in Confirmation Popup 
             Logger.LogMethodEntry("CreateNewTest", "ClickOnExpandButtonInFiltertestBank",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Click On Expand Button In FiltertestBank
             new PaperTestUXPage().ClickOnExpandButtonInFilterTestBank(myQuestionFolder);
             Logger.LogMethodExit("CreateNewTest", "ClickOnExpandButtonInFiltertestBank",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -257,13 +257,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Select The Question To DragAndDrop In MyTest
             Logger.LogMethodEntry("CreateNewTest", "SelectTheQuestionToDragAndDropInMyTest",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Question question = Question.Get(questionType);
             // Select the question to Drag and drop in Mytest
             new PaperTestUXPage().SelectTheQuestionToDragAndDropToMyTest(question.Name);
             Logger.LogMethodExit("CreateNewTest", "SelectTheQuestionToDragAndDropInMyTest",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -275,11 +275,11 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Click On Pegasus OK Button In MyTest
             Logger.LogMethodEntry("CreateNewTest", "ClickOnPegasusOKButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Handle The Validate popup window
             new PaperTestUXPage().HandlePopupWindowOnMyTest(popupWindowName);
             Logger.LogMethodExit("CreateNewTest", "ClickOnPegasusOKButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -291,14 +291,14 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Successfull Message In Pegasus Popup
             Logger.LogMethodEntry("CreateNewTest", "VerifyConfirmationMessageInPegasusPopup",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert Display of Confirmation Message
             Logger.LogAssertion("VerifyConfirmationMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(confirmationMessage,
                     new PaperTestUXPage().GetConfirmationMessageInPegasusPopup()));
             Logger.LogMethodExit("CreateNewTest", "VerifyConfirmationMessageInPegasusPopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -310,7 +310,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Verify The Question In Mytest
             Logger.LogMethodEntry("CreateNewTest", "VerifyTheQuestionInMytest",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Question question = Question.Get(questionType);
             //Asserts the Question Name
@@ -320,7 +320,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                     new PaperTestUXPage().
                     GetQuestionNameInMyTest(question.Name)));
             Logger.LogMethodExit("CreateNewTest", "VerifyTheQuestionInMytest",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -332,7 +332,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Verify The Display Of Header Options In Manage Your Test
             Logger.LogMethodEntry("CreateNewTest",
                 "VerifyTheDisplayOfHeaderOptionsInManageYourTest",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Assert Display of Header Options In Manage Your Test
             Logger.LogAssertion("VerifyDisplayOptionsInManageYourTest",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -342,7 +342,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                     GetDisplayOfHeaderOptionsInManageYourTest()));
             Logger.LogMethodExit("CreateNewTest",
                 "VerifyTheDisplayOfHeaderOptionsInManageYourTest",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -355,7 +355,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Verify The Question In Manage Your Test
             Logger.LogMethodEntry("CreateNewTest", "VerifyTheQuestionInManageYourTest",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Question question = Question.Get(questionType);
             //Asserts the Question Name
@@ -365,7 +365,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                     new PaperTestUXPage().
                     getTheQuestionInManageYourTest(question.Name)));
             Logger.LogMethodExit("CreateNewTest", "VerifyTheQuestionInManageYourTest",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -380,7 +380,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Verify The Order Of MyTest Folder
             Logger.LogMethodEntry("CreateNewTest",
                "VerifyTheMyTestFolderInCourseMaterialsLibrary",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Asserts the Folder Name
             Logger.LogAssertion("VerifyFolderName",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -395,7 +395,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                     GetMyTestFolderpositionInContentLibrary(myTestFolderName))));
             Logger.LogMethodExit("CreateNewTest",
                 "VerifyTheMyTestFolderInCourseMaterialsLibrary",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -407,13 +407,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Entry
             Logger.LogMethodExit("CreateNewTest",
                 "ClickOnUpgradeToLinkInsideCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Instance of MyTestUXPage.
             new MyTestUXPage().ClickOnUpgradeToTextInsideCourse();
             //Logger Exit
             Logger.LogMethodExit("CreateNewTest",
                "ClickOnUpgradeToLinkInsideCourse",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -425,13 +425,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Entry
             Logger.LogMethodEntry("CreateNewTest",
                 "ClickOnButtonInSideTest",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Click on View All tests button 
             new PaperTestUXPage().ClickOnViewAllTestButtonInsideTest();
             //Logger Exit
             Logger.LogMethodExit("CreateNewTest",
                 "ClickOnButtonInSideTest",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -443,7 +443,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Entry
             Logger.LogMethodEntry("CreateNewTest",
                 "ClickOnButtonInSideTest",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Validate the display of View All Tests button 
             Logger.LogAssertion("VerifyManageTestYourButton",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -452,7 +452,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Exit
             Logger.LogMethodExit("CreateNewTest",
                 "ClickOnButtonInSideTest",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -465,7 +465,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Entry
             Logger.LogMethodEntry("CreateNewTest",
                 "IsButtonDisplaying",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Validate the display of button inside MyTest activity 
             Logger.LogAssertion("VerifyManageTestYourButton",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -474,7 +474,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Exit
             Logger.LogMethodExit("CreateNewTest",
                 "IsButtonDisplaying",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -486,12 +486,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Click On Download Options
             Logger.LogMethodEntry("CreateNewTest",
                 "ClickOnDownloadOptions",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Click The Download Option In ManageYourTest
             new PaperTestUXPage().ClickTheDownloadOptionInManageYourTest();
             Logger.LogMethodExit("CreateNewTest",
                 "ClickOnDownloadOptions",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -505,13 +505,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Click On Image CMenu Option From Test DropDown
             Logger.LogMethodEntry("CreateNewTest",
                 "ClickOnImageCMenuOptionFromTestDropDown",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click The Image Cmenu Option From Test DropDown
             new MyTestGridUXPage().ClickTheImageCmenuOptionFromTestDropDown
                 (activityTypeEnum);
             Logger.LogMethodExit("CreateNewTest",
                 "ClickOnImageCMenuOptionFromTestDropDown",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -524,7 +524,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Verify The Display Of Download CmenuOptions For Test
             Logger.LogMethodEntry("CreateNewTest",
                  "VerifyTheDisplayOfDownloadCmenuOptionsForTest",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             foreach (TableRow tableRow in table.Rows)
             {
                 //Assert correct pages are opened
@@ -539,7 +539,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             }
             Logger.LogMethodExit("CreateNewTest",
                 "VerifyTheDisplayOfDownloadCmenuOptionsForTest",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -552,7 +552,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Verify The Display Of CmenuOptions For Created Test
             Logger.LogMethodEntry("CreateNewTest",
                  "VerifyTheDisplayOfCmenuOptionsForCreatedTest",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             foreach (TableRow tableRow in table.Rows)
             {
                 //Assert correct pages are opened
@@ -568,7 +568,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Exit
             Logger.LogMethodExit("CreateNewTest",
                 "VerifyTheDisplayOfCmenuOptionsForCreatedTest",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -581,7 +581,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Entry 
             Logger.LogMethodEntry("CreateNewTest",
                 "ValidateMyTestValidationMessage",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Validate Message 
             Logger.LogAssertion("ValidateMyTestValidationMessage", ScenarioContext.
                     Current.ScenarioInfo.Title,
@@ -591,7 +591,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //logger Exit
             Logger.LogMethodExit("CreateNewTest",
                 "ValidateMyTestValidationMessage",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -604,7 +604,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Entry 
             Logger.LogMethodEntry("CreateNewTest",
                 "CreateMultipleVersions",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Create Page Class Object
             PrintToolPage printToolPage = new PrintToolPage();
             //Create Multiple Version
@@ -614,7 +614,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Exit 
             Logger.LogMethodExit("CreateNewTest",
                 "CreateMultipleVersions",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -627,7 +627,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Entry 
             Logger.LogMethodEntry("CreateNewTest",
                 "VerifyVersionsEnteredInThePrintPopUp",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             //Validate Message 
             Logger.LogAssertion("ValidateMyTestValidationMessage", ScenarioContext.
                 Current.ScenarioInfo.Title,
@@ -636,7 +636,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Exit
             Logger.LogMethodExit("CreateNewTest",
                 "VerifyVersionsEnteredInThePrintPopUp",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -650,7 +650,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Entry 
             Logger.LogMethodEntry("CreateNewTest",
                 "VerifyVersionsEnteredInThePrintPopUp",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityTypeEnum);
             //Validate Message 
             Logger.LogAssertion("ValidateMyTestValidationMessage", ScenarioContext.
@@ -662,7 +662,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Logger Exit
             Logger.LogMethodExit("CreateNewTest",
                 "VerifyVersionsEnteredInThePrintPopUp",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

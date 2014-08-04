@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Message
             logger.LogMethodEntry("IndexPage", "GetSuccessfullMessageAfterCourseIntegration",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             string getMessage = string.Empty;
             try
@@ -47,7 +47,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                 
             }
             logger.LogMethodExit("IndexPage", "GetSuccessfullMessageAfterCourseIntegration",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             return getMessage;
         }
 

@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Edit and Update Schema
             logger.LogMethodEntry("GBSchemaCreatEditPage", "EditAndUpdateSchema",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Update Schema Window
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("GBSchemaCreatEditPage", "EditAndUpdateSchema",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Feedback For Grade ValueG
             logger.LogMethodEntry("GBSchemaCreatEditPage", "EnterFeedbackForGradeValueG",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_FeedbackValue_Xpath_Locator));
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
                 GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_Feedback_Value);
             logger.LogMethodExit("GBSchemaCreatEditPage", "EnterFeedbackForGradeValueG",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Edit and Update Schema
             logger.LogMethodEntry("GBSchemaCreatEditPage", "EditAndUpdateSchema",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeValue_Id_Locator));
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
                 GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_Grade_Value);
             logger.LogMethodExit("GBSchemaCreatEditPage", "EditAndUpdateSchema",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -108,14 +108,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Update Schema Window
             logger.LogMethodEntry("GBSchemaCreatEditPage", "SelectUpdateSchemaWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(GBSchemaCreatEditPageResource.
                 GBSchemaCreatEdit_Page_UpdateSchema_Window_Name);
             //Select Update Schema Window
             base.SelectWindow(GBSchemaCreatEditPageResource.
                 GBSchemaCreatEdit_Page_UpdateSchema_Window_Name);
             logger.LogMethodExit("GBSchemaCreatEditPage", "SelectUpdateSchemaWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Grade Option
             logger.LogMethodEntry("GBSchemaCreatEditPage", "ClickOnAddGradeOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_AddGrade_Button_Id_Locator));
             //Get Add Grade Button Property
@@ -134,7 +134,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Add Grade Button
             base.ClickByJavaScriptExecutor(getAddGradeButtonProperty);
             logger.LogMethodExit("GBSchemaCreatEditPage", "ClickOnAddGradeOption",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Update To Score Value for Grade B
             logger.LogMethodEntry("GBSchemaCreatEditPage", "UpdateScoreToValueofGradeB",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeB_ToScore_Id_Locator));
             base.ClearTextById(GBSchemaCreatEditPageResource.
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
                 GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeB_ToScore_Value);
             logger.LogMethodExit("GBSchemaCreatEditPage", "UpdateScoreToValueofGradeB",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Grade Value G
             logger.LogMethodEntry("GBSchemaCreatEditPage", "EnterGradeValueG",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_Grade_Id_Locator));
@@ -176,7 +176,7 @@ namespace Pegasus.Pages.UI_Pages
                 GBSchemaCreateEdit_Page_Input_Grade_Id_Locator, GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_Grade_Value);
             logger.LogMethodExit("GBSchemaCreatEditPage", "EnterGradeValueG",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -187,7 +187,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Score From Value For Grade G
             logger.LogMethodEntry("GBSchemaCreatEditPage", "EnterScoreFromValueForGradeG",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_FromScore_Id_Locator));
@@ -199,7 +199,7 @@ namespace Pegasus.Pages.UI_Pages
                 GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_FromScore_Value);
             logger.LogMethodExit("GBSchemaCreatEditPage", "EnterScoreFromValueForGradeG",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnterScoreToValueForGradeG()
         {
             logger.LogMethodEntry("GBSchemaCreatEditPage", "EnterScoreToValueForGradeG",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GrabeG_ToScore_Id_Locator));
@@ -220,7 +220,7 @@ namespace Pegasus.Pages.UI_Pages
                 GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_ToScore_Value);
             logger.LogMethodExit("GBSchemaCreatEditPage", "EnterScoreToValueForGradeG",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Feedback for Grade G
             logger.LogMethodEntry("GBSchemaCreatEditPage", "EnterFeedbackForGradeG",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_Feedback_Id_Locator));
@@ -242,7 +242,7 @@ namespace Pegasus.Pages.UI_Pages
                 GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Input_GradeG_Feedback_Value);
             logger.LogMethodExit("GBSchemaCreatEditPage", "EnterFeedbackForGradeG",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Save and Close Button
             logger.LogMethodEntry("GBSchemaCreatEditPage", "ClickOnSaveAndCloseButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(GBSchemaCreatEditPageResource.
                 GBSchemaCreateEdit_Page_Button_SaveAndClose_Id_Locator));
             //Get Save and Close Button Property
@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save and Close Button
             base.ClickByJavaScriptExecutor(getSaveAndCloseButton);
             logger.LogMethodExit("GBSchemaCreatEditPage", "ClickOnSaveAndCloseButton",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -273,7 +273,7 @@ namespace Pegasus.Pages.UI_Pages
             //Edit and Update Schema
             logger.LogMethodEntry("GBSchemaCreatEditPage",
                 "EditAndUpdateTheApplyGradeSchema",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Update Schema Window
             this.SelectUpdateSchemaWindow();
             //Click On Add Grade Option
@@ -292,7 +292,7 @@ namespace Pegasus.Pages.UI_Pages
             this.ClickOnSaveAndCloseButton();
             logger.LogMethodExit("GBSchemaCreatEditPage",
                 "EditAndUpdateTheApplyGradeSchema",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click on Enrollment Mode Option Menu
             Logger.LogMethodEntry("AdminToolPage", "ClickEnrollmentModeOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch To Default Window
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "ClickEnrollmentModeOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
         public void UserSearch(String username)
         {
             Logger.LogMethodEntry("AdminToolPage", "UserSearch",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // To click New Search link
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "UserSearch",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
         public void EnrollUserInCourse(User.UserTypeEnum userTypeEnum)
         {
             Logger.LogMethodEntry("AdminToolPage", "EnrollUserAsTeacher",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Switch to users to enroll in the course
@@ -127,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "EnrollUserAsTeacher",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enroll User as Instructor
             Logger.LogMethodEntry("AdminToolPage", "EnrollUserAsInstructor",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click enroll button
             new EnrollmentPage().ClickEnrollButton();
             base.SwitchToDefaultWindow();
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
                 AdminTool_Page_AddAsInstructor_Id_Locator);
             base.ClickByJavaScriptExecutor(getInstructorLink);
             Logger.LogMethodExit("AdminToolPage", "EnrollUserAsInstructor",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enroll User as Student
             Logger.LogMethodEntry("AdminToolPage", "EnrollUserAsStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click enroll button
             new EnrollmentPage().ClickEnrollButton();
             base.SwitchToDefaultWindow();
@@ -173,7 +173,7 @@ namespace Pegasus.Pages.UI_Pages
                 AdminTool_Page_AddAsStudent_Id_Locator);
             base.ClickByJavaScriptExecutor(getStudentLink);
             Logger.LogMethodExit("AdminToolPage", "EnrollUserAsStudent",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate To Manage Programs Page
             Logger.LogMethodEntry("AdminToolPage", "NavigateToManageProgramsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window
@@ -215,7 +215,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "NavigateToManageProgramsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Handling To Organization management Page
             Logger.LogMethodEntry("AdminToolPage", "NavigateOrganizationManagementPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "NavigateOrganizationManagementPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -266,7 +266,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate To Organization Admin Tab
             Logger.LogMethodEntry("AdminToolPage", "NavigateToOrganizationAdminTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window
             base.WaitUntilWindowLoads(AdminToolPageResource.
                 AdminTool_Page_CourseEnrollment_Window_Title_Name);
@@ -285,7 +285,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(AdminToolPageResource.
                 AdminTool_Page_OrganizationManagementWindow_Name_Locator);
             Logger.LogMethodExit("AdminToolPage", "NavigateToOrganizationAdminTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Handling To Navigate Manage Products Page
             Logger.LogMethodEntry("AdminToolPage", "NavigateManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window
@@ -327,7 +327,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "NavigateManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -340,7 +340,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate To Sub Tab
             Logger.LogMethodEntry("AdminToolPage", "NavigateToSubTabOfPublishingTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window
             base.WaitUntilWindowLoads(AdminToolPageResource.
                 AdminTool_Page_CourseEnrollment_Window_Title_Name);
@@ -364,7 +364,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Window
             base.SelectWindow(pageName);
             Logger.LogMethodExit("AdminToolPage", "NavigateToSubTabOfPublishingTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -374,7 +374,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Selecting MyProfile Link
             Logger.LogMethodEntry("AdminToolPage", "ClickMyProfileLinkByWSAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window
@@ -400,7 +400,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "ClickMyProfileLinkByWSAdmin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -411,7 +411,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Complete SingOut Process
             Logger.LogMethodEntry("LoginPage", "SignOutByPegasusUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Base Page
@@ -427,7 +427,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LoginPage", "SignOutByPegasusUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -438,7 +438,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Complete SingOut Process
             Logger.LogMethodEntry("AdminToolPage", "SignOutByHigherEdUsers",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Default Window           
@@ -456,7 +456,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "SignOutByHigherEdUsers",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -466,7 +466,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Organization Admin Tab
             Logger.LogMethodEntry("AdminToolPage", "ClickOnOrganizationAdminTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select Course Enrollment window 
@@ -486,7 +486,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "ClickOnOrganizationAdminTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -498,7 +498,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click the Create New Workspace Link
             Logger.LogMethodEntry("AdminToolPage", "ClickTheCreateNewWorkspaceLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (adminWorkspaceEnum)
@@ -527,7 +527,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "ClickTheCreateNewWorkspaceLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -537,7 +537,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Workspace Frame
             Logger.LogMethodEntry("AdminToolPage", "SelectWorkspaceFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the window name
@@ -554,7 +554,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "SelectWorkspaceFrame",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -565,7 +565,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Display Of Default Tabs For CTG Publisher Admin
             Logger.LogMethodEntry("AdminToolPage", "IsDefaultTabsDisplayedForCtgPublisherAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             bool isDefaultTabsPresent = false;
             try
@@ -587,7 +587,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "IsDefaultTabsDisplayedForCtgPublisherAdmin",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isDefaultTabsPresent;
         }
 
@@ -602,7 +602,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search Created Workspace
             Logger.LogMethodEntry("AdminToolPage", "SearchCreatedWorkspace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Intialize the workspace
             string getWorkspaceName = workspaceName.Substring(
                 Convert.ToInt32(AdminToolPageResource.AdminTool_Page_Substring_Value),
@@ -638,7 +638,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "SearchCreatedWorkspace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -652,7 +652,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Row of Workspace Name
             Logger.LogMethodEntry("AdminToolPage", "SelectRowOfWorkspaceName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get the table row count 
             int count = GetElementCountByXPath(AdminToolPageResource.
                 AdminTool_Page_Workspace_Table_RowCount_Xpath_Locator);
@@ -683,7 +683,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("AdminToolPage", "SelectRowOfWorkspaceName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -694,7 +694,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Checkbox For Delete Workspace
             Logger.LogMethodEntry("AdminToolPage", "SelectCheckboxForDeleteWorkspace",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.XPath(string.Format(AdminToolPageResource.
                 AdminTool_Page_Workspaces_Delete_Checkbox_Xpath_Locator, 
@@ -712,7 +712,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the checkbox
             base.ClickByJavaScriptExecutor(getCheckbox);
             Logger.LogMethodExit("AdminToolPage", "SelectCheckboxForDeleteWorkspace",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -722,7 +722,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Delete Link In CTGPublisher Admin
             Logger.LogMethodEntry("AdminToolPage", "ClickOnDeleteLinkInCtgPublisherAdmin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the element
@@ -750,7 +750,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "ClickOnDeleteLinkInCtgPublisherAdmin",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -761,7 +761,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Cmenu Option 
             Logger.LogMethodEntry("AdminToolPage", "ClickTheImageCmenuOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Focus on the row
             base.FocusOnElementByXPath(string.Format(AdminToolPageResource.
               AdminTool_Page_Workspace_Table_Row_Img_Xpath_Locator, workspaceRowNumber));
@@ -774,7 +774,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click the cmenu
             base.ClickByJavaScriptExecutor(getImgOption);
             Logger.LogMethodExit("AdminToolPage", "ClickTheImageCmenuOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -785,7 +785,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Verify The Displayed Of Cmenu Options  
             Logger.LogMethodEntry("AdminToolPage", "VerifyTheDisplayedOfCmenuOptions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             bool isCmenuOptionsDisplayed = false;
             try
             {
@@ -808,7 +808,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "VerifyTheDisplayedOfCmenuOptions",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return isCmenuOptionsDisplayed;
         }
 
@@ -819,7 +819,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Edit Workspace info CmenuOption
             Logger.LogMethodEntry("AdminToolPage", "ClickEditWorkspaceinfoCmenuOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the elemnet
@@ -836,7 +836,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "ClickEditWorkspaceinfoCmenuOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -847,7 +847,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search User In Administrators Page
             Logger.LogMethodEntry("AdminToolPage", "SearchUserInAdministratorsPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Search the User
@@ -858,7 +858,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "SearchUserInAdministratorsPage",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -868,7 +868,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate Administrator Tool Page
             Logger.LogMethodEntry("AdminToolPage", "NavigateAdministratorToolPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Parent Window
@@ -894,7 +894,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AdminToolPage", "NavigateAdministratorToolPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -904,7 +904,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate To Administrators Tab
             Logger.LogMethodEntry("AdminToolPage", "NavigateToAdministratorsTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.SelectDefaultWindow();
             // Navigating To Administrators tab
             base.WaitForElement(By.PartialLinkText(AdminToolPageResource.
@@ -918,7 +918,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(AdminToolPageResource.
                 AdminTool_Page_AdministratorToolWindow_Name_Locator);
             Logger.LogMethodExit("AdminToolPage", "NavigateToAdministratorsTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

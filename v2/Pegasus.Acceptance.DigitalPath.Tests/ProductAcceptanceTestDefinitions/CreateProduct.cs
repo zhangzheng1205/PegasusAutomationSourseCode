@@ -35,13 +35,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Creation of DP Product
             Logger.LogMethodEntry("CreateProduct", "CreateProductUsingProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Create new Product Link
             new ManageProductsPage().ClickOnCreateNewProductLink();
             //Create DP Product
             new NewProductPage().CreateNewProduct(productTypeEnum, programTypeEnum);
             Logger.LogMethodExit("VerifyCreateNewProduct", "CreateProductUsingProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -53,11 +53,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Manage to navigate  Products Page
             Logger.LogMethodEntry("CreateProduct", "NavigateToManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Navigate to Manage Products Page
             new AdminToolPage().NavigateManageProductsPage();
             Logger.LogMethodExit("CreateProduct", "NavigateToManageProductsPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,11 +68,11 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Disable Course In Product
             Logger.LogMethodEntry("CreateProduct", "DisableCourseInProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enable Hide In Catalog Preference
             new CourseEnrollmentModePage().EnableHideInCatalogPreference();            
             Logger.LogMethodExit("CreateProduct", "DisableCourseInProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -86,14 +86,14 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Select Course Cmenu
             Logger.LogMethodEntry("CreateProduct", "SelectCmenuOfCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Select Course Cmenu
             new ProductCoursesPage().
                 SelectCourseContextualMenuOptionInProduct(course.Name, courseCmenuOption);
             Logger.LogMethodExit("CreateProduct", "SelectCmenuOfCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             
         }
 
@@ -108,7 +108,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Verify The Course State
             Logger.LogMethodEntry("CreateProduct", "VerifyTheCourseState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Asserts the Course Status
@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(courseState,
                     new ProductCoursesPage().GetCourseState(course.Name)));
             Logger.LogMethodExit("CreateProduct", "VerifyTheCourseState",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -128,12 +128,12 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Click The Product Cmenu Option
             Logger.LogMethodEntry("CreateProduct",
                 "ClickTheProductCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click The Product Cmenu Option
             new ProductCoursesPage().ClickTheProductCmenuOption();
             Logger.LogMethodExit("CreateProduct", 
                 "ClickTheProductCmenuOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Search Product In Right Frame
             Logger.LogMethodEntry("CreateProduct",
                 "SearchProductInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Product FromMemory
             Product product = Product.Get(productTypeEnum);
             //Click Search Product Link
@@ -157,7 +157,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
                 EnterProductNameandClickonSearchButton(product.Name);
             Logger.LogMethodExit("CreateProduct",
                 "SearchProductInRightFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Verify The Display Of CMenu Options For Product.
             Logger.LogMethodEntry("CreateProduct",
                  "VerifyTheDisplayOfCMenuOptionsForProduct",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             foreach (var tableRow in table.Rows)
             {
                 //Assert Display of Activity Cmenu Options
@@ -184,7 +184,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             }
             Logger.LogMethodExit("CreateProduct",
                 "VerifyTheDisplayOfCMenuOptionsForProduct",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

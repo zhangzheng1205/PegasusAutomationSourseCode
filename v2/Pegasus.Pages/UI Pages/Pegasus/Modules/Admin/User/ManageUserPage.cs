@@ -60,7 +60,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Clicks on the Sub Tab
             logger.LogMethodEntry("ManageUserPage", "NavigateToSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (tabNameEnum)
@@ -84,7 +84,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUserPage", "NavigateToSubTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the User Tab
             logger.LogMethodEntry("ManageUserPage", "ClickOnUsersTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Manage Organization Window
@@ -125,7 +125,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUserPage", "ClickOnUsersTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the Add Users/Create Users Link
             logger.LogMethodEntry("ManageUserPage", "ClickOnAddCreateUsersLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (tabNameEnum)
@@ -167,7 +167,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             //Click on the Add Users Link
             logger.LogMethodExit("ManageUserPage", "ClickOnAddCreateUsersLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the Add Users Link
             logger.LogMethodEntry("ManageUserPage", "ClickOnTheAddUsersLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Manage Organization Window
             new ManageOrganisationToolBarPage().SelectManageOrganizationWindow();
             //Switch toFrame
@@ -190,7 +190,7 @@ namespace Pegasus.Pages.UI_Pages
                 ManageUser_Page_AddUsers_Link_Id_Locator);
             base.ClickByJavaScriptExecutor(getAddUserLink);
             logger.LogMethodExit("ManageUserPage", "ClickOnTheAddUsersLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select the User type
             logger.LogMethodEntry("ManageUserPage", "SelectUserType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Selects the type of user to create
@@ -241,7 +241,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUserPage", "SelectUserType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the Student option
             logger.LogMethodEntry("ManageUserPage", "ClickOnStudentOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Check if the student option is present
             if (base.IsElementPresent(By.Id(ManageUserPageResource.
                 ManageUser_Page_AddUsers_Student_Option_Id_Locator),
@@ -270,7 +270,7 @@ namespace Pegasus.Pages.UI_Pages
                     OrgAdminUserEnrollment_Page_CreateUsers_Student_Option_Id_Locator);
             }
             logger.LogMethodExit("ManageUserPage", "ClickOnStudentOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -283,7 +283,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search User
             logger.LogMethodEntry("ManageUserPage", "SearchUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (tabNameEnum)
@@ -311,7 +311,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUserPage", "SearchUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -322,7 +322,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search the User
             logger.LogMethodEntry("ManageUserPage", "SearchUserInUsersTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Manage Organization window
             new ManageOrganisationToolBarPage().SelectManageOrganizationWindow();
             //Switch to the Frame
@@ -343,7 +343,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the Search button
             base.ClickByJavaScriptExecutor(getSearctLink);
             logger.LogMethodExit("ManageUserPage", "SearchUserInUsersTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -355,7 +355,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Searched User name
             logger.LogMethodEntry("ManageUserPage", "GetSearchedUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable getUserName
             string getUserName = string.Empty;
             try
@@ -382,7 +382,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUserPage", "GetSearchedUserInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
 
@@ -394,7 +394,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Searched User name
             logger.LogMethodEntry("ManageUserPage", "GetSearchedUserInUsersTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Manage Organization window
             new ManageOrganisationToolBarPage().SelectManageOrganizationWindow();
             //Switch to the Frame
@@ -406,7 +406,7 @@ namespace Pegasus.Pages.UI_Pages
             string getUserName = base.GetTitleAttributeValueByXPath(ManageUserPageResource.
                 ManageUser_Page_Searched_Username_Xpath_Locator);
             logger.LogMethodExit("ManageUserPage", "GetSearchedUserInUsersTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getUserName;
         }
 
@@ -417,7 +417,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Bulk User upload
             logger.LogMethodEntry("ManageUserPage", "BulkUserUpload"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Element
@@ -442,7 +442,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUserPage", "BulkUserUpload"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -453,7 +453,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait For Successfull Message To Display For Bulk Registration
             logger.LogMethodEntry("ManageUserPage",
                 "WaitForSuccessfullMessageToDisplayForBulkRegistration"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Select Manage Organization Window
             new ManageOrganisationToolBarPage().SelectManageOrganizationWindow();
             //Start the StopWatch
@@ -488,7 +488,7 @@ namespace Pegasus.Pages.UI_Pages
                 (stopWatch.Elapsed.TotalMinutes < getMinutesToWait));
             logger.LogMethodExit("ManageUserPage",
                 "WaitForSuccessfullMessageToDisplayForBulkRegistration"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -499,7 +499,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Successfull Message After Bulk Registration of Users
             logger.LogMethodEntry("ManageUserPage", "GetSuccessfullMessageAfterBulkRegistration"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable getSuccessfulMessage
             string getSuccessfulMessage = string.Empty;
             try
@@ -515,7 +515,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUserPage", "GetSuccessfullMessageAfterBulkRegistration"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             return getSuccessfulMessage;
         }
 
@@ -527,7 +527,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select User Type In Manage Student Page
             logger.LogMethodEntry("ManageUserPage", "SelectUserTypeInManageStudentPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Selects the type of user to create
@@ -569,7 +569,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageUserPage", "SelectUserTypeInManageStudentPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -581,7 +581,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Message
             logger.LogMethodEntry("ManageUsersPage", "GetMessage"
-            , base.isTakeScreenShotDuringEntryExit);
+            , base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             string getMessage = string.Empty;
             try
@@ -605,7 +605,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("ManageUsersPage", "GetMessage"
-            , base.isTakeScreenShotDuringEntryExit);
+            , base.IsTakeScreenShotDuringEntryExit);
             return getMessage;
         }
     }

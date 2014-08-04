@@ -99,6 +99,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Property application download file path.
+        /// </summary>
+        public static string DownloadFilePath
+        {
+            get
+            {
+                return Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_DOWNLOAD_PATH_Key)
+                    ?? Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\..\\..\\..\\Pegasus.Pages";
+            }
+        }
+
+        /// <summary>
         /// Property SMS admin url root.
         /// </summary> 
         public static string SmsAdminUrlRoot

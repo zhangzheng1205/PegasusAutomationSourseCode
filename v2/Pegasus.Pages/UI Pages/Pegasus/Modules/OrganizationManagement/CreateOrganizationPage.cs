@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages
             //Create Organization Based On Level of Organization
             Logger.LogMethodEntry("CreateOrganizationPage",
                 "CreateOrganizationInProductBasedOnLevel",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Guid for Organization Name
             Guid organizationNameGuid = Guid.NewGuid();
             try
@@ -121,7 +121,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CreateOrganizationPage",
                 "CreateOrganizationInProductBasedOnLevel",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             ///Create School Level Organization
             Logger.LogMethodEntry("CreateOrganizationPage", "CreateSchoolLevelOrganization",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             if (organizationTypeEnum != Organization.OrganizationTypeEnum.DigitalPathDemo)
             {
                 //Select Organization Management Window
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages
                     organizationLevelEnum, organizationTypeEnum);
             }
             Logger.LogMethodExit("CreateOrganizationPage", "CreateSchoolLevelOrganization",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace Pegasus.Pages.UI_Pages
             //Remove State Region and District Level Organization
             Logger.LogMethodEntry("CreateOrganizationPage",
                 "RemoveStateRegionandDistrictLevelOrganization",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(CreateOrganizationPageResource.
                 CreateOrganization_Page_State_Organization_Checkbox_Xpath_Locator));
             //Select State Level Organization
@@ -214,7 +214,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getRemoveButton);
             Logger.LogMethodExit("CreateOrganizationPage",
                 "RemoveStateRegionandDistrictLevelOrganization",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace Pegasus.Pages.UI_Pages
             //Log Method Entry
             Logger.LogMethodEntry("CreateOrganizationPage",
               "SelectOrganizationManagementWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window
             base.WaitUntilPageGetSwitchedSuccessfully(CreateOrganizationPageResource.
                 CreateOrganization_Page_OrganizationManagement_Window_Name);
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
             //Log Method Exists
             Logger.LogMethodExit("CreateOrganizationPage",
               "SelectOrganizationManagementWindow",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Root Level Organization and Create Organization
             Logger.LogMethodEntry("CreateOrganizationPage", "SelectAndCreateOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Select Button Of Organization
             new OrganizationManagementPage().ClickOnTheOrganizationSelectButton();
             //Click on Add Organization Link 
@@ -260,7 +260,7 @@ namespace Pegasus.Pages.UI_Pages
             this.CreateNewOrganizationForDifferentLevels(
                 organizationLevelEnum, organizationTypeEnum);
             Logger.LogMethodExit("CreateOrganizationPage", "SelectAndCreateOrganization",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create School Level Organization
             Logger.LogMethodEntry("CreateOrganizationPage", "CreateSchoolLevelOrganization",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Intialize Guid for organization
             Guid organizationNameGuid = Guid.NewGuid();
             //Enter Organization Name
@@ -298,7 +298,7 @@ namespace Pegasus.Pages.UI_Pages
                     organizationLevelEnum, organizationTypeEnum);
             }
             Logger.LogMethodExit("CreateOrganizationPage", "CreateSchoolLevelOrganization",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -308,7 +308,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnterOrganizationName(Guid organizationNameGuid)
         {
             Logger.LogMethodEntry("CreateOrganizationPage", "EnterOrganizationName",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Internal Organization text box element to display
             base.WaitForElement(By.Id(CreateOrganizationPageResource.
              CreateOrganization_Page_InternalOrganizationName_TextBox_Id_Locator));
@@ -327,7 +327,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FocusOnElementById(CreateOrganizationPageResource.
              CreateOrganization_Page_OrganizationdisplayName_TextBox_Id_Locator);
             Logger.LogMethodExit("CreateOrganizationPage", "EnterOrganizationName",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -337,7 +337,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select School Level Organization
             Logger.LogMethodEntry("CreateOrganizationPage", "SelectSchoolLevelOrganization",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait for State Level CheckBox
             base.WaitForElement(By.XPath(CreateOrganizationPageResource.
                 CreateOrganization_Page_StateLevel_CheckBox_Xpath_Locator));
@@ -368,7 +368,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonById(CreateOrganizationPageResource.
                 CreateOrganization_Page_RemoveButton_Id_Locator);
             Logger.LogMethodExit("CreateOrganizationPage", "SelectSchoolLevelOrganization",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -383,7 +383,7 @@ namespace Pegasus.Pages.UI_Pages
             //Create And edit the organization details
             Logger.LogMethodEntry("CreateOrganizationPage",
                 "CreateNewOrganizationForDifferentLevels",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Guid for Organization Name
             Guid organizationNameGuid = Guid.NewGuid();
             try
@@ -415,7 +415,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CreateOrganizationPage",
                 "CreateNewOrganizationForDifferentLevels",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -426,7 +426,7 @@ namespace Pegasus.Pages.UI_Pages
             //Log Method Entry
             Logger.LogMethodEntry("CreateOrganizationPage",
                 "SelectCountryOptionForStateLevelOrganization",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(CreateOrganizationPageResource.
                 CreateOrganization_Page_Country_dropdown_Id_Locator));
@@ -438,7 +438,7 @@ namespace Pegasus.Pages.UI_Pages
             //Log Method Exit
             Logger.LogMethodExit("CreateOrganizationPage",
                 "SelectCountryOptionForStateLevelOrganization",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -452,7 +452,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill Details For New Organization
             Logger.LogMethodEntry("CreateOrganizationPage", "FillDetailsForNewOrganizationLevels",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             // Fill Internal Organization Name
             this.FillInternalOrganizationName(organization);
             //Fill Organization Display Name
@@ -464,7 +464,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button To Save Organization
             this.ClickOnButtonToSaveOrganization();
             Logger.LogMethodExit("CreateOrganizationPage", "FillDetailsForNewOrganizationLevels",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -474,7 +474,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Log Entry of Method
             Logger.LogMethodEntry("CreateOrganizationPage", "FillOrganizationDisplayName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Organization display text box element to display
             base.WaitForElement(By.Id(CreateOrganizationPageResource.
                 CreateOrganization_Page_OrganizationdisplayName_TextBox_Id_Locator));
@@ -485,7 +485,7 @@ namespace Pegasus.Pages.UI_Pages
                 CreateOrganization_Page_OrganizationdisplayName_TextBox_Id_Locator);
             //Log Exit of the Method
             Logger.LogMethodExit("CreateOrganizationPage", "FillOrganizationDisplayName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -496,7 +496,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Log Entry of the Method
             Logger.LogMethodEntry("CreateOrganizationPage", "FillInternalOrganizationName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the Internal Organization text box element to display
             base.WaitForElement(By.Id(CreateOrganizationPageResource.
                 CreateOrganization_Page_InternalOrganizationName_TextBox_Id_Locator));
@@ -508,7 +508,7 @@ namespace Pegasus.Pages.UI_Pages
                 SendKeys(organizationGuid.ToString());
             //Log Exit of the Method
             Logger.LogMethodExit("CreateOrganizationPage", "FillInternalOrganizationName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -520,7 +520,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Organization Type 
             Logger.LogMethodEntry("CreateOrganizationPage",
-                "SelectOrganizationTypeCheckBox", base.isTakeScreenShotDuringEntryExit);
+                "SelectOrganizationTypeCheckBox", base.IsTakeScreenShotDuringEntryExit);
             //Select Third Party Check Box
             switch (orgLevelEnum)
             {
@@ -533,7 +533,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("CreateOrganizationPage",
-                "SelectOrganizationTypeCheckBox", base.isTakeScreenShotDuringEntryExit);
+                "SelectOrganizationTypeCheckBox", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -543,7 +543,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Log Method Entry
             Logger.LogMethodEntry("CreateOrganizationPage",
-               "ClickOnButtonToSaveOrganization", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnButtonToSaveOrganization", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(CreateOrganizationPageResource.
                 CreateOrganization_Page_Save_Button_Id_Locator));
@@ -559,7 +559,7 @@ namespace Pegasus.Pages.UI_Pages
                 CreateOrganization_Page_WaitElement_Time));
             //Log Method Exit
             Logger.LogMethodExit("CreateOrganizationPage",
-               "ClickOnButtonToSaveOrganization", base.isTakeScreenShotDuringEntryExit);
+               "ClickOnButtonToSaveOrganization", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -571,7 +571,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill the organization contact details           
             Logger.LogMethodEntry("CreateOrganizationPage",
                 "FillOrganizationContactDetails",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Fill the Address Name    
             base.GetWebElementPropertiesById(CreateOrganizationPageResource.
                                      CreateOrganization_Page_Address_TextBox_Id_Locator).Clear();
@@ -595,7 +595,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectOrganizationState();
             Logger.LogMethodExit("CreateOrganizationPage",
                 "FillOrganizationContactDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         //Selct Organization State
@@ -604,7 +604,7 @@ namespace Pegasus.Pages.UI_Pages
             //Log Method Entry
             Logger.LogMethodEntry("CreateOrganizationPage",
               "SelectOrganizationState",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select the State
             base.SelectDropDownValueThroughIndexById(CreateOrganizationPageResource.
                 CreateOrganization_Page_State_dropdown_Id_Locator,
@@ -613,7 +613,7 @@ namespace Pegasus.Pages.UI_Pages
             //Log Metod Exit
             Logger.LogMethodExit("CreateOrganizationPage",
               "SelectOrganizationState",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -624,7 +624,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Create Organization Frame
             Logger.LogMethodEntry("CreateOrganizationPage",
                "SelectCreateOrganizationWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait To Load Window
             base.WaitUntilWindowLoads(OrganizationManagementPageResource.
             OrganizationManagement_Page_CreateOrganizationWindow_Name_Locator);
@@ -633,7 +633,7 @@ namespace Pegasus.Pages.UI_Pages
             OrganizationManagement_Page_CreateOrganizationWindow_Name_Locator);
             Logger.LogMethodExit("CreateOrganizationPage",
                  "SelectCreateOrganizationWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -644,7 +644,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select The Properties Organization Managment Frame
             Logger.LogMethodEntry("CreateOrganizationPage",
                "SelectThePropertiesOrganizationManagmentFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the window
@@ -659,7 +659,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CreateOrganizationPage",
                "SelectThePropertiesOrganizationManagmentFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -673,7 +673,7 @@ namespace Pegasus.Pages.UI_Pages
             //Create The Multiple Level Organization
             Logger.LogMethodEntry("CreateOrganizationPage",
                "CreateMultipleLevelOrganization",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Intialize Guid for organization
             Guid organization = Guid.NewGuid();
             try
@@ -706,7 +706,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CreateOrganizationPage",
                "CreateMultipleLevelOrganization",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -721,7 +721,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Storing the organization details
             Logger.LogMethodEntry("CreateOrganizationPage", "StoreTheOrganizationDetails",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             Organization organization = new Organization
             {
                 Name = organizationName.ToString(),
@@ -731,7 +731,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             organization.StoreOrganizationInMemory();
             Logger.LogMethodExit("CreateOrganizationPage", "StoreTheOrganizationDetails",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

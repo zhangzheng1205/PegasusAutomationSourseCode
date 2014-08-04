@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Activity Name
             logger.LogMethodEntry("CourseCalendarPage", "GetActivityName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getActivityName=string.Empty;
             try
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("CourseCalendarPage", "GetActivityName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 
@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnCalendarIcon()
         {
             logger.LogMethodEntry("CourseCalendarPage", "ClickOnCalendarIcon",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Overview Window
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);                
             }
             logger.LogMethodExit("CourseCalendarPage", "ClickOnCalendarIcon",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Status Of Submitted Activity 
             logger.LogMethodEntry("CourseCalendarPage", "GetStatusOfSubmittedActivityInCalendar",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             //Initialize getStatusText variable
             string getActivitySubmittedStatus = string.Empty;            
             string getActivityName = string.Empty;
@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseCalendarPage", "GetStatusOfSubmittedActivityInCalendar",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             return getActivitySubmittedStatus;
         }
 
@@ -166,7 +166,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window And Frame
             logger.LogMethodEntry("CourseCalendarPage", "SelectWindowAndFrame",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(CourseCalendarPageResource.
                 CourseCalendar_Page_CourseMaterials_Window_Name);
             //Select Window
@@ -176,7 +176,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrameById(CourseCalendarPageResource.
                 CourseCalendar_Page_Frame_Id_Locator);
             logger.LogMethodExit("CourseCalendarPage", "SelectWindowAndFrame",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

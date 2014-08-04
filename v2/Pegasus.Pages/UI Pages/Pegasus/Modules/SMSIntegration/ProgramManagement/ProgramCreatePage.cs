@@ -25,7 +25,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create New Program
             logger.LogMethodEntry("ProgramCreatePage", "CreateNewProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Create New Program Window
@@ -46,7 +46,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ProgramCreatePage", "CreateNewProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter New Program Name
             logger.LogMethodEntry("ProgramCreatePage", "EnterNewProgramName",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Program Name Guid
             Guid programNameGuid = Guid.NewGuid();
             // Enter Program Name
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(ProgramCreatePageResource.
                                           ProgramCreation_Page_EmptyClass_DropDown_Id_Locator));
             logger.LogMethodExit("ProgramCreatePage", "EnterNewProgramName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return programNameGuid;
         }
 
@@ -82,7 +82,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Program Window
             logger.LogMethodEntry("ProgramCreatePage", "SelectCreateNewProgramWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Loads
             base.WaitUntilWindowLoads(ProgramCreatePageResource.
                                           ProgramCreation_Page_Window_Title_Locator);
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(ProgramCreatePageResource.
                                   ProgramCreation_Page_Window_Title_Locator);
             logger.LogMethodExit("ProgramCreatePage", "SelectCreateNewProgramWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Selects Empty Class
             logger.LogMethodEntry("ProgramCreatePage", "SelectEmptyClassNameBasedOnProgramType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Empty Class on Program Type Basis
             switch (programTypeEnum)
             {
@@ -138,7 +138,7 @@ namespace Pegasus.Pages.UI_Pages
                     }
             }
             logger.LogMethodExit("ProgramCreatePage", "SelectEmptyClassNameBasedOnProgramType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Four Check Box to be Check After Empty Class Selection
             logger.LogMethodEntry("ProgramCreatePage", "SelectOptionsForProgramAssociation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(ProgramCreatePageResource.
                 ProgramCreation_Page_EnablePrgAssociationToAdmin_CheckBox_Id_Locator));
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click Checkbox To Enable Student Management
             base.ClickByJavaScriptExecutor(getEnableStdManagementCheckBoxProperty);
             logger.LogMethodExit("ProgramCreatePage", "SelectOptionsForProgramAssociation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Save The Program
             logger.LogMethodEntry("ProgramCreatePage", "ClickToSaveTheProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For The Save Button
             base.WaitForElement(By.Id(ProgramCreatePageResource.
                 ProgramCreation_Page_Save_Button_Id_Locator));
@@ -202,7 +202,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click Save Button
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("ProgramCreatePage", "ClickToSaveTheProgram",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Stores Program in Memory
             logger.LogMethodEntry("ProgramCreatePage", "StoreProgramDetailsInMemory",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             Program program = new Program
                 {
                     //Program Details
@@ -225,7 +225,7 @@ namespace Pegasus.Pages.UI_Pages
                 };
             program.StoreProgramInMemory();
             logger.LogMethodExit("ProgramCreatePage", "StoreProgramDetailsInMemory",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

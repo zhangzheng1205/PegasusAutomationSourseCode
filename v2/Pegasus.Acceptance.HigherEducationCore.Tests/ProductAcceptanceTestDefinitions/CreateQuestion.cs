@@ -30,12 +30,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Select Add Course Materails Button
             Logger.LogMethodEntry("CreateQuestion", 
                 "SelectAddCourseMaterialsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Add Course Materials Button
             new QlGridUXPage().SelectAddCourseMaterialsButton();
             Logger.LogMethodExit("CreateQuestion", 
                 "SelectAddCourseMaterialsOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -47,11 +47,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Select Question Type
             Logger.LogMethodEntry("CreateQuestion", "SelectQuestionType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Question Type
             new QlGridUXPage().SelectQuestionType(questionType);
             Logger.LogMethodExit("CreateQuestion", "SelectQuestionType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -64,11 +64,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Create Questions
             Logger.LogMethodEntry("CreateQuestion", "CreateQuestions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Questions
             new QlGridUXPage().CreateQuestions(questionTypeEnum);
             Logger.LogMethodExit("CreateQuestion", "CreateQuestions",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify The Action Row ClipBoard Items
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheActionRowClipBoardItems",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Assert Display Of Action Row ClipBoard Items
             Logger.LogAssertion("VerifyActionRowOptions",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -87,7 +87,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     CreateQuestion_DeleteCopyCutPasteReports_Appended_Text,
                     new QlGridUXPage().GetClipBoardItemsTextDisplayed()));
             Logger.LogMethodExit("CreateQuestion", "VerifyTheActionRowClipBoardItems",
-               base.isTakeScreenShotDuringEntryExit);  
+               base.IsTakeScreenShotDuringEntryExit);  
         }
 
         /// <summary>
@@ -99,11 +99,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Select The Question From QuestionBank
             Logger.LogMethodEntry("CreateQuestion", "SelectTheQuestionFromQuestionBank",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select The Question From QuestionBank
             new QlGridUXPage().SelectTheQuestionFromQuestionBank(questionName);
             Logger.LogMethodExit("CreateQuestion", "SelectTheQuestionFromQuestionBank",
-               base.isTakeScreenShotDuringEntryExit);  
+               base.IsTakeScreenShotDuringEntryExit);  
         }
 
         /// <summary>
@@ -115,11 +115,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Create Question Folder
             Logger.LogMethodEntry("CreateQuestion", "CreateFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Create Folder
             new AddFolderPage().CreateTheFolder(activityTypeEnum);
             Logger.LogMethodExit("CreateQuestion", "CreateFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -131,11 +131,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Select Option In Course Materials
             Logger.LogMethodEntry("CreateQuestion", "SelectOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Option In Course Materials
             new QlGridUXPage().SelectOptionInCourseMaterials(option);
             Logger.LogMethodExit("CreateQuestion", "SelectOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Verify The Created Question Folder
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheCreatedQuestionFolder",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Fetch Folder from Memory
             Activity getFolder = Activity.Get(Activity.ActivityTypeEnum.QuestionFolder);
             //Assert Created Question Folder
@@ -156,7 +156,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                    Assert.AreEqual(getFolder.Name, new QlGridUXPage().
                    GetSearchedFolderName(getFolder.Name)));            
             Logger.LogMethodExit("CreateQuestion", "VerifyTheCreatedQuestionFolder",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
       
         /// <summary>
@@ -167,13 +167,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Verify The ClipBoard Options Enabled
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheClipBoardOptionsEnabled",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Assert for Verify The ClipBoard Options Enabled.
             Logger.LogAssertion("VerifyActionRowOptionsEnabled",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new QlGridUXPage().IsClipBoardItemsGetEnabledState()));
             Logger.LogMethodExit("CreateQuestion", "VerifyTheClipBoardOptionsEnabled",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -184,13 +184,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify The Paste Options Get Enabled
             Logger.LogMethodEntry("CreateQuestion", "VerifyThePasteOptionsGetEnabled",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Assert Display Of paste options get enabled
             Logger.LogAssertion("VerifyPasteOptionsEnabledState",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new QlGridUXPage().IsPasteOptionGetDisplayedEnabledState()));
             Logger.LogMethodExit("CreateQuestion", "VerifyThePasteOptionsGetEnabled",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -201,11 +201,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             // Click On Copy Clipboard Option
             Logger.LogMethodEntry("CreateQuestion", "ClickTheCopyClipboardOption",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Click On Copy Clipboard Option
             new QlGridUXPage().ClickOnCopyClipboardOption();
             Logger.LogMethodExit("CreateQuestion", "ClickTheCopyClipboardOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -217,11 +217,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Navigate To Folder In Question Bank
             Logger.LogMethodEntry("CreateQuestion", "NavigateToFolderInQuestionBank",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Navigate to Folder
             new QlGridUXPage().ClickOnTheQuestionFolder(folderName);
             Logger.LogMethodExit("CreateQuestion", "NavigateToFolderInQuestionBank",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -236,14 +236,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Set Score For Questions In Folder Level
             Logger.LogMethodEntry("CreateQuestion", "SetScoreForQuestionsInFolderLevel",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             QlGridUXPage qlGridUXPage = new QlGridUXPage();
             //Click On Cmenu Of Folder
             qlGridUXPage.ClickOnCmenuOfAsset(folderName, folderCmenuOption);
             //Set Score For Questions
             qlGridUXPage.SetScoreForQuestions(score);
             Logger.LogMethodExit("CreateQuestion", "SetScoreForQuestionsInFolderLevel",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -258,7 +258,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Verify The Updated Score Of Question
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheUpdatedScoreOfQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             QlGridUXPage qlGridUXPage = new QlGridUXPage();
             //Click on Folder
             qlGridUXPage.ClickOnTheQuestionFolder(folderName);
@@ -270,7 +270,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                ScenarioContext.Current.ScenarioInfo.Title, () =>
                    Assert.IsTrue(new MultipleChoicePage().IsUpdatedScoreCorrect(score)));
             Logger.LogMethodExit("CreateQuestion", "VerifyTheUpdatedScoreOfQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -282,13 +282,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Map Question To Skill
             Logger.LogMethodEntry("CreateQuestion", "MapQuestionToSkill",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Fetch Question From Memory
             Question question = Question.Get(questionTypeEnum);
             //Map Question To Skill
             new SkillStandardAlignedAssetsUXPage().MapQuestionToTheSkill(question.Name);
             Logger.LogMethodExit("CreateQuestion", "MapQuestionToSkill",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -299,11 +299,11 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         {
             //Create Audio Essay Questions
             Logger.LogMethodEntry("CreateQuestion", "CreateAudioEssayQuestionType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Create Audio Essay Questions
             new EssayPage().CreateAudioEssayQuestions();
             Logger.LogMethodExit("CreateQuestion", "CreateAudioEssayQuestionType",
-                       base.isTakeScreenShotDuringEntryExit);
+                       base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// This method is called before execution of test.

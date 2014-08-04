@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Cmenu of promoted admin
             logger.LogMethodEntry("AdminEnrollment", "ClickCmenuOfPromotedAdmin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select Administration tool window
@@ -47,7 +47,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AdminEnrollment", "SaveTheManageAccessSaveButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
 
         }
 
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Click Cmenu image
             logger.LogMethodEntry("AdminEnrollment", "ClickCmenuOfAdminName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Count total rows
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AdminEnrollment", "ClickCmenuOfAdminName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -107,7 +107,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Unenroll option for workspace admin
             logger.LogMethodEntry("AdminEnrollment", "GetCmenuOptionForWorkspaceAdmin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             string getCmenuOption = string.Empty;
             try
             {
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AdminEnrollment", "GetCmenuOptionForWorkspaceAdmin",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getCmenuOption.Trim();
         }
 
@@ -135,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check If the User CMenu Options are Displayed
             logger.LogMethodEntry("AdminEnrollment", "GetCMenuOptionsOfAdmin"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             string ContextMenuNames = string.Empty;
             try
@@ -147,7 +147,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AdminEnrollment", "GetCMenuOptionsOfAdmin"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             return ContextMenuNames;
         }
 

@@ -34,14 +34,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment", 
                 "SelectCourseToEnrollUsers",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch course name from memory
             Course course = Course.Get(courseTypeEnum);
             //Selection of course in right frame
             new ManageCoursesPage().SelectCourse(course.Name);
             Logger.LogMethodExit("UserEnrollment", 
                 "SelectCourseToEnrollUsers",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Add Course From Search Catalog
             Logger.LogMethodEntry("UserEnrollment",
                 "SelectWSUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch user name from memory
             User user = User.Get(userTypeEnum);
             // User search in left frame
@@ -64,7 +64,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             new ManageUsersPage().SelectUser(user.Name);
             Logger.LogMethodExit("UserEnrollment", 
                 "SelectWSUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -79,12 +79,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Enroll User to Course
             Logger.LogMethodEntry("UserEnrollment", 
                 "EnrollTheUserInTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enroll user to the course
             new AdminToolPage().EnrollUserInCourse(userTypeEnum);
             Logger.LogMethodExit("UserEnrollment", 
                 "EnrollTheUserInTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //See The Enrolled User Inside The Course
             Logger.LogMethodEntry("UserEnrollment", 
                 "CheckEnrolledUserInsideCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch User's Last Name From Memory
             User user = User.Get(userTypeEnum);
             //Asert The Last Name Of The User
@@ -109,7 +109,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             GetEnrolledUserLastName(user.LastName)));
             Logger.LogMethodExit("UserEnrollment", 
                 "CheckEnrolledUserInsideCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -122,12 +122,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Select master library class in right frame
             Logger.LogMethodEntry("UserEnrollment", "SelectMasterLibraryClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Master library class on the right frame
             new OrgAdminEnrollClassesPage().
                 SelectMasterLibraryClass(classTypeEnum);
             Logger.LogMethodExit("UserEnrollment", "SelectMasterLibraryClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -139,13 +139,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Select users in left frame
             Logger.LogMethodEntry("UserEnrollment", "SelectUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Get the user
             User user = User.Get(userTypeEnum);
             // Select the user in left frame
             new OrgAdminUserEnrollmentPage().SelectUserInLeftFrame(user.Name);
             Logger.LogMethodExit("UserEnrollment", "SelectUserInLeftFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -156,11 +156,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Select enroll button
             Logger.LogMethodEntry("UserEnrollment", "SelectEnrollButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Click on enroll button in middle frame
             new OrgEnrollmentPage().SelectEnrollButton();
             Logger.LogMethodExit("UserEnrollment", "SelectEnrollButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Select enroll button
             Logger.LogMethodEntry("UserEnrollment", 
                 "CheckEnrollmentSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert we have correct message displayed
             Logger.LogAssertion("VerifySuccessMessageDisplay",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -181,7 +181,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                     UserEnrollment_Enrollment_SuccessMessage_Text)));
             Logger.LogMethodExit("UserEnrollment", 
                 "CheckEnrollmentSuccessfullMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

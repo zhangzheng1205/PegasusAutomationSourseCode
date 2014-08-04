@@ -30,14 +30,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Select Template Class
             Logger.LogMethodEntry("UserEnrollmentsInClass", 
                 "EnterInToTheTemplateClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Class Name Stored in Memory
              Class className = Class.Get(classTypeEnum);
             //Enter in to Template Class
             new MyPegasusUXPage().EnterInToTemplateClass(className.Name);
             Logger.LogMethodExit("UserEnrollmentsInClass", 
                 "EnterInToTheTemplateClass",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -49,14 +49,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Enable Roaster in Preferences Tab
             Logger.LogMethodEntry("UserEnrollmentsInClass", 
                 "EnableRoasterInPreferencesTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on Roster Preference
             new GeneralPreferencesPage().ClickonRosterPreference();
             //Enable Roster Preference
             new RosterPreferencesPage().EnableRosterPreference();
             Logger.LogMethodExit("UserEnrollmentsInClass", 
                 "EnableRoasterInPreferencesTab",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
         }
 
         /// <summary>
@@ -70,14 +70,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Create the User
             Logger.LogMethodEntry("UserEnrollmentsInClass", 
                 "CreateUserAsCoursespaceTeacher",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Click on Create New Button to Create User
             new GBRosterGridUXPage().ClickonCreateNewButtonToCreateUser();
             //Create New User
             new AddUserPage().CreateNewUser(userTypeEnum);
             Logger.LogMethodExit("UserEnrollmentsInClass", 
                 "CreateUserAsCoursespaceTeacher",
-                 base.isTakeScreenShotDuringEntryExit); 
+                 base.IsTakeScreenShotDuringEntryExit); 
         }
 
         /// <summary>

@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ManageStudentHelpTextWindow()
         {
             logger.LogMethodEntry("StudentHelpTextPage", "ManageStudentHelpTextWindow", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 Thread.Sleep(Convert.ToInt32(StudentHelpTextPageResource.
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentHelpTextPage", "ManageStudentHelpTextWindow",
-                base.isTakeScreenShotDuringEntryExit);          
+                base.IsTakeScreenShotDuringEntryExit);          
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Close Student Help Text Window
             logger.LogMethodEntry("StudentHelpTextPage", "CloseStudentHelpTextWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(StudentHelpTextPageResource.
                                   StudentHelpText_Page_Window_Title_Name);
             base.SelectWindow(StudentHelpTextPageResource.
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(StudentHelpTextPageResource
                 .StudentHelpText_Page_ThreadSleep_Value));
             logger.LogMethodExit("StudentHelpTextPage", "CloseStudentHelpTextWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

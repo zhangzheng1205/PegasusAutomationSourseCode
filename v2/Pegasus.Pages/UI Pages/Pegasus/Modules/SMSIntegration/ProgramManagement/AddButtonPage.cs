@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click To Course Enrollment Button to Associate Course to Product
             Logger.LogMethodEntry("AddButtonPage", "ClickProgramCoursesAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -44,7 +44,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("AddButtonPage", "ClickProgramCoursesAddButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,14 +54,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Middle IFrame
             Logger.LogMethodEntry("AddButtonPage", "SelectMiddleIFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AddButtonPageResource.
                                           AddButton_Page_iFrameMiddle_Id_Locator));
             //Switch To Frame
             base.SwitchToIFrame(AddButtonPageResource.
                                     AddButton_Page_iFrameMiddle_Id_Locator);
             Logger.LogMethodExit("AddButtonPage", "SelectMiddleIFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select IFrame
             Logger.LogMethodEntry("AddButtonPage", "SelectWorkSpaceIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(AddButtonPageResource.
                                           AddButton_Page_WorkspaceiFrame_Id_Locator));
@@ -79,7 +79,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrame(AddButtonPageResource.
                                     AddButton_Page_WorkspaceiFrame_Id_Locator);
             Logger.LogMethodExit("AddButtonPage", "SelectWorkSpaceIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,12 +89,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Manage Products Window
             Logger.LogMethodEntry("AddButtonPage", "SelectManageProductsWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(AddButtonPageResource.
                                   AddButton_Page_Window_Title_Page);
             Logger.LogMethodExit("AddButtonPage", "SelectManageProductsWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Add Button
             Logger.LogMethodEntry("AddButtonPage", "SelectAddButtonInMiddleFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(AddButtonPageResource.
                   AddButton_Page_ProgramCourses_Button_Id_Locator));
@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("AddButtonPage", "SelectAddButtonInMiddleFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -134,14 +134,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Add Button in Chrome
             Logger.LogMethodEntry("AddButtonPage", "ClickAddButtonInChrome",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Add Button Properties
             IWebElement buttonProgramCoursesinChrome =
                 base.GetWebElementPropertiesById(AddButtonPageResource.
                                                      AddButton_Page_ProgramCourses_Button_Id_Locator);
             buttonProgramCoursesinChrome.Click();
             Logger.LogMethodExit("AddButtonPage", "ClickAddButtonInChrome",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Add Button In IE
             Logger.LogMethodEntry("AddButtonPage", "ClickAddButonInInternetExplorer",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(AddButtonPageResource.
                      AddButton_Page_ProgramCourses_Button_Id_Locator));
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
                      AddButton_Page_ProgramCourses_Button_Id_Locator);
             base.ClickByJavaScriptExecutor(buttonProgramCourse);
             Logger.LogMethodExit("AddButtonPage", "ClickAddButonInInternetExplorer",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -171,14 +171,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Add Button In Fire Fox
             Logger.LogMethodEntry("AddButtonPage", "ClickAddButtonInFireFox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Add Button Properties
             IWebElement buttonProgramCoursesinFirefox =
                 base.GetWebElementPropertiesById(AddButtonPageResource.
                                                      AddButton_Page_ProgramCourses_Button_Id_Locator);
             buttonProgramCoursesinFirefox.Click();
             Logger.LogMethodExit("AddButtonPage", "ClickAddButtonInFireFox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the Page Title
             logger.LogMethodEntry("ManageWorkspacesPage", "GetThePageTitle",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Default window
@@ -40,7 +40,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("ManageWorkspacesPage", "GetThePageTitle",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return base.GetPageTitle;
         }
 
@@ -54,7 +54,7 @@ namespace Pegasus.Pages.UI_Pages
             //Display Of Default Contents In Workspaces Tab
             logger.LogMethodEntry("ManageWorkspacesPage",
                 "IsTheDefaultContentsInWorkspacesTabDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initializing the Variable
             bool isDefaultContentsDisplayed = false;
             try
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("ManageWorkspacesPage",
                 "IsTheDefaultContentsInWorkspacesTabDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return isDefaultContentsDisplayed;
         }
 
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Check If All the default Contents are Displayed
             logger.LogMethodEntry("ManageWorkspacesPage","IsAllContentsDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Is 'Create New Workspace' link Displayed
             bool isCreateNewWorkspaceDisplayed = base.IsElementPresent(By.
                 PartialLinkText(ManageWorkspacesPageResource.
@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
             bool isOptionsFieldDisplayed = getHeaderText.Contains(ManageWorkspacesPageResource.
                 ManageWorkspacesPage_Header_Options_Text);
             logger.LogMethodExit("ManageWorkspacesPage", "IsAllContentsDisplayed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return (isCreateNewWorkspaceDisplayed &&
                 isDeleteSelectedWorkspacesDisplayed && isNameFieldDisplayed &&
                 isStatusFieldDisplayed && isOptionsFieldDisplayed);            

@@ -36,7 +36,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Check If Expected Page Is Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait Till Thinking Indicator Loads
             bool isThinkingIndicatorLoading = base.IsThinkingIndicatorLoading();
             //If Thinking Indicator In Process After Specified Time Interval then Fail This Step
@@ -55,7 +55,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedPageTitle, getActualPageTitle));
             Logger.LogMethodExit("CommonSteps", "ShowThePageInMMND",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,12 +69,12 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Navigate Inside MMNDCourse
             Logger.LogMethodEntry("CommonSteps", "NavigateInsideMMNDCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter into the Course
             new UserLayoutRootNodeTargetPage().EnterIntoMMNDCourse
                 (courseTypeEnum, userTypeEnum);
             Logger.LogMethodExit("CommonSteps", "NavigateInsideMMNDCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }        
 
         /// <summary>
@@ -86,11 +86,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Click On Subtab
             Logger.LogMethodEntry("CommonSteps", "ClickOnSubtab",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Navigate to Sub Tab           
             new ViewPage().NavigateInsideSubTabLink(subtabName);
             Logger.LogMethodExit("CommonSteps", "ClickOnSubtab",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -104,12 +104,12 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Enter in Course from Global Home Page 
             Logger.LogMethodEntry("CommonSteps", "EnterInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter Into The Course
             new HEDGlobalHomePage().EnterInsideCourse(
                 courseTypeEnum, userTypeEnum);
             Logger.LogMethodExit("CommonSteps", " EnterInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Method to Navigate to the Tab Window 
             Logger.LogMethodEntry("CommonSteps", "NavigateToTheTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.PartialLinkText(tabName));
             //Get Tab Element Property
@@ -144,7 +144,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
             }
             Logger.LogMethodExit("CommonSteps", "NavigateToTheTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         [Then(@"I should be on the ""(.*)"" window")]
@@ -152,13 +152,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Method to Navigate to the Tab Window 
             Logger.LogMethodEntry("CommonSteps", "OpenCustomColumnWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new GBInstructorUXPage().SelectTheWindowName(expectedPageTitle);
             string getActualPageTitle = base.GetPageTitle;
             Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedPageTitle, getActualPageTitle));
             Logger.LogMethodExit("CommonSteps", "OpenCustomColumnWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 

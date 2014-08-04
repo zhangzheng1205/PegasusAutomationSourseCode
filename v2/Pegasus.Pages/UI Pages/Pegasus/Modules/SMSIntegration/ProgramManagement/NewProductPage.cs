@@ -35,7 +35,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create New product
             Logger.LogMethodEntry("NewProductPage", "CreateNewProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Window
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
                 throw;
             }
             Logger.LogMethodExit("NewProductPage", "CreateNewProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
             (Product.ProductTypeEnum productTypeEnum)
         {
             Logger.LogMethodEntry("NewProductPage", "EnterDetailsBasedOnProductType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             switch (productTypeEnum)
             {
                 case Product.ProductTypeEnum.HedCoreGeneral:
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("NewProductPage", "EnterDetailsBasedOnProductType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Enter Demo Access Code for Demo Product.
@@ -131,7 +131,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Log Method Entry
             Logger.LogMethodEntry("NewProductPage", "EnterDemoAccessCode",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(NewProductPageResource.
                 NewProduct_Page_DemoProduct_Checkbox_Id_Locator));
             //Click Demo Product CheckBox
@@ -146,7 +146,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.GetRandomNumber(NewProductPageResource.
                 NewProduct_Page_AccessCode_Characterset_Value, 7));
             Logger.LogMethodExit("NewProductPage", "EnterDemoAccessCode",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Log Method Entry
             Logger.LogMethodEntry("NewProductPage", "EnterWelcomeMessage",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Switch To Frame
             base.SwitchToIFrame(NewProductPageResource.
             NewProduct_Page_Welcome_Message_Editor_ID_Locator);
@@ -169,7 +169,7 @@ namespace Pegasus.Pages.UI_Pages
             //switch back to the DefaultContent
             base.SwitchToDefaultPageContent();
             Logger.LogMethodExit("NewProductPage", "EnterWelcomeMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return welcomeMessage;
         }
 
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Program Name In The Search Box
             Logger.LogMethodEntry("NewProductPage", "EnterProgramNameToSearch",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewProductPageResource.
             NewProduct_Page_IFrameSearchProgram_Id_Locator));
@@ -198,7 +198,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click Button
             base.ClickButtonById(NewProductPageResource.NewProduct_Page_SearchButton_Id_Locator);
             Logger.LogMethodExit("NewProductPage", "EnterProgramNameToSearch",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Program Search Link
             Logger.LogMethodEntry("NewProductPage", "ClickSearchProgramsLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(NewProductPageResource.
                                   NewProduct_Page_Window_Title_Name);
@@ -219,7 +219,7 @@ namespace Pegasus.Pages.UI_Pages
                                           NewProduct_Page_RightSearch_Id_Locator);
             base.ClickByJavaScriptExecutor(getSearchButtonProperty);
             Logger.LogMethodExit("NewProductPage", "ClickSearchProgramsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Created Program
             Logger.LogMethodEntry("NewProductPage", "SelectProgramNameInTheSearchFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(NewProductPageResource.
                 NewProduct_Page_PegasusDataGrid_Id_Locator));
             //Wait for Element
@@ -246,7 +246,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Default Page
             base.SwitchToDefaultPageContent();
             Logger.LogMethodExit("NewProductPage", "SelectProgramNameInTheSearchFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -256,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Product Save Button
             Logger.LogMethodEntry("NewProductPage", "ClickToSaveProduct",
-        base.isTakeScreenShotDuringEntryExit);
+        base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewProductPageResource.
                                           NewProduct_Page_SaveButton_Id_Locator));
@@ -266,7 +266,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSaveButtonProperty);
             base.IsPopUpClosed(2);
             Logger.LogMethodExit("NewProductPage", "ClickToSaveProduct",
-        base.isTakeScreenShotDuringEntryExit);
+        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -276,7 +276,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create Program Type Product
             Logger.LogMethodEntry("NewProductPage", "EnterDetailsForProgramTypeProductForHed",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(NewProductPageResource.
                 NewProduct_Page_Window_Title_Name);
@@ -293,7 +293,7 @@ namespace Pegasus.Pages.UI_Pages
                 NewProductPageResource.NewProduct_Page_ProgramType_CheckBox_Id_Locator);
             base.ClickByJavaScriptExecutor(getProgramTyprCheckBoxProperty);
             Logger.LogMethodExit("NewProductPage", "EnterDetailsForProgramTypeProductForHed",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -303,7 +303,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Discipline To Create Product
             Logger.LogMethodEntry("NewProductPage", "SelectDisciplineNameToCreateHedProgramTypeProduct",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewProductPageResource.
                                           NewProduct_Page_Discipline_DropDown_Id_Locator));
@@ -315,7 +315,7 @@ namespace Pegasus.Pages.UI_Pages
                                                 NewProduct_Page_Discipline_DropDown_Id_Locator,
                                             NewProductPageResource.NewProduct_Page_Discipline_DropDown_Value);
             Logger.LogMethodExit("NewProductPage", "SelectDisciplineNameToCreateHedProgramTypeProduct",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -325,7 +325,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create Hed Core General Product
             Logger.LogMethodEntry("NewProductPage", "EnterDetailsForGeneralTypeProductForHed",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             base.SelectWindow(NewProductPageResource.
                 NewProduct_Page_Window_Title_Name);
@@ -337,7 +337,7 @@ namespace Pegasus.Pages.UI_Pages
                 NewProduct_Page_SMSID_TextBox_Id_Locator,
                 AutomationConfigurationManager.SmsMuduleId);
             Logger.LogMethodExit("NewProductPage", "EnterDetailsForGeneralTypeProductForHed",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -349,7 +349,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create Product
             Logger.LogMethodEntry("NewProductPage", "UploadBannerAndIconImagesForSchoolProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (productTypeEnum)
             {
                 case Product.ProductTypeEnum.DigitalPath:
@@ -369,7 +369,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("NewProductPage", "UploadBannerAndIconImagesForSchoolProduct",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -381,7 +381,7 @@ namespace Pegasus.Pages.UI_Pages
             productTypeEnum)
         {
             Logger.LogMethodEntry("NewProductPage", "EnterProductName",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
             //This is product name guid
             Guid productNameGuid = Guid.NewGuid();
             switch (productTypeEnum)
@@ -412,7 +412,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("NewProductPage", "EnterProductName",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             return productNameGuid.ToString();
         }
 
@@ -423,7 +423,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             Logger.LogMethodEntry("NewProductPage", "SelectCreateNewProductWindow",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
             //Wait For Create New product Window
             base.WaitUntilWindowLoads(NewProductPageResource.
                                           NewProduct_Page_Window_Title_Name);
@@ -431,7 +431,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(NewProductPageResource.
                                   NewProduct_Page_Window_Title_Name);
             Logger.LogMethodExit("NewProductPage", "SelectCreateNewProductWindow",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -443,7 +443,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Licensing And Product Type For Synapse Product
             Logger.LogMethodEntry("NewProductPage", "SelectEnableLicensingAndProductTypeOptions",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             switch (productTypeEnum)
             {
                 case Product.ProductTypeEnum.DigitalPath:
@@ -463,7 +463,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("NewProductPage", "SelectEnableLicensingAndProductTypeOptions",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -473,7 +473,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select NovaNET License and Product
             Logger.LogMethodEntry("NewProductPage", "SelectNovaNETEnableLicensingOptionValue",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewProductPageResource.
                                                 NewProduct_Page_LicensingType_DropDown_Id_Locator));
@@ -485,7 +485,7 @@ namespace Pegasus.Pages.UI_Pages
                                                 NewProduct_Page_LicensingType_DropDown_Id_Locator,
                                             NewProductPageResource.NewProduct_Page_Concurrent_LicensingType_DropDown_Value);
             Logger.LogMethodExit("NewProductPage", "SelectNovaNETEnableLicensingOptionValue",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -494,7 +494,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectNovaNETProductTypeOptionValue()
         {
             Logger.LogMethodEntry("NewProductPage", "SelectNovaNETProductTypeOptionValue",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewProductPageResource.
                                           NewProduct_Page_ProductType_DropDown_Id_Locator));
@@ -506,7 +506,7 @@ namespace Pegasus.Pages.UI_Pages
                                                         NewProduct_Page_ProductType_DropDown_Id_Locator,
                                                     NewProductPageResource.NewProduct_Page_NovaNET_ProductType_DropDown_Value);
             Logger.LogMethodExit("NewProductPage", "SelectNovaNETProductTypeOptionValue",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -516,7 +516,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Digital Path Enable License Option Value
             Logger.LogMethodEntry("NewProductPage", "SelectDigitalPathEnableLicesingOptionValue",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement((By.Id(NewProductPageResource.
                 NewProduct_Page_LicensingType_DropDown_Id_Locator)));
@@ -528,7 +528,7 @@ namespace Pegasus.Pages.UI_Pages
                 NewProduct_Page_LicensingType_DropDown_Id_Locator,
                 NewProductPageResource.NewProduct_Page_Seat_LicensingType_DropDown_Value);
             Logger.LogMethodExit("NewProductPage", "SelectDigitalPathEnableLicesingOptionValue",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -538,7 +538,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Product Type Option Value.
             Logger.LogMethodEntry("NewProductPage", "SelectDigitalPathProductTypeOptionValue",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(NewProductPageResource.
                                           NewProduct_Page_ProductType_DropDown_Id_Locator));
@@ -550,7 +550,7 @@ namespace Pegasus.Pages.UI_Pages
                                                         NewProduct_Page_ProductType_DropDown_Id_Locator,
                                                     NewProductPageResource.NewProduct_Page_Basal_ProductType_DropDown_Value);
             Logger.LogMethodExit("NewProductPage", "SelectDigitalPathProductTypeOptionValue",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -560,7 +560,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Upload Banner Image
             Logger.LogMethodEntry("NewProductPage", "UploadProductBannerImageForDigitalPathProduct",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Get the Banner Image path from AppConfig
             string getBannerFilePath = (AutomationConfigurationManager.TestDataPath
                 + NewProductPageResource.NewProduct_Page_BannerImage_Name).Replace("file:\\", "");
@@ -568,7 +568,7 @@ namespace Pegasus.Pages.UI_Pages
             base.UploadFile(getBannerFilePath, By.Id(NewProductPageResource.
                 NewProduct_Page_Button_BrowseBannerImage_Id_Locator));
             Logger.LogMethodExit("NewProductPage", "UploadProductBannerImageForDigitalPathProduct",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -578,7 +578,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Upload Banner Image
             Logger.LogMethodEntry("NewProductPage", "UploadProductIconImageForDigitalPathProduct",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Default Window
             base.SelectDefaultWindow();
             //Select Create New Product Page
@@ -591,7 +591,7 @@ namespace Pegasus.Pages.UI_Pages
             base.UploadFile(getIconFilePath, By.Id(NewProductPageResource.
                 NewProduct_Page_Button_BrowseIconImage_Id_Locator));
             Logger.LogMethodExit("NewProductPage",
-                "UploadProductIconImageForDigitalPathProduct", base.isTakeScreenShotDuringEntryExit);
+                "UploadProductIconImageForDigitalPathProduct", base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Upload Demo Product Welcome Banner Image.
@@ -600,7 +600,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Upload Banner Image
             Logger.LogMethodEntry("NewProductPage", "UploadWelcomeBannerImageForNovanetDemoProduct",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Select Default Window
             base.SelectDefaultWindow();
             //Select Create New Product Page
@@ -613,7 +613,7 @@ namespace Pegasus.Pages.UI_Pages
             base.UploadFile(getIconFilePath, By.Id(NewProductPageResource.
                 NewProduct_Page_Button_BrowseWelcomeImage_Id_Locator));
             Logger.LogMethodExit("NewProductPage",
-                "UploadWelcomeBannerImageForNovanetDemoProduct", base.isTakeScreenShotDuringEntryExit);
+                "UploadWelcomeBannerImageForNovanetDemoProduct", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -627,7 +627,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save Copy Course in Memory
             Logger.LogMethodEntry("NewProductPage", "StoreProductDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             Product newProduct = new Product
               {
                   //Product Details
@@ -639,7 +639,7 @@ namespace Pegasus.Pages.UI_Pages
               };
             newProduct.StoreProductInMemory();
             Logger.LogMethodExit("NewProductPage", "StoreProductDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -649,7 +649,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select MyItLab Program Admin Reporting
             Logger.LogMethodEntry("NewProductPage", "SelectMyItLabProgramAdminReportingCheckBox",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(NewProductPageResource.
                 NewProduct_Page_MyItLabProgramAdminReporting_Id_Locator));
             //Select the Check Box Property
@@ -659,7 +659,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select the Checkbox
             base.ClickByJavaScriptExecutor(getCheckBoxProperty);
             Logger.LogMethodExit("NewProductPage", "SelectMyItLabProgramAdminReportingCheckBox",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

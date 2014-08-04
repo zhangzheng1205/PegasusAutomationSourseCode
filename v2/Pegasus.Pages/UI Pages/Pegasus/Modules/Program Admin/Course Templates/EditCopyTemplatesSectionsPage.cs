@@ -29,7 +29,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Copy as shared library
             logger.LogMethodEntry("EditCopyTemplatesSectionsPage", "ClickToCreateUpdate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click save button.
@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("EditCopyTemplatesSectionsPage", "ClickToCreateUpdate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Click save button in the popup window to start create shared library
@@ -132,7 +132,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //To Validate The Message On the Copy as Section Popup Page
             logger.LogMethodEntry("EditCopyTemplatesSectionsPage", "ToValidateTheMessageOnPopupPage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
 
             //Initialize Variable
             bool IsTrue = false; ;
@@ -151,7 +151,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("EditCopyTemplatesSectionsPage", "ToValidateTheMessageOnPopupPage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
 
             return IsTrue;
         }
@@ -163,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //To get the Section popup check box status
             logger.LogMethodEntry("EditCopyTemplatesSectionsPage", "CopyMyCourseContentCheckBoxStatus",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
 
             //Variable Initialization
             bool IsChecked = false;
@@ -184,7 +184,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("EditCopyTemplatesSectionsPage", "CopyMyCourseContentCheckBoxStatus",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
 
             return IsChecked;
         }

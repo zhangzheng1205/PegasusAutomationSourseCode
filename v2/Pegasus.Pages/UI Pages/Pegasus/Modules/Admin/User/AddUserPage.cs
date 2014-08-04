@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create New User
             logger.LogMethodEntry("AddUserPage", "CreateNewUser"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Creating the Cs User by UserType                
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddUserPage", "CreateNewUser"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // CreateNewUser for CS user creation
             logger.LogMethodEntry("AddUserPage", "CreateCsUser"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Select Add User Window
             this.SelectAddUserWindow();
             // Generate User Login Details Guid
@@ -75,7 +75,7 @@ namespace Pegasus.Pages.UI_Pages
                 AddUser_Page_PasswordTextbox_Value);
             this.ClickOnSaveAndFinishButtonInAddUserPage();
             logger.LogMethodExit("AddUserPage", "CreateCsUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return userInformation;
         }
 
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Stores User Details in Memory
             logger.LogMethodEntry("AddUserPage", "StoreUserDetails"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.DPCsTeacher:
@@ -139,7 +139,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("AddUserPage", "StoreUserDetails"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -150,7 +150,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Associates Program for Administrator
             logger.LogMethodEntry("AddUserPage", "AssociateProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Associate Program
             if (userTypeEnum.ToString() == AddUserPageResource.
                 AddUser_Page_Administrator_Enum_Value)
@@ -176,7 +176,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectAddUserWindow();
             }
             logger.LogMethodExit("AddUserPage", "AssociateProgram",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -186,12 +186,12 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Add User Window
             logger.LogMethodEntry("AddUserPage", "SelectAddUserWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Select the Add User window
             base.WaitUntilWindowLoads(AddUserPageResource.AddUser_Page_PopUpName);
             base.SelectWindow(AddUserPageResource.AddUser_Page_PopUpName);
             logger.LogMethodExit("AddUserPage", "SelectAddUserWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -203,7 +203,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter WS User Details in create new user pop up
             logger.LogMethodEntry("AddUserPage", "EnterCsUserDetails"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             // Enter FirstName                  
             base.WaitForElement(By.Id(AddUserPageResource
                 .AddUser_Page_FirstNameTextBox_Id_Locator));
@@ -223,7 +223,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(AddUserPageResource.AddUser_Page_EmailTextBox_Id_Locator,
                 AddUserPageResource.AddUser_Page_EmailTextbox_Value);
             logger.LogMethodExit("AddUserPage", "EnterCsUserDetails"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the Save and Finish button
             logger.LogMethodEntry("AddUserPage", "ClickOnSaveAndFinishButtonInAddUserPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click Save and Finish Button
             base.WaitForElement(By.Id(AddUserPageResource.AddUser_Page_SaveButton_Id_Locator));
             IWebElement getSaveButton = base.GetWebElementPropertiesById
@@ -243,7 +243,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for 4 secs
             Thread.Sleep(Convert.ToInt32(AddUserPageResource.AddUser_Page_SleepTime));
             logger.LogMethodExit("AddUserPage", "ClickOnSaveAndFinishButtonInAddUserPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save user in Memory
             logger.LogMethodEntry("AddUserPage", "StoreUserDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Save User Properties in Memory
             switch (userTypeEnum)
             {
@@ -280,7 +280,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("AddUserPage", "StoreUserDetailsInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -296,7 +296,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save The User In Memory
             logger.LogMethodEntry("AddUserPage", "SaveUserInMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             User newUser = new User
             {
                 Name = userName.ToString(),
@@ -309,7 +309,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save The User In Memory
             newUser.StoreUserInMemory();
             logger.LogMethodExit("AddUserPage", "SaveUserInMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -320,7 +320,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create New User In Global Home
             logger.LogMethodEntry("AddUserPage", "CreateNewUserInGlobalHome"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Creating the Cs User by UserType                
@@ -333,7 +333,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddUserPage", "CreateNewUserInGlobalHome"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -345,7 +345,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Stores User Details in Memory
             logger.LogMethodEntry("AddUserPage", "StoreCourseSpaceUserDetails"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.DPCsTeacher:
@@ -361,7 +361,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("AddUserPage", "StoreCourseSpaceUserDetails"
-             , base.isTakeScreenShotDuringEntryExit);
+             , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -373,7 +373,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Create New User In CourseSpace Admin
             logger.LogMethodEntry("AddUserPage", "CreateNewUserInCourseSpaceAdmin"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Creating the Cs User by UserType                
@@ -386,7 +386,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AddUserPage", "CreateNewUserInCourseSpaceAdmin"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -399,7 +399,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Stores CourseSpace Admin Details in Memory
             logger.LogMethodEntry("AddUserPage", "StoreCourseSpaceAdminUserDetails"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.DPCsTeacher:
@@ -416,7 +416,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             logger.LogMethodExit("AddUserPage", "StoreCourseSpaceAdminUserDetails"
-             , base.isTakeScreenShotDuringEntryExit);
+             , base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

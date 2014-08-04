@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select report
             logger.LogMethodEntry("RptMainPage", "SelectReport",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Select report frame
@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptMainPage", "SelectReport",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Program admin report frame
             logger.LogMethodEntry("RptMainPage", "SelectReportFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.SelectWindow(RptMainPageResource
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptMainPage", "SelectReportFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Student Enrollement Report
             logger.LogMethodEntry("RptMainPage", "ClickOnReportLink",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.WaitForElement(By.XPath(RptMainPageResource
@@ -120,7 +120,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptMainPage", "ClickOnReportLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -130,7 +130,7 @@ namespace Pegasus.Pages.UI_Pages
         public String GetReportName()
         {
             logger.LogMethodEntry("RptMainPage", "GetReportName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getReportName = string.Empty;
             try
@@ -148,7 +148,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptMainPage", "GetReportName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getReportName;
         }
 
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Report In Activity Results Panel
             logger.LogMethodEntry("RptMainPage", "GetReportName",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getReportName = string.Empty;
             try
@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptMainPage", "GetReportName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Certificate In Activity Results Panel
             logger.LogMethodEntry("RptMainPage", "ClickOnCertificateInActivityResultsPanel",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getCertificateName = string.Empty;
             try
@@ -244,7 +244,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptMainPage", "ClickOnCertificateInActivityResultsPanel",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

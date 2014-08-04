@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Login as Admin User
             Logger.LogMethodEntry("LoginContentPage", "Login",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Administrative Pages Window
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("LoginContentPage", "Login",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Admin Password
             Logger.LogMethodEntry("LoginContentPage", "EnterPassword",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             //Wait for Password Textbox
             base.WaitForElement(By.Id(LoginContentPageResource.
                 LoginContent_Page_Password_Id_Locator));
@@ -74,7 +74,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(LoginContentPageResource.
                 LoginContent_Page_Password_Id_Locator, password);
             Logger.LogMethodExit("LoginContentPage", "EnterPassword",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Admin Username
             Logger.LogMethodEntry("LoginContentPage", "EnterUserName",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Wait for UserName TextBox
             base.WaitForElement(By.Id(LoginContentPageResource.
                 LoginContent_Page_UserName_Id_Locator));
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(LoginContentPageResource.
                 LoginContent_Page_UserName_Id_Locator, userName);
             Logger.LogMethodExit("LoginContentPage", "EnterUserName",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

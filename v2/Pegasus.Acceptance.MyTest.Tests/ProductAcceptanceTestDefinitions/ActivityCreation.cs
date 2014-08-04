@@ -30,7 +30,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Click On Add Course Materials Option
             Logger.LogMethodEntry("ActivityCreation",
                 "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Declaration of object
             ContentLibraryUXPage contentLibrary = new ContentLibraryUXPage();
             //Select Window
@@ -43,7 +43,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             contentLibrary.ClickOnAddCourseMaterialsLink();
             Logger.LogMethodExit("ActivityCreation",
                 "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,11 +55,11 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Click On Activity Type
             Logger.LogMethodEntry("ActivityCreation", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Activity Type
             new ContentLibraryUXPage().ClickOnActivityType(activityType);
             Logger.LogMethodExit("ActivityCreation", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -73,13 +73,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Create The NonGradable Activity
             Logger.LogMethodEntry("ActivityCreation",
                   "CreateTheNonGradableActivityInContentLibrary",
-                        base.isTakeScreenShotDuringEntryExit);
+                        base.IsTakeScreenShotDuringEntryExit);
             //Create The NonGradable Activity.
             new ContentLibraryUXPage().
                 CreateNonGradableActivityInContentlibrary(activityTypeEnum);
             Logger.LogMethodExit("ActivityCreation",
                 "CreateTheNonGradableActivityInContentLibrary",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Associate The Activity From Content Library To MyCourse
             Logger.LogMethodEntry("ActivityCreation",
                 "AssociateTheActivityFromContentLibraryToMyCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
@@ -109,7 +109,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             contentLibraryUXPage.ClickOnActivityAddButton();
             Logger.LogMethodExit("ActivityCreation",
                 "AssociateTheActivityFromContentLibraryToMyCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
     }
 }

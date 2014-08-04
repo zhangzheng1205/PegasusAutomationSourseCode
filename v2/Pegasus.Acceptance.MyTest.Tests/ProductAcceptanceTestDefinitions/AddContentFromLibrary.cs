@@ -32,13 +32,13 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Click on folder in Add Course Materials pane
             Logger.LogMethodEntry("AddContentFromLibrary", "ClickOnFolderInAddCourseMaterials",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on MyTest folder in Add From Library
             new TeachingPlanUxPage().
                 ClickOnFolderInAddCourseMaterialsFrame(expectedFolderName);
             //Logger exist
             Logger.LogMethodExit("AddContentFromLibrary", "ClickOnFolderInAddCourseMaterials",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Logger Enrty
             Logger.LogMethodEntry("AddContentFromLibrary", "SeeTheMyTestInMyTestFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the name of My Test assets
             Activity activity = Activity.Get(activityTypeEnum);
             //Assert Display of My Test assest in MYTest Folder
@@ -62,7 +62,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                     activity.Name)));
             //Logger exist
             Logger.LogMethodExit("AddContentFromLibrary", "SeeTheMyTestInMyTestFolder",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Add Contents From Content Library To MyCourse Frame
             Logger.LogMethodEntry("AddContentFromLibrary",
                 "AddContentsFromContentLibraryToMyCourseFrame",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
@@ -91,7 +91,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             contentLibraryUXPage.ClickOnActivityAddButton();
             Logger.LogMethodExit("AddContentFromLibrary",
                 "AddContentsFromContentLibraryToMyCourseFrame",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Add Contents From Content Library To MyCourse Frame in CourseSpace
             Logger.LogMethodEntry("AddContentFromLibrary",
                 "AddContentsFromContentLibraryToMyCourseFrameInCourseSpace",
-                isTakeScreenShotDuringEntryExit);            
+                IsTakeScreenShotDuringEntryExit);            
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
             //Select Window
             contentLibraryUXPage.SelectTheWindowName(AddContentFromLibraryResource.
@@ -118,7 +118,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             contentLibraryUXPage.ClickOnActivityAddButton();
             Logger.LogMethodExit("AddContentFromLibrary",
                 "AddContentsFromContentLibraryToMyCourseFrameInCourseSpace",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -132,7 +132,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Verify the Activity Name added to the My Course Frame
             Logger.LogMethodEntry("AddContentFromLibrary", "DisplayOfActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Gets the Activity name from Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Asserts the Activity Name
@@ -140,7 +140,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activity.Name,
                     new CourseContentUXPage().GetActivityName(activity.Name)));
             Logger.LogMethodExit("AddContentFromLibrary", "DisplayOfActivityInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Asserts the Activity Name in My Course Frame In CourseSpace
             Logger.LogMethodEntry("AddContentFromLibrary", 
                 "DisplayOfActivityInMyCourseFrameInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Fetch the activity from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Asserts the Activity Name
@@ -163,7 +163,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
                     new CourseContentUXPage().GetActivityName(activity.Name)));
             Logger.LogMethodExit("AddContentFromLibrary",
                 "DisplayOfActivityInMyCourseFrameInCourseSpace",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -175,12 +175,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Click The Activity Cmenu Option In MyCourse Frame
             Logger.LogMethodEntry("AddContentFromLibrary",
                 "ClickTheActivityCmenuOptionInMyCourseFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Click On The Activity Cmenu In MyCourse Frame
             new CourseContentUXPage().ClickTheActivityShowHideCmenuInMyCourseFrame();
             Logger.LogMethodExit("AddContentFromLibrary",
                 "ClickTheActivityCmenuOptionInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -192,12 +192,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Select The Activity CmenuOption In MyCourseFrame
             Logger.LogMethodEntry("AddContentFromLibrary",
                 "SelectTheActivityCmenuOptionInMyCourseFrame",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Click On The Activity Cmenu In MyCourse Frame
             new CourseContentUXPage().ClickTheActivityCmneuImageIcon();
             Logger.LogMethodExit("AddContentFromLibrary",
                 "SelectTheActivityCmenuOptionInMyCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -208,11 +208,11 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Click On ShowHide Status Option
             Logger.LogMethodEntry("AddContentFromLibrary", "ClickOnShowHideStatusOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Activity Type
             new CourseContentUXPage().ClickTheShowHideStatusOption();
             Logger.LogMethodExit("AddContentFromLibrary", "ClickOnShowHideStatusOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -225,11 +225,11 @@ namespace Pegasus.Acceptance.MyTest.Tests.
         {
             //Click The Cmenu of Activity
             Logger.LogMethodEntry("AddContentFromLibrary", "ClickTheCmenuofActivity"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
             //Click On Cmenu of Activity
             new CourseContentUXPage().ClickTheCmenuOptionofActivity(cmenuOption);
             Logger.LogMethodExit("AddContentFromLibrary", "ClickTheCmenuofActivity"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             //Verify The Display Of CMenu Options For Activity.
             Logger.LogMethodEntry("AddContentFromLibrary",
                  "VerifyTheDisplayOfCMenuOptionsForActivity",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             foreach (var tableRow in table.Rows)
             {
                 //Assert correct pages are opened
@@ -257,7 +257,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.
             }
             Logger.LogMethodExit("AddContentFromLibrary",
                 "VerifyTheDisplayOfCMenuOptionsForActivity",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

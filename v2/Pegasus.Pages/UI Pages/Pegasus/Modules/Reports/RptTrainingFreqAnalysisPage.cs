@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Activity Score From Generated Report
             logger.LogMethodEntry("RptTrainingFreqAnalysisPage",
                 "GetActivityScoreFromGeneratedReport"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Initialized Activity Score Variable
             string getActivityScore = string.Empty;
             try
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RptTrainingFreqAnalysisPage",
                 "GetActivityScoreFromGeneratedReport"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
 
@@ -70,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("RptTrainingFreqAnalysisPage", "SelectWindow"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             //Wait Until Window
             base.WaitUntilWindowLoads(RptTrainingFreqAnalysisPageResource.
                 RptTrainingFreqAnalysisPage_Resource_Window_Title);
@@ -78,7 +78,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(RptTrainingFreqAnalysisPageResource.
                 RptTrainingFreqAnalysisPage_Resource_Window_Title);
             logger.LogMethodExit("RptTrainingFreqAnalysisPage", "SelectWindow"
-               , base.isTakeScreenShotDuringEntryExit);
+               , base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

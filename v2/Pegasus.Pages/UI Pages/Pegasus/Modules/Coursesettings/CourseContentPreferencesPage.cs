@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Set The Content Preferences
             logger.LogMethodEntry("CourseContentPreferencesPage", "SetTheContentPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on the Content Link
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseContentPreferencesPage", "SetTheContentPreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Sets Content Preferences Options
             logger.LogMethodEntry("CourseContentPreferencesPage", "ContentPreferencesOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for "Enable Assign/Unassign" option
             base.WaitForElement(By.Id(CourseContentPreferencesPageResource.
                 CourseContentPreferencesPage_Checkbox_EnableAssignUnassign_Id_Locator));
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(getHideCourseContent);
             }
             logger.LogMethodExit("CourseContentPreferencesPage", "ContentPreferencesOptions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the Content Link
             logger.LogMethodEntry("CourseContentPreferencesPage", "ClickOnContentLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select the Main Preferences
             new CourseCopyPreferencesPage().SelectTheMainPreferencesFrame();
             //Wait for the Content Link
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the Content Link
             base.ClickByJavaScriptExecutor(getContentLink);
             logger.LogMethodExit("CourseContentPreferencesPage", "ClickOnContentLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
             //Set The Content Preferences For ContainerCourse
             logger.LogMethodEntry("CourseContentPreferencesPage",
                 "SetTheContentPreferencesForContainerCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Click on the Content Link
@@ -146,7 +146,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CourseContentPreferencesPage",
                 "SetTheContentPreferencesForContainerCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

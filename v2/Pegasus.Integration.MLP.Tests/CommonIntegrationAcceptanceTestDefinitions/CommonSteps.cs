@@ -50,7 +50,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Check If Expected Page Is Opened
             Logger.LogMethodEntry("CommonSteps", "ShowTheExpectedPage",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Wait Till Thinking Indicator Loads
             bool isThinkingIndicatorLoading = IsThinkingIndicatorLoading();
             //If Thinking Indicator In Process After Specified Time Interval then Fail This Step
@@ -70,7 +70,7 @@ namespace Pegasus.Integration.MLP.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedPageTitle, getActualPageTitle));
             Logger.LogMethodExit("CommonSteps", "ShowTheExpectedPage",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Pegasus.Integration.MLP.Tests.
             // Method To Verify the Success Message     
             Logger.LogMethodEntry("CommonSteps",
                 "DisplayTheSuccessfullMessage",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Verify Correct Message Present on the Page
             IsMessageExists(successMessage,
                                  CommonStepsResource.CommonSteps_SuccessMessage_Class_Locator);
@@ -91,7 +91,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //but this is not the severe issue. So We, can ignore this.
             Logger.LogMethodExit("CommonSteps",
                 "DisplayTheSuccessfullMessage",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Verify Pop Up Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Wait Untill Window Loads
             WaitUntilWindowLoads(popUpName,
                 Convert.ToInt32(CommonStepsResource.
@@ -115,7 +115,7 @@ namespace Pegasus.Integration.MLP.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(true, isPopUpExist));
             Logger.LogMethodExit("CommonSteps", "ShowThePopUpInPegasus",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Method to Navigate to the Tab Window 
             Logger.LogMethodEntry("CommonSteps", "NavigateToTheTab",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             //Click On More Link if More Link Is Present
             //And The Required Tab Is Not Present
             new TodaysViewUXPage().ClickMoreLinkIfPresent(tabName);
@@ -143,7 +143,7 @@ namespace Pegasus.Integration.MLP.Tests.
             Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                  CommonSteps_SleepTime_Value));
             Logger.LogMethodExit("CommonSteps", "NavigateToTheTab",
-                 isTakeScreenShotDuringEntryExit);
+                 IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -158,7 +158,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Click on the Link
             Logger.LogMethodEntry("CommonSteps", "ClickOnTheLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Switch To Frame
             base.SwitchToIFrame(CommonStepsResource.
                 CommonSteps_IFrame + frame + String.Empty);
@@ -178,7 +178,7 @@ namespace Pegasus.Integration.MLP.Tests.
                     break;
             }
             Logger.LogMethodExit("CommonSteps", "ClickOnTheLink",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Show Course On The MyCourses and Testbanks Page In Active State
             Logger.LogMethodEntry("CommonSteps",
                 "ShowCourseOnTheGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Assert Course Present on Global Home Page
@@ -202,7 +202,7 @@ namespace Pegasus.Integration.MLP.Tests.
                     GetCoursePresentInGlobalHomePage().Contains(course.Name)));
             Logger.LogMethodExit("CommonSteps",
                 "ShowCourseOnTheGlobalHomePage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -216,12 +216,12 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Enter in Course from Global Home Page 
             Logger.LogMethodEntry("CommonSteps", "EnterInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Enter Into The Course
             new HEDGlobalHomePage().EnterInsideCourse(
                 courseTypeEnum, userTypeEnum);
             Logger.LogMethodExit("CommonSteps", " EnterInCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -233,10 +233,10 @@ namespace Pegasus.Integration.MLP.Tests.
             String administrationLinkName)
         {
             Logger.LogMethodEntry("CommonSteps", "SelectAdministrationPageLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new HomePSHPage().SelectHomePSHPagesLink(administrationLinkName);
             Logger.LogMethodExit("CommonSteps", "SelectAdministrationPageLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -250,12 +250,12 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Navigate to Frame
             Logger.LogMethodEntry("CommonSteps", "SelectAdminNavigationTab",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             // Select Admin Navigation Tab
             new CampusAdminNavPage().
                 SelectGlobalNavigationPageLink(adminNavigationTabName);
             Logger.LogMethodExit("CommonSteps", "SelectAdminNavigationTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -268,11 +268,11 @@ namespace Pegasus.Integration.MLP.Tests.
         public void ClickOnExitOption()
         {
             Logger.LogMethodEntry("CommonSteps", "ClickOnExitOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             // Insatance of SubHeadFramePage
             new SubHeadFramePage().ClickOnExitButton();
             Logger.LogMethodExit("CommonSteps", "ClickOnExitOption",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -285,11 +285,11 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Select Tab
             Logger.LogMethodEntry("CommonSteps", "SelectGlobalNavigationTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On The Global Navigation Frame
             new SubHeadFramePage().ClickOnGlobalNavigationTab(globalNavigationTabName);
             Logger.LogMethodExit("CommonSteps", "SelectGlobalNavigationTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -301,10 +301,10 @@ namespace Pegasus.Integration.MLP.Tests.
         public void WhenIClickOnOptionOnHomePSHPage(String tabName)
         {
             Logger.LogMethodEntry("CommonSteps", "WhenIClickOnOptionOnHomePSHPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new HomePSHPage().ClickOnTabLink(tabName);
             Logger.LogMethodExit("CommonSteps", "WhenIClickOnOptionOnHomePSHPage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -315,7 +315,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             //Check If Expected Page Is Opened
             Logger.LogMethodEntry("CommonSteps", "ShowTheExpectedPage",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
 
             //Wait Till Thinking Indicator Loads
             bool isThinkingIndicatorLoading = IsThinkingIndicatorLoading();
@@ -340,7 +340,7 @@ namespace Pegasus.Integration.MLP.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(isCloseButtonPresent));
             Logger.LogMethodExit("CommonSteps", "ShowTheExpectedPopupWindow",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -354,7 +354,7 @@ namespace Pegasus.Integration.MLP.Tests.
         {
             // Method To Verify the Success Message 
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessageInWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait For Page Get Refresh after Pop Up Close
             Thread.Sleep(Convert.ToInt32(CommonStepsResource.
                 CommonSteps_SleepTime_Value));
@@ -374,7 +374,7 @@ namespace Pegasus.Integration.MLP.Tests.
             //Removed The Assert For Message Because Sometimes Message not comes 
             //but this is not the severe issue. So We, can ignore this.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessageInWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

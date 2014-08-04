@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetStudentText()
         {
             logger.LogMethodEntry("RptStudentUsagePage", "GetStudentText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Student Name Variable
             string getStudentName = string.Empty;
             try
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptStudentUsagePage", "GetStudentText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getStudentName;
         }
 
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetSectionName(ProgramAdminReportType reportTypeEnum)
         {
             logger.LogMethodEntry("RptStudentUsagePage", "GetSectionText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Section Name Variable
             string getSectionName = string.Empty;
             try
@@ -95,7 +95,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("RptStudentUsagePage", "GetSectionText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSectionName;
         }
 
@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages
         private String GetSectionText()
         {
             logger.LogMethodEntry("RptStudentUsagePage", "GetSectionText",
-                   base.isTakeScreenShotDuringEntryExit);
+                   base.IsTakeScreenShotDuringEntryExit);
             string getSectionName = string.Empty;
             //Select Window
             this.SelectWindow();
@@ -114,7 +114,7 @@ namespace Pegasus.Pages.UI_Pages
             getSectionName = base.GetElementTextByXPath(
                 RptStudentUsagePageResource.RptStudentUsage_Page_Section_Text_Xpath_Locator);
             logger.LogMethodExit("RptStudentUsagePage", "GetSectionText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return getSectionName;
         }
 
@@ -127,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetStatusText(ProgramAdminReportType reportTypeEnum)
         {
             logger.LogMethodEntry("RptStudentUsagePage", "GetStatusText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Status Variable
             string getStatus = string.Empty;
             try
@@ -150,7 +150,7 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("RptStudentUsagePage", "GetStatusText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getStatus;
         }
 
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
         private string GetSectionStatusText()
         {
             logger.LogMethodEntry("RptStudentUsagePage", "GetSectionStatusText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             string getStatus = string.Empty;
             //Select Window
             this.SelectWindow();
@@ -174,7 +174,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(ProgramAdminUsersPageResource
             .ProgramAdminUsers_Page_Window_Title_Name);
             logger.LogMethodExit("RptStudentUsagePage", "GetSectionStatusText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getStatus;
         }
 
@@ -185,7 +185,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SelectReportWindow(string getReportWindowName)
         {
             logger.LogMethodEntry("RptStudentUsagePage", "SelectReportWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select the Student Enrollment Window
@@ -197,7 +197,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptStudentUsagePage", "SelectReportWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Enrollment Date
             logger.LogMethodEntry("RptStudentUsagePage", "GetEnrollmentDate",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getsplittedEnrollmentDate = string.Empty;
             string getenrollmentDateTime = string.Empty;
@@ -235,7 +235,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptStudentUsagePage", "GetEnrollmentDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getsplittedEnrollmentDate;
         }
 
@@ -246,14 +246,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             logger.LogMethodEntry("RptStudentUsagePage", "SelectWindow",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Select window title
             base.WaitUntilWindowLoads(RptStudentUsagePageResource
                             .RptStudentUsage_Page_Window_Title);
             base.SelectWindow(RptStudentUsagePageResource
                             .RptStudentUsage_Page_Window_Title);
             logger.LogMethodExit("RptStudentUsagePage", "SelectWindow",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -264,7 +264,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get Last Login Date
             logger.LogMethodEntry("RptStudentUsagePage", "GetLastLoginDate",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             string getsplittedLastLoginDate = string.Empty;
             string getLastLoginDateTime = string.Empty;
@@ -289,7 +289,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptStudentUsagePage", "GetLastLoginDate",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getsplittedLastLoginDate;
         }
     }

@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
             Course.CourseTypeEnum courseTypeEnum)
         {
             Logger.LogMethodEntry("SingleCrsCreationBottomPage",
-                "CreateSingleCourseRequest", base.isTakeScreenShotDuringEntryExit);
+                "CreateSingleCourseRequest", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Frame
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(ex);
             }
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
-                "CreateSingleCourseRequest", base.isTakeScreenShotDuringEntryExit);
+                "CreateSingleCourseRequest", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Submit The Course
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
-              "SubmitPreviewCourseInformation", base.isTakeScreenShotDuringEntryExit);
+              "SubmitPreviewCourseInformation", base.IsTakeScreenShotDuringEntryExit);
             //Click on Submit Button 
             base.WaitForElement(By.Name(SingleCrsCreationBottomPageResource
                                             .SingleCrsCreationBottom_Page_Submit_Button_Name_Locator));
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectButtonByName(SingleCrsCreationBottomPageResource
                                        .SingleCrsCreationBottom_Page_Submit_Button_Name_Locator);
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
-              "SubmitPreviewCourseInformation", base.isTakeScreenShotDuringEntryExit);
+              "SubmitPreviewCourseInformation", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Next Button
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
-               "ClickNextCourseButton", base.isTakeScreenShotDuringEntryExit);
+               "ClickNextCourseButton", base.IsTakeScreenShotDuringEntryExit);
             //Select Top Content Area frame
             SelectTopContentAreaFrame();
             //Wait for Next Button 
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectButtonByName(SingleCrsCreationBottomPageResource.
                      SingleCrsCreationBottom_Page_Next_button_Name_Locator);
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
-               "ClickNextCourseButton", base.isTakeScreenShotDuringEntryExit);
+               "ClickNextCourseButton", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Course Credit Information
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
-                "EnterCourseCreditInformation", base.isTakeScreenShotDuringEntryExit);
+                "EnterCourseCreditInformation", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             WaitForElement(By.Name(SingleCrsCreationBottomPageResource.
                 SingleCrsCreationBottom_Page_CreditContactHours_TextBox_Name_Locator));
@@ -118,7 +118,7 @@ namespace Pegasus.Pages.UI_Pages
                   SingleCrsCreationBottomPageResource.
                   SingleCrsCreationBottom_Page_CreditContactHours_Value);
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
-                "EnterCourseCreditInformation", base.isTakeScreenShotDuringEntryExit);
+                "EnterCourseCreditInformation", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             Logger.LogMethodEntry("SingleCrsCreationBottomPage",
                 "SelectTopContentAreaFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectAdministrationPagesWindow();
             //Select Frame Content
@@ -140,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
                 SingleCrsCreationBottom_Page_TopContentArea_Frame_Name_Locator);
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
                 "SelectTopContentAreaFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Course Information
             Logger.LogMethodEntry("SingleCrsCreationBottomPage",
                 "EnterCourseInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Name(
                 SingleCrsCreationBottomPageResource.
                 SingleCrsCreationBottom_Page_EnrollableArea_DropDown_Name_Locator));
@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
                 SingleCrsCreationBottom_Page_ExistingTerm_Name_Locator);
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
                 "EnterCourseInformation",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Frame
             Logger.LogMethodEntry("SingleCrsCreationBottomPage",
                 "SelectBottomContentAreaFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Select Window
             this.SelectAdministrationPagesWindow();
             //Select Frame Content
@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Enrollable Area Drop Down
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
                 "SelectBottomContentAreaFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace Pegasus.Pages.UI_Pages
             //Enter Display Course Code Information
             Logger.LogMethodEntry("SingleCrsCreationBottomPage",
                 "EnterDisplayCourseCode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Genrate guid for Display Course Code
             Guid generateDispalyCourseCode = Guid.NewGuid();
             base.WaitForElement(By.Name(SingleCrsCreationBottomPageResource.
@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
                     generateDispalyCourseCode.ToString());
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
                 "EnterDisplayCourseCode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -226,7 +226,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Course Code
             Logger.LogMethodEntry("SingleCrsCreationBottomPage", "EnterCoureCode",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Generate Course Code
             String getCourseCode = base.GetRandomNumber(SingleCrsCreationBottomPageResource.
                 SingleCrsCreationBottom_Page_CourseCode_CharacterSet, 5);
@@ -239,7 +239,7 @@ namespace Pegasus.Pages.UI_Pages
                   SingleCrsCreationBottom_Page_CourseCode_TextBox_Name_Locator,
                   getCourseCode);
             Logger.LogMethodExit("SingleCrsCreationBottomPage", "EnterCoureCode",
-                  base.isTakeScreenShotDuringEntryExit);
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -248,7 +248,7 @@ namespace Pegasus.Pages.UI_Pages
         private String EnterCourseTitle()
         {
             Logger.LogMethodEntry("SingleCrsCreationBottomPage",
-                "EnterCourseTitle", base.isTakeScreenShotDuringEntryExit);
+                "EnterCourseTitle", base.IsTakeScreenShotDuringEntryExit);
             //Genrate guid for Course tilte 
             Guid generateCourseTitleGuid = Guid.NewGuid();
             // Wait for Element 
@@ -262,7 +262,7 @@ namespace Pegasus.Pages.UI_Pages
             //Log course name in logger file
             CourseName = generateCourseTitleGuid.ToString();
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
-                "EnterCourseTitle", base.isTakeScreenShotDuringEntryExit);
+                "EnterCourseTitle", base.IsTakeScreenShotDuringEntryExit);
             return generateCourseTitleGuid.ToString();
         }
 
@@ -273,7 +273,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Window
             Logger.LogMethodEntry("SingleCrsCreationBottomPage",
-             "SelectAdministrationPagesWindow", base.isTakeScreenShotDuringEntryExit);
+             "SelectAdministrationPagesWindow", base.IsTakeScreenShotDuringEntryExit);
             //Wait For Window Gets Load
             base.WaitUntilWindowLoads(SingleCrsCreationBottomPageResource.
                 SingleCrsCreationBottom_Page_AdministrationPages_Window_Title);
@@ -281,7 +281,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(SingleCrsCreationBottomPageResource.
                 SingleCrsCreationBottom_Page_AdministrationPages_Window_Title);
             Logger.LogMethodEntry("SingleCrsCreationBottomPage",
-             "SelectAdministrationPagesWindow", base.isTakeScreenShotDuringEntryExit);
+             "SelectAdministrationPagesWindow", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save Course in Memory
             Logger.LogMethodEntry("SingleCrsCreationBottomPage",
                 "StoreECollegeCourseInformationInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Save Course Properties in Memory
             Course newCourse = new Course
             {
@@ -307,7 +307,7 @@ namespace Pegasus.Pages.UI_Pages
             newCourse.StoreCourseInMemory();
             Logger.LogMethodExit("SingleCrsCreationBottomPage",
                 "StoreECollegeCourseInformationInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
 
         }
     }

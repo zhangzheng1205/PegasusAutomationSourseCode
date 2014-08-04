@@ -26,7 +26,7 @@ namespace Pegasus.Acceptance.MMND.Tests.ProductAcceptanceTestDefinitions
             //Click On Add Course Materials Option
             Logger.LogMethodEntry("CreateActivity",
                 "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Declaration of object
             ContentLibraryUXPage contentLibrary = new ContentLibraryUXPage();
             //Select Window
@@ -39,7 +39,7 @@ namespace Pegasus.Acceptance.MMND.Tests.ProductAcceptanceTestDefinitions
             contentLibrary.ClickOnAddCourseMaterialsLink();
             Logger.LogMethodExit("CreateActivity",
                 "ClickOnAddCourseMaterialsLink",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -51,11 +51,11 @@ namespace Pegasus.Acceptance.MMND.Tests.ProductAcceptanceTestDefinitions
         {
             //Click On Activity Type
             Logger.LogMethodEntry("CreateActivity", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Activity Type
             new ContentLibraryUXPage().ClickOnActivityType(activityType);
             Logger.LogMethodExit("CreateActivity", "ClickOnTheActivityType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace Pegasus.Acceptance.MMND.Tests.ProductAcceptanceTestDefinitions
         {
             //Create Activity
             Logger.LogMethodEntry("CreateActivity", "CreateTheActivityOfBehavioralModeType",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Create Object for RandomTopicList Page
             RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
             AddAssessmentPage addAssessmentPage = new AddAssessmentPage();
@@ -85,7 +85,7 @@ namespace Pegasus.Acceptance.MMND.Tests.ProductAcceptanceTestDefinitions
             //Enter the message
             addAssessmentPage.EnterTheMessageForActivity();
             Logger.LogMethodExit("CreateActivity", "CreateTheActivityOfBehavioralModeType",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Pegasus.Acceptance.MMND.Tests.ProductAcceptanceTestDefinitions
             //Associate The Activity From Content Library To MyCourse
             Logger.LogMethodEntry("CreateActivity",
                 "AssociateTheActivityFromContentLibraryToMyCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
             ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
@@ -115,7 +115,7 @@ namespace Pegasus.Acceptance.MMND.Tests.ProductAcceptanceTestDefinitions
             contentLibraryUXPage.ClickOnActivityAddButton();
             Logger.LogMethodExit("CreateActivity",
                 "AssociateTheActivityFromContentLibraryToMyCourse",
-                isTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -31,13 +31,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Verify is SMS URL browsed successfully
             Logger.LogMethodEntry("SMSRegistration", "VerifyIsSMSRegistrationURLBrowsedSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert URL browsed Successfully
             Logger.LogAssertion("VerifyBrowsedURL",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
                     Assert.IsTrue(new ConsentPage().IsAcceptButtonPresent()));
             Logger.LogMethodExit("SMSRegistration", "VerifyIsSMSRegistrationURLBrowsedSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             // Create New SMS User
             Logger.LogMethodEntry("SMSRegistration", "RegisterNewSMSUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.MMNDInstructor:
@@ -72,7 +72,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                     break;
             }
             Logger.LogMethodExit("SMSRegistration", "RegisterNewSMSUser",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
 
@@ -87,7 +87,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
             // SMS User Created with Confirmation and Summary
             Logger.LogMethodEntry("SMSRegistration",
                 "DisplayTheConfirmationAndSummaryForSMSUserRegisteration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert SMS User Created and Saved in Memory
             Logger.LogAssertion("VerifySMSUserCreated",
                 ScenarioContext.Current.ScenarioInfo.Title,
@@ -96,7 +96,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                     new ConsentPage().GetPageTitle));
             Logger.LogMethodExit("SMSRegistration",
                 "DisplayTheConfirmationAndSummaryForSMSUserRegisteration",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
             //Verify is SMS Student URL Browsed successfully
             Logger.LogMethodEntry("SMSRegistration",
                 "VerifyIsSMSStudentRegistrationURLBrowsedSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Assert Find Course Button
             Logger.LogAssertion("VerifyFindCourseButton",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                     IsFindCourseButtonPresent()));
             Logger.LogMethodExit("SMSRegistration",
                 "VerifyIsSMSStudentRegistrationURLBrowsedSuccessfully",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -129,13 +129,13 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Enter Course Id
             Logger.LogMethodEntry("SMSRegistration", "EnterTheCourseId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get Course Id From Memeory
             Course course = Course.Get(courseTypeEnum);
             //Enter Course Id
             new CourseIdInputPage().EnterCourseId(course.ECollegeIntegrationId);
             Logger.LogMethodExit("SMSRegistration", "EnterTheCourseId",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -146,11 +146,11 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Click On Log In Now Button
             Logger.LogMethodEntry("SMSRegistration", "LoginAsMMNDStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click On Log In Now Button
             new Reg3Page().ClickOnLogInNowButton();
             Logger.LogMethodExit("SMSRegistration", "LoginAsMMNDStudent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         {
             //Verify the Enrolled Course
             Logger.LogMethodEntry("SMSRegistration", "VerifyTheEnrolledCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course Id From Memeory
             Course course = Course.Get(courseTypeEnum);
             //Assert Course
@@ -172,7 +172,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                     Assert.IsTrue(new UserLayoutRootNodePage().
                     IsCourseNameDisplayed(course.Name)));
             Logger.LogMethodExit("SMSRegistration", "VerifyTheEnrolledCourse",
-           base.isTakeScreenShotDuringEntryExit);
+           base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

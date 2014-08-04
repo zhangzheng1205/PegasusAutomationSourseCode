@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
       {
           //Create Link Asset
           logger.LogMethodEntry("AddUrlPage", "CreateLinkAsset",
-            base.isTakeScreenShotDuringEntryExit);              
+            base.IsTakeScreenShotDuringEntryExit);              
           //Intialize Guid for Link Asset
           Guid newLinkAsset = Guid.NewGuid();
           try
@@ -59,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
               ExceptionHandler.HandleException(e);
           }
           logger.LogMethodExit("AddUrlPage", "CreateLinkAsset",
-        base.isTakeScreenShotDuringEntryExit); 
+        base.IsTakeScreenShotDuringEntryExit); 
       }
 
       /// <summary>
@@ -69,7 +69,7 @@ namespace Pegasus.Pages.UI_Pages
       {
           //Click The Add Button
           logger.LogMethodEntry("AddUrlPage", "ClickTheAddButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
           //Fill the URL text
           base.FillTextBoxById(AddUrlPageResource.
               AddUrl_Page_URL_Textbox_Id_Locator, AddUrlPageResource.
@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages
           base.ClickButtonById(AddUrlPageResource.
               AddUrl_Page_Link_CreateButton_Id_Locator);
           logger.LogMethodExit("AddUrlPage", "ClickTheAddButton",
-       base.isTakeScreenShotDuringEntryExit); 
+       base.IsTakeScreenShotDuringEntryExit); 
       }
 
       /// <summary>
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
       {
           //Store the asset 
          logger.LogMethodEntry("AddUrlPage", "StoreTheLinkAsset",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
            //Store the Link in memory
          Activity newLink=new Activity
          {
@@ -107,7 +107,7 @@ namespace Pegasus.Pages.UI_Pages
          };
          newLink.StoreActivityInMemory();
          logger.LogMethodExit("AddUrlPage", "StoreTheLinkAsset",
-           base.isTakeScreenShotDuringEntryExit); 
+           base.IsTakeScreenShotDuringEntryExit); 
       }
     }
 }

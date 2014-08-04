@@ -27,13 +27,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Preference settings For Copy Content
             Logger.LogMethodEntry("Preferences", 
                 "SetThePreferencesForCopyContent", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Set The Preferences For Copy Content
             new CourseCopyPreferencesPage().
                 SetCopyContentPreference();
             Logger.LogMethodExit("Preferences", 
                 "SetThePreferencesForCopyContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -45,12 +45,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Set The Preferences For Shared Library
             Logger.LogMethodEntry("Preferences", 
                 "SetThePreferencesForSharedLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             new SharedLibraryPreferencesPage().
                 SetSharedLibrariesPreferences();
             Logger.LogMethodExit("Preferences", 
                 "SetThePreferencesForSharedLibrary",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -62,13 +62,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Set The Preferences For Content In ContainerCourse
             Logger.LogMethodEntry("Preferences", 
                 "SetThePreferencesForContentInContainerCourse",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
             //Set The Content Preferences For ContainerCourse
             new CourseContentPreferencesPage().
                 SetTheContentPreferencesForContainerCourse();
             Logger.LogMethodExit("Preferences", 
                 "SetThePreferencesForContentInContainerCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -80,12 +80,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Click on the Save Preferences Button
             Logger.LogMethodEntry("Preferences", 
                 "SaveThePreferences", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Save the Preferences
             new ActivitiesPreferencesPage().SaveActivityPreferences();
             Logger.LogMethodExit("Preferences", 
                 "SaveThePreferences",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -97,13 +97,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Set Preference settings For Custom Content
             Logger.LogMethodEntry("Preferences", 
                 "SetThePreferencesForCustomContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Set The Preferences For Custom Content
             new CustomContentPreferencesPage().
                 SetCustomContentPreferences();
             Logger.LogMethodExit("Preferences", 
                 "SetThePreferencesForCustomContent",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -115,12 +115,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Set The Preferences For My Course
             Logger.LogMethodEntry("Preferences", 
                 "SetThePreferencesForMyCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Set The Preferences For My Course
             new MyCoursesPreferencesPage().SetMyCoursesPreferences();
             Logger.LogMethodExit("Preferences", 
                 "SetThePreferencesForMyCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -132,13 +132,13 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Set The Preferences For Content
             Logger.LogMethodEntry("Preferences", 
                 "SetThePreferencesForContent",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Set The Preferences For Content
             new CourseContentPreferencesPage().
                 SetTheContentPreferences();
             Logger.LogMethodExit("Preferences", 
                 "SetThePreferencesForContent",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -150,11 +150,11 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Navigating to 'Home' sub tab
             Logger.LogMethodEntry("Preferences", "ClickOnTheHomeTab",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             //Navigating to 'Home' sub tab options from preference page
             new GeneralPreferencesPage().ClickonSubTabofPreference(subTabName);
             Logger.LogMethodExit("Preferences", "ClickOnTheHomeTab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Enable Necessary Grades Preference Settings
             Logger.LogMethodEntry("Preference",
                 "EnableNecessaryGradingTabPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             GeneralPreferencesPage generalPreferencePage = new GeneralPreferencesPage();
             //Select Main Frame
             generalPreferencePage.SelectThePreferenceWindowWithFrame();
@@ -179,7 +179,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             generalPreferencePage.SavePreferences();
             Logger.LogMethodExit("Preference",
                 "EnableNecessaryGradingTabPreferenceSettings",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -24,7 +24,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         public string GetSectionText()
         {
             logger.LogMethodEntry("RptStudentUsagePage", "GetSectionText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             string getSectionText = string.Empty;
             try
             {
@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptStudentUsagePage", "GetSectionText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSectionText;
         }
 
@@ -53,7 +53,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         public string GetSectionStatusText()
         {
             logger.LogMethodEntry("RptStudentUsagePage", "GetSectionText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             string getSectionStatusText = string.Empty;
             try
             {
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptStudentUsagePage", "GetSectionText",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getSectionStatusText;
         }
     }

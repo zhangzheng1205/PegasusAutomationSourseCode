@@ -32,7 +32,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Publish Course
             Logger.LogMethodEntry("PublishingNotesPage", "PublishCourseInWorkSpace",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window
@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("PublishingNotesPage", "PublishCourseInWorkSpace",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Course Publishing Details on Basis of Browser
             Logger.LogMethodEntry("PublishingNotesPage",
-                                  "SaveCoursePublishingDetails", base.isTakeScreenShotDuringEntryExit);
+                                  "SaveCoursePublishingDetails", base.IsTakeScreenShotDuringEntryExit);
             //Enter Publish Details on Basis of Browser
             switch (base.Browser)
             {
@@ -90,7 +90,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
             }
             Logger.LogMethodExit("PublishingNotesPage",
-                                 "SaveCoursePublishingDetails", base.isTakeScreenShotDuringEntryExit);
+                                 "SaveCoursePublishingDetails", base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save Course Publish Description
             Logger.LogMethodEntry("PublishingNotesPage", "SaveCoursePublishDescriptionInChrome",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(PublishingNotesPageResource.
                                           PublishingNotes_Page_Save_Button_Id_Locator));
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
                 MoveToElement(saveButtononChrome).Build().Perform();
             new Actions(WebDriver).MoveToElement(saveButtononChrome).Click().Perform();
             Logger.LogMethodExit("PublishingNotesPage", "SaveCoursePublishDescriptionInChrome",
-                                          base.isTakeScreenShotDuringEntryExit);
+                                          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save Course Publish Description
             Logger.LogMethodEntry("PublishingNotesPage",
                                   "SaveCoursePublishDescriptionInInternetExplorer",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(PublishingNotesPageResource.
                                           PublishingNotes_Page_Save_Button_Id_Locator));
             //Get HTML Element Property
@@ -133,7 +133,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getButtonProperyInInternetExplorer);
             Logger.LogMethodExit("PublishingNotesPage",
                                   "SaveCoursePublishDescriptionInInternetExplorer",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace Pegasus.Pages.UI_Pages
             //Save Course Publish Description in FF Browser
             Logger.LogMethodEntry("PublishingNotesPage",
                                   "SaveCoursePublishDescriptionInFirefox",
-                                  base.isTakeScreenShotDuringEntryExit);
+                                  base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element
             base.WaitForElement(By.Id(PublishingNotesPageResource.
                                           PublishingNotes_Page_Save_Button_Id_Locator));
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
                                      PublishingNotes_Page_Save_Button_Id_Locator);
             Logger.LogMethodExit("PublishingNotesPage",
                                  "SaveCoursePublishDescriptionInFirefox",
-                                 base.isTakeScreenShotDuringEntryExit);
+                                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

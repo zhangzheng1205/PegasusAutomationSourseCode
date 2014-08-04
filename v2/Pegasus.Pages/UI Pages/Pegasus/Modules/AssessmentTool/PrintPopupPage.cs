@@ -28,7 +28,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool
         {
             //Logger Entry
             Logger.LogMethodEntry("PrintPopupPage", "GetNumberOfVersions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized Variable
             int getVersionNumberOfRows = 0;
             try
@@ -55,7 +55,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool
             }
             //Logger Exit
             Logger.LogMethodExit("PrintPopupPage", "GetNumberOfVersions",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getVersionNumberOfRows;
         }
 
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool
         {
             //Logger Entry
             Logger.LogMethodEntry("PrintPopupPage", "SelectDownloadLightBoxIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Switch To Default Page Content
             base.SwitchToDefaultPageContent();
             //Wait for Iframe 
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool
                 PrintPopup_Page_Iframe_Id_Locator);
             //Logger Exit
             Logger.LogMethodExit("PrintPopupPage", "SelectDownloadLightBoxIFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool
         {
             //Logger Entry
             Logger.LogMethodEntry("PrintPopupPage", "GetDownloadVersionName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialized variable
             String getDownloadVersionNameFromTableRow = string.Empty;
             try
@@ -110,7 +110,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool
             }
             //Logger Exit
             Logger.LogMethodExit("PrintPopupPage", "GetDownloadVersionName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return getDownloadVersionNameFromTableRow;
         }
     }

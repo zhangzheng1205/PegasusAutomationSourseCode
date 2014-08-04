@@ -33,7 +33,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Validate Visibilty Questions Tab for Doc Based Activity 
                 logger.LogMethodEntry("DocBasedAssessmentPage",
                     "CheckQuestionsTabVisibilty",
-                      base.isTakeScreenShotDuringEntryExit);
+                      base.IsTakeScreenShotDuringEntryExit);
                 //Wait for the Window
                 base.WaitUntilWindowLoads(DocBasedAssessmentResource.
                     DocBasedAssessment_Page_WindowName);
@@ -49,7 +49,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("DocBasedAssessmentPage", 
                 "CheckQuestionsTabVisibilty",
-                 base.isTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
             return isQuestionTabsDisplayed;
         }
 
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Validate Visibilty Questions Tab for Doc Sim Study plan
                 logger.LogMethodEntry("SkillBasedAssessmentPage",
                     "CheckQuestionsTabVisibiltyInSimStudyPlan",
-                    base.isTakeScreenShotDuringEntryExit);
+                    base.IsTakeScreenShotDuringEntryExit);
                 string getWindowName;
                 if (testType == DocBasedAssessmentResource.DocBasedAssessment_Page_PreTest)
                 {
@@ -93,7 +93,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("SkillBasedAssessmentPage",
                 "CheckQuestionsTabVisibiltyInSimStudyPlan",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             return isQuestionTabsDisplayed;
         }
     }

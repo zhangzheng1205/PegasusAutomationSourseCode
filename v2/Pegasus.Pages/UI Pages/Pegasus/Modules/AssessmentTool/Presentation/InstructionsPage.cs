@@ -22,7 +22,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation
         {
             // Click To Start Activity
             logger.LogMethodEntry("InstructionsPage", "ClickTestStartButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Wait For Start Button
@@ -40,7 +40,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("InstructionsPage", "ClickTestStartButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation
         {
             //Click To Close Activity
             logger.LogMethodEntry("InstructionsPage", "ClickTestCloseButton",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 // Wait For Stop Button
@@ -72,7 +72,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("InstructionsPage", "ClickTestCloseButton",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation
         {
             //Get Button Text
             logger.LogMethodEntry("InstructionsPage", "GetButtonText",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getButtonText = string.Empty;
             try
@@ -105,7 +105,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("InstructionsPage", "GetButtonText",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             return getButtonText;
         }
     }

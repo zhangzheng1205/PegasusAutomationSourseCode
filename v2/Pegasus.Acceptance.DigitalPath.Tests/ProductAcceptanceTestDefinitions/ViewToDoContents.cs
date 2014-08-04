@@ -32,13 +32,13 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
         {
             //Display The Assigned Asset In To Do Tab
             Logger.LogMethodEntry("ViewToDoContents", "DisplayTheAssignedAssetInToDoTab",
-               base.isTakeScreenShotDuringEntryExit);            
+               base.IsTakeScreenShotDuringEntryExit);            
             //Verify The Assigned Content In To Do Tab         
             Logger.LogAssertion("VerifyActivityName", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activityName,
                     new StudTodoDonePage().GetAssignedContentInToDoTab(activityName)));
             Logger.LogMethodExit("ViewToDoContents", "DisplayTheAssignedAssetInToDoTab",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

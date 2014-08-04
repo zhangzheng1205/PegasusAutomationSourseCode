@@ -33,12 +33,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Creates a New Course
             Logger.LogMethodEntry("CreateCourse", "CreateNewCourse", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Creates a new course using defined format
             new NewCoursePage().CreateNewCourse(courseTypeEnum, 
                 courseFormatOption);
             Logger.LogMethodExit("CreateCourse", "CreateNewCourse", 
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //Search Course in right frame
             Logger.LogMethodEntry("CreateCourse", "SearchTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Get the Course from Memory
             Course course = Course.Get(courseTypeEnum);
             //Search course
@@ -65,7 +65,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Select CourseEnrollement Window
             new ManageCoursesPage().SelectCourseEnrollementWindow();
             Logger.LogMethodExit("CreateCourse", "SearchTheCourse",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
         
         /// <summary>
@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
         {
             //To Verify The Course Search
             Logger.LogMethodEntry("CreateCourse", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Get Course Name From InMemory
             Course course = Course.Get(courseTypeEnum);
             // Assert Course Search
@@ -87,7 +87,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(course.Name,
                     new ManageCoursesPage().GetSearchedCourse(courseTypeEnum)));
             Logger.LogMethodExit("CreateCourse", "CheckSearchedCourse",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -99,12 +99,12 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Delete The Created Course In Manage Course Frame
             Logger.LogMethodEntry("CreateCourse",
                 "DeleteTheCreatedCourseInManageCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Delete The Created Course In Manage Course Frame
             new ManageCoursesPage().DeleteTheCreatedCourseInManageCourseFrame();
             Logger.LogMethodExit("CreateCourse",
                 "DeleteTheCreatedCourseInManageCourseFrame",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -117,14 +117,14 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Verify The Course Message
             Logger.LogMethodEntry("CreateCourse",
                 "VerifyTheCourseMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             // Assert Course Search
             Logger.LogAssertion("VerifySearchCourse", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(message,
                     new ManageCoursesPage().GetMessageInManageCourseFrame(message)));
             Logger.LogMethodExit("CreateCourse",
                 "VerifyTheCourseMessage",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

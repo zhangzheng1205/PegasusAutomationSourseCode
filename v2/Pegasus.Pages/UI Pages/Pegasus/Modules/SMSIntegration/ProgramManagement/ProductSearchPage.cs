@@ -26,7 +26,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Search Product
             Logger.LogMethodEntry("ProductSearchPage", "SearchProduct"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Enter Product Name and Click on Search Button
@@ -39,7 +39,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("ProductSearchPage", "SearchProduct"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Search Button
             Logger.LogMethodEntry("ProductSearchPage",
                 "EnterProductNameandClickonSearchButton"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Switch To Active Element 
@@ -76,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("ProductSearchPage",
                 "EnterProductNameandClickonSearchButton"
-                , base.isTakeScreenShotDuringEntryExit);
+                , base.IsTakeScreenShotDuringEntryExit);
         }
         
     }

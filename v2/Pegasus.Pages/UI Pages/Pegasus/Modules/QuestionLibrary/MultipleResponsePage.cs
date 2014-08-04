@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Create Multiple Response Question
             logger.LogMethodEntry("MultipleResponsePage", "CreateMultipleResponseQuestion",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Create Multiple Response Window
@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("MultipleResponsePage", "CreateMultipleResponseQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -71,14 +71,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Create Multiple Response Window
             logger.LogMethodEntry("MultipleResponsePage", "SelectCreateMultipleResponseWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(MultipleResponsePageResource.
                 MultipleResponse_Page_CreateMultipleResponse_Window_Name);
             //Select Create Multiple Response Window
             base.SelectWindow(MultipleResponsePageResource.
                 MultipleResponse_Page_CreateMultipleResponse_Window_Name);
             logger.LogMethodExit("MultipleResponsePage", "SelectCreateMultipleResponseWindow",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Question Title
             logger.LogMethodEntry("MultipleResponsePage", "EnterQuestionTitle",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Generate Question Title Guid
             Guid questionTitle = Guid.NewGuid();
             base.WaitForElement(By.Id(MultipleResponsePageResource.
@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(MultipleResponsePageResource.
                 MultipleResponse_Page_EnterQuestionTitle_Id_Locator, questionTitle.ToString());
             logger.LogMethodExit("MultipleResponsePage", "EnterQuestionTitle",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return questionTitle;
         }
 
@@ -112,7 +112,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On View Source Button and Enter Data
             logger.LogMethodEntry("MultipleResponsePage",
                 "ClickOnViewSourceAndEnterDataForMultipleResponseQuestion",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Frame
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_Frame_Id_Locator));
@@ -134,7 +134,7 @@ namespace Pegasus.Pages.UI_Pages
                 MultipleResponse_Page_ViewSource_Button_Id_Locator);
             logger.LogMethodExit("MultipleResponsePage",
                 "ClickOnViewSourceAndEnterDataForMultipleResponseQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add Pallette Characters
             logger.LogMethodEntry("MultipleResponsePage", "AddPalletteCharacters",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Add a character
             this.ClickOnCharacterPalleteButton(MultipleResponsePageResource.
                 MultipleResponse_Page_CharacterPalletea_Xpath_Locator_one);
@@ -161,7 +161,7 @@ namespace Pegasus.Pages.UI_Pages
             this.ClickOnCharacterPalleteButton(MultipleResponsePageResource.
                 MultipleResponse_Page_CharacterPalleteu_Xpath_Locator_five);
             logger.LogMethodExit("MultipleResponsePage", "AddPalletteCharacters",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on Character Pallette
             logger.LogMethodEntry("MultipleResponsePage", "ClickOnCharacterPalleteButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.XPath(locator));
             base.FocusOnElementByXPath(locator);
@@ -181,7 +181,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Button
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("MultipleResponsePage", "ClickOnCharacterPalleteButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Choice Button
             logger.LogMethodEntry("MultipleResponsePage", "ClicKOnAddChoiceButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Create Multiple Response Window
             base.SelectWindow(MultipleResponsePageResource.
                 MultipleResponse_Page_CreateMultipleResponse_Window_Name);
@@ -204,7 +204,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Add Choice Button
             base.ClickByJavaScriptExecutor(getAddChoiceButtonProperty);
             logger.LogMethodExit("MultipleResponsePage", "ClicKOnAddChoiceButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -216,7 +216,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select Edit Button and Fill Text
             logger.LogMethodEntry("MultipleResponsePage",
                 "SelectEditButtonAndFillText",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Edit Button
             this.ClickEditButtonToAddText();
             //Select Editor Window
@@ -227,7 +227,7 @@ namespace Pegasus.Pages.UI_Pages
             this.ClickOnOkButton();
             logger.LogMethodExit("MultipleResponsePage",
                 "SelectEditButtonAndFillText",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Edit Button To Add Text
             logger.LogMethodEntry("MultipleResponsePage", "ClickEditButtonToAddText",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_EditButton_Text_Id_Locator));
             //Get Edit button Property
@@ -247,7 +247,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Edit Button
             base.ClickByJavaScriptExecutor(getEditButtonPropertyToAddText);
             logger.LogMethodExit("MultipleResponsePage", "ClickEditButtonToAddText",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -257,14 +257,14 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Editor Window
             logger.LogMethodEntry("MultipleResponsePage", "SelectEditorWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(MultipleResponsePageResource.
                 MultipleResponse_Page_Editor_Window_Name);
             //Select Editor Window
             base.SelectWindow(MultipleResponsePageResource.
                 MultipleResponse_Page_Editor_Window_Name);
             logger.LogMethodExit("MultipleResponsePage", "SelectEditorWindow",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -275,7 +275,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill Question Text
             logger.LogMethodEntry("MultipleResponsePage", "FillQuestionText",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_ViewSource_Button_Id_Locator));
             //Get View Source Button Property
@@ -288,7 +288,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(MultipleResponsePageResource.
                 MultipleResponse_Page_EnterQuestionTextHTML_Id_Locator, questionText);
             logger.LogMethodExit("MultipleResponsePage", "FillQuestionText",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -298,7 +298,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On 'OK' Button
             logger.LogMethodEntry("MultipleResponsePage", "ClickOnOkButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_Ok_Button_Id_Locator));
             //Get 'OK' Button Property
@@ -308,7 +308,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On 'OK' Button
             base.ClickByJavaScriptExecutor(getOkButtonProperty);
             logger.LogMethodExit("MultipleResponsePage", "ClickOnOkButton",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -318,7 +318,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Edit Button To Insert Image
             logger.LogMethodEntry("MultipleResponsePage", "SelectEditButtonToInsertImage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Drop Down To Add Image
             this.SelectDropDownToAddImage();
             //Select Edit Button To Add Image
@@ -327,7 +327,7 @@ namespace Pegasus.Pages.UI_Pages
             new ContentBrowserUXPage().SelectNarativeImage(
                 MultipleResponsePageResource.MultipleResponse_Page_ImageFile_Name);
             logger.LogMethodExit("MultipleResponsePage", "SelectEditButtonToInsertImage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -337,7 +337,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Drop Down To Add Image
             logger.LogMethodEntry("MultipleResponsePage", "SelectDropDownToAddImage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Create Multiple Response Window
             this.SelectCreateMultipleResponseWindow();
             base.WaitForElement(By.Id(MultipleResponsePageResource.
@@ -347,7 +347,7 @@ namespace Pegasus.Pages.UI_Pages
                 MultipleResponse_Page_ImageDropDown_Id_Locator,
                 MultipleResponsePageResource.MultipleResponse_Page_DropDown_Image_Name);
             logger.LogMethodExit("MultipleResponsePage", "SelectDropDownToAddImage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -357,7 +357,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click Edit Button to Add Image
             logger.LogMethodEntry("MultipleResponsePage", "ClickEditButtonToAddImage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_EditButton_Image_Id_Locator));
             //Get Edit Button Property 
@@ -367,7 +367,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Edit Button
             base.ClickByJavaScriptExecutor(getEditButtonPropertyToAddImage);
             logger.LogMethodExit("MultipleResponsePage", "ClickEditButtonToAddImage",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -377,7 +377,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Edit Button And Insert Audio
             logger.LogMethodEntry("MultipleResponsePage", "SelectEditButtonAndInsertAudio",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Drop Down To Add Audio
             this.SelectDropDownToAddAudio();
             //Select Edit Button To Add Audio
@@ -385,7 +385,7 @@ namespace Pegasus.Pages.UI_Pages
             new ContentBrowserUXPage().SelectNarativeImage(
                 MultipleResponsePageResource.MultipleResponse_Page_AudioFile_Name);
             logger.LogMethodExit("MultipleResponsePage", "SelectEditButtonAndInsertAudio",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -395,7 +395,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Edit Button To Add Audio
             logger.LogMethodEntry("MultipleResponsePage", "SelectEditButtonToAddAudio",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_EditButton_Audio_Id_Locator));
             //Get Edit Button Property
@@ -405,7 +405,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Edit Button
             base.ClickByJavaScriptExecutor(getEditButtonpropertyToAddAudio);
             logger.LogMethodExit("MultipleResponsePage", "SelectEditButtonToAddAudio",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -415,7 +415,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Drop Down To Add Audio
             logger.LogMethodEntry("MultipleResponsePage", "SelectDropDownToAddAudio",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Create Multiple Response Window
             this.SelectCreateMultipleResponseWindow();
             base.WaitForElement(By.Id(MultipleResponsePageResource.
@@ -425,7 +425,7 @@ namespace Pegasus.Pages.UI_Pages
                 MultipleResponse_Page_AudioDropDown_Id_Locator,
                 MultipleResponsePageResource.MultipleResponse_Page_DropDown_Audio_Name);
             logger.LogMethodExit("MultipleResponsePage", "SelectDropDownToAddAudio",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -435,7 +435,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Edit Button And Insert Video
             logger.LogMethodEntry("MultipleResponsePage", "SelectEditButtonAndInsertVideo",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             //Select Drop Down To Add Video
             this.SelectDropDownToAddVideo();
             //Select Edit Button To Add Video
@@ -444,7 +444,7 @@ namespace Pegasus.Pages.UI_Pages
             new ContentBrowserUXPage().SelectNarativeImage(
                 MultipleResponsePageResource.MultipleResponse_Page_VideoFile_Name);
             logger.LogMethodExit("MultipleResponsePage", "SelectEditButtonAndInsertVideo",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -454,7 +454,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Edit Button To Add Video
             logger.LogMethodEntry("MultipleResponsePage", "SelectEditButtonToAddVideo",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_EditButton_Video_Id_Locator));
             //Get Edit Button Property
@@ -464,7 +464,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Edit Button
             base.ClickByJavaScriptExecutor(getEditButtonpropertyToAddVideo);
             logger.LogMethodExit("MultipleResponsePage", "SelectEditButtonToAddVideo",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -474,7 +474,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Drop Down To Add video
             logger.LogMethodEntry("MultipleResponsePage", "SelectDropDownToAddVideo",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Create Multiple Response Window
             this.SelectCreateMultipleResponseWindow();
             base.WaitForElement(By.Id(MultipleResponsePageResource.
@@ -484,7 +484,7 @@ namespace Pegasus.Pages.UI_Pages
                 MultipleResponse_Page_VideoDropDown_Id_Locator,
                 MultipleResponsePageResource.MultipleResponse_Page_DropDown_Movie_Name);
             logger.LogMethodExit("MultipleResponsePage", "SelectDropDownToAddVideo",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -494,7 +494,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Fill Score Value
             logger.LogMethodEntry("MultipleResponsePage", "FillScoreValue",
-             base.isTakeScreenShotDuringEntryExit);
+             base.IsTakeScreenShotDuringEntryExit);
             //Select Create Multiple Response Window
             base.SelectWindow(MultipleResponsePageResource.
                 MultipleResponse_Page_CreateMultipleResponse_Window_Name);
@@ -514,7 +514,7 @@ namespace Pegasus.Pages.UI_Pages
                     MultipleResponse_Page_ZeroScoreValue);
             }
             logger.LogMethodExit("MultipleResponsePage", "FillScoreValue",
-            base.isTakeScreenShotDuringEntryExit);
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -525,7 +525,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Save and Close Button
             logger.LogMethodEntry("MultipleResponsePage",
                 "ClickONSaveAndCloseButtonOfMultipleResponseQuestion",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Select Create Entry List Window
             base.WaitForElement(By.Id(MultipleResponsePageResource.
                 MultipleResponse_Page_Save_Button_Id_Locator));
@@ -537,7 +537,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getButtonProperty);
             logger.LogMethodExit("MultipleResponsePage",
                 "ClickONSaveAndCloseButtonOfMultipleResponseQuestion",
-          base.isTakeScreenShotDuringEntryExit);
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -548,7 +548,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Question Details in Memory
             logger.LogMethodEntry("MultipleResponsePage", "StoreQuestionDetailsInMemory",
-               base.isTakeScreenShotDuringEntryExit);
+               base.IsTakeScreenShotDuringEntryExit);
             //Save Question Properties in Memory
             Question newQuestion = new Question
             {
@@ -558,7 +558,7 @@ namespace Pegasus.Pages.UI_Pages
             };
             newQuestion.StoreQuestionInMemory();
             logger.LogMethodExit("MultipleResponsePage", "StoreQuestionDetailsInMemory",
-              base.isTakeScreenShotDuringEntryExit);
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Add New Tool Launch Subtab
             logger.LogMethodEntry("PostIndexMixedPage", "AddNewToolLaunchSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {                
                 //Wait and Click on the Modify link
@@ -66,7 +66,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PostIndexMixedPage", "AddNewToolLaunchSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Store Subtab Link Name In Memory
             logger.LogMethodEntry("PostIndexMixedPage", "StoreSubtabLinkNameInMemory",
-                base.isTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);            
             MmndToolLinks link = new MmndToolLinks
             {
                 Name = subtabLinkName,
@@ -86,7 +86,7 @@ namespace Pegasus.Pages.UI_Pages
             }; 
             link.StoreLinkInMemory();
             logger.LogMethodExit("PostIndexMixedPage", "StoreSubtabLinkNameInMemory",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Save The SubTab And Close The Popup
             logger.LogMethodEntry("PostIndexMixedPage", "SaveTheSubTabAndCloseThePopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Click on the Save button
             base.ClickLinkById(PostIndexMixedPageResource.
                 PostIndexMixedPage_Lightbox_Save_Button_Id_Locator);
@@ -116,7 +116,7 @@ namespace Pegasus.Pages.UI_Pages
                 GetWebElementPropertiesByClassName(PostIndexMixedPageResource.
                 PostIndexMixedPage_Lightbox_Close_Button_ClassName_Locator));
             logger.LogMethodExit("PostIndexMixedPage", "SaveTheSubTabAndCloseThePopup",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Enter Subtab Details
             logger.LogMethodEntry("PostIndexMixedPage", "EnterSubTabDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for Drop Down
             base.WaitForElement(By.Id(PostIndexMixedPageResource.
                 PostIndexMixedPage_Lightbox_AddContents_Dropdown_Id_Locator));
@@ -145,7 +145,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(PostIndexMixedPageResource.
                 PostIndexMixedPage_Lightbox_AddList_Textfield_Id_Locator, subtabLinkName);
             logger.LogMethodExit("PostIndexMixedPage", "EnterSubTabDetails",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }                     
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Manage Option
             logger.LogMethodEntry("PostIndexMixedPage", "ClickOnManageOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the window to load
@@ -179,7 +179,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PostIndexMixedPage", "ClickOnManageOption",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Tool Launch Subtab
             logger.LogMethodEntry("PostIndexMixedPage", "ClickOnToolLaunchSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for the window to load
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PostIndexMixedPage", "ClickOnToolLaunchSubtab",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -218,7 +218,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Get the Subtab Link name
             logger.LogMethodEntry("PostIndexMixedPage", "GetSubTabLinkName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variables            
             string subTabName = string.Empty;
             MmndToolLinks toolLinkName = null;
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("PostIndexMixedPage", "GetSubTabLinkName",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return subTabName;
         }
 

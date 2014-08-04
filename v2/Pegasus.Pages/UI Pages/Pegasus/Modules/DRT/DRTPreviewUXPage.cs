@@ -31,7 +31,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click on the preview option of pre test
             Logger.LogMethodEntry("DRTPreviewUXPage", "PreviewPreTestInStudyPlan",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait For Window
@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("DRTPreviewUXPage", "PreviewPreTestInStudyPlan",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Handle the post actions of closing activity presentation window
             Logger.LogMethodEntry("DRTPreviewUXPage", "ClickOnCancelButton",
-       base.isTakeScreenShotDuringEntryExit);
+       base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select window and refresh the page        
@@ -101,7 +101,7 @@ namespace Pegasus.Pages.UI_Pages
 
             }
             Logger.LogMethodExit("DRTPreviewUXPage", "ClickOnCancelButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Handle the post actions of closing activity presentation window
             Logger.LogMethodEntry("DRTPreviewUXPage", "ClickOnReturnToCourseButton",
-       base.isTakeScreenShotDuringEntryExit);
+       base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select window and refresh the page        
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages
 
             }
             Logger.LogMethodExit("DRTPreviewUXPage", "ClickOnReturnToCourseButton",
-                base.isTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
     }
