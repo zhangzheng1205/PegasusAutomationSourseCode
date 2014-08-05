@@ -111,7 +111,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             base.ClickByJavaScriptExecutor(getLinkProperty);
             switch (frame)
             {
-                case CommonSteps.FrameTypeEnum.Left:
+                case CommonSteps.FrameTypeEnum.left:
                     //Wait untill window of users
                     base.WaitUntilWindowLoads(CommonStepsResource.
                         CommonSteps_CreateNewUserWindow_Name_Locator);
