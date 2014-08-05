@@ -106,7 +106,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Search Asset In Content Library Frame
             Logger.LogMethodEntry("CreateActivity", "SearchAssetInContentLibrary",
               base.IsTakeScreenShotDuringEntryExit);
-            ContentLibraryUXPage contentLibraryUxPage = new ContentLibraryUXPage();
+            var contentLibraryUxPage = new ContentLibraryUXPage();
             //Fetch the activity from memory
            Activity activity = Activity.Get(activityTypeEnum, behavioralTypeEnum);
             //Select Window

@@ -261,12 +261,36 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <returns>Chrome based driver</returns>
         private static IWebDriver ChromeWebDriver()
         {
-            // create chrome browser object
-            IWebDriver webDriver = new ChromeDriver(
-                (Path.GetDirectoryName(
-                Assembly.GetExecutingAssembly().GetName().CodeBase)
-                + "\\..\\..\\..\\..\\ExternalAssemblies").Replace("file:\\", ""));
+            // chrome preferences
+            var chromeOptions = new ChromeOptionsWithPrefs
+            {
+                Prefs = new Dictionary<string, object>
+                {
+                    {"download.default_directory", DownloadFilePath},
+                    {"download.prompt_for_download", false},
+                    {"profile.default_content_settings.popups", 0},
+                    {"intl.accept_languages", "nl"}
+                }
+            };
+
+            // chrome capabilities
+            var desiredCapabilities = DesiredCapabilities.Chrome();
+            desiredCapabilities.SetCapability(ChromeOptions.Capability, chromeOptions);
+            // chrome driver path
+            string chromeDriverPath = (Path.GetDirectoryName
+                (Assembly.GetExecutingAssembly().GetName().CodeBase)
+                + "\\..\\..\\..\\..\\ExternalAssemblies").Replace("file:\\", "");
+            // create chrome browser instance
+            IWebDriver webDriver = new ChromeDriver(chromeDriverPath, chromeOptions, TimeSpan.FromMinutes(3));
             return webDriver;
+        }
+
+        /// <summary>
+        /// Property Chrome Options With Preferences.
+        /// </summary>
+        public class ChromeOptionsWithPrefs : ChromeOptions
+        {
+            public Dictionary<string, object> Prefs { get; set; }
         }
 
         /// <summary>

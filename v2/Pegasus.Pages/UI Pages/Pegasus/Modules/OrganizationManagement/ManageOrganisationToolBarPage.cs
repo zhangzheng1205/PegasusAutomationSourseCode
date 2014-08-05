@@ -62,6 +62,12 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select the Window
                 base.SelectWindow(windowName);
+                base.WaitForElement(By.Id("btnDownload"));
+                base.ClickButtonById("btnDownload");
+                base.WaitUntilWindowLoads("Download Starting Files");
+                base.SelectWindow("Download Starting Files");
+                base.ClickButtonById("aDownLoadAll");
+
                 //Close the Window
                 base.CloseBrowserWindow();
                 //Switch to Default Window
