@@ -601,44 +601,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
 
             Logger.LogAssertion("ToValidateTheMessageOnPopUp",
                             ScenarioContext.Current.ScenarioInfo.Title, ()
-                           => Assert.AreEqual(message, new ShowMessagePage().GetTheValidationMessageOfAddingRandonQuestionToMyTest()));
+                           => Assert.AreEqual(message, new ShowMessagePage().
+                           GetTheValidationMessageOfAddingRandonQuestionToMyTest()));
             new ShowMessagePage().ClickOnPegasusAlertOkButton();
             Logger.LogMethodExit("CommonSteps", "ToValidateMessageOnPopUp",
                 IsTakeScreenShotDuringEntryExit);
         }
-
-        /// <summary>
-        /// Select Activity And Add In My Course Frame.
-        /// </summary>
-        /// <param name="activityName">This is activity name.</param>
-        [When(@"I selected activity ""(.*)"" and add in My Course frame")]
-        public void SelectActivityAndAddInMyCourseFrame(string activityName)
-        {
-            // select activity and add in my course frame
-            Logger.LogMethodEntry("CommonSteps", "SelectActivityAndAddInMyCourseFrame",
-               IsTakeScreenShotDuringEntryExit);
-            new TeachingPlanUxPage().
-                SelectActivityInCourseMaterialsLibraryFrame(activityName);
-            Logger.LogMethodExit("CommonSteps", "SelectActivityAndAddInMyCourseFrame",
-               IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Select All Activity And Change The Visible Status.
-        /// </summary>
-        /// <param name="activityVisibleStatus">This is activity visible status.</param>
-        [When(@"I selected all activity and change the status from ""(.*)""")]
-        public void SelectAllActivityAndChangeTheStatus(string activityVisibleStatus)
-        {
-            Logger.LogMethodEntry("CommonSteps", "SelectAllActivityAndChangeTheStatus",
-              IsTakeScreenShotDuringEntryExit);
-            new TeachingPlanUxPage().
-                ClickAssetShowHideButton(activityVisibleStatus);
-            Logger.LogMethodExit("CommonSteps", "SelectAllActivityAndChangeTheStatus",
-              IsTakeScreenShotDuringEntryExit);
-        }
-
-
+        
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

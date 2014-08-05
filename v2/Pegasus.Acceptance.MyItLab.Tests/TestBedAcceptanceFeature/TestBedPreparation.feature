@@ -3,13 +3,6 @@
 			As a different user roles
 			So that once the test bed is ready then we start executing the test cases as already documented.
 
-# Assign Assets in My Course Frame
-Scenario: To Assign Content In My Course Frame For Test Bed Preparation
-When I navigate to "Course Materials" tab
-And I selected activity "Access Chapter 1: End-of-Chapter Quiz" and add in My Course frame
-Then I should see the successfull message "Content item is added to My Course"
-When I selected all activity and change the status from "Hidden"
-
 # Set Activity Properties In My Course Frame
 Scenario: To Set Activity Properties In My Course Frame For Test Bed Preparation
 When I navigate to "Course Materials" tab
