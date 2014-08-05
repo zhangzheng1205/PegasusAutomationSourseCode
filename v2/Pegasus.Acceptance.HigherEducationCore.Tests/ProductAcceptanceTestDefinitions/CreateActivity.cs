@@ -384,19 +384,19 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("CreateActivity", 
                 "AssociateTheActivityFromContentLibraryToMyCourse",
                 IsTakeScreenShotDuringEntryExit);
-            ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
+            var contentLibraryUxPage = new ContentLibraryUXPage();
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Select Window
-            contentLibraryUXPage.SelectTheWindowName(GradeBookResource.
+            contentLibraryUxPage.SelectTheWindowName(GradeBookResource.
                 GradeBook_Coursematerials_Window_Title);
             //Select the frame
-            contentLibraryUXPage.SelectAndSwitchtoFrame(GradeBookResource.
+            contentLibraryUxPage.SelectAndSwitchtoFrame(GradeBookResource.
                 GradeBook_Coursematerials_LeftFrame_Id_Locator);
             // Select the activity
-            contentLibraryUXPage.SelectActivity(activity.Name);
+            contentLibraryUxPage.SelectActivity(activity.Name);
             // Click on Activity Add Button
-            contentLibraryUXPage.ClickOnActivityAddButton();
+            contentLibraryUxPage.ClickOnActivityAddButton();
             Logger.LogMethodExit("CreateActivity", 
                 "AssociateTheActivityFromContentLibraryToMyCourse",
                 IsTakeScreenShotDuringEntryExit);
@@ -447,15 +447,15 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// </summary>
         /// <param name="cmenuOption">This is Page Cmenu Preview Option.</param>
         [When(@"I '(.*)' the HTML Page Asset")]
-        public void PreviewTheHTMLPageAsset(string cmenuOption)
-        {            
-            Logger.LogMethodEntry("CreateActivity", "PreviewTheHTMLPageAsset",
+        public void PreviewTheHtmlPageAsset(string cmenuOption)
+        {
+            Logger.LogMethodEntry("CreateActivity", "PreviewTheHtmlPageAsset",
                base.IsTakeScreenShotDuringEntryExit);
            //Search For HTML Audio Page Asset
             new PegasusHTMLUXPage().SearchForAudioHTMLPage();           
             //Select Cmenu Option of Page Asset
             new ContentLibraryUXPage().SelectCmenuOptionOfActivity(cmenuOption);
-            Logger.LogMethodExit("CreateActivity", "PreviewTheHTMLPageAsset",
+            Logger.LogMethodExit("CreateActivity", "PreviewTheHtmlPageAsset",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -463,13 +463,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// Select The HTML Preview Page.
         /// </summary>
         [Then(@"I should able to see the preview page")]
-        public void SelectHTMLPagePreviewPage()
-        {            
-            Logger.LogMethodEntry("CreateActivity", "SelectHTMLPagePreviewPage",
+        public void SelectHtmlPagePreviewPage()
+        {
+            Logger.LogMethodEntry("CreateActivity", "SelectHtmlPagePreviewPage",
                base.IsTakeScreenShotDuringEntryExit);
             // Select The HTML Preview Page
             new PegasusHTMLUXPage().SelectHTMLPreviewPage();
-            Logger.LogMethodExit("CreateActivity", "SelectHTMLPagePreviewPage",
+            Logger.LogMethodExit("CreateActivity", "SelectHtmlPagePreviewPage",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -477,13 +477,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// Click The HTML Play Button.
         /// </summary>
         [When(@"I click on the Play button")]
-        public void ClickOnTheHTMLPlayButton()
-        {            
-            Logger.LogMethodEntry("CreateActivity", "ClickOnTheHTMLPlayButton",
+        public void ClickOnTheHtmlPlayButton()
+        {
+            Logger.LogMethodEntry("CreateActivity", "ClickOnTheHtmlPlayButton",
                base.IsTakeScreenShotDuringEntryExit);
             // Click The HTML Play Button
             new PegasusHTMLUXPage().ClickTheHTMLPlayButton();
-            Logger.LogMethodExit("CreateActivity", "ClickOnTheHTMLPlayButton",
+            Logger.LogMethodExit("CreateActivity", "ClickOnTheHtmlPlayButton",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -491,13 +491,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         ///Play The Audio Successfully.
         /// </summary>
         [Then(@"I should play the audio successfully")]
-        public void VerifyTheHTMLAudioPlayer()
+        public void VerifyTheHtmlAudioPlayer()
         {
-            Logger.LogMethodEntry("CreateActivity", "VerifyTheHTMLAudioPlayer",
+            Logger.LogMethodEntry("CreateActivity", "VerifyTheHtmlAudioPlayer",
                base.IsTakeScreenShotDuringEntryExit);
             //Play The Audio Successfully
             new PegasusHTMLUXPage().VerifyTheAudioPlayer();
-            Logger.LogMethodExit("CreateActivity", "VerifyTheHTMLAudioPlayer",
+            Logger.LogMethodExit("CreateActivity", "VerifyTheHtmlAudioPlayer",
              base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>

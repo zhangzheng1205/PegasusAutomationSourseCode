@@ -76,7 +76,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             if (base.IsPopupPresent(CourseContentResource
                 .CourseContent_ShowHide_ConfirmationPopup_Name))
             {
-                this.ClickOKButtonOnPegasusConfirmationPopUp();
+                this.ClickOkButtonOnPegasusConfirmationPopUp();
             }
             Activity shownActivity = Activity.Get(Activity.ShowHideStatusEnum.Shown);
             base.SelectDefaultWindow();
@@ -136,7 +136,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Clicks Ok button on Pegasus confirmation pop-up.
         /// </summary>
-        public void ClickOKButtonOnPegasusConfirmationPopUp()
+        public void ClickOkButtonOnPegasusConfirmationPopUp()
         {
             Logger.LogMethodEntry("CourseContent",
                "ClickOKButtonOnPegasusConfirmationPopUp",
