@@ -878,5 +878,76 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 "VerifyTheScoreOfActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select The Cmenu Of Asset In Instructor GradeBook.
+        /// </summary>
+        /// <param name="assetCmenu">This is Asset Cmenu.</param>
+        /// <param name="activityTypeEnum">This is Asset Name.</param>
+        [When(@"I select the cmenu ""(.*)"" of asset ""(.*)""")]
+        public void SelectCmenuOfAssetInInstructorGradeBook(string assetCmenu,
+            string assetName)
+        {
+            // Select The Cmenu Of Asset In GradeBook
+            Logger.LogMethodEntry("Gradebook", "SelectCmenuOfAssetInInstructorGradeBook",
+                base.IsTakeScreenShotDuringEntryExit);
+            GBStudentUXPage gbStudentPage = new GBStudentUXPage();
+            GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
+            //Select Gradebook window
+            gbStudentPage.SelectGradebookWindow();
+            gbInstructorPage.SelectCmenuOptionOfAssetInGradebook(
+                (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
+                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), assetName);
+            Logger.LogMethodExit("Gradebook", "SelectCmenuOfAssetInInstructorGradeBook",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Student Submission Score In ViewSubmission Page.
+        /// </summary>
+        /// <param name="submissionScore">This is Submission Score.</param>
+        [Then(@"I should see ""(.*)"" score in view submission page")]
+        public void VerifyStudentSubmissionScoreInViewSubmissionPage(string submissionScore)
+        {
+            // Verify Student Submission Score In ViewSubmission Page
+            Logger.LogMethodEntry("Gradebook", "VerifyStudentSubmissionScoreInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (submissionScore, new ViewSubmissionPage().GetSubmissionScoreInViewSubmissionPage()));
+            Logger.LogMethodExit("Gradebook", "VerifyStudentSubmissionScoreInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Activity Grade Schema In Gradebook.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Name.</param>
+        /// <param name="activityStatus">This is Activity Status.</param>
+        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        [Then(@"I should see the ""(.*)"" activity status ""(.*)"" in Gradebook for enrollled ""(.*)""")]
+        public void VerifyActivityGradeSchemaInGradebook(
+            string activityName, string activityStatus, 
+            User.UserTypeEnum userTypeEnum)
+        {
+            //Verify Activity Grade Schema In Gradebook
+            Logger.LogMethodEntry("GradeBook",
+                "VerifyActivityGradeSchemaInGradebook",
+                 IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = User.Get(userTypeEnum);
+            //Select the window
+            new GBInstructorUXPage().SelectGradebookFrame();
+            //Assert Activity Status for Enrolled User in Gradebook
+            Logger.LogAssertion("VerifyActivityDisplayInGradebook",
+               ScenarioContext.Current.ScenarioInfo.Title, () =>
+                 Assert.AreEqual(activityStatus,
+                 new GBInstructorUXPage().GetActivityStatus
+                 (activityName, user.LastName, user.FirstName)));
+            Logger.LogMethodExit("GradeBook",
+                "VerifyActivityGradeSchemaInGradebook",
+                IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
