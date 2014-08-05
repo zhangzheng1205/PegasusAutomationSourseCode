@@ -823,5 +823,58 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 "ManageTheGradebookFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Manage Instructor Gradebook FolderLevel Navigation.
+        /// </summary>
+        /// <param name="navigateMILFolderLevelName">This is MIL Folder Level Type.</param>
+        [When(@"I navigate inside the folder level type ""(.*)"" in instructor gradebook")]
+        public void ManageInstructorGradebookFolderLevelNavigation(
+            string navigateMILFolderLevelType)
+        {
+            //Manage Instructor Gradebook FolderLevel Navigation
+            Logger.LogMethodEntry("Gradebook",
+                "ManageInstructorGradebookFolderLevelNavigation",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Select Gradebook Window and Frame
+            new GBFoldersPage().SelectGradebookWindowandFrame();
+            //Manage Instructor Gradebook Folder Navigation
+            new GBLeftNavigationUXPage().ManageInstructorGradebookFolderNavigation(
+                (GBLeftNavigationUXPage.MilAuthoredCourseFolderLelevlTypeEnum)Enum.Parse(typeof
+                (GBLeftNavigationUXPage.MilAuthoredCourseFolderLelevlTypeEnum),
+                navigateMILFolderLevelType));
+            Logger.LogMethodExit("Gradebook",
+                "ManageInstructorGradebookFolderLevelNavigation",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify The Score Of Activity.
+        /// </summary>
+        /// <param name="activityScore">This is Activity Score.</param>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        [Then(@"I should see the score ""(.*)"" of ""(.*)"" activity for ""(.*)""")]
+        public void VerifyTheScoreOfActivity(
+            string activityScore, string activityName, User.UserTypeEnum userTypeEnum)
+        {
+            //Verify The Score Of Activity
+            Logger.LogMethodEntry("Gradebook",
+                "VerifyTheScoreOfActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = User.Get(userTypeEnum);
+            //Select the window
+            new GBInstructorUXPage().SelectGradebookFrame();
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (activityScore, new GBInstructorUXPage().GetActivityStatus(
+                    activityName, user.LastName, user.FirstName)));
+            Logger.LogMethodExit("Gradebook",
+                "VerifyTheScoreOfActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

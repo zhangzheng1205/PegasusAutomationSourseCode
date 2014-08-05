@@ -106,6 +106,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 0.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Folder_Count_Initial_Value {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Folder_Count_Initial_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;rptrFolderContent&apos;]/div.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Folder_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Folder_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;rptrFolderContent&apos;]/div[{0}]/div[2].
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Folder_Name_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Folder_Name_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;rptrFolderContent&apos;]/div[{0}].
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Folder_Text_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Folder_Text_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Frame1.
         /// </summary>
         internal static string GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator {
@@ -115,11 +151,182 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Loop_Initializer {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Loop_Initializer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access 2013.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Access_FolderLevel1_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Access_FolderLevel1_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access Chapter 1: Getting Started with Microsoft Access.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Access_FolderLevel2_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Access_FolderLevel2_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access Chapter 1: Activities.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Access_FolderLevel3_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Access_FolderLevel3_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Access Chapter 1: Simulation Activities.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Access_FolderLevel4_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Access_FolderLevel4_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GO! with Microsoft Office 2013, Volume 1.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel 2013.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Excel_FolderLevel1_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Excel_FolderLevel1_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel Chapter 1: Creating a Worksheet and Charting Data.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Excel_FolderLevel2_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Excel_FolderLevel2_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel Chapter 1: Activities.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Excel_FolderLevel3_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Excel_FolderLevel3_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel Chapter 1: Simulation Activities.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Excel_FolderLevel4_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Excel_FolderLevel4_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PowerPoint 2013.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel1_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel1_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PowerPoint Chapter 1: Getting Started with Microsoft.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel2_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel2_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PowerPoint Chapter 1: Activities.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel3_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel3_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PowerPoint Chapter 1: Simulation Activities.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel4_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel4_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Word 2013.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Word_FolderLevel1_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Word_FolderLevel1_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Word Chapter 1: Creating Documents with Microsoft Word 2013.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Word_FolderLevel2_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Word_FolderLevel2_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Word Chapter 1: Activities.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Word_FolderLevel3_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Word_FolderLevel3_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Word Chapter 1: Simulation Activities.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_SIM5_Word_FolderLevel4_Name {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_SIM5_Word_FolderLevel4_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 20000.
         /// </summary>
         internal static string GBLeftNavigationUXPage_ThreadTime_Value {
             get {
                 return ResourceManager.GetString("GBLeftNavigationUXPage_ThreadTime_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5000.
+        /// </summary>
+        internal static string GBLeftNavigationUXPage_Wait_Time {
+            get {
+                return ResourceManager.GetString("GBLeftNavigationUXPage_Wait_Time", resourceCulture);
             }
         }
         

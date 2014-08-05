@@ -85,3 +85,12 @@ Then I should be on the "View Submission" page
 When I edit the score in view submission page
 Then I should see the grade under activity column of the submitted "Test" activity for "CsSmsStudent"
 
+#Purpose: Instructor Validating student grade in instructor grade book
+# TestCase Id: peg-22025
+#MyItLabProgramCourse
+Scenario: Instructor Validating student grade in instructor grade book By SMS Instructor
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I navigate inside the folder level type "Word" in instructor gradebook
+Then I should see the score "0" of "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity for "CsSmsStudent"
+
