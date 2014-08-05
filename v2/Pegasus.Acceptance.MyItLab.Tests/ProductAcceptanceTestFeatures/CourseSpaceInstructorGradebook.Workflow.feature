@@ -94,3 +94,23 @@ Then I should be on the "Gradebook" page
 When I navigate inside the folder level type "Word" in instructor gradebook
 Then I should see the score "0" of "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity for "CsSmsStudent"
 
+#Purpose: Instructor Validaing student submissin and grade in Instructor Gradebook
+# TestCase Id: peg-22028
+#MyItLabProgramCourse
+Scenario: Instructor Validaing student submissin and grade in Instructor Gradebook By SMS Instructor
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I navigate inside the folder level type "Word" in instructor gradebook
+And I select the cmenu "ViewAllSubmissions" of asset "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+Then I should see "70" score in view submission page
+
+#Purpose: Validating Apply GradeSchema in Instructor Gradebook
+# TestCase Id: peg-22030
+#MyItLabProgramCourse
+Scenario: Validating Apply GradeSchema in Instructor Gradebook By SMS Instructor
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I navigate inside the folder level type "Word" in instructor gradebook
+And I select the cmenu "ApplyGradeSchema" of asset "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I 'Apply' the grade schema for the submitted activity
+Then I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity status "F" in Gradebook for enrollled "CsSmsStudent"

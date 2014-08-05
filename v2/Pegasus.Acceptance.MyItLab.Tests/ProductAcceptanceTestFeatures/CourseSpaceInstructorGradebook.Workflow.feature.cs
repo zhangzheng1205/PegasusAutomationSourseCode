@@ -284,6 +284,57 @@ testRunner.Then("I should see the score \"0\" of \"Word Chapter 1 Project 1A Ski
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor Validaing student submissin and grade in Instructor Gradebook By SMS I" +
+            "nstructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorGradebook")]
+        public virtual void InstructorValidaingStudentSubmissinAndGradeInInstructorGradebookBySMSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Validaing student submissin and grade in Instructor Gradebook By SMS I" +
+                    "nstructor", ((string[])(null)));
+#line 100
+this.ScenarioSetup(scenarioInfo);
+#line 101
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 102
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 103
+testRunner.When("I navigate inside the folder level type \"Word\" in instructor gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 104
+testRunner.And("I select the cmenu \"ViewAllSubmissions\" of asset \"Word Chapter 1 Project 1A Skill" +
+                    "-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 105
+testRunner.Then("I should see \"70\" score in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Validating Apply GradeSchema in Instructor Gradebook By SMS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorGradebook")]
+        public virtual void ValidatingApplyGradeSchemaInInstructorGradebookBySMSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validating Apply GradeSchema in Instructor Gradebook By SMS Instructor", ((string[])(null)));
+#line 110
+this.ScenarioSetup(scenarioInfo);
+#line 111
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 112
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 113
+testRunner.When("I navigate inside the folder level type \"Word\" in instructor gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 114
+testRunner.And("I select the cmenu \"ApplyGradeSchema\" of asset \"Word Chapter 1 Project 1A Skill-B" +
+                    "ased Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 115
+testRunner.And("I \'Apply\' the grade schema for the submitted activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 116
+testRunner.Then("I should see the \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" activi" +
+                    "ty status \"F\" in Gradebook for enrollled \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
