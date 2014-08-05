@@ -111,7 +111,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             base.ClickByJavaScriptExecutor(getLinkProperty);
             switch (frame)
             {
-                case CommonSteps.FrameTypeEnum.left:
+                case CommonSteps.FrameTypeEnum.Left:
                     //Wait untill window of users
                     base.WaitUntilWindowLoads(CommonStepsResource.
                         CommonSteps_CreateNewUserWindow_Name_Locator);
@@ -330,6 +330,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             Logger.LogMethodExit("CommonSteps", " EnterInCourse",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Verify Section in Active State or not.
         /// </summary>
@@ -370,7 +371,6 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
                 , base.IsTakeScreenShotDuringEntryExit);
         }
 
-
         /// <summary>
         /// Verify the Success Message Display on the Window.
         /// </summary>
@@ -408,8 +408,8 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// <summary>
         /// Navigate To Tab Of The Particular Page.
         /// </summary>
-        /// <param name="tabName">This is Tab Name.</param>
-        /// <param name="pageName">This is Page Name.</param>
+        /// <param name="subNavigationTabName">This is Tab Name.</param>
+        /// <param name="subNavigationTabParentWindowName">This is Page Name.</param>
         [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page")]
         public void NavigateToTabInProgramAdminPage(
             string subNavigationTabName, string subNavigationTabParentWindowName)
@@ -463,6 +463,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// </summary>
         /// <param name="tabName">This is Tab Name.</param>
         [When(@"I navigate to ""(.*)"" tab")]
+
         public void NavigateToTab(string tabName)
         {
             //Navigate to Tab
@@ -473,6 +474,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToTab",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Enter As New Activity Type Name.
         /// </summary>
@@ -488,6 +490,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             Logger.LogMethodExit("CommonSteps", "EnterNewActivityTypeName",
                 IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Click On Save Preferences Button On Preferences Page.
         /// </summary>
@@ -507,7 +510,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// Select Cmenu Option Of Activity.
         /// </summary>
         /// <param name="cmenuOptionName">This is Cmenu Option Name.</param>
-        /// <param name="activityTypeEnum">This is activity name.</param>
+        /// <param name="activityName">This is activity name.</param>
         [When(@"I select cmenu ""(.*)"" option of activity ""(.*)""")]
         public void SelectCmenuOptionOfActivity(string cmenuOptionName,
             string activityName)
@@ -525,7 +528,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// <summary>
         /// Search Asset In My Course Frame.
         /// </summary>
-        /// <param name="activityTypeEnum">This is Activity Name..</param>
+        /// <param name="activityName">This is Activity Name..</param>
         [When(@"I search the activity ""(.*)"" in My Course frame")]
         public void SearchAssetInMyCourseFrame(string activityName)
         {
@@ -546,7 +549,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         public void SelectActivityTab(string activityWindowName, string selectActivityTabName)
         {
             // select Tab
-            RandomAssessmentPage randomAssessmentPage =
+            var randomAssessmentPage =
                 new RandomAssessmentPage();
             randomAssessmentPage.SelectActivityLevelTab
                 (activityWindowName, selectActivityTabName);
@@ -584,8 +587,6 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
-
         /// <summary>
         /// To validate the alert message.
         /// </summary>
@@ -604,6 +605,37 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             new ShowMessagePage().ClickOnPegasusAlertOkButton();
             Logger.LogMethodExit("CommonSteps", "ToValidateMessageOnPopUp",
                 IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Activity And Add In My Course Frame.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        [When(@"I selected activity ""(.*)"" and add in My Course frame")]
+        public void SelectActivityAndAddInMyCourseFrame(string activityName)
+        {
+            // select activity and add in my course frame
+            Logger.LogMethodEntry("CommonSteps", "SelectActivityAndAddInMyCourseFrame",
+               IsTakeScreenShotDuringEntryExit);
+            new TeachingPlanUxPage().
+                SelectActivityInCourseMaterialsLibraryFrame(activityName);
+            Logger.LogMethodExit("CommonSteps", "SelectActivityAndAddInMyCourseFrame",
+               IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select All Activity And Change The Visible Status.
+        /// </summary>
+        /// <param name="activityVisibleStatus">This is activity visible status.</param>
+        [When(@"I selected all activity and change the status from ""(.*)""")]
+        public void SelectAllActivityAndChangeTheStatus(string activityVisibleStatus)
+        {
+            Logger.LogMethodEntry("CommonSteps", "SelectAllActivityAndChangeTheStatus",
+              IsTakeScreenShotDuringEntryExit);
+            new TeachingPlanUxPage().
+                ClickAssetShowHideButton(activityVisibleStatus);
+            Logger.LogMethodExit("CommonSteps", "SelectAllActivityAndChangeTheStatus",
+              IsTakeScreenShotDuringEntryExit);
         }
 
 

@@ -377,7 +377,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-              ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("TeachingPlanUXPage", "SelectActivityInCourseMaterialsLibraryFrame",
               base.IsTakeScreenShotDuringEntryExit);
@@ -480,7 +480,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-              ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("TeachingPlanUXPage", "NavigateMyCourseFrameToSelectTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -496,15 +496,11 @@ namespace Pegasus.Pages.UI_Pages
             {
                 Logger.LogMethodEntry("TeachingPlanUXPage", "ClickAssetShowHideButton",
                      base.IsTakeScreenShotDuringEntryExit);
-                base.WaitForElement(By.Id(TeachingPlanUXPageResource.
-                          TeachingPlanUX_Page_MyCourse_Table_Locator));
                 // get required assets avaliable in frame
                 string getHiddenAssets = base.GetElementTextById(TeachingPlanUXPageResource.
                     TeachingPlanUX_Page_MyCourse_Table_Locator);
                 if (getHiddenAssets.Contains(activityStatus))
                 {
-                    base.WaitForElement(By.PartialLinkText(TeachingPlanUXPageResource.
-                        TeachingPlanUX_Page_ShowHide_PartialLinkText_Locator));
                     // click show/hide button
                     base.ClickLinkByPartialLinkText(TeachingPlanUXPageResource.
                         TeachingPlanUX_Page_ShowHide_PartialLinkText_Locator);
@@ -512,7 +508,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-               ExceptionHandler.HandleException(e);               
+                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("TeachingPlanUXPage", "ClickAssetShowHideButton",
                base.IsTakeScreenShotDuringEntryExit);
@@ -609,7 +605,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToIFrameById(TeachingPlanUXPageResource.
                 TeachingPlanUX_Page_Course_Content_Right_Iframe_Id);
             base.WaitForElement(By.Id(TeachingPlanUXPageResource.
-                    TeachingPlanUX_Page_MyCourse_Table_Locator),5);
+                    TeachingPlanUX_Page_MyCourse_Table_Locator), 5);
             // get activity count present in frame
             activityCount = base.GetElementCountByXPath(TeachingPlanUXPageResource.
                     TeachingPlanUX_Page_MyCourse_CourseContent_Xpath_Locator);

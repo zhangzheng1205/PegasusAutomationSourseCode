@@ -14,7 +14,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(ApproveCourse));
 
 
