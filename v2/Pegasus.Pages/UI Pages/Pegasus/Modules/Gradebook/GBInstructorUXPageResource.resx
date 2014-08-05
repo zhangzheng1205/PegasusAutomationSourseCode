@@ -549,4 +549,7 @@
   <data name="GBInstructorUX_Page_ShowForStudent_Cmenu_ID_Locator" xml:space="preserve">
     <value>_ctl0_InnerPageContent_lblreleasecolumn</value>
   </data>
+  <data name="GBInstructorUXPage_Initializer_Value" xml:space="preserve">
+    <value>0</value>
+  </data>
 </root>

@@ -1348,6 +1348,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 0.
+        /// </summary>
+        internal static string GBInstructorUXPage_Initializer_Value {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_Initializer_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to txtColumn.
         /// </summary>
         internal static string GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator {

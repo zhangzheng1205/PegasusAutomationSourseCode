@@ -2106,22 +2106,75 @@ namespace Pegasus.Pages.UI_Pages
             //Select The Cmenu Option Of Asset
             logger.LogMethodEntry("GBInstructorUXPage", "SelectTheCmenuOptionOfAsset",
            base.IsTakeScreenShotDuringEntryExit);
-          try
-          {              
-              //Get Activity Column Count
-              int getActivityColumnCount = this.GetActivityColumnCount(assetName);
-              //Click The Cmenu Icon In Gradebook
-              this.ClickTheCmenuIconInGradebook(getActivityColumnCount);   
-              //Click On Cmenu Of Asset In Gradebook
-              this.ClickOnCmenuOfAssetInGradebook(
-                  getActivityColumnCount, assetCmenuOptionEnum, activityTypeEnum);              
-          }
-          catch (Exception e)
-          {
-              ExceptionHandler.HandleException(e);
-          }
-          logger.LogMethodExit("GBInstructorUXPage", "SelectTheCmenuOptionOfAsset",
+            try
+            {
+                //Get Activity Column Count and Click Cmenu Icon
+                int getActivityColumnCount = GetActivityColumnCountandClickCmenuIcon(assetName);
+                //Click On Cmenu Of Asset In Gradebook
+                this.ClickOnCmenuOfAssetInGradebook(
+                    getActivityColumnCount, assetCmenuOptionEnum, activityTypeEnum);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "SelectTheCmenuOptionOfAsset",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Cmenu Option Of Asset In Gradebook.
+        /// </summary>
+        /// <param name="assetCmenuOptionEnum">This is Asset cmenu options.</param>
+        /// <param name="assetName">This is Asset name.</param>
+        public void SelectCmenuOptionOfAssetInGradebook(
+            AssetCmenuOptionEnum assetCmenuOptionEnum, string assetName)
+        {
+            //Select The Cmenu Option Of Asset
+            logger.LogMethodEntry("GBInstructorUXPage", "SelectTheCmenuOptionOfAsset",
            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Get Activity Column Count and Click Cmenu Icon
+                int getActivityColumnCount = GetActivityColumnCountandClickCmenuIcon(assetName);
+                //click Cmenu of Asset In Gradebook
+                this.clickCmenuofAssetInGradebook(assetCmenuOptionEnum);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "SelectTheCmenuOptionOfAsset",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get Activity Column Count and Click Cmenu Icon.
+        /// </summary>
+        /// <param name="assetName">This is Asset Name.</param>
+        /// <returns>Activity Column Count.</returns>
+        public int GetActivityColumnCountandClickCmenuIcon(string assetName)
+        {
+            //Get Activity Column Count and Click Cmenu Icon
+            logger.LogMethodEntry("GBInstructorUXPage", "GetActivityColumnCountandClickCmenuIcon",
+           base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            int getActivityColumnCount = Convert.ToInt32(
+                GBInstructorUXPageResource.GBInstructorUXPage_Initializer_Value);
+            try
+            {
+                //Get Activity Column Count
+                getActivityColumnCount = this.GetActivityColumnCount(assetName);
+                //Click The Cmenu Icon In Gradebook
+                this.ClickTheCmenuIconInGradebook(getActivityColumnCount);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "GetActivityColumnCountandClickCmenuIcon",
+           base.IsTakeScreenShotDuringEntryExit);
+            return getActivityColumnCount;
         }
 
         /// <summary>
@@ -2182,66 +2235,93 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
+        // <summary>
         /// Click On Cmenu Of Asset In Gradebook.
         /// </summary>
         /// <param name="getActivityColumnCount">This is asset count.</param>
-        /// <param name="assetCmenuOptionEnum">Thia is asset cmenu option.</param>
+        /// <param name="assetCmenuOptionEnum">Thia is asset cmenu option Enum.</param>
         private void ClickOnCmenuOfAssetInGradebook(
             int getActivityColumnCount, AssetCmenuOptionEnum assetCmenuOptionEnum, Activity.ActivityTypeEnum activityTypeEnum)
         {
             //Click On Cmenu Of Asset In Gradebook
             logger.LogMethodEntry("GBInstructorUXPage", "ClickOnCmenuOfAssetInGradebook",
-          base.IsTakeScreenShotDuringEntryExit);           
+          base.IsTakeScreenShotDuringEntryExit);
+            //click Cmenu of Asset In Gradebook
+            this.clickCmenuofAssetInGradebook(assetCmenuOptionEnum);
             switch (assetCmenuOptionEnum)
             {
-                    //Click the 'View All Submission' cmenu
-                case AssetCmenuOptionEnum.ViewAllSubmissions:
-                    this.SelectViewAllSubmissionCmenuOption();      
-                    break;
-                    //Click the 'Apply Grade Schema' cmenu
-                case AssetCmenuOptionEnum.ApplyGradeSchema:
-                    this.SelectApplyGradeSchemaCmenuOption();                                    
-                    break;
-                    //Click the 'Remove from Custom View' cmenu
-                case AssetCmenuOptionEnum.RemovefromCustomView:
-                    this.SelectRemovefromCustomViewCmenuOption();                    
-                    break;
-                    //Click the 'Save to Custom View' cmenu
-                case AssetCmenuOptionEnum.SavetoCustomView:
-                    this.SelectSavetoCustomViewCmenuOption();                                   
-                    break;
-                    //Click the 'Modify Grade Schema'
-                case AssetCmenuOptionEnum.ModifyGradeSchema:
-                    this.SelectModifyGradeSchemaCmenuOption();
-                    break;
-                    //Click the 'Remove Grade Schema'
-                case AssetCmenuOptionEnum.RemoveGradeSchema:
-                    this.SelectRemoveGradeSchemaCmenuOption();
-                    break;
-                //Click the 'Edit Grades'
-                case AssetCmenuOptionEnum.EditGrades:
-                    this.SelectTheEditGradesCmenuOption();
-                    break;
-                    //Click 'Hide for Student'
-                case AssetCmenuOptionEnum.HideforStudent:
-                    this.SelectTheHideForStudentCmenuOption();
-                    break;
-                    // Click 'Synchronize with LMS'
+                // Click 'Synchronize with LMS'
                 case AssetCmenuOptionEnum.SynchronizewithLMS:
-                    SynchronizeWithLMSCmenuOption(getActivityColumnCount, AssetCmenuOptionEnum.SynchronizewithLMS, activityTypeEnum);
+                    SynchronizeWithLMSCmenuOption(
+                        getActivityColumnCount, AssetCmenuOptionEnum.SynchronizewithLMS, activityTypeEnum);
                     break;
-                    //Click 'Stop LMS synchronization'
+                //Click 'Stop LMS synchronization'
                 case AssetCmenuOptionEnum.StopLMSSynchronization:
-                    SynchronizeWithLMSCmenuOption(getActivityColumnCount, AssetCmenuOptionEnum.StopLMSSynchronization, activityTypeEnum);
-                    break;
-                    //Click 'Show for Student'
-                case AssetCmenuOptionEnum.ShowforStudent:
-                    this.SelectTheShowForStudentCmenuOption();
+                    SynchronizeWithLMSCmenuOption(
+                        getActivityColumnCount, AssetCmenuOptionEnum.StopLMSSynchronization, activityTypeEnum);
                     break;
             }
             logger.LogMethodExit("GBInstructorUXPage", "ClickOnCmenuOfAssetInGradebook",
          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// click Cmenu of Asset In Gradebook.
+        /// </summary>        
+        /// <param name="assetCmenuOptionEnum">This is asset cmenu option Enum.</param>
+        public void clickCmenuofAssetInGradebook(AssetCmenuOptionEnum assetCmenuOptionEnum)
+        {
+            //Click On Cmenu Of Asset In Gradebook
+            logger.LogMethodEntry("GBInstructorUXPage", "clickCmenuofAssetInGradebook",
+          base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (assetCmenuOptionEnum)
+                {
+                    //Click the 'View All Submission' cmenu
+                    case AssetCmenuOptionEnum.ViewAllSubmissions:
+                        this.SelectViewAllSubmissionCmenuOption();
+                        break;
+                    //Click the 'Apply Grade Schema' cmenu
+                    case AssetCmenuOptionEnum.ApplyGradeSchema:
+                        this.SelectApplyGradeSchemaCmenuOption();
+                        break;
+                    //Click the 'Remove from Custom View' cmenu
+                    case AssetCmenuOptionEnum.RemovefromCustomView:
+                        this.SelectRemovefromCustomViewCmenuOption();
+                        break;
+                    //Click the 'Save to Custom View' cmenu
+                    case AssetCmenuOptionEnum.SavetoCustomView:
+                        this.SelectSavetoCustomViewCmenuOption();
+                        break;
+                    //Click the 'Modify Grade Schema'
+                    case AssetCmenuOptionEnum.ModifyGradeSchema:
+                        this.SelectModifyGradeSchemaCmenuOption();
+                        break;
+                    //Click the 'Remove Grade Schema'
+                    case AssetCmenuOptionEnum.RemoveGradeSchema:
+                        this.SelectRemoveGradeSchemaCmenuOption();
+                        break;
+                    //Click the 'Edit Grades'
+                    case AssetCmenuOptionEnum.EditGrades:
+                        this.SelectTheEditGradesCmenuOption();
+                        break;
+                    //Click 'Hide for Student'
+                    case AssetCmenuOptionEnum.HideforStudent:
+                        this.SelectTheHideForStudentCmenuOption();
+                        break;
+                    //Click 'Show for Student'
+                    case AssetCmenuOptionEnum.ShowforStudent:
+                        this.SelectTheShowForStudentCmenuOption();
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "clickCmenuofAssetInGradebook",
+        base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

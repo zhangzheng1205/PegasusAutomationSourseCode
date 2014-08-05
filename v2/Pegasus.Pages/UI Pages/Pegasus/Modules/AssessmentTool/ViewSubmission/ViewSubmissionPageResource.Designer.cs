@@ -350,6 +350,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0_PopupPageContent_SubmissionHeaderMaster_InstructorHeader_lblVSInstructorHeaderGrade.
+        /// </summary>
+        internal static string ViewSubmission_Page_StudentSubmission_Grade_Id_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_StudentSubmission_Grade_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;GridStudent&apos;]/tbody/tr/td[2]/span/span.
         /// </summary>
         internal static string ViewSubmission_Page_Studyplan_Name_Cmenu_Xpath_Locator {

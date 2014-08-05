@@ -1244,7 +1244,34 @@ namespace Pegasus.Pages.UI_Pages
             return strViewSubmissionXpath;
         }
 
-
-
+        /// <summary>
+        /// Get Submission Score In View Submission Page.
+        /// </summary>
+        /// <returns>This is Submission Score.</returns>
+        public string GetSubmissionScoreInViewSubmissionPage()
+        {
+            //Get Submission Score In View Submission Page
+            logger.LogMethodEntry("ViewSubmissionPage",
+                "GetSubmissionScoreInViewSubmissionPage",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            string getSubmissionScore = string.Empty;
+            try
+            {
+                //Click on Submission Grade
+                this.ClickonSubmissionGrade();
+                //Get Submission Grade
+                getSubmissionScore = base.GetElementTextById(ViewSubmissionPageResource.
+                    ViewSubmission_Page_StudentSubmission_Grade_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ViewSubmissionPage",
+                "GetSubmissionScoreInViewSubmissionPage",
+            base.IsTakeScreenShotDuringEntryExit);
+            return getSubmissionScore;
+        }
     }
 }
