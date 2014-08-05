@@ -165,13 +165,14 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
                         GBStudentUXPage_Activity_Name_Xpath_Locator, initialCount)));
                     //Get Activity Name
-                    string getActivityName = base.GetElementTextByXPath(
+                    string getActivityName = base.GetTitleAttributeValueByXPath(
                         string.Format(GBStudentUXPageResource.
-                        GBStudentUXPage_Activity_Name_Xpath_Locator, initialCount));
+                        GBStudentUXPage_Activity_Name_Xpath_Locator, initialCount)).Trim();
                     if (getActivityName == activityName)
                     {
                         //Get Activity Score
                         getActivityScore = this.GetActivityScore(getActivityScore, initialCount).Trim();
+                        Thread.Sleep(2000);
                         break;
                     }
                 }
@@ -924,7 +925,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
                     GBStudentUXPage_Activity_Name_Xpath_Locator, initialCount)));
                 //Get Activity Name
-                string getActivityName = base.GetElementTextByXPath(string.Format
+                string getActivityName = base.GetTitleAttributeValueByXPath(string.Format
                     (GBStudentUXPageResource.
                     GBStudentUXPage_Activity_Name_Xpath_Locator, initialCount));
                 if (getActivityName.Contains(activityName))

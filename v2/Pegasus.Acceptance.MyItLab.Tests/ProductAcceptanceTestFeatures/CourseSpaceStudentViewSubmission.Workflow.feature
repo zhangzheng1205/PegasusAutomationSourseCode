@@ -107,7 +107,7 @@ And  I should be on the "Assignments - To Do" page
 Scenario: Student validating score in gradebook for SIM5 Excel activity By SMS Student
 When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
-When I navigate inside the folder level type "Excel" in gradebook
+When I navigate inside the folder level type "Excel" in "Gradebook" by "CsSmsStudent"
 Then I should see the activity "Excel Chapter 1 Skill-Based Training" score "100"
 When I click on cmenu "View Submissions" of asset "Excel Chapter 1 Skill-Based Training" in gradebook
 Then I should be on the "View Submission" page
@@ -118,9 +118,9 @@ When I close the "View Submission" window
 Scenario: Student validating score in gradebook for SIM5 PowerPoint activity By SMS Student
 When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
-When I navigate inside the folder level type "PowerPoint" in gradebook
+When I navigate inside the folder level type "PowerPoint" in "Gradebook" by "CsSmsStudent"
 Then I should see the activity "PowerPoint Chapter 1 Skill-Based Training" score "70"
-When I click on cmenu "View Submissions" of asset "Excel Chapter 1 Skill-Based Training" in gradebook
+When I click on cmenu "View Submissions" of asset "PowerPoint Chapter 1 Skill-Based Training" in gradebook
 Then I should be on the "View Submission" page
 When I close the "View Submission" window
 
@@ -129,9 +129,9 @@ When I close the "View Submission" window
 Scenario: Student validating score in gradebook for SIM5 Word activity By SMS Student
 When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
-When I navigate inside the folder level type "Word" in gradebook
-Then I should see the activity "Word Chapter 1 Skill-Based Training" score "0"
-When I click on cmenu "View Submissions" of asset "Excel Chapter 1 Skill-Based Training" in gradebook
+When I navigate inside the folder level type "Word" in "Gradebook" by "CsSmsStudent"
+Then I should see the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" score "0"
+When I click on cmenu "View Submissions" of asset "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in gradebook
 Then I should be on the "View Submission" page
 When I close the "View Submission" window
 
@@ -140,10 +140,8 @@ When I close the "View Submission" window
 Scenario: Student validating score in gradebook for SIM5 Access activity By SMS Student
 When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
-When I navigate inside the folder level type "Access" in gradebook
+When I navigate inside the folder level type "Access" in "Gradebook" by "CsSmsStudent"
 Then I should see the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" score "100"
-When I click on cmenu "View Submissions" of asset "Excel Chapter 1 Skill-Based Training" in gradebook
+When I click on cmenu "View Submissions" of asset "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in gradebook
 Then I should be on the "View Submission" page
 When I close the "View Submission" window
-
-

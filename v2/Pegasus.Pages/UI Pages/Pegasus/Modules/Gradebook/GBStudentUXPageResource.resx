@@ -127,7 +127,7 @@
     <value>1</value>
   </data>
   <data name="GBStudentUXPage_Activity_Name_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[2]</value>
+    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span</value>
   </data>
   <data name="GBStudentUXPage_Activity_Score_SplittingCharacter" xml:space="preserve">
     <value> </value>

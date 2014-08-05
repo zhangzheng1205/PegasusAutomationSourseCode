@@ -806,20 +806,23 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Manage The Gradebook FolderLevel Navigation.
         /// </summary>
-        /// <param name="navigateMILFolderLevelName">This is MIL Folder Level Type.</param>
-        [When(@"I navigate inside the folder level type ""(.*)"" in gradebook")]
-        public void ManageTheGradebookFolderLevelNavigation(string navigateMILFolderLevelType)
+        /// <param name="navigateMILFolderLevelType">This is Folder Type.</param>
+        /// <param name="tabName">This is Tab Name.</param>
+        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        [When(@"I navigate inside the folder level type ""(.*)"" in ""(.*)"" by ""(.*)""")]
+        public void ManageTheGradebookFolderLevelNavigation(
+            GBLeftNavigationUXPage.MilCourseFolderLelevlTypeEnum
+            navigateMILFolderLevelType, GBLeftNavigationUXPage.TabNameTypeEnum tabName,
+            User.UserTypeEnum userTypeEnum)
         {
             //Manage The Gradebook FolderLevel Navigation
             Logger.LogMethodEntry("Gradebook",
                 "ManageTheGradebookFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
             //Manage The Gradebook Folder Navigation
-            new GBLeftNavigationUXPage().ManageTheGradebookFolderNavigation(
-                (GBLeftNavigationUXPage.MilAuthoredCourseFolderLelevlTypeEnum)Enum.Parse(typeof
-                (GBLeftNavigationUXPage.MilAuthoredCourseFolderLelevlTypeEnum),
-                navigateMILFolderLevelType));
-            Logger.LogMethodExit("Gradebook", 
+            new GBLeftNavigationUXPage().ManageTheFolderNavigationForMILCourse(
+                navigateMILFolderLevelType,tabName,userTypeEnum);
+            Logger.LogMethodExit("Gradebook",
                 "ManageTheGradebookFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -840,8 +843,8 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             new GBFoldersPage().SelectGradebookWindowandFrame();
             //Manage Instructor Gradebook Folder Navigation
             new GBLeftNavigationUXPage().ManageInstructorGradebookFolderNavigation(
-                (GBLeftNavigationUXPage.MilAuthoredCourseFolderLelevlTypeEnum)Enum.Parse(typeof
-                (GBLeftNavigationUXPage.MilAuthoredCourseFolderLelevlTypeEnum),
+                (GBLeftNavigationUXPage.MilCourseFolderLelevlTypeEnum)Enum.Parse(typeof
+                (GBLeftNavigationUXPage.MilCourseFolderLelevlTypeEnum),
                 navigateMILFolderLevelType));
             Logger.LogMethodExit("Gradebook",
                 "ManageInstructorGradebookFolderLevelNavigation",
@@ -875,6 +878,5 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 "VerifyTheScoreOfActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
-
     }
 }

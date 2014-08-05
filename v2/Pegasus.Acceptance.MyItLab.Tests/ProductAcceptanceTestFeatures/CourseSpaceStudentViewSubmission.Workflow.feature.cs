@@ -319,7 +319,7 @@ testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.Spe
 #line 109
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 110
-testRunner.When("I navigate inside the folder level type \"Excel\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate inside the folder level type \"Excel\" in \"Gradebook\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 111
 testRunner.Then("I should see the activity \"Excel Chapter 1 Skill-Based Training\" score \"100\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 112
@@ -348,12 +348,13 @@ testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.Spe
 #line 120
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 121
-testRunner.When("I navigate inside the folder level type \"PowerPoint\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate inside the folder level type \"PowerPoint\" in \"Gradebook\" by \"CsSmsStud" +
+                    "ent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 122
 testRunner.Then("I should see the activity \"PowerPoint Chapter 1 Skill-Based Training\" score \"70\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 123
-testRunner.When("I click on cmenu \"View Submissions\" of asset \"Excel Chapter 1 Skill-Based Trainin" +
-                    "g\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on cmenu \"View Submissions\" of asset \"PowerPoint Chapter 1 Skill-Based Tr" +
+                    "aining\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 124
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 125
@@ -375,12 +376,13 @@ testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.Spe
 #line 131
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 132
-testRunner.When("I navigate inside the folder level type \"Word\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate inside the folder level type \"Word\" in \"Gradebook\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 133
-testRunner.Then("I should see the activity \"Word Chapter 1 Skill-Based Training\" score \"0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the activity \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1" +
+                    ")\" score \"0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 134
-testRunner.When("I click on cmenu \"View Submissions\" of asset \"Excel Chapter 1 Skill-Based Trainin" +
-                    "g\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on cmenu \"View Submissions\" of asset \"Word Chapter 1 Project 1A Skill-Bas" +
+                    "ed Exam (Scenario 1)\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 135
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 136
@@ -402,13 +404,14 @@ testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.Spe
 #line 142
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 143
-testRunner.When("I navigate inside the folder level type \"Access\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate inside the folder level type \"Access\" in \"Gradebook\" by \"CsSmsStudent\"" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 144
 testRunner.Then("I should see the activity \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario" +
                     " 1)\" score \"100\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 145
-testRunner.When("I click on cmenu \"View Submissions\" of asset \"Excel Chapter 1 Skill-Based Trainin" +
-                    "g\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on cmenu \"View Submissions\" of asset \"Access Chapter 1 Project 1A Skill-B" +
+                    "ased Exam (Scenario 1)\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 146
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 147

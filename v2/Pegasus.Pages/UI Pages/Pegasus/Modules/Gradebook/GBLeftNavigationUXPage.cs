@@ -5,6 +5,7 @@ using System.Text;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.Exceptions;
+using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook;
 using System.Threading;
@@ -23,17 +24,23 @@ namespace Pegasus.Pages.UI_Pages
             Logger.GetInstance(typeof(GBLeftNavigationUXPage));
 
         /// <summary>
-        /// This is the Pegasus Intructor Certificate Types.
+        /// This is the MIL Folder navigation Types.
         /// </summary>
-        public enum MilAuthoredCourseFolderLelevlTypeEnum
+        public enum MilCourseFolderLelevlTypeEnum
         {
-            /// <summary>
-            /// 'Certificate of Completion(Training)' Certificate Type.
-            /// </summary>
             Excel = 1,
             PowerPoint = 2,
             Word=3,
             Access=4
+        }
+
+        /// <summary>
+        /// This is the Pegasus Tab Types.
+        /// </summary>
+        public enum TabNameTypeEnum
+        {
+            Gradebook = 1,
+            CourseMaterials = 2
         }
 
         /// <summary>
@@ -50,7 +57,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitUntilWindowLoads(GBLeftNavigationUXPageResource
                      .GBLeftNavigationUXPage_WindowName_Title);
                 //Select Left Navigation Frame
-                this.SelectLeftNavigationFrame();
+                this.SelectStudentGradebookLeftNavigationFrame();
                 // Click on Root Folder
                IWebElement activityFolder =  base.WebDriver.FindElement(By
                    .PartialLinkText(GBLeftNavigationUXPageResource
@@ -67,14 +74,15 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Select Left Navigation Frame.
+        /// Select Student Gradebook Left Navigation Frame.
         /// </summary>
-        private void SelectLeftNavigationFrame()
+        private void SelectStudentGradebookLeftNavigationFrame()
         {
             //Select Left Navigation Frame
-            Logger.LogMethodEntry("GBLeftNavigationUXPage", "SelectLeftNavigationFrame",
+            Logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "SelectStudentGradebookLeftNavigationFrame",
                                  base.IsTakeScreenShotDuringEntryExit);
-            base.WaitUntilPopUpLoads(GBLeftNavigationUXPageResource
+            base.WaitUntilWindowLoads(GBLeftNavigationUXPageResource
                 .GBLeftNavigationUXPage_WindowName_Title);
             //Select Window
             base.SelectWindow(GBLeftNavigationUXPageResource
@@ -85,7 +93,8 @@ namespace Pegasus.Pages.UI_Pages
             //Switch to Frame
             base.SwitchToIFrame(GBLeftNavigationUXPageResource
                 .GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator);
-            Logger.LogMethodExit("GBLeftNavigationUXPage", "SelectLeftNavigationFrame",
+            Logger.LogMethodExit("GBLeftNavigationUXPage", 
+                "SelectStudentGradebookLeftNavigationFrame",
                                  base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -97,18 +106,16 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Navigate Inside Activity Folder
             Logger.LogMethodEntry("GBLeftNavigationUXPage", "NavigateInsideActivityFolder",
-                            base.IsTakeScreenShotDuringEntryExit);
-            //Select Left Navigation Frame
-            this.SelectLeftNavigationFrame();
+                 base.IsTakeScreenShotDuringEntryExit);            
             // Click on Additional practice
             base.WaitForElement(By.PartialLinkText(folderName));
-           IWebElement getFolderName =  base.WebDriver.FindElement
+            base.FocusOnElementByPartialLinkText(folderName);
+            IWebElement getFolderName =  base.WebDriver.FindElement
                (By.PartialLinkText(folderName));
-           base.ClickByJavaScriptExecutor(getFolderName);
-            Thread.Sleep(Convert.ToInt32(GBLeftNavigationUXPageResource
-                .GBLeftNavigationUXPage_ElementTime_Value));            
+            base.ClickByJavaScriptExecutor(getFolderName);
+            Thread.Sleep(10000);           
             Logger.LogMethodExit("GBLeftNavigationUXPage", "NavigateInsideActivityFolder",
-                           base.IsTakeScreenShotDuringEntryExit);
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -165,42 +172,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getAssetProperty);
             Logger.LogMethodExit("GBLeftNavigationUXPage", "EnterInsideAsset",
                            base.IsTakeScreenShotDuringEntryExit);
-        }        
-
-        /// <summary>
-        /// Manage The Gradebook Folder Navigation.
-        /// </summary>
-        /// <param name="milAuthoredCourseFolderLelevlTypeEnum">This is MIL Folder Navigation Type Enum.</param>
-        public void ManageTheGradebookFolderNavigation(MilAuthoredCourseFolderLelevlTypeEnum 
-            milAuthoredCourseFolderLelevlTypeEnum)
-        {
-            //Manage The Gradebook Folder Navigation
-            Logger.LogMethodEntry("GBLeftNavigationUXPage","ManageTheGradebookFolderNavigation",
-               base.IsTakeScreenShotDuringEntryExit);
-            //Select Folder level type           
-            try
-            {
-                //Report Type
-                switch (milAuthoredCourseFolderLelevlTypeEnum)
-                {
-                    //Generate Activity Result by Student Report
-                    case MilAuthoredCourseFolderLelevlTypeEnum.Word:
-                        break;
-                    case MilAuthoredCourseFolderLelevlTypeEnum.Access:
-                        break;
-                    case MilAuthoredCourseFolderLelevlTypeEnum.Excel:
-                        break;
-                    case MilAuthoredCourseFolderLelevlTypeEnum.PowerPoint:
-                        break;
-                }
-            }
-            catch (Exception e)
-            {
-                ExceptionHandler.HandleException(e);
-            }
-            Logger.LogMethodExit("GBLeftNavigationUXPage","ManageTheGradebookFolderNavigation",
-              base.IsTakeScreenShotDuringEntryExit);
-        }
+        }         
 
         /// <summary>
         /// Manage Instructor Gradebook Folder Navigation.
@@ -208,7 +180,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="mILAuthoredCourseFolderLelevlTypeEnum">
         /// This is MIL Folder Navigation Type Enum.</param>
         public void ManageInstructorGradebookFolderNavigation(
-            MilAuthoredCourseFolderLelevlTypeEnum mILAuthoredCourseFolderLelevlTypeEnum)
+            MilCourseFolderLelevlTypeEnum mILAuthoredCourseFolderLelevlTypeEnum)
         {
             //Manage Instructor Gradebook Folder Navigation
             Logger.LogMethodEntry("GBLeftNavigationUXPage",
@@ -219,7 +191,7 @@ namespace Pegasus.Pages.UI_Pages
                 switch (mILAuthoredCourseFolderLelevlTypeEnum)
                 {
                     //Select Folder level of type Word
-                    case MilAuthoredCourseFolderLelevlTypeEnum.Word:
+                    case MilCourseFolderLelevlTypeEnum.Word:
                         this.WordActivityFolderNavigationInInstructorGradebook();
                         break;
                 }
@@ -296,6 +268,172 @@ namespace Pegasus.Pages.UI_Pages
                 "NavigateToActivityFolderInInstructorGradebook",
               base.IsTakeScreenShotDuringEntryExit);
         }
+       
+        /// <summary>
+        /// Power Point Activity Folder Navigation. 
+        /// </summary>
+        private void PowerPointActivityFolderNavigation()
+        {
+            //Power Point Activity Folder Navigation In Gradebook
+            Logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "PowerPointActivityFolderNavigation",
+               base.IsTakeScreenShotDuringEntryExit);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel1_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel2_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel3_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_PowerPoint_FolderLevel4_Name);
+            Logger.LogMethodExit("GBLeftNavigationUXPage",
+                "PowerPointActivityFolderNavigation",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
 
+        /// <summary>
+        ///Excel Activity Folder Navigation. 
+        /// </summary>
+        private void ExcelActivityFolderNavigation()
+        {
+            //Excel Activity Folder Navigation In Gradebook.
+            Logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "ExcelActivityFolderNavigation",
+               base.IsTakeScreenShotDuringEntryExit);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel1_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel2_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel3_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel4_Name);
+            Logger.LogMethodExit("GBLeftNavigationUXPage",
+                "ExcelActivityFolderNavigation",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Access Activity Folder Navigation.
+        /// </summary>
+        private void AccessActivityFolderNavigation()
+        {
+            //Access Activity Folder Navigation
+            Logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "AccessActivityFolderNavigation",
+               base.IsTakeScreenShotDuringEntryExit);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Access_FolderLevel1_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Access_FolderLevel2_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Access_FolderLevel3_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Access_FolderLevel4_Name);
+            Logger.LogMethodExit("GBLeftNavigationUXPage",
+                "AccessActivityFolderNavigation",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Word Activity Folder Navigation.
+        /// </summary>
+        private void WordActivityFolderNavigation()
+        {
+            //Word Activity Folder Navigation
+            Logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "WordActivityFolderNavigation",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Navigate Inside the SubFolder Folder
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel1_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel2_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel3_Name);
+            this.NavigateInsideActivityFolder(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Word_FolderLevel4_Name);
+            Logger.LogMethodExit("GBLeftNavigationUXPage",
+                "WordActivityFolderNavigation",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Manage The Folder Navigation For MIL Course.
+        /// </summary>
+        /// <param name="navigateMILFolderLevelType">This is Folder Name type.</param>
+        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        /// <param name="tabName">This is Tab Name.</param>
+        public void ManageTheFolderNavigationForMILCourse(MilCourseFolderLelevlTypeEnum 
+            navigateMILFolderLevelType, TabNameTypeEnum tabName, User.UserTypeEnum userTypeEnum)
+        {
+            //Manage The Folder Navigation For MIL Course
+            Logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "ManageTheFolderNavigationForMILCourse",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Select the Window
+            this.SelectWindowForFolderNavigation(userTypeEnum, tabName);
+            //Select Folder navigation type
+            switch (navigateMILFolderLevelType)
+            {
+                //Folder navigation
+                case MilCourseFolderLelevlTypeEnum.Word:
+                    this.WordActivityFolderNavigation();
+                    break;
+                case MilCourseFolderLelevlTypeEnum.Access:
+                    this.AccessActivityFolderNavigation();
+                    break;
+                case MilCourseFolderLelevlTypeEnum.Excel:
+                    this.ExcelActivityFolderNavigation();
+                    break;
+                case MilCourseFolderLelevlTypeEnum.PowerPoint:
+                    this.PowerPointActivityFolderNavigation();
+                    break;
+            }
+            Logger.LogMethodExit("GBLeftNavigationUXPage",
+                "ManageTheFolderNavigationForMILCourse",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Window For Folder Navigation.
+        /// </summary>
+        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        /// <param name="tabName">This is Tab Name.</param>
+        private void SelectWindowForFolderNavigation(User.UserTypeEnum userTypeEnum,
+            TabNameTypeEnum tabName)
+        {
+            //Select Window For Folder Navigation
+            Logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "SelectWindowForFolderNavigation",
+               base.IsTakeScreenShotDuringEntryExit);
+            switch (userTypeEnum)
+            {
+                // Get User Type
+                case User.UserTypeEnum.CsSmsStudent:
+                    switch (tabName)
+                    {
+                        //Generate Activity Result by Student Report
+                        case TabNameTypeEnum.CourseMaterials:
+                            new CoursePreviewMainUXPage().SelectCourseMaterialsWindow();
+                            break;
+                        case TabNameTypeEnum.Gradebook:
+                            this.SelectStudentGradebookLeftNavigationFrame();
+                            break;
+                    }
+                    break;
+            }
+            Logger.LogMethodExit("GBLeftNavigationUXPage",
+                "SelectWindowForFolderNavigation",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
