@@ -102,21 +102,28 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Select Window.
         /// </summary>
-        private void SelectCourseMaterialsWindow()
+        public void SelectCourseMaterialsWindow()
         {
             //Select Window
             Logger.LogMethodEntry("CoursePreviewMainUXPage", "SelectCourseMaterialsWindow",
                 base.IsTakeScreenShotDuringEntryExit);
-            //Select Window
-            base.WaitUntilWindowLoads(CoursePreviewMainUXPageResource.
-                CoursePreviewMainUX_Page_Window_Title_Name_HED);
-            base.SelectWindow(CoursePreviewMainUXPageResource.
-                CoursePreviewMainUX_Page_Window_Title_Name_HED);
-            base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
-                CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
-            //Switch To Frame
-            base.SwitchToIFrame(CoursePreviewMainUXPageResource.
-                CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+            try
+            {
+                //Select Window
+                base.WaitUntilWindowLoads(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Window_Title_Name_HED);
+                base.SelectWindow(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Window_Title_Name_HED);
+                base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator));
+                //Switch To Frame
+                base.SwitchToIFrame(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_CoursePreview_IFrame_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             Logger.LogMethodExit("CoursePreviewMainUXPage", "SelectCourseMaterialsWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
