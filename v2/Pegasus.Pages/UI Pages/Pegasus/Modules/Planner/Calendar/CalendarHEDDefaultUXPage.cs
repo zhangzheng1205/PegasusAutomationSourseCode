@@ -1762,5 +1762,152 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             return getMessageValidate;
         }
+
+        /// <summary>
+        /// Expands the node.
+        /// </summary>
+        /// <param name="nodeId">Id of the node.</param>
+        public void ExpandNode(string nodeId)
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+               "ExpandNode",
+               base.IsTakeScreenShotDuringEntryExit);
+            base.ClickButtonByXPath(string.Format(CalendarHEDDefaultUXPageResource
+                .CalendarHEDDefaultUXPage_ContainerAssets_Title_Xpath_Locator, nodeId));
+
+            logger.LogMethodExit("CalendarHEDDefaultUXPage",
+               "ExpandNode",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Is node expanded or not.
+        /// </summary>
+        /// <param name="nodeId">Id of the node.</param>
+        /// <returns></returns>
+        public bool IsNodeExpanded(string nodeId)
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+               "IsNodeExpanded",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            return base.IsElementEnabledById(CalendarHEDDefaultUXPageResource
+                .CalendarHEDDefaultUXPage_ContainerAssets_Id_Locator + nodeId);
+
+            logger.LogMethodExit("CalendarHEDDefaultUXPage",
+               "IsNodeExpanded",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Is Assigned/Unassigned link button enabled or not.
+        /// </summary>
+        /// <returns></returns>
+        public bool IsAssignedUnAssignedButtonEnabled()
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+               "IsAssignedUnAssignedButtonEnabled",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource
+                .CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator));
+            return base.IsElementEnabledById(CalendarHEDDefaultUXPageResource
+                  .CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator);
+
+            logger.LogMethodExit("CalendarHEDDefaultUXPage",
+               "IsAssignedUnAssignedButtonEnabled",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Selects the checkbox of the activity.
+        /// </summary>
+        /// <param name="assetCount">Number of activities to be selected.</param>
+        /// <param name="containerNodeId">Node Id of the container node.</param>
+        public void SelectCheckBoxOfActivity(int assetCount, string containerNodeId)
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+               "SelectCheckBoxOfActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            ICollection<IWebElement> checkBoxList = base
+                .GetWebElementsCollectionByXPath(string.Format(
+                CalendarHEDDefaultUXPageResource
+                .CalendarHEDDefaultUXPage_ContainerAssets_Checkbox_Xpath_Locator,
+                containerNodeId));
+            if (checkBoxList == null) return;
+            int counter = 0;
+            string checkBoxId = string.Empty;
+            foreach (IWebElement checkBox in checkBoxList)
+            {
+                checkBoxId = checkBox.GetAttribute("id");
+                base.SelectCheckBoxById(checkBoxId);
+                this.StoreAssignUnAssignActivityInMemory(
+                    checkBoxId.Split('_')[1]);
+                ++counter;
+                if (counter >= assetCount) break;
+            }
+
+            logger.LogMethodExit("CalendarHEDDefaultUXPage",
+               "SelectCheckBoxOfActivity",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Clicks on Assign/Unassign link button.
+        /// </summary>
+        public void ClickOnAssignUnassignButton()
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+               "ClickOnAssignUnassignButton",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            base.ClickButtonById(CalendarHEDDefaultUXPageResource
+                .CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator);
+
+            logger.LogMethodExit("CalendarHEDDefaultUXPage",
+               "ClickOnAssignUnassignButton",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Is asset assigned or not.
+        /// </summary>
+        /// <param name="assetId">Asset id.</param>
+        /// <returns></returns>
+        public bool IsAssetAssigned(string assetId)
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+               "IsAssetAssigned",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            IWebElement assignStatusImage = base.GetWebElementPropertiesByXPath(
+                string.Format(CalendarHEDDefaultUXPageResource
+                  .CalendarHEDDefaultUXPage_Asset_AssignStatus_Assigned_Img_Xpath_Locator, assetId));
+            if (assignStatusImage == null) return false;
+            string assignStatusCss = assignStatusImage.GetAttribute("class");
+            if (assignStatusCss == CalendarHEDDefaultUXPageResource
+                .CalendarHEDDefaultUXPage_AssignStatus_Assigned_Class_Locator
+                || assignStatusCss == CalendarHEDDefaultUXPageResource
+                .CalendarHEDDefaultUXPage_AssignStatus_AssignedDueDate_Class_Locator)
+                return true;
+            else
+                return false;
+        }
+
+        /// <summary>
+        /// Stores the activity in memory with Assign/Unassigned status.
+        /// </summary>
+        /// <param name="activityId">Id of the activity.</param>
+        private void StoreAssignUnAssignActivityInMemory(string activityId)
+        {
+            Activity activity = new Activity()
+            {
+                ActivityID = activityId,
+                IsAssigned = IsAssetAssigned(activityId),
+                IsCreated = true
+            };
+            activity.StoreActivityInMemory();
+        }
     }
 }

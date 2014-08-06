@@ -1,5 +1,6 @@
 ﻿using Pearson.Pegasus.TestAutomation.Frameworks;
 using System;
+using System.Collections.Generic;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
@@ -424,5 +425,130 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                   "VerifyTheInstructorGradedContentsInCaledarFrame",
                            base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Expands the container asset node.
+        /// </summary>
+        [When(@"I expands the Asset Path on Calendar page")]
+        public void ExpandsTheAssetPath()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                 "ExpandsTheAssetPath",
+                          base.IsTakeScreenShotDuringEntryExit);
+
+            new CalendarHEDDefaultUXPage().ExpandNode(Activity
+                .Get(Activity.ActivityTypeEnum.Folder).ActivityID);
+            Logger.LogMethodExit("AssignmentCalendar",
+                  "ExpandsTheAssetPath",
+                           base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Verify expand of folder and activities content.
+        /// </summary>
+        [Then(@"I should see expaned Folder with activities")]
+        public void VerifyExpanedFolderWithActivities()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                 "VerifyExpanedFolderWithActivities",
+                          base.IsTakeScreenShotDuringEntryExit);
+            Assert.IsTrue(new CalendarHEDDefaultUXPage().IsNodeExpanded(
+                Activity.Get(Activity.ActivityTypeEnum.Folder).ActivityID));
+            Logger.LogMethodExit("AssignmentCalendar",
+                  "VerifyExpanedFolderWithActivities",
+                           base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Selects the check box of activity.
+        /// </summary>
+        /// <param name="activityCount">Number of activity for which checkbox to be checked.</param>
+        [When(@"I select the check box of any (.*) activities")]
+        public void SelectCheckBoxOfActivity(
+            int activityCount)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                 "SelectCheckBoxOfActivity",
+                          base.IsTakeScreenShotDuringEntryExit);
+
+            int counter = 0;
+            CalendarHEDDefaultUXPage calendarHEDDefaultUXPage =
+                new CalendarHEDDefaultUXPage();
+            calendarHEDDefaultUXPage.SelectCheckBoxOfActivity(activityCount,
+                Activity.Get(Activity.ActivityTypeEnum.Folder).ActivityID);
+
+            Logger.LogMethodExit("AssignmentCalendar",
+                  "SelectCheckBoxOfActivity",
+                           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Assign/UnAssign link button state.
+        /// </summary>
+        [Then(@"I should see Assign/Unassign link in active state on the content frame header")]
+        public void VerifyAssignUnassignLinkState()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                 "VerifyAssignUnassignLinkState",
+                          base.IsTakeScreenShotDuringEntryExit);
+            Assert.IsTrue(new CalendarHEDDefaultUXPage()
+                .IsAssignedUnAssignedButtonEnabled());
+
+            Logger.LogMethodExit("AssignmentCalendar",
+                  "VerifyAssignUnassignLinkState",
+                           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Clicks on Assign/Unassign link button.
+        /// </summary>
+        [When(@"I click on assign/Unassign link displayed in content frame header")]
+        public void ClickOnAssignUnassignLink()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                 "ClickOnAssignUnassignLink",
+                          base.IsTakeScreenShotDuringEntryExit);
+            new CalendarHEDDefaultUXPage()
+                .ClickOnAssignUnassignButton();
+
+            Logger.LogMethodExit("AssignmentCalendar",
+                  "ClickOnAssignUnassignLink",
+                           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Check mark in assigned status column.
+        /// </summary>
+        [Then(@"I should see the check mark in assigned status column next to the assets")]
+        public void VerifyCheckMarkInAssignedStatusColumn()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                 "VerifyCheckMarkInAssignedStatusColumn",
+                          base.IsTakeScreenShotDuringEntryExit);
+            List<Activity> assignedActivityList =
+                Activity.Get(a => a.IsAssigned == true);
+            List<Activity> unAssignedActivityList =
+                Activity.Get(a => a.IsAssigned == false);
+            CalendarHEDDefaultUXPage calendarHEDDefaultUXPage =
+                new CalendarHEDDefaultUXPage();
+            foreach (Activity assignedActivity in assignedActivityList)
+            {
+                Assert.IsFalse(calendarHEDDefaultUXPage
+                    .IsAssetAssigned(assignedActivity.ActivityID));
+            }
+            foreach (Activity unAssignedActivity in unAssignedActivityList)
+            {
+                Assert.IsTrue(calendarHEDDefaultUXPage
+                    .IsAssetAssigned(unAssignedActivity.ActivityID));
+            }
+
+            Logger.LogMethodExit("AssignmentCalendar",
+                  "VerifyCheckMarkInAssignedStatusColumn",
+                           base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
     }
 }

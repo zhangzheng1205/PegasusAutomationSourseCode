@@ -107,6 +107,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@nodeid=&apos;{0}&apos;]/tbody/tr/td[4]/div/div/div[@class=&apos;divIsAssigned&apos;]/img.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_Asset_AssignStatus_Assigned_Img_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_Asset_AssignStatus_Assigned_Img_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to check_.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_Asset_Checkbox_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_Asset_Checkbox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;TreeViewContainer&apos;]/div/div[5]/table/tbody/tr/td/input[@class=&apos;collpsChk&apos;].
         /// </summary>
         internal static string CalendarHEDDefaultUXPage_AssetOne_CheckBox_Xpath_Locator {
@@ -152,6 +170,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to cssIsAssigned.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_AssignStatus_Assigned_Class_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_AssignStatus_Assigned_Class_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cssDueDate.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_AssignStatus_AssignedDueDate_Class_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_AssignStatus_AssignedDueDate_Class_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cssIsAssignedOff.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_AssignStatus_NotAssigned_Class_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_AssignStatus_NotAssigned_Class_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ctl00$ctl00$phBody$PageContent$ucLeftNavigationContainer$ucContentFilter$btnAssignUnassign.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to /.
         /// </summary>
         internal static string CalendarHEDDefaultUXPage_Backword_Slash_Character {
@@ -184,6 +238,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarHEDDefaultUXPage_Calendar_WindowName {
             get {
                 return ResourceManager.GetString("CalendarHEDDefaultUXPage_Calendar_WindowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ContainerID_{0}&apos;]/table/tbody/tr/td[1]/input.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_ContainerAssets_Checkbox_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_ContainerAssets_Checkbox_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ContainerID_.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_ContainerAssets_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_ContainerAssets_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;gtRow_{0}&apos;]/tbody/tr/td[3]/table/tbody/tr/td[1].
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_ContainerAssets_Title_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_ContainerAssets_Title_Xpath_Locator", resourceCulture);
             }
         }
         

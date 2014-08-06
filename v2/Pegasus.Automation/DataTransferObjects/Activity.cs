@@ -90,6 +90,11 @@ namespace Pegasus.Automation.DataTransferObjects
         public ShowHideStatusEnum ShowHideStatus { get; set; }
 
         /// <summary>
+        /// Is activity assigned or not.
+        /// </summary>
+        public bool? IsAssigned { get; set; }
+
+        /// <summary>
         /// This method is used to create a new activity.
         /// </summary>
         public void StoreActivityInMemory()

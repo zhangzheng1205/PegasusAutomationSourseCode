@@ -351,4 +351,31 @@
   <data name="CalendarHEDDefaultUXPage_Element_Time" xml:space="preserve">
     <value>2000</value>
   </data>
+  <data name="CalendarHEDDefaultUXPage_Asset_AssignStatus_Assigned_Img_Xpath_Locator" xml:space="preserve">
+    <value>//table[@nodeid='{0}']/tbody/tr/td[4]/div/div/div[@class='divIsAssigned']/img</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_Asset_Checkbox_Id_Locator" xml:space="preserve">
+    <value>check_</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_AssignStatus_AssignedDueDate_Class_Locator" xml:space="preserve">
+    <value>cssDueDate</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_AssignStatus_Assigned_Class_Locator" xml:space="preserve">
+    <value>cssIsAssigned</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_AssignStatus_NotAssigned_Class_Locator" xml:space="preserve">
+    <value>cssIsAssignedOff</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator" xml:space="preserve">
+    <value>ctl00$ctl00$phBody$PageContent$ucLeftNavigationContainer$ucContentFilter$btnAssignUnassign</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_ContainerAssets_Checkbox_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ContainerID_{0}']/table/tbody/tr/td[1]/input</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_ContainerAssets_Id_Locator" xml:space="preserve">
+    <value>ContainerID_</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_ContainerAssets_Title_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='gtRow_{0}']/tbody/tr/td[3]/table/tbody/tr/td[1]</value>
+  </data>
 </root>
