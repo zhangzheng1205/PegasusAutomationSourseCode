@@ -2055,6 +2055,18 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             SendKeys.SendWait(keyValue);
         }
 
+        /// <summary>
+        /// Press Ctrl+A by locating element.
+        /// </summary>
+        /// <param name="iWebElement">The IWebElement interface represents an HTML element. 
+        /// Generally, all interesting operations to do with interacting with a page will be performed through this interface.</param>
+        protected void PressCtrlAKey(IWebElement iWebElement)
+        {
+            // ASCII code 1 for Ctrl-A
+            const char character = '\u0001';
+            iWebElement.SendKeys(Convert.ToString(character));
+        }
+
         #endregion
 
         #region WebDriver Alert
