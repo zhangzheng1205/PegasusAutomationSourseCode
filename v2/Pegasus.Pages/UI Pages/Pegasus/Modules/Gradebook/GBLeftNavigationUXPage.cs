@@ -194,6 +194,9 @@ namespace Pegasus.Pages.UI_Pages
                     case MilCourseFolderLelevlTypeEnum.Word:
                         this.WordActivityFolderNavigationInInstructorGradebook();
                         break;
+                    case MilCourseFolderLelevlTypeEnum.Excel:
+                        this.ExcelActivityFolderNavigationInInstructorGradebook();
+                        break;
                 }
             }
             catch (Exception e)
@@ -227,6 +230,31 @@ namespace Pegasus.Pages.UI_Pages
                 GBLeftNavigationUXPage_SIM5_Word_FolderLevel4_Name);
             Logger.LogMethodExit("GBLeftNavigationUXPage",
                 "WordActivityFolderNavigationInInstructorGradebook",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Excel Activity Folder Navigation In Instructor Gradebook.
+        /// </summary>
+        private void ExcelActivityFolderNavigationInInstructorGradebook()
+        {
+            //Excel Activity Folder Navigation In Instructor Gradebook
+            Logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "ExcelActivityFolderNavigationInInstructorGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Navigate Inside the SubFolder Folder
+            this.NavigateToActivityFolderInInstructorGradebook(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Activity_Root_Folder_Name);
+            this.NavigateToActivityFolderInInstructorGradebook(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel1_Name);
+            this.NavigateToActivityFolderInInstructorGradebook(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel2_Name);
+            this.NavigateToActivityFolderInInstructorGradebook(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel3_Name);
+            this.NavigateToActivityFolderInInstructorGradebook(GBLeftNavigationUXPageResource.
+                GBLeftNavigationUXPage_SIM5_Excel_FolderLevel4_Name);
+            Logger.LogMethodExit("GBLeftNavigationUXPage",
+                "ExcelActivityFolderNavigationInInstructorGradebook",
               base.IsTakeScreenShotDuringEntryExit);
         }
 

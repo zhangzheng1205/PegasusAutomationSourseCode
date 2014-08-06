@@ -949,5 +949,24 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 "VerifyActivityGradeSchemaInGradebook",
                 IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click On View Grades In Gradebook.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        [When(@"I click on view grades of ""(.*)"" in gradebook")]
+        public void ClickOnViewGradesInGradebook(string activityName)
+        {
+            // Click On View Grades In Gradebook
+            Logger.LogMethodEntry("Gradebook", "ClickOnViewGradesInGradebook",
+                base.IsTakeScreenShotDuringEntryExit);
+            GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
+            //Select Gradebook Window
+            gbInstructorPage.SelectGradebookFrame();
+            //Click on View Grades Button
+            gbInstructorPage.GetActivityName(activityName);
+            Logger.LogMethodExit("Gradebook", "ClickOnViewGradesInGradebook",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
