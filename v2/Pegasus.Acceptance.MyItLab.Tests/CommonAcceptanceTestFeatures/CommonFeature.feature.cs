@@ -293,22 +293,22 @@ testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Glob
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login as SMS Instructor and Navigate to MyITLabOffice2013Program Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login Program Admin and Navigate MyITLabOffice2013Program Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
-        public virtual void UserLoginAsSMSInstructorAndNavigateToMyITLabOffice2013ProgramCourse()
+        public virtual void UserLoginProgramAdminAndNavigateMyITLabOffice2013ProgramCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as SMS Instructor and Navigate to MyITLabOffice2013Program Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login Program Admin and Navigate MyITLabOffice2013Program Course", ((string[])(null)));
 #line 82
 this.ScenarioSetup(scenarioInfo);
 #line 83
-testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I browsed the login url for \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 84
-testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I logged into the Pegasus as \"HedProgramAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 85
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 86
-testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
-                    "SmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"He" +
+                    "dProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 87
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 88
@@ -324,11 +324,11 @@ testRunner.And("I click the \"Enter Section as Instructor\"", ((string)(null)), 
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login as SMS Instructor and Navigate to MyItLabProgramCourse")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login as SMS Instructor and Navigate MyITLabOffice2013Section Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
-        public virtual void UserLoginAsSMSInstructorAndNavigateToMyItLabProgramCourse()
+        public virtual void UserLoginAsSMSInstructorAndNavigateMyITLabOffice2013SectionCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as SMS Instructor and Navigate to MyItLabProgramCourse", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as SMS Instructor and Navigate MyITLabOffice2013Section Course", ((string[])(null)));
 #line 94
 this.ScenarioSetup(scenarioInfo);
 #line 95
@@ -465,11 +465,11 @@ testRunner.When("I enter in the \"MyItLabProgramCourse\" course from the Global 
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login as SMS Student and Navigate to MyITLabOffice2013Program Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login as SMS Student and Navigate to MyITLabOffice2013Section Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
-        public virtual void UserLoginAsSMSStudentAndNavigateToMyITLabOffice2013ProgramCourse()
+        public virtual void UserLoginAsSMSStudentAndNavigateToMyITLabOffice2013SectionCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as SMS Student and Navigate to MyITLabOffice2013Program Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as SMS Student and Navigate to MyITLabOffice2013Section Course", ((string[])(null)));
 #line 142
 this.ScenarioSetup(scenarioInfo);
 #line 143

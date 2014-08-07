@@ -78,12 +78,12 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
 
-#Purpose: Login as SMS Instructor and Navigate to MyITLabOffice2013Program
-Scenario: User Login as SMS Instructor and Navigate to MyITLabOffice2013Program Course
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+#Purpose: Login as Program Admin and Navigate to MyITLabOffice2013Program
+Scenario: User Login Program Admin and Navigate MyITLabOffice2013Program Course
+Given I browsed the login url for "HedProgramAdmin"
+When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
 Then I should logged in successfully
-When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsInstructor"
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "HedProgramAdmin"
 Then I should be on the "Program Administration" page
 When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
@@ -91,7 +91,7 @@ When I search the "MyITLabOffice2013Program" first section
 And I click the "Enter Section as Instructor"
 
 #Purpose: Login as SMS Instructor and Navigate to MyItLabProgramCourse
-Scenario: User Login as SMS Instructor and Navigate to MyItLabProgramCourse
+Scenario: User Login as SMS Instructor and Navigate MyITLabOffice2013Section Course
 Given I browsed the login url for "CsSmsInstructor"
 When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
@@ -139,7 +139,7 @@ Given I am on the "Global Home" page
 When I enter in the "MyItLabProgramCourse" course from the Global Home page as "CsSmsStudent"
 
 #Purpose: Login as SMS Student and Navigate to MyITLabOffice2013Program
-Scenario: User Login as SMS Student and Navigate to MyITLabOffice2013Program Course
+Scenario: User Login as SMS Student and Navigate to MyITLabOffice2013Section Course
 Given I browsed the login url for "CsSmsStudent"
 When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
 Then I should logged in successfully

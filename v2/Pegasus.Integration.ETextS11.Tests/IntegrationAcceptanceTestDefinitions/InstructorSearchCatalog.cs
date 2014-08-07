@@ -99,7 +99,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                 () => Assert.IsFalse(new HEDGlobalHomePage().
                     IsCoursePresentInAssignedToCopyState()));
             //Store Instructor Course Id
-            new HEDGlobalHomePage().StoreInstructorCourseIDInMemory(courseTypeEnum);
+            new HEDGlobalHomePage().StoreInstructorCourseIdInMemory(courseTypeEnum);
             Logger.LogMethodExit("HEDGlobalHomePage", 
                 "VerifyInstructorCourseOnTheGlobalHomePageInActiveState",
                 base.IsTakeScreenShotDuringEntryExit);

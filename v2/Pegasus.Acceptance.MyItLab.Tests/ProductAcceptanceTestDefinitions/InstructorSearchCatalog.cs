@@ -77,7 +77,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 () => Assert.IsFalse(new HEDGlobalHomePage().
                     IsCoursePresentInAssignedToCopyState()));
             //Store Instructor Course Id
-            new HEDGlobalHomePage().StoreInstructorCourseIDInMemory(courseTypeEnum);
+            new HEDGlobalHomePage().StoreInstructorCourseIdInMemory(courseTypeEnum);
             Logger.LogMethodExit("InstructorSearchCatalog",
                 "VerifyInstructorCourseOnTheGlobalHomePageInActiveState",
                 base.IsTakeScreenShotDuringEntryExit);

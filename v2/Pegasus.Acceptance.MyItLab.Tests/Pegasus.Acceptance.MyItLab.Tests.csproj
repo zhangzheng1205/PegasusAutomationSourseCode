@@ -404,7 +404,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MyItLabFull.orderedtest" />
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.US18493AcceptanceTest.MyItLab.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.DemoAcceptanceTest.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BTS.MyItLab.orderedtest">

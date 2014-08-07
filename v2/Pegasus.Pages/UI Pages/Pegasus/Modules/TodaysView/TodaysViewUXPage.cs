@@ -1918,7 +1918,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Click The Help Link In Global Homepage in TA
                     case GlobalHomePageLinkTypeEnum.HelpInTA:
-                        new HEDGlobalHomePage().ClickTheHelpLinkInGlobalHomePageInTA();
+                        new HEDGlobalHomePage().ClickTheHelpLinkInGlobalHomePageInTa();
                         break;
                 }
             }

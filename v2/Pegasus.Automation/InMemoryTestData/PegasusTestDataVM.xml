@@ -145,12 +145,12 @@
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>ed2810a7-f9ff-4bbc-9d1b-9e5be8da6719</Name>
+      <Name>Automation Program</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
-      <IsPreferenceStatus>false</IsPreferenceStatus>
-      <SectionName>e82f9710-284c-4337-b120-01f2e4b6d3a0</SectionName>
-      <SectionId>CRSKLMH-14001430</SectionId>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <SectionName>Automation Section</SectionName>
+      <SectionId>CRSKLRU-14001445</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
@@ -401,7 +401,18 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>55bdfdd2-0245-4020-88ae-1d280d5ea7a1</Name>
+      <Name>5.15.2automation</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>SMSUSER</LastName>
+      <UserType>HedProgramAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>5.15.2automation2</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
@@ -412,7 +423,7 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>77c227b1-76cd-42ca-8cfa-0ffd52e8d60d</Name>
+      <Name>187bae30-3422-4f72-ae2d-67cbf84cee73</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>

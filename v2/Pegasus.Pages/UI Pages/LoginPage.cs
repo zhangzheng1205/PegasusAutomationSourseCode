@@ -27,7 +27,7 @@ namespace Pegasus.Pages.UI_Pages
             /// <summary>
             /// Course space for login
             /// </summary>
-            CourseSpace=2
+            CourseSpace = 2
         }
 
         /// <summary>
@@ -60,13 +60,13 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Get Wait Limit Time From Config.
         /// </summary>
-        private int getWaitTimeOut = Convert.ToInt32(
+        private readonly int _getWaitTimeOut = Convert.ToInt32(
             ConfigurationManager.AppSettings["ElementFindTimeOutInSeconds"]);
 
         /// <summary>
         /// Initialize base Pegasus login Url.
         /// </summary>
-        readonly string baseLoginURL;
+        readonly string _baseLoginUrl;
 
         /// <summary>
         ///  Get Title of the Page.
@@ -93,45 +93,46 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedWsAdmin:
                     case User.UserTypeEnum.HedMiLWsAdmin:
                     case User.UserTypeEnum.HedCoreVmWsAdmin:
-                        baseLoginURL = string.Format(
+                        _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.WorkSpaceUrlRoot
                                 + LoginPageResource
                                  .Login_Page_WorkSpaceAdminURL_Append_Parameters); break;
                     // Get URL of workspace Teacher/Student
                     case User.UserTypeEnum.HedWsInstructor:
                     case User.UserTypeEnum.HedWsStudent:
-                        baseLoginURL = string.Format(
+                        _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.WorkSpaceUrlRoot
                                  + LoginPageResource
                                   .Login_Page_WorkspaceURL_Append_Parameters); break;
                     // Get URL of Course Space admin
                     case User.UserTypeEnum.HedCsAdmin:
-                        baseLoginURL = string.Format(
+                        _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.CourseSpaceUrlRoot
                                 + LoginPageResource
                                  .Login_Page_CourseSpaceAdminURL_Append_Parameters); break;
                     //Get url of course space teacher/student
                     case User.UserTypeEnum.CsSmsInstructor:
                     case User.UserTypeEnum.CsSmsStudent:
+                    case User.UserTypeEnum.HedProgramAdmin:
                     case User.UserTypeEnum.HedTeacherAssistant:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
                     case User.UserTypeEnum.HedMilAcceptanceStudent:
                     case User.UserTypeEnum.HedCoreAcceptanceInstructor:
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
-                        baseLoginURL = string.Format(
+                        _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.CourseSpaceUrlRoot
                                  + LoginPageResource
                                  .Login_Page_Hed_CourseSpaceURL_Append_Parameters); break;
                     //Get url of Synapse workspace admin
                     case User.UserTypeEnum.WsAdmin:
-                        baseLoginURL = string.Format(
+                        _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.WorkSpaceUrlRoot
                                + LoginPageResource
                                .Login_Page_WorkSpaceAdminURL_Append_Parameters); break;
                     //Get url of Synapse course space admin
                     case User.UserTypeEnum.CsAdmin:
                     case User.UserTypeEnum.DPCourseSpacePramotedAdmin:
-                        baseLoginURL = string.Format(
+                        _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.CourseSpaceUrlRoot
                                + LoginPageResource
                                .Login_Page_WorkSpaceAdminURL_Append_Parameters); break;
@@ -139,13 +140,13 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.WsStudent:
                     case User.UserTypeEnum.WsTeacher:
                     case User.UserTypeEnum.DPWorkSpacePramotedAdmin:
-                        baseLoginURL = string.Format(
+                        _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.WorkSpaceUrlRoot
                                    + LoginPageResource.
                                    Login_Page_WorkspaceURL_Append_Parameters); break;
                     //Get Url of Rumba Admin
                     case User.UserTypeEnum.RUMBAAdmin:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.RumbaUrlRoot);
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.RumbaUrlRoot);
                         base.DeleteAllBrowserCookies();
                         break;
                     //Get Url of Synapse CourseSpace User
@@ -154,20 +155,20 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.DPCsStudent:
                     case User.UserTypeEnum.RumbaTeacher:
                     case User.UserTypeEnum.RumbaStudent:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.
                             CourseSpaceUrlRoot
                                  + LoginPageResource
                                  .Login_Page_Synapse_CourseSpaceUserURL_Append_Parameters); break;
                     //Get url of Synapse workspace admin
                     case User.UserTypeEnum.NovaNETWsAdmin:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.
                             WorkSpaceUrlRoot
                                + LoginPageResource
                                .Login_Page_WorkSpaceAdminURL_Append_Parameters); break;
                     //Get Url of Synapse Novanet Coursespace User
                     case User.UserTypeEnum.NovaNETCsTeacher:
                     case User.UserTypeEnum.NovaNETCsStudent:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.
                             CourseSpaceUrlRoot
                                  + LoginPageResource
                                  .Login_Page_Synapse_CourseSpaceUserURL_Append_Parameters); break;
@@ -175,25 +176,25 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.MMNDInstructor:
                     // Get URL of MMNDStudent
                     case User.UserTypeEnum.MMNDStudent:
-                        baseLoginURL = string.Format(ConfigurationManager.AppSettings[LoginPageResource.
+                        _baseLoginUrl = string.Format(ConfigurationManager.AppSettings[LoginPageResource.
                             Login_Page_MMNDCertPortal_RootUrl_Config_Value]);
                         base.DeleteAllBrowserCookies();
                         break;
                     // Get URL of MMNDAdmin
                     case User.UserTypeEnum.MMNDAdmin:
-                        baseLoginURL = string.Format(ConfigurationManager.AppSettings[LoginPageResource.
+                        _baseLoginUrl = string.Format(ConfigurationManager.AppSettings[LoginPageResource.
                             Login_Page_MMNDCertAdmin_RootUrl_Config_Value]);
                         base.DeleteAllBrowserCookies();
                         break;
                     // Get URL for DPCTGPPublisherAdmin
                     case User.UserTypeEnum.DPCTGPPublisherAdmin:
                     case User.UserTypeEnum.HEDWSCTGPublisherAdmin:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.WorkSpaceUrlRoot
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.WorkSpaceUrlRoot
                             + LoginPageResource.Login_Page_WorkSpaceAdminURL_Append_Parameters);
                         break;
                     // Get URL of OrganizationAdmin
                     case User.UserTypeEnum.DPCsOrganizationAdmin:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.CourseSpaceUrlRoot
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.CourseSpaceUrlRoot
                                 + LoginPageResource
                                 .Login_Page_Synapse_CourseSpaceUserURL_Append_Parameters);
                         break;
@@ -201,33 +202,30 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.ECollegeAdmin:
                     case User.UserTypeEnum.ECollegeTeacher:
                     case User.UserTypeEnum.ECollegeStudent:
-                        baseLoginURL = string.Format(ConfigurationManager.
+                        _baseLoginUrl = string.Format(ConfigurationManager.
                             AppSettings[LoginPageResource.LoginPage_ECollegeAdmin_RootURL_Config_Value]);
                         break;
                     //Get URL for Backdoor login page
                     case User.UserTypeEnum.HedBackdoorLoginInstructor:
                     case User.UserTypeEnum.HedBackdoorLoginStudent:
-                        baseLoginURL = string.Format("{0}{1}",
+                        _baseLoginUrl = string.Format("{0}{1}",
                             AutomationConfigurationManager.CourseSpaceUrlRoot
                             , LoginPageResource
                             .LoginPage_Backdoor_CourseSpaceUser_Append_Parameters);
                         break;
                     case User.UserTypeEnum.HEDCSCTGPPublisherAdmin:
-                        baseLoginURL = string.Format("{0}{1}",
+                        _baseLoginUrl = string.Format("{0}{1}",
                             AutomationConfigurationManager.CourseSpaceUrlRoot
                             , LoginPageResource.LoginPage_CourseSpaceAdminURL_Append_Parameters);
                         break;
                     case User.UserTypeEnum.HedMilPPEStudent:
-                        baseLoginURL = string.Format(
+                        _baseLoginUrl = string.Format(
                             AutomationConfigurationManager.CourseSpaceUrlRoot
                                  + LoginPageResource
                                  .Login_Page_Hed_CourseSpaceURL_Append_Parameters); break;
                     case User.UserTypeEnum.SMSAdmin:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.SmsAdminUrlRoot)
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.SmsAdminUrlRoot)
                             + LoginPageResource.Login_Page_SMSAdmin_Append_Parameter;
-                        break;
-                    case User.UserTypeEnum.SMSAdminStudent:
-                        baseLoginURL = string.Format(AutomationConfigurationManager.SmsAdminUrlRoot);
                         break;
                 }
             }
@@ -251,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages
                 if (IsUrlBrowsedSuccessful())
                 {
                     //Open Url in Browser
-                    base.NavigateToBrowseUrl(this.baseLoginURL);
+                    base.NavigateToBrowseUrl(this._baseLoginUrl);
                 }
                 else
                 {
@@ -565,8 +563,9 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
                     case User.UserTypeEnum.HedMilPPEStudent:
+                    case User.UserTypeEnum.HedProgramAdmin:
                         //Enter SMS User Name    
-                        this.EnterSMSUserName(userName);
+                        this.EnterSmsUserName(userName);
                         break;
                     default:
                         //Enter Default User Name
@@ -621,7 +620,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Thread.Sleep(Convert.ToInt32(LoginPageResource
                 .Login_Page_ThreadTimeToWait_Value));
-            //Is Login Success
+            // is login success
             isLoginSuccessful = ValidateLogin(userTypeEnum);
             if (count == LoginAttemptRetryCount && !isLoginSuccessful)
             {
@@ -656,10 +655,10 @@ namespace Pegasus.Pages.UI_Pages
         /// Enter SMS User Name.
         /// </summary>
         /// <param name="userName">This is User Name.</param>
-        private void EnterSMSUserName(String userName)
+        private void EnterSmsUserName(String userName)
         {
             //Enter User Name
-            Logger.LogMethodEntry("LoginPage", "EnterSMSUserName",
+            Logger.LogMethodEntry("LoginPage", "EnterSmsUserName",
                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(LoginPageResource.
                 Login_Page_LoginName_TextBox_Id_Locator));
@@ -669,7 +668,7 @@ namespace Pegasus.Pages.UI_Pages
             //Insert User Name in Username TextBox
             base.FillTextBoxById(LoginPageResource.
                 Login_Page_LoginName_TextBox_Id_Locator, userName);
-            Logger.LogMethodExit("LoginPage", "EnterSMSUserName",
+            Logger.LogMethodExit("LoginPage", "EnterSmsUserName",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -739,14 +738,14 @@ namespace Pegasus.Pages.UI_Pages
                 //Logged in by NN Ws Admin
                 case User.UserTypeEnum.NovaNETWsAdmin:
                     isLoginSuccessful = this.
-                        IsWsAdminValidated(isLoginSuccessful);
+                        IsWsAdminValidated(false);
                     break;
                 //Logged in by Hed Cs Admin
                 case User.UserTypeEnum.HedCsAdmin:
                 case User.UserTypeEnum.CsAdmin:
                 case User.UserTypeEnum.DPCourseSpacePramotedAdmin:
                     //Validate Hed Cs Admin Login
-                    isLoginSuccessful = this.IsCSAdminLoginValidated(isLoginSuccessful);
+                    isLoginSuccessful = this.IsCsAdminLoginValidated(false);
                     break;
                 //Logged in by SMS Instructor and Student
                 case User.UserTypeEnum.CsSmsInstructor:
@@ -756,8 +755,9 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.HedCoreAcceptanceStudent:
                 case User.UserTypeEnum.HedMilAcceptanceInstructor:
                 case User.UserTypeEnum.HedMilPPEStudent:
+                case User.UserTypeEnum.HedProgramAdmin:
                     //Validate Hed SMS User Login    
-                    isLoginSuccessful = this.IsSMSUserLoggedIn(isLoginSuccessful);
+                    isLoginSuccessful = this.IsSmsUserLoggedIn(false);
                     break;
                 //Logged in by Ws Teacher and Student
                 case User.UserTypeEnum.WsTeacher:
@@ -768,32 +768,32 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.HEDWSCTGPublisherAdmin:
                 case User.UserTypeEnum.HedMiLWsAdmin:
                     //Validate WS user Login
-                    isLoginSuccessful = this.IsWsUserLoggedIn(isLoginSuccessful);
+                    isLoginSuccessful = this.IsWsUserLoggedIn(false);
                     break;
                 //Logged in by DP Cs User
                 case User.UserTypeEnum.DPCsTeacher:
                 case User.UserTypeEnum.DPCsStudent:
                 case User.UserTypeEnum.DPCsOrganizationAdmin:
-                    isLoginSuccessful = this.IsDigitalPathCsUserLoggedIn(isLoginSuccessful);
+                    isLoginSuccessful = this.IsDigitalPathCsUserLoggedIn(false);
                     break;
 
                 case User.UserTypeEnum.DPDemoUser:
-                    isLoginSuccessful = this.IsDigitalPathCsDemoUserLoggedIn(isLoginSuccessful);
+                    isLoginSuccessful = this.IsDigitalPathCsDemoUserLoggedIn(false);
                     break;
 
                 case User.UserTypeEnum.RumbaStudent:
                 case User.UserTypeEnum.RumbaTeacher:
-                    isLoginSuccessful = this.IsRumbaUserLoggedIn(isLoginSuccessful);
+                    isLoginSuccessful = this.IsRumbaUserLoggedIn(false);
                     break;
 
                 //Logged in by NN cs User
                 case User.UserTypeEnum.NovaNETCsTeacher:
                 case User.UserTypeEnum.NovaNETCsStudent:
-                    isLoginSuccessful = this.IsDigitalPathCsUserLoggedIn(isLoginSuccessful);
+                    isLoginSuccessful = this.IsDigitalPathCsUserLoggedIn(false);
                     break;
                 //Logged in by DPCTGPPublisherAdmin
                 case User.UserTypeEnum.DPCTGPPublisherAdmin:
-                    isLoginSuccessful = this.IsDigitalPathCsUserLoggedIn(isLoginSuccessful);
+                    isLoginSuccessful = this.IsDigitalPathCsUserLoggedIn(false);
                     break;
             }
             Logger.LogMethodExit("LoginPage", "ValidateLogin",
@@ -807,10 +807,10 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="isLoginSuccessful">This is Login Success Initialization value.</param>
         /// <returns>Login Success Status.</returns>
-        private Boolean IsSMSUserLoggedIn(Boolean isLoginSuccessful)
+        private Boolean IsSmsUserLoggedIn(Boolean isLoginSuccessful)
         {
             //Checks After LoggedIn Window Present    
-            Logger.LogMethodEntry("LoginPage", "IsSMSUserLoggedIn",
+            Logger.LogMethodEntry("LoginPage", "IsSmsUserLoggedIn",
                 base.IsTakeScreenShotDuringEntryExit);
             if (base.IsElementLoadedInWindow(LoginPageResource.
                 Login_Page_PageTitle_Locator_GlobalHome,
@@ -818,7 +818,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 isLoginSuccessful = true;
             }
-            Logger.LogMethodExit("LoginPage", "IsSMSUserLoggedIn",
+            Logger.LogMethodExit("LoginPage", "IsSmsUserLoggedIn",
                 base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
@@ -828,10 +828,10 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="isLoginSuccessful">This is Login Success Initialization value.</param>
         /// <returns>Login Success Status.</returns>
-        private Boolean IsCSAdminLoginValidated(Boolean isLoginSuccessful)
+        private Boolean IsCsAdminLoginValidated(Boolean isLoginSuccessful)
         {
             //Checks After LoggedIn Window Present    
-            Logger.LogMethodEntry("LoginPage", "IsCSAdminLoginValidated",
+            Logger.LogMethodEntry("LoginPage", "IsCsAdminLoginValidated",
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for Login Window
             if (base.IsElementLoadedInWindow(LoginPageResource.
@@ -846,7 +846,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 isLoginSuccessful = true;
             }
-            Logger.LogMethodExit("LoginPage", "IsCSAdminLoginValidated",
+            Logger.LogMethodExit("LoginPage", "IsCsAdminLoginValidated",
                 base.IsTakeScreenShotDuringEntryExit);
             return isLoginSuccessful;
         }
@@ -1075,10 +1075,10 @@ namespace Pegasus.Pages.UI_Pages
                 LoginPage_NoConnect_Window_Title) || getCurrentPageTitle.Equals
                 (LoginPageResource.Login_Page_404Error_Window_Title))
             {
-                while (stopWatch.Elapsed.TotalSeconds < getWaitTimeOut)
+                while (stopWatch.Elapsed.TotalSeconds < _getWaitTimeOut)
                 {
                     //Navigate Base Url
-                    base.NavigateToBrowseUrl(this.baseLoginURL);
+                    base.NavigateToBrowseUrl(this._baseLoginUrl);
                     getCurrentPageTitle = base.GetPageTitle;
                     if (!getCurrentPageTitle.Equals(LoginPageResource.
                         LoginPage_NoConnect_Window_Title) && !getCurrentPageTitle.Equals

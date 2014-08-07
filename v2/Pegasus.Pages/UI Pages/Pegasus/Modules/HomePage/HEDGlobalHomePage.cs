@@ -21,21 +21,16 @@ namespace Pegasus.Pages.UI_Pages
         private static readonly Logger Logger =
             Logger.GetInstance(typeof(HEDGlobalHomePage));
 
-        //Get the WaitTime
-        int getWaitTimeinSeconds = Int32.Parse(ConfigurationManager.
-                AppSettings[HEDGlobalHomePageResource.
-                HEDGlobalHome_Page_ElementFindTimeoutInSeconds]);
-
         /// <summary>
         /// Get Total Time To Wait For Assigned TO Copy State.
         /// </summary>
-        int minutesToWait = Int32.Parse(ConfigurationManager.
+        readonly int _minutesToWait = Int32.Parse(ConfigurationManager.
             AppSettings["AssignedToCopyInterval"]);
 
         /// <summary>
         /// Declared variable.
         /// </summary>
-        private string getInstructorCourseID = null;
+        private string _getInstructorCourseId = null;
 
         /// <summary>
         /// Click Search Catalog Link on Global Home Page.
@@ -48,7 +43,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Window
-                this.SelectHEDGlobalHomePageWindow();
+                this.SelectHedGlobalHomePageWindow();
                 //Wait and Click on the Search Catalog option
                 base.WaitForElement(By.PartialLinkText(HEDGlobalHomePageResource
                     .HEDGlobalHome_Page_SearchCatalog_LinkButton_PartialLinkText_Locator));
@@ -85,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Global Home Window
-                this.SelectHEDGlobalHomePageWindow();
+                this.SelectHedGlobalHomePageWindow();
                 base.WaitForElement(By.LinkText(HEDGlobalHomePageResource.
                     HEDGlobalHome_Page_CreateaCourse_LinkButton_Locator));
                 //Get Link Property
@@ -160,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
                 HEDGlobalHome_Page_TimeInSeconds)))
             {
                 //If still time is pending to verify assigned to copy state
-                if (stopWatch.Elapsed.TotalMinutes < minutesToWait == false) break;
+                if (stopWatch.Elapsed.TotalMinutes < _minutesToWait == false) break;
                 {
                     Thread.Sleep(Convert.ToInt32(HEDGlobalHomePageResource.
                           HEDGlobalHome_Page_ThreadSleep_Value));
@@ -317,7 +312,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Window
-                this.SelectHEDGlobalHomePageWindow();
+                this.SelectHedGlobalHomePageWindow();
                 //Set Thread To Wait
                 Thread.Sleep(Convert.ToInt32(HEDGlobalHomePageResource
                     .HEDGlobalHome_Page_ThreadSleep_Value));
@@ -345,7 +340,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Store Instructor Course Id in Memory.
         /// </summary>
         /// <param name="courseTypeEnum">This is course type enum.</param>
-        public void StoreInstructorCourseIDInMemory(Course.CourseTypeEnum courseTypeEnum)
+        public void StoreInstructorCourseIdInMemory(Course.CourseTypeEnum courseTypeEnum)
         {
             //Get Instructor Course Id and Store In Memory
             Logger.LogMethodEntry("HEDGlobalHomePage", "StoreInstructorCourseIDInMemory"
@@ -358,9 +353,9 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     default:
                         //Get Instructor Course ID
-                        string getInstructorCourseID = this.GetInstructorCourseID(courseTypeEnum);
+                        string getInstructorCourseID = this.GetInstructorCourseId(courseTypeEnum);
                         //Store Instructor Course Id In Memory
-                        this.StoreInstructorCourseIDInMemory(getInstructorCourseID, courseTypeEnum);
+                        this.StoreInstructorCourseIdInMemory(getInstructorCourseID, courseTypeEnum);
                         break;
                 }
             }
@@ -377,15 +372,15 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="courseTypeEnum">This is course type enum.</param>
         /// <returns>Instructor Course ID.</returns>
-        private String GetInstructorCourseID(Course.CourseTypeEnum courseTypeEnum)
+        private String GetInstructorCourseId(Course.CourseTypeEnum courseTypeEnum)
         {
             //Get Instructor Course ID from Global Home Page
-            Logger.LogMethodEntry("HEDGlobalHomePage", "GetInstructorCourseID"
+            Logger.LogMethodEntry("HEDGlobalHomePage", "GetInstructorCourseId"
                 , base.IsTakeScreenShotDuringEntryExit);
             //Initialize Course Table Div Count
             const int getCourseDivCount = 1;
             //Select Window
-            this.SelectHEDGlobalHomePageWindow();
+            this.SelectHedGlobalHomePageWindow();
             base.WaitForElement(By.XPath(string.Format
                 (HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, getCourseDivCount)));
@@ -394,9 +389,9 @@ namespace Pegasus.Pages.UI_Pages
                 string.Format(HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_Course_Table_Row_XPath_Locator, getCourseDivCount));
             //Get Instructor Course Id
-            string getInstructorCourseId = GetInstructorCourseIDFromDiv(
+            string getInstructorCourseId = GetInstructorCourseIdFromDiv(
                 getCourseDivCount, getCourseDivText, courseTypeEnum);
-            Logger.LogMethodExit("HEDGlobalHomePage", "GetInstructorCourseID"
+            Logger.LogMethodExit("HEDGlobalHomePage", "GetInstructorCourseId"
                 , base.IsTakeScreenShotDuringEntryExit);
             return getInstructorCourseId;
         }
@@ -408,12 +403,12 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="courseDivText">This is course div text.</param>
         /// <param name="courseTypeEnum">This is course type enum.</param>
         /// <returns>Instructor Course ID.</returns>
-        private string GetInstructorCourseIDFromDiv(int courseDivCount,
+        private string GetInstructorCourseIdFromDiv(int courseDivCount,
             IWebElement courseDivText, Course.CourseTypeEnum courseTypeEnum)
         {
             //Get Instructor Course ID
             Logger.LogMethodEntry("HEDGlobalHomePage",
-                "GetInstructorCourseIDFromDiv", base.IsTakeScreenShotDuringEntryExit);
+                "GetInstructorCourseIdFromDiv", base.IsTakeScreenShotDuringEntryExit);
             //Get Instructor Course Id
             string getInstructorCourseId;
             Course course = Course.Get(courseTypeEnum);
@@ -430,7 +425,7 @@ namespace Pegasus.Pages.UI_Pages
                 getInstructorCourseId = GetInstructorCourseIdFromFirstDiv(courseDivCount);
             }
             Logger.LogMethodExit("HEDGlobalHomePage",
-                 "GetInstructorCourseIDFromDiv", base.IsTakeScreenShotDuringEntryExit);
+                 "GetInstructorCourseIdFromDiv", base.IsTakeScreenShotDuringEntryExit);
             return getInstructorCourseId;
         }
 
@@ -495,32 +490,32 @@ namespace Pegasus.Pages.UI_Pages
                  HEDGlobalHome_Page_Course_Table_ActiveSpan_XPath_Locator, coursePresentDivNumber));
                     //Get the Location of Space to fetch numbers available after space
                     int getInstructorCourseIdLineNumber = getTextFromCourseRow.IndexOf(' ');
-                    getInstructorCourseID = getTextFromCourseRow.
+                    _getInstructorCourseId = getTextFromCourseRow.
                         Substring(getInstructorCourseIdLineNumber).Trim();
                     break;
                 }
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "GetInstructorCourseIdFromNonFirstDiv",
                 base.IsTakeScreenShotDuringEntryExit);
-            return getInstructorCourseID;
+            return _getInstructorCourseId;
         }
 
         /// <summary>
         /// Store Course Instructor ID in Memory.
         /// </summary>
-        /// <param name="instructorCourseID">This is Instructor Course ID.</param>
+        /// <param name="instructorCourseId">This is Instructor Course ID.</param>
         /// <param name="courseTypeEnum">This is Course Type enum.</param>
-        private void StoreInstructorCourseIDInMemory(string instructorCourseID,
+        private void StoreInstructorCourseIdInMemory(string instructorCourseId,
             Course.CourseTypeEnum courseTypeEnum)
         {
             //Save Instructor Course ID in Memory
             Logger.LogMethodEntry("HEDGlobalHomePage",
-                "StoreInstructorCourseIDInMemory",
+                "StoreInstructorCourseIdInMemory",
                                   base.IsTakeScreenShotDuringEntryExit);
             Course hedProductCourse = Course.Get(courseTypeEnum);
-            hedProductCourse.InstructorCourseId = instructorCourseID;
+            hedProductCourse.InstructorCourseId = instructorCourseId;
             Logger.LogMethodExit("HEDGlobalHomePage",
-        "StoreInstructorCourseIDInMemory"
+        "StoreInstructorCourseIdInMemory"
         , base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -576,7 +571,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedCoreAcceptanceInstructor:
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
                     case User.UserTypeEnum.HedWsInstructor:
-                    case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.HedProgramAdmin:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
                         switch (courseTypeEnum)
                         {
@@ -603,6 +598,7 @@ namespace Pegasus.Pages.UI_Pages
                         }
                         break;
                     case User.UserTypeEnum.HedTeacherAssistant:
+                    case User.UserTypeEnum.CsSmsInstructor:
                     case User.UserTypeEnum.CsSmsStudent:
                         switch (courseTypeEnum)
                         {
@@ -841,7 +837,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select HED Global home page window
-                this.SelectHEDGlobalHomePageWindow();
+                this.SelectHedGlobalHomePageWindow();
                 //Get EnrollInCourse Button Status
                 bool isEnrollInCourseButtonPresent = base.IsElementPresent(By.Id
                     (HEDGlobalHomePageResource.
@@ -876,10 +872,10 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Select HEDGlobal Home page window.
         /// </summary>
-        private void SelectHEDGlobalHomePageWindow()
+        private void SelectHedGlobalHomePageWindow()
         {
             //Logger enrty
-            Logger.LogMethodEntry("HEDGlobalHomePage", "SelectHEDGlobalHomePageWindow"
+            Logger.LogMethodEntry("HEDGlobalHomePage", "SelectHedGlobalHomePageWindow"
                 , base.IsTakeScreenShotDuringEntryExit);
             //Wait for window
             base.WaitUntilWindowLoads(HEDGlobalHomePageResource.
@@ -888,7 +884,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(HEDGlobalHomePageResource.
                 HEDGlobalHome_Page_Window_Title_Name);
             //Logger exit
-            Logger.LogMethodExit("HEDGlobalHomePage", "SelectHEDGlobalHomePageWindow"
+            Logger.LogMethodExit("HEDGlobalHomePage", "SelectHedGlobalHomePageWindow"
                 , base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -986,10 +982,10 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         ///  Click The Help Link In Global Homepage in TA.
         /// </summary>
-        public void ClickTheHelpLinkInGlobalHomePageInTA()
+        public void ClickTheHelpLinkInGlobalHomePageInTa()
         {
             // Click The Help Link In Global Homepage in TA
-            Logger.LogMethodEntry("HEDGlobalHomePage", "ClickTheHelpLinkInGlobalHomePageInTA",
+            Logger.LogMethodEntry("HEDGlobalHomePage", "ClickTheHelpLinkInGlobalHomePageInTa",
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -1005,7 +1001,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("HEDGlobalHomePage", "ClickTheHelpLinkInGlobalHomePageInTA",
+            Logger.LogMethodExit("HEDGlobalHomePage", "ClickTheHelpLinkInGlobalHomePageInTa",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1022,7 +1018,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select HED Global home page
-                this.SelectHEDGlobalHomePageWindow();
+                this.SelectHedGlobalHomePageWindow();
                 //Handle Announcment pop up 
                 this.OpenAndCloseAnnouncementPage();
                 Course courseName = Course.Get(courseTypeEnum);
