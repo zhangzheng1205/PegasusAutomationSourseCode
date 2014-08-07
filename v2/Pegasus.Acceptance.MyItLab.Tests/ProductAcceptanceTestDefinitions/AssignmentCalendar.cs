@@ -516,7 +516,10 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                           base.IsTakeScreenShotDuringEntryExit);
             new CalendarHEDDefaultUXPage()
                 .ClickOnAssignUnassignButton();
-            if (base.IsPopupPresent(CourseContentResource
+            List<Activity> assignedActivityList =
+                Activity.Get(a => a.IsAssigned == true);
+            if ((assignedActivityList.Count > 0) && base
+                .IsPopupPresent(CourseContentResource
                .CourseContent_ShowHide_ConfirmationPopup_Name))
             {
                 this.ClickOkButtonOnPegasusConfirmationPopUp();
@@ -570,6 +573,8 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //If assets are already attempted by student a show hide pop-up will appear.
             try
             {
+                base.SelectWindow(CourseContentResource
+               .CourseContent_ShowHide_ConfirmationPopup_Name);
                 new ShowMessagePage().ClickOkButton();
             }
             catch { }
