@@ -369,6 +369,9 @@
   <data name="CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator" xml:space="preserve">
     <value>ctl00$ctl00$phBody$PageContent$ucLeftNavigationContainer$ucContentFilter$btnAssignUnassign</value>
   </data>
+  <data name="CalendarHEDDefaultUXPage_Assets_Title_Xpath_Locator" xml:space="preserve">
+    <value>//div[contains(@class, 'dvNodeContent') and text()='{0}']</value>
+  </data>
   <data name="CalendarHEDDefaultUXPage_ContainerAssets_Checkbox_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='ContainerID_{0}']/table/tbody/tr/td[1]/input</value>
   </data>
@@ -377,5 +380,8 @@
   </data>
   <data name="CalendarHEDDefaultUXPage_ContainerAssets_Title_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='gtRow_{0}']/tbody/tr/td[3]/table/tbody/tr/td[1]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_NodeId_Value" xml:space="preserve">
+    <value>nodeid</value>
   </data>
 </root>

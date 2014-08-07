@@ -435,9 +435,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("AssignmentCalendar",
                  "ExpandsTheAssetPath",
                           base.IsTakeScreenShotDuringEntryExit);
-
-            new CalendarHEDDefaultUXPage().ExpandNode(Activity
-                .Get(Activity.ActivityTypeEnum.Folder).ActivityID);
+            CalendarHEDDefaultUXPage calendarHEDDefaultUXPage = 
+                new CalendarHEDDefaultUXPage();
+            Activity activity = Activity.Get(Activity.ActivityTypeEnum.Folder);
+            activity.ActivityID = calendarHEDDefaultUXPage.GetAssetId(
+                    activity.Name);
+            activity.UpdateActivityInMemory(activity);
+            calendarHEDDefaultUXPage.ExpandNode(activity.ActivityID);
             Logger.LogMethodExit("AssignmentCalendar",
                   "ExpandsTheAssetPath",
                            base.IsTakeScreenShotDuringEntryExit);
@@ -447,7 +451,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Verify expand of folder and activities content.
         /// </summary>
-        [Then(@"I should see expaned Folder with activities")]
+        [Then(@"I should see expanded Folder with activities")]
         public void VerifyExpanedFolderWithActivities()
         {
             Logger.LogMethodEntry("AssignmentCalendar",
@@ -512,7 +516,13 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                           base.IsTakeScreenShotDuringEntryExit);
             new CalendarHEDDefaultUXPage()
                 .ClickOnAssignUnassignButton();
-
+            if (base.IsPopupPresent(CourseContentResource
+               .CourseContent_ShowHide_ConfirmationPopup_Name))
+            {
+                this.ClickOkButtonOnPegasusConfirmationPopUp();
+                base.SelectDefaultWindow();
+            }
+            
             Logger.LogMethodExit("AssignmentCalendar",
                   "ClickOnAssignUnassignLink",
                            base.IsTakeScreenShotDuringEntryExit);
@@ -547,6 +557,25 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("AssignmentCalendar",
                   "VerifyCheckMarkInAssignedStatusColumn",
                            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Clicks Ok button on Pegasus confirmation pop-up.
+        /// </summary>
+        public void ClickOkButtonOnPegasusConfirmationPopUp()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+               "ClickOKButtonOnPegasusConfirmationPopUp",
+               base.IsTakeScreenShotDuringEntryExit);
+            //If assets are already attempted by student a show hide pop-up will appear.
+            try
+            {
+                new ShowMessagePage().ClickOkButton();
+            }
+            catch { }
+            Logger.LogMethodExit("AssignmentCalendar",
+               "ClickOKButtonOnPegasusConfirmationPopUp",
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 

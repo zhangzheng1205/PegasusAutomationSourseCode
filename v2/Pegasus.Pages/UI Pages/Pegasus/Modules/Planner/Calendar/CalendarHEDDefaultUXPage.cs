@@ -1772,8 +1772,12 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                "ExpandNode",
                base.IsTakeScreenShotDuringEntryExit);
-            base.ClickButtonByXPath(string.Format(CalendarHEDDefaultUXPageResource
+            base.WaitForElement(By.XPath(string.Format(CalendarHEDDefaultUXPageResource
+                .CalendarHEDDefaultUXPage_ContainerAssets_Title_Xpath_Locator, nodeId)));
+            IWebElement nodeLink = base.GetWebElementPropertiesByXPath(string
+                .Format(CalendarHEDDefaultUXPageResource
                 .CalendarHEDDefaultUXPage_ContainerAssets_Title_Xpath_Locator, nodeId));
+            base.ClickByJavaScriptExecutor(nodeLink);
 
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                "ExpandNode",
@@ -1829,7 +1833,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                "SelectCheckBoxOfActivity",
                base.IsTakeScreenShotDuringEntryExit);
-
+            
             ICollection<IWebElement> checkBoxList = base
                 .GetWebElementsCollectionByXPath(string.Format(
                 CalendarHEDDefaultUXPageResource
@@ -1841,7 +1845,7 @@ namespace Pegasus.Pages.UI_Pages
             foreach (IWebElement checkBox in checkBoxList)
             {
                 checkBoxId = checkBox.GetAttribute("id");
-                base.SelectCheckBoxById(checkBoxId);
+                base.ClickByJavaScriptExecutor(checkBox);
                 this.StoreAssignUnAssignActivityInMemory(
                     checkBoxId.Split('_')[1]);
                 ++counter;
@@ -1908,6 +1912,24 @@ namespace Pegasus.Pages.UI_Pages
                 IsCreated = true
             };
             activity.StoreActivityInMemory();
+        }
+
+        /// <summary>
+        /// Gets the asset id of asset.
+        /// </summary>
+        /// <param name="assetName">Asset name.</param>
+        /// <returns></returns>
+        public string GetAssetId(string assetName)
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+              "GetAssetId",
+              base.IsTakeScreenShotDuringEntryExit);
+            return base.GetWebElementPropertiesByXPath(
+               string.Format(CalendarHEDDefaultUXPageResource
+                 .CalendarHEDDefaultUXPage_Assets_Title_Xpath_Locator, assetName))
+                 .FindElement(By.XPath(".."))
+                 .GetAttribute(CalendarHEDDefaultUXPageResource
+                 .CalendarHEDDefaultUXPage_NodeId_Value);
         }
     }
 }

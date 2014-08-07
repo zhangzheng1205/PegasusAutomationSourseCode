@@ -181,6 +181,7 @@
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
+      
   </ArrayOfCourse>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfUser>
@@ -588,6 +589,11 @@
     <Activity>
       <Name>fca86e3a-929c-4bf9-bd5b-ce11efcf58db</Name>
       <ActivityType>File</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
+    <Activity>
+      <Name>Technology in Action, 10e</Name>
+      <ActivityType>Folder</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
   </ArrayOfActivity>

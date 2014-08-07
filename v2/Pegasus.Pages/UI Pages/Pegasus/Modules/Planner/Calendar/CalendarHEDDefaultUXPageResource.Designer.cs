@@ -134,6 +134,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[contains(@class, &apos;dvNodeContent&apos;) and text()=&apos;{0}&apos;].
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_Assets_Title_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_Assets_Title_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;TreeViewContainer&apos;]/div/div[5]/table[2]/tbody/tr/td/input[@class=&apos;collpsChk&apos;].
         /// </summary>
         internal static string CalendarHEDDefaultUXPage_AssetTwo_CheckBox_Xpath_Locator {
@@ -400,6 +409,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarHEDDefaultUXPage_MyProfile_Link_Locator {
             get {
                 return ResourceManager.GetString("CalendarHEDDefaultUXPage_MyProfile_Link_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to nodeid.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPage_NodeId_Value {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_NodeId_Value", resourceCulture);
             }
         }
         
