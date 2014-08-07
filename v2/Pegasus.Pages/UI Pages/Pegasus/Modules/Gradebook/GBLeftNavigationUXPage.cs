@@ -393,44 +393,7 @@ namespace Pegasus.Pages.UI_Pages
                 "WordActivityFolderNavigation",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
-        /// <summary>
-        /// Manage The Folder Navigation For MIL Course.
-        /// </summary>
-        /// <param name="navigateMILFolderLevelType">This is Folder Name type.</param>
-        /// <param name="userTypeEnum">This is User Type Enum.</param>
-        /// <param name="tabName">This is Tab Name.</param>
-        public void ManageTheFolderNavigationForMILCourse(MilCourseFolderLelevlTypeEnum 
-            navigateMILFolderLevelType, TabNameTypeEnum tabName, User.UserTypeEnum userTypeEnum)
-        {
-            //Manage The Folder Navigation For MIL Course
-            Logger.LogMethodEntry("GBLeftNavigationUXPage",
-                "ManageTheFolderNavigationForMILCourse",
-               base.IsTakeScreenShotDuringEntryExit);
-            //Select the Window
-            this.SelectWindowForFolderNavigation(userTypeEnum, tabName);
-            //Select Folder navigation type
-            switch (navigateMILFolderLevelType)
-            {
-                //Folder navigation
-                case MilCourseFolderLelevlTypeEnum.Word:
-                    this.WordActivityFolderNavigation();
-                    break;
-                case MilCourseFolderLelevlTypeEnum.Access:
-                    this.AccessActivityFolderNavigation();
-                    break;
-                case MilCourseFolderLelevlTypeEnum.Excel:
-                    this.ExcelActivityFolderNavigation();
-                    break;
-                case MilCourseFolderLelevlTypeEnum.PowerPoint:
-                    this.PowerPointActivityFolderNavigation();
-                    break;
-            }
-            Logger.LogMethodExit("GBLeftNavigationUXPage",
-                "ManageTheFolderNavigationForMILCourse",
-              base.IsTakeScreenShotDuringEntryExit);
-        }
-
+        
         /// <summary>
         /// Select Window For Folder Navigation.
         /// </summary>
@@ -461,6 +424,43 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("GBLeftNavigationUXPage",
                 "SelectWindowForFolderNavigation",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Manage The Activity Folder Level Navigation.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name type.</param>
+        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        /// <param name="tabName">This is Tab Name.</param>
+        public void ManageTheActivityFolderLevelNavigation(string activityName, 
+            TabNameTypeEnum tabName, User.UserTypeEnum userTypeEnum)
+        {
+            //Manage The Activity Folder Level Navigation
+            Logger.LogMethodEntry("GBLeftNavigationUXPage",
+                "ManageTheActivityFolderLevelNavigation",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Select the Window based on user and tab
+            this.SelectWindowForFolderNavigation(userTypeEnum, tabName);
+            //Select Folder navigation type
+            switch (activityName)
+            {
+                //Folder navigation
+                case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                    this.WordActivityFolderNavigation();
+                    break;
+                case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                    this.AccessActivityFolderNavigation();
+                    break;
+                case "Excel Chapter 1 Skill-Based Training":
+                    this.ExcelActivityFolderNavigation();
+                    break;
+                case "PowerPoint Chapter 1 Skill-Based Training":
+                    this.PowerPointActivityFolderNavigation();
+                    break;
+            }
+            Logger.LogMethodExit("GBLeftNavigationUXPage",
+                "ManageTheActivityFolderLevelNavigation",
               base.IsTakeScreenShotDuringEntryExit);
         }
     }

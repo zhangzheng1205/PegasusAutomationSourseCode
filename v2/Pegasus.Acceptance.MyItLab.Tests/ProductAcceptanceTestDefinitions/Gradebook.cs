@@ -801,31 +801,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 activityName, assetCmenu);
             Logger.LogMethodExit("Gradebook", "SelectTheCmenuOfAssetInGradebook",
                 base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Manage The Gradebook FolderLevel Navigation.
-        /// </summary>
-        /// <param name="navigateMILFolderLevelType">This is Folder Type.</param>
-        /// <param name="tabName">This is Tab Name.</param>
-        /// <param name="userTypeEnum">This is User Type Enum.</param>
-        [When(@"I navigate inside the folder level type ""(.*)"" in ""(.*)"" by ""(.*)""")]
-        public void ManageTheGradebookFolderLevelNavigation(
-            GBLeftNavigationUXPage.MilCourseFolderLelevlTypeEnum
-            navigateMILFolderLevelType, GBLeftNavigationUXPage.TabNameTypeEnum tabName,
-            User.UserTypeEnum userTypeEnum)
-        {
-            //Manage The Gradebook FolderLevel Navigation
-            Logger.LogMethodEntry("Gradebook",
-                "ManageTheGradebookFolderLevelNavigation",
-                base.IsTakeScreenShotDuringEntryExit);
-            //Manage The Gradebook Folder Navigation
-            new GBLeftNavigationUXPage().ManageTheFolderNavigationForMILCourse(
-                navigateMILFolderLevelType,tabName,userTypeEnum);
-            Logger.LogMethodExit("Gradebook",
-                "ManageTheGradebookFolderLevelNavigation",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
+        }        
 
         /// <summary>
         /// Manage Instructor Gradebook FolderLevel Navigation.

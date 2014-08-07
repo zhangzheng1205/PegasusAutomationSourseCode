@@ -607,7 +607,29 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
             Logger.LogMethodExit("CommonSteps", "ToValidateMessageOnPopUp",
                 IsTakeScreenShotDuringEntryExit);
         }
-        
+
+        /// <summary>
+        /// Manage The Activity Folder Level Navigation.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="tabName">This Is Tab Name.</param>
+        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        [When(@"I select ""(.*)"" in ""(.*)"" by ""(.*)""")]
+        public void ManageTheActivityFolderLevelNavigation(string activityName,
+            GBLeftNavigationUXPage.TabNameTypeEnum tabName,
+            User.UserTypeEnum userTypeEnum)
+        {
+            //Manage The Activity Folder Level Navigation
+            Logger.LogMethodEntry("CommonSteps",
+                "ManageTheActivityFolderLevelNavigation",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Manage The Gradebook Folder Navigation
+            new GBLeftNavigationUXPage().ManageTheActivityFolderLevelNavigation(
+               activityName, tabName, userTypeEnum);
+            Logger.LogMethodExit("CommonSteps",
+                "ManageTheActivityFolderLevelNavigation",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
