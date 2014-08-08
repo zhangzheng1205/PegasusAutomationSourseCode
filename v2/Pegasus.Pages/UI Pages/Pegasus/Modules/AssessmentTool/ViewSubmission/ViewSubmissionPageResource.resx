@@ -268,7 +268,7 @@
     <value>0</value>
   </data>
   <data name="ViewSubmission_Page_Asset_Cmenuicon_Xpath_Locator" xml:space="preserve">
-    <value>&gt;//td[@assetid='assetId']/img</value>
+    <value>//td[@assetid='assetId']/img</value>
   </data>
   <data name="ViewSubmission_Page_Asset_CmenuViewSubmission_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='PegMenu32']//div[@id='cmenuCont']//div[@title='View Submissions']</value>
@@ -284,5 +284,8 @@
   </data>
   <data name="ViewSubmission_Page_StudentSubmission_Grade_Id_Locator" xml:space="preserve">
     <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_InstructorHeader_lblVSInstructorHeaderGrade</value>
+  </data>
+  <data name="ViewSubmission_Page_GradebookGrade_XPath_Locator" xml:space="preserve">
+    <value>//span[@class='lblGradeCss']</value>
   </data>
 </root>

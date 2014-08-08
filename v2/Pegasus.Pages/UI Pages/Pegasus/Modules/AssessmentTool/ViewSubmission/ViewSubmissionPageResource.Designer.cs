@@ -98,7 +98,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &gt;//td[@assetid=&apos;assetId&apos;]/img.
+        ///   Looks up a localized string similar to //td[@assetid=&apos;assetId&apos;]/img.
         /// </summary>
         internal static string ViewSubmission_Page_Asset_Cmenuicon_Xpath_Locator {
             get {
@@ -175,6 +175,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         internal static string ViewSubmission_Page_Grade_ViewSubmission_Xpath_Locator {
             get {
                 return ResourceManager.GetString("ViewSubmission_Page_Grade_ViewSubmission_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //span[@class=&apos;lblGradeCss&apos;].
+        /// </summary>
+        internal static string ViewSubmission_Page_GradebookGrade_XPath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_GradebookGrade_XPath_Locator", resourceCulture);
             }
         }
         

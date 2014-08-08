@@ -809,6 +809,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to submitbutton.
+        /// </summary>
+        internal static string StudentPresentation_Page_Submit_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_Submit_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;CustomMessageBox&apos;]/div/div[3]/button[2].
+        /// </summary>
+        internal static string StudentPresentation_Page_SubmitAssignment_OK_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SubmitAssignment_OK_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to btnSubmit1.
         /// </summary>
         internal static string StudentPresentation_Page_SubmitForGrading_Button_Id_Locator {
@@ -1007,6 +1025,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to excl.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Excel_Icon_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Excel_Icon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;title-bar&apos;]/span[2]/span[1]/span/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Excel_Save_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Excel_Save_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0_APH_feedback.
         /// </summary>
         internal static string StudentPrsentation_Page_FeedbackText_Id_Locator {
@@ -1021,6 +1057,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_FeedbackText_Xpath_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_FeedbackText_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@class=&apos;newTemplateList&apos;]/li[1]/div/div[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_New_Excel_Workbook_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_New_Excel_Workbook_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -1057,6 +1102,195 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_SAMActivity_WindowName_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_SAMActivity_WindowName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;saveAsRightPaneDiv&apos;]/div[1]/div[4].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Save_MyComputer_Browse_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Save_MyComputer_Browse_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-ButtonNewFolder.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Save_New_Folder_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Save_New_Folder_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@class=&apos;left-pane-node-container&apos;]/li[13]/div[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Save_USB_Disk_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Save_USB_Disk_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A1.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_A1_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_A1_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A2.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_A2_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_A2_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A4.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_A4_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_A4_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A5.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_A5_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_A5_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pro Fit Marietta.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_First_Activity_A1_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_First_Activity_A1_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Quarter Cardio Sales.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_First_Activity_A2_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_First_Activity_A2_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exercise Bikes.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_First_Activity_A4_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_First_Activity_A4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elliptical Machines.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_First_Activity_A5_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_First_Activity_A5_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel Chapter 1.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_Folder_Name {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_Folder_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to formulaBox.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_Formula_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_Formula_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to refBox.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10000.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Launch_Sleep_Time {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Launch_Sleep_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to editable-text-area.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_New_Folder_Class_Name {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_New_Folder_Class_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-ButtonOpen.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Open_button_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Open_button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-ButtonSave.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Save_button_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Save_button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1A_Quarterly_Sales.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Save_Excel_File_Name {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Save_Excel_File_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-TextBoxFileName.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Save_File_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Save_File_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5000.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Sleep_Time {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Sleep_Time", resourceCulture);
             }
         }
         

@@ -2636,6 +2636,275 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("StudentPresentationPage", "RecordAudioForOneMinute",
                base.IsTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Get the SIM5 assetid from the current url.
+        /// </summary>
+        /// <returns></returns>
+        public string GetSIM5AssetIdFromUrl(string assetName)
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "GetSIM5AssetIdFromUrl",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Switch Window
+            base.SwitchToLastOpenedWindow();
+            // Wait for window
+            base.WaitUntilWindowLoads(assetName + StudentPresentationPageResource.
+            StudentPresentation_Page_SimPresentation_Window_Name);
+            //Get the current url
+            string strURL = base.GetCurrentUrl;
+            int searchIndex = strURL.IndexOf("resLinkID=") + 10;
+            // Get the assetId
+            string assetId = strURL.Substring(searchIndex, strURL.IndexOf('&', searchIndex) - searchIndex);
+            logger.LogMethodExit("StudentPresentationPage", "GetSIM5AssetIdFromUrl",
+            base.IsTakeScreenShotDuringEntryExit);
+            return assetId;
+        }
+        /// <summary>
+        /// Submit SIM5 Excel type activity.
+        /// </summary>
+        public void SubmitSIMExcelTypeActivity(String activityName)
+        {
+            //Submit SIM5 Excel type activity
+            logger.LogMethodEntry("StudentPresentationPage",
+                "SubmitSIM5ExcelTypeActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait for the SIM5 assignment launch window
+                base.WaitUntilWindowLoads(activityName + StudentPresentationPageResource.
+                StudentPresentation_Page_SimPresentation_Window_Name);
+                //Select the SIM5 assignment launch window
+                base.SelectWindow(activityName + StudentPresentationPageResource.
+                StudentPresentation_Page_SimPresentation_Window_Name);
+                //Answer first excel question
+                StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook();
+                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
+                //Answer Second excel question
+                EnteringTextUsingAutoCompleteAndUsingTheNameBoxToSelectACell();
+                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                   StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
+                //Click on SIM5 activity Submit button
+                this.ClickOnSIM5ActivitySubmitButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+                 "SubmitSIM5ExcelTypeActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Answers Starting Excel Navigating Excel And Naming And Saving A Workbook.
+        /// </summary>
+        private void StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook()
+        {
+
+            //Answers first Excel Question            
+            logger.LogMethodEntry("StudentPresentationPage",
+                    "AnswersFirstExcelQuestion",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Get Excel desktop icon button Property
+            IWebElement getExcelIconButton = base.GetWebElementPropertiesById
+                (StudentPresentationPageResource.
+                 StudentPrsentation_Page_Excel_Icon_Id_Locator);
+            //Click on Excel desktop icon button
+            base.ClickByJavaScriptExecutor(getExcelIconButton);
+            //Get Excel blank workbook icon button Property
+            IWebElement getBlankWorkbookIconButton = base.GetWebElementPropertiesByXPath
+                (StudentPresentationPageResource.
+                 StudentPrsentation_Page_New_Excel_Workbook_Xpath_Locator);
+            //Click on Excel blank workbook icon button
+
+            base.ClickByJavaScriptExecutor(getBlankWorkbookIconButton);
+            SaveFilesInUSB();
+            logger.LogMethodExit("StudentPresentationPage",
+                "AnswersFirstExcelQuestion",
+              base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Save office file in USB in SIM5.
+        /// </summary>
+        private void SaveFilesInUSB()
+        {
+            //Save office file in USB in SIM5        
+            logger.LogMethodEntry("StudentPresentationPage",
+                    "SaveFilesInUSB",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Get Excel save icon button Property
+            IWebElement getSaveIconButton = base.GetWebElementPropertiesByXPath
+                (StudentPresentationPageResource.
+                StudentPrsentation_Page_Excel_Save_Xpath_Locator);
+            //Click on save icon button
+            base.ClickByJavaScriptExecutor(getSaveIconButton);
+            //Get  computer browse icon button Property
+            IWebElement getComputerBrowseIconButton = base.GetWebElementPropertiesByXPath
+                (StudentPresentationPageResource.
+                 StudentPrsentation_Page_Save_MyComputer_Browse_Xpath_Locator);
+            //Click on computer browse icon button
+            base.ClickByJavaScriptExecutor(getComputerBrowseIconButton);
+            //Get  USB disk icon button Property
+            IWebElement getUSBDiskIconButton = base.GetWebElementPropertiesByXPath
+                (StudentPresentationPageResource.
+                 StudentPrsentation_Page_Save_USB_Disk_Xpath_Locator);
+            //Click on USB disk icon button
+            base.ClickByJavaScriptExecutor(getUSBDiskIconButton);
+
+            //Get  New Folder button Property
+            IWebElement getNewFolderButton = base.GetWebElementPropertiesById
+                (StudentPresentationPageResource.
+                 StudentPrsentation_Page_Save_New_Folder_ID_Locator);
+            //Click on New Folder button
+            base.ClickByJavaScriptExecutor(getNewFolderButton);
+            //Get created new folder Property
+            IWebElement getNewFolderName = base.GetWebElementPropertiesByClassName
+                (StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_New_Folder_Class_Name);
+            //focus on created new folder
+            base.FocusOnElementByClassName(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_New_Folder_Class_Name);
+            //Select all in New folder Text box
+            base.ClearTextByClassName((StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_New_Folder_Class_Name));
+            //Rename Folder name
+            base.FillTextBoxByClassName(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_New_Folder_Class_Name,
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Folder_Name);
+
+            //Press Enter Key in New Folder text box
+            base.PressEnterKeyByClassName(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_New_Folder_Class_Name);
+            //Get open button Property
+            IWebElement getOpenFileButton = base.GetWebElementPropertiesById
+                (StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Open_button_Id_Locator);
+            //Click on open button
+            base.ClickByJavaScriptExecutor(getOpenFileButton);
+            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Sleep_Time));
+
+            //Select all in file name Text box
+            base.ClearTextById(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Save_File_TextBox_Id_Locator);
+            //SSave file name
+            base.FillTextBoxById(StudentPresentationPageResource.
+                 StudentPrsentation_Page_SIM5_Save_File_TextBox_Id_Locator,
+                 StudentPresentationPageResource.
+                 StudentPrsentation_Page_SIM5_Save_Excel_File_Name);
+
+            //Get save button Property
+            IWebElement getSaveFileButton = base.GetWebElementPropertiesById(
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Save_button_Id_Locator);
+            //Click on  save button
+            base.ClickByJavaScriptExecutor(getSaveFileButton);
+
+            logger.LogMethodExit("StudentPresentationPage",
+                "SaveFilesInUSB",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Answers Entering Text Using AutoComplete And Using The NameBox To Select A Cell.
+        /// </summary>
+        private void EnteringTextUsingAutoCompleteAndUsingTheNameBoxToSelectACell()
+        {
+            //Answer second Excel Question       
+            logger.LogMethodEntry("StudentPresentationPage",
+                    "AnswerSecondExcelQuestion",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Fill A1 cell value
+            PutExcelValueInCell(
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_A1_Cell_Id,
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_First_Activity_A1_Cell_Value);
+            //Fill A2 cell value
+            PutExcelValueInCell(
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_A2_Cell_Id,
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_First_Activity_A2_Cell_Value);
+            //Fill A4 cell value
+            PutExcelValueInCell(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_A4_Cell_Id,
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_First_Activity_A4_Cell_Value);
+            //Fill A5 cell value
+            PutExcelValueInCell(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_A5_Cell_Id,
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_First_Activity_A5_Cell_Value);
+            logger.LogMethodExit("StudentPresentationPage",
+                "AnswerSecondExcelQuestion",
+              base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Fill Excel cell.
+        /// </summary>
+        /// <param name="refCell">Cell Id</param>
+        /// <param name="formulaValue">Cell value</param>
+        private void PutExcelValueInCell(string referenceCellId, string formulaValue)
+        {
+            //Fill Excel cell
+            logger.LogMethodEntry("StudentPresentationPage",
+                "PutExcelValueInCell",
+               base.IsTakeScreenShotDuringEntryExit);
+            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Sleep_Time));
+            //Clear Reference Box
+            base.ClearTextById(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Fill Cell ID in Reference Box 
+            base.FillTextBoxById(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator, referenceCellId);
+            //Press Enter in Reference Box
+            PressEnterKeyById(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Clear Formula Box
+            base.ClearTextById(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Formula_TextBox_Id_Locator);
+            //Fill vlaue in Formula Box 
+            base.FillTextBoxById(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Formula_TextBox_Id_Locator, formulaValue);
+            //Press Enter in Formula Box
+            PressEnterKeyById(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Formula_TextBox_Id_Locator);
+            logger.LogMethodExit("StudentPresentationPage",
+                "PutExcelValueInCell",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On SIM5 Activity Submit Button.
+        /// </summary>
+        public void ClickOnSIM5ActivitySubmitButton()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "ClickOnSIM5ActivitySubmitButton",
+            base.IsTakeScreenShotDuringEntryExit);
+
+            //Click on Ok button
+            IWebElement getSubmitButton = base.GetWebElementPropertiesById
+            (StudentPresentationPageResource.
+            StudentPresentation_Page_Submit_Button_Id_Locator);
+            base.ClickByJavaScriptExecutor(getSubmitButton);
+
+            //Get the Submit Assignment 'OK' button as WebElement
+            IWebElement getSubmitAssignment = base.GetWebElementPropertiesByXPath
+            (StudentPresentationPageResource.
+            StudentPresentation_Page_SubmitAssignment_OK_Button_Id_Locator);
+            //Click on the Submit Assignment 'OK' button
+            base.ClickByJavaScriptExecutor(getSubmitAssignment);
+            logger.LogMethodExit("StudentPresentationPage", "ClickOnSIM5ActivitySubmitButton",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
     }
 }

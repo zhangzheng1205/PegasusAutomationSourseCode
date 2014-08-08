@@ -1273,5 +1273,56 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             return getSubmissionScore;
         }
+        /// <summary>
+        /// Select Last Submission from Submission List In View Submission Window.
+        /// </summary>
+        public void SelectLastSubmissionInViewSubmissionWindow()
+        {
+            //
+            logger.LogMethodEntry("ViewSubmissionPage",
+            "SelectLastSubmissionInViewSubmissionWindow", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the View Submission window
+                this.SelectViewSubmissionWindow();
+
+                //Get the Collection of all the Submission in Submission List
+                ICollection<IWebElement> getAllSubmissionsInSubmissionList = base.GetWebElementsCollectionByClassName(
+                ViewSubmissionPageResource.ViewSubmission_Page_ViewSubmission_Score_ClassName_Locator);
+
+                //Get the Last submission from the collection of Submissions in Submission List
+                IWebElement getLastSubmission = getAllSubmissionsInSubmissionList.Last();
+
+                //Click the score link
+                base.ClickByJavaScriptExecutor(getLastSubmission);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodEntry("ViewSubmissionPage",
+            "SelectLastSubmissionInViewSubmissionWindow", base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verify Gradebook Grade value On ViewSubmission Page.
+        /// </summary>
+        /// <returns></returns>
+        public string GetGradebookGradeOnViewSubmissionPage()
+        {
+            //get Gradebook Grade text from View Submission page
+            string getGradebookGradeText = base.GetElementTextByXPath(ViewSubmissionPageResource.
+            ViewSubmission_Page_GradebookGrade_XPath_Locator);
+
+            //Split Gradebook Grade text from View Submission page to get Grade Value component
+            string[] getGradebookGradeTextElements = getGradebookGradeText.Split(Convert.ToChar(
+            ViewSubmissionPageResource.ViewSubmission_Page_StatusSpecialCharacter_Char));
+
+            //populate Gradebook Grade from View Submission page
+            string GradebookGrade = getGradebookGradeTextElements[1].ToString().Trim();
+
+            //return Gradebook Grade from View Submission page
+            return GradebookGrade;
+        }
+
     }
 }
