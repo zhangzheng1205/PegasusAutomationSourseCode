@@ -63,4 +63,14 @@ Then I should be on the "Gradebook" page
 When I click on the "SIM5StudyPlan" 'View Grades' option 
 Then I should see the pre test training "Sim5PreTest" score "100"
 
-
+#Purpose : Student launches a Sim 5 activity for Excel Application. Scores a 100% and compares the result and status
+Scenario: Student launches a Sim 5 activity for Excel Application. Scores a 100% and compares the result and status
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I launch the activity named as "Excel Chapter 1 Skill-Based Training" in Course Materials
+And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly and click on Submit button
+Then I should be on the "Course Materials" page
+When I click on cmenu "ViewSubmissions" of asset "Excel Chapter 1 Skill-Based Training" with mode "SkillBased" in Course Materials
+Then I should be on the "View Submission" page
+When I click on the last submission
+Then I should see the grade is "7.41%" in View Submission page
