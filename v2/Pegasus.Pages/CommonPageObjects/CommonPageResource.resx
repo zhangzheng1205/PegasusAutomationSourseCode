@@ -117,46 +117,64 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GBLeftNavigationUXPage_ActivityFolder_LinkText_Locator" xml:space="preserve">
-    <value>Capítulo Preliminar 0A: Para empezar</value>
+  <data name="CommonPage_Access2013_FolderName" xml:space="preserve">
+    <value>Access 2013</value>
   </data>
-  <data name="GBLeftNavigationUXPage_ActivityGradesFrame_Id_Locator" xml:space="preserve">
-    <value>srcGBFrame</value>
+  <data name="CommonPage_AccessChapter1Activities_FolderName" xml:space="preserve">
+    <value>Access Chapter 1: Activities</value>
   </data>
-  <data name="GBLeftNavigationUXPage_AdditionalPractice_LinkText_Locator" xml:space="preserve">
-    <value>ADDITIONAL PRACTICE</value>
+  <data name="CommonPage_AccessChapter1GettingStartedWithMicrosoftAccess2013_FolderName" xml:space="preserve">
+    <value>Access Chapter 1: Getting Started with Microsoft Access 2013</value>
   </data>
-  <data name="GBLeftNavigationUXPage_ChapterResources_LinkText_Locator" xml:space="preserve">
-    <value>CHAPTER RESOURCES</value>
+  <data name="CommonPage_AccessChapter1SimulationActivities_FolderName" xml:space="preserve">
+    <value>Access Chapter 1: Simulation Activities</value>
   </data>
-  <data name="GBLeftNavigationUXPage_ElementTime_Value" xml:space="preserve">
-    <value>3000</value>
+  <data name="CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator" xml:space="preserve">
+    <value>backicon</value>
   </data>
-  <data name="GBLeftNavigationUXPage_Folder_Count_Initial_Value" xml:space="preserve">
-    <value>0</value>
+  <data name="CommonPage_Excel2013_FolderName" xml:space="preserve">
+    <value>Excel 2013</value>
   </data>
-  <data name="GBLeftNavigationUXPage_Folder_Count_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='rptrFolderContent']/div</value>
+  <data name="CommonPage_ExcelChapter1Activities_FolderName" xml:space="preserve">
+    <value>Excel Chapter 1: Activities</value>
   </data>
-  <data name="GBLeftNavigationUXPage_Folder_Name_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='rptrFolderContent']/div[{0}]/div[2]</value>
+  <data name="CommonPage_ExcelChapter1CreatingAWorksheetAndChartingData_FolderName" xml:space="preserve">
+    <value>Excel Chapter 1: Creating a Worksheet and Charting Data</value>
   </data>
-  <data name="GBLeftNavigationUXPage_Folder_Text_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='rptrFolderContent']/div[{0}]</value>
+  <data name="CommonPage_ExcelChapter1SimulationActivities_FolderName" xml:space="preserve">
+    <value>Excel Chapter 1: Simulation Activities</value>
   </data>
-  <data name="GBLeftNavigationUXPage_LeftNavigationFrame_Id_Locator" xml:space="preserve">
+  <data name="CommonPage_FolderNavigation_Sleep_Time" xml:space="preserve">
+    <value>1500</value>
+  </data>
+  <data name="CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName" xml:space="preserve">
+    <value>GO! with Microsoft Office 2013, Volume 1</value>
+  </data>
+  <data name="CommonPage_LeftNavigationFrame_Id_Locator" xml:space="preserve">
     <value>Frame1</value>
   </data>
-  <data name="GBLeftNavigationUXPage_Loop_Initializer" xml:space="preserve">
-    <value>1</value>
+  <data name="CommonPage_PowerPointChapter1Activities_FolderName" xml:space="preserve">
+    <value>PowerPoint Chapter 1: Activities</value>
   </data>
-  <data name="GBLeftNavigationUXPage_ThreadTime_Value" xml:space="preserve">
-    <value>20000</value>
+  <data name="CommonPage_PowerPointChapter1GettingStartedWithMicrosoftPowerPoint_FolderName" xml:space="preserve">
+    <value>PowerPoint Chapter 1: Getting Started with Microsoft PowerPoint</value>
   </data>
-  <data name="GBLeftNavigationUXPage_Wait_Time" xml:space="preserve">
-    <value>5000</value>
+  <data name="CommonPage_PowerPointChapter1SimulationActivities_FolderName" xml:space="preserve">
+    <value>PowerPoint Chapter 1: Simulation Activities</value>
   </data>
-  <data name="GBLeftNavigationUXPage_WindowName_Title" xml:space="preserve">
-    <value>Gradebook</value>
+  <data name="CommonPage_Word2013_FolderName" xml:space="preserve">
+    <value>Word 2013</value>
+  </data>
+  <data name="CommonPage_WordChapter1Activities_FolderName" xml:space="preserve">
+    <value>Word Chapter 1: Activities</value>
+  </data>
+  <data name="CommonPage_WordChapter1CreatingDocumentsWithMicrosoftWord2013_FolderName" xml:space="preserve">
+    <value>Word Chapter 1: Creating Documents with Microsoft Word 2013</value>
+  </data>
+  <data name="CommonPage_WordChapter1SimulationActivities_FolderName" xml:space="preserve">
+    <value>Word Chapter 1: Simulation Activities</value>
+  </data>
+  <data name="ComonPage_PowerPoint2013_FolderName" xml:space="preserve">
+    <value>PowerPoint 2013</value>
   </data>
 </root>

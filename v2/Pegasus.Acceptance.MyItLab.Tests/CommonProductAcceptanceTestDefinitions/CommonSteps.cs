@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using Pegasus.Pages.CommonPageObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Automation.DataTransferObjects;
 using Pearson.Pegasus.TestAutomation.Frameworks;
@@ -612,24 +613,24 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// Manage The Activity Folder Level Navigation.
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
-        /// <param name="tabName">This Is Tab Name.</param>
+        /// <param name="activityUnderTabName">This Is Tab Name.</param>
         /// <param name="userTypeEnum">This is User Type Enum.</param>
         [When(@"I select ""(.*)"" in ""(.*)"" by ""(.*)""")]
         public void ManageTheActivityFolderLevelNavigation(string activityName,
-            GBLeftNavigationUXPage.TabNameTypeEnum tabName,
-            User.UserTypeEnum userTypeEnum)
+            string activityUnderTabName, User.UserTypeEnum userTypeEnum)
         {
             //Manage The Activity Folder Level Navigation
             Logger.LogMethodEntry("CommonSteps",
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
             //Manage The Gradebook Folder Navigation
-            new GBLeftNavigationUXPage().ManageTheActivityFolderLevelNavigation(
-               activityName, tabName, userTypeEnum);
+            new CommonPage().ManageTheActivityFolderLevelNavigation(
+               activityName, activityUnderTabName, userTypeEnum);
             Logger.LogMethodExit("CommonSteps",
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

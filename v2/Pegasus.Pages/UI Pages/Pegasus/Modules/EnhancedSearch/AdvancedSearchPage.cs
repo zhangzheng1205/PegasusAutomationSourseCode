@@ -22,7 +22,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         ///  Static instance of the logger
         /// </summary>
-        private static readonly Logger logger = Logger.
+        private static readonly Logger Logger = Logger.
             GetInstance(typeof(AdvancedSearchPage));
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SearchAssetUsingAdvancedSearch(string activityName, SearchTab tabName)
         {
             //Search Asset Using Advanced Search
-            logger.LogMethodEntry("AdvancedSearchPage", "SearchAssetUsingAdvancedSearch",
+            Logger.LogMethodEntry("AdvancedSearchPage", "SearchAssetUsingAdvancedSearch",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -81,7 +81,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("AdvancedSearchPage", "SearchAssetUsingAdvancedSearch",
+            Logger.LogMethodExit("AdvancedSearchPage", "SearchAssetUsingAdvancedSearch",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -92,7 +92,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickonAdvancedSearchLink(string activityName, SearchTab tabName)
         {
             //Click on AdvancedSearch Link
-            logger.LogMethodEntry("AdvancedSearchPage", "ClickonAdvancedSearchLink",
+            Logger.LogMethodEntry("AdvancedSearchPage", "ClickonAdvancedSearchLink",
                 base.IsTakeScreenShotDuringEntryExit);
             switch (tabName)
             {
@@ -133,7 +133,7 @@ namespace Pegasus.Pages.UI_Pages
                          AdvancedSearch_Page_PlannerFrame_Id_Locator);
                     break;
             }
-            logger.LogMethodExit("AdvancedSearchPage", "ClickonAdvancedSearchLink",
+            Logger.LogMethodExit("AdvancedSearchPage", "ClickonAdvancedSearchLink",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -144,7 +144,7 @@ namespace Pegasus.Pages.UI_Pages
         public void FillAssetNameInTextBoxAndClickSearchButton(string assetName)
         {
             //Fill Asset Name In Text Box and Click On Search Button
-            logger.LogMethodEntry("AdvancedSearchPage",
+            Logger.LogMethodEntry("AdvancedSearchPage",
                 "FillAssetNameInTextBoxAndClickSearchButton",
               base.IsTakeScreenShotDuringEntryExit);
             try
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("AdvancedSearchPage",
+            Logger.LogMethodExit("AdvancedSearchPage",
                 "FillAssetNameInTextBoxAndClickSearchButton",
              base.IsTakeScreenShotDuringEntryExit);
         }
@@ -171,7 +171,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SelectAdvanceSearchFrame()
         {
             //Select Middle Frame
-            logger.LogMethodEntry("AdvancedSearchPage",
+            Logger.LogMethodEntry("AdvancedSearchPage",
                 "SelectAdvanceSearchFrame", base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -186,7 +186,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("AdvancedSearchPage", "SelectAdvanceSearchFrame",
+            Logger.LogMethodExit("AdvancedSearchPage", "SelectAdvanceSearchFrame",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -197,7 +197,7 @@ namespace Pegasus.Pages.UI_Pages
         private void FillAssetNameInTextBox(string assetname)
         {
             //Fill Asset Name In Text Box
-            logger.LogMethodEntry("AdvancedSearchPage",
+            Logger.LogMethodEntry("AdvancedSearchPage",
                 "FillAssetNameInTextBox",
               base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AdvancedSearchPageResource.
@@ -208,7 +208,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill Asset Name In Text Box
             base.FillTextBoxById(AdvancedSearchPageResource.
                 AdvancedSearch_Page_TextBox_Id_Locator, assetname);
-            logger.LogMethodExit("AdvancedSearchPage",
+            Logger.LogMethodExit("AdvancedSearchPage",
               "FillAssetNameInTextBox",
              base.IsTakeScreenShotDuringEntryExit);
         }
@@ -219,7 +219,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickOnSearchButton()
         {
             //Click On Search Button
-            logger.LogMethodEntry("AdvancedSearchPage", "ClickOnSearchButton",
+            Logger.LogMethodEntry("AdvancedSearchPage", "ClickOnSearchButton",
              base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(AdvancedSearchPageResource.
                 AdvancedSearch_Page_Search_Button_Id_Locator));
@@ -229,7 +229,7 @@ namespace Pegasus.Pages.UI_Pages
                 AdvancedSearch_Page_Search_Button_Id_Locator);
             //Click On Search Button
             base.ClickByJavaScriptExecutor(getSearchButtonProperty);
-            logger.LogMethodExit("AdvancedSearchPage", "ClickOnSearchButton",
+            Logger.LogMethodExit("AdvancedSearchPage", "ClickOnSearchButton",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -239,7 +239,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnAdvancedSearchCloseButton()
         {
             //Click On Advanced Search Close Button
-            logger.LogMethodEntry("AdvancedSearchPage", 
+            Logger.LogMethodEntry("AdvancedSearchPage", 
                 "ClickOnAdvancedSearchCloseButton",
              base.IsTakeScreenShotDuringEntryExit);
             try
@@ -258,7 +258,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("AdvancedSearchPage", 
+            Logger.LogMethodExit("AdvancedSearchPage", 
                 "ClickOnAdvancedSearchCloseButton",
              base.IsTakeScreenShotDuringEntryExit);
         }
