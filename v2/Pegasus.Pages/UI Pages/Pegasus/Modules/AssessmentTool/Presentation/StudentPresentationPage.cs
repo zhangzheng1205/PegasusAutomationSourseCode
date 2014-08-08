@@ -2444,7 +2444,198 @@ namespace Pegasus.Pages.UI_Pages
                 "AnswersSelectionInTestWindow",
               base.IsTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// AudioEssay Question Submission.
+        /// </summary>
+        public void AudioEssayQuestionSubmission()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "AudioEssayQuestionSubmission",
+              base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click the Start button
+                new InstructionsPage().ClickTestStartButton();
+                //Attempt Audio Essay Question Submission
+                this.AttemptTheAudioEssayQuestionSubmission();
+                //Click on Submit For Grade Button
+                this.ClickOnSubmitForGradingButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "AudioEssayQuestionSubmission",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Attempt Audio Essay Question Submission.
+        /// </summary>
+        private void AttemptTheAudioEssayQuestionSubmission()
+        {
+            //Attempt Essay Question Submission
+            logger.LogMethodEntry("StudentPresentationPage",
+                "AttemptTheAudioEssayQuestionSubmission",
+              base.IsTakeScreenShotDuringEntryExit);
+            base.SwitchToLastOpenedWindow();
+            //Select the window
+            this.SelectWebActivityWindow(StudentPresentationPageResource.
+                StudentPrsentation_Page_SAMActivity_WindowName_Locator);
+            //Record the student response
+            this.RecordAudio();
+            //Wait for the element
+            base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Essay_Textbox_Xpath_Locator));
+            base.FillTextBoxByXPath(StudentPresentationPageResource.
+                StudentPrsentation_Page_Essay_Textbox_Xpath_Locator,
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_Essay_Text);
+            //Play the question text audio
+            this.PlayAudio();
+            logger.LogMethodExit("StudentPresentationPage",
+                "AttemptTheAudioEssayQuestionSubmission",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Play Question text audio
+        /// </summary>
+        public void PlayAudio()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "PlayAudio",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click the Pegasus play button icon
+                this.ClickAudioButton(StudentPresentationPageResource.
+                 StudentPresentation_Page_AudioPlay_Button_Xpath_Locator);
+                //Click the Learnosity audio voice tool play button
+                this.ClickAudioButton(StudentPresentationPageResource.
+                    StudentPresentation_Page_Learnosity_AudioPlay_Button_Xpath_Locator);
+                //Play Audio for one minite
+                this.AudioPlayForOneMin();
+                //Click the Learnosity voice tool stop button
+                this.ClickAudioButton(StudentPresentationPageResource.
+                    StudentPresentation_Page_Learnosity_AudioPlay_Button_Xpath_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "PlayAudio",
+                     base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        ///Record Student audio response
+        /// </summary>
+        public void RecordAudio()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "RecordAudio",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click the Pegasus record button
+                this.ClickAudioButton(StudentPresentationPageResource.
+                     StudentPresentation_Page_AudioRecord_Button_Xpath_Locator);
+                //Click the Learnosity audio voice tool record button
+                this.ClickAudioButton(StudentPresentationPageResource.
+                    StudentPresentation_Page_Learnosity_Record_button_Xpath_Locator);
+                //Record the audio response for one minite
+                this.RecordAudioForOneMinute();
+                //Click the Learnosity voice tool stop recording button
+                this.ClickAudioButton(StudentPresentationPageResource.
+                    StudentPresentation_Page_Learnosity_Record_button_Xpath_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "RecordAudio",
+                     base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Play Audio For One minite.
+        /// </summary>
+        private void AudioPlayForOneMin()
+        {
 
+            logger.LogMethodEntry("StudentPresentationPage", "AudioPlayForOneMin",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Gets the audio play running time
+                base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                    StudentPresentation_Page_Learnosity_Play_CurrentTime_Span_Xpath_Locator));
+                string getAudioCurretTime = base.GetElementTextByXPath(StudentPresentationPageResource.
+                    StudentPresentation_Page_Learnosity_Play_CurrentTime_Span_Xpath_Locator);
+                //Validate the audio played for one min
+                if (Convert.ToInt32(getAudioCurretTime.Split(':')[0]) >= Convert.ToInt32(StudentPresentationPageResource.StudentPresentation_Page_Play_Time))
+                    return;
+                else
+                    AudioPlayForOneMin();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "AudioPlayForOneMin",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click The Audio Button.
+        /// </summary>
+        private void ClickAudioButton(string buttonXPath)
+        {
+            // Click The HTML Page Audio Play Button
+            logger.LogMethodEntry("StudentPresentationPage", "ClickAudioButton",
+                      base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Wait For Element
+                base.WaitForElement(By.XPath(buttonXPath));
+                IWebElement getPlayButton = base.GetWebElementPropertiesByXPath(buttonXPath);
+                //Click On Button
+                base.ClickByJavaScriptExecutor(getPlayButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "ClickAudioButton",
+                     base.IsTakeScreenShotDuringEntryExit);
+
+        }
+        /// <summary>
+        /// Record Audio for One Minute.
+        /// </summary>
+        public void RecordAudioForOneMinute()
+        {
+            //Record Audio for One Minute
+            logger.LogMethodEntry("StudentPresentationPage", "RecordAudioForOneMinute",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Fetching The Recording Time Value
+                base.WaitForElement(By.XPath(StudentPresentationPageResource.
+               StudentPresentation_Page_Learnosity_Record_CurrentTime_span_Xpath_Locator));
+                string getRecordingCurretTime = base.GetElementTextByXPath(
+                   StudentPresentationPageResource.StudentPresentation_Page_Learnosity_Record_CurrentTime_span_Xpath_Locator);
+                //Reccursive Method To Record Audio For One Minute
+                if (Convert.ToInt32(getRecordingCurretTime.Split(':')[0]) >=
+                    Convert.ToInt32(StudentPresentationPageResource.StudentPresentation_Page_Recording_Time))
+                {
+                    return;
+                }
+                else
+                {
+                    RecordAudioForOneMinute();
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "RecordAudioForOneMinute",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
 
     }
 }

@@ -463,7 +463,65 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityForSubmission",
                 base.IsTakeScreenShotDuringEntryExit);            
         }
+        [Then(@"I should see the status of activity with learnosity audio question as ""(.*)""")]
+        public void VerifyStatusOfActivityWithLearnosityAudioQuestion(String activityStatus)
+        {
+            //Verify the Status Of Activity
+            Logger.LogMethodEntry("ActivitySubmission",
+                "VerifyStatusOfActivityWithLearnosityAudioQuestion",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert the Activity Status
+            Logger.LogAssertion("VerifyStatusOfActivityWithLearnosityAudioQuestion",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(activityStatus, new CoursePreviewMainUXPage().
+                    GetStatusOfActivity(ActivitySubmissionResource.
+                    ActivitySubmission_Contains_Learnosity_Audio_Question_Activity_Name)));
+            Logger.LogMethodExit("ActivitySubmission",
+                "VerifyStatusOfActivityWithLearnosityAudioQuestion",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
+        /// <summary>
+        /// Open the Activity with Learnosity audio question As Student.
+        /// </summary>
+        [When(@"I open the activity with learnosity audio essay question")]
+        public void OpenTheActivityWithLearnosityAudioEssayQuestion()
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivityWithLearnosityAudioEssayQuestion",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Switch to default window after closing of presentation pop up            
+            //Launch The Activity
+            new CoursePreviewMainUXPage().OpenActivity(ActivitySubmissionResource.
+                ActivitySubmission_Contains_Learnosity_Audio_Question_Activity_Name);
+            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityWithLearnosityAudioEssayQuestion",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Submit The Activity with Learnosity Audio question.
+        /// </summary>
+        [When(@"I submit the 'Manually Gradable' Activity with learnosity audio question")]
+        public void SubmitTheActivityWithLearnosityAudioQuestion()
+        {
+            //Submit the Activity
+            Logger.LogMethodEntry("ActivitySubmission",
+                "SubmitTheActivityWithLearnosityAudioQuestion",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Declaration of object
+            StudentPresentationPage studentPresentation =
+                new StudentPresentationPage();
+            //Select the window
+            studentPresentation.SelectWebActivityWindow(ActivitySubmissionResource.
+                ActivitySubmission_SAMActivity_WindowName);
+            //Click the start button
+            studentPresentation.AudioEssayQuestionSubmission();
+            //Submit the Activity
+            studentPresentation.FinishAndReturnToCourse();
+            // Select close button on the Test window
+            new InstructionsPage().ClickTestCloseButton();
+            Logger.LogMethodExit("ActivitySubmission",
+                "SubmitTheActivityWithLearnosityAudioQuestion",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

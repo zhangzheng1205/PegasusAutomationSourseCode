@@ -141,4 +141,10 @@
   <data name="ActivitySubmission_Test_WindowName" xml:space="preserve">
     <value>Test</value>
   </data>
+   <data name="ActivitySubmission_Contains_Learnosity_Audio_Question_Activity_Name" xml:space="preserve">
+    <value>Learnosity Audio Activity</value>
+  </data>
+  <data name="ActivitySubmission_SAMActivity_WindowName" xml:space="preserve">
+    <value>SAM Activity</value>
+  </data>
 </root>

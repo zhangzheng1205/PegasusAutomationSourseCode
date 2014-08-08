@@ -89,6 +89,15 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.ProductAcceptanceTestDefi
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Learnosity Audio Activity.
+        /// </summary>
+        internal static string ActivitySubmission_Contains_Learnosity_Audio_Question_Activity_Name {
+            get {
+                return ResourceManager.GetString("ActivitySubmission_Contains_Learnosity_Audio_Question_Activity_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 50.
         /// </summary>
         internal static string ActivitySubmission_ManuallySubmitted_Activity_GradeValue {
@@ -103,6 +112,15 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.ProductAcceptanceTestDefi
         internal static string ActivitySubmission_Quiz_WindowName {
             get {
                 return ResourceManager.GetString("ActivitySubmission_Quiz_WindowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SAM Activity.
+        /// </summary>
+        internal static string ActivitySubmission_SAMActivity_WindowName {
+            get {
+                return ResourceManager.GetString("ActivitySubmission_SAMActivity_WindowName", resourceCulture);
             }
         }
         

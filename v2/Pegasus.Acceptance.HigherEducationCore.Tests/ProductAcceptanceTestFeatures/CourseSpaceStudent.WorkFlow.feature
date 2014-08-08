@@ -106,4 +106,12 @@ Then I should be on the "Course Materials" page
 When I click on calendar icon
 Then I should see the assigned asset "Quiz"
 
+Scenario: Gradable Activity with Learnosity Audio Question Submission by SMS Student
+When I enter in the "InstructorCourse" from the Global Home page as "CsSmsStudent"
+When I navigate to "Course Materials" tab of the "Course Materials" page
+Then I should be on the "Course Materials" page
+When I open the activity with learnosity audio essay question 
+And I submit the 'Manually Gradable' Activity with learnosity audio question
+Then I should see the status of activity with learnosity audio question as "Submitted"
+
  

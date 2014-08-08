@@ -135,28 +135,9 @@ namespace Pegasus.Pages.UI_Pages
         public void OpenActivity(
             Activity.ActivityTypeEnum activityTypeEnum)
         {
-            // Launch The Activity
-            Logger.LogMethodEntry("CoursePreviewMainUXPage", "OpenActivity",
-                base.IsTakeScreenShotDuringEntryExit);
-            try
-            {
-                // Get Activity Type
-                Activity activity = Activity.Get(activityTypeEnum);
-                //Select the window
-                this.SelectCourseMaterialsWindow();
-                //Wait For The Activity Name
-                base.WaitForElement(By.PartialLinkText(activity.Name));
-                //Get Activity Property
-                IWebElement getActivityProperty = base.GetWebElementPropertiesByPartialLinkText
-                    (activity.Name);
-                base.ClickByJavaScriptExecutor(getActivityProperty);
-            }
-            catch (Exception e)
-            {
-                ExceptionHandler.HandleException(e);
-            }
-            Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenActivity",
-                base.IsTakeScreenShotDuringEntryExit);
+            // Get Activity Type
+            Activity activity = Activity.Get(activityTypeEnum);
+            OpenActivity(activity.Name);
         }
 
         /// <summary>
@@ -898,6 +879,34 @@ namespace Pegasus.Pages.UI_Pages
                 "GetDisplayOfActivityNameInViewAllContent",
                    base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
+        }
+      
+        /// <summary>
+        /// Launch The Activity by activity name.
+        /// </summary>
+        /// <param name="activityName">Name of the activity</param>
+        public void OpenActivity(string activityName)
+        {
+            // Launch The Activity
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "OpenActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the window
+                this.SelectCourseMaterialsWindow();
+                //Wait For The Activity Name
+                base.WaitForElement(By.PartialLinkText(activityName));
+                //Get Activity Property
+                IWebElement getActivityProperty = base.GetWebElementPropertiesByPartialLinkText
+                    (activityName);
+                base.ClickByJavaScriptExecutor(getActivityProperty);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenActivity",
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }
