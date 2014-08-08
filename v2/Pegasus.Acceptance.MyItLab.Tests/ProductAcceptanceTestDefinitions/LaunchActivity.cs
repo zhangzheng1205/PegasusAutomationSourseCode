@@ -117,6 +117,18 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        /// <summary>
+        /// Submit SIM5 Excel type activity.
+        /// </summary>
+        [When(@"I should answer activity ""(.*)"" correctly and click on Submit button")]
+        public void SubmitSIM5ExcelTypeActivity(String activityName)
+        {
+            //Submit SIM5 Excel type activity
+            Logger.LogMethodEntry("LaunchActivity", "SubmitSIM5ExcelTypeActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().SubmitSIMExcelTypeActivity(activityName);
+            Logger.LogMethodExit("LaunchActivity", "SubmitSIM5ExcelTypeActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

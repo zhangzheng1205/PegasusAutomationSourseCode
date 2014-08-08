@@ -372,10 +372,6 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
-
-
-
         [When(@"I launch the activity named as ""(.*)"" in Course Materials")]
         public void OpenTheActivityToLaunch(string activityName)
         {
@@ -387,7 +383,8 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             new StudentPresentationPage().SelectWindowAndFrame();
             //wait for frame to load
             new StudentPresentationPage().WaitForActivitytoLoad(activityName);
-
+            //Get asset id
+            this.AssetId = new StudentPresentationPage().GetSIM5AssetIdFromUrl(activityName);
             //Click The Activity In CourseMaterial
             //new StudentPresentationPage().SelectActivityNameInCourseMaterialTab(activityName);
             Logger.LogMethodExit("ActivitySubmission", "OpenTheActivity", base.IsTakeScreenShotDuringEntryExit);
@@ -569,6 +566,62 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebook",
                  IsTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Click On Cmenu Of Asset In Course Materials.
+        /// </summary>
+        /// <param name="cmenuOption">C-menu Option</param>
+        /// <param name="activityName">Activity Name</param>
+        /// <param name="activityTypeEnum">Activity Type enum</param>
+        [When(@"I click on cmenu ""(.*)"" of asset ""(.*)"" with mode ""(.*)"" in Course Materials")]
+        public void ClickOnCmenuOfAssetInCourseMaterials(string cmenuOption, string activityName, Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Click On Cmenu Of Asset
+            Logger.LogMethodEntry("GradeBook", "SubmitTheSIM5Activity",
+            IsTakeScreenShotDuringEntryExit);
+
+            //Click On Cmenu Of Asset
+            ViewSubmissionPage objViewSubmissionPage = new ViewSubmissionPage();
+
+            //Select The Cmenu Option Of Asset
+            objViewSubmissionPage.SelectAssetCMenuOption(
+            (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
+            GBInstructorUXPage.AssetCmenuOptionEnum), cmenuOption), activityName, activityTypeEnum, AssetId);
+
+            Logger.LogMethodExit("GradeBook", "SubmitTheSIM5Activity",
+            IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On The Last Submission from submission list in view submission window.
+        /// </summary>
+        [When(@"I click on the last submission")]
+        public void ClickOnTheLastSubmission()
+        {
+            Logger.LogMethodEntry("GradeBook", "SubmitTheSIM5Activity",
+            IsTakeScreenShotDuringEntryExit);
+            //Click on last submission
+            new ViewSubmissionPage().SelectLastSubmissionInViewSubmissionWindow();
+
+            Logger.LogMethodExit("GradeBook", "SubmitTheSIM5Activity",
+            IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verify the Gradebook Grade value On View Submission Page.
+        /// </summary>
+        /// <param name="gradeValue">Gradebook Grade value in view submission page</param>
+        [Then(@"I should see the grade is ""(.*)"" in View Submission page")]
+        public void VerifyGradebookGradeOnViewSubmissionPage(string gradeValue)
+        {
+            Logger.LogMethodEntry("GradeBook", "VerifyGradebookGradeOnViewSubmissionPage",
+            IsTakeScreenShotDuringEntryExit);
+
+            Logger.LogAssertion("VerifyGradebookGradeOnViewSubmissionPage", ScenarioContext.
+            Current.ScenarioInfo.Title, () => Assert.AreEqual(gradeValue,
+            new ViewSubmissionPage().GetGradebookGradeOnViewSubmissionPage()));
+
+            Logger.LogMethodExit("GradeBook", "VerifyGradebookGradeOnViewSubmissionPage",
+            IsTakeScreenShotDuringEntryExit);
+        }
+
 
     }
 }
