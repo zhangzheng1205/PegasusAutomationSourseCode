@@ -99,9 +99,27 @@ namespace Pegasus.Pages.CommonPageObjects {
         /// <summary>
         ///   Looks up a localized string similar to backicon.
         /// </summary>
-        internal static string CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator {
+        internal static string CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator {
             get {
-                return ResourceManager.GetString("CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator", resourceCulture);
+                return ResourceManager.GetString("CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to imgBackArrow.
+        /// </summary>
+        internal static string CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator {
+            get {
+                return ResourceManager.GetString("CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ifrmCoursePreview.
+        /// </summary>
+        internal static string CommonPage_CoursePreviewFrame_Id_Locator {
+            get {
+                return ResourceManager.GetString("CommonPage_CoursePreviewFrame_Id_Locator", resourceCulture);
             }
         }
         

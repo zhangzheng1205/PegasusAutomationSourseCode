@@ -129,8 +129,14 @@
   <data name="CommonPage_AccessChapter1SimulationActivities_FolderName" xml:space="preserve">
     <value>Access Chapter 1: Simulation Activities</value>
   </data>
-  <data name="CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator" xml:space="preserve">
+  <data name="CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator" xml:space="preserve">
     <value>backicon</value>
+  </data>
+  <data name="CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator" xml:space="preserve">
+    <value>imgBackArrow</value>
+  </data>
+  <data name="CommonPage_CoursePreviewFrame_Id_Locator" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
   </data>
   <data name="CommonPage_Excel2013_FolderName" xml:space="preserve">
     <value>Excel 2013</value>
