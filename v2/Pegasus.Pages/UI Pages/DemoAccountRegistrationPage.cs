@@ -8,8 +8,6 @@ using Pegasus.Pages.Exceptions;
 using System.Diagnostics;
 using OpenQA.Selenium;
 
-
-
 namespace Pegasus.Pages.UI_Pages
 {
     /// <summary>
@@ -20,39 +18,40 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// The Static Instance Of The Logger For The Class.
         /// </summary>
-        private static Logger logger = Logger.GetInstance(typeof(DemoAccountRegistrationPage));
+        private static readonly Logger Logger = Logger.GetInstance(typeof(DemoAccountRegistrationPage));
 
-        readonly string demoAccountRegistrationURL;
-        
+        readonly string _demoAccountRegistrationUrl;
+
         /// <summary>
         /// Get Wait Limit Time From Config.
         /// </summary>
-        private int getWaitTimeOut = Convert.ToInt32(
+        private readonly int _getWaitTimeOut = Convert.ToInt32(
             ConfigurationManager.AppSettings["ElementFindTimeOutInSeconds"]);
 
         /// <summary>
         /// Construct a object of type DemoAccountRegistrationPage.
         /// </summary>
-        /// <param name="userTypeEnum">Type of the user</param>
+        /// <param name="userTypeEnum">Type of the user.</param>
         public DemoAccountRegistrationPage(User.UserTypeEnum userTypeEnum)
-         {
-             logger.LogMethodEntry("DemoAccountRegistrationPage", "DemoAccountRegistrationPage",
-                base.IsTakeScreenShotDuringEntryExit);
+        {
+            Logger.LogMethodEntry("DemoAccountRegistrationPage", "DemoAccountRegistrationPage",
+               base.IsTakeScreenShotDuringEntryExit);
 
-             if (userTypeEnum == User.UserTypeEnum.DPDemoUser)
-             {
-                 demoAccountRegistrationURL = AutomationConfigurationManager.CourseSpaceUrlRoot
-                     + DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_PageName;                
-             }
-             logger.LogMethodExit("DemoAccountRegistrationPage", "DemoAccountRegistrationPage", base.IsTakeScreenShotDuringEntryExit);
-         }
+            if (userTypeEnum == User.UserTypeEnum.DPDemoUser)
+            {
+                _demoAccountRegistrationUrl = AutomationConfigurationManager.CourseSpaceUrlRoot
+                    + DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_PageName;
+            }
+            Logger.LogMethodExit("DemoAccountRegistrationPage", "DemoAccountRegistrationPage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Navigates to demo user account registration url.
         /// </summary>
         public void GoToDemoAccountRegistrationUrl()
         {
-            logger.LogMethodEntry("DemoAccountRegistrationPage", "GoToDemoAccountRegistrationUrl",
+            Logger.LogMethodEntry("DemoAccountRegistrationPage", "GoToDemoAccountRegistrationUrl",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -60,7 +59,7 @@ namespace Pegasus.Pages.UI_Pages
                 if (IsUrlBrowsedSuccessful())
                 {
                     //Open Url in Browser
-                    base.NavigateToBrowseUrl(this.demoAccountRegistrationURL);
+                    base.NavigateToBrowseUrl(this._demoAccountRegistrationUrl);
                 }
                 else
                 {
@@ -71,7 +70,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(ex);
             }
-            logger.LogMethodExit("DemoAccountRegistrationPage", "GoToDemoAccountRegistrationUrl",
+            Logger.LogMethodExit("DemoAccountRegistrationPage", "GoToDemoAccountRegistrationUrl",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -81,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="userTypeEnum"></param>
         public void RegisterDemoAccount(User.UserTypeEnum userTypeEnum)
         {
-            logger.LogMethodEntry("DemoAccountRegistrationPage", "RegisterDemoAccount"
+            Logger.LogMethodEntry("DemoAccountRegistrationPage", "RegisterDemoAccount"
              , base.IsTakeScreenShotDuringEntryExit);
 
             string userUniqueId = Guid.NewGuid().ToString();
@@ -89,151 +88,154 @@ namespace Pegasus.Pages.UI_Pages
             EnterDemoUserDetails(userUniqueId);
             RegisterDemoAccount();
             SaveUserInMemory(userUniqueId);
-
-            logger.LogMethodExit("DemoAccountRegistrationPage", "RegisterDemoAccount",
+            Logger.LogMethodExit("DemoAccountRegistrationPage", "RegisterDemoAccount",
                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-         /// Check thr Url Browsed Successfully.
-         /// </summary>
-         /// <returns>True if Url browsed successfully else false.</returns>
-         /// <remarks>Slow web page loading or page not found then this 
-         /// method open the Url in the address bar and wait till specified time
-         ///  to page get successfully browse.</remarks>
+        /// Check thr Url Browsed Successfully.
+        /// </summary>
+        /// <returns>True if Url browsed successfully else false.</returns>
+        /// <remarks>Slow web page loading or page not found then this 
+        /// method open the Url in the address bar and wait till specified time
+        ///  to page get successfully browse.</remarks>
         public Boolean IsUrlBrowsedSuccessful()
-         {
-             //Start Stop Watch
-             Stopwatch stopWatch = new Stopwatch();
-             stopWatch.Start();
-             //Get Image Present On The Page
-             String getCurrentPageTitle = base.GetPageTitle;
-             if (getCurrentPageTitle.Equals(LoginPageResource.
-                 LoginPage_NoConnect_Window_Title) || getCurrentPageTitle.Equals
-                 (LoginPageResource.Login_Page_404Error_Window_Title))
-             {
-                 while (stopWatch.Elapsed.TotalSeconds < getWaitTimeOut)
-                 {
-                     //Navigate Base Url
-                     base.NavigateToBrowseUrl(this.demoAccountRegistrationURL);
-                     getCurrentPageTitle = base.GetPageTitle;
-                     if (!getCurrentPageTitle.Equals(LoginPageResource.
-                         LoginPage_NoConnect_Window_Title) && !getCurrentPageTitle.Equals
-                 (LoginPageResource.Login_Page_404Error_Window_Title))
-                     {
-                         stopWatch.Stop();
-                         return true;
-                     }
-                 }
-                 stopWatch.Stop();
-                 return false;
-             }
-             stopWatch.Stop();
-             return true;
-         }
+        {
+            //Start Stop Watch
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            //Get Image Present On The Page
+            String getCurrentPageTitle = base.GetPageTitle;
+            if (getCurrentPageTitle.Equals(LoginPageResource.
+                LoginPage_NoConnect_Window_Title) || getCurrentPageTitle.Equals
+                (LoginPageResource.Login_Page_404Error_Window_Title))
+            {
+                while (stopWatch.Elapsed.TotalSeconds < _getWaitTimeOut)
+                {
+                    //Navigate Base Url
+                    base.NavigateToBrowseUrl(this._demoAccountRegistrationUrl);
+                    getCurrentPageTitle = base.GetPageTitle;
+                    if (!getCurrentPageTitle.Equals(LoginPageResource.
+                        LoginPage_NoConnect_Window_Title) && !getCurrentPageTitle.Equals
+                (LoginPageResource.Login_Page_404Error_Window_Title))
+                    {
+                        stopWatch.Stop();
+                        return true;
+                    }
+                }
+                stopWatch.Stop();
+                return false;
+            }
+            stopWatch.Stop();
+            return true;
+        }
 
         /// <summary>
         /// Gets the message from message box.
         /// </summary>       
         /// <returns></returns>
         public String GetSuccessMessageFromMessageBox()
-         {
-             logger.LogMethodEntry("DemoAccountRegistrationPage", "GetSuccessMessageFromMessageBox"
-              , base.IsTakeScreenShotDuringEntryExit);
-                       
+        {
+            Logger.LogMethodEntry("DemoAccountRegistrationPage", "GetSuccessMessageFromMessageBox"
+             , base.IsTakeScreenShotDuringEntryExit);
+
             try
             {
-                base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_MsgBox_IFrame_Id_Locator));
+                base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
+                    DemoAccountRegistration_Page_MsgBox_IFrame_Id_Locator));
                 //Switch To light box
-                base.SwitchToIFrame(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_MsgBox_IFrame_Id_Locator);
-                base.ClickButtonById(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_MsgBox_Form_Id_Locator);
+                base.SwitchToIFrame(DemoAccountRegistrationPageResource.
+                    DemoAccountRegistration_Page_MsgBox_IFrame_Id_Locator);
+                base.ClickButtonById(DemoAccountRegistrationPageResource.
+                    DemoAccountRegistration_Page_MsgBox_Form_Id_Locator);
                 //get the message displayed on light box.
-                return base.GetElementTextByXPath(DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_MsgBox_SuccessSpan_XPath_Locator);
+                return base.GetElementTextByXPath(DemoAccountRegistrationPageResource.
+                    DemoAccountRegistration_Page_MsgBox_SuccessSpan_XPath_Locator);
             }
             catch (Exception ex) { ExceptionHandler.HandleException(ex); }
 
-            logger.LogMethodExit("DemoAccountRegistrationPage", "GetSuccessMessageFromMessageBox",
+            Logger.LogMethodExit("DemoAccountRegistrationPage", "GetSuccessMessageFromMessageBox",
                  base.IsTakeScreenShotDuringEntryExit);
 
-             return String.Empty;
-         }
+            return String.Empty;
+        }
 
         /// <summary>
         /// Selects the demo user account registration window.
         /// </summary>
         private void SelectDemoAccountRegistrationWindow()
-         {
-             logger.LogMethodEntry("DemoAccountRegistrationPage", "SelectDemoAccountRegistrationWindow"
-               , base.IsTakeScreenShotDuringEntryExit);
-             base.WaitUntilWindowLoads("");
-             base.SelectWindow("");
-             logger.LogMethodExit("DemoAccountRegistrationPage", "SelectDemoAccountRegistrationWindow",
-                 base.IsTakeScreenShotDuringEntryExit);
-         }
+        {
+            Logger.LogMethodEntry("DemoAccountRegistrationPage", "SelectDemoAccountRegistrationWindow"
+              , base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads("");
+            base.SelectWindow("");
+            Logger.LogMethodExit("DemoAccountRegistrationPage", "SelectDemoAccountRegistrationWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Enters demo user's details on Registration page.
         /// </summary>
         private void EnterDemoUserDetails(string userUniqueId)
-         {
-             logger.LogMethodEntry("DemoAccountRegistrationPage", "EnterUserDetails"
-               , base.IsTakeScreenShotDuringEntryExit);
+        {
+            Logger.LogMethodEntry("DemoAccountRegistrationPage", "EnterUserDetails"
+              , base.IsTakeScreenShotDuringEntryExit);
 
-             base.RefreshTheCurrentPage();
-             Product demoProduct = Product.Get(Product.ProductTypeEnum.DigitalPathDemo);
+            base.RefreshTheCurrentPage();
+            Product demoProduct = Product.Get(Product.ProductTypeEnum.DigitalPathDemo);
 
-             //Wait for last element (Registraion button) to load
-             base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
-                 DemoAccountRegistration_Page_Register_Button_Id_Locator));
+            //Wait for last element (Registraion button) to load
+            base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_Register_Button_Id_Locator));
 
-             //User Name
-             base.FillTextBoxById(DemoAccountRegistrationPageResource.
-                 DemoAccountRegistration_Page_Name_TextBox_Id_Locator,
-                DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Name_Value);
+            //User Name
+            base.FillTextBoxById(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_Name_TextBox_Id_Locator,
+               DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Name_Value);
 
-             //Email
-             base.FillTextBoxById(DemoAccountRegistrationPageResource.
-                 DemoAccountRegistration_Page_Email_TextBox_Id_Locator,
-                DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Email_Value);
+            //Email
+            base.FillTextBoxById(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_Email_TextBox_Id_Locator,
+               DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Email_Value);
 
             //Login name
-             base.FillTextBoxById(DemoAccountRegistrationPageResource.
-                 DemoAccountRegistration_Page_UserName_TextBox_Id_Locator,
-                userUniqueId);
+            base.FillTextBoxById(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_UserName_TextBox_Id_Locator,
+               userUniqueId);
 
             //Password
-             base.ClickButtonById(DemoAccountRegistrationPageResource.
-                 DemoAccountRegistration_Page_PasswordWM_TextBox_IE_Id_Locator);
-             base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
-                 DemoAccountRegistration_Page_Password_TextBox_Id_Locator));
-             base.FillTextBoxById(DemoAccountRegistrationPageResource.
-                 DemoAccountRegistration_Page_Password_TextBox_Id_Locator,
-                DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Password_Value);
+            base.ClickButtonById(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_PasswordWM_TextBox_IE_Id_Locator);
+            base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_Password_TextBox_Id_Locator));
+            base.FillTextBoxById(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_Password_TextBox_Id_Locator,
+               DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Password_Value);
 
             //Demo Access code
-             base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
-                 DemoAccountRegistration_Page_AccessCode_TextBox_Id_Locator));
-             base.FillTextBoxById(DemoAccountRegistrationPageResource.
-                 DemoAccountRegistration_Page_AccessCode_TextBox_Id_Locator,
-                demoProduct.DemoAccessCode);   
-          
-             //Select State
-             base.SelectDropDownValueThroughIndexById(DemoAccountRegistrationPageResource.
-                 DemoAccountRegistration_Page_State_Select_Id_Locator,
-                Convert.ToInt32(DemoAccountRegistrationPageResource.
-                DemoAccountRegistration_Page_State_Select_Index_Value));
+            base.WaitForElement(By.Id(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_AccessCode_TextBox_Id_Locator));
+            base.FillTextBoxById(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_AccessCode_TextBox_Id_Locator,
+               demoProduct.DemoAccessCode);
 
-             //Zip Code
-             base.IsElementEnabledById(DemoAccountRegistrationPageResource.
-                 DemoAccountRegistration_Page_Zipcode_TextBox_Id_Locator);
-             base.FillTextBoxById(DemoAccountRegistrationPageResource
-                 .DemoAccountRegistration_Page_Zipcode_TextBox_Id_Locator,
-                 DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Zipcode_Value);
+            //Select State
+            base.SelectDropDownValueThroughIndexById(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_State_Select_Id_Locator,
+               Convert.ToInt32(DemoAccountRegistrationPageResource.
+               DemoAccountRegistration_Page_State_Select_Index_Value));
 
-             logger.LogMethodExit("DemoAccountRegistrationPage", "EnterUserDetails"
-               , base.IsTakeScreenShotDuringEntryExit);
-         }
-       
+            //Zip Code
+            base.IsElementEnabledById(DemoAccountRegistrationPageResource.
+                DemoAccountRegistration_Page_Zipcode_TextBox_Id_Locator);
+            base.FillTextBoxById(DemoAccountRegistrationPageResource
+                .DemoAccountRegistration_Page_Zipcode_TextBox_Id_Locator,
+                DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Zipcode_Value);
+
+            Logger.LogMethodExit("DemoAccountRegistrationPage", "EnterUserDetails"
+              , base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Clicks Register button to Register the demo user account.
         /// </summary>
@@ -246,7 +248,7 @@ namespace Pegasus.Pages.UI_Pages
                 .DemoAccountRegistration_Page_Register_Button_Id_Locator));
             IWebElement registerButton = base.GetWebElementPropertiesById(
                 DemoAccountRegistrationPageResource.DemoAccountRegistration_Page_Register_Button_Id_Locator);
-            base.ClickByJavaScriptExecutor(registerButton);           
+            base.ClickByJavaScriptExecutor(registerButton);
         }
 
         /// <summary>
@@ -254,7 +256,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SaveUserInMemory(string userUniqueId)
         {
-            User user = new User()
+            var user = new User()
             {
                 UserType = User.UserTypeEnum.DPDemoUser,
                 Name = userUniqueId,

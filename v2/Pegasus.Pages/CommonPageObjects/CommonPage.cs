@@ -118,21 +118,21 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodEntry("CommonPage", "NavigateToPowerPointChapter1SimulationActivitiesFolder",
              base.IsTakeScreenShotDuringEntryExit);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.ComonPage_PowerPoint2013_FolderName,
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.ComonPage_PowerPoint2013_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_PowerPointChapter1GettingStartedWithMicrosoftPowerPoint_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.CommonPage_PowerPointChapter1Activities_FolderName,
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_PowerPointChapter1Activities_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_PowerPointChapter1SimulationActivities_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             Logger.LogMethodExit("CommonPage", "NavigateToPowerPointChapter1SimulationActivitiesFolder",
@@ -148,22 +148,22 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodEntry("CommonPage", "NavigateToExcelChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.CommonPage_Excel2013_FolderName,
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_Excel2013_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_ExcelChapter1CreatingAWorksheetAndChartingData_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_ExcelChapter1Activities_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_ExcelChapter1SimulationActivities_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             Logger.LogMethodExit("CommonPage", "NavigateToExcelChapter1SimulationActivitiesFolder",
@@ -179,20 +179,20 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.CommonPage_Access2013_FolderName,
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_Access2013_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_AccessChapter1GettingStartedWithMicrosoftAccess2013_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.CommonPage_AccessChapter1Activities_FolderName,
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_AccessChapter1Activities_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_AccessChapter1SimulationActivities_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
@@ -208,23 +208,23 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodEntry("CommonPage", "NavigateToWordChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_Word2013_FolderName, CommonPageResource.
                     CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_WordChapter1CreatingDocumentsWithMicrosoftWord2013_FolderName,
                 CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_WordChapter1Activities_FolderName, CommonPageResource.
                     CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             // click folder level
-            this.NavigateInsideFolderUnderGradeBookTab(CommonPageResource.
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_WordChapter1SimulationActivities_FolderName, CommonPageResource.
                     CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
             Logger.LogMethodExit("CommonPage", "NavigateToWordChapter1SimulationActivitiesFolder",
@@ -234,23 +234,26 @@ namespace Pegasus.Pages.CommonPageObjects
         /// <summary>
         /// Activity Folder Navigation Under Tab.
         /// </summary>
-        private void NavigateInsideFolderUnderGradeBookTab(string activityFolderName, string webElementToWait)
+        /// <param name="activityFolderName">This is activity folder name.</param>
+        /// <param name="webElementToWait">This is web element name to wait 
+        /// wile navigtion inside folder.</param>
+        private void NavigateInsideActivityFolderUnderTab(string activityFolderName, string webElementToWait)
         {
             // activity folder navigation
-            Logger.LogMethodEntry("CommonPage", "NavigateInsideFolderUnderGradeBookTab",
+            Logger.LogMethodEntry("CommonPage", "NavigateInsideActivityFolderUnderTab",
                 base.IsTakeScreenShotDuringEntryExit);
             base.ClickButtonByPartialLinkText(activityFolderName);
             Thread.Sleep(Convert.ToInt32(CommonPageResource.CommonPage_FolderNavigation_Sleep_Time));
             // wait for element
             base.WaitForElement(By.Id(webElementToWait));
-            Logger.LogMethodExit("CommonPage", "NavigateInsideFolderUnderGradeBookTab",
+            Logger.LogMethodExit("CommonPage", "NavigateInsideActivityFolderUnderTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Select Window For Folder Navigation.
         /// </summary>
-        /// <param name="activityUnderTabName">This is Tab Name Same Name For Window.</param>
+        /// <param name="activityUnderTabName">This is Tab ame same name as window Title.</param>
         private void SelectWindowForFolderNavigation(string activityUnderTabName)
         {
             // select window
