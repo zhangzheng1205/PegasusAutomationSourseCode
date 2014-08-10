@@ -29,12 +29,14 @@ namespace Pegasus.Pages.CommonPageObjects
         /// <param name="activityName">This is activity name.</param>
         /// <param name="userTypeEnum">This is user Type Enum.</param>
         /// <param name="activityUnderTabName">This is Tab Name.</param>
+        /// <remarks>This folder navigation is only valid for MIL authored course named as
+        ///  'MyITLab for Office 2013: GO! Series + Technology in Action [01.01.14] '. The created 
+        /// section course, instructor course and Templates will only valid for this method.</remarks>
         public void ManageTheActivityFolderLevelNavigation(string activityName,
             string activityUnderTabName, User.UserTypeEnum userTypeEnum)
         {
-            //Manage The Activity Folder Level Navigation
-            Logger.LogMethodEntry("CommonPage",
-                "ManageTheActivityFolderLevelNavigation",
+            // manage activity folder level navigation
+            Logger.LogMethodEntry("CommonPage", "ManageTheActivityFolderLevelNavigation",
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -48,20 +50,26 @@ namespace Pegasus.Pages.CommonPageObjects
                             case "Gradebook":
                                 // select window
                                 this.SelectWindowForFolderNavigation(activityUnderTabName);
+                                // select frame
+                                this.SelectLeftNavigationIFrame();
                                 switch (activityName)
                                 {
                                     // folder navigation based on activity name
                                     case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
-                                        NavigateToWordChapter1SimulationActivitiesFolder();
+                                        this.NavigateToWordChapter1SimulationActivitiesFolder
+                                            (CommonPageResource.CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
                                         break;
                                     case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
-                                        NavigateToAccessChapter1SimulationActivitiesFolder();
+                                        this.NavigateToAccessChapter1SimulationActivitiesFolder
+                                            (CommonPageResource.CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
                                         break;
                                     case "Excel Chapter 1 Skill-Based Training":
-                                        NavigateToExcelChapter1SimulationActivitiesFolder();
+                                        this.NavigateToExcelChapter1SimulationActivitiesFolder
+                                            (CommonPageResource.CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
                                         break;
                                     case "PowerPoint Chapter 1 Skill-Based Training":
-                                        NavigateToPowerPointChapter1SimulationActivitiesFolder();
+                                        this.NavigateToPowerPointChapter1SimulationActivitiesFolder
+                                            (CommonPageResource.CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
                                         break;
                                 }
                                 break;
@@ -71,28 +79,34 @@ namespace Pegasus.Pages.CommonPageObjects
                         // folder navigation based on Tab name
                         switch (activityUnderTabName)
                         {
-                            case "Manage Course Materials":
+                            case "Course Materials":
                                 // select window
                                 this.SelectWindowForFolderNavigation(activityUnderTabName);
+                                // select frame
+                                this.SelectCoursePreviewIFrame();
                                 switch (activityName)
                                 {
                                     // folder navigation based on activity name
                                     case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
-                                        // add code
+                                        this.NavigateToWordChapter1SimulationActivitiesFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
                                         break;
                                     case "Excel Chapter 1 Skill-Based Training":
                                     case "Excel Chapter 1 Skill-Based Exam (Scenario 1)":
                                     case "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test":
                                     case "Excel Chapter 1 Project 1A Skill-Based Training":
                                     case "Excel Chapter 1 Project 1A Skill-Based Exam (Scenario 1) ":
-                                        // add code
+                                        this.NavigateToExcelChapter1SimulationActivitiesFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
                                         break;
-                                    case "Access Chapter 1 Skill-Based Training ":
-                                        // add code
+                                    case "Access Chapter 1 Skill-Based Training":
+                                        this.NavigateToAccessChapter1SimulationActivitiesFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
                                         break;
                                     case "PowerPoint Chapter 1 Skill-Based Training":
                                     case "PowerPoint Chapter 1 Skill-Based Exam (Scenario 1)":
-                                        // add code
+                                        this.NavigateToPowerPointChapter1SimulationActivitiesFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
                                         break;
                                 }
                                 break;
@@ -104,37 +118,35 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("CommonPage",
-                "ManageTheActivityFolderLevelNavigation",
+            Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigation",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Navigate To Power Point Chapter1 Simulation Activities Folder.
         /// </summary>
-        private void NavigateToPowerPointChapter1SimulationActivitiesFolder()
+        private void NavigateToPowerPointChapter1SimulationActivitiesFolder(string webElementToWait)
         {
             // navigate inside power point chapter1 simulation activities folder
             Logger.LogMethodEntry("CommonPage", "NavigateToPowerPointChapter1SimulationActivitiesFolder",
              base.IsTakeScreenShotDuringEntryExit);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.ComonPage_PowerPoint2013_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_PowerPointChapter1GettingStartedWithMicrosoftPowerPoint_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_PowerPointChapter1Activities_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_PowerPointChapter1SimulationActivities_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                webElementToWait);
             Logger.LogMethodExit("CommonPage", "NavigateToPowerPointChapter1SimulationActivitiesFolder",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -142,30 +154,26 @@ namespace Pegasus.Pages.CommonPageObjects
         /// <summary>
         /// Navigate To Excel Chapter1 Simulation Activities Folder.
         /// </summary>
-        private void NavigateToExcelChapter1SimulationActivitiesFolder()
+        private void NavigateToExcelChapter1SimulationActivitiesFolder(string webElementToWait)
         {
             // navigate inside excel chapter1 simulation activities folder
             Logger.LogMethodEntry("CommonPage", "NavigateToExcelChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_Excel2013_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_ExcelChapter1CreatingAWorksheetAndChartingData_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_ExcelChapter1CreatingAWorksheetAndChartingData_FolderName, webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_ExcelChapter1Activities_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_ExcelChapter1Activities_FolderName, webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_ExcelChapter1SimulationActivities_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_ExcelChapter1SimulationActivities_FolderName, webElementToWait);
             Logger.LogMethodExit("CommonPage", "NavigateToExcelChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -173,28 +181,25 @@ namespace Pegasus.Pages.CommonPageObjects
         /// <summary>
         /// Navigate To Access Chapter1 Simulation Activities Folder.
         /// </summary>
-        private void NavigateToAccessChapter1SimulationActivitiesFolder()
+        private void NavigateToAccessChapter1SimulationActivitiesFolder(string webElementToWait)
         {
             // navigate inside access chapter1 simulation activities folder
             Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_Access2013_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                webElementToWait);
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_AccessChapter1GettingStartedWithMicrosoftAccess2013_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_AccessChapter1GettingStartedWithMicrosoftAccess2013_FolderName, webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_AccessChapter1Activities_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_AccessChapter1SimulationActivities_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_AccessChapter1SimulationActivities_FolderName, webElementToWait);
             Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -202,31 +207,27 @@ namespace Pegasus.Pages.CommonPageObjects
         /// <summary>
         /// Navigate To Word Chapter1 Simulation Activities Folder.
         /// </summary>
-        private void NavigateToWordChapter1SimulationActivitiesFolder()
+        private void NavigateToWordChapter1SimulationActivitiesFolder(string webElementToWait)
         {
             // navigate inside word chapter1 simulation activities folder
             Logger.LogMethodEntry("CommonPage", "NavigateToWordChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_Word2013_FolderName, CommonPageResource.
-                    CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_Word2013_FolderName, webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_WordChapter1CreatingDocumentsWithMicrosoftWord2013_FolderName,
-                CommonPageResource.CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_WordChapter1Activities_FolderName, CommonPageResource.
-                    CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_WordChapter1Activities_FolderName, webElementToWait);
             // click folder level
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_WordChapter1SimulationActivities_FolderName, CommonPageResource.
-                    CommonPage_BackToPreviousContentFolder_LinkedIcon_Id_Locator);
+                CommonPage_WordChapter1SimulationActivities_FolderName, webElementToWait);
             Logger.LogMethodExit("CommonPage", "NavigateToWordChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -265,6 +266,36 @@ namespace Pegasus.Pages.CommonPageObjects
             base.SwitchToIFrame(CommonPageResource
                 .CommonPage_LeftNavigationFrame_Id_Locator);
             Logger.LogMethodExit("CommonPage", "SelectWindowForFolderNavigation",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Left Navigation IFrame.
+        /// </summary>
+        private void SelectLeftNavigationIFrame()
+        {
+            // select iframe
+            Logger.LogMethodEntry("CommonPage", "SelectLeftNavigationIFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+            // switch To Frame
+            base.SwitchToIFrame(CommonPageResource
+                .CommonPage_LeftNavigationFrame_Id_Locator);
+            Logger.LogMethodExit("CommonPage", "SelectLeftNavigationIFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Course Preview IFrame.
+        /// </summary>
+        private void SelectCoursePreviewIFrame()
+        {
+            // select iframe
+            Logger.LogMethodEntry("CommonPage", "SelectCoursePreviewIFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+            // switch To Frame
+            base.SwitchToIFrame(CommonPageResource
+                .CommonPage_CoursePreviewFrame_Id_Locator);
+            Logger.LogMethodExit("CommonPage", "SelectCoursePreviewIFrame",
                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
