@@ -262,9 +262,6 @@ namespace Pegasus.Pages.CommonPageObjects
                 base.IsTakeScreenShotDuringEntryExit);
             // select window
             base.SelectWindow(activityUnderTabName);
-            // switch To Frame
-            base.SwitchToIFrame(CommonPageResource
-                .CommonPage_LeftNavigationFrame_Id_Locator);
             Logger.LogMethodExit("CommonPage", "SelectWindowForFolderNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
