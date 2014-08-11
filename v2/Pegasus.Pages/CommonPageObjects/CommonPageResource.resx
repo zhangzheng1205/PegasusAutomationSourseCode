@@ -130,7 +130,7 @@
     <value>Access Chapter 1: Simulation Activities</value>
   </data>
   <data name="CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator" xml:space="preserve">
-    <value>backicon</value>
+    <value>divBackArrow</value>
   </data>
   <data name="CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator" xml:space="preserve">
     <value>imgBackArrow</value>
@@ -153,8 +153,14 @@
   <data name="CommonPage_FolderNavigation_Sleep_Time" xml:space="preserve">
     <value>1500</value>
   </data>
+  <data name="CommonPage_GoButton_Calendar_Id_Locator" xml:space="preserve">
+    <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_acSearchPanel_btnSearchGo</value>
+  </data>
   <data name="CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName" xml:space="preserve">
     <value>GO! with Microsoft Office 2013, Volume 1</value>
+  </data>
+  <data name="CommonPage_InstructorLeftNavigationFrame_Id_Locator" xml:space="preserve">
+    <value>Iframe1</value>
   </data>
   <data name="CommonPage_LeftNavigationFrame_Id_Locator" xml:space="preserve">
     <value>Frame1</value>
@@ -180,7 +186,25 @@
   <data name="CommonPage_WordChapter1SimulationActivities_FolderName" xml:space="preserve">
     <value>Word Chapter 1: Simulation Activities</value>
   </data>
+  <data name="ComonPage_Folder_Count_Initial_Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ComonPage_Folder_Count_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='rptrFolderContent']/div</value>
+  </data>
+  <data name="ComonPage_Folder_Name_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='rptrFolderContent']/div[{0}]/div[2]</value>
+  </data>
+  <data name="ComonPage_Folder_Text_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='rptrFolderContent']/div[{0}]</value>
+  </data>
+  <data name="ComonPage_Loop_Initializer" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="ComonPage_PowerPoint2013_FolderName" xml:space="preserve">
     <value>PowerPoint 2013</value>
+  </data>
+  <data name="ComonPage_Wait_Time" xml:space="preserve">
+    <value>2000</value>
   </data>
 </root>

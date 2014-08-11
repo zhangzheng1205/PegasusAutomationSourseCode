@@ -97,7 +97,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to backicon.
+        ///   Looks up a localized string similar to divBackArrow.
         /// </summary>
         internal static string CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator {
             get {
@@ -169,11 +169,29 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_acSearchPanel_btnSearchGo.
+        /// </summary>
+        internal static string CommonPage_GoButton_Calendar_Id_Locator {
+            get {
+                return ResourceManager.GetString("CommonPage_GoButton_Calendar_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to GO! with Microsoft Office 2013, Volume 1.
         /// </summary>
         internal static string CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName {
             get {
                 return ResourceManager.GetString("CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iframe1.
+        /// </summary>
+        internal static string CommonPage_InstructorLeftNavigationFrame_Id_Locator {
+            get {
+                return ResourceManager.GetString("CommonPage_InstructorLeftNavigationFrame_Id_Locator", resourceCulture);
             }
         }
         
@@ -250,11 +268,65 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 0.
+        /// </summary>
+        internal static string ComonPage_Folder_Count_Initial_Value {
+            get {
+                return ResourceManager.GetString("ComonPage_Folder_Count_Initial_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;rptrFolderContent&apos;]/div.
+        /// </summary>
+        internal static string ComonPage_Folder_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ComonPage_Folder_Count_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;rptrFolderContent&apos;]/div[{0}]/div[2].
+        /// </summary>
+        internal static string ComonPage_Folder_Name_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ComonPage_Folder_Name_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;rptrFolderContent&apos;]/div[{0}].
+        /// </summary>
+        internal static string ComonPage_Folder_Text_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ComonPage_Folder_Text_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string ComonPage_Loop_Initializer {
+            get {
+                return ResourceManager.GetString("ComonPage_Loop_Initializer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PowerPoint 2013.
         /// </summary>
         internal static string ComonPage_PowerPoint2013_FolderName {
             get {
                 return ResourceManager.GetString("ComonPage_PowerPoint2013_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2000.
+        /// </summary>
+        internal static string ComonPage_Wait_Time {
+            get {
+                return ResourceManager.GetString("ComonPage_Wait_Time", resourceCulture);
             }
         }
     }
