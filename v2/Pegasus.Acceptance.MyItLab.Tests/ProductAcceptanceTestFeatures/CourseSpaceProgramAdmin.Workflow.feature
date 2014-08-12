@@ -54,3 +54,14 @@ Scenario: Filter Section by Program Admin
 When I filter the template "MyITLabForOffice2013Master" using 'Parent Template' dropdown
 Then I should see the new section created usign "MyITLabOffice2013Program" in the section list
 
+#Purpose: Copying Section as Section and validate copied section to get out from the assigned to copy state
+Scenario: Copying Section As Section
+When I navigate to "Sections" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
+When I search the section of "MyITLabOffice2013Program"
+And  I click the "Copy as Section" c-menu option
+Then I should be on the "Copy as Section" page
+When I click Copy/Save button to copy
+Then I should see the successfull message "Section Copied Successfully."
+When I verify the Section copied from "MyITLabOffice2013Program" section for AssignedToCopy state
+Then I should see the Section copied from "MyITLabOffice2013Program" section to be successfully out of AssignedToCopy state

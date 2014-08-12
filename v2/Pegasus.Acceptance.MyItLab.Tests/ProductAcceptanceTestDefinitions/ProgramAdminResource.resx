@@ -120,4 +120,7 @@
   <data name="ProgramAdmin_Page_AssignToCopyState_Text_Value" xml:space="preserve">
     <value>Request is Processing and will be available soon</value>
   </data>
+  <data name="ProgramAdmin_Page_CopyOf_Text_Value" xml:space="preserve">
+    <value>Copy of </value>
+  </data>
 </root>

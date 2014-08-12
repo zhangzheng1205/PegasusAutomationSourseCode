@@ -231,11 +231,8 @@ namespace Pegasus.Pages.UI_Pages
             //Enter the Entity Name
             base.FillTextBoxById(ManageTemplatePageResource.
                 ManageTemplate_Page_SectionDetail_TextBox_Id_Locator, entityName);
-            base.WaitForElement(By.Id(ManageTemplatePageResource.
-                ManageTemplate_Page_Search_Button_Id_Locator));
-            //Click on the Search
-            base.ClickButtonById(ManageTemplatePageResource.
-                ManageTemplate_Page_Search_Button_Id_Locator);
+            //Click on search button
+            this.ClickSearchButtonForSectionSearch();
             Logger.LogMethodExit("ManageTemplatePage", "SelectTemplate",
                 base.IsTakeScreenShotDuringEntryExit);
         }

@@ -316,6 +316,48 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("ProgramAdmin", "CreateNewSectionWithCount",
                   base.IsTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Verify copied Section in Active State.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        [When(@"I verify the Section copied from ""(.*)"" section for AssignedToCopy state")]
+        public void CopiedSectionInAssignedToCopyState(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Verify copied Section in Active State
+            Logger.LogMethodEntry("ProgramAdmin", "CopiedSectionInAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Approve copied Section in Active State
+            new ManageTemplatePage().ApproveInActiveStateOfEntityInProgramAdministration(ProgramAdminResource.
+                ProgramAdmin_Page_CopyOf_Text_Value + course.SectionName);
+            Logger.LogMethodExit("ProgramAdmin", "CopiedSectionInAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verify copied Section in Active State or not.
+        /// </summary>
+        /// /// <param name="courseTypeEnum">This is course type enum.</param>
+        [Then(@"I should see the Section copied from ""(.*)"" section to be successfully out of AssignedToCopy state")]
+        public void ApproveAssignedToCopyStateForCopiedSection(
+          Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Verify Section in Active State
+            Logger.LogMethodEntry("ProgramAdmin", "ApproveAssignedToCopyStateForCopiedSection",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Assert Verify copied Section in Active State or not
+            Logger.LogAssertion("VerifyCopiedSectionActiveState",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                Assert.AreEqual(false, new ManageTemplatePage().GetAssignToCopyStateText
+                (ProgramAdminResource.
+                ProgramAdmin_Page_CopyOf_Text_Value + course.SectionName).Contains(ProgramAdminResource.
+                ProgramAdmin_Page_AssignToCopyState_Text_Value)));
+            Logger.LogMethodExit("ProgramAdmin", "ApproveAssignedToCopyStateForCopiedSection",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
     }
 }
