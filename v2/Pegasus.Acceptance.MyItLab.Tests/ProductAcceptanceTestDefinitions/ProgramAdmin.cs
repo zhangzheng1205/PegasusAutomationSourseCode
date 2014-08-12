@@ -131,6 +131,37 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("ProgramAdmin", "SectionInAssignedToCopyState",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Filter Template Using  Parent Template Drop Down.
+        /// </summary>
+        [When(@"I filter the template ""(.*)"" using 'Parent Template' dropdown")]
+        public void FilterTheTemplateUsingDropdown(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "FilterTheTemplateUsingDropdown",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Filter Template Using  Parent Template Drop Down
+            new AddNewSectionPage().FilterTheTemplateUsingParentTemplateDD(courseTypeEnum);
+            Logger.LogMethodExit("ProgramAdmin", "FilterTheTemplateUsingDropdown",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verify Created Section Available in the Filter Section List.
+        /// </summary>
+        [Then(@"I should see the new section created usign ""(.*)"" in the section list")]
+        public void VerifyTheCreatedSectionInTheSectionList(Course.CourseTypeEnum courseTypeEnum)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "VerifyTheCreatedSectionInTheSectionList",
+               base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseTypeEnum);
+            //Verify Created Section Available in the Filter Section List
+            Logger.LogAssertion("CopyMyCourseContentCheckBoxStatus",
+                ScenarioContext.Current.ScenarioInfo.Title, ()
+               => Assert.AreEqual(course.SectionName,
+               new AddNewSectionPage().VerifyCreatedSectionInFilterTemplateList(course.SectionName)));
+            Logger.LogMethodExit("ProgramAdmin", "VerifyTheCreatedSectionInTheSectionList",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Click on Cmenu of Section or Template.

@@ -158,3 +158,10 @@ Scenario: User Logout as SMS Student
 When I "Sign out" from the "CsSmsStudent"
 Then I should see the successfull message "You have been signed out of the application."
 
+#Purpose: Login as Program Admin and Navigate to MyITLabOffice2013Program
+Scenario: User Login Program Admin and Navigate MyITLabOffice2013Program
+Given I browsed the login url for "HedProgramAdmin"
+When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
+Then I should logged in successfully
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "HedProgramAdmin"
+Then I should be on the "Program Administration" page

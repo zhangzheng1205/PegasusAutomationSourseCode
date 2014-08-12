@@ -48,3 +48,9 @@ Then I should be on the "Program Administration" page
 When I verify the Section created from "MyITLabOffice2013Program" course Template for AssignedToCopy state
 Then I should see the Section created from "MyITLabOffice2013Program" course Template to be successfully out of AssignedToCopy state
 
+#Purpose: Filter Section using ParentTemplate DropDown
+#MyItLabProgramCourse
+Scenario: Filter Section by Program Admin
+When I filter the template "MyITLabForOffice2013Master" using 'Parent Template' dropdown
+Then I should see the new section created usign "MyITLabOffice2013Program" in the section list
+

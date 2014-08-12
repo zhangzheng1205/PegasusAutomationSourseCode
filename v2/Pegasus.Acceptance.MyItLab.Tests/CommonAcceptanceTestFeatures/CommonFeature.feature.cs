@@ -523,6 +523,29 @@ testRunner.Then("I should see the successfull message \"You have been signed out
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login Program Admin and Navigate MyITLabOffice2013Program")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
+        public virtual void UserLoginProgramAdminAndNavigateMyITLabOffice2013Program()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login Program Admin and Navigate MyITLabOffice2013Program", ((string[])(null)));
+#line 162
+this.ScenarioSetup(scenarioInfo);
+#line 163
+testRunner.Given("I browsed the login url for \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 164
+testRunner.When("I logged into the Pegasus as \"HedProgramAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 165
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 166
+testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"He" +
+                    "dProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 167
+testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

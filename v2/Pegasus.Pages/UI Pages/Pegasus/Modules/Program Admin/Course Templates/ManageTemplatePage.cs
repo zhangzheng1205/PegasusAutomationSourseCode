@@ -398,9 +398,8 @@ namespace Pegasus.Pages.UI_Pages
                              ManageTemplate_Page_Search_Link_Locator));
             IWebElement getSearchLink = base.GetWebElementPropertiesByPartialLinkText
                 (ManageTemplatePageResource.
-                             ManageTemplate_Page_Search_Link_Locator);
-            base.ClickButtonByPartialLinkText(ManageTemplatePageResource.
-                             ManageTemplate_Page_Search_Link_Locator);
+                             ManageTemplate_Page_Search_Link_Locator);        
+            base.ClickByJavaScriptExecutor(getSearchLink);
             Logger.LogMethodExit("ManageTemplatePage", "ClickSearchLinkForSectionSearch",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -418,9 +417,10 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 // search section 
-                SearchSection(sectionName);
-                base.WaitForElement(By.Id(ManageTemplatePageResource.
-                    ManageTemplate_Page_TemplateSection_Grid_Id_Locator));
+              SearchSection(sectionName);              
+               base.WaitForElement(By.Id(ManageTemplatePageResource.
+                   ManageTemplate_Page_TemplateSection_Grid_Id_Locator));
+                 this.SelectMiddleFrame();
                 // get section id to store
                 String getSectionID = base.GetElementTextByXPath(ManageTemplatePageResource.
                     ManageTemplate_Page_TemplateSectionGrid_XPath_Locator);

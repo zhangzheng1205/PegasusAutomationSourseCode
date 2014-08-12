@@ -202,6 +202,24 @@ testRunner.Then("I should see the Section created from \"MyITLabOffice2013Progra
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Filter Section by Program Admin")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void FilterSectionByProgramAdmin()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter Section by Program Admin", ((string[])(null)));
+#line 53
+this.ScenarioSetup(scenarioInfo);
+#line 54
+testRunner.When("I filter the template \"MyITLabForOffice2013Master\" using \'Parent Template\' dropdo" +
+                    "wn", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 55
+testRunner.Then("I should see the new section created usign \"MyITLabOffice2013Program\" in the sect" +
+                    "ion list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

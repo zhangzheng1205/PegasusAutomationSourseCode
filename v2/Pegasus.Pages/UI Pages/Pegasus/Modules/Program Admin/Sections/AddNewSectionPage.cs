@@ -64,7 +64,93 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("AddNewSectionPage", "CreateNewSection",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
+        /// <summary>
+        /// Filter Template Using Parent Template Drop Down
+        /// </summary>
+        public void FilterTheTemplateUsingParentTemplateDD(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Filter Template Using Parent Template Drop Down
+            Logger.LogMethodEntry("AddNewSectionPage", "FilterTheTemplateUsingParentTemplateDD",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {                
+                //Switch To IFrame
+                this.SwitchToIFrame();
+                //Wait for Parent Template DropDown
+                base.WaitForElement(By.Id(AddNewSectionPageResource.
+                    AddNewSection_Page_ParentTemplate_DropDown_ID_Loator));  
+               // Get Course Details By Enum Value
+                Course course = Course.Get(courseTypeEnum);
+                //Select Parent Template DropDown 
+                base.SelectDropDownValueThroughTextByName(
+                    AddNewSectionPageResource.AddNewSection_Page_ParentTemplate_DropDown_ID_Loator, 
+                    course.Name);
+                //Switch To IFrame
+                this.SwitchToIFrame();      
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AddNewSectionPage", "FilterTheTemplateUsingParentTemplateDD",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Switch To IFrame
+        /// </summary>
+        private void SwitchToIFrame()
+        {
+            //Switch To Manage Section IFrame
+            Logger.LogMethodEntry("AddNewSectionPage", "FilterTheTemplateUsingParentTemplateDD",
+               base.IsTakeScreenShotDuringEntryExit);
+            base.SelectWindow(AddNewSectionPageResource
+            .AddNewSection_Page_ParentWindow_Page_Title);
+            //Switch To IFrame           
+            base.SwitchToIFrameById(AddNewSectionPageResource.
+                AddNewSection_Page__ctl0_PageContent_iFrameMiddle_Id_Locator);
+            Logger.LogMethodExit("AddNewSectionPage", "FilterTheTemplateUsingParentTemplateDD",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verify Created Section Available in the Filter Section List.
+        /// </summary>
+        public string VerifyCreatedSectionInFilterTemplateList(string courseName)
+        {           
+            //Verify Created Section Available in the Filter Section List
+            Logger.LogMethodEntry("AddNewSectionPage", "VerifyCreatedSectionInFilterTemplateList",
+                base.IsTakeScreenShotDuringEntryExit);
+            string sectionName = string.Empty;
+            try
+            {    
+               //get Section Row Count
+                int GetSectionRowCount = base.GetElementCountByXPath(
+                    AddNewSectionPageResource.AddNewSection_Page_TemplateSection_Table_Id_Locator
+                    );
+                //Iterate for Respective Section In Table
+                for(
+                    int setSectionRowCount =
+                        Convert.ToInt32(AddNewSectionPageResource.AddNewSection_Page_TemplateList_Index_Value); 
+                        setSectionRowCount <=GetSectionRowCount; setSectionRowCount++)
+                {
+                   //Get Section Name From SectionList
+                    sectionName =
+                        base.GetInnerTextAttributeValueByXPath(String.Format(
+                        AddNewSectionPageResource.AddNewSection_Page_TemplateSection_Span_Text_XPath_Locator,
+                        setSectionRowCount));
+                    if (sectionName.Contains(courseName))
+                    {
+                        break;
+                    }
+                }               
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AddNewSectionPage", "VerifyCreatedSectionInFilterTemplateList",
+               base.IsTakeScreenShotDuringEntryExit);
+            return sectionName;
+        }
         /// <summary>
         /// Fill the section count in text box to be created
         /// </summary>
@@ -230,11 +316,11 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("AddNewSectionPage", "FillingSectionDetails",
                 base.IsTakeScreenShotDuringEntryExit);
             string sectionName = string.Empty;
+            // generate new guid section name
+            Guid sectionGuid = Guid.NewGuid();
 
             try
-            {
-                // generate new guid section name
-                Guid sectionGuid = Guid.NewGuid();
+            {               
                 // selecting the create new section window
                 this.SelectAddNewSectionWindow();
                 base.WaitForElement(By.Id(AddNewSectionPageResource.
@@ -293,7 +379,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("AddNewSectionPage", "FillingSectionDetails",
                 base.IsTakeScreenShotDuringEntryExit);
 
-            return sectionName;
+            return sectionGuid.ToString();
         }
 
         /// <summary>

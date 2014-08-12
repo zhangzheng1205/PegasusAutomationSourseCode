@@ -150,6 +150,9 @@
   <data name="AddNewSection_Page_NumberOfWindows_Value" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="AddNewSection_Page_ParentTemplate_DropDown_ID_Loator" xml:space="preserve">
+    <value>DrdParentTemplate</value>
+  </data>
   <data name="AddNewSection_Page_ParentWindow_Page_Title" xml:space="preserve">
     <value>Program Administration</value>
   </data>
@@ -182,6 +185,12 @@
   </data>
   <data name="AddNewSection_Page_TemplateList_Index_Value" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="AddNewSection_Page_TemplateSection_Span_Text_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='grdTemplateSection']/tbody/tr[{0}]/td[2]/table/tbody/tr/th[2]/span</value>
+  </data>
+  <data name="AddNewSection_Page_TemplateSection_Table_Id_Locator" xml:space="preserve">
+    <value>.//*[@id='grdTemplateSection']/tbody/tr</value>
   </data>
   <data name="AddNewSection_Page_Template_Text_Value" xml:space="preserve">
     <value> Template</value>

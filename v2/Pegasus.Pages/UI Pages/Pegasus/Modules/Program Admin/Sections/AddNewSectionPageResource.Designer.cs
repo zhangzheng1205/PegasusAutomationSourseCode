@@ -170,6 +170,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Sections {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DrdParentTemplate.
+        /// </summary>
+        internal static string AddNewSection_Page_ParentTemplate_DropDown_ID_Loator {
+            get {
+                return ResourceManager.GetString("AddNewSection_Page_ParentTemplate_DropDown_ID_Loator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Program Administration.
         /// </summary>
         internal static string AddNewSection_Page_ParentWindow_Page_Title {
@@ -274,6 +283,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Sections {
         internal static string AddNewSection_Page_TemplateList_Index_Value {
             get {
                 return ResourceManager.GetString("AddNewSection_Page_TemplateList_Index_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdTemplateSection&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr/th[2]/span.
+        /// </summary>
+        internal static string AddNewSection_Page_TemplateSection_Span_Text_XPath_Locator {
+            get {
+                return ResourceManager.GetString("AddNewSection_Page_TemplateSection_Span_Text_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;grdTemplateSection&apos;]/tbody/tr.
+        /// </summary>
+        internal static string AddNewSection_Page_TemplateSection_Table_Id_Locator {
+            get {
+                return ResourceManager.GetString("AddNewSection_Page_TemplateSection_Table_Id_Locator", resourceCulture);
             }
         }
         
