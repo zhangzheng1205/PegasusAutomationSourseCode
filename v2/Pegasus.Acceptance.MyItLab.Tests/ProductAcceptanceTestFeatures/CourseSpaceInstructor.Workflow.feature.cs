@@ -146,8 +146,10 @@ testRunner.And("I click on \"SetSchedulingOptions\" option in c menu of \"Excel 
 #line 39
 testRunner.Then("I should be on the \"Properties\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40
-testRunner.And("I should see the successfull message \"Properties updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I assign asset with due date and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 41
+testRunner.Then("I should see the successfull message \"Properties updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 42
 testRunner.And("I should see assigned icon for \"Excel Chapter 1 Project 1A Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -161,21 +163,21 @@ testRunner.And("I should see assigned icon for \"Excel Chapter 1 Project 1A Skil
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor assign the assets with duedate,startdate and endate in Managecoursewor" +
                     "k", ((string[])(null)));
-#line 46
-this.ScenarioSetup(scenarioInfo);
 #line 47
+this.ScenarioSetup(scenarioInfo);
+#line 48
 testRunner.When("I click on \"SetSchedulingOptions\" option in c menu of \"Excel Chapter 1 Project 1A" +
                     " Skill-Based Exam (Scenario 1)\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 48
-testRunner.Then("I should be on the \"Properties\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 49
-testRunner.When("I assign and schedule the asset and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Properties\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 50
-testRunner.Then("I should see the successfull message \"Properties updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I assign and schedule the asset and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 51
+testRunner.Then("I should see the successfull message \"Properties updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 52
 testRunner.And("I should see assigned icon for \"Excel Chapter 1 Project 1A Skill-Based Exam (Scen" +
                     "ario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
+#line 53
 testRunner.And("I should see scheduled icon for \"Excel Chapter 1 Project 1A Skill-Based Exam (Sce" +
                     "nario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

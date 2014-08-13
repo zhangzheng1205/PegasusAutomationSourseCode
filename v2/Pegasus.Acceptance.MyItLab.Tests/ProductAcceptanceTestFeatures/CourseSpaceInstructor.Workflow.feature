@@ -37,7 +37,8 @@ Then I should be on the "Course Materials" page
 When I navigate to "Excel Chapter 1 Project 1A Skill-Based Training" asset in "Course Materials" tab as "CsSmsInstructor"
 And I click on "SetSchedulingOptions" option in c menu of "Excel Chapter 1 Project 1A Skill-Based Training" asset
 Then I should be on the "Properties" page
-And I should see the successfull message "Properties updated successfully."
+When I assign asset with due date and save
+Then I should see the successfull message "Properties updated successfully."
 And I should see assigned icon for "Excel Chapter 1 Project 1A Skill-Based Training" 
 
 #Purpose : Instructor assign the assets with duedate,startdate and endate in Managecoursework
