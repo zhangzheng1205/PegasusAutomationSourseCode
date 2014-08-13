@@ -59,15 +59,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("ManageOrganisationToolBarPage", "CloseWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             try
-            {
-                //Select the Window
-                base.SelectWindow(windowName);
-                base.WaitForElement(By.Id("btnDownload"));
-                base.ClickButtonById("btnDownload");
-                base.WaitUntilWindowLoads("Download Starting Files");
-                base.SelectWindow("Download Starting Files");
-                base.ClickButtonById("aDownLoadAll");
-
+            {              
                 //Close the Window
                 base.CloseBrowserWindow();
                 //Switch to Default Window
@@ -81,6 +73,37 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Select Download Button.
+        /// </summary>
+        /// <param name="windowName">This is Window Name</param>
+        public void SelectDownloadButton(string windowName)
+        {
+            //Select Download Button
+            Logger.LogMethodEntry("ManageOrganisationToolBarPage", "SelectDownloadButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.SelectWindow(windowName);
+                base.WaitForElement(By.Id(ManageOrganisationToolBarPageResource.
+                    ManageOrganisationToolBar_Page_DownloadButton_Id_Locator));
+                base.ClickButtonById(ManageOrganisationToolBarPageResource.
+                    ManageOrganisationToolBar_Page_DownloadButton_Id_Locator);
+                base.WaitUntilWindowLoads(ManageOrganisationToolBarPageResource.
+                    ManageOrganisationToolBar_Page_Download_Window);
+                base.SelectWindow(ManageOrganisationToolBarPageResource.
+                    ManageOrganisationToolBar_Page_Download_Window);
+                base.ClickButtonById(ManageOrganisationToolBarPageResource.
+                    ManageOrganisationToolBar_Page_DownloadAll_Button_Id_Locator);
+                this.CloseWindow(windowName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("ManageOrganisationToolBarPage", "SelectDownloadButton",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Clicks on the Enrollment Tab
         /// </summary>

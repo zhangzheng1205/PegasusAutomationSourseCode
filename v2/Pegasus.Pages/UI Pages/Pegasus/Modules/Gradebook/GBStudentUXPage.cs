@@ -1038,6 +1038,8 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for Activity Score 
             base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
                 GBStudentUXPage_Studyplanasset_Name_Xpath_Locator, getRowCount)));
+            base.FocusOnElementByXPath(string.Format(GBStudentUXPageResource.
+                GBStudentUXPage_Studyplanasset_Name_Xpath_Locator, getRowCount));
             IWebElement getAssetName = base.GetWebElementPropertiesByXPath
                 (string.Format(GBStudentUXPageResource.
                 GBStudentUXPage_Studyplanasset_Name_Xpath_Locator, getRowCount));
