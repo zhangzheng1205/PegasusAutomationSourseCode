@@ -91,8 +91,9 @@ Then I should see the grade under activity column of the submitted "Test" activi
 Scenario: Instructor Validating student grade in instructor grade book By SMS Instructor
 When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
-When I navigate inside the folder level type "Word" in instructor gradebook
-Then I should see the score "0" of "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity for "CsSmsStudent"
+When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Gradebook" by "CsSmsInstructor"
+Then I should see the score "0" of "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity for "CsSmsStudentOne"
+And I click on 'My Course' link in gradebook
 
 #Purpose: Instructor Validaing student submissin and grade in Instructor Gradebook
 # TestCase Id: peg-22028
@@ -100,9 +101,10 @@ Then I should see the score "0" of "Word Chapter 1 Project 1A Skill-Based Exam (
 Scenario: Instructor Validaing student submissin and grade in Instructor Gradebook By SMS Instructor
 When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
-When I navigate inside the folder level type "Word" in instructor gradebook
+When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Gradebook" by "CsSmsInstructor"
 And I select the cmenu "ViewAllSubmissions" of asset "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 Then I should see "70" score in view submission page
+And I click on 'My Course' link in gradebook
 
 #Purpose: Validating Apply GradeSchema in Instructor Gradebook
 # TestCase Id: peg-22030
@@ -110,10 +112,11 @@ Then I should see "70" score in view submission page
 Scenario: Validating Apply GradeSchema in Instructor Gradebook By SMS Instructor
 When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
-When I navigate inside the folder level type "Word" in instructor gradebook
-And I select the cmenu "ApplyGradeSchema" of asset "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+When I select "PowerPoint Chapter 1 Skill-Based Training" in "Gradebook" by "CsSmsInstructor"
+And I select the cmenu "ApplyGradeSchema" of asset "PowerPoint Chapter 1 Skill-Based Training"
 And I 'Apply' the grade schema for the submitted activity
-Then I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity status "F" in Gradebook for enrollled "CsSmsStudent"
+Then I should see the "PowerPoint Chapter 1 Skill-Based Training" activity status "A" in Gradebook for enrollled "CsSmsStudent"
+And I click on 'My Course' link in gradebook
 
 #Purpose: Instructor Validating student Study Plan Grade in Instructor Gradebook
 # TestCase Id: peg-22027
@@ -121,7 +124,22 @@ Then I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" 
 Scenario: Instructor Validating student Study Plan Grade in Instructor Gradebook By SMS Instructor
 When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
-When I navigate inside the folder level type "Excel" in instructor gradebook
+When I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Gradebook" by "CsSmsInstructor"
 And I click on view grades of "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in gradebook
-Then I should see the score "70" of "Excel Chapter 1 Skill-Based Training - Pre-test Training" activity for "CsSmsStudent"
-And I should see the score "70" of "Excel Chapter 1 Skill-Based Exam (Scenario 1)-Post Test" activity for "CsSmsStudent"
+Then I should see the score "100" of "Excel Chapter 1 Skill-Based Training - Pre-test Training" activity for "CsSmsStudent"
+And I should see the score "100" of "Excel Chapter 1 Skill-Based Exam (Scenario 1)-Post Test" activity for "CsSmsStudent"
+And I click on 'My Course' link in gradebook
+
+#Purpose: :Instructor Accepting Pastdue Submission in Instructor Gradebook
+#TestCase Id: peg-22029
+#MyItLabProgramCourse
+Scenario: Instructor Accepting Pastdue Submission in Instructor Gradebook By SMS Instructor
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I select "Excel Chapter 1 Skill-Based Training" in "Gradebook" by "CsSmsInstructor"
+And I select the cmenu "ViewAllSubmissions" of asset "Excel Chapter 1 Skill-Based Training"
+Then I should see "Decline" and "Accept" options in view submission page
+When I select the option "Accept" in view submission page
+And I close the "View Submission" window
+Then I should see the score "0" of "Excel Chapter 1 Skill-Based Training" activity for "CsSmsStudent"
+And I click on 'My Course' link in gradebook
