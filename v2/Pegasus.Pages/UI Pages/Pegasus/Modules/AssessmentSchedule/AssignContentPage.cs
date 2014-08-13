@@ -928,5 +928,107 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AssignContentPage", "SetActivityPropertiesSettings",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Get due date and fill that is duedate field
+        /// </summary>
+        public void GetAndFillDueDate()
+        {
+            logger.LogMethodEntry("AssignContentPage", "GetAndFillDueDate",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Get the due date
+                DateTime getDueDate = DateTime.Now.AddMinutes(5);
+
+                // Enter the due date in due date text box
+                base.WaitForElement(By.Id(AssignContentPageResource
+               .AssignContent_Page_DueDate_TextBox_Id_Locator));
+                base.ClearTextById(AssignContentPageResource
+               .AssignContent_Page_DueDate_TextBox_Id_Locator);
+                base.FillTextBoxById(AssignContentPageResource
+                .AssignContent_Page_DueDate_TextBox_Id_Locator, getDueDate.ToString(AssignContentPageResource.AssignContent_Page_DateFormat));
+                //clear current hours
+                base.ClearTextById(AssignContentPageResource
+                    .AssignContent_Page_Hours_TextBox_Id_Locator);
+                // enter current hours
+                base.FillTextBoxById(AssignContentPageResource
+                    .AssignContent_Page_Hours_TextBox_Id_Locator, String.Format("{0:h }", getDueDate).Trim());
+                base.ClearTextById(AssignContentPageResource
+                    .AssignContent_Page_Minutes_TextBox_Id_Locator);
+                // enter after 3 minutes from current minute value
+                base.FillTextBoxById(AssignContentPageResource
+                    .AssignContent_Page_Minutes_TextBox_Id_Locator, String.Format("{0:m }", getDueDate).Trim());
+                //Setting AM/PM
+                base.SelectDropDownValueThroughTextById(AssignContentPageResource.
+                   AssignContent_Page_DuedateAMPM_Dropdown_Id_Locator,
+                   String.Format("{0:tt}", getDueDate));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "GetAndFillDueDate",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Set the duedate and save the settings
+        /// </summary>
+        public void SaveProperties()
+        {
+
+            logger.LogMethodEntry("AssignContentPage", "SetDueDateAndSave",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click on save button
+                base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText
+                        (AssignContentPageResource.AssignContent_Page_Button_Save_Id_Locator));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "SetDueDateAndSave",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Sets start date and end date 
+        /// </summary>
+        public void SetStartAndEndDate()
+        {
+            logger.LogMethodEntry("AssignContentPage", "SetStartAndEndDate",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                SelectSetavailabilitydaterangeRadiobutton();
+
+                string dueDate = base.GetWebElementPropertiesById(AssignContentPageResource.
+                    AssignContent_Page_DueDate_TextBox_Id_Locator).GetAttribute(AssignContentPageResource.
+                    AssignContent_Page_DueDate_Value);
+
+                DateTime endDate = Convert.ToDateTime(dueDate).AddDays(5);
+
+                base.WaitForElement(By.Id(AssignContentPageResource.
+                  AssignContent_Page_ToDate_TextField_Id_Locator));
+                base.ClearTextById(AssignContentPageResource.
+                AssignContent_Page_ToDate_TextField_Id_Locator);
+                base.FillTextBoxById(AssignContentPageResource.
+                AssignContent_Page_ToDate_TextField_Id_Locator, endDate.ToString
+                        (AssignContentPageResource.AssignContent_Page_DateFormat));
+
+                //Click on save button
+                base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText
+                        (AssignContentPageResource.AssignContent_Page_Button_Save_Id_Locator));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "SetStartAndEndDate",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

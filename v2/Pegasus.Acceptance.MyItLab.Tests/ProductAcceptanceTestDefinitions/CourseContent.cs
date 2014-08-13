@@ -4,6 +4,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Automation.DataTransferObjects;
+using Pegasus.Pages.CommonPageObjects;
 using TechTalk.SpecFlow;
 
 namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
@@ -150,6 +151,117 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CourseContent",
                "ClickOKButtonOnPegasusConfirmationPopUp",
                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Opening c menu and clicking on the given c menu option
+        /// </summary>
+        /// <param name="activityCmenuOption">c menu option  name</param>
+        /// <param name="assetName">Activity name</param>
+        [When(@"I click on ""(.*)"" option in c menu of ""(.*)"" asset")]
+        public void CMenuOperationsForAnAsset(string activityCmenuOption, string assetName)
+        {
+            //Select Cmenu Option Of Activity
+            Logger.LogMethodEntry("CourseContent", "CMenuOperationsForAnAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Select Activity Cmenu Option
+            new CoursePreviewMainUXPage().SelectActivityCmenuForInstructor((CoursePreviewMainUXPage.ActivityCmenuEnum)
+                Enum.Parse(typeof(CoursePreviewMainUXPage.ActivityCmenuEnum), activityCmenuOption), assetName);
+            Logger.LogMethodExit("CourseContent", "CMenuOperationsForAnAsset",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigating to the folder where given asset exists
+        /// </summary>
+        /// <param name="Assetname">Asset Name</param>
+        /// <param name="tabName">Tab</param>
+        /// <param name="userTypeEnum">User type</param>
+        [When(@"I navigate to ""(.*)"" asset in ""(.*)"" tab as ""(.*)""")]
+        public void NavigateToFolder(string Assetname, string tabName, User.UserTypeEnum userTypeEnum)
+        {
+            //Select Cmenu Option Of Activity
+            Logger.LogMethodEntry("CourseContent", "NavigateToFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CommonPage().ManageTheActivityFolderLevelNavigation(Assetname, tabName, userTypeEnum);
+            Logger.LogMethodExit("CourseContent", "NavigateToFolder",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Assigning the activity with due date.
+        /// </summary>
+        [When(@"I assign asset with due date and save")]
+        public void AssignAssetWithDueDateAndSave()
+        {
+            Logger.LogMethodEntry("CourseContent", "AssignAssetWithDueDateAndSave",
+               base.IsTakeScreenShotDuringEntryExit);
+            AssignContentPage assignContent = new AssignContentPage();
+            //Selecting assign radio button
+            assignContent.SelectAssignedRadiobutton();
+            //Set duedate
+            assignContent.GetAndFillDueDate();
+            //Setting due date and save
+            assignContent.SaveProperties();
+            Logger.LogMethodExit("CourseContent", "AssignAssetWithDueDateAndSave",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Assigning the asset with duedate and scheduling with start and end date
+        /// </summary>
+        [When(@"I assign and schedule the asset and save")]
+        public void AssignAndScheduleTheAssetAndSave()
+        {
+            Logger.LogMethodEntry("CourseContent", "AssignAndScheduleTheAssetAndSave",
+               base.IsTakeScreenShotDuringEntryExit);
+            AssignContentPage assignContent = new AssignContentPage();
+            //Selecting assign radio button
+            assignContent.SelectAssignedRadiobutton();
+            //Setting due date
+            assignContent.GetAndFillDueDate();
+            //Setting the start date and end date
+            assignContent.SetStartAndEndDate();
+            Logger.LogMethodExit("CourseContent", "AssignAndScheduleTheAssetAndSave",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Checking assigned status
+        /// </summary>
+        /// <param name="assetName">Asset Name</param>
+        [Then(@"I should see assigned icon for ""(.*)""")]
+        public void ConfirmAssetAssignedStatus(string assetName)
+        {
+            Logger.LogMethodEntry("CourseContent", "IsAssetAssigned",
+              base.IsTakeScreenShotDuringEntryExit);
+
+            //Checking the activity status whether it is assigned or not
+            Logger.LogAssertion("CheckAssignedStatus",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.IsTrue(new CoursePreviewMainUXPage().
+                   IsAssetAssigned(assetName)));
+            Logger.LogMethodExit("CourseContent", "IsAssetAssigned",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Checking for assigned and scheduled status
+        /// </summary>
+        /// <param name="assetName">Asset name</param>
+        [Then(@"I should see scheduled icon for ""(.*)""")]
+        public void ConfirmAssetAssignedAndScheduledStatus(string assetName)
+        {
+            Logger.LogMethodEntry("CourseContent", "IsAssetAssignedAndScheduled",
+              base.IsTakeScreenShotDuringEntryExit);
+
+            //Checking the activity status whether it is assigned or not
+            Logger.LogAssertion("CheckAssignedStatus",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new CoursePreviewMainUXPage().
+                    IsAssetScheduled(assetName)));
+            Logger.LogMethodExit("CourseContent", "IsAssetAssignedAndScheduled",
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
     }

@@ -107,6 +107,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr/td[4]/img.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_Activitycmenu_Xpath_Locator_Ins {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_Activitycmenu_Xpath_Locator_Ins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to spanPost.
         /// </summary>
         internal static string CoursePreviewMainUX_Page_ActivityResultPost_Text_Id_Locator {
@@ -121,6 +130,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CoursePreviewMainUX_Page_Answer_TextArea_Xpath_Locator {
             get {
                 return ResourceManager.GetString("CoursePreviewMainUX_Page_Answer_TextArea_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_Asset_Loop_Initialization_InstValue {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_Asset_Loop_Initialization_InstValue", resourceCulture);
             }
         }
         
@@ -179,6 +197,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 2.
         /// </summary>
         internal static string CoursePreviewMainUX_Page_Assets_Row_Increment_Value {
@@ -193,6 +220,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CoursePreviewMainUX_Page_Assets_Status_Xpath_Locator {
             get {
                 return ResourceManager.GetString("CoursePreviewMainUX_Page_Assets_Status_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[4]/center/img[@class=&apos;CC_b_clock&apos;].
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_AssignedIcon_Xpath_Locator_Ins {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_AssignedIcon_Xpath_Locator_Ins", resourceCulture);
             }
         }
         
@@ -328,6 +364,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CoursePreviewMainUX_Page_PresssEnterKey {
             get {
                 return ResourceManager.GetString("CoursePreviewMainUX_Page_PresssEnterKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[2]/div/img[@class=&apos;CC_mark2image&apos;].
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_ScheduledIcon_Xpath_Locator_Ins {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_ScheduledIcon_Xpath_Locator_Ins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[2]/div.
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_ScheduleInfo_Xpath_Locator_Ins {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_ScheduleInfo_Xpath_Locator_Ins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@title=&apos;Set Scheduling Options&apos;].
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_SetSchedulingOptions_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_SetSchedulingOptions_Xpath_Locator", resourceCulture);
             }
         }
         

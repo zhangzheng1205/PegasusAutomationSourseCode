@@ -276,4 +276,7 @@
   <data name="AssignContent_Page_Minutes_TextBox_Id_Locator" xml:space="preserve">
     <value>txtdMins</value>
   </data>
+  <data name="AssignContent_Page_DuedateAMPM_Dropdown_Id_Locator" xml:space="preserve">
+    <value>CMBAMPMDUEDT</value>
+  </data>
 </root>

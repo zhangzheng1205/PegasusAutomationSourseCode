@@ -26,3 +26,27 @@ And I should see "Test" activity in the Content Library Frame
 When I click on "Edit" cmenu option of activity in "CsSmsInstructor"
 And I set the feedback correct answer preference
 Then I should see the successfull message "Activity updated successfully."
+
+
+#Purpose :Instructor assign the asset with duedate in Managecoursework
+#TestCase Id: peg-22005
+#MyItLabInstructorCourse
+Scenario: Instructor assign the asset with duedate in Managecoursework
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "Excel Chapter 1 Project 1A Skill-Based Training" asset in "Course Materials" tab as "CsSmsInstructor"
+And I click on "SetSchedulingOptions" option in c menu of "Excel Chapter 1 Project 1A Skill-Based Training" asset
+Then I should be on the "Properties" page
+And I should see the successfull message "Properties updated successfully."
+And I should see assigned icon for "Excel Chapter 1 Project 1A Skill-Based Training" 
+
+#Purpose : Instructor assign the assets with duedate,startdate and endate in Managecoursework
+#TestCase Id: peg-22006
+#MyItLabInstructorCourse
+Scenario: Instructor assign the assets with duedate,startdate and endate in Managecoursework
+When I click on "SetSchedulingOptions" option in c menu of "Excel Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset
+Then I should be on the "Properties" page
+When I assign and schedule the asset and save
+Then I should see the successfull message "Properties updated successfully."
+And I should see assigned icon for "Excel Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" 
+And I should see scheduled icon for "Excel Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" 

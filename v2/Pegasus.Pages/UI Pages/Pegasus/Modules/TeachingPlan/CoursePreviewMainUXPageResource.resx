@@ -240,4 +240,25 @@
   <data name="CoursePreviewMainUX_Page_PresssEnterKey" xml:space="preserve">
     <value>{ENTER}</value>
   </data>
+  <data name="CoursePreviewMainUX_Page_Activitycmenu_Xpath_Locator_Ins" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[4]/img</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_Asset_Loop_Initialization_InstValue" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_AssignedIcon_Xpath_Locator_Ins" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[4]/center/img[@class='CC_b_clock']</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_ScheduledIcon_Xpath_Locator_Ins" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/div/img[@class='CC_mark2image']</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_ScheduleInfo_Xpath_Locator_Ins" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/div</value>
+  </data>
+  <data name="CoursePreviewMainUX_Page_SetSchedulingOptions_Xpath_Locator" xml:space="preserve">
+    <value>//div[@title='Set Scheduling Options']</value>
+  </data>
 </root>

@@ -179,6 +179,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentSchedule {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CMBAMPMDUEDT.
+        /// </summary>
+        internal static string AssignContent_Page_DuedateAMPM_Dropdown_Id_Locator {
+            get {
+                return ResourceManager.GetString("AssignContent_Page_DuedateAMPM_Dropdown_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;tblContentAvail&apos;]/tbody/tr[3].
         /// </summary>
         internal static string AssignContent_Page_EndDate_Text_Xpath_Locator {

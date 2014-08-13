@@ -6,6 +6,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Threading;
+using System.Text.RegularExpressions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
 
 namespace Pegasus.Pages.UI_Pages
@@ -43,7 +44,8 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public enum ActivityCmenuEnum
         {
-            GetInformation=1
+            GetInformation=1,
+            SetSchedulingOptions=2
         }
 
         /// <summary>
@@ -908,5 +910,213 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Searching for the activity, open the c menu for that activity and click on the given c menu option
+        /// </summary>
+        /// <param name="activityCmenuEnum"></param>
+        /// <param name="activityName"></param>
+        public void SelectActivityCmenuForInstructor(ActivityCmenuEnum activityCmenuEnum, String activityName)
+        {
+            //Select Activity 
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "SelectActivityCmenuOptionIns",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Course Materials Window
+                this.SelectCourseMaterialsWindow();
+                //Click On Activity Cmenu
+                this.ClickOnAssetCmenuForInstructor(activityName);
+                switch (activityCmenuEnum)
+                {
+                    case CoursePreviewMainUXPage.ActivityCmenuEnum.SetSchedulingOptions:
+                        //Click On Scheduling Option
+                        this.ClickOnSetSchedulingOption();
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "SelectActivityCmenuOptionIns",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void ClickOnSetSchedulingOption()
+        {
+            //Click On Get Information Option
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickOnGetInformationOption",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Get Information Property
+            IWebElement getGetInformationProperty = base.
+                GetWebElementPropertiesByXPath(CoursePreviewMainUXPageResource.
+                CoursePreviewMainUX_Page_SetSchedulingOptions_Xpath_Locator);
+            //Click On GetInformation Link
+            base.ClickByJavaScriptExecutor(getGetInformationProperty);
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickOnGetInformationOption",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Searching for the activity and opening the cmenu for instructor view
+        /// </summary>
+        /// <param name="activityName"></param>
+        private void ClickOnAssetCmenuForInstructor(String activityName)
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickOnActivityCmenuIns",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            int getActivityCount;
+            //Initialize Variable
+            string getActivityname = string.Empty;
+            //Get Activity Count
+            getActivityCount = base.GetElementCountByXPath(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Assets_Count_Xpath_Locator);
+            for (int initialCount = Convert.ToInt32(CoursePreviewMainUXPageResource.
+                   CoursePreviewMainUX_Page_Asset_Loop_Initialization_InstValue);
+                   initialCount <= getActivityCount; initialCount++)
+            {
+                //Get Activity Name
+                getActivityname = base.GetElementTextByXPath
+                        (string.Format(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins, initialCount));
+                if (getActivityname == activityName)
+                {
+                    IWebElement getActivityProperty = base.GetWebElementPropertiesByXPath(
+                        string.Format(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins, initialCount));
+                    base.PerformMouseHoverByJavaScriptExecutor(getActivityProperty);
+                    //Get Cmenu Property
+                    IWebElement getCmenuProperty = base.
+                        GetWebElementPropertiesByXPath(string.Format(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_Activitycmenu_Xpath_Locator_Ins, initialCount));
+                    //Click On Cmenu Option
+                    base.ClickByJavaScriptExecutor(getCmenuProperty);
+                    break;
+                }
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickOnActivityCmenuIns",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Checking the assigned status by assign icon and due date existance
+        /// </summary>
+        /// <param name="activityName"></param>
+        /// <returns></returns>
+        public Boolean IsAssetAssigned(String activityName)
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "CheckAssignedStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+            string getAssignedDueDate = string.Empty;
+            Boolean isAssigned = false;
+            bool isDueDateExists = false;
+            DateTime dueDate;
+            try
+            {
+                this.SelectCourseMaterialsWindow();
+                //Initialize Variable
+                int getActivityCount;
+                //Initialize Variable
+                string getActivityname = string.Empty;
+                //Get Activity Count
+                getActivityCount = base.GetElementCountByXPath(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_Assets_Count_Xpath_Locator);
+                for (int initialCount = Convert.ToInt32(CoursePreviewMainUXPageResource.
+                       CoursePreviewMainUX_Page_Asset_Loop_Initialization_InstValue);
+                       initialCount <= getActivityCount; initialCount++)
+                {
+                    //Get Activity Name
+                    getActivityname = base.GetElementTextByXPath
+                            (string.Format(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins, initialCount));
+                    if (getActivityname == activityName)
+                    {
+                        //Check assigned icon
+                        isAssigned = base.IsElementPresent(By.XPath(string.Format(CoursePreviewMainUXPageResource.
+                             CoursePreviewMainUX_Page_AssignedIcon_Xpath_Locator_Ins, initialCount)));
+
+                        getAssignedDueDate = base.GetTitleAttributeValueByXPath(string.Format(CoursePreviewMainUXPageResource.
+                              CoursePreviewMainUX_Page_AssignedIcon_Xpath_Locator_Ins, initialCount));
+
+                        isDueDateExists = DateTime.TryParse(getAssignedDueDate.Trim(), out dueDate);
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "CheckAssignedStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+            return isAssigned & isDueDateExists;
+        }
+
+        /// <summary>
+        /// Checking if asset is scheduled with start and end date
+        /// </summary>
+        /// <param name="activityName"></param>
+        /// <returns></returns>
+        public Boolean IsAssetScheduled(String activityName)
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "CheckAssignedStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+            DateTime startDate;
+            DateTime endDate;
+            bool isStartDateExists = false;
+            bool isEndDateExists = false;
+            Boolean isScheduled = false;
+            try
+            {
+                this.SelectCourseMaterialsWindow();
+
+                //Initialize Variable
+                int getActivityCount;
+                //Initialize Variable
+                string getActivityname = string.Empty;
+                //Get Activity Count
+                getActivityCount = base.GetElementCountByXPath(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_Assets_Count_Xpath_Locator);
+                for (int initialCount = Convert.ToInt32(CoursePreviewMainUXPageResource.
+                       CoursePreviewMainUX_Page_Asset_Loop_Initialization_InstValue);
+                       initialCount <= getActivityCount; initialCount++)
+                {
+                    //Get Activity Name
+                    getActivityname = base.GetElementTextByXPath
+                            (string.Format(CoursePreviewMainUXPageResource.
+                            CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins, initialCount));
+                    if (getActivityname == activityName)
+                    {
+                        //Check for scheduled icon
+                        isScheduled = base.IsElementPresent(By.XPath(string.Format(CoursePreviewMainUXPageResource.
+                             CoursePreviewMainUX_Page_ScheduledIcon_Xpath_Locator_Ins, initialCount)));
+
+                        IWebElement getAssignedDiv = base.GetWebElementPropertiesByXPath(string.Format(CoursePreviewMainUXPageResource.
+                              CoursePreviewMainUX_Page_ScheduleInfo_Xpath_Locator_Ins, initialCount));
+
+                        var elements = Regex.Matches(getAssignedDiv.Text, @"(?:\S+\s)?\S*-\S*(?:\s\S+)?", RegexOptions.IgnoreCase);
+                        char[] delimiterChars = { '-' };
+                        string[] startAndEnddate = elements[0].ToString().Split(delimiterChars);
+                        isStartDateExists = DateTime.TryParse(startAndEnddate[0].Trim(), out startDate);
+                        isEndDateExists = DateTime.TryParse(startAndEnddate[1].Trim(), out endDate);
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "CheckAssignedStatus",
+            base.IsTakeScreenShotDuringEntryExit);
+
+            return isScheduled & isStartDateExists & isEndDateExists;
+        }
+
     }
 }
