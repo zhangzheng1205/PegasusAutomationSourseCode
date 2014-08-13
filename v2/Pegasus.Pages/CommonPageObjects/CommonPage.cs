@@ -372,9 +372,14 @@ namespace Pegasus.Pages.CommonPageObjects
             // activity folder navigation
             Logger.LogMethodEntry("CommonPage", "NavigateInsideActivityFolderUnderTab",
                 base.IsTakeScreenShotDuringEntryExit);
-            base.ClickButtonByPartialLinkText(activityFolderName);
+            //Wait for the element
+            base.WaitForElement(By.PartialLinkText(activityFolderName));
+            IWebElement getFolderLink=base.GetWebElementPropertiesByPartialLinkText
+                (activityFolderName);
+            //Click the link
+            base.ClickByJavaScriptExecutor(getFolderLink);
             Thread.Sleep(Convert.ToInt32(CommonPageResource.CommonPage_FolderNavigation_Sleep_Time));
-            // wait for element
+            //Wait for element
             base.WaitForElement(By.Id(webElementToWait));
             Logger.LogMethodExit("CommonPage", "NavigateInsideActivityFolderUnderTab",
                 base.IsTakeScreenShotDuringEntryExit);

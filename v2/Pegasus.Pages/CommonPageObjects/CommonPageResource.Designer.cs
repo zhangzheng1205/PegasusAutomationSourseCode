@@ -97,7 +97,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to divBackArrow.
+        ///   Looks up a localized string similar to backicon.
         /// </summary>
         internal static string CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator {
             get {
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1500.
+        ///   Looks up a localized string similar to 5000.
         /// </summary>
         internal static string CommonPage_FolderNavigation_Sleep_Time {
             get {
