@@ -552,4 +552,7 @@
   <data name="GBInstructorUXPage_Initializer_Value" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="GBInstructorUXPage_MyCourse_Link_Id_Locator" xml:space="preserve">
+    <value>divContentName</value>
+  </data>
 </root>

@@ -3943,6 +3943,31 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on MyCourse in Gradebook.
+        /// </summary>       
+        public void ClickonMyCourseInGradebook()
+        {
+            //Click on MyCourse in Gradebook
+            logger.LogMethodEntry("GBInstructorUXPage", "ClickonMyCourseInGradebook",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the window
+                this.SelectGradebookFrame();
+                //Click on MyCourse Link
+                IWebElement getMyCourseLink = base.GetWebElementPropertiesById(
+                    GBInstructorUXPageResource.GBInstructorUXPage_MyCourse_Link_Id_Locator);
+                base.ClickByJavaScriptExecutor(getMyCourseLink);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "ClickonMyCourseInGradebook",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
 

@@ -1357,6 +1357,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to divContentName.
+        /// </summary>
+        internal static string GBInstructorUXPage_MyCourse_Link_Id_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_MyCourse_Link_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to txtColumn.
         /// </summary>
         internal static string GBInstructorUXPage_TextBox_CalculatedColumnName_ID_Locator {

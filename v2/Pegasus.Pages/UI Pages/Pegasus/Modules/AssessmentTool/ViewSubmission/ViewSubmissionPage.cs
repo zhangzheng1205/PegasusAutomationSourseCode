@@ -1324,5 +1324,69 @@ namespace Pegasus.Pages.UI_Pages
             return GradebookGrade;
         }
 
+        /// <summary>
+        /// Verify Decline and Accept Option Displayed in View Submission Page for Past Due Submission.
+        /// </summary>
+        /// <param name="declineOption">This is Decline Option.</param>
+        /// <param name="acceptOption">This is Accept Option.</param>
+        public Boolean IsDeclineAcceptOptionDisplayed(string declineOption, string acceptOption)
+        {
+            //Verify Decline and Accept Option Displayed in View Submission Page for Past Due Submission
+            logger.LogMethodEntry("ViewSubmissionPage",
+                "IsDeclineAcceptOptionDisplayed",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            bool isDeclineOptionDisplayed = false;
+            bool isAcceptOptionDisplayed = false;
+            try
+            {
+                //Click on Submission Grade
+                this.ClickonSubmissionGrade();
+                //Verify Decline Option Displayed
+                isDeclineOptionDisplayed =
+                    base.IsElementDisplayedByPartialLinkText(declineOption);
+                //Verify Accept Option Displayed
+                isAcceptOptionDisplayed =
+                    base.IsElementDisplayedByPartialLinkText(acceptOption);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ViewSubmissionPage",
+                "IsDeclineAcceptOptionDisplayed",
+            base.IsTakeScreenShotDuringEntryExit);
+            return (isDeclineOptionDisplayed && isAcceptOptionDisplayed);
+        }
+
+        /// <summary>
+        /// Click On Button In View Submission Page.
+        /// </summary>
+        /// <param name="buttonName">This is Button Name.</param>
+        public void ClickOnButtonInViewSubmissionPage(string buttonName)
+        {
+            //Click On Button In View Submission Page
+            logger.LogMethodEntry("ViewSubmissionPage",
+                "ClickOnButtonInViewSubmissionPage",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select View Submission Window
+                this.SelectViewSubmissionWindow();
+                //Get Button Property
+                IWebElement getButtonProperty =
+                    base.GetWebElementPropertiesByPartialLinkText(buttonName);
+                //Click on Button
+                base.ClickByJavaScriptExecutor(getButtonProperty);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ViewSubmissionPage",
+                "ClickOnButtonInViewSubmissionPage",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
