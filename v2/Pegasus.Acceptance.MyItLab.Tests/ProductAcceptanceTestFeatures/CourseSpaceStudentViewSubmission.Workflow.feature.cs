@@ -362,7 +362,11 @@ testRunner.When("I click on cmenu \"View Submissions\" of asset \"PowerPoint Cha
 #line 128
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 129
+testRunner.And("I should see \"70\" score in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 130
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 131
+testRunner.Then("I click on \'My Course\' link in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -373,25 +377,29 @@ testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((Te
         public virtual void StudentValidatingScoreInGradebookForSIM5WordActivityBySMSStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating score in gradebook for SIM5 Word activity By SMS Student", ((string[])(null)));
-#line 134
-this.ScenarioSetup(scenarioInfo);
-#line 135
-testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 136
-testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 137
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 138
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 139
 testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Gradebook\"" +
                     " by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 138
+#line 140
 testRunner.Then("I should see the activity \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1" +
                     ")\" score \"0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 139
+#line 141
 testRunner.When("I click on cmenu \"View Submissions\" of asset \"Word Chapter 1 Project 1A Skill-Bas" +
                     "ed Exam (Scenario 1)\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 140
+#line 142
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 141
+#line 143
+testRunner.And("I should see \"0\" score in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 144
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 145
+testRunner.Then("I click on \'My Course\' link in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -402,25 +410,29 @@ testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((Te
         public virtual void StudentValidatingScoreInGradebookForSIM5AccessActivityBySMSStudent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating score in gradebook for SIM5 Access activity By SMS Student", ((string[])(null)));
-#line 146
+#line 150
 this.ScenarioSetup(scenarioInfo);
-#line 147
+#line 151
 testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 148
+#line 152
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 149
+#line 153
 testRunner.When("I select \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Gradeboo" +
                     "k\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 150
+#line 154
 testRunner.Then("I should see the activity \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario" +
                     " 1)\" score \"100\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 151
+#line 155
 testRunner.When("I click on cmenu \"View Submissions\" of asset \"Access Chapter 1 Project 1A Skill-B" +
                     "ased Exam (Scenario 1)\" in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 152
+#line 156
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 153
+#line 157
+testRunner.And("I should see \"100\" score in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 158
 testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 159
+testRunner.Then("I click on \'My Course\' link in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
