@@ -1041,6 +1041,8 @@ namespace Pegasus.Pages.UI_Pages
                     base.GetWebElementPropertiesByXPath(ViewSubmissionPageResource.
                     ViewSubmission_Page_Grade_ViewSubmission_Xpath_Locator);
                 base.ClickByJavaScriptExecutor(getSubmissionGradeProperty);
+                Thread.Sleep(Convert.ToInt32(ViewSubmissionPageResource.
+                    ViewSubmission_Page_SleepTime_Value));
             }
             catch (Exception e)
             {
@@ -1262,7 +1264,9 @@ namespace Pegasus.Pages.UI_Pages
                 this.ClickonSubmissionGrade();
                 //Get Submission Grade
                 getSubmissionScore = base.GetElementTextById(ViewSubmissionPageResource.
-                    ViewSubmission_Page_StudentSubmission_Grade_Id_Locator);
+                    ViewSubmission_Page_GradeScore_Id_Locator);
+                getSubmissionScore = (System.Text.RegularExpressions.Regex.Split(getSubmissionScore,
+                    ": (.*)%")[1]).Split('.')[0];
             }
             catch (Exception e)
             {
