@@ -152,15 +152,26 @@ namespace Pegasus.Pages.CommonPageObjects
                             case "Calendar":
                                 switch (activityName)
                                 {
-                                    // folder navigation based on activity name
+                                        //Folder navigation for Word based on activity name
                                     case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                                        this.SelectWordActivityFolderNavigationInInstructorCalendar(CommonPageResource.
+                                            CommonPage_Instructor_Calendar_Content_Id_Locator);
                                         break;
+                                    //Folder navigation for Access
                                     case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                                        this.SelectAccessActivityFolderNavigationInInstructorCalendar(CommonPageResource.
+                                            CommonPage_Instructor_Calendar_Content_Id_Locator);
                                         break;
+                                     //Folder navigation for powerpoint
                                     case "PowerPoint Chapter 1 Skill-Based Training":
                                     case "PowerPoint Chapter 1 Skill-Based Exam (Scenario 1)":
+                                        this.SelectPowerPointActivityFolderNavigationInInstructorCalendar(CommonPageResource.
+                                            CommonPage_Instructor_Calendar_Content_Id_Locator);
                                         break;
+                                    //Folder navigation for Excel
                                     case "Excel Chapter 1 Skill-Based Training":
+                                        this.SelectExcelActivityFolderNavigationInInstructorCalendar(CommonPageResource.
+                                            CommonPage_Instructor_Calendar_Content_Id_Locator);
                                         break;
                                 }
                                 break;
@@ -175,6 +186,147 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigation",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        ///Select Excel Activity Folder Navigation In Instructor Calendar.
+        /// </summary>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private void SelectExcelActivityFolderNavigationInInstructorCalendar
+            (string webElementToWait)
+        {
+            //Word Excel Folder Navigation In Instructor Calendar
+            Logger.LogMethodEntry("CommonPage",
+                "SelectExcelActivityFolderNavigationInInstructorCalendar",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Navigate Inside the SubFolder Folder
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_Excel2013_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_ExcelChapter1CreatingAWorksheetAndChartingData_FolderName,
+                webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_ExcelChapter1Activities_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_ExcelChapter1SimulationActivities_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage",
+                "SelectExcelActivityFolderNavigationInInstructorCalendar",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Select Power Point Activity Folder Navigation In Instructor Calendar.
+        /// </summary>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private void SelectPowerPointActivityFolderNavigationInInstructorCalendar
+            (string webElementToWait)
+        {
+            //Word Power Point Folder Navigation In Instructor Calendar
+            Logger.LogMethodEntry("CommonPage",
+                "SelectPowerPointActivityFolderNavigationInInstructorCalendar",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Navigate Inside the SubFolder Folder
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                ComonPage_PowerPoint2013_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_PowerPointChapter1GettingStartedWithMicrosoftPowerPoint_FolderName,
+                webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_PowerPointChapter1Activities_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_PowerPointChapter1SimulationActivities_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage",
+                "SelectPowerPointActivityFolderNavigationInInstructorCalendar",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Select Access Activity Folder Navigation In Instructor Calendar.
+        /// </summary>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private void SelectAccessActivityFolderNavigationInInstructorCalendar
+            (string webElementToWait)
+        {
+            //Word Activity Folder Navigation In Instructor Calendar
+            Logger.LogMethodEntry("CommonPage",
+                "SelectAccessActivityFolderNavigationInInstructorCalendar",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Navigate Inside the SubFolder Folder
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_Access2013_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_AccessChapter1GettingStartedWithMicrosoftAccess2013_FolderName,
+                webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_AccessChapter1Activities_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_AccessChapter1SimulationActivities_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage",
+                "SelectAccessActivityFolderNavigationInInstructorCalendar",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Select Word Activity Folder Navigation In Instructor Calendar.
+        /// </summary>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private void SelectWordActivityFolderNavigationInInstructorCalendar(
+                      string webElementToWait)
+        {
+            //Word Activity Folder Navigation In Instructor Calendar
+            Logger.LogMethodEntry("CommonPage",
+                "SelectWordActivityFolderNavigationInInstructorCalendar",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Navigate Inside the SubFolder Folder
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_Word2013_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_WordChapter1CreatingDocumentsWithMicrosoftWord2013_FolderName,
+                webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_WordChapter1Activities_FolderName, webElementToWait);
+            this.NavigateToActivityFolderInInstructorCalendar(CommonPageResource.
+                CommonPage_WordChapter1SimulationActivities_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage",
+                "SelectWordActivityFolderNavigationInInstructorCalendar",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Activity Folder In Instructor Calendar.
+        /// </summary>
+        /// <param name="folderName">This is folder name.</param>
+        /// <param name="webElementToWait">This is wait element.</param>
+        private void NavigateToActivityFolderInInstructorCalendar(string folderName,
+            string webElementToWait)
+        {
+            //Navigate To Activity Folder In Instructor Calendar
+            Logger.LogMethodEntry("CommonPage",
+                "NavigateToActivityFolderInInstructorCalendar",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Wait for the element
+            base.WaitForElement(By.XPath(String.Format(CommonPageResource.
+                CommonPage_Instructor_CalendarNavigationFolder_Xpath_Locator, folderName)));
+            IWebElement getFolderProperty = base.GetWebElementPropertiesByXPath
+                (String.Format(CommonPageResource.
+                CommonPage_Instructor_CalendarNavigationFolder_Xpath_Locator, folderName));
+            //Click on the folder
+            base.ClickByJavaScriptExecutor(getFolderProperty);
+            Thread.Sleep(Convert.ToInt32(CommonPageResource.
+                CommonPage_FolderNavigation_Sleep_Time));
+            base.WaitForElement(By.Id(webElementToWait));
+            Logger.LogMethodExit("CommonPage",
+                "NavigateToActivityFolderInInstructorCalendar",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         ///Select Window With Frame For Folder Navigation .
@@ -246,7 +398,7 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 // switch To Frame
                 base.SwitchToIFrame(frameName);
-            }            
+            }  
             Logger.LogMethodExit("CommonPage", "SelectWindowNameForFoldernavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
