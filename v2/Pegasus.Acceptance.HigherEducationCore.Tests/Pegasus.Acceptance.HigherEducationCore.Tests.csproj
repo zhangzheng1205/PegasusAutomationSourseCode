@@ -570,6 +570,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BTS.HedCore.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.5.15.2.BVTTestPlan.HSS.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdvancedSearchInManageCourseMaterialsAndAddContentLibrary.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceAdvancedSearchInManageCourseMaterialsAndAddContentLibrary.feature.cs</LastGenOutput>
