@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using Pegasus.Automation.DataTransferObjects;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Interactions;
 using System.Net;
@@ -659,5 +660,32 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return results == -1 ? false : true;
         }
 
+        /// <summary>
+        /// Get correct option for the question from xml memory.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is name of the activity type enum.</param>
+        /// <param name="activityBehaviourTypeEnum">This is name of the activity type behaviour.</param>
+        /// <param name="activityNameEnum">This is name of the activity.</param>
+        /// <param name="questionNameFromUi">This is question name present on UI.</param>
+        /// <exception cref="ArgumentNullException">This is error when received a null argument for correct option variable.</exception>
+        /// <returns>Correct option based on question name.</returns>
+        protected string GetQuestionCorrectOption(ActivityQuestionsList.ActivityTypeEnum activityTypeEnum,
+            ActivityQuestionsList.ActivityBehaviourTypeEnum activityBehaviourTypeEnum,
+            ActivityQuestionsList.ActivityNameEnum activityNameEnum, string questionNameFromUi)
+        {
+            string correctOption = string.Empty;
+            List<ActivityQuestionsList> activityQuestionsList = ActivityQuestionsList.
+                    GetAll(activityTypeEnum, activityBehaviourTypeEnum, activityNameEnum);
+
+            foreach (var activityQuestion in activityQuestionsList)
+            {
+                if ((activityQuestion.Name).Equals(questionNameFromUi))
+                {
+                    // select correct option
+                    correctOption = activityQuestion.CorrectOption;
+                }
+            }
+            return correctOption;
+        }
     }
 }

@@ -615,4 +615,43 @@
       <IsCreated>true</IsCreated>
     </Product>
   </ArrayOfProduct>
+  <!--This is already created activity and there questions present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+  <ArrayOfActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>are personal judgments based on beliefs rather than facts.</Name>
+      <ActivityType>Homework</ActivityType>
+      <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
+      <ActivityName>TakeTheChapter1Exam</ActivityName>
+      <FirstOption>Predictions</FirstOption>
+      <SecondOption>Biases</SecondOption>
+      <ThirdOption>Perspectives</ThirdOption>
+      <FourthOption>Observations</FourthOption>
+      <CorrectOption>Biases</CorrectOption>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Talking, facial expressions, and movements are elements of</Name>
+      <ActivityType>Homework</ActivityType>
+      <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
+      <ActivityName>TakeTheChapter1Exam</ActivityName>
+      <FirstOption>humanism</FirstOption>
+      <SecondOption>biopsychology</SecondOption>
+      <ThirdOption>mental processes</ThirdOption>
+      <FourthOption>behavior</FourthOption>
+      <CorrectOption>humanism</CorrectOption>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Within the field of psychology, mental processes refer to</Name>
+      <ActivityType>Homework</ActivityType>
+      <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
+      <ActivityName>TakeTheChapter1Exam</ActivityName>
+      <FirstOption>outward actions</FirstOption>
+      <SecondOption>overt reactions</SecondOption>
+      <ThirdOption>all internal covert activity of our minds</ThirdOption>
+      <FourthOption>only human behavior</FourthOption>
+      <CorrectOption>only human behavior</CorrectOption>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+  </ArrayOfActivityQuestionsList>
 </Data>
