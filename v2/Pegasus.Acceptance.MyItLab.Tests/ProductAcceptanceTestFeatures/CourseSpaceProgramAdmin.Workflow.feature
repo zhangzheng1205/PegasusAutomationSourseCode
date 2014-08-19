@@ -59,7 +59,7 @@ Scenario: Copying Section As Section
 When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
 When I search the section of "MyITLabOffice2013Program"
-And  I click the "Copy as Section" c-menu option
+And I click the "Copy as Section" c-menu option
 Then I should be on the "Copy as Section" page
 When I click Copy/Save button to copy
 Then I should see the successfull message "Section Copied Successfully."
