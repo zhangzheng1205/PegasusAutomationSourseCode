@@ -98,6 +98,7 @@
     <Compile Include="DataTransferObjects\WorkSpace.cs" />
     <Compile Include="InMemoryDatabase.cs" />
     <Compile Include="InMemoryDatabaseSingleton.cs" />
+    <Compile Include="DataEntityObjects\ActivityQuestionsList.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="PegasusBaseTestFixture.cs" />
     <Compile Include="PegasusBaseTestScript.cs" />
@@ -118,7 +119,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="InMemoryTestData\PegasusTestDataPPE.xml" />
-    <Content Include="InMemoryTestData\PegasusTestDataVM.xml" />
+    <Content Include="InMemoryTestData\PegasusTestDataVM.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="TestData\Branding_Image.png" />
     <Content Include="TestData\CourseIconImage.png" />
     <Content Include="TestData\Product_Banner.png" />
@@ -131,6 +134,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

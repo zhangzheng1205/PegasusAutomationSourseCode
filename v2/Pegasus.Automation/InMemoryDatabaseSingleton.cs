@@ -13,7 +13,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
 {
     /// <summary>
     /// Thi class is a singleton.
-    /// </summary>
+    /// </summary>B
     internal class InMemoryDatabaseSingleton
     {
         /// <summary>
@@ -85,6 +85,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             DesearlizeActivityTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeClassTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
             DesearlizeProductTestData(xmlDocument, ref xmlNodeList, ref xmlSerializer);
+            DesearlizeActivityQuestionsListTestData(xmlDocument, out xmlNodeList, out xmlSerializer);
         }
 
         /// <summary>
@@ -284,6 +285,34 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 {
                     // push in memory
                     _inMemoryDatabase.Insert(organizations);
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// Desearlize Organization Test Data In Memory.
+        /// </summary>
+        /// <param name="xmlDocument">Represents an XML document.</param>
+        /// <param name="xmlNodeList">Represents an ordered collection of nodes.</param>
+        /// <param name="xmlSerializer">Serializes and deserializes objects into and from XML documents. 
+        /// The XmlSerializer enables you to control how objects are encoded into XML.</param>
+        private void DesearlizeActivityQuestionsListTestData(XmlDocument xmlDocument,
+            out XmlNodeList xmlNodeList, out XmlSerializer xmlSerializer)
+        {
+            xmlNodeList = xmlDocument.SelectNodes("Data/ArrayOfActivityQuestionsList");
+            xmlSerializer = new XmlSerializer(typeof(List<ActivityQuestionsList>));
+            if (xmlNodeList != null && xmlNodeList.Count > 0)
+            {
+                // created object xml node reader
+                var reader = new XmlNodeReader(xmlNodeList.Item(0));
+                // get organization list
+                var activityQuestionsList = (List<ActivityQuestionsList>)
+                 xmlSerializer.Deserialize(reader);
+                foreach (ActivityQuestionsList activityQuestions in activityQuestionsList)
+                {
+                    // push in memory
+                    _inMemoryDatabase.Insert(activityQuestions);
                 }
             }
         }
