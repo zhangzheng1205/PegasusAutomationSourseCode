@@ -281,7 +281,7 @@ testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario
                     " by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 95
 testRunner.Then("I should see the score \"0\" of \"Word Chapter 1 Project 1A Skill-Based Exam (Scenar" +
-                    "io 1)\" activity for \"CsSmsStudentOne\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "io 1)\" activity for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 96
 testRunner.And("I click on \'My Course\' link in gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
