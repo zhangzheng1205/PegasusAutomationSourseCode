@@ -128,6 +128,25 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
+        /// Validate the content count in alert channel.
+        /// </summary>
+        /// <param name="activityCount">Activity count.</param>
+        /// <param name="channelName">Channel name from which the count should be retrieved.</param>
+        [Then(@"I should see ""(.*)"" activity in the ""(.*)"" channel")]
+        public void ValidateActivityCountInNotPassedChannel(int activityCount, string channelName)
+        {
+            //Click on Back navigation link
+            Logger.LogMethodEntry("TodaysView", "ValidateActivityCountInNotPassedChannel",
+                base.isTakeScreenShotDuringEntryExit);
+            //Validate the activity count displayed in Not passed channel
+            Logger.LogAssertion("ValidateActivityCountInNotPassedChannel", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(activityCount,
+                    new TodaysViewUXPage().GetCountFromAlertChannels(channelName)));
+            Logger.LogMethodExit("TodaysView", "ValidateActivityCountInNotPassedChannel",
+                base.isTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Click On Notification Channel Option.
         /// </summary>
         /// <param name="channelOption">This is Channel Option.</param>
