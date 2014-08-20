@@ -26,7 +26,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.Hed.ETe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.Hed.MLP.Tests", "Pegasus.Integration.MLP.Tests\Pegasus.Integration.Hed.MLP.Tests.csproj", "{8413E51E-C450-4694-8C0E-A89145EA3E91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MyItLab.Tests", "Pegasus.Acceptance.MyItLab.Tests\Pegasus.Acceptance.MyItLab.Tests.csproj", "{CC79FB91-DC29-4CE7-93C4-F091E330B357}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MyITLab.Tests", "Pegasus.Acceptance.MyItLab.Tests\Pegasus.Acceptance.MyITLab.Tests.csproj", "{CC79FB91-DC29-4CE7-93C4-F091E330B357}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Integration.DigitalPath.Rumba.Tests", "Pegasus.Integration.MGM.Tests\Pegasus.Integration.DigitalPath.Rumba.Tests.csproj", "{ADA54BAB-4A0F-405B-97E3-5974DB4FCF6D}"
 EndProject
@@ -36,7 +36,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MyTest.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.WritingSpace.Tests", "Pegasus.Acceptance.WritingSpace.Tests\Pegasus.Acceptance.WritingSpace.Tests.csproj", "{BA06F996-39AE-460C-8A62-99768BC4B215}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MyItLab.GraderIT.Tests", "Pegasus.Acceptance.MyItLab.GraderIT.Tests\Pegasus.Acceptance.MyItLab.GraderIT.Tests.csproj", "{5416BB71-2D64-4EC1-B330-CE1478603181}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MyITLab.GraderIT.Tests", "Pegasus.Acceptance.MyItLab.GraderIT.Tests\Pegasus.Acceptance.MyITLab.GraderIT.Tests.csproj", "{5416BB71-2D64-4EC1-B330-CE1478603181}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

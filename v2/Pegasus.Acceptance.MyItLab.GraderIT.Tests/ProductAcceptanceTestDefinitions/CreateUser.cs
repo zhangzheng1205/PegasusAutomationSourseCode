@@ -4,7 +4,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
+namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.
     ProductAcceptanceTestDefinitions
 {
     /// <summary>

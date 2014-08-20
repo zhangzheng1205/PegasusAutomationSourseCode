@@ -9,7 +9,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
+namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.
     CommonProductAcceptanceTestDefinitions
 {/// <summary>
     /// This class contains the common feature steps

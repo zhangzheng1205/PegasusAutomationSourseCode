@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinitions {
+namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.ProductAcceptanceTestDefinitions {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinitions.Prefer" +
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pegasus.Acceptance.MyITLab.GraderIT.Tests.ProductAcceptanceTestDefinitions.Prefer" +
                             "encesResource", typeof(PreferencesResource).Assembly);
                     resourceMan = temp;
                 }

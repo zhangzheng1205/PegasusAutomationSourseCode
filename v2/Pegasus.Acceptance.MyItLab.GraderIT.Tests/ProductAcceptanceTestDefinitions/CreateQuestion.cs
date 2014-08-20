@@ -1,13 +1,12 @@
 ﻿using System;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services.SIM5ContentBrowse;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
     /// This Class Handles the Create Question action
@@ -18,7 +17,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         /// <summary>
         /// This is the logger
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(CreateQuestion));
 
         /// <summary>

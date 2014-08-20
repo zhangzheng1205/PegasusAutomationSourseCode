@@ -3,12 +3,13 @@ using System.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
-using Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions;
+using Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions;
+using Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.
+namespace Pegasus.Acceptance.MyITLab.Tests.
     ProductAcceptanceTestDefinitions
 {
     /// <summary>
@@ -65,7 +66,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         /// </summary>
         /// <param name="userTypeEnum">This is User Type Enum.</param>
         [Then(@"I should see the Confirmation and Summary for ""(.*)"" registeration")]
-        public void DisplayTheConfirmationAndSummaryForSMSUserRegisteration
+        public void DisplayTheConfirmationAndSummaryForSmsUserRegisteration
             (User.UserTypeEnum userTypeEnum)
         {
             // SMS User Created with Confirmation and Summary

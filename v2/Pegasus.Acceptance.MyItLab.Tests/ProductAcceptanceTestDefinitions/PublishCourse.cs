@@ -1,12 +1,10 @@
 ﻿using System;
 using Pearson.Pegasus.TestAutomation.Frameworks;
-using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
-using Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     [Binding]
     public class PublishCourse : PegasusBaseTestFixture

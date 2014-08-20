@@ -1,10 +1,9 @@
 ﻿using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
-using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
     /// This class contains the details user's in Pegasus

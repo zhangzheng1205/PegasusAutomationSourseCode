@@ -1,12 +1,9 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Pearson.Pegasus.TestAutomation.Frameworks;
+﻿using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings;
 using TechTalk.SpecFlow;
-using Pegasus.Pages.UI_Pages.Pegasus.Modules.Location;
 
-namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
     /// This Class contains the definitions for Preferences scenarios.
@@ -17,7 +14,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger Logger = Logger.GetInstance(typeof(Preferences));
+        private static readonly Logger Logger = Logger.GetInstance(typeof(Preferences));
 
         /// <summary>
         /// Set The Preferences For Copy Content.

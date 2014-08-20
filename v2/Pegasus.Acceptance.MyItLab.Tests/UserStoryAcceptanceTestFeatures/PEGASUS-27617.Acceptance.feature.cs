@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
+namespace Pegasus.Acceptance.MyITLab.Tests.UserStoryAcceptanceTestFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -50,7 +50,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "27617:Automation: (Admin Modules) Verifying Start Copy Functuionality")))
             {
-                Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures._27617AutomationAdminModulesVerifyingStartCopyFunctuionalityFeature.FeatureSetup(null);
+                Pegasus.Acceptance.MyITLab.Tests.UserStoryAcceptanceTestFeatures._27617AutomationAdminModulesVerifyingStartCopyFunctuionalityFeature.FeatureSetup(null);
             }
         }
         

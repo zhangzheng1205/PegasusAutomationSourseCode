@@ -1,12 +1,10 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
-using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
     /// This class contains the details of Program Admin Actions
@@ -19,7 +17,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestDefinit
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(ProgramAdmin));
 
         /// <summary>

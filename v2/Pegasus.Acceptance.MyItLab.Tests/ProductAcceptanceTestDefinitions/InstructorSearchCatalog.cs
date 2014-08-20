@@ -5,7 +5,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
     /// This class contains details of Instructor Search Catalog
