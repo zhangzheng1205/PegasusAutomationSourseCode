@@ -137,13 +137,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Click on Back navigation link
             Logger.LogMethodEntry("TodaysView", "ValidateActivityCountInNotPassedChannel",
-                base.IsTakeScreenShotDuringEntryExit);
+                base.isTakeScreenShotDuringEntryExit);
             //Validate the activity count displayed in Not passed channel
             Logger.LogAssertion("ValidateActivityCountInNotPassedChannel", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activityCount,
                     new TodaysViewUXPage().GetCountFromAlertChannels(channelName)));
             Logger.LogMethodExit("TodaysView", "ValidateActivityCountInNotPassedChannel",
-                base.IsTakeScreenShotDuringEntryExit);
+                base.isTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
