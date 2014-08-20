@@ -228,26 +228,38 @@ testRunner.Then("I should see \"1\" Idle Student \"Stud , Mail\" in \"Idle Stude
 #line 79
 this.ScenarioSetup(scenarioInfo);
 #line 80
-testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 81
-testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 82
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 83
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 84
-testRunner.When("I enter in the \"MyItLabInstructorCourse\" course from the Global Home page as \"CsS" +
-                    "msInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 85
-testRunner.And("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 86
 testRunner.Then("I should see the \"Notifications\" channels in \'Todays view\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 87
+#line 82
 testRunner.And("I should see the alert count updated as \"1\" in \"Not Passed\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 88
+#line 83
 testRunner.When("I click on the \"Not Passed\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 89
+#line 84
 testRunner.Then("I should see \"1\" activity in the \"Not Passed\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor views Alert update in Past Due Not Submitted channel")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void InstructorViewsAlertUpdateInPastDueNotSubmittedChannel()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor views Alert update in Past Due Not Submitted channel", ((string[])(null)));
+#line 91
+this.ScenarioSetup(scenarioInfo);
+#line 92
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 93
+testRunner.Then("I should see the \"Notifications\" channels in \'Todays view\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 94
+testRunner.And("I should see the alert count updated as \"69\" in \"Past Due: Not Submitted\" channel" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 95
+testRunner.When("I click on the \"Past Due: Not Submitted\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 96
+testRunner.Then("I should see \"69\" activity in the Past Due: Not Submitted channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

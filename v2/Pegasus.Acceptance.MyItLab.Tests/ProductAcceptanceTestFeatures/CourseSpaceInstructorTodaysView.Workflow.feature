@@ -77,13 +77,20 @@ Then I should see "1" Idle Student "Stud , Mail" in "Idle Students" channel
 #Pre condition : Student should not meet the threshold of the activity
 #Dependency : One time dependent(This scenario can be run against existing data)
 Scenario: Instructor views Alert update in Not Passed channel of Todays View page for Activity
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
-And I navigate to "Today's View" tab
+When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
 And I should see the alert count updated as "1" in "Not Passed" channel
 When I click on the "Not Passed" option
 Then I should see "1" activity in the "Not Passed" channel
+
+#Purpose : As a instructor i should be notified with alert counts and contents when student does not submits Past due activity.
+#Test case ID : peg-16742.
+#Products : MyItLab, World Languages.
+#Pre condition : Assigned activity should be past due and student should not submit the activity even after past due date.
+#Dependency : One time dependent(This scenario can be run against existing data).
+Scenario: Instructor views Alert update in Past Due Not Submitted channel
+When I navigate to "Today's View" tab
+Then I should see the "Notifications" channels in 'Todays view' page
+And I should see the alert count updated as "69" in "Past Due: Not Submitted" channel
+When I click on the "Past Due: Not Submitted" option
+Then I should see "69" activity in the Past Due: Not Submitted channel

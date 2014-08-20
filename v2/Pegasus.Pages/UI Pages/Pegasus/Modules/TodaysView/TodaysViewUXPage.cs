@@ -2263,6 +2263,46 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Get the activity count from Past due not
+        /// submitted alert channel
+        /// </summary>
+        /// <returns>Activity count</returns>
+        public int GetActivityCountFromPastDueNotSubmittedChannel()
+        {
+
+            //Get Alert count from Notification Channel
+            logger.LogMethodEntry("TodaysViewUXPage", "GetActivityCountFromPastDueNotSubmittedChannel",
+                                  base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Alert Variable
+            int alertValue = 0;
+            int totalCount = 0;
+            try
+            {
+                //Get the number of student rows displayed in the past due not submitted channel
+                alertValue = base.GetElementCountByXPath(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_PastDueNotSubmitted_ActivityCount_Xpath_Locator);
+                //Initialize the counter
+                for (int i = 2; i <= alertValue; i++)
+                {
+                    //Get the content count
+                    int ContentCount = base.GetElementCountByXPath(
+                        string.Format(TodaysViewUXPageResource.
+                        TodaysViewUXPageResource_PastDueNotSubmitted_ActivityTotalCount_Xpath_Locator, i));
+                    totalCount = totalCount + ContentCount;
+                }
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "GetActivityCountFromPastDueNotSubmittedChannel",
+                                base.IsTakeScreenShotDuringEntryExit);
+            return totalCount;
+        }
+
+
+        /// <summary>
         /// Get Calendar Text
         /// </summary>
         /// <returns>Calendar Text</returns>

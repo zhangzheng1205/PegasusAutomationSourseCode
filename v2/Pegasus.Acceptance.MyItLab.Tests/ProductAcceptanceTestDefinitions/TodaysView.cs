@@ -163,6 +163,24 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
+        /// Validate the number of activity
+        /// displayed in Past Due: Not submitted channel.
+        /// </summary>
+        /// <param name="activityCount">Past due not submitted activity count.</param>
+        [Then(@"I should see ""(.*)"" activity in the Past Due: Not Submitted channel")]
+        public void ValidateActivityCountInPastDueNotSubmittedChannel(int activityCount)
+        {
+            //Click on Back navigation link
+            Logger.LogMethodEntry("TodaysView", "ValidateActivityCountInPastDueNotSubmittedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("ValidateActivityCountInPastDueNotSubmittedChannel", ScenarioContext.Current
+                .ScenarioInfo.Title, () => Assert.AreEqual(activityCount,
+                    new TodaysViewUXPage().GetActivityCountFromPastDueNotSubmittedChannel()));
+            Logger.LogMethodExit("TodaysView", "ValidateActivityCountInPastDueNotSubmittedChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Validate the idle student name.
         /// </summary>
         /// <param name="Count">Number of idle students.</param>

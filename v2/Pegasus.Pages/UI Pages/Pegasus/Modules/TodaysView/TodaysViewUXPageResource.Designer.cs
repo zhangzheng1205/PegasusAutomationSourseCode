@@ -970,6 +970,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;TVInsAnnoucement$contentCntr&apos;]/tbody/tr.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_PastDueNotSubmitted_ActivityCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_PastDueNotSubmitted_ActivityCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;TVInsAnnoucement$contentCntr&apos;]/tbody/tr[{0}]/td/div/table/tbody/tr/td/table.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_PastDueNotSubmitted_ActivityTotalCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_PastDueNotSubmitted_ActivityTotalCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Practice.
         /// </summary>
         internal static string TodaysViewUXPageResource_Practice_Link_Locator {

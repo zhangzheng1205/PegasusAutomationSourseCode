@@ -588,4 +588,10 @@
   <data name="TodaysViewUXPageResource_StudentName_IdleStudents_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='TVIdlStuDatagrid']/tbody/tr/td//table//div/b</value>
   </data>
+  <data name="TodaysViewUXPageResource_PastDueNotSubmitted_ActivityCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVInsAnnoucement$contentCntr']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_PastDueNotSubmitted_ActivityTotalCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVInsAnnoucement$contentCntr']/tbody/tr[{0}]/td/div/table/tbody/tr/td/table</value>
+  </data>
 </root>
