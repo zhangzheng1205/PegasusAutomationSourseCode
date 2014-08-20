@@ -407,6 +407,7 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.CsSmsInstructor:
                 case User.UserTypeEnum.MMNDInstructor:
                 case User.UserTypeEnum.MMNDStudent:
+                case User.UserTypeEnum.HedProgramAdmin:
                     //Save SMS Instructor in Memory
                     this.InsertUserDetailsInMemory(userType, usernameGuid, password);
                     break;
