@@ -119,9 +119,7 @@ namespace Pearson.Pegasus.TestAutomation.
             HedBackdoorLoginStudent = 55,
             HedBackdoorLoginInstructor = 56,
             HedMilPPEStudent = 57,
-            SMSAdminStudent = 58,
-            CsSmsStudentOne = 59,
-            CsSmsStudentTwo = 60
+            SMSAdminStudent = 58            
             #endregion
         }
 
