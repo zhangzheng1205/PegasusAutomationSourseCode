@@ -422,9 +422,6 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ManageCourse.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.AssignmentCalendar.BVT.MyItLab.orderedtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Reports.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
