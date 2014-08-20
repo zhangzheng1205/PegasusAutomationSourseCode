@@ -154,7 +154,7 @@ namespace Pearson.Pegasus.TestAutomation.
         /// <summary>
         /// This is the user Id.
         /// </summary>
-        private string UserId { get; set; }
+        public string UserId { get; set; }
 
         /// <summary>
         /// This method selects users based on given condition.
@@ -192,7 +192,8 @@ namespace Pearson.Pegasus.TestAutomation.
         /// <returns>User based on ID.</returns>
         public static User Get(string userId)
         {
-            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<User>(x => x.UserId == userId && x.IsCreated).First();
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<User>(x => x.UserId == userId && x.IsCreated)
+                .OrderByDescending(x => x.CreationDate).First();
         }
 
         /// <summary>

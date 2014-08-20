@@ -260,7 +260,7 @@ namespace Pegasus.Pages.UI_Pages
                 User user = User.Get(userStudentType);
                 Guid studentName = Guid.Parse(user.Name);
                 //Store Teaching Assistent User details In Memory
-                new Reg1Page().StoreSMSUserInMemory(userTeacherAssistentType, studentName,
+                new Reg1Page().StoreSmsUserInMemory(userTeacherAssistentType, studentName,
                     GBRosterGridUXPageResource.GBRosterGridUX_Page_TeachingAssistent_Password);
                 Thread.Sleep(Convert.ToInt32(GBRosterGridUXPageResource.
                     GBRosterGridUX_Page_UserRole_Time_Value));

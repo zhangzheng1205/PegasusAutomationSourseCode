@@ -15,15 +15,15 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// This is the logger
         /// </summary>
-        private static readonly Logger logger = Logger.GetInstance(typeof(Reg2Page));
+        private static readonly Logger Logger = Logger.GetInstance(typeof(Reg2Page));
 
         /// <summary>
         /// Fill SMS User Account Information for Registeration
         /// </summary>
-        public void EnterSMSUserAccountInformation()
+        public void EnterSmsUserAccountInformation()
         {
             // Fill SMS User Account Information
-            logger.LogMethodEntry("Reg2Page", "EnterSMSUserAccountInformation",
+            Logger.LogMethodEntry("Reg2Page", "EnterSmsUserAccountInformation",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -36,7 +36,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClearTextById(Reg2PageResource.
                     Reg2_Page_FirstName_TextBox_Id_Locator);
                 //Enter Name And Email For SMS User
-                this.EnterSMSUserPersonalInformation();
+                this.EnterSmsUserPersonalInformation();
                 base.WaitForElement(By.Id(Reg2PageResource.
                     Reg2_Page_Entered_Country_DropDown_Id_Locator));
                 //Select Drop Down Value
@@ -44,23 +44,23 @@ namespace Pegasus.Pages.UI_Pages
                     Reg2_Page_Entered_Country_DropDown_Id_Locator,
                     Reg2PageResource.Reg2_Page_Entered_Country_DropDown_Value);
                 //Enter SMS User School Information
-                this.EnterSMSUserSchoolInformation();
+                this.EnterSmsUserSchoolInformation();
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("Reg2Page", "EnterSMSUserAccountInformation",
+            Logger.LogMethodExit("Reg2Page", "EnterSmsUserAccountInformation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Enter SMS User Personal Information
         /// </summary>
-        private void EnterSMSUserPersonalInformation()
+        private void EnterSmsUserPersonalInformation()
         {
             //Enter Personal Information
-            logger.LogMethodEntry("Reg2Page", "EnterSMSUserPersonalInformation",
+            Logger.LogMethodEntry("Reg2Page", "EnterSmsUserPersonalInformation",
                 base.IsTakeScreenShotDuringEntryExit);
             //Enter First Name
             base.FillTextBoxById(Reg2PageResource.
@@ -77,7 +77,7 @@ namespace Pegasus.Pages.UI_Pages
                 Reg2PageResource.Reg2_Page_LastName_TextBox_Id_Value);
             //Enter Email Id
             this.EnterEmailIdForTheUser();
-            logger.LogMethodExit("Reg2Page", "EnterSMSUserPersonalInformation",
+            Logger.LogMethodExit("Reg2Page", "EnterSmsUserPersonalInformation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -87,7 +87,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnterEmailIdForTheUser()
         {
             //Enter the Email id details for the user
-            logger.LogMethodEntry("Reg2Page", "EnterEmailIdForTheUser",
+            Logger.LogMethodEntry("Reg2Page", "EnterEmailIdForTheUser",
                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(Reg2PageResource.
                 Reg2_Page_Email_TextBox_Id_Locator));
@@ -107,17 +107,17 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(Reg2PageResource.
                 Reg2_Page_EmailConfirm_TextBox_Id_Locator,
                 Reg2PageResource.Reg2_Page_Email_TextBox_Value);
-            logger.LogMethodExit("Reg2Page", "EnterEmailIdForTheUser",
+            Logger.LogMethodExit("Reg2Page", "EnterEmailIdForTheUser",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Enter SMS User School Information for Registeration
         /// </summary>
-        private void EnterSMSUserSchoolInformation()
+        private void EnterSmsUserSchoolInformation()
         {
             // Enter SMS User School Information
-            logger.LogMethodEntry("Reg2Page", "EnterSMSUserSchoolInformation",
+            Logger.LogMethodEntry("Reg2Page", "EnterSmsUserSchoolInformation",
                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(Reg2PageResource.
                 Reg2_Page_OtherSchoolName_TextBox_Id_Locator));
@@ -138,18 +138,18 @@ namespace Pegasus.Pages.UI_Pages
                 Reg2_Page_Person_VerifyQuestion_DropDown_Name_Locator,
                 Reg2PageResource.Reg2_Page_Person_VerifyQuestion_DropDown_Value);
             //Enter SMS Personal Account Information
-            EnterSMSUserSecurityInformation();
-            logger.LogMethodExit("Reg2Page", "EnterSMSUserSchoolInformation",
+            this.EnterSmsUserSecurityInformation();
+            Logger.LogMethodExit("Reg2Page", "EnterSmsUserSchoolInformation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Enter SMS User Security Information
         /// </summary>
-        private void EnterSMSUserSecurityInformation()
+        private void EnterSmsUserSecurityInformation()
         {
             //Enter SMS User Security Information
-            logger.LogMethodEntry("Reg2Page", "EnterSMSUserSecurityInformation",
+            Logger.LogMethodEntry("Reg2Page", "EnterSmsUserSecurityInformation",
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait For Element City textbox
             base.WaitForElement(By.Id(Reg2PageResource.
@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait For Window
             base.WaitUntilWindowLoads(Reg2PageResource.
                                      Reg2_Page_ConfirmationandSummary_Window_Title_Name);
-            logger.LogMethodExit("Reg2Page", "EnterSMSUserSecurityInformation",
+            Logger.LogMethodExit("Reg2Page", "EnterSmsUserSecurityInformation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
     }

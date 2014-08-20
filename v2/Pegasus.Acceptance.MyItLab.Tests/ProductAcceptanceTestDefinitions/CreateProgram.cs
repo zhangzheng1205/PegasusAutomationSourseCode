@@ -14,7 +14,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// This is the logger
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(CreateProgram));
 
         /// <summary>

@@ -120,6 +120,46 @@ testRunner.Then("I should see the Confirmation and Summary for \"CsSmsStudent\" 
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Student by SMS Admin To Score Zero")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "User Subscription Through SMS")]
+        public virtual void CreateStudentBySMSAdminToScoreZero()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Student by SMS Admin To Score Zero", ((string[])(null)));
+#line 25
+this.ScenarioSetup(scenarioInfo);
+#line 8
+this.FeatureBackground();
+#line 26
+testRunner.When("I accept the License Agreement and Privacy Policy of SMS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+testRunner.And("I register new SMS user for \"scoring 0\" as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+testRunner.Then("I should see the Confirmation and Summary for \"CsSmsStudent\" registeration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Student by SMS Admin To Set Idle")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "User Subscription Through SMS")]
+        public virtual void CreateStudentBySMSAdminToSetIdle()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Student by SMS Admin To Set Idle", ((string[])(null)));
+#line 30
+this.ScenarioSetup(scenarioInfo);
+#line 8
+this.FeatureBackground();
+#line 31
+testRunner.When("I accept the License Agreement and Privacy Policy of SMS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+testRunner.And("I register new SMS user for \"set idle\" as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 33
+testRunner.Then("I should see the Confirmation and Summary for \"CsSmsStudent\" registeration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

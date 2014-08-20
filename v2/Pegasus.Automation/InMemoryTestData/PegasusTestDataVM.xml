@@ -180,7 +180,7 @@
       <IsPreferenceStatus>true</IsPreferenceStatus>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
-    </Course>    
+    </Course>
   </ArrayOfCourse>
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfUser>
@@ -433,6 +433,28 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
+      <Name>8534e01f-deb3-45ba-b87c-8610524e155e</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>SMSUSER</LastName>
+      <UserId>Hed_User_SMS_STU_UC1</UserId>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>a8ccc820-3ebe-4f8f-a344-0eab3919d869</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>SMSUSER</LastName>
+      <UserId>Hed_User_SMS_STU_UC2</UserId>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
       <Name>7e291029-3cdf-4df0-a3c8-4cc6545facac</Name>
       <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
@@ -521,7 +543,7 @@
       <Password >pegasusadmin</Password>
       <UserType>ECollegeAdmin</UserType>
       <IsCreated>true</IsCreated>
-    </User>   
+    </User>
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProgram>

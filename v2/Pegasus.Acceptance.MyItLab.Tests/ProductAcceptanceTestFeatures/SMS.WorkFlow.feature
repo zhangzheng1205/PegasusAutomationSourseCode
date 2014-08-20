@@ -21,3 +21,13 @@ Scenario: Create Student by SMS Admin
 When I accept the License Agreement and Privacy Policy of SMS
 And I register new SMS user as "CsSmsStudent"
 Then I should see the Confirmation and Summary for "CsSmsStudent" registeration
+
+Scenario: Create Student by SMS Admin To Score Zero
+When I accept the License Agreement and Privacy Policy of SMS
+And I register new SMS user for "scoring 0" as "CsSmsStudent"
+Then I should see the Confirmation and Summary for "CsSmsStudent" registeration
+
+Scenario: Create Student by SMS Admin To Set Idle
+When I accept the License Agreement and Privacy Policy of SMS
+And I register new SMS user for "set idle" as "CsSmsStudent"
+Then I should see the Confirmation and Summary for "CsSmsStudent" registeration
