@@ -166,18 +166,26 @@ testRunner.And("I should see assigned icon for \"Excel Chapter 1 Project 1A Skil
 #line 47
 this.ScenarioSetup(scenarioInfo);
 #line 48
+testRunner.When("I navigate to \"Course Materials\" tab and selected \"Manage Course Materials\" subta" +
+                    "b", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 49
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 50
+testRunner.When("I navigate to \"Excel Chapter 1 Project 1A Skill-Based Training\" asset in \"Course " +
+                    "Materials\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 51
 testRunner.When("I click on \"SetSchedulingOptions\" option in c menu of \"Excel Chapter 1 Project 1A" +
                     " Skill-Based Exam (Scenario 1)\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 49
-testRunner.Then("I should be on the \"Properties\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
-testRunner.When("I assign and schedule the asset and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
-testRunner.Then("I should see the successfull message \"Properties updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 52
+testRunner.Then("I should be on the \"Properties\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 53
+testRunner.When("I assign and schedule the asset and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 54
+testRunner.Then("I should see the successfull message \"Properties updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 55
 testRunner.And("I should see assigned icon for \"Excel Chapter 1 Project 1A Skill-Based Exam (Scen" +
                     "ario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 53
+#line 56
 testRunner.And("I should see scheduled icon for \"Excel Chapter 1 Project 1A Skill-Based Exam (Sce" +
                     "nario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
