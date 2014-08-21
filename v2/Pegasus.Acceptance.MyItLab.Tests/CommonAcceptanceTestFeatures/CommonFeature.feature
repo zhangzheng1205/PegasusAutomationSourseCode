@@ -78,6 +78,29 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsInstructor"
 
+#Purpose: Login as SMS Student and Navigate to MyItLabInstructorCourse
+Scenario: User Login as SMS Student and Navigate to MyItLabInstructorCourse
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+
+#Purpose: Login as SMS Student and Navigate to MyItLabProgramCourse
+Scenario: User Login as SMS Student and Navigate to MyItLabProgramCourse
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabProgramCourse" course from the Global Home page as "CsSmsStudent"
+
+#Purpose: Login as SMS Instructor
+Scenario: User Login as SMS Instructor
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+
 #MyITLabOffice2013InstructorCourse
 #Purpose: Login as SMS Instructor and Navigate to MyITLabOffice2013InstructorCourse
 Scenario: User Login as SMS Instructor and Navigate MyITLabOffice2013InstructorCourse Course
@@ -87,7 +110,17 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyITLabOffice2013InstructorCourse" course from the Global Home page as "CsSmsInstructor"
 
-#Purpose: Login as Program Admin and Navigate to MyITLabOffice2013Program
+#User enter into the program course
+#Purpose: Login as SMS Instructor and Navigate to MyITLabOffice2013Program
+Scenario: User Login as Program Admin and Navigate MyITLabOffice2013Program Course
+Given I browsed the login url for "HedProgramAdmin"
+When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "HedProgramAdmin"
+
+#User enter into the program course and enter into section
+#Purpose: Login as Program Admin and Navigate to section MyITLabOffice2013Program
 Scenario: User Login Program Admin and Navigate MyITLabOffice2013Section Course
 Given I browsed the login url for "HedProgramAdmin"
 When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
@@ -98,21 +131,6 @@ When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
 When I search the "MyITLabOffice2013Program" first section
 And I click the "Enter Section as Instructor"
-
-#Purpose: Login as SMS Instructor and Navigate to MyItLabProgramCourse
-Scenario: User Login as SMS Instructor and Navigate MyITLabOffice2013Program Course
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsInstructor"
-
-#Purpose: Login as SMS Instructor
-Scenario: User Login as SMS Instructor
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
 
 #Purpose: Logout as SMS Instructor
 Scenario: User Logout as SMS Instructor
@@ -129,22 +147,6 @@ Then I should logged in successfully
 Scenario: User Logout as Coursespace Admin
 When I "Sign out" from the "HedCsAdmin"
 Then I should see the successfull message "You have been signed out of the application."
-
-#Purpose: Login as SMS Student and Navigate to MyItLabInstructorCourse
-Scenario: User Login as SMS Student and Navigate to MyItLabInstructorCourse
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
-
-#Purpose: Login as SMS Student and Navigate to MyItLabProgramCourse
-Scenario: User Login as SMS Student and Navigate to MyItLabProgramCourse
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabProgramCourse" course from the Global Home page as "CsSmsStudent"
 
 #Purpose: Login as SMS Student and Navigate to MyITLabOffice2013Program
 Scenario: User Login as SMS Student and Navigate to MyITLabOffice2013Section Course
@@ -166,10 +168,3 @@ Scenario: User Logout as SMS Student
 When I "Sign out" from the "CsSmsStudent"
 Then I should see the successfull message "You have been signed out of the application."
 
-#Purpose: Login as Program Admin and Navigate to MyITLabOffice2013Program
-Scenario: User Login Program Admin and Navigate MyITLabOffice2013Program
-Given I browsed the login url for "HedProgramAdmin"
-When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
-Then I should logged in successfully
-When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "HedProgramAdmin"
-Then I should be on the "Program Administration" page
