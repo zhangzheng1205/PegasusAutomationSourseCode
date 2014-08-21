@@ -450,19 +450,7 @@
       <UserType>HedWsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
-    </User>
-    <User>
-      <Name>1c30732a-fa7f-432d-b7d5-8962d259b493</Name>
-      <Password>password2</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>56636801-2504-43b9-a94e-60a512c5063e</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>56636801-2504-43b9-a94e-60a512c5063e</LastName>
-      <UserType>HedWsInstructor</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>true</EnrolementStatus>
-    </User>
-
+    </User>    
     <!--Hard coded Users data for "NovaNET" Product.-->
     <User>
       <Name>cif_automation</Name>
@@ -529,29 +517,7 @@
       <Password >pegasusadmin</Password>
       <UserType>ECollegeAdmin</UserType>
       <IsCreated>true</IsCreated>
-    </User>
-    <User>
-      <Name>77c227b1-76cd-42ca-8cfa-0ffd52e8d60d</Name>
-      <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>MyItlab</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>stu1</LastName>
-      <UserType>CsSmsStudentOne</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>true</EnrolementStatus>
-    </User>
-    <User>
-      <Name>77c227b1-76cd-42ca-8cfa-0ffd52e8d60d</Name>
-      <Password>password1</Password>
-      <Email>manish.singh@imfinity.com</Email>
-      <FirstName>MyItlab</FirstName>
-      <MiddleName>Pegasus</MiddleName>
-      <LastName>stu1</LastName>
-      <UserType>CsSmsStudentTwo</UserType>
-      <IsCreated>true</IsCreated>
-      <EnrolementStatus>true</EnrolementStatus>
-    </User>
+    </User> 
   </ArrayOfUser>
   <!--This is already created program present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfProgram>
