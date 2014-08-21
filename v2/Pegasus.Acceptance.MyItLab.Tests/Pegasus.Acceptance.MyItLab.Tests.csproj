@@ -88,6 +88,11 @@
       <DependentUpon>CreateActivityResource.resx</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\CreateProgram.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\CreateQuestionResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateQuestionResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\LaunchActivity.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ManageAnnouncement.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ApproveCourse.cs" />
@@ -602,6 +607,10 @@
     <EmbeddedResource Include="ProductAcceptanceTestDefinitions\CreateActivityResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CreateActivityResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\CreateQuestionResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateQuestionResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductAcceptanceTestDefinitions\CreateWorkspaceResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

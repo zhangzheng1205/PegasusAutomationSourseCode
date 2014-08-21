@@ -120,6 +120,9 @@
   <data name="SkillBasedAssessment_AddmyitlabStudyPlan_Window_Name" xml:space="preserve">
     <value>Add myitlab Study Plan</value>
   </data>
+  <data name="SkillBasedAssessment_CreateNewQuestion_PartialText_Id_Locator" xml:space="preserve">
+    <value>Create New Question</value>
+  </data>
   <data name="SkillBasedAssessment_EditRandomActivity_WindowName" xml:space="preserve">
     <value>Edit Random activity</value>
   </data>
@@ -156,6 +159,12 @@
   <data name="SkillBasedAssessment_Page_WindowName" xml:space="preserve">
     <value>Create activity</value>
   </data>
+  <data name="SkillBasedAssessment_Questions_SelectQuestionsFromBank_Anchor" xml:space="preserve">
+    <value>Select Questions from Bank</value>
+  </data>
+  <data name="SkillBasedAssessment_SaveAndReturn_Button_Id_Locator" xml:space="preserve">
+    <value>cmdTabTopicsFinish</value>
+  </data>
   <data name="SkillBasedAssessment_SaveForLater_Checkbox_ID" xml:space="preserve">
     <value>Chksavelater</value>
   </data>
@@ -164,5 +173,8 @@
   </data>
   <data name="SkillBasedAssessment_Time_Limit_TextBox_Id" xml:space="preserve">
     <value>txtMinutes</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_ucSearchPanel_lnkAdvSearch</value>
   </data>
 </root>

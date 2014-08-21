@@ -56,6 +56,9 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+
+
         /// <summary>
         /// Select Question From Bank for Basic Random.
         /// </summary>
@@ -84,6 +87,10 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("RandomTopicListPage", "SelectQuestionFromBankForBasicRandom",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+
+       
 
         /// <summary>
         /// Select Question From Bank for Assignment.

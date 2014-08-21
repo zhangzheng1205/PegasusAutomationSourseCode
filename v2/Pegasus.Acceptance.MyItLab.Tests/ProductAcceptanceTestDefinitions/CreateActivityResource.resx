@@ -129,4 +129,7 @@
   <data name="CreateActivity_CourseMaterials_Window_Title" xml:space="preserve">
     <value>Course Materials</value>
   </data>
+  <data name="s" xml:space="preserve">
+    <value />
+  </data>
 </root>

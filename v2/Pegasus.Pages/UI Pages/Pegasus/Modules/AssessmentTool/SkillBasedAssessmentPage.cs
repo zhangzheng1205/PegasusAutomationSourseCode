@@ -143,7 +143,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Entry Logger 
             logger.LogMethodEntry("SkillBasedAssessmentPage",
-               "EnterTimeInActivityPreference",base.IsTakeScreenShotDuringEntryExit);
+               "EnterTimeInActivityPreference", base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Wait for set time limit Check box
@@ -164,7 +164,7 @@ namespace Pegasus.Pages.UI_Pages
                     SkillBasedAssessment_Time_Limit_TextBox_Id);
                 //Fill Text by expected time
                 base.FillTextBoxById(SkillBasedAssessmentResource.
-                    SkillBasedAssessment_Time_Limit_TextBox_Id, 
+                    SkillBasedAssessment_Time_Limit_TextBox_Id,
                     timeInMinute.ToString());
             }
             catch (Exception e)
@@ -190,7 +190,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Pretest Window
                 this.SelectSIMStudyPlanPretestWindow();
                 //Save The Preference Settings
-                this.SaveThePreferenceSettings();               
+                this.SaveThePreferenceSettings();
                 // Select Edit myitlab Study Plan window.
                 this.SelectSIMStudyplanWindow();
                 //Wait for Save and resturn button
@@ -241,7 +241,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("SkillBasedAssessmentPage",
             "SelectSIMStudyplanWindow",
             base.IsTakeScreenShotDuringEntryExit);
-           //Wait for window
+            //Wait for window
             base.WaitUntilWindowLoads(SkillBasedAssessmentResource.
                 SkillBasedAssessment_AddmyitlabStudyPlan_Window_Name);
             //Select Window
@@ -259,7 +259,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectSIMStudyPlanPretestWindow()
         {
             //Select Pretest Window
-            logger.LogMethodEntry("SkillBasedAssessmentPage", 
+            logger.LogMethodEntry("SkillBasedAssessmentPage",
                 "SelectSIMStudyPlanPretestWindow",
              base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
@@ -287,7 +287,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Click The Preference Tab
-                this.ClickThePreferenceTab(); 
+                this.ClickThePreferenceTab();
                 //Select 'Create Activity' Window
                 this.SelectCreateActivityWindow();
                 base.WaitForElement(By.Id(SkillBasedAssessmentResource.
@@ -307,7 +307,7 @@ namespace Pegasus.Pages.UI_Pages
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
-            }            
+            }
             logger.LogMethodExit("SkillBasedAssessmentPage",
                 "VerifyPlayTrainingModePreference",
                  base.IsTakeScreenShotDuringEntryExit);
@@ -340,7 +340,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("SkillBasedAssessmentPage", "ClickThePreferenceTab",
                   base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         /// Check 'Play Training Mode' Preference.
@@ -439,7 +439,7 @@ namespace Pegasus.Pages.UI_Pages
                 "EnableTheManualGradingPreference",
                    base.IsTakeScreenShotDuringEntryExit);
             try
-            {  
+            {
                 //Wait for the element
                 base.WaitForElement(By.Id(SkillBasedAssessmentResource.
                     SkillBasedAssessment_ManualGrading_Preference_Id_Locator));
@@ -457,7 +457,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("SkillBasedAssessmentPage", 
+            logger.LogMethodExit("SkillBasedAssessmentPage",
                 "EnableTheManualGradingPreference",
                    base.IsTakeScreenShotDuringEntryExit);
         }
@@ -473,7 +473,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-               //Wait for the element
+                //Wait for the element
                 base.WaitForElement(By.Id(SkillBasedAssessmentResource.
                     SkillBasedAssessment_SaveForLater_Checkbox_ID));
                 if (!base.IsElementSelectedById(SkillBasedAssessmentResource.
@@ -535,6 +535,169 @@ namespace Pegasus.Pages.UI_Pages
                 "EnableFeedbackNeverPreference",
                  base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+
+        /// <summary>
+        /// Select SIM5 AND QTI Supported Questions from Question Bank for SIM5 Activity.
+        /// </summary>
+        public void SelectQuestionFromQuestionBank()
+        {
+            logger.LogMethodEntry("SkillBasedAssessmentPage", "SelectQuestionFromQuestionBank",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Select SIM5 Questions From Bank
+            try
+            {
+                //Click on Select Question From Bank
+                this.ClickOnSelectQuestionFromBank();
+                // Switch to last open Window
+                base.SwitchToLastOpenedWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("SkillBasedAssessmentPage", "SelectQuestionFromQuestionBank",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Click on Select Question From Bank
+        /// </summary>
+        private void ClickOnSelectQuestionFromBank()
+        {
+            logger.LogMethodEntry("SkillBasedAssessmentPage", "ClickOnSelectQuestionFromBank",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Get IWebElement properties for 'Select Question From Bank'
+            IWebElement GetSelectQuestionFromBank = base.
+                GetWebElementPropertiesByPartialLinkText(SkillBasedAssessmentResource.
+                SkillBasedAssessment_Questions_SelectQuestionsFromBank_Anchor);
+            //Click on 'Select Questions from Bank' option
+            base.ClickByJavaScriptExecutor(GetSelectQuestionFromBank);
+            logger.LogMethodExit("SkillBasedAssessmentPage", "ClickOnSelectQuestionFromBank",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Create new questions.
+        /// </summary>
+        public void CreateNewQuestion()
+        {
+            //Select Question From Bank for Basic Random
+            logger.LogMethodEntry("RandomTopicListPage", "SelectQuestionFromBankForBasicRandom",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+
+                base.WaitForElement(By.XPath(RandomTopicListPageResource.
+                       RandomTopicList_Page_SelectQuestionFromBank_Xpath_Locator));
+
+                IWebElement getSelectQuestion = base.GetWebElementPropertiesByXPath(RandomTopicListPageResource.
+                        RandomTopicList_Page_SelectQuestionFromBank_Xpath_Locator);
+                //Click On Select Question From Bank
+                base.ClickByJavaScriptExecutor(getSelectQuestion);
+                //Wait for Select Questions Window
+                base.WaitUntilWindowLoads(RandomTopicListPageResource.
+                    RandomTopicList_Page_SelectQuestions_Window_Name);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RandomTopicListPage", "SelectQuestionFromBankForBasicRandom",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
+
+        /// <summary>
+        /// Create new Pegasus native questions.
+        /// </summary>
+        public void CreatePegasusNativeQuestion()
+        {
+            //Create Pegasus native question
+
+            logger.LogMethodEntry("SkillBasedAssessmentPage", "CreatePegasusNativeQuestion",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Switch to last open window
+                base.SwitchToLastOpenedWindow();
+                //Click on 'Add Questions' link
+                new RandomTopicListPage().ClickOnAddQuestionLink();
+                //Click on 'Create new Question'
+                this.ClickOnCreateNewQuestion();
+                //Click on 'True/False' question link
+                new CreateQuestionPage().ClickOnTrueFalseQuestionLink();
+                //Create a new True/False question
+                new TrueFalsePage().CreateNewTrueFalseQuestion();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("SkillBasedAssessmentPage", "CreatePegasusNativeQuestion",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Click on Save and Return.
+        /// </summary>
+        public void SaveandReturn()
+        {
+            logger.LogMethodEntry("SkillBasedAssessmentPage", "SaveandReturn",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Switch to last open window
+                base.SwitchToLastOpenedWindow();
+                //Wait for 'Save and Return' button
+                base.WaitForElement(By.Id(SkillBasedAssessmentResource.SkillBasedAssessment_SaveAndReturn_Button_Id_Locator));
+                //Get Property for 'Save and Return' button
+                IWebElement GetSaveAndReturn = base.GetWebElementPropertiesById(SkillBasedAssessmentResource.
+                    SkillBasedAssessment_SaveAndReturn_Button_Id_Locator);
+                //Click on 'Save and Return'
+                base.ClickByJavaScriptExecutor(GetSaveAndReturn);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("SkillBasedAssessmentPage", "SaveandReturn",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Click on Create New Question
+        /// </summary>
+        private void ClickOnCreateNewQuestion()
+        {
+
+            logger.LogMethodEntry("SkillBasedAssessmentPage", "ClickOnCreateNewQuestion",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.PartialLinkText(SkillBasedAssessmentResource.
+                    SkillBasedAssessment_CreateNewQuestion_PartialText_Id_Locator));
+                //Get property for 'Create New Question'
+                IWebElement GetCreateNewQuestion = base.GetWebElementPropertiesByPartialLinkText(SkillBasedAssessmentResource.
+                    SkillBasedAssessment_CreateNewQuestion_PartialText_Id_Locator);
+                //Click on Create New Question link
+                base.ClickByJavaScriptExecutor(GetCreateNewQuestion);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("SkillBasedAssessmentPage", "ClickOnCreateNewQuestion",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Select 'Edit Random Activity' Window.

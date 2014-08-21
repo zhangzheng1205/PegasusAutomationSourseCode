@@ -15,6 +15,20 @@ Then I should see the successfull message "Activity added successfully."
 When I "Sign out" from the "HedWsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
+#Purpose: To Create a Skill based activity with QTI and SIM5 questions
+Scenario: To Create a Skill based activity with QTI and SIM5 questions
+When I navigate to the "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option in Content Library
+And I click on the "Exam [Skill-Based]" activity type
+Then I should be on the "Create activity" page
+When I create a "SIM5Activity" activity of behavioral mode "SkillBased" type
+And I add "SIM5" question into created activity
+And I add "QTI" question into created activity
+And I save this activity
+Then I should see the successfull message "Activity added successfully."
+
+
 #Purpose: To edit an activity in Content Library and preview the HelpLink
 Scenario: To edit an activity in Content Library and preview the HelpLink
 When I navigate to the "Course Materials" tab

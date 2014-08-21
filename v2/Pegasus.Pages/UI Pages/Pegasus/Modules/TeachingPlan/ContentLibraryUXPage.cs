@@ -623,8 +623,6 @@ namespace Pegasus.Pages.UI_Pages
                         //Wait for the asset link
                         base.WaitForElement(By.XPath(string.Format(ContentLibraryUXPageResource.
                         ContentLibraryUX_Page_getLinkName_Xpath_Locator, rowCount)));
-                        base.FocusOnElementByXPath(string.Format(ContentLibraryUXPageResource.
-                        ContentLibraryUX_Page_getLinkName_Xpath_Locator, rowCount));
                         IWebElement getAssetLink = base.GetWebElementPropertiesByXPath
                             (string.Format(ContentLibraryUXPageResource.
                         ContentLibraryUX_Page_getLinkName_Xpath_Locator, rowCount));

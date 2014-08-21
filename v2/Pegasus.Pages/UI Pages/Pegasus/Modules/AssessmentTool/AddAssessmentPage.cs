@@ -313,6 +313,42 @@ namespace Pegasus.Pages.UI_Pages
                    base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Create SIM5 Activity.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
+        /// <param name="behavioralModeEnum">This is Behavioral Mode Enum.</param>
+        public void CreateSIM5Activity(Activity.ActivityTypeEnum activityTypeEnum,
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum)
+        {
+            //Create Activity
+            logger.LogMethodEntry("AddAssessmentPage", "CreateSIM5Activity",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Generate Random Number
+                string randomNumber = base.GetRandomNumber(AddAssessmentPageResources.
+                    AddAsessment_Page_RandomNumber_Character,
+                    Convert.ToInt32(AddAssessmentPageResources.
+                    AddAsessment_Page_RandomNumber_Length));
+                //Generate GUID for Activity Name
+                Guid activity = Guid.NewGuid();
+                string activityName = activity.ToString();
+                //Create SIM5 Skill Based Activity
+               this.CreateSkillBasedActivity(activityName, behavioralModeEnum);
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AddAssessmentPage", "CreateSIM5Activity",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+      
+
+
         /// <summary>
         /// Create SIM5 Skill Behavioral Mode Activity
         /// </summary>
@@ -342,6 +378,25 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save and Return Button
             new RandomTopicListPage().ClickOnSaveAndReturnButton();            
             logger.LogMethodExit("AddAssessmentPage", "CreateSIM5SkillBehavioralModeActivity",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
+        /// <summary>
+        /// Create SIM5 SkillBased Activity
+        /// </summary>
+        /// <param name="activityName">This is activityName</param>
+        private void CreateSIM5SkillBasedActivity(string activityName,
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum)
+        {
+            logger.LogMethodEntry("AddAssessmentPage", "CreateSIM5SkillBasedActivity",
+                  base.IsTakeScreenShotDuringEntryExit);
+            
+            //Create Skill Based SIM5 Activity
+            this.CreateSkillBasedActivity(activityName, behavioralModeEnum);
+           
+            logger.LogMethodExit("AddAssessmentPage", "CreateSIM5SkillBasedActivity",
                    base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -380,6 +435,32 @@ namespace Pegasus.Pages.UI_Pages
             new RandomTopicListPage().ClickOnAddQuestionLink();
             logger.LogMethodExit("AddAssessmentPage", 
                 "CreateTheActivityUsingBehavioralModeType",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Create the SkillBasedActivity.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="behavioralModeEnum">This is Behavioral Mode.</param>
+        private void CreateSkillBasedActivity(string activityName,
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum)
+        {
+            //Create The Activity Using Behavioral ModeType.
+            logger.LogMethodEntry("AddAssessmentPage",
+                "CreateSkillBasedActivity",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Select Create Activity Window
+            this.SelectCreateActivityWindow();
+            //Fill Asset name
+            this.FillAssetName(activityName);            
+            //Click On Save And Continue Button
+            this.ClickOnSaveAndContinueButton();
+            //Click On Add Question Link
+            new RandomTopicListPage().ClickOnAddQuestionLink();            
+            logger.LogMethodExit("AddAssessmentPage",
+                "CreateSkillBasedActivity",
                    base.IsTakeScreenShotDuringEntryExit);
         }
 

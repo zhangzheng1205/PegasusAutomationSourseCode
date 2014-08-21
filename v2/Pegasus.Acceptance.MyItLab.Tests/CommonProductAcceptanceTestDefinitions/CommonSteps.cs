@@ -632,6 +632,22 @@ namespace Pegasus.Acceptance.MyItLab.Tests.
         }
 
         /// <summary>
+        /// Click On Activity Type.
+        /// </summary>
+        /// <param name="activityTypeName">This is Activity Type Name.</param>
+        [When(@"I click on the ""(.*)"" activity type")]
+        public void ClickOnActivityType(String activityTypeName)
+        {
+            //Click On The Activity Type
+            Logger.LogMethodEntry("CreateActivity", "ClickOnTheActivityType",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click On Activity Type
+            new ContentLibraryUXPage().ClickOnActivityType(activityTypeName);
+            Logger.LogMethodExit("CreateActivity", "ClickOnTheActivityType",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]

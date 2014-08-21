@@ -316,6 +316,56 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                       base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+
+
+        /// <summary>
+        /// Add questions into activity
+        /// </summary>
+        /// <param name="activityType">This is Activity Type.</param>  
+
+        [When(@"I add ""(.*)"" question into created activity")]
+        public void AddQuestionIntoCreatedActivity(string activityType)
+        {
+            Logger.LogMethodEntry("CreateQuestion", "AddQuestionIntoCreatedActivity",
+                 base.IsTakeScreenShotDuringEntryExit);
+            switch(activityType)
+            {
+                case "SIM5":
+                    //Click on Select Questions from Bank
+                    new SkillBasedAssessmentPage().SelectQuestionFromQuestionBank();
+                    //Click on Advanced Search option
+                    new ContentBrowserUXPage().SearchAndAddSIM5question();
+                    break;
+                case "QTI" :
+                    //Create Pegasus native questions
+                    new SkillBasedAssessmentPage().CreatePegasusNativeQuestion();
+                    break;                    
+            }
+            Logger.LogMethodExit("CreateQuestion", "AddQuestionIntoCreatedActivity",
+                     base.IsTakeScreenShotDuringEntryExit);            
+        }
+
+
+        /// <summary>
+        /// Add Save the Activity
+        /// </summary>
+        /// <param name="activityType">This is Activity Type.</param>  
+        [When(@"I save this activity")]
+        public void SaveThisActivityAndReturn()
+        {
+            Logger.LogMethodEntry("CreateQuestion", "SaveThisActivityAndReturn",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Click on Save and Return
+            new SkillBasedAssessmentPage().SaveandReturn();
+            Logger.LogMethodExit("CreateQuestion", "SaveThisActivityAndReturn",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        
+
+
         /// <summary>
         /// Verify The Question Point Value.
         /// </summary>

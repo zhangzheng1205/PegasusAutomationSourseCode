@@ -44,28 +44,12 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CreateActivity", "ClickOnAddCourseMaterialsOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-       
-        /// <summary>
-        /// Click On Activity Type.
-        /// </summary>
-        /// <param name="activityType">This is Activity Type.</param>
-        [When(@"I click on the ""(.*)"" activity type")]
-        public void ClickOnActivityType(String activityType)
-        {
-            //Click On The Activity Type
-            Logger.LogMethodEntry("CreateActivity", "ClickOnTheActivityType",
-                base.IsTakeScreenShotDuringEntryExit);
-            //Click On Activity Type
-            new ContentLibraryUXPage().ClickOnActivityType(activityType);
-            Logger.LogMethodExit("CreateActivity", "ClickOnTheActivityType",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
 
         /// <summary>
-        /// Create Activity of Behavioral Mode
+        /// Create Activity of Behavioral Mode.
         /// </summary>
-        /// <param name="activityTypeEnum">This is activity type enum</param>
-        /// <param name="behavioralModeEnum">This is behavioral mode enum</param>
+        /// <param name="activityTypeEnum">This is activity type enum.</param>
+        /// <param name="behavioralModeEnum">This is behavioral mode enum.</param>
         [When(@"I create ""(.*)"" activity of behavioral mode ""(.*)"" type")]
         public void CreateActivityOfBehavioralModeType(Activity.ActivityTypeEnum activityTypeEnum,
             Activity.ActivityBehavioralModesEnum behavioralModeEnum)
@@ -79,6 +63,42 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Create a SIM5 SkillBased Activity
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum</param>
+        /// <param name="behavioralModeEnum">This is behavioral mode enum</param>
+        [When(@"I create a ""(.*)"" activity of behavioral mode ""(.*)"" type")]
+        public void CreateSIM5ActivityOfBehavioralModeSkillBasedType(Activity.ActivityTypeEnum activityTypeEnum,
+            Activity.ActivityBehavioralModesEnum behavioralModeEnum)
+        {
+            Logger.LogMethodEntry("CreateActivity", "CreateActivityOfBehavioralModeSkillBasedType", 
+                base.IsTakeScreenShotDuringEntryExit);
+            //Create Activity
+            new AddAssessmentPage().CreateSIM5Activity(activityTypeEnum, behavioralModeEnum);
+            Logger.LogMethodExit("CreateActivity", "CreateActivityOfBehavioralModeSkillBasedType",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
+
+        /// <summary>
+        /// Create a SkillBased SIM5 Activity
+        /// </summary>
+        /// <param name="activityTypeEnum">This is activity type enum</param>
+        //[When(@"I create ""(.*)"" activity of behavioral mode SkillBased type")]
+        //public void CreateSkillBasedSim5Activity(Activity.ActivityTypeEnum activityTypeEnum)
+        //{
+        //    //Create Activity
+        //    Logger.LogMethodEntry("CreateActivity", "CreateActivityOfBehavioralModeType",
+        //       base.IsTakeScreenShotDuringEntryExit);
+        //    //Create Activity
+        //    new AddAssessmentPage().CreateActivity(activityTypeEnum, 0);
+        //    Logger.LogMethodExit("CreateActivity", "CreateActivityOfBehavioralModeType",
+        //        base.IsTakeScreenShotDuringEntryExit);
+        //}
         /// <summary>
         /// Create Instructor Gradable Activity.
         /// </summary>
@@ -112,7 +132,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Activity.ActivityBehavioralModesEnum behavioralModeEnum)
         {
             //Create SIMActivity Of Behavioral ModeType.
-            Logger.LogMethodEntry("CreateActivity", 
+            Logger.LogMethodEntry("CreateActivity",
                 "CreateSIMActivityOfBehavioralModeType",
                base.IsTakeScreenShotDuringEntryExit);
             //Create SIM Activity
@@ -162,7 +182,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="activityTypeEnum">This is activity type enum.</param>
         [Then(@"I should see ""(.*)"" activity in the Content Library Frame")]
-        public void SeeActivityInTheContentLibraryFrame(Activity.ActivityTypeEnum 
+        public void SeeActivityInTheContentLibraryFrame(Activity.ActivityTypeEnum
             activityTypeEnum)
         {
             //Logger Entry
@@ -183,7 +203,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="userTypeEnum">This is User type enum.</param>
         [When(@"I click on ""(.*)"" cmenu option of activity in ""(.*)""")]
         public void ClickOnCmenuOptionOfActivity(string cmenuOptionName,
-            User.UserTypeEnum userTypeEnum )
+            User.UserTypeEnum userTypeEnum)
         {
             //Logger Entry
             Logger.LogMethodEntry("CreateActivity", "ClickOnCmenuOptionOfActivity",
@@ -221,7 +241,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //enter the message
             new AddAssessmentPage().EnterActivityMessage();
             //Set Save for Later Preference
-            new SkillBasedAssessmentPage().SetSaveforLaterPreference();            
+            new SkillBasedAssessmentPage().SetSaveforLaterPreference();
             //Click On Add And Close Button
             new ContentBrowserUXPage().ClickOnAddAndCloseButton();
             Logger.LogMethodExit("CreateActivity", "CreateTheActivityOfBehavioralModeType",
@@ -240,7 +260,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         {
             //Create GraderIT Activity
             Logger.LogMethodEntry("CreateActivity", "CreateGraderITActivity",
-               base.IsTakeScreenShotDuringEntryExit);    
+               base.IsTakeScreenShotDuringEntryExit);
             //Create Object for RandomTopicList Page
             RandomTopicListPage randomTopicListPage = new RandomTopicListPage();
             //Create Object for AutoGrader Page
@@ -331,7 +351,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("CreateActivity", "DisplayOfActivityInMyCourseFrame",
                 base.IsTakeScreenShotDuringEntryExit);
             //Gets the Activity name from Memory
-            Activity activity = Activity.Get(activityTypeEnum,behavioralmode);
+            Activity activity = Activity.Get(activityTypeEnum, behavioralmode);
             //Asserts the Activity Name
             Logger.LogAssertion("VerifyActivityName", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activity.Name,
@@ -410,6 +430,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CreateActivity", "SetTheFeedbackCorrectAnswerPreference",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Click On Add Course Materials Link in Content Library.
         /// </summary>        
@@ -426,6 +447,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CreateActivity", "ClickOnAddCourseMaterialsLinkInContentLibrary",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Enter The Necessary Details Begin Creation Of Assignment Behavioral Type.
         /// </summary>
@@ -442,6 +464,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 "EnterTheNecessaryDetailsBeginCreationOfAssignmentBehavioralType",
                 IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Click On The Messages Activity Sub-tab.
         /// </summary>
@@ -494,6 +517,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                 "VerifyTheActivityBeginningAndEndMessagesSetInMainCoursePreferences",
                 IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Verify New Activity Type In The Add Course Materials Menu.
         /// </summary>
@@ -514,6 +538,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CommonSteps", "VerifyNewActivityTypeInTheAddCourseMaterialsMenu",
                 IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Create Basic Random Activity Using True-False Question And HelpLinks.
         /// </summary>
@@ -525,7 +550,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Activity.ActivityBehavioralModesEnum behavioralModeEnum)
         {
             //Create Instructor Gradable Activity
-            Logger.LogMethodEntry("CreateActivity", 
+            Logger.LogMethodEntry("CreateActivity",
                 "CreateBasicRandomActivityUsingTrueandFalseQuestionAndHelpLinks",
                base.IsTakeScreenShotDuringEntryExit);
 
@@ -534,9 +559,14 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Create Activity
             new AddAssessmentPage().CreateActivityWithHelpLinks(activityTypeEnum);
 
-            Logger.LogMethodExit("CreateActivity", 
+            Logger.LogMethodExit("CreateActivity",
                 "CreateBasicRandomActivityUsingTrueandFalseQuestionAndHelpLinks",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+      
+
+        
+
     }
 }

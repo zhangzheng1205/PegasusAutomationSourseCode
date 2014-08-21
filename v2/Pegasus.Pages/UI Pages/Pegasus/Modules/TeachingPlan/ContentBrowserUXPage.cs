@@ -515,8 +515,154 @@ namespace Pegasus.Pages.UI_Pages
                        base.IsTakeScreenShotDuringEntryExit);
         }
 
+
         /// <summary>
-        /// Click On AddClose Button.
+        /// Click on Search and add SIM5 questions from bank.
+        /// </summary>
+        public void SearchAndAddSIM5question()
+        {
+
+            Logger.LogMethodEntry("ContentBrowserUXPage", "SearchAndAddSIM5question",
+                          base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click on Advanced Search option
+                this.ClickOnAdvancedSearchLink();
+                //Search SIM5 Question
+                this.SearchSIM5Question();
+                //Select and Add SIM5 question
+                this.SelectAndAddSIM5Question();            
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ContentBrowserUXPage", "SearchAndAddSIM5question",
+                       base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select and add SIM5 Questions from Question Bank for SIM5 Activity.
+        /// </summary>
+        private void SelectAndAddSIM5Question()
+        {
+            Logger.LogMethodEntry("ContentBrowserUXPage", "SelectAndAddSIM5Question",
+                          base.IsTakeScreenShotDuringEntryExit);
+             try
+             {
+                 //Switch to last open window
+                 base.SwitchToLastOpenedWindow();
+                 //Switch to Iframe
+                 base.SwitchToIFrameById(ContentBrowserUXPageResource.
+                     ContentBrowserUX_Page_CourseMaterialsLibrary_Iframe_Id_Locator);
+                 //Wait for element to select first SIM5 question
+                 base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                     ContentBrowserUX_Page_CourseMaterialsLibrary_FirstSIM5Question_CheckBox_Id_Locator));
+                 //Get checkbox property for first SIM5 question 
+                 IWebElement GetFirstSIM5QuestionCheckBox = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
+                     ContentBrowserUX_Page_CourseMaterialsLibrary_FirstSIM5Question_CheckBox_Id_Locator);
+                 //Select first SIM5 question
+                 base.ClickByJavaScriptExecutor(GetFirstSIM5QuestionCheckBox);
+                 //Switch to last open Window
+                 base.SwitchToLastOpenedWindow();
+                 //Wait for Add and Close button
+                 base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                     ContentBrowserUX_Page_AddAndClose_Button_Id_Locator));
+                 //Get Property of Add and Close button
+                 IWebElement GetAddAndCloseButton = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
+                     ContentBrowserUX_Page_AddAndClose_Button_Id_Locator);
+                 //Click on Add and Close button
+                 base.ClickByJavaScriptExecutor(GetAddAndCloseButton);
+             }
+             catch (Exception e)
+             {
+                 ExceptionHandler.HandleException(e);
+             }
+             Logger.LogMethodEntry("ContentBrowserUXPage", "SelectAndAddSIM5Question",
+                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        private void SearchSIM5Question()
+        {
+
+            Logger.LogMethodEntry("ContentBrowserUXPage", "SearchSIM5Question",
+                          base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait for last opened window
+                base.SwitchToLastOpenedWindow();
+                //Wait for element 'All Question Type'
+                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_AdvancedSearch_AllQuestionTypes_CheckBox_IframeId_locator));
+                //Switch to Iframe
+                base.SwitchToIFrameById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_AdvancedSearch_AllQuestionTypes_CheckBox_IframeId_locator);
+                //Wait for All QuestionTypes checkbox
+                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_AdvancedSearch_AllQuestionTypes_CheckBox_Id));
+                //Get Properity for All Question Types checkbox
+                IWebElement GetAllQuestionTypeCheckBox = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_AdvancedSearch_AllQuestionTypes_CheckBox_Id);
+                //Uncheck checkbox for All QuestionTypes
+                base.ClickByJavaScriptExecutor(GetAllQuestionTypeCheckBox);
+                //Wait for checkbox element for SIM5 Question
+                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_AdvancedSearch_SIM5Question_CheckBox_Id));
+                //Get WebElement property for SIM5 check box
+                IWebElement GetSIM5CheckBox = base.GetWebElementPropertiesById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_AdvancedSearch_SIM5Question_CheckBox_Id);
+                //Select the checkbox for SIM5 Question
+                base.ClickByJavaScriptExecutor(GetSIM5CheckBox);
+                //Click on Search button
+                base.ClickButtonById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_AdvancedSearch_Search_Button_Id);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ContentBrowserUXPage", "SearchSIM5Question",
+                       base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Click on Advanced Search Link
+        /// </summary>
+        private void ClickOnAdvancedSearchLink()
+        {
+
+            Logger.LogMethodEntry("ContentBrowserUXPage", "ClickOnAdvancedSearchLink",
+                          base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait for IFrame
+                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_Frame_Id_Locator));
+                //Switch to Iframe
+                base.SwitchToIFrameById(ContentBrowserUXPageResource.
+                    ContentBrowserUX_Page_Frame_Id_Locator);
+                //Wait for Element Advanced Search
+                base.WaitForElement(By.Id(ContentBrowserUXPageResource.
+                    ContentBrtowserUX_Page_AdvancedSearch_Div_Id_locator));
+                //Get property for Advanced Search option
+                IWebElement GetAdvancedSearchOption = base.GetWebElementPropertiesById
+                    (ContentBrowserUXPageResource.ContentBrtowserUX_Page_AdvancedSearch_Div_Id_locator);
+                //Click on Advanced Search option
+                base.ClickByJavaScriptExecutor(GetAdvancedSearchOption);
+                //Move focus to last open window
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("ContentBrowserUXPage", "ClickOnAdvancedSearchLink",
+                       base.IsTakeScreenShotDuringEntryExit);
+        }
+             
+
+        /// <summary>
+        /// Click On Add and Close Button.
         /// </summary>
         private void ClickOnAddCloseButton()
         {

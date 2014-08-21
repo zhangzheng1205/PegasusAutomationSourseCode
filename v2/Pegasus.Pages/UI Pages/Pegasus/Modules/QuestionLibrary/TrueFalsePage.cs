@@ -235,6 +235,8 @@ namespace Pegasus.Pages.UI_Pages
                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
+
+
                 //Enter Question Title
                 Guid questionTrueFalse = this.EnterQuestionTitle();
                 //Store the Question
@@ -260,12 +262,58 @@ namespace Pegasus.Pages.UI_Pages
                 TrueFalse_Page_Activity_SaveAndClose_TimeValue));
                 //Click on Add and Close
                 this.ClickonAddandClose();
+                
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("TrueFalsePage", "CreateTrueFalseQuestion",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
+        /// <summary>
+        /// Create a new True/False Question.
+        /// </summary>
+        public void CreateNewTrueFalseQuestion()
+        {
+            //Create a new True/False Question
+            Logger.LogMethodEntry("TrueFalsePage", "CreateNewTrueFalseQuestion",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Enter Question Title
+                Guid questionTrueFalse = this.EnterQuestionTitle();
+                //Store the Question
+                this.StoreTheQuestion(questionTrueFalse);
+                //Fill the Discription for HTML Editor
+                this.FillTheDiscriptionForHTMLEditor();
+                //Enter Feedback
+                this.EnterFeedback();
+              
+                //Wait for the element
+                base.WaitForElement(By.Id(TrueFalsePageResource.
+                   TrueFalse_Page_SaveAndClose_Ques_Button_Id_Locator));
+                base.FocusOnElementById(TrueFalsePageResource.
+                   TrueFalse_Page_SaveAndClose_Ques_Button_Id_Locator);
+                //Get web element
+                IWebElement getSaveCloseButton = base.GetWebElementPropertiesById
+                    (TrueFalsePageResource.
+                    TrueFalse_Page_SaveAndClose_Ques_Button_Id_Locator);
+                //Click the "SaveAndClose" button
+                base.ClickByJavaScriptExecutor(getSaveCloseButton);
+                Thread.Sleep(Convert.ToInt32(TrueFalsePageResource.
+                TrueFalse_Page_Activity_SaveAndClose_TimeValue));
+                //Click on 'Add and Close' button
+                this.ClickonAddandCloseButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TrueFalsePage", "CreateNewTrueFalseQuestion",
                  base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -324,6 +372,31 @@ namespace Pegasus.Pages.UI_Pages
             //Select 'Create'Random'Activity' Window
             this.SelectCreateRandomActivityWindow();
             Logger.LogMethodExit("TrueFalsePage", "ClickonAddandClose",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Add and Close button.
+        /// </summary>
+        private void ClickonAddandCloseButton()
+        {
+            //Click on 'Add and Close' button
+            Logger.LogMethodEntry("TrueFalsePage", "ClickonAddandCloseButton",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Select Window
+            new SelectQuestionTypePage().SelectCreateNewQuestionWindow();
+            //Wait for the 'Add and Close' button
+            base.WaitForElement(By.Id(TrueFalsePageResource.
+                TrueFalse_Page_SaveandCloseButton_Id_Locator));
+            IWebElement getAddCloseButton = base.GetWebElementPropertiesById
+            (TrueFalsePageResource.
+                TrueFalse_Page_SaveandCloseButton_Id_Locator);
+            //Click on 'Add and Close' button
+            base.ClickByJavaScriptExecutor(getAddCloseButton);
+            base.IsPopUpClosed(Convert.ToInt32(TrueFalsePageResource.
+                   TrueFalse_Page_Window_Count));
+            
+            Logger.LogMethodExit("TrueFalsePage", "ClickonAddandCloseButton",
                  base.IsTakeScreenShotDuringEntryExit);
         }
 
