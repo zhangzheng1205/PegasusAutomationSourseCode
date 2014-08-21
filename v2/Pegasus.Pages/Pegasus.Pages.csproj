@@ -469,7 +469,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssignContentPageResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\ActivityType.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\AddAssessmentPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\AddAssessmentPageResources.Designer.cs">
       <AutoGen>True</AutoGen>
