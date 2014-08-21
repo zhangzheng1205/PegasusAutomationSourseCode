@@ -488,12 +488,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssignmentResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\CreateQuestionPage.cs" />
-    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\CreateQuestionPageResource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CreateQuestionPageResource.resx</DependentUpon>
-    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\DocBasedAssessmentPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\DocBasedAssessmentResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2043,10 +2037,6 @@
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\AssignmentResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AssignmentResource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\CreateQuestionPageResource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CreateQuestionPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\DocBasedAssessmentResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
