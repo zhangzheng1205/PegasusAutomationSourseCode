@@ -631,7 +631,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on 'Create new Question'
                 this.ClickOnCreateNewQuestion();
                 //Click on 'True/False' question link
-                //new CreateQuesstionPage().ClickOnTrueFalseQuestionLink();
+                new CreateQuestionPage().ClickOnTrueFalseQuestionLink();
                 //Create a new True/False question
                 new TrueFalsePage().CreateNewTrueFalseQuestion();
             }
