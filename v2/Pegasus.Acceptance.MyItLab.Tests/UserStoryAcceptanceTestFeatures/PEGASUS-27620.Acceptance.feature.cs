@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
+namespace Pegasus.Acceptance.MyITLab.Tests.UserStoryAcceptanceTestFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "PEGASUS-27620: Automation: (Admin Modules) Validating PMCID for created shared Li" +
                             "brary course")))
             {
-                Pegasus.Acceptance.MyItLab.Tests.UserStoryAcceptanceTestFeatures.PEGASUS_27620AutomationAdminModulesValidatingPMCIDForCreatedSharedLibraryCourseFeature.FeatureSetup(null);
+                Pegasus.Acceptance.MyITLab.Tests.UserStoryAcceptanceTestFeatures.PEGASUS_27620AutomationAdminModulesValidatingPMCIDForCreatedSharedLibraryCourseFeature.FeatureSetup(null);
             }
         }
         

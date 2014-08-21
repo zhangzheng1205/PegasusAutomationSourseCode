@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.CommonProductAcceptanceFeatures
+namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.CommonProductAcceptanceFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -49,7 +49,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.CommonProductAcceptanceFeatu
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "CommonUserScenarios")))
             {
-                Pegasus.Acceptance.MyItLab.GraderIT.Tests.CommonProductAcceptanceFeatures.CommonUserScenariosFeature.FeatureSetup(null);
+                Pegasus.Acceptance.MyITLab.GraderIT.Tests.CommonProductAcceptanceFeatures.CommonUserScenariosFeature.FeatureSetup(null);
             }
         }
         

@@ -10,7 +10,7 @@ using Pegasus.Pages.UI_Pages.Pegasus.Modules.FeedBack;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
     /// This Class Handles the User Profile Page actions.

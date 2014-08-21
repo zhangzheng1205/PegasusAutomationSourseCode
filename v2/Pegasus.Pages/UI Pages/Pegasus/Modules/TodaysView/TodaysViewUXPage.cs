@@ -12,6 +12,7 @@ using Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.TemplateClassManagement.Classes;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -173,6 +174,37 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("TodaysViewUXPage", "GetDisplayedAlertValue",
+                                 base.IsTakeScreenShotDuringEntryExit);
+            return alertValue;
+        }
+
+        /// <summary>
+        /// Get Alert Count in Todays View Notfication
+        /// Channel
+        /// </summary>
+        /// <returns>Alert Count</returns>
+        public int GetAlertCount(String channelName)
+        {
+            //Get Alert count from Notification Channel
+            logger.LogMethodEntry("TodaysViewUXPage", "GetAlertCount",
+                                  base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Alert Variable
+            int alertValue = 0;
+            //Wait for the Alert channel to load
+            base.WaitForElement(By.PartialLinkText(channelName));
+            //Store the Alert channel text
+            string newGradesAlert = base.GetElementTextByPartialLinkText(channelName);
+            try
+            {
+                //Extract only alert count from the string
+                alertValue = Convert.ToInt32(Regex.Replace(newGradesAlert, @"\D", ""));
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "GetAlertCount",
                                  base.IsTakeScreenShotDuringEntryExit);
             return alertValue;
         }
@@ -2176,6 +2208,32 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Get Notification channel text In Today's View Page
+        /// </summary>
+        /// <returns>Notification channel Title</returns>
+        public String GetNotificationsChannelTitle()
+        {
+            //Validate notification channel existance in Today's View Page
+            logger.LogMethodEntry("TodaysViewUXPage", "GetChannelsInTodaysView",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            string getChannels = string.Empty;
+            try
+            {
+                //Get Channels Text
+                getChannels = this.GetNotificationsText();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "GetChannelsInTodaysView",
+              base.IsTakeScreenShotDuringEntryExit);
+            return getChannels;
+        }
+
+
+        /// <summary>
         /// Get Notification Text
         /// </summary>
         /// <returns>Notification Text</returns>
@@ -2186,15 +2244,63 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getNotificationsText = string.Empty;
-            base.WaitForElement(By.Id(TodaysViewUXPageResource.
-                TodaysViewUXPageResource_GetNotificationText_Id_Locator));
             //Get Notification Text
-            getNotificationsText = base.GetElementTextById(TodaysViewUXPageResource.
+            bool isNotificationChannelPreset = base.IsElementPresent(By.Id(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_GetNotificationText_Id_Locator), 5);
+            if (isNotificationChannelPreset)
+            {
+                getNotificationsText = base.GetElementTextById(TodaysViewUXPageResource.
                 TodaysViewUXPageResource_GetNotificationText_Id_Locator);
+            }
+            else
+            {
+                getNotificationsText = base.GetElementTextById(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_MILGetNotificationText_Id_Locator);
+            }
             logger.LogMethodExit("TodaysViewUXPage", "GetNotificationsText",
             base.IsTakeScreenShotDuringEntryExit);
             return getNotificationsText;
         }
+
+        /// <summary>
+        /// Get the activity count from Past due not
+        /// submitted alert channel
+        /// </summary>
+        /// <returns>Activity count</returns>
+        public int GetActivityCountFromPastDueNotSubmittedChannel()
+        {
+
+            //Get Alert count from Notification Channel
+            logger.LogMethodEntry("TodaysViewUXPage", "GetActivityCountFromPastDueNotSubmittedChannel",
+                                  base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Alert Variable
+            int alertValue = 0;
+            int totalCount = 0;
+            try
+            {
+                //Get the number of student rows displayed in the past due not submitted channel
+                alertValue = base.GetElementCountByXPath(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_PastDueNotSubmitted_ActivityCount_Xpath_Locator);
+                //Initialize the counter
+                for (int i = 2; i <= alertValue; i++)
+                {
+                    //Get the content count
+                    int ContentCount = base.GetElementCountByXPath(
+                        string.Format(TodaysViewUXPageResource.
+                        TodaysViewUXPageResource_PastDueNotSubmitted_ActivityTotalCount_Xpath_Locator, i));
+                    totalCount = totalCount + ContentCount;
+                }
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "GetActivityCountFromPastDueNotSubmittedChannel",
+                                base.IsTakeScreenShotDuringEntryExit);
+            return totalCount;
+        }
+
 
         /// <summary>
         /// Get Calendar Text
@@ -2540,10 +2646,10 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Click on Performance Channel Option.
+        /// Click on Notification Channel Option.
         /// </summary>
         /// <param name="channelOption">This is Channel option.</param>
-        public void ClickonPerformanceChannelOption(string channelOption)
+        public void ClickonNotificationChannelOption(string channelOption)
         {
             //Click on Performance Channel Option
             logger.LogMethodEntry("TodaysViewUXPage", "ClickonPerformanceChannelOption",
@@ -2565,6 +2671,132 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("TodaysViewUXPage", "ClickonPerformanceChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get content count from alert channel.
+        /// </summary>
+        /// <param name="channelName">Alert channel name.</param>
+        /// <returns>Content count</returns>
+        public int GetCountFromAlertChannels(string channelName)
+        {
+            //Get content count from alert channel
+            logger.LogMethodEntry("TodaysViewUXPage", "GetCountFromAlertChannels",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize variable
+            int ContentCount = 0;
+            try
+            {
+                //Switch to alert channel based on the input paramater passed
+                switch (channelName)
+                {
+                    case "Not Passed":
+                        ContentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
+                            TodaysViewUXPageResource_NotPassedChannel_ActivityRow_Id_Locator);
+                        break;
+                    case "Unread Messages":
+                        ContentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
+                            TodaysViewPageResource_GetMessagesCount_Xpath_Locator);
+                        break;
+                    case "Idle Students":
+                        ContentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
+                            TodaysViewUXPageResource_GetIdleStudentCount_Xpath_Locator);
+                        break;
+                    case "Unread Discussion":
+                        ContentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
+                            TodaysViewUXPageResource_GetDiscussionTopicCount_Xpath_Locator);
+                        break;
+                }
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "GetCountFromAlertChannels",
+                base.IsTakeScreenShotDuringEntryExit);
+
+            return ContentCount;
+        }
+
+        /// <summary>
+        /// Get student first, last name
+        /// from Idle student alert channel.
+        /// </summary>
+        /// <returns>Student irst, last name.</returns>
+        public string GetStudentNameFromIdleStudents()
+        {
+            string StudentName = string.Empty;
+            //Get Student First name, Last name displayed in unread messages channel
+            logger.LogMethodEntry("TodaysViewUXPage", "GetStudentNameFromUnreadMessages",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Call the method to get the student first, last name and store it
+                StudentName = GetStudentNameFromAlertChannel(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_StudentName_IdleStudents_Xpath_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("TodaysViewUXPage", "GetStudentNameFromUnreadMessages",
+               base.IsTakeScreenShotDuringEntryExit);
+            return StudentName;
+        }
+
+        /// <summary>
+        /// Get student first, last name
+        /// from alert channels.
+        /// </summary>
+        /// <param name="studentNamePath">Student name xpath.</param>
+        /// <returns>Student first, last name.</returns>
+        private string GetStudentNameFromAlertChannel(string studentNamePath)
+        {
+            string StudentName = string.Empty;
+            //Get Student First name, Last name displayed in unread messages channel
+            logger.LogMethodEntry("TodaysViewUXPage", "GetStudentNameFromAlertChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Get the Student First name, Last name and store it in the variable
+                StudentName = base.GetElementInnerTextByXPath(studentNamePath).Trim();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("TodaysViewUXPage", "GetStudentNameFromAlertChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+            return StudentName;
+        }
+
+        /// <summary>
+        /// Get Content count 
+        /// from Alert Channel.
+        /// </summary>
+        /// <returns>Content count.</returns>
+        private int GetContentCountFromAlertChannel(string LocatorPath)
+        {
+            int ContentCount = 0;
+            //Get activity count displayed from Not Passed Channel
+            logger.LogMethodEntry("TodaysViewUXPage", "GetContentCountInNotPassedAlertChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Get Activity Count
+                ContentCount = base.GetElementCountByXPath(LocatorPath);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("TodaysViewUXPage", "GetContentCountInNotPassedAlertChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            return ContentCount;
         }
 
         /// <summary>

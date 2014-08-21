@@ -58,3 +58,39 @@ And I click on the "Quiz" activity type
 Then I should be on the "Create activity" page
 When I create "Quiz" activity of behavioral mode "BasicRandom" type using Essay question
 Then I should see the successfull message "Activity added successfully."
+
+#Purpose : As a instructor i should be notified with alert counts and student details in Idle students Channel, when students have not accessed course.
+#Test case ID : peg-16740.
+#Products : MyItLab, HSS and World Languages.
+#Pre condition : Student should have not accessed course.
+#Dependency : One time dependent(This scenario can be run against existing data).
+Scenario: Instructor views Alert update in idle students channel of Todays View page
+When I navigate to "Today's View" tab
+Then I should see the "Notifications" channels in 'Todays view' page
+And I should see the alert count updated as "1" in "Idle Students" channel
+When I click on the "Idle Students" option
+Then I should see "1" Idle Student "Stud , Mail" in "Idle Students" channel
+
+#Purpose : To validate display of alert counts and contents in Not Passed alert channel
+#Test case ID : peg-16736
+#Products : MyItLab, World Languages
+#Pre condition : Student should not meet the threshold of the activity
+#Dependency : One time dependent(This scenario can be run against existing data)
+Scenario: Instructor views Alert update in Not Passed channel of Todays View page for Activity
+When I navigate to "Today's View" tab
+Then I should see the "Notifications" channels in 'Todays view' page
+And I should see the alert count updated as "1" in "Not Passed" channel
+When I click on the "Not Passed" option
+Then I should see "1" activity in the "Not Passed" channel
+
+#Purpose : As a instructor i should be notified with alert counts and contents when student does not submits Past due activity.
+#Test case ID : peg-16742.
+#Products : MyItLab, World Languages.
+#Pre condition : Assigned activity should be past due and student should not submit the activity even after past due date.
+#Dependency : One time dependent(This scenario can be run against existing data).
+Scenario: Instructor views Alert update in Past Due Not Submitted channel
+When I navigate to "Today's View" tab
+Then I should see the "Notifications" channels in 'Todays view' page
+And I should see the alert count updated as "69" in "Past Due: Not Submitted" channel
+When I click on the "Past Due: Not Submitted" option
+Then I should see "69" activity in the Past Due: Not Submitted channel

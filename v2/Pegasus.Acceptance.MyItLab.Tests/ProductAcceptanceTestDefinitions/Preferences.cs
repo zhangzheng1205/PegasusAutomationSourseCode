@@ -4,9 +4,8 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Coursesettings;
 using TechTalk.SpecFlow;
-using Pegasus.Pages.UI_Pages.Pegasus.Modules.Location;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
     /// This Class contains the definitions for Preferences scenarios.

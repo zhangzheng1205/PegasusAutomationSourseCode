@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorCalendar", "               As a CS Instructor \n\t\t\tI want to manage all the coursespace instru" +
-                    "ctor calendar related usecases \n\t\t\tso that I would validate all the coursespace " +
-                    "instructor calendar related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorCalendar", "               As a CS Instructor \r\n\t\t\tI want to manage all the coursespace instr" +
+                    "uctor calendar related usecases \r\n\t\t\tso that I would validate all the coursespac" +
+                    "e instructor calendar related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -50,7 +50,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "CourseSpaceInstructorCalendar")))
             {
-                Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures.CourseSpaceInstructorCalendarFeature.FeatureSetup(null);
+                Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures.CourseSpaceInstructorCalendarFeature.FeatureSetup(null);
             }
         }
         

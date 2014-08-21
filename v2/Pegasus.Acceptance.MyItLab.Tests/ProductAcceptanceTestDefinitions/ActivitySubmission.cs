@@ -6,8 +6,9 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation;
 using TechTalk.SpecFlow;
+using Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
     /// This Class Handles Activity Submission Actions.

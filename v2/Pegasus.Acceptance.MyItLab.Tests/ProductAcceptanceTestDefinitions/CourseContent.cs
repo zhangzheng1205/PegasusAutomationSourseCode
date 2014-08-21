@@ -7,7 +7,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.CommonPageObjects;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
     /// This class handles Course Content related actions.
@@ -109,11 +109,11 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
                  "VerifyDisplayOfTextInShownToColumn",
                  base.IsTakeScreenShotDuringEntryExit);
             string shownToText;            
-            CourseContentUXPage courseContentUXPage = new CourseContentUXPage();
+            CourseContentUXPage courseContentUxPage = new CourseContentUXPage();
             Activity shownActivity = Activity.Get(Activity.ShowHideStatusEnum.Shown);
             if (shownActivity != null)
             {
-                shownToText = courseContentUXPage.GetTextInShownToColumn(
+                shownToText = courseContentUxPage.GetTextInShownToColumn(
                     shownActivity.ActivityID);
                 Assert.AreEqual(CourseContentResource.CourseContent_None_Value,
                     shownToText);
@@ -122,7 +122,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             Activity hiddenActivity = Activity.Get(Activity.ShowHideStatusEnum.Hidden);
             if (hiddenActivity != null)
             {
-                shownToText = courseContentUXPage.GetTextInShownToColumn(
+                shownToText = courseContentUxPage.GetTextInShownToColumn(
                     hiddenActivity.ActivityID);
                 if (shownToText.Equals(CourseContentResource.CourseContent_All_Value)
                     || shownToText.Equals(CourseContentResource

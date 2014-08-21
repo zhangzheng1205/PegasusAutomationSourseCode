@@ -151,7 +151,7 @@
     <value>Excel Chapter 1: Simulation Activities</value>
   </data>
   <data name="CommonPage_FolderNavigation_Sleep_Time" xml:space="preserve">
-    <value>5000</value>
+    <value>7000</value>
   </data>
   <data name="CommonPage_GoButton_Calendar_Id_Locator" xml:space="preserve">
     <value>ctl00_ctl00_phBody_PageContent_ucLeftNavigationContainer_ucContentFilter_acSearchPanel_btnSearchGo</value>
@@ -206,5 +206,11 @@
   </data>
   <data name="ComonPage_Wait_Time" xml:space="preserve">
     <value>2000</value>
+  </data>
+  <data name="CommonPage_Instructor_CalendarNavigationFolder_Xpath_Locator" xml:space="preserve">
+    <value>//div[@title='{0}']</value>
+  </data>
+  <data name="CommonPage_Instructor_Calendar_Content_Id_Locator" xml:space="preserve">
+    <value>TreeViewContainer</value>
   </data>
 </root>

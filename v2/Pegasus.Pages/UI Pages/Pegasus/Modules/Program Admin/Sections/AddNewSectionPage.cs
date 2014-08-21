@@ -132,9 +132,13 @@ namespace Pegasus.Pages.UI_Pages
                         Convert.ToInt32(AddNewSectionPageResource.AddNewSection_Page_TemplateList_Index_Value); 
                         setSectionRowCount <=GetSectionRowCount; setSectionRowCount++)
                 {
+                    //Wait for the element
+                    base.WaitForElement(By.XPath(String.Format(
+                        AddNewSectionPageResource.AddNewSection_Page_TemplateSection_Span_Text_XPath_Locator,
+                        setSectionRowCount)));
                    //Get Section Name From SectionList
                     sectionName =
-                        base.GetInnerTextAttributeValueByXPath(String.Format(
+                        base.GetTitleAttributeValueByXPath(String.Format(
                         AddNewSectionPageResource.AddNewSection_Page_TemplateSection_Span_Text_XPath_Locator,
                         setSectionRowCount));
                     if (sectionName.Contains(courseName))

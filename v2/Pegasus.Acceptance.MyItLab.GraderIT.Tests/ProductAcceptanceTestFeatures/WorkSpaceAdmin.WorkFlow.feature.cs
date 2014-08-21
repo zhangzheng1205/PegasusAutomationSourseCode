@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestFeatures
+namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.ProductAcceptanceTestFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -50,7 +50,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestFeature
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "WorkSpaceAdmin")))
             {
-                Pegasus.Acceptance.MyItLab.GraderIT.Tests.ProductAcceptanceTestFeatures.WorkSpaceAdminFeature.FeatureSetup(null);
+                Pegasus.Acceptance.MyITLab.GraderIT.Tests.ProductAcceptanceTestFeatures.WorkSpaceAdminFeature.FeatureSetup(null);
             }
         }
         

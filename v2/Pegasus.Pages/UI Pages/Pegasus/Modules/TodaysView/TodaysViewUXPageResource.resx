@@ -570,4 +570,28 @@
   <data name="TodayViewUXPageResource__SubTab_SelectedTab_Value" xml:space="preserve">
     <value>SubNavigationTabSelected1</value>
   </data>
+  <data name="TodaysViewPageResource_GetMessagesCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TodaysViewMessageDatagrid']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_GetDiscussionTopicCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVUnreaddiscussionDatagrid']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_GetIdleStudentCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVIdlStuDatagrid']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_MILGetNotificationText_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl0__ctl0_lblHeading</value>
+  </data>
+  <data name="TodaysViewUXPageResource_NotPassedChannel_ActivityRow_Id_Locator" xml:space="preserve">
+    <value>//table[@id='TodaysInsNotPassedDatagrid']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_StudentName_IdleStudents_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVIdlStuDatagrid']/tbody/tr/td//table//div/b</value>
+  </data>
+  <data name="TodaysViewUXPageResource_PastDueNotSubmitted_ActivityCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVInsAnnoucement$contentCntr']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_PastDueNotSubmitted_ActivityTotalCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVInsAnnoucement$contentCntr']/tbody/tr[{0}]/td/div/table/tbody/tr/td/table</value>
+  </data>
 </root>

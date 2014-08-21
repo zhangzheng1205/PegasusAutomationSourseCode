@@ -14,29 +14,29 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
     /// also responsible to create SMS user registeration.
     /// </summary>
     [Binding]
-    public class SMSRegistration : PegasusBaseTestFixture
+    public class SmsRegistration : PegasusBaseTestFixture
     {
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger Logger =
-            Logger.GetInstance(typeof(SMSRegistration));
+        private static readonly Logger Logger =
+            Logger.GetInstance(typeof(SmsRegistration));
 
         /// <summary>
         /// Accept The License Agreement And Privacy Policy 
         /// Button Clicked by SMS Admin.
         /// </summary>
         [When(@"I accept the License Agreement and Privacy Policy of SMS")]
-        public void AcceptTheLicenseAgreementAndPrivacyPolicyOfSMS()
+        public void AcceptTheLicenseAgreementAndPrivacyPolicyOfSms()
         {
             // I Accept Button Clicked by SMS Admin 
             Logger.LogMethodEntry("SMSRegistration",
-                "AcceptTheLicenseAgreementAndPrivacyPolicyOfSMS",
+                "AcceptTheLicenseAgreementAndPrivacyPolicyOfSms",
                 base.IsTakeScreenShotDuringEntryExit);
             // Click I Accept Button
             new ConsentPage().ClickIAcceptButtonBySMSAdmin();
             Logger.LogMethodExit("SMSRegistration",
-                "AcceptTheLicenseAgreementAndPrivacyPolicyOfSMS",
+                "AcceptTheLicenseAgreementAndPrivacyPolicyOfSms",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -45,16 +45,16 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="userTypeEnum">This is SMS User Type Enum.</param>
         [When(@"I register new SMS user as ""(.*)""")]
-        public void RegisterNewSMSUser(User.UserTypeEnum userTypeEnum)
+        public void RegisterNewSmsUser(User.UserTypeEnum userTypeEnum)
         {
             // Create New SMS User
-            Logger.LogMethodEntry("SMSRegistration", "RegisterNewSMSUser",
+            Logger.LogMethodEntry("SMSRegistration", "RegisterNewSmsUser",
                 base.IsTakeScreenShotDuringEntryExit);
             //submit Access Information 
-            new Reg1Page().EnterSMSUserAccessInformation(userTypeEnum);
+            new Reg1Page().EnterSmsUserAccessInformation(userTypeEnum);
             //Submit Account Information
-            new Reg2Page().EnterSMSUserAccountInformation();
-            Logger.LogMethodExit("SMSRegistration", "RegisterNewSMSUser",
+            new Reg2Page().EnterSmsUserAccountInformation();
+            Logger.LogMethodExit("SMSRegistration", "RegisterNewSmsUser",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -63,12 +63,12 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="userTypeEnum">This is User Type Enum.</param>
         [Then(@"I should see the Confirmation and Summary for ""(.*)"" registeration")]
-        public void DisplayTheConfirmationAndSummaryForSMSUserRegisteration
+        public void DisplayTheConfirmationAndSummaryForSmsUserRegisteration
             (User.UserTypeEnum userTypeEnum)
         {
             // SMS User Created with Confirmation and Summary
             Logger.LogMethodEntry("SMSRegistration",
-                "DisplayTheConfirmationAndSummaryForSMSUserRegisteration",
+                "DisplayTheConfirmationAndSummaryForSmsUserRegisteration",
                 base.IsTakeScreenShotDuringEntryExit);
             //Assert SMS User Created and Saved in Memory
             Logger.LogAssertion("VerifySMSUserCreated",
@@ -77,7 +77,7 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions
                     SMSRegisteration_ConfirmationandSummary_Window_Title_Name,
                     new ConsentPage().GetPageTitle));
             Logger.LogMethodExit("SMSRegistration",
-                "DisplayTheConfirmationAndSummaryForSMSUserRegisteration",
+                "DisplayTheConfirmationAndSummaryForSmsUserRegisteration",
                 base.IsTakeScreenShotDuringEntryExit);
         }
     }

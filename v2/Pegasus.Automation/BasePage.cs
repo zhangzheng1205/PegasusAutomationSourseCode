@@ -2067,6 +2067,26 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             iWebElement.SendKeys(Convert.ToString(character));
         }
 
+        /// <summary>
+        /// Perform key down and then press alternate key. 
+        /// </summary>
+        /// <param name="keyDownName">This is a key event to perform key down.</param>
+        /// <param name="pressKeyName">This is a key event to perform key press after key down.</param>
+        /// <param name="moveTimes">This is number of times to perform action.</param>
+        /// <see cref="Keys">Representations of pressable keys that aren't text. </see>/>
+        /// <see cref="Actions">Interface representing a single user-interaction action.</see>/>
+        /// <see cref="SendKeys">This method to simulate typing into an element, 
+        /// which may set its value.</see>
+        /// <see cref="Perform">User-interaction action.</see>/>
+        protected void PerformKeyDownThenPressKeyToElement(string keyDownName, string pressKeyName, int moveTimes)
+        {
+            for (int move = 1; move <= moveTimes; move++)
+            {
+                new Actions(WebDriver).KeyDown(keyDownName).SendKeys(pressKeyName).Perform();
+            }
+            new Actions(WebDriver).KeyUp(keyDownName).Perform();
+        }
+
         #endregion
 
         #region WebDriver Alert

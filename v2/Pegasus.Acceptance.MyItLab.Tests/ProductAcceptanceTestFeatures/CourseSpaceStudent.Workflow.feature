@@ -67,7 +67,8 @@ Then I should see the pre test training "Sim5PreTest" score "100"
 Scenario: Student launches a Sim 5 activity for Excel Application. Scores a 100% and compares the result and status
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
-When I launch the activity named as "Excel Chapter 1 Skill-Based Training" in Course Materials
+When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the activity named as "Excel Chapter 1 Skill-Based Training" in Course Materials
 And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly and click on Submit button
 Then I should be on the "Course Materials" page
 When I click on cmenu "ViewSubmissions" of asset "Excel Chapter 1 Skill-Based Training" with mode "SkillBased" in Course Materials

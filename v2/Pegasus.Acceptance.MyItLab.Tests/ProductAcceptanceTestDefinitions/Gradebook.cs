@@ -6,7 +6,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
     /// This Class Handles Gradebook Actions.
@@ -56,27 +56,27 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// Associate the Activity to MyCourse Frame.
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
-        /// <param name="behavoiralModeTypeEnum">This is Behavioral Mode Type Enum.</param>
+        /// <param name="activityModeTypeEnum">This is activity mode enum.</param>
         [When(@"I associate the ""(.*)"" activity of behavioral mode ""(.*)"" to MyCourse frame")]
         public void AssociateTheActivityToMyCourseFrame(Activity.ActivityTypeEnum activityTypeEnum,
-            Activity.ActivityBehavioralModesEnum ActivityModeTypeEnum)
+            Activity.ActivityBehavioralModesEnum activityModeTypeEnum)
         {
             //Associate the Activity to MyCourse Frame
             Logger.LogMethodEntry("Gradebook", "AssociateTheActivityToMyCourseFrame",
                 IsTakeScreenShotDuringEntryExit);
-            ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
+            ContentLibraryUXPage contentLibraryUxPage = new ContentLibraryUXPage();
             //Fetch the data from memory
-            Activity activity = Activity.Get(activityTypeEnum, ActivityModeTypeEnum);
+            Activity activity = Activity.Get(activityTypeEnum, activityModeTypeEnum);
             //Select Window
-            contentLibraryUXPage.SelectTheWindowName(GradebookResource.
+            contentLibraryUxPage.SelectTheWindowName(GradebookResource.
                 GradeBook_CourseMaterials_Window_Title);
             //Select the frame
-            contentLibraryUXPage.SelectAndSwitchtoFrame(GradebookResource.
+            contentLibraryUxPage.SelectAndSwitchtoFrame(GradebookResource.
                 GradeBook_CourseMaterials_LeftFrame_Id_Locator);
             // Select the activity
-            contentLibraryUXPage.SelectActivity(activity.Name);
+            contentLibraryUxPage.SelectActivity(activity.Name);
             // Click on Activity Add Button
-            contentLibraryUXPage.ClickOnActivityAddButton();
+            contentLibraryUxPage.ClickOnActivityAddButton();
             Logger.LogMethodExit("GradeBook", "AssociateTheActivityToMyCourseFrame",
                 IsTakeScreenShotDuringEntryExit);
         }

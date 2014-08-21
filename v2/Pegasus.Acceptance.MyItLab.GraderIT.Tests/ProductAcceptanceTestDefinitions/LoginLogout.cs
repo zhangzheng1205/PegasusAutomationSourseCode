@@ -3,11 +3,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
-using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
+namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.
     ProductAcceptanceTestDefinitions
 {
     /// <summary>
@@ -20,7 +19,7 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
         /// <summary>
         /// The instance for Login Page
         /// </summary>
-        BrowsePegasusUserURL loginPage;
+        BrowsePegasusUserURL _loginPage;
 
         /// <summary>
         /// The static instance of the logger for the class.
@@ -40,16 +39,16 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
             Logger.LogMethodEntry("LoginLogout", "BrowsePegasusLoginUrl",
                 base.IsTakeScreenShotDuringEntryExit);
             // Pick Url based on user type enum
-            loginPage = new BrowsePegasusUserURL((User.UserTypeEnum)
+            _loginPage = new BrowsePegasusUserURL((User.UserTypeEnum)
                 Enum.Parse(typeof(User.UserTypeEnum), userType));
             //Login  the type of the user
             Boolean isBasePegasusUrlBrowsedSuccessful =
-                loginPage.IsUrlBrowsedSuccessful();
+                _loginPage.IsUrlBrowsedSuccessful();
             //Check Is Url Browsed Successfully
             if (isBasePegasusUrlBrowsedSuccessful)
             {
                 //Open Url in Browser
-                loginPage.GoToLoginUrl();
+                _loginPage.GoToLoginUrl();
             }
             Logger.LogMethodExit("LoginLogout", "BrowsePegasusLoginUrl",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -84,13 +83,13 @@ namespace Pegasus.Acceptance.MyItLab.GraderIT.Tests.
                     {
                         case BrowsePegasusUserURL.PegasusLoginSpace.WorkSpace:
                             //Login as the given user with password in workspace
-                            loginPage.Authenticate(user.Name, user.Password,
+                            _loginPage.Authenticate(user.Name, user.Password,
                                  BrowsePegasusUserURL.PegasusLoginSpace.WorkSpace, userTypeEnum);
                             LoginSpace = BrowsePegasusUserURL.PegasusLoginSpace.WorkSpace.ToString();
                             break;
                         case BrowsePegasusUserURL.PegasusLoginSpace.CourseSpace:
                             //Login as the given user with password in course space
-                            loginPage.Authenticate(user.Name, user.Password,
+                            _loginPage.Authenticate(user.Name, user.Password,
                                 BrowsePegasusUserURL.PegasusLoginSpace.CourseSpace, userTypeEnum);
                             LoginSpace = BrowsePegasusUserURL.PegasusLoginSpace.CourseSpace.ToString();
                             break;

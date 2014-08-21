@@ -160,7 +160,7 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 5000.
+        ///   Looks up a localized string similar to 7000.
         /// </summary>
         internal static string CommonPage_FolderNavigation_Sleep_Time {
             get {
@@ -183,6 +183,24 @@ namespace Pegasus.Pages.CommonPageObjects {
         internal static string CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName {
             get {
                 return ResourceManager.GetString("CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TreeViewContainer.
+        /// </summary>
+        internal static string CommonPage_Instructor_Calendar_Content_Id_Locator {
+            get {
+                return ResourceManager.GetString("CommonPage_Instructor_Calendar_Content_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@title=&apos;{0}&apos;].
+        /// </summary>
+        internal static string CommonPage_Instructor_CalendarNavigationFolder_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CommonPage_Instructor_CalendarNavigationFolder_Xpath_Locator", resourceCulture);
             }
         }
         

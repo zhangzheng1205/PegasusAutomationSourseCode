@@ -4,14 +4,13 @@ using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using Pegasus.Pages.CommonPageObjects;
-using Pegasus.Pages.Exceptions;
 using Pegasus.Automation.DataTransferObjects;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.
+namespace Pegasus.Acceptance.MyITLab.Tests.
     CommonProductAcceptanceTestDefinitions
 {
     /// <summary>

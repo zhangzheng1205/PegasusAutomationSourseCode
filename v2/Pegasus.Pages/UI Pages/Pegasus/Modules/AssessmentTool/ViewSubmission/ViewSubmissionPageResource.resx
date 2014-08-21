@@ -288,4 +288,7 @@
   <data name="ViewSubmission_Page_GradebookGrade_XPath_Locator" xml:space="preserve">
     <value>//span[@class='lblGradeCss']</value>
   </data>
+  <data name="ViewSubmission_Page_GradeScore_Id_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblGradeBook</value>
+  </data>
 </root>

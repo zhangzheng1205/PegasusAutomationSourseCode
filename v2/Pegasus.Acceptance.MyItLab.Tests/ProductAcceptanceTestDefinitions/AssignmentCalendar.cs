@@ -1,15 +1,12 @@
 ﻿using Pearson.Pegasus.TestAutomation.Frameworks;
 using System;
 using System.Collections.Generic;
-using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
-using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     [Binding]
     public class AssignmentCalendar : PegasusBaseTestFixture
@@ -17,7 +14,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(AssignmentCalendar));
 
 

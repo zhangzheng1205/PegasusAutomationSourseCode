@@ -126,7 +126,9 @@ When I select "PowerPoint Chapter 1 Skill-Based Training" in "Gradebook" by "CsS
 Then I should see the activity "PowerPoint Chapter 1 Skill-Based Training" score "70"
 When I click on cmenu "View Submissions" of asset "PowerPoint Chapter 1 Skill-Based Training" in gradebook
 Then I should be on the "View Submission" page
+And I should see "70" score in view submission page
 When I close the "View Submission" window
+Then I click on 'My Course' link in gradebook
 
 #MyITLabOffice2013Program
 #peg-22024
@@ -138,7 +140,9 @@ When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Grad
 Then I should see the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" score "0"
 When I click on cmenu "View Submissions" of asset "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in gradebook
 Then I should be on the "View Submission" page
+And I should see "0" score in view submission page
 When I close the "View Submission" window
+Then I click on 'My Course' link in gradebook
 
 #MyITLabOffice2013Program
 #peg-22033
@@ -150,4 +154,6 @@ When I select "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Gr
 Then I should see the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" score "100"
 When I click on cmenu "View Submissions" of asset "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in gradebook
 Then I should be on the "View Submission" page
+And I should see "100" score in view submission page
 When I close the "View Submission" window
+Then I click on 'My Course' link in gradebook

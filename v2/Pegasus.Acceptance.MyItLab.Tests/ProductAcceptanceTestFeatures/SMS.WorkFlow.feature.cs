@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -49,7 +49,7 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "User Subscription Through SMS")))
             {
-                Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestFeatures.UserSubscriptionThroughSMSFeature.FeatureSetup(null);
+                Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures.UserSubscriptionThroughSMSFeature.FeatureSetup(null);
             }
         }
         
@@ -78,13 +78,13 @@ testRunner.Given("I browsed the login url for \"SMSAdmin\"", ((string)(null)), (
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Instructor by SMS Admin")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Program Admin by SMS Admin")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "User Subscription Through SMS")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("SMSIns")]
-        public virtual void CreateInstructorBySMSAdmin()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("SMSPrgAdmin")]
+        public virtual void CreateProgramAdminBySMSAdmin()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Instructor by SMS Admin", new string[] {
-                        "SMSIns"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Program Admin by SMS Admin", new string[] {
+                        "SMSPrgAdmin"});
 #line 13
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -92,8 +92,30 @@ this.FeatureBackground();
 #line 14
 testRunner.When("I accept the License Agreement and Privacy Policy of SMS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 15
-testRunner.And("I register new SMS user as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I register new SMS user as \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
+testRunner.Then("I should see the Confirmation and Summary for \"HedProgramAdmin\" registeration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Instructor by SMS Admin")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "User Subscription Through SMS")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("SMSIns")]
+        public virtual void CreateInstructorBySMSAdmin()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Instructor by SMS Admin", new string[] {
+                        "SMSIns"});
+#line 20
+this.ScenarioSetup(scenarioInfo);
+#line 8
+this.FeatureBackground();
+#line 21
+testRunner.When("I accept the License Agreement and Privacy Policy of SMS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 22
+testRunner.And("I register new SMS user as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 23
 testRunner.Then("I should see the Confirmation and Summary for \"CsSmsInstructor\" registeration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -107,15 +129,55 @@ testRunner.Then("I should see the Confirmation and Summary for \"CsSmsInstructor
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Student by SMS Admin", new string[] {
                         "SMSStudent"});
-#line 20
+#line 27
 this.ScenarioSetup(scenarioInfo);
 #line 8
 this.FeatureBackground();
-#line 21
+#line 28
 testRunner.When("I accept the License Agreement and Privacy Policy of SMS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
+#line 29
 testRunner.And("I register new SMS user as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
+#line 30
+testRunner.Then("I should see the Confirmation and Summary for \"CsSmsStudent\" registeration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Student by SMS Admin To Score Zero")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "User Subscription Through SMS")]
+        public virtual void CreateStudentBySMSAdminToScoreZero()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Student by SMS Admin To Score Zero", ((string[])(null)));
+#line 33
+this.ScenarioSetup(scenarioInfo);
+#line 8
+this.FeatureBackground();
+#line 34
+testRunner.When("I accept the License Agreement and Privacy Policy of SMS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+testRunner.And("I register new SMS user for \"scoring 0\" as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+testRunner.Then("I should see the Confirmation and Summary for \"CsSmsStudent\" registeration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create Student by SMS Admin To Set Idle")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "User Subscription Through SMS")]
+        public virtual void CreateStudentBySMSAdminToSetIdle()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create Student by SMS Admin To Set Idle", ((string[])(null)));
+#line 39
+this.ScenarioSetup(scenarioInfo);
+#line 8
+this.FeatureBackground();
+#line 40
+testRunner.When("I accept the License Agreement and Privacy Policy of SMS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 41
+testRunner.And("I register new SMS user for \"set idle\" as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 42
 testRunner.Then("I should see the Confirmation and Summary for \"CsSmsStudent\" registeration", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

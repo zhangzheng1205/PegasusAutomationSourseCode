@@ -2,12 +2,13 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
+using Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
     [Binding]
     public class TodaysView : PegasusBaseTestFixture
@@ -103,9 +104,104 @@ namespace Pegasus.Acceptance.MyItLab.Tests.ProductAcceptanceTestDefinitions
             //Verify Channels in Today's View Page
             Logger.LogAssertion("VerifyChannels",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(channels, new TodaysViewUXPage().GetChannelsInTodaysView()));
+                () => Assert.AreEqual(channels, new TodaysViewUXPage().GetNotificationsChannelTitle()));
             Logger.LogMethodEntry("TodaysView", "VerifyChanneslInTodaysViewPage",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Alerts in Notification Channel.
+        /// </summary>
+        /// <param name="alertcount">Alert Count to be Validated.</param>
+        [Then(@"I should see the alert count updated as ""(.*)"" in ""(.*)"" channel")]
+        public void ValidateUnreadMessageAlertCount(int alertCount, string channelName)
+        {
+            //Verify Alert count in Unread Messages Notification channel
+            Logger.LogMethodEntry("TodaysView", "ValidateUnreadMessageAlertCount",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert the alert count displayed in Unread Messages channel
+            Logger.LogAssertion("VerifyUnreadMessageAlerts", ScenarioContext.Current.
+                ScenarioInfo.Title,
+                () => Assert.AreEqual(alertCount, new TodaysViewUXPage().GetAlertCount(channelName)));
+            Logger.LogMethodEntry("TodaysView", "ValidateUnreadMessageAlertCount",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the content count in alert channel.
+        /// </summary>
+        /// <param name="activityCount">Activity count.</param>
+        /// <param name="channelName">Channel name from which the count should be retrieved.</param>
+        [Then(@"I should see ""(.*)"" activity in the ""(.*)"" channel")]
+        public void ValidateActivityCountInNotPassedChannel(int activityCount, string channelName)
+        {
+            //Click on Back navigation link
+            Logger.LogMethodEntry("TodaysView", "ValidateActivityCountInNotPassedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Validate the activity count displayed in Not passed channel
+            Logger.LogAssertion("ValidateActivityCountInNotPassedChannel", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(activityCount,
+                    new TodaysViewUXPage().GetCountFromAlertChannels(channelName)));
+            Logger.LogMethodExit("TodaysView", "ValidateActivityCountInNotPassedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On Notification Channel Option.
+        /// </summary>
+        /// <param name="channelOption">This is Channel Option.</param>
+        [When(@"I click on the ""(.*)"" option")]
+        public void ClickOnAlertChannelOption(string channelOption)
+        {
+            //Click On Notification Channel Option
+            Logger.LogMethodEntry("TodaysView", "ClickOnNotificationChannelOption",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on the Performance channel Option
+            new TodaysViewUXPage().ClickonNotificationChannelOption(channelOption);
+            Logger.LogMethodExit("TodaysView", "ClickOnNotificationChannelOption",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the number of activity
+        /// displayed in Past Due: Not submitted channel.
+        /// </summary>
+        /// <param name="activityCount">Past due not submitted activity count.</param>
+        [Then(@"I should see ""(.*)"" activity in the Past Due: Not Submitted channel")]
+        public void ValidateActivityCountInPastDueNotSubmittedChannel(int activityCount)
+        {
+            //Click on Back navigation link
+            Logger.LogMethodEntry("TodaysView", "ValidateActivityCountInPastDueNotSubmittedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("ValidateActivityCountInPastDueNotSubmittedChannel", ScenarioContext.Current
+                .ScenarioInfo.Title, () => Assert.AreEqual(activityCount,
+                    new TodaysViewUXPage().GetActivityCountFromPastDueNotSubmittedChannel()));
+            Logger.LogMethodExit("TodaysView", "ValidateActivityCountInPastDueNotSubmittedChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the idle student name.
+        /// </summary>
+        /// <param name="Count">Number of idle students.</param>
+        /// <param name="StudentName">Idle student first, last name.</param>
+        /// <param name="channelName"></param>
+        [Then(@"I should see ""(.*)"" Idle Student ""(.*)"" in ""(.*)"" channel")]
+        public void ValidateIdleStudentName(int Count, string StudentName, string channelName)
+        {
+            //Verify Alert count in Idle Students Notification channel
+            Logger.LogMethodEntry("TodaysView", "ValidateUnreadMessageAlertCount",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert the alert count displayed in Idle Students channel
+            Logger.LogAssertion("VerifyUnreadMessageAlerts", ScenarioContext.Current.
+                ScenarioInfo.Title,
+                () => Assert.AreEqual(Count, new TodaysViewUXPage().GetCountFromAlertChannels(channelName)));
+            //Assert the idle student name
+            Logger.LogAssertion("VerifyUnreadMessageAlerts", ScenarioContext.Current.
+                ScenarioInfo.Title,
+                () => Assert.AreEqual(StudentName, new TodaysViewUXPage().GetStudentNameFromIdleStudents()));
+            Logger.LogMethodEntry("TodaysView", "ValidateUnreadMessageAlertCount",
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
