@@ -102,8 +102,8 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 
 #MyITLabOffice2013InstructorCourse
-#Purpose: Login as SMS Instructor and Navigate to MyITLabOffice2013InstructorCourse
-Scenario: User Login as SMS Instructor and Navigate MyITLabOffice2013InstructorCourse Course
+#Purpose: Login as SMS Instructor and Navigate to MyITLabOffice2013InstructorSection
+Scenario: User Login as SMS Instructor and Navigate MyITLabOffice2013InstructorSection Course
 Given I browsed the login url for "CsSmsInstructor"
 When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
