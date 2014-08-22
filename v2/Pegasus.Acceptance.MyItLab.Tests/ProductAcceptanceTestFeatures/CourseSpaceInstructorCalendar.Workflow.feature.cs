@@ -224,16 +224,15 @@ testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)
 #line 72
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 73
-testRunner.When("I expands the Asset Path on Calendar page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Calendar\" by \"CsSmsInstr" +
+                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 74
-testRunner.Then("I should see expanded Folder with activities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I select the check box of any 2 activities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 75
-testRunner.When("I select the check box of any 2 activities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 76
 testRunner.Then("I should see Assign/Unassign link in active state on the content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 77
+#line 76
 testRunner.When("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 78
+#line 77
 testRunner.Then("I should see the check mark in assigned status column next to the assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

@@ -70,9 +70,8 @@ Then I should be on the "Program Administration" page
 Scenario: Assign more than one content using Assign Unassign link by SMS Instructor
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
-When I expands the Asset Path on Calendar page
-Then I should see expanded Folder with activities
-When I select the check box of any 2 activities
+When I select "PowerPoint Chapter 1 Skill-Based Training" in "Calendar" by "CsSmsInstructor"
+And I select the check box of any 2 activities
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
 Then I should see the check mark in assigned status column next to the assets
