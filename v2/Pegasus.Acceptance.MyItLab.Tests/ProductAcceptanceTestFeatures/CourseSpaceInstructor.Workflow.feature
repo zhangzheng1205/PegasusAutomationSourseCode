@@ -30,7 +30,7 @@ Then I should see the successfull message "Activity updated successfully."
 
 #Purpose :Instructor assign the asset with duedate in Managecoursework
 #TestCase Id: peg-22005
-#MyITLabOffice2013InstructorCourse
+#MyITLabOffice2013SectionCourse
 Scenario: Instructor assign the asset with duedate in Managecoursework
 When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
 Then I should be on the "Course Materials" page
@@ -43,7 +43,7 @@ And I should see assigned icon for "Excel Chapter 1 Project 1A Skill-Based Train
 
 #Purpose : Instructor assign the assets with duedate,startdate and endate in Managecoursework
 #TestCase Id: peg-22006
-#MyITLabOffice2013InstructorCourse
+#MyITLabOffice2013SectionCourse
 Scenario: Instructor assign the assets with duedate,startdate and endate in Managecoursework
 When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
 Then I should be on the "Course Materials" page

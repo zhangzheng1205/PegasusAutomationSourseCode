@@ -52,6 +52,7 @@ When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 And I should see the "Passed" status of the "Quiz" activity type
 
+#PEGASUS-27924
 #Purpose : (Activity types and tools) Sim5 assessment launch when "Trap ALT + TAB" is disabled
 Scenario: Sim5 assessment launch when "Trap ALT + TAB" is disabled
 When I navigate to the "Course Materials" tab

@@ -359,13 +359,11 @@ testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTal
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login as SMS Instructor and Navigate MyITLabOffice2013InstructorSection Cour" +
-            "se")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login as SMS Instructor and Navigate MyITLabOffice2013Section Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
-        public virtual void UserLoginAsSMSInstructorAndNavigateMyITLabOffice2013InstructorSectionCourse()
+        public virtual void UserLoginAsSMSInstructorAndNavigateMyITLabOffice2013SectionCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as SMS Instructor and Navigate MyITLabOffice2013InstructorSection Cour" +
-                    "se", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login as SMS Instructor and Navigate MyITLabOffice2013Section Course", ((string[])(null)));
 #line 106
 this.ScenarioSetup(scenarioInfo);
 #line 107
@@ -377,8 +375,8 @@ testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.
 #line 110
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 111
-testRunner.When("I enter in the \"MyITLabOffice2013InstructorCourse\" course from the Global Home pa" +
-                    "ge as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
+                    "SmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }

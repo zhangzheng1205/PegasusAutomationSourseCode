@@ -64,8 +64,9 @@ And I should see the Status of the assigned content in status column
 When I select 'Home' option
 Then I should be on the "Program Administration" page
 
+#PEGASUS-28905
 #Purpose : To validate Assign more than one content using Assign/Unassign link
-#Test Case Id :peg-21979
+#Test Case Id :peg-21979 -Assign more than one content using Assign/Unassign link
 Scenario: Assign more than one content using Assign Unassign link by SMS Instructor
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page

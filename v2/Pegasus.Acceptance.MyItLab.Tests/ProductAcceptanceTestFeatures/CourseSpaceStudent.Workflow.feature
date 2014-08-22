@@ -63,8 +63,10 @@ Then I should be on the "Gradebook" page
 When I click on the "SIM5StudyPlan" 'View Grades' option 
 Then I should see the pre test training "Sim5PreTest" score "100"
 
-#Purpose : Student launches a Sim 5 activity for Excel Application. Scores a 100% and compares the result and status
-Scenario: Student launches a Sim 5 activity for Excel Application. Scores a 100% and compares the result and status
+#PEGASUS-29285 
+#peg-21998:Sim 5 Excel activity and Student scoring a 100%
+#Purpose : Student launches a Sim 5 Excel activity and Student scoring a 100%
+Scenario: Student launches a Sim 5 Excel activity and Student scoring a 100% compares the result and status
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"

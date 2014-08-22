@@ -101,14 +101,14 @@ When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 
-#MyITLabOffice2013InstructorCourse
-#Purpose: Login as SMS Instructor and Navigate to MyITLabOffice2013InstructorSection
-Scenario: User Login as SMS Instructor and Navigate MyITLabOffice2013InstructorSection Course
+#MyITLabOffice2013Program
+#Purpose: Login as SMS Instructor and Navigate to MyITLabOffice2013Section
+Scenario: User Login as SMS Instructor and Navigate MyITLabOffice2013Section Course
 Given I browsed the login url for "CsSmsInstructor"
 When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
-When I enter in the "MyITLabOffice2013InstructorCourse" course from the Global Home page as "CsSmsInstructor"
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsInstructor"
 
 #User enter into the program course
 #Purpose: Login as SMS Instructor and Navigate to MyITLabOffice2013Program

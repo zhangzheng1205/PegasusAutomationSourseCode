@@ -69,8 +69,7 @@ namespace Pegasus.Automation.DataTransferObjects
             HedEmptyClass = 44,
             // mil GraderIT Courses
             GraderITSIM5Course = 45,
-            HedMilSelfStudy = 46,
-            MyITLabOffice2013InstructorCourse = 47
+            HedMilSelfStudy = 46
         }
 
         /// <summary>
