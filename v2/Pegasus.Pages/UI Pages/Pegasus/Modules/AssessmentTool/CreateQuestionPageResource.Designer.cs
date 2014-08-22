@@ -95,5 +95,14 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
                 return ResourceManager.GetString("CreateQuestionPage_TrueFalse_PartialText_Locator", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create New Question.
+        /// </summary>
+        internal static string CreateQuestionPage_Window_Title_Locator {
+            get {
+                return ResourceManager.GetString("CreateQuestionPage_Window_Title_Locator", resourceCulture);
+            }
+        }
     }
 }

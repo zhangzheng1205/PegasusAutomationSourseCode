@@ -535,9 +535,7 @@ namespace Pegasus.Pages.UI_Pages
                 "EnableFeedbackNeverPreference",
                  base.IsTakeScreenShotDuringEntryExit);
         }
-
-
-
+        
         /// <summary>
         /// Select SIM5 AND QTI Supported Questions from Question Bank for SIM5 Activity.
         /// </summary>
@@ -578,8 +576,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("SkillBasedAssessmentPage", "ClickOnSelectQuestionFromBank",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
-
+        
         /// <summary>
         /// Create new questions.
         /// </summary>
@@ -609,21 +606,20 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("RandomTopicListPage", "SelectQuestionFromBankForBasicRandom",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
-
-
-
+                
         /// <summary>
-        /// Create new Pegasus native questions.
+        /// 
         /// </summary>
-        public void CreatePegasusNativeQuestion()
+        /// <param name="questionName"></param>
+        public void CreateNativeQuestion(string questionName)
         {
             //Create Pegasus native question
 
-            logger.LogMethodEntry("SkillBasedAssessmentPage", "CreatePegasusNativeQuestion",
+            logger.LogMethodEntry("SkillBasedAssessmentPage", "CreateNativeQuestion",
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                
                 //Switch to last open window
                 base.SwitchToLastOpenedWindow();
                 //Click on 'Add Questions' link
@@ -631,7 +627,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on 'Create new Question'
                 this.ClickOnCreateNewQuestion();
                 //Click on 'True/False' question link
-                new CreateQuestionPage().ClickOnTrueFalseQuestionLink();
+                new CreateQuestionPage().ClickOnQuestionLink(questionName);
                 //Create a new True/False question
                 new TrueFalsePage().CreateNewTrueFalseQuestion();
             }
@@ -639,11 +635,10 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("SkillBasedAssessmentPage", "CreatePegasusNativeQuestion",
+            logger.LogMethodExit("SkillBasedAssessmentPage", "CreateNativeQuestion",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
-
+        
         /// <summary>
         /// Click on Save and Return.
         /// </summary>
@@ -670,8 +665,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("SkillBasedAssessmentPage", "SaveandReturn",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
-
+        
         /// <summary>
         /// Click on Create New Question
         /// </summary>
@@ -698,8 +692,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-
-        /// <summary>
+                /// <summary>
         /// Select 'Edit Random Activity' Window.
         /// </summary>
         private void SelectEditRandomActivityWindow()

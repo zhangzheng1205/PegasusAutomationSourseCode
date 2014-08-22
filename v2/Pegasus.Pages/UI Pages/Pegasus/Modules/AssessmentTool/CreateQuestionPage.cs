@@ -1,18 +1,23 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool;
-using System;
 
 namespace Pegasus.Pages.UI_Pages
 {
     /// <summary>
     /// This class handles Create Question actions.
     /// </summary>
-    class CreateQuestionPage : BasePage
+     public class CreateQuestionPage : BasePage
     {
         private static readonly Logger logger =
         Logger.GetInstance(typeof(CreateQuestionPage));
@@ -21,15 +26,16 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Create New Questions from Activity.
         /// </summary>
-        public void ClickOnTrueFalseQuestionLink()
+        public void ClickOnQuestionLink(string questionName)
         {
             logger.LogMethodEntry("CreateQuestionPage",
             "ClickOnTrueFalseQuestionLink",
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.SelectWindow(CreateQuestionPageResource.CreateQuestionPage_Window_Title_Locator);
                 //Switch to Last Open Window
-                base.SwitchToLastOpenedWindow();
+                //base.SwitchToLastOpenedWindow();
                 //Wait for Iframe
                 base.WaitForElement(By.Id(CreateQuestionPageResource.
                 CreateQuestionPage_Iframe_Id_Locator));
@@ -37,10 +43,10 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToIFrameById(CreateQuestionPageResource.
                 CreateQuestionPage_Iframe_Id_Locator);
                 //Get property for 'True/False' question link
-                IWebElement GetTrueFalseQuestion = base.GetWebElementPropertiesByPartialLinkText
-                (CreateQuestionPageResource.CreateQuestionPage_TrueFalse_PartialText_Locator);
+                IWebElement getQuestionName = base.GetWebElementPropertiesByPartialLinkText
+                (questionName);
                 //Click on 'True/False' question link
-                base.ClickByJavaScriptExecutor(GetTrueFalseQuestion);
+                base.ClickByJavaScriptExecutor(getQuestionName);
 
             }
             catch (Exception e)
@@ -52,6 +58,8 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
 
         }
+
+       
 
     }
 }

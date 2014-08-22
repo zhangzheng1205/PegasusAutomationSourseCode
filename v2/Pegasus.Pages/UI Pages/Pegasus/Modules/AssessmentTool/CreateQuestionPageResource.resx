@@ -129,4 +129,7 @@
   <data name="CreateQuestionPage_TrueFalse_PartialText_Locator" xml:space="preserve">
     <value>True/False</value>
   </data>
+  <data name="CreateQuestionPage_Window_Title_Locator" xml:space="preserve">
+    <value>Create New Question</value>
+  </data>
 </root>

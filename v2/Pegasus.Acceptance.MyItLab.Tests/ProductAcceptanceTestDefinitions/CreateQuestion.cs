@@ -38,7 +38,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "SelectAddCourseMaterialsOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Select Question Type.
         /// </summary>
@@ -83,7 +83,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new SIMRepositoryPage().AddQuestionFolder();
             Logger.LogMethodExit("CreateQuestion", "AddTheQuestionFolderFromSimRepository",
                base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         /// Verify The Created Question.
@@ -94,7 +94,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         {
             // Verify The Created Question Folder
             Logger.LogMethodEntry("CreateQuestion", "VerifyTheCreatedQuestion",
-                 base.IsTakeScreenShotDuringEntryExit);           
+                 base.IsTakeScreenShotDuringEntryExit);
             //Assert Created Question 
             Logger.LogAssertion("VerifyTheCreatedQuestion", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(true,
@@ -119,7 +119,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new QlGridUXPage().ClickOnCmenuOfAsset(questionName, cmenuOption);
             Logger.LogMethodExit("CreateQuestion", "SelectCmenuOption",
               base.IsTakeScreenShotDuringEntryExit);
-            
+
         }
 
         /// <summary>
@@ -132,17 +132,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Question.QuestionTypeEnum questionTypeEnum, String projectName)
         {
             // Create Grader IT Question In Manage Question Bank
-            Logger.LogMethodEntry("CreateQuestion", 
+            Logger.LogMethodEntry("CreateQuestion",
                 "CreateGraderITQuestionInManageQuestionBank",
                  base.IsTakeScreenShotDuringEntryExit);
             //Create The GraderIT Question In Manage Question Bank
             new AutoGraderPage().
-                CreateTheGraderITQuestionInManageQuestionBank(questionTypeEnum,projectName);
-            Logger.LogMethodExit("CreateQuestion", 
+                CreateTheGraderITQuestionInManageQuestionBank(questionTypeEnum, projectName);
+            Logger.LogMethodExit("CreateQuestion",
                 "CreateGraderITQuestionInManageQuestionBank",
               base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Add SIM Question 2010 from SIM Repository.
         /// </summary>
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CreateQuestion",
                 "AddSIMQuestionFromSIMRepository",
               base.IsTakeScreenShotDuringEntryExit);
-           
+
         }
 
         /// <summary>
@@ -249,14 +249,14 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         public void CraetedSIMQuestionSetWithQuestionType(Question.
             QuestionTypeEnum questionTypeEnum)
         {
-           //Logger Entry
+            //Logger Entry
             Logger.LogMethodEntry("CreateQuestion",
                 "CraetedSIMQuestionSetWithQuestionType",
                 base.IsTakeScreenShotDuringEntryExit);
             //Create 2010 SIM Questions set 
             new QuestionSetPage().CreateSIMQuestionsSet(questionTypeEnum);
             //Logger Exit
-            Logger.LogMethodExit("CreateQuestion", 
+            Logger.LogMethodExit("CreateQuestion",
                 "CraetedSIMQuestionSetWithQuestionType",
                        base.IsTakeScreenShotDuringEntryExit);
         }
@@ -316,19 +316,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
 
-
-
         /// <summary>
         /// Add questions into activity
         /// </summary>
-        /// <param name="activityType">This is Activity Type.</param>  
-
+        /// <param name="activityType">This is Activity Type.</param> 
         [When(@"I add ""(.*)"" question into created activity")]
-        public void AddQuestionIntoCreatedActivity(string activityType)
+        [When(@"I add ""(.*)"" question as ""(.*)"" into created activity")]
+         public void AddQuestionIntoActivity(string questionType, string questionName)
         {
-            Logger.LogMethodEntry("CreateQuestion", "AddQuestionIntoCreatedActivity",
+            Logger.LogMethodEntry("CreateQuestion", "AddQuestionIntoActivity",
                  base.IsTakeScreenShotDuringEntryExit);
-            switch(activityType)
+            switch (questionType)
             {
                 case "SIM5":
                     //Click on Select Questions from Bank
@@ -336,15 +334,14 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     //Click on Advanced Search option
                     new ContentBrowserUXPage().SearchAndAddSIM5question();
                     break;
-                case "QTI" :
+                case "QTI":
                     //Create Pegasus native questions
-                    new SkillBasedAssessmentPage().CreatePegasusNativeQuestion();
-                    break;                    
+                    new SkillBasedAssessmentPage().CreateNativeQuestion(questionName);
+                    break;
             }
-            Logger.LogMethodExit("CreateQuestion", "AddQuestionIntoCreatedActivity",
-                     base.IsTakeScreenShotDuringEntryExit);            
+            Logger.LogMethodExit("CreateQuestion", "AddQuestionIntoActivity",
+                     base.IsTakeScreenShotDuringEntryExit);
         }
-
 
         /// <summary>
         /// Add Save the Activity
@@ -362,7 +359,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
 
-        
+
 
 
         /// <summary>
