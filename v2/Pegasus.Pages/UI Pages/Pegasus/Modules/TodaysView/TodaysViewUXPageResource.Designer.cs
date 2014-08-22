@@ -520,6 +520,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;InsUnreadComments&apos;]/tbody/tr.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;InsUnreadComments&apos;]/tbody/tr[{0}]/td/table/tbody/tr/td/span.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_InstructorComments_Activity_Name_By_Xpath {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_InstructorComments_Activity_Name_By_Xpath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to channel_button.
         /// </summary>
         internal static string TodaysViewUXPageResource_ManageAll_Button_Class_Locator {

@@ -3300,6 +3300,73 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             return getSubTabId;
         }
-        
+
+        /// <summary>
+        /// Get Instructor Comments channel text In Today's View Page.
+        /// </summary>
+        /// <returns>Notification channel Title.</returns>
+        public String GetInstructorCommentsChannelTitle(string channelName)
+        {
+            //Validate Instructor Comments channel existance in Today's View Page
+            logger.LogMethodEntry("TodaysViewUXPage", 
+                "GetInstructorCommentsChannelTitle",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            string getInstructorCommentsText = string.Empty;
+            try
+            {                
+                //Wait for the Alert channel to load
+                base.WaitForElement(By.PartialLinkText(channelName));
+                //Get Instructor Comments Text
+                getInstructorCommentsText =
+                       base.GetElementTextByPartialLinkText(channelName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage",
+                "GetInstructorCommentsChannelTitle",
+              base.IsTakeScreenShotDuringEntryExit);
+            return getInstructorCommentsText;
+        }
+
+        /// <summary>
+        /// Get Instructor Comments Activity Name Text.
+        /// </summary>
+        /// <returns>Activity Name.</returns>
+        public string GetActivityNameOfInstructorCommentsChannel(string activityName)
+        {
+            //Get Instructor Comments Text
+            logger.LogMethodEntry("TodaysViewUXPage",
+                "GetActivityNameOfInstructorCommentsChannel",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            string getActivityName = string.Empty;
+            //get Activities Row Count
+            int GetActivitiesRowCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath
+                );
+            //Iterate for Respective Activity In Table
+            for (
+                int setActivityRowCount =
+                    Convert.ToInt32(TodaysViewUXPageResource.TodaysViewUXPageResource_Page_Initial_Value);
+                    setActivityRowCount <= GetActivitiesRowCount; setActivityRowCount++)
+            {
+                //Get The Activity Name From List
+                getActivityName =
+                    base.GetInnerTextAttributeValueByXPath(String.Format(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_InstructorComments_Activity_Name_By_Xpath,
+                    setActivityRowCount));
+                if(getActivityName.Contains(activityName))
+                {
+                    break;
+                }
+            }  
+            logger.LogMethodExit("TodaysViewUXPage",
+                "GetActivityNameOfInstructorCommentsChannel",
+            base.IsTakeScreenShotDuringEntryExit);
+            return getActivityName;
+        }
     }
 }

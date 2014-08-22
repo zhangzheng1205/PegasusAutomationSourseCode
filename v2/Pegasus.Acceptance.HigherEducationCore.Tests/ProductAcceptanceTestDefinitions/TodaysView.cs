@@ -287,6 +287,75 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("TodaysView", "CheckTheNotifyMeCheckboxOption",
                  base.IsTakeScreenShotDuringEntryExit);
         }
+      
+        /// <summary>
+        /// Verify Instructor Comments channel in Today's View Page.
+        /// </summary>
+        /// <param name="channels">Channels.</param>
+        [Then(@"I should see the ""(.*)"" channels in 'Todays view' page")]
+        public void VerifyChanneslInTodaysViewPage(string channels)
+        {
+            //Verify Instructor Comments channel in Today's View Page
+            Logger.LogMethodEntry("TodaysView", "VerifyChanneslInTodaysViewPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Verify Instructor Comments channel in Today's View Page
+            Logger.LogAssertion("VerifyChannels",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(channels, new TodaysViewUXPage().
+                    GetInstructorCommentsChannelTitle(channels)));
+            Logger.LogMethodEntry("TodaysView", "VerifyChanneslInTodaysViewPage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verify Alerts Count in Instructor Comments Channel.
+        /// </summary>
+        /// <param name="alertcount">Alert Count to be Validated.</param>
+        [Then(@"I should see the alert count updated as ""(.*)"" in ""(.*)"" channel")]
+        public void ValidateInstructorCommentsAlertCount(int alertCount, string channelName)
+        {
+            // Verify Alerts Count in Instructor Comments Channel
+            Logger.LogMethodEntry("TodaysView", "ValidateInstructorCommentsAlertCount",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert the alert count displayed in Instructor Comments channel
+            Logger.LogAssertion("VerifyInstructorCommentsAlerts", ScenarioContext.Current.
+                ScenarioInfo.Title,
+                () => Assert.AreEqual(alertCount, new TodaysViewUXPage().
+                    GetAlertCount(channelName)));
+            Logger.LogMethodEntry("TodaysView", "ValidateInstructorCommentsAlertCount",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On Instructor Comments Channel Option.
+        /// </summary>
+        /// <param name="channelOption">This is Channel Option.</param>
+        [When(@"I click on the ""(.*)"" option")]
+        public void ClickOnInstructorCommentsOption(string channelOption)
+        {
+            //Click On Instructor Comments Channel Option
+            Logger.LogMethodEntry("TodaysView", "ClickOnInstructorCommentsOption",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on the Instructor Comments channel Option
+            new TodaysViewUXPage().ClickonNotificationChannelOption(channelOption);
+            Logger.LogMethodExit("TodaysView", "ClickOnInstructorCommentsOption",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verify The Activity Name In The Instructor Comments Channel.
+        /// </summary>
+        /// <param name="ActivityName">This is Activity Name.</param>
+        [Then(@"I should see the activity ""(.*)"" in the Instructor Comments channel")]
+        public void VerifyActivityNameInChannel(string activityName)
+        {
+            //Verify The Activity Name In The Instructor Comments Channel           
+            Logger.LogMethodEntry("TodaysView", "VerifyActivityNameInChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert the Activity Name In The Instructor Comments Channel 
+            Logger.LogAssertion("VerifyActivityName", ScenarioContext.Current.
+                ScenarioInfo.Title,
+                () => Assert.AreEqual(activityName, new TodaysViewUXPage().GetActivityNameOfInstructorCommentsChannel(activityName)));
+            Logger.LogMethodEntry("TodaysView", "VerifyActivityNameInChannel",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

@@ -594,4 +594,10 @@
   <data name="TodaysViewUXPageResource_PastDueNotSubmitted_ActivityTotalCount_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='TVInsAnnoucement$contentCntr']/tbody/tr[{0}]/td/div/table/tbody/tr/td/table</value>
   </data>
+  <data name="TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath" xml:space="preserve">
+    <value>//table[@id='InsUnreadComments']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_InstructorComments_Activity_Name_By_Xpath" xml:space="preserve">
+    <value>//table[@id='InsUnreadComments']/tbody/tr[{0}]/td/table/tbody/tr/td/span</value>
+  </data>
 </root>

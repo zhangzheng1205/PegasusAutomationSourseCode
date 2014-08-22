@@ -184,3 +184,12 @@ When I enter in the "InstructorCourse" from the Global Home page as "HedTeacherA
 Scenario: User LogOut As CsTAInstructor
 When I "Sign out" from the "HedTeacherAssistant"
 Then I should see the successfull message "You have been signed out of the application."
+
+#MySpanishLab for ¡Anda! Curso elemental, 2e -AuthoredCourse
+#Purpose: Verify The User Login As CourseSpaceSMSStudent TO MySpanishLabAuthoredCourse
+Scenario: User Login As CsSMSStudent Navigate To MySpanishLabAuthored
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabMaster" from the Global Home page as "CsSmsStudent"
