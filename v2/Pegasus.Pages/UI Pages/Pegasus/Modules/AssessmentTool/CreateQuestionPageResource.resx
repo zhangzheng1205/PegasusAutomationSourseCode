@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CreateQuestionPage_FillintheBlank_PartialText_Locator" xml:space="preserve">
+    <value>Fill in the Blank</value>
+  </data>
   <data name="CreateQuestionPage_Iframe_Id_Locator" xml:space="preserve">
     <value>frmSelectQuestion</value>
+  </data>
+  <data name="CreateQuestionPage_Matching_PartialText_Locator" xml:space="preserve">
+    <value>Matching</value>
+  </data>
+  <data name="CreateQuestionPage_MultipleChoice_PartialText_Locator" xml:space="preserve">
+    <value>Multiple Choice</value>
+  </data>
+  <data name="CreateQuestionPage_MultipleResponse_PartialText_Locator" xml:space="preserve">
+    <value>Multiple Response</value>
   </data>
   <data name="CreateQuestionPage_RandomNumber_Character" xml:space="preserve">
     <value>a'&gt;</value>
@@ -126,10 +138,16 @@
   <data name="CreateQuestionPage_RandomNumber_Length" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="CreateQuestionPage_Ranking_PartialText_Locator" xml:space="preserve">
+    <value>Ranking</value>
+  </data>
   <data name="CreateQuestionPage_TrueFalse_PartialText_Locator" xml:space="preserve">
     <value>True/False</value>
   </data>
   <data name="CreateQuestionPage_Window_Title_Locator" xml:space="preserve">
     <value>Create New Question</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
   </data>
 </root>

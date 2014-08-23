@@ -33,9 +33,8 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                base.SelectWindow(CreateQuestionPageResource.CreateQuestionPage_Window_Title_Locator);
-                //Switch to Last Open Window
-                //base.SwitchToLastOpenedWindow();
+                //Select Window
+                base.SelectWindow(CreateQuestionPageResource.CreateQuestionPage_Window_Title_Locator);             
                 //Wait for Iframe
                 base.WaitForElement(By.Id(CreateQuestionPageResource.
                 CreateQuestionPage_Iframe_Id_Locator));
@@ -59,7 +58,58 @@ namespace Pegasus.Pages.UI_Pages
 
         }
 
-       
+        /// <summary>
+        /// Verify, if all native questions are present.
+        /// </summary>
+        public Boolean IsAllNativeQuestionsPresent()
+        {
+            logger.LogMethodEntry("CreateQuestionPage",
+           "IsAllNativeQuestionsPresent",
+           base.IsTakeScreenShotDuringEntryExit);
+            bool isNativeQuestionsDisplayed = false;
+            try
+            {
+                //Select window
+                base.SelectWindow(CreateQuestionPageResource.
+                    CreateQuestionPage_Window_Title_Locator);
+                //Switch to Iframe
+                base.SwitchToIFrameById(CreateQuestionPageResource.
+                    CreateQuestionPage_Iframe_Id_Locator);
+                //Wait for element
+                base.WaitForElement(By.PartialLinkText(CreateQuestionPageResource.
+                    CreateQuestionPage_FillintheBlank_PartialText_Locator));
+                //Is 'Fill in the Blank' question link Displayed
+                bool isFillInTheBlankDisplayed = base.IsElementPresent(By.PartialLinkText(CreateQuestionPageResource.
+                    CreateQuestionPage_FillintheBlank_PartialText_Locator));
+                //Is 'Matching' question link Displayed
+                bool isMatchingDisplayed = base.IsElementPresent(By.PartialLinkText(CreateQuestionPageResource.
+                    CreateQuestionPage_Matching_PartialText_Locator));
+                //Is 'Multiple Choice' question link Displayed
+                bool isMultipleChoiceDisplayed = base.IsElementPresent(By.PartialLinkText(CreateQuestionPageResource.
+                    CreateQuestionPage_MultipleChoice_PartialText_Locator));
+                //Is 'Multiple Response' question link Displayed
+                bool isMultipleResponseDisplayed = base.IsElementPresent(By.PartialLinkText(CreateQuestionPageResource.
+                    CreateQuestionPage_MultipleResponse_PartialText_Locator));
+                //Is 'Ranking' question link Displayed
+                bool isRankingDisplayed = base.IsElementPresent(By.PartialLinkText(CreateQuestionPageResource.
+                    CreateQuestionPage_Ranking_PartialText_Locator));
+                //Is 'True/false' question link Displayed
+                bool isTrueFalseDisplayed = base.IsElementPresent(By.PartialLinkText(CreateQuestionPageResource.
+                    CreateQuestionPage_TrueFalse_PartialText_Locator));
+                //Are All Native Questions Present 
+                isNativeQuestionsDisplayed = isFillInTheBlankDisplayed && isMatchingDisplayed && isMultipleChoiceDisplayed &&
+                   isMultipleResponseDisplayed && isRankingDisplayed && isTrueFalseDisplayed;
+                  }                             
+                    
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CreateQuestionPage",
+            "IsAllNativeQuestionsPresent",
+            base.IsTakeScreenShotDuringEntryExit);
+            return isNativeQuestionsDisplayed;
+        }             
 
     }
 }

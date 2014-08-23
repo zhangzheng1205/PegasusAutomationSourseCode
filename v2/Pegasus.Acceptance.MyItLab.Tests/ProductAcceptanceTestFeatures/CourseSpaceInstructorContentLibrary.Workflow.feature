@@ -22,11 +22,22 @@ Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option in Content Library
 And I click on the "Exam [Skill-Based]" activity type
 Then I should be on the "Create activity" page
-When I create a "SIM5Activity" activity of behavioral mode "SkillBased" type
-And I add "SIM5" question into created activity
-And I add "Native" question as "True/False" into created activity
-And I save this activity
+When I create a "SIM5Activity" of behavioral mode "SkillBased" type
+And I add "SIM5" question in created "Exam [Skill-Based]" activity
+And I add "Native" question as "True/False" in created activity and save this activity
 Then I should see the successfull message "Activity added successfully."
+
+#Purpose: To verify all native questions are present
+Scenario: To verify all native questions are present
+When I navigate to the "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I click on the 'Add Course Materials' option in Content Library
+And I click on the "Exam [Skill-Based]" activity type
+Then I should be on the "Create activity" page
+When I create a "SIM5Activity" of behavioral mode "SkillBased" type
+And I click on "Create New Question" link
+Then I should be on the "Create New Question" page
+And I should see all native questions present
 
 #Purpose: To edit an activity in Content Library and preview the HelpLink
 Scenario: To edit an activity in Content Library and preview the HelpLink

@@ -282,6 +282,41 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
+        /// Click on 'Create New Question' Link
+        /// </summary>      
+        [When(@"I click on ""(.*)"" link")]
+        public void ClickOnCreateNewQuestionLink(string createQuestion)
+        {
+            //Logger Entry
+            Logger.LogMethodEntry("CreateQuestion",
+                "ClickOnCreateNewQuestionLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            new SkillBasedAssessmentPage().ClickOnCreateNewQuestion();
+            Logger.LogMethodExit("CreateQuestion",
+               "ClickOnCreateNewQuestionLink",
+                      base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify if all native questions are present
+        /// </summary>      
+        [Then(@"I should see all native questions present")]
+        public void VerifyAllNativeQuestionsPresent()
+        {
+            //Logger Entry
+            Logger.LogMethodEntry("CreateQuestion",
+                "VerifyAllNativeQuestionsPresent",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Verify if all native questions are present
+            Logger.LogAssertion("Verify All Native Questions Presence",
+                "Are All Native Questions present", () =>
+                Assert.AreEqual(true,  new CreateQuestionPage().IsAllNativeQuestionsPresent()));
+            Logger.LogMethodExit("CreateQuestion",
+               "VerifyAllNativeQuestionsPresent",
+                      base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Click On Cmenu Of Question.
         /// </summary>
         /// <param name="cmenuOption">This is Cmenu Option.</param>
@@ -315,13 +350,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                       base.IsTakeScreenShotDuringEntryExit);
         }
 
-
         /// <summary>
         /// Add questions into activity
         /// </summary>
         /// <param name="activityType">This is Activity Type.</param> 
-        [When(@"I add ""(.*)"" question into created activity")]
-        [When(@"I add ""(.*)"" question as ""(.*)"" into created activity")]
+        [When(@"I add ""(.*)"" question in created ""(.*)"" activity")]
+        [When(@"I add ""(.*)"" question as ""(.*)"" in created activity and save this activity")]
          public void AddQuestionIntoActivity(string questionType, string questionName)
         {
             Logger.LogMethodEntry("CreateQuestion", "AddQuestionIntoActivity",
@@ -334,34 +368,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     //Click on Advanced Search option
                     new ContentBrowserUXPage().SearchAndAddSIM5question();
                     break;
-                case "QTI":
+                case "Native":
                     //Create Pegasus native questions
                     new SkillBasedAssessmentPage().CreateNativeQuestion(questionName);
                     break;
             }
+            
             Logger.LogMethodExit("CreateQuestion", "AddQuestionIntoActivity",
                      base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Add Save the Activity
-        /// </summary>
-        /// <param name="activityType">This is Activity Type.</param>  
-        [When(@"I save this activity")]
-        public void SaveThisActivityAndReturn()
-        {
-            Logger.LogMethodEntry("CreateQuestion", "SaveThisActivityAndReturn",
-                 base.IsTakeScreenShotDuringEntryExit);
-            //Click on Save and Return
-            new SkillBasedAssessmentPage().SaveandReturn();
-            Logger.LogMethodExit("CreateQuestion", "SaveThisActivityAndReturn",
-                    base.IsTakeScreenShotDuringEntryExit);
-        }
-
-
-
-
-
+        
         /// <summary>
         /// Verify The Question Point Value.
         /// </summary>

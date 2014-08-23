@@ -63,13 +63,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
         /// <summary>
         /// Create a SIM5 SkillBased Activity
         /// </summary>
         /// <param name="activityTypeEnum">This is activity type enum</param>
         /// <param name="behavioralModeEnum">This is behavioral mode enum</param>
-        [When(@"I create a ""(.*)"" activity of behavioral mode ""(.*)"" type")]
+       [When(@"I create a ""(.*)"" of behavioral mode ""(.*)"" type")]
         public void CreateSIM5ActivityOfBehavioralModeSkillBasedType(Activity.ActivityTypeEnum activityTypeEnum,
             Activity.ActivityBehavioralModesEnum behavioralModeEnum)
         {

@@ -669,7 +669,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click on Create New Question
         /// </summary>
-        private void ClickOnCreateNewQuestion()
+        public void ClickOnCreateNewQuestion()
         {
 
             logger.LogMethodEntry("SkillBasedAssessmentPage", "ClickOnCreateNewQuestion",

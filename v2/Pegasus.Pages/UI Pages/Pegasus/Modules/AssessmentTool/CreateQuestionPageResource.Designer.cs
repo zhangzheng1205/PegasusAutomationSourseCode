@@ -61,11 +61,47 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fill in the Blank.
+        /// </summary>
+        internal static string CreateQuestionPage_FillintheBlank_PartialText_Locator {
+            get {
+                return ResourceManager.GetString("CreateQuestionPage_FillintheBlank_PartialText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to frmSelectQuestion.
         /// </summary>
         internal static string CreateQuestionPage_Iframe_Id_Locator {
             get {
                 return ResourceManager.GetString("CreateQuestionPage_Iframe_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Matching.
+        /// </summary>
+        internal static string CreateQuestionPage_Matching_PartialText_Locator {
+            get {
+                return ResourceManager.GetString("CreateQuestionPage_Matching_PartialText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Multiple Choice.
+        /// </summary>
+        internal static string CreateQuestionPage_MultipleChoice_PartialText_Locator {
+            get {
+                return ResourceManager.GetString("CreateQuestionPage_MultipleChoice_PartialText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Multiple Response.
+        /// </summary>
+        internal static string CreateQuestionPage_MultipleResponse_PartialText_Locator {
+            get {
+                return ResourceManager.GetString("CreateQuestionPage_MultipleResponse_PartialText_Locator", resourceCulture);
             }
         }
         
@@ -88,6 +124,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ranking.
+        /// </summary>
+        internal static string CreateQuestionPage_Ranking_PartialText_Locator {
+            get {
+                return ResourceManager.GetString("CreateQuestionPage_Ranking_PartialText_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to True/False.
         /// </summary>
         internal static string CreateQuestionPage_TrueFalse_PartialText_Locator {
@@ -102,6 +147,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         internal static string CreateQuestionPage_Window_Title_Locator {
             get {
                 return ResourceManager.GetString("CreateQuestionPage_Window_Title_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
     }

@@ -308,7 +308,9 @@ namespace Pegasus.Pages.UI_Pages
                 TrueFalse_Page_Activity_SaveAndClose_TimeValue));
                 //Click on 'Add and Close' button
                 this.ClickonAddandCloseButton();
-            }
+                //Click on Save and Return
+                new SkillBasedAssessmentPage().SaveandReturn();
+                        }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
