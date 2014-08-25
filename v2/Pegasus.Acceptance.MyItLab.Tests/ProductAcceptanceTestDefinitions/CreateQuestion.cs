@@ -362,7 +362,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                  base.IsTakeScreenShotDuringEntryExit);
             switch (questionType)
             {
-                case "SIM5":
+                 case "SIM5":
                     //Click on Select Questions from Bank
                     new SkillBasedAssessmentPage().SelectQuestionFromQuestionBank();
                     //Click on Advanced Search option

@@ -34,9 +34,14 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                
+            
                 Thread.Sleep(Convert.ToInt32(RandomTopicListPageResource.
                      RandomTopicList_Page_Time_Value));
-                //Wait for Add Question Button
+                //Select window
+                base.SelectWindow(RandomTopicListPageResource.
+                    RandomTopicList_Page_CreateActivity_Window_Title_Locator);
+                    //Wait for Add Question Button
                 base.WaitForElement(By.Id(RandomTopicListPageResource.
                     RandomTopicList_Page_AddQuestion_Button_Id_Locator));
                 //Get Add Question Button Property

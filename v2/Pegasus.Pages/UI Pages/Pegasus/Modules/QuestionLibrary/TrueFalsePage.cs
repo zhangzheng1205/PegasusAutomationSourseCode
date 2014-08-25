@@ -97,11 +97,9 @@ namespace Pegasus.Pages.UI_Pages
             //Select  the frame
             base.SwitchToIFrame(TrueFalsePageResource.
                 TrueFalse_Page_HTMLEditorQues_Frame_Id_Locator);
+            // Click on ShowHTML button
             base.WaitForElement(By.Id(TrueFalsePageResource.
             TrueFalse_Page_HTMLEditorQues_ViewsourceButton_Id_Locator));
-            // Click on ShowHTML button
-            base.FocusOnElementById(TrueFalsePageResource.
-            TrueFalse_Page_HTMLEditorQues_ViewsourceButton_Id_Locator);
             IWebElement getHtmldesc = base.
                 GetWebElementPropertiesById(TrueFalsePageResource.
             TrueFalse_Page_HTMLEditorQues_ViewsourceButton_Id_Locator);

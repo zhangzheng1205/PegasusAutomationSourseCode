@@ -34,7 +34,8 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Window
-                base.SelectWindow(CreateQuestionPageResource.CreateQuestionPage_Window_Title_Locator);             
+                //base.SelectWindow(CreateQuestionPageResource.CreateQuestionPage_Window_Title_Locator);     
+                this.SelectCreateQuestionPageWindow();
                 //Wait for Iframe
                 base.WaitForElement(By.Id(CreateQuestionPageResource.
                 CreateQuestionPage_Iframe_Id_Locator));
@@ -58,6 +59,31 @@ namespace Pegasus.Pages.UI_Pages
 
         }
 
+
+        /// <summary>
+        /// Select the Create Question Page window.
+        /// </summary>
+         private void SelectCreateQuestionPageWindow()
+        {
+            logger.LogMethodEntry("CreateQuestionPage",
+          "SelectWindow",
+          base.IsTakeScreenShotDuringEntryExit);
+              try
+            {
+                //Select Window
+                base.SelectWindow(CreateQuestionPageResource.
+                    CreateQuestionPage_Window_Title_Locator);
+
+            }
+              catch (Exception e)
+              {
+                  ExceptionHandler.HandleException(e);
+              }
+              logger.LogMethodExit("CreateQuestionPage",
+              "SelectWindow",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Verify, if all native questions are present.
         /// </summary>
@@ -70,8 +96,9 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select window
-                base.SelectWindow(CreateQuestionPageResource.
-                    CreateQuestionPage_Window_Title_Locator);
+              //  base.SelectWindow(CreateQuestionPageResource.
+                    //CreateQuestionPage_Window_Title_Locator);
+                this.SelectCreateQuestionPageWindow();
                 //Switch to Iframe
                 base.SwitchToIFrameById(CreateQuestionPageResource.
                     CreateQuestionPage_Iframe_Id_Locator);

@@ -15,8 +15,9 @@ Then I should see the successfull message "Activity added successfully."
 When I "Sign out" from the "HedWsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
+#Test Case ID: peg-22162
 #Purpose: To Create a Skill based activity with Native and SIM5 questions
-Scenario: To Create a Skill based activity with Native and SIM5 questions
+Scenario: Creation of Skill based activity with QTI and SIM5 questions
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option in Content Library
@@ -27,8 +28,9 @@ And I add "SIM5" question in created "Exam [Skill-Based]" activity
 And I add "Native" question as "True/False" in created activity and save this activity
 Then I should see the successfull message "Activity added successfully."
 
-#Purpose: To verify all native questions are present
-Scenario: To verify all native questions are present
+#Test Case ID: peg-22161
+#Purpose: Creation of Skill based activity with Sim5 and QTI questions
+Scenario: Creation of Skill based activity with Sim5 and QTI questions
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option in Content Library
