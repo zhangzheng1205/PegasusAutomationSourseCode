@@ -3353,9 +3353,9 @@ namespace Pegasus.Pages.UI_Pages
                     Convert.ToInt32(TodaysViewUXPageResource.TodaysViewUXPageResource_Page_Initial_Value);
                     setActivityRowCount <= GetActivitiesRowCount; setActivityRowCount++)
             {
-                //Get The Activity Name From List
+                //Get The Activity Name From List   
                 getActivityName =
-                    base.GetInnerTextAttributeValueByXPath(String.Format(TodaysViewUXPageResource.
+                    base.GetElementInnerTextByXPath(String.Format(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_InstructorComments_Activity_Name_By_Xpath,
                     setActivityRowCount));
                 if(getActivityName.Contains(activityName))
