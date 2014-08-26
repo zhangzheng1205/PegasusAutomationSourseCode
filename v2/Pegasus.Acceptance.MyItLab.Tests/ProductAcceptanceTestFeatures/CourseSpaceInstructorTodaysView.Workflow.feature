@@ -94,3 +94,28 @@ Then I should see the "Notifications" channels in 'Todays view' page
 And I should see the alert count updated as "69" in "Past Due: Not Submitted" channel
 When I click on the "Past Due: Not Submitted" option
 Then I should see "69" activity in the Past Due: Not Submitted channel
+
+#Purpose : As a instructor i should see the calculation done for the submited activity in "Student Performance".
+#Test case ID : peg-16750.
+#Products : MyItLab, World Languages and HSS.
+#Pre condition : Student should submit the actvity and GTD/WM job should run.
+#Dependency : One time dependent(This scenario can be run against existing data).
+Scenario: Instructor validates grade display in Student performance channel
+When I navigate to "Today's View" tab
+Then I should see the "Notifications" channels in 'Todays view' page
+When I click on the "Student Performance" option
+Then I should see "6.57%" as overall Grade in "Student Performance" alert channel
+
+#Purpose : As a instructor i should be notified with alert counts and contents when student submits Past due activity
+#Test case ID : peg-16762.
+#Products : MyItLab, World Languages and HSS.
+#Pre condition : Student should submit the assigned activities post due date.
+#Dependency : One time dependent(This scenario can be run against existing data).
+Scenario: Instructor views Alert update in Past Due Submitted channel
+When I navigate to "Today's View" tab
+Then I should see the "Notifications" channels in 'Todays view' page
+And I should see the alert count updated as "1" in "Past Due: Submitted" channel
+When I click on the "Past Due: Submitted" option
+Then I should see student First, Last name "ln, fn" in Past Due: Submitted channel
+When I click on the expand icon of student
+Then I should see the activity name "Training [Skill-Based]: Word Chapter 1 Skill-Based Training"

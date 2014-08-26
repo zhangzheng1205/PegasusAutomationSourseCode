@@ -66,6 +66,48 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         }
 
         /// <summary>
+        /// Validate the status of the submitted activity.
+        /// </summary>
+        /// <param name="activityStatus">Status of the activity.</param>
+        /// <param name="activityName">Activity name.</param>
+        [Then(@"I should see ""(.*)"" status for the activity ""(.*)""")]
+        public void ValidateActivityStatus(string activityStatus, string activityName)
+        {
+
+            //Validate the submitted activity status
+            Logger.LogMethodEntry("CommonSteps",
+                "ValidateActivityStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Validate the submitted activity status
+            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(activityStatus, new StudentPresentationPage().
+                    GetStatusOfSubmittedActivityInCourseMaterial(activityName)));
+            Logger.LogMethodExit("CommonSteps",
+                "ValidateActivityStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate score of the submitted activity.
+        /// </summary>
+        /// <param name="activityScore">Activity score.</param>
+        /// <param name="activityName">Activity name.</param>
+        [Then(@"I should see ""(.*)"" score for the activity ""(.*)"" in course material page")]
+        public void ThenIShouldSeeScoreForTheActivityInCourseMaterialPage(string activityScore, string activityName)
+        {
+            //Validate the submitted activity score
+            Logger.LogMethodEntry("CommonSteps",
+                "ValidateActivityStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(activityScore, new StudentPresentationPage().
+                    GetActivityScoreFromCourseMaterialsPage(activityName)));
+            Logger.LogMethodExit("CommonSteps",
+                "ValidateActivityStatus",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Verifies the Pop Up Opened.
         /// Verifies the Correct Pop Up Opened.
         /// </summary>

@@ -793,6 +793,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AddDiscussionTopicPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Discussion\DiscussionMainUXPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Discussion\DiscussionMainUXPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiscussionMainUXPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\DRT\DRTDefaultUXPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\DRT\DRTDefaultUXPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2258,6 +2264,10 @@
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Discussion\AddDiscussionTopicPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AddDiscussionTopicPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Discussion\DiscussionMainUXPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DiscussionMainUXPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\DRT\DRTDefaultUXPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

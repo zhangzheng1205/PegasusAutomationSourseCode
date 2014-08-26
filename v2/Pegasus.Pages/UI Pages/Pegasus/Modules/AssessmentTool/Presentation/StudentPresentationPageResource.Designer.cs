@@ -62,6 +62,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[4].
+        /// </summary>
+        internal static string CoursePreviewMainUX_Page_ActivityScore_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewMainUX_Page_ActivityScore_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Activity Alert.
         /// </summary>
         internal static string StudentPresentation_Page_Activity_Alert_Window_Name {

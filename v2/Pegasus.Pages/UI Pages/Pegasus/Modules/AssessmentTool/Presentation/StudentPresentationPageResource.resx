@@ -531,4 +531,7 @@
   <data name="StudentPrsentation_Page_SIM5_Sleep_Time" xml:space="preserve">
     <value>5000</value>
   </data>
+  <data name="CoursePreviewMainUX_Page_ActivityScore_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[4]</value>
+  </data>
 </root>

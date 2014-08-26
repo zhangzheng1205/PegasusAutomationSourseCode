@@ -214,6 +214,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;div__ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1&apos;]/table/tbody/tr/td[2]/a.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_ActivityName_PastDueSubmitted_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_ActivityName_PastDueSubmitted_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;grdAnnouncement&apos;]/tbody/tr.
         /// </summary>
         internal static string TodaysViewUXPageResource_Announcement_Rows_Xpath_Locator {
@@ -403,11 +412,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //a[@id=&apos;_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn0&apos;]/img.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_ExpandIcon_PastDueSubmitted_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_ExpandIcon_PastDueSubmitted_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;TVUnreaddiscussionDatagrid&apos;]/tbody/tr.
         /// </summary>
         internal static string TodaysViewUXPageResource_GetDiscussionTopicCount_Xpath_Locator {
             get {
                 return ResourceManager.GetString("TodaysViewUXPageResource_GetDiscussionTopicCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;TVUnreaddiscussionDatagrid&apos;]/tbody/tr[{0}]/td/table/tbody/tr/td/table/tbody/tr/td/div/b.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_GetDiscussionTopicName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_GetDiscussionTopicName_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -606,6 +633,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodaysViewUXPageResource_MyClass_Image_Button_ClassName_Locator {
             get {
                 return ResourceManager.GetString("TodaysViewUXPageResource_MyClass_Image_Button_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdMyProgress$tblHdr&apos;]/tbody/tr[2]/td[2].
+        /// </summary>
+        internal static string TodaysViewUXPageResource_MyProgressChannel_OverallGrade_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_MyProgressChannel_OverallGrade_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -1069,6 +1105,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdStudentPerformance$tblHdr&apos;]/tbody/tr[2]/td[2].
+        /// </summary>
+        internal static string TodaysViewUXPageResource_StudentPerformanceChannel_OverallGrade_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_StudentPerformanceChannel_OverallGrade_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to spnCourseNameStuViewCls.
         /// </summary>
         internal static string TodaysViewUXPageResource_StudentView_ClassName_Locator {
@@ -1416,6 +1461,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_Outer_Frame_Id_Locator {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_Outer_Frame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont0.
+        /// </summary>
+        internal static string TodayViewUXPageResource_PastDueSubmitted_StudentName_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_PastDueSubmitted_StudentName_Id_Locator", resourceCulture);
             }
         }
         

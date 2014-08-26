@@ -2674,6 +2674,189 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Fetch overall grade displayed in
+        /// Student performance channel.
+        /// </summary>
+        /// <returns>Overall Grade.</returns>
+        public string GetGradeFromStudentPerformanceChannel(string channelName)
+        {
+            //Get Alert count from Notification Channel
+            logger.LogMethodEntry("TodaysViewUXPage", "GetGradeFromStudentPerformanceChannel",
+                                  base.IsTakeScreenShotDuringEntryExit);
+            //Initialize variable
+            string gradeValue = string.Empty;
+            try
+            {
+                //Get the overall grade from Weather Map channels.
+                switch (channelName)
+                {
+                    case "Student Performance":
+                        //Get overall grade from Student performance channel
+                        gradeValue = base.GetElementTextByXPath(TodaysViewUXPageResource.
+                     TodaysViewUXPageResource_StudentPerformanceChannel_OverallGrade_Xpath_Locator);
+                        break;
+
+                    case "My Progress":
+                        //Get overall grade from My progress channel
+                        gradeValue = base.GetElementTextByXPath(TodaysViewUXPageResource.
+                     TodaysViewUXPageResource_MyProgressChannel_OverallGrade_Xpath_Locator);
+                        break;
+                }
+
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("TodaysViewUXPage", "GetGradeFromStudentPerformanceChannel",
+                             base.IsTakeScreenShotDuringEntryExit);
+            return gradeValue;
+        }
+
+        /// <summary>
+        /// Click on cmenu icon of the Discussion topic.
+        /// </summary>
+        /// <param name="assetName">Name of the discussion topic for which system has to click on cmenu icon.</param>
+        public void ClickOnCmenuIconOfDiscussionTopic(string assetName)
+        {
+            //Click On Cmenu Option of Activity
+            logger.LogMethodEntry("TodaysViewUXPage", "ClickOnCmenuIconOfDiscussionTopic",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            string getDiscussionTopicName = string.Empty;
+            try
+            {
+                base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                        TodaysViewUXPageResource_GetDiscussionTopicCount_Xpath_Locator));
+                //Get Asset Count
+                int assetCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_GetDiscussionTopicCount_Xpath_Locator);
+                //Initialize the counter to find the discussion topic and click on the cmenu of it
+                for (int initialCount = 1; initialCount <= assetCount; initialCount++)
+                {
+                    //Wait for the discussion topic name
+                    base.WaitForElement(By.XPath(string.Format(TodaysViewUXPageResource.
+                        TodaysViewUXPageResource_GetDiscussionTopicName_Xpath_Locator, initialCount)));
+
+                    //Get Activity Name
+                    getDiscussionTopicName = base.GetElementTextByXPath(string.Format(TodaysViewUXPageResource.
+                         TodaysViewUXPageResource_GetDiscussionTopicName_Xpath_Locator, initialCount));
+                    string[] discussionTopicNameSplitValue = getDiscussionTopicName.Split(new string[] { "..." }, StringSplitOptions.None);
+                    string discussionTopicName = discussionTopicNameSplitValue[0].Trim();
+                    if (assetName.Contains(discussionTopicName))
+                    {
+                        IWebElement getActivityProperty = base.GetWebElementPropertiesByXPath
+                            (string.Format(TodaysViewUXPageResource.
+                            TodaysViewUXPageResource_GetDiscussionTopicName_Xpath_Locator, initialCount));
+                        //Perform Mouse Hover
+                        base.PerformMouseHoverByJavaScriptExecutor(getActivityProperty);
+                        //Get Cmenu Property
+                        IWebElement getCmenubuttonProperty = base.GetWebElementPropertiesByClassName(
+                            TodaysViewUXPageResource.TodayViewUXPageResource_AssetCmenu_ClassName_Locator);
+                        //Click On Cmenu
+                        base.ClickByJavaScriptExecutor(getCmenubuttonProperty);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("TodaysViewUXPage", "ClickOnCmenuIconOfDiscussionTopic",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Get student first, last name
+        /// from Past due submitted channel.
+        /// </summary>
+        /// <returns>Student first, last name.</returns>
+        public string GetStudentNameFromPastDueSubmittedChannel()
+        {
+            string studentName = string.Empty;
+            //Get Student First name, Last name displayed in unread messages channel
+            logger.LogMethodEntry("TodaysViewUXPage", "GetStudentNameFromPastDueSubmittedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Get the Student First name, Last name and store it in the variable
+                studentName = base.GetElementInnerTextById
+                    (TodaysViewUXPageResource.TodayViewUXPageResource_PastDueSubmitted_StudentName_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("TodaysViewUXPage", "GetStudentNameFromPastDueSubmittedChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+            return studentName;
+        }
+
+        /// <summary>
+        /// Click on student expand icon
+        /// in Past due submitted channel.
+        /// </summary>
+        public void ClickonExpandIconInPastDueSubmittedChannel()
+        {
+            //Click on the student name in unread messages channel
+            logger.LogMethodEntry("TodaysViewUXPage", "ClickonExpandIconInPastDueSubmittedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click on Expand icon displayed for student
+                base.ClickLinkByXPath(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_ExpandIcon_PastDueSubmitted_Xpath_Locator);
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("TodaysViewUXPage", "ClickonExpandIconInPastDueSubmittedChannel",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get Past due submitted activity name.
+        /// </summary>
+        /// <returns>Activity name.</returns>
+        public string GetActivityNameInPastDueSubmittedChannel()
+        {
+
+            //Click on the student name in unread messages channel
+            logger.LogMethodEntry("TodaysViewUXPage", "GetActivityNameInPastDueSubmittedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize string variable which holds the activity name
+            string activityName = string.Empty;
+            string pastDueActivityName = string.Empty;
+            try
+            {
+                //Get the activity name by Xpath
+                activityName = base.GetElementInnerTextByXPath(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_ActivityName_PastDueSubmitted_Xpath_Locator);
+                //Split the obtained string to get only required activity name
+                string[] activityName_splitValue = activityName.Split(new string[] { "Due" }, StringSplitOptions.None);
+                pastDueActivityName = activityName_splitValue[0].Trim();
+            }
+
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("TodaysViewUXPage", "GetActivityNameInPastDueSubmittedChannel",
+              base.IsTakeScreenShotDuringEntryExit);
+            return pastDueActivityName;
+        }
+
+
+
+        /// <summary>
         /// Get content count from alert channel.
         /// </summary>
         /// <param name="channelName">Alert channel name.</param>

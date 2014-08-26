@@ -1690,6 +1690,69 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Get score of the activity submitted.
+        /// </summary>
+        /// <returns>Score of the activity.</returns>
+        public string GetActivityScoreFromCourseMaterialsPage(string assetName)
+        {
+            //Get score Of Submitted Activity In CourseMaterial
+            logger.LogMethodEntry("StudentPresentationPage",
+                "GetActivityScoreFromCourseMaterialsPage",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Initialize getStatusText variable
+            string getActivitySubmittedScore = string.Empty;
+            try
+            {
+                //Get the activty column count
+                int activityColumnCount = this.GetTheActivityNameInCourseMaterial(assetName);
+                //Get the score of the activity
+                getActivitySubmittedScore = base.GetElementTextByXPath(
+              string.Format(StudentPresentationPageResource.
+              CoursePreviewMainUX_Page_ActivityScore_Xpath_Locator, activityColumnCount));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+              "GetActivityScoreFromCourseMaterialsPage",
+                  base.IsTakeScreenShotDuringEntryExit);
+            return getActivitySubmittedScore;
+        }
+
+
+        /// <summary>
+        /// Click on submit button
+        /// in SIM5 presentation window.
+        /// </summary>
+        /// <param name="activityName">Name of the activity.</param>
+        public void SubmitSIMActivityWithoutAnswering(String activityName)
+        {
+            //Submit SIM5 activity
+            logger.LogMethodEntry("StudentPresentationPage",
+                "SubmitSIMActivityWithoutAnswering",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait for the SIM5 assignment launch window
+                base.WaitUntilWindowLoads(activityName + StudentPresentationPageResource.
+                StudentPresentation_Page_SimPresentation_Window_Name);
+                //Select the SIM5 assignment launch window
+                base.SelectWindow(activityName + StudentPresentationPageResource.
+                StudentPresentation_Page_SimPresentation_Window_Name);
+                //Click on SIM5 activity Submit button
+                this.ClickOnSIM5ActivitySubmitButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+                 "SubmitSIMActivityWithoutAnswering",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Select The SIMStudyplan Window.
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
