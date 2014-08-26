@@ -600,4 +600,22 @@
   <data name="TodaysViewUXPageResource_InstructorComments_Activity_Name_By_Xpath" xml:space="preserve">
     <value>//table[@id='InsUnreadComments']/tbody/tr[{0}]/td/table/tbody/tr/td/span</value>
   </data>
+  <data name="TodaysViewUXPageResource_ActivityName_PastDueSubmitted_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='div__ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1']/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="TodaysViewUXPageResource_ExpandIcon_PastDueSubmitted_Xpath_Locator" xml:space="preserve">
+    <value>//a[@id='_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn0']/img</value>
+  </data>
+  <data name="TodaysViewUXPageResource_GetDiscussionTopicName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVUnreaddiscussionDatagrid']/tbody/tr[{0}]/td/table/tbody/tr/td/table/tbody/tr/td/div/b</value>
+  </data>
+  <data name="TodaysViewUXPageResource_MyProgressChannel_OverallGrade_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdMyProgress$tblHdr']/tbody/tr[2]/td[2]</value>
+  </data>
+  <data name="TodaysViewUXPageResource_StudentPerformanceChannel_OverallGrade_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdStudentPerformance$tblHdr']/tbody/tr[2]/td[2]</value>
+  </data>
+  <data name="TodayViewUXPageResource_PastDueSubmitted_StudentName_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont0</value>
+  </data>
 </root>

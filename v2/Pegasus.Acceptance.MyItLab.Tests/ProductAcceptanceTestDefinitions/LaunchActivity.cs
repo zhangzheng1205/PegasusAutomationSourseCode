@@ -129,5 +129,22 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("LaunchActivity", "SubmitSIM5ExcelTypeActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click on Submit button in SIM5
+        /// presentation page.
+        /// </summary>
+        /// <param name="activityName">Name of the activity.</param>
+        [When(@"I click on submit button without answering ""(.*)""")]
+        public void ClickonSubmitButton(string activityName)
+        {
+            //Submit SIM5 Excel type activity
+            Logger.LogMethodEntry("LaunchActivity", "ClickonSubmitButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on submit button
+            new StudentPresentationPage().SubmitSIMActivityWithoutAnswering(activityName);
+            Logger.LogMethodExit("LaunchActivity", "ClickonSubmitButton",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

@@ -77,3 +77,66 @@ When I click on cmenu "ViewSubmissions" of asset "Excel Chapter 1 Skill-Based Tr
 Then I should be on the "View Submission" page
 When I click on the last submission
 Then I should see the grade is "7.41%" in View Submission page
+
+#Purpose : Submitting Sim 5 excel activity and Student scoring a Zero.
+#Test case ID : peg-21990.
+#Products : MyItLab.
+#Pre condition : Excel SIM5 activity should be created by instructor/Author in the following course and “Trap ALT+TAB and Browser Lock-Down” option should be un checked in the activity preference tab.
+#Dependency : Always dependent.
+Scenario: Sim 5 excel activity and Student scoring a Zero.
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the activity named as "Excel Chapter 1 Skill-Based Training" in Course Materials
+And I click on submit button without answering "Excel Chapter 1 Skill-Based Training"
+Then I should be on the "Course Materials" page
+And I should see "Not passed" status for the activity "Excel Chapter 1 Skill-Based Training"
+And I should see "0.00%" score for the activity "Excel Chapter 1 Skill-Based Training" in course material page
+
+#Purpose : Submitting Sim 5 Word activity and Student scoring a Zero.
+#Test case ID : peg-21989.
+#Products : MyItLab.
+#Pre condition : Word SIM5 activity should be created by instructor/Author in the following course and “Trap ALT+TAB and Browser Lock-Down” option should be un checked in the activity preference tab.
+#Dependency : Always dependent.
+Scenario: Student scoring 0 in SIM5 Word activity
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
+And I launch the activity named as "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in Course Materials
+And I click on submit button without answering "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+Then I should be on the "Course Materials" page
+And I should see "Not passed" status for the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I should see "0.00%" score for the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
+
+
+#Purpose : Submitting Sim 5 Powerpoint activity and Student scoring a Zero.
+#Test case ID : peg-21991.
+#Products : MyItLab.
+#Pre condition : Power Point SIM5 activity should be created by instructor/Author in the following course and “Trap ALT+TAB and Browser Lock-Down” option should be un checked in the activity preference tab.
+#Dependency : Always dependent.
+Scenario: Student scoring 0 in SIM5 PowerPoint activity
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the activity named as "PowerPoint Chapter 1 Skill-Based Training" in Course Materials
+And I click on submit button without answering "PowerPoint Chapter 1 Skill-Based Training"
+Then I should be on the "Course Materials" page
+And I should see "Not passed" status for the activity "PowerPoint Chapter 1 Skill-Based Training"
+And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Skill-Based Training" in course material page
+
+
+#Purpose : Submitting Sim 5 Access activity and Student scoring a Zero
+#Test case ID : peg-21992.
+#Products : MyItLab.
+#Pre condition : Access SIM5 activity should be created by instructor/Author in the following course and “Trap ALT+TAB and Browser Lock-Down” option should be un checked in the activity preference tab.
+#Dependency : Always dependent.
+Scenario: Student scoring 0 in SIM5 Access activity
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
+And I launch the activity named as "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in Course Materials
+And I click on submit button without answering "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+Then I should be on the "Course Materials" page
+And I should see "Not passed" status for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I should see "0.00%" score for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
+

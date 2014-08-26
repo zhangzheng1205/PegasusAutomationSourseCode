@@ -7,6 +7,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion;
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -163,6 +164,114 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Expand the student name in
+        /// Past due submitted alert channel.
+        /// </summary>
+        [When(@"I click on the expand icon of student")]
+        public void ExpandStudentNameinPastDueSubmittedChannel()
+        {
+            //Exapnd Student name to view past due submitted activity
+            Logger.LogMethodEntry("TodaysView", "ExpandStudentNameinPastDueSubmittedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on Expand icon displayed for student name
+            new TodaysViewUXPage().ClickonExpandIconInPastDueSubmittedChannel();
+            Logger.LogMethodExit("TodaysView", "ExpandStudentNameinPastDueSubmittedChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the Past due submitted activity name.
+        /// </summary>
+        /// <param name="activityName">Activity name to be verified</param>
+        [Then(@"I should see the activity name ""(.*)""")]
+        public void ValidateActivityNameInPastDueSubmittedChannel(string activityName)
+        {
+            //Validate the past due submitted activity name
+            Logger.LogMethodEntry("TodaysView", "ValidateActivityNameInPastDueSubmittedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert the activity name displayed in the Past due submitted channel
+            Logger.LogAssertion("ValidateActivityNameInPastDueSubmittedChannel",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                    Assert.AreEqual(activityName, new TodaysViewUXPage().GetActivityNameInPastDueSubmittedChannel()));
+            Logger.LogMethodExit("TodaysView", "ValidateActivityNameInPastDueSubmittedChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate the display of student 
+        /// first, last name in Past due submitted channel
+        /// </summary>
+        /// <param name="studentName">Student first,</param>
+        [Then(@"I should see student First, Last name ""(.*)"" in Past Due: Submitted channel")]
+        public void ValidateStudentNameInPastDueSubmittedChannel(string studentName)
+        {
+
+            //Click on Back navigation link
+            Logger.LogMethodEntry("TodaysView", "ValidateStudentNameInPastDueSubmittedChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Validate student first, last name in past due submitted channel
+            Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+                .ScenarioInfo.Title, () => Assert.AreEqual(studentName, new
+                    TodaysViewUXPage().GetStudentNameFromPastDueSubmittedChannel()));
+            Logger.LogMethodExit("TodaysView", "ValidateStudentNameInPastDueSubmittedChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on cmenu icon of Discussion topic.
+        /// </summary>
+        /// <param name="activityName">Discussion topic name.</param>
+        [When(@"I click on cmenu icon of Discussion topic ""(.*)""")]
+        public void AccesCmenuOptionOfDiscussionTopic(string discussionTopicName)
+        {
+            //Click On Cmenu icon of discussion topic
+            Logger.LogMethodEntry("TodaysView", "ClickonCmenuOptionOfDiscussionTopic",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on the cmenu icon of discussion topic in unread discussions alert channel
+            new TodaysViewUXPage().ClickOnCmenuIconOfDiscussionTopic(discussionTopicName);
+            Logger.LogMethodExit("TodaysView", "ClickonCmenuOptionOfDiscussionTopic",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Validate display of discussion frame
+        ///in DiscussionMainUX page.
+        /// </summary>
+        /// <param name="discussionFrameTitle">Discussion frame title.</param>
+        [Then(@"I should see the ""(.*)"" frame")]
+        public void ValidateDisplayofDiscussionFrame(string discussionFrameTitle)
+        {
+            //Validate the display of Discussion frame in DiscussionMainUX page
+            Logger.LogMethodEntry("TodaysView", "SelectMyProgressOption",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Assert the discussion frame title from the DiscussionMainUX page
+            Logger.LogAssertion("ValidateDisplayofDiscussionFrame", ScenarioContext.Current.ScenarioInfo.Title, ()
+                => Assert.AreEqual(discussionFrameTitle, new DiscussionMainUXPage().GetDiscussionFrameTitle()));
+            Logger.LogMethodExit("TodaysView", "ValidateDisplayofDiscussionFrame",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Validate overall grade displayed in 
+        /// Student performance channel.
+        /// </summary>
+        /// <param name="Grade">Overall Grade.</param>
+        [Then(@"I should see ""(.*)"" as overall Grade in ""(.*)"" alert channel")]
+        public void ValidateGradeInStudentPerformanceChannel(string Grade, string channelName)
+        {
+            //Click On Notification Channel Option
+            Logger.LogMethodEntry("TodaysView", "ValidateGradeInStudentPerformanceChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Validate overall grade in student performance channel
+            Logger.LogAssertion("ValidateGradeInStudentPerformanceChannel", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(Grade, new TodaysViewUXPage().GetGradeFromStudentPerformanceChannel(channelName)));
+            Logger.LogMethodExit("TodaysView", "ValidateGradeInStudentPerformanceChannel",
+                base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
         /// <summary>
         /// Validate the number of activity
         /// displayed in Past Due: Not submitted channel.
@@ -251,6 +360,88 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     new TodaysViewUxPage().GetNewGradesAlert()));
             Logger.LogMethodExit("TodaysView", "DisplayAlertForNewGrades",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on cmenu icon of the response posted
+        /// for the discussion topic.
+        /// </summary>
+        /// <param name="postName">Name of the response posted.</param>
+        [When(@"I click on cmenu of response ""(.*)"" posted")]
+        public void ClickonCmenuIconOfResponse(string postName)
+        {
+            //Displaying the Alert for New Grades
+            Logger.LogMethodEntry("TodaysView", "ClickonCmenuIconOfResponse",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on the cmenu icon of the response posted for discussion topic
+            new DiscussionMainUXPage().ClickOnCmenuOfResponse(postName);
+            Logger.LogMethodExit("TodaysView", "ClickonCmenuIconOfResponse",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select the cmenu option of the response posted.
+        /// </summary>
+        /// <param name="cmenuOption">Cmenu option to be selected.</param>
+        [When(@"I select the cmenu option ""(.*)"" of the response posted")]
+        public void ClickOnCmenuOptionOftheResponse(string cmenuOption)
+        {
+            //Click on the cmenu option of the response posted
+            Logger.LogMethodEntry("TodaysView", "ClickOnCmenuOptionOftheResponse",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on the cmenu option of the response posted for the discussion topic
+            new DiscussionMainUXPage().SelectCmenuOption(cmenuOption);
+            Logger.LogMethodExit("TodaysView", "ClickOnCmenuOptionOftheResponse",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Switch to Last opened pop up.
+        /// </summary>
+        [When(@"I switch to ReadResponse pop up")]
+        public void SwitchToPopUp()
+        {
+
+            //Switch to pop up
+            Logger.LogMethodEntry("TodaysView", "SwitchToPopUp",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Switch to the Last opened pop up.
+            new DiscussionMainUXPage().SwitchToPopUp();
+            Logger.LogMethodExit("TodaysView", "SwitchToPopUp",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Close button 
+        /// in Read response pop up.
+        /// </summary>
+        [When(@"I click on the close button in ReadResponse pop up")]
+        public void ClickOnCloseButtonInReadResponsePopUp()
+        {
+            //Click on Close button in read response pop up
+            Logger.LogMethodEntry("TodaysView", "ClickOnCloseButtonInReadResponsePopUp",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on Close button 
+            new DiscussionMainUXPage().ClickOnCloseButtonInReadResponsePopUp();
+            Logger.LogMethodEntry("TodaysView", "ClickOnCloseButtonInReadResponsePopUp",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Click on Cance button in
+        /// Discussion page
+        /// </summary>
+        [When(@"I click on cancel button in Discussion Page")]
+        public void ClickonCancelButtonInDiscussionPage()
+        {
+            //Click on Close button in read response pop up
+            Logger.LogMethodEntry("TodaysView", "ClickonCancelButtonInDiscussionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on cancel button
+            new DiscussionMainUXPage().ClickOnCancelButton();
+            Logger.LogMethodEntry("TodaysView", "ClickonCancelButtonInDiscussionPage",
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
