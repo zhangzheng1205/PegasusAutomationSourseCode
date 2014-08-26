@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorTodaysView", "\t\t\tAs a CS Instructor \r\n\t\t\tI want to manage all the Coursespace Instructor Today\'" +
-                    "s View related usecases \r\n\t\t\tso that I would validate all the coursespace instru" +
-                    "ctor Today\'s View related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorTodaysView", "\t\t\tAs a CS Instructor \n\t\t\tI want to manage all the Coursespace Instructor Today\'s" +
+                    " View related usecases \n\t\t\tso that I would validate all the coursespace instruct" +
+                    "or Today\'s View related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -307,6 +307,44 @@ testRunner.When("I click on the expand icon of student", ((string)(null)), ((Tec
 #line 121
 testRunner.Then("I should see the activity name \"Training [Skill-Based]: Word Chapter 1 Skill-Base" +
                     "d Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor accepts past due submission from Past due: Submitted channel of activi" +
+            "ty")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void InstructorAcceptsPastDueSubmissionFromPastDueSubmittedChannelOfActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor accepts past due submission from Past due: Submitted channel of activi" +
+                    "ty", ((string[])(null)));
+#line 128
+this.ScenarioSetup(scenarioInfo);
+#line 129
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 130
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 131
+testRunner.When("I click on the \"Past Due: Submitted\" link in notifications channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 132
+testRunner.Then("I should see First name, Last name of \"CsSmsStudent\" who has submitted the past d" +
+                    "ue activity in the right frame along with expand icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 133
+testRunner.When("I click on expand icon displayed against student name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 134
+testRunner.And("I selected the check box of the past due activity submitted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 135
+testRunner.Then("I should see \"CsSmsStudent\" name and \"Word Chapter 1 Skill-Based Training\" activi" +
+                    "ty name and due date and time and submitted date and time which is submitted pos" +
+                    "t due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 136
+testRunner.And("I should be able to select the past due activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 137
+testRunner.When("I click on \"Accept\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 138
+testRunner.Then("I should see the successfull message \"The submission by Student, Gurudatt has bee" +
+                    "n accepted. The grade for this submission will now appear in the Gradebook.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
