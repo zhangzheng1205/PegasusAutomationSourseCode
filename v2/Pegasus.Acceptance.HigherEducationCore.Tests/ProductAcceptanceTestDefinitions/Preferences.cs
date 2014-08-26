@@ -433,7 +433,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("Preferences", "ClickOnMoveDownOptionOfCalendarChannel",
                   base.IsTakeScreenShotDuringEntryExit);
             //Click On Move Down Option Of Channel
-            new TodaysViewUXPage().ClickOnChannelMoveDownOption(option);
+            new TodaysViewUxPage().ClickOnChannelMoveDownOption(option);
             Logger.LogMethodExit("Preferences", "ClickOnMoveDownOptionOfCalendarChannel",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -453,7 +453,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogAssertion("VerifyDisplayOfChannel",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(channelName,
-                    new TodaysViewUXPage().getCourseChannelName()));
+                    new TodaysViewUxPage().GetCourseChannelName()));
             Logger.LogMethodExit("Preferences",
                 "VerifyDisplayOfChannel",
               base.IsTakeScreenShotDuringEntryExit);
@@ -471,7 +471,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                "ClickOnMoveUpOptionOfCalendarCourseChannel",
                  base.IsTakeScreenShotDuringEntryExit);
            //Click On Course Channel Option
-           new TodaysViewUXPage().ClickOnCourseChannelMOveUpOption(option);
+           new TodaysViewUxPage().ClickOnCourseChannelMOveUpOption(option);
            Logger.LogMethodExit("Preferences",
                "ClickOnMoveUpOptionOfCalendarCourseChannel",
              base.IsTakeScreenShotDuringEntryExit);
@@ -487,7 +487,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            Logger.LogMethodEntry("Preferences", "RemoveCalendarChannelFromCourseChannel",
                   base.IsTakeScreenShotDuringEntryExit);
            // Remove Calendar Channel From Course Channel
-           new TodaysViewUXPage().RemoveCalendarChannel();
+           new TodaysViewUxPage().RemoveCalendarChannel();
            Logger.LogMethodExit("Preferences", "RemoveCalendarChannelFromCourseChannel",
              base.IsTakeScreenShotDuringEntryExit);
        }
@@ -506,7 +506,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
            Logger.LogAssertion("VerifyRemovedChannel",
                ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.AreNotEqual(channelName,
-                   new TodaysViewUXPage().getCourseChannelName()));
+                   new TodaysViewUxPage().GetCourseChannelName()));
            Logger.LogMethodExit("Preferences", "VerifyRemovedChannel",
              base.IsTakeScreenShotDuringEntryExit);
        }       

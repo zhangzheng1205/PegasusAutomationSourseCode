@@ -35,7 +35,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("UserProfile", "ClickMyProfileLinkOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click On My Profile Link Option
-            new CalendarHEDDefaultUXPage().ClickOnMyProfileLink(userType);
+            new CalendarHedDefaultUxPage().ClickOnMyProfileLink(userType);
             Logger.LogMethodExit("UserProfile", "ClickMyProfileLinkOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("UserProfile", "ClickOnFeedBackOption",
                base.IsTakeScreenShotDuringEntryExit);
             //Click On FeedBack Link Option
-            new TodaysViewUXPage().ClickOnFeedBackLink();
+            new TodaysViewUxPage().ClickOnFeedBackLink();
             Logger.LogMethodExit("UserProfile", "ClickOnFeedBackOption",
                base.IsTakeScreenShotDuringEntryExit);      
         }

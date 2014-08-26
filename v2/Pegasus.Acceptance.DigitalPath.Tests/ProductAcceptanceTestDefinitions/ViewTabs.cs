@@ -43,9 +43,9 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Assert Accessibility for Tab on Today's View Page.
             Logger.LogAssertion("VerifyTabAccessbilityByTitle", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
-                (tabWindowTitle, new TodaysViewUXPage().GetTodaysViewTabTitle
-                ((TodaysViewUXPage.TodaysViewTabType)Enum.Parse
-                (typeof(TodaysViewUXPage.TodaysViewTabType), newTabName))));
+                (tabWindowTitle, new TodaysViewUxPage().GetTodaysViewTabTitle
+                ((TodaysViewUxPage.TodaysViewTabType)Enum.Parse
+                (typeof(TodaysViewUxPage.TodaysViewTabType), newTabName))));
             Logger.LogMethodExit("ViewTabs", "AccessTheTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }

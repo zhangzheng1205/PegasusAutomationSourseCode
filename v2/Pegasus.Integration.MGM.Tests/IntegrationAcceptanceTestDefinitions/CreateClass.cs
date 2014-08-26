@@ -155,7 +155,7 @@ namespace Pegasus.Integration.MGM.Tests.
             //Assert Teacher View tabs displayed
             Logger.LogAssertion("VerifyDefaultTabsForTeacherView", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
-                (true, new TodaysViewUXPage().IsTeacherViewTabsPresent()));
+                (true, new TodaysViewUxPage().IsTeacherViewTabsPresent()));
             Logger.LogMethodExit("CreateClass", "VerifyDefaultTabsForTeacherView",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -170,7 +170,7 @@ namespace Pegasus.Integration.MGM.Tests.
             Logger.LogMethodEntry("CreateClass", "NavigateOutsideOfTheClass",
              base.IsTakeScreenShotDuringEntryExit);
             //Navigate Outside of the Class
-            new TodaysViewUXPage().NavigateOutsideFromClass(windowName);
+            new TodaysViewUxPage().NavigateOutsideFromClass(windowName);
             Logger.LogMethodExit("CreateClass", "NavigateOutsideOfTheClass",
         base.IsTakeScreenShotDuringEntryExit);
         }

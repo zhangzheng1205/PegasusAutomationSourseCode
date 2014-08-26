@@ -29,7 +29,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickNewGradesAlertOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Clicking on the New Grades Link
-            new TodaysViewUXPage().ClickNewGradesOption();
+            new TodaysViewUxPage().ClickNewGradesOption();
             Logger.LogMethodExit("TodaysView", "ClickNewGradesAlertOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -44,7 +44,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickViewSubmissionCmenuOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click The View Submission Cmenu Option
-            new TodaysViewUXPage().ClickTheViewSubmissionCmenuOption();
+            new TodaysViewUxPage().ClickTheViewSubmissionCmenuOption();
             Logger.LogMethodEntry("TodaysView", "ClickViewSubmissionCmenuOption",
                    base.IsTakeScreenShotDuringEntryExit);
         }
@@ -86,7 +86,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("VerifyTheSubmittedActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(activity.Name,
-                    new TodaysViewUXPage().GetSubmittedActivityNameByStudent()));
+                    new TodaysViewUxPage().GetSubmittedActivityNameByStudent()));
             Logger.LogMethodEntry("TodaysView", "VerifyTheSubmittedActivityName",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -104,7 +104,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Verify Channels in Today's View Page
             Logger.LogAssertion("VerifyChannels",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(channels, new TodaysViewUXPage().GetNotificationsChannelTitle()));
+                () => Assert.AreEqual(channels, new TodaysViewUxPage().GetNotificationsChannelTitle()));
             Logger.LogMethodEntry("TodaysView", "VerifyChanneslInTodaysViewPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -122,7 +122,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Assert the alert count displayed in Unread Messages channel
             Logger.LogAssertion("VerifyUnreadMessageAlerts", ScenarioContext.Current.
                 ScenarioInfo.Title,
-                () => Assert.AreEqual(alertCount, new TodaysViewUXPage().GetAlertCount(channelName)));
+                () => Assert.AreEqual(alertCount, new TodaysViewUxPage().GetAlertCount(channelName)));
             Logger.LogMethodEntry("TodaysView", "ValidateUnreadMessageAlertCount",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -141,7 +141,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Validate the activity count displayed in Not passed channel
             Logger.LogAssertion("ValidateActivityCountInNotPassedChannel", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activityCount,
-                    new TodaysViewUXPage().GetCountFromAlertChannels(channelName)));
+                    new TodaysViewUxPage().GetCountFromAlertChannels(channelName)));
             Logger.LogMethodExit("TodaysView", "ValidateActivityCountInNotPassedChannel",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -151,13 +151,14 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="channelOption">This is Channel Option.</param>
         [When(@"I click on the ""(.*)"" option")]
+        [When(@"I click on the ""(.*)"" link in notifications channel")]
         public void ClickOnAlertChannelOption(string channelOption)
         {
             //Click On Notification Channel Option
             Logger.LogMethodEntry("TodaysView", "ClickOnNotificationChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the Performance channel Option
-            new TodaysViewUXPage().ClickonNotificationChannelOption(channelOption);
+            new TodaysViewUxPage().ClickonNotificationChannelOption(channelOption);
             Logger.LogMethodExit("TodaysView", "ClickOnNotificationChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -175,7 +176,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("ValidateActivityCountInPastDueNotSubmittedChannel", ScenarioContext.Current
                 .ScenarioInfo.Title, () => Assert.AreEqual(activityCount,
-                    new TodaysViewUXPage().GetActivityCountFromPastDueNotSubmittedChannel()));
+                    new TodaysViewUxPage().GetActivityCountFromPastDueNotSubmittedChannel()));
             Logger.LogMethodExit("TodaysView", "ValidateActivityCountInPastDueNotSubmittedChannel",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -195,11 +196,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Assert the alert count displayed in Idle Students channel
             Logger.LogAssertion("VerifyUnreadMessageAlerts", ScenarioContext.Current.
                 ScenarioInfo.Title,
-                () => Assert.AreEqual(Count, new TodaysViewUXPage().GetCountFromAlertChannels(channelName)));
+                () => Assert.AreEqual(Count, new TodaysViewUxPage().GetCountFromAlertChannels(channelName)));
             //Assert the idle student name
             Logger.LogAssertion("VerifyUnreadMessageAlerts", ScenarioContext.Current.
                 ScenarioInfo.Title,
-                () => Assert.AreEqual(StudentName, new TodaysViewUXPage().GetStudentNameFromIdleStudents()));
+                () => Assert.AreEqual(StudentName, new TodaysViewUxPage().GetStudentNameFromIdleStudents()));
             Logger.LogMethodEntry("TodaysView", "ValidateUnreadMessageAlertCount",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -247,7 +248,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreNotEqual(TodaysViewResource.
                     TodaysViewResource_NewGrade_Value,
-                    new TodaysViewUXPage().GetNewGradesAlert()));
+                    new TodaysViewUxPage().GetNewGradesAlert()));
             Logger.LogMethodExit("TodaysView", "DisplayAlertForNewGrades",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -263,9 +264,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "SelectResourceToolFromDropdown",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Resource Tool From 'Tools' Dropdown            
-            new TodaysViewUXPage().SelectResourceToolFromToolsDropdown
-               ((TodaysViewUXPage.ResourceToolsTypeEnum)Enum.Parse
-               (typeof(TodaysViewUXPage.ResourceToolsTypeEnum), resourceToolName));
+            new TodaysViewUxPage().SelectResourceToolFromToolsDropdown
+               ((TodaysViewUxPage.ResourceToolsTypeEnum)Enum.Parse
+               (typeof(TodaysViewUxPage.ResourceToolsTypeEnum), resourceToolName));
             Logger.LogMethodExit("TodaysView", "SelectResourceToolFromDropdown",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -280,7 +281,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "SelectMyProgressOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select My Progress option
-            new TodaysViewUXPage().SelectMyProgressOption();
+            new TodaysViewUxPage().SelectMyProgressOption();
             Logger.LogMethodExit("TodaysView", "SelectMyProgressOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -296,7 +297,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickOnCmenuOptionOfActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             Activity activity = Activity.Get(activityTypeEnum);
-            new TodaysViewUXPage().ClickOnCmenuOptionOfAsset(activity.Name);
+            new TodaysViewUxPage().ClickOnCmenuOptionOfAsset(activity.Name);
             Logger.LogMethodExit("TodaysView", "ClickOnCmenuOptionOfActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -306,7 +307,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         {
             Logger.LogMethodEntry("TodaysView", "SelectMyProgressOption",
              base.IsTakeScreenShotDuringEntryExit);
-            new TodaysViewUXPage().SelectCmenuOption(cmenuOption);
+            new TodaysViewUxPage().SelectCmenuOption(cmenuOption);
             Logger.LogMethodExit("TodaysView", "SelectMyProgressOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -330,7 +331,61 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("TodaysView",
                 "VerifyVerbChartToolLaunchedSuccessfully",
                 base.IsTakeScreenShotDuringEntryExit);
-        }      
+        }
+
+        [Then(@"I should see First name, Last name of ""(.*)"" who has submitted the past due activity in the right frame along with expand icon")]
+        public void ValidateUserWhoHasSubmittedThePastDueActivity(User.UserTypeEnum userTypeEnum)
+        {
+            User user = User.Get(userTypeEnum);
+            Logger.LogAssertion("VerifyUserDetails", ScenarioContext.Current.
+              ScenarioInfo.Title,
+              () => Assert.AreEqual(user.LastName + ',' + user.FirstName, new TodaysViewUxPage()
+                  .GetUserNameWhoHasSubmittedThePastDueActivity()));
+        }
+
+        [When(@"I click on expand icon displayed against student name")]
+        public void ClickOnExpandIconDisplayedAgainstStudentName()
+        {
+            new TodaysViewUxPage().ClickExpandIconDisplayedAgainstUserName();
+        }
+
+        [When(@"I selected the check box of the past due activity submitted")]
+        public void SelectedTheCheckBoxOfThePastDueActivitySubmitted()
+        {
+            new TodaysViewUxPage().SelectSubmittedPastDueActivityCheckBox();
+        }
+
+        [Then(@"I should see ""(.*)"" name and ""(.*)"" activity name and due date and time and submitted date and time which is submitted post due date")]
+        public void ValidateDetailsForSubmittedPostDueDateActivity(User.UserTypeEnum userTypeEnum, string activityName)
+        {
+            User user = User.Get(userTypeEnum);
+            Logger.LogAssertion("VerifyUserDetails", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(user.LastName + ',' + user.FirstName, new TodaysViewUxPage()
+                .GetUserNameWhoHasSubmittedThePastDueActivity()));
+            Logger.LogAssertion("VerifyActivityDetails", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(activityName, new TodaysViewUxPage().
+                    GetActivityNameForSubmittedPastDueActivity()));
+            Logger.LogAssertion("VerifyActivityDueDateAndTime", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsNotNull(new TodaysViewUxPage().GetActivityPastDueDateAndTime()));
+            Logger.LogAssertion("VerifyActivitySubmittedDateAndTime", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsNotNull(new TodaysViewUxPage().GetActivitySubmittedDateAndTime()));
+        }
+
+        [Then(@"I should be able to select the past due activity")]
+        public void ValidateToSelectThePastDueActivity()
+        {
+            Logger.LogAssertion("VerifyToSelectThePastDueActivity", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new TodaysViewUxPage().IsPastDueActivitySelected()));
+        }
+
+        [When(@"I click on ""(.*)"" activities past due date")]
+        public void ClickOnPastDueButton(string buttonName)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+       
+
 
     }
 }

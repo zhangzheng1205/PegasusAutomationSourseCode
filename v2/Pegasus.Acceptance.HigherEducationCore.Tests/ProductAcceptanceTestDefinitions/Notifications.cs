@@ -34,7 +34,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("Notifications", "NavigateToTodaysViewTab",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the Today's view option
-            new CalendarHEDDefaultUXPage().ClickOnTodaysViewOption(tabName);
+            new CalendarHedDefaultUxPage().ClickOnTodaysViewOption(tabName);
             Logger.LogMethodExit("Notifications", "NavigateToTodaysViewTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -53,7 +53,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreNotEqual(NotificationsResource.
                     NotificationsResource_Submitted_Grades,
-                    new TodaysViewUXPage().GetNewGradesAlert()));
+                    new TodaysViewUxPage().GetNewGradesAlert()));
             Logger.LogMethodExit("Notifications", "DisplayAlertForNewGrades",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -68,7 +68,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("Notifications", "ClickNewGradesAlertOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Clicking on the New Grades Link
-            new TodaysViewUXPage().ClickNewGradesOption();
+            new TodaysViewUxPage().ClickNewGradesOption();
             Logger.LogMethodExit("Notifications", "ClickNewGradesAlertOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -87,7 +87,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(NotificationsResource.
                     NotificationsResource_Submitted_ActivityName,
-                    new TodaysViewUXPage().GetSubmittedActivityName()));
+                    new TodaysViewUxPage().GetSubmittedActivityName()));
             Logger.LogMethodEntry("Notifications", "DisplayOfSubmittedActivityName",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -104,7 +104,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("Notifications", "ClickTheSupportLinkInGlobalHomepage",
                 base.IsTakeScreenShotDuringEntryExit);
             // Click The Support Link In Global Homepage
-            new CalendarHEDDefaultUXPage().ClickTheSuportLinkInGlobalHomepage(userTypeEnum);
+            new CalendarHedDefaultUxPage().ClickTheSuportLinkInGlobalHomepage(userTypeEnum);
             Logger.LogMethodEntry("Notifications", "ClickTheSupportLinkInGlobalHomepage",
                  base.IsTakeScreenShotDuringEntryExit);
         }
@@ -120,9 +120,9 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("Notifications", "ClickTheLinkInGlobalHomepage",
                 base.IsTakeScreenShotDuringEntryExit);
             // Click The Link In Global Homepage 
-            new TodaysViewUXPage().ClickTheLinkInGlobalHomePage(
-                (TodaysViewUXPage.GlobalHomePageLinkTypeEnum)Enum.Parse
-                (typeof(TodaysViewUXPage.GlobalHomePageLinkTypeEnum), globalHomePageLink));
+            new TodaysViewUxPage().ClickTheLinkInGlobalHomePage(
+                (TodaysViewUxPage.GlobalHomePageLinkTypeEnum)Enum.Parse
+                (typeof(TodaysViewUxPage.GlobalHomePageLinkTypeEnum), globalHomePageLink));
             Logger.LogMethodEntry("Notifications", "ClickTheLinkInGlobalHomepage",
                  base.IsTakeScreenShotDuringEntryExit);
         }
@@ -143,7 +143,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Assert for user name present            
             Logger.LogAssertion("VerifySubmittedActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(user.Name, new CalendarHEDDefaultUXPage().
+                () => Assert.AreEqual(user.Name, new CalendarHedDefaultUxPage().
                     GetUserNameInSupportPopup()));
             Logger.LogMethodEntry("Notifications", "VerifyTheUserNameInSupportPopup",
                  base.IsTakeScreenShotDuringEntryExit);
@@ -160,7 +160,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             //Verify Help PageText
             Logger.LogAssertion("VerifyHomePageText", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new TodaysViewUXPage().IsVerifyTheHelpLinkPageTextPresent()));    
+                () => Assert.IsTrue(new TodaysViewUxPage().IsVerifyTheHelpLinkPageTextPresent()));    
             Logger.LogMethodExit("Notifications", "VerifyTheHelpPageText",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -181,7 +181,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogAssertion("VerifyTheSubmittedActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(activity.Name,
-                    new TodaysViewUXPage().GetSubmittedActivityNameByStudent()));
+                    new TodaysViewUxPage().GetSubmittedActivityNameByStudent()));
             Logger.LogMethodEntry("Notifications", "VerifyTheSubmittedActivityName",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -196,7 +196,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("Notifications", "ClickViewSubmissionCmenuOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click The View Submission Cmenu Option
-            new TodaysViewUXPage().ClickTheViewSubmissionCmenuOption();                             
+            new TodaysViewUxPage().ClickTheViewSubmissionCmenuOption();                             
             Logger.LogMethodEntry("Notifications", "ClickViewSubmissionCmenuOption",
                    base.IsTakeScreenShotDuringEntryExit);
         }

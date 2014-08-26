@@ -142,7 +142,7 @@ namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             //Click On More Link if More Link Is Present
             //And The Required Tab Is Not Present
-            new TodaysViewUXPage().ClickTheMoreLinkIfPresent(tabName);
+            new TodaysViewUxPage().ClickTheMoreLinkIfPresent(tabName);
             //Wait For Element
             base.WaitForElement(By.PartialLinkText(tabName));
             //Get Tab Element Property
@@ -267,7 +267,7 @@ namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.
             Logger.LogMethodEntry("CommonSteps", "ClickHomeLink",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click On Home Link
-            new TodaysViewUXPage().ClickOnHomeLink();
+            new TodaysViewUxPage().ClickOnHomeLink();
             Logger.LogMethodExit("CommonSteps", "ClickHomeLink",
                 base.IsTakeScreenShotDuringEntryExit);
         }

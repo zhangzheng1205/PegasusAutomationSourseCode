@@ -33,7 +33,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             Logger.LogAssertion("VerifyAlertForNewGrades", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreNotEqual(ActivityAlertsResource.
                     TeacherDashBoard_NewGradesAlert_Value,
-                    new TodaysViewUXPage().GetNewGradesAlert()));
+                    new TodaysViewUxPage().GetNewGradesAlert()));
             Logger.LogMethodExit("ActivityAlerts", "VerifyAlertForNewGrades",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -48,7 +48,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             Logger.LogMethodEntry("ActivityAlerts", "SelectNewGradesOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on New Grades Option
-            new TodaysViewUXPage().ClickNewGradesOptionInOverViewTab();
+            new TodaysViewUxPage().ClickNewGradesOptionInOverViewTab();
             Logger.LogMethodExit("ActivityAlerts", "SelectNewGradesOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -66,7 +66,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             //Assert Display of Submitted Activity Name
             Logger.LogAssertion("VerifyNameofSubmittedActivity", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(activityName,
-                   new TodaysViewUXPage().GetSubmittedActivityName(activityName)));
+                   new TodaysViewUxPage().GetSubmittedActivityName(activityName)));
             Logger.LogMethodExit("ActivityAlerts", "VerifyNameOfSubmittedActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }

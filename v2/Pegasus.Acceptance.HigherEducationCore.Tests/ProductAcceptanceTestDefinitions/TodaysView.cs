@@ -33,12 +33,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 IsTakeScreenShotDuringEntryExit);
             // To validate the page with given text
             Logger.LogAssertion("TodaysView", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(text, new TodaysViewUXPage().
+                () => Assert.AreEqual(text, new TodaysViewUxPage().
                     ValidateThePageWithText(TodaysViewResource.TodaysView_HeaderClassName)));
             // To validate the student name
             Logger.LogAssertion("TodaysView", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(TodaysViewResource.TodaysView_ManuallyGradable_Student_Name,
-                    new TodaysViewUXPage().ValidateTheStudentName(TodaysViewResource.
+                    new TodaysViewUxPage().ValidateTheStudentName(TodaysViewResource.
                     TodaysView_ManuallyGradable_Student_Name)));
             // Check the text in given page
             Logger.LogMethodExit("TodaysView", "ValidateThePageWithText",
@@ -55,9 +55,9 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "OpenActivity",
                 IsTakeScreenShotDuringEntryExit);
             // Open The Manually Gradable Activity
-            new TodaysViewUXPage().LaunchTheActivityHED();
+            new TodaysViewUxPage().LaunchTheActivityHed();
             //Attempt Essay Activity
-            new TodaysViewUXPage().AttemptEssayActivity(TodaysViewResource
+            new TodaysViewUxPage().AttemptEssayActivity(TodaysViewResource
                 .TodaysView_EssayQuestion_Answer_Text_Value);
             // To submit manual gradable activity
             Logger.LogMethodExit("TodaysView", "OpenActivity",
@@ -74,7 +74,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "SubmitTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             // Submit the Activity
-            new TodaysViewUXPage().SubmitTheActivityHED();
+            new TodaysViewUxPage().SubmitTheActivityHed();
             // Submit the Activity
             Logger.LogMethodExit("TodaysView", "SubmitTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -111,10 +111,10 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "ManuallyGradeTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             // Open the Activity For Grading
-            new TodaysViewUXPage().OpenActivityForGradingInHED(TodaysViewResource.
+            new TodaysViewUxPage().OpenActivityForGradingInHed(TodaysViewResource.
                     TodaysView_ManuallyGradable_Activity_Name);
             // Comment the Activity
-            new TodaysViewUXPage().EnterInstructorComments();
+            new TodaysViewUxPage().EnterInstructorComments();
             // Manually Grade the Activity
             Logger.LogMethodExit("TodaysView", "ManuallyGradeTheActivity",
                base.IsTakeScreenShotDuringEntryExit);
@@ -130,7 +130,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "ClickOnExpandIcon",
                 base.IsTakeScreenShotDuringEntryExit);
             // Click On Expand Icon
-            new TodaysViewUXPage().ClickOnExpandIcon();
+            new TodaysViewUxPage().ClickOnExpandIcon();
             // Click on student tree view Expand icon
             Logger.LogMethodExit("TodaysView", "ClickOnExpandIcon",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -148,7 +148,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             // TO check submitted activity existance
             Logger.LogAssertion("TodaysView", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(activityName, new TodaysViewUXPage().CheckSubmittedActitvityName(activityName)));
+                () => Assert.AreEqual(activityName, new TodaysViewUxPage().CheckSubmittedActitvityName(activityName)));
             // To check submitted activity name
             Logger.LogMethodExit("TodaysView", "CheckSubmittedActitvityName",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -164,7 +164,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "ClickOnTheCustomizeButton",
                 base.IsTakeScreenShotDuringEntryExit);
             //Open the Customize Notifications PopUp Window
-            new TodaysViewUXPage().OpenCustomizeNotificationPopUp();
+            new TodaysViewUxPage().OpenCustomizeNotificationPopUp();
             Logger.LogMethodExit("TodaysView", "ClickOnTheCustomizeButton",
                     base.IsTakeScreenShotDuringEntryExit);
         }
@@ -183,7 +183,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Assert We Have Correct Pop Up Window Opened
             Logger.LogAssertion("VerifyOpenedPopUpTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(popUpName, new TodaysViewUXPage().
+                () => Assert.AreEqual(popUpName, new TodaysViewUxPage().
                     GetCustomizeNotificationPopUpWindowTitle()));
             Logger.LogMethodExit("CommonSteps", "ValidatePopupWindow",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -200,7 +200,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "SelectTheChannelAsDefault",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select the Default channel in drop down
-            new TodaysViewUXPage().SelectTheDefaultChannel(channelName);
+            new TodaysViewUxPage().SelectTheDefaultChannel(channelName);
             Logger.LogMethodExit("TodaysView", "SelectTheChannelAsDefault",
                  base.IsTakeScreenShotDuringEntryExit);
         }
@@ -215,7 +215,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "UncheckTheCheckboxOption",
                 base.IsTakeScreenShotDuringEntryExit);
             // UnCheck the checkbox option in pop up Window
-            new TodaysViewUXPage().UnCheckNotifyMeCheckboxOption();
+            new TodaysViewUxPage().UnCheckNotifyMeCheckboxOption();
             Logger.LogMethodExit("TodaysView", "UncheckTheCheckboxOption",
                  base.IsTakeScreenShotDuringEntryExit);
         }
@@ -230,7 +230,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "ClickOnSaveAndCloseButton",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on Save and Close button
-            new TodaysViewUXPage().ClickTheSaveAndCloseButton();
+            new TodaysViewUxPage().ClickTheSaveAndCloseButton();
             Logger.LogMethodExit("TodaysView", "ClickOnSaveAndCloseButton",
                  base.IsTakeScreenShotDuringEntryExit);
         }
@@ -248,7 +248,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Assert Unread Comments Present in Today's View page
             Logger.LogAssertion("VerifyUnreadCommentsChannel",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreNotEqual(channelName, new TodaysViewUXPage().
+                () => Assert.AreNotEqual(channelName, new TodaysViewUxPage().
                     GetUnreadCommentsInTodaysViewPage(channelName)));
             Logger.LogMethodExit("CommonSteps", "ValidateUnreadCommentsInTodaySViewPage",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -267,7 +267,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Assert Unread Comments Present in Today's View page
             Logger.LogAssertion("VerifyDisplayOfUnreadCommentsChannel",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(channelName, new TodaysViewUXPage().
+                () => Assert.AreEqual(channelName, new TodaysViewUxPage().
                     GetUnreadCommentsInTodaysViewPage(channelName)));
             Logger.LogMethodExit("CommonSteps", "VerifyDisplayOfChannelInTodaysViewPage",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -283,7 +283,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "CheckTheNotifyMeCheckboxOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Check the checkbox option in pop up Window
-            new TodaysViewUXPage().CheckNotifyMeCheckboxOption();
+            new TodaysViewUxPage().CheckNotifyMeCheckboxOption();
             Logger.LogMethodExit("TodaysView", "CheckTheNotifyMeCheckboxOption",
                  base.IsTakeScreenShotDuringEntryExit);
         }
@@ -301,7 +301,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Instructor Comments channel in Today's View Page
             Logger.LogAssertion("VerifyChannels",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(channels, new TodaysViewUXPage().
+                () => Assert.AreEqual(channels, new TodaysViewUxPage().
                     GetInstructorCommentsChannelTitle(channels)));
             Logger.LogMethodEntry("TodaysView", "VerifyChanneslInTodaysViewPage",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -319,7 +319,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Assert the alert count displayed in Instructor Comments channel
             Logger.LogAssertion("VerifyInstructorCommentsAlerts", ScenarioContext.Current.
                 ScenarioInfo.Title,
-                () => Assert.AreEqual(alertCount, new TodaysViewUXPage().
+                () => Assert.AreEqual(alertCount, new TodaysViewUxPage().
                     GetAlertCount(channelName)));
             Logger.LogMethodEntry("TodaysView", "ValidateInstructorCommentsAlertCount",
               base.IsTakeScreenShotDuringEntryExit);
@@ -335,7 +335,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "ClickOnInstructorCommentsOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the Instructor Comments channel Option
-            new TodaysViewUXPage().ClickonNotificationChannelOption(channelOption);
+            new TodaysViewUxPage().ClickonNotificationChannelOption(channelOption);
             Logger.LogMethodExit("TodaysView", "ClickOnInstructorCommentsOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -352,7 +352,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Assert the Activity Name In The Instructor Comments Channel 
             Logger.LogAssertion("VerifyActivityName", ScenarioContext.Current.
                 ScenarioInfo.Title,
-                () => Assert.AreEqual(activityName, new TodaysViewUXPage().GetActivityNameOfInstructorCommentsChannel(activityName)));
+                () => Assert.AreEqual(activityName, new TodaysViewUxPage().GetActivityNameOfInstructorCommentsChannel(activityName)));
             Logger.LogMethodEntry("TodaysView", "VerifyActivityNameInChannel",
               base.IsTakeScreenShotDuringEntryExit);
         }

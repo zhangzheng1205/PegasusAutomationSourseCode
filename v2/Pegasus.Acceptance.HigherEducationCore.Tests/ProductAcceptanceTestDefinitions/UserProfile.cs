@@ -31,7 +31,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("UserProfile", "ClickMyProfileLinkOption",
                 base.IsTakeScreenShotDuringEntryExit);  
             //Click On My Profile Link Option
-            new CalendarHEDDefaultUXPage().ClickOnMyProfileLink(userType);
+            new CalendarHedDefaultUxPage().ClickOnMyProfileLink(userType);
             Logger.LogMethodExit("UserProfile", "ClickMyProfileLinkOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }

@@ -389,12 +389,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Assert for display of section name after enter inside the section 
             Logger.LogAssertion("VerifySectionNameAfterEnterInsideSection",
                 ScenarioContext.Current.ScenarioInfo.Title,
-             () => Assert.AreEqual(sectionName,new TodaysViewUXPage().GetCourseName()));
+             () => Assert.AreEqual(sectionName,new TodaysViewUxPage().GetCourseName()));
             // Assert for display of section ID after enter inside the section
             Logger.LogAssertion("VerifySectionIDAfterEnterInsideSection",
                ScenarioContext.Current.ScenarioInfo.Title,
             () => Assert.AreEqual(course.SectionId,
-               new TodaysViewUXPage().GetSectionIDAfterEnterInsideSection()));
+               new TodaysViewUxPage().GetSectionIdAfterEnterInsideSection()));
             Logger.LogMethodExit("ProgramAdmin",
                 "VerifySectionNameandIDAfterEnterInsideSection"
                 , base.IsTakeScreenShotDuringEntryExit);
@@ -415,7 +415,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             // Assert Course Name 
             Logger.LogAssertion("VerifyCourseName",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(course.Name,new TodaysViewUXPage().GetCourseName()));
+                () => Assert.AreEqual(course.Name,new TodaysViewUxPage().GetCourseName()));
             Logger.LogMethodExit("ProgramAdmin", "DisplayOfCourseName",
                 base.IsTakeScreenShotDuringEntryExit);
         }

@@ -189,7 +189,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage", "getDueDateOfActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            return new CalendarHEDDefaultUXPage().GetConvertedDate(getDueDate);
+            return new CalendarHedDefaultUxPage().GetConvertedDate(getDueDate);
 
         }
 

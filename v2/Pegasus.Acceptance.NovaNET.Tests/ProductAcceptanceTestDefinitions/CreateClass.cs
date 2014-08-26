@@ -226,7 +226,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             Logger.LogMethodEntry("CreateClass", "SelectTheHomeButton",
                base.IsTakeScreenShotDuringEntryExit);
             //Select the Home Button
-            new TodaysViewUXPage().SelectHomeButton();
+            new TodaysViewUxPage().SelectHomeButton();
             Logger.LogMethodExit("CreateClass", "SelectTheHomeButton",
            base.IsTakeScreenShotDuringEntryExit);
         }

@@ -165,7 +165,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store the activity in memory
             Activity newActivityTest = new Activity
             {
-                ActivityID = CommonResource.CommonResource.DigitalPath_Activity_Test_UC3,
+                ActivityId = CommonResource.CommonResource.DigitalPath_Activity_Test_UC3,
                 Name = activityTest.ToString(),
                 ActivityType = Activity.ActivityTypeEnum.Test,
                 IsCreated = true,
@@ -187,7 +187,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store the activity in memory
             Activity newActivityTest = new Activity
             {
-                ActivityID = CommonResource.CommonResource.DigitalPath_Activity_Test_UC2,
+                ActivityId = CommonResource.CommonResource.DigitalPath_Activity_Test_UC2,
                 Name = activityTest.ToString(),
                 ActivityType = Activity.ActivityTypeEnum.Test,
                 IsCreated = true,
@@ -1538,10 +1538,10 @@ namespace Pegasus.Pages.UI_Pages
                     AddAssessmentPageResources.AddAssessment_Page_HelpLinkAssets_CheckBox_Id_Locator);
 
                 //Check the first enabled checkbox for a Help Link asset to add it to HelpLinks grid in Activity
-                foreach (IWebElement HelpLinkAsset in getAllHelpLinkAssets)
+                foreach (IWebElement helpLinkAsset in getAllHelpLinkAssets)
                 {
-                    if (HelpLinkAsset.Enabled)
-                        HelpLinkAsset.Click();
+                    if (helpLinkAsset.Enabled)
+                        helpLinkAsset.Click();
                     break;
                 }
                 //Select the Add Link popup

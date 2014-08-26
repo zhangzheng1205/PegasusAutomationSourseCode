@@ -41,7 +41,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             // Assert Class Search
             Logger.LogAssertion("VerifyClassPresentInOverviewTab", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(orgClass.Name,
-                    new TodaysViewUXPage().GetClassName()));
+                    new TodaysViewUxPage().GetClassName()));
             Logger.LogMethodExit("Overview", "ClassPresentInTheOverviewTab",
            base.IsTakeScreenShotDuringEntryExit);
         }

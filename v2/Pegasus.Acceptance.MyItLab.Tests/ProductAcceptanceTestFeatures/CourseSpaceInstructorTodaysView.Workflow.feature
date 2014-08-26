@@ -84,7 +84,7 @@ When I click on the "Not Passed" option
 Then I should see "1" activity in the "Not Passed" channel
 
 #Purpose : As a instructor i should be notified with alert counts and contents when student does not submits Past due activity.
-#Test case ID : peg-16742.
+#Test case ID : peg-21949
 #Products : MyItLab, World Languages.
 #Pre condition : Assigned activity should be past due and student should not submit the activity even after past due date.
 #Dependency : One time dependent(This scenario can be run against existing data).
@@ -94,3 +94,20 @@ Then I should see the "Notifications" channels in 'Todays view' page
 And I should see the alert count updated as "69" in "Past Due: Not Submitted" channel
 When I click on the "Past Due: Not Submitted" option
 Then I should see "69" activity in the Past Due: Not Submitted channel
+
+#Purpose : Instructor accepts past due submission from Past due: Submitted channel.
+#Test case ID : peg-21949.
+#Products : MyItLab, HSS and World Language.
+#Pre condition : Assigned activity should be past due and student should not submit the activity even after past due date.
+#Dependency : Instructor should assign activity with due date and Student should submit the activity post due date.
+Scenario: Instructor accepts past due submission from Past due: Submitted channel of activity
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on the "Past Due: Submitted" link in notifications channel
+Then I should see First name, Last name of "CsSmsStudent" who has submitted the past due activity in the right frame along with expand icon
+When I click on expand icon displayed against student name
+And I selected the check box of the past due activity submitted
+Then I should see "CsSmsStudent" name and "Word Chapter 1 Skill-Based Training" activity name and due date and time and submitted date and time which is submitted post due date
+And I should be able to select the past due activity
+When I click on "Accept" activities past due date
+Then I should see the successfull message "The submission by Student, Gurudatt has been accepted. The grade for this submission will now appear in the Gradebook."

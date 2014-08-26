@@ -37,7 +37,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             Activity activity = Activity.Get(activityTypeEnum);
             new CourseHomeListItemViewPage().SelectCourseHomeWindow();
             //Search Content
-            new CalendarHEDDefaultUXPage().SearchContent(activity.Name);
+            new CalendarHedDefaultUxPage().SearchContent(activity.Name);
             Logger.LogMethodExit("AssignmentCalendar", 
                 "SearchContentInAssignmentCalendar",
                base.IsTakeScreenShotDuringEntryExit);
@@ -58,7 +58,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             Logger.LogAssertion("VerifyThefailureMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(message,
-                    new CalendarHEDDefaultUXPage().
+                    new CalendarHedDefaultUxPage().
                     GetMessageFromAssignmentCalendarTab(message)));
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifySearchedAssetMessageInAssignmentCalendar",

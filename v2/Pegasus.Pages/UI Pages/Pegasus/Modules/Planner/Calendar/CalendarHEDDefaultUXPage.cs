@@ -16,12 +16,12 @@ namespace Pegasus.Pages.UI_Pages
     /// <summary>
     /// This class contains details of Assignment Calender tab
     /// </summary>
-    public class CalendarHEDDefaultUXPage : BasePage
+    public class CalendarHedDefaultUxPage : BasePage
     {
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger logger = Logger.GetInstance(typeof(CalendarHEDDefaultUXPage));
+        private static Logger logger = Logger.GetInstance(typeof(CalendarHedDefaultUxPage));
 
         /// <summary>
         /// This the enum available for Show Dropdown type Enum
@@ -1841,10 +1841,9 @@ namespace Pegasus.Pages.UI_Pages
                 containerNodeId));
             if (checkBoxList == null) return;
             int counter = 0;
-            string checkBoxId = string.Empty;
             foreach (IWebElement checkBox in checkBoxList)
             {
-                checkBoxId = checkBox.GetAttribute("id");
+                string checkBoxId = checkBox.GetAttribute("id");
                 base.ClickByJavaScriptExecutor(checkBox);
                 this.StoreAssignUnAssignActivityInMemory(
                     checkBoxId.Split('_')[1]);
@@ -1907,7 +1906,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             Activity activity = new Activity()
             {
-                ActivityID = activityId,
+                ActivityId = activityId,
                 IsAssigned = IsAssetAssigned(activityId),
                 IsCreated = true
             };

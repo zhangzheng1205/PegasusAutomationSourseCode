@@ -55,7 +55,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogAssertion("VerifyWelcomeStudentText", 
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(welcomeStudentText,
-                    new TodaysViewUXPage().
+                    new TodaysViewUxPage().
                     GetWelcomeStudentTextMessage(welcomeStudentText))); 
             Logger.LogMethodEntry("StudentView",
                 "VerifyTheInstructorShouldTurnedAsStudent",

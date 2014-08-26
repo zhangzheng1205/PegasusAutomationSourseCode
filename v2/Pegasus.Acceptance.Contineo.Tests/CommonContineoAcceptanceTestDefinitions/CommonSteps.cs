@@ -184,7 +184,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
                 IsTakeScreenShotDuringEntryExit);
             //Click On More Link if More Link Is Present
             //And The Required Tab Is Not Present
-            new TodaysViewUXPage().ClickMoreLinkIfPresent(tabName);
+            new TodaysViewUxPage().ClickMoreLinkIfPresent(tabName);
             //Wait For Element
             WaitForElement((By.PartialLinkText(tabName)));
             //Get Element Property          
@@ -231,7 +231,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //Assert defaults tabs displayed
             Logger.LogAssertion("VerifyDisplayOfDefaultsTabs", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
-                (true, new TodaysViewUXPage().IsDefaultTabsPresent(userTypeEnum)));
+                (true, new TodaysViewUxPage().IsDefaultTabsPresent(userTypeEnum)));
             Logger.LogMethodExit("CommonSteps", " ViewDefaultsTabs",
                 IsTakeScreenShotDuringEntryExit);
         }
@@ -246,7 +246,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             Logger.LogMethodEntry("CommonSteps", "NavigateBackToGlobalHomePage",
                 IsTakeScreenShotDuringEntryExit);
             //Navigate To Global Home Page
-            new TodaysViewUXPage().NavigateToGlobalHomePage();
+            new TodaysViewUxPage().NavigateToGlobalHomePage();
             Logger.LogMethodExit("CommonSteps", "NavigateBackToGlobalHomePage",
                 IsTakeScreenShotDuringEntryExit);
         }

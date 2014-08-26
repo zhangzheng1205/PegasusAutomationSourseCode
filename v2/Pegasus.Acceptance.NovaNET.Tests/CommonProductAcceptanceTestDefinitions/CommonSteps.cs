@@ -179,7 +179,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             base.SelectDefaultWindow();
             //Click On More Link if More Link Is Present
-            new TodaysViewUXPage().ClickMoreLinkIfPresent(tabName); 
+            new TodaysViewUxPage().ClickMoreLinkIfPresent(tabName); 
             //Wait For Element
             base.WaitForElement((By.PartialLinkText(tabName)));
             //Get Tab Element Property
@@ -379,7 +379,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             Logger.LogMethodEntry("CommonSteps", "NavigateToTab",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Tab
-            new TodaysViewUXPage().SelectTab(tabName);
+            new TodaysViewUxPage().SelectTab(tabName);
             Logger.LogMethodExit("CommonSteps", "NavigateToTab",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -397,7 +397,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
             Logger.LogMethodEntry("CommonSteps", "NavigateToCourseSpaceUserTabs",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Tab
-            new TodaysViewUXPage().SelectTab(parentTabName, childTabName);
+            new TodaysViewUxPage().SelectTab(parentTabName, childTabName);
             Logger.LogMethodExit("CommonSteps", "NavigateToCourseSpaceUserTabs",
                base.IsTakeScreenShotDuringEntryExit);
         }

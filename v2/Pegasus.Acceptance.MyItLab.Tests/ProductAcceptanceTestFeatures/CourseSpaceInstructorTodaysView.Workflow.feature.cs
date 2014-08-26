@@ -263,6 +263,44 @@ testRunner.Then("I should see \"69\" activity in the Past Due: Not Submitted cha
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor accepts past due submission from Past due: Submitted channel of activi" +
+            "ty")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void InstructorAcceptsPastDueSubmissionFromPastDueSubmittedChannelOfActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor accepts past due submission from Past due: Submitted channel of activi" +
+                    "ty", ((string[])(null)));
+#line 103
+this.ScenarioSetup(scenarioInfo);
+#line 104
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 105
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 106
+testRunner.When("I click on the \"Past Due: Submitted\" link in notifications channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 107
+testRunner.Then("I should see First name, Last name of \"CsSmsStudent\" who has submitted the past d" +
+                    "ue activity in the right frame along with expand icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 108
+testRunner.When("I click on expand icon displayed against student name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 109
+testRunner.And("I selected the check box of the past due activity submitted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 110
+testRunner.Then("I should see \"CsSmsStudent\" name and \"Word Chapter 1 Skill-Based Training\" activi" +
+                    "ty name and due date and time and submitted date and time which is submitted pos" +
+                    "t due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 111
+testRunner.And("I should be able to select the past due activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 112
+testRunner.When("I click on \"Accept\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 113
+testRunner.Then("I should see the successfull message \"The submission by Student, Gurudatt has bee" +
+                    "n accepted. The grade for this submission will now appear in the Gradebook.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

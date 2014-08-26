@@ -2572,7 +2572,7 @@ namespace Pegasus.Pages.UI_Pages
             string[] LMSAttribute = LMSGradesynch.Split(':');
 
             Activity activity = Activity.Get(activityTypeEnum);
-            activity.ActivityID = LMSAttribute[1].Trim();
+            activity.ActivityId = LMSAttribute[1].Trim();
             activity.CreationDate = DateTime.Now;
             activity.UpdateActivityInMemory(activity);
 

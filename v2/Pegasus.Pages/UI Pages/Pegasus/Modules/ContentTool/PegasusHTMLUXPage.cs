@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store the Page in memory
             Activity newPage = new Activity
             {
-                ActivityID = PageAssetID,
+                ActivityId = PageAssetID,
                 Name = newPageAsset.ToString(),
                 ActivityType = activityTypeEnum,
                 IsCreated = true,

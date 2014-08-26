@@ -35,7 +35,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Search the Activity            
-            new CalendarHEDDefaultUXPage().SearchTheActivity(activity.Name);
+            new CalendarHedDefaultUxPage().SearchTheActivity(activity.Name);
             Logger.LogMethodExit("AssignmentCalendar", "SearchTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -57,7 +57,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogAssertion("VerifySearchedActivity",
                 ScenarioContext.Current.ScenarioInfo.
                 Title, () => Assert.AreEqual(activity.Name,
-                    new CalendarHEDDefaultUXPage().
+                    new CalendarHedDefaultUxPage().
                 GetSearchedActivityName()));
             Logger.LogMethodExit("AssignmentCalendar",
                 "DisplayOfSearchedActivity",
@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Drag and Drop the Activity
-            new CalendarHEDDefaultUXPage().DragAndDropActivity(activity.Name);
+            new CalendarHedDefaultUxPage().DragAndDropActivity(activity.Name);
             Logger.LogMethodExit("AssignmentCalendar",
                 "DragAndDropTheActivityOnCurrentDay",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -99,7 +99,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Activity activity = Activity.Get(activityTypeEnum);
             //Assert the Assigned Activity            
             Logger.LogAssertion("VerifyActivityAssigned", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(new CalendarHEDDefaultUXPage().
+                () => Assert.AreEqual(new CalendarHedDefaultUxPage().
                     GetAssignedActivityNameOnCurrentDay(activity.Name), activity.Name));
             Logger.LogMethodExit("AssignmentCalendar", "DisplayOfAssignedActivity",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -116,7 +116,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "SearchAnotherActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             //Search the Activity
-            new CalendarHEDDefaultUXPage().SearchTheActivity(
+            new CalendarHedDefaultUxPage().SearchTheActivity(
                 AssignmentCalendarResource.
                 AssignmentCalendar_Activity2_Name);
             Logger.LogMethodExit("AssignmentCalendar",
@@ -135,7 +135,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "AssignActivityFromCmenuOptions",
                 base.IsTakeScreenShotDuringEntryExit);
             //Assign The Activity
-            new CalendarHEDDefaultUXPage().AssignActivityThroughCmenuOption();
+            new CalendarHedDefaultUxPage().AssignActivityThroughCmenuOption();
             Logger.LogMethodExit("AssignmentCalendar",
                 "AssignActivityFromCmenuOptions",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -159,7 +159,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogAssertion("VerifyAssignedActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(activity.Name,
-                    new CalendarHEDDefaultUXPage().
+                    new CalendarHedDefaultUxPage().
                     GetAssignedActivityNameOnCurrentDay(activity.Name)));
             Logger.LogMethodExit("AssignmentCalendar",
                 "DisplayOfActivityAssignedByCmenuOption",
@@ -177,7 +177,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "SelectTheAssets",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Multiple Assets
-            new CalendarHEDDefaultUXPage().
+            new CalendarHedDefaultUxPage().
                 SelectMultipleAssetsToDragAndDrop();
             Logger.LogMethodExit("AssignmentCalendar",
                 "SelectTheAssets",
@@ -197,7 +197,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Calendar Status Of Activity
             Logger.LogAssertion("VerifyCalendarStatusOfActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new CalendarHEDDefaultUXPage().
+                () => Assert.IsTrue(new CalendarHedDefaultUxPage().
                     IsActivityDueDateStatusPresent()));
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyCalendarStatusOfTheActivity",
@@ -215,7 +215,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "SelectCmenuOptionAssignmentPropertiesOfActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on Cmenu Option Assignment Properties
-            new CalendarHEDDefaultUXPage().ClickOnAssignmentProperties();
+            new CalendarHedDefaultUxPage().ClickOnAssignmentProperties();
             Logger.LogMethodExit("AssignmentCalendar",
                 "SelectCmenuOptionAssignmentPropertiesOfActivity",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -234,7 +234,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Verify Due Date Of Activity
             Logger.LogAssertion("VerifyDueDateOfActivity",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(new CalendarHEDDefaultUXPage().
+                () => Assert.AreEqual(new CalendarHedDefaultUxPage().
                     GetMyProfileProfileDate(),
                     new AssignContentPage().getDueDateOfActivity()));
             Logger.LogMethodExit("AssignmentCalendar",
@@ -298,8 +298,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("AssignmentCalendar",
                 "SelectOptionInDropdown",
                base.IsTakeScreenShotDuringEntryExit);
-            CalendarHEDDefaultUXPage calendarHEDDefaultUXPage =
-                new CalendarHEDDefaultUXPage();
+            CalendarHedDefaultUxPage calendarHEDDefaultUXPage =
+                new CalendarHedDefaultUxPage();
             //Select Option In 'View By' Dropdown
             calendarHEDDefaultUXPage.
                 SelectOptionInViewByDropdown(viewByDropdownOption);
@@ -322,7 +322,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("AssignmentCalendar", "SelectContentType",
                base.IsTakeScreenShotDuringEntryExit);
             //Select The Content Type
-            new CalendarHEDDefaultUXPage().SelectTheContentType(contentType);
+            new CalendarHedDefaultUxPage().SelectTheContentType(contentType);
             Logger.LogMethodExit("AssignmentCalendar", "SelectContentType",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -337,7 +337,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Search Content
             Logger.LogMethodEntry("AssignmentCalendar", "SearchContent",
                 base.IsTakeScreenShotDuringEntryExit);
-            CalendarHEDDefaultUXPage calendarHEDDefaultUXPage = new CalendarHEDDefaultUXPage();
+            CalendarHedDefaultUxPage calendarHEDDefaultUXPage = new CalendarHedDefaultUxPage();
             //Fetch Activity From Memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Select the Calendar Window
@@ -359,7 +359,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "EnterDayViewForAssignedContentInCalendar",
                 base.IsTakeScreenShotDuringEntryExit);
             //Enter Day View For Assigned Content In Calendar
-            new CalendarHEDDefaultUXPage().EnterTheDayViewForAssignedActivity();
+            new CalendarHedDefaultUxPage().EnterTheDayViewForAssignedActivity();
             Logger.LogMethodExit("AssignmentCalendar",
                 "EnterDayViewForAssignedContentInCalendar",
                base.IsTakeScreenShotDuringEntryExit);
@@ -375,8 +375,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("AssignmentCalendar",
                 "VerifyTheOrderOfAssignedContentsInCalendar",
                 base.IsTakeScreenShotDuringEntryExit);
-            CalendarHEDDefaultUXPage calendarHEDDefaultUXPage =
-                new CalendarHEDDefaultUXPage();
+            CalendarHedDefaultUxPage calendarHEDDefaultUXPage =
+                new CalendarHedDefaultUxPage();
             //Get Contents Order In Course Content
             string getContentsOrder = calendarHEDDefaultUXPage.
                 GetContentsOrderInCourseContent();
@@ -511,7 +511,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "SelectTheContentInCalendar",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select The Content In Calendar
-            new CalendarHEDDefaultUXPage().SelectContentInCalendar(contentName, status);
+            new CalendarHedDefaultUxPage().SelectContentInCalendar(contentName, status);
             Logger.LogMethodExit("AssignmentCalendar",
                "SelectTheContentInCalendar",
               base.IsTakeScreenShotDuringEntryExit);
@@ -529,7 +529,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "ClickOnButtonInAssignmentCalendar",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click On Button In Calendar
-            new CalendarHEDDefaultUXPage().ClickOnButtonInCalendar(buttonName);
+            new CalendarHedDefaultUxPage().ClickOnButtonInCalendar(buttonName);
             Logger.LogMethodExit("AssignmentCalendar",
               "ClickOnButtonInAssignmentCalendar",
              base.IsTakeScreenShotDuringEntryExit);
@@ -550,7 +550,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Asset To Verify Content Is In Assigned State
             Logger.LogAssertion("VerifyContentIsInAssignedState",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(status,new CalendarHEDDefaultUXPage().
+                () => Assert.AreEqual(status,new CalendarHedDefaultUxPage().
                     GetContentStatus(contentName, status)));
             Logger.LogMethodExit("AssignmentCalendar",
               "VerifyContentIsInAssignedState",
@@ -571,7 +571,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Asset To Verify Assign/Unassign Button Is In Disabled State
             Logger.LogAssertion("VerifyAssignUnassignButtonIsInDisabledState",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new CalendarHEDDefaultUXPage().
+                () => Assert.IsTrue(new CalendarHedDefaultUxPage().
                     IsAssignUnassignButtonDisabled()));            
             Logger.LogMethodExit("AssignmentCalendar",
               "VerifyTheButtonIsInDisabledState",

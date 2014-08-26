@@ -87,7 +87,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             {
                 Assert.AreEqual(Activity.ShowHideStatusEnum.Hidden,
                 courseContentPage
-                .GetAssetsShowHideStatus(shownActivity.ActivityID));
+                .GetAssetsShowHideStatus(shownActivity.ActivityId));
                 return;
             }
             Activity hiddenActivity = Activity.Get(Activity.ShowHideStatusEnum.Hidden);
@@ -95,7 +95,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             {
                 Assert.AreEqual(Activity.ShowHideStatusEnum.Shown,
                courseContentPage
-                .GetAssetsShowHideStatus(hiddenActivity.ActivityID));
+                .GetAssetsShowHideStatus(hiddenActivity.ActivityId));
             }
             Logger.LogMethodExit("CourseContent",
               "VerifyAssetsShowHideStatus",
@@ -114,7 +114,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             if (shownActivity != null)
             {
                 shownToText = courseContentUxPage.GetTextInShownToColumn(
-                    shownActivity.ActivityID);
+                    shownActivity.ActivityId);
                 Assert.AreEqual(CourseContentResource.CourseContent_None_Value,
                     shownToText);
                 return;
@@ -123,7 +123,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             if (hiddenActivity != null)
             {
                 shownToText = courseContentUxPage.GetTextInShownToColumn(
-                    hiddenActivity.ActivityID);
+                    hiddenActivity.ActivityId);
                 if (shownToText.Equals(CourseContentResource.CourseContent_All_Value)
                     || shownToText.Equals(CourseContentResource
                     .CourseContent_Selected_Value))

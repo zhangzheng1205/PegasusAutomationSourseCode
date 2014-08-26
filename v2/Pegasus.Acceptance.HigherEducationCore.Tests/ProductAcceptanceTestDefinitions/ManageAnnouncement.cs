@@ -67,7 +67,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     break;
                 case Announcement.AnnouncementTypeEnum.CsCourse:
                     //Click On Manage All Button
-                    new TodaysViewUXPage().ClickOnManageAllButtonHED();
+                    new TodaysViewUxPage().ClickOnManageAllButtonHed();
                     //Create Course Announcement in CourseSpace
                     new CreateAnnouncementUXPage().
                         CreateAnnouncementInSideCourseHED(announcementTypeEnum);
@@ -138,7 +138,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "SelectAnnouncementTypeInDropDown",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click ManageAll Button
-            new TodaysViewUXPage().ClickOnManageAllButtonHED();
+            new TodaysViewUxPage().ClickOnManageAllButtonHed();
             //Select Announcement Frame
             new CreateAnnouncementUXPage().SelectAnnouncmentFrame();
             //Select Announcement Type in Drop Down

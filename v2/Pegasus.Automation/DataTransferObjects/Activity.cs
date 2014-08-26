@@ -83,7 +83,18 @@ namespace Pegasus.Automation.DataTransferObjects
         /// <summary>
         /// This is the activity ID.
         /// </summary>
-        public string ActivityID { get; set; }
+        public string ActivityId { get; set; }
+
+        /// <summary>
+        /// This is the activity due date.
+        /// </summary>
+        public string DueDate { get; set; }
+
+
+        /// <summary>
+        /// This is the activity subitted date.
+        /// </summary>
+        public string SubmittedDate { get; set; }
 
         /// <summary>
         /// This is activity show-hide status.
@@ -147,7 +158,7 @@ namespace Pegasus.Automation.DataTransferObjects
         /// <returns>Returns Activity based in ID.</returns>
         public static Activity Get(string activityId)
         {
-            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Activity>(x => x.ActivityID == activityId && x.IsCreated).First();
+            return InMemoryDatabaseSingleton.DatabaseInstance.SelectMany<Activity>(x => x.ActivityId == activityId && x.IsCreated).First();
         }
 
         /// <summary>

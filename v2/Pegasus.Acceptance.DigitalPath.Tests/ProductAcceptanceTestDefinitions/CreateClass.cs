@@ -143,7 +143,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Assert Teacher View tabs displayed
             Logger.LogAssertion("VerifyDefaultTabsForTeacherView", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
-                (true, new TodaysViewUXPage().IsTeacherViewTabsPresent()));
+                (true, new TodaysViewUxPage().IsTeacherViewTabsPresent()));
             Logger.LogMethodExit("CreateClass", "VerifyDefaultTabsForTeacherView",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -158,7 +158,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("CreateClass", "EnterAsDemoStudent",
              base.IsTakeScreenShotDuringEntryExit);
             //Enter as Demo Student
-            new TodaysViewUXPage().EnterAsDemoStudent();
+            new TodaysViewUxPage().EnterAsDemoStudent();
             Logger.LogMethodExit("CreateClass", "EnterAsDemoStudent",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -179,7 +179,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             // Assert Class Search
             Logger.LogAssertion("VerifyClassSearch", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(orgClass.Name,
-                    new TodaysViewUXPage().GetClassName()));
+                    new TodaysViewUxPage().GetClassName()));
             Logger.LogMethodExit("CreateClass", "VerifyTheClass",
            base.IsTakeScreenShotDuringEntryExit);
         }
@@ -196,7 +196,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Assert Teacher View tabs displayed
             Logger.LogAssertion("VerifyNavigationOfTeacherView", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.IsTrue
-                (new TodaysViewUXPage().IsTeacherNavigatedBack()));
+                (new TodaysViewUxPage().IsTeacherNavigatedBack()));
             Logger.LogMethodExit("CreateClass", "NavigateToTeacherView",
           base.IsTakeScreenShotDuringEntryExit);
         }
@@ -213,7 +213,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("CreateClass", "NavigateOutsideOfTheClass",
              base.IsTakeScreenShotDuringEntryExit);
             //Navigate Outside of the Class
-            new TodaysViewUXPage().NavigateOutsideFromClass(windowName);
+            new TodaysViewUxPage().NavigateOutsideFromClass(windowName);
             Logger.LogMethodExit("CreateClass", "NavigateOutsideOfTheClass",
         base.IsTakeScreenShotDuringEntryExit);
         }

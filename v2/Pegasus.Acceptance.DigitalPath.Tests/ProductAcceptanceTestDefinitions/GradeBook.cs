@@ -131,7 +131,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Activity activity = Activity.Get(activityTypeEnum);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();   
             //Select Window and Frame
-            new TodaysViewUXPage().selectwindowandFrame();
+            new TodaysViewUxPage().SelectwindowandFrame();
             //Select Cmenu Of Asset
             gbInstructorPage.SelectCmenuOptionOfAssetinGradebook(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
@@ -162,7 +162,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Fetch the data from memory
             User user = User.Get(userTypeEnum);
             //Select the window
-            new TodaysViewUXPage().selectwindowandFrame();
+            new TodaysViewUxPage().SelectwindowandFrame();
             //Assert Activity Status for Enrolled User in Gradebook
             Logger.LogAssertion("VerifyActivityDisplayInGradebook",
                ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -188,7 +188,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Fetch the data from memory
             Activity activity = Activity.Get(activityTypeEnum);
             //Select Window and Frame
-            new TodaysViewUXPage().selectwindowandFrame();
+            new TodaysViewUxPage().SelectwindowandFrame();
             //Get Activity Name and Click On View Grade Of Asset
             new GBInstructorUXPage().GetActivityName(activity.Name);
             Logger.LogMethodExit("GradeBook","ClickOnViewGradeOfAsset",
@@ -228,7 +228,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Activity activity = Activity.Get(activityTypeEnum);
             GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
             //Select Window and Frame
-            new TodaysViewUXPage().selectwindowandFrame();
+            new TodaysViewUxPage().SelectwindowandFrame();
             //Select Cmenu Of Asset
             gbInstructorPage.SelectCmenuOptionOfAssetinGradebook(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(

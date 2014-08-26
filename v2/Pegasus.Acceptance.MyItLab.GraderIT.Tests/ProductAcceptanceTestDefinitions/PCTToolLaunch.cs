@@ -28,7 +28,7 @@ namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.ProductAcceptanceTestDefinit
                 IsTakeScreenShotDuringEntryExit);
 
             // Open the PCT Tools drop down from resource tool bar
-            new TodaysViewUXPage().OpenPCTToolsDropDown();
+            new TodaysViewUxPage().OpenPctToolsDropDown();
 
             Logger.LogMethodExit("PCTToolLaunch", "OpenPctToolsDropDown",
                 IsTakeScreenShotDuringEntryExit);
@@ -42,7 +42,7 @@ namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             // Method to launch the PCT URL
             Logger.LogMethodEntry("PCTToolLaunch", "ClickOnPctToolInDropDown",
                 IsTakeScreenShotDuringEntryExit);
-            new TodaysViewUXPage().LaunchPCTFromDropDown(pctToolName);
+            new TodaysViewUxPage().LaunchPctFromDropDown(pctToolName);
             Logger.LogMethodExit("PCTToolLaunch", "ClickOnPctToolInDropDown",
                 IsTakeScreenShotDuringEntryExit);
         }
@@ -61,11 +61,11 @@ namespace Pegasus.Acceptance.MyITLab.GraderIT.Tests.ProductAcceptanceTestDefinit
             //Asserts To Verify The PCT window width
             Logger.LogAssertion("VerifyThePCTWindowWidth",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new TodaysViewUXPage().GetPCTWindowWidth() >= width));
+                () => Assert.IsTrue(new TodaysViewUxPage().GetPctWindowWidth() >= width));
             //Asserts To Verify The PCT window height
             Logger.LogAssertion("VerifyThePCTWindowHeight",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new TodaysViewUXPage().GetPCTWindowHeight() >= height));
+                () => Assert.IsTrue(new TodaysViewUxPage().GetPctWindowHeight() >= height));
 
             Logger.LogMethodExit("PCTToolLaunch", "VerifyTheQuestionEditPage"
                 , base.IsTakeScreenShotDuringEntryExit);

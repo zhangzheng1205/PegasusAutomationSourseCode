@@ -144,7 +144,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             //Click On More Link if More Link Is Present
             //And The Required Tab Is Not Present
-            new TodaysViewUXPage().ClickTheMoreLinkIfPresent(tabName);
+            new TodaysViewUxPage().ClickTheMoreLinkIfPresent(tabName);
             //Wait For Element
             base.WaitForElement(By.PartialLinkText(tabName));
             //Get Tab Element Property
@@ -269,7 +269,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "ClickHomeLink",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click On Home Link
-            new TodaysViewUXPage().ClickOnHomeLink();
+            new TodaysViewUxPage().ClickOnHomeLink();
             Logger.LogMethodExit("CommonSteps", "ClickHomeLink",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -435,7 +435,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "NavigateToPublishingTab",
                 base.IsTakeScreenShotDuringEntryExit);
             //Navigate To The Publishing Tab
-            new TodaysViewUXPage().NavigateToThePublishingTab(subtabName, mainTabName);
+            new TodaysViewUxPage().NavigateToThePublishingTab(subtabName, mainTabName);
             Logger.LogMethodExit("CommonSteps", "NavigateToPublishingTab",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -453,7 +453,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "NavigateToCourseSpaceUserTabs",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Tab
-            new TodaysViewUXPage().SelectTab(parentTabName, childTabName);
+            new TodaysViewUxPage().SelectTab(parentTabName, childTabName);
             Logger.LogMethodExit("CommonSteps", "NavigateToCourseSpaceUserTabs",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -470,7 +470,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "NavigateToTab",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Tab
-            new TodaysViewUXPage().SelectTab(tabName);
+            new TodaysViewUxPage().SelectTab(tabName);
             Logger.LogMethodExit("CommonSteps", "NavigateToTab",
                base.IsTakeScreenShotDuringEntryExit);
         }

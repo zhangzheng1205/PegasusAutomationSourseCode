@@ -30,7 +30,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Select Window
             new CourseHomeListItemViewPage().SelectCourseHomeWindow();          
             //Click on the New Grades Link
-            new TodaysViewUXPage().ClickNewGradesOption();
+            new TodaysViewUxPage().ClickNewGradesOption();
             Logger.LogMethodExit("TodaysView", "ClickNewGradesAlertOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -52,7 +52,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
            // Assert Display of Writingspace Assessment in New Grades
             Logger.LogAssertion("VerifyDisplayofWritingspaceAssessmentInNewGrades",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
-                    Assert.AreNotEqual(activity.Name,new TodaysViewUXPage().
+                    Assert.AreNotEqual(activity.Name,new TodaysViewUxPage().
                     GetWritingspaceAssessmentInNewGrades(activity.Name)));
             Logger.LogMethodExit("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInNewGrades",
@@ -76,7 +76,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             // Assert Display of Writingspace Assessment in New Grades for Student
             Logger.LogAssertion("VerifyDisplayofWritingspaceAssessmentInNewGradesforStudent",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
-                    Assert.AreNotEqual(activity.Name, new TodaysViewUXPage().
+                    Assert.AreNotEqual(activity.Name, new TodaysViewUxPage().
                     GetWritingspaceAssessmentInNewGradesForStudent(activity.Name)));
             Logger.LogMethodExit("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInNewGradesForStudent",
@@ -100,7 +100,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Assert Display of Writingspace Assessment in Course Performance Channel
             Logger.LogAssertion("VerifyDisplayofAssessmentinCoursePerformanceChannel",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
-                    Assert.AreNotEqual(activity.Name,new TodaysViewUXPage().
+                    Assert.AreNotEqual(activity.Name,new TodaysViewUxPage().
                     GetAssessmentInCoursePerformance(activity.Name)));
             Logger.LogMethodExit("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInCoursePerformance",
@@ -118,7 +118,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickOnPerformanceChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the Performance channel Option
-            new TodaysViewUXPage().ClickonNotificationChannelOption(channelOption);
+            new TodaysViewUxPage().ClickonNotificationChannelOption(channelOption);
             Logger.LogMethodExit("TodaysView", "ClickOnPerformanceChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -142,7 +142,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Assert Display of Writingspace Assessment in Student Performance Channel
             Logger.LogAssertion("VerifyDisplayofAssessmentinStudentPerformanceChannel",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
-                    Assert.AreNotEqual(activity.Name,new TodaysViewUXPage().
+                    Assert.AreNotEqual(activity.Name,new TodaysViewUxPage().
                     GetAssessmentInStudentPerformance(activity.Name, mmndStudent.FirstName)));
             Logger.LogMethodExit("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInStudentPerformance",
@@ -166,7 +166,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             //Assert Display of Writingspace Assessment in My Progress Channel
             Logger.LogAssertion("VerifyDisplayofAssessmentinMyProgressChannel",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
-                    Assert.AreNotEqual(activity.Name,new TodaysViewUXPage().
+                    Assert.AreNotEqual(activity.Name,new TodaysViewUxPage().
                     GetWritingspaceAssessmentInMyProgress(activity.Name)));
             Logger.LogMethodExit("TodaysView",
                 "VerifyDisplayofWritingspaceAssessmentInMyProgress",

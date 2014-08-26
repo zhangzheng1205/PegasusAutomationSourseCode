@@ -282,7 +282,7 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             Logger.LogMethodEntry("CreateAnnouncement", "CreateCsCourseAnnouncement",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click ManageAll Button
-            new TodaysViewUXPage().ClickAnnouncementManageAllButton();
+            new TodaysViewUxPage().ClickAnnouncementManageAllButton();
             //Create Course Announcement in CS
             new CreateAnnouncementUXPage().CreateCourseAnnouncementInCs();
             Logger.LogMethodExit("CreateAnnouncement", "CreateCsCourseAnnouncement",

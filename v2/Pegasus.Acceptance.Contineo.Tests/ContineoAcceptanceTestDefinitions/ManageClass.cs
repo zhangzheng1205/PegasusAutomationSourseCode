@@ -40,7 +40,7 @@ namespace Pegasus.Acceptance.Contineo.Tests.
             //Assert Class Name
             Logger.LogAssertion("VerifyClassInOverviewTab", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(className.Name,
-                    new TodaysViewUXPage().GetClassName()));
+                    new TodaysViewUxPage().GetClassName()));
             Logger.LogMethodExit("ManageClass", "VerifyEnrolledClassInOverviewTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }

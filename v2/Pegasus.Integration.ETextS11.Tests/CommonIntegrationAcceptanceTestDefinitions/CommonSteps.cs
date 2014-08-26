@@ -131,7 +131,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
                 IsTakeScreenShotDuringEntryExit);
             //Click On More Link if More Link Is Present
             //And The Required Tab Is Not Present
-            new TodaysViewUXPage().ClickMoreLinkIfPresent(tabName);
+            new TodaysViewUxPage().ClickMoreLinkIfPresent(tabName);
             //Wait For Element
             WaitForElement((By.PartialLinkText(tabName)));
             //Get Element Property          

@@ -144,29 +144,29 @@ namespace Pegasus.Pages.UI_Pages
                "ClickOnAssignmentEditOption", base.IsTakeScreenShotDuringEntryExit);
 
             // Activity Type Name Collection
-            ICollection<IWebElement> ActivityTypeEditCollection = base.GetWebElementsCollectionById(
+            ICollection<IWebElement> activityTypeEditCollection = base.GetWebElementsCollectionById(
                     ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_EditButton_Id_Locator);
             // Activity Type Name corresponding Edit Preferences Link Collection 
-            ICollection<IWebElement> ActivityTypesCollection = base.GetWebElementsCollectionByPartialCssSelector(
+            ICollection<IWebElement> activityTypesCollection = base.GetWebElementsCollectionByPartialCssSelector(
                     ActivitiesPreferencesPageResource.ActivitiesPreferences_Page_NewActivityTypeName_CSSSelector);
             
             int i = 0;
             //click on the Edit Preferences Link for the desired Activity Type Name out of the Collection
-            foreach (IWebElement ActivityType in ActivityTypesCollection)
+            foreach (IWebElement activityType in activityTypesCollection)
             {
                 i++;
 
-                if (ActivityType.Enabled && ActivityType.GetAttribute("value") == 
+                if (activityType.Enabled && activityType.GetAttribute("value") == 
                     ActivitiesPreferencesPageResource.
                     ActivitiesPreferences_Page_AssignmentActivityTypeName_Value)
                 {
                     int j = 0;
-                    foreach(IWebElement ActivityTypeEdit in ActivityTypeEditCollection)
+                    foreach(IWebElement activityTypeEdit in activityTypeEditCollection)
                     {
                         j++;
                         if(i==j)
                         {
-                            base.ClickByJavaScriptExecutor(ActivityTypeEdit);
+                            base.ClickByJavaScriptExecutor(activityTypeEdit);
                             break;
                         }
                     }                    

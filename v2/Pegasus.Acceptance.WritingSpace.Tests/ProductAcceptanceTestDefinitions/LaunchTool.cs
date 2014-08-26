@@ -252,7 +252,7 @@ namespace Pegasus.Acceptance.WritingSpace.
             Logger.LogMethodEntry("LaunchTool", "FetchAndStorePegasusCourseId",
                    base.IsTakeScreenShotDuringEntryExit);
             //Click on Support Link
-            new TodaysViewUXPage().ClickonSupportLink();
+            new TodaysViewUxPage().ClickonSupportLink();
             //Fetch And Store CourseId
             new SupportPage().FetchAndStoreCourseId();            
             Logger.LogMethodExit("LaunchTool", "FetchAndStorePegasusCourseId",

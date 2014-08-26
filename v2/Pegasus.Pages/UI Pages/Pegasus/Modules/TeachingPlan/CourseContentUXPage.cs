@@ -1867,7 +1867,7 @@ namespace Pegasus.Pages.UI_Pages
             if(string.IsNullOrEmpty(activityID))return;
             Activity activity = new Activity
             {                
-                ActivityID = activityID,
+                ActivityId = activityID,
                 ShowHideStatus = this.GetAssetsShowHideStatus(activityID),
                 IsCreated = true
             };

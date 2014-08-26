@@ -68,7 +68,7 @@ namespace Pegasus.Pages.UI_Pages
                 "StoreActivityDetailsInMemory", base.IsTakeScreenShotDuringEntryExit);
             Activity studyPlan = new Activity
             {
-                ActivityID = CommonResource.CommonResource.DigitalPath_Activity_SkillStudyPlan_UC1,
+                ActivityId = CommonResource.CommonResource.DigitalPath_Activity_SkillStudyPlan_UC1,
                 Name = activityName,
                 ActivityType = Activity.ActivityTypeEnum.SkillStudyPlan,
                 IsCreated = true,

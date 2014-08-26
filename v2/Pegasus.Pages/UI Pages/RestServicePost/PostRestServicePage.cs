@@ -470,7 +470,7 @@ namespace Pegasus.Pages.UI_Pages
                         getConcatenatedGradeUrl = getWritingspaceHeaderUrl + externalCourseId +
                             appendValue +
                             PostRestServiceResource.PostRestServicePage_HeaderUrl_Slash_Character
-                            + activity.ActivityID +
+                            + activity.ActivityId +
                             PostRestServiceResource.PostRestServicePage_HeaderUrl_Appendgrades;
                         //Fill The Post Grade URL Value
                         this.FillTheMockApplicationDetailsValue(getConcatenatedGradeUrl,
@@ -705,7 +705,7 @@ namespace Pegasus.Pages.UI_Pages
             //Store the Activity into memory
             Activity activity = new Activity
             {
-                ActivityID = getItemId,
+                ActivityId = getItemId,
                 ActivityType = Activity.ActivityTypeEnum.WritingSpace,
                 IsCreated = true,
             };
@@ -793,7 +793,7 @@ namespace Pegasus.Pages.UI_Pages
                 string[] getItemId = Regex.Split(getResponseDetails, "},{");
                 foreach (String ResponseItemValues in getItemId)
                 {
-                    if (ResponseItemValues.Contains(activity.ActivityID))// 6000000000384474
+                    if (ResponseItemValues.Contains(activity.ActivityId))// 6000000000384474
                     {
                         ResponseValues = ResponseItemValues.Split(',');
                         string[] PayLoadValues = ResponseValues[2].Split('&');

@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages
            //Store the Link in memory
          Activity newLink=new Activity
          {
-             ActivityID=CommonResource.CommonResource.DigitalPath_Activity_Link_UC4,
+             ActivityId=CommonResource.CommonResource.DigitalPath_Activity_Link_UC4,
              Name=newLinkAsset.ToString(),
              ActivityType = activityTypeEnum,
              IsCreated=true,
