@@ -176,7 +176,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ExpandStudentNameinPastDueSubmittedChannel",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on Expand icon displayed for student name
-            new TodaysViewUXPage().ClickonExpandIconInPastDueSubmittedChannel();
+            new TodaysViewUxPage().ClickonExpandIconInPastDueSubmittedChannel();
             Logger.LogMethodExit("TodaysView", "ExpandStudentNameinPastDueSubmittedChannel",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -194,7 +194,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Assert the activity name displayed in the Past due submitted channel
             Logger.LogAssertion("ValidateActivityNameInPastDueSubmittedChannel",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
-                    Assert.AreEqual(activityName, new TodaysViewUXPage().GetActivityNameInPastDueSubmittedChannel()));
+                    Assert.AreEqual(activityName, new TodaysViewUxPage().GetActivityNameInPastDueSubmittedChannel()));
             Logger.LogMethodExit("TodaysView", "ValidateActivityNameInPastDueSubmittedChannel",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -214,7 +214,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Validate student first, last name in past due submitted channel
             Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
                 .ScenarioInfo.Title, () => Assert.AreEqual(studentName, new
-                    TodaysViewUXPage().GetStudentNameFromPastDueSubmittedChannel()));
+                    TodaysViewUxPage().GetStudentNameFromPastDueSubmittedChannel()));
             Logger.LogMethodExit("TodaysView", "ValidateStudentNameInPastDueSubmittedChannel",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -230,7 +230,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickonCmenuOptionOfDiscussionTopic",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the cmenu icon of discussion topic in unread discussions alert channel
-            new TodaysViewUXPage().ClickOnCmenuIconOfDiscussionTopic(discussionTopicName);
+            new TodaysViewUxPage().ClickOnCmenuIconOfDiscussionTopic(discussionTopicName);
             Logger.LogMethodExit("TodaysView", "ClickonCmenuOptionOfDiscussionTopic",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -248,7 +248,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              base.IsTakeScreenShotDuringEntryExit);
             //Assert the discussion frame title from the DiscussionMainUX page
             Logger.LogAssertion("ValidateDisplayofDiscussionFrame", ScenarioContext.Current.ScenarioInfo.Title, ()
-                => Assert.AreEqual(discussionFrameTitle, new DiscussionMainUXPage().GetDiscussionFrameTitle()));
+                => Assert.AreEqual(discussionFrameTitle, new DiscussionMainUxPage().GetDiscussionFrameTitle()));
             Logger.LogMethodExit("TodaysView", "ValidateDisplayofDiscussionFrame",
              base.IsTakeScreenShotDuringEntryExit);
         }
@@ -266,7 +266,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             //Validate overall grade in student performance channel
             Logger.LogAssertion("ValidateGradeInStudentPerformanceChannel", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(Grade, new TodaysViewUXPage().GetGradeFromStudentPerformanceChannel(channelName)));
+                () => Assert.AreEqual(Grade, new TodaysViewUxPage().GetGradeFromStudentPerformanceChannel(channelName)));
             Logger.LogMethodExit("TodaysView", "ValidateGradeInStudentPerformanceChannel",
                 base.IsTakeScreenShotDuringEntryExit);
 
@@ -374,7 +374,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickonCmenuIconOfResponse",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the cmenu icon of the response posted for discussion topic
-            new DiscussionMainUXPage().ClickOnCmenuOfResponse(postName);
+            new DiscussionMainUxPage().ClickOnCmenuOfResponse(postName);
             Logger.LogMethodExit("TodaysView", "ClickonCmenuIconOfResponse",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -390,7 +390,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickOnCmenuOptionOftheResponse",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the cmenu option of the response posted for the discussion topic
-            new DiscussionMainUXPage().SelectCmenuOption(cmenuOption);
+            new DiscussionMainUxPage().SelectCmenuOption(cmenuOption);
             Logger.LogMethodExit("TodaysView", "ClickOnCmenuOptionOftheResponse",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -406,7 +406,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "SwitchToPopUp",
                 base.IsTakeScreenShotDuringEntryExit);
             //Switch to the Last opened pop up.
-            new DiscussionMainUXPage().SwitchToPopUp();
+            new DiscussionMainUxPage().SwitchToPopUp();
             Logger.LogMethodExit("TodaysView", "SwitchToPopUp",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -422,7 +422,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickOnCloseButtonInReadResponsePopUp",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on Close button 
-            new DiscussionMainUXPage().ClickOnCloseButtonInReadResponsePopUp();
+            new DiscussionMainUxPage().ClickOnCloseButtonInReadResponsePopUp();
             Logger.LogMethodEntry("TodaysView", "ClickOnCloseButtonInReadResponsePopUp",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -439,7 +439,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickonCancelButtonInDiscussionPage",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on cancel button
-            new DiscussionMainUXPage().ClickOnCancelButton();
+            new DiscussionMainUxPage().ClickOnCancelButton();
             Logger.LogMethodEntry("TodaysView", "ClickonCancelButtonInDiscussionPage",
            base.IsTakeScreenShotDuringEntryExit);
         }

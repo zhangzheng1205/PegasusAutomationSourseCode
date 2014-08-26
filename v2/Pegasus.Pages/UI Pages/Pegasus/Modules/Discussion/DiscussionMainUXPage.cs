@@ -1,28 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
-using Pegasus.Automation.DataTransferObjects;
-using Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView;
 using Pegasus.Pages.Exceptions;
-using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
-using System.Windows.Forms;
-using System.Text.RegularExpressions;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion;
 
-namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion
+namespace Pegasus.Pages.UI_Pages
 {
     /// <summary>
     /// This class contains details of Discussion page
     /// </summary>
-    public class DiscussionMainUXPage : BasePage
+    public class DiscussionMainUxPage : BasePage
     {
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger logger = Logger.GetInstance(typeof(TodaysViewUXPage));
+        private static Logger logger = Logger.GetInstance(typeof(DiscussionMainUxPage));
 
         /// <summary>
         /// Click on cmenu icon of the response posted.
@@ -34,14 +26,13 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion
             logger.LogMethodEntry("DiscussionMainUXPage", "ClickOnOpenCmenuOfResponse",
                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
-            string responsePosted = string.Empty;
             try
             {
                 //Switch to Post response frame
                 base.SwitchToIFrame(DiscussionMainUXPageResource.DiscussionMainUXPageResource_PostResponse_Iframe_Name);
                 //Get the name of the respone posted 
-                responsePosted = base.GetElementTextByXPath(string.Format(DiscussionMainUXPageResource.
-                         DiscussionMainUXPageResource_ResponseName_Xpath));
+                string responsePosted = base.GetElementTextByXPath(string.Format(DiscussionMainUXPageResource.
+                    DiscussionMainUXPageResource_ResponseName_Xpath));
                 //Split the name fetched
                 string[] splitResponse = responsePosted.Split(new string[] { "..." }, StringSplitOptions.None);
                 string getResponseName = splitResponse[0].Trim();

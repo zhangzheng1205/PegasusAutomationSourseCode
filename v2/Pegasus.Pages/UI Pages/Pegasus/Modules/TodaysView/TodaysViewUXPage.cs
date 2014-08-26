@@ -1560,13 +1560,13 @@ namespace Pegasus.Pages.UI_Pages
             // To check submitted activity name
             Logger.LogMethodEntry("TodaysViewUXPage", "CheckSubmittedActitvityName",
                 base.IsTakeScreenShotDuringEntryExit);
-            string _activityName = string.Empty;
+            string getActivityName = string.Empty;
             try
             {
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_Page_TreeViewControlID));
-                _activityName = (base.GetElementTextById(TodaysViewUXPageResource.
-                    TodaysViewUXPageResource_Page_TreeViewControlID).Contains(activityName) ? activityName : _activityName);
+                getActivityName = (base.GetElementTextById(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_Page_TreeViewControlID).Contains(activityName) ? activityName : getActivityName);
             }
             catch (Exception ex)
             {
@@ -1576,7 +1576,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("TodaysViewUXPage", "CheckSubmittedActitvityName",
                 base.IsTakeScreenShotDuringEntryExit);
             // Return activity name if exits
-            return _activityName;
+            return getActivityName;
         }
 
         /// <summary>
@@ -1899,7 +1899,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage", "IsVerifyTheHelpLinkPageTextPresent",
               base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
-            bool IsHelpPageTextPresent = false;
+            bool isHelpPageTextPresent = false;
             try
             {
                 //Select window
@@ -1913,7 +1913,7 @@ namespace Pegasus.Pages.UI_Pages
                 IWebElement getHelpWindowFrameName = base.GetWebElementPropertiesById
                     (TodaysViewUXPageResource.TodaysViewUXPageResource_Help_Link_IFrame_Id_Locator);
                 base.SwitchToIFrameByWebElement(getHelpWindowFrameName);
-                IsHelpPageTextPresent = base.IsElementPresent(By.PartialLinkText
+                isHelpPageTextPresent = base.IsElementPresent(By.PartialLinkText
                     (TodaysViewUXPageResource.TodaysViewUXPageResource_Help_TextPresent));
             }
             catch (Exception e)
@@ -1922,7 +1922,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("TodaysViewUXPage", "IsVerifyTheHelpLinkPageTextPresent",
             base.IsTakeScreenShotDuringEntryExit);
-            return IsHelpPageTextPresent;
+            return isHelpPageTextPresent;
         }
 
         /// <summary>
@@ -2242,7 +2242,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage", "GetNotificationsText",
              base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
-            string getNotificationsText = string.Empty;
+            string getNotificationsText;
             //Get Notification Text
             bool isNotificationChannelPreset = base.IsElementPresent(By.Id(TodaysViewUXPageResource.
                 TodaysViewUXPageResource_GetNotificationText_Id_Locator), 5);
@@ -2273,21 +2273,20 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage", "GetActivityCountFromPastDueNotSubmittedChannel",
                                   base.IsTakeScreenShotDuringEntryExit);
             //Initialize Alert Variable
-            int alertValue = 0;
             int totalCount = 0;
             try
             {
                 //Get the number of student rows displayed in the past due not submitted channel
-                alertValue = base.GetElementCountByXPath(TodaysViewUXPageResource.
+                int alertValue = base.GetElementCountByXPath(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_PastDueNotSubmitted_ActivityCount_Xpath_Locator);
                 //Initialize the counter
                 for (int i = 2; i <= alertValue; i++)
                 {
                     //Get the content count
-                    int ContentCount = base.GetElementCountByXPath(
+                    int contentCount = base.GetElementCountByXPath(
                         string.Format(TodaysViewUXPageResource.
                         TodaysViewUXPageResource_PastDueNotSubmitted_ActivityTotalCount_Xpath_Locator, i));
-                    totalCount = totalCount + ContentCount;
+                    totalCount = totalCount + contentCount;
                 }
             }
 
@@ -2311,11 +2310,10 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage", "GetCalendarText",
              base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
-            string getCalendarText = string.Empty;
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodaysViewPageResource_GetCalendarText_Id_Locator));
             //Get Calendar Text
-            getCalendarText = base.GetElementTextById(TodaysViewUXPageResource.
+            string getCalendarText = base.GetElementTextById(TodaysViewUXPageResource.
                 TodaysViewPageResource_GetCalendarText_Id_Locator);
             Logger.LogMethodExit("TodaysViewUXPage", "GetCalendarText",
             base.IsTakeScreenShotDuringEntryExit);
@@ -2332,11 +2330,10 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage", "GetAnnouncementText",
             base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
-            string getAnnouncementText = string.Empty;
             base.WaitForElement(By.Id(TodaysViewUXPageResource.
                 TodaysViewPageReosurce_GetAnnouncementText_Id_Locator));
             //Get Announcement Text
-            getAnnouncementText = base.GetElementTextById(TodaysViewUXPageResource.
+            string getAnnouncementText = base.GetElementTextById(TodaysViewUXPageResource.
                 TodaysViewPageReosurce_GetAnnouncementText_Id_Locator);
             Logger.LogMethodExit("TodaysViewUXPage", "GetAnnouncementText",
             base.IsTakeScreenShotDuringEntryExit);
@@ -2489,7 +2486,6 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage", "ClickOnCmenuOptionOfAsset",
                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
-            string getActivityName = string.Empty;
             try
             {
                 base.WaitForElement(By.XPath(TodaysViewUXPageResource.
@@ -2503,7 +2499,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.WaitForElement(By.XPath(string.Format(TodaysViewUXPageResource.
                         TodayViewUXPageResource_GetActivityName_Xpath_Locator, initialCount)));
                     //Get Activity Name
-                    getActivityName = base.GetElementTextByXPath(string.Format(TodaysViewUXPageResource.
+                    string getActivityName = base.GetElementTextByXPath(string.Format(TodaysViewUXPageResource.
                         TodayViewUXPageResource_GetActivityName_Xpath_Locator, initialCount));
                     if (getActivityName == assetName)
                     {
@@ -2680,7 +2676,7 @@ namespace Pegasus.Pages.UI_Pages
         public string GetGradeFromStudentPerformanceChannel(string channelName)
         {
             //Get Alert count from Notification Channel
-            logger.LogMethodEntry("TodaysViewUXPage", "GetGradeFromStudentPerformanceChannel",
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetGradeFromStudentPerformanceChannel",
                                   base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             string gradeValue = string.Empty;
@@ -2709,7 +2705,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
 
-            logger.LogMethodExit("TodaysViewUXPage", "GetGradeFromStudentPerformanceChannel",
+            Logger.LogMethodExit("TodaysViewUXPage", "GetGradeFromStudentPerformanceChannel",
                              base.IsTakeScreenShotDuringEntryExit);
             return gradeValue;
         }
@@ -2721,7 +2717,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnCmenuIconOfDiscussionTopic(string assetName)
         {
             //Click On Cmenu Option of Activity
-            logger.LogMethodEntry("TodaysViewUXPage", "ClickOnCmenuIconOfDiscussionTopic",
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickOnCmenuIconOfDiscussionTopic",
                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getDiscussionTopicName = string.Empty;
@@ -2763,7 +2759,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("TodaysViewUXPage", "ClickOnCmenuIconOfDiscussionTopic",
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickOnCmenuIconOfDiscussionTopic",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -2777,7 +2773,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             string studentName = string.Empty;
             //Get Student First name, Last name displayed in unread messages channel
-            logger.LogMethodEntry("TodaysViewUXPage", "GetStudentNameFromPastDueSubmittedChannel",
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetStudentNameFromPastDueSubmittedChannel",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -2790,7 +2786,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
 
-            logger.LogMethodExit("TodaysViewUXPage", "GetStudentNameFromPastDueSubmittedChannel",
+            Logger.LogMethodExit("TodaysViewUXPage", "GetStudentNameFromPastDueSubmittedChannel",
                base.IsTakeScreenShotDuringEntryExit);
             return studentName;
         }
@@ -2802,7 +2798,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickonExpandIconInPastDueSubmittedChannel()
         {
             //Click on the student name in unread messages channel
-            logger.LogMethodEntry("TodaysViewUXPage", "ClickonExpandIconInPastDueSubmittedChannel",
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickonExpandIconInPastDueSubmittedChannel",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -2816,7 +2812,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
 
-            logger.LogMethodExit("TodaysViewUXPage", "ClickonExpandIconInPastDueSubmittedChannel",
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickonExpandIconInPastDueSubmittedChannel",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -2828,19 +2824,18 @@ namespace Pegasus.Pages.UI_Pages
         {
 
             //Click on the student name in unread messages channel
-            logger.LogMethodEntry("TodaysViewUXPage", "GetActivityNameInPastDueSubmittedChannel",
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetActivityNameInPastDueSubmittedChannel",
                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize string variable which holds the activity name
-            string activityName = string.Empty;
             string pastDueActivityName = string.Empty;
             try
             {
                 //Get the activity name by Xpath
-                activityName = base.GetElementInnerTextByXPath(TodaysViewUXPageResource.
+                string activityName = base.GetElementInnerTextByXPath(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_ActivityName_PastDueSubmitted_Xpath_Locator);
                 //Split the obtained string to get only required activity name
-                string[] activityName_splitValue = activityName.Split(new string[] { "Due" }, StringSplitOptions.None);
-                pastDueActivityName = activityName_splitValue[0].Trim();
+                string[] activityNameSplitValue = activityName.Split(new string[] { "Due" }, StringSplitOptions.None);
+                pastDueActivityName = activityNameSplitValue[0].Trim();
             }
 
             catch (Exception e)
@@ -2848,7 +2843,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
 
-            logger.LogMethodExit("TodaysViewUXPage", "GetActivityNameInPastDueSubmittedChannel",
+            Logger.LogMethodExit("TodaysViewUXPage", "GetActivityNameInPastDueSubmittedChannel",
               base.IsTakeScreenShotDuringEntryExit);
             return pastDueActivityName;
         }
@@ -2866,26 +2861,26 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage", "GetCountFromAlertChannels",
                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
-            int ContentCount = 0;
+            int contentCount = 0;
             try
             {
                 //Switch to alert channel based on the input paramater passed
                 switch (channelName)
                 {
                     case "Not Passed":
-                        ContentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
+                        contentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
                             TodaysViewUXPageResource_NotPassedChannel_ActivityRow_Id_Locator);
                         break;
                     case "Unread Messages":
-                        ContentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
+                        contentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
                             TodaysViewPageResource_GetMessagesCount_Xpath_Locator);
                         break;
                     case "Idle Students":
-                        ContentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
+                        contentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
                             TodaysViewUXPageResource_GetIdleStudentCount_Xpath_Locator);
                         break;
                     case "Unread Discussion":
-                        ContentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
+                        contentCount = GetContentCountFromAlertChannel(TodaysViewUXPageResource.
                             TodaysViewUXPageResource_GetDiscussionTopicCount_Xpath_Locator);
                         break;
                 }
@@ -2898,7 +2893,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("TodaysViewUXPage", "GetCountFromAlertChannels",
                 base.IsTakeScreenShotDuringEntryExit);
 
-            return ContentCount;
+            return contentCount;
         }
 
         /// <summary>
@@ -2908,14 +2903,14 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns>Student irst, last name.</returns>
         public string GetStudentNameFromIdleStudents()
         {
-            string StudentName = string.Empty;
+            string studentName = string.Empty;
             //Get Student First name, Last name displayed in unread messages channel
             Logger.LogMethodEntry("TodaysViewUXPage", "GetStudentNameFromUnreadMessages",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Call the method to get the student first, last name and store it
-                StudentName = GetStudentNameFromAlertChannel(TodaysViewUXPageResource.
+                studentName = GetStudentNameFromAlertChannel(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_StudentName_IdleStudents_Xpath_Locator);
             }
             catch (Exception e)
@@ -2925,7 +2920,7 @@ namespace Pegasus.Pages.UI_Pages
 
             Logger.LogMethodExit("TodaysViewUXPage", "GetStudentNameFromUnreadMessages",
                base.IsTakeScreenShotDuringEntryExit);
-            return StudentName;
+            return studentName;
         }
 
         /// <summary>
@@ -2936,14 +2931,14 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns>Student first, last name.</returns>
         private string GetStudentNameFromAlertChannel(string studentNamePath)
         {
-            string StudentName = string.Empty;
+            string studentName = string.Empty;
             //Get Student First name, Last name displayed in unread messages channel
             Logger.LogMethodEntry("TodaysViewUXPage", "GetStudentNameFromAlertChannel",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get the Student First name, Last name and store it in the variable
-                StudentName = base.GetElementInnerTextByXPath(studentNamePath).Trim();
+                studentName = base.GetElementInnerTextByXPath(studentNamePath).Trim();
             }
             catch (Exception e)
             {
@@ -2952,7 +2947,7 @@ namespace Pegasus.Pages.UI_Pages
 
             Logger.LogMethodExit("TodaysViewUXPage", "GetStudentNameFromAlertChannel",
                base.IsTakeScreenShotDuringEntryExit);
-            return StudentName;
+            return studentName;
         }
 
         /// <summary>
@@ -2962,14 +2957,14 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns>Content count.</returns>
         private int GetContentCountFromAlertChannel(string locatorPath)
         {
-            int ContentCount = 0;
+            int contentCount = 0;
             //Get activity count displayed from Not Passed Channel
             Logger.LogMethodEntry("TodaysViewUXPage", "GetContentCountInNotPassedAlertChannel",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Get Activity Count
-                ContentCount = base.GetElementCountByXPath(locatorPath);
+                contentCount = base.GetElementCountByXPath(locatorPath);
             }
             catch (Exception e)
             {
@@ -2978,7 +2973,7 @@ namespace Pegasus.Pages.UI_Pages
 
             Logger.LogMethodExit("TodaysViewUXPage", "GetContentCountInNotPassedAlertChannel",
                 base.IsTakeScreenShotDuringEntryExit);
-            return ContentCount;
+            return contentCount;
         }
 
         /// <summary>
@@ -3000,9 +2995,9 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the element
                 base.WaitForElement(By.PartialLinkText(mmndStudentFirstName));
                 //Click on Student Name
-                IWebElement getMMNDStudentName =
+                IWebElement getMmndStudentName =
                     base.GetWebElementPropertiesByPartialLinkText(mmndStudentFirstName);
-                base.ClickByJavaScriptExecutor(getMMNDStudentName);
+                base.ClickByJavaScriptExecutor(getMmndStudentName);
                 Thread.Sleep(Convert.ToInt32(TodaysViewUXPageResource.
                     TodaysViewUXPageResource_Sleep_Value));
                 //Get Writingspace Asset Name
@@ -3129,7 +3124,6 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("GBInstructorUXPage", "ClickLinkInMoreDropdown",
                          base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
-            string tabName = string.Empty;
             try
             {
                 //Click on More Link
@@ -3144,17 +3138,17 @@ namespace Pegasus.Pages.UI_Pages
                     TodaysViewUXPageResource_Page_Initial_Value); i <= getLinkCount; i++)
                 {
                     //Get tab name
-                    tabName = base.GetElementTextByXPath(string.Format
+                    string tabName = base.GetElementTextByXPath(string.Format
                         (TodaysViewUXPageResource.
-                        TodayViewUXPageResource_LinkName_Xpath_Locator, i));
+                            TodayViewUXPageResource_LinkName_Xpath_Locator, i));
                     //Check if the tab name found is matching with expected tab name
                     if (tabName.Contains(linkName))
                     {
                         //Click on the tab name
-                        IWebElement TabClick = base.GetWebElementPropertiesByXPath(
+                        IWebElement tabClick = base.GetWebElementPropertiesByXPath(
                             string.Format(TodaysViewUXPageResource.
                         TodayViewUXPageResource_LinkName_Xpath_Locator, i));
-                        base.ClickByJavaScriptExecutor(TabClick);
+                        base.ClickByJavaScriptExecutor(tabClick);
                         break;
                     }
                 }
@@ -3526,14 +3520,14 @@ namespace Pegasus.Pages.UI_Pages
             //Initialize Variable
             string getActivityName = string.Empty;
             //get Activities Row Count
-            int GetActivitiesRowCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
+            int getActivitiesRowCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
                 TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath
                 );
             //Iterate for Respective Activity In Table
             for (
                 int setActivityRowCount =
                     Convert.ToInt32(TodaysViewUXPageResource.TodaysViewUXPageResource_Page_Initial_Value);
-                    setActivityRowCount <= GetActivitiesRowCount; setActivityRowCount++)
+                    setActivityRowCount <= getActivitiesRowCount; setActivityRowCount++)
             {
                 //Get The Activity Name From List   
                 getActivityName =
