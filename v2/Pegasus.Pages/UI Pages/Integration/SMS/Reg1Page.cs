@@ -41,8 +41,10 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectSmsUserAccountNumber();
                 // Enter the SMS User Details and Get Password
                 string getSmsUserPassword = EnterSmsUserDetails(userType, userNameSmsGuid);
+                //Enter SMS User Personal Information and Get User Last Name
+                string getLastName = new Reg2Page().EnterSmsUserPersonalInformation(userNameSmsGuid);
                 //Save SMS User Details in Memory
-                StoreSmsUserInMemory(userType, userNameSmsGuid, getSmsUserPassword);
+                StoreSmsUserInMemory(userType, userNameSmsGuid, getSmsUserPassword, getLastName);
             }
             catch (Exception e)
             {
@@ -159,6 +161,7 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.CsSmsInstructor:
                 case User.UserTypeEnum.CsSmsStudent:
                 case User.UserTypeEnum.MMNDInstructor:
+                case User.UserTypeEnum.HedProgramAdmin:
                     //Execute According To Browser Selected
                     switch (base.Browser)
                     {
@@ -251,6 +254,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Store SMS Instructor
                 case User.UserTypeEnum.CsSmsInstructor:
+                case User.UserTypeEnum.HedProgramAdmin:
                     this.EnterSmsAccessCodeForInstructor();
                     break;
                 //Store SMS Student
@@ -354,8 +358,10 @@ namespace Pegasus.Pages.UI_Pages
             //Enter User Name
             this.EnterUserName(userNameSmsGuid);
             string getSmsUserPassword = this.EnterSmsUserLoginDetails(userType);
+            //Enter SMS User Personal Information and Get User Last Name
+            string getLastName = new Reg2Page().EnterSmsUserPersonalInformation(userNameSmsGuid);
             //Save SMS User Details in Memory
-            StoreSmsUserInMemory(userType, userNameSmsGuid, getSmsUserPassword);
+            StoreSmsUserInMemory(userType, userNameSmsGuid, getSmsUserPassword, getLastName);
             Logger.LogMethodExit("Reg1Page", "EnterSMSUserAccessInformationforMMNDStudent",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -393,8 +399,9 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="userType">This is User Type.</param>
         /// <param name="usernameGuid">This is Guid Username.</param>
         /// <param name="password">This is Password.</param>
+        /// <param name="userLastName">This is User Last Name.</param>
         public void StoreSmsUserInMemory(User.UserTypeEnum userType,
-            Guid usernameGuid, string password)
+            Guid usernameGuid, string password, string userLastName)
         {
             //Save SMS User in Memory
             Logger.LogMethodEntry("Reg1Page", "StoreSMSUserInMemory",
@@ -409,7 +416,7 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.MMNDStudent:
                 case User.UserTypeEnum.HedProgramAdmin:
                     //Save SMS Instructor in Memory
-                    this.InsertUserDetailsInMemory(userType, usernameGuid, password);
+                    this.InsertUserDetailsInMemory(userType, usernameGuid, password, userLastName);
                     break;
             }
             Logger.LogMethodExit("Reg1Page", "StoreSMSUserInMemory",
@@ -422,7 +429,9 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="usernameGuid">This is Guid Username.</param>
         /// <param name="password">This is Password.</param>
         /// <param name="userType">This is User type.</param>
-        private void InsertUserDetailsInMemory(User.UserTypeEnum userType, Guid usernameGuid, string password)
+        /// <param name="userLastName">This is User Last Name.</param>
+        private void InsertUserDetailsInMemory(User.UserTypeEnum userType,
+            Guid usernameGuid, string password, string userLastName)
         {
             // save sms user 
             Logger.LogMethodEntry("Reg1Page", "InsertUserDetailsInMemory",
@@ -433,9 +442,10 @@ namespace Pegasus.Pages.UI_Pages
                                              Name = usernameGuid.ToString(),
                                              Password = password,
                                              UserType = userType,
+                                             LastName = userLastName,
                                              IsCreated = true,
                                          };
-            user.StoreUserInMemory();
+            user.StoreUserInMemory();            
             Logger.LogMethodExit("Reg1Page", "InsertUserDetailsInMemory",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -453,7 +463,8 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectSmsUserAccountNumber();
                 // sms user details and get password
                 string getSmsUserPassword = EnterSmsUserDetails(userType, userNameSmsGuid);
-
+                //Enter SMS User Personal Information and Get User Last Name
+                string getLastName = new Reg2Page().EnterSmsUserPersonalInformation(userNameSmsGuid);
                 switch (userType)
                 {
                     case User.UserTypeEnum.CsSmsStudent:
@@ -462,12 +473,12 @@ namespace Pegasus.Pages.UI_Pages
                             case "scoring 0":
                                 InsertUserDetailsInMemoryBasedOnScenario(CommonResource.CommonResource
                                     .SMS_STU_UC1, userNameSmsGuid,
-                                    getSmsUserPassword);
+                                    getSmsUserPassword, getLastName);
                                 break;
                             case "set idle":
                                 InsertUserDetailsInMemoryBasedOnScenario(CommonResource.CommonResource
                                     .SMS_STU_UC2, userNameSmsGuid,
-                                  getSmsUserPassword);
+                                  getSmsUserPassword, getLastName);
                                 break;
                         }
                         break;
@@ -481,8 +492,15 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Insert User Details In Memory.
+        /// </summary>
+        /// <param name="userId">This is User Id.</param>
+        /// <param name="usernameGuid">This is User Name GUID.</param>
+        /// <param name="password">This is Password.</param>
+        /// <param name="userLastName">This is User Last Name.</param>
         private void InsertUserDetailsInMemoryBasedOnScenario(string userId,
-            Guid usernameGuid, string password)
+            Guid usernameGuid, string password,string userLastName)
         {
             // save sms user 
             Logger.LogMethodEntry("Reg1Page", "InsertUserDetailsInMemoryBasedOnScenario",
@@ -493,6 +511,7 @@ namespace Pegasus.Pages.UI_Pages
                 Name = usernameGuid.ToString(),
                 Password = password,
                 UserId = userId,
+                LastName = userLastName,
                 IsCreated = true,
             };
             user.StoreUserInMemory();

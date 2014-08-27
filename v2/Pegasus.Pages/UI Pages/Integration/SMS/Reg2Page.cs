@@ -26,17 +26,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("Reg2Page", "EnterSmsUserAccountInformation",
                 base.IsTakeScreenShotDuringEntryExit);
             try
-            {
-                //Select Window
-                base.SelectWindow(Reg2PageResource.
-                        Reg2_Page_AccountInformation_Window_Title_Name);
-                //Wait for Element
-                base.WaitForElement(By.Id(Reg2PageResource.
-                    Reg2_Page_FirstName_TextBox_Id_Locator));
-                base.ClearTextById(Reg2PageResource.
-                    Reg2_Page_FirstName_TextBox_Id_Locator);
-                //Enter Name And Email For SMS User
-                this.EnterSmsUserPersonalInformation();
+            {                
                 base.WaitForElement(By.Id(Reg2PageResource.
                     Reg2_Page_Entered_Country_DropDown_Id_Locator));
                 //Select Drop Down Value
@@ -57,28 +47,50 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enter SMS User Personal Information
         /// </summary>
-        private void EnterSmsUserPersonalInformation()
+        public string EnterSmsUserPersonalInformation(Guid userNameSmsGuid)
         {
             //Enter Personal Information
             Logger.LogMethodEntry("Reg2Page", "EnterSmsUserPersonalInformation",
                 base.IsTakeScreenShotDuringEntryExit);
-            //Enter First Name
-            base.FillTextBoxById(Reg2PageResource.
-                Reg2_Page_FirstName_TextBox_Id_Locator,
-                Reg2PageResource.Reg2_Page_FirstName_TextBox_Value);
-            //Wait For Element
-            base.WaitForElement(By.Id(Reg2PageResource.
-                Reg2_Page_LastName_TextBox_Id_Locator));
-            base.ClearTextById(Reg2PageResource.
-                Reg2_Page_LastName_TextBox_Id_Locator);
-            //Enter Last Name
-            base.FillTextBoxById(Reg2PageResource.
-                Reg2_Page_LastName_TextBox_Id_Locator,
-                Reg2PageResource.Reg2_Page_LastName_TextBox_Id_Value);
-            //Enter Email Id
-            this.EnterEmailIdForTheUser();
+            //Initialize Variable
+            string getUserLastName = string.Empty;
+            try
+            {
+                //Select Window
+                base.SelectWindow(Reg2PageResource.
+                        Reg2_Page_AccountInformation_Window_Title_Name);
+                //Wait for Element
+                base.WaitForElement(By.Id(Reg2PageResource.
+                    Reg2_Page_FirstName_TextBox_Id_Locator));
+                base.ClearTextById(Reg2PageResource.
+                    Reg2_Page_FirstName_TextBox_Id_Locator);
+                //Enter First Name
+                base.FillTextBoxById(Reg2PageResource.
+                    Reg2_Page_FirstName_TextBox_Id_Locator,
+                    Reg2PageResource.Reg2_Page_FirstName_TextBox_Value);
+                //Splitt User Last Name
+                string[] getSplittedUserLastName = userNameSmsGuid.ToString().Split('-');
+                //Get Splitted User Last Name
+                getUserLastName = getSplittedUserLastName[1];
+                //Wait For Element
+                base.WaitForElement(By.Id(Reg2PageResource.
+                    Reg2_Page_LastName_TextBox_Id_Locator));
+                base.ClearTextById(Reg2PageResource.
+                    Reg2_Page_LastName_TextBox_Id_Locator);
+                //Enter Last Name
+                base.FillTextBoxById(Reg2PageResource.
+                    Reg2_Page_LastName_TextBox_Id_Locator,
+                    getUserLastName);
+                //Enter Email Id
+                this.EnterEmailIdForTheUser();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             Logger.LogMethodExit("Reg2Page", "EnterSmsUserPersonalInformation",
                 base.IsTakeScreenShotDuringEntryExit);
+            return getUserLastName;
         }
 
         /// <summary>
