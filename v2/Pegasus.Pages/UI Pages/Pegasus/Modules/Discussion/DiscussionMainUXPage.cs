@@ -66,9 +66,12 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             //Initialize variable
             string discussionFrameTitle = string.Empty;
-
             try
             {
+                //Select the discussion page window
+                base.SelectWindow(base.GetPageTitle);
+                base.WaitForElement(By.Id(DiscussionMainUXPageResource.
+                      DiscussionMainUXPageResource_DiscussionFrame_Title_ID));
                 //Get the discussion frame title, trim if there are any spaces and store it in variable
                 discussionFrameTitle = base.GetElementInnerTextById(DiscussionMainUXPageResource.
                       DiscussionMainUXPageResource_DiscussionFrame_Title_ID).Trim();
@@ -191,8 +194,8 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Get the close button properties
-                IWebElement closeButton = base.GetWebElementPropertiesByXPath(
-                    DiscussionMainUXPageResource.DiscussionMainUXPageResource_Close_Button_Xpath);
+                IWebElement closeButton = base.GetWebElementPropertiesById(DiscussionMainUXPageResource.
+                    DiscussionMainUXPageResource_Close_Button_Id_Locator);
                 //Click on close button
                 base.ClickByJavaScriptExecutor(closeButton);
             }

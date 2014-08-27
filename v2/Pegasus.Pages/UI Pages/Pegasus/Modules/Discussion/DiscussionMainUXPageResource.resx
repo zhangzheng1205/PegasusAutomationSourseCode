@@ -120,8 +120,8 @@
   <data name="DiscussionMainUXPageResource_Cancel_Button_Id_Locator" xml:space="preserve">
     <value>_ctl0:_ctl0:phBody:PageContent:Img1</value>
   </data>
-  <data name="DiscussionMainUXPageResource_Close_Button_Xpath" xml:space="preserve">
-    <value>//div[@id='_ctl0_PopupPageContent_Div1']/table[3]/a[@id='_ctl0:PopupPageContent:_ctl0']</value>
+  <data name="DiscussionMainUXPageResource_Close_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0:PopupPageContent:_ctl0</value>
   </data>
   <data name="DiscussionMainUXPageResource_CmenuCount_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='PegMenuundefined']/div[2]/div</value>
@@ -136,7 +136,7 @@
     <value>//div[@id='PegMenuundefined']/div[2]/div[{0}]/span</value>
   </data>
   <data name="DiscussionMainUXPageResource_ResponseCmenu_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='_ctl0_InnerPageContent_RadDiscussion']/div/span/span/table/tbody/tr/td[3]</value>
+    <value>//div[@id='_ctl0_InnerPageContent_RadDiscussion']/div/span/span/table/tbody/tr/td[3]/div/img</value>
   </data>
   <data name="DiscussionMainUXPageResource_ResponseName_Xpath" xml:space="preserve">
     <value>//div[@id='_ctl0_InnerPageContent_RadDiscussion']/div/span/span/table/tbody/tr/td[2]</value>
