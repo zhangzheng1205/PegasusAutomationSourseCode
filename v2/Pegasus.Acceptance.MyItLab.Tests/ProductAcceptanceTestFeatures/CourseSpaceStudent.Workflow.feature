@@ -88,7 +88,7 @@ When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
 And I launch the activity named as "Excel Chapter 1 Skill-Based Training" in Course Materials
-And I click on submit button without answering "Excel Chapter 1 Skill-Based Training"
+And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Skill-Based Training"
 Then I should be on the "Course Materials" page
 And I should see "Not passed" status for the activity "Excel Chapter 1 Skill-Based Training"
 And I should see "0.00%" score for the activity "Excel Chapter 1 Skill-Based Training" in course material page
@@ -99,11 +99,9 @@ And I should see "0.00%" score for the activity "Excel Chapter 1 Skill-Based Tra
 #Pre condition : Word SIM5 activity should be created by instructor/Author in the following course and “Trap ALT+TAB and Browser Lock-Down” option should be un checked in the activity preference tab.
 #Dependency : Always dependent.
 Scenario: Student scoring 0 in SIM5 Word activity
-When I navigate to "Course Materials" tab
-Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
 And I launch the activity named as "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in Course Materials
-And I click on submit button without answering "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I click on submit button answering incorrectly of "Word" type "Exam" mode activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 Then I should be on the "Course Materials" page
 And I should see "Not passed" status for the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 And I should see "0.00%" score for the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
@@ -115,11 +113,9 @@ And I should see "0.00%" score for the activity "Word Chapter 1 Project 1A Skill
 #Pre condition : Power Point SIM5 activity should be created by instructor/Author in the following course and “Trap ALT+TAB and Browser Lock-Down” option should be un checked in the activity preference tab.
 #Dependency : Always dependent.
 Scenario: Student scoring 0 in SIM5 PowerPoint activity
-When I navigate to "Course Materials" tab
-Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
 And I launch the activity named as "PowerPoint Chapter 1 Skill-Based Training" in Course Materials
-And I click on submit button without answering "PowerPoint Chapter 1 Skill-Based Training"
+And I click on submit button answering incorrectly of "PowerPoint" type "Training" mode activity "PowerPoint Chapter 1 Skill-Based Training"
 Then I should be on the "Course Materials" page
 And I should see "Not passed" status for the activity "PowerPoint Chapter 1 Skill-Based Training"
 And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Skill-Based Training" in course material page
@@ -131,11 +127,9 @@ And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Skill-Base
 #Pre condition : Access SIM5 activity should be created by instructor/Author in the following course and “Trap ALT+TAB and Browser Lock-Down” option should be un checked in the activity preference tab.
 #Dependency : Always dependent.
 Scenario: Student scoring 0 in SIM5 Access activity
-When I navigate to "Course Materials" tab
-Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
 And I launch the activity named as "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in Course Materials
-And I click on submit button without answering "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I click on submit button answering incorrectly of "Access" type "Exam" mode activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 Then I should be on the "Course Materials" page
 And I should see "Not passed" status for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 And I should see "0.00%" score for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
