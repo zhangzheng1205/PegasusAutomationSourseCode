@@ -97,9 +97,14 @@ namespace Pegasus.Pages.UI_Pages
             //Select  the frame
             base.SwitchToIFrame(TrueFalsePageResource.
                 TrueFalse_Page_HTMLEditorQues_Frame_Id_Locator);
-            // Click on ShowHTML button
+            //Wait for element
+            Thread.Sleep(Convert.ToInt32(TrueFalsePageResource.
+               TrueFalse_Page_Activity_ShowHTML_Button_TimeValue));           
             base.WaitForElement(By.Id(TrueFalsePageResource.
             TrueFalse_Page_HTMLEditorQues_ViewsourceButton_Id_Locator));
+            base.PerformFocusOnElementActionById(TrueFalsePageResource.
+            TrueFalse_Page_HTMLEditorQues_ViewsourceButton_Id_Locator);
+            //Get element property
             IWebElement getHtmldesc = base.
                 GetWebElementPropertiesById(TrueFalsePageResource.
             TrueFalse_Page_HTMLEditorQues_ViewsourceButton_Id_Locator);
@@ -289,8 +294,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Fill the Discription for HTML Editor
                 this.FillTheDiscriptionForHTMLEditor();
                 //Enter Feedback
-                this.EnterFeedback();
-              
+                this.EnterFeedback();              
                 //Wait for the element
                 base.WaitForElement(By.Id(TrueFalsePageResource.
                    TrueFalse_Page_SaveAndClose_Ques_Button_Id_Locator));

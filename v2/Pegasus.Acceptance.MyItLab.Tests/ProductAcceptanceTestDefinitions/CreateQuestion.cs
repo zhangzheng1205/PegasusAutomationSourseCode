@@ -308,9 +308,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "VerifyAllNativeQuestionsPresent",
                 base.IsTakeScreenShotDuringEntryExit);
             //Verify if all native questions are present
-            Logger.LogAssertion("Verify All Native Questions Presence",
-                "Are All Native Questions present", () =>
-                Assert.AreEqual(true,  new CreateQuestionPage().IsAllNativeQuestionsPresent()));
+            Logger.LogAssertion("VerifyAllNativeQuestionsPresence",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>                  
+                Assert.IsTrue(new CreateQuestionPage().IsAllNativeQuestionsPresent()));            
             Logger.LogMethodExit("CreateQuestion",
                "VerifyAllNativeQuestionsPresent",
                       base.IsTakeScreenShotDuringEntryExit);
@@ -353,7 +353,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Add questions into activity
         /// </summary>
-        /// <param name="activityType">This is Activity Type.</param> 
+        /// <param name="activityType">This is Question Type.</param> 
+        /// /// <param name="activityType">This is Question Name.</param> 
         [When(@"I add ""(.*)"" question in created ""(.*)"" activity")]
         [When(@"I add ""(.*)"" question as ""(.*)"" in created activity and save this activity")]
          public void AddQuestionIntoActivity(string questionType, string questionName)
