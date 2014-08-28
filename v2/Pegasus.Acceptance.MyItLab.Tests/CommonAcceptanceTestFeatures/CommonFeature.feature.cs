@@ -253,11 +253,11 @@ testRunner.When("I enter in the \"HedEmptyClass\" course from the Global Home pa
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Logout as Workspace Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Logout as Workspace Teacher")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
-        public virtual void UserLogoutAsWorkspaceInstructor()
+        public virtual void UserLogoutAsWorkspaceTeacher()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Logout as Workspace Instructor", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Logout as Workspace Teacher", ((string[])(null)));
 #line 69
 this.ScenarioSetup(scenarioInfo);
 #line 70
