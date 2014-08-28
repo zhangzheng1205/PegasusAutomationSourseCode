@@ -199,10 +199,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceInstructorPreference.Workflow.feature</DependentUpon>
     </Compile>
-    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorReport.feature.cs">
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorReport.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CourseSpaceInstructorReport.feature</DependentUpon>
+      <DependentUpon>CourseSpaceInstructorReport.Workflow.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructor.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
@@ -284,10 +284,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WorkSpaceInstructorAnnouncement.Workflow.feature</DependentUpon>
     </Compile>
-    <Compile Include="ProductAcceptanceTestFeatures\WorkSpaceInstructorCalendar.feature.cs">
+    <Compile Include="ProductAcceptanceTestFeatures\WorkSpaceInstructorCalendar.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>WorkSpaceInstructorCalendar.feature</DependentUpon>
+      <DependentUpon>WorkSpaceInstructorCalendar.Workflow.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\WorkSpaceInstructorContentLibrary.Workflow.feature.cs">
       <AutoGen>True</AutoGen>
@@ -468,9 +468,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceInstructorPreference.Workflow.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorReport.feature">
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorReport.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CourseSpaceInstructorReport.feature.cs</LastGenOutput>
+      <LastGenOutput>CourseSpaceInstructorReport.Workflow.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructor.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -536,9 +536,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WorkSpaceInstructorAnnouncement.Workflow.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceTestFeatures\WorkSpaceInstructorCalendar.feature">
+    <None Include="ProductAcceptanceTestFeatures\WorkSpaceInstructorCalendar.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>WorkSpaceInstructorCalendar.feature.cs</LastGenOutput>
+      <LastGenOutput>WorkSpaceInstructorCalendar.Workflow.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\WorkSpaceInstructorContentLibrary.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

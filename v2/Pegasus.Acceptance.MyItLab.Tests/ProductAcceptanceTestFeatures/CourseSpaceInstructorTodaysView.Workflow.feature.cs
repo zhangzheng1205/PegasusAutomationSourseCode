@@ -348,6 +348,44 @@ testRunner.Then("I should see the successfull message \"All of the late submissi
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor decline past due submission from past due submitted channel of activit" +
+            "y")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorTodaysView")]
+        public virtual void InstructorDeclinePastDueSubmissionFromPastDueSubmittedChannelOfActivity()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor decline past due submission from past due submitted channel of activit" +
+                    "y", ((string[])(null)));
+#line 144
+this.ScenarioSetup(scenarioInfo);
+#line 145
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 146
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 147
+testRunner.When("I click on the \"Past Due: Submitted\" link in notifications channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 148
+testRunner.Then("I should see First name, Last name of \"CsSmsStudent\" who has submitted the past d" +
+                    "ue activity in the right frame along with expand icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 149
+testRunner.When("I click on expand icon displayed against student name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 150
+testRunner.And("I selected the check box of the past due activity submitted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 151
+testRunner.Then("I should see \"CsSmsStudent\" name and \"Training [Skill-Based]: Excel Chapter 1 Ski" +
+                    "ll-Based Training\" activity name and due date and time and submitted date and ti" +
+                    "me which is submitted post due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 152
+testRunner.And("I should be able to select the past due activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 153
+testRunner.When("I click on \"Accept\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 154
+testRunner.Then("I should see the successfull message \"All of the late submissions have been decli" +
+                    "ned. These submissions will receive a zero in the Gradebook.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

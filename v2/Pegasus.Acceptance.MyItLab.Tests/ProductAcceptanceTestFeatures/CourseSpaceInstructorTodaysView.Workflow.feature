@@ -136,3 +136,19 @@ Then I should see "CsSmsStudent" name and "Training [Skill-Based]: Excel Chapter
 And I should be able to select the past due activity
 When I click on "Accept" activities past due date
 Then I should see the successfull message "All of the late submissions have been accepted. The grades for these submissions will now appear in the Gradebook."
+
+#Test case ID : peg-21953.
+#Products : MyItLab, HSS and World Language.
+#Pre condition : Assigned activity should be past due and student should not submit the activity even after past due date.
+#Dependency : Instructor should assign activity with due date and Student should submit the activity post due date.
+Scenario: Instructor decline past due submission from past due submitted channel of activity
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on the "Past Due: Submitted" link in notifications channel
+Then I should see First name, Last name of "CsSmsStudent" who has submitted the past due activity in the right frame along with expand icon
+When I click on expand icon displayed against student name
+And I selected the check box of the past due activity submitted
+Then I should see "CsSmsStudent" name and "Training [Skill-Based]: Excel Chapter 1 Skill-Based Training" activity name and due date and time and submitted date and time which is submitted post due date
+And I should be able to select the past due activity
+When I click on "Accept" activities past due date
+Then I should see the successfull message "All of the late submissions have been declined. These submissions will receive a zero in the Gradebook."
