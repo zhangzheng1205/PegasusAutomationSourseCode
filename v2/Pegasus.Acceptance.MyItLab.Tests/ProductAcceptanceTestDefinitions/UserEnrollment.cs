@@ -83,7 +83,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Enroll SMS student in course.
         /// </summary>
         /// <param name="courseTypeEnum">This is Course Type Enum.</param>
-        [When(@"I enroll SMS Student in ""(.*)""")]
+        [When(@"I enroll SMS Student in ""(.*)""")]     
         public void EnrollSmsStudentInCourse(
             Course.CourseTypeEnum courseTypeEnum)
         {
@@ -101,6 +101,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("UserEnrollment", "EnrollSmsStudentInCourse",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+       
 
         /// <summary>
         /// To verify section displays in global home page.
@@ -113,12 +114,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "DisplayOfEnrolledSectionInGlobalHomePage",
                 base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
-            Course course = Course.Get(courseTypeEnum);
+            Course course = Course.Get(courseTypeEnum);           
             bool isCourseVisibleInGlobalHomePage = new HEDGlobalHomePage().
-                    GetCoursePresentInGlobalHomePage().Replace(" ", "").Contains(course.SectionName);
-            //Assert section displays in global home page
+                   GetCoursePresentInGlobalHomePage().Contains(course.SectionName);
+            //Assert section displays in global home page           
             Logger.LogAssertion("VerifySmsStudentEnrollInCourse", ScenarioContext.
-                Current.ScenarioInfo.Title, () => Assert.AreEqual(true, isCourseVisibleInGlobalHomePage));
+                Current.ScenarioInfo.Title, () => Assert.IsTrue(isCourseVisibleInGlobalHomePage));
             Logger.LogMethodExit("UserEnrollment",
                 "DisplayOfEnrolledSectionInGlobalHomePage",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -145,5 +146,24 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "DisplayOfEnrolledInstructorCourseInGlobalHomePage",
                   base.IsTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Enroll SMS Instructor in course.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is Course Type Enum.</param>
+        [When(@"I enroll SMS Instructor in ""(.*)""")]
+        public void EnrollSmsInstructorInCourse(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Add Course From Search Catalog
+            Logger.LogMethodEntry("UserEnrollment", "EnrollSmsInstructorInCourse",
+                base.IsTakeScreenShotDuringEntryExit);           
+            // Click 'Enroll In a Course' Button 
+            new HEDGlobalHomePage().ClickOnEnrollInCourseButton();
+            // To Enroll Instructor depending on the course
+            new SelfEnrollmentPage().SmsStudentEnrolledInCourse(courseTypeEnum);
+            Logger.LogMethodExit("UserEnrollment", "EnrollSmsInstructorInCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+   
     }
 }

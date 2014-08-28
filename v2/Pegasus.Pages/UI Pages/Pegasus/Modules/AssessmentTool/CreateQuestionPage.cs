@@ -68,17 +68,12 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CreateQuestionPage",
           "SelectWindow",
           base.IsTakeScreenShotDuringEntryExit);
-              try
-            {
+           
                 //Select Window
                 base.SelectWindow(CreateQuestionPageResource.
                     CreateQuestionPage_Window_Title_Locator);
 
-            }
-              catch (Exception e)
-              {
-                  ExceptionHandler.HandleException(e);
-              }
+          
               logger.LogMethodExit("CreateQuestionPage",
               "SelectWindow",
               base.IsTakeScreenShotDuringEntryExit);
@@ -96,8 +91,6 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select window
-              //  base.SelectWindow(CreateQuestionPageResource.
-                    //CreateQuestionPage_Window_Title_Locator);
                 this.SelectCreateQuestionPageWindow();
                 //Switch to Iframe
                 base.SwitchToIFrameById(CreateQuestionPageResource.
@@ -116,16 +109,13 @@ namespace Pegasus.Pages.UI_Pages
                     CreateQuestionPage_MultipleChoice_PartialText_Locator));
                 //Is 'Multiple Response' question link Displayed
                 bool isMultipleResponseDisplayed = base.IsElementPresent(By.PartialLinkText(CreateQuestionPageResource.
-                    CreateQuestionPage_MultipleResponse_PartialText_Locator));
-                //Is 'Ranking' question link Displayed
-                bool isRankingDisplayed = base.IsElementPresent(By.PartialLinkText(CreateQuestionPageResource.
-                    CreateQuestionPage_Ranking_PartialText_Locator));
+                    CreateQuestionPage_MultipleResponse_PartialText_Locator));                            
                 //Is 'True/false' question link Displayed
                 bool isTrueFalseDisplayed = base.IsElementPresent(By.PartialLinkText(CreateQuestionPageResource.
                     CreateQuestionPage_TrueFalse_PartialText_Locator));
                 //Are All Native Questions Present 
                 isNativeQuestionsDisplayed = isFillInTheBlankDisplayed && isMatchingDisplayed && isMultipleChoiceDisplayed &&
-                   isMultipleResponseDisplayed && isRankingDisplayed && isTrueFalseDisplayed;
+                   isMultipleResponseDisplayed && isTrueFalseDisplayed;
                   }                             
                     
             catch (Exception e)

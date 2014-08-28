@@ -1142,6 +1142,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to remainingattemptscount.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_AttemptRemaining_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_AttemptRemaining_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to dsktp.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A1.
         /// </summary>
         internal static string StudentPrsentation_Page_SIM5_Excel_A1_Cell_Id {
@@ -1259,6 +1277,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@title=&apos;No Spacing&apos;]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_NoSpacingElement_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_NoSpacingElement_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 4-ButtonOpen.
         /// </summary>
         internal static string StudentPrsentation_Page_SIM5_Open_button_Id_Locator {
@@ -1300,6 +1327,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_SIM5_Sleep_Time {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Sleep_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;CustomMessageBox&apos;]/div/div[3]/button[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_TrainingMode_WarningPopup_Ok_Button_Xpath {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_TrainingMode_WarningPopup_Ok_Button_Xpath", resourceCulture);
             }
         }
         

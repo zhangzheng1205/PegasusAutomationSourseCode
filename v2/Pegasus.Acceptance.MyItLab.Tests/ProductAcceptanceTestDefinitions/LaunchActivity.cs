@@ -132,17 +132,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
         /// <summary>
         /// Click on Submit button in SIM5
-        /// presentation page.
+        /// presentation page after answering a question incorrectly.
         /// </summary>
         /// <param name="activityName">Name of the activity.</param>
-        [When(@"I click on submit button without answering ""(.*)""")]
-        public void ClickonSubmitButton(string activityName)
+        [When(@"I click on submit button answering incorrectly of ""(.*)"" type ""(.*)"" mode activity ""(.*)""")]
+        public void ClickonSubmitButtonAfterAnsweringIncorrectly(string applicationType, string activityMode, string activityName)
         {
             //Submit SIM5 Excel type activity
             Logger.LogMethodEntry("LaunchActivity", "ClickonSubmitButton",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on submit button
-            new StudentPresentationPage().SubmitSIMActivityWithoutAnswering(activityName);
+            new StudentPresentationPage().SubmitSIMActivityWithoutAnswering(applicationType, activityMode, activityName);
             Logger.LogMethodExit("LaunchActivity", "ClickonSubmitButton",
                base.IsTakeScreenShotDuringEntryExit);
         }

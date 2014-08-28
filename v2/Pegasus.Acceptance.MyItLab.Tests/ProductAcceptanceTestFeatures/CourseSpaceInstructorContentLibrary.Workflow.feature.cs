@@ -134,11 +134,11 @@ testRunner.Then("I should see the successfull message \"Activity added successfu
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Creation of Skill based activity with Sim5 and QTI questions")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify presense of option to add pegasus native questions for SIM5 assessment")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorContentLibrary")]
-        public virtual void CreationOfSkillBasedActivityWithSim5AndQTIQuestions()
+        public virtual void VerifyPresenseOfOptionToAddPegasusNativeQuestionsForSIM5Assessment()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creation of Skill based activity with Sim5 and QTI questions", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify presense of option to add pegasus native questions for SIM5 assessment", ((string[])(null)));
 #line 33
 this.ScenarioSetup(scenarioInfo);
 #line 34

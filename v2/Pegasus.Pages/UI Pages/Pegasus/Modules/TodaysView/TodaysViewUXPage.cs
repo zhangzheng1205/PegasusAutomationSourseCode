@@ -2729,7 +2729,6 @@ namespace Pegasus.Pages.UI_Pages
                     //Wait for the discussion topic name
                     base.WaitForElement(By.XPath(string.Format(TodaysViewUXPageResource.
                         TodaysViewUXPageResource_GetDiscussionTopicName_Xpath_Locator, initialCount)));
-
                     //Get Activity Name
                     getDiscussionTopicName = base.GetElementTextByXPath(string.Format(TodaysViewUXPageResource.
                          TodaysViewUXPageResource_GetDiscussionTopicName_Xpath_Locator, initialCount));

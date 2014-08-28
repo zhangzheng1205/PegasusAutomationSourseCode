@@ -29,8 +29,8 @@ And I add "Native" question as "True/False" in created activity and save this ac
 Then I should see the successfull message "Activity added successfully."
 
 #Test Case ID: peg-22161
-#Purpose: Creation of Skill based activity with Sim5 and QTI questions
-Scenario: Creation of Skill based activity with Sim5 and QTI questions
+#Purpose: To verify that Pegasus Native questions can be added in a SIM5 assessment
+Scenario: Verify presense of option to add pegasus native questions for SIM5 assessment
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I click on the 'Add Course Materials' option in Content Library

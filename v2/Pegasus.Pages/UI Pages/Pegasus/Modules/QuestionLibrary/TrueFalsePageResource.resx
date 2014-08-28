@@ -177,4 +177,7 @@
   <data name="TrueFalse_Page_Wrong_Feedback_Value" xml:space="preserve">
     <value>Answer is wrong</value>
   </data>
+  <data name="TrueFalse_Page_Activity_ShowHTML_Button_TimeValue" xml:space="preserve">
+    <value>7000</value>
+  </data>
 </root>

@@ -70,11 +70,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_PopupPageContent_Div1&apos;]/table[3]/a[@id=&apos;_ctl0:PopupPageContent:_ctl0&apos;].
+        ///   Looks up a localized string similar to _ctl0:PopupPageContent:_ctl0.
         /// </summary>
-        internal static string DiscussionMainUXPageResource_Close_Button_Xpath {
+        internal static string DiscussionMainUXPageResource_Close_Button_Id_Locator {
             get {
-                return ResourceManager.GetString("DiscussionMainUXPageResource_Close_Button_Xpath", resourceCulture);
+                return ResourceManager.GetString("DiscussionMainUXPageResource_Close_Button_Id_Locator", resourceCulture);
             }
         }
         
@@ -115,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_InnerPageContent_RadDiscussion&apos;]/div/span/span/table/tbody/tr/td[3].
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_InnerPageContent_RadDiscussion&apos;]/div/span/span/table/tbody/tr/td[3]/div/img.
         /// </summary>
         internal static string DiscussionMainUXPageResource_ResponseCmenu_Xpath_Locator {
             get {

@@ -1726,7 +1726,7 @@ namespace Pegasus.Pages.UI_Pages
         /// in SIM5 presentation window.
         /// </summary>
         /// <param name="activityName">Name of the activity.</param>
-        public void SubmitSIMActivityWithoutAnswering(String activityName)
+        public void SubmitSIMActivityWithoutAnswering(string applicationType, string activityMode, string activityName)
         {
             //Submit SIM5 activity
             logger.LogMethodEntry("StudentPresentationPage",
@@ -1740,6 +1740,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Select the SIM5 assignment launch window
                 base.SelectWindow(activityName + StudentPresentationPageResource.
                 StudentPresentation_Page_SimPresentation_Window_Name);
+                //Answer incorrectly
+                this.SIM5QuestionIncorrectAnswer(activityMode, applicationType);
                 //Click on SIM5 activity Submit button
                 this.ClickOnSIM5ActivitySubmitButton();
             }
@@ -1750,6 +1752,86 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("StudentPresentationPage",
                  "SubmitSIMActivityWithoutAnswering",
                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Answer SIM5 activity incorrectly.
+        /// </summary>
+        /// <param name="activityMode">Mode of the activity(Training or Exam).</param>
+        /// <param name="applicationType">Application type of SIM5 activity.</param>
+        private void SIM5QuestionIncorrectAnswer(string activityMode, string applicationType)
+        {
+            //Initialize variables
+            string attemptRemaining = string.Empty;
+            int attemptCount = 0;
+            //Switch based on activity mode
+            switch (activityMode)
+            {
+
+                case "Training":
+                    switch (applicationType)
+                    {
+                        case "Word":
+                        case "Excel":
+                        case "PowerPoint":
+                            //Get the attempt count
+                            attemptRemaining = base.GetElementTextById(StudentPresentationPageResource.
+                                StudentPrsentation_Page_SIM5_AttemptRemaining_Id_Locator);
+                            attemptCount = Int32.Parse(attemptRemaining);
+                            //Start counter to based on the attempt count
+                            for (int i = 1; i <= attemptCount; i++)
+                            {
+                                //Click on the Desktop icon in the SIM5 activity
+                                base.ClickLinkById(StudentPresentationPageResource.
+                                    StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator);
+                            }
+                            //Click on Ok button in the warning pop up
+                            base.ClickButtonByXPath(StudentPresentationPageResource.
+                                StudentPrsentation_Page_SIM5_TrainingMode_WarningPopup_Ok_Button_Xpath);
+                            break;
+                    }
+                    break;
+
+                case "Exam":
+                    switch (applicationType)
+                    {
+                        case "Word":
+                        case "Excel":
+                        case "PowerPoint":
+                            //Get the attempt count
+                            attemptRemaining = base.GetElementTextById(StudentPresentationPageResource.
+                                StudentPrsentation_Page_SIM5_AttemptRemaining_Id_Locator);
+                            attemptCount = Int32.Parse(attemptRemaining);
+                            //Start counter to based on the attempt count
+                            for (int i = 1; i <= attemptCount; i++)
+                            {
+                                //Click on the Desktop icon in the SIM5 activity
+                                base.ClickLinkById(StudentPresentationPageResource.
+                                    StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator);
+                            }
+
+                            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                           StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
+                            break;
+                        case "Access":
+                            //Get the attempt count
+                            attemptRemaining = base.GetElementTextById(StudentPresentationPageResource.
+                                StudentPrsentation_Page_SIM5_AttemptRemaining_Id_Locator);
+                            attemptCount = Int32.Parse(attemptRemaining);
+                            //Start counter to based on the attempt count
+                            for (int i = 1; i <= attemptCount; i++)
+                            {
+                                //Click on No spacing element displayed in SIM5 activity
+                                base.ClickLinkByXPath(StudentPresentationPageResource.
+                                    StudentPrsentation_Page_SIM5_NoSpacingElement_Xpath_Locator);
+                            }
+                            break;
+                    }
+                    Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                      StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
+                    break;
+            }
         }
 
         /// <summary>

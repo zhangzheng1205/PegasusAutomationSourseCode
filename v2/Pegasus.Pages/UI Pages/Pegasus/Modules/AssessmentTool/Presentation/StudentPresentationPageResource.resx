@@ -534,4 +534,16 @@
   <data name="CoursePreviewMainUX_Page_ActivityScore_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[4]</value>
   </data>
+  <data name="StudentPrsentation_Page_SIM5_AttemptRemaining_Id_Locator" xml:space="preserve">
+    <value>remainingattemptscount</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_DesktopElement_Id_Locator" xml:space="preserve">
+    <value>dsktp</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_NoSpacingElement_Xpath_Locator" xml:space="preserve">
+    <value>//div[@title='No Spacing']/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_TrainingMode_WarningPopup_Ok_Button_Xpath" xml:space="preserve">
+    <value>//div[@id='CustomMessageBox']/div/div[3]/button[2]</value>
+  </data>
 </root>
