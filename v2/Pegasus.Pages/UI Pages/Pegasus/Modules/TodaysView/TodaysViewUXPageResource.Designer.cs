@@ -61,15 +61,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent__ctl0__ctl3__ctl1__ctl0__ctl0_lblHeading.
         /// </summary>
         internal static string TodaysViewPageReosurce_GetAnnouncementText_Id_Locator {
@@ -210,6 +201,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodaysViewUXPage_WelcomeMessage_TextValue {
             get {
                 return ResourceManager.GetString("TodaysViewUXPage_WelcomeMessage_TextValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PDS_DueSpan.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_Activity_PastDueDateAndTime_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_Activity_PastDueDateAndTime_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1Checkbox.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_Activity_Select_Checkbox {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_Activity_Select_Checkbox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PDS_SubmitSpan.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_Activity_SubmittedDateAndTime_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_Activity_SubmittedDateAndTime_Id_Locator", resourceCulture);
             }
         }
         
@@ -408,6 +426,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodaysViewUXPageResource_Enrollments_TabName_Text {
             get {
                 return ResourceManager.GetString("TodaysViewUXPageResource_Enrollments_TabName_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn0.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_Expand_Icon_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_Expand_Icon_Id_Locator", resourceCulture);
             }
         }
         
@@ -1078,7 +1105,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 15000.
+        ///   Looks up a localized string similar to 5000.
         /// </summary>
         internal static string TodaysViewUXPageResource_Sleep_Value {
             get {
@@ -1123,6 +1150,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont0.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_Submitted_Activity_UserName_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_Submitted_Activity_UserName_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to chkAlltvPastDueSubmission.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_SubmittedActivity_Checkbox_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_SubmittedActivity_Checkbox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PA-01 Span Practice- Vocabulary: Saludos, despedidas y presentaciones.
         /// </summary>
         internal static string TodaysViewUXPageResource_SubmittedActivity_Name {
@@ -1155,6 +1200,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodaysViewUXPageResource_SubmittedActivity_Name_StartIndex {
             get {
                 return ResourceManager.GetString("TodaysViewUXPageResource_SubmittedActivity_Name_StartIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont1.
+        /// </summary>
+        internal static string TodaysViewUXPageResource_SubmittedActivityName_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodaysViewUXPageResource_SubmittedActivityName_Id_Locator", resourceCulture);
             }
         }
         

@@ -668,8 +668,7 @@ namespace Pegasus.Pages.UI_Pages
                                  base.IsTakeScreenShotDuringEntryExit);
             return isTeacherViewTabsPresent;
         }
-
-
+        
         /// <summary>
         /// Enter as Demo Student
         /// </summary>
@@ -736,8 +735,7 @@ namespace Pegasus.Pages.UI_Pages
                                  base.IsTakeScreenShotDuringEntryExit);
             return getClassName;
         }
-
-
+        
         /// <summary>
         /// Select Home Button
         /// </summary>
@@ -773,8 +771,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("TodaysViewUXPage", "SelectHomeButton",
                                  base.IsTakeScreenShotDuringEntryExit);
         }
-
-
+        
         /// <summary>
         /// Navigate to Teacher View
         /// </summary>
@@ -1009,7 +1006,6 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
             return getTabWindowTitle;
         }
-
 
         /// <summary>
         /// Click On Manage All Button in HED
@@ -2298,8 +2294,7 @@ namespace Pegasus.Pages.UI_Pages
                                 base.IsTakeScreenShotDuringEntryExit);
             return totalCount;
         }
-
-
+        
         /// <summary>
         /// Get Calendar Text
         /// </summary>
@@ -2644,10 +2639,10 @@ namespace Pegasus.Pages.UI_Pages
         /// Click on Notification Channel Option.
         /// </summary>
         /// <param name="channelOption">This is Channel option.</param>
-        public void ClickonNotificationChannelOption(string channelOption)
+        public void ClickNotificationChannelOption(string channelOption)
         {
             //Click on Performance Channel Option
-            Logger.LogMethodEntry("TodaysViewUXPage", "ClickonPerformanceChannelOption",
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickNotificationChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -2664,7 +2659,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("TodaysViewUXPage", "ClickonPerformanceChannelOption",
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickNotificationChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -2763,7 +2758,6 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
         /// <summary>
         /// Get student first, last name
         /// from Past due submitted channel.
@@ -2847,8 +2841,6 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
             return pastDueActivityName;
         }
-
-
 
         /// <summary>
         /// Get content count from alert channel.
@@ -3545,51 +3537,125 @@ namespace Pegasus.Pages.UI_Pages
             return getActivityName;
         }
 
-        public string GetUserNameWhoHasSubmittedThePastDueActivity()
+        /// <summary>
+        /// Get user name who has submitted the activity.
+        /// </summary>
+        /// <returns>User name.</returns>
+        public string GetUserNameWhoHasSubmittedTheActivity()
         {
-            ICollection<IWebElement> pastDueSubmissionTreeElements =
-                base.GetWebElementsCollectionByClassName("dvcmenuout1");
-            IWebElement pastDueSubmissionTree = pastDueSubmissionTreeElements.ToArray()[1];
-            return pastDueSubmissionTree.ToString();
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetUserNameWhoHasSubmittedTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            // return user name
+            return base.GetElementTextById(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_Submitted_Activity_UserName_Id_Locator);
         }
 
+        /// <summary>
+        /// Click expand icon display against user.
+        /// </summary>
         public void ClickExpandIconDisplayedAgainstUserName()
         {
-            base.ClickButtonById("_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn0");
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickExpandIconDisplayedAgainstUserName",
+           base.IsTakeScreenShotDuringEntryExit);
+            // click expand icon display against user
+            base.ClickButtonById(TodaysViewUXPageResource.TodaysViewUXPageResource_Expand_Icon_Id_Locator);
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickExpandIconDisplayedAgainstUserName",
+           base.IsTakeScreenShotDuringEntryExit);
         }
 
-        public void SelectSubmittedPastDueActivityCheckBox()
+        /// <summary>
+        /// Is expand icon present.
+        /// </summary>
+        /// <returns>True if expand icon present else false.</returns>
+        public bool IsExpandIconPresent()
         {
-            base.SelectCheckBoxById("chkAlltvPastDueSubmission");
+            Logger.LogMethodEntry("TodaysViewUXPage", "IsExpandIconPresent",
+            base.IsTakeScreenShotDuringEntryExit);
+            // return expand icon present status
+            return
+                base.IsElementPresent(
+                    By.Id(TodaysViewUXPageResource.TodaysViewUXPageResource_Expand_Icon_Id_Locator));
         }
 
+        /// <summary>
+        /// Select submitted activity checkbox.
+        /// </summary>
+        public void SelectSubmittedActivityCheckBox()
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "SelectSubmittedActivityCheckBox",
+                base.IsTakeScreenShotDuringEntryExit);
+            // select activity checkbox
+            base.SelectCheckBoxById(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_SubmittedActivity_Checkbox_Id_Locator);
+            Logger.LogMethodExit("TodaysViewUXPage", "SelectSubmittedActivityCheckBox",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get submitted activity name.
+        /// </summary>
+        /// <returns>Submitted activity name.</returns>
         public string GetActivityNameForSubmittedPastDueActivity()
         {
-            ICollection<IWebElement> pastDueSubmissionTreeElements = 
-                base.GetWebElementsCollectionByClassName("dvcmenuout1");
-            IWebElement pastDueSubmissionTree = pastDueSubmissionTreeElements.ToArray()[2];
-            return pastDueSubmissionTree.ToString();
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetActivityNameForSubmittedPastDueActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            // return submitted activity name
+            return
+                base.GetElementTextById(
+                    TodaysViewUXPageResource.TodaysViewUXPageResource_SubmittedActivityName_Id_Locator);
         }
 
+        /// <summary>
+        /// Get activity past due date and time.
+        /// </summary>
+        /// <returns>Past due date and time.</returns>
         public string GetActivityPastDueDateAndTime()
         {
-            return base.GetElementTextByClassName("PDS_DueSpan");
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetActivityPastDueDateAndTime",
+               base.IsTakeScreenShotDuringEntryExit);
+            // return activity due date and time
+            return base.GetElementTextByClassName(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_Activity_PastDueDateAndTime_Id_Locator);
         }
 
+        /// <summary>
+        /// Get activity submitted due date and time.
+        /// </summary>
+        /// <returns>Submitted date and time.</returns>
         public string GetActivitySubmittedDateAndTime()
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetActivitySubmittedDateAndTime",
+              base.IsTakeScreenShotDuringEntryExit);
+            // return submitted date and time
             return base.GetElementTextByClassName("PDS_SubmitSpan");
         }
 
-        public bool IsPastDueActivitySelected()
+        /// <summary>
+        /// Is activity selected.
+        /// </summary>
+        /// <returns>True if activity is selected else false.</returns>
+        public bool IsActivitySelected()
         {
-            base.SelectCheckBoxById("_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1Checkbox");
-            return base.IsElementSelectedById("_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1Checkbox");
+            Logger.LogMethodEntry("TodaysViewUXPage", "IsActivitySelected",
+             base.IsTakeScreenShotDuringEntryExit);
+            // return status for activity is selected
+            return
+                base.IsElementSelectedById(TodaysViewUXPageResource.
+                TodaysViewUXPageResource_Activity_Select_Checkbox);
         }
 
-        public void ClickTheActivitiesPastTheDueDateButton(string actionButtonName)
+        /// <summary>
+        /// Click to accept or decline activity status.
+        /// </summary>
+        /// <param name="actionButtonName">This is button name.</param>
+        /// <remarks>Button can be Accept or Decline.</remarks>
+        public void ClickTheActivityButton(string actionButtonName)
         {
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickTheActivityButton",
+             base.IsTakeScreenShotDuringEntryExit);
             base.ClickButtonByPartialLinkText(actionButtonName);
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickTheActivityButton",
+             base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

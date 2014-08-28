@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
@@ -159,7 +160,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickOnNotificationChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the Performance channel Option
-            new TodaysViewUxPage().ClickonNotificationChannelOption(channelOption);
+            new TodaysViewUxPage().ClickNotificationChannelOption(channelOption);
             Logger.LogMethodExit("TodaysView", "ClickOnNotificationChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -222,7 +223,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Click on cmenu icon of Discussion topic.
         /// </summary>
-        /// <param name="activityName">Discussion topic name.</param>
+        /// <param name="discussionTopicName">Discussion topic name.</param>
         [When(@"I click on cmenu icon of Discussion topic ""(.*)""")]
         public void AccesCmenuOptionOfDiscussionTopic(string discussionTopicName)
         {
@@ -493,11 +494,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Select cmenu option of activity.
+        /// </summary>
+        /// <param name="cmenuOption">This is cmenu option name.</param>
         [When(@"I select the cmenu option ""(.*)"" of the activity")]
         public void SelectCmenuOfTheActivity(string cmenuOption)
         {
             Logger.LogMethodEntry("TodaysView", "SelectMyProgressOption",
              base.IsTakeScreenShotDuringEntryExit);
+            // select cmenu option
             new TodaysViewUxPage().SelectCmenuOption(cmenuOption);
             Logger.LogMethodExit("TodaysView", "SelectMyProgressOption",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -524,59 +530,121 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Validate user who has submitted past due activity.
+        /// </summary>
+        /// <param name="userTypeEnum">This is user type enum.</param>
         [Then(@"I should see First name, Last name of ""(.*)"" who has submitted the past due activity in the right frame along with expand icon")]
         public void ValidateUserWhoHasSubmittedThePastDueActivity(User.UserTypeEnum userTypeEnum)
         {
+            Logger.LogMethodEntry("TodaysView", "ValidateUserWhoHasSubmittedThePastDueActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            // user details 
             User user = User.Get(userTypeEnum);
-            Logger.LogAssertion("VerifyUserDetails", ScenarioContext.Current.
-              ScenarioInfo.Title,
-              () => Assert.AreEqual(user.LastName + ',' + user.FirstName, new TodaysViewUxPage()
-                  .GetUserNameWhoHasSubmittedThePastDueActivity()));
+            string userFullName = (user.LastName + ',' + user.FirstName).Replace(" ", "");
+            // verify user is present
+            Logger.LogAssertion("VerifyUserNamePresent", ScenarioContext.Current.
+              ScenarioInfo.Title, () => Assert.AreEqual(userFullName, new TodaysViewUxPage()
+                .GetUserNameWhoHasSubmittedTheActivity()));
+            //verify expand icon present
+            Logger.LogAssertion("VerifyExpantIconPresent", ScenarioContext.Current.
+             ScenarioInfo.Title, () => Assert.IsTrue(new TodaysViewUxPage()
+               .IsExpandIconPresent()));
+            Logger.LogMethodExit("TodaysView", "ValidateUserWhoHasSubmittedThePastDueActivity",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on expand icon.
+        /// </summary>
         [When(@"I click on expand icon displayed against student name")]
         public void ClickOnExpandIconDisplayedAgainstStudentName()
         {
+            Logger.LogMethodEntry("TodaysView", "ClickOnExpandIconDisplayedAgainstStudentName",
+                base.IsTakeScreenShotDuringEntryExit);
+            // click expand icon display against user
             new TodaysViewUxPage().ClickExpandIconDisplayedAgainstUserName();
+            Logger.LogMethodExit("TodaysView", "ClickOnExpandIconDisplayedAgainstStudentName",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Select check box for activity.
+        /// </summary>
         [When(@"I selected the check box of the past due activity submitted")]
         public void SelectedTheCheckBoxOfThePastDueActivitySubmitted()
         {
-            new TodaysViewUxPage().SelectSubmittedPastDueActivityCheckBox();
+            Logger.LogMethodEntry("TodaysView", "SelectedTheCheckBoxOfThePastDueActivitySubmitted",
+                base.IsTakeScreenShotDuringEntryExit);
+            // select activity check box
+            new TodaysViewUxPage().SelectSubmittedActivityCheckBox();
+            Logger.LogMethodExit("TodaysView", "SelectedTheCheckBoxOfThePastDueActivitySubmitted",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify submitted past due activity details.
+        /// </summary>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        /// <param name="activityName">This is activity name.</param>
         [Then(@"I should see ""(.*)"" name and ""(.*)"" activity name and due date and time and submitted date and time which is submitted post due date")]
         public void ValidateDetailsForSubmittedPostDueDateActivity(User.UserTypeEnum userTypeEnum, string activityName)
         {
+            Logger.LogMethodEntry("TodaysView", "ValidateDetailsForSubmittedPostDueDateActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            // user details
             User user = User.Get(userTypeEnum);
-            Logger.LogAssertion("VerifyUserDetails", ScenarioContext.Current.ScenarioInfo.Title,
+            // verify user details present
+            Logger.LogAssertion("VerifyUserDetailsPresent", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(user.LastName + ',' + user.FirstName, new TodaysViewUxPage()
-                .GetUserNameWhoHasSubmittedThePastDueActivity()));
-            Logger.LogAssertion("VerifyActivityDetails", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(activityName, new TodaysViewUxPage().
-                    GetActivityNameForSubmittedPastDueActivity()));
-            Logger.LogAssertion("VerifyActivityDueDateAndTime", ScenarioContext.Current.ScenarioInfo.Title,
+                .GetUserNameWhoHasSubmittedTheActivity()));
+            // replace not required characters from activity name 
+            int activityLength = activityName.Length;
+            string replaceNewLineFromActivityName = new TodaysViewUxPage().
+                GetActivityNameForSubmittedPastDueActivity().Replace(Environment.NewLine, "");
+            string activityNameSubString = replaceNewLineFromActivityName.Substring(0, activityLength);
+            // verify activity details present
+            Logger.LogAssertion("VerifyActivityDetailsPresent", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(activityName, activityNameSubString));
+            // verify activity past due data and time present
+            Logger.LogAssertion("VerifyActivityDueDateAndTimePresent", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsNotNull(new TodaysViewUxPage().GetActivityPastDueDateAndTime()));
-            Logger.LogAssertion("VerifyActivitySubmittedDateAndTime", ScenarioContext.Current.ScenarioInfo.Title,
+            // verify activity submitted date and time present 
+            Logger.LogAssertion("VerifyActivitySubmittedDateAndTimePresent", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsNotNull(new TodaysViewUxPage().GetActivitySubmittedDateAndTime()));
+            Logger.LogMethodExit("TodaysView", "ValidateDetailsForSubmittedPostDueDateActivity",
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify activity can be select.
+        /// </summary>
         [Then(@"I should be able to select the past due activity")]
         public void ValidateToSelectThePastDueActivity()
         {
+            Logger.LogMethodEntry("TodaysView", "ValidateToSelectThePastDueActivity",
+             base.IsTakeScreenShotDuringEntryExit);
+            // verify activity can be select
             Logger.LogAssertion("VerifyToSelectThePastDueActivity", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new TodaysViewUxPage().IsPastDueActivitySelected()));
+                () => Assert.IsTrue(new TodaysViewUxPage().IsActivitySelected()));
+            Logger.LogMethodExit("TodaysView", "ValidateToSelectThePastDueActivity",
+             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on past due button.
+        /// </summary>
+        /// <param name="buttonName">This is button name.</param>
+        /// <remarks>Button can be Accept or Decline.</remarks>
         [When(@"I click on ""(.*)"" activities past due date")]
         public void ClickOnPastDueButton(string buttonName)
         {
-            ScenarioContext.Current.Pending();
+            Logger.LogMethodEntry("TodaysView", "ClickOnPastDueButton",
+            base.IsTakeScreenShotDuringEntryExit);
+            // click on button
+            new TodaysViewUxPage().ClickTheActivityButton(buttonName);
+            Logger.LogMethodExit("TodaysView", "ClickOnPastDueButton",
+            base.IsTakeScreenShotDuringEntryExit);
         }
-
-       
-
-
     }
 }

@@ -208,7 +208,7 @@
     <value>Preferences</value>
   </data>
   <data name="TodaysViewUXPageResource_Sleep_Value" xml:space="preserve">
-    <value>15000</value>
+    <value>5000</value>
   </data>
   <data name="TodaysViewUXPageResource_StudentView_ClassName_Locator" xml:space="preserve">
     <value>spnCourseNameStuViewCls</value>
@@ -245,9 +245,6 @@
   </data>
   <data name="TodaysViewUX_Page_CourseTitle_Id_Locator" xml:space="preserve">
     <value>_ctl0__ctl0_phHeader__ctl0__ctl0_ClassCourseTitle</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value />
   </data>
   <data name="TodaysViewUXPageResource_NewGradesLink_Xpath_Locator" xml:space="preserve">
     <value>//table[@class='CoursePerformanceUpdateTd']/tbody/tr[6]/td/a</value>
@@ -616,6 +613,27 @@
     <value>//table[@id='grdStudentPerformance$tblHdr']/tbody/tr[2]/td[2]</value>
   </data>
   <data name="TodayViewUXPageResource_PastDueSubmitted_StudentName_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont0</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Activity_PastDueDateAndTime_Id_Locator" xml:space="preserve">
+    <value>PDS_DueSpan</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Activity_Select_Checkbox" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1Checkbox</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Activity_SubmittedDateAndTime_Id_Locator" xml:space="preserve">
+    <value>PDS_SubmitSpan</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Expand_Icon_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn0</value>
+  </data>
+  <data name="TodaysViewUXPageResource_SubmittedActivityName_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont1</value>
+  </data>
+  <data name="TodaysViewUXPageResource_SubmittedActivity_Checkbox_Id_Locator" xml:space="preserve">
+    <value>chkAlltvPastDueSubmission</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Submitted_Activity_UserName_Id_Locator" xml:space="preserve">
     <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont0</value>
   </data>
 </root>

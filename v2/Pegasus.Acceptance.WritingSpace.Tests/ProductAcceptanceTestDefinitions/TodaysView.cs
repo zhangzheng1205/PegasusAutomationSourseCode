@@ -118,7 +118,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("TodaysView", "ClickOnPerformanceChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the Performance channel Option
-            new TodaysViewUxPage().ClickonNotificationChannelOption(channelOption);
+            new TodaysViewUxPage().ClickNotificationChannelOption(channelOption);
             Logger.LogMethodExit("TodaysView", "ClickOnPerformanceChannelOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }

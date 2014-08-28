@@ -17,7 +17,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>       
-        private static Logger Logger = 
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(TodaysView));
 
         /// <summary>
@@ -287,7 +287,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("TodaysView", "CheckTheNotifyMeCheckboxOption",
                  base.IsTakeScreenShotDuringEntryExit);
         }
-      
+
         /// <summary>
         /// Verify Instructor Comments channel in Today's View Page.
         /// </summary>
@@ -306,10 +306,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "VerifyChanneslInTodaysViewPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Verify Alerts Count in Instructor Comments Channel.
         /// </summary>
-        /// <param name="alertcount">Alert Count to be Validated.</param>
+        /// <param name="alertCount">Alert Count to be Validated.</param>
+        /// <param name="channelName">This is channel name.</param>
         [Then(@"I should see the alert count updated as ""(.*)"" in ""(.*)"" channel")]
         public void ValidateInstructorCommentsAlertCount(int alertCount, string channelName)
         {
@@ -335,14 +337,14 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("TodaysView", "ClickOnInstructorCommentsOption",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the Instructor Comments channel Option
-            new TodaysViewUxPage().ClickonNotificationChannelOption(channelOption);
+            new TodaysViewUxPage().ClickNotificationChannelOption(channelOption);
             Logger.LogMethodExit("TodaysView", "ClickOnInstructorCommentsOption",
                 base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         /// Verify The Activity Name In The Instructor Comments Channel.
         /// </summary>
-        /// <param name="ActivityName">This is Activity Name.</param>
+        /// <param name="activityName">This is Activity Name.</param>
         [Then(@"I should see the activity ""(.*)"" in the Instructor Comments channel")]
         public void VerifyActivityNameInChannel(string activityName)
         {
@@ -357,22 +359,5 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Initialize Pegasus test before test execution starts.
-        /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
-        {
-
-        }
-
-        /// <summary>
-        /// Deinitialize Pegasus test after the execution of test.
-        /// </summary>
-        [AfterTestRun]
-        public static void TearDown()
-        {
-
-        }
-        }
+    }
 }
