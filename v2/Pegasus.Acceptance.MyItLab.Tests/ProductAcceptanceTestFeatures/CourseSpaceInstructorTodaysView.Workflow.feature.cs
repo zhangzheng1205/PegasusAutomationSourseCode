@@ -335,9 +335,9 @@ testRunner.When("I click on expand icon displayed against student name", ((strin
 #line 134
 testRunner.And("I selected the check box of the past due activity submitted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 135
-testRunner.Then("I should see \"CsSmsStudent\" name and \"Training [Skill-Based]: Excel Chapter 1 Ski" +
-                    "ll-Based Training\" activity name and due date and time and submitted date and ti" +
-                    "me which is submitted post due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"CsSmsStudent\" name and \"Word Chapter 1 Skill-Based Training\" activi" +
+                    "ty name and due date and time and submitted date and time which is submitted pos" +
+                    "t due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 136
 testRunner.And("I should be able to select the past due activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 137
@@ -373,13 +373,13 @@ testRunner.When("I click on expand icon displayed against student name", ((strin
 #line 150
 testRunner.And("I selected the check box of the past due activity submitted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 151
-testRunner.Then("I should see \"CsSmsStudent\" name and \"Training [Skill-Based]: Excel Chapter 1 Ski" +
-                    "ll-Based Training\" activity name and due date and time and submitted date and ti" +
-                    "me which is submitted post due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"CsSmsStudent\" name and \"Word Chapter 1 Skill-Based Training\" activi" +
+                    "ty name and due date and time and submitted date and time which is submitted pos" +
+                    "t due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 152
 testRunner.And("I should be able to select the past due activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 153
-testRunner.When("I click on \"Accept\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"Decline\" activities past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 154
 testRunner.Then("I should see the successfull message \"All of the late submissions have been decli" +
                     "ned. These submissions will receive a zero in the Gradebook.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

@@ -132,7 +132,7 @@ When I click on the "Past Due: Submitted" link in notifications channel
 Then I should see First name, Last name of "CsSmsStudent" who has submitted the past due activity in the right frame along with expand icon
 When I click on expand icon displayed against student name
 And I selected the check box of the past due activity submitted
-Then I should see "CsSmsStudent" name and "Training [Skill-Based]: Excel Chapter 1 Skill-Based Training" activity name and due date and time and submitted date and time which is submitted post due date
+Then I should see "CsSmsStudent" name and "Word Chapter 1 Skill-Based Training" activity name and due date and time and submitted date and time which is submitted post due date
 And I should be able to select the past due activity
 When I click on "Accept" activities past due date
 Then I should see the successfull message "All of the late submissions have been accepted. The grades for these submissions will now appear in the Gradebook."
@@ -148,7 +148,7 @@ When I click on the "Past Due: Submitted" link in notifications channel
 Then I should see First name, Last name of "CsSmsStudent" who has submitted the past due activity in the right frame along with expand icon
 When I click on expand icon displayed against student name
 And I selected the check box of the past due activity submitted
-Then I should see "CsSmsStudent" name and "Training [Skill-Based]: Excel Chapter 1 Skill-Based Training" activity name and due date and time and submitted date and time which is submitted post due date
+Then I should see "CsSmsStudent" name and "Word Chapter 1 Skill-Based Training" activity name and due date and time and submitted date and time which is submitted post due date
 And I should be able to select the past due activity
-When I click on "Accept" activities past due date
+When I click on "Decline" activities past due date
 Then I should see the successfull message "All of the late submissions have been declined. These submissions will receive a zero in the Gradebook."
