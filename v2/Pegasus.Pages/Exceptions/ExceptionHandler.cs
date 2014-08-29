@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 
 namespace Pegasus.Pages.Exceptions
@@ -14,7 +11,8 @@ namespace Pegasus.Pages.Exceptions
         /// <summary>
         /// Static logger instance of the class.
         /// </summary>
-        private static Logger exceptionLogger = Logger.GetInstance(typeof(ExceptionHandler));
+        private static readonly Logger ExceptionLogger = 
+            Logger.GetInstance(typeof(ExceptionHandler));
 
         /// <summary>
         /// This method handels and throws exceptions.
@@ -28,13 +26,13 @@ namespace Pegasus.Pages.Exceptions
                 || ex is InvalidOperationException
                 || ex is OpenQA.Selenium.WebDriverException)
             {
-                exceptionLogger.LogMessage("Exception Handler", "Rethrow handled exception out", "The nested child exception has already been handled", true);
+                ExceptionLogger.LogMessage("ExceptionHandler", "HandleException", ex.Message, true);
                 // close webdriver and browser instances
                 WebDriverSingleton.GetInstance().Dispose();
                 throw ex;
             }
-            GenericPageException genericPageException = new GenericPageException(ex.ToString(), ex);
-            exceptionLogger.LogException("ExceptionHandler", "handleException", ex, true);
+            var genericPageException = new GenericPageException(ex.ToString(), ex);
+            ExceptionLogger.LogException("ExceptionHandler", "HandleException", ex, ex.Message, true);
             // close webdriver and browser instances
             WebDriverSingleton.GetInstance().Dispose();
             throw genericPageException;
