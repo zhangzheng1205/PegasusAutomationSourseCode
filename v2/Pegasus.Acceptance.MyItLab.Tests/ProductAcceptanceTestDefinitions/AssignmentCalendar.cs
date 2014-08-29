@@ -474,10 +474,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                  "SelectCheckBoxOfActivity",
                           base.IsTakeScreenShotDuringEntryExit);
 
-            int counter = 0;
-            CalendarHedDefaultUxPage calendarHEDDefaultUXPage =
+            var calendarHedDefaultUxPage =
                 new CalendarHedDefaultUxPage();
-            calendarHEDDefaultUXPage.SelectCheckBoxOfActivity(activityCount,
+            calendarHedDefaultUxPage.SelectCheckBoxOfActivity(activityCount,
                 Activity.Get(Activity.ActivityTypeEnum.Folder).ActivityId);
 
             Logger.LogMethodExit("AssignmentCalendar",

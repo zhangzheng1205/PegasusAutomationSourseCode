@@ -446,7 +446,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.SwitchToIFrame(HomePageResource.
                     Home_Page_AccessClass_SetUpWizardFrame_Id_Locator);
             }
-            catch (Exception ex) { logger.LogMessage("HomePage", "SelectLightBoxFrame", "Error in switching setup wizard frame"); }
+            catch (Exception e) { ExceptionHandler.HandleException(e); }
             logger.LogMethodExit("HomePage", "SelectLightBoxFrame",
                base.IsTakeScreenShotDuringEntryExit);
         }

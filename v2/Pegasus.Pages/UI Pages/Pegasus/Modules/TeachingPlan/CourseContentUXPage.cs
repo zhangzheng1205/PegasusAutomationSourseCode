@@ -36,11 +36,11 @@ namespace Pegasus.Pages.UI_Pages
             ShowHide = 2,
             Remove = 3,
             Copy = 4,
-            Cut = 5,            
+            Cut = 5,
             Paste = 6
         }
 
-        
+
         /// <summary>
         /// This is the Broswer variable called from AppSettings.
         /// </summary>
@@ -77,8 +77,8 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("CourseContentUXPage", "GetActivityName",
                 base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
-        }       
-        
+        }
+
         /// <summary>
         /// Get the Searched Activity.
         /// </summary>
@@ -455,7 +455,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("CourseContentUXPage", "SelectTheActivityForCopyContent",
                 base.IsTakeScreenShotDuringEntryExit);
             try
-            {               
+            {
                 //Select Frame In Window
                 this.SelectFrameInWindow(CourseContentUXPageResource.
                     CourseContentUXPage_CourseMaterials_Window_Title, CourseContentUXPageResource.
@@ -681,7 +681,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnAddCourseMaterialsOption",
                base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         /// Close eText Presentation Window
@@ -1076,7 +1076,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("CourseContentUXPage", "ClickOnSearchViewButton",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-       
+
         /// <summary>
         /// Click On Advanced Search Option
         /// </summary>
@@ -1156,7 +1156,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("CourseContentUXPage", "ClickOnTheActivityCmenuInMyCourseFrame",
              base.IsTakeScreenShotDuringEntryExit);
             try
-            { 
+            {
                 //Select Right Frame
                 this.SelectFrameInWindow(CourseContentUXPageResource.
                     CourseContentUXPage_CourseMaterials_Window_Title,
@@ -1630,7 +1630,7 @@ namespace Pegasus.Pages.UI_Pages
             for (int rowCount = Convert.ToInt32(CourseContentUXPageResource.
                 CourseContentUXPage_Loop_Initializer_Value);
                 rowCount <= assetCount; rowCount++)
-            {                
+            {
                 //Get Assets Name
                 getAssetText =
                     base.GetElementTextByXPath(string.Format(CourseContentUXPageResource.
@@ -1721,7 +1721,7 @@ namespace Pegasus.Pages.UI_Pages
                     .CourseContentUXPage_FrameRight_Id_Locator));
                 this.SelectFrameInWindow(CourseContentUXPageResource.
                    CourseContentUXPage_CourseMaterials_Window_Title,
-                   CourseContentUXPageResource.CourseContentUXPage_FrameRight_Id_Locator);  
+                   CourseContentUXPageResource.CourseContentUXPage_FrameRight_Id_Locator);
             }
             catch (Exception e)
             {
@@ -1761,14 +1761,15 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
         }
 
-        public bool IsButtonEnabled(MyCourseButtonType buttonType){
+        public bool IsButtonEnabled(MyCourseButtonType buttonType)
+        {
             Logger.LogMethodEntry("CourseContentUXPage",
                 "IsButtonEnabled",
              base.IsTakeScreenShotDuringEntryExit);
 
             string buttonID = this.GetButtonIDByButtonType(buttonType);
             if (buttonID == null) return false;
-            return base.IsElementEnabledById(buttonID); 
+            return base.IsElementEnabledById(buttonID);
         }
 
         /// <summary>
@@ -1777,10 +1778,10 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="buttonType">Type of the button.</param>
         public void ClickButtonOnHeader(MyCourseButtonType buttonType)
         {
-             Logger.LogMethodEntry("CourseContentUXPage",
-                "ClickButtonOnHeader",
-                 base.IsTakeScreenShotDuringEntryExit);
-            this.ClickButtonByID(this
+            Logger.LogMethodEntry("CourseContentUXPage",
+               "ClickButtonOnHeader",
+                base.IsTakeScreenShotDuringEntryExit);
+            this.ClickHeaderButtonById(this
                 .GetButtonIDByButtonType(buttonType));
             Thread.Sleep(Convert.ToInt32(CourseContentUXPageResource
                 .CourseContentUXPage_ShowHide_Status_Time_Value));
@@ -1801,28 +1802,25 @@ namespace Pegasus.Pages.UI_Pages
                 , activityID)));
             IWebElement assetTitleTable = base.GetWebElementPropertiesByXPath(string.Format(
                 CourseContentUXPageResource.CourseContentUXPage_ActivityTitle_Table_XPath_Locator
-                ,activityID));
+                , activityID));
             return (Activity.ShowHideStatusEnum)
                 Convert.ToInt32(assetTitleTable.GetAttribute(
-                CourseContentUXPageResource.CourseContentUXPage_IsHiddenAttribute_Value));            
+                CourseContentUXPageResource.CourseContentUXPage_IsHiddenAttribute_Value));
         }
 
         /// <summary>
         /// Gets the text displayed in Shown To column.
         /// </summary>
-        /// <param name="activityID">Activity ID</param>
+        /// <param name="activityId">Activity ID</param>
         /// <returns></returns>
-        public string GetTextInShownToColumn(string activityID)
+        public string GetTextInShownToColumn(string activityId)
         {
             Logger.LogMethodEntry("CourseContentUXPage",
                 "GetTextInShownToColumn",
                  base.IsTakeScreenShotDuringEntryExit);
-           return  base.GetElementTextByXPath(string.Format(CourseContentUXPageResource
-               .CourseContentUXPage_Activity_ShownToColumn_Span_XPath_Locator
-               ,activityID));
-            Logger.LogMethodExit("CourseContentUXPage",
-                "GetTextInShownToColumn",
-             base.IsTakeScreenShotDuringEntryExit);
+            return base.GetElementTextByXPath(string.Format(CourseContentUXPageResource
+                .CourseContentUXPage_Activity_ShownToColumn_Span_XPath_Locator
+                , activityId));
         }
 
         /// <summary>
@@ -1831,27 +1829,29 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="buttonType">Type of the button.</param>
         /// <returns>ID attribute value of the button.</returns>
         private string GetButtonIDByButtonType(
-            MyCourseButtonType buttonType){
-            string buttonID = null;
-            if(buttonType == MyCourseButtonType.ShowHide){
-                buttonID = CourseContentUXPageResource
+            MyCourseButtonType buttonType)
+        {
+            string buttonId = null;
+            if (buttonType == MyCourseButtonType.ShowHide)
+            {
+                buttonId = CourseContentUXPageResource
                     .CourseContentUXPage_ShowHide_Link_ID_Locator;
             }
 
-            return buttonID;
+            return buttonId;
         }
 
-         /// <summary>
+        /// <summary>
         /// Clicks the button by its ID attribute.
         /// </summary>
-        /// <param name="buttonID">ID attribute of the button.</param>
-        private void ClickButtonByID(string buttonID)
+        /// <param name="buttonId">ID attribute of the button.</param>
+        private void ClickHeaderButtonById(string buttonId)
         {
-            if (buttonID != null)
+            if (buttonId != null)
             {
-                base.WaitForElement(By.Id(buttonID));
+                base.WaitForElement(By.Id(buttonId));
                 IWebElement headerButton = base
-                    .GetWebElementPropertiesById(buttonID);
+                    .GetWebElementPropertiesById(buttonId);
                 base.ClickByJavaScriptExecutor(headerButton);
             }
         }
@@ -1862,13 +1862,13 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="assetCheckBox"></param>
         private void StoreSelectedActivityInMemory(IWebElement assetCheckBox)
         {
-            string activityID = assetCheckBox.GetAttribute(
+            string activityId = assetCheckBox.GetAttribute(
                 CourseContentUXPageResource.CourseContentUXPage_ValueAttribute_Value);
-            if(string.IsNullOrEmpty(activityID))return;
-            Activity activity = new Activity
-            {                
-                ActivityId = activityID,
-                ShowHideStatus = this.GetAssetsShowHideStatus(activityID),
+            if (string.IsNullOrEmpty(activityId)) return;
+            var activity = new Activity
+            {
+                ActivityId = activityId,
+                ShowHideStatus = this.GetAssetsShowHideStatus(activityId),
                 IsCreated = true
             };
             activity.StoreActivityInMemory();

@@ -29,10 +29,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private const string APP_SETTINGS_REMOTE = "isRemote";
         private const string APP_SETTINGS_REMOTE_HUB_URL = "remoteHubUrl";
 
-        private static bool isChromeExecuted;
-        private static bool isFireFoxExecuted;
-        private static bool isInternetExplorerExecuted;
-        private static int counter = 1;
+        private static bool _isChromeExecuted;
+        private const bool IsInternetExplorerExecuted = false;
+        private static int _counter = 1;
 
         /// <summary>
         /// This is the time out for the load.
@@ -55,7 +54,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 Console.Out.WriteLine(string.Format("Attempting to get APP_SETTINGS_REMOTE"));
                 Boolean.TryParse(ConfigurationManager.AppSettings[APP_SETTINGS_REMOTE], out _isRemote);
             }
-            Console.Out.WriteLine(string.Format("IS_REMOTE = {0}", _isRemote));
+            Console.Out.WriteLine("IS_REMOTE = {0}", _isRemote);
 
             Console.Out.WriteLine(string.Format("Attempting to get ENV_PEG_AUTOMATION_BROWSER"));
             _browserName = Environment.GetEnvironmentVariable(ENV_PEG_AUTOMATION_BROWSER);
@@ -64,7 +63,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 Console.Out.WriteLine(string.Format("Attempting to get APP_SETTINGS_BROWSER"));
                 _browserName = ConfigurationManager.AppSettings[APP_SETTINGS_BROWSER];
             }
-            Console.Out.WriteLine(string.Format("BROWSER = {0}", _browserName));
+            Console.Out.WriteLine("BROWSER = {0}", _browserName);
 
             if (_isRemote)
             {
@@ -75,7 +74,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     Console.Out.WriteLine(string.Format("Attempting to get APP_SETTINGS_REMOTE_HUB_URL"));
                     _remoteHubUrl = ConfigurationManager.AppSettings[APP_SETTINGS_REMOTE_HUB_URL];
                 }
-                Console.Out.WriteLine(string.Format("REMOTE_HUB_URL = {0}", _remoteHubUrl));
+                Console.Out.WriteLine("REMOTE_HUB_URL = {0}", _remoteHubUrl);
             }
         }
 
@@ -133,30 +132,28 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             };
             foreach (DesiredCapabilities browser in browserList)
             {
-                if ((isChromeExecuted == false) || ((isChromeExecuted == true) && (counter == 2)))
+                if ((_isChromeExecuted == false) || ((_isChromeExecuted == true) && (_counter == 2)))
                 {
-                    if (counter == 4)
+                    if (_counter == 4)
                     {
-                        counter = 2;
+                        _counter = 2;
                     }
                     if (browser.BrowserName == "chrome")
                     {
-                        isChromeExecuted = true;
-                        counter = counter + 1;
+                        _isChromeExecuted = true;
+                        _counter = _counter + 1;
                         webDriver = ChromeWebDriver(); break;
                     }
                 }
-                else if ((isChromeExecuted == true) && (counter == 3))
+                else if ((_isChromeExecuted == true) && (_counter == 3))
                 {
-                    isFireFoxExecuted = true;
-                    counter = counter + 1;
+                    _counter = _counter + 1;
                     webDriver = FireFoxWebDriver(); break;
                 }
 
-                else if ((isInternetExplorerExecuted == false) && (counter > 3))
+                else if ((IsInternetExplorerExecuted == false) && (_counter > 3))
                 {
-                    isChromeExecuted = false;
-                    isFireFoxExecuted = false;
+                    _isChromeExecuted = false;
                     webDriver = IeWebDriver(); break;
                 }
             }
