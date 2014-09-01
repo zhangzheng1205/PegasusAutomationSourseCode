@@ -103,7 +103,7 @@ When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Gradebook" by "CsSmsInstructor"
 And I select the cmenu "ViewAllSubmissions" of asset "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
-Then I should see "70" score in view submission page
+Then I should see "0" score in view submission page
 And I click on 'My Course' link in gradebook
 
 #Purpose: Validating Apply GradeSchema in Instructor Gradebook
@@ -141,5 +141,5 @@ And I select the cmenu "ViewAllSubmissions" of asset "Excel Chapter 1 Skill-Base
 Then I should see "Decline" and "Accept" options in view submission page
 When I select the option "Accept" in view submission page
 And I close the "View Submission" window
-Then I should see the score "0" of "Excel Chapter 1 Skill-Based Training" activity for "CsSmsStudent"
+Then I should see the score "100" of "Excel Chapter 1 Skill-Based Training" activity for "CsSmsStudent"
 And I click on 'My Course' link in gradebook

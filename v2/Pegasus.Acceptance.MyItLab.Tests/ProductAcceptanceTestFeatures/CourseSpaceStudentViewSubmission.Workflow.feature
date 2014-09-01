@@ -124,10 +124,10 @@ Scenario: Student validating score in gradebook for SIM5 PowerPoint activity By 
 When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I select "PowerPoint Chapter 1 Skill-Based Training" in "Gradebook" by "CsSmsStudent"
-Then I should see the activity "PowerPoint Chapter 1 Skill-Based Training" score "70"
+Then I should see the activity "PowerPoint Chapter 1 Skill-Based Training" score "100"
 When I click on cmenu "View Submissions" of asset "PowerPoint Chapter 1 Skill-Based Training" in gradebook
 Then I should be on the "View Submission" page
-And I should see "70" score in view submission page
+And I should see "100" score in view submission page
 When I close the "View Submission" window
 Then I click on 'My Course' link in gradebook
 
