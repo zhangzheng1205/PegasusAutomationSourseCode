@@ -376,6 +376,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdCourseContent&apos;]/tbody/tr[{0}]/td[1]/input.
+        /// </summary>
+        internal static string CourseContentUXPage_chkLink_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_chkLink_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;grdCourseContent&apos;]/tbody/tr[2]/td[2]/table/tbody/tr/td/table/tbody/tr/td[3].
         /// </summary>
         internal static string CourseContentUXPage_Content_Cmenu_MyCourse_Xpath_Locator {
@@ -579,6 +588,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CourseContentUXPage_IsHiddenAttribute_Value {
             get {
                 return ResourceManager.GetString("CourseContentUXPage_IsHiddenAttribute_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdCourseContent&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr[1]/td[1]/table/tbody/tr[1]/td[2]/a.
+        /// </summary>
+        internal static string CourseContentUXPage_link_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_link_Xpath_Locator", resourceCulture);
             }
         }
         

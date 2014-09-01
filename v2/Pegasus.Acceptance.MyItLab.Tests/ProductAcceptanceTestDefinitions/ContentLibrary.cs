@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
+using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
@@ -161,7 +162,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
         }
 
-
         [When(@"I click on OK button on Delete confirmation pop up")]
         public void ClickOKButtonOnDeleteConfirmationPopUp()
         {
@@ -173,6 +173,53 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                "ClickOKButtonOnDeleteConfirmationPopUp",
                base.IsTakeScreenShotDuringEntryExit);
         }
-       
+
+        /// <summary>
+        /// Select the asset check box to add into CC
+        /// </summary>
+        [When(@"I select the checkbox of ""(.*)"" activity")]
+        public void SelectTheCheckboxOfActivity(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Logger Entry
+            Logger.LogMethodEntry("ContentLibrary", "SelectTheCheckboxOfActivity",
+                    base.IsTakeScreenShotDuringEntryExit);
+
+            ContentLibraryUXPage contentLibraryUXPage = new ContentLibraryUXPage();
+            contentLibraryUXPage.SelectLeftFrameInCourseMaterialsPage();
+
+            //Fetch the activity from memory
+            Activity activity = Activity.Get(activityTypeEnum);
+
+            //Select Window
+            contentLibraryUXPage.SelectTheWindowName(CopyContentResource.
+                CopyContent_CourseMaterials_Window_Title);
+
+            //Select the frame
+            contentLibraryUXPage.SelectAndSwitchtoFrame(CopyContentResource.
+                CopyContent_CourseMaterials_LeftFrame_Id_Locator);
+
+            //Search Asset In Content Library Frame
+            contentLibraryUXPage.SelectActivity(activity.Name);
+
+            Logger.LogMethodExit("ContentLibrary", "SelectTheCheckboxOfActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Clicks on the Add Button.
+        /// </summary>
+        [When(@"I Click on the Add button")]
+        public void ClickOnAddButton()
+        {
+            //Clicks on the Add Button
+            Logger.LogMethodEntry("ContentLibrary", "ClickOnAddButton",
+                base.IsTakeScreenShotDuringEntryExit);
+
+            //Click on the Add Button
+            new ContentLibraryUXPage().ClickOnActivityAddButton();
+
+            Logger.LogMethodExit("CreateActivity", "ClickOnAddButton",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

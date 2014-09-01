@@ -1873,5 +1873,147 @@ namespace Pegasus.Pages.UI_Pages
             };
             activity.StoreActivityInMemory();
         }
+
+        /// <summary>
+        /// Select Activity
+        /// </summary>
+        /// <param name="activityName">This is Activity Name</param>
+        public void SelectAssetCheckBox(string activityName)
+        {
+            //Select Activity
+            Logger.LogMethodEntry("CourseContentUXPage", "SelectActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            //Initialize Variable
+            string getActivityname = string.Empty;
+            int rID = 0;
+
+            try
+            {
+                //Select Right Frame
+                this.SelectFrameInWindow(CourseContentUXPageResource.
+                    CourseContentUXPage_CourseMaterials_Window_Title,
+                    CourseContentUXPageResource.CourseContentUXPage_FrameRight_Id_Locator);
+
+                //Get ActivityCount
+                int getActivitycount = base.GetElementCountByXPath(CourseContentUXPageResource.
+                    CourseContentUXPage_SearchedActivityCount_XPath_Locator);
+                for (int rowCount = Convert.ToInt32(CourseContentUXPageResource.
+                    CourseContentUXPage_Loop_Initializer_Value); rowCount <= getActivitycount; rowCount++)
+                {
+                    base.WaitForElement(By.XPath(string.Format(CourseContentUXPageResource.
+                        CourseContentUXPage_ActivityName_Xpath_Locator, rowCount)));
+                    //Get Activity Name
+                    getActivityname = base.GetElementTextByXPath(string.Format(CourseContentUXPageResource.
+                        CourseContentUXPage_ActivityName_Xpath_Locator, rowCount));
+                    if (getActivityname == activityName)
+                    {
+                        rID = rowCount;
+                    }
+                }
+
+                IWebElement getAsset = base.GetWebElementPropertiesByXPath(string.Format(CourseContentUXPageResource.
+                    CourseContentUXPage_chkLink_Xpath_Locator, rID));
+                
+                base.ClickByJavaScriptExecutor(getAsset);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CourseContentUXPage", "SelectActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click The ShowHide Status Option.
+        /// </summary>
+        public void ClickOnShowHideStatusOption()
+        {
+            // Click The ShowHide Status Option
+            Logger.LogMethodEntry("CourseContentUXPage", "ClickOnShowHideStatusOption",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Right Frame
+                this.SelectFrameInWindow(CourseContentUXPageResource.
+                    CourseContentUXPage_CourseMaterials_Window_Title,
+                    CourseContentUXPageResource.CourseContentUXPage_FrameRight_Id_Locator);
+                //Wait for the showhide link
+                base.WaitForElement(By.Id(CourseContentUXPageResource.
+                    CourseContentUXPage_ShowHide_Link_ID_Locator));
+                IWebElement getShowHideProperty = base.GetWebElementPropertiesById
+                    (CourseContentUXPageResource.
+                    CourseContentUXPage_ShowHide_Link_ID_Locator);
+                //Click on showhide link
+                base.ClickByJavaScriptExecutor(getShowHideProperty);
+                Thread.Sleep(Convert.ToInt32(CourseContentUXPageResource.
+                    CourseContentUXPage_ShowHide_Status_Time_Value));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CourseContentUXPage", "ClickOnShowHideStatusOption",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get the activity ID
+        /// </summary>
+        /// <param name="activityName">This is activity Name</param>
+        /// <returns>This is the Activity Name</returns>
+        public string getAssetID(string activityName)
+        {
+            //Select Activity
+            Logger.LogMethodEntry("CourseContentUXPage", "getAssetID",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            //Initialize Variable
+            string getActivityname = string.Empty, ID = string.Empty;
+            int rID = 0;
+
+            try
+            {
+                //Select window
+                //base.SelectWindow("Course Materials");
+                //base.SwitchToIFrame("ifrmRight");
+
+                //Select Right Frame
+                this.SelectFrameInWindow(CourseContentUXPageResource.
+                    CourseContentUXPage_CourseMaterials_Window_Title,
+                    CourseContentUXPageResource.CourseContentUXPage_FrameRight_Id_Locator);
+
+                //Get ActivityCount
+                int getActivitycount = base.GetElementCountByXPath(CourseContentUXPageResource.
+                    CourseContentUXPage_SearchedActivityCount_XPath_Locator);
+
+                for (int rowCount = Convert.ToInt32(CourseContentUXPageResource.
+                    CourseContentUXPage_Loop_Initializer_Value); rowCount <= getActivitycount; rowCount++)
+                {
+                    base.WaitForElement(By.XPath(string.Format(CourseContentUXPageResource.
+                        CourseContentUXPage_ActivityName_Xpath_Locator, rowCount)));
+                    //Get Activity Name
+                    getActivityname = base.GetElementTextByXPath(string.Format(CourseContentUXPageResource.
+                        CourseContentUXPage_ActivityName_Xpath_Locator, rowCount));
+                    if (getActivityname == activityName)
+                    {
+                        rID = rowCount;
+                    }
+                }
+                IWebElement getSelectedTabElement = base.GetWebElementPropertiesByXPath(string.Format(CourseContentUXPageResource.
+                    CourseContentUXPage_link_Xpath_Locator, rID));
+                ID = getSelectedTabElement.GetAttribute("id");
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            Logger.LogMethodExit("CourseContentUXPage", "getAssetID",
+                base.IsTakeScreenShotDuringEntryExit);
+
+            return ID;
+        }
     }
 }

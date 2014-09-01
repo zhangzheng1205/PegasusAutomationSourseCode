@@ -87,3 +87,18 @@ When I select "Delete" button on Content Library header
 Then I should see a "Delete" confirmation pop up should display with "OK" button and "Cancel" button
 When I click on OK button on Delete confirmation pop up 
 Then I should see the successfull message "Items deleted successfully."
+
+#Purpose : To add Folder asset from CL to CC and make that folder as shown
+#Test case ID : peg-22232
+#Products : HED MIL
+#Pre condition : Atleat one folder should be created in the CL with the given name
+#Dependency : No dependency test can run with existing data
+Scenario: To add folder from Content Library to Course Content
+When I navigate to the "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select the checkbox of "Folder" activity
+And I Click on the Add button
+Then I should see the selected "Folder" in Hidden state
+When I select the checkbox of added "Folder" activity
+And I click on Show/Hide action
+Then I should see the selected "Folder" in Shown state

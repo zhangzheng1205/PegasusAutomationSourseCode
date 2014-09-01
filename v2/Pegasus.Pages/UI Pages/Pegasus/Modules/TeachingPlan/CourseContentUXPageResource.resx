@@ -357,4 +357,10 @@
   <data name="CourseContentUXPage_ValueAttribute_Value" xml:space="preserve">
     <value>value</value>
   </data>
+  <data name="CourseContentUXPage_link_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdCourseContent']/tbody/tr[{0}]/td[2]/table/tbody/tr[1]/td[1]/table/tbody/tr[1]/td[2]/a</value>
+  </data>
+  <data name="CourseContentUXPage_chkLink_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdCourseContent']/tbody/tr[{0}]/td[1]/input</value>
+  </data>  
 </root>

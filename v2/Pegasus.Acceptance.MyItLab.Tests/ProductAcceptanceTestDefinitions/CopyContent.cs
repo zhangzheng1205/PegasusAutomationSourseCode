@@ -330,5 +330,85 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("CopyContent", " SearchSecondSection",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Check added folder in hidden state
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Asset Type Enum</param>
+        [Then(@"I should see the selected ""(.*)"" in Hidden state")]
+        public void CheckFolderInHiddenState(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Logger Entry
+            Logger.LogMethodEntry("CourseContent", "CheckFolderInHiddenState",
+                    base.IsTakeScreenShotDuringEntryExit);
+
+            CourseContentUXPage courseContentUXPage = new CourseContentUXPage();
+            Activity activity = Activity.Get(activityTypeEnum);
+            //courseContentUXPage.GetAssetNameFromCourseContent();
+
+            //Search Asset In Course Content Frame
+            Assert.AreEqual(Activity.ShowHideStatusEnum.Hidden, courseContentUXPage
+                .GetAssetsShowHideStatus(courseContentUXPage.getAssetID(activity.Name).Substring(8)));
+
+            Logger.LogMethodExit("CourseContent", "CheckFolderInHiddenState",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select added folder checkbox
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Asset Type Enum</param>
+        [When(@"I select the checkbox of added ""(.*)"" activity")]
+        public void SelectTheCheckboxOfAddedActivity(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Logger Entry
+            Logger.LogMethodEntry("CourseContent", "CheckFolderInHiddenState",
+                    base.IsTakeScreenShotDuringEntryExit);
+
+            CourseContentUXPage courseContentUXPage = new CourseContentUXPage();
+            Activity activity = Activity.Get(activityTypeEnum);
+
+            courseContentUXPage.SelectAssetCheckBox(activity.Name);
+
+            Logger.LogMethodExit("CourseContent", "CheckFolderInHiddenState",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Change asset state from Hiddden to shown
+        /// </summary>
+        [When(@"I click on Show/Hide action")]
+        public void ShowHideAction()
+        {
+            //Logger Entry
+            Logger.LogMethodEntry("CourseContent", "ShowHideAction",
+                    base.IsTakeScreenShotDuringEntryExit);
+
+            CourseContentUXPage courseContentUXPage = new CourseContentUXPage();
+            courseContentUXPage.ClickOnShowHideStatusOption();
+
+            Logger.LogMethodExit("CourseContent", "ShowHideAction",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Check asset in shown state
+        /// </summary>
+        [Then(@"I should see the selected ""(.*)"" in Shown state")]
+        public void CheckFolderInShownState(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Logger Entry
+            Logger.LogMethodEntry("CourseContent", "CheckFolderInShownState",
+                    base.IsTakeScreenShotDuringEntryExit);
+
+            CourseContentUXPage courseContentUXPage = new CourseContentUXPage();
+            Activity activity = Activity.Get(activityTypeEnum);
+            //Search Asset In Course Content Frame
+            Assert.AreEqual(Activity.ShowHideStatusEnum.Shown, courseContentUXPage
+                .GetAssetsShowHideStatus(courseContentUXPage.getAssetID(activity.Name).Substring(8)));
+
+            Logger.LogMethodExit("CourseContent", "CheckFolderInShownState",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
