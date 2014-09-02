@@ -115,7 +115,7 @@ When I click on cmenu "View Submissions" of asset "Excel Chapter 1 Skill-Based T
 Then I should be on the "View Submission" page
 And I should see "100" score in view submission page
 When I close the "View Submission" window
-Then I click on 'My Course' link in gradebook
+Then I click on 'My Course' link in gradebook by "CsSmsStudent"
 
 #MyITLabOffice2013Program
 #peg-22032
@@ -129,7 +129,7 @@ When I click on cmenu "View Submissions" of asset "PowerPoint Chapter 1 Skill-Ba
 Then I should be on the "View Submission" page
 And I should see "100" score in view submission page
 When I close the "View Submission" window
-Then I click on 'My Course' link in gradebook
+Then I click on 'My Course' link in gradebook by "CsSmsStudent"
 
 #MyITLabOffice2013Program
 #peg-22024
@@ -143,7 +143,7 @@ When I click on cmenu "View Submissions" of asset "Word Chapter 1 Project 1A Ski
 Then I should be on the "View Submission" page
 And I should see "0" score in view submission page
 When I close the "View Submission" window
-Then I click on 'My Course' link in gradebook
+Then I click on 'My Course' link in gradebook by "CsSmsStudent"
 
 #MyITLabOffice2013Program
 #peg-22033
@@ -157,4 +157,4 @@ When I click on cmenu "View Submissions" of asset "Access Chapter 1 Project 1A S
 Then I should be on the "View Submission" page
 And I should see "100" score in view submission page
 When I close the "View Submission" window
-Then I click on 'My Course' link in gradebook
+Then I click on 'My Course' link in gradebook by "CsSmsStudent"

@@ -93,7 +93,7 @@ When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Gradebook" by "CsSmsInstructor"
 Then I should see the score "0" of "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity for "CsSmsStudent"
-And I click on 'My Course' link in gradebook
+And I click on 'My Course' link in gradebook by "CsSmsInstructor"
 
 #Purpose: Instructor Validaing student submissin and grade in Instructor Gradebook
 # TestCase Id: peg-22028
@@ -104,7 +104,7 @@ Then I should be on the "Gradebook" page
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Gradebook" by "CsSmsInstructor"
 And I select the cmenu "ViewAllSubmissions" of asset "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 Then I should see "0" score in view submission page
-And I click on 'My Course' link in gradebook
+And I click on 'My Course' link in gradebook by "CsSmsInstructor"
 
 #Purpose: Validating Apply GradeSchema in Instructor Gradebook
 # TestCase Id: peg-22030
@@ -116,7 +116,7 @@ When I select "PowerPoint Chapter 1 Skill-Based Training" in "Gradebook" by "CsS
 And I select the cmenu "ApplyGradeSchema" of asset "PowerPoint Chapter 1 Skill-Based Training"
 And I 'Apply' the grade schema for the submitted activity
 Then I should see the "PowerPoint Chapter 1 Skill-Based Training" activity status "A" in Gradebook for enrollled "CsSmsStudent"
-And I click on 'My Course' link in gradebook
+And I click on 'My Course' link in gradebook by "CsSmsInstructor"
 
 #Purpose: Instructor Validating student Study Plan Grade in Instructor Gradebook
 # TestCase Id: peg-22027
@@ -128,7 +128,7 @@ When I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" i
 And I click on view grades of "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in gradebook
 Then I should see the score "100" of "Excel Chapter 1 Skill-Based Training - Pre-test Training" activity for "CsSmsStudent"
 And I should see the score "100" of "Excel Chapter 1 Skill-Based Exam (Scenario 1)-Post Test" activity for "CsSmsStudent"
-And I click on 'My Course' link in gradebook
+And I click on 'My Course' link in gradebook by "CsSmsInstructor"
 
 #Purpose: :Instructor Accepting Pastdue Submission in Instructor Gradebook
 #TestCase Id: peg-22029
@@ -142,4 +142,4 @@ Then I should see "Decline" and "Accept" options in view submission page
 When I select the option "Accept" in view submission page
 And I close the "View Submission" window
 Then I should see the score "100" of "Excel Chapter 1 Skill-Based Training" activity for "CsSmsStudent"
-And I click on 'My Course' link in gradebook
+And I click on 'My Course' link in gradebook by "CsSmsInstructor"

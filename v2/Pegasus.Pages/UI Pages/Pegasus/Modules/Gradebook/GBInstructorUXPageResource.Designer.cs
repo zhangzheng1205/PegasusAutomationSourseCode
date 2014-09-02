@@ -1231,6 +1231,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Gradebook {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to divBackArrow.
+        /// </summary>
+        internal static string GBInstructorUXPage_Back_Arrow_Link_Id_Locator {
+            get {
+                return ResourceManager.GetString("GBInstructorUXPage_Back_Arrow_Link_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create Calculated Column.
         /// </summary>
         internal static string GBInstructorUXPage_CalculatedColumn_Windiw_Title {

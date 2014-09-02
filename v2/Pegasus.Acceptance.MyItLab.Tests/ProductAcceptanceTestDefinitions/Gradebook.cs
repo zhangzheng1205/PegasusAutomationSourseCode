@@ -941,18 +941,19 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Click On MyCourse Link In Gradebook.
         /// </summary>
-        [Then(@"I click on 'My Course' link in gradebook")]
-        public void ClickOnMyCourseLinkInGradebook()
+        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        [Then(@"I click on 'My Course' link in gradebook by ""(.*)""")]
+        public void ClickOnMyCourseLinkInGradebook(User.UserTypeEnum userTypeEnum)
         {
             //Click On MyCourse Link In Gradebook
             Logger.LogMethodEntry("Gradebook", "VerifyOptionsInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click On MyCourse Link
-            new GBInstructorUXPage().ClickonMyCourseInGradebook();
+            new GBInstructorUXPage().ClickonMyCourseInGradebook(userTypeEnum);
             Logger.LogMethodExit("Gradebook", "VerifyOptionsInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
+        
         /// <summary>
         /// Select Button In View Submission Page.
         /// </summary>

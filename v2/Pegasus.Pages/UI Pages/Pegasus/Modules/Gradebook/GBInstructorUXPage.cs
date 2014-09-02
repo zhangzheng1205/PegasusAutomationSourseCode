@@ -3945,22 +3945,38 @@ namespace Pegasus.Pages.UI_Pages
 
         /// <summary>
         /// Click on MyCourse in Gradebook.
-        /// </summary>       
-        public void ClickonMyCourseInGradebook()
+        /// </summary>  
+        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        public void ClickonMyCourseInGradebook(User.UserTypeEnum userTypeEnum)
         {
             //Click on MyCourse in Gradebook
             logger.LogMethodEntry("GBInstructorUXPage", "ClickonMyCourseInGradebook",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select the window
-                this.SelectGradebookFrame();
-                base.WaitForElement(By.Id(GBInstructorUXPageResource.
-                    GBInstructorUXPage_MyCourse_Link_Id_Locator));
-                //Click on MyCourse Link
-                IWebElement getMyCourseLink = base.GetWebElementPropertiesById(
-                    GBInstructorUXPageResource.GBInstructorUXPage_MyCourse_Link_Id_Locator);
-                base.ClickByJavaScriptExecutor(getMyCourseLink);
+                switch (userTypeEnum)
+                {
+                    case User.UserTypeEnum.CsSmsStudent:                        
+                        //Select Window
+                        base.WaitUntilWindowLoads(GBInstructorUXPageResource.
+                            GBInstructorUX_Page_Window_Title);
+                        base.SelectWindow(GBInstructorUXPageResource.
+                            GBInstructorUX_Page_Window_Title);
+                        //Click on Back Arrow to Navigate to Root Folder
+                        IWebElement getBackIconProperty = 
+                            base.GetWebElementPropertiesById(GBInstructorUXPageResource.
+                            GBInstructorUXPage_Back_Arrow_Link_Id_Locator);
+                        base.ClickByJavaScriptExecutor(getBackIconProperty);
+                        break;
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        //Select the window
+                        this.SelectGradebookFrame();
+                        //Click on MyCourse Link
+                        IWebElement getMyCourseLink = base.GetWebElementPropertiesById(
+                            GBInstructorUXPageResource.GBInstructorUXPage_MyCourse_Link_Id_Locator);
+                        base.ClickByJavaScriptExecutor(getMyCourseLink);
+                        break;
+                }
             }
             catch (Exception e)
             {

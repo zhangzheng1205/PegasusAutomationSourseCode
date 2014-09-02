@@ -132,21 +132,21 @@ namespace Pegasus.Pages.CommonPageObjects
                                     // folder navigation based on activity name
                                     case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
                                         this.SelectWordActivityFolderNavigationInInstructorGradebook(CommonPageResource.
-                                            CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
+                                            CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
                                     case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
                                         this.SelectAccessActivityFolderNavigationInInstructorGradebook(CommonPageResource.
-                                            CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
+                                            CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
                                     case "PowerPoint Chapter 1 Skill-Based Training":
                                     case "PowerPoint Chapter 1 Skill-Based Exam (Scenario 1)":
                                         this.SelectPowerPointActivityFolderNavigationInInstructorGradebook(CommonPageResource.
-                                            CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
+                                            CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
                                     case "Excel Chapter 1 Skill-Based Training":
                                     case "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test":
                                         this.SelectExcelActivityFolderNavigationInInstructorGradebook(CommonPageResource.
-                                            CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
+                                            CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
                                 }
                                 break;

@@ -187,6 +187,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to divBackArrow.
+        /// </summary>
+        internal static string CommonPage_Gradebook_BackArrow_Id_Locator {
+            get {
+                return ResourceManager.GetString("CommonPage_Gradebook_BackArrow_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TreeViewContainer.
         /// </summary>
         internal static string CommonPage_Instructor_Calendar_Content_Id_Locator {
