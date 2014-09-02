@@ -3343,6 +3343,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select MainTab
             Logger.LogMethodEntry("TodaysViewUXPage", "SelectCourseSpaceUserMainTab",
                 base.IsTakeScreenShotDuringEntryExit);
+            base.SelectDefaultWindow();
             //Wait for the MainTab
             base.WaitForElement(By.PartialLinkText(mainTabName));
             //Get Tab Property

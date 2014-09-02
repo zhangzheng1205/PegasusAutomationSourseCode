@@ -27,6 +27,24 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
+      <Name>Automation_Section 1</Name>
+      <CourseType>MyITLabOffice2013Program</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <SectionName>Automation_Section 1</SectionName>
+      <SectionId>CRSKLLK-4037708</SectionId>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
+      <Name>Automation_MyITLab for Office 2013: GO! Series + Technology in Action</Name>
+      <CourseType>MyITLabForOffice2013Master</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
       <Name>Digits-GradeCourse</Name>
       <CourseType>DigitsCourse</CourseType>
       <IsCreated>true</IsCreated>
@@ -409,7 +427,7 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>ed30e48f-3c92-46fa-adc7-2b15205c3fd4</Name>
+      <Name>3648989d-01b4-48c5-ad8e-12f6fe89ef16</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
@@ -512,7 +530,18 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
-
+    <!--Hard code for progran admin-->
+    <User>
+      <Name>abbb2b0f-d320-48b8-af19-a88b6efd208f</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>SMSUSER</LastName>
+      <UserType>HedProgramAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User> 
     <!--Hard coded Users data for "ECollege".-->
     <User>
       <Name>pegasus_admin</Name>

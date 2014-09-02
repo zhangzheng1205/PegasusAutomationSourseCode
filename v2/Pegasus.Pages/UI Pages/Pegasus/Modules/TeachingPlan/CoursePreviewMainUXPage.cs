@@ -1044,7 +1044,7 @@ namespace Pegasus.Pages.UI_Pages
                               CoursePreviewMainUX_Page_AssignedIcon_Xpath_Locator_Ins, initialCount));
 
                         isDueDateExists = DateTime.TryParse(getAssignedDueDate.Trim(), out dueDate);
-
+                        break;
                     }
                 }
             }

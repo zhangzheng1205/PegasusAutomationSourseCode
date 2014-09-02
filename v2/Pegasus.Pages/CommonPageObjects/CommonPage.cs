@@ -144,6 +144,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
                                         break;
                                     case "Excel Chapter 1 Skill-Based Training":
+                                    case "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test":
                                         this.SelectExcelActivityFolderNavigationInInstructorGradebook(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
                                         break;

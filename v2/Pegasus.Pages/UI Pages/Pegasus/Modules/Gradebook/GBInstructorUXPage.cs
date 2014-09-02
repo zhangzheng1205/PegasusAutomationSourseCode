@@ -3955,6 +3955,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select the window
                 this.SelectGradebookFrame();
+                base.WaitForElement(By.Id(GBInstructorUXPageResource.
+                    GBInstructorUXPage_MyCourse_Link_Id_Locator));
                 //Click on MyCourse Link
                 IWebElement getMyCourseLink = base.GetWebElementPropertiesById(
                     GBInstructorUXPageResource.GBInstructorUXPage_MyCourse_Link_Id_Locator);

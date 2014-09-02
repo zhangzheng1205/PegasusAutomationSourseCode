@@ -40,6 +40,8 @@ Then I should be on the "Properties" page
 When I assign asset with due date and save
 Then I should see the successfull message "Properties updated successfully."
 And I should see assigned icon for "Excel Chapter 1 Project 1A Skill-Based Training" 
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
 
 #Purpose : Instructor assign the assets with duedate,startdate and endate in Managecoursework
 #TestCase Id: peg-22006
