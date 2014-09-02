@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CreateQuestionPage_Cancel_Button_Id_Locator" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
   <data name="CreateQuestionPage_FillintheBlank_PartialText_Locator" xml:space="preserve">
     <value>Fill in the Blank</value>
   </data>
@@ -147,7 +150,7 @@
   <data name="CreateQuestionPage_Window_Title_Locator" xml:space="preserve">
     <value>Create New Question</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
+  <data name="SkillBasedAssessment_Page_PopUp_CancelActivity_Window_DoNotSave_Button_Locator" xml:space="preserve">
+    <value>imgdontsave</value>
   </data>
 </root>

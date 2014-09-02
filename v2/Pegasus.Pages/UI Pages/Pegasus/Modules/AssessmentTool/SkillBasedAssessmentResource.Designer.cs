@@ -125,6 +125,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to imgdontsave.
+        /// </summary>
+        internal static string SkillBasedAssessment_Page_PopUp_CancelActivity_Window_DoNotSave_Button_Locator {
+            get {
+                return ResourceManager.GetString("SkillBasedAssessment_Page_PopUp_CancelActivity_Window_DoNotSave_Button_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel Activity.
+        /// </summary>
+        internal static string SkillBasedAssessment_Page_PopUp_CancelActivity_Window_Title_Locator {
+            get {
+                return ResourceManager.GetString("SkillBasedAssessment_Page_PopUp_CancelActivity_Window_Title_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create Post-test.
         /// </summary>
         internal static string SkillBasedAssessment_Page_Post_Test_WindowName {

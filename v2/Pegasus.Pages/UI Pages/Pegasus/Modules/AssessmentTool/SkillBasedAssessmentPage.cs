@@ -430,6 +430,48 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Click On cancel Button.
+        /// </summary>
+        /// <param name="questionType">This is Question type.</param>
+        public void ClickOnCancelButton()
+        {
+            logger.LogMethodEntry("SkillBasedAssessmentPage", "ClickOnCancelButton",
+                   base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                this.SelectCreateActivityWindow();
+                //Wait for element
+                base.WaitForElement(By.Id(SkillBasedAssessmentResource.
+                    SkillBasedAssessment_Page_PopUp_CancelActivity_Window_DoNotSave_Button_Locator));
+                //Get Cancel button property
+                IWebElement getCancelButton = base.GetWebElementPropertiesById(SkillBasedAssessmentResource.
+                    SkillBasedAssessment_Page_PopUp_CancelActivity_Window_DoNotSave_Button_Locator);
+                //Click on Cancel button
+                base.ClickByJavaScriptExecutor(getCancelButton);
+                // select pop up window
+                base.SelectWindow(SkillBasedAssessmentResource.
+                    SkillBasedAssessment_Page_PopUp_CancelActivity_Window_Title_Locator);
+                //wait for element
+                base.WaitForElement(By.Id(SkillBasedAssessmentResource.
+                    SkillBasedAssessment_Page_PopUp_CancelActivity_Window_DoNotSave_Button_Locator));
+                //Get Property for Don't save button
+                IWebElement getDoNotSaveButton = base.GetWebElementPropertiesById(SkillBasedAssessmentResource.
+                    SkillBasedAssessment_Page_PopUp_CancelActivity_Window_DoNotSave_Button_Locator);
+                //Click On Don't save button
+                base.ClickByJavaScriptExecutor(getDoNotSaveButton);
+                //Select default window
+                base.SelectDefaultWindow();
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("SkillBasedAssessmentPage", "ClickOnCancelButton",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
         /// Enable The Manual Grading Preference.
         /// </summary>
         public void EnableTheManualGradingPreference()

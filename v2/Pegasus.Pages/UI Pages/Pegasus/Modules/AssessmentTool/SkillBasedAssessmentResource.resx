@@ -138,6 +138,12 @@
   <data name="SkillBasedAssessment_Page_PlayMode_Checkbox_Id_Locator" xml:space="preserve">
     <value>chkPlaymode</value>
   </data>
+  <data name="SkillBasedAssessment_Page_PopUp_CancelActivity_Window_DoNotSave_Button_Locator" xml:space="preserve">
+    <value>imgdontsave</value>
+  </data>
+  <data name="SkillBasedAssessment_Page_PopUp_CancelActivity_Window_Title_Locator" xml:space="preserve">
+    <value>Cancel Activity</value>
+  </data>
   <data name="SkillBasedAssessment_Page_Post_Test_WindowName" xml:space="preserve">
     <value>Create Post-test</value>
   </data>

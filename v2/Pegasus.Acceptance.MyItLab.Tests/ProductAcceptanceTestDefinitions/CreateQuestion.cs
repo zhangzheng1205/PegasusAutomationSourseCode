@@ -297,9 +297,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                       base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Verify if all native questions are present
-        /// </summary>      
         [Then(@"I should see all native questions present")]
         public void VerifyAllNativeQuestionsPresent()
         {
@@ -309,8 +306,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             //Verify if all native questions are present
             Logger.LogAssertion("VerifyAllNativeQuestionsPresence",
-                ScenarioContext.Current.ScenarioInfo.Title, () =>                  
-                Assert.IsTrue(new CreateQuestionPage().IsAllNativeQuestionsPresent()));            
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                Assert.IsTrue(new CreateQuestionPage().IsAllNativeQuestionsPresent()));
+            //Click on Cancel Button
+            new CreateQuestionPage().ClickOnCancelButton();
+            //cancel the activity creation
+            new SkillBasedAssessmentPage().ClickOnCancelButton();
             Logger.LogMethodExit("CreateQuestion",
                "VerifyAllNativeQuestionsPresent",
                       base.IsTakeScreenShotDuringEntryExit);

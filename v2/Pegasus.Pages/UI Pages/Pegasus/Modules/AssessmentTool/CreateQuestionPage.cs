@@ -126,7 +126,42 @@ namespace Pegasus.Pages.UI_Pages
             "IsAllNativeQuestionsPresent",
             base.IsTakeScreenShotDuringEntryExit);
             return isNativeQuestionsDisplayed;
-        }             
+        }
 
+
+        /// <summary>
+        /// Click on Canel button
+        /// </summary>       
+        public void ClickOnCancelButton()
+        {
+
+            logger.LogMethodEntry("CreateQuestionPage",
+            "ClickOnCancelButton",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                this.SelectCreateQuestionPageWindow();
+                //Switch to Iframe
+                base.SwitchToIFrameById(CreateQuestionPageResource.
+                    CreateQuestionPage_Iframe_Id_Locator);
+                // Wait for element
+                base.WaitForElement(By.Id(CreateQuestionPageResource.
+                    CreateQuestionPage_Cancel_Button_Id_Locator));
+                // Get Cancel button
+                IWebElement getCancelButton = base.GetWebElementPropertiesById(CreateQuestionPageResource.
+                    CreateQuestionPage_Cancel_Button_Id_Locator);
+                // Click on cancel button
+                base.ClickByJavaScriptExecutor(getCancelButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CreateQuestionPage",
+            "ClickOnCancelButton",
+            base.IsTakeScreenShotDuringEntryExit);
+
+        }
     }
 }

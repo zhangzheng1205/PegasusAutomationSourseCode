@@ -61,6 +61,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to btnCancel.
+        /// </summary>
+        internal static string CreateQuestionPage_Cancel_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("CreateQuestionPage_Cancel_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fill in the Blank.
         /// </summary>
         internal static string CreateQuestionPage_FillintheBlank_PartialText_Locator {
@@ -151,11 +160,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to imgdontsave.
         /// </summary>
-        internal static string String1 {
+        internal static string SkillBasedAssessment_Page_PopUp_CancelActivity_Window_DoNotSave_Button_Locator {
             get {
-                return ResourceManager.GetString("String1", resourceCulture);
+                return ResourceManager.GetString("SkillBasedAssessment_Page_PopUp_CancelActivity_Window_DoNotSave_Button_Locator", resourceCulture);
             }
         }
     }
