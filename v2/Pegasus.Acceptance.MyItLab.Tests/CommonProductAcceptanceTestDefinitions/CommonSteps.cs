@@ -664,7 +664,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps",
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
-            //Manage The Folder Navigation
+            //Manage The Gradebook Folder Navigation
             new CommonPage().ManageTheActivityFolderLevelNavigation(
                activityName, activityUnderTabName, userTypeEnum);
             Logger.LogMethodExit("CommonSteps",

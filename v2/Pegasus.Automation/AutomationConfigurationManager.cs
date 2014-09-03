@@ -99,18 +99,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
-        /// Property application Test Data path in Pegasus Pages.
-        /// </summary> 
-        public static string PegasusPagesTestDataPath
-        {
-            get
-            {
-                return Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_TESTDATA_PATH_Key)
-                    ?? Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\..\\..\\..\\Pegasus.Pages";
-            }
-        }
-
-        /// <summary>
         /// Property application download file path.
         /// </summary>
         public static string DownloadFilePath
