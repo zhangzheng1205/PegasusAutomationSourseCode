@@ -216,6 +216,18 @@
   <data name="CommonPage_Gradebook_BackArrow_Id_Locator" xml:space="preserve">
     <value>divBackArrow</value>
   </data>
+  <data name="CommonPage_AccessChapter1GraderActivities_FolderName" xml:space="preserve">
+    <value>Access Chapter 1: Grader Activities</value>
+  </data>
+  <data name="CommonPage_PowerPointChapter1GraderActivities_FolderName" xml:space="preserve">
+    <value>PowerPoint Chapter 1: Grader Activities</value>
+  </data>
+  <data name="CommonPage_WordChapter1GraderActivities_FolderName" xml:space="preserve">
+    <value>Word Chapter 1: Grader Activities</value>
+  </data>
+  <data name="ComonPage_ExcelChapter1GraderActivities_FolderName" xml:space="preserve">
+    <value>Excel Chapter 1: Grader Activities</value>
+  </data>
   <data name="CommonPage_CoursePerformance_Table_Id_Locator" xml:space="preserve">
     <value>grdCoursePerformance</value>
   </data>

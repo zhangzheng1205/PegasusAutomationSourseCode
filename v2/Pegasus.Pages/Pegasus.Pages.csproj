@@ -499,6 +499,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DocBasedAssessmentResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\DownLoadStartingFilesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\DownLoadStartingFilesPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DownLoadStartingFilesPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\GraderFeedbackPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\GraderFeedbackResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GraderFeedbackResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\PresentationPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\PresentationPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PresentationPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\UploadCompletedFilesPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\UploadCompletedFilesResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadCompletedFilesResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\PrintPopupPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\AssessmentTool\PrintPopupPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2057,6 +2081,22 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DocBasedAssessmentResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\DownLoadStartingFilesPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DownLoadStartingFilesPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\GraderFeedbackResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GraderFeedbackResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\PresentationPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PresentationPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\Presentation\AutoGrader\UploadCompletedFilesResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UploadCompletedFilesResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\AssessmentTool\PrintPopupPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>PrintPopupPageResource.Designer.cs</LastGenOutput>
@@ -2814,6 +2854,15 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="TestData\Excel\ExcelFileFor0Percent\go_e01_grader_h3.xlsx" />
+    <None Include="TestData\Excel\ExcelFileFor100Percent\go_e01_grader_h3.xlsx" />
+    <None Include="TestData\Excel\ExcelFileFor70Percent\go_e01_grader_h3.xlsx" />
+    <None Include="TestData\PowerPoint\PowerPointFileFor0Percent\go_p01_grader_h3.pptx" />
+    <None Include="TestData\PowerPoint\PowerPointFileFor100Percent\go_p01_grader_h3.pptx" />
+    <None Include="TestData\PowerPoint\PowerPointFileFor70Percent\go_p01_grader_h3.pptx" />
+    <None Include="TestData\Word\WordFileFor0Percent\go_w01_grader_a3.docx" />
+    <None Include="TestData\Word\WordFileFor100Percent\go_w01_grader_a3.docx" />
+    <None Include="TestData\Word\WordFileFor70Percent\go_w01_grader_a3.docx" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
@@ -2826,6 +2875,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ApplicationDownloadedFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData\Access\AccessFileFor0Percent\go_a01_grader_a3_Open_Houses.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Access\AccessFileFor100Percent\go_a01_grader_a3_Open_Houses.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Access\AccessFileFor70Percent\go_a01_grader_a3_Open_Houses.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
