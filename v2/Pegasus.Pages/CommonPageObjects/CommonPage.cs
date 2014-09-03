@@ -220,11 +220,6 @@ namespace Pegasus.Pages.CommonPageObjects
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void NavigateToWordChapter1SkillBasedTraining(string webElementToWait)
-        {
-
-        }
-
         /// <summary>
         /// Navigate To Excel Chapter 1 Grader Activities.
         /// </summary>
@@ -682,51 +677,6 @@ namespace Pegasus.Pages.CommonPageObjects
             //Wait for element
             base.WaitForElement(By.Id(webElementToWait));
             Logger.LogMethodExit("CommonPage", "NavigateInsideActivityFolderUnderTab",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Select Window For Folder Navigation.
-        /// </summary>
-        /// <param name="activityUnderTabName">This is Tab ame same name as window Title.</param>
-        private void SelectWindowForFolderNavigation(string activityUnderTabName)
-        {
-            // select window
-            Logger.LogMethodEntry("CommonPage", "SelectWindowForFolderNavigation",
-                base.IsTakeScreenShotDuringEntryExit);
-            // select window
-            base.SelectWindow(activityUnderTabName);
-            Logger.LogMethodExit("CommonPage", "SelectWindowForFolderNavigation",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Select Left Navigation IFrame.
-        /// </summary>
-        private void SelectLeftNavigationIFrame()
-        {
-            // select iframe
-            Logger.LogMethodEntry("CommonPage", "SelectLeftNavigationIFrame",
-                base.IsTakeScreenShotDuringEntryExit);
-            // switch To Frame
-            base.SwitchToIFrame(CommonPageResource
-                .CommonPage_LeftNavigationFrame_Id_Locator);
-            Logger.LogMethodExit("CommonPage", "SelectLeftNavigationIFrame",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Select Course Preview IFrame.
-        /// </summary>
-        private void SelectCoursePreviewIFrame()
-        {
-            // select iframe
-            Logger.LogMethodEntry("CommonPage", "SelectCoursePreviewIFrame",
-                base.IsTakeScreenShotDuringEntryExit);
-            // switch To Frame
-            base.SwitchToIFrame(CommonPageResource
-                .CommonPage_CoursePreviewFrame_Id_Locator);
-            Logger.LogMethodExit("CommonPage", "SelectCoursePreviewIFrame",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
