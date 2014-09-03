@@ -157,6 +157,10 @@ Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
 Then I should see "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
 And I should see "100.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I refresh the View All Course Materials frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Submitting GraderIT PowerPoint activity and Student scoring a 0%.
 #Test case ID : peg-22007.
@@ -182,6 +186,10 @@ Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
 Then I should see "Not passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
 And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I refresh the View All Course Materials frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Submitting GraderIT PowerPoint activity and Student scoring a 70%.
 #Test case ID : peg-22008.
@@ -207,6 +215,10 @@ Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
 Then I should see "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
 And I should see "74.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I refresh the View All Course Materials frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Submitting GraderIT Word activity and Student scoring a 70%
 #Test case ID : peg-21983.
@@ -232,6 +244,10 @@ Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
 And I should see "74.50%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
+When I refresh the View All Course Materials frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Submitting GraderIT Word activity and Student scoring a 0%
 #Test case ID : peg-20927.
@@ -257,6 +273,10 @@ Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see "Not passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
 And I should see "0.00%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
+When I refresh the View All Course Materials frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Submitting GraderIT Word activity and Student scoring a 100%
 #Test case ID : peg-22013.
@@ -264,11 +284,6 @@ And I should see "0.00%" score for the activity "Word Chapter 1 Grader Project [
 #Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
 #Dependency : Always dependent.
 Scenario: Student GraderIT Word Activity and student scoring 100%
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
 When I navigate to "Course Materials" tab
 And I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 And I open the activity named as "Word Chapter 1 Grader Project [Assessment 3]"
@@ -287,6 +302,10 @@ Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
 And I should see "100.00%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
+When I refresh the View All Course Materials frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Submitting GraderIT Excel activity and Student scoring a 100%
 #Test case ID : peg-22014.
@@ -312,6 +331,10 @@ Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
 Then I should see "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
 And I should see "100.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I refresh the View All Course Materials frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Submitting GraderIT Excel activity and Student scoring a 0%
 #Test case ID : peg-22003.
@@ -337,6 +360,11 @@ Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
 Then I should see "Not passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
 And I should see "0.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I refresh the View All Course Materials frame
+And I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Submitting GraderIT Excel activity and Student scoring a 70%.
 #Test case ID : peg-22004.
@@ -362,6 +390,8 @@ Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
 Then I should see "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
 And I should see "71.30%" score for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I refresh the View All Course Materials frame
+Then I should be on the "Course Materials" page
 
 #Purpose : Submitting GraderIT Access activity and Student scoring a 0%.
 #Test case ID : peg-22009.
@@ -387,6 +417,10 @@ Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see "Not passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
 And I should see "0.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
+When I refresh the View All Course Materials frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Submitting GraderIT Access activity and Student scoring a 70%.
 #Test case ID : peg-22010.
@@ -412,6 +446,10 @@ Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
 And I should see "76.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
+When I refresh the View All Course Materials frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Submitting GraderIT Access activity and Student scoring a 100%.
 #Test case ID : peg-22016.
@@ -437,3 +475,7 @@ Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
 Then I should see "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
 And I should see "100.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
+When I refresh the View All Course Materials frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
