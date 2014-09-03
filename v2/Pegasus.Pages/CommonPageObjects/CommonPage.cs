@@ -76,8 +76,8 @@ namespace Pegasus.Pages.CommonPageObjects
                                 {
                                     // folder navigation based on activity name
                                     case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
-                                        this.NavigateToWordChapter1SimulationActivitiesFolder(CommonPageResource.
-                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
+                                        this.NavigateToWordChapter1SimulationActivitiesFolder
+                                            (CommonPageResource.CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
                                         break;
                                     case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
                                         this.NavigateToAccessChapter1SimulationActivitiesFolder(CommonPageResource.
@@ -89,6 +89,26 @@ namespace Pegasus.Pages.CommonPageObjects
                                         break;
                                     case "PowerPoint Chapter 1 Skill-Based Training":
                                         this.NavigateToPowerPointChapter1SimulationActivitiesFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
+                                        break;
+                                    // Grader IT for Excel Activity
+                                    case "Excel Chapter 1 Grader Project [Homework 3] (Project G)":
+                                        this.NavigateToExcelChapter1GraderActivitiesFolder
+                                            (CommonPageResource.CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
+                                        break;
+                                    // Grader IT for PowerPoint Activity
+                                    case "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)":
+                                        this.NavigateToPowerPointChapter1GraderActivitiesFolder
+                                            (CommonPageResource.CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
+                                        break;
+                                    // Grader IT for Word Activty
+                                    case "Word Chapter 1 Grader Project [Assessment 3]":
+                                        this.NavigateToWordChapter1GraderActivitiesFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
+                                        break;
+                                    // Grader IT for Access Activty
+                                    case "Access Chapter 1 Grader Project [Assessment 3]":
+                                        this.NavigateAccessChapter1GraderActivitiesFolder(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
                                         break;
                                 }
@@ -186,6 +206,116 @@ namespace Pegasus.Pages.CommonPageObjects
             }
             Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigation",
               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Excel Chapter 1 Grader Activities.
+        /// </summary>
+        private void NavigateToExcelChapter1GraderActivitiesFolder(string webElementToWait)
+        {
+            // navigate inside power point chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToPowerPointExcelChapter1GraderActivitiesFolder",
+             base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_Excel2013_FolderName,
+                webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_ExcelChapter1CreatingAWorksheetAndChartingData_FolderName, webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_ExcelChapter1Activities_FolderName, webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                ComonPage_ExcelChapter1GraderActivities_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToPowerPointExcelChapter1GraderActivitiesFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Power Point Chapter1 Grader Activities Folder.
+        /// </summary>
+        private void NavigateToPowerPointChapter1GraderActivitiesFolder(string webElementToWait)
+        {
+            // navigate inside power point chapter1 Grader activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToPowerPointChapter1GraderActivitiesFolder",
+             base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.ComonPage_PowerPoint2013_FolderName,
+                webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_PowerPointChapter1GettingStartedWithMicrosoftPowerPoint_FolderName,
+                webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_PowerPointChapter1Activities_FolderName,
+                webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_PowerPointChapter1GraderActivities_FolderName,
+                webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToPowerPointChapter1GraderActivitiesFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Word Chapter1 Grader Activities Folder.
+        /// </summary>
+        private void NavigateToWordChapter1GraderActivitiesFolder(string webElementToWait)
+        {
+            // navigate inside word chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToWordChapter1GraderActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_Word2013_FolderName, webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_WordChapter1CreatingDocumentsWithMicrosoftWord2013_FolderName,
+                webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_WordChapter1Activities_FolderName, webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_WordChapter1GraderActivities_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToWordChapter1GraderActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Access Chapter1 Grader Activities Folder.
+        /// </summary>
+        private void NavigateAccessChapter1GraderActivitiesFolder(string webElementToWait)
+        {
+            // navigate inside access chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_GOWithMicrosoftOffice2013Volume1_FolderName, webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_Access2013_FolderName,
+                webElementToWait);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_AccessChapter1GettingStartedWithMicrosoftAccess2013_FolderName, webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_AccessChapter1Activities_FolderName,
+                webElementToWait);
+            // click folder level
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_AccessChapter1GraderActivities_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

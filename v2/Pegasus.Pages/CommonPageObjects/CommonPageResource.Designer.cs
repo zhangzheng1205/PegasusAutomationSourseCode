@@ -88,6 +88,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Access Chapter 1: Grader Activities.
+        /// </summary>
+        internal static string CommonPage_AccessChapter1GraderActivities_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_AccessChapter1GraderActivities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Access Chapter 1: Simulation Activities.
         /// </summary>
         internal static string CommonPage_AccessChapter1SimulationActivities_FolderName {
@@ -250,6 +259,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PowerPoint Chapter 1: Grader Activities.
+        /// </summary>
+        internal static string CommonPage_PowerPointChapter1GraderActivities_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_PowerPointChapter1GraderActivities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PowerPoint Chapter 1: Simulation Activities.
         /// </summary>
         internal static string CommonPage_PowerPointChapter1SimulationActivities_FolderName {
@@ -286,11 +304,29 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Word Chapter 1: Grader Activities.
+        /// </summary>
+        internal static string CommonPage_WordChapter1GraderActivities_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_WordChapter1GraderActivities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Word Chapter 1: Simulation Activities.
         /// </summary>
         internal static string CommonPage_WordChapter1SimulationActivities_FolderName {
             get {
                 return ResourceManager.GetString("CommonPage_WordChapter1SimulationActivities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel Chapter 1: Grader Activities.
+        /// </summary>
+        internal static string ComonPage_ExcelChapter1GraderActivities_FolderName {
+            get {
+                return ResourceManager.GetString("ComonPage_ExcelChapter1GraderActivities_FolderName", resourceCulture);
             }
         }
         
