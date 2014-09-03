@@ -168,3 +168,4 @@ Scenario: User Logout as SMS Student
 When I "Sign out" from the "CsSmsStudent"
 Then I should see the successfull message "You have been signed out of the application."
 
+

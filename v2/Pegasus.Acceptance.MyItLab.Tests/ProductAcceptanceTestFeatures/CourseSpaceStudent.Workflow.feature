@@ -134,3 +134,312 @@ Then I should be on the "Course Materials" page
 And I should see "Not passed" status for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 And I should see "0.00%" score for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
 
+#Purpose : Submitting GraderIT PowerPoint activity and Student scoring a 100%.
+#Test case ID : peg-22015.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT PPT Activity and student scoring 100%
+When I navigate to "Course Materials" tab
+And I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_p01_grader_h3.pptx"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Power Point file for 100%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" activity
+Then I should see message "Your file, go_p01_grader_h3.pptx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
+And I should see "100.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+
+#Purpose : Submitting GraderIT PowerPoint activity and Student scoring a 0%.
+#Test case ID : peg-22007.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT PPT Activity and student scoring 0%
+When I navigate to "Course Materials" tab
+And I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_p01_grader_h3.pptx"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Power Point file for 0%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" activity
+Then I should see message "Your file, go_p01_grader_h3.pptx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+Then I should see "Not passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
+And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+
+#Purpose : Submitting GraderIT PowerPoint activity and Student scoring a 70%.
+#Test case ID : peg-22008.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT PPT Activity and student scoring 70%
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Course Materials" tab
+And I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_p01_grader_h3.pptx"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Power Point file for 70%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" activity
+Then I should see message "Your file, go_p01_grader_h3.pptx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
+And I should see "74.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+
+#Purpose : Submitting GraderIT Word activity and Student scoring a 70%
+#Test case ID : peg-21983.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT Word Activity and student scoring 70%
+When I navigate to "Course Materials" tab
+And I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Word Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_w01_grader_a3.docx"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Word file for 70%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "Word Chapter 1 Grader Project [Assessment 3]" activity
+Then I should see message "Your file, go_w01_grader_a3.docx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
+And I should see "74.50%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
+
+#Purpose : Submitting GraderIT Word activity and Student scoring a 0%
+#Test case ID : peg-20927.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT Word Activity and student scoring 0%
+When I navigate to "Course Materials" tab
+And I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Word Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_w01_grader_a3.docx"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Word file for 0%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "Word Chapter 1 Grader Project [Assessment 3]" activity
+Then I should see message "Your file, go_w01_grader_a3.docx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Not passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
+And I should see "0.00%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
+
+#Purpose : Submitting GraderIT Word activity and Student scoring a 100%
+#Test case ID : peg-22013.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT Word Activity and student scoring 100%
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabInstructorCourse" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Course Materials" tab
+And I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Word Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_w01_grader_a3.docx"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Word file for 100%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "Word Chapter 1 Grader Project [Assessment 3]" activity
+Then I should see message "Your file, go_w01_grader_a3.docx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
+And I should see "100.00%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
+
+#Purpose : Submitting GraderIT Excel activity and Student scoring a 100%
+#Test case ID : peg-22014.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT Excel Activity and student scoring 100%
+When I navigate to "Course Materials" tab
+And I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_e01_grader_h3.xlsx"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Excel file for 100%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "GraderITExcel" activity
+Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
+And I should see "100.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+
+#Purpose : Submitting GraderIT Excel activity and Student scoring a 0%
+#Test case ID : peg-22003.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT Excel Activity and student scoring 0%
+When I navigate to "Course Materials" tab
+And I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_e01_grader_h3.xlsx"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Excel file for 0%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "Excel Chapter 1 Grader Project [Homework 3] (Project G)" activity
+Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+Then I should see "Not passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
+And I should see "0.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+
+#Purpose : Submitting GraderIT Excel activity and Student scoring a 70%.
+#Test case ID : peg-22004.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT Excel Activity and student scoring 70%
+When I navigate to "Course Materials" tab
+And I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_e01_grader_h3.xlsx"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Excel file for 70%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "GraderITExcel" activity
+Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
+And I should see "71.30%" score for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+
+#Purpose : Submitting GraderIT Access activity and Student scoring a 0%.
+#Test case ID : peg-22009.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT Access Activity and student scoring 0%
+When I navigate to "Course Materials" tab
+And I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Access Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_a01_grader_a3_Open_Houses.accdb"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Access file for 0%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "Access Chapter 1 Grader Project [Assessment 3]" activity
+Then I should see message "Your file, go_a01_grader_a3_Open_Houses.accdb, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Not passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
+And I should see "0.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
+
+#Purpose : Submitting GraderIT Access activity and Student scoring a 70%.
+#Test case ID : peg-22010.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT Access Activity and student scoring 70%
+When I navigate to "Course Materials" tab
+And I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Access Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_a01_grader_a3_Open_Houses.accdb"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Access file for 70%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "Access Chapter 1 Grader Project [Assessment 3]" activity
+Then I should see message "Your file, go_a01_grader_a3_Open_Houses.accdb, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
+And I should see "76.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
+
+#Purpose : Submitting GraderIT Access activity and Student scoring a 100%.
+#Test case ID : peg-22016.
+#Products : MyItLab.
+#Pre condition : This test case depends on Grader IT activity should be created by instructor/Author.
+#Dependency : Always dependent.
+Scenario: Student GraderIT Access Activity and student scoring 100%
+When I navigate to "Course Materials" tab
+And I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Access Chapter 1 Grader Project [Assessment 3]"
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Download Files button on Test Presentation pop up
+And I click on download icon of "go_a01_grader_a3_Open_Houses.accdb"
+And I click on Close and Return button
+Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
+When I click on Upload Completed File button on Test Presentation pop up
+And I upload the downloaded file "Grader Access file for 100%"
+Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
+When I submit "Access Chapter 1 Grader Project [Assessment 3]" activity
+Then I should see message "Your file, go_a01_grader_a3_Open_Houses.accdb, has been successfully received by myitlab:grader." on "Test Feedback" popup page
+When I click on Return To Course button
+Then I should be on the "Course Materials" page
+When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
+And I should see "100.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page

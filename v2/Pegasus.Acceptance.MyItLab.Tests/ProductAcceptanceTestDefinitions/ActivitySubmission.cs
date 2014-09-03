@@ -7,6 +7,7 @@ using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation;
 using TechTalk.SpecFlow;
 using Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.AutoGrader;
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -206,19 +207,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity Type Enum.</param>
         [When(@"I open the activity named as ""(.*)""")]
-        public void OpenTheActivity(Activity.ActivityTypeEnum activityTypeEnum)
+        public void OpenTheActivity(string activityName)
         {
             // Open The Activity
             Logger.LogMethodEntry("ActivitySubmission",
                 "OpenTheActivity",
                base.IsTakeScreenShotDuringEntryExit);
-            //Fetch Activity From Memory
-            Activity activity = Activity.Get(activityTypeEnum);
             //Select Window And Frame
             new StudentPresentationPage().SelectWindowAndFrame();
             //Click The Activity In CourseMaterial
             new StudentPresentationPage().
-                SelectActivityNameInCourseMaterialTab(activity.Name);
+                SelectActivityNameInCourseMaterialTab(activityName);
             Logger.LogMethodExit("ActivitySubmission",
                 "OpenTheActivity",
                base.IsTakeScreenShotDuringEntryExit);
@@ -623,6 +622,161 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Validate the display of Test Presentation PopUp With Buttons in it.
+        /// </summary>
+        /// <param name="popUp">PopUp Name</param>
+        /// <param name="firstButton">Download Files button</param>
+        /// <param name="secondButton">Upload Completed File</param>
+        [Then(@"I should see a ""(.*)"" pop up displayed with ""(.*)"" button and ""(.*)"" button")]
+        public void VerifyDisplayOfTestPresentationPopUpWithButtons(string popUp,
+            string firstButton,
+            string secondButton)
+        {
+            Logger.LogMethodEntry("ActivitySubmission",
+                "VerifyDisplayOfTestPresentationPopUpWithButtons",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Create an object of PresentationPage class
+            PresentationPage presentationPage = new PresentationPage();
+            // Assertion of Download Files button
+            Assert.AreEqual(firstButton,
+                            presentationPage.GetDownloadFilesButtonText());
+            // Assertion of Upload Completed File
+            Assert.AreEqual(secondButton,
+                presentationPage.GetUploadCompletedFileButtonText());
+            Logger.LogMethodExit("ContentLibrary",
+               "VerifyAssetCopiedPosition",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
 
+        /// <summary>
+        /// Click Download button to launch download file popup 
+        /// in Test Presentation pop up
+        /// </summary>
+        [When(@"I click on Download Files button on Test Presentation pop up")]
+        public void ClickTheDownloadFilesButton()
+        {
+            //Click on Download button.
+            Logger.LogMethodEntry("ActivitySubmission", "ClickTheDownloadFilesButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            PresentationPage presentationPage = new PresentationPage();
+            presentationPage.ClickDownloadFilesButton();
+            Logger.LogMethodExit("ActivitySubmission", "ClickTheDownloadFilesButton",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on download file icon in Downloads Starting file popup
+        /// </summary>
+        /// <param name="fileName">File name to be downloaded</param>
+        [When(@"I click on download icon of ""(.*)""")]
+        public void ClickOnDownloadIconOfFile(string fileName)
+        {
+            // Click on download file icon
+            Logger.LogMethodEntry("ActivitySubmission",
+                "ClickOnDownloadIconOfFile",
+                base.IsTakeScreenShotDuringEntryExit);
+            DownLoadStartingFilesPage downLoadStartingFilesPage =
+                new DownLoadStartingFilesPage();
+            downLoadStartingFilesPage.ClickDownloadIconOfTheFile(fileName);
+            // Click on download file icon
+            Logger.LogMethodExit("ActivitySubmission",
+                "ClickOnDownloadIconOfFile", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click Close and Return button in Download Starting File Page.
+        /// </summary>
+        [When(@"I click on Close and Return button")]
+        public void ClickCloseAndReturnButton()
+        {
+            // Click Close and Return button
+            Logger.LogMethodEntry("ActivitySubmission",
+                "ClickCloseAndReturnButton",
+           base.IsTakeScreenShotDuringEntryExit);
+            new DownLoadStartingFilesPage().
+                ClickOnCloseAndReturnButton();
+            Logger.LogMethodExit("ActivitySubmission",
+                "ClickCloseAndReturnButton",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click Upload Completed File button on Test Presentation pop up.
+        /// </summary>
+        [When(@"I click on Upload Completed File button on Test Presentation pop up")]
+        public void ClickTheUploadCompletedFileButtonButton()
+        {
+            //Click Upload Completed File.
+            Logger.LogMethodEntry("ActivitySubmission",
+                "ClickTheUploadCompletedFileButtonButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            PresentationPage presentationPage = new
+                PresentationPage();
+            presentationPage.ClickUploadCompletedFileButton();
+        }
+
+        /// <summary>
+        /// Upload the downloaded file
+        /// </summary>
+        /// <param name="uploadFileName">File name to upload</param>
+        [When(@"I upload the downloaded file ""(.*)""")]
+        public void UploadTheDownloadedFile(string uploadFileName)
+        {
+            // Upload document
+            Logger.LogMethodEntry("ActivitySubmission",
+                "UploadTheDownloadedFile",
+                base.IsTakeScreenShotDuringEntryExit);
+            new UploadCompletedFilesPage().UploadGraderItFile(uploadFileName);
+            Logger.LogMethodExit("ActivitySubmission", "UploadTheDownloadedFile",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// To Validate the obtained message on the Presentation popup page.
+        /// </summary>
+        [Then(@"I should see message ""(.*)"" on ""(.*)"" popup page")]
+        public void ValidateMessageDisplayOnPopup(string message, string pageName)
+        {
+            Logger.LogMethodEntry("ActivitySubmission",
+               "ValidateTheMessage",
+               base.IsTakeScreenShotDuringEntryExit);
+            //To Verify The Message In Copy as Section Popup
+            Logger.LogAssertion("ToValidateTheMessage",
+                            ScenarioContext.Current.ScenarioInfo.Title, ()
+                           => Assert.IsTrue(new PresentationPage().
+                           ValidateTheMessageOnPopupPage(message, pageName)));
+            Logger.LogMethodExit("ActivitySubmission",
+           "ValidateTheMessage",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Submit The Activity 
+        /// </summary>
+        /// <param name="p0">activityType</param>
+        [When(@"I submit ""(.*)"" activity")]
+        public void SubmitGraderITActivity(String activityType)
+        {
+            //Submit the Activity
+            Logger.LogMethodEntry("ActivitySubmission", "SubmitGraderITActivity",
+             base.IsTakeScreenShotDuringEntryExit);
+            new PresentationPage().ClickSubmitButton();
+            Logger.LogMethodEntry("ActivitySubmission", "SubmitGraderITActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click Return To Course button.
+        /// </summary>
+        [When(@"I click on Return To Course button")]
+        public void ClickReturnToCourseButton()
+        {
+            Logger.LogMethodEntry("ActivitySubmission", "ClickReturnToCourseButton",
+              base.IsTakeScreenShotDuringEntryExit);
+            new GraderFeedbackPage().ClickReturnToCourseButton();
+            Logger.LogMethodExit("ActivitySubmission", "ClickReturnToCourseButton",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

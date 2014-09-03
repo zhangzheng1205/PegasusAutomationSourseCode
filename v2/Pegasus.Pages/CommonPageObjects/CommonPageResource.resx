@@ -162,6 +162,12 @@
   <data name="CommonPage_InstructorLeftNavigationFrame_Id_Locator" xml:space="preserve">
     <value>Iframe1</value>
   </data>
+  <data name="CommonPage_Instructor_CalendarNavigationFolder_Xpath_Locator" xml:space="preserve">
+    <value>//div[@title='{0}']</value>
+  </data>
+  <data name="CommonPage_Instructor_Calendar_Content_Id_Locator" xml:space="preserve">
+    <value>TreeViewContainer</value>
+  </data>
   <data name="CommonPage_LeftNavigationFrame_Id_Locator" xml:space="preserve">
     <value>Frame1</value>
   </data>
@@ -170,6 +176,9 @@
   </data>
   <data name="CommonPage_PowerPointChapter1GettingStartedWithMicrosoftPowerPoint_FolderName" xml:space="preserve">
     <value>PowerPoint Chapter 1: Getting Started with Microsoft PowerPoint</value>
+  </data>
+  <data name="CommonPage_PowerPointChapter1GraderActivities_FolderName" xml:space="preserve">
+    <value>PowerPoint Chapter 1: Grader Activities</value>
   </data>
   <data name="CommonPage_PowerPointChapter1SimulationActivities_FolderName" xml:space="preserve">
     <value>PowerPoint Chapter 1: Simulation Activities</value>
@@ -183,8 +192,14 @@
   <data name="CommonPage_WordChapter1CreatingDocumentsWithMicrosoftWord2013_FolderName" xml:space="preserve">
     <value>Word Chapter 1: Creating Documents with Microsoft Word 2013</value>
   </data>
+  <data name="CommonPage_WordChapter1GraderActivities_FolderName" xml:space="preserve">
+    <value>Word Chapter 1: Grader Activities</value>
+  </data>
   <data name="CommonPage_WordChapter1SimulationActivities_FolderName" xml:space="preserve">
     <value>Word Chapter 1: Simulation Activities</value>
+  </data>
+  <data name="ComonPage_ExcelChapter1GraderActivities_FolderName" xml:space="preserve">
+    <value>Excel Chapter 1: Grader Activities</value>
   </data>
   <data name="ComonPage_Folder_Count_Initial_Value" xml:space="preserve">
     <value>0</value>
@@ -207,13 +222,7 @@
   <data name="ComonPage_Wait_Time" xml:space="preserve">
     <value>2000</value>
   </data>
-  <data name="CommonPage_Instructor_CalendarNavigationFolder_Xpath_Locator" xml:space="preserve">
-    <value>//div[@title='{0}']</value>
-  </data>
-  <data name="CommonPage_Instructor_Calendar_Content_Id_Locator" xml:space="preserve">
-    <value>TreeViewContainer</value>
-  </data>
-  <data name="CommonPage_Gradebook_BackArrow_Id_Locator" xml:space="preserve">
-    <value>divBackArrow</value>
+  <data name="CommonPage_AccessChapter1GraderActivities_FolderName" xml:space="preserve">
+    <value>Access Chapter 1: Grader Activities</value>
   </data>
 </root>
