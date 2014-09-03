@@ -2814,6 +2814,15 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="TestData\Excel\ExcelFileFor0Percent\go_e01_grader_h3.xlsx" />
+    <None Include="TestData\Excel\ExcelFileFor100Percent\go_e01_grader_h3.xlsx" />
+    <None Include="TestData\Excel\ExcelFileFor70Percent\go_e01_grader_h3.xlsx" />
+    <None Include="TestData\PowerPoint\PowerPointFileFor0Percent\go_p01_grader_h3.pptx" />
+    <None Include="TestData\PowerPoint\PowerPointFileFor100Percent\go_p01_grader_h3.pptx" />
+    <None Include="TestData\PowerPoint\PowerPointFileFor70Percent\go_p01_grader_h3.pptx" />
+    <None Include="TestData\Word\WordFileFor0Percent\go_w01_grader_a3.docx" />
+    <None Include="TestData\Word\WordFileFor100Percent\go_w01_grader_a3.docx" />
+    <None Include="TestData\Word\WordFileFor70Percent\go_w01_grader_a3.docx" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
@@ -2826,6 +2835,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ApplicationDownloadedFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData\Access\AccessFileFor0Percent\go_a01_grader_a3_Open_Houses.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Access\AccessFileFor100Percent\go_a01_grader_a3_Open_Houses.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Access\AccessFileFor70Percent\go_a01_grader_a3_Open_Houses.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
