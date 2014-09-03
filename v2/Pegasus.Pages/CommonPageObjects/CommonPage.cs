@@ -49,7 +49,7 @@ namespace Pegasus.Pages.CommonPageObjects
                         // folder navigation based on Tab name
                         switch (activityUnderTabName)
                         {
-                            case "Gradebook":                                
+                            case "Gradebook":
                                 switch (activityName)
                                 {
                                     // folder navigation based on activity name
@@ -153,7 +153,7 @@ namespace Pegasus.Pages.CommonPageObjects
                             case "Calendar":
                                 switch (activityName)
                                 {
-                                        //Folder navigation for Word based on activity name
+                                    //Folder navigation for Word based on activity name
                                     case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
                                         this.SelectWordActivityFolderNavigationInInstructorCalendar(CommonPageResource.
                                             CommonPage_Instructor_Calendar_Content_Id_Locator);
@@ -163,7 +163,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                         this.SelectAccessActivityFolderNavigationInInstructorCalendar(CommonPageResource.
                                             CommonPage_Instructor_Calendar_Content_Id_Locator);
                                         break;
-                                     //Folder navigation for powerpoint
+                                    //Folder navigation for powerpoint
                                     case "PowerPoint Chapter 1 Skill-Based Training":
                                     case "PowerPoint Chapter 1 Skill-Based Exam (Scenario 1)":
                                         this.SelectPowerPointActivityFolderNavigationInInstructorCalendar(CommonPageResource.
@@ -176,6 +176,18 @@ namespace Pegasus.Pages.CommonPageObjects
                                         break;
                                 }
                                 break;
+                            case "Today's View":
+                                {
+                                    switch (activityName)
+                                    {
+                                        case "Word Chapter 1 Skill-Based Training":
+                                            this.NavigateToWordChapter1SimulationActivitiesFolder
+                                                (CommonPageResource.CommonPage_CoursePerformance_Table_Id_Locator);
+                                            break;
+                                    }
+
+                                }
+                                break;
                         }
                         break;
                 }
@@ -186,6 +198,11 @@ namespace Pegasus.Pages.CommonPageObjects
             }
             Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigation",
               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        private void NavigateToWordChapter1SkillBasedTraining(string webElementToWait)
+        {
+
         }
 
         /// <summary>
@@ -349,11 +366,11 @@ namespace Pegasus.Pages.CommonPageObjects
                     {
                         //Generate Activity Result by Student Report
                         case "Course Materials":
-                            this.SelectWindowNameForFoldernavigation(activityUnderTabName, 
+                            this.SelectWindowNameForFoldernavigation(activityUnderTabName,
                                 CommonPageResource.CommonPage_CoursePreviewFrame_Id_Locator);
                             break;
                         case "Gradebook":
-                            this.SelectWindowNameForFoldernavigation(activityUnderTabName, 
+                            this.SelectWindowNameForFoldernavigation(activityUnderTabName,
                                 CommonPageResource.CommonPage_LeftNavigationFrame_Id_Locator);
                             break;
                     }
@@ -374,7 +391,7 @@ namespace Pegasus.Pages.CommonPageObjects
                             this.SelectWindowNameForFoldernavigation(activityUnderTabName);
                             break;
                     }
-                    break;                    
+                    break;
             }
             Logger.LogMethodExit("CommonPage",
                 "SelectWindowWithFrameForFolderNavigation",
@@ -386,7 +403,7 @@ namespace Pegasus.Pages.CommonPageObjects
         /// </summary>
         /// <param name="windowName">This is Window Name.</param>
         /// <param name="frameName">This is Frame Name</param>
-        private void SelectWindowNameForFoldernavigation(string windowName, 
+        private void SelectWindowNameForFoldernavigation(string windowName,
             string frameName = "Default Value")
         {
             //Select Window Name For Folder navigation
@@ -399,7 +416,7 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 // switch To Frame
                 base.SwitchToIFrame(frameName);
-            }  
+            }
             Logger.LogMethodExit("CommonPage", "SelectWindowNameForFoldernavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -527,7 +544,7 @@ namespace Pegasus.Pages.CommonPageObjects
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.PartialLinkText(activityFolderName));
-            IWebElement getFolderLink=base.GetWebElementPropertiesByPartialLinkText
+            IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
                 (activityFolderName);
             //Click the link
             base.ClickByJavaScriptExecutor(getFolderLink);
@@ -609,7 +626,7 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage",
                 "SelectWordActivityFolderNavigationInInstructorGradebook",
               base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         ///Select Access Activity Folder Navigation In Instructor Gradebook.
@@ -637,7 +654,7 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage",
                 "SelectAccessActivityFolderNavigationInInstructorGradebook",
               base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         ///Select Excel Activity Folder Navigation In Instructor Gradebook.
@@ -665,7 +682,7 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage",
                 "SelectExcelActivityFolderNavigationInInstructorGradebook",
               base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         ///Select Power Point Activity Folder Navigation In Instructor Gradebook.
@@ -693,7 +710,7 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage",
                 "SelectPowerPointActivityFolderNavigationInInstructorGradebook",
               base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
 
         /// <summary>
         /// Navigate To Activity Folder In Instructor Gradebook.
@@ -736,7 +753,7 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage",
                 "NavigateToActivityFolderInInstructorGradebook",
               base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
     }
 }
 

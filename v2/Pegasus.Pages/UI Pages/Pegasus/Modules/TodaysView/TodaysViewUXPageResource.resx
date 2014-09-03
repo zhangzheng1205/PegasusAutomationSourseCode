@@ -117,6 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TodaysViewPageReosurce_GetAnnouncementText_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl3__ctl1__ctl0__ctl0_lblHeading</value>
+  </data>
+  <data name="TodaysViewPageResource_GetCalendarText_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl3__ctl0__ctl0__ctl0_lblHeading</value>
+  </data>
+  <data name="TodaysViewPageResource_GetMessagesCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TodaysViewMessageDatagrid']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_ActivityName_PastDueSubmitted_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='div__ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1']/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Activity_PastDueDateAndTime_Id_Locator" xml:space="preserve">
+    <value>PDS_DueSpan</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Activity_Select_Checkbox" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1Checkbox</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Activity_SubmittedDateAndTime_Id_Locator" xml:space="preserve">
+    <value>PDS_SubmitSpan</value>
+  </data>
   <data name="TodaysViewUXPageResource_AnnouncementMaxRows_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='grdAnnouncement']/tbody/tr[" + announcementCnt + "]</value>
   </data>
@@ -132,11 +153,26 @@
   <data name="TodaysViewUXPageResource_Button_CUSTOMIZE_Text" xml:space="preserve">
     <value>CUSTOMIZE</value>
   </data>
+  <data name="TodaysViewUXPageResource_ChannelDisplay_Sleep_Time_Value" xml:space="preserve">
+    <value>40000</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Channel_Close_Button_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='columnLayout']/tbody/tr/td[2]/div/div/div/div/div/span[2]/span[2]/a/span</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Channel_MoveUp_Option_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='columnLayout']/tbody/tr/td[2]/div[2]/div/div/div/div/span[2]/div/a</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Channel_Name_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='columnLayout']/tbody/tr/td[2]/div/div/div/div/div/span/div/span</value>
+  </data>
   <data name="TodaysViewUXPageResource_Classes_Window_Title" xml:space="preserve">
     <value>Classes</value>
   </data>
   <data name="TodaysViewUXPageResource_ClassName_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='_ctl0__ctl0_phHeader__ctl0__ctl0_ClassCourseTitle']</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Close_Button_Partial_Text" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="TodaysViewUXPageResource_Communicate_TabName_Text" xml:space="preserve">
     <value>Communicate</value>
@@ -150,11 +186,38 @@
   <data name="TodaysViewUXPageResource_CourseContainer_Frame_Id_Locator" xml:space="preserve">
     <value>frmCourseContainer</value>
   </data>
+  <data name="TodaysViewUXPageResource_CourseName_XPath_Locator" xml:space="preserve">
+    <value>//*[contains(@id,'CourseInfo_headerCourseName')]</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Custom_WaitTime" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="TodaysViewUXPageResource_Default_NotificationArea_Div_Id_Locator" xml:space="preserve">
     <value>divContent</value>
   </data>
+  <data name="TodaysViewUXPageResource_Enrollments_Link_Locator" xml:space="preserve">
+    <value>Enrollments</value>
+  </data>
   <data name="TodaysViewUXPageResource_Enrollments_TabName_Text" xml:space="preserve">
     <value>Enrollments</value>
+  </data>
+  <data name="TodaysViewUXPageResource_ExpandIcon_PastDueSubmitted_Xpath_Locator" xml:space="preserve">
+    <value>//a[@id='_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn0']/img</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Expand_Icon_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn0</value>
+  </data>
+  <data name="TodaysViewUXPageResource_GetDiscussionTopicCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVUnreaddiscussionDatagrid']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_GetDiscussionTopicName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVUnreaddiscussionDatagrid']/tbody/tr[{0}]/td/table/tbody/tr/td/table/tbody/tr/td/div/b</value>
+  </data>
+  <data name="TodaysViewUXPageResource_GetIdleStudentCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVIdlStuDatagrid']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_GetNotificationText_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl0__ctl0_lblHeading</value>
   </data>
   <data name="TodaysViewUXPageResource_Gradebook_Link_Locator" xml:space="preserve">
     <value>Gradebook</value>
@@ -164,231 +227,6 @@
   </data>
   <data name="TodaysViewUXPageResource_Grades_TabName_Text" xml:space="preserve">
     <value>Grades</value>
-  </data>
-  <data name="TodaysViewUXPageResource_HomeLink_Class_Locator" xml:space="preserve">
-    <value>btn_Homeback</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Home_Link_PartialText_Locator" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="TodaysViewUXPageResource_ManageAll_Button_Class_Locator" xml:space="preserve">
-    <value>channel_button</value>
-  </data>
-  <data name="TodaysViewUXPageResource_ManageAll_Button_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl3__ctl0__ctl1__ctl0_btnViewAll</value>
-  </data>
-  <data name="TodaysViewUXPageResource_MoreLink_Id_Locator" xml:space="preserve">
-    <value>divMore</value>
-  </data>
-  <data name="TodaysViewUXPageResource_MyTest_TabName_Text" xml:space="preserve">
-    <value>MyTest</value>
-  </data>
-  <data name="TodaysViewUXPageResource_NewGrades_Alert_StartIndex" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="TodaysViewUXPageResource_NewGrades_Attribute_InnerText" xml:space="preserve">
-    <value>innerText</value>
-  </data>
-  <data name="TodaysViewUXPageResource_NewGrades_Link_Text" xml:space="preserve">
-    <value>New Grades</value>
-  </data>
-  <data name="TodaysViewUXPageResource_NewGrades_SubmittedActivity_Table_Id_Locator" xml:space="preserve">
-    <value>TodayInsNewGradeDatagrid</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Overview_Link_Locator" xml:space="preserve">
-    <value>Overview</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Overview_TabName_Text" xml:space="preserve">
-    <value>Overview</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Preferences_Link_Locator" xml:space="preserve">
-    <value>Preferences</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Preferences_TabName_Text" xml:space="preserve">
-    <value>Preferences</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Sleep_Value" xml:space="preserve">
-    <value>5000</value>
-  </data>
-  <data name="TodaysViewUXPageResource_StudentView_ClassName_Locator" xml:space="preserve">
-    <value>spnCourseNameStuViewCls</value>
-  </data>
-  <data name="TodaysViewUXPageResource_SubmittedActivity_Name" xml:space="preserve">
-    <value>PA-01 Span Practice- Vocabulary: Saludos, despedidas y presentaciones</value>
-  </data>
-  <data name="TodaysViewUXPageResource_SubmittedActivity_Name_Length" xml:space="preserve">
-    <value>69</value>
-  </data>
-  <data name="TodaysViewUXPageResource_SubmittedActivity_Name_SplittingCharacter" xml:space="preserve">
-    <value>)</value>
-  </data>
-  <data name="TodaysViewUXPageResource_SubmittedActivity_Name_StartIndex" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="TodaysViewUX_Page_InstructorView_ClassName_Locator" xml:space="preserve">
-    <value>ux_Instructor_View</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Custom_WaitTime" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Enrollments_Link_Locator" xml:space="preserve">
-    <value>Enrollments</value>
-  </data>
-  <data name="TodaysViewUXPageResource_WindowsTitle" xml:space="preserve">
-    <value>Today's View</value>
-  </data>
-  <data name="TodaysViewUXPage_ClassNameText_Class_Locator" xml:space="preserve">
-    <value>tblclsfldsDP</value>
-  </data>
-  <data name="TodaysViewUXPageResource_MyClass_Image_Button_ClassName_Locator" xml:space="preserve">
-    <value>img_MyClass</value>
-  </data>
-  <data name="TodaysViewUX_Page_CourseTitle_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phHeader__ctl0__ctl0_ClassCourseTitle</value>
-  </data>
-  <data name="TodaysViewUXPageResource_NewGradesLink_Xpath_Locator" xml:space="preserve">
-    <value>//table[@class='CoursePerformanceUpdateTd']/tbody/tr[6]/td/a</value>
-  </data>
-  <data name="TodaysViewUXPageResource_NewGrades_Synapse_SubmittedActivity_Table_Id_Locator" xml:space="preserve">
-    <value>TodayInsNewGradeDatagrid$divContent</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Overview_Window_Title" xml:space="preserve">
-    <value>Overview</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Practice_Link_Locator" xml:space="preserve">
-    <value>Practice</value>
-  </data>
-  <data name="TodaysViewUXPageResource_ToDo_Link_Locator" xml:space="preserve">
-    <value>To Do</value>
-  </data>
-  <data name="TodaysViewUXPageResource_ManageAll_Button_PartialLinkText" xml:space="preserve">
-    <value>Manage All</value>
-  </data>
-  <data name="TodaysViewUXPageResource_NotPassed_Link_Text" xml:space="preserve">
-    <value>Not Passed</value>
-  </data>
-  <data name="TodaysViewUX_Page_welcomeStudentMessage_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_lblWelcomeText</value>
-  </data>
-  <data name="TodaysViewUXPage_WelcomeMessage_TextValue" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Close_Button_Partial_Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_Window_Title_Name_HED" xml:space="preserve">
-    <value>Course Materials</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_Frame_Id_Locator" xml:space="preserve">
-    <value>ifrmCoursePreview</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_ManualGrade_Activity" xml:space="preserve">
-    <value>HomeWork: Manual gradable</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_Answer_TextArea_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='MainQuestionLayoutDefault']/descendant::textarea</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Tree_View_DivID" xml:space="preserve">
-    <value>divTreeContainer</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_CustomWait_Time" xml:space="preserve">
-    <value>6000</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_MasterFinish_Button_Id_Locator" xml:space="preserve">
-    <value>_ctl0:btnMasterFinish</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_ActivityFinish_Button_Id_Locator" xml:space="preserve">
-    <value>_ctl0:APH:btnfinish</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_ReturnToCourse_Button_Id_Locator" xml:space="preserve">
-    <value>Return to Course</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_AssignmentCount_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_Initial_Value" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_Window_Title" xml:space="preserve">
-    <value>Gradebook</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_Synapse_GradesFrame_Iframe_Name_Locator" xml:space="preserve">
-    <value>srcGBFrame</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_CmenuOption_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/div[@class='GBRepnewContextualmenu']</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_WaitWindowTime_Value" xml:space="preserve">
-    <value>3000</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_AssignmentTitleIE_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/a</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_AssignmentTitleFF_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/a</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_ViewSubmission_Cmenu_ID" xml:space="preserve">
-    <value>ViewSubmission_head</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_StudentName_Xpath" xml:space="preserve">
-    <value>//div[@id='divVS_SubmissionList_GridContainer']/div/div[2]/div/span/div/div</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_ViewSubmission_Title" xml:space="preserve">
-    <value>View Submission</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_ViewSource_Button_Id_Locator" xml:space="preserve">
-    <value>viewsource</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_EnterText_HTML_Id_Locator" xml:space="preserve">
-    <value>ucEditorA_textarea</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_Instructor_Comments" xml:space="preserve">
-    <value>Instructor comments</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_SaveAndClose_Button" xml:space="preserve">
-    <value>Save and Close</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_TreeViewExpandIconID" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvUnreadCommentStudentn0</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_TreeViewControlID" xml:space="preserve">
-    <value>divTreeContainer</value>
-  </data>
-  <data name="TodaysViewUX_Page_Customize_Button_ID_Locator" xml:space="preserve">
-    <value>_ctl0:_ctl0:phBody:PageContent:_ctl0:_ctl2:_ctl0:_ctl0:_ctl0:btnAddItem</value>
-  </data>
-  <data name="TodaysViewUX_Page_Customize_Notification_Title_ID_Locator" xml:space="preserve">
-    <value>Label9</value>
-  </data>
-  <data name="TodaysViewUX_Page_Default_View_DropDownList_By_ID_Locator" xml:space="preserve">
-    <value>Ddlist</value>
-  </data>
-  <data name="TodaysViewUX_Page_IFrame_LightBox_PopUp_ID_Locator" xml:space="preserve">
-    <value>lightboxid</value>
-  </data>
-  <data name="TodaysViewUX_Page_NotifyMe_CheckBox_ID_Locator" xml:space="preserve">
-    <value>chkUnreadComments</value>
-  </data>
-  <data name="TodaysViewUX_Page_Save_Close_Button_By_ID_Locator" xml:space="preserve">
-    <value>btnSave</value>
-  </data>
-  <data name="TodaysViewUX_Page_WaitTime_Value" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="TodaysViewUX_Page_CoursePerformance_Update_By_Class_Name" xml:space="preserve">
-    <value>CoursePerformanceUpdateTd</value>
-  </data>
-  <data name="TodaysViewUXPageResource_SectionID_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phHeader__ctl0_ucs_CourseInfo_HeaderCourseID</value>
-  </data>
-  <data name="TodaysViewUXPageResource_CourseName_XPath_Locator" xml:space="preserve">
-    <value>//*[contains(@id,'CourseInfo_headerCourseName')]</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_HTML_editorIframe" xml:space="preserve">
-    <value>//div[@id='divEssayCommentsContainer']/div[2]/table/tbody/tr[2]/td/iframe</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Page_Instructor_comment" xml:space="preserve">
-    <value>Comments entered by instructor</value>
   </data>
   <data name="TodaysViewUXPageResource_Help_Link_Frame_Name" xml:space="preserve">
     <value>navigation</value>
@@ -402,14 +240,128 @@
   <data name="TodaysViewUXPageResource_Help_TextPresent" xml:space="preserve">
     <value>Welcome</value>
   </data>
+  <data name="TodaysViewUXPageResource_HomeLink_Class_Locator" xml:space="preserve">
+    <value>btn_Homeback</value>
+  </data>
   <data name="TodaysViewUXPageResource_Home_Link_Id_Locator" xml:space="preserve">
     <value>ctl00_ctl00_phHeader_ctl00_ucs_HelloObject_MyCoursesLink</value>
   </data>
-  <data name="TodaysViewUXPageResource_ChannelDisplay_Sleep_Time_Value" xml:space="preserve">
-    <value>40000</value>
+  <data name="TodaysViewUXPageResource_Home_Link_PartialText_Locator" xml:space="preserve">
+    <value>Home</value>
   </data>
-  <data name="TodaysViewUXPageResource_Student_Newgrade_Id_Locator" xml:space="preserve">
-    <value>TodaysStuNewGradeDatagrid</value>
+  <data name="TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath" xml:space="preserve">
+    <value>//table[@id='InsUnreadComments']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_InstructorComments_Activity_Name_By_Xpath" xml:space="preserve">
+    <value>//table[@id='InsUnreadComments']/tbody/tr[{0}]/td/table/tbody/tr/td/span</value>
+  </data>
+  <data name="TodaysViewUXPageResource_ManageAll_Button_Class_Locator" xml:space="preserve">
+    <value>channel_button</value>
+  </data>
+  <data name="TodaysViewUXPageResource_ManageAll_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl3__ctl0__ctl1__ctl0_btnViewAll</value>
+  </data>
+  <data name="TodaysViewUXPageResource_ManageAll_Button_PartialLinkText" xml:space="preserve">
+    <value>Manage All</value>
+  </data>
+  <data name="TodaysViewUXPageResource_MILGetNotificationText_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl0__ctl0_lblHeading</value>
+  </data>
+  <data name="TodaysViewUXPageResource_MoreLink_Id_Locator" xml:space="preserve">
+    <value>divMore</value>
+  </data>
+  <data name="TodaysViewUXPageResource_MoreLink_Xpath_Locator" xml:space="preserve">
+    <value>//td[@id='_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_tdMore']/div/span[@id='divMore']</value>
+  </data>
+  <data name="TodaysViewUXPageResource_MoveDown_Option_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='columnLayout']/tbody/tr/td[2]/div/div/div/div/div/span[2]/div/a</value>
+  </data>
+  <data name="TodaysViewUXPageResource_MyClass_Image_Button_ClassName_Locator" xml:space="preserve">
+    <value>img_MyClass</value>
+  </data>
+  <data name="TodaysViewUXPageResource_MyProgressChannel_OverallGrade_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdMyProgress$tblHdr']/tbody/tr[2]/td[2]</value>
+  </data>
+  <data name="TodaysViewUXPageResource_MyTest_TabName_Text" xml:space="preserve">
+    <value>MyTest</value>
+  </data>
+  <data name="TodaysViewUXPageResource_NewGradesLink_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='CoursePerformanceUpdateTd']/tbody/tr[6]/td/a</value>
+  </data>
+  <data name="TodaysViewUXPageResource_NewGrades_Alert_StartIndex" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="TodaysViewUXPageResource_NewGrades_Attribute_InnerText" xml:space="preserve">
+    <value>innerText</value>
+  </data>
+  <data name="TodaysViewUXPageResource_NewGrades_Link_Text" xml:space="preserve">
+    <value>New Grades</value>
+  </data>
+  <data name="TodaysViewUXPageResource_NewGrades_SubmittedActivity_Table_Id_Locator" xml:space="preserve">
+    <value>TodayInsNewGradeDatagrid</value>
+  </data>
+  <data name="TodaysViewUXPageResource_NewGrades_Synapse_SubmittedActivity_Table_Id_Locator" xml:space="preserve">
+    <value>TodayInsNewGradeDatagrid$divContent</value>
+  </data>
+  <data name="TodaysViewUXPageResource_NotPassedChannel_ActivityRow_Id_Locator" xml:space="preserve">
+    <value>//table[@id='TodaysInsNotPassedDatagrid']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_NotPassed_Link_Text" xml:space="preserve">
+    <value>Not Passed</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Overview_Link_Locator" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Overview_TabName_Text" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Overview_Window_Title" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_ActivityFinish_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0:APH:btnfinish</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_Answer_TextArea_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='MainQuestionLayoutDefault']/descendant::textarea</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_AssignmentCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_AssignmentTitleFF_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/a</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_AssignmentTitleIE_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/span/a</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_CmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='GBGridHeaderTable']/tbody/tr/td[{0}]/div[@class='GBRepnewContextualmenu']</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_CustomWait_Time" xml:space="preserve">
+    <value>6000</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_EnterText_HTML_Id_Locator" xml:space="preserve">
+    <value>ucEditorA_textarea</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_Frame_Id_Locator" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_HTML_editorIframe" xml:space="preserve">
+    <value>//div[@id='divEssayCommentsContainer']/div[2]/table/tbody/tr[2]/td/iframe</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_Initial_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_Instructor_comment" xml:space="preserve">
+    <value>Comments entered by instructor</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_Instructor_Comments" xml:space="preserve">
+    <value>Instructor comments</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_ManualGrade_Activity" xml:space="preserve">
+    <value>HomeWork: Manual gradable</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Page_MasterFinish_Button_Id_Locator" xml:space="preserve">
+    <value>_ctl0:btnMasterFinish</value>
   </data>
   <data name="TodaysViewUXPageResource_Page_NewGrade_ActivitytName_Xpath" xml:space="preserve">
     <value>//table[@id='TodaysStuNewGradeDatagrid']/tbody/tr/td/table</value>
@@ -420,41 +372,143 @@
   <data name="TodaysViewUXPageResource_Page_NewGrade_Activityt_Cmenu_Viewgrade_Xpath" xml:space="preserve">
     <value>//div[@id='ReferenceId1']/table/tbody/tr/td/div[2]/a</value>
   </data>
-  <data name="TodaysViewUXPageResource_Channel_Name_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='columnLayout']/tbody/tr/td[2]/div/div/div/div/div/span/div/span</value>
+  <data name="TodaysViewUXPageResource_Page_ReturnToCourse_Button_Id_Locator" xml:space="preserve">
+    <value>Return to Course</value>
   </data>
-  <data name="TodaysViewUXPageResource_MoveDown_Option_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='columnLayout']/tbody/tr/td[2]/div/div/div/div/div/span[2]/div/a</value>
+  <data name="TodaysViewUXPageResource_Page_SaveAndClose_Button" xml:space="preserve">
+    <value>Save and Close</value>
   </data>
-  <data name="TodaysViewUXPageResource_Channel_Close_Button_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='columnLayout']/tbody/tr/td[2]/div/div/div/div/div/span[2]/span[2]/a/span</value>
+  <data name="TodaysViewUXPageResource_Page_StudentName_Xpath" xml:space="preserve">
+    <value>//div[@id='divVS_SubmissionList_GridContainer']/div/div[2]/div/span/div/div</value>
   </data>
-  <data name="TodaysViewUXPageResource_Channel_MoveUp_Option_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='columnLayout']/tbody/tr/td[2]/div[2]/div/div/div/div/span[2]/div/a</value>
+  <data name="TodaysViewUXPageResource_Page_Synapse_GradesFrame_Iframe_Name_Locator" xml:space="preserve">
+    <value>srcGBFrame</value>
   </data>
-  <data name="TodaysViewPageReosurce_GetAnnouncementText_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl3__ctl1__ctl0__ctl0_lblHeading</value>
+  <data name="TodaysViewUXPageResource_Page_TreeViewControlID" xml:space="preserve">
+    <value>divTreeContainer</value>
   </data>
-  <data name="TodaysViewPageResource_GetCalendarText_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl3__ctl0__ctl0__ctl0_lblHeading</value>
+  <data name="TodaysViewUXPageResource_Page_TreeViewExpandIconID" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvUnreadCommentStudentn0</value>
   </data>
-  <data name="TodaysViewUXPageResource_GetNotificationText_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl0__ctl0_lblHeading</value>
+  <data name="TodaysViewUXPageResource_Page_ViewSource_Button_Id_Locator" xml:space="preserve">
+    <value>viewsource</value>
   </data>
-  <data name="TodaysViewUXPageResource_MoreLink_Xpath_Locator" xml:space="preserve">
-    <value>//td[@id='_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_tdMore']/div/span[@id='divMore']</value>
+  <data name="TodaysViewUXPageResource_Page_ViewSubmission_Cmenu_ID" xml:space="preserve">
+    <value>ViewSubmission_head</value>
   </data>
-  <data name="TodayViewUXPageResource_Feedback_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_FeedbackLink</value>
+  <data name="TodaysViewUXPageResource_Page_ViewSubmission_Title" xml:space="preserve">
+    <value>View Submission</value>
   </data>
-  <data name="TodayViewUXPageResource_Glossary_Image_Id_Locator" xml:space="preserve">
-    <value>imgGlossary</value>
+  <data name="TodaysViewUXPageResource_Page_WaitWindowTime_Value" xml:space="preserve">
+    <value>3000</value>
   </data>
-  <data name="TodayViewUXPageResource_Tools_Dropdown_Id_Locator" xml:space="preserve">
-    <value>_ctl0:_ctl0:phHeader:_ctl0:ucs_Toolbar:ucs_RT:tools</value>
+  <data name="TodaysViewUXPageResource_Page_Window_Title" xml:space="preserve">
+    <value>Gradebook</value>
   </data>
-  <data name="TodayViewUXPageResource_VerbChart_Image_Id_Locator" xml:space="preserve">
-    <value>imgVerbChart</value>
+  <data name="TodaysViewUXPageResource_Page_Window_Title_Name_HED" xml:space="preserve">
+    <value>Course Materials</value>
+  </data>
+  <data name="TodaysViewUXPageResource_PastDueNotSubmitted_ActivityCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVInsAnnoucement$contentCntr']/tbody/tr</value>
+  </data>
+  <data name="TodaysViewUXPageResource_PastDueNotSubmitted_ActivityTotalCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVInsAnnoucement$contentCntr']/tbody/tr[{0}]/td/div/table/tbody/tr/td/table</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Practice_Link_Locator" xml:space="preserve">
+    <value>Practice</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Preferences_Link_Locator" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Preferences_TabName_Text" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="TodaysViewUXPageResource_SectionID_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_CourseInfo_HeaderCourseID</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Sleep_Value" xml:space="preserve">
+    <value>5000</value>
+  </data>
+  <data name="TodaysViewUXPageResource_StudentName_IdleStudents_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='TVIdlStuDatagrid']/tbody/tr/td//table//div/b</value>
+  </data>
+  <data name="TodaysViewUXPageResource_StudentPerformanceChannel_OverallGrade_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdStudentPerformance$tblHdr']/tbody/tr[2]/td[2]</value>
+  </data>
+  <data name="TodaysViewUXPageResource_StudentView_ClassName_Locator" xml:space="preserve">
+    <value>spnCourseNameStuViewCls</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Student_Newgrade_Id_Locator" xml:space="preserve">
+    <value>TodaysStuNewGradeDatagrid</value>
+  </data>
+  <data name="TodaysViewUXPageResource_SubmittedActivityName_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont1</value>
+  </data>
+  <data name="TodaysViewUXPageResource_SubmittedActivity_Checkbox_Id_Locator" xml:space="preserve">
+    <value>chkAlltvPastDueSubmission</value>
+  </data>
+  <data name="TodaysViewUXPageResource_SubmittedActivity_Name" xml:space="preserve">
+    <value>PA-01 Span Practice- Vocabulary: Saludos, despedidas y presentaciones</value>
+  </data>
+  <data name="TodaysViewUXPageResource_SubmittedActivity_Name_Length" xml:space="preserve">
+    <value>69</value>
+  </data>
+  <data name="TodaysViewUXPageResource_SubmittedActivity_Name_SplittingCharacter" xml:space="preserve">
+    <value>)</value>
+  </data>
+  <data name="TodaysViewUXPageResource_SubmittedActivity_Name_StartIndex" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Submitted_Activity_UserName_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont0</value>
+  </data>
+  <data name="TodaysViewUXPageResource_ToDo_Link_Locator" xml:space="preserve">
+    <value>To Do</value>
+  </data>
+  <data name="TodaysViewUXPageResource_Tree_View_DivID" xml:space="preserve">
+    <value>divTreeContainer</value>
+  </data>
+  <data name="TodaysViewUXPageResource_WindowsTitle" xml:space="preserve">
+    <value>Today's View</value>
+  </data>
+  <data name="TodaysViewUXPage_ClassNameText_Class_Locator" xml:space="preserve">
+    <value>tblclsfldsDP</value>
+  </data>
+  <data name="TodaysViewUXPage_WelcomeMessage_TextValue" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="TodaysViewUX_Page_CoursePerformance_Update_By_Class_Name" xml:space="preserve">
+    <value>CoursePerformanceUpdateTd</value>
+  </data>
+  <data name="TodaysViewUX_Page_CourseTitle_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0__ctl0_ClassCourseTitle</value>
+  </data>
+  <data name="TodaysViewUX_Page_Customize_Button_ID_Locator" xml:space="preserve">
+    <value>_ctl0:_ctl0:phBody:PageContent:_ctl0:_ctl2:_ctl0:_ctl0:_ctl0:btnAddItem</value>
+  </data>
+  <data name="TodaysViewUX_Page_Customize_Notification_Title_ID_Locator" xml:space="preserve">
+    <value>Label9</value>
+  </data>
+  <data name="TodaysViewUX_Page_Default_View_DropDownList_By_ID_Locator" xml:space="preserve">
+    <value>Ddlist</value>
+  </data>
+  <data name="TodaysViewUX_Page_IFrame_LightBox_PopUp_ID_Locator" xml:space="preserve">
+    <value>lightboxid</value>
+  </data>
+  <data name="TodaysViewUX_Page_InstructorView_ClassName_Locator" xml:space="preserve">
+    <value>ux_Instructor_View</value>
+  </data>
+  <data name="TodaysViewUX_Page_NotifyMe_CheckBox_ID_Locator" xml:space="preserve">
+    <value>chkUnreadComments</value>
+  </data>
+  <data name="TodaysViewUX_Page_Save_Close_Button_By_ID_Locator" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="TodaysViewUX_Page_WaitTime_Value" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="TodaysViewUX_Page_welcomeStudentMessage_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_lblWelcomeText</value>
   </data>
   <data name="TodayViewUXPageResource_AssetCmenu_ClassName_Locator" xml:space="preserve">
     <value>DiscussionImgDownOpt</value>
@@ -462,38 +516,65 @@
   <data name="TodayViewUXPageResource_AssetCount_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='grdMyProgress']/tbody/tr</value>
   </data>
-  <data name="TodayViewUXPageResource_Asset_InitialValue" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TodayViewUXPageResource_GetActivityName_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='grdMyProgress']/tbody/tr[{0}]/td/table/tbody/tr/td/table/tbody/tr/td[2]/a</value>
-  </data>
-  <data name="TodayViewUXPageResource_Myprogress_Link_Locator" xml:space="preserve">
-    <value>My Progress</value>
-  </data>
-  <data name="TodayViewUXPageResource_SupportLink_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancSupport</value>
-  </data>
-  <data name="TodayViewUXPageResource_CoursePerformance_AssetsName_Id_Locator" xml:space="preserve">
-    <value>grdCoursePerformance</value>
-  </data>
-  <data name="TodayViewUXPageResource_NewGrades_AssetsName_Id_Locator" xml:space="preserve">
-    <value>TodayInsNewGradeDatagrid$divContent</value>
-  </data>
-  <data name="TodayViewUXPageResource_StudentPerformance_AssetsName_Id_Locator" xml:space="preserve">
-    <value>grdStudentPerformance</value>
-  </data>
-  <data name="TodayViewUXPageResource_Student_MyProgress_AssetsName_Id_Locator" xml:space="preserve">
-    <value>grdMyProgress$divContent</value>
-  </data>
-  <data name="TodayViewUXPageResource_Student_NewGrades_Assets_ClassName_Locator" xml:space="preserve">
-    <value>tdnc2</value>
-  </data>
   <data name="TodayViewUXPageResource_AssetsName_MyProgress_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='grdMyProgress$divRoot']/div[@id='grdMyProgress$divContent']</value>
   </data>
   <data name="TodayViewUXPageResource_AssetsName_Newgrades_Xpath_Locator" xml:space="preserve">
     <value>//table[@class='todaysView3']/tbody/tr/td[@class='tdnc2']</value>
+  </data>
+  <data name="TodayViewUXPageResource_Asset_InitialValue" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TodayViewUXPageResource_Classes_Window_Name" xml:space="preserve">
+    <value>Classes</value>
+  </data>
+  <data name="TodayViewUXPageResource_CourseHome_Frame" xml:space="preserve">
+    <value>centerIFrame</value>
+  </data>
+  <data name="TodayViewUXPageResource_CourseHome_Window_Title" xml:space="preserve">
+    <value>Course Home</value>
+  </data>
+  <data name="TodayViewUXPageResource_CoursePerformance_Activity_ContentCompleted_Xpath_Locator" xml:space="preserve">
+    <value>//tr[@id='grdCoursePerformancemyTR_{0}']/td[3]/center/table/tbody/tr/td</value>
+  </data>
+  <data name="TodayViewUXPageResource_CoursePerformance_Activity_Grade_Xpath_Locator" xml:space="preserve">
+    <value>//tr[@id='grdCoursePerformancemyTR_{0}']/td[2]/table/tbody/tr/td</value>
+  </data>
+  <data name="TodayViewUXPageResource_CoursePerformance_Activity_Replace_Character" xml:space="preserve">
+    <value>\r\n--</value>
+  </data>
+  <data name="TodayViewUXPageResource_CoursePerformance_Activity_TimeOnTask_Xpath_Locator" xml:space="preserve">
+    <value>//tr[@id='grdCoursePerformancemyTR_{0}']/td[4]/center/table/tbody/tr/td</value>
+  </data>
+  <data name="TodayViewUXPageResource_CoursePerformance_AssetsName_Id_Locator" xml:space="preserve">
+    <value>grdCoursePerformance</value>
+  </data>
+  <data name="TodayViewUXPageResource_CoursePerformance_Table_Row_Id_Locator" xml:space="preserve">
+    <value>grdCoursePerformancemyTR_</value>
+  </data>
+  <data name="TodayViewUXPageResource_CoursePerformance_Table_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdCoursePerformance']/tbody/tr</value>
+  </data>
+  <data name="TodayViewUXPageResource_ElementWaitTimeOut_Value" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="TodayViewUXPageResource_Feedback_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_FeedbackLink</value>
+  </data>
+  <data name="TodayViewUXPageResource_GetActivityName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='grdMyProgress']/tbody/tr[{0}]/td/table/tbody/tr/td/table/tbody/tr/td[2]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_GetClass_Value" xml:space="preserve">
+    <value>class</value>
+  </data>
+  <data name="TodayViewUXPageResource_Glossary_Image_Id_Locator" xml:space="preserve">
+    <value>imgGlossary</value>
+  </data>
+  <data name="TodayViewUXPageResource_Gradebook_Frame_Id_Locator" xml:space="preserve">
+    <value>srcGBFrame</value>
+  </data>
+  <data name="TodayViewUXPageResource_Home_Link_PartialLink_Locator" xml:space="preserve">
+    <value>Home</value>
   </data>
   <data name="TodayViewUXPageResource_Instructor_CoursePerformance_Assets_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='grdCoursePerformance']</value>
@@ -504,44 +585,11 @@
   <data name="TodayViewUXPageResource_Instructor_StudentPerformance_Assets_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='grdStudentPerformance']</value>
   </data>
-  <data name="TodayViewUXPageResource_CourseHome_Frame" xml:space="preserve">
-    <value>centerIFrame</value>
-  </data>
-  <data name="TodayViewUXPageResource_CourseHome_Window_Title" xml:space="preserve">
-    <value>Course Home</value>
-  </data>
-  <data name="TodayViewUXPageResource_Classes_Window_Name" xml:space="preserve">
-    <value>Classes</value>
-  </data>
-  <data name="TodayViewUXPageResource_Gradebook_Frame_Id_Locator" xml:space="preserve">
-    <value>srcGBFrame</value>
-  </data>
   <data name="TodayViewUXPageResource_LinkCount_Xpath_Locator" xml:space="preserve">
     <value>//ul[@class='dd_options more_dd']/li</value>
   </data>
   <data name="TodayViewUXPageResource_LinkName_Xpath_Locator" xml:space="preserve">
     <value>//ul[@class='dd_options more_dd']/li[{0}]</value>
-  </data>
-  <data name="TodayViewUXPageResource_MoreLink_Id_Locator" xml:space="preserve">
-    <value>more_dd</value>
-  </data>
-  <data name="TodayViewUXPageResource_Outer_Frame_Id_Locator" xml:space="preserve">
-    <value>frmCourseContainer</value>
-  </data>
-  <data name="TodayViewUXPageResource_Home_Link_PartialLink_Locator" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="TodayViewUXPageResource_PCTInstructorResourceDropDown" xml:space="preserve">
-    <value>//td[@id='tdResTB']/div[1]/a</value>
-  </data>
-  <data name="TodayViewUXPageResource_PCTInstructorResourceToolLink" xml:space="preserve">
-    <value>//table[@id='tblRTBPulldown']/tbody/tr/td/div/div[@title</value>
-  </data>
-  <data name="TodayViewUXPageResource_ElementWaitTimeOut_Value" xml:space="preserve">
-    <value>2000</value>
-  </data>
-  <data name="TodayViewUXPageResource_GetClass_Value" xml:space="preserve">
-    <value>class</value>
   </data>
   <data name="TodayViewUXPageResource_MainTab_SelectedTab_Value" xml:space="preserve">
     <value>ancCourseNavSelectedMenuImgCls</value>
@@ -558,85 +606,55 @@
   <data name="TodayViewUXPageResource_ManagePrograms_Tab_Name" xml:space="preserve">
     <value>Manage Programs</value>
   </data>
+  <data name="TodayViewUXPageResource_MoreLink_Id_Locator" xml:space="preserve">
+    <value>more_dd</value>
+  </data>
+  <data name="TodayViewUXPageResource_Myprogress_Link_Locator" xml:space="preserve">
+    <value>My Progress</value>
+  </data>
+  <data name="TodayViewUXPageResource_NewGrades_AssetsName_Id_Locator" xml:space="preserve">
+    <value>TodayInsNewGradeDatagrid$divContent</value>
+  </data>
+  <data name="TodayViewUXPageResource_Outer_Frame_Id_Locator" xml:space="preserve">
+    <value>frmCourseContainer</value>
+  </data>
+  <data name="TodayViewUXPageResource_PastDueSubmittedChannel_ActivityCheckbox_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='div__ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1']/table/tbody/tr/td[1]/input</value>
+  </data>
+  <data name="TodayViewUXPageResource_PastDueSubmitted_StudentName_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont0</value>
+  </data>
+  <data name="TodayViewUXPageResource_PCTInstructorResourceDropDown" xml:space="preserve">
+    <value>//td[@id='tdResTB']/div[1]/a</value>
+  </data>
+  <data name="TodayViewUXPageResource_PCTInstructorResourceToolLink" xml:space="preserve">
+    <value>//table[@id='tblRTBPulldown']/tbody/tr/td/div/div[@title</value>
+  </data>
+  <data name="TodayViewUXPageResource_StudentPerformance_AssetsName_Id_Locator" xml:space="preserve">
+    <value>grdStudentPerformance</value>
+  </data>
+  <data name="TodayViewUXPageResource_Student_MyProgress_AssetsName_Id_Locator" xml:space="preserve">
+    <value>grdMyProgress$divContent</value>
+  </data>
+  <data name="TodayViewUXPageResource_Student_NewGrades_Assets_ClassName_Locator" xml:space="preserve">
+    <value>tdnc2</value>
+  </data>
   <data name="TodayViewUXPageResource_Subtab_Classname_Xpath_Locator" xml:space="preserve">
     <value>//tr[@id='trSubNavigationTab']/td[{0}]</value>
   </data>
   <data name="TodayViewUXPageResource_Subtab_Count_Xpath_Locator" xml:space="preserve">
     <value>//tr[@id='trSubNavigationTab']/td</value>
   </data>
+  <data name="TodayViewUXPageResource_SupportLink_Id_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phHeader__ctl0_ucs_HelloObject_ancSupport</value>
+  </data>
+  <data name="TodayViewUXPageResource_Tools_Dropdown_Id_Locator" xml:space="preserve">
+    <value>_ctl0:_ctl0:phHeader:_ctl0:ucs_Toolbar:ucs_RT:tools</value>
+  </data>
+  <data name="TodayViewUXPageResource_VerbChart_Image_Id_Locator" xml:space="preserve">
+    <value>imgVerbChart</value>
+  </data>
   <data name="TodayViewUXPageResource__SubTab_SelectedTab_Value" xml:space="preserve">
     <value>SubNavigationTabSelected1</value>
-  </data>
-  <data name="TodaysViewPageResource_GetMessagesCount_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='TodaysViewMessageDatagrid']/tbody/tr</value>
-  </data>
-  <data name="TodaysViewUXPageResource_GetDiscussionTopicCount_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='TVUnreaddiscussionDatagrid']/tbody/tr</value>
-  </data>
-  <data name="TodaysViewUXPageResource_GetIdleStudentCount_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='TVIdlStuDatagrid']/tbody/tr</value>
-  </data>
-  <data name="TodaysViewUXPageResource_MILGetNotificationText_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl0__ctl0_lblHeading</value>
-  </data>
-  <data name="TodaysViewUXPageResource_NotPassedChannel_ActivityRow_Id_Locator" xml:space="preserve">
-    <value>//table[@id='TodaysInsNotPassedDatagrid']/tbody/tr</value>
-  </data>
-  <data name="TodaysViewUXPageResource_StudentName_IdleStudents_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='TVIdlStuDatagrid']/tbody/tr/td//table//div/b</value>
-  </data>
-  <data name="TodaysViewUXPageResource_PastDueNotSubmitted_ActivityCount_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='TVInsAnnoucement$contentCntr']/tbody/tr</value>
-  </data>
-  <data name="TodaysViewUXPageResource_PastDueNotSubmitted_ActivityTotalCount_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='TVInsAnnoucement$contentCntr']/tbody/tr[{0}]/td/div/table/tbody/tr/td/table</value>
-  </data>
-  <data name="TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath" xml:space="preserve">
-    <value>//table[@id='InsUnreadComments']/tbody/tr</value>
-  </data>
-  <data name="TodaysViewUXPageResource_InstructorComments_Activity_Name_By_Xpath" xml:space="preserve">
-    <value>//table[@id='InsUnreadComments']/tbody/tr[{0}]/td/table/tbody/tr/td/span</value>
-  </data>
-  <data name="TodaysViewUXPageResource_ActivityName_PastDueSubmitted_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='div__ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1']/table/tbody/tr/td[2]/a</value>
-  </data>
-  <data name="TodaysViewUXPageResource_ExpandIcon_PastDueSubmitted_Xpath_Locator" xml:space="preserve">
-    <value>//a[@id='_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn0']/img</value>
-  </data>
-  <data name="TodaysViewUXPageResource_GetDiscussionTopicName_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='TVUnreaddiscussionDatagrid']/tbody/tr[{0}]/td/table/tbody/tr/td/table/tbody/tr/td/div/b</value>
-  </data>
-  <data name="TodaysViewUXPageResource_MyProgressChannel_OverallGrade_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='grdMyProgress$tblHdr']/tbody/tr[2]/td[2]</value>
-  </data>
-  <data name="TodaysViewUXPageResource_StudentPerformanceChannel_OverallGrade_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='grdStudentPerformance$tblHdr']/tbody/tr[2]/td[2]</value>
-  </data>
-  <data name="TodayViewUXPageResource_PastDueSubmitted_StudentName_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont0</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Activity_PastDueDateAndTime_Id_Locator" xml:space="preserve">
-    <value>PDS_DueSpan</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Activity_Select_Checkbox" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1Checkbox</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Activity_SubmittedDateAndTime_Id_Locator" xml:space="preserve">
-    <value>PDS_SubmitSpan</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Expand_Icon_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn0</value>
-  </data>
-  <data name="TodaysViewUXPageResource_SubmittedActivityName_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont1</value>
-  </data>
-  <data name="TodaysViewUXPageResource_SubmittedActivity_Checkbox_Id_Locator" xml:space="preserve">
-    <value>chkAlltvPastDueSubmission</value>
-  </data>
-  <data name="TodaysViewUXPageResource_Submitted_Activity_UserName_Id_Locator" xml:space="preserve">
-    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont0</value>
-  </data>
-  <data name="TodayViewUXPageResource_PastDueSubmittedChannel_ActivityCheckbox_Xpath_Locator" xml:space="preserve">
-    <value>//div[@id='div__ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1']/table/tbody/tr/td[1]/input</value>
   </data>
 </root>

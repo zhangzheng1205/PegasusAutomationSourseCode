@@ -1321,11 +1321,66 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //tr[@id=&apos;grdCoursePerformancemyTR_{0}&apos;]/td[3]/center/table/tbody/tr/td.
+        /// </summary>
+        internal static string TodayViewUXPageResource_CoursePerformance_Activity_ContentCompleted_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_CoursePerformance_Activity_ContentCompleted_Xpath_Locator" +
+                        "", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //tr[@id=&apos;grdCoursePerformancemyTR_{0}&apos;]/td[2]/table/tbody/tr/td.
+        /// </summary>
+        internal static string TodayViewUXPageResource_CoursePerformance_Activity_Grade_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_CoursePerformance_Activity_Grade_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to \r\n--.
+        /// </summary>
+        internal static string TodayViewUXPageResource_CoursePerformance_Activity_Replace_Character {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_CoursePerformance_Activity_Replace_Character", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //tr[@id=&apos;grdCoursePerformancemyTR_{0}&apos;]/td[4]/center/table/tbody/tr/td.
+        /// </summary>
+        internal static string TodayViewUXPageResource_CoursePerformance_Activity_TimeOnTask_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_CoursePerformance_Activity_TimeOnTask_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to grdCoursePerformance.
         /// </summary>
         internal static string TodayViewUXPageResource_CoursePerformance_AssetsName_Id_Locator {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_CoursePerformance_AssetsName_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to grdCoursePerformancemyTR_.
+        /// </summary>
+        internal static string TodayViewUXPageResource_CoursePerformance_Table_Row_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_CoursePerformance_Table_Row_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;grdCoursePerformance&apos;]/tbody/tr.
+        /// </summary>
+        internal static string TodayViewUXPageResource_CoursePerformance_Table_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_CoursePerformance_Table_Xpath_Locator", resourceCulture);
             }
         }
         

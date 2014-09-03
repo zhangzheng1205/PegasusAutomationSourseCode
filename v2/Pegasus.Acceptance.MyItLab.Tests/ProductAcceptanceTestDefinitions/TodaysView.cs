@@ -541,7 +541,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             // user details 
             User user = User.Get(userTypeEnum);
-            string userFullName = (user.LastName + ',' + " " +user.FirstName);
+            string userFullName = (user.LastName + ',' + " " + user.FirstName);
             // verify user is present
             Logger.LogAssertion("VerifyUserNamePresent", ScenarioContext.Current.
               ScenarioInfo.Title, () => Assert.AreEqual(userFullName, new TodaysViewUxPage()
@@ -647,5 +647,23 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("TodaysView", "ClickOnPastDueButton",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Validate Activity Score In Course Performance Channel.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="header">This is activity header name.</param>
+        /// <param name="headerValue">This is expected activity header value.</param>
+        [Then(@"I should see ""(.*)"" having ""(.*)"" as ""(.*)""")]
+        public void ValidateActivityCoursePerformanceChannel(string activityName, string header, string headerValue)
+        {
+            Logger.LogMethodEntry("TodaysView", "ValidateActivityCoursePerformanceChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyCoursePerformanceChannelScore", ScenarioContext.Current.ScenarioInfo.Title,
+              () => Assert.AreEqual(headerValue, new TodaysViewUxPage().GetPerformanceChannelCalculations(activityName, header)));
+            Logger.LogMethodExit("TodaysView", "ValidateActivityCoursePerformanceChannel",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
