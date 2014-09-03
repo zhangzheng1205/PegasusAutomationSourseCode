@@ -72,6 +72,25 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Click on Back image icon
+        /// in View all course materials.
+        /// </summary>
+        public void ClickOnBackIconInCourseMaterials()
+        {
+            //Click on back icon
+            logger.LogMethodEntry("StudentPresentationPage",
+               "ClickOnBackIconInCourseMaterials",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Click on back icon
+            base.ClickButtonById(StudentPresentationPageResource.
+                StudentPresentation_Back_Icon_Id_Locator);
+            logger.LogMethodExit("StudentPresentationPage",
+                "ClickOnBackIconInCourseMaterials",
+                base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
         /// Submit the activity in presentation window.
         /// </summary>
         public void AttemptActivity()

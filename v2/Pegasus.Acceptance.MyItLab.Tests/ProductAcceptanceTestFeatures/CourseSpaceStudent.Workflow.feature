@@ -67,8 +67,6 @@ Then I should see the pre test training "Sim5PreTest" score "100"
 #peg-21998:Sim 5 Excel activity and Student scoring a 100%
 #Purpose : Student launches a Sim 5 Excel activity and Student scoring a 100%
 Scenario: Student launches a Sim 5 Excel activity and Student scoring a 100% compares the result and status
-When I navigate to "Course Materials" tab
-Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
 And I launch the activity named as "Excel Chapter 1 Skill-Based Training" in Course Materials
 And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly and click on Submit button
@@ -133,4 +131,4 @@ And I click on submit button answering incorrectly of "Access" type "Exam" mode 
 Then I should be on the "Course Materials" page
 And I should see "Not passed" status for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 And I should see "0.00%" score for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
-
+And I click on 'Back' link in View all course materials

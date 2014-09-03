@@ -71,6 +71,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to imgBackArrow.
+        /// </summary>
+        internal static string StudentPresentation_Back_Icon_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Back_Icon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Activity Alert.
         /// </summary>
         internal static string StudentPresentation_Page_Activity_Alert_Window_Name {
@@ -737,7 +746,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  - BDD SMSUSER.
+        ///   Looks up a localized string similar to  - BDD ecb1.
         /// </summary>
         internal static string StudentPresentation_Page_SimPresentation_Window_Name {
             get {

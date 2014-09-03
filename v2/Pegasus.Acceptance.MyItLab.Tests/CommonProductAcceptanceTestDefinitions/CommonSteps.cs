@@ -688,6 +688,25 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+       /// <summary>
+       /// Click on Back icon in
+       /// View all course materials
+       /// </summary>
+       /// <param name="p0"></param>
+        [Then(@"I click on 'Back' link in View all course materials")]
+        public void ClickBackIconInViewAllCourseMaterials()
+        {
+            //Click on back icon in View all course materials
+            Logger.LogMethodEntry("CommonSteps", "ClickBackIconInViewAllCourseMaterials",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on back icon in View all course materials
+            new StudentPresentationPage().ClickOnBackIconInCourseMaterials();
+            Logger.LogMethodExit("CommonSteps", "ClickBackIconInViewAllCourseMaterials",
+              base.IsTakeScreenShotDuringEntryExit);
+            
+        }
+
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

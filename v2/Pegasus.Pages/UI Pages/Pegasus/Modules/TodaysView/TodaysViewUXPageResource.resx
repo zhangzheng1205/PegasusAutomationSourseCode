@@ -636,4 +636,7 @@
   <data name="TodaysViewUXPageResource_Submitted_Activity_UserName_Id_Locator" xml:space="preserve">
     <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissiont0</value>
   </data>
+  <data name="TodayViewUXPageResource_PastDueSubmittedChannel_ActivityCheckbox_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='div__ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1']/table/tbody/tr/td[1]/input</value>
+  </data>
 </root>

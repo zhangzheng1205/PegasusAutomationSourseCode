@@ -3343,7 +3343,6 @@ namespace Pegasus.Pages.UI_Pages
             //Select MainTab
             Logger.LogMethodEntry("TodaysViewUXPage", "SelectCourseSpaceUserMainTab",
                 base.IsTakeScreenShotDuringEntryExit);
-            base.SelectDefaultWindow();
             //Wait for the MainTab
             base.WaitForElement(By.PartialLinkText(mainTabName));
             //Get Tab Property
@@ -3585,8 +3584,8 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("TodaysViewUXPage", "SelectSubmittedActivityCheckBox",
                 base.IsTakeScreenShotDuringEntryExit);
             // select activity checkbox
-            base.SelectCheckBoxById(TodaysViewUXPageResource.
-                TodaysViewUXPageResource_SubmittedActivity_Checkbox_Id_Locator);
+            base.SelectCheckBoxByXPath(TodaysViewUXPageResource.
+                TodayViewUXPageResource_PastDueSubmittedChannel_ActivityCheckbox_Xpath_Locator);
             Logger.LogMethodExit("TodaysViewUXPage", "SelectSubmittedActivityCheckBox",
                 base.IsTakeScreenShotDuringEntryExit);
         }

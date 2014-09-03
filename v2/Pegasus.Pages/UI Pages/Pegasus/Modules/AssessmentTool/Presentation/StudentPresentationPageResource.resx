@@ -265,7 +265,7 @@
     <value>{RIGHT}</value>
   </data>
   <data name="StudentPresentation_Page_SimPresentation_Window_Name" xml:space="preserve">
-    <value> - BDD SMSUSER</value>
+    <value> - BDD ecb1</value>
   </data>
   <data name="StudentPresentation_Page_Tab_Key_Value" xml:space="preserve">
     <value>{TAB}</value>
@@ -545,5 +545,8 @@
   </data>
   <data name="StudentPrsentation_Page_SIM5_TrainingMode_WarningPopup_Ok_Button_Xpath" xml:space="preserve">
     <value>//div[@id='CustomMessageBox']/div/div[3]/button[2]</value>
+  </data>
+  <data name="StudentPresentation_Back_Icon_Id_Locator" xml:space="preserve">
+    <value>imgBackArrow</value>
   </data>
 </root>

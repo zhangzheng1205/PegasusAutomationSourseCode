@@ -223,28 +223,24 @@ testRunner.Then("I should see the pre test training \"Sim5PreTest\" score \"100\
 #line 69
 this.ScenarioSetup(scenarioInfo);
 #line 70
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 71
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 72
 testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsSt" +
                     "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 73
+#line 71
 testRunner.And("I launch the activity named as \"Excel Chapter 1 Skill-Based Training\" in Course M" +
                     "aterials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 74
+#line 72
 testRunner.And("I should answer activity \"Excel Chapter 1 Skill-Based Training\" correctly and cli" +
                     "ck on Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 75
+#line 73
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 76
+#line 74
 testRunner.When("I click on cmenu \"ViewSubmissions\" of asset \"Excel Chapter 1 Skill-Based Training" +
                     "\" with mode \"SkillBased\" in Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 77
+#line 75
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 78
+#line 76
 testRunner.When("I click on the last submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 79
+#line 77
 testRunner.Then("I should see the grade is \"7.41%\" in View Submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -256,27 +252,27 @@ testRunner.Then("I should see the grade is \"7.41%\" in View Submission page", (
         public virtual void Sim5ExcelActivityAndStudentScoringAZero_()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sim 5 excel activity and Student scoring a Zero.", ((string[])(null)));
-#line 86
+#line 84
 this.ScenarioSetup(scenarioInfo);
-#line 87
+#line 85
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 88
+#line 86
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 89
+#line 87
 testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsSt" +
                     "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 90
+#line 88
 testRunner.And("I launch the activity named as \"Excel Chapter 1 Skill-Based Training\" in Course M" +
                     "aterials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 91
+#line 89
 testRunner.And("I click on submit button answering incorrectly of \"Excel\" type \"Training\" mode ac" +
                     "tivity \"Excel Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 92
+#line 90
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 93
+#line 91
 testRunner.And("I should see \"Not passed\" status for the activity \"Excel Chapter 1 Skill-Based Tr" +
                     "aining\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 94
+#line 92
 testRunner.And("I should see \"0.00%\" score for the activity \"Excel Chapter 1 Skill-Based Training" +
                     "\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -289,23 +285,23 @@ testRunner.And("I should see \"0.00%\" score for the activity \"Excel Chapter 1 
         public virtual void StudentScoring0InSIM5WordActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student scoring 0 in SIM5 Word activity", ((string[])(null)));
-#line 101
+#line 99
 this.ScenarioSetup(scenarioInfo);
-#line 102
+#line 100
 testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course Mat" +
                     "erials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 103
+#line 101
 testRunner.And("I launch the activity named as \"Word Chapter 1 Project 1A Skill-Based Exam (Scena" +
                     "rio 1)\" in Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 104
+#line 102
 testRunner.And("I click on submit button answering incorrectly of \"Word\" type \"Exam\" mode activit" +
                     "y \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 105
+#line 103
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 106
+#line 104
 testRunner.And("I should see \"Not passed\" status for the activity \"Word Chapter 1 Project 1A Skil" +
                     "l-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 107
+#line 105
 testRunner.And("I should see \"0.00%\" score for the activity \"Word Chapter 1 Project 1A Skill-Base" +
                     "d Exam (Scenario 1)\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -318,23 +314,23 @@ testRunner.And("I should see \"0.00%\" score for the activity \"Word Chapter 1 P
         public virtual void StudentScoring0InSIM5PowerPointActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student scoring 0 in SIM5 PowerPoint activity", ((string[])(null)));
-#line 115
+#line 113
 this.ScenarioSetup(scenarioInfo);
-#line 116
+#line 114
 testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 117
+#line 115
 testRunner.And("I launch the activity named as \"PowerPoint Chapter 1 Skill-Based Training\" in Cou" +
                     "rse Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 118
+#line 116
 testRunner.And("I click on submit button answering incorrectly of \"PowerPoint\" type \"Training\" mo" +
                     "de activity \"PowerPoint Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 119
+#line 117
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 120
+#line 118
 testRunner.And("I should see \"Not passed\" status for the activity \"PowerPoint Chapter 1 Skill-Bas" +
                     "ed Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 121
+#line 119
 testRunner.And("I should see \"0.00%\" score for the activity \"PowerPoint Chapter 1 Skill-Based Tra" +
                     "ining\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -347,25 +343,27 @@ testRunner.And("I should see \"0.00%\" score for the activity \"PowerPoint Chapt
         public virtual void StudentScoring0InSIM5AccessActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student scoring 0 in SIM5 Access activity", ((string[])(null)));
-#line 129
+#line 127
 this.ScenarioSetup(scenarioInfo);
-#line 130
+#line 128
 testRunner.When("I select \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course M" +
                     "aterials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 131
+#line 129
 testRunner.And("I launch the activity named as \"Access Chapter 1 Project 1A Skill-Based Exam (Sce" +
                     "nario 1)\" in Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 132
+#line 130
 testRunner.And("I click on submit button answering incorrectly of \"Access\" type \"Exam\" mode activ" +
                     "ity \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 133
+#line 131
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 134
+#line 132
 testRunner.And("I should see \"Not passed\" status for the activity \"Access Chapter 1 Project 1A Sk" +
                     "ill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 135
+#line 133
 testRunner.And("I should see \"0.00%\" score for the activity \"Access Chapter 1 Project 1A Skill-Ba" +
                     "sed Exam (Scenario 1)\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 134
+testRunner.And("I click on \'Back\' link in View all course materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -174,7 +174,7 @@ testRunner.Then("I should see the \"Notifications\" channels in \'Todays view\' 
 #line 54
 testRunner.When("I click on the \"My Progress\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 55
-testRunner.Then("I should see \"37.55%\" as overall Grade in \"My Progress\" alert channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"0.93%\" as overall Grade in \"My Progress\" alert channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

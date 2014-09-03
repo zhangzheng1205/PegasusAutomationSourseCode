@@ -52,7 +52,7 @@ Scenario: Student validates grade display in My progress channel
 When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
 When I click on the "My Progress" option
-Then I should see "37.55%" as overall Grade in "My Progress" alert channel
+Then I should see "0.93%" as overall Grade in "My Progress" alert channel
 
 #Purpose : As a Student i should be notified with alert count in "Unread Discussions" channel when instructor posts reply to Discussion topic
 #Test case ID : peg-16746.

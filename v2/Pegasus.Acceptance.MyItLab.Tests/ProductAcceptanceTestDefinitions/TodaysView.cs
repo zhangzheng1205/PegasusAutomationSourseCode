@@ -541,7 +541,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             // user details 
             User user = User.Get(userTypeEnum);
-            string userFullName = (user.LastName + ',' + user.FirstName).Replace(" ", "");
+            string userFullName = (user.LastName + ',' + " " +user.FirstName);
             // verify user is present
             Logger.LogAssertion("VerifyUserNamePresent", ScenarioContext.Current.
               ScenarioInfo.Title, () => Assert.AreEqual(userFullName, new TodaysViewUxPage()
@@ -596,7 +596,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             User user = User.Get(userTypeEnum);
             // verify user details present
             Logger.LogAssertion("VerifyUserDetailsPresent", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(user.LastName + ',' + user.FirstName, new TodaysViewUxPage()
+                () => Assert.AreEqual(user.LastName + ',' +
+                    " " + user.FirstName, new TodaysViewUxPage()
                 .GetUserNameWhoHasSubmittedTheActivity()));
             // replace not required characters from activity name 
             int activityLength = activityName.Length;

@@ -1528,6 +1528,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;div__ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl1__ctl0__ctl3_tvPastDueSubmissionn1&apos;]/table/tbody/tr/td[1]/input.
+        /// </summary>
+        internal static string TodayViewUXPageResource_PastDueSubmittedChannel_ActivityCheckbox_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_PastDueSubmittedChannel_ActivityCheckbox_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //td[@id=&apos;tdResTB&apos;]/div[1]/a.
         /// </summary>
         internal static string TodayViewUXPageResource_PCTInstructorResourceDropDown {
