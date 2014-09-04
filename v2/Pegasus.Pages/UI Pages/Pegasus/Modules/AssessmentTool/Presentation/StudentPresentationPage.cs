@@ -2836,19 +2836,42 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for the SIM5 assignment launch window
                 base.WaitUntilWindowLoads(activityName + StudentPresentationPageResource.
                 StudentPresentation_Page_SimPresentation_Window_Name);
+                
                 //Select the SIM5 assignment launch window
                 base.SelectWindow(activityName + StudentPresentationPageResource.
                 StudentPresentation_Page_SimPresentation_Window_Name);
+               
                 //Answer first excel question
                 StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook();
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                     StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
-                //Answer Second excel question
-                EnteringTextUsingAutoCompleteAndUsingTheNameBoxToSelectACell();
+                //Answer second question
+                this.EnteringTextUsingAutoCompleteAndUsingTheNameBoxToSelectACell();
+                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
+                //Answer third question
+                this.AutoFillAndKeyboardShortcuts();
+                //wait for element               
+                base.WaitForElement(By.Id("fwdtaskbtn"));
+                //Get property for next button
+                IWebElement getNextButton = base.GetWebElementPropertiesById("fwdtaskbtn");
+                //Click on next button
+                base.ClickByJavaScriptExecutor(getNextButton);
+                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
+                base.ClickByJavaScriptExecutor(getNextButton);
+                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
+                base.ClickByJavaScriptExecutor(getNextButton);
+                //Anser sixth question
+                this.ConstructingAFormulaAndUsingTheSumFunction();
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                    StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
+                //base.ClickByJavaScriptExecutor(getNextButton);
+                
                 //Click on SIM5 activity Submit button
                 this.ClickOnSIM5ActivitySubmitButton();
+
             }
             catch (Exception e)
             {
@@ -2858,6 +2881,72 @@ namespace Pegasus.Pages.UI_Pages
                  "SubmitSIM5ExcelTypeActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Answers Autofill and Keyboard shortcuts
+        /// </summary>     
+        private void AutoFillAndKeyboardShortcuts()
+        {
+            //Answer third Excel Question       
+            logger.LogMethodEntry("StudentPresentationPage",
+                    "AutoFillAndKeyboardShortcuts",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Fill B3 cell value
+            PutExcelValueInCell(
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_ThirdQuestion_B3_Cell_Id,
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_First_Activity_ThirdQuestion_B3_Cell_Value);
+            //Clear reference box
+            base.ClearTextById(StudentPresentationPageResource.
+               StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Fill Cell ID in reference box
+            base.FillTextBoxById(StudentPresentationPageResource.
+               StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator, "B3");
+            //Press enter
+            this.PressEnterKeyById(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Wait for element Border bullet for cell B3
+            base.WaitForElement(By.ClassName("SelectionBorderBullet"));
+            //Get properties border bullet element
+            IWebElement getBorderBullet = base.GetWebElementPropertiesByClassName("SelectionBorderBullet");
+            //select and drag the range B3:D3        
+            base.PerformDragAndDropToOffset(getBorderBullet, 100, 60);
+            logger.LogMethodExit("StudentPresentationPage",
+                "AutoFillAndKeyboardShortcuts",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Answers Constructing A Formula And Using The Sum Function.
+        /// </summary>
+        private void ConstructingAFormulaAndUsingTheSumFunction()
+        {
+            //Answer second Excel Question       
+            logger.LogMethodEntry("StudentPresentationPage",
+                    "ConstructingAFormulaAndUsingTheSumFunction",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Fill B8 cell value
+            PutExcelValueInCell(
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_B8_Cell_Id,
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_First_Activity_B8_Cell_Value);
+            //Fill C8 cell value
+            PutExcelValueInCell(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_C8_Cell_Id,
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_First_Activity_C8_Cell_Value);
+            //Fill D8 cell value
+            PutExcelValueInCell(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_D8_Cell_Id,
+                StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_First_Activity_D8_Cell_Value);
+            logger.LogMethodExit("StudentPresentationPage",
+                "ConstructingAFormulaAndUsingTheSumFunction",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Answers Starting Excel Navigating Excel And Naming And Saving A Workbook.

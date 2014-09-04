@@ -549,4 +549,31 @@
   <data name="StudentPresentation_Back_Icon_Id_Locator" xml:space="preserve">
     <value>imgBackArrow</value>
   </data>
+  <data name="StudentPresentation_Page_SimPresentation_Window_Name_Locator" xml:space="preserve">
+    <value> - PEG_PPE_HED_Core_Stud_1302 PEG_PPE_HED_Core_Stud_1302</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_B8_Cell_Id" xml:space="preserve">
+    <value>B8</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_C8_Cell_Id" xml:space="preserve">
+    <value>C8</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_D8_Cell_Id" xml:space="preserve">
+    <value>D8</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_First_Activity_B8_Cell_Value" xml:space="preserve">
+    <value>=B4+B5+B6+B7</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_First_Activity_C8_Cell_Value" xml:space="preserve">
+    <value>=C4+C5+C6+C7</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_First_Activity_D8_Cell_Value" xml:space="preserve">
+    <value>=D4+D5+D6+D7</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_First_Activity_ThirdQuestion_B3_Cell_Value" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_ThirdQuestion_B3_Cell_Id" xml:space="preserve">
+    <value>B3</value>
+  </data>
 </root>

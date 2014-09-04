@@ -1827,6 +1827,19 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             new Actions(WebDriver).DragAndDrop(sourceElementLocation, targetElementLocation).Perform();
         }
 
+        /// <summary>
+        /// A convenience method that performs click-and-hold at the location of the source element, 
+        /// moves to the location of the target element, then releases the mouse.
+        /// </summary>
+        /// <see cref="Actions">The user-facing API for emulating complex user gestures. 
+        /// Use this class rather than using the Keyboard or Mouse directly. Implements the builder pattern: 
+        /// Builds a CompositeAction containing all actions specified by the method calls.</see>
+        /// <param name="sourceElementLocation">element to emulate button down at.</param>
+        /// <param name="targetElementLocation">element to move to and release the mouse at.</param>
+        protected void PerformDragAndDropToOffset(IWebElement sourceElementLocation, int offsetX, int offsetY)
+        {
+            new Actions(WebDriver).DragAndDropToOffset(sourceElementLocation, offsetX, offsetY).Perform();
+        }
         #endregion
 
         #region WebDriver IJavaScriptExecutor
