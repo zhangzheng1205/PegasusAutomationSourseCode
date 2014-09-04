@@ -466,18 +466,18 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Selects the check box of activity.
         /// </summary>
         /// <param name="activityCount">Number of activity for which checkbox to be checked.</param>
-        [When(@"I select the check box of any (.*) activities")]
+        [When(@"I select the check box of any (.*) activities in ""(.*)""")]
         public void SelectCheckBoxOfActivity(
-            int activityCount)
+            int activityCount, String folderName)
         {
             Logger.LogMethodEntry("AssignmentCalendar",
                  "SelectCheckBoxOfActivity",
                           base.IsTakeScreenShotDuringEntryExit);
-
             var calendarHedDefaultUxPage =
                 new CalendarHedDefaultUxPage();
+            String activityId = calendarHedDefaultUxPage.GetAssetId(folderName);                          
             calendarHedDefaultUxPage.SelectCheckBoxOfActivity(activityCount,
-                Activity.Get(Activity.ActivityTypeEnum.Folder).ActivityId);
+                activityId);
 
             Logger.LogMethodExit("AssignmentCalendar",
                   "SelectCheckBoxOfActivity",

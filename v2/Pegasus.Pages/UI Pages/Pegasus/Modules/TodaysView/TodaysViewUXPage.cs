@@ -668,7 +668,7 @@ namespace Pegasus.Pages.UI_Pages
                                  base.IsTakeScreenShotDuringEntryExit);
             return isTeacherViewTabsPresent;
         }
-        
+
         /// <summary>
         /// Enter as Demo Student
         /// </summary>
@@ -735,7 +735,7 @@ namespace Pegasus.Pages.UI_Pages
                                  base.IsTakeScreenShotDuringEntryExit);
             return getClassName;
         }
-        
+
         /// <summary>
         /// Select Home Button
         /// </summary>
@@ -771,7 +771,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("TodaysViewUXPage", "SelectHomeButton",
                                  base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
         /// Navigate to Teacher View
         /// </summary>
@@ -2294,7 +2294,7 @@ namespace Pegasus.Pages.UI_Pages
                                 base.IsTakeScreenShotDuringEntryExit);
             return totalCount;
         }
-        
+
         /// <summary>
         /// Get Calendar Text
         /// </summary>
@@ -3655,6 +3655,60 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickButtonByPartialLinkText(actionButtonName);
             Logger.LogMethodEntry("TodaysViewUXPage", "ClickTheActivityButton",
              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get Course Performance Channel Calculations.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="headerName">This is course performance header name.</param>
+        /// <returns>Course performance score else null.</returns>
+        public string GetPerformanceChannelCalculations(string activityName, string headerName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetPerformanceChannelCalculations",
+               base.IsTakeScreenShotDuringEntryExit);
+            string getCoursePerformanceScore = string.Empty;
+            try
+            {
+                // get count of course performance activity rows
+                int getTotalCoursePerformanceActivityRows = base.GetElementCountByXPath
+                    (TodaysViewUXPageResource.TodayViewUXPageResource_CoursePerformance_Table_Xpath_Locator);
+                for (int i = 1; i <= getTotalCoursePerformanceActivityRows; i++)
+                {
+                    // get activity name
+                    string getActivityNameFromUi = base.GetElementTextById(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_CoursePerformance_Table_Row_Id_Locator + i)
+                        .Replace(TodaysViewUXPageResource
+                        .TodayViewUXPageResource_CoursePerformance_Activity_Replace_Character, string.Empty);
+                    if (getActivityNameFromUi.Contains(activityName))
+                    {
+                        // get score based on header name
+                        switch (headerName)
+                        {
+                            case "Grade":
+                                getCoursePerformanceScore = base.GetElementTextByXPath
+                           (String.Format(TodaysViewUXPageResource.TodayViewUXPageResource_CoursePerformance_Activity_Grade_Xpath_Locator, i));
+                                break;
+                            case "Content Completed":
+                                getCoursePerformanceScore = base.GetElementTextByXPath
+                       (String.Format(TodaysViewUXPageResource.TodayViewUXPageResource_CoursePerformance_Activity_ContentCompleted_Xpath_Locator, i));
+                                break;
+                            case "Time on Task":
+                                getCoursePerformanceScore = base.GetElementTextByXPath
+                       (String.Format(TodaysViewUXPageResource.TodayViewUXPageResource_CoursePerformance_Activity_TimeOnTask_Xpath_Locator, i));
+                                break;
+                        }
+
+                    }
+                }
+                Logger.LogMethodExit("TodaysViewUXPage", "GetPerformanceChannelCalculations",
+               base.IsTakeScreenShotDuringEntryExit);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e); ;
+            }
+            return getCoursePerformanceScore;
         }
     }
 }

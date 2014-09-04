@@ -139,5 +139,19 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
             logger.LogMethodExit("GraderFeedbackPage", "ClickReturnToCourseButton",
                       base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Refresh Course Preview Iframe.
+        /// </summary>
+        public void RefreshCoursePreviewIframe()
+        {
+            //To perform click operation on "Retuen To Course" button.
+            logger.LogMethodEntry("GraderFeedbackPage", "RefreshCoursePreviewIframe",
+                                  base.IsTakeScreenShotDuringEntryExit);
+            base.SelectDefaultWindow();
+            base.RefreshTheCurrentPage();
+            logger.LogMethodExit("GraderFeedbackPage", "RefreshCoursePreviewIframe",
+                      base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

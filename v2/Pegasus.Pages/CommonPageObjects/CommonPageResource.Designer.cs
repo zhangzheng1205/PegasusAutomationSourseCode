@@ -124,6 +124,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to grdCoursePerformance.
+        /// </summary>
+        internal static string CommonPage_CoursePerformance_Table_Id_Locator {
+            get {
+                return ResourceManager.GetString("CommonPage_CoursePerformance_Table_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ifrmCoursePreview.
         /// </summary>
         internal static string CommonPage_CoursePreviewFrame_Id_Locator {

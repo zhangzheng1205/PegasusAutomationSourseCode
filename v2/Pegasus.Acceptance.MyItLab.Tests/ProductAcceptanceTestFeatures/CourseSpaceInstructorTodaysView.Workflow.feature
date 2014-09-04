@@ -152,3 +152,17 @@ Then I should see "CsSmsStudent" name and "Exam [Skill-Based]: Word Chapter 1 Sk
 And I should be able to select the past due activity
 When I click on "Decline" activities past due date
 Then I should see the successfull message "All of the late submissions have been declined. These submissions will receive a zero in the Gradebook."
+
+#Test case ID : peg-16749.
+#Products : MyItLab, HSS and World Language.
+#Pre condition : 1. Student should submit the activity. 2. GTD Job should be run(Frequency is every 2 Hour).
+#Dependency : Instructor should assign activity and Student should submit the activity.
+Scenario: Display of activities and update of Grades in Course Performance channel
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
+When I click on the "Course Performance" link in notifications channel
+And I select "Word Chapter 1 Skill-Based Training" in "Today's View" by "CsSmsInstructor"
+Then I should see "Word Chapter 1 Skill-Based Training" having "Grade" as "100%"
+And I should see "Word Chapter 1 Skill-Based Training" having "Content Completed" as "100%"
+And I should see "Word Chapter 1 Skill-Based Training" having "Time on Task" as "00:07"
+

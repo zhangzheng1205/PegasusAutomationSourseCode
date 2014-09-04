@@ -228,4 +228,7 @@
   <data name="ComonPage_ExcelChapter1GraderActivities_FolderName" xml:space="preserve">
     <value>Excel Chapter 1: Grader Activities</value>
   </data>
+  <data name="CommonPage_CoursePerformance_Table_Id_Locator" xml:space="preserve">
+    <value>grdCoursePerformance</value>
+  </data>
 </root>

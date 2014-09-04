@@ -227,7 +227,8 @@ testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((Tech
 testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Calendar\" by \"CsSmsInstr" +
                     "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 74
-testRunner.And("I select the check box of any 2 activities", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I select the check box of any 2 activities in \"PowerPoint Chapter 1: Simulation A" +
+                    "ctivities\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 75
 testRunner.Then("I should see Assign/Unassign link in active state on the content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 76

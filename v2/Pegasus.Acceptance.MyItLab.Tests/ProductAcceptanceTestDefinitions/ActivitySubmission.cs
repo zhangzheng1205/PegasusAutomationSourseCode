@@ -779,5 +779,19 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("ActivitySubmission", "ClickReturnToCourseButton",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Refresh the View All Course Materials frame to navigate to root folder
+        /// </summary>
+        [When(@"I refresh the View All Course Materials frame")]
+        public void RefreshViewAllCourseMaterialsFrame()
+        {
+            // Refresh the View All Course Materials frame
+            Logger.LogMethodEntry("ActivitySubmission", "RefreshViewAllCourseMaterialsFrame",
+              base.IsTakeScreenShotDuringEntryExit);
+            new GraderFeedbackPage().RefreshCoursePreviewIframe();
+            Logger.LogMethodExit("ActivitySubmission", "RefreshViewAllCourseMaterialsFrame",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
