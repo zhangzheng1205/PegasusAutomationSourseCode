@@ -442,6 +442,12 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.CoursespaceAdminTestSet.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.WorkspaceAuthore.BVT.MyItLab.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.WorkspaceAdminPublishing.BVT.MyItLab.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceAdmin.Workflow.feature.cs</LastGenOutput>
