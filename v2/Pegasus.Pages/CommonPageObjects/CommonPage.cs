@@ -77,7 +77,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                     // folder navigation based on activity name
                                     case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
                                         this.NavigateToWordChapter1SimulationActivitiesFolder
-                                            (CommonPageResource.CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator);
+                                            (CommonPageResource.CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
                                         break;
                                     case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
                                         this.NavigateToAccessChapter1SimulationActivitiesFolder(CommonPageResource.
