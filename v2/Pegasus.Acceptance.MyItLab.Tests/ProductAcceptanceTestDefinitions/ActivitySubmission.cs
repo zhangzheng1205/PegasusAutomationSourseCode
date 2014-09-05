@@ -4,6 +4,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
+using Pegasus.Pages.UI_Pages.Pegasus;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation;
 using TechTalk.SpecFlow;
 using Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions;
@@ -676,7 +677,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("ActivitySubmission",
                 "ClickOnDownloadIconOfFile",
                 base.IsTakeScreenShotDuringEntryExit);
-            DownLoadStartingFilesPage downLoadStartingFilesPage =
+            var downLoadStartingFilesPage =
                 new DownLoadStartingFilesPage();
             downLoadStartingFilesPage.ClickDownloadIconOfTheFile(fileName);
             // Click on download file icon
