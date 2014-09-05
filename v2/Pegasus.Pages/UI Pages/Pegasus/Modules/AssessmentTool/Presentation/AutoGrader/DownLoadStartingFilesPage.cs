@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.Exceptions;
-using Pegasus.Pages.UI_Pages.Pegasus.Common;
-using System.Threading;
-
-namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.AutoGrader
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.AutoGrader;
+namespace Pegasus.Pages.UI_Pages.Pegasus
 {
 
     public class DownLoadStartingFilesPage : BasePage
     {
-        // <summary>
+        /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger logger = Logger.GetInstance(typeof(DownLoadStartingFilesPage));
+        private static readonly Logger Logger = Logger.GetInstance(typeof(DownLoadStartingFilesPage));
 
         /// <summary>
         /// Gets text on Get Download Files button.
@@ -24,7 +19,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
         /// <returns>File Name</returns>
         public void ClickDownloadIconOfTheFile(string fileName)
         {
-            logger.LogMethodEntry("DownLoadStartingFilesPage", " ClickDownloadIconOfTheFile",
+            Logger.LogMethodEntry("DownLoadStartingFilesPage", " ClickDownloadIconOfTheFile",
                    base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilPopUpLoads(DownLoadStartingFilesPageResource
                 .DownLoadStartingFilesPage_FileName_Popup_Title);
@@ -32,17 +27,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
             base.SelectWindow(DownLoadStartingFilesPageResource.
                        DownLoadStartingFilesPage_FileName_Popup_Title);
             //Variable Declaration of Assets     
-            string getFileName = string.Empty;
             try
             {
                 //Get Assets Count               
                 int getFileCount = base.GetElementCountByXPath(DownLoadStartingFilesPageResource.
                  DownLoadStartingFilesPage_FileName_RowCount_Xpath_Locator);
-                int x = getFileCount;
                 for (int setRowCount = Convert.ToInt32(DownLoadStartingFilesPageResource.
                   DownLoadStartingFilesPage_Initial_Value); setRowCount <= getFileCount; setRowCount++)
                 {
-                    getFileName = base.GetElementTextByXPath(string.Format
+                    string getFileName = base.GetElementTextByXPath(string.Format
                         ("//table[@id='tblRepeater']/tbody/tr[{0}]",
                             setRowCount));
                     if (getFileName.Contains(fileName))
@@ -50,11 +43,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
                         //Wait for the element
                         base.WaitForElement(By.XPath(string.Format(DownLoadStartingFilesPageResource.
                        DownLoadStartingFilesPage_File_Name_Xpath_Locator, setRowCount)), 10);
-                        IWebElement getDownloadIconID = base.GetWebElementPropertiesByXPath
+                        IWebElement getDownloadIconId = base.GetWebElementPropertiesByXPath
                             (string.Format(DownLoadStartingFilesPageResource.
                             DownLoadStartingFilesPage_DownloadIcon_Xpath_Locator, setRowCount));
                         //Click on Download Icon
-                        base.ClickByJavaScriptExecutor(getDownloadIconID);
+                        base.ClickByJavaScriptExecutor(getDownloadIconId);
                         break;
                     }
                 }
@@ -63,7 +56,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("DownLoadStartingFilesPage", " ClickDownloadIconOfTheFile",
+            Logger.LogMethodExit("DownLoadStartingFilesPage", " ClickDownloadIconOfTheFile",
                      base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -72,7 +65,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
         /// </summary>
         public void ClickOnCloseAndReturnButton()
         {
-            logger.LogMethodEntry("DownLoadStartingFilesPage", " ClickOnCloseAndReturnButton",
+            Logger.LogMethodEntry("DownLoadStartingFilesPage", " ClickOnCloseAndReturnButton",
                             base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilPopUpLoads(DownLoadStartingFilesPageResource
                             .DownLoadStartingFilesPage_FileName_Popup_Title);
@@ -82,11 +75,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
             // Wait untill Close and Return button loads
             base.WaitForElement(By.Id(DownLoadStartingFilesPageResource.
                 DownLoadStartingFilePage_CloseAndReturn_Button_ID_Value));
-            IWebElement closeAndReturnButtonID = base.GetWebElementPropertiesById
+            IWebElement closeAndReturnButtonId = base.GetWebElementPropertiesById
                 (DownLoadStartingFilesPageResource.
                 DownLoadStartingFilePage_CloseAndReturn_Button_ID_Value);
-            base.ClickByJavaScriptExecutor(closeAndReturnButtonID);
-            logger.LogMethodExit("DownLoadStartingFilesPage", " ClickOnCloseAndReturnButton",
+            base.ClickByJavaScriptExecutor(closeAndReturnButtonId);
+            Logger.LogMethodExit("DownLoadStartingFilesPage", " ClickOnCloseAndReturnButton",
                 base.IsTakeScreenShotDuringEntryExit);
         }
     }
