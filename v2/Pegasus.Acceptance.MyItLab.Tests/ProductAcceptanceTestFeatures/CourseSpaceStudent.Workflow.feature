@@ -140,8 +140,8 @@ And I click on 'Back' link in View all course materials
 #Dependency : Always dependent.
 Scenario: Student GraderIT PPT Activity and student scoring 100%
 When I navigate to "Course Materials" tab
-And I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-And I open the activity named as "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
+And I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "PowerPoint Chapter 1 Grader Project [Homework 3]"
 Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
 When I click on Download Files button on Test Presentation pop up
 And I click on download icon of "go_p01_grader_h3.pptx"
@@ -150,13 +150,13 @@ Then I should see a "Test Presentation" pop up displayed with "Download Files" b
 When I click on Upload Completed File button on Test Presentation pop up
 And I upload the downloaded file "Grader Power Point file for 100%"
 Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
-When I submit "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" activity
+When I submit "PowerPoint Chapter 1 Grader Project [Homework 3]" activity
 Then I should see message "Your file, go_p01_grader_h3.pptx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
-When I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
-And I should see "100.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
+And I should see "100.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -169,8 +169,8 @@ Then I should be on the "Today's View" page
 #Dependency : Always dependent.
 Scenario: Student GraderIT PPT Activity and student scoring 0%
 When I navigate to "Course Materials" tab
-And I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-And I open the activity named as "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
+And I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "PowerPoint Chapter 1 Grader Project [Homework 3]"
 Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
 When I click on Download Files button on Test Presentation pop up
 And I click on download icon of "go_p01_grader_h3.pptx"
@@ -179,13 +179,13 @@ Then I should see a "Test Presentation" pop up displayed with "Download Files" b
 When I click on Upload Completed File button on Test Presentation pop up
 And I upload the downloaded file "Grader Power Point file for 0%"
 Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
-When I submit "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" activity
+When I submit "PowerPoint Chapter 1 Grader Project [Homework 3]" activity
 Then I should see message "Your file, go_p01_grader_h3.pptx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
-When I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-Then I should see "Not passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
-And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Not passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
+And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -198,8 +198,8 @@ Then I should be on the "Today's View" page
 #Dependency : Always dependent.
 Scenario: Student GraderIT PPT Activity and student scoring 70%
 When I navigate to "Course Materials" tab
-And I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-And I open the activity named as "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
+And I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "PowerPoint Chapter 1 Grader Project [Homework 3]"
 Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
 When I click on Download Files button on Test Presentation pop up
 And I click on download icon of "go_p01_grader_h3.pptx"
@@ -208,13 +208,13 @@ Then I should see a "Test Presentation" pop up displayed with "Download Files" b
 When I click on Upload Completed File button on Test Presentation pop up
 And I upload the downloaded file "Grader Power Point file for 70%"
 Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
-When I submit "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" activity
+When I submit "PowerPoint Chapter 1 Grader Project [Homework 3]" activity
 Then I should see message "Your file, go_p01_grader_h3.pptx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
-When I select "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)"
-And I should see "74.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
+And I should see "74.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -314,8 +314,8 @@ Then I should be on the "Today's View" page
 #Dependency : Always dependent.
 Scenario: Student GraderIT Excel Activity and student scoring 100%
 When I navigate to "Course Materials" tab
-And I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-And I open the activity named as "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
+And I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Excel Chapter 1 Grader Project [Homework 3]"
 Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
 When I click on Download Files button on Test Presentation pop up
 And I click on download icon of "go_e01_grader_h3.xlsx"
@@ -328,9 +328,9 @@ When I submit "GraderITExcel" activity
 Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
-When I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
-And I should see "100.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
+And I should see "100.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
@@ -343,8 +343,8 @@ Then I should be on the "Today's View" page
 #Dependency : Always dependent.
 Scenario: Student GraderIT Excel Activity and student scoring 0%
 When I navigate to "Course Materials" tab
-And I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-And I open the activity named as "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
+And I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Excel Chapter 1 Grader Project [Homework 3]"
 Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
 When I click on Download Files button on Test Presentation pop up
 And I click on download icon of "go_e01_grader_h3.xlsx"
@@ -353,13 +353,13 @@ Then I should see a "Test Presentation" pop up displayed with "Download Files" b
 When I click on Upload Completed File button on Test Presentation pop up
 And I upload the downloaded file "Grader Excel file for 0%"
 Then I should see message "Your completed file has been successfully uploaded." on "Test Presentation" popup page
-When I submit "Excel Chapter 1 Grader Project [Homework 3] (Project G)" activity
+When I submit "Excel Chapter 1 Grader Project [Homework 3]" activity
 Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
-When I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-Then I should see "Not passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
-And I should see "0.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Not passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
+And I should see "0.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 And I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
@@ -373,8 +373,8 @@ Then I should be on the "Today's View" page
 #Dependency : Always dependent.
 Scenario: Student GraderIT Excel Activity and student scoring 70%
 When I navigate to "Course Materials" tab
-And I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-And I open the activity named as "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
+And I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Excel Chapter 1 Grader Project [Homework 3]"
 Then I should see a "Test Presentation" pop up displayed with "Download Files" button and "Upload Completed File" button
 When I click on Download Files button on Test Presentation pop up
 And I click on download icon of "go_e01_grader_h3.xlsx"
@@ -387,9 +387,9 @@ When I submit "GraderITExcel" activity
 Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successfully received by myitlab:grader." on "Test Feedback" popup page
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
-When I select "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)"
-And I should see "71.30%" score for the activity "Excel Chapter 1 Grader Project [Homework 3] (Project G)" in course material page
+When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
+Then I should see "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
+And I should see "71.30%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 
