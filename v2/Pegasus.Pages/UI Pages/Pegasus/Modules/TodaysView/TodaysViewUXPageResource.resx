@@ -535,16 +535,16 @@
     <value>Course Home</value>
   </data>
   <data name="TodayViewUXPageResource_CoursePerformance_Activity_ContentCompleted_Xpath_Locator" xml:space="preserve">
-    <value>//tr[@id='grdCoursePerformancemyTR_{0}']/td[3]/center/table/tbody/tr/td</value>
+    <value>//tr[@id='grdCoursePerformancemyTR_{0}']/td[3]</value>
   </data>
   <data name="TodayViewUXPageResource_CoursePerformance_Activity_Grade_Xpath_Locator" xml:space="preserve">
-    <value>//tr[@id='grdCoursePerformancemyTR_{0}']/td[2]/table/tbody/tr/td</value>
+    <value>//tr[@id='grdCoursePerformancemyTR_{0}']/td[2]</value>
   </data>
   <data name="TodayViewUXPageResource_CoursePerformance_Activity_Replace_Character" xml:space="preserve">
     <value>\r\n--</value>
   </data>
   <data name="TodayViewUXPageResource_CoursePerformance_Activity_TimeOnTask_Xpath_Locator" xml:space="preserve">
-    <value>//tr[@id='grdCoursePerformancemyTR_{0}']/td[4]/center/table/tbody/tr/td</value>
+    <value>//tr[@id='grdCoursePerformancemyTR_{0}']/td[4]</value>
   </data>
   <data name="TodayViewUXPageResource_CoursePerformance_AssetsName_Id_Locator" xml:space="preserve">
     <value>grdCoursePerformance</value>

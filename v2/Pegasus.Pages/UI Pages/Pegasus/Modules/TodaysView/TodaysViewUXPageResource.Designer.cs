@@ -1321,7 +1321,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //tr[@id=&apos;grdCoursePerformancemyTR_{0}&apos;]/td[3]/center/table/tbody/tr/td.
+        ///   Looks up a localized string similar to //tr[@id=&apos;grdCoursePerformancemyTR_{0}&apos;]/td[3].
         /// </summary>
         internal static string TodayViewUXPageResource_CoursePerformance_Activity_ContentCompleted_Xpath_Locator {
             get {
@@ -1331,7 +1331,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //tr[@id=&apos;grdCoursePerformancemyTR_{0}&apos;]/td[2]/table/tbody/tr/td.
+        ///   Looks up a localized string similar to //tr[@id=&apos;grdCoursePerformancemyTR_{0}&apos;]/td[2].
         /// </summary>
         internal static string TodayViewUXPageResource_CoursePerformance_Activity_Grade_Xpath_Locator {
             get {
@@ -1349,7 +1349,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //tr[@id=&apos;grdCoursePerformancemyTR_{0}&apos;]/td[4]/center/table/tbody/tr/td.
+        ///   Looks up a localized string similar to //tr[@id=&apos;grdCoursePerformancemyTR_{0}&apos;]/td[4].
         /// </summary>
         internal static string TodayViewUXPageResource_CoursePerformance_Activity_TimeOnTask_Xpath_Locator {
             get {

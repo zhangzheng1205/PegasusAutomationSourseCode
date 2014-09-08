@@ -69,7 +69,7 @@ When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
 And I should see the alert count updated as "1" in "Idle Students" channel
 When I click on the "Idle Students" option
-Then I should see "1" Idle Student "db3e , BDD" in "Idle Students" channel
+Then I should see "1" Idle Student "Student , Gurudatt" in "Idle Students" channel
 
 #Purpose : To validate display of alert counts and contents in Not Passed alert channel
 #Test case ID : peg-16736
@@ -79,9 +79,9 @@ Then I should see "1" Idle Student "db3e , BDD" in "Idle Students" channel
 Scenario: Instructor views Alert update in Not Passed channel of Todays View page for Activity
 When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
-And I should see the alert count updated as "7" in "Not Passed" channel
+And I should see the alert count updated as "10" in "Not Passed" channel
 When I click on the "Not Passed" option
-Then I should see "6" activity in the "Not Passed" channel
+Then I should see "10" activity in the "Not Passed" channel
 
 #Purpose : As a instructor i should be notified with alert counts and contents when student does not submits Past due activity.
 #Test case ID : peg-16742.
@@ -91,9 +91,9 @@ Then I should see "6" activity in the "Not Passed" channel
 Scenario: Instructor views Alert update in Past Due Not Submitted channel
 When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
-And I should see the alert count updated as "10" in "Past Due: Not Submitted" channel
+And I should see the alert count updated as "6" in "Past Due: Not Submitted" channel
 When I click on the "Past Due: Not Submitted" option
-Then I should see "10" activity in the Past Due: Not Submitted channel
+Then I should see "6" activity in the Past Due: Not Submitted channel
 
 #Purpose : As a instructor i should see the calculation done for the submited activity in "Student Performance".
 #Test case ID : peg-16750.
@@ -104,7 +104,7 @@ Scenario: Instructor validates grade display in Student performance channel
 When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
 When I click on the "Student Performance" option
-Then I should see "15.37%" as overall Grade in "Student Performance" alert channel
+Then I should see "16.54%" as overall Grade in "Student Performance" alert channel
 
 #Purpose : As a instructor i should be notified with alert counts and contents when student submits Past due activity
 #Test case ID : peg-16762.
@@ -116,9 +116,9 @@ When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
 And I should see the alert count updated as "2" in "Past Due: Submitted" channel
 When I click on the "Past Due: Submitted" option
-Then I should see student First, Last name "b456, BDD" in Past Due: Submitted channel
+Then I should see student First, Last name "a550, BDD" in Past Due: Submitted channel
 When I click on the expand icon of student
-Then I should see the activity name "Training [Skill-Based]: Word Chapter 1 Skill-Based Training"
+Then I should see the activity name "Training [Skill-Based]: Excel Chapter 1 Project 1A Skill-Based Training"
 
 #Purpose : Instructor accepts past due submission from Past due: Submitted channel.
 #Test case ID : peg-21949.
@@ -132,7 +132,7 @@ When I click on the "Past Due: Submitted" link in notifications channel
 Then I should see First name, Last name of "CsSmsStudent" who has submitted the past due activity in the right frame along with expand icon
 When I click on expand icon displayed against student name
 And I selected the check box of the past due activity submitted
-Then I should see "CsSmsStudent" name and "Training [Skill-Based]: Word Chapter 1 Skill-Based Training" activity name and due date and time and submitted date and time which is submitted post due date
+Then I should see "CsSmsStudent" name and "Training [Skill-Based]: Excel Chapter 1 Project 1A Skill-Based Training" activity name and due date and time and submitted date and time which is submitted post due date
 And I should be able to select the past due activity
 When I click on "Accept" activities past due date
 Then I should see the successfull message "All of the late submissions have been accepted. The grades for these submissions will now appear in the Gradebook."
@@ -148,7 +148,7 @@ When I click on the "Past Due: Submitted" link in notifications channel
 Then I should see First name, Last name of "CsSmsStudent" who has submitted the past due activity in the right frame along with expand icon
 When I click on expand icon displayed against student name
 And I selected the check box of the past due activity submitted
-Then I should see "CsSmsStudent" name and "Exam [Skill-Based]: Word Chapter 1 Skill-Based Exam (Scenario 1)" activity name and due date and time and submitted date and time which is submitted post due date
+Then I should see "CsSmsStudent" name and "Exam [Skill-Based]: Excel Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity name and due date and time and submitted date and time which is submitted post due date
 And I should be able to select the past due activity
 When I click on "Decline" activities past due date
 Then I should see the successfull message "All of the late submissions have been declined. These submissions will receive a zero in the Gradebook."
@@ -162,7 +162,7 @@ When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on the "Course Performance" link in notifications channel
 And I select "Word Chapter 1 Skill-Based Training" in "Today's View" by "CsSmsInstructor"
-Then I should see "Word Chapter 1 Skill-Based Training" having "Grade" as "100%"
-And I should see "Word Chapter 1 Skill-Based Training" having "Content Completed" as "100%"
-And I should see "Word Chapter 1 Skill-Based Training" having "Time on Task" as "00:07"
+Then I should see "Word Chapter 1 Skill-Based Training" having "Grade" as "6.9%"
+And I should see "Word Chapter 1 Skill-Based Training" having "Content Completed" as "25%"
+And I should see "Word Chapter 1 Skill-Based Training" having "Time on Task" as "00:03"
 
