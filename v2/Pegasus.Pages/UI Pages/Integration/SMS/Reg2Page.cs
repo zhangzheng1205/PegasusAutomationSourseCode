@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.UI_Pages.Integration.SMS;
+using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 
 namespace Pegasus.Pages.UI_Pages
@@ -20,13 +21,29 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Fill SMS User Account Information for Registeration
         /// </summary>
-        public void EnterSmsUserAccountInformation()
+        /// <param name="userType">This is user type enum.</param>
+        public void EnterSmsUserAccountInformation(User.UserTypeEnum userType,
+            string scenarioName="Default Value")
         {
             // Fill SMS User Account Information
             Logger.LogMethodEntry("Reg2Page", "EnterSmsUserAccountInformation",
                 base.IsTakeScreenShotDuringEntryExit);
+            string getLastName = string.Empty;
             try
-            {                
+            {
+                //Enter SmsUser Personal Information.
+               getLastName= this.EnterSmsUserPersonalInformation(userType);
+               if (scenarioName != "Default Value")
+               {
+                   //Update The User LastName In Memory
+                   this.UpdateTheUserLastNameInMemoryOnScenerioBasis(userType, 
+                       getLastName, scenarioName);
+               }
+               if (scenarioName == "Default Value")
+               {
+                   //Update The User LastName In Memory
+                   this.UpdateTheUserLastNameInMemory(userType, getLastName);
+               }
                 base.WaitForElement(By.Id(Reg2PageResource.
                     Reg2_Page_Entered_Country_DropDown_Id_Locator));
                 //Select Drop Down Value
@@ -45,13 +62,67 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Update The User LastName In Memory.
+        /// </summary>
+        /// <param name="userType">This is user type enum.</param>
+        /// <param name="getLastName">This is last name.</param>
+        private void UpdateTheUserLastNameInMemory(User.UserTypeEnum userType,
+            string getLastName)
+        {
+            //Update The User LastName In Memory
+            Logger.LogMethodEntry("Reg2Page", "UpdateTheUserLastNameInMemory",
+                base.IsTakeScreenShotDuringEntryExit);
+            //The the user details from memory
+            User user = User.Get(userType);
+            user.LastName = getLastName;
+            //Update the last name in memory
+            user.UpdateUserInMemory(user);
+            Logger.LogMethodExit("Reg2Page", "UpdateTheUserLastNameInMemory",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Update The User LastName In Memory On Scenerio Basis.
+        /// </summary>
+        /// <param name="userType">This Is User Type Enum.</param>
+        /// <param name="getLastName">This Is Last Name.</param>
+        /// <param name="scenarioName">This Is scenerion Basis Name.</param>
+        private void UpdateTheUserLastNameInMemoryOnScenerioBasis(User.UserTypeEnum userType, 
+            string getLastName, string scenarioName)
+        {
+            //Update The User LastName In Memory On Scenerio Basis
+            Logger.LogMethodEntry("Reg2Page", "UpdateTheUserLastNameInMemoryOnScenerioBasis",
+                base.IsTakeScreenShotDuringEntryExit);
+               switch (scenarioName)
+               {
+                   case "scoring 0":
+                       User user = User.Get(CommonResource.CommonResource
+                         .SMS_STU_UC1);
+                       user.LastName = getLastName;
+                       user.UpdateUserInMemory(user);
+                       break;
+                   case "set idle":
+                       User user2 = User.Get(CommonResource.CommonResource
+                         .SMS_STU_UC2);
+                       user2.LastName = getLastName;
+                       user2.UpdateUserInMemory(user2);
+                       break;
+               }
+               Logger.LogMethodExit("Reg2Page", "UpdateTheUserLastNameInMemoryOnScenerioBasis",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Enter SMS User Personal Information
         /// </summary>
-        public string EnterSmsUserPersonalInformation(Guid userNameSmsGuid)
+        /// /// <param name="userType">This is user type enum.</param>
+        public string EnterSmsUserPersonalInformation(User.UserTypeEnum userType)
         {
             //Enter Personal Information
             Logger.LogMethodEntry("Reg2Page", "EnterSmsUserPersonalInformation",
                 base.IsTakeScreenShotDuringEntryExit);
+            //Generate GUID for customize Activity Name
+            Guid userLastName = Guid.NewGuid();
             //Initialize Variable
             string getUserLastName = string.Empty;
             try
@@ -69,7 +140,7 @@ namespace Pegasus.Pages.UI_Pages
                     Reg2_Page_FirstName_TextBox_Id_Locator,
                     Reg2PageResource.Reg2_Page_FirstName_TextBox_Value);
                 //Splitt User Last Name
-                string[] getSplittedUserLastName = userNameSmsGuid.ToString().Split('-');
+                string[] getSplittedUserLastName = userLastName.ToString().Split('-');
                 //Get Splitted User Last Name
                 getUserLastName = getSplittedUserLastName[1];
                 //Wait For Element
@@ -82,7 +153,7 @@ namespace Pegasus.Pages.UI_Pages
                     Reg2_Page_LastName_TextBox_Id_Locator,
                     getUserLastName);
                 //Enter Email Id
-                this.EnterEmailIdForTheUser();
+                this.EnterEmailIdForTheUser();                
             }
             catch (Exception e)
             {
@@ -92,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             return getUserLastName;
         }
-
+        
         /// <summary>
         /// Enter the Email id details for the user
         /// </summary>

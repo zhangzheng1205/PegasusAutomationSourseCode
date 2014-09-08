@@ -58,7 +58,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                     //submit Access Information 
                     new Reg1Page().EnterSmsUserAccessInformation(userTypeEnum);
                     //Submit Account Information
-                    new Reg2Page().EnterSmsUserAccountInformation();
+                    new Reg2Page().EnterSmsUserAccountInformation(userTypeEnum);
                     break;
                 case User.UserTypeEnum.MMNDStudent:
                     //Enter Access Code
@@ -68,7 +68,7 @@ namespace Pegasus.Acceptance.WritingSpace.Tests.
                     //submit Access Information 
                     new Reg1Page().EnterSmsUserAccessInformationforMmndStudent(userTypeEnum);
                     //Submit Account Information
-                    new Reg2Page().EnterSmsUserAccountInformation();
+                    new Reg2Page().EnterSmsUserAccountInformation(userTypeEnum);
                     break;
             }
             Logger.LogMethodExit("SMSRegistration", "RegisterNewSmsUser",

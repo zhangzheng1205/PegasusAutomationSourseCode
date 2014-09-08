@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             //submit Access Information 
             new Reg1Page().EnterSmsUserAccessInformation(userTypeEnum);
             //Submit Account Information
-            new Reg2Page().EnterSmsUserAccountInformation();
+            new Reg2Page().EnterSmsUserAccountInformation(userTypeEnum);
             Logger.LogMethodExit("SMSRegistration", "RegisterNewSmsUser",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -63,7 +63,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         /// <param name="scenarioName">This is scenario name for user should be created.</param>
         /// <param name="userTypeEnum">This is user type enum.</param>
         [When(@"I register new SMS user for ""(.*)"" as ""(.*)""")]
-        public void RegisterNewSmsUserForDifferentScenarios(string scenarioName, User.UserTypeEnum userTypeEnum)
+        public void RegisterNewSmsUserForDifferentScenarios(string scenarioName,
+            User.UserTypeEnum userTypeEnum)
         {
             // Create New SMS User
             Logger.LogMethodEntry("SMSRegistration", "RegisterNewSmsUserForDifferentScenarios",
@@ -71,7 +72,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             //submit Access Information 
             new Reg1Page().EnterSmsUserAccessInformationBasedOnScenario(scenarioName, userTypeEnum);
             //Submit Account Information
-            new Reg2Page().EnterSmsUserAccountInformation();
+            new Reg2Page().EnterSmsUserAccountInformation(userTypeEnum, scenarioName);
             Logger.LogMethodExit("SMSRegistration", "RegisterNewSmsUserForDifferentScenarios",
                 base.IsTakeScreenShotDuringEntryExit);
         }

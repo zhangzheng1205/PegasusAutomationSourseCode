@@ -54,7 +54,7 @@ namespace Pegasus.Integration.ETextS11.Tests.
             //submit Access Information 
             new Reg1Page().EnterSmsUserAccessInformation(userTypeEnum);
             //Submit Account Information
-            new Reg2Page().EnterSmsUserAccountInformation();
+            new Reg2Page().EnterSmsUserAccountInformation(userTypeEnum);
             Logger.LogMethodExit("SMSRegistration", "RegisterNewSmsUser",
                 base.IsTakeScreenShotDuringEntryExit);
         }

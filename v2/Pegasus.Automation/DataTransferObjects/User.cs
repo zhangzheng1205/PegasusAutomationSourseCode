@@ -175,6 +175,14 @@ namespace Pearson.Pegasus.TestAutomation.
         }
 
         /// <summary>
+        /// This method is used to update the activity.
+        /// </summary>
+        public void UpdateUserInMemory(User user)
+        {
+            InMemoryDatabaseSingleton.DatabaseInstance.Update(user);
+        }
+
+        /// <summary>
         /// This method selects a single user based on the role.
         /// </summary>
         /// <param name="userType">This is the user type.</param>
