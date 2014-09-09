@@ -47,3 +47,13 @@ When I click on the "Instructor Comments" option
 Then I should see the activity "SAM Activity : SAM 01-19 Singular y plural. [Gramática 3. Sustantivos singulares y plurales] Voice Recording." in the Instructor Comments channel
 And I should see the activity "SAM Activity : SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in the Instructor Comments channel
 
+
+#Purpose : Display of "Getting Started" channel in Overview tab for Student
+#Test case ID : peg-16754
+#Products : World Languages - MySpanishLab Authored Course
+#Pre condition : Getting started channel should be enabled
+#Dependency : Testcase can run with existing data
+Scenario: Availability and display of Getting started in Overview tab for Student
+Then I should be on the "Today's View" page
+And I should see the "Getting Started" channel
+And I should see the "Click on the icons below & follow the on-screen instructions for the best course experience!" inside the Getting started channel

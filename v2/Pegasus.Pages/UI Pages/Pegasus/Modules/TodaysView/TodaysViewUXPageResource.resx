@@ -657,4 +657,10 @@
   <data name="TodayViewUXPageResource__SubTab_SelectedTab_Value" xml:space="preserve">
     <value>SubNavigationTabSelected1</value>
   </data>
+  <data name="TodayViewUXPageResource_DisplayOfGettingStartedContents_ByXPathLocator" xml:space="preserve">
+    <value>//table[@id='tblContent']/tbody/tr/td/div/center/table/tbody/tr/td/span/b</value>
+  </data>
+  <data name="TodayViewUXPageResource_GettingStarted_ByID" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl0__ctl0_lblHeading</value>
+  </data>
 </root>

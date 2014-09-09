@@ -3710,5 +3710,67 @@ namespace Pegasus.Pages.UI_Pages
             }
             return getCoursePerformanceScore;
         }
+
+        /// <summary>
+        /// Get text of Getting Started channel.
+        /// </summary>
+        /// <returns>It returns the Getting Started Text.</returns>
+        public string GetChannelTitle()
+        {
+            //Get text of Getting Started channel
+            Logger.LogMethodEntry("TodaysViewUXPage", "GetChannelTitle",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize the variable
+            string gettingStartedText = string.Empty;
+            try
+            {
+                //Wait for the element
+                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_GettingStarted_ByID));
+                gettingStartedText = base.GetElementTextById(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_GettingStarted_ByID);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage",
+                "GetChannelTitle",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Return string value
+            return gettingStartedText;
+        }
+
+        /// <summary>
+        /// Get Contents inside Getting Started channel.
+        /// </summary>
+        /// <returns>It returns the Getting Started Content Text.</returns>
+        public string GettingStartedContentText()
+        {
+            //Get Contents inside Getting Started channel
+            Logger.LogMethodEntry("TodaysViewUXPage",
+                "GettingStartedContentText",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize the variable
+            string gettingStartedContentText = string.Empty;
+            try
+            {
+                //Wait for the element
+                base.WaitForElement(By.XPath(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_DisplayOfGettingStartedContents_ByXPathLocator));
+                gettingStartedContentText = base.GetElementTextByXPath
+                    (TodaysViewUXPageResource.
+                    TodayViewUXPageResource_DisplayOfGettingStartedContents_ByXPathLocator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage",
+                "GettingStartedContentText",
+              base.IsTakeScreenShotDuringEntryExit);
+            // return string value
+            return gettingStartedContentText;
+        }
     }
 }

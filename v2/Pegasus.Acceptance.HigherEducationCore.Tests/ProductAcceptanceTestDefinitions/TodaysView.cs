@@ -359,5 +359,45 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Availablity of the Getting Started Channel
+        /// </summary>
+        /// <param name="expectedFrameTitle">This is Channel name.</param>
+        [Then(@"I should see the ""(.*)"" channel")]
+        public void VerifyTheChannelTitleText(string expectedFrameTitle)
+        {
+            //Verify Correct Frame Title
+            Logger.LogMethodEntry("TodaysView", "VerifyTheChannelTitleText",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Object Declaration
+            TodaysViewUxPage ChannelTitle = new TodaysViewUxPage();
+            //Assert we have correct Channel frame title
+            Logger.LogAssertion("VerifyChannelTitle",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(expectedFrameTitle, ChannelTitle.GetChannelTitle()));
+            Logger.LogMethodExit("TodaysView", "VerifyTheChannelTitleText",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Availablity of Contents inside the Getting Started Channel.
+        /// </summary>
+        /// <param name="gettingStartedContent">This is Getting started Content text.</param>
+        [Then(@"I should see the ""(.*)"" inside the Getting started channel")]
+        public void VerifyTheGettingStartedContentText(string gettingStartedContent)
+        {
+            //Verify Correct Contents inside the Getting Started
+            Logger.LogMethodEntry("TodaysView", "GettingStartedContent",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Object Declaration
+            TodaysViewUxPage ChannelContents = new TodaysViewUxPage();
+            //Assert we have correct Contents of Getting Started
+            Logger.LogAssertion("VerifyChannelContentText",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(gettingStartedContent,
+                    ChannelContents.GettingStartedContentText()));
+            Logger.LogMethodExit("TodaysView", "VerifyTheGettingStartedContentText",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

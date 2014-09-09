@@ -1385,6 +1385,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblContent&apos;]/tbody/tr/td/div/center/table/tbody/tr/td/span/b.
+        /// </summary>
+        internal static string TodayViewUXPageResource_DisplayOfGettingStartedContents_ByXPathLocator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_DisplayOfGettingStartedContents_ByXPathLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 2000.
         /// </summary>
         internal static string TodayViewUXPageResource_ElementWaitTimeOut_Value {
@@ -1417,6 +1426,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_GetClass_Value {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_GetClass_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl0__ctl0_lblHeading.
+        /// </summary>
+        internal static string TodayViewUXPageResource_GettingStarted_ByID {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_GettingStarted_ByID", resourceCulture);
             }
         }
         
