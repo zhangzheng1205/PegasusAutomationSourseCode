@@ -2835,10 +2835,10 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Wait for the SIM5 assignment launch window
                 base.WaitUntilWindowLoads(activityName + StudentPresentationPageResource.
-                StudentPresentation_Page_SimPresentation_Window_Name_Locator);
+                StudentPresentation_Page_SimPresentation_Window_Name);
                 //Select the SIM5 assignment launch window
                 base.SelectWindow(activityName + StudentPresentationPageResource.
-                StudentPresentation_Page_SimPresentation_Window_Name_Locator);
+                StudentPresentation_Page_SimPresentation_Window_Name);
                 //Answer first excel question
                 this.StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook();
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
