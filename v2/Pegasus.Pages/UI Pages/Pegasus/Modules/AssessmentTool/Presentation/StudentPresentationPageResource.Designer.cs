@@ -746,6 +746,204 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ribbon-tab-container-home&apos;]/ul/li[3]/span/span/span/span/span[2]/span[2]/span/div/span.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_AlignCenter_Button_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_AlignCenter_Button_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ribbon-tab-container-home&apos;]/ul/li[6]/span/span/span/span/span[3]/div[1]/div[2]/div/div[1]/div[4]/div[2].
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_ColumnWidth_Link_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_ColumnWidth_Link_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btnOkID.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_ColumnWidth_OK_Button_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_ColumnWidth_OK_Button_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to inputTxtBox.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_ColumnWidth_TextBox_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_ColumnWidth_TextBox_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 16.43.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_ColumnWidth_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_ColumnWidth_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_B3.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_B3_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_B3_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to B4.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_B4_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_B4_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 68991.12.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_B4_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_B4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to B5.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_B5_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_B5_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 28836.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_B5_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_B5_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C4.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_C4_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_C4_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 86894.82.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_C4_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_C4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C5.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_C5_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_C5_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 22634.23.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_C5_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_C5_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_D3.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_D3_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_D3_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_D3_Cell_OffsetX {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_D3_Cell_OffsetX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 60.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_D3_Cell_OffsetY {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_D3_Cell_OffsetY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D4.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_D4_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_D4_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 99650.58.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_D4_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_D4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D5.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_D5_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_D5_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 99823.87.
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Excel_D5_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Excel_D5_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ribbon-tab-container-home&apos;]/ul/li[6]/span/span/span/span/span[3]/div[1]/div[1]/div[1]/div[2].
+        /// </summary>
+        internal static string StudentPresentation_Page_SIM5_Format_Button_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_SIM5_Format_Button_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  - BDD ecb1.
         /// </summary>
         internal static string StudentPresentation_Page_SimPresentation_Window_Name {
@@ -1187,6 +1385,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //li[@id=&apos;Sheet1_A1&apos;]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_A1_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_A1_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A2.
         /// </summary>
         internal static string StudentPrsentation_Page_SIM5_Excel_A2_Cell_Id {
@@ -1228,6 +1435,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_SIM5_Excel_C8_Cell_Id {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_C8_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SelectionBorderBullet.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator", resourceCulture);
             }
         }
         

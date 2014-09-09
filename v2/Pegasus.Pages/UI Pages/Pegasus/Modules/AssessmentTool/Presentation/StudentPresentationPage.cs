@@ -2835,14 +2835,12 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Wait for the SIM5 assignment launch window
                 base.WaitUntilWindowLoads(activityName + StudentPresentationPageResource.
-                StudentPresentation_Page_SimPresentation_Window_Name);
-                
+                StudentPresentation_Page_SimPresentation_Window_Name_Locator);
                 //Select the SIM5 assignment launch window
                 base.SelectWindow(activityName + StudentPresentationPageResource.
-                StudentPresentation_Page_SimPresentation_Window_Name);
-               
+                StudentPresentation_Page_SimPresentation_Window_Name_Locator);
                 //Answer first excel question
-                StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook();
+                this.StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook();
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                     StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
                 //Answer second question
@@ -2851,24 +2849,21 @@ namespace Pegasus.Pages.UI_Pages
                     StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
                 //Answer third question
                 this.AutoFillAndKeyboardShortcuts();
-                //wait for element               
-                base.WaitForElement(By.Id("fwdtaskbtn"));
-                //Get property for next button
-                IWebElement getNextButton = base.GetWebElementPropertiesById("fwdtaskbtn");
-                //Click on next button
-                base.ClickByJavaScriptExecutor(getNextButton);
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                     StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
-                base.ClickByJavaScriptExecutor(getNextButton);
+                //Answer Fourth question
+                this.SettingCellWidthAndSelectingCellRangeToAlignData();
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
-                base.ClickByJavaScriptExecutor(getNextButton);
+                   StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
+                //Answer Fifth excel quetion
+                this.SettingDataInCell();
+                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                   StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
                 //Anser sixth question
                 this.ConstructingAFormulaAndUsingTheSumFunction();
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                    StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
-                //base.ClickByJavaScriptExecutor(getNextButton);
-                
+
                 //Click on SIM5 activity Submit button
                 this.ClickOnSIM5ActivitySubmitButton();
 
@@ -2881,6 +2876,204 @@ namespace Pegasus.Pages.UI_Pages
                  "SubmitSIM5ExcelTypeActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Setting Data In Cell.
+        /// </summary>
+        public void SettingDataInCell()
+        {
+            //Answer second Excel Question
+            logger.LogMethodEntry("StudentPresentationPage",
+            "SettingDataInCell",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Fill B4 cell value
+            PutExcelValueInCellAndPressFormulaButtonCenter(
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_B4_Cell_Id,
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_B4_Cell_Value);
+            //Fill C4 cell value
+            PutExcelValueInCellAndPressFormulaButtonCenter(
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_C4_Cell_Id,
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_C4_Cell_Value);
+            //Fill D4 cell value
+            PutExcelValueInCellAndPressFormulaButtonCenter(
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_D4_Cell_Id,
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_D4_Cell_Value);
+
+            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Sleep_Time));
+
+            //Fill B5 cell value
+            PutExcelValueInCellAndPressFormulaButtonCenter(
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_B5_Cell_Id,
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_B5_Cell_Value);
+            //Fill C5 cell value
+            PutExcelValueInCellAndPressFormulaButtonCenter(
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_C5_Cell_Id,
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_C5_Cell_Value);
+            //Fill D5 cell value
+            PutExcelValueInCellAndPressFormulaButtonCenter(
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_D5_Cell_Id,
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_D5_Cell_Value);
+
+            logger.LogMethodExit("StudentPresentationPage",
+            "SettingDataInCell",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Put Excel Value In Cell And Press Formula Button Center.
+        /// </summary>
+        /// <param name="refCell">Cell Id</param>
+        /// <param name="formulaValue">Cell value</param>
+        private void PutExcelValueInCellAndPressFormulaButtonCenter(string referenceCellId, string dataValue)
+        {
+            //Fill Excel cell
+            logger.LogMethodEntry("StudentPresentationPage",
+            "PutExcelValueInCellAndPressFormulaButtonCenter",
+            base.IsTakeScreenShotDuringEntryExit);
+
+            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Sleep_Time));
+
+            //Clear Reference Box
+            base.ClearTextById(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Fill Cell ID in Reference Box
+            base.FillTextBoxById(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator, referenceCellId);
+            //Press Enter in Reference Box
+            PressEnterKeyById(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+
+            //Clear Formula Box
+            base.ClearTextById(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_Formula_TextBox_Id_Locator);
+            //Fill vlaue in Formula Box
+            base.FillTextBoxById(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_Formula_TextBox_Id_Locator, dataValue);
+            //Get WebElement object for Cell A1
+            IWebElement cellA1 = base.GetWebElementPropertiesByXPath(
+                StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_A1_XPath_Locator);
+            //Click on Cell A1 inorder to commit the change made to the Formula Box above
+            base.PerformMouseClickAction(cellA1);
+
+            logger.LogMethodExit("StudentPresentationPage",
+            "PutExcelValueInCellAndPressFormulaButtonCenter",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Setting Cell Width And Selecting Cell Range To Align Data.
+        /// </summary>
+        public void SettingCellWidthAndSelectingCellRangeToAlignData()
+        {
+            //Submit SIM5 Excel type activity
+            logger.LogMethodEntry("StudentPresentationPage",
+            "SettingCellWidthAndSelectingCellRangeToAlignData",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Set Cell Width
+                this.SetCellWidth();
+                //Select Cell Range And Align Data
+                this.SelectCellRangeAndAlignData();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+            "SettingCellWidthAndSelectingCellRangeToAlignData",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Set excel spread sheet Cell Width.
+        /// </summary>
+        private void SetCellWidth()
+        {
+            logger.LogMethodEntry("StudentPresentationPage",
+            "SetCellWidth",
+            base.IsTakeScreenShotDuringEntryExit);
+
+            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Sleep_Time));
+            //Clear Reference Box
+            base.ClearTextById(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Fill Cell ID in Reference Box
+            base.FillTextBoxById(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator,
+            StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_A1_Cell_Id);
+            //Press Enter in Reference Box
+            PressEnterKeyById(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //click on Format button by XPath
+            IWebElement formatButton = base.GetWebElementPropertiesByXPath
+                (StudentPresentationPageResource.StudentPresentation_Page_SIM5_Format_Button_XPath_Locator);
+            base.ClickByJavaScriptExecutor(formatButton);
+            //click on Column Width button by XPath in Format dropdown
+            IWebElement columnWidthButton = base.GetWebElementPropertiesByXPath
+                (StudentPresentationPageResource.StudentPresentation_Page_SIM5_ColumnWidth_Link_XPath_Locator);
+            base.ClickByJavaScriptExecutor(columnWidthButton);
+            //Clear the Column Width value text box
+            base.ClearTextById(StudentPresentationPageResource.
+                StudentPresentation_Page_SIM5_ColumnWidth_TextBox_ID_Locator);
+            //enter the desired value in column width text box
+            base.FillTextBoxById(StudentPresentationPageResource.
+                StudentPresentation_Page_SIM5_ColumnWidth_TextBox_ID_Locator,
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_ColumnWidth_Value);
+            //Get property for Column width OK button
+            IWebElement clickOKButton = base.GetWebElementPropertiesById(
+                StudentPresentationPageResource.StudentPresentation_Page_SIM5_ColumnWidth_OK_Button_ID_Locator);
+            //click on ok button for setting the column width value
+            base.ClickByJavaScriptExecutor(clickOKButton);
+
+            logger.LogMethodExit("StudentPresentationPage",
+            "SetCellWidth",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Select Cell Range And Align Data.
+        /// </summary>
+        private void SelectCellRangeAndAlignData()
+        {
+            logger.LogMethodEntry("StudentPresentationPage",
+            "SelectCellRangeAndAlignData",
+            base.IsTakeScreenShotDuringEntryExit);
+
+            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Sleep_Time));
+            //Clear Reference Box
+            base.ClearTextById(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Fill Cell ID in Reference Box
+            base.FillTextBoxById(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator,
+            StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_ThirdQuestion_B3_Cell_Id);
+            //Press Enter in Reference Box
+            PressEnterKeyById(StudentPresentationPageResource.
+            StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Get property B3 Cell
+            IWebElement getCellB3 = base.GetWebElementPropertiesById(StudentPresentationPageResource.
+                StudentPresentation_Page_SIM5_Excel_B3_Cell_ID_Locator);
+            //Get property D3 Cell
+            IWebElement getCellD3 = base.GetWebElementPropertiesById(StudentPresentationPageResource.
+                StudentPresentation_Page_SIM5_Excel_D3_Cell_ID_Locator);
+            //select and drag the range B3:D3
+            base.PerformDragAndDropAction(getCellB3, getCellD3);
+            //Get Center Button property
+            IWebElement centerButton = base.GetWebElementPropertiesByXPath
+                (StudentPresentationPageResource.StudentPresentation_Page_SIM5_AlignCenter_Button_XPath_Locator);
+            //Click on Center Button
+            base.ClickByJavaScriptExecutor(centerButton);
+
+            logger.LogMethodExit("StudentPresentationPage",
+            "SelectCellRangeAndAlignData",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
 
         /// <summary>
         /// Answers Autofill and Keyboard shortcuts
@@ -2902,16 +3095,21 @@ namespace Pegasus.Pages.UI_Pages
                StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
             //Fill Cell ID in reference box
             base.FillTextBoxById(StudentPresentationPageResource.
-               StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator, "B3");
+               StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator, StudentPresentationPageResource.
+               StudentPrsentation_Page_SIM5_Excel_ThirdQuestion_B3_Cell_Id);
             //Press enter
             this.PressEnterKeyById(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
             //Wait for element Border bullet for cell B3
-            base.WaitForElement(By.ClassName("SelectionBorderBullet"));
-            //Get properties border bullet element
-            IWebElement getBorderBullet = base.GetWebElementPropertiesByClassName("SelectionBorderBullet");
+            base.WaitForElement(By.ClassName(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator));
+            //Get web element property for border bullet element
+            IWebElement getBorderBullet = base.GetWebElementPropertiesByClassName(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator);
             //select and drag the range B3:D3        
-            base.PerformDragAndDropToOffset(getBorderBullet, 100, 60);
+            base.PerformDragAndDropToOffset(getBorderBullet,
+                Convert.ToInt32(StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_D3_Cell_OffsetX),
+                Convert.ToInt32(StudentPresentationPageResource.StudentPresentation_Page_SIM5_Excel_D3_Cell_OffsetY));
             logger.LogMethodExit("StudentPresentationPage",
                 "AutoFillAndKeyboardShortcuts",
               base.IsTakeScreenShotDuringEntryExit);

@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent Submission", "                As a CS Student \r\n\t\t\tI want to manage all the coursespace student" +
-                    " Submission related usecases \r\n\t\t\tso that I would validate all the coursespace s" +
-                    "tudent Submission scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent Submission", "                As a CS Student \n\t\t\tI want to manage all the coursespace student " +
+                    "Submission related usecases \n\t\t\tso that I would validate all the coursespace stu" +
+                    "dent Submission scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -220,28 +220,32 @@ testRunner.Then("I should see the pre test training \"Sim5PreTest\" score \"100\
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student launches a Sim 5 Excel activity and Student scoring a 100% compares the r" +
                     "esult and status", ((string[])(null)));
-#line 69
-this.ScenarioSetup(scenarioInfo);
-#line 70
-testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsSt" +
-                    "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 71
-testRunner.And("I launch the activity named as \"Excel Chapter 1 Skill-Based Training\" in Course M" +
-                    "aterials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 72
-testRunner.And("I should answer activity \"Excel Chapter 1 Skill-Based Training\" correctly and cli" +
-                    "ck on Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 73
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 74
+testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsSt" +
+                    "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 75
+testRunner.And("I launch the activity named as \"Excel Chapter 1 Skill-Based Training\" in Course M" +
+                    "aterials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 76
+testRunner.And("I should answer activity \"Excel Chapter 1 Skill-Based Training\" correctly and cli" +
+                    "ck on Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 77
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 78
 testRunner.When("I click on cmenu \"ViewSubmissions\" of asset \"Excel Chapter 1 Skill-Based Training" +
                     "\" with mode \"SkillBased\" in Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 75
+#line 79
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 76
+#line 80
 testRunner.When("I click on the last submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 77
-testRunner.Then("I should see the grade is \"7.41%\" in View Submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 81
+testRunner.Then("I should see the grade is \"22.22%\" in View Submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -252,27 +256,27 @@ testRunner.Then("I should see the grade is \"7.41%\" in View Submission page", (
         public virtual void Sim5ExcelActivityAndStudentScoringAZero_()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sim 5 excel activity and Student scoring a Zero.", ((string[])(null)));
-#line 84
-this.ScenarioSetup(scenarioInfo);
-#line 85
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 86
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 87
-testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsSt" +
-                    "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 88
-testRunner.And("I launch the activity named as \"Excel Chapter 1 Skill-Based Training\" in Course M" +
-                    "aterials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 89
-testRunner.And("I click on submit button answering incorrectly of \"Excel\" type \"Training\" mode ac" +
-                    "tivity \"Excel Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 90
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 91
+testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsSt" +
+                    "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 92
+testRunner.And("I launch the activity named as \"Excel Chapter 1 Skill-Based Training\" in Course M" +
+                    "aterials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 93
+testRunner.And("I click on submit button answering incorrectly of \"Excel\" type \"Training\" mode ac" +
+                    "tivity \"Excel Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 94
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 95
 testRunner.And("I should see \"Not passed\" status for the activity \"Excel Chapter 1 Skill-Based Tr" +
                     "aining\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 92
+#line 96
 testRunner.And("I should see \"0.00%\" score for the activity \"Excel Chapter 1 Skill-Based Training" +
                     "\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -285,23 +289,23 @@ testRunner.And("I should see \"0.00%\" score for the activity \"Excel Chapter 1 
         public virtual void StudentScoring0InSIM5WordActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student scoring 0 in SIM5 Word activity", ((string[])(null)));
-#line 99
+#line 103
 this.ScenarioSetup(scenarioInfo);
-#line 100
+#line 104
 testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course Mat" +
                     "erials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 101
+#line 105
 testRunner.And("I launch the activity named as \"Word Chapter 1 Project 1A Skill-Based Exam (Scena" +
                     "rio 1)\" in Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 102
+#line 106
 testRunner.And("I click on submit button answering incorrectly of \"Word\" type \"Exam\" mode activit" +
                     "y \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 103
+#line 107
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 104
+#line 108
 testRunner.And("I should see \"Not passed\" status for the activity \"Word Chapter 1 Project 1A Skil" +
                     "l-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 105
+#line 109
 testRunner.And("I should see \"0.00%\" score for the activity \"Word Chapter 1 Project 1A Skill-Base" +
                     "d Exam (Scenario 1)\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -314,23 +318,23 @@ testRunner.And("I should see \"0.00%\" score for the activity \"Word Chapter 1 P
         public virtual void StudentScoring0InSIM5PowerPointActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student scoring 0 in SIM5 PowerPoint activity", ((string[])(null)));
-#line 113
+#line 117
 this.ScenarioSetup(scenarioInfo);
-#line 114
+#line 118
 testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 115
+#line 119
 testRunner.And("I launch the activity named as \"PowerPoint Chapter 1 Skill-Based Training\" in Cou" +
                     "rse Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 116
+#line 120
 testRunner.And("I click on submit button answering incorrectly of \"PowerPoint\" type \"Training\" mo" +
                     "de activity \"PowerPoint Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 117
+#line 121
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 118
+#line 122
 testRunner.And("I should see \"Not passed\" status for the activity \"PowerPoint Chapter 1 Skill-Bas" +
                     "ed Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 119
+#line 123
 testRunner.And("I should see \"0.00%\" score for the activity \"PowerPoint Chapter 1 Skill-Based Tra" +
                     "ining\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -343,26 +347,26 @@ testRunner.And("I should see \"0.00%\" score for the activity \"PowerPoint Chapt
         public virtual void StudentScoring0InSIM5AccessActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student scoring 0 in SIM5 Access activity", ((string[])(null)));
-#line 127
+#line 131
 this.ScenarioSetup(scenarioInfo);
-#line 128
+#line 132
 testRunner.When("I select \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course M" +
                     "aterials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 129
+#line 133
 testRunner.And("I launch the activity named as \"Access Chapter 1 Project 1A Skill-Based Exam (Sce" +
                     "nario 1)\" in Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 130
+#line 134
 testRunner.And("I click on submit button answering incorrectly of \"Access\" type \"Exam\" mode activ" +
                     "ity \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 131
+#line 135
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 132
+#line 136
 testRunner.And("I should see \"Not passed\" status for the activity \"Access Chapter 1 Project 1A Sk" +
                     "ill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 133
+#line 137
 testRunner.And("I should see \"0.00%\" score for the activity \"Access Chapter 1 Project 1A Skill-Ba" +
                     "sed Exam (Scenario 1)\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 134
+#line 138
 testRunner.And("I click on \'Back\' link in View all course materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -374,59 +378,59 @@ testRunner.And("I click on \'Back\' link in View all course materials", ((string
         public virtual void StudentGraderITPPTActivityAndStudentScoring100()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT PPT Activity and student scoring 100%", ((string[])(null)));
-#line 141
+#line 145
 this.ScenarioSetup(scenarioInfo);
-#line 142
+#line 146
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 143
+#line 147
 testRunner.And("I select \"PowerPoint Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\"" +
                     " by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 144
-testRunner.And("I open the activity named as \"PowerPoint Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 145
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 146
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 147
-testRunner.And("I click on download icon of \"go_p01_grader_h3.pptx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 148
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"PowerPoint Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 149
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 150
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 151
-testRunner.And("I upload the downloaded file \"Grader Power Point file for 100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_p01_grader_h3.pptx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 152
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 153
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 154
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 155
+testRunner.And("I upload the downloaded file \"Grader Power Point file for 100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 156
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 153
+#line 157
 testRunner.When("I submit \"PowerPoint Chapter 1 Grader Project [Homework 3]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 154
+#line 158
 testRunner.Then("I should see message \"Your file, go_p01_grader_h3.pptx, has been successfully rec" +
                     "eived by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 155
+#line 159
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 156
+#line 160
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 157
+#line 161
 testRunner.When("I select \"PowerPoint Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\"" +
                     " by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 158
+#line 162
 testRunner.Then("I should see \"Passed\" status for the activity \"PowerPoint Chapter 1 Grader Projec" +
                     "t [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 159
+#line 163
 testRunner.And("I should see \"100.00%\" score for the activity \"PowerPoint Chapter 1 Grader Projec" +
                     "t [Homework 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 160
+#line 164
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 161
+#line 165
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 162
+#line 166
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 163
+#line 167
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -438,59 +442,59 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void StudentGraderITPPTActivityAndStudentScoring0()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT PPT Activity and student scoring 0%", ((string[])(null)));
-#line 170
+#line 174
 this.ScenarioSetup(scenarioInfo);
-#line 171
+#line 175
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 172
+#line 176
 testRunner.And("I select \"PowerPoint Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\"" +
                     " by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 173
-testRunner.And("I open the activity named as \"PowerPoint Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 174
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 175
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 176
-testRunner.And("I click on download icon of \"go_p01_grader_h3.pptx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 177
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"PowerPoint Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 178
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 179
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 180
-testRunner.And("I upload the downloaded file \"Grader Power Point file for 0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_p01_grader_h3.pptx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 181
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 182
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 183
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 184
+testRunner.And("I upload the downloaded file \"Grader Power Point file for 0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 185
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 182
+#line 186
 testRunner.When("I submit \"PowerPoint Chapter 1 Grader Project [Homework 3]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 183
+#line 187
 testRunner.Then("I should see message \"Your file, go_p01_grader_h3.pptx, has been successfully rec" +
                     "eived by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 184
+#line 188
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 185
+#line 189
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 186
+#line 190
 testRunner.When("I select \"PowerPoint Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\"" +
                     " by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 187
+#line 191
 testRunner.Then("I should see \"Not passed\" status for the activity \"PowerPoint Chapter 1 Grader Pr" +
                     "oject [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 188
+#line 192
 testRunner.And("I should see \"0.00%\" score for the activity \"PowerPoint Chapter 1 Grader Project " +
                     "[Homework 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 189
+#line 193
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 190
+#line 194
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 191
+#line 195
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 192
+#line 196
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -502,59 +506,59 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void StudentGraderITPPTActivityAndStudentScoring70()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT PPT Activity and student scoring 70%", ((string[])(null)));
-#line 199
+#line 203
 this.ScenarioSetup(scenarioInfo);
-#line 200
+#line 204
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 201
+#line 205
 testRunner.And("I select \"PowerPoint Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\"" +
                     " by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 202
-testRunner.And("I open the activity named as \"PowerPoint Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 203
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 204
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 205
-testRunner.And("I click on download icon of \"go_p01_grader_h3.pptx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 206
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"PowerPoint Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 207
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 208
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 209
-testRunner.And("I upload the downloaded file \"Grader Power Point file for 70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_p01_grader_h3.pptx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 210
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 211
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 212
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 213
+testRunner.And("I upload the downloaded file \"Grader Power Point file for 70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 214
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 211
+#line 215
 testRunner.When("I submit \"PowerPoint Chapter 1 Grader Project [Homework 3]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 212
+#line 216
 testRunner.Then("I should see message \"Your file, go_p01_grader_h3.pptx, has been successfully rec" +
                     "eived by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 213
+#line 217
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 214
+#line 218
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 215
+#line 219
 testRunner.When("I select \"PowerPoint Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\"" +
                     " by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 216
+#line 220
 testRunner.Then("I should see \"Passed\" status for the activity \"PowerPoint Chapter 1 Grader Projec" +
                     "t [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 217
+#line 221
 testRunner.And("I should see \"74.00%\" score for the activity \"PowerPoint Chapter 1 Grader Project" +
                     " [Homework 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 218
+#line 222
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 219
+#line 223
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 220
+#line 224
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 221
+#line 225
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -566,59 +570,59 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void StudentGraderITWordActivityAndStudentScoring70()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT Word Activity and student scoring 70%", ((string[])(null)));
-#line 228
+#line 232
 this.ScenarioSetup(scenarioInfo);
-#line 229
+#line 233
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 230
+#line 234
 testRunner.And("I select \"Word Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" by " +
                     "\"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 231
-testRunner.And("I open the activity named as \"Word Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 232
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 233
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 234
-testRunner.And("I click on download icon of \"go_w01_grader_a3.docx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 235
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"Word Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 236
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 237
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 238
-testRunner.And("I upload the downloaded file \"Grader Word file for 70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_w01_grader_a3.docx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 239
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 240
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 241
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 242
+testRunner.And("I upload the downloaded file \"Grader Word file for 70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 243
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 240
+#line 244
 testRunner.When("I submit \"Word Chapter 1 Grader Project [Assessment 3]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 241
+#line 245
 testRunner.Then("I should see message \"Your file, go_w01_grader_a3.docx, has been successfully rec" +
                     "eived by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 242
+#line 246
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 243
+#line 247
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 244
+#line 248
 testRunner.When("I select \"Word Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" by " +
                     "\"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 245
+#line 249
 testRunner.Then("I should see \"Passed\" status for the activity \"Word Chapter 1 Grader Project [Ass" +
                     "essment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 246
+#line 250
 testRunner.And("I should see \"74.50%\" score for the activity \"Word Chapter 1 Grader Project [Asse" +
                     "ssment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 247
+#line 251
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 248
+#line 252
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 249
+#line 253
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 250
+#line 254
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -630,59 +634,59 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void StudentGraderITWordActivityAndStudentScoring0()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT Word Activity and student scoring 0%", ((string[])(null)));
-#line 257
+#line 261
 this.ScenarioSetup(scenarioInfo);
-#line 258
+#line 262
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 259
+#line 263
 testRunner.And("I select \"Word Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" by " +
                     "\"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 260
-testRunner.And("I open the activity named as \"Word Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 261
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 262
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 263
-testRunner.And("I click on download icon of \"go_w01_grader_a3.docx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 264
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"Word Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 265
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 266
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 267
-testRunner.And("I upload the downloaded file \"Grader Word file for 0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_w01_grader_a3.docx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 268
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 269
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 270
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 271
+testRunner.And("I upload the downloaded file \"Grader Word file for 0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 272
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 269
+#line 273
 testRunner.When("I submit \"Word Chapter 1 Grader Project [Assessment 3]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 270
+#line 274
 testRunner.Then("I should see message \"Your file, go_w01_grader_a3.docx, has been successfully rec" +
                     "eived by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 271
+#line 275
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 272
+#line 276
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 273
+#line 277
 testRunner.When("I select \"Word Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" by " +
                     "\"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 274
+#line 278
 testRunner.Then("I should see \"Not passed\" status for the activity \"Word Chapter 1 Grader Project " +
                     "[Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 275
+#line 279
 testRunner.And("I should see \"0.00%\" score for the activity \"Word Chapter 1 Grader Project [Asses" +
                     "sment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 276
+#line 280
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 277
+#line 281
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 278
+#line 282
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 279
+#line 283
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -694,59 +698,59 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void StudentGraderITWordActivityAndStudentScoring100()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT Word Activity and student scoring 100%", ((string[])(null)));
-#line 286
+#line 290
 this.ScenarioSetup(scenarioInfo);
-#line 287
+#line 291
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 288
+#line 292
 testRunner.And("I select \"Word Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" by " +
                     "\"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 289
-testRunner.And("I open the activity named as \"Word Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 290
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 291
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 292
-testRunner.And("I click on download icon of \"go_w01_grader_a3.docx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 293
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"Word Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 294
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 295
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 296
-testRunner.And("I upload the downloaded file \"Grader Word file for 100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_w01_grader_a3.docx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 297
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 298
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 299
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 300
+testRunner.And("I upload the downloaded file \"Grader Word file for 100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 301
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 298
+#line 302
 testRunner.When("I submit \"Word Chapter 1 Grader Project [Assessment 3]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 299
+#line 303
 testRunner.Then("I should see message \"Your file, go_w01_grader_a3.docx, has been successfully rec" +
                     "eived by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 300
+#line 304
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 301
+#line 305
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 302
+#line 306
 testRunner.When("I select \"Word Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" by " +
                     "\"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 303
+#line 307
 testRunner.Then("I should see \"Passed\" status for the activity \"Word Chapter 1 Grader Project [Ass" +
                     "essment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 304
+#line 308
 testRunner.And("I should see \"100.00%\" score for the activity \"Word Chapter 1 Grader Project [Ass" +
                     "essment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 305
+#line 309
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 306
+#line 310
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 307
+#line 311
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 308
+#line 312
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -758,59 +762,59 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void StudentGraderITExcelActivityAndStudentScoring100()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT Excel Activity and student scoring 100%", ((string[])(null)));
-#line 315
+#line 319
 this.ScenarioSetup(scenarioInfo);
-#line 316
+#line 320
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 317
+#line 321
 testRunner.And("I select \"Excel Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\" by \"" +
                     "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 318
-testRunner.And("I open the activity named as \"Excel Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 319
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 320
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 321
-testRunner.And("I click on download icon of \"go_e01_grader_h3.xlsx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 322
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"Excel Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 323
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 324
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 325
-testRunner.And("I upload the downloaded file \"Grader Excel file for 100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_e01_grader_h3.xlsx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 326
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 327
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 328
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 329
+testRunner.And("I upload the downloaded file \"Grader Excel file for 100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 330
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 327
+#line 331
 testRunner.When("I submit \"GraderITExcel\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 328
+#line 332
 testRunner.Then("I should see message \"Your file, go_e01_grader_h3.xlsx, has been successfully rec" +
                     "eived by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 329
+#line 333
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 330
+#line 334
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 331
+#line 335
 testRunner.When("I select \"Excel Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\" by \"" +
                     "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 332
+#line 336
 testRunner.Then("I should see \"Passed\" status for the activity \"Excel Chapter 1 Grader Project [Ho" +
                     "mework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 333
+#line 337
 testRunner.And("I should see \"100.00%\" score for the activity \"Excel Chapter 1 Grader Project [Ho" +
                     "mework 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 334
+#line 338
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 335
+#line 339
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 336
+#line 340
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 337
+#line 341
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -822,61 +826,61 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void StudentGraderITExcelActivityAndStudentScoring0()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT Excel Activity and student scoring 0%", ((string[])(null)));
-#line 344
+#line 348
 this.ScenarioSetup(scenarioInfo);
-#line 345
+#line 349
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 346
+#line 350
 testRunner.And("I select \"Excel Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\" by \"" +
                     "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 347
-testRunner.And("I open the activity named as \"Excel Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 348
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 349
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 350
-testRunner.And("I click on download icon of \"go_e01_grader_h3.xlsx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 351
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"Excel Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 352
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 353
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 354
-testRunner.And("I upload the downloaded file \"Grader Excel file for 0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_e01_grader_h3.xlsx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 355
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 356
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 357
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 358
+testRunner.And("I upload the downloaded file \"Grader Excel file for 0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 359
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 356
+#line 360
 testRunner.When("I submit \"Excel Chapter 1 Grader Project [Homework 3]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 357
+#line 361
 testRunner.Then("I should see message \"Your file, go_e01_grader_h3.xlsx, has been successfully rec" +
                     "eived by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 358
+#line 362
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 359
+#line 363
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 360
+#line 364
 testRunner.When("I select \"Excel Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\" by \"" +
                     "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 361
+#line 365
 testRunner.Then("I should see \"Not passed\" status for the activity \"Excel Chapter 1 Grader Project" +
                     " [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 362
+#line 366
 testRunner.And("I should see \"0.00%\" score for the activity \"Excel Chapter 1 Grader Project [Home" +
                     "work 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 363
-testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 364
-testRunner.And("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 365
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 366
-testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 367
+testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 368
+testRunner.And("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 369
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 370
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 371
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -888,55 +892,55 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void StudentGraderITExcelActivityAndStudentScoring70()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT Excel Activity and student scoring 70%", ((string[])(null)));
-#line 374
+#line 378
 this.ScenarioSetup(scenarioInfo);
-#line 375
+#line 379
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 376
+#line 380
 testRunner.And("I select \"Excel Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\" by \"" +
                     "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 377
-testRunner.And("I open the activity named as \"Excel Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 378
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 379
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 380
-testRunner.And("I click on download icon of \"go_e01_grader_h3.xlsx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 381
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"Excel Chapter 1 Grader Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 382
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 383
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 384
-testRunner.And("I upload the downloaded file \"Grader Excel file for 70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_e01_grader_h3.xlsx\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 385
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 386
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 387
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 388
+testRunner.And("I upload the downloaded file \"Grader Excel file for 70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 389
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 386
+#line 390
 testRunner.When("I submit \"GraderITExcel\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 387
+#line 391
 testRunner.Then("I should see message \"Your file, go_e01_grader_h3.xlsx, has been successfully rec" +
                     "eived by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 388
+#line 392
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 389
+#line 393
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 390
+#line 394
 testRunner.When("I select \"Excel Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\" by \"" +
                     "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 391
+#line 395
 testRunner.Then("I should see \"Passed\" status for the activity \"Excel Chapter 1 Grader Project [Ho" +
                     "mework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 392
+#line 396
 testRunner.And("I should see \"71.30%\" score for the activity \"Excel Chapter 1 Grader Project [Hom" +
                     "ework 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 393
+#line 397
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 394
+#line 398
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -948,59 +952,59 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         public virtual void StudentGraderITAccessActivityAndStudentScoring0()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT Access Activity and student scoring 0%", ((string[])(null)));
-#line 401
+#line 405
 this.ScenarioSetup(scenarioInfo);
-#line 402
+#line 406
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 403
+#line 407
 testRunner.And("I select \"Access Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" b" +
                     "y \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 404
-testRunner.And("I open the activity named as \"Access Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 405
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 406
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 407
-testRunner.And("I click on download icon of \"go_a01_grader_a3_Open_Houses.accdb\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 408
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"Access Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 409
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 410
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 411
-testRunner.And("I upload the downloaded file \"Grader Access file for 0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_a01_grader_a3_Open_Houses.accdb\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 412
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 413
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 414
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 415
+testRunner.And("I upload the downloaded file \"Grader Access file for 0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 416
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 413
+#line 417
 testRunner.When("I submit \"Access Chapter 1 Grader Project [Assessment 3]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 414
+#line 418
 testRunner.Then("I should see message \"Your file, go_a01_grader_a3_Open_Houses.accdb, has been suc" +
                     "cessfully received by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 415
+#line 419
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 416
+#line 420
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 417
+#line 421
 testRunner.When("I select \"Access Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" b" +
                     "y \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 418
+#line 422
 testRunner.Then("I should see \"Not passed\" status for the activity \"Access Chapter 1 Grader Projec" +
                     "t [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 419
+#line 423
 testRunner.And("I should see \"0.00%\" score for the activity \"Access Chapter 1 Grader Project [Ass" +
                     "essment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 420
+#line 424
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 421
+#line 425
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 422
+#line 426
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 423
+#line 427
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1012,59 +1016,59 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void StudentGraderITAccessActivityAndStudentScoring70()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT Access Activity and student scoring 70%", ((string[])(null)));
-#line 430
+#line 434
 this.ScenarioSetup(scenarioInfo);
-#line 431
+#line 435
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 432
+#line 436
 testRunner.And("I select \"Access Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" b" +
                     "y \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 433
-testRunner.And("I open the activity named as \"Access Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 434
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 435
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 436
-testRunner.And("I click on download icon of \"go_a01_grader_a3_Open_Houses.accdb\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 437
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"Access Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 438
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 439
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 440
-testRunner.And("I upload the downloaded file \"Grader Access file for 70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_a01_grader_a3_Open_Houses.accdb\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 441
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 442
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 443
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 444
+testRunner.And("I upload the downloaded file \"Grader Access file for 70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 445
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 442
+#line 446
 testRunner.When("I submit \"Access Chapter 1 Grader Project [Assessment 3]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 443
+#line 447
 testRunner.Then("I should see message \"Your file, go_a01_grader_a3_Open_Houses.accdb, has been suc" +
                     "cessfully received by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 444
+#line 448
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 445
+#line 449
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 446
+#line 450
 testRunner.When("I select \"Access Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" b" +
                     "y \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 447
+#line 451
 testRunner.Then("I should see \"Passed\" status for the activity \"Access Chapter 1 Grader Project [A" +
                     "ssessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 448
+#line 452
 testRunner.And("I should see \"76.00%\" score for the activity \"Access Chapter 1 Grader Project [As" +
                     "sessment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 449
+#line 453
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 450
+#line 454
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 451
+#line 455
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 452
+#line 456
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1076,59 +1080,59 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void StudentGraderITAccessActivityAndStudentScoring100()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student GraderIT Access Activity and student scoring 100%", ((string[])(null)));
-#line 459
+#line 463
 this.ScenarioSetup(scenarioInfo);
-#line 460
+#line 464
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 461
+#line 465
 testRunner.And("I select \"Access Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" b" +
                     "y \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 462
-testRunner.And("I open the activity named as \"Access Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 463
-testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
-                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 464
-testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 465
-testRunner.And("I click on download icon of \"go_a01_grader_a3_Open_Houses.accdb\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 466
-testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I open the activity named as \"Access Chapter 1 Grader Project [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 467
 testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
                     "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 468
-testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on Download Files button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 469
-testRunner.And("I upload the downloaded file \"Grader Access file for 100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on download icon of \"go_a01_grader_a3_Open_Houses.accdb\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 470
+testRunner.And("I click on Close and Return button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 471
+testRunner.Then("I should see a \"Test Presentation\" pop up displayed with \"Download Files\" button " +
+                    "and \"Upload Completed File\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 472
+testRunner.When("I click on Upload Completed File button on Test Presentation pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 473
+testRunner.And("I upload the downloaded file \"Grader Access file for 100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 474
 testRunner.Then("I should see message \"Your completed file has been successfully uploaded.\" on \"Te" +
                     "st Presentation\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 471
+#line 475
 testRunner.When("I submit \"Access Chapter 1 Grader Project [Assessment 3]\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 472
+#line 476
 testRunner.Then("I should see message \"Your file, go_a01_grader_a3_Open_Houses.accdb, has been suc" +
                     "cessfully received by myitlab:grader.\" on \"Test Feedback\" popup page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 473
+#line 477
 testRunner.When("I click on Return To Course button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 474
+#line 478
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 475
+#line 479
 testRunner.When("I select \"Access Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" b" +
                     "y \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 476
+#line 480
 testRunner.Then("I should see \"Passed\" status for the activity \"Access Chapter 1 Grader Project [A" +
                     "ssessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 477
+#line 481
 testRunner.And("I should see \"100.00%\" score for the activity \"Access Chapter 1 Grader Project [A" +
                     "ssessment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 478
+#line 482
 testRunner.When("I refresh the View All Course Materials frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 479
+#line 483
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 480
+#line 484
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 481
+#line 485
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

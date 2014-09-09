@@ -576,4 +576,76 @@
   <data name="StudentPrsentation_Page_SIM5_Excel_ThirdQuestion_B3_Cell_Id" xml:space="preserve">
     <value>B3</value>
   </data>
+  <data name="StudentPresentation_Page_SIM5_AlignCenter_Button_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='ribbon-tab-container-home']/ul/li[3]/span/span/span/span/span[2]/span[2]/span/div/span</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_ColumnWidth_Link_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='ribbon-tab-container-home']/ul/li[6]/span/span/span/span/span[3]/div[1]/div[2]/div/div[1]/div[4]/div[2]</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_ColumnWidth_OK_Button_ID_Locator" xml:space="preserve">
+    <value>btnOkID</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_ColumnWidth_TextBox_ID_Locator" xml:space="preserve">
+    <value>inputTxtBox</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_ColumnWidth_Value" xml:space="preserve">
+    <value>16.43</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_B3_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_B3</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_B4_Cell_Id" xml:space="preserve">
+    <value>B4</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_B4_Cell_Value" xml:space="preserve">
+    <value>68991.12</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_B5_Cell_Id" xml:space="preserve">
+    <value>B5</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_B5_Cell_Value" xml:space="preserve">
+    <value>28836</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_C4_Cell_Id" xml:space="preserve">
+    <value>C4</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_C4_Cell_Value" xml:space="preserve">
+    <value>86894.82</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_C5_Cell_Id" xml:space="preserve">
+    <value>C5</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_C5_Cell_Value" xml:space="preserve">
+    <value>22634.23</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_D3_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_D3</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_D3_Cell_OffsetX" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_D3_Cell_OffsetY" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_D4_Cell_Id" xml:space="preserve">
+    <value>D4</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_D4_Cell_Value" xml:space="preserve">
+    <value>99650.58</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_D5_Cell_Id" xml:space="preserve">
+    <value>D5</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Excel_D5_Cell_Value" xml:space="preserve">
+    <value>99823.87</value>
+  </data>
+  <data name="StudentPresentation_Page_SIM5_Format_Button_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='ribbon-tab-container-home']/ul/li[6]/span/span/span/span/span[3]/div[1]/div[1]/div[1]/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_A1_XPath_Locator" xml:space="preserve">
+    <value>//li[@id='Sheet1_A1']/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator" xml:space="preserve">
+    <value>SelectionBorderBullet</value>
+  </data>
 </root>
