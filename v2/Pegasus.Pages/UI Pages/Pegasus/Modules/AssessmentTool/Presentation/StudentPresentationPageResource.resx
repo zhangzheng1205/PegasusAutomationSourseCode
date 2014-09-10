@@ -648,4 +648,16 @@
   <data name="StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator" xml:space="preserve">
     <value>SelectionBorderBullet</value>
   </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_E3_Cell_Id" xml:space="preserve">
+    <value>E3</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_E3_Cell_Value" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_E4_Cell_Id" xml:space="preserve">
+    <value>E4</value>
+  </data>
+  <data name="StudentPrsentation_Page_SIM5_Excel_E4_Cell_Value" xml:space="preserve">
+    <value>=SUM(B4:D4)</value>
+  </data>
 </root>

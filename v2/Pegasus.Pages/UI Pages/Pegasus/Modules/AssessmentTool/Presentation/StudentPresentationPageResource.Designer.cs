@@ -1457,6 +1457,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to E3.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_E3_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_E3_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_E3_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_E3_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E4.
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_E4_Cell_Id {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_E4_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to =SUM(B4:D4).
+        /// </summary>
+        internal static string StudentPrsentation_Page_SIM5_Excel_E4_Cell_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_SIM5_Excel_E4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pro Fit Marietta.
         /// </summary>
         internal static string StudentPrsentation_Page_SIM5_Excel_First_Activity_A1_Cell_Value {

@@ -2832,7 +2832,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToLastOpenedWindow();
             // Wait for window
             base.WaitUntilWindowLoads(assetName + StudentPresentationPageResource.
-            StudentPresentation_Page_SimPresentation_Window_Name_Locator);
+            StudentPresentation_Page_SimPresentation_Window_Name);
             //Get the current url
             string strURL = base.GetCurrentUrl;
             int searchIndex = strURL.IndexOf("resLinkID=") + 10;
@@ -2855,10 +2855,10 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Wait for the SIM5 assignment launch window
                 base.WaitUntilWindowLoads(activityName + StudentPresentationPageResource.
-                StudentPresentation_Page_SimPresentation_Window_Name_Locator);
+                StudentPresentation_Page_SimPresentation_Window_Name);
                 //Select the SIM5 assignment launch window
                 base.SelectWindow(activityName + StudentPresentationPageResource.
-                StudentPresentation_Page_SimPresentation_Window_Name_Locator);
+                StudentPresentation_Page_SimPresentation_Window_Name);
                 //Answer first excel question
                 this.StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook();
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
@@ -2909,28 +2909,27 @@ namespace Pegasus.Pages.UI_Pages
             "CopyingAFormulaByUsingTheFillHandle",
             base.IsTakeScreenShotDuringEntryExit);
             //Fill E3 cell value
-            this.PutExcelValueInCell("E3", "Total");
+            this.PutExcelValueInCell(StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_E3_Cell_Id,
+                StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_E3_Cell_Value);
             //Fill E4 cell value
-            this.PutExcelValueInCell("E4", "=SUM(B4:D4)");
-            
-
-            ///Clear reference box
+            this.PutExcelValueInCell(StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_E4_Cell_Id, 
+                StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_E4_Cell_Value);           
+            //Clear reference box
             base.ClearTextById(StudentPresentationPageResource.
                StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
             //Fill Cell ID in reference box
             base.FillTextBoxById(StudentPresentationPageResource.
-               StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator, "E4");
+               StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator, 
+               StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_E4_Cell_Id);
             //Press enter
             this.PressEnterKeyById(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
-
             //Wait for element Border bullet for cell E4
             base.WaitForElement(By.ClassName(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator));
             //Get web element property for border bullet element
             IWebElement getBorderBullet = base.GetWebElementPropertiesByClassName(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator);
-              
+                StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator);            
             
 
             logger.LogMethodExit("StudentPresentationPage",
