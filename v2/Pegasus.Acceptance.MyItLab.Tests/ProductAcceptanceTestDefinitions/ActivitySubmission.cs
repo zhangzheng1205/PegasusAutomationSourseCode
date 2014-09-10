@@ -373,12 +373,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Open the activity
+        /// </summary>
+        /// /// <param name="activityCount">This is activity name.</param>
         [When(@"I launch the activity named as ""(.*)"" in Course Materials")]
         public void OpenTheActivityToLaunch(string activityName)
         {
             // Open The Activity
             Logger.LogMethodEntry("ActivitySubmission",
-            "OpenTheActivity",
+            "OpenTheActivityToLaunch",
             base.IsTakeScreenShotDuringEntryExit);
             //Select Window And Frame
             new StudentPresentationPage().SelectWindowAndFrame();
@@ -386,24 +391,26 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new StudentPresentationPage().WaitForActivitytoLoad(activityName);
             //Get asset id
             this.AssetId = new StudentPresentationPage().GetSIM5AssetIdFromUrl(activityName);
-            //Click The Activity In CourseMaterial
-            //new StudentPresentationPage().SelectActivityNameInCourseMaterialTab(activityName);
-            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivity", base.IsTakeScreenShotDuringEntryExit);
+            //Click on the Activity In CourseMaterial
+            new StudentPresentationPage().SelectActivityNameInCourseMaterialTab(activityName);
+            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityToLaunch", base.IsTakeScreenShotDuringEntryExit);
         }
 
 
+        /// <summary>
+        /// Verify the pass due message
         /// </summary>
+        /// /// <param>This is expected pass due message.</param>
         [Then(@"I should see the message ""(.*)"" in activity presentation page")]
         public void VerifyMessageInActivityPresentationPage(string expectedPastDueActivityMessage)
         {
-            //Verify PastDue Message
+            
             Logger.LogMethodEntry("ActivitySubmission",
             "VerifyMessageInActivityPresentationPage",
             base.IsTakeScreenShotDuringEntryExit);
-
+            //Verify PastDue Message
             Logger.LogAssertion("VerifyActivitySubmission", ScenarioContext.
             Current.ScenarioInfo.Title,
-
             () => Assert.AreEqual(expectedPastDueActivityMessage,
             new StudentPresentationPage().
             GetActivityPastDueStatusMessage().Trim()));
@@ -415,36 +422,35 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
 
 
-
+        /// <summary>
+        /// Submit the pass due message
+        /// </summary>      
+        /// <param>This is expected pass due message.</param>
         [When(@"I submit the past due ""(.*)"" activity")]
         public void WhenISubmitThePastDueActivity(string activityType)
         {
             //Submit the Activity
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
-             base.IsTakeScreenShotDuringEntryExit);
-            //Created Class Object
-            StudentPresentationPage studentpresentationpage =
-                new StudentPresentationPage();
-
-            //Attempt The Activity
-            //studentpresentationpage.AttemptTheBehavioralModeTypeActivity(activityType);
-
-            // studentpresentationpage.AttemptTheActivityInCourseMaterials(activityType);
-            studentpresentationpage.SubmitPastDueActivity();
-
-            //Finish and return to course selection
-            //studentpresentationpage.ClickOnFinishButtonInCourseMaterials();
-            //Click On Feedback Icon
-            // studentpresentationpage.ClickOnFeedbackIcon();
+             base.IsTakeScreenShotDuringEntryExit);           
+                new StudentPresentationPage().SubmitPastDueActivity();                       
             Logger.LogMethodEntry("ActivitySubmission", "SubmitTheActivity",
             base.IsTakeScreenShotDuringEntryExit);
         }
 
 
+        /// <summary>
+        /// Return to parent window
+        /// </summary>   
         [Then(@"I should return to parent window")]
-        public void ThenIShouldReturnToParentWindow()
+        public void ReturnToParentWindow()
         {
+            Logger.LogMethodEntry("ActivitySubmission", "ReturnToParentWindow",
+            base.IsTakeScreenShotDuringEntryExit);  
+            //Return to parent window
             new StudentPresentationPage().ReturnToParentWindow();
+            Logger.LogMethodEntry("ActivitySubmission", "ReturnToParentWindow",
+           base.IsTakeScreenShotDuringEntryExit);
+
         }
 
 

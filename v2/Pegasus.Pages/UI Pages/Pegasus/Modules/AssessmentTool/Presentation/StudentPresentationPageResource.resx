@@ -580,7 +580,7 @@
     <value>//div[@id='ribbon-tab-container-home']/ul/li[3]/span/span/span/span/span[2]/span[2]/span/div/span</value>
   </data>
   <data name="StudentPresentation_Page_SIM5_ColumnWidth_Link_XPath_Locator" xml:space="preserve">
-    <value>//div[@id='ribbon-tab-container-home']/ul/li[6]/span/span/span/span/span[3]/div[1]/div[2]/div/div[1]/div[4]/div[2]</value>
+    <value>//div[@id='ribbon-tab-container-home']/ul/li[6]/span/span/span/span[3]/div[1]/div[2]/div/div[1]/div[4]/div[2]</value>
   </data>
   <data name="StudentPresentation_Page_SIM5_ColumnWidth_OK_Button_ID_Locator" xml:space="preserve">
     <value>btnOkID</value>
@@ -640,7 +640,7 @@
     <value>99823.87</value>
   </data>
   <data name="StudentPresentation_Page_SIM5_Format_Button_XPath_Locator" xml:space="preserve">
-    <value>//div[@id='ribbon-tab-container-home']/ul/li[6]/span/span/span/span/span[3]/div[1]/div[1]/div[1]/div[2]</value>
+    <value>//div[@id='ribbon-tab-container-home']/ul/li[6]/span/span/span/span[3]/div[1]/div[1]/div[1]/div[2]</value>
   </data>
   <data name="StudentPrsentation_Page_SIM5_Excel_A1_XPath_Locator" xml:space="preserve">
     <value>//li[@id='Sheet1_A1']/div</value>

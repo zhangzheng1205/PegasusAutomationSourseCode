@@ -62,6 +62,7 @@ Then I should see the activity successfully launched in browser normal mode
 When I close the "Launch" window
 Then I should be on the "Course Materials" page
 
+#Purpose : Verify the attempts for past due activity
 Scenario:To verify the attempts for past due activity by SMS student
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page

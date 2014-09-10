@@ -2412,46 +2412,66 @@ namespace Pegasus.Pages.UI_Pages
                     base.IsTakeScreenShotDuringEntryExit);
         }
 
-
-
+        /// <summary>
+        /// Wait for Activity to Load
+        /// </summary>
         public void WaitForActivitytoLoad(string activityName)
         {
-            // This code checks the link exists
-            //if (base.IsElementDisplayedByPartialLinkText(assetName))
-
-
+            logger.LogMethodEntry("StudentPresentationPage", "WaitForActivitytoLoad",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+            
+            //Wait for element
             base.WaitForElement(By.PartialLinkText(activityName));
             //Get Element Property
             IWebElement getCmenuIconProperty1 = base.GetWebElementPropertiesByPartialLinkText(activityName);
             //Perform Mouse Hover on Cmenu Icon
-
             base.ClickByJavaScriptExecutor(getCmenuIconProperty1);
-            //}
-
+            //Wait for element
             base.WaitForElement(By.PartialLinkText(activityName));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "WaitForActivitytoLoad",
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
 
 
-
+        /// <summary>
+        /// Set Activity pass due message
+        /// </summary>
         public string GetActivityPastDueStatusMessage()
         {
-
-            base.SwitchToLastOpenedWindow();
-            //Select Window And Frame
-            //base.SwitchToIFrameById(StudentPresentationPageResource.StudentPresentation_Page_Content_Frame_Id_Locator);
-            base.WaitForElement(By.Id(StudentPresentationPageResource.StudentPresentation_Page_PassDue_Message_Id));
-            string actualPastDueActivityMessage = base.GetElementInnerTextById(StudentPresentationPageResource.StudentPresentation_Page_PassDue_Message_Id);
-            return actualPastDueActivityMessage;
-
-
+            
+            logger.LogMethodEntry("StudentPresentationPage", "GetActivityPastDueStatusMessage",
+                base.IsTakeScreenShotDuringEntryExit);            
+            
+                //Switch to last opened window
+                base.SwitchToLastOpenedWindow();
+                //Wait for element         
+                base.WaitForElement(By.Id(StudentPresentationPageResource.StudentPresentation_Page_PassDue_Message_Id));
+                //Get Actual Pass due message
+                string actualPastDueActivityMessage = base.GetElementInnerTextById(StudentPresentationPageResource.
+                    StudentPresentation_Page_PassDue_Message_Id);
+                return actualPastDueActivityMessage;            
+            
+            logger.LogMethodExit("StudentPresentationPage", "GetActivityPastDueStatusMessage",
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
 
+        
+        /// <summary>
+        /// Submit the pass due activity
+        /// </summary>
         public void SubmitPastDueActivity()
         {
             //Opens Activity Presentation Window
-            logger.LogMethodEntry("StudentPresentationPage", "AttemptActivity",
+            logger.LogMethodEntry("StudentPresentationPage", "SubmitPastDueActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -2460,41 +2480,41 @@ namespace Pegasus.Pages.UI_Pages
                 //Answers Selection in Presention window
                 this.AnswersFirstQuestionTestWindow();
                 //Click the Submit button
-                this.ClickOnPastDueSubmitForGradingButton();                
-
+                this.ClickOnPastDueSubmitForGradingButton();          
                 //Click on the Finish button
                 this.ClickOnFinishButton();
-                //Click On Return To Course Button
-                //this.ClickOnReturnToCourseButton();
-                // Switch to default window after closing of presentation pop up
-                //base.WaitUntilWindowLoads(StudentPresentationPageResource
-                //.StudentPresentation_Page_BaseWindow_Title_Name);
-                //base.SelectWindow(StudentPresentationPageResource
-                //.StudentPresentation_Page_BaseWindow_Title_Name);
+               
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("StudentPresentationPage", "AttemptActivity",
+            logger.LogMethodExit("StudentPresentationPage", "SubmitPastDueActivity",
                     base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        /// <summary>
+        /// Return to parent window
+        /// </summary>
         public void ReturnToParentWindow()
         {
-            //Click On Return To Course Button  Return to Course
-            IWebElement getReturnToCourseLinkProperties = base.GetWebElementPropertiesByPartialLinkText(StudentPresentationPageResource.StudentPresentation_Page_ReturntoCourse_Button_Text);
-            //Click on Button
-            base.ClickByJavaScriptExecutor(getReturnToCourseLinkProperties);
-
-            //this.ClickOnReturnToCourseButton();
-            //Switch to default window after closing of presentation pop up
-            //base.WaitUntilWindowLoads(StudentPresentationPageResource
-            //.StudentPresentation_Page_BaseWindow_Title_Name);
-            //base.SelectWindow(StudentPresentationPageResource
-            //.StudentPresentation_Page_BaseWindow_Title_Name);
-
+            logger.LogMethodEntry("StudentPresentationPage", "ReturnToParentWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click On Return To Course Button  Return to Course
+                IWebElement getReturnToCourseLinkProperties = base.GetWebElementPropertiesByPartialLinkText
+                    (StudentPresentationPageResource
+                    .StudentPresentation_Page_ReturntoCourse_Button_Text);
+                //Click on Return to Course Button
+                base.ClickByJavaScriptExecutor(getReturnToCourseLinkProperties);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "ReturnToParentWindow",
+                    base.IsTakeScreenShotDuringEntryExit);
         }
 
           /// <summary>
@@ -2812,7 +2832,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SwitchToLastOpenedWindow();
             // Wait for window
             base.WaitUntilWindowLoads(assetName + StudentPresentationPageResource.
-            StudentPresentation_Page_SimPresentation_Window_Name);
+            StudentPresentation_Page_SimPresentation_Window_Name_Locator);
             //Get the current url
             string strURL = base.GetCurrentUrl;
             int searchIndex = strURL.IndexOf("resLinkID=") + 10;
@@ -2835,10 +2855,10 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Wait for the SIM5 assignment launch window
                 base.WaitUntilWindowLoads(activityName + StudentPresentationPageResource.
-                StudentPresentation_Page_SimPresentation_Window_Name);
+                StudentPresentation_Page_SimPresentation_Window_Name_Locator);
                 //Select the SIM5 assignment launch window
                 base.SelectWindow(activityName + StudentPresentationPageResource.
-                StudentPresentation_Page_SimPresentation_Window_Name);
+                StudentPresentation_Page_SimPresentation_Window_Name_Locator);
                 //Answer first excel question
                 this.StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook();
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.

@@ -755,7 +755,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;ribbon-tab-container-home&apos;]/ul/li[6]/span/span/span/span/span[3]/div[1]/div[2]/div/div[1]/div[4]/div[2].
+        ///   Looks up a localized string similar to //div[@id=&apos;ribbon-tab-container-home&apos;]/ul/li[6]/span/span/span/span[3]/div[1]/div[2]/div/div[1]/div[4]/div[2].
         /// </summary>
         internal static string StudentPresentation_Page_SIM5_ColumnWidth_Link_XPath_Locator {
             get {
@@ -935,7 +935,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;ribbon-tab-container-home&apos;]/ul/li[6]/span/span/span/span/span[3]/div[1]/div[1]/div[1]/div[2].
+        ///   Looks up a localized string similar to //div[@id=&apos;ribbon-tab-container-home&apos;]/ul/li[6]/span/span/span/span[3]/div[1]/div[1]/div[1]/div[2].
         /// </summary>
         internal static string StudentPresentation_Page_SIM5_Format_Button_XPath_Locator {
             get {
