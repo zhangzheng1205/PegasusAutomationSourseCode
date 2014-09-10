@@ -2883,6 +2883,8 @@ namespace Pegasus.Pages.UI_Pages
                 this.ConstructingAFormulaAndUsingTheSumFunction();
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                    StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
+                //Answer seventh question
+                this.CopyingAFormulaByUsingTheFillHandle();
 
                 //Click on SIM5 activity Submit button
                 this.ClickOnSIM5ActivitySubmitButton();
@@ -2896,6 +2898,46 @@ namespace Pegasus.Pages.UI_Pages
                  "SubmitSIM5ExcelTypeActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Copying a Formula by Using the Fill Handle
+        /// </summary>
+        public void CopyingAFormulaByUsingTheFillHandle()
+        {
+            
+            logger.LogMethodEntry("StudentPresentationPage",
+            "CopyingAFormulaByUsingTheFillHandle",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Fill E3 cell value
+            this.PutExcelValueInCell("E3", "Total");
+            //Fill E4 cell value
+            this.PutExcelValueInCell("E4", "=SUM(B4:D4)");
+            
+
+            ///Clear reference box
+            base.ClearTextById(StudentPresentationPageResource.
+               StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Fill Cell ID in reference box
+            base.FillTextBoxById(StudentPresentationPageResource.
+               StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator, "E4");
+            //Press enter
+            this.PressEnterKeyById(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+
+            //Wait for element Border bullet for cell E4
+            base.WaitForElement(By.ClassName(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator));
+            //Get web element property for border bullet element
+            IWebElement getBorderBullet = base.GetWebElementPropertiesByClassName(StudentPresentationPageResource.
+                StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator);
+              
+            
+
+            logger.LogMethodExit("StudentPresentationPage",
+            "CopyingAFormulaByUsingTheFillHandle",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Setting Data In Cell.

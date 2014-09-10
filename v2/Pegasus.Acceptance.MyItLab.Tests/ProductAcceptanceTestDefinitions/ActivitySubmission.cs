@@ -392,7 +392,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Get asset id
             this.AssetId = new StudentPresentationPage().GetSIM5AssetIdFromUrl(activityName);
             //Click on the Activity In CourseMaterial
-            new StudentPresentationPage().SelectActivityNameInCourseMaterialTab(activityName);
+            //new StudentPresentationPage().SelectActivityNameInCourseMaterialTab(activityName);
             Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityToLaunch", base.IsTakeScreenShotDuringEntryExit);
         }
 
