@@ -693,6 +693,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to rsWrap HighlightHoverDayCell.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_CurrentDate_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_CurrentDate_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //td[@class=&apos;HighlightTodayCell&apos;]/div[2]/div[3][contains(@id,&apos;ctl00_ctl00_phBody_PageContent&apos;)].
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_CurrentDate_Xpath_Locator {

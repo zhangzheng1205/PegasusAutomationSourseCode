@@ -579,6 +579,42 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify if the current date highlighted in the calendar frame.
+        /// </summary>
+        [Then(@"I should see the current date highlighted in the calendar frame")]
+        public void VerifyTheCurrentDateHighlightedInTheCalendar()
+        {
+            //Verify if the current date highlighted in the calendar frame
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "VerifyTheCurrentDateHighlightedInTheCalendar",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyCurrentDateHighlighted",
+                ScenarioContext.Current.ScenarioInfo.
+                   Title, () => Assert.IsTrue(
+                 new CalendarHedDefaultUxPage().IsCurrentDateHighlighted()));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "VerifyTheCurrentDateHighlightedInTheCalendar",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
 
+        /// <summary>
+        /// Verify the assigned content in the day view.
+        /// </summary>     
+        [Then(@"I should see the assigned content ""(.*)"" in the day view")]
+        public void VerifyAssignedContent(string assetName)
+        {
+            //Verify the assigned content in the day view
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "VerifyAssignedContent",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyAssignedContentText",
+                ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(assetName,
+                    new CalendarHedDefaultUxPage().GetAssignCourseMaterialsText()));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "VerifyAssignedContent",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

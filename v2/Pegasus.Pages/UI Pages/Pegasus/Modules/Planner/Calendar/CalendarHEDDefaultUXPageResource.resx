@@ -384,4 +384,7 @@
   <data name="CalendarHEDDefaultUXPage_NodeId_Value" xml:space="preserve">
     <value>nodeid</value>
   </data>
+  <data name="CalendarHEDDefaultUXPageResource_CurrentDate_ClassName_Locator" xml:space="preserve">
+    <value>rsWrap HighlightHoverDayCell</value>
+  </data>
 </root>

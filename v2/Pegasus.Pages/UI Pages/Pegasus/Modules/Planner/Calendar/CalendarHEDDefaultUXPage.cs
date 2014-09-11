@@ -1920,5 +1920,26 @@ namespace Pegasus.Pages.UI_Pages
                  .GetAttribute(CalendarHEDDefaultUXPageResource
                  .CalendarHEDDefaultUXPage_NodeId_Value);
         }
+        /// <summary>
+        /// Verify if the current date is highlighted in the calendar frame.
+        /// </summary>
+        /// <returns>Return the current date value highlighted.</returns>
+        public Boolean IsCurrentDateHighlighted()
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                "IsCurrentDayHighlighted",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Declaring a variable
+            bool isCurrentDateHighlighted = false;
+            //Select the calendar window
+            this.SelectCalendarWindow();
+            isCurrentDateHighlighted = base.IsElementPresent(By.ClassName
+                  (CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_CurrentDate_ClassName_Locator));
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                "IsCurrentDayHighlighted",
+                base.IsTakeScreenShotDuringEntryExit);
+            return isCurrentDateHighlighted;
+        }
     }
 }

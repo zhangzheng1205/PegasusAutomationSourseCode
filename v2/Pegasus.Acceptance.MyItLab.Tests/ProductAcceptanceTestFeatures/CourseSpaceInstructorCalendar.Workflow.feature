@@ -75,3 +75,12 @@ And I select the check box of any 2 activities in "PowerPoint Chapter 1: Simulat
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
 Then I should see the check mark in assigned status column next to the assets
+
+#Purpose: To validate the current date assigned content in calendar frame by Coursespace Instructor
+#Test Case Id: peg-21985
+Scenario: To check the current date assigned content in the calendar by Coursespace Instructor
+When I navigate to the "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+And I should see the current date highlighted in the calendar frame
+When I select the current date 
+Then I should see the assigned content "Excel Chapter 1 Skill-Based Training" in the day view
