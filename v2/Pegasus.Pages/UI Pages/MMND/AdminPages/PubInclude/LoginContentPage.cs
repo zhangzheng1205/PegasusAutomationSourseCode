@@ -97,5 +97,34 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("LoginContentPage", "EnterUserName",
              base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        ///Select User Details Baesd On Scenerio. 
+        /// </summary>
+        /// <param name="scenerioName">This is based on scenerio.</param>
+        /// <returns>User details.</returns>
+        public User SelectUserDetailsBaesdOnScenerio(string scenerioName)
+        {
+            //Select User Details Baesd On Scenerio
+            Logger.LogMethodEntry("LoginContentPage", "SelectUserDetailsBaesdOnScenerio",
+             base.IsTakeScreenShotDuringEntryExit);
+            //User declaration
+            User user = new User();
+            switch (scenerioName)
+            {
+                case "scoring 0":
+                    user = User.Get(CommonResource.CommonResource
+                               .SMS_STU_UC1);
+                    break;
+                case "set idle":
+                    user = User.Get(CommonResource.CommonResource
+                              .SMS_STU_UC2);
+                              break;
+            }
+            Logger.LogMethodExit("LoginContentPage", "SelectUserDetailsBaesdOnScenerio",
+             base.IsTakeScreenShotDuringEntryExit);
+            return user;
+        }
     }
 }
+        

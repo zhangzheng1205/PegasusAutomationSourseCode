@@ -163,6 +163,21 @@ When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 
+#Purpose: Login as Zero Score SMS Student
+Scenario: User login as SMS student to score zero percent
+Given I browsed the login url for "CsSmsStudent"
+When I login as "scoring 0" into the pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
+
+#Purpose: Login as Set Idle SMS Student
+Scenario: User Login as Set Idle SMS Student
+Given I browsed the login url for "CsSmsStudent"
+When I login as "set idle" into the pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+
 #Purpose: Logout as SMS Student
 Scenario: User Logout as SMS Student
 When I "Sign out" from the "CsSmsStudent"
