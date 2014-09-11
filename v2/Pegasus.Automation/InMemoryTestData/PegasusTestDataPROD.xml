@@ -433,6 +433,32 @@
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
+    <!--Hard coded Users data for Zero Score "CsSMSStudent".-->
+    <User>
+      <Name>187bae30-3422-4f72-ae2d-67cbf84cee73</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>ln1</LastName>
+      <UserType>CsSmsStudent</UserType>
+      <UserId>Hed_User_SMS_STU_UC1</UserId>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for Set Idle "CsSMSStudent".-->
+    <User>
+      <Name>187bae30-3422-4f72-ae2d-67cbf84cee73</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>ln1</LastName>
+      <UserType>CsSmsStudent</UserType>
+      <UserId>Hed_User_SMS_STU_UC2</UserId>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
     <User>
       <Name>actinstructor1</Name>
       <Password>password2</Password>

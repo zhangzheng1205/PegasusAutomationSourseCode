@@ -449,7 +449,7 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>ln1</LastName>
       <UserType>CsSmsStudent</UserType>
-      <UserId>SMS_STU_UC1</UserId>
+      <UserId>Hed_User_SMS_STU_UC1</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -462,7 +462,7 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>ln1</LastName>
       <UserType>CsSmsStudent</UserType>
-      <UserId>SMS_STU_UC2</UserId>
+      <UserId>Hed_User_SMS_STU_UC2</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
