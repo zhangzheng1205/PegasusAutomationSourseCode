@@ -164,6 +164,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceAdmin.Workflow.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorAssignment.Workflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceInstructorAssignment.Workflow.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorEnrollement.Workflow1.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -405,6 +410,12 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonFeature.feature.cs</LastGenOutput>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CorseSpaceStudent.GraderIT.AverageandMaximumScenarios.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CourseSpaceStudent.GraderIT.ZeroScoreScenarios.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Extended.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -454,6 +465,10 @@
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceAdmin.Workflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorAssignment.Workflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceInstructorAssignment.Workflow.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorEnrollement.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

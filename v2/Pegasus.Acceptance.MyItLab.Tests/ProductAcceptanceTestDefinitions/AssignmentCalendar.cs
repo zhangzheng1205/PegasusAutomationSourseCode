@@ -5,6 +5,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
+using Pegasus.Pages.Exceptions;
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -616,5 +617,96 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "VerifyAssignedContent",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+         /// <summary>
+        /// Verify folder asset is present.
+        /// </summary>
+        /// <param name="folderAssetName">This is a string text.</param>
+        [Then(@"I should see ""(.*)"" asset")]
+        public void VerifyFolderAssetPresent(string expectedFolderAssetName)
+        {
+            //Verify expected folder name is same as actual folder name
+            Logger.LogMethodEntry("AssignmentCalendar",
+              "VerifyFolderAssetPresent",
+              base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Assert expected and actual folder values
+                Logger.LogAssertion("VerifyFolderAssetPresent",
+                    ScenarioContext.Current.ScenarioInfo.Title,
+                    () => Assert.AreEqual(expectedFolderAssetName,
+                        new CalendarHedDefaultUxPage().GetActualFolderName()));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("AssignmentCalendar",
+               "VerifyFolderAssetPresent",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Make the asset assignment property as 'Not Assigned'.
+        /// </summary>
+        [When(@"I should select the '(.*)' at the assignment properties")]
+        public void SelectNotAssignedRadioButton()
+        {
+            //Make the asset assignment property as 'Not Assigned'
+            Logger.LogMethodEntry("AssignmentCalendar",
+               "SetNotAssignedRadioButton",
+               base.IsTakeScreenShotDuringEntryExit);
+            ////Make the asset assignment property as 'Not Assigned'
+            new AssignContentPage().SelectNotAssignedAndSave();
+            Logger.LogMethodExit("AssignmentCalendar",
+               "SetNotAssignedRadioButton",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        ///  /// Drag and drop 'Word Chapter 1: Simulation Activities' folder to current date.
+        /// </summary>
+        [When(@"I drag and drop the '(.*)' folder to the current date")]
+        public void DragAndDropFolderToCurrentDate()
+        {
+            // Drag and drop a folder asset to current date.
+            Logger.LogMethodEntry("AssignmentCalendar",
+               "DragAndDropFolderToCurrentDate",
+               base.IsTakeScreenShotDuringEntryExit);
+            // Drag and drop a folder asset to current date.
+            new CalendarHedDefaultUxPage().DragAndDropWordFolderAsset();
+            Logger.LogMethodExit("AssignmentCalendar",
+              "DragAndDropFolderToCurrentDate",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify due date icon is diplayed in assigned date.
+        /// </summary>
+        [Then(@"I should see Due Date Icon displayed in current date")]
+        public void VerifyDueDateIconDisplayed()
+        {
+            // Verify due date icon is diplayed in assigned date
+            Logger.LogMethodEntry("AssignmentCalendar",
+              "VerifyDueDateIconDisplayed",
+              base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Verify due date icon is diplayed in assigned date
+                Logger.LogAssertion("VerifyDueDateIconDisplayed",
+                   ScenarioContext.Current.ScenarioInfo.Title,
+                   () => Assert.IsTrue(new CalendarHedDefaultUxPage()
+                       .IsActivityDueDateStatusPresent()));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("AssignmentCalendar",
+             "VerifyDueDateIconDisplayed",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

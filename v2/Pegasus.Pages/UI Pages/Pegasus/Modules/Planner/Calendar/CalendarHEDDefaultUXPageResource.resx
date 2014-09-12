@@ -387,4 +387,10 @@
   <data name="CalendarHEDDefaultUXPageResource_CurrentDate_ClassName_Locator" xml:space="preserve">
     <value>rsWrap HighlightHoverDayCell</value>
   </data>
+  <data name="CalendarHEDDefaultUXPage_GOwithMicrosoftOffice2013Volume1Folder_XPath_Locator" xml:space="preserve">
+    <value>(//div[text()='GO! with Microsoft Office 2013, Volume 1'])[2]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPage_WordChapter1SimulationActivitiesFolder_Xpath_Locator" xml:space="preserve">
+    <value>//div[text()='Word Chapter 1: Simulation Activities']</value>
+  </data>
 </root>
