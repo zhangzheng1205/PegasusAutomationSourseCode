@@ -2883,8 +2883,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.ConstructingAFormulaAndUsingTheSumFunction();
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                    StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
-                //Answer seventh question
-                this.CopyingAFormulaByUsingTheFillHandle();
+            
 
                 //Click on SIM5 activity Submit button
                 this.ClickOnSIM5ActivitySubmitButton();
@@ -2899,43 +2898,7 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Copying a Formula by Using the Fill Handle
-        /// </summary>
-        public void CopyingAFormulaByUsingTheFillHandle()
-        {
-            
-            logger.LogMethodEntry("StudentPresentationPage",
-            "CopyingAFormulaByUsingTheFillHandle",
-            base.IsTakeScreenShotDuringEntryExit);
-            //Fill E3 cell value
-            this.PutExcelValueInCell(StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_E3_Cell_Id,
-                StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_E3_Cell_Value);
-            //Fill E4 cell value
-            this.PutExcelValueInCell(StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_E4_Cell_Id, 
-                StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_E4_Cell_Value);           
-            //Clear reference box
-            base.ClearTextById(StudentPresentationPageResource.
-               StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
-            //Fill Cell ID in reference box
-            base.FillTextBoxById(StudentPresentationPageResource.
-               StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator, 
-               StudentPresentationPageResource.StudentPrsentation_Page_SIM5_Excel_E4_Cell_Id);
-            //Press enter
-            this.PressEnterKeyById(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
-            //Wait for element Border bullet for cell E4
-            base.WaitForElement(By.ClassName(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator));
-            //Get web element property for border bullet element
-            IWebElement getBorderBullet = base.GetWebElementPropertiesByClassName(StudentPresentationPageResource.
-                StudentPrsentation_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator);            
-            
-
-            logger.LogMethodExit("StudentPresentationPage",
-            "CopyingAFormulaByUsingTheFillHandle",
-            base.IsTakeScreenShotDuringEntryExit);
-        }
+        
 
 
         /// <summary>
