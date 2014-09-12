@@ -56,6 +56,11 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonProductAcceptanceFeatures\CommonFeature.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonFeature.feature</DependentUpon>
+    </Compile>
     <Compile Include="CommonProductAcceptanceTestDefinitions\CommonSteps.cs" />
     <Compile Include="CommonProductAcceptanceTestDefinitions\CommonStepsResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -168,7 +173,25 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CommonProductAcceptanceFeatures\CommonFeature.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CommonFeature.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDMapIntegrationPointID.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDUserRegistration.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDCourseCreation.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDToolLaunch.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceTestFeatures\GDXStub.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GDXStub.WorkFlow.feature.cs</LastGenOutput>

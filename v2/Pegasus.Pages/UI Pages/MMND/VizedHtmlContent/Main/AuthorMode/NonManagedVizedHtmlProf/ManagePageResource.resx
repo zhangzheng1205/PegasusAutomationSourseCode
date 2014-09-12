@@ -128,154 +128,102 @@
   </data>
   <data name="ManagePage_CBOM_Request_Text" xml:space="preserve">
     <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html 
-xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
     &lt;head&gt;
         &lt;title&gt;Tool Linking Example HTML&lt;/title&gt;
-        &lt;meta http-equiv="Content-Type" content="text/html;
-    
-    charset=UTF-8" /&gt;
-        &lt;script language="javascript" src="http://tpi-scripts.pearsoncmg.com/Pegasus/cert/PegasusLTICert_ccng_58_pegasus.js"
-        
-type="text/javascript"&gt;&lt;/script&gt;
+        &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+        &lt;SCRIPT src="/currentcourse/ccng_it_pegasus.js" type=text/javascript&gt;&lt;/SCRIPT&gt;
+        &lt;link href="http://media.pearsoncmg.com/cmg/cddc/training/ccng/course_developers/web_resources/css/style.css" rel="stylesheet" type="text/css" /&gt;
     &lt;/head&gt;
     &lt;body&gt;
-        &lt;link 
-href="http://media.pearsoncmg.com/cmg/cddc/training/ccng/course_developers/web_resources/css/style.css" rel="stylesheet" type="text/css" /&gt;
-        &lt;div 
-id="content"&gt;
+        &lt;div id="content"&gt;
         &lt;h1&gt;All Pegasus Tool level links&lt;/h1&gt;
-        &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+        &lt;p&gt;The HTML source code of this page uses every possible example of the openPegasusToolNew( Pegasus_tool , role )
+        JavaScript code. This page also contains the final production JavaScript import URL.&lt;/p&gt;
         &lt;h2&gt;Instructor Links&lt;/h2&gt;
-        &lt;p&gt;&lt;a href="#" onclick="
-        
-openPegasusToolSame( 'Todays_View','Instructor' ); return false;"&gt;Todays_View&lt;/a&gt;&lt;br /&gt;
-        &lt;a href="#" onclick=" openPegasusToolNew( 
-'MyTest','Instructor'
-        ); return false;"&gt;MyTest&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolNew( 'Todays_View','Instructor' ); return false;"&gt;Todays_View&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolSame( 'MyTest','Instructor' ); return false;"&gt;MyTest&lt;/a&gt;&lt;/p&gt;
         &lt;p&gt;Course Content sub tools- no direct link to Course Content&lt;/p&gt;
-        &lt;blockquote 
-class="webkit-indent-blockquote" style="margin: 0px 0px 0px 40px; padding: 0px; border: currentColor;"&gt;
-        &lt;p&gt;
-        &lt;a href="#" onclick=" 
-openPegasusToolSame(
-        'Add_Content_from_Library','Instructor' ); return false;"&gt;Add_Content_from_Library&lt;/a&gt;
-        &lt;a href="#" onclick=" 
-openPegasusToolNew(
-        'Map_Learning_Objectives','Instructor' ); return false;"&gt;&lt;br /&gt;
+        &lt;blockquote class="webkit-indent-blockquote" style="margin: 0pt 0pt 0pt 40px; padding: 0px; border: currentColor;"&gt;
+        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Add_Content_from_Library','Instructor' ); return
+        false;"&gt;Add_Content_from_Library&lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolNew( 'Map_Learning_Objectives','Instructor' );
+        return false;"&gt;&lt;br /&gt;
         Map_Learning_Objectives&lt;br /&gt;
-        &lt;/a&gt;&lt;a href="#" 
-onclick=" openPegasusToolNew(
-        'Organize_Content','Instructor' ); return false;"&gt;Organize_Content&lt;br /&gt;
-        &lt;/a&gt;&lt;a href="#" onclick=" 
-openPegasusToolSame( 'Assign_Content','Instructor'
-        ); return false;"&gt;Assign_Content&lt;br /&gt;
-        &lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolNew( 
-'Organize_Calendar','Instructor' ); return
+        &lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Organize_Content','Instructor' ); return
+        false;"&gt;Organize_Content&lt;br /&gt;
+        &lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Assign_Content','Instructor' ); return false;"&gt;Assign_Content&lt;br /&gt;
+        &lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Organize_Calendar','Instructor' ); return
         false;"&gt;Organize_Calendar&lt;br /&gt;
-        &lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolNew( 
-'Media_Library','Instructor' ); return false;"&gt;Media_Library&lt;/a&gt;&lt;br /&gt;
-        &lt;a href="#" onclick=" openPegasusToolNew( 
-'Manage_Question_Library','Instructor' ); return false;"&gt;Manage_Question_Library&lt;/a&gt;&lt;a href="#" onclick="
-        openPegasusToolNew( 
-'Map_Learning_Objectives_To_Questions','Instructor' ); return false;"&gt;&lt;br /&gt;
+        &lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Media_Library','Instructor' ); return false;"&gt;Media_Library&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolSame( 'Manage_Question_Library','Instructor' ); return
+        false;"&gt;Manage_Question_Library&lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolSame(
+        'Map_Learning_Objectives_To_Questions','Instructor' ); return false;"&gt;&lt;br /&gt;
         Map_Learning_Objectives_To_Questions&lt;/a&gt;&lt;/p&gt;
         &lt;/blockquote&gt;
-        
-&lt;p&gt;Gradebook sub tools- no direct link Gradebook&lt;/p&gt;
-        &lt;blockquote class="webkit-indent-blockquote" style="margin: 0px 0px 0px 40px; padding: 0px; 
-border: currentColor;"&gt;
+        &lt;p&gt;Gradebook sub tools- no direct link Gradebook&lt;/p&gt;
+        &lt;blockquote class="webkit-indent-blockquote" style="margin: 0pt 0pt 0pt 40px; padding: 0px; border: currentColor;"&gt;
         &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Grades','Instructor' ); return false;"&gt;Grades&lt;br /&gt;
-        &lt;/a&gt;&lt;a href="#" 
-onclick=" openPegasusToolSame( 'Custom_View','Instructor' ); return false;"&gt;Custom_View&lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolNew(
-        
-'Manage_Roster','Instructor' ); return false;"&gt;&lt;br /&gt;
-        Manage_Roster&lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Reports','Instructor' ); return
-     
-   false;"&gt;&lt;br /&gt;
+        &lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Custom_View','Instructor' ); return false;"&gt;Custom_View&lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolNew( 'Manage_Roster','Instructor' ); return false;"&gt;&lt;br /&gt;
+        Manage_Roster&lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Reports','Instructor' ); return false;"&gt;&lt;br /&gt;
         Reports&lt;/a&gt;&lt;/p&gt;
         &lt;/blockquote&gt;
         &lt;p&gt;Communicate sub tools- no direct link Gradebook&lt;/p&gt;
-        &lt;blockquote class="webkit-
- 
-       indent-blockquote" style="margin: 0px 0px 0px 40px; padding: 0px; border: currentColor;"&gt;
-        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame(
-        
-'Mail','Instructor' ); return false;"&gt;Mail&lt;br /&gt;
-        &lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Announcement','Instructor' ); return
-        
-false;"&gt;Announcement&lt;/a&gt; &lt;a href="#" onclick=" openPegasusToolSame( 'Chat','Instructor' ); return false;"&gt;&lt;br /&gt;
+        &lt;blockquote class="webkit-indent-blockquote" style="margin: 0pt 0pt 0pt 40px; padding: 0px; border: currentColor;"&gt;
+        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolNew( 'Mail','Instructor' ); return false;"&gt;Mail&lt;br /&gt;
+        &lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolNew( 'Announcement','Instructor' ); return false;"&gt;Announcement&lt;/a&gt; &lt;a href="#" onclick=" openPegasusToolNew( 'Chat','Instructor' ); return false;"&gt;&lt;br /&gt;
         Chat&lt;/a&gt;&lt;/p&gt;
         &lt;/blockquote&gt;
-     
-   &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Preferences','Instructor' ); return false;"&gt;Preferences&lt;/a&gt;&lt;br /&gt;
-        &lt;a href="#" onclick="
-        
-openPegasusToolSame( 'Search','Instructor' ); return false;"&gt;Search&lt;/a&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'my_profile','Instructor' );
- 
-       return false;"&gt;My Profile&lt;/a&gt; - time zone&lt;/p&gt;
-        &lt;p&gt;Program Courses&lt;/p&gt;
-        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 
-'Program_Admin','Instructor'
-        ); return false;"&gt;Program_Admin&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolNew( 'Preferences','Instructor' ); return false;"&gt;Preferences&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolNew( 'Search','Instructor' ); return false;"&gt;Search&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;3.10 tool level links&lt;/p&gt;
+        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolNew( 'Profile','Instructor' ); return false;"&gt;My_Profile&lt;/a&gt; - time
+        zone&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolNew( 'Help','Instructor' ); return false;"&gt;Help&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolNew( 'Feedback','Instructor' ); return false;"&gt;Feedback&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;Program Courses (COCO courses only)&lt;/p&gt;
+        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolNew( 'Program_Admin','Instructor' ); return false;"&gt;Program_Admin&lt;/a&gt;&lt;/p&gt;
         &lt;h2&gt;Student Links&lt;/h2&gt;
-        &lt;p&gt;&lt;a href="#" onclick=" 
-openPegasusToolSame( 'Todays_View','Student' ); return
-        false;"&gt;Todays_ViewStudent&lt;/a&gt;&lt;/p&gt;
-        &lt;p&gt;Course Content sub tools- no direct link to Course 
-Content&lt;/p&gt;
+        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Todays_View','Student' ); return false;"&gt;Todays_View&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;Course Content sub tools- no direct link to Course Content&lt;/p&gt;
         &lt;blockquote&gt;
-        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'View_All_Content','Student' ); return false;"&gt;View_All_Content&lt;/a&gt;&lt;br 
-/&gt;
-        &lt;a href="#" onclick=" openPegasusToolSame(
-        'Course_Calendar','Student' ); return false;"&gt;Course_Calendar&lt;/a&gt;&lt;br /&gt;
-        &lt;a href="#" 
-onclick=" openPegasusToolSame( 'Learning_Objectives','Student' );
-        return false;"&gt;Learning_Objectives&lt;br /&gt;
-        &lt;/a&gt;&lt;a href="#" onclick=" 
-openPegasusToolSame( 'Media_Library','Student' ); return
+        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'View_All_Content','Student' ); return
+        false;"&gt;View_All_Content&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolSame( 'Course_Calendar','Student' ); return false;"&gt;Course_Calendar&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolSame( 'Learning_Objectives','Student' ); return
+        false;"&gt;Learning_Objectives&lt;br /&gt;
+        &lt;/a&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Media_Library','Student' ); return
         false;"&gt;Media_Library&lt;/a&gt;&amp;nbsp;&lt;/p&gt;
         &lt;/blockquote&gt;
-        &lt;p&gt;Grades sub tools- no 
-direct link to Grades&lt;/p&gt;
+        &lt;p&gt;Grades sub tools- no direct link to Grades&lt;/p&gt;
         &lt;blockquote&gt;
-        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Grades','Student' ); return false;"&gt;Grades_Student&lt;/a&gt;&lt;br 
-/&gt;
-        &lt;a href="#" onclick=" openPegasusToolSame(
-        'Custom_View','Student' ); return false;"&gt;Custom_View&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Grades','Student' ); return false;"&gt;Grades&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolSame( 'Custom_View','Student' ); return false;"&gt;Custom_View&lt;/a&gt;&lt;/p&gt;
         &lt;/blockquote&gt;
-        
-&lt;p&gt;Communicate sub tools- no direct link Gradebook&lt;/p&gt;
+        &lt;p&gt;Communicate sub tools- no direct link Gradebook&lt;/p&gt;
         &lt;blockquote&gt;
-        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Mail','Student' ); return 
-false;"&gt;Mail&lt;/a&gt;&lt;br /&gt;
-        &lt;a href="#" onclick="
-        openPegasusToolSame( 'Announcement','Student' ); return false;"&gt;Announcement&lt;/a&gt;&lt;br /&gt;
-        &lt;a 
-href="#" onclick=" openPegasusToolSame( 'Chat','Student' );
-        return false;"&gt;Chat&lt;br /&gt;
+        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Mail','Student' ); return false;"&gt;Mail&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolSame( 'Announcement','Student' ); return false;"&gt;Announcement&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolSame( 'Chat','Student' ); return false;"&gt;Chat&lt;br /&gt;
         &lt;/a&gt;&lt;/p&gt;
-        &lt;a href="http://lti.next.ecollege-
-labs.com/Main/LTI/ScriptedLinkLaunchView.ed?json=%7b%22handler_urn%22%3a%22pearson%2fccng_pegasus%2fslink%2fx-pearson-ccng_pegasus%22%2c%22ToolId%22%3a
-%22Organize_Content%22%2c%22AssetId%22%3a%22100c5e06ecb44a3c9371f6e4e7c4745c%22%2c%22ToolRole%22%3a%22Instructor%22%7d" target="MyLabSSO"&gt;Organize 
-Content&lt;/a&gt;&lt;br /&gt;
-        &lt;a href="#" onclick=" openPegasusAssetSame(
-        '00a128d8842b4e74ac4ebd0e40d901ea', &amp;lsquo;view_all_content' ); return 
-false;"&gt;Asset link&lt;/a&gt;
+        &lt;/blockquote&gt;
+        &lt;p&gt;3.10 tool level links&lt;/p&gt;
+        &lt;p&gt;&lt;a href="#" onclick=" openPegasusToolSame( 'Profile','Student' ); return false;"&gt;My_Profile&lt;/a&gt; - time zone&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolSame( 'Help','Student' ); return false;"&gt;Help&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusToolSame( 'Feedback','Student' ); return false;"&gt;Feedback&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+        &lt;p&gt;Questions about the HTML or JavaScript used on this page? &lt;a href="mailto:kevin.mackett@pearson.com"&gt;kevin.mackett@pearson.com&lt;/a&gt;&lt;/p&gt;
         &lt;br /&gt;
-        &lt;a href="#" onclick="
-        openPegasusAssetSame( '00a128d8842b4e74ac4ebd0e40d901ea','Instructor' ); return 
-false;"&gt;Asset link_INS&lt;/a&gt;
+        &lt;a href="http://lti.next.ecollege-labs.com/Main/LTI/ScriptedLinkLaunchView.ed?json=%7b%22handler_urn%22%3a%20%20%20%20%20%20%20%20%20%22pearson%2fccng_pegasus%2fslink%2fx-pearson-ccng_pegasus%22%2c%22ToolId%22%3a%22Organize_Content%22%2c%22AssetId%22%3a%20%20%20%20%20%20%20%20%20%fdbb644f0829406e8db60b374238d5cc%22%2c%22ToolRole%22%3a%22Instructor%22%7d" target="MyLabSSO"&gt;Organize Content&lt;/a&gt;&lt;br /&gt;
         &lt;br /&gt;
-        &lt;a href="#" onclick="
-        openPegasusAssetSame( '00a128d8842b4e74ac4ebd0e40d901ea','Student' ); return 
-false;"&gt;Asset link_STU&lt;/a&gt;
-        &lt;br /&gt;
-        &lt;a href="#" class="lti_link" onclick="javascript:lti_launch
-({'handler_urn':'pearson/ccng_5qa_pegasus/slink/x-pearson-ccng_5qa_pegasus','targetId':'studyplan'},'http://lti.next.ecollege-
-        labs.com');return 
-false;"&gt;studyplan&lt;/a&gt; &lt;/blockquote&gt;&lt;/div&gt;
+        &lt;a href="#" onclick=" openPegasusAssetNew( '3068bbe4aff44de4ade688ecc1324010','Instructor' ); return false;"&gt;Amp
+        Content Asset link_Ins&lt;/a&gt; &lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusAssetNew( '6a4af24099e94816bbafb1315c2a40dd','Instructor' ); return false;"&gt;Amp
+        Reporting Asset link_Ins&lt;/a&gt; &lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusAssetNew( 'b633120f3b2e4df3a7c4a962ff91c527','Instructor' ); return false;"&gt;Amp
+        Content- 1 Asset link_Ins&lt;/a&gt; &lt;br /&gt;
+        &lt;a href="#" onclick=" openPegasusAssetNew( '9d58c49073a34436b4ec0add720c13b7','Instructor' ); return false;"&gt;Amp
+        Reporting - 1 Asset link_Ins&lt;/a&gt; &lt;br /&gt;
+        &lt;/div&gt;
     &lt;/body&gt;
 &lt;/html&gt;</value>
   </data>

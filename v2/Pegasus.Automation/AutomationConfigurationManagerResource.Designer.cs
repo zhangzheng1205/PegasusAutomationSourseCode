@@ -106,6 +106,60 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MMNDCertAdminURLRoot.
+        /// </summary>
+        internal static string MMNDCertAdminURLRoot_Key {
+            get {
+                return ResourceManager.GetString("MMNDCertAdminURLRoot_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MMNDPPEAdminURLRoot.
+        /// </summary>
+        internal static string MMNDPPEAdminURLRoot_Key {
+            get {
+                return ResourceManager.GetString("MMNDPPEAdminURLRoot_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MMNDPPEPortalURLRoot.
+        /// </summary>
+        internal static string MMNDPPEPortalURLRoot_Key {
+            get {
+                return ResourceManager.GetString("MMNDPPEPortalURLRoot_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MMNDPRODAdminURLRoot.
+        /// </summary>
+        internal static string MMNDPRODAdminURLRoot_Key {
+            get {
+                return ResourceManager.GetString("MMNDPRODAdminURLRoot_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MMNDPRODPortalURLRoot.
+        /// </summary>
+        internal static string MMNDPRODPortalURLRoot_Key {
+            get {
+                return ResourceManager.GetString("MMNDPRODPortalURLRoot_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MMNDVMPortalURLRoot.
+        /// </summary>
+        internal static string MMNDVMPortalURLRoot_Key {
+            get {
+                return ResourceManager.GetString("MMNDVMPortalURLRoot_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PCTInstructorResourceToolbarURLPPE.
         /// </summary>
         internal static string PCTInstructorResourceToolsPPE_Key {
@@ -210,6 +264,33 @@ namespace Pegasus.Automation {
         internal static string RumbaURLRootVM_Key {
             get {
                 return ResourceManager.GetString("RumbaURLRootVM_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SMSAdminStudentURLRootPPE.
+        /// </summary>
+        internal static string SMSAdminStudentURLRootPPE_Key {
+            get {
+                return ResourceManager.GetString("SMSAdminStudentURLRootPPE_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SMSAdminStudentURLRootPROD.
+        /// </summary>
+        internal static string SMSAdminStudentURLRootPROD_Key {
+            get {
+                return ResourceManager.GetString("SMSAdminStudentURLRootPROD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SMSAdminStudentURLRootVM.
+        /// </summary>
+        internal static string SMSAdminStudentURLRootVM_Key {
+            get {
+                return ResourceManager.GetString("SMSAdminStudentURLRootVM_Key", resourceCulture);
             }
         }
         

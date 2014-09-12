@@ -121,7 +121,7 @@
     <value>5</value>
   </data>
   <data name="EPContent_Page_AdministrationPages_Window_Name" xml:space="preserve">
-    <value>Administration Pages</value>
+    <value>Administrative Pages</value>
   </data>
   <data name="EPContent_Page_CourseCompassNextGen_Window_Name" xml:space="preserve">
     <value>Course Compass Next Gen | LOGIN</value>
@@ -148,7 +148,7 @@
     <value>Signoff</value>
   </data>
   <data name="EPContent_Page_Window_Name" xml:space="preserve">
-    <value>Administrative Pages</value>
+    <value>Administration Pages</value>
   </data>
   <data name="EPContet_Page_CourseType_DropDown_Name" xml:space="preserve">
     <value>ClientID</value>

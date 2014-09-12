@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Administrative Page Window
-                this.SelectAdministrativePageWindow();
+                base.SelectWindow(EPContentPageResource.EPContent_Page_Window_Name);
                 base.WaitForElement(By.Name(EPContentPageResource.
                     EPContent_Page_HeaderFrame_Name_Locator));
                 //Switch to Frame
@@ -78,18 +78,18 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Exit Link
                 base.ClickButtonByPartialLinkText(EPContentPageResource.
                     EPContent_Page_Exit_Link_Locator);
-                base.WaitUntilWindowLoads(EPContentPageResource.
-                    EPContent_Page_HomePSH_Window_Name);
-                //Select HomePSH Window
-                base.SelectWindow(EPContentPageResource.
-                    EPContent_Page_HomePSH_Window_Name);
-                base.WaitForElement(By.PartialLinkText(EPContentPageResource.
-                    EPContent_Page_Signoff_Link_Locator));
-                //Click On Sign Off Link
-                base.ClickButtonByPartialLinkText(EPContentPageResource.
-                    EPContent_Page_Signoff_Link_Locator);
-                base.WaitUntilWindowLoads(EPContentPageResource.
-                    EPContent_Page_CourseCompassNextGen_Window_Name);
+                //base.WaitUntilWindowLoads(EPContentPageResource.
+                //    EPContent_Page_HomePSH_Window_Name);
+                ////Select HomePSH Window
+                //base.SelectWindow(EPContentPageResource.
+                //    EPContent_Page_HomePSH_Window_Name);
+                //base.WaitForElement(By.PartialLinkText(EPContentPageResource.
+                //    EPContent_Page_Signoff_Link_Locator));
+                ////Click On Sign Off Link
+                //base.ClickButtonByPartialLinkText(EPContentPageResource.
+                //    EPContent_Page_Signoff_Link_Locator);
+                //base.WaitUntilWindowLoads(EPContentPageResource.
+                //    EPContent_Page_CourseCompassNextGen_Window_Name);
             }
             catch (Exception e)
             {
@@ -109,7 +109,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             //Select Administrative Pages Window
             base.WaitUntilWindowLoads(EPContentPageResource.
-                EPContent_Page_AdministrationPages_Window_Name);
+             EPContent_Page_AdministrationPages_Window_Name);
             base.SelectWindow(EPContentPageResource.
                 EPContent_Page_AdministrationPages_Window_Name);
             logger.LogMethodExit("EPContentPage", "SelectAdministrativePageWindow",

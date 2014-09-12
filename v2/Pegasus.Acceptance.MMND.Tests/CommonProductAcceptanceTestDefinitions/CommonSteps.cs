@@ -93,6 +93,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
                 IsTakeScreenShotDuringEntryExit);
         }
 
+       
         /// <summary>
         /// Enter Into Course.
         /// </summary>
@@ -165,7 +166,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         /// <summary>
         /// Initialize Pegasus test before test execution starts
         /// </summary>
-        [BeforeScenario]
+        [BeforeTestRun]
         public static void Setup()
         {
             new CommonSteps().ResetWebdriver();
@@ -175,7 +176,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         /// Deinitialize Pegasus test after the execution of test
         /// and stops the webdriver.
         /// </summary>
-        [AfterScenario]
+        [AfterTestRun]
         public static void TearDown()
         {
             // clean processess

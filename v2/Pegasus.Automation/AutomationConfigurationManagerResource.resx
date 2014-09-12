@@ -132,6 +132,24 @@
   <data name="CourseSpaceURLRootVM_Key" xml:space="preserve">
     <value>CourseSpaceURLRootVM</value>
   </data>
+  <data name="MMNDCertAdminURLRoot_Key" xml:space="preserve">
+    <value>MMNDCertAdminURLRoot</value>
+  </data>
+  <data name="MMNDPPEAdminURLRoot_Key" xml:space="preserve">
+    <value>MMNDPPEAdminURLRoot</value>
+  </data>
+  <data name="MMNDPPEPortalURLRoot_Key" xml:space="preserve">
+    <value>MMNDPPEPortalURLRoot</value>
+  </data>
+  <data name="MMNDPRODAdminURLRoot_Key" xml:space="preserve">
+    <value>MMNDPRODAdminURLRoot</value>
+  </data>
+  <data name="MMNDPRODPortalURLRoot_Key" xml:space="preserve">
+    <value>MMNDPRODPortalURLRoot</value>
+  </data>
+  <data name="MMNDVMPortalURLRoot_Key" xml:space="preserve">
+    <value>MMNDVMPortalURLRoot</value>
+  </data>
   <data name="PCTInstructorResourceToolsPPE_Key" xml:space="preserve">
     <value>PCTInstructorResourceToolbarURLPPE</value>
   </data>
@@ -167,6 +185,15 @@
   </data>
   <data name="RumbaURLRootVM_Key" xml:space="preserve">
     <value>RUMBAAdminURLRootVM</value>
+  </data>
+  <data name="SMSAdminStudentURLRootPPE_Key" xml:space="preserve">
+    <value>SMSAdminStudentURLRootPPE</value>
+  </data>
+  <data name="SMSAdminStudentURLRootPROD_Key" xml:space="preserve">
+    <value>SMSAdminStudentURLRootPROD</value>
+  </data>
+  <data name="SMSAdminStudentURLRootVM_Key" xml:space="preserve">
+    <value>SMSAdminStudentURLRootVM</value>
   </data>
   <data name="SMSAdminURLRootPPE_Key" xml:space="preserve">
     <value>SMSAdminURLRootPPE</value>

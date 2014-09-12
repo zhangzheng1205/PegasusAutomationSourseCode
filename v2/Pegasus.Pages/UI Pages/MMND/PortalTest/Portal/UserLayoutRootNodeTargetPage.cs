@@ -427,6 +427,42 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Click on Back to your courses page
+        /// link.
+        /// </summary>
+        public void ClickOnBackToYourCoursesLink(string linkName)
+        {
+            //Click on Back to your courses page link
+            logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "ClickOnLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Click on link name
+                ClickOnLink(linkName);
+            }
+            catch(Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            logger.LogMethodExit("UserLayoutRootNodeTargetPage", "ClickOnLink",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        private void ClickOnLink(string linkName)
+        {
+            //Click on link based on partial link text
+            logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "ClickOnLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on link based on partial link text
+            IWebElement linkProperties = base.GetWebElementPropertiesByPartialLinkText(linkName);
+            base.ClickByJavaScriptExecutor(linkProperties);
+            logger.LogMethodExit("UserLayoutRootNodeTargetPage", "ClickOnLink",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Get CourseId
         /// </summary>
         /// <returns>CourseId</returns>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MMNDIntegration_CourseCompassNextGeneration_Name" xml:space="preserve">
-    <value>Course Compass Next Generation</value>
+    <value>Course Compass Next Gen</value>
   </data>
   <data name="MMNDIntegration_InstructorParameterIdCOCO_Name" xml:space="preserve">
     <value>InstructorParameterIdCOCO</value>

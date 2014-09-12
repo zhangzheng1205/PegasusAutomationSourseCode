@@ -57,6 +57,38 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Property MMND Admin url root.
+        /// </summary>
+        public static string MMNDUrlRoot
+        {
+            get { return GetMMNDUrlRoot(); }
+        }
+
+        private static string GetMMNDUrlRoot()
+        {
+            //MMNDAdminURLRootPPE_Key
+            string applicationMMNDurl;
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            {
+                case "VM":
+                    applicationMMNDurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_WSURL_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MMNDCertAdminURLRoot_Key];
+                    break;
+                case "PPE":
+                    applicationMMNDurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_WSURL_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MMNDPPEAdminURLRoot_Key];
+                    break;
+                case "PROD":
+                    applicationMMNDurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_WSURL_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MMNDPRODAdminURLRoot_Key];
+                    break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return applicationMMNDurl;
+
+        }
+
+        /// <summary>
         /// Find work space url root based on application environment.
         /// </summary> 
         /// <returns>Application ws url.</returns>
@@ -154,6 +186,71 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 case "PROD":
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminURLRootPROD_Key];
+                    break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return url;
+        }
+
+
+        /// <summary>
+        /// Get SMS registration URL for MMND student.
+        /// </summary>
+        public static string SmsMMNDStudentRegistrationURL
+        {
+            get { return GetSmsMMNDStudentRegistrationRoot(); }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private static string GetSmsMMNDStudentRegistrationRoot()
+        {
+            string url = string.Empty;
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            {
+                case "VM":
+                    url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminStudentURLRootVM_Key];
+                    break;
+                case "PPE":
+                    url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminStudentURLRootPPE_Key];
+                    break;
+                case "PROD":
+                    url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminStudentURLRootPROD_Key];
+                    break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+            }
+            return url;
+        }
+
+        /// <summary>
+        /// Get MMND users login URL.
+        /// </summary>
+        public static string MMNDUsersLoginURL
+        {
+            get { return GetMMNDUsersLoginURLRoot(); }
+        }
+
+        private static string GetMMNDUsersLoginURLRoot()
+        {
+            string url = string.Empty;
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            {
+                case "VM":
+                    url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MMNDVMPortalURLRoot_Key];
+                    break;
+                case "PPE":
+                    url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MMNDPPEPortalURLRoot_Key];
+                    break;
+                case "PROD":
+                    url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MMNDPRODPortalURLRoot_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }

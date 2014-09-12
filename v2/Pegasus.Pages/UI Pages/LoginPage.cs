@@ -176,14 +176,13 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.MMNDInstructor:
                     // Get URL of MMNDStudent
                     case User.UserTypeEnum.MMNDStudent:
-                        _baseLoginUrl = string.Format(ConfigurationManager.AppSettings[LoginPageResource.
-                            Login_Page_MMNDCertPortal_RootUrl_Config_Value]);
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.MMNDUsersLoginURL);
                         base.DeleteAllBrowserCookies();
                         break;
                     // Get URL of MMNDAdmin
                     case User.UserTypeEnum.MMNDAdmin:
-                        _baseLoginUrl = string.Format(ConfigurationManager.AppSettings[LoginPageResource.
-                            Login_Page_MMNDCertAdmin_RootUrl_Config_Value]);
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.
+                            MMNDUrlRoot);
                         base.DeleteAllBrowserCookies();
                         break;
                     // Get URL for DPCTGPPublisherAdmin
@@ -225,6 +224,10 @@ namespace Pegasus.Pages.UI_Pages
                                  .Login_Page_Hed_CourseSpaceURL_Append_Parameters); break;
                     case User.UserTypeEnum.SMSAdmin:
                         _baseLoginUrl = string.Format(AutomationConfigurationManager.SmsAdminUrlRoot)
+                            + LoginPageResource.Login_Page_SMSAdmin_Append_Parameter;
+                        break;
+                    case User.UserTypeEnum.SMSAdminStudent:
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.SmsMMNDStudentRegistrationURL)
                             + LoginPageResource.Login_Page_SMSAdmin_Append_Parameter;
                         break;
                 }

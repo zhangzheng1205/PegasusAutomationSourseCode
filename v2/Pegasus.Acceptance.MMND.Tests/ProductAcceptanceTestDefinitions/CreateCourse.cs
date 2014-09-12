@@ -103,6 +103,24 @@ namespace Pegasus.Acceptance.MMND.Tests.
         }
 
         /// <summary>
+        /// Click on Back to Your courses page
+        /// link.
+        /// </summary>
+        /// <param name="linkName">Link name to click.</param>
+        [When(@"I click on ""(.*)"" link")]
+        public void ClickOnLink(string linkName)
+        {
+            //Course Created Successfully
+            Logger.LogMethodEntry("CreateCourse", "ClickOnLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on link
+            new UserLayoutRootNodeTargetPage().ClickOnBackToYourCoursesLink(linkName);
+            Logger.LogMethodExit("CreateCourse", "ClickOnLink",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Get CourseId Of Course
         /// </summary>
         /// <param name="courseTypeEnum">This is Course Type Enum</param>
@@ -227,7 +245,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         /// <summary>
         /// Start New WebDriver Instance Before Scenario
         /// </summary>
-        [BeforeScenario("CreateNonCoOrdinateCourse", "CreateCoOrdinateCourse", "CreateSectionCourse")]
+        [BeforeTestRun]
         public static void StartIeWebDriver()
         {
             new CreateCourse().ResetWebdriver();
@@ -236,7 +254,7 @@ namespace Pegasus.Acceptance.MMND.Tests.
         /// <summary>
         /// Stop WebDriver Instance after Scenario
         /// </summary>
-        [AfterScenario("CreateMMNDInstructor")]
+        [AfterTestRun]
         public static void StopIeWebDriver()
         {
             new CreateCourse().WebDriverCleanUp();

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedtest.mmndmapintegrationpointid" storage="d:\27thauguststashcopy\v2\pegasus.acceptance.mmnd.tests\productacceptanceorderedtests\orderedtest.mmndmapintegrationpointid.orderedtest" id="8d743e19-f594-4a39-8edd-eddf2aa1c5eb" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="1e6eec14-6ff8-7d72-675a-272f24ea5fcc" name="UserSignInAsAdminInEcollegeAdminPages" storage="..\bin\debug\pegasus.acceptance.mmnd.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="bcc51604-982c-4e91-4311-35bb8066da7d" name="ChangeTheIntegrationPointIdForCoOrdinateCourse" storage="..\bin\debug\pegasus.acceptance.mmnd.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="64a74bcc-59c6-3a63-fd81-c5ad459ba89d" name="ChangeTheIntegrationPointIdForNonCoOrdinateCourse" storage="..\bin\debug\pegasus.acceptance.mmnd.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="1c0c8949-5663-b0fe-ca4c-0959a7d00f5e" name="UserSignOffAsAdminInEcollegeAdminPages" storage="..\bin\debug\pegasus.acceptance.mmnd.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

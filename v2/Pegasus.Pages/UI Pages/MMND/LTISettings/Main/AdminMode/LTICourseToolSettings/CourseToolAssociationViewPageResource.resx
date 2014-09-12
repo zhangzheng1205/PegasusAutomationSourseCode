@@ -121,7 +121,7 @@
     <value>//form[@id='frmAssociateView']/table/tbody/tr[3]/td/table/tbody/tr[2]/td/table/tbody/tr</value>
   </data>
   <data name="CourseToolAssociationView_Page_CourseProvider_Name" xml:space="preserve">
-    <value>CCNG Pegasus 5.8</value>
+    <value>ccng_it_pegasus</value>
   </data>
   <data name="CourseToolAssociationView_Page_CourseProvider_Text_XpathLocator" xml:space="preserve">
     <value>//form[@id='frmAssociateView']/table/tbody/tr[3]/td/table/tbody/tr[2]/td/table/tbody/tr[{0}]/td[2]</value>
