@@ -410,10 +410,7 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonFeature.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CorseSpaceStudent.GraderIT.AverageandMaximumScenarios.orderedtest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CourseSpaceStudent.GraderIT.ZeroScoreScenarios.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.CourseSpaceInstructor.Assignment.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Extended.MyItLab.orderedtest">
