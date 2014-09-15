@@ -1029,28 +1029,6 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage", "SetStartAndEndDate",
               base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Clicks 'Not Assigned' radio button and save 'Assignment Properties'.
-        /// </summary>
-        public void SelectNotAssignedAndSave()
-        {
-            // Clicks 'Not Assigned' radio button and save 'Assignment Properties'
-            logger.LogMethodEntry("AssignContentPage", "SelectNotAssignedAndSave",
-                base.IsTakeScreenShotDuringEntryExit);
-            try
-            {
-               // Clicks 'Not Assigned' radio button and save 'Assignment Properties' and save
-                SelectNotAssignedRadiobutton();
-                SaveProperties();
-            }
-            catch (Exception e)
-            {
-                ExceptionHandler.HandleException(e);
-            }
-           logger.LogMethodExit("AssignContentPage", "SelectNotAssignedAndSave",
-            base.IsTakeScreenShotDuringEntryExit);
-        }
+        }       
     }
 }

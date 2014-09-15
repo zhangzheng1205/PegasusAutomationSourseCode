@@ -35,7 +35,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// Select Current date
+        /// Select Current date.
         /// </summary>
         [When(@"I select the current date")]
         public void SelectCurrentDate()
@@ -458,15 +458,15 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Assert.IsTrue(new CalendarHedDefaultUxPage().IsNodeExpanded(
                 Activity.Get(Activity.ActivityTypeEnum.Folder).ActivityId));
             Logger.LogMethodExit("AssignmentCalendar",
-                  "VerifyExpanedFolderWithActivities",
-                           base.IsTakeScreenShotDuringEntryExit);
-
+              "VerifyExpanedFolderWithActivities",
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Selects the check box of activity.
         /// </summary>
         /// <param name="activityCount">Number of activity for which checkbox to be checked.</param>
+        /// <param name="folderName">This is Activity folder name.</param>
         [When(@"I select the check box of any (.*) activities in ""(.*)""")]
         public void SelectCheckBoxOfActivity(
             int activityCount, String folderName)
@@ -479,7 +479,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             String activityId = calendarHedDefaultUxPage.GetAssetId(folderName);                          
             calendarHedDefaultUxPage.SelectCheckBoxOfActivity(activityCount,
                 activityId);
-
             Logger.LogMethodExit("AssignmentCalendar",
                   "SelectCheckBoxOfActivity",
                            base.IsTakeScreenShotDuringEntryExit);
@@ -496,7 +495,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                           base.IsTakeScreenShotDuringEntryExit);
             Assert.IsTrue(new CalendarHedDefaultUxPage()
                 .IsAssignedUnAssignedButtonEnabled());
-
             Logger.LogMethodExit("AssignmentCalendar",
                   "VerifyAssignUnassignLinkState",
                            base.IsTakeScreenShotDuringEntryExit);
@@ -567,14 +565,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("AssignmentCalendar",
                "ClickOKButtonOnPegasusConfirmationPopUp",
                base.IsTakeScreenShotDuringEntryExit);
-            //If assets are already attempted by student a show hide pop-up will appear.
-            try
-            {
+            //If assets are already attempted by student a show hide pop-up will appear
                 base.SelectWindow(CourseContentResource
                .CourseContent_ShowHide_ConfirmationPopup_Name);
                 new ShowMessagePage().ClickOkButton();
-            }
-            catch { }
             Logger.LogMethodExit("AssignmentCalendar",
                "ClickOKButtonOnPegasusConfirmationPopUp",
                base.IsTakeScreenShotDuringEntryExit);
@@ -590,10 +584,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("AssignmentCalendar",
                 "VerifyTheCurrentDateHighlightedInTheCalendar",
                 base.IsTakeScreenShotDuringEntryExit);
-            Logger.LogAssertion("VerifyCurrentDateHighlighted",
-                ScenarioContext.Current.ScenarioInfo.
-                   Title, () => Assert.IsTrue(
-                 new CalendarHedDefaultUxPage().IsCurrentDateHighlighted()));
+                Logger.LogAssertion("VerifyCurrentDateHighlighted",
+                        ScenarioContext.Current.ScenarioInfo.
+                           Title, () => Assert.IsTrue(
+                         new CalendarHedDefaultUxPage().IsCurrentDateHighlighted()));
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyTheCurrentDateHighlightedInTheCalendar",
               base.IsTakeScreenShotDuringEntryExit);
@@ -601,7 +595,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
         /// <summary>
         /// Verify the assigned content in the day view.
-        /// </summary>     
+        /// </summary>    
+        /// <param name="assetName">This is Asset Name.</param>
         [Then(@"I should see the assigned content ""(.*)"" in the day view")]
         public void VerifyAssignedContent(string assetName)
         {
@@ -618,7 +613,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-         /// <summary>
+        /// <summary>
         /// Verify folder asset is present.
         /// </summary>
         /// <param name="folderAssetName">This is a string text.</param>
@@ -629,40 +624,15 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("AssignmentCalendar",
               "VerifyFolderAssetPresent",
               base.IsTakeScreenShotDuringEntryExit);
-            try
-            {
-                //Assert expected and actual folder values
-                Logger.LogAssertion("VerifyFolderAssetPresent",
-                    ScenarioContext.Current.ScenarioInfo.Title,
-                    () => Assert.AreEqual(expectedFolderAssetName,
-                        new CalendarHedDefaultUxPage().GetActualFolderName()));
-            }
-            catch (Exception e)
-            {
-                ExceptionHandler.HandleException(e);
-            }
+            //Assert expected and actual folder values
+            Logger.LogAssertion("VerifyFolderAssetPresent",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(expectedFolderAssetName,
+                    new CalendarHedDefaultUxPage().GetActualFolderName()));
             Logger.LogMethodExit("AssignmentCalendar",
-               "VerifyFolderAssetPresent",
-               base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Make the asset assignment property as 'Not Assigned'.
-        /// </summary>
-        [When(@"I should select the '(.*)' at the assignment properties")]
-        public void SelectNotAssignedRadioButton()
-        {
-            //Make the asset assignment property as 'Not Assigned'
-            Logger.LogMethodEntry("AssignmentCalendar",
-               "SetNotAssignedRadioButton",
-               base.IsTakeScreenShotDuringEntryExit);
-            ////Make the asset assignment property as 'Not Assigned'
-            new AssignContentPage().SelectNotAssignedAndSave();
-            Logger.LogMethodExit("AssignmentCalendar",
-               "SetNotAssignedRadioButton",
-               base.IsTakeScreenShotDuringEntryExit);
-        }
-
+                "VerifyFolderAssetPresent",
+              base.IsTakeScreenShotDuringEntryExit);
+        }      
 
         /// <summary>
         ///  /// Drag and drop 'Word Chapter 1: Simulation Activities' folder to current date.
@@ -691,18 +661,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("AssignmentCalendar",
               "VerifyDueDateIconDisplayed",
               base.IsTakeScreenShotDuringEntryExit);
-            try
-            {
-                // Verify due date icon is diplayed in assigned date
-                Logger.LogAssertion("VerifyDueDateIconDisplayed",
-                   ScenarioContext.Current.ScenarioInfo.Title,
-                   () => Assert.IsTrue(new CalendarHedDefaultUxPage()
-                       .IsActivityDueDateStatusPresent()));
-            }
-            catch (Exception e)
-            {
-                ExceptionHandler.HandleException(e);
-            }
+            // Verify due date icon is diplayed in assigned date
+            Logger.LogAssertion("VerifyDueDateIconDisplayed",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.IsTrue(new CalendarHedDefaultUxPage()
+                   .IsActivityDueDateStatusPresent()));
             Logger.LogMethodEntry("AssignmentCalendar",
              "VerifyDueDateIconDisplayed",
              base.IsTakeScreenShotDuringEntryExit);
@@ -725,6 +688,23 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyTheStartdateIconInCalendarFrame",
                        base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Drag and Drop selected 'Excel Chapter 1: Simulation Activities' assets to current date.
+        /// </summary>
+        [When(@"I should drag and drop multiple assets to the current date")]
+        public void DragAndDropMultipleAssetsToCurrentDate()
+        {
+            // Drag and drop multiple assets to current date
+            Logger.LogMethodEntry("AssignmentCalendar",
+               "DragAndDropMultipleAssetsToCurrentDate",
+               base.IsTakeScreenShotDuringEntryExit);
+            new CalendarHedDefaultUxPage().DragAndDropMultipleExcelActivities();
+            // Drag and drop multiple assets to current date
+            Logger.LogMethodExit("AssignmentCalendar",
+             "DragAndDropMultipleAssetsToCurrentDate",
+             base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

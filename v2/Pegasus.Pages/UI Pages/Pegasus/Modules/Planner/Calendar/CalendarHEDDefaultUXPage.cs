@@ -1339,9 +1339,10 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
-                        CalendarHEDDefaultUXPageResource_AssignCourseMaterials_Id_Locator));
+                       CalendarHEDDefaultUXPageResource_AssignCourseMaterials_Id_Locator));
                 //Get Assign Course Materials Text
-                getAssignCourseMaterialsText = base.GetElementTextById(CalendarHEDDefaultUXPageResource.
+                getAssignCourseMaterialsText = base.GetElementTextById
+                    (CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_AssignCourseMaterials_Id_Locator);
             }
             catch (Exception e)
@@ -1935,12 +1936,12 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select the calendar window
                 this.SelectCalendarWindow();
-                base.WaitForElement(By.ClassName
+                base.WaitForElement(By.XPath
                       (CalendarHEDDefaultUXPageResource.
-                        CalendarHEDDefaultUXPageResource_CurrentDate_ClassName_Locator));
-                isCurrentDateHighlighted = base.IsElementPresent(By.ClassName
+                       CalendarHEDDefaultUXPageResource_CurrentDate_Xpath_Locator));
+                isCurrentDateHighlighted = base.IsElementPresent(By.XPath
                       (CalendarHEDDefaultUXPageResource.
-                        CalendarHEDDefaultUXPageResource_CurrentDate_ClassName_Locator));
+                       CalendarHEDDefaultUXPageResource_CurrentDate_Xpath_Locator));
             }
             catch (Exception e)
             {
@@ -1953,9 +1954,9 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Get the Folder Name
+        /// Get the Folder Name.
         /// </summary>
-        /// <returns></returns>    
+        /// <returns>Asset Name.</returns>    
         public string GetActualFolderName()
         {
             //Get the Folder Name
@@ -2056,5 +2057,42 @@ namespace Pegasus.Pages.UI_Pages
                            base.IsTakeScreenShotDuringEntryExit);
             return IsStartDateFlagDisplayed;
         }
+
+        /// <summary>
+        /// Drag and Drop selected 'Excel Chapter 1: Simulation Activities' assets to current date. 
+        /// </summary>
+        public void DragAndDropMultipleExcelActivities()
+        {
+            //Drag and Drop selected 'Excel Chapter 1: Simulation Activities' assets to current date
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage", "DragAndDropMultipleExcelActivities",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Calendar Window
+                this.SelectCalendarWindow();
+                //Wait for the element
+                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource
+                    .CalendarHEDDefaultUXPageResource_ExcelSkillBasedTrainingAsset_Xpath_Locator));
+                //Drag and Drop
+                base.PerformClickAndHoldAction(base.
+                    GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource
+                    .CalendarHEDDefaultUXPageResource_ExcelSkillBasedTrainingAsset_Xpath_Locator));
+                //Wait for the element
+                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                base.PerformMoveToElementClickAction(base.
+                    GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                //Wait for 10 Secs
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_SleepTime));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CalendarHEDDefaultUXPage", "DragAndDropMultipleExcelActivities",
+                base.IsTakeScreenShotDuringEntryExit);
+        }     
     }
 }
