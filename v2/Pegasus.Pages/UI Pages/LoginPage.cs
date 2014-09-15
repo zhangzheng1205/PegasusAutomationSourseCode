@@ -4,7 +4,6 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using System.Configuration;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using OpenQA.Selenium;
-using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.Exceptions;
 using System.Diagnostics;
 
@@ -176,13 +175,13 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.MMNDInstructor:
                     // Get URL of MMNDStudent
                     case User.UserTypeEnum.MMNDStudent:
-                        _baseLoginUrl = string.Format(AutomationConfigurationManager.MMNDUsersLoginURL);
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.MmndUsersLoginUrl);
                         base.DeleteAllBrowserCookies();
                         break;
                     // Get URL of MMNDAdmin
                     case User.UserTypeEnum.MMNDAdmin:
                         _baseLoginUrl = string.Format(AutomationConfigurationManager.
-                            MMNDUrlRoot);
+                            MmndUrlRoot);
                         base.DeleteAllBrowserCookies();
                         break;
                     // Get URL for DPCTGPPublisherAdmin
@@ -227,7 +226,7 @@ namespace Pegasus.Pages.UI_Pages
                             + LoginPageResource.Login_Page_SMSAdmin_Append_Parameter;
                         break;
                     case User.UserTypeEnum.SMSAdminStudent:
-                        _baseLoginUrl = string.Format(AutomationConfigurationManager.SmsMMNDStudentRegistrationURL)
+                        _baseLoginUrl = string.Format(AutomationConfigurationManager.SmsMmndStudentRegistrationUrl)
                             + LoginPageResource.Login_Page_SMSAdmin_Append_Parameter;
                         break;
                 }

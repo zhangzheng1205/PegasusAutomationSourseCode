@@ -196,20 +196,74 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PEG_AUTOMATION_CSURL.
+        ///   Looks up a localized string similar to CourseSpaceURLRootPPE.
         /// </summary>
-        internal static string PEG_AUTOMATION_CSURL_Key {
+        internal static string PEG_AUTOMATION_PPE_CSURL_Key {
             get {
-                return ResourceManager.GetString("PEG_AUTOMATION_CSURL_Key", resourceCulture);
+                return ResourceManager.GetString("PEG_AUTOMATION_PPE_CSURL_Key", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PEG_AUTOMATION_WSURL.
+        ///   Looks up a localized string similar to WorkSpaceURLRootPPE.
         /// </summary>
-        internal static string PEG_AUTOMATION_WSURL_Key {
+        internal static string PEG_AUTOMATION_PPE_WSURL_Key {
             get {
-                return ResourceManager.GetString("PEG_AUTOMATION_WSURL_Key", resourceCulture);
+                return ResourceManager.GetString("PEG_AUTOMATION_PPE_WSURL_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CourseSpaceURLRootPROD.
+        /// </summary>
+        internal static string PEG_AUTOMATION_PROD_CSURL_Key {
+            get {
+                return ResourceManager.GetString("PEG_AUTOMATION_PROD_CSURL_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WorkSpaceURLRootPROD.
+        /// </summary>
+        internal static string PEG_AUTOMATION_PROD_WSURL_Key {
+            get {
+                return ResourceManager.GetString("PEG_AUTOMATION_PROD_WSURL_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CourseSpaceURLRootST.
+        /// </summary>
+        internal static string PEG_AUTOMATION_ST_CSURL_Key {
+            get {
+                return ResourceManager.GetString("PEG_AUTOMATION_ST_CSURL_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WorkSpaceURLRootST.
+        /// </summary>
+        internal static string PEG_AUTOMATION_ST_WSURL_Key {
+            get {
+                return ResourceManager.GetString("PEG_AUTOMATION_ST_WSURL_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CourseSpaceURLRootVM.
+        /// </summary>
+        internal static string PEG_AUTOMATION_VM_CSURL_Key {
+            get {
+                return ResourceManager.GetString("PEG_AUTOMATION_VM_CSURL_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WorkSpaceURLRootVM.
+        /// </summary>
+        internal static string PEG_AUTOMATION_VM_WSURL_Key {
+            get {
+                return ResourceManager.GetString("PEG_AUTOMATION_VM_WSURL_Key", resourceCulture);
             }
         }
         

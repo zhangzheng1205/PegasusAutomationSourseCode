@@ -162,11 +162,29 @@
   <data name="PCTInstructorResourceToolsVM_Key" xml:space="preserve">
     <value>PCTInstructorResourceToolbarURLVM</value>
   </data>
-  <data name="PEG_AUTOMATION_CSURL_Key" xml:space="preserve">
-    <value>PEG_AUTOMATION_CSURL</value>
+  <data name="PEG_AUTOMATION_PPE_CSURL_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootPPE</value>
   </data>
-  <data name="PEG_AUTOMATION_WSURL_Key" xml:space="preserve">
-    <value>PEG_AUTOMATION_WSURL</value>
+  <data name="PEG_AUTOMATION_PPE_WSURL_Key" xml:space="preserve">
+    <value>WorkSpaceURLRootPPE</value>
+  </data>
+  <data name="PEG_AUTOMATION_PROD_CSURL_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootPROD</value>
+  </data>
+  <data name="PEG_AUTOMATION_PROD_WSURL_Key" xml:space="preserve">
+    <value>WorkSpaceURLRootPROD</value>
+  </data>
+  <data name="PEG_AUTOMATION_ST_CSURL_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootST</value>
+  </data>
+  <data name="PEG_AUTOMATION_ST_WSURL_Key" xml:space="preserve">
+    <value>WorkSpaceURLRootST</value>
+  </data>
+  <data name="PEG_AUTOMATION_VM_CSURL_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootVM</value>
+  </data>
+  <data name="PEG_AUTOMATION_VM_WSURL_Key" xml:space="preserve">
+    <value>WorkSpaceURLRootVM</value>
   </data>
   <data name="PEG_DOWNLOAD_PATH_Key" xml:space="preserve">
     <value>PEG_DOWNLOAD_PATH</value>
