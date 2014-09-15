@@ -393,4 +393,7 @@
   <data name="CalendarHEDDefaultUXPage_WordChapter1SimulationActivitiesFolder_Xpath_Locator" xml:space="preserve">
     <value>//div[text()='Word Chapter 1: Simulation Activities']</value>
   </data>
+  <data name="CalendarHEDDefaultUXPageResource_FlagImage_Class_Locator" xml:space="preserve">
+    <value>cssStartAssignmentImage</value>
+  </data>
 </root>

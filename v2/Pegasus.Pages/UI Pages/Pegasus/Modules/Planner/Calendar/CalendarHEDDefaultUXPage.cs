@@ -1935,6 +1935,9 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select the calendar window
                 this.SelectCalendarWindow();
+                base.WaitForElement(By.ClassName
+                      (CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPageResource_CurrentDate_ClassName_Locator));
                 isCurrentDateHighlighted = base.IsElementPresent(By.ClassName
                       (CalendarHEDDefaultUXPageResource.
                         CalendarHEDDefaultUXPageResource_CurrentDate_ClassName_Locator));
@@ -2021,5 +2024,37 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verifying Start Date Flag Element Present or not.
+        /// </summary>
+        /// <returns>Start date value.</returns>
+        public Boolean IsStartDateFlagDisplayed()
+        {
+            //Verifying Start Date Flag Element Present or not
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                "IsStartDateFlagDisplayed",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Intialize the value
+            Boolean IsStartDateFlagDisplayed = false;
+            try
+            {
+                //Select the calendar window
+                this.SelectCalendarWindow();
+                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPageResource_FlagImage_Class_Locator));
+                // Verify Start Date Icon by Is True Assert
+                IsStartDateFlagDisplayed = base.IsElementPresent(By.Id
+                    (CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_FlagImage_Class_Locator));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                           "IsStartDateFlagDisplayed",
+                           base.IsTakeScreenShotDuringEntryExit);
+            return IsStartDateFlagDisplayed;
+        }
     }
 }

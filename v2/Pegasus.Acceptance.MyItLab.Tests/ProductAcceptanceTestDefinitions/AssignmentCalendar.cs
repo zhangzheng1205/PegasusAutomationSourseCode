@@ -708,5 +708,23 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verifying Start Date Flag is Present.
+        /// </summary>
+        [Then(@"I should see the startdate Icon in calendar frame")]
+        public void VerifyTheStartdateIconInCalendarFrame()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+                "VerifyTheStartdateIconInCalendarFrame",
+                                base.IsTakeScreenShotDuringEntryExit);
+            //Verify Start Date Flag Presence by Assert.
+            Logger.LogAssertion("VerifyingStartDateFlag",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                        () => Assert.IsTrue(new CalendarHedDefaultUxPage().
+                            IsStartDateFlagDisplayed()));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "VerifyTheStartdateIconInCalendarFrame",
+                       base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

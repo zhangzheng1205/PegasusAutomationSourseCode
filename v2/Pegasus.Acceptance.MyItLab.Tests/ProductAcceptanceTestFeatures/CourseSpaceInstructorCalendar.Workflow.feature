@@ -78,9 +78,18 @@ Then I should see the check mark in assigned status column next to the assets
 
 #Purpose: To validate the current date assigned content in calendar frame by Coursespace Instructor
 #Test Case Id: peg-21985
-Scenario: To check the current date assigned content in the calendar by Coursespace Instructor
+Scenario: To check the current date assigned content in the calendar by SMS Instructor
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 And I should see the current date highlighted in the calendar frame
 When I select the current date 
 Then I should see the assigned content "Excel Chapter 1 Skill-Based Training" in the day view
+
+#PEGASUS-21987
+#Purpose : As Instructor for HED Product,i need to validate the display of start date icon in calendar frame
+#Test Case Id :peg-21987
+Scenario: To validate the display of start date icon in calendar frame by SMS Instructor
+When I navigate to the "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+And I should see the current date highlighted in the calendar frame
+And I should see the startdate Icon in calendar frame
