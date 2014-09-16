@@ -2041,12 +2041,13 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select the calendar window
                 this.SelectCalendarWindow();
-                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource.
+                base.WaitForElement(By.ClassName(CalendarHEDDefaultUXPageResource.
                         CalendarHEDDefaultUXPageResource_FlagImage_Class_Locator));
                 // Verify Start Date Icon by Is True Assert
-                IsStartDateFlagDisplayed = base.IsElementPresent(By.Id
+                IsStartDateFlagDisplayed = base.IsElementPresent(By.ClassName
                     (CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_FlagImage_Class_Locator));
+                    
             }
             catch (Exception e)
             {
