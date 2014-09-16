@@ -1909,6 +1909,7 @@ namespace Pegasus.Pages.UI_Pages
                     if (getActivityname == activityName)
                     {
                         rID = rowCount;
+                        break;
                     }
                 }
 
@@ -1974,11 +1975,7 @@ namespace Pegasus.Pages.UI_Pages
             int rID = 0;
 
             try
-            {
-                //Select window
-                //base.SelectWindow("Course Materials");
-                //base.SwitchToIFrame("ifrmRight");
-
+            {               
                 //Select Right Frame
                 this.SelectFrameInWindow(CourseContentUXPageResource.
                     CourseContentUXPage_CourseMaterials_Window_Title,
@@ -1999,6 +1996,7 @@ namespace Pegasus.Pages.UI_Pages
                     if (getActivityname == activityName)
                     {
                         rID = rowCount;
+                        break;
                     }
                 }
                 IWebElement getSelectedTabElement = base.GetWebElementPropertiesByXPath(string.Format(CourseContentUXPageResource.

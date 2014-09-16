@@ -594,7 +594,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.GraderITSIM5Course:
                             case Course.CourseTypeEnum.MyITLabOffice2013Program:                            
                                 //Open the Course
-                                this.OpenTheCourse(course.Name);
+                                this.OpenTheCourse(course.SectionName);
                                 break;
                         }
                         break;
