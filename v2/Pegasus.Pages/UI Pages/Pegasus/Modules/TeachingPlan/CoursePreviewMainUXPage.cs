@@ -1044,6 +1044,7 @@ namespace Pegasus.Pages.UI_Pages
                               CoursePreviewMainUX_Page_AssignedIcon_Xpath_Locator_Ins, initialCount));
 
                         isDueDateExists = DateTime.TryParse(getAssignedDueDate.Trim(), out dueDate);
+                        break;
 
                     }
                 }
@@ -1104,6 +1105,7 @@ namespace Pegasus.Pages.UI_Pages
                         string[] startAndEnddate = elements[0].ToString().Split(delimiterChars);
                         isStartDateExists = DateTime.TryParse(startAndEnddate[0].Trim(), out startDate);
                         isEndDateExists = DateTime.TryParse(startAndEnddate[1].Trim(), out endDate);
+                        break;
 
                     }
                 }
