@@ -39,7 +39,7 @@ namespace Pegasus.Pages.UI_Pages
                    this.UpdateTheUserLastNameInMemoryOnScenerioBasis(userType, 
                        getLastName, scenarioName);
                }
-               if (scenarioName == "Default Value")
+               else
                {
                    //Update The User LastName In Memory
                    this.UpdateTheUserLastNameInMemory(userType, getLastName);
