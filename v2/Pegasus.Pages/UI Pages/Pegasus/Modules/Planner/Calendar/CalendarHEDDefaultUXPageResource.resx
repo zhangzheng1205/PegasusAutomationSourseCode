@@ -399,4 +399,25 @@
   <data name="CalendarHEDDefaultUXPageResource_ExcelSkillBasedTrainingAsset_Xpath_Locator" xml:space="preserve">
     <value>//div[@title='Excel Chapter 1 Skill-Based Training']</value>
   </data>
+  <data name="CalendarHEDDefaulPageResource_CheckMarkIcon_Xpath" xml:space="preserve">
+    <value>//div[@title='Available from 9/12/2014 to 9/16/2014']</value>
+  </data>
+  <data name="CalendarHEDDefaulPageResource_DueDateIcon_Xpath_Locator" xml:space="preserve">
+    <value>//div[@title='Excel Chapter 1 Study Plan [Skill-Based]: Training &gt; Post-Test']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Asset_XPath_Locator" xml:space="preserve">
+    <value>//div[@title='{1}']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_CmenuOption_Locator" xml:space="preserve">
+    <value>//div[@title='{0}']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Cmenu_XPath_Locator" xml:space="preserve">
+    <value>"//id[@'cmenuLN_gtRow_6000000001589725']/img/src</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssetInnerText_XPath_Locator" xml:space="preserve">
+    <value>//div[@id=//div[@id=ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_Droppable_DivPeriod__1110237016_1/div[{0}]/div/span</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssetText_XPath_locator" xml:space="preserve">
+    <value>//div[@id=ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_Droppable_DivPeriod__1110237016_1/div</value>
+  </data>
 </root>

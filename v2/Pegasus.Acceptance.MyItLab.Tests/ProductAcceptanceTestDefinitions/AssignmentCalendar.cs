@@ -595,8 +595,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
         /// <summary>
         /// Verify the assigned content in the day view.
-        /// </summary>    
-        /// <param name="assetName">This is Asset Name.</param>
+        /// </summary>     
         [Then(@"I should see the assigned content ""(.*)"" in the day view")]
         public void VerifyAssignedContent(string assetName)
         {
@@ -607,7 +606,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("VerifyAssignedContentText",
                 ScenarioContext.Current.ScenarioInfo.
                 Title, () => Assert.AreEqual(assetName,
-                    new CalendarHedDefaultUxPage().GetAssignCourseMaterialsText()));
+                    new CalendarHedDefaultUxPage().GetAssignAssetText(assetName)));
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyAssignedContent",
               base.IsTakeScreenShotDuringEntryExit);
@@ -706,5 +705,69 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              "DragAndDropMultipleAssetsToCurrentDate",
              base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click on the cmenu option of the asset.
+        /// </summary>
+        /// <param name="cmenuOption">This is the cmenu option.</param>
+        /// <param name="assetName">This is a asset name.</param>
+        [When(@"I select cmenu ""(.*)"" of activity ""(.*)""")]
+        public void SelectCmenuOfActivity(string cmenuOption, string assetName)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+              "SelectCmenuOfActivity",
+              base.IsTakeScreenShotDuringEntryExit);
+            //click on cmenu option
+            new CalendarHedDefaultUxPage().SelectActivityCmenu
+                (cmenuOption, assetName);
+            Logger.LogMethodExit("AssignmentCalendar",
+                "SelectCmenuOfActivity",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Assign the asset to the current date and save.
+        /// </summary>
+        [When(@"I assign the asset for current date in the properties popup")]
+        public void AssignTheAsset()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+               "AssignTheAsset",
+               base.IsTakeScreenShotDuringEntryExit);
+            AssignContentPage assignContentPage = new AssignContentPage();
+            //Select 'Assigned' radiobutton
+            assignContentPage.SelectAssignRadiobutton();
+            //Select current date
+            assignContentPage.SelectCurrentDate();
+            //Save the properties
+            assignContentPage.SaveProperties();
+            Logger.LogMethodExit("AssignmentCalendar",
+                "AssignTheAsset",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the due date icon display next to the activity in calendar page.
+        /// </summary>
+        [Then(@"I should see the duedate icon along with the checkmark in the calendar")]
+        public void VerifyTheAssignIconInCalendar()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+             "VerifyDueDateIconInCalendar",
+             base.IsTakeScreenShotDuringEntryExit);
+            //verify duedate icon
+            Logger.LogAssertion("VerifyDueDateIconInCalendar",
+                ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.IsTrue(new CalendarHedDefaultUxPage().
+                    IsDueDateIconPresentInCalendar()));
+            //Verify CheckMark icon
+            Logger.LogAssertion("VerifyCheckMarkIconInCalendar",
+                ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.IsTrue(new CalendarHedDefaultUxPage().
+                    IsCheckMarkDisplayedInCalendar()));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "VerifyDueDateIconInCalendar",
+              base.IsTakeScreenShotDuringEntryExit);
+        } 
     }
 }

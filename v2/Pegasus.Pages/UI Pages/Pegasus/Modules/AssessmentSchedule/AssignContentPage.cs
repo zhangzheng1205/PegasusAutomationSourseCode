@@ -973,7 +973,7 @@ namespace Pegasus.Pages.UI_Pages
 
 
         /// <summary>
-        /// Set the duedate and save the settings
+        /// Set the duedate and save the settings.
         /// </summary>
         public void SaveProperties()
         {
@@ -1029,6 +1029,63 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage", "SetStartAndEndDate",
               base.IsTakeScreenShotDuringEntryExit);
-        }       
+        }
+
+        /// <summary>
+        /// Select Assign Radio button.
+        /// </summary>
+        public void SelectAssignRadiobutton()
+        {
+            //Select Assigned Radiobutton
+            logger.LogMethodEntry("AssignContentPage", "SelectAssignRadiobutton",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Assign Window
+                this.SelectAssignWindow();
+                //Wait For Element
+                base.WaitForElement(By.Id(AssignContentPageResource.
+                    AssignContent_Page_RadioButton_Assigned_Id_Locator));
+                if (!base.IsElementSelectedById(AssignContentPageResource.
+                    AssignContent_Page_RadioButton_Assigned_Id_Locator))
+                {
+                    //Select Radiobutton
+                    base.SelectRadioButtonById(AssignContentPageResource.
+                    AssignContent_Page_RadioButton_Assigned_Id_Locator);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "SelectAssignRadiobutton",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// To click on the current date.
+        /// </summary>
+        public void SelectCurrentDate()
+        {
+            logger.LogMethodEntry("AssignContentPage", "SelectCurrentDate",
+                         base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Properties Window
+                this.SelectPropertiesWindow();
+                //Get current date property
+                IWebElement getCurrentDate = base.GetWebElementPropertiesByClassName(
+                    AssignContentPageResource.
+                    AssignContent_Page_CurrentDate_ClassName_Locator);
+                //Click on the current date
+                base.ClickByJavaScriptExecutor(getCurrentDate);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "SelectCurrentDate",
+                            base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

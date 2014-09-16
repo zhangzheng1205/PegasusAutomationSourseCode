@@ -2094,6 +2094,144 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "DragAndDropMultipleExcelActivities",
                 base.IsTakeScreenShotDuringEntryExit);
-        }     
+        }
+
+        /// <summary>
+        /// Select the Cmenu of the activity.
+        /// </summary>
+        /// <param name="cmenuOption">This is the Cmenu option.</param>
+        /// <param name="assetName">This is the name of the asset.</param>
+        public void SelectActivityCmenu(string cmenuOption, string assetName)
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage", "SelectActivityCmenu",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select the Calendar window
+                this.SelectCalendarWindow();
+                //Get the Asset property
+                IWebElement getAssetName = base.GetWebElementPropertiesByXPath(
+                    CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_Asset_XPath_Locator);
+                //Mouseover on the asset
+                base.PerformMouseHoverAction(getAssetName);
+                //Click on cmenu of the asset
+                base.ClickByJavaScriptExecutor
+                    (base.GetWebElementPropertiesByXPath(
+                    CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_Cmenu_XPath_Locator));
+                //Click On 'Set Scheduling option' in cmenu
+                base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath(
+                    CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_CmenuOption_Locator));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CalendarHEDDefaultUXPage", "SelectActivityCmenu",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the Due Date Icon Dispaly.
+        /// </summary>
+        /// <returns>Display of icon in calendar.</returns>
+        public Boolean IsDueDateIconPresentInCalendar()
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                "IsDueDateIconPresentInCalendar",
+                            base.IsTakeScreenShotDuringEntryExit);
+            bool isDueDateIcon = false;
+            try
+            {
+                //Refresh the page
+                base.RefreshTheCurrentPage();
+                //Select Calendar Window
+                this.SelectCalendarWindow();
+                //Verify Due date icon display
+                isDueDateIcon = base.IsElementPresent(By.XPath(
+                    CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaulPageResource_DueDateIcon_Xpath_Locator));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CalendarHEDDefaultUXPage",
+                "IsDueDateIconPresentInCalendar",
+                           base.IsTakeScreenShotDuringEntryExit);
+            return isDueDateIcon;
+        }
+
+        /// <summary>
+        /// Verify the check mark in calendar after assigning.
+        /// </summary>
+        /// <returns>Display of checkmark.</returns>
+        public Boolean IsCheckMarkDisplayedInCalendar()
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+                "IsCheckMarkDisplayedInCalendar",
+                            base.IsTakeScreenShotDuringEntryExit);
+            bool isCheckMarkIconDisplayed = false;
+            try
+            {
+                this.SelectCalendarWindow();
+                isCheckMarkIconDisplayed = base.IsElementPresent(By.XPath
+                    (CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaulPageResource_CheckMarkIcon_Xpath));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CalendarHEDDefaultUXPage",
+                "IsCheckMarkDisplayedInCalendar",
+                           base.IsTakeScreenShotDuringEntryExit);
+            return isCheckMarkIconDisplayed;
+        }
+
+        /// <summary>
+        /// Get the asset inner text.
+        /// </summary>
+        /// <param name="assetName">This is a asset name.</param>
+        /// <returns>Asset inner text assigned.</returns>
+        public string GetAssignAssetText(string assetName)
+        {
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage",
+               "GetAssignAssetText",
+              base.IsTakeScreenShotDuringEntryExit);
+            string getActivityName = string.Empty;
+            try
+            {
+                //Get the total no of assets assigned count
+                int getRowCount = base.GetElementCountByXPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AssetText_XPath_locator);
+                for (int row = 0; row <= getRowCount; row++)
+                {
+
+                    base.WaitForElement(By.XPath(String.Format(CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPageResource_AssetInnerText_XPath_Locator, row)));
+                    //Get the asset inner text
+                    getActivityName = base.GetElementInnerTextByXPath(String.Format
+                        (CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPageResource_AssetInnerText_XPath_Locator, row));
+                    //Compare asset name with the inner text
+                    if (getActivityName.Contains(assetName))
+                    {
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CalendarHEDDefaultUXPage",
+               "GetAssignAssetText",
+              base.IsTakeScreenShotDuringEntryExit);
+            return getActivityName;
+        }
     }
 }

@@ -279,4 +279,7 @@
   <data name="AssignContent_Page_DuedateAMPM_Dropdown_Id_Locator" xml:space="preserve">
     <value>CMBAMPMDUEDT</value>
   </data>
+  <data name="AssignContent_Page_CurrentDate_ClassName_Locator" xml:space="preserve">
+    <value>ui-state-default ui-state-highlight ui-state-active</value>
+  </data>
 </root>

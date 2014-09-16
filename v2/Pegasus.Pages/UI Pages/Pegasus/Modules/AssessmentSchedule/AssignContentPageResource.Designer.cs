@@ -116,6 +116,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentSchedule {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ui-state-default ui-state-highlight ui-state-active.
+        /// </summary>
+        internal static string AssignContent_Page_CurrentDate_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("AssignContent_Page_CurrentDate_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to rdAssigned.
         /// </summary>
         internal static string AssignContent_Page_DateAssigned_RadioButton_Id_Locator {

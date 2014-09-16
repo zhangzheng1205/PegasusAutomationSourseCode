@@ -95,3 +95,16 @@ Then I should be on the "Calendar" page
 And I should see "GO! with Microsoft Office 2013, Volume 1" asset
 And I should see the current date highlighted in the calendar frame
 And I should see the startdate Icon in calendar frame
+
+#Purpose: To change the assigned content from due date to currentdate
+#Test Case Id: peg-21978
+#MyITLabOffice2013Program
+Scenario: Assign the content with due date to current date by SMS Instructor
+When I navigate to the "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+When I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Calendar" by "CsSmsInstructor"
+And I select cmenu "Set Scheduling option" of activity "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" 
+Then I should see the "Properties" popup
+When I assign the asset for current date in the properties popup
+Then I should see the duedate icon along with the checkmark in the calendar
+
