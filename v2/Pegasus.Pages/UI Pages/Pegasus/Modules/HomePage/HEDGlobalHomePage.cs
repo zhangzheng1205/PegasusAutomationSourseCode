@@ -625,6 +625,10 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.CsSmsInstructor:
                         switch (courseTypeEnum)
                         {
+                            case Course.CourseTypeEnum.ProgramCourse:
+                                //Open the Program Course
+                                this.OpenTheCourse(course.Name);
+                                break;
                             case Course.CourseTypeEnum.MyITLabOffice2013Program:
                                 //Open the Course
                                 this.OpenTheCourse(course.SectionName);

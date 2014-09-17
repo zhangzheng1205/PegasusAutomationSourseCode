@@ -834,6 +834,57 @@ namespace Pegasus.Pages.CommonPageObjects
                 "NavigateToActivityFolderInInstructorGradebook",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        
+        /// <summary>
+        /// Manage The Activity Folder Level Navigation HED Core.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="userTypeEnum">This is user Type Enum.</param>
+        /// <param name="activityUnderTabName">This is Tab Name.</param>
+        /// <remarks>This folder navigation is only valid for MyLab authored course such as
+        /// section course, instructor course and Templates will only valid for this method.</remarks>
+        public void ManageTheActivityFolderLevelNavigationHEDCore(string activityName,
+            string activityUnderTabName, User.UserTypeEnum userTypeEnum)
+        {
+            // manage activity folder level navigation
+            Logger.LogMethodEntry("CommonPage", "ManageTheActivityFolderLevelNavigationHEDCore",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window With Frame For Folder Navigation
+                this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+                // folder navigation based on user type
+                switch (userTypeEnum)
+                {
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        // folder navigation based on Tab name
+                        switch (activityUnderTabName)
+                        {
+                            case "Gradebook":
+                                switch (activityName)
+                                {
+                                    // folder navigation based on activity name
+                                    case "Take the Chapter 1 Exam":
+                                        this.NavigateToActivityFolderInInstructorGradebook(
+                                            CommonPageResource.CommonPage_Chapter1TheScienceofPsychology_FolderName
+                                          , CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
+                                        break;
+                                }
+                                break;
+                        }
+                        break;
+                }
+                
+            }
+                
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigationHEDCore",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
 

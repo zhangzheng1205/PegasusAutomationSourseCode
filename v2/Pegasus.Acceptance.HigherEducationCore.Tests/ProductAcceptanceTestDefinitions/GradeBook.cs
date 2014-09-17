@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "ClickOnTheContentCmenuIcon",
                  base.IsTakeScreenShotDuringEntryExit);
             //Click On The Content Cmenu Icon
-            new GBInstructorUXPage().ClickOnTheFirstColumnCmenuIcon();
+            new GBInstructorUXPage().ClickOnTheFirstColumnCmenuIconHEDCore();
             Logger.LogMethodExit("GradeBook",
                 "ClickOnTheContentCmenuIcon",
                  base.IsTakeScreenShotDuringEntryExit);
@@ -459,6 +459,28 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                  IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click On Cmenu Of Asset In Gradebook.
+        /// </summary>
+        /// <param name="assetCmenu">This is Asset Cmenu type enum</param>
+        /// <param name="assetName">This is Asset name</param>
+        [When(@"I click on cmenu option ""(.*)"" of asset ""(.*)""")]
+        public void ClickOnCmenuOfAssetInGradebookHED(string assetCmenu,
+            string assetName)
+        {
+            //Click On Cmenu Of Asset In Gradebook
+            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInGradebookHED",
+                  IsTakeScreenShotDuringEntryExit);
+            GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
+            //Select Frame
+            gbInstructorPage.SelectGradebookFrame();
+            //Select The Cmenu Option Of Asset
+            gbInstructorPage.SelectTheCmenuOptionOfAssetHED(
+                (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
+                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), assetName);
+            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebookHED",
+                 IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Verify Display of Cmenu Option in Asset Cmenu Options
         /// </summary>
@@ -1090,6 +1112,24 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("GradeBook",
                 "ClickTheGradeCellCmenuOfActivityInGradebook",
                 IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Student Submission Score In ViewSubmission Page.
+        /// </summary>
+        /// <param name="submissionScore">This is Submission Score.</param>
+        [Then(@"I should see ""(.*)"" score in view submission page")]
+        public void VerifyStudentSubmissionScoreInViewSubmissionPage(string submissionScore)
+        {
+            // Verify Student Submission Score In ViewSubmission Page
+            Logger.LogMethodEntry("Gradebook", "VerifyStudentSubmissionScoreInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (submissionScore, new ViewSubmissionPage().GetSubmissionScoreInViewSubmissionPageHEDCore()));
+            Logger.LogMethodExit("Gradebook", "VerifyStudentSubmissionScoreInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

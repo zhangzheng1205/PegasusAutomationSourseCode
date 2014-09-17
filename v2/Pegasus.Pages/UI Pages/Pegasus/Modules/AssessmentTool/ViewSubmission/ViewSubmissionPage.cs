@@ -1277,6 +1277,44 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             return getSubmissionScore;
         }
+
+        /// <summary>
+        /// Get Submission Score In View Submission Page for HED Core.
+        /// </summary>
+        /// <returns>This is Submission Score.</returns>
+        public string GetSubmissionScoreInViewSubmissionPageHEDCore()
+        {
+            //Get Submitted Grade In ViewSubmission Page
+            logger.LogMethodEntry("ViewSubmissionPage",
+                "GetSubmissionScoreInViewSubmissionPageHEDCore",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Intialize the variable
+            string getScore = string.Empty;
+            try
+            {
+                this.ClickonSubmissionGrade();
+                //Select View Submission Window
+                this.SelectViewSubmissionWindow();
+                //Wait for the element
+                base.WaitForElement(By.XPath(ViewSubmissionPageResource.
+                       ViewSubmission_Page_ViewSubmission_StudentExpand_Grade_Xpath_Locator));
+                //Get Grade
+                getScore = base.GetElementTextByXPath(ViewSubmissionPageResource.
+                       ViewSubmission_Page_ViewSubmission_StudentExpand_Grade_Xpath_Locator);
+                getScore = getScore.Substring(Convert.ToInt32
+                    (ViewSubmissionPageResource.ViewSubmission_Page_Initial_Count_Value),
+                    Convert.ToInt32(
+                   ViewSubmissionPageResource.ViewSubmission_Page_Substring_Split_Count_Value));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ViewSubmissionPage",
+                "GetSubmissionScoreInViewSubmissionPageHEDCore",
+                           base.IsTakeScreenShotDuringEntryExit);
+            return getScore;
+        }
         /// <summary>
         /// Select Last Submission from Submission List In View Submission Window.
         /// </summary>

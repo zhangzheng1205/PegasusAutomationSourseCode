@@ -231,4 +231,10 @@
   <data name="CommonPage_CoursePerformance_Table_Id_Locator" xml:space="preserve">
     <value>grdCoursePerformance</value>
   </data>
+  <data name="CommonPage_Chapter1TheScienceofPsychology_FolderName" xml:space="preserve">
+    <value>Chapter 1: The Science of Psychology</value>
+  </data>
+  <data name="CommonPage_Gradebook_Right_Iframe_Name_Locator" xml:space="preserve">
+    <value>srcGBFrame</value>
+  </data>
 </root>

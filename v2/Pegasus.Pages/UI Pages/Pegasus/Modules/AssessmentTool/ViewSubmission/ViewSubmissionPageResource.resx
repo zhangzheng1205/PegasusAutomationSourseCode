@@ -291,4 +291,7 @@
   <data name="ViewSubmission_Page_GradeScore_Id_Locator" xml:space="preserve">
     <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblGradeBook</value>
   </data>
+  <data name="ViewSubmission_Page_ViewSubmission_StudentExpand_Grade_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span/div[3]/span</value>
+  </data>
 </root>

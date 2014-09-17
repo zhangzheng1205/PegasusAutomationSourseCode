@@ -494,6 +494,31 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("ProgramAdmin", "SearchTheSection",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Search The Section.
+        /// </summary>
+        [When(@"I search section of ""(.*)""")]
+        public void SearchTheSectionHEDCore(Course.CourseTypeEnum coursetypeEnum)
+        {
+            Logger.LogMethodEntry("ProgramAdmin", "SearchTheSectionHEDCore",
+                 base.IsTakeScreenShotDuringEntryExit);
+            Course course = new Course();
+            switch (coursetypeEnum)
+            {
+                //Get Course From Memory
+                case Course.CourseTypeEnum.ProgramCourse:
+                    course = Course.Get(coursetypeEnum);
+                    break;
+                case Course.CourseTypeEnum.MySpanishLabMaster:
+                    course = Course.Get(coursetypeEnum);
+                    break;
+            }
+            //Search Section
+            new ManageTemplatePage().SearchSection(course.SectionName);
+            Logger.LogMethodExit("ProgramAdmin", "SearchTheSectionHEDCore",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Save Button click to create course Manage Template section
         /// </summary>

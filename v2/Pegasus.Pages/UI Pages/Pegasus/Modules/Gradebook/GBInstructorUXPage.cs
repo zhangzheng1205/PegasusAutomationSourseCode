@@ -736,6 +736,43 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Click On The First Column Cmenu Icon for HED Core
+        /// </summary>
+        public void ClickOnTheFirstColumnCmenuIconHEDCore()
+        {
+            //Click On The Course Column Cmenu Icon
+            logger.LogMethodEntry("GBInstructorUXPage", "ClickOnTheFirstColumnCmenuIconHEDCore",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Wait for the Window
+                base.WaitUntilWindowLoads(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_Window_Title);
+                //Select the Frame
+                this.SelectGradebookFrame();
+                base.WaitForElement(By.XPath(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator));
+                IWebElement getCmenuIconProperty = base.GetWebElementPropertiesByXPath(
+                    GBInstructorUXPageResource.
+                    GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator);
+                base.ClickByJavaScriptExecutor(getCmenuIconProperty);
+                bool bhj = base.IsElementPresent(By.XPath(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator),10);
+                //Click on the Context Menu Icon For First Column
+                IWebElement getStudentName = base.GetWebElementPropertiesByXPath(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator);
+                base.ClickByJavaScriptExecutor(getStudentName);
+                //base.ClickImageByXPath(GBInstructorUXPageResource.
+                  //  GBInstructorUX_Page_FirstColumn_Cmenu_Icon_Xpath_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "ClickOnTheFirstColumnCmenuIconHEDCore",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
         /// Get Context Menu Option Displayed.
         /// </summary>
         /// <param name="contextMenuOption">This is The Context Menu Option.</param>
@@ -1945,7 +1982,7 @@ namespace Pegasus.Pages.UI_Pages
             for (int columnCount = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Value); columnCount <= getActivityCount;
                 columnCount++)
-            {                
+            {                 
                 //Wait for Element
                 base.WaitForElement(By.XPath(string.Format(GBInstructorUXPageResource.
                     GBInstructorUX_Page_AssignmentTitle_Xpath_Locator, columnCount)));
@@ -1966,6 +2003,47 @@ namespace Pegasus.Pages.UI_Pages
             return activityColumnNumber;
         }
 
+        /// <summary>
+        /// Get Activity Column Count for HED Core.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <returns>This is Activity Column Number.</returns>
+        private int GetActivityColumnCountHED(string activityName)
+        {
+            //Get Activity Column Count
+            logger.LogMethodEntry("GBInstructorUXPage", "GetActivityColumnCountHED",
+           base.IsTakeScreenShotDuringEntryExit);
+            //Initialize VariableVariable
+            string getActivityName = string.Empty;
+            //Initialize VariableVariable
+            int activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
+                GBInstructorUX_Page_Initial_Count_Value);
+            base.WaitForElement(By.XPath(GBInstructorUXPageResource.
+                GBInstructorUX_Page_AcitivityNames_Xpath_Locator),10);
+            //Getting the counts of Activity  
+            int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
+                GBInstructorUX_Page_AcitivityNames_Xpath_Locator);
+            for (int columnCount = Convert.ToInt32(GBInstructorUXPageResource.
+                GBInstructorUX_Page_Initial_Value); columnCount <= getActivityCount;
+                columnCount++)
+            {
+                //Wait for Element
+                base.WaitForElement(By.XPath(string.Format(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_AssignmentTitleFF_Xpath_Locator, columnCount)));
+                //Getting the Activity name
+                getActivityName = base.GetTitleAttributeValueByXPath
+                    (string.Format(GBInstructorUXPageResource.
+                    GBInstructorUX_Page_AssignmentTitleFF_Xpath_Locator, columnCount));
+                if (getActivityName.Contains(activityName))
+                {
+                    activityColumnNumber = columnCount;
+                    break;
+                }
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "GetActivityColumnCountHED",
+           base.IsTakeScreenShotDuringEntryExit);
+            return activityColumnNumber;
+        }
         /// <summary>
         /// Get Activity Column Count.
         /// </summary>
@@ -2123,6 +2201,32 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Select The Cmenu Option Of Asset.
+        /// </summary>
+        /// <param name="assetCmenuOptionEnum">This is Asset cmenu options.</param>
+        /// <param name="assetName">This is Asset name.</param>
+        public void SelectTheCmenuOptionOfAssetHED(
+            AssetCmenuOptionEnum assetCmenuOptionEnum, string assetName)
+        {
+            //Select The Cmenu Option Of Asset
+            logger.LogMethodEntry("GBInstructorUXPage", "SelectTheCmenuOptionOfAssetHED",
+           base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Get Activity Column Count and Click Cmenu Icon
+                int getActivityColumnCount = GetActivityColumnCountandClickCmenuIconHED(assetName);
+                //Click On Cmenu Of Asset In Gradebook
+                this.ClickOnCmenuOfAssetInGradebookHED(
+                    getActivityColumnCount, assetCmenuOptionEnum);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "SelectTheCmenuOptionOfAssetHED",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
         /// Select Cmenu Option Of Asset In Gradebook.
         /// </summary>
         /// <param name="assetCmenuOptionEnum">This is Asset cmenu options.</param>
@@ -2177,6 +2281,34 @@ namespace Pegasus.Pages.UI_Pages
             return getActivityColumnCount;
         }
 
+        /// <summary>
+        /// Get Activity Column Count and Click Cmenu Icon.
+        /// </summary>
+        /// <param name="assetName">This is Asset Name.</param>
+        /// <returns>Activity Column Count.</returns>
+        public int GetActivityColumnCountandClickCmenuIconHED(string assetName)
+        {
+            //Get Activity Column Count and Click Cmenu Icon
+            logger.LogMethodEntry("GBInstructorUXPage", "GetActivityColumnCountandClickCmenuIconHED",
+           base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            int getActivityColumnCount = Convert.ToInt32(
+                GBInstructorUXPageResource.GBInstructorUXPage_Initializer_Value);
+            try
+            {
+                //Get Activity Column Count
+                getActivityColumnCount = this.GetActivityColumnCountHED(assetName);
+                //Click The Cmenu Icon In Gradebook
+                this.ClickTheCmenuIconInGradebook(getActivityColumnCount);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBInstructorUXPage", "GetActivityColumnCountandClickCmenuIconHED",
+           base.IsTakeScreenShotDuringEntryExit);
+            return getActivityColumnCount;
+        }
         /// <summary>
         /// Select The Cmenu Option Of Asset.
         /// </summary>
@@ -2265,6 +2397,22 @@ namespace Pegasus.Pages.UI_Pages
          base.IsTakeScreenShotDuringEntryExit);
         }
 
+        // <summary>
+        /// Click On Cmenu Of Asset In Gradebook.
+        /// </summary>
+        /// <param name="getActivityColumnCount">This is asset count.</param>
+        /// <param name="assetCmenuOptionEnum">Thia is asset cmenu option Enum.</param>
+        private void ClickOnCmenuOfAssetInGradebookHED(
+            int getActivityColumnCount, AssetCmenuOptionEnum assetCmenuOptionEnum)
+        {
+            //Click On Cmenu Of Asset In Gradebook
+            logger.LogMethodEntry("GBInstructorUXPage", "ClickOnCmenuOfAssetInGradebookHED",
+          base.IsTakeScreenShotDuringEntryExit);
+            //click Cmenu of Asset In Gradebook
+            this.clickCmenuofAssetInGradebook(assetCmenuOptionEnum);
+            logger.LogMethodExit("GBInstructorUXPage", "ClickOnCmenuOfAssetInGradebookHED",
+         base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// click Cmenu of Asset In Gradebook.
         /// </summary>        
@@ -2375,15 +2523,13 @@ namespace Pegasus.Pages.UI_Pages
                          base.IsTakeScreenShotDuringEntryExit);
             //Wait for the cmenu icon
             base.WaitForElement(By.XPath(String.Format(GBInstructorUXPageResource.
-                GBInstructorUX_Page_Asset_Cmenuicon_Xpath_Locator, getActivityColumnCount)));
+                GBInstructorUX_Page_Asset_Cmenuicon_Xpath_Locator, getActivityColumnCount)));            
             //Get Element Property
             IWebElement getCmenuIconProperty = base.GetWebElementPropertiesByXPath
                 (String.Format(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Asset_Cmenuicon_Xpath_Locator, getActivityColumnCount));
-            //Perform Mouse Hover on Cmenu Icon
-            base.PerformMouseHoverAction(getCmenuIconProperty);
             //Perform Mouse Click Action
-            base.PerformMouseClickAction(getCmenuIconProperty);
+            base.ClickByJavaScriptExecutor(getCmenuIconProperty);
             Thread.Sleep(Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_SleepTime_Value));
             logger.LogMethodExit("GBInstructorUXPage", "ClickTheCmenuIconInGradebook",

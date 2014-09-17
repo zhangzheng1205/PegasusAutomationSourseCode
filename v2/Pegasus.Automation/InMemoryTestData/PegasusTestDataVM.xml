@@ -100,11 +100,11 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>c2df1bbf-98b7-45ed-847d-a72952bb616d</Name>
+      <Name>MyPsychLab for Ciccarelli</Name>
       <CourseType>ProgramCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
-      <SectionName>26328ba8-a891-489b-bce4-88d39a922186</SectionName>
+      <SectionName>peg-18255 section 1</SectionName>
       <SectionId>CRSKL39-12001405</SectionId>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
@@ -419,7 +419,7 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>5152smsins</Name>
+      <Name>guruprof5151</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>

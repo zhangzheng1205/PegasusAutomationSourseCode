@@ -9,6 +9,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.Exceptions;
 using TechTalk.SpecFlow;
+using Pegasus.Pages.CommonPageObjects;
 
 namespace Pegasus.Acceptance.HigherEducationCore.Tests.
     CommonProductAcceptanceTestDefinitions
@@ -47,6 +48,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <param name="expectedPageTitle">This is Expected Page Title.</param>
         [Then("I should be on the \"(.*)\" page")]
         [Given(@"I am on the ""(.*)"" page")]
+        [When(@"I am on the ""(.*)"" page")]
         public void ShowThePageInPegasus(String expectedPageTitle)
         {
             //Verify Correct Page Opened
@@ -660,6 +662,40 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         public static void TearDown()
         {
             new CommonSteps().WebDriverCleanUp();
+        }
+
+        /// <summary>
+        /// Manage The Activity Folder Level Navigation HED Core.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="userTypeEnum">This is user Type Enum.</param>
+        /// <param name="activityUnderTabName">This is Tab Name.</param>
+        /// <remarks>This folder navigation is only valid for MyLab authored course such as
+        /// section course, instructor course and Templates will only valid for this method.</remarks>
+        [When(@"I select ""(.*)"" in ""(.*)"" by ""(.*)""")]
+        public void ManageTheActivityFolderLevelNavigation(string activityName,
+            string activityUnderTabName, User.UserTypeEnum userTypeEnum)
+        {
+            //Manage The Activity Folder Level Navigation
+            Logger.LogMethodEntry("CommonSteps",
+                "ManageTheActivityFolderLevelNavigation",
+                base.IsTakeScreenShotDuringEntryExit);
+            // select particular window here
+            base.SelectWindow(base.GetPageTitle);
+
+            // select grade book right iframe here
+            new GBInstructorUXPage().SelectGradebookFrame();
+
+            // make sleep intentionally to load frame completely
+            Thread.Sleep(15000);
+
+            //Manage The Folder Navigation
+            new CommonPage().ManageTheActivityFolderLevelNavigationHEDCore(
+               activityName, activityUnderTabName, userTypeEnum);
+            
+            Logger.LogMethodExit("CommonSteps",
+                "ManageTheActivityFolderLevelNavigation",
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

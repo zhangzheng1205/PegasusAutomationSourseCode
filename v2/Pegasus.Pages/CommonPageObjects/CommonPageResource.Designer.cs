@@ -124,6 +124,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chapter 1: The Science of Psychology.
+        /// </summary>
+        internal static string CommonPage_Chapter1TheScienceofPsychology_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_Chapter1TheScienceofPsychology_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to grdCoursePerformance.
         /// </summary>
         internal static string CommonPage_CoursePerformance_Table_Id_Locator {
@@ -210,6 +219,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         internal static string CommonPage_Gradebook_BackArrow_Id_Locator {
             get {
                 return ResourceManager.GetString("CommonPage_Gradebook_BackArrow_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to srcGBFrame.
+        /// </summary>
+        internal static string CommonPage_Gradebook_Right_Iframe_Name_Locator {
+            get {
+                return ResourceManager.GetString("CommonPage_Gradebook_Right_Iframe_Name_Locator", resourceCulture);
             }
         }
         
