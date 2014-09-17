@@ -98,9 +98,13 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetWorkSpaceUrlRoot()
         {
             string applicationWsurl;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
-            {
+
+            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.TestEnvironment_Key) ??
+                ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            {     
+                        
                 case "ST":
+
                     applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_ST_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootST_Key];
                     break;
@@ -108,7 +112,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_VM_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootVM_Key];
                     break;
-                case "PPE":
+                case "PPE":                    
                     applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_PPE_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootPPE_Key];
                     break;
