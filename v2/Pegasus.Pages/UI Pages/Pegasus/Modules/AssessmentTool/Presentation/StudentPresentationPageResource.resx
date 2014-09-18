@@ -660,4 +660,151 @@
   <data name="StudentPrsentation_Page_SIM5_Excel_E4_Cell_Value" xml:space="preserve">
     <value>=SUM(B4:D4)</value>
   </data>
+  <data name="StudentPrsentation_Page_Browse_Option_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='saveAsRightPaneDiv']/div/div[4]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Computer_Option_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@class='saveAsList']/li[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Content_FirstBullet_Text" xml:space="preserve">
+    <value>Over 20 years of experience in the travel industry</value>
+  </data>
+  <data name="StudentPrsentation_Page_Content_Text" xml:space="preserve">
+    <value>//div[@id='ContentDiv_TP_7']/ul/li</value>
+  </data>
+  <data name="StudentPrsentation_Page_Create_Option_Id_Locator" xml:space="preserve">
+    <value>ThemePreview-Create-Button</value>
+  </data>
+  <data name="StudentPrsentation_Page_Cursor_Xaxis_Value" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="StudentPrsentation_Page_Cursor_Yaxis_Value" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="StudentPrsentation_Page_DecreaseList_Level_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@id='ribbon-tab-Home']/li[4]/span/span/span/span/span/span[4]/span/div/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Design_Tab_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@class='ribbon-tabs-wrapper']/li[9]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Design_Theme_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@id='ribbon-tab-Design']/li/span/span/span/span/div/div[2]/div[3]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Down_Key_Value" xml:space="preserve">
+    <value>{DOWN}</value>
+  </data>
+  <data name="StudentPrsentation_Page_Facet_Template_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='newTemplateDivParent']/div/ul/li[3]/div/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_File_Name_Textbox_Id_Locator" xml:space="preserve">
+    <value>9-TextBoxFileName</value>
+  </data>
+  <data name="StudentPrsentation_Page_File_Name_Value" xml:space="preserve">
+    <value>1A_KWT_Overview</value>
+  </data>
+  <data name="StudentPrsentation_Page_First_Bulleted_Point_Text_Value" xml:space="preserve">
+    <value>Certified Travel Associates</value>
+  </data>
+  <data name="StudentPrsentation_Page_First_Bulleted_Point_Text_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ContentDiv_TP_4']/ul/li[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_First_Bulleted_Point_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ContentDiv_TP_4']/ul/li/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_FolderName_Textbox_ClassName_Locator" xml:space="preserve">
+    <value>editable-text-area</value>
+  </data>
+  <data name="StudentPrsentation_Page_Folder_Name_Value" xml:space="preserve">
+    <value>PowerPoint Chapter 1</value>
+  </data>
+  <data name="StudentPrsentation_Page_Fourth_Question_Title_Value" xml:space="preserve">
+    <value>Your Dreams</value>
+  </data>
+  <data name="StudentPrsentation_Page_Home_Tab_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@class='ribbon-tabs-wrapper']/li[6]</value>
+  </data>
+  <data name="StudentPrsentation_Page_IncreaseList_Level_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ribbon-tab-container-home']/ul/li[4]/span/span/span/span/span/span[5]/span/div/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_NewFolder_Option_Id_Locator" xml:space="preserve">
+    <value>9-ButtonNewFolder</value>
+  </data>
+  <data name="StudentPrsentation_Page_NewSlide_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@id='ribbon-tab-Home']/li[2]/span/span/span/span/div/div/span/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_Notes_Area_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='presentationNotesArea']</value>
+  </data>
+  <data name="StudentPrsentation_Page_Notes_Button_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='statusBarNotes']/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_Notes_Text_Value" xml:space="preserve">
+    <value>Kodiak West Travel has locations in Juneau, Anchorage, and Victoria.</value>
+  </data>
+  <data name="StudentPrsentation_Page_Open_Option_Id_Locator" xml:space="preserve">
+    <value>9-ButtonOpen</value>
+  </data>
+  <data name="StudentPrsentation_Page_Organic_Theme_Xpath_Locator" xml:space="preserve">
+    <value>//div[@title='Organic']/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_Panoramic_Slide_Xpath_Locator" xml:space="preserve">
+    <value>//div[@title='Panoramic Picture with Caption']/div/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_PowerPoint_Option_Id_Locator" xml:space="preserve">
+    <value>ppt</value>
+  </data>
+  <data name="StudentPrsentation_Page_Save_Button_Xpath_Locator" xml:space="preserve">
+    <value>//button[@id='9-ButtonSave']</value>
+  </data>
+  <data name="StudentPrsentation_Page_Save_Option_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='title-bar']/span[2]/span/span/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_Second_Bulleted_Point_Text_Value" xml:space="preserve">
+    <value>Specializing in land and sea travel</value>
+  </data>
+  <data name="StudentPrsentation_Page_Second_Bulleted_Point_Text_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ContentDiv_TP_4']/ul/li[3]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Space_Hypen_Value" xml:space="preserve">
+    <value> - </value>
+  </data>
+  <data name="StudentPrsentation_Page_Space_Value" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="StudentPrsentation_Page_SubTitle_FirstText_Value" xml:space="preserve">
+    <value>Your Travel</value>
+  </data>
+  <data name="StudentPrsentation_Page_SubTitle_FirstText_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ContentDiv_TP_5']/ul/li</value>
+  </data>
+  <data name="StudentPrsentation_Page_SubTitle_SecondText_Value" xml:space="preserve">
+    <value>Your Way</value>
+  </data>
+  <data name="StudentPrsentation_Page_SubTitle_SecondText_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ContentDiv_TP_5']/ul/li[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Third_Bulleted_Point_Text_Value" xml:space="preserve">
+    <value>Pacific Northwest including U.S. And Canada</value>
+  </data>
+  <data name="StudentPrsentation_Page_Third_Bulleted_Point_Text_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ContentDiv_TP_4']/ul/li[4]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Time_to_Wait" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="StudentPrsentation_Page_Title_Content_Slide" xml:space="preserve">
+    <value>//div[@title='Title and Content']/div/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Title_Content_Slide_Title_Value" xml:space="preserve">
+    <value>Our Expertise</value>
+  </data>
+  <data name="StudentPrsentation_Page_Title_TextArea_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ContentDiv_TP_4']/ul/li</value>
+  </data>
+  <data name="StudentPrsentation_Page_Title_Text_Value" xml:space="preserve">
+    <value>Kodiak West</value>
+  </data>
+  <data name="StudentPrsentation_Page_Title_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ContentDiv_TP_3']/ul/li</value>
+  </data>
 </root>

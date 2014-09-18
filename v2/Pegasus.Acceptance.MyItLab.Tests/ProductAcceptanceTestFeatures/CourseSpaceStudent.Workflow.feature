@@ -483,3 +483,21 @@ When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
+
+#Purpose : Submitting Sim 5 Powerpoint activity and Student scoring 70
+#Test case ID : peg-21995.
+#Products : MyItLab.
+#Pre condition : This test case depends on Power Point SIM5 activity should be created by instructor/Author in the following course and 
+#“Trap ALT+TAB and Browser Lock-Down” option  should be un checked in the activity preference tab.
+#Dependency : Always dependent.
+Scenario: Student scoring 70 in SIM5 Powerpoint activity
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
+And I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the activity named as "PowerPoint Chapter 1 Skill-Based Training" in Course Materials
+And I attempt questions in "PowerPoint Chapter 1 Skill-Based Training"

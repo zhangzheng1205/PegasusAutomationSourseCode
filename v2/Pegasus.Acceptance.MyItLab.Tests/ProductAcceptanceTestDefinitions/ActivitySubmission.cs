@@ -800,5 +800,21 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("ActivitySubmission", "RefreshViewAllCourseMaterialsFrame",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Sim5 Power Point Questions Submission.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+        [When(@"I attempt questions in ""(.*)""")]
+        public void AttemptSim5PowerPointQuestions(string activityName)
+        {
+            //Sim5 Power Point Questions Submission
+            Logger.LogMethodEntry("ActivitySubmission", "AttemptSim5PowerPointQuestions",
+            IsTakeScreenShotDuringEntryExit);
+            //Attempt Sim5 Power Point Questions
+            new StudentPresentationPage().AttemptSim5PowerPointQuestions(activityName);
+            Logger.LogMethodExit("ActivitySubmission", "AttemptSim5PowerPointQuestions",
+            IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
