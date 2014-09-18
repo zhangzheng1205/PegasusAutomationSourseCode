@@ -88,6 +88,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr/td[3]/img.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_Activitycmenu_Xpath_Locator_Ins {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_Activitycmenu_Xpath_Locator_Ins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@title=&apos;{0}&apos;].
         /// </summary>
         internal static string TeachingPlanUX_Page_ActivityName_Xpath_Locator {
@@ -111,6 +120,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string TeachingPlanUX_Page_AddFromLibrary_Tab {
             get {
                 return ResourceManager.GetString("TeachingPlanUX_Page_AddFromLibrary_Tab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr.
+        /// </summary>
+        internal static string TeachingPlanUX_Page_Assets_Count_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_Assets_Count_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -363,6 +381,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string TeachingPlanUX_Page_Preview_ClassName_Locator {
             get {
                 return ResourceManager.GetString("TeachingPlanUX_Page_Preview_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@title=&apos;Properties&apos;].
+        /// </summary>
+        internal static string TeachingPlanUX_Page_PropertiesOptions_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("TeachingPlanUX_Page_PropertiesOptions_Xpath_Locator", resourceCulture);
             }
         }
         

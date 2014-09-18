@@ -139,6 +139,10 @@ namespace Pegasus.Pages.CommonPageObjects
                                         this.NavigateToAccessChapter1SimulationActivitiesFolder(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
                                         break;
+                                    case "Review the Chapter 04 Learning Objectives":
+                                        this.NavigateToAccessChapter4BrainAndNervousSystemFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
+                                        break;
                                     case "PowerPoint Chapter 1 Skill-Based Training":
                                     case "PowerPoint Chapter 1 Skill-Based Exam (Scenario 1)":
                                         this.NavigateToPowerPointChapter1SimulationActivitiesFolder(CommonPageResource.
@@ -219,7 +223,20 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigation",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
+        /// <summary>
+        /// Navigate To Chapter 04: The Brain and Nervous System Folder.
+        /// </summary>
+        private void NavigateToAccessChapter4BrainAndNervousSystemFolder(string webElementToWait)
+        {
+            // navigate inside Chapter 4: Consciousness: Sleep, Dreams, Hypnosis, and Drugs Folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToExcelChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level 
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_Chapter4BrainAndNervous_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToExcelChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+        } 
         /// <summary>
         /// Navigate To Excel Chapter 1 Grader Activities.
         /// </summary>

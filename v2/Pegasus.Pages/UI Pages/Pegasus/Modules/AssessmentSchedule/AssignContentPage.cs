@@ -785,7 +785,6 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AssignContentPage", "SelectPropertiesWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Select 'Assigned' Radiobutton.
         /// </summary>
@@ -798,11 +797,10 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select Properties Window
                 this.SelectPropertiesWindow();
-                //Check the Assignd Radio Button
-                base.WaitForElement(By.Id(AssignContentPageResource.
-                    AssignContent_Page_RadioButton_Assigned_Id_Locator));
-                base.ClickButtonById(AssignContentPageResource.
-                    AssignContent_Page_RadioButton_Assigned_Id_Locator);
+                //Check the Assignd Radio Button               
+                IWebElement getRadioButton = base.GetWebElementPropertiesById(
+                    AssignContentPageResource.AssignContent_Page_RadioButton_Assigned_Id_Locator);
+                base.ClickByJavaScriptExecutor(getRadioButton);
             }
             catch (Exception e)
             {
@@ -811,6 +809,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AssignContentPage", "SelectAssignedRadiobutton",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Select 'Set availability date range' Radiobutton.

@@ -240,4 +240,7 @@
   <data name="CommonPage_Chapter3_Sensation_and_Perception_FolderName" xml:space="preserve">
     <value>Chapter 3: Sensation and Perception</value>
   </data>
+  <data name="CommonPage_Chapter4BrainAndNervous_FolderName" xml:space="preserve">
+    <value>Chapter 04: The Brain and Nervous System</value>
+  </data>
 </root>

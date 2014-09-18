@@ -513,5 +513,97 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickOnAssetCMenuOptionLink",
                    base.IsTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Searching for the activity, open the c menu for that activity and click on the given c menu option.
+        /// </summary>
+        /// <param name="activityCmenuEnum"></param>
+        /// <param name="activityName"></param>
+        public void SelectActivityCmenuForInstructor(ActivityCmenuEnum activityCmenuEnum, String activityName)
+        {
+            //Select Activity 
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "SelectActivityCmenuForInstructor",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Course Materials Window
+                this.SelectCourseMaterialsWindow();
+                //Click On Activity Cmenu
+                this.ClickOnAssetCmenuForInstructor(activityName);  
+                switch (activityCmenuEnum)
+                {
+                    case TeachingPlanUxPage.ActivityCmenuEnum.Properties:
+                        //Click On Properties Option
+                        this.ClickOnPropertiesOption();
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "SelectActivityCmenuForInstructor",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Searching for the activity and opening the cmenu for instructor view
+        /// </summary>
+        /// <param name="activityName"></param>
+        private void ClickOnAssetCmenuForInstructor(String activityName)
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickOnActivityCmenuIns",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            int getActivityCount;
+            //Initialize Variable
+            string getActivityname = string.Empty;          
+            this.SelectCourseMaterialsWindow();
+            base.SwitchToIFrame(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_ManageCourseMaterials_Frame_Id_Locator);
+            //Get Activity Count
+            getActivityCount = base.GetElementCountByXPath(TeachingPlanUXPageResource.
+                    TeachingPlanUX_Page_Assets_Count_Xpath_Locator);
+            for (int initialCount = Convert.ToInt32(CoursePreviewMainUXPageResource.
+                   CoursePreviewMainUX_Page_Asset_Loop_Initialization_InstValue);
+                   initialCount <= getActivityCount; initialCount++)
+            {
+                //Get Activity Name
+                getActivityname = base.GetElementTextByXPath
+                        (string.Format(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins, initialCount));
+                if (getActivityname == activityName)
+                {
+                    IWebElement getActivityProperty = base.GetWebElementPropertiesByXPath(
+                        string.Format(CoursePreviewMainUXPageResource.
+                        CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins, initialCount));
+                    base.PerformMouseHoverByJavaScriptExecutor(getActivityProperty);
+                    //Get Cmenu Property
+                     IWebElement getCmenuProperty = base.
+                        GetWebElementPropertiesByXPath(string.Format(TeachingPlanUXPageResource.
+                        TeachingPlanUX_Page_Activitycmenu_Xpath_Locator_Ins, initialCount));
+                    //Click On Cmenu Option
+                    base.ClickByJavaScriptExecutor(getCmenuProperty);
+                    break;
+                }
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickOnActivityCmenuIns",
+          base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click On Properties Option
+        /// </summary>
+        private void ClickOnPropertiesOption()
+        {
+            //Click On Properties Option
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickOnPropertiesOption",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Get Information Property          
+            IWebElement getPropertiesOption = base.
+                GetWebElementPropertiesByXPath(TeachingPlanUXPageResource.
+                TeachingPlanUX_Page_PropertiesOptions_Xpath_Locator);
+            //Click On Properties Link
+            base.ClickByJavaScriptExecutor(getPropertiesOption);
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickOnPropertiesOption",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

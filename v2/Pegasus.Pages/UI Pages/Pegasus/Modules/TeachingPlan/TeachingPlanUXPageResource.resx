@@ -231,4 +231,13 @@
   <data name="TeachingPlanUX_Page_ShowHide_PartialLinkText_Locator" xml:space="preserve">
     <value>Show/Hide</value>
   </data>
+  <data name="TeachingPlanUX_Page_Activitycmenu_Xpath_Locator_Ins" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[2]/table/tbody/tr/td[3]/img</value>
+  </data>
+  <data name="TeachingPlanUX_Page_Assets_Count_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='tblCoursePreview']/tbody/tr</value>
+  </data>
+  <data name="TeachingPlanUX_Page_PropertiesOptions_Xpath_Locator" xml:space="preserve">
+    <value>//div[@title='Properties']</value>
+  </data>
 </root>
