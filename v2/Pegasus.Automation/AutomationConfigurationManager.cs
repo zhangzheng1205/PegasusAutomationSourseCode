@@ -99,8 +99,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             string applicationWsurl;
 
-            switch (Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.TestEnvironment_Key) ??
-                ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
             {     
                         
                 case "ST":
