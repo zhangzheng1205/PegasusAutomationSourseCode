@@ -2443,5 +2443,38 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
 
         #endregion WebDriver FindElements
 
+        /// <summary>
+        /// Use this Method to Fill Text to Inner HTML of Text Area Using Javascript.
+        /// </summary>
+        /// <param name="by">This is HTML element locating mechanism to use.</param>
+        /// <param name="textToFill">This is Text to Fill in the Text Area.</param>
+        private void FillTexttoInnerHTMLByJavaScriptExecutor(By by, string textToFill)
+        {
+            base.WaitForElement(by);
+            IWebElement iWebElementName = WebDriver.FindElement(by);
+            ((IJavaScriptExecutor)WebDriver).ExecuteScript(String.Format("arguments[0].innerHTML = '{0}'", textToFill), iWebElementName);
+        }
+
+        /// <summary>
+        /// Use this Method to Fill text in Inner HTML Property of Text Area Using Xpath Attribute Value Through Javascript.
+        /// </summary>
+        /// <param name="xPathAttributeValue">This is Xpath Attribute Value.</param>
+        /// <param name="textValue">This is Text Value to Fill.</param>
+        protected void FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor
+            (String xPathAttributeValue, String textValue)
+        {
+            FillTexttoInnerHTMLByJavaScriptExecutor(By.XPath(xPathAttributeValue), textValue);
+        }
+
+        /// <summary>
+        /// Use this Method to Place Cursor to Specified Position.
+        /// </summary>
+        /// <param name="WebElement">Element to move to.</param>
+        /// <param name="xCoordinateValue">This is X Coordinate Value Where Cursor need to Place.</param>
+        /// <param name="yCoordinateValue">This is Y Coordinate Value Where Cursor need to Place.</param>
+        protected void PlaceCursorPosition(IWebElement WebElement, int xCoordinateValue, int yCoordinateValue)
+        {
+            new Actions(WebDriver).MoveToElement(WebElement, xCoordinateValue, yCoordinateValue).Click().Perform();
+        }
     }
 }
