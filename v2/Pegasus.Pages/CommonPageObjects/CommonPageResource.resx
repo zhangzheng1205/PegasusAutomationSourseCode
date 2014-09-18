@@ -237,4 +237,7 @@
   <data name="CommonPage_Gradebook_Right_Iframe_Name_Locator" xml:space="preserve">
     <value>srcGBFrame</value>
   </data>
+  <data name="CommonPage_Chapter3_Sensation_and_Perception_FolderName" xml:space="preserve">
+    <value>Chapter 3: Sensation and Perception</value>
+  </data>
 </root>

@@ -133,6 +133,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chapter 3: Sensation and Perception.
+        /// </summary>
+        internal static string CommonPage_Chapter3_Sensation_and_Perception_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_Chapter3_Sensation_and_Perception_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to grdCoursePerformance.
         /// </summary>
         internal static string CommonPage_CoursePerformance_Table_Id_Locator {

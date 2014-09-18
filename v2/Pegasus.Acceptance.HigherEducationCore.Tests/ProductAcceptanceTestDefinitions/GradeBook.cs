@@ -1150,5 +1150,37 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
 
         }
 
+        /// <summary>
+        /// Verify Options In ViewSubmission Page.
+        /// </summary>
+        /// <param name="declineOption">This is Decline Option.</param>
+        /// <param name="acceptOption">This is Accept Option.</param>
+        [Then(@"I should see ""(.*)"" and ""(.*)"" options in view submission page")]
+        public void VerifyOptionsInViewSubmissionPage(string declineOption, string acceptOption)
+        {
+            //Verify Options In ViewSubmission Page
+            Logger.LogMethodEntry("Gradebook", "VerifyOptionsInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Verify 'Decline' and 'Accept' Option Displayed in View Submission Page
+            new ViewSubmissionPage().IsDeclineAcceptOptionDisplayed(declineOption, acceptOption);
+            Logger.LogMethodExit("Gradebook", "VerifyOptionsInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Button In View Submission Page.
+        /// </summary>
+        /// <param name="buttonName">This is Button Name.</param>
+        [When(@"I select the option ""(.*)"" in view submission page")]
+        public void SelectButtonInViewSubmissionPage(string buttonName)
+        {
+            //Select Button In View Submission Page
+            Logger.LogMethodEntry("Gradebook", "SelectButtonInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click On Button In View Submission Page
+            new ViewSubmissionPage().ClickOnButtonInViewSubmissionPage(buttonName);
+            Logger.LogMethodExit("Gradebook", "SelectButtonInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

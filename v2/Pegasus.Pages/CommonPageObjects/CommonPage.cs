@@ -870,6 +870,11 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPageResource.CommonPage_Chapter1TheScienceofPsychology_FolderName
                                           , CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
                                         break;
+                                    case "Take the Chapter 3 Exam":
+                                        this.NavigateToActivityFolderInInstructorGradebook(
+                                            CommonPageResource.CommonPage_Chapter3_Sensation_and_Perception_FolderName,
+                                            CommonPageResource.CommonPage_Gradebook_BackArrow_Id_Locator);
+                                        break;
                                 }
                                 break;
                         }
