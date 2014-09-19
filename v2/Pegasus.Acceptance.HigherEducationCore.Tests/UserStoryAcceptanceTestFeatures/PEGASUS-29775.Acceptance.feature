@@ -1,7 +1,5 @@
 ﻿Feature: PEGASUS-29775
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+Automation : HED BVT:peg-22229:Validating forcefull submission of saved activity
 
 #Verify the usecases in Instructor Course
 #Purpose:Verify The User Login As CourseSpaceSMSInstructor

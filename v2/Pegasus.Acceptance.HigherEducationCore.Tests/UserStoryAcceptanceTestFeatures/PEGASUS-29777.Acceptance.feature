@@ -1,7 +1,5 @@
 ﻿Feature: PEGASUS-29777
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+Automation : HED BVT: peg-22228:Instructor Validaing student submission and grade in Instructor Gradebook-HSS
 
 #Verify the usecases in Instructor Course
 #Purpose:Verify The User Login As CourseSpaceSMSInstructor
