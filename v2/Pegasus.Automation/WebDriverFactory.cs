@@ -24,8 +24,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private const string ENV_PEG_AUTOMATION_REMOTE = "PEG_AUTOMATION_IS_REMOTE";
         private const string ENV_PEG_AUTOMATION_BROWSER = "PEG_AUTOMATION_BROWSER";
         private const string ENV_PEG_AUTOMATION_REMOTE_HUB_URL = "PEG_AUTOMATION_REMOTE_HUB_URL";
+        private const string ENV_PEG_AUTOMATION_TEST_ENVIRONMENT_NAME = "PEG_AUTOMATION_TEST_ENVIRONMENT";
 
         private const string APP_SETTINGS_BROWSER = "Browser";
+        private const string APP_SETTINGS_TEST_ENVIRONMENT = "TestEnvironment";
         private const string APP_SETTINGS_REMOTE = "isRemote";
         private const string APP_SETTINGS_REMOTE_HUB_URL = "remoteHubUrl";
 
@@ -34,11 +36,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static int _counter = 1;
 
         /// <summary>
-        /// This is the time out for the load.
+        /// This is defined static variables.
         /// </summary>
         private static readonly int TimeOut = Convert.ToInt16(ConfigurationManager.AppSettings["WebDriverTimeOutInSeconds"]);
         private static bool _isRemote = false;
         private static string _browserName;
+        private static string _applicationTestEnvironmentName;
         private static string _remoteHubUrl;
         private static readonly string DownloadFilePath = (AutomationConfigurationManager.DownloadFilePath + "\\ApplicationDownloadedFiles").Replace("file:\\", "");
 
@@ -64,6 +67,15 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 _browserName = ConfigurationManager.AppSettings[APP_SETTINGS_BROWSER];
             }
             Console.Out.WriteLine("BROWSER = {0}", _browserName);
+
+            Console.Out.WriteLine(string.Format("Attempting to get ENV_PEG_AUTOMATION_TEST_ENVIRONMENT"));
+            _applicationTestEnvironmentName = Environment.GetEnvironmentVariable(ENV_PEG_AUTOMATION_TEST_ENVIRONMENT_NAME);
+            if (string.IsNullOrEmpty(_applicationTestEnvironmentName))
+            {
+                Console.Out.WriteLine(string.Format("Attempting to get APP_SETTINGS_TEST_ENVIRONMENT"));
+                _applicationTestEnvironmentName = ConfigurationManager.AppSettings[APP_SETTINGS_TEST_ENVIRONMENT];
+            }
+            Console.Out.WriteLine("TEST_ENVIRONMENT = {0}", _applicationTestEnvironmentName);
 
             if (_isRemote)
             {

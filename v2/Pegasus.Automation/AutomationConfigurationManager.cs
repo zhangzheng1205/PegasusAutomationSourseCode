@@ -415,9 +415,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Find application environment.
         /// </summary> 
         /// <returns>Application environment.</returns>
-        private static string GetApplicationTestEnvironment()
+        public static string GetApplicationTestEnvironment()
         {
-            return ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key];
+            return Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.TestEnvironment_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key];
         }
 
         /// <summary>
