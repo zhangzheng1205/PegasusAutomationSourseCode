@@ -43,6 +43,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     applicationCsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_PROD_CSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootPROD_Key];
                     break;
+                case "VCD":
+                    applicationCsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_VCD_CSURL_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootVCD_Key];
+                    break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
             return applicationCsUrl;
@@ -118,6 +122,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 case "PROD":
                     applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_PROD_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootPROD_Key];
+                    break;
+                case "VCD":
+                    applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_VCD_WSURL_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootVCD_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }

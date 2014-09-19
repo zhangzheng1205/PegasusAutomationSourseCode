@@ -97,6 +97,15 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CourseSpaceURLRootVCD.
+        /// </summary>
+        internal static string CourseSpaceURLRootVCD_Key {
+            get {
+                return ResourceManager.GetString("CourseSpaceURLRootVCD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CourseSpaceURLRootVM.
         /// </summary>
         internal static string CourseSpaceURLRootVM_Key {
@@ -246,6 +255,24 @@ namespace Pegasus.Automation {
         internal static string PEG_AUTOMATION_ST_WSURL_Key {
             get {
                 return ResourceManager.GetString("PEG_AUTOMATION_ST_WSURL_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CourseSpaceURLRootVCD.
+        /// </summary>
+        internal static string PEG_AUTOMATION_VCD_CSURL_Key {
+            get {
+                return ResourceManager.GetString("PEG_AUTOMATION_VCD_CSURL_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WorkSpaceURLRootVCD.
+        /// </summary>
+        internal static string PEG_AUTOMATION_VCD_WSURL_Key {
+            get {
+                return ResourceManager.GetString("PEG_AUTOMATION_VCD_WSURL_Key", resourceCulture);
             }
         }
         
@@ -525,6 +552,15 @@ namespace Pegasus.Automation {
         internal static string WorkSpaceURLRootST_Key {
             get {
                 return ResourceManager.GetString("WorkSpaceURLRootST_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WorkSpaceURLRootVCD.
+        /// </summary>
+        internal static string WorkSpaceURLRootVCD_Key {
+            get {
+                return ResourceManager.GetString("WorkSpaceURLRootVCD_Key", resourceCulture);
             }
         }
         

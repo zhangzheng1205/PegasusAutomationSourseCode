@@ -129,6 +129,9 @@
   <data name="CourseSpaceURLRootST_Key" xml:space="preserve">
     <value>CourseSpaceURLRootST</value>
   </data>
+  <data name="CourseSpaceURLRootVCD_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootVCD</value>
+  </data>
   <data name="CourseSpaceURLRootVM_Key" xml:space="preserve">
     <value>CourseSpaceURLRootVM</value>
   </data>
@@ -179,6 +182,12 @@
   </data>
   <data name="PEG_AUTOMATION_ST_WSURL_Key" xml:space="preserve">
     <value>WorkSpaceURLRootST</value>
+  </data>
+  <data name="PEG_AUTOMATION_VCD_CSURL_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootVCD</value>
+  </data>
+  <data name="PEG_AUTOMATION_VCD_WSURL_Key" xml:space="preserve">
+    <value>WorkSpaceURLRootVCD</value>
   </data>
   <data name="PEG_AUTOMATION_VM_CSURL_Key" xml:space="preserve">
     <value>CourseSpaceURLRootVM</value>
@@ -272,6 +281,9 @@
   </data>
   <data name="WorkSpaceURLRootST_Key" xml:space="preserve">
     <value>WorkSpaceURLRootST</value>
+  </data>
+  <data name="WorkSpaceURLRootVCD_Key" xml:space="preserve">
+    <value>WorkSpaceURLRootVCD</value>
   </data>
   <data name="WorkSpaceURLRootVM_Key" xml:space="preserve">
     <value>WorkSpaceURLRootVM</value>

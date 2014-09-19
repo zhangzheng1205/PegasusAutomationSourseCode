@@ -45,6 +45,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
                 case "PROD": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
+                case "VCD": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
+                    (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
                 default: throw new ArgumentException("The suggested environment was not found");
             }
         }

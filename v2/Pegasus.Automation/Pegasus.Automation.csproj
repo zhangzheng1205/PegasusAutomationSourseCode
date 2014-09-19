@@ -119,6 +119,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="InMemoryTestData\PegasusTestDataPPE.xml" />
+    <Content Include="InMemoryTestData\PegasusTestDataVCD.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="InMemoryTestData\PegasusTestDataVM.xml">
       <SubType>Designer</SubType>
     </Content>
