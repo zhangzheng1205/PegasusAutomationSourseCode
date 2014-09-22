@@ -117,61 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RptSelectStudents_Page_Ins_AddLinkText_Locator" xml:space="preserve">
-    <value>Add</value>
+  <data name="ProgramAdminReportsSubTab_ActivityResultMultipleStudentsAndActivities_Link_Id_locator" xml:space="preserve">
+    <value>RPT_MULTIPLESTU_MULTIPLEASSMT</value>
   </data>
-  <data name="RptSelectStudents_Page_Ins_CheckBox_Id_Locator" xml:space="preserve">
-    <value>GridStudent$_ctrl1</value>
+  <data name="ProgramAdminReportsSubTab_ActivityResultMultipleStudents_Link_Id_locator" xml:space="preserve">
+    <value>RPT_ASSESSMENT_MULTIPLESTU</value>
   </data>
-  <data name="RptSelectStudents_Page_Ins_SelectStudent_Window_Name" xml:space="preserve">
-    <value>Select Student</value>
+  <data name="ProgramAdminReportsSubTab_ExamFrequencyAnalysis_Link_Id_locator" xml:space="preserve">
+    <value>RPT_EXAMFREQRPT</value>
   </data>
-  <data name="RptSelectStudents_Page_Ins_StudentCount_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='GridStudent']/tbody/tr</value>
+  <data name="ProgramAdminReportsSubTab_MyReports_ReportCmenuDelete_Id_Locator" xml:space="preserve">
+    <value>RPT_DELETE</value>
   </data>
-  <data name="RptSelectStudents_Page_Ins_StudentSelect_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td[2]/span</value>
+  <data name="ProgramAdminReportsSubTab_MyReports_ReportCmenuEditSettings_Id_Locator" xml:space="preserve">
+    <value>RPT_EDITRPTSETTINGS</value>
   </data>
-  <data name="RptSelectStudents_Page_Ins_Student_Checkbox_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='GridStudent']/tbody/tr[{0}]/td/input[@id='GridStudent$_ctrl1']</value>
+  <data name="ProgramAdminReportsSubTab_MyReports_ReportCmenuRunReport_Id_Locator" xml:space="preserve">
+    <value>RPT_RUNRPT</value>
   </data>
-  <data name="RptSelectStudents_Page_Ins_Student_LastName" xml:space="preserve">
-    <value>SMSUSER</value>
+  <data name="ProgramAdminReportsSubTab_TrainingFrequencyAnalysis_Link_Id_locator" xml:space="preserve">
+    <value>RPT_TRAINFREQRPT</value>
   </data>
-  <data name="RptSelectStudents_Page_Ins_Student_Name" xml:space="preserve">
-    <value>SMSUSER, BDD</value>
+  <data name="ProgramAdmin_Page_ReportCriteriaPage_Heading_Xpath_Locator" xml:space="preserve">
+    <value>//span[@id='lblHeader']</value>
   </data>
-  <data name="RptSelectStudents_Page_Ins_Student_RowNo" xml:space="preserve">
-    <value>2</value>
+  <data name="ProgramAdmin_Page_ReportCriteriaPage_WindowTime" xml:space="preserve">
+    <value>5000</value>
   </data>
-  <data name="RptSelectStudents_Page_Ins_Window_Count" xml:space="preserve">
-    <value>2</value>
+  <data name="ProgramAdmin_Page_Report_Window_Name" xml:space="preserve">
+    <value>Program Administration</value>
   </data>
-  <data name="RptSelectStudents_Page_Ins_Window_Name" xml:space="preserve">
-    <value>Select Students</value>
+  <data name="ProgramAdmin_Page_SaveSettingsToMyReport_Checkbox_Id_Locator" xml:space="preserve">
+    <value>chkSaveReport</value>
   </data>
-  <data name="RptSelectStudents_Page_PgA_Add_Button_Id_Locator" xml:space="preserve">
-    <value>imgAddSections</value>
-  </data>
-  <data name="RptSelectStudents_Page_PgA_Expand_Image_Xpath_Locator" xml:space="preserve">
-    <value>//img[contains(@src,'RadControls/Grid/Skins/Default/SinglePlus.gif')]</value>
-  </data>
-  <data name="RptSelectStudents_Page_PgA_StudentCount_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr</value>
-  </data>
-  <data name="RptSelectStudents_Page_PgA_StudentText_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[" + i.ToString() + "]/td[2]</value>
-  </data>
-  <data name="RptSelectStudents_Page_PgA_Student_Checkbox_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[" + i.ToString() + "]/td/input</value>
-  </data>
-  <data name="RptSelectStudents_Page_SelectAll_Checkbox_Id_Locator" xml:space="preserve">
-    <value>chkSelectAll</value>
-  </data>
-  <data name="RptSelectStudents_Page_Select_Student_Window_Name" xml:space="preserve">
-    <value>Select Student</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value />
+  <data name="ProgramAdmin_Page_SelectStudentds_Button_Xpath_Locator" xml:space="preserve">
+    <value>//a/span[text()='Select Students']</value>
   </data>
 </root>

@@ -1063,6 +1063,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnrollmentMainPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Reports\ProgramAdminReportsSubTabPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Program Admin\Reports\ProgramAdminReportsSubTabPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramAdminReportsSubTabPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\AutoGraderPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\QuestionLibrary\AutoGraderPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2516,6 +2522,10 @@
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\ProgramAdminToolPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ProgramAdminToolPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Reports\ProgramAdminReportsSubTabPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgramAdminReportsSubTabPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Program Admin\Sections\AddNewSectionPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

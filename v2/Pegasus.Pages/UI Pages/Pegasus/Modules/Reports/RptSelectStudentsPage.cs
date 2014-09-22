@@ -272,5 +272,31 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("RptSelectStudentsPage",
                 "SelectStudentToGenerateProgramAdminReport", base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        ///  //Check select all in 'Select Students' window.
+        /// </summary>
+        public void CheckSelectAll()
+        {
+            //Check select all in 'Select Students' window
+            logger.LogMethodEntry("RptSelectStudentsPage",
+               "SelectAllStudent", base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                this.SelectStudentsWindow();
+                base.WaitForElement(By.Id(RptSelectStudentsResource.
+                    RptSelectStudents_Page_SelectAll_Checkbox_Id_Locator));
+                //Check select all in 'Select Students' window
+                base.SelectCheckBoxById(RptSelectStudentsResource.
+                    RptSelectStudents_Page_SelectAll_Checkbox_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptSelectStudentsPage",
+                 "SelectAllStudent", base.IsTakeScreenShotDuringEntryExit);
+
+        }
     }
 }

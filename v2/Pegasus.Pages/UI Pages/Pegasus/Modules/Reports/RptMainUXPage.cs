@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.IO;
 using System.Configuration;
+using Pegasus.Automation.DataTransferObjects;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -131,8 +132,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodEntry("RptMainUXPage", "ManageInstructorReport",
-               base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogMethodExit("RptMainUXPage", "ManageInstructorReport",
+                base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
         ///Select Mastery Report link.
@@ -166,8 +167,11 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         ///Generate Mastery Reports.
         /// </summary>
-        public String GenerateMasteryReportForSkill(PegasusInstructorReportEnum reportTypeEnum, string skillName)
+        public String GenerateMasteryReportForSkill(PegasusInstructorReportEnum reportTypeEnum,
+            string skillName)
         {
+            Logger.LogMethodEntry("RptMainUXPage", "GenerateMasteryReportForSkill",
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 switch (reportTypeEnum)
@@ -210,7 +214,7 @@ namespace Pegasus.Pages.UI_Pages
             rptCommonCriteriaPage.ClickRunReport();
             //Validate skill name
             skillName = new RptMasteryPage().ValidateSkillNameForMasteryReport();
-            Logger.LogMethodEntry("RptMainUXPage", "GenerateClassMasteryReport",
+            Logger.LogMethodExit("RptMainUXPage", "GenerateClassMasteryReport",
                base.IsTakeScreenShotDuringEntryExit);
             return skillName;
         }
@@ -234,7 +238,7 @@ namespace Pegasus.Pages.UI_Pages
             rptCommonCriteriaPage.ClickRunReport();
             //Validate skill name
             skillName = new RptMasteryPage().ValidateSkillNameForMasteryReport();
-            Logger.LogMethodEntry("RptMainUXPage", "GenerateStudentMasteryReport",
+            Logger.LogMethodExit("RptMainUXPage", "GenerateStudentMasteryReport",
                base.IsTakeScreenShotDuringEntryExit);
             return skillName;
         }
@@ -1341,6 +1345,627 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("RptMainUXPage", "ClickonAddButton",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Click on a report link based on instructor.
+        /// </summary>
+        /// <param name="reportType">This is the report type.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        public void ClickTheReportLink(string reportType, User.UserTypeEnum userTypeEnum)
+        {
+            // Click on a report link based on instructor
+            Logger.LogMethodEntry("RptMainUXPage", "ClickTheReportLink",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (userTypeEnum)
+                {
+                    //Click on a report link if instructor is 'Program Admin'
+                    case User.UserTypeEnum.HedProgramAdmin:
+                        new ProgramAdminReportsSubTabPage().ClickOnReportLink(reportType);
+                        break;
+                    //Click on a report link if instructor is 'SMS Instructor'
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        this.SwitchToReportsWindow();
+                        //Switch to 'Reports' page 'Mainframe' iframe
+                        this.SwitchToMainFrame();
+                        switch (reportType)
+                        {
+                            case "Activity Result (Multiple students and activities)":
+                                //Click 'Activity Result (Multiple students and activities)' report link
+                                this.ClickReportLink(RptMainUXPageResource.
+                                RptMainUX_Page_ActivityResultMultipleStudentsAndActivities_Link_Id_Locator);
+                                break;
+                            case "Exam Frequency Analysis":
+                                //Click 'Exam Frequency Analysis' report link
+                                this.ClickReportLink(RptMainUXPageResource.
+                                    RptMainUX_Page_ExamFrequencyAnalysis_Link_Id_Locator);
+                                break;
+                            case "Training Frequency Analysis":
+                                //Click 'Exam Frequency Analysis' report link
+                                this.ClickReportLink(RptMainUXPageResource.
+                                    RptMainUX_Page_TrainingFrequencyAnalysis_Link_Id_Locator);
+                                break;
+                            case "Activity Results (Multiple Students)":
+                                //Click 'Exam Frequency Analysis' report link
+                                this.ClickReportLink(RptMainUXPageResource.
+                                    RptMainUX_Page_ActivityResultMultipleStudents_Link_Id_Locator);
+                                break;
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPage", "ClickTheReportLink",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        ///<summary>
+        ///Click on the report link.
+        ///<summary>
+        /// <param name="linkId">This is the Id locator of the link.</param>
+        public void ClickReportLink(String linkId)
+        {
+            //Click on the report link
+            Logger.LogMethodEntry("RptMainUXPage", "ClickReportLink",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(linkId));
+                IWebElement getReportLink = base.GetWebElementPropertiesById
+                    (linkId);
+                //Click on the report link
+                base.ClickByJavaScriptExecutor(getReportLink);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPage", "ClickReportLink",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Perform 'Run Report' or 'Edit Settings' or 'Delete' at 'My reports' based on user.
+        /// </summary>
+        /// <param name="reportActionOption">This is action to be performed on report.</param>
+        /// <param name="reportTypeEnum">This is report name enum.</param>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        public void PerformActionOnMyReports(string reportActionOption,
+            Report.ReportTypeEnum reportTypeEnum,
+           User.UserTypeEnum userTypeEnum)
+        {
+            // Perform 'Run Report' or 'Edit Settings' or 'Delete' at 'My reports' based on user.
+            Logger.LogMethodEntry("RptMainUXPage", "NavigateToReport",
+              base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (userTypeEnum)
+                {
+                    //Switch to this case when user is 'Program Admin'
+                    case User.UserTypeEnum.HedProgramAdmin:
+                        new ProgramAdminReportsSubTabPage().MyReportsActions
+                            (reportActionOption, reportTypeEnum);
+                        break;
+                    //Switch to this case when user is 'SMS Instructor' os 'Section Instructor'
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        SwitchToReportsWindow();
+                        //Switch to 'Reports' page 'Mainframe' iframe
+                        SwitchToMainFrame();
+                        switch (reportActionOption)
+                        {
+                            //Perform 'Run Report' on selected report
+                            case "Run Report": ClickReportCMenu(reportTypeEnum);
+                                base.WaitForElement(By.Id(RptMainUXPageResource.
+                                    RptmainUX_Page_MyReports_ReportCmenuRunReport_Id_Locator));
+                                   IWebElement getCmenuRunReport = base.GetWebElementPropertiesById
+                                       (RptMainUXPageResource.
+                                    RptmainUX_Page_MyReports_ReportCmenuRunReport_Id_Locator);
+                                     //Click on cmenu of the asset
+                                   base.ClickByJavaScriptExecutor(getCmenuRunReport);
+                                break;
+                            //Perform 'Edit Settings' on selected report
+                            case "Edit Settings": ClickReportCMenu(reportTypeEnum);
+                                base.WaitForElement(By.Id(RptMainUXPageResource.
+                                   RptmainUX_Page_MyReports_ReportCmenuEditSettings_Id_Locator));
+                                base.ClickLinkById(RptMainUXPageResource.
+                                    RptmainUX_Page_MyReports_ReportCmenuEditSettings_Id_Locator);
+                                break;
+                            //Perform 'Delete' on selected report
+                            case "Delete": ClickReportCMenu(reportTypeEnum);
+                                base.WaitForElement(By.Id(RptMainUXPageResource.
+                                    RptmainUX_Page_MyReports_ReportCmenuDelete_Id_Locator));
+                                base.ClickLinkById(RptMainUXPageResource.
+                                    RptmainUX_Page_MyReports_ReportCmenuDelete_Id_Locator);
+                                break;
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPage", "PerformActionOnMyReports",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on 'C menu' of a selected report in 'My Reports'.
+        /// </summary>
+        /// <param name="reportTypeEnum">This is report type enum.</param>
+        public void ClickReportCMenu(Report.ReportTypeEnum reportTypeEnum)
+        {
+            // Click on 'C menu' of a selected report in 'My Reports'
+            Logger.LogMethodEntry("RptMainUXPage", "ClickReportCMenu",
+             base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                string getSearchedReportName = string.Empty;
+                base.WaitForElement(By.XPath(RptMainUXPageResource.
+                    RptMainUX_Page_MyReportsCount_Xpath_Locator));
+                //Get count of the reports listed under 'My Reports'
+                int getActivityCount = base.GetElementCountByXPath(RptMainUXPageResource.
+                    RptMainUX_Page_MyReportsCount_Xpath_Locator);
+                int initialCountResource = 1;
+                //Search for expected report 
+                for (int initialCount = initialCountResource;
+                    initialCount <= getActivityCount; initialCount++)
+                {
+                    base.WaitForElement(By.XPath(string.Format(RptMainUXPageResource.
+                    RptMainUX_Page_MyReports_ActualReport_Xpath_Locator, initialCount)));
+                    getSearchedReportName = base.GetElementTextByXPath(string.
+                    Format(RptMainUXPageResource.
+                    RptMainUX_Page_MyReports_ActualReport_Xpath_Locator, initialCount, initialCount));
+                    string actualMyReportName = string.Empty;
+                    Report report = Report.Get(reportTypeEnum);
+                    actualMyReportName = report.Name;
+                    //Click on 'C menu' of expected report
+                    if (getSearchedReportName == actualMyReportName)
+                    {
+                        base.WaitForElement(By.XPath(string.Format(RptMainUXPageResource.
+                        RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator, initialCount)));
+                        IWebElement getCmenu = base.GetWebElementPropertiesByXPath((string.
+                        Format(RptMainUXPageResource.
+                        RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator, initialCount)));
+                        //Click on cmenu of the asset
+                        base.ClickByJavaScriptExecutor(getCmenu);
+                        Thread.Sleep(1000);
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPage", "ClickReportCMenu",
+               base.IsTakeScreenShotDuringEntryExit);            
+        }
+
+        /// <summary>
+        /// Click 'Select Students' button and check 'Select All' at Students Option based on instructor.
+        /// </summary>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        public void SelectAllStudent(User.UserTypeEnum userTypeEnum)
+        {
+            // Click 'Select Students' button and check 'Select All' at Students Option
+            Logger.LogMethodEntry("RptMainUXPage", "SelectAllStudent",
+              base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (userTypeEnum)
+                {
+                    //Switch to this case when user is 'Program Admin'
+                    case User.UserTypeEnum.HedProgramAdmin:
+                        new ProgramAdminReportsSubTabPage().SelectAllStudentsProgramAdmin();
+                        break;
+                    //Switch to this case when user is 'SMS Instructor'
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        this.SwitchToReportsWindow();
+                        //Switch to 'Reports' page 'Mainframe' iframe
+                        this.SwitchToMainFrame();
+                        base.WaitForElement(By.XPath(RptMainUXPageResource.
+                            RptMainUX_Page_SelectStudentds_Button_Xpath_Locator));
+                        //Click 'Select Students' button
+                        base.ClickButtonByXPath(RptMainUXPageResource.
+                            RptMainUX_Page_SelectStudentds_Button_Xpath_Locator);
+                        //check 'Select All' at Students Option
+                        new RptSelectStudentsPage().CheckSelectAll();
+                        break;
+                }
+                this.ClickAddButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPage", "SelectAllStudent",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// /// <summary>
+        /// Switch to 'Reports' window.
+        /// </summary>
+        private void SwitchToReportsWindow()
+        {
+            Logger.LogMethodEntry("RptMainUXPage", "SwitchToReportsWindow",
+              base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(RptMainUXPageResource.RptMainUX_Page_Report_Window_Name);
+            base.SelectWindow(RptMainUXPageResource.RptMainUX_Page_Report_Window_Name);
+            Logger.LogMethodExit("RptMainUXPage", "SwitchToReportsWindow",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Switch to 'Mainframe' iframe.
+        /// </summary>
+        private void SwitchToMainFrame()
+        {
+            Logger.LogMethodEntry("RptMainUXPage", "SwitchToMainFrame",
+              base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(RptMainUXPageResource.
+               RptMain_Page_Frame_Id_Locator));
+            //Switch to Frame
+            base.SwitchToIFrame(RptMainUXPageResource.
+                RptMain_Page_Frame_Id_Locator);
+            Logger.LogMethodExit("RptMainUXPage", "SwitchToMainFrame",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Checks the 'Save Settings To My Reports' based on instructor.
+        /// </summary>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        public void SaveSettingsToMyReportCheckByUser(User.UserTypeEnum userTypeEnum)
+        {
+            // Checks the 'Save Settings To My Reports' based on instructor
+            Logger.LogMethodEntry("RptMainUXPage", "SaveSettingsToMyReportCheckByUser",
+              base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (userTypeEnum)
+                {
+                    //Switch to this case when user is 'Program Admin'
+                    case User.UserTypeEnum.HedProgramAdmin:
+                        new ProgramAdminReportsSubTabPage().CheckSaveSettingsToMyReport();
+                        break;
+                    //Switch to this case when user is 'SMS Instructor'
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        this.SwitchToReportsWindow();
+                        //Switch to 'Reports' page 'Mainframe' iframe
+                        this.SwitchToMainFrame();
+                        //Check the checkbox
+                        this.SelectCheckBoxSaveSettingsToMyReport();
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPage", "SaveSettingsToMyReportCheckByUser",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///  Checks the 'Save Settings To My Reports' checkbox.
+        /// </summary>
+        private void SelectCheckBoxSaveSettingsToMyReport()
+        {
+            //  Checks the 'Save Settings To My Reports' checkbox.
+            Logger.LogMethodEntry("RptMainUXPage", "SelectCheckBoxSaveSettingsToMyReport",
+            base.IsTakeScreenShotDuringEntryExit);
+             base.FocusOnElementById(RptMainUXPageResource.
+               RptMainUX_Page_SaveSettingsToMyReport_Checkbox_Id_Locator);
+            base.WaitForElement(By.Id(RptMainUXPageResource.
+                RptMainUX_Page_SaveSettingsToMyReport_Checkbox_Id_Locator));
+            //Checks the checkbox
+            base.SelectCheckBoxById(RptMainUXPageResource.
+                RptMainUX_Page_SaveSettingsToMyReport_Checkbox_Id_Locator);
+            Logger.LogMethodExit("RptMainUXPage", "SelectCheckBoxSaveSettingsToMyReport",
+               base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Click buttons in criteria page base on instructor.
+        /// </summary>
+        /// <param name="buttonName">This is the button to be clicked.</param>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        public void ClickButtonInReportByUser(string buttonName, User.UserTypeEnum userTypeEnum)
+        {
+            // Click buttons in criteria page base on instructor
+            Logger.LogMethodEntry("RptMainUXPage", "ClickButtonInReportByUser",
+                base.IsTakeScreenShotDuringEntryExit);
+            switch (userTypeEnum)
+            {
+                //Switch to this case when user is 'Program Admin'
+                case User.UserTypeEnum.HedProgramAdmin:
+                    new ProgramAdminReportsSubTabPage().ClickButtonInReports(buttonName);
+                    break;
+                //Switch to this case when user is 'SMS Instructor'
+                case User.UserTypeEnum.CsSmsInstructor:
+                    this.SwitchToReportsWindow();
+                    //Switch to 'Reports' page 'Mainframe' iframe
+                    this.SwitchToMainFrame();
+                    //Click on the expected button In Reports
+                    this.ClickButtonInReport(buttonName);
+                    break;
+            }
+            Logger.LogMethodExit("RptMainUXPage", "ClickButtonInReportByUser",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on the button in 'Reports'.
+        /// </summary>
+        /// <param name="button">This is the button to be clicked.</param>
+        public void ClickButtonInReport(string button)
+        {
+            //Click on the button In Reports
+            Logger.LogMethodEntry("RptMainUXPage", "ClickButtonInReport",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.PartialLinkText(button));
+                // Focus on Element
+                base.FocusOnElementByPartialLinkText((button));
+                //Click On Button
+                IWebElement getButton =
+                    base.GetWebElementPropertiesByPartialLinkText(button);
+                base.ClickByJavaScriptExecutor(getButton);
+                Thread.Sleep(Convert.ToInt32(RptSaveReportPageResource
+                .RptSaveReport_Page_ThreadTime_Value));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPage", "ClickButtonInReport",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// This selects the expected 'Activity' or 'Exam' or 'Training' based on user.
+        /// </summary>
+        /// <param name="assessmentName">This is the asset name.</param>
+        /// <param name="assessmentType">This is the asset type.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        public void SelectSingleAssessment(string assessmentName, 
+            string assessmentType, User.UserTypeEnum userTypeEnum)
+        {
+            // This selects the expected 'Activity' or 'Exam' or 'Training' based on user
+            Logger.LogMethodEntry("RptMainUXPage", "SelectSingleAssesment",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (userTypeEnum)
+                {
+                    //Selects the activity when instructor is 'Program Admin'
+                    case User.UserTypeEnum.HedProgramAdmin:
+                        new ProgramAdminReportsSubTabPage().
+                            SelectAnAssessment(assessmentType, assessmentName);
+                        break;
+                    //Selects the activity when instructor is 'SMS Instructor'
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        this.SwitchToReportsWindow();
+                        //Switch to 'Mainframe' iframe in 'Reports' page
+                        this.SwitchToMainFrame();
+                        switch (assessmentType)
+                        {
+                            case "Select Activities":
+                                this.OpenAssessmentWindow(assessmentType, "Select Activities");
+                                //Selects the expected activity and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Exams":
+                                this.OpenAssessmentWindow(assessmentType, "Select Exam");
+                                //Selects the expected exam and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Trainings":
+                                this.OpenAssessmentWindow(assessmentType, "Select Training");
+                                //Selects the expected training and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainRptMainUXPage", "SelectSingleAssesment",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Opens the assesment window ad switch to it.
+        /// </summary>
+        /// <param name="assesmentType">This is the assesment button name.</param>
+        /// <param name="assessmentWindow">This is the assesment window name.</param>
+        public void OpenAssessmentWindow(string assesmentType, string assessmentWindow)
+        {
+            Logger.LogMethodEntry("RptMainUXPageResource", "OpenAssesmentWindow",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.XPath(string.
+                           Format(RptMainUXPageResource.
+                                  RptmainUX_Page_AssesmentButton_Xpath_Locator, assesmentType)));
+                IWebElement getWindowName = base.GetWebElementPropertiesByXPath(string.
+                        Format(RptMainUXPageResource.
+                               RptmainUX_Page_AssesmentButton_Xpath_Locator, assesmentType));
+                //Click assesment button
+                base.ClickByJavaScriptExecutor(getWindowName);
+                //Switch to window
+                base.WaitUntilWindowLoads(assessmentWindow);
+                base.SelectWindow(assessmentWindow);
+            }
+            catch (Exception e)
+            {                
+                 ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPageResource", "OpenAssesmentWindow",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// This selects the expected assessment.
+        /// </summary>
+        /// <param name="assesmentName">This is the assessment to be selected.</param>
+        public void AddAssessment(string assesmentName)
+        {
+            // This selects the expected assessment
+            Logger.LogMethodEntry("RptMainUXPage", "AddAssesment",
+                  base.IsTakeScreenShotDuringEntryExit);
+            string getSearchedAssesmentName = string.Empty;
+            base.WaitForElement(By.XPath(RptMainUXPageResource.
+                RptMainUX_Page_MyReports_AssessmentCount_Xpath_Locator));
+            //Get count of the reports listed under 'My Reports'
+            int getActivityCount = base.GetElementCountByXPath(RptMainUXPageResource.
+                RptMainUX_Page_MyReports_AssessmentCount_Xpath_Locator);
+            int initialCountAssessment = Convert.ToInt32(RptSelectAssessmentsResource.
+                RptSelectAssessments_Page_Ins_Activity_RowNo);
+            //Search for expected report 
+            for (int initialCount = initialCountAssessment; 
+                initialCount <= getActivityCount; initialCount++)
+            {
+                base.WaitForElement(By.XPath(string.
+                    Format(RptMainUXPageResource.
+                    RptMainUX_Page_MyReports_ActualAssessment_Xpath_Locator, initialCount)));
+                getSearchedAssesmentName = base.GetElementTextByXPath(string.
+                Format(RptMainUXPageResource.
+                RptMainUX_Page_MyReports_ActualAssessment_Xpath_Locator, initialCount));
+                //Click on 'Checkbox' of the assessment
+                if (getSearchedAssesmentName == assesmentName)
+                {
+                    base.WaitForElement(By.XPath(string.Format(RptMainUXPageResource.
+                    RptmainUX_Page_MyReports_ActualAssessmentCheckBox_Xpath_Locator, initialCount)));
+                    base.ClickImageByXPath(string.Format(RptMainUXPageResource.
+                    RptmainUX_Page_MyReports_ActualAssessmentCheckBox_Xpath_Locator, initialCount));
+                    break;
+                }
+            }
+            this.ClickAddButton();
+            Logger.LogMethodExit("RptMainUXPage", "AddAssesment",
+                     base.IsTakeScreenShotDuringEntryExit);
+        }
+        
+        /// <summary>
+        /// Click on add button.
+        /// </summary>
+        private void ClickAddButton()
+        {
+            // Click on add button
+            Logger.LogMethodEntry("RptMainUXPageResource", "ClickAddButton",
+                  base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.XPath("//a/span/span[text()='Add']"));
+            bool addButton = base.IsElementPresent(By.XPath("//a/span/span[text()='Add']"));
+            // Click on add button
+            base.ClickButtonByXPath("//a/span/span[text()='Add']");
+            Logger.LogMethodExit("RptMainUXPageResource", "ClickAddButton",
+                     base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Returns the criteria page heading based on instructor type.
+        /// </summary>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        /// <returns>The criteria page name.</returns>
+        public string GetCriteriaPageName(User.UserTypeEnum userTypeEnum)
+        {
+            // Returns the criteria page name base on instructor type
+            Logger.LogMethodEntry("RptMainUXPageResource", "GetCriteriaPageName",
+                  base.IsTakeScreenShotDuringEntryExit);
+            string getCriteriaPageName = string.Empty;
+            try
+            {
+                switch (userTypeEnum)
+                {
+                    //Returns the criteria page heading when instructor in 'Program Admin'
+                    case User.UserTypeEnum.HedProgramAdmin:
+                        getCriteriaPageName = new ProgramAdminReportsSubTabPage().
+                            GetCriteriaPageHeading();
+                        break;
+                    //Returns the criteria page heading when instructor in 'SMS Instructor'
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        this.SwitchToReportsWindow();
+                        //Switch to 'Mainframe' iframe at 'Reports page'
+                        this.SwitchToMainFrame();
+                        base.WaitForElement(By.XPath(RptMainUXPageResource.
+                            RptMainUX_Page_ReportCriteriaPage_Heading_Xpath_Locator));
+                        //Gets the text from the element
+                        getCriteriaPageName = base.GetElementTextByXPath(RptMainUXPageResource.
+                            RptMainUX_Page_ReportCriteriaPage_Heading_Xpath_Locator);
+                        Thread.Sleep(Convert.ToInt32(RptMainUXPageResource.
+                        RptMainUX_Page_ReportCriteriaPage_WindowTime));
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPageResource", "GetCriteriaPageName",
+                        base.IsTakeScreenShotDuringEntryExit);
+            //returns the text value
+            return getCriteriaPageName;
+        }
+
+        /// <summary>
+        /// Gets the Activity name displayed in the 'Activity Results (Multiple students and activities)' report.
+        /// </summary>
+        /// <returns>Returns the activity name.</returns>
+        public string GetActivityNameFromReport()
+        {
+            // Gets the Activity name displayed in the report
+            Logger.LogMethodEntry("RptMainUXPageResource", "GetActivityNameFromReport",
+                  base.IsTakeScreenShotDuringEntryExit);
+            string getActualActivityName = string.Empty;
+            try
+            {
+                SwitchToGeneratedReportWindow(RptMainUXPageResource.
+                        RptMainUX_Page_ActivityResultsMultipleStudentsAndActivitiesWindow_Title_Locator);
+                bool head = base.IsElementPresent(By.XPath(RptMainUXPageResource.
+                    RptMainUX_Page_ActivityResultsMultipleStudentsAndActivitiesReport_ActivityHeading_Xpath_Locator));
+                base.WaitForElement(By.XPath(RptMainUXPageResource.
+                    RptMainUX_Page_ActivityResultsMultipleStudentsAndActivitiesReport_ActivityHeading_Xpath_Locator));
+                //Gets the text from the element
+                getActualActivityName = base.GetElementTextByXPath(RptMainUXPageResource.
+                    RptMainUX_Page_ActivityResultsMultipleStudentsAndActivitiesReport_ActivityHeading_Xpath_Locator);
+                Thread.Sleep(Convert.ToInt32(RptMainUXPageResource.
+                RptMainUX_Page_ReportCriteriaPage_WindowTime));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPageResource", "GetActivityNameFromReport",
+                        base.IsTakeScreenShotDuringEntryExit);
+            return getActualActivityName;
+        }
+
+        /// <summary>
+        /// /// <summary>
+        /// Switch to 'Reports' window.
+        /// </summary>
+        private void SwitchToGeneratedReportWindow(string windowName)
+        {
+            // Switch to 'Reports' window
+            Logger.LogMethodEntry("RptMainUXPage", "SwitchToGeneratedReportWindow",
+              base.IsTakeScreenShotDuringEntryExit);
+            base.WaitUntilWindowLoads(windowName);
+            // Switch to 'Reports' window
+            base.SelectWindow(windowName);
+            Logger.LogMethodExit("RptSelectStudentsPage", "SwitchToGeneratedReportWindow",
+               base.IsTakeScreenShotDuringEntryExit);
+        }        
     }
 }
 

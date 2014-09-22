@@ -350,7 +350,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("Reports", "VerifyTheScoreInGeneratedReport",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-       
+
         /// <summary>
         /// Activity Result Generate Report By Instructor.
         /// </summary>
@@ -578,7 +578,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         public void EnterTheValidDataInTheFieldsToGenerateExamReport()
         {
             //Enter The Valid Data In The Fields To Generate Exam Report
-            Logger.LogMethodEntry("Reports", 
+            Logger.LogMethodEntry("Reports",
                 "EnterTheValidDataInTheFieldsToGenerateExamReport",
             base.IsTakeScreenShotDuringEntryExit);
             RptSaveReportPage rptSaveReportPage = new RptSaveReportPage();
@@ -586,7 +586,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             rptSaveReportPage.SelectReportWindowAndFrame();
             //Select Save Settings To My Reports Checkbox
             rptSaveReportPage.EnterTheDataFieldsToGenerateExamReport();
-            Logger.LogMethodExit("Reports", 
+            Logger.LogMethodExit("Reports",
                 "EnterTheValidDataInTheFieldsToGenerateExamReport",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -607,6 +607,150 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             rptSaveReportPage.SelectSaveSettingsToMyReportsOption();
             Logger.LogMethodExit("Reports", "SelectSaveSettingsToMyReportsOption",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on a report link based on instructor.
+        /// </summary>
+        /// <param name="reportType">This is the report type.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [When(@"I click on ""(.*)"" report link as ""(.*)""")]
+        public void ClickOnReportLink(string reportType, User.UserTypeEnum userTypeEnum)
+        {
+            //Click on a report link based on instructor
+            Logger.LogMethodEntry("Reports", "ClickOnReportLink",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Click on a report link based on instructor
+            new RptMainUXPage().ClickTheReportLink(reportType, userTypeEnum);
+            Logger.LogMethodExit("Reports", "ClickOnReportLink",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        ///Perform 'Run Report' or 'Edit Settings' or 'Delete' at 'My reports' based on user.
+        /// </summary>
+        /// <param name="reportActionOption">Action to be performed on the report.</param>
+        /// <param name="reportTypeEnum">Report name enum.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [When(@"I select ""(.*)"" for ""(.*)"" report in 'My Reports' grid by ""(.*)""")]
+        public void MyReportActionsThroughCmenu(string reportActionOption,
+            Report.ReportTypeEnum reportTypeEnum,
+           User.UserTypeEnum userTypeEnum)
+        {
+            //Perform 'Run Report' or 'Edit Settings' or 'Delete' at 'My reports' based on user
+            Logger.LogMethodEntry("Reports", "MyReportActionsThroughCmenu",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Perform 'Run Report' or 'Edit Settings' or 'Delete' at 'My reports' based on user
+            new RptMainUXPage().PerformActionOnMyReports
+                (reportActionOption, reportTypeEnum, userTypeEnum);
+            Logger.LogMethodExit("Reports", "MyReportActionsThroughCmenu",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select All Students Based on instructor.
+        /// </summary>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [When(@"I 'Select All' in 'Student Options' by ""(.*)""")]
+        public void SelectAllStudents(User.UserTypeEnum userTypeEnum)
+        {
+            // Check 'Select All' at Students Option base on instructor
+            Logger.LogMethodEntry("Reports", "SelectAllStudents",
+           base.IsTakeScreenShotDuringEntryExit);
+            // Check 'Select All' at Students Option base on instructor
+            new RptMainUXPage().SelectAllStudent(userTypeEnum);
+            Logger.LogMethodExit("Reports", "SelectAllStudents",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Check 'Save settings to my report' base on instructor.
+        /// </summary>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [When(@"I select 'save settings to My Reports' option by ""(.*)""")]
+        public void CheckSaveSettingsToMyReportsOption(User.UserTypeEnum userTypeEnum)
+        {
+            //Select 'save settings to My Reports' Option
+            Logger.LogMethodEntry("Reports", "SelectSaveSettingsToMyReportsOption",
+            base.IsTakeScreenShotDuringEntryExit);
+            new RptMainUXPage().SaveSettingsToMyReportCheckByUser(userTypeEnum);
+            Logger.LogMethodExit("Reports", "SelectSaveSettingsToMyReportsOption",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select 'Run Report' or 'Cancel' button based on instructor .
+        /// </summary>
+        /// <param name="buttonType">This is the action to be performed.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [When(@"I click on the ""(.*)"" button in reports by ""(.*)""")]
+        public void ClickReportButton(string buttonType, User.UserTypeEnum userTypeEnum)
+        {
+            // Select 'Run Report' or 'Cancel' button based on user 
+            Logger.LogMethodEntry("Reports", "ClickReportButton",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Select 'Run Report' or 'Cancel' button based on user 
+            new RptMainUXPage().ClickButtonInReportByUser(buttonType, userTypeEnum);
+            Logger.LogMethodExit("Reports", "ClickReportButton",
+                base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// This selects assessment from assessment window based on user.
+        /// </summary>
+        /// <param name="assessmentName">This is the asset name.</param>
+        /// <param name="assessmentType">This is the asset type.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [When(@"I select ""(.*)"" asset in ""(.*)"" by ""(.*)""")]
+        public void SelectTheAssessmentInReport(string assessmentName, 
+            string assessmentType, User.UserTypeEnum userTypeEnum)
+        {
+            // This selects assessment from assessment window
+            Logger.LogMethodEntry("Reports", "SelectTheAssessmentInReport",
+            base.IsTakeScreenShotDuringEntryExit);
+            // This selects assessment from assessment window
+            new RptMainUXPage().SelectSingleAssessment
+                (assessmentName, assessmentType, userTypeEnum);
+            Logger.LogMethodExit("Reports", "SelectTheAssessmentInReport",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the opened criteria page based on user.
+        /// </summary>
+        /// <param name="criteriaPageName">This is the name of the criteria page.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [Then(@"I should see the ""(.*)"" in criteria page as ""(.*)""")]
+        public void VerifyCriteriaPageOpened(string criteriaPageName, User.UserTypeEnum userTypeEnum)
+        {
+            // Verify the opened criteria page based on user
+            Logger.LogMethodEntry("Reports", "VerifyCriteriaPageOpened",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Verify the opened criteria page based on user
+            Logger.LogAssertion("VerifyCriteriaPageOpened",
+              ScenarioContext.Current.ScenarioInfo.Title,() =>
+                Assert.AreEqual(criteriaPageName,
+                new RptMainUXPage().GetCriteriaPageName(userTypeEnum)));
+            Logger.LogMethodExit("Reports", "VerifyCriteriaPageOpened",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify expected activity in 'Activity Results (Multiple students and activities)' report
+        /// </summary>
+        /// <param name="expectedActivity">This is the expected activity.</param>
+        [Then(@"I should see ""(.*)""")]
+        public void VerifyExpectedActivity(string expectedActivity)
+        {
+            Logger.LogMethodEntry("Reports", "VerifyExpectedActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyCriteriaPageOpened",
+              ScenarioContext.Current.ScenarioInfo.Title, () =>
+                Assert.AreEqual(expectedActivity,
+                new RptMainUXPage().GetActivityNameFromReport()));
+            Logger.LogMethodExit("Reports", "VerifyExpectedActivity",
+              base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

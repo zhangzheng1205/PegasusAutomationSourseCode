@@ -117,3 +117,25 @@ And I enter the valid data in the fields to generate certificate for Exam report
 And I click on "Run Report" button in reports
 Then I should see the exam score "100.00%" in 'Certificate of Completion Exam' page
 When I close the "Certificate of Completion (Exam)" window
+
+#Purpose : Generate “Activity Result (Multiple students and activities)" Report by SMS Instructor
+#Test Case Id:peg-21964
+#MyITLabOffice2013Program
+Scenario:Report generation along with report data verification by SMS Instructor
+When I navigate to "Gradebook" tab and selected "Reports" subtab
+Then I should be on the "Reports" page
+When I click on "Activity Result (Multiple students and activities)" report link as "CsSmsInstructor"
+Then I should see the "Options for Activity Results (Multiple students and activities)" in criteria page as "CsSmsInstructor"
+When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in "Select Activities" by "CsSmsInstructor"
+And I 'Select All' in 'Student Options' by "CsSmsInstructor"
+And I select 'save settings to My Reports' option by "CsSmsInstructor"
+And I click on the "Run Report" button in reports by "CsSmsInstructor"
+Then I should be on the "Save settings to My Reports" page
+When I select "Createnewreport" radiobutton
+And I enter the "MyItLabTrainingFrequencyAnalysis" report name
+And I click on "SaveandRun" button
+Then I should see "Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+When I close the "Activity Results (Multiple students and activities)" window
+And I click on the "Cancel" button in reports by "CsSmsInstructor"
+And I select "Run Report" for "MyItLabTrainingFrequencyAnalysis" report in 'My Reports' grid by "CsSmsInstructor"
+Then I should be on the "Activity Results (Multiple students and activities)" page

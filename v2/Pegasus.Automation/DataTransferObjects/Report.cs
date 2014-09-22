@@ -23,7 +23,10 @@ namespace Pegasus.Automation.DataTransferObjects
             HedMilStudentEnrollment = 4,
             MyTestStudentEnrollment = 5,
             HedMilStudyPlanSingleStudent=6,
-            MyItLabTrainingFrequencyAnalysis = 7
+            MyItLabTrainingFrequencyAnalysis = 7,
+            MyItLabActivityResultsMultipleStudentsAdActivities = 8,
+            MyITLabActivityResultsMultipleStudents = 9,
+            MyITLabExamFrequencyAnalysis = 10
         }
 
         /// <summary>
