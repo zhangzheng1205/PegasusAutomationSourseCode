@@ -385,7 +385,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@title=&apos;Properties&apos;].
+        ///   Looks up a localized string similar to //div[@id=&apos;PegMenu128&apos;]/div[2]/div[3]/span.
         /// </summary>
         internal static string TeachingPlanUX_Page_PropertiesOptions_Xpath_Locator {
             get {

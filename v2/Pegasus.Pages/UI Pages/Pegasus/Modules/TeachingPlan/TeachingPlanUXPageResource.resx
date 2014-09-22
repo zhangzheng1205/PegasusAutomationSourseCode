@@ -238,6 +238,6 @@
     <value>//table[@id='tblCoursePreview']/tbody/tr</value>
   </data>
   <data name="TeachingPlanUX_Page_PropertiesOptions_Xpath_Locator" xml:space="preserve">
-    <value>//div[@title='Properties']</value>
+    <value>//div[@id='PegMenu128']/div[2]/div[3]/span</value>
   </data>
 </root>
