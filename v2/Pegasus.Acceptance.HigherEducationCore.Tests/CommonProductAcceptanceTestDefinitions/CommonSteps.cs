@@ -644,7 +644,22 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfTheParticularPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
+        /// <summary>
+        /// Navigating to the folder where given asset exists.
+        /// </summary>
+        /// <param name="Assetname">Asset Name</param>
+        /// <param name="tabName">Tab</param>
+        /// <param name="userTypeEnum">User type</param>
+        [When(@"I navigate to ""(.*)"" asset in ""(.*)"" tab as ""(.*)""")]
+        public void NavigateToFolder(string Assetname, string tabName, User.UserTypeEnum userTypeEnum)
+        {
+            //Navigating to the folder where given asset exists
+            Logger.LogMethodEntry("CourseContent", "NavigateToFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CommonPage().ManageTheActivityFolderLevelNavigation(Assetname, tabName, userTypeEnum);
+            Logger.LogMethodExit("CourseContent", "NavigateToFolder",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
