@@ -183,3 +183,10 @@ Scenario: User Logout as SMS Student
 When I "Sign out" from the "CsSmsStudent"
 Then I should see the successfull message "You have been signed out of the application."
 
+Scenario: User Login as SMS Instructor and Navigate to MyItLabProgramCourse
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyItLabProgramCourse" course from the Global Home page as "CsSmsInstructor"
+
