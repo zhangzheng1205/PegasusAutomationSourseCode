@@ -171,6 +171,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SIMRepositoryPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Integration\SIM5\SIM5Services\SIM5FramePage.cs" />
+    <Compile Include="UI Pages\Integration\SIM5\SIM5Services\SIM5FramePageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIM5FramePageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Integration\SMS\CourseIdInputPage.cs" />
     <Compile Include="UI Pages\Integration\SMS\CourseIdInputPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1810,6 +1816,10 @@
     <EmbeddedResource Include="UI Pages\Integration\SIM5\SIM5Services\SIM5ContentBrowse\SIMRepositoryPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SIMRepositoryPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Integration\SIM5\SIM5Services\SIM5FramePageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SIM5FramePageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Integration\SMS\CourseIdInputPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
