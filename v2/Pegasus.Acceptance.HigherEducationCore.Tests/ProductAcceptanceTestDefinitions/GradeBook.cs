@@ -1118,16 +1118,18 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// Verify Student Submission Score In ViewSubmission Page.
         /// </summary>
         /// <param name="submissionScore">This is Submission Score.</param>
-        [Then(@"I should see ""(.*)"" score in view submission page")]
-        public void VerifyStudentSubmissionScoreInViewSubmissionPage(string submissionScore)
+        [Then(@"I should see ""(.*)"" score in view submission page for a student ""(.*)""")]
+        public void VerifyStudentSubmissionScoreInViewSubmissionPage(string submissionScore, User.UserTypeEnum userTypeEnum)
         {
             // Verify Student Submission Score In ViewSubmission Page
             Logger.LogMethodEntry("Gradebook", "VerifyStudentSubmissionScoreInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = User.Get(userTypeEnum);
             //Assert Grades of Submitted Activity
             Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual
-                 (submissionScore, new ViewSubmissionPage().GetSubmissionScoreInViewSubmissionPageHEDCore()));
+                 (submissionScore, new ViewSubmissionPage().GetSubmissionScoreByStudent(user.LastName, user.FirstName)));
             Logger.LogMethodExit("Gradebook", "VerifyStudentSubmissionScoreInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1181,6 +1183,44 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             new ViewSubmissionPage().ClickOnButtonInViewSubmissionPage(buttonName);
             Logger.LogMethodExit("Gradebook", "SelectButtonInViewSubmissionPage",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Search student from student frame of view submission page
+        /// </summary>
+        /// <param name="userTypeEnum"></param>
+        [Then(@"I should search student ""(.*)"" from student frame in view submission page")]
+        public void SearchStudentFromStudentFrameInViewSubmissionPage(User.UserTypeEnum userTypeEnum)
+        {
+            //Select Button In View Submission Page
+            Logger.LogMethodEntry("Gradebook", "SearchStudentFromStudentFrameInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = User.Get(userTypeEnum);
+            // Search the particular student and perform click for that
+            new ViewSubmissionPage().ClickStudent(new ViewSubmissionPage().SearchStudentByLastAndFirstName(user.LastName, user.FirstName));
+
+            Logger.LogMethodExit("Gradebook", "SearchStudentFromStudentFrameInViewSubmissionPage",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Get student score and validate
+        /// </summary>
+        /// <param name="score"></param>
+        [Then(@"I should see ""(.*)"" score in view submission page")]
+        public void ValidateStudentScore(string score)
+        {
+            //Select Button In View Submission Page
+            Logger.LogMethodEntry("Gradebook", "ShouldSeeScoreInViewSubmissionPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (score, new ViewSubmissionPage().GetStudentScore()));
+
+            Logger.LogMethodExit("Gradebook", "ShouldSeeScoreInViewSubmissionPage",
+            base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

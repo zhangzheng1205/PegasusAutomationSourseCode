@@ -164,3 +164,30 @@ Then I should be on the "Gradebook" page
 When I click on the 'Create Column' drop down 
 Then I should be on the "Create Total Column" page
 And I should see the 'Total Weight' field with value "0"
+
+#Purpose: Instructor Validating student grade in instructor grade book
+# TestCase Id: peg-22228
+# HED Instructor course
+# Pre Condition: Activity should be submitted by student
+Scenario: Instructor Validating student grade in instructor grade book By SMS Instructor
+When I navigate to "Gradebook" tab of the "Gradebook" page
+Then I should be on the "Gradebook" page
+When I select "Take the Chapter 1 Exam" in "Gradebook" by "CsSmsInstructor"
+And I click on cmenu option "ViewAllSubmissions" of asset "Take the Chapter 1 Exam"
+Then I should be on the "View Submission" page
+And I should see "100" score in view submission page for a student "CsSmsStudent"
+
+#Purpose: As a Instructor for HED Product  ,i need to make force full submission of saved actviity
+# TestCase Id: peg-22229
+# HED Instructor course
+# Pre Condition: Activity should be past due and submitted by student
+Scenario: Instructor Validating forcefull submission of saved activity
+When I navigate to "Gradebook" tab of the "Gradebook" page
+Then I should be on the "Gradebook" page
+When I select "Take the Chapter 3 Exam" in "Gradebook" by "CsSmsInstructor"
+And I click on cmenu option "ViewAllSubmissions" of asset "Take the Chapter 3 Exam"
+Then I should be on the "View Submission" page
+And I should search student "CsSmsStudent" from student frame in view submission page
+Then I should see "Decline" and "Accept" options in view submission page
+When I select the option "Accept" in view submission page
+Then I should see "32" score in view submission page

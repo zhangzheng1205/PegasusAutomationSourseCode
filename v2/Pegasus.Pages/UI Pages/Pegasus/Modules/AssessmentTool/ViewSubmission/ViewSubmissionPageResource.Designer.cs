@@ -503,6 +503,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to %.
+        /// </summary>
+        internal static string ViewSubmission_Page_ViewSubmission_Grade_Delimiter {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_ViewSubmission_Grade_Delimiter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ifrmCoursePreview.
         /// </summary>
         internal static string ViewSubmission_Page_ViewSubmission_Iframe_Id_Locator {
@@ -557,6 +566,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&apos;]/span[{0}]/div[1]/div.
+        /// </summary>
+        internal static string ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&apos;]/span/div[3]/span.
         /// </summary>
         internal static string ViewSubmission_Page_ViewSubmission_StudentExpand_Grade_Xpath_Locator {
@@ -571,6 +589,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.ViewSubmission {
         internal static string ViewSubmission_Page_ViewSubmission_StudentExpand_Xpath_Locator {
             get {
                 return ResourceManager.GetString("ViewSubmission_Page_ViewSubmission_StudentExpand_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&apos;]/span[{0}]/div[3]/span.
+        /// </summary>
+        internal static string ViewSubmission_Page_ViewSubmission_StudentGrade_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("ViewSubmission_Page_ViewSubmission_StudentGrade_Xpath_Locator", resourceCulture);
             }
         }
         

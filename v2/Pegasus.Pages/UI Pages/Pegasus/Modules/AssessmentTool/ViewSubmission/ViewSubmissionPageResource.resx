@@ -294,4 +294,13 @@
   <data name="ViewSubmission_Page_ViewSubmission_StudentExpand_Grade_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span/div[3]/span</value>
   </data>
+  <data name="ViewSubmission_Page_ViewSubmission_Grade_Delimiter" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="ViewSubmission_Page_ViewSubmission_StudentGrade_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div[3]/span</value>
+  </data>
+  <data name="ViewSubmission_Page_ViewSubmission_Student_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span[{0}]/div[1]/div</value>
+  </data>
 </root>

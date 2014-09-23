@@ -193,3 +193,14 @@ When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MySpanishLabMaster" from the Global Home page as "CsSmsStudent"
+
+#Verify the usecases in Instructor Course
+#Purpose:Verify The User Login As CourseSpaceSMSInstructor to enter course
+Scenario: User Login As CsSMSInstructor to enter course
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "InstructorCourse" from the Global Home page as "CsSmsInstructor"
+Then I should be on the "Calendar" page
+
