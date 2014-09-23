@@ -626,6 +626,10 @@ namespace Pegasus.Pages.UI_Pages
                         switch (courseTypeEnum)
                         {
                             case Course.CourseTypeEnum.ProgramCourse:
+                            case Course.CourseTypeEnum.MyTestInstructorCourse:
+                            case Course.CourseTypeEnum.MyTestBankCourse:
+                            case Course.CourseTypeEnum.MyItLabProgramCourse:
+                            case Course.CourseTypeEnum.MyItLabInstructorCourse:
                                 //Open the Program Course
                                 this.OpenTheCourse(course.Name);
                                 break;
