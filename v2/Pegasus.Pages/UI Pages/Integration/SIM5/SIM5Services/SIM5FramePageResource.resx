@@ -1,101 +1,405 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
-		Microsoft ResX Schema
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-		Version 1.3
-
-		The primary goals of this format is to allow a simple XML format 
-		that is mostly human readable. The generation and parsing of the 
-		various data types are done through the TypeConverter classes 
-		associated with the data types.
-
-		Example:
-
-		... ado.net/XML headers & schema ...
-		<resheader name="resmimetype">text/microsoft-resx</resheader>
-		<resheader name="version">1.3</resheader>
-		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-		<data name="Name1">this is my long string</data>
-		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-			[base64 mime encoded serialized .NET Framework object]
-		</data>
-		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-			[base64 mime encoded string representing a byte array form of the .NET Framework object]
-		</data>
-
-		There are any number of "resheader" rows that contain simple 
-		name/value pairs.
-
-		Each data row contains a name, and value. The row also contains a 
-		type or mimetype. Type corresponds to a .NET class that support 
-		text/value conversion through the TypeConverter architecture. 
-		Classes that don't support this are serialized and stored with the 
-		mimetype set.
-
-		The mimetype is used for serialized objects, and tells the 
-		ResXResourceReader how to depersist the object. This is currently not 
-		extensible. For a given mimetype the value must be set accordingly:
-
-		Note - application/x-microsoft.net.object.binary.base64 is the format 
-		that the ResXResourceWriter will generate, however the reader can 
-		read any of the formats listed below.
-
-		mimetype: application/x-microsoft.net.object.binary.base64
-		value   : The object must be serialized with 
-			: System.Serialization.Formatters.Binary.BinaryFormatter
-			: and then encoded with base64 encoding.
-
-		mimetype: application/x-microsoft.net.object.soap.base64
-		value   : The object must be serialized with 
-			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-			: and then encoded with base64 encoding.
-
-		mimetype: application/x-microsoft.net.object.bytearray.base64
-		value   : The object must be serialized into a byte array 
-			: using a System.ComponentModel.TypeConverter
-			: and then encoded with base64 encoding.
-	-->
-	
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>1.3</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SIM5Frame_Page_SIM5_ColumnWidth_OK_Button_ID_Locator" xml:space="preserve">
+    <value>btnOkID</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_ColumnWidth_TextBox_ID_Locator" xml:space="preserve">
+    <value>inputTxtBox</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_ColumnWidth_Value" xml:space="preserve">
+    <value>16.43</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B3_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_B3</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B4_Cell_Id" xml:space="preserve">
+    <value>B4</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B4_Cell_Value" xml:space="preserve">
+    <value>68991.12</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B5_Cell_Id" xml:space="preserve">
+    <value>B5</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B5_Cell_Value" xml:space="preserve">
+    <value>28836</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_C4_Cell_Id" xml:space="preserve">
+    <value>C4</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_C4_Cell_Value" xml:space="preserve">
+    <value>86894.82</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_C5_Cell_Id" xml:space="preserve">
+    <value>C5</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_C5_Cell_Value" xml:space="preserve">
+    <value>22634.23</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_D3_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_D3</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_D3_Cell_OffsetX" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_D3_Cell_OffsetY" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_D4_Cell_Id" xml:space="preserve">
+    <value>D4</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_D4_Cell_Value" xml:space="preserve">
+    <value>99650.58</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_D5_Cell_Id" xml:space="preserve">
+    <value>D5</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_D5_Cell_Value" xml:space="preserve">
+    <value>99823.87</value>
+  </data>
+  <data name="SIM5Frame_Page_SimPresentation_Window_Name_Locator" xml:space="preserve">
+    <value> - PEG_PPE_HED_Core_Stud_1302 PEG_PPE_HED_Core_Stud_1302</value>
+  </data>
+  <data name="SIM5Frame_Page_Excel_Icon_Id_Locator" xml:space="preserve">
+    <value>excl</value>
+  </data>
+  <data name="SIM5Frame_Page_Excel_Save_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='title-bar']/span[2]/span[1]/span/div/span/img</value>
+  </data>
+  <data name="SIM5Frame_Page_New_Excel_Workbook_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@class='newTemplateList']/li[1]/div/div[1]</value>
+  </data>
+  <data name="SIM5Frame_Page_Save_MyComputer_Browse_Xpath_Locator" xml:space="preserve">
+    <value>//div[@class='saveAsRightPaneDiv']/div[1]/div[4]</value>
+  </data>
+  <data name="SIM5Frame_Page_Save_New_Folder_ID_Locator" xml:space="preserve">
+    <value>4-ButtonNewFolder</value>
+  </data>
+  <data name="SIM5Frame_Page_Save_USB_Disk_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@class='left-pane-node-container']/li[13]/div[1]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A1_Cell_Id" xml:space="preserve">
+    <value>A1</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A2_Cell_Id" xml:space="preserve">
+    <value>A2</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A4_Cell_Id" xml:space="preserve">
+    <value>A4</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A5_Cell_Id" xml:space="preserve">
+    <value>A5</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B8_Cell_Id" xml:space="preserve">
+    <value>B8</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_C8_Cell_Id" xml:space="preserve">
+    <value>C8</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator" xml:space="preserve">
+    <value>SelectionBorderBullet</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_D8_Cell_Id" xml:space="preserve">
+    <value>D8</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_F3_Cell_Id" xml:space="preserve">
+    <value>F3</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_First_Activity_A1_Cell_Value" xml:space="preserve">
+    <value>Pro Fit Marietta</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_First_Activity_A2_Cell_Value" xml:space="preserve">
+    <value>First Quarter Cardio Sales</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_First_Activity_A4_Cell_Value" xml:space="preserve">
+    <value>Exercise Bikes</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_First_Activity_A5_Cell_Value" xml:space="preserve">
+    <value>Elliptical Machines</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_First_Activity_B8_Cell_Value" xml:space="preserve">
+    <value>=B4+B5+B6+B7</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_First_Activity_C8_Cell_Value" xml:space="preserve">
+    <value>=C4+C5+C6+C7</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_First_Activity_D8_Cell_Value" xml:space="preserve">
+    <value>=D4+D5+D6+D7</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_First_Activity_ThirdQuestion_B3_Cell_Value" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Folder_Name" xml:space="preserve">
+    <value>Excel Chapter 1</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator" xml:space="preserve">
+    <value>formulaBox</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator" xml:space="preserve">
+    <value>refBox</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Launch_Sleep_Time" xml:space="preserve">
+    <value>10000</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_New_Folder_Class_Name" xml:space="preserve">
+    <value>editable-text-area</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Open_button_Id_Locator" xml:space="preserve">
+    <value>4-ButtonOpen</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Save_button_Id_Locator" xml:space="preserve">
+    <value>4-ButtonSave</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Save_Excel_File_Name" xml:space="preserve">
+    <value>1A_Quarterly_Sales</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Save_File_TextBox_Id_Locator" xml:space="preserve">
+    <value>4-TextBoxFileName</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Sleep_Time" xml:space="preserve">
+    <value>5000</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_B4</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B5_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_B5</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B8_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_B8</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_E4_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_E4</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_E7_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_E7</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_E8_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_E8</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A1_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_A1</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A2_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_A2</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A4_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_A4</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A8_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_A8</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_CellStyle_Heading1_CSSLocator_Class_Index" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_CellStyle_Heading4_CSSLocator_Class_Index" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_CellStyle_Title_CSSLocator_Class_Index" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_CellStyle_Total_CSSLocator_Class_Index" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Cell_Styles_Collection_CSSSelector_Locator" xml:space="preserve">
+    <value>ul#ribbon-tab-Home li:nth-child(5) .icon-wrapper.office-hover-default</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Comma_CSS_Selector_Class_Collection_Locator" xml:space="preserve">
+    <value>ul#ribbon-tab-Home li:nth-child(4) .icon-wrapper.button-icon</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_F1_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_F1</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_F2_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_F2</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_F3_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_F3</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_MergeAndCenter_CSS_Selector_Class_Locator" xml:space="preserve">
+    <value>ul#ribbon-tab-Home li:nth-child(3) .dropdown-item.office-hover-default.Sim5-ContextMenuItem.accessible.item-type-iconandtext</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_MergeAndCenter_Dropdown_CSS_Selector_Class_Locator" xml:space="preserve">
+    <value>ul#ribbon-tab-Home li:nth-child(3) .dropdown-button.office-hover-default</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Number_Format_TextBox_Accounting_Value" xml:space="preserve">
+    <value>Accounting</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Number_Format_TextBox_CSS_Selector" xml:space="preserve">
+    <value>ul#ribbon-tab-Home li:nth-child(4) .combo-textbox.combobox-value-holder.combo-value-part.control-label</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_PageLayout_Menu" xml:space="preserve">
+    <value>li.tab-header.tab-header-pagelayout.accessible</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Styles_Collection_CSSSelector_Locator" xml:space="preserve">
+    <value>ul#ribbon-tab-Home li:nth-child(5) .combo-icon-part.control-icon</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ThemeObjects_Collection_CSSSelector" xml:space="preserve">
+    <value>#ribbon-tab-container-pagelayout .dropdown-item.office-hover-default.Sim5-ContextMenuItem.item-type-imageitem</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ThemeObjects_Retrospect_Title_Value" xml:space="preserve">
+    <value>Retrospect</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ThemeObjects_Title_Attribute" xml:space="preserve">
+    <value>title</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ThemeObjects_Title_Retrospect_XPath_Locator" xml:space="preserve">
+    <value>.//div</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Themes_Dropdown_CSSSelector" xml:space="preserve">
+    <value>#ribbon-tab-container-pagelayout .combo-value-part.control-label</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Border_DragDrop_XYOffset" xml:space="preserve">
+    <value>70</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_SeventhQuestion_ColumnData_Trend" xml:space="preserve">
+    <value>Trend</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B3_Cell_Id" xml:space="preserve">
+    <value>B3</value>
+  </data>
+  <data name="SIM5Frame_Page_FormatToolsObject_Collection_CssSelector" xml:space="preserve">
+    <value>ul#ribbon-tab-Home li:nth-child(6) .dropdown-item-text</value>
+  </data>
+  <data name="SIM5Frame_Page_MenuToolsObject_Collection_CssSelector" xml:space="preserve">
+    <value>ul#ribbon-tab-Home li:nth-child(6) .combo-value-part.control-label</value>
+  </data>
+  <data name="SIM5Frame_Page_SubmitAssignment_OK_Button_Id_Locator" xml:space="preserve">
+    <value>//div[@id='CustomMessageBox']/div/div[3]/button[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_Submit_Button_Id_Locator" xml:space="preserve">
+    <value>submitbutton</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_E3_Cell_Id" xml:space="preserve">
+    <value>E3</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_E3_Cell_Value" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_E4_Cell_Id" xml:space="preserve">
+    <value>E4</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_E4_Cell_Value" xml:space="preserve">
+    <value>=SUM(B4:D4)</value>
+  </data>
+  <data name="SIM5Frame_Page_AlignmentObjects_Collection_CssSelector" xml:space="preserve">
+    <value>ul#ribbon-tab-Home li:nth-child(3) .icon-wrapper.button-icon</value>
+  </data>
 </root>

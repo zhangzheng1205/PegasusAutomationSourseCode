@@ -1232,6 +1232,7 @@ namespace Pegasus.Pages.UI_Pages
             string strViewSubmissionXpath;
             // Modified the xpath for the To Do tab based on the assetid
             strViewSubmissionXpath = ViewSubmissionPageResource.ViewSubmission_Page_Asset_ToDo_Cmenuicon_Xpath_Locator;
+            base.PerformMouseHoverAction(base.GetWebElementPropertiesByPartialLinkText(assetName));
             strViewSubmissionXpath = strViewSubmissionXpath.Replace("assetId", assetId);
             if (base.IsElementPresent(By.XPath(strViewSubmissionXpath),5)) { }
             else

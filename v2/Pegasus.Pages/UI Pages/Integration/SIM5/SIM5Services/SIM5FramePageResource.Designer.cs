@@ -59,5 +59,860 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ul#ribbon-tab-Home li:nth-child(3) .icon-wrapper.button-icon.
+        /// </summary>
+        internal static string SIM5Frame_Page_AlignmentObjects_Collection_CssSelector {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AlignmentObjects_Collection_CssSelector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to excl.
+        /// </summary>
+        internal static string SIM5Frame_Page_Excel_Icon_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Excel_Icon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;title-bar&apos;]/span[2]/span[1]/span/div/span/img.
+        /// </summary>
+        internal static string SIM5Frame_Page_Excel_Save_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Excel_Save_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ul#ribbon-tab-Home li:nth-child(6) .dropdown-item-text.
+        /// </summary>
+        internal static string SIM5Frame_Page_FormatToolsObject_Collection_CssSelector {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_FormatToolsObject_Collection_CssSelector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ul#ribbon-tab-Home li:nth-child(6) .combo-value-part.control-label.
+        /// </summary>
+        internal static string SIM5Frame_Page_MenuToolsObject_Collection_CssSelector {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_MenuToolsObject_Collection_CssSelector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@class=&apos;newTemplateList&apos;]/li[1]/div/div[1].
+        /// </summary>
+        internal static string SIM5Frame_Page_New_Excel_Workbook_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_New_Excel_Workbook_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@class=&apos;saveAsRightPaneDiv&apos;]/div[1]/div[4].
+        /// </summary>
+        internal static string SIM5Frame_Page_Save_MyComputer_Browse_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Save_MyComputer_Browse_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-ButtonNewFolder.
+        /// </summary>
+        internal static string SIM5Frame_Page_Save_New_Folder_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Save_New_Folder_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@class=&apos;left-pane-node-container&apos;]/li[13]/div[1].
+        /// </summary>
+        internal static string SIM5Frame_Page_Save_USB_Disk_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Save_USB_Disk_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btnOkID.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_ColumnWidth_OK_Button_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_ColumnWidth_OK_Button_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to inputTxtBox.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_ColumnWidth_TextBox_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_ColumnWidth_TextBox_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 16.43.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_ColumnWidth_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_ColumnWidth_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A1.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_A1_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_A1_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_A1.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_A1_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_A1_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A2.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_A2_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_A2_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_A2.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_A2_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_A2_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A4.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_A4_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_A4_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_A4.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_A4_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_A4_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A5.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_A5_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_A5_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_A8.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_A8_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_A8_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to B3.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B3_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B3_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_B3.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B3_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B3_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to B4.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B4_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B4_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_B4.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 68991.12.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B4_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to B5.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B5_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B5_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_B5.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B5_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B5_Cell_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 28836.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B5_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B5_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to B8.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B8_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B8_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_B8.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B8_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B8_Cell_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 70.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Border_DragDrop_XYOffset {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Border_DragDrop_XYOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C4.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_C4_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_C4_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 86894.82.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_C4_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_C4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C5.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_C5_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_C5_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 22634.23.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_C5_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_C5_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C8.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_C8_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_C8_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SelectionBorderBullet.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Cell_B3_BorderBullet_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ul#ribbon-tab-Home li:nth-child(5) .icon-wrapper.office-hover-default.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Cell_Styles_Collection_CSSSelector_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Cell_Styles_Collection_CSSSelector_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 12.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_CellStyle_Heading1_CSSLocator_Class_Index {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_CellStyle_Heading1_CSSLocator_Class_Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 15.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_CellStyle_Heading4_CSSLocator_Class_Index {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_CellStyle_Heading4_CSSLocator_Class_Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 16.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_CellStyle_Title_CSSLocator_Class_Index {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_CellStyle_Title_CSSLocator_Class_Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 17.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_CellStyle_Total_CSSLocator_Class_Index {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_CellStyle_Total_CSSLocator_Class_Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ul#ribbon-tab-Home li:nth-child(4) .icon-wrapper.button-icon.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Comma_CSS_Selector_Class_Collection_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Comma_CSS_Selector_Class_Collection_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_D3.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_D3_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_D3_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_D3_Cell_OffsetX {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_D3_Cell_OffsetX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 60.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_D3_Cell_OffsetY {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_D3_Cell_OffsetY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D4.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_D4_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_D4_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 99650.58.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_D4_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_D4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D5.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_D5_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_D5_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 99823.87.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_D5_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_D5_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to D8.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_D8_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_D8_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E3.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_E3_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_E3_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_E3_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_E3_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E4.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_E4_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_E4_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_E4.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_E4_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_E4_Cell_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to =SUM(B4:D4).
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_E4_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_E4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_E7.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_E7_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_E7_Cell_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_E8.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_E8_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_E8_Cell_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_F1.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_F1_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_F1_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_F2.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_F2_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_F2_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to F3.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_F3_Cell_Id {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_F3_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_F3.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_F3_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_F3_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pro Fit Marietta.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_First_Activity_A1_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_First_Activity_A1_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Quarter Cardio Sales.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_First_Activity_A2_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_First_Activity_A2_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exercise Bikes.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_First_Activity_A4_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_First_Activity_A4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elliptical Machines.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_First_Activity_A5_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_First_Activity_A5_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to =B4+B5+B6+B7.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_First_Activity_B8_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_First_Activity_B8_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to =C4+C5+C6+C7.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_First_Activity_C8_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_First_Activity_C8_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to =D4+D5+D6+D7.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_First_Activity_D8_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_First_Activity_D8_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to April.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_First_Activity_ThirdQuestion_B3_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_First_Activity_ThirdQuestion_B3_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Excel Chapter 1.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Folder_Name {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Folder_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to formulaBox.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ul#ribbon-tab-Home li:nth-child(3) .dropdown-item.office-hover-default.Sim5-ContextMenuItem.accessible.item-type-iconandtext.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_MergeAndCenter_CSS_Selector_Class_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_MergeAndCenter_CSS_Selector_Class_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ul#ribbon-tab-Home li:nth-child(3) .dropdown-button.office-hover-default.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_MergeAndCenter_Dropdown_CSS_Selector_Class_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_MergeAndCenter_Dropdown_CSS_Selector_Class_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accounting.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Number_Format_TextBox_Accounting_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Number_Format_TextBox_Accounting_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ul#ribbon-tab-Home li:nth-child(4) .combo-textbox.combobox-value-holder.combo-value-part.control-label.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Number_Format_TextBox_CSS_Selector {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Number_Format_TextBox_CSS_Selector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to li.tab-header.tab-header-pagelayout.accessible.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_PageLayout_Menu {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_PageLayout_Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to refBox.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trend.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_SeventhQuestion_ColumnData_Trend {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_SeventhQuestion_ColumnData_Trend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ul#ribbon-tab-Home li:nth-child(5) .combo-icon-part.control-icon.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Styles_Collection_CSSSelector_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Styles_Collection_CSSSelector_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #ribbon-tab-container-pagelayout .dropdown-item.office-hover-default.Sim5-ContextMenuItem.item-type-imageitem.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_ThemeObjects_Collection_CSSSelector {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_ThemeObjects_Collection_CSSSelector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retrospect.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_ThemeObjects_Retrospect_Title_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_ThemeObjects_Retrospect_Title_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to title.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_ThemeObjects_Title_Attribute {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_ThemeObjects_Title_Attribute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//div.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_ThemeObjects_Title_Retrospect_XPath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_ThemeObjects_Title_Retrospect_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #ribbon-tab-container-pagelayout .combo-value-part.control-label.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_Themes_Dropdown_CSSSelector {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_Themes_Dropdown_CSSSelector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10000.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Launch_Sleep_Time {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Launch_Sleep_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to editable-text-area.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_New_Folder_Class_Name {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_New_Folder_Class_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-ButtonOpen.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Open_button_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Open_button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-ButtonSave.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Save_button_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Save_button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1A_Quarterly_Sales.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Save_Excel_File_Name {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Save_Excel_File_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-TextBoxFileName.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Save_File_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Save_File_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5000.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Sleep_Time {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Sleep_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  - PEG_PPE_HED_Core_Stud_1302 PEG_PPE_HED_Core_Stud_1302.
+        /// </summary>
+        internal static string SIM5Frame_Page_SimPresentation_Window_Name_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SimPresentation_Window_Name_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to submitbutton.
+        /// </summary>
+        internal static string SIM5Frame_Page_Submit_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Submit_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;CustomMessageBox&apos;]/div/div[3]/button[2].
+        /// </summary>
+        internal static string SIM5Frame_Page_SubmitAssignment_OK_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SubmitAssignment_OK_Button_Id_Locator", resourceCulture);
+            }
+        }
     }
 }

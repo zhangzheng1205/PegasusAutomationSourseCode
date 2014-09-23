@@ -125,7 +125,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Submit SIM5 Excel type activity
             Logger.LogMethodEntry("LaunchActivity", "SubmitSIM5ExcelTypeActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            new StudentPresentationPage().SubmitSIMExcelTypeActivity(activityName);
+            new SIM5FramePage().SubmitSIM5ExcelActivityExcelChapter1SkillBasedTraining(activityName);
             Logger.LogMethodExit("LaunchActivity", "SubmitSIM5ExcelTypeActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }

@@ -2059,6 +2059,15 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Press Enter Key By locating element CssSelector attribute value. 
+        /// </summary>
+        /// <param name="xPathAttributeValue">This is HTML Element CssSelector Attribute value.</param>
+        protected void PressEnterKeyByCssSelector(String cssSelectorAttributeValue)
+        {
+            PressEnterKey(By.CssSelector(cssSelectorAttributeValue));
+        }
+
+        /// <summary>
         /// Sends the given keys to the active application.
         /// </summary>
         /// <param name="keyValue">The string of keystrokes to send.</param>
@@ -2098,6 +2107,21 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 new Actions(WebDriver).KeyDown(keyDownName).SendKeys(pressKeyName).Perform();
             }
             new Actions(WebDriver).KeyUp(keyDownName).Perform();
+        }
+
+        /// <summary>
+        /// Perform Control key down.
+        /// </summary>
+        protected void PerformCTRLKeyDown()
+        {
+            new Actions(WebDriver).KeyDown(Keys.Control).Perform();
+        }
+        /// <summary>
+        /// Perform Control key up.
+        /// </summary>
+        protected void PerformCTRLKeyUp()
+        {
+            new Actions(WebDriver).KeyUp(Keys.Control).Perform();
         }
 
         #endregion
