@@ -1512,5 +1512,37 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify Decline and Accept Option Displayed in View Submission Page for Past Due Submission.
+        /// </summary>
+        /// <param name="declineOption">This is Decline Option.</param>
+        /// <param name="acceptOption">This is Accept Option.</param>
+        public Boolean IsDeclineAcceptOptionDisplayedInstructor(string declineOption, string acceptOption)
+        {
+            //Verify Decline and Accept Option Displayed in View Submission Page for Past Due Submission
+            logger.LogMethodEntry("ViewSubmissionPage",
+                "IsDeclineAcceptOptionDisplayedInstructor",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            bool isDeclineOptionDisplayed = false;
+            bool isAcceptOptionDisplayed = false;
+            try
+            {
+                //Verify Decline Option Displayed
+                isDeclineOptionDisplayed =
+                    base.IsElementDisplayedByPartialLinkText(declineOption);
+                //Verify Accept Option Displayed
+                isAcceptOptionDisplayed =
+                    base.IsElementDisplayedByPartialLinkText(acceptOption);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("ViewSubmissionPage",
+                "IsDeclineAcceptOptionDisplayedInstructor",
+            base.IsTakeScreenShotDuringEntryExit);
+            return (isDeclineOptionDisplayed && isAcceptOptionDisplayed);
+        }
     }
 }

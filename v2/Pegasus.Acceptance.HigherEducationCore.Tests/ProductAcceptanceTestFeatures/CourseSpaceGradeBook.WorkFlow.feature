@@ -188,6 +188,6 @@ When I select "Take the Chapter 3 Exam" in "Gradebook" by "CsSmsInstructor"
 And I click on cmenu option "ViewAllSubmissions" of asset "Take the Chapter 3 Exam"
 Then I should be on the "View Submission" page
 And I should search student "CsSmsStudent" from student frame in view submission page
-Then I should see "Decline" and "Accept" options in view submission page
+Then I should see "Decline" and "Accept" options in instructor view submission page
 When I select the option "Accept" in view submission page
 Then I should see "32" score in view submission page

@@ -1222,5 +1222,22 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("Gradebook", "ShouldSeeScoreInViewSubmissionPage",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Verify Options In ViewSubmission Page (ex Accept, Decline and etc.,).
+        /// </summary>
+        /// <param name="declineOption">This is Decline Option.</param>
+        /// <param name="acceptOption">This is Accept Option.</param>
+        [Then(@"I should see ""(.*)"" and ""(.*)"" options in instructor view submission page")]
+        public void VerifyOptionsInViewSubmissionPageInstructor(string declineOption, string acceptOption)
+        {
+            //Verify Options In ViewSubmission Page
+            Logger.LogMethodEntry("Gradebook", "VerifyOptionsInViewSubmissionPageInstructor",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Verify 'Decline' and 'Accept' Option Displayed in View Submission Page
+            new ViewSubmissionPage().IsDeclineAcceptOptionDisplayedInstructor(declineOption, acceptOption);
+            Logger.LogMethodExit("Gradebook", "VerifyOptionsInViewSubmissionPageInstructor",
+                base.IsTakeScreenShotDuringEntryExit);
+        }	
     }
 }

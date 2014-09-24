@@ -498,7 +498,7 @@ testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)),
 testRunner.And("I should search student \"CsSmsStudent\" from student frame in view submission page" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 191
-testRunner.Then("I should see \"Decline\" and \"Accept\" options in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"Decline\" and \"Accept\" options in instructor view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 192
 testRunner.When("I select the option \"Accept\" in view submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 193
