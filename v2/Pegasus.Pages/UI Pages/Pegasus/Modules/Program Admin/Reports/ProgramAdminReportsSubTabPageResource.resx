@@ -123,6 +123,9 @@
   <data name="ProgramAdminReportsSubTab_ActivityResultMultipleStudents_Link_Id_locator" xml:space="preserve">
     <value>RPT_ASSESSMENT_MULTIPLESTU</value>
   </data>
+  <data name="ProgramAdminReportsSubTab_CriteriaPage_SelectStudents_XPath_locator" xml:space="preserve">
+    <value>//a/span/span[text()='Select Students']</value>
+  </data>
   <data name="ProgramAdminReportsSubTab_ExamFrequencyAnalysis_Link_Id_locator" xml:space="preserve">
     <value>RPT_EXAMFREQRPT</value>
   </data>
@@ -135,8 +138,35 @@
   <data name="ProgramAdminReportsSubTab_MyReports_ReportCmenuRunReport_Id_Locator" xml:space="preserve">
     <value>RPT_RUNRPT</value>
   </data>
+  <data name="ProgramAdminReportsSubTab_SelectSections_Button_Xpath_locator" xml:space="preserve">
+    <value>//a/span/span[text()='Select Sections']</value>
+  </data>
+  <data name="ProgramAdminReportsSubTab_SelectSections_GridCount_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='PAdimSections__ctl1']/tbody/tr</value>
+  </data>
+  <data name="ProgramAdminReportsSubTab_SelectSections_SectionCheckBox_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='PAdimSections__ctl1']/tbody/tr[{0}]/td[2]/table/tbody/tr[{1}]/td[1]/input</value>
+  </data>
+  <data name="ProgramAdminReportsSubTab_SelectSections_SectionCount_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='PAdimSections__ctl1']/tbody/tr[{0}]/td[2]/table/tbody/tr</value>
+  </data>
+  <data name="ProgramAdminReportsSubTab_SelectSections_SectionName_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='PAdimSections__ctl1']/tbody/tr[{0}]/td[2]/table/tbody/tr[{1}]/td[2]</value>
+  </data>
+  <data name="ProgramAdminReportsSubTab_SelectSections_TemplateExpand_Icon_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='PAdimSections__ctl1']/tbody/tr[{0}]/td[1]/img</value>
+  </data>
+  <data name="ProgramAdminReportsSubTab_SelectSections_TemplateName_Xpath_locator" xml:space="preserve">
+    <value>//table[@id='PAdimSections__ctl1']/tbody/tr[{0}]/td[3]</value>
+  </data>
+  <data name="ProgramAdminReportsSubTab_SelectSections_Window_Title_Locator" xml:space="preserve">
+    <value>Select Sections</value>
+  </data>
   <data name="ProgramAdminReportsSubTab_TrainingFrequencyAnalysis_Link_Id_locator" xml:space="preserve">
     <value>RPT_TRAINFREQRPT</value>
+  </data>
+  <data name="ProgramAdmin_Page_Frame_Id_Locator" xml:space="preserve">
+    <value>Mainframe</value>
   </data>
   <data name="ProgramAdmin_Page_ReportCriteriaPage_Heading_Xpath_Locator" xml:space="preserve">
     <value>//span[@id='lblHeader']</value>

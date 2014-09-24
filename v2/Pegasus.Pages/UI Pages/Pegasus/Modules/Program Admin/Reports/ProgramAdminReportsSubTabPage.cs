@@ -14,7 +14,7 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.IO;
-using Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports;
+
 using System.Configuration;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Reports;
@@ -24,7 +24,7 @@ namespace Pegasus.Pages.UI_Pages
     /// <summary>
     /// This class handles Pegasus Program Administration Reports Sub Tab Actions.
     /// </summary>
-    class ProgramAdminReportsSubTabPage : BasePage
+    public class ProgramAdminReportsSubTabPage : BasePage
     {
 
         /// <summary>
@@ -58,11 +58,20 @@ namespace Pegasus.Pages.UI_Pages
             // Switch to 'Mainframe' iframe
             Logger.LogMethodEntry("ProgramAdminReportsSubTabPage", "SwitchToMainFrame",
               base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.Id(RptMainUXPageResource.
-               RptMain_Page_Frame_Id_Locator));
+            //1st frame
+            base.WaitForElement(By.Id("_ctl0_PageContent_ifrmMiddle"));
             //Switch to Frame
-            base.SwitchToIFrame(RptMainUXPageResource.
-                RptMain_Page_Frame_Id_Locator);
+            base.SwitchToIFrame("_ctl0_PageContent_ifrmMiddle");
+            //2nd frame
+          /*  base.WaitForElement(By.Id("__hifSmartNav"));
+            //Switch to Frame
+            base.SwitchToIFrame("__hifSmartNav");*/
+            //3rd frame
+            base.WaitForElement(By.Id(ProgramAdminReportsSubTabPageResource.
+                ProgramAdmin_Page_Frame_Id_Locator));
+            //Switch to Frame
+            base.SwitchToIFrame(ProgramAdminReportsSubTabPageResource.
+                ProgramAdmin_Page_Frame_Id_Locator);
             Logger.LogMethodExit("ProgramAdminReportsSubTabPage", "SwitchToMainFrame",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -85,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.XPath(ProgramAdminReportsSubTabPageResource.
                     ProgramAdmin_Page_ReportCriteriaPage_Heading_Xpath_Locator));
                 //Gets the text of the element
-                getCriteriaPageHeading = base.GetInnerTextAttributeValueByXPath
+                getCriteriaPageHeading = base.GetElementInnerTextByXPath
                     (ProgramAdminReportsSubTabPageResource.
                     ProgramAdmin_Page_ReportCriteriaPage_Heading_Xpath_Locator);
                 Thread.Sleep(Convert.ToInt32(ProgramAdminReportsSubTabPageResource.
@@ -150,9 +159,9 @@ namespace Pegasus.Pages.UI_Pages
             //  This selects assessment from assessment window
             Logger.LogMethodEntry("ProgramAdminReportsSubTabPage", " SelectAnAssessment",
              base.IsTakeScreenShotDuringEntryExit);
-            SwitchToProgramAdminWindow();
+            this.SwitchToProgramAdminWindow();
             //Switch to 'Mainframe' iframe in 'Program  Administration' page
-            SwitchToMainFrame();
+            this.SwitchToMainFrame();
             switch (assessmentType)
             {
                 case "Select Activities":
@@ -187,9 +196,12 @@ namespace Pegasus.Pages.UI_Pages
             //Switch to 'Mainframe' iframe in 'Program  Administration' page
             this.SwitchToMainFrame();
             base.WaitForElement(By.XPath(ProgramAdminReportsSubTabPageResource.
-                ProgramAdmin_Page_Report_Window_Name));
-            //Click 'Select Students' button
-            base.ClickButtonByXPath("//a/span[text()='Select Students']");
+            ProgramAdminReportsSubTab_CriteriaPage_SelectStudents_XPath_locator));
+            IWebElement getSelectStudentsButton = base.GetWebElementPropertiesByXPath
+                   (ProgramAdminReportsSubTabPageResource.
+            ProgramAdminReportsSubTab_CriteriaPage_SelectStudents_XPath_locator);
+            //Click on the report link
+            base.ClickByJavaScriptExecutor(getSelectStudentsButton);
             //check 'Select All' at Students Option
             new RptSelectStudentsPage().CheckSelectAll();
             Logger.LogMethodExit("ProgramAdminReportsSubTabPage", "SelectAllStudentsProgramAdmin",
@@ -260,10 +272,13 @@ namespace Pegasus.Pages.UI_Pages
                 case "Run Report": 
                     new RptMainUXPage().ClickReportCMenu(reportTypeEnum);
                     base.WaitForElement(By.Id(ProgramAdminReportsSubTabPageResource.
-                        ProgramAdminReportsSubTab_MyReports_ReportCmenuRunReport_Id_Locator));
-                    base.ClickLinkById(ProgramAdminReportsSubTabPageResource.
+                        ProgramAdminReportsSubTab_MyReports_ReportCmenuRunReport_Id_Locator));  
+                        IWebElement getCmenuRunReport = base.GetWebElementPropertiesById
+                                       (ProgramAdminReportsSubTabPageResource.
                         ProgramAdminReportsSubTab_MyReports_ReportCmenuRunReport_Id_Locator);
-                    break;
+                                     //Click on cmenu of the asset
+                                   base.ClickByJavaScriptExecutor(getCmenuRunReport);
+                                break;
                 //Perform 'Edit Settings' on selected report
                 case "Edit Settings":
                     new RptMainUXPage().ClickReportCMenu(reportTypeEnum);
@@ -306,5 +321,107 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
 
         }
+
+        /// <summary>
+        /// Select Section Based On Template.
+        /// </summary>
+        /// <param name="sectionName"></param>
+        /// <param name="templateName"></param>
+         public void SelectSectionBasedOnTemplate(string sectionName, string templateName)
+        {
+            Logger.LogMethodEntry("ProgramAdminReportsSubTabPage", "SelectSectionBasedOnTemplate",
+               base.IsTakeScreenShotDuringEntryExit);
+            OpenSectionWindow();
+            string getActivityName=string.Empty;
+           //Get the count of Templates
+            int getRowCount = base.GetElementCountByXPath(ProgramAdminReportsSubTabPageResource.
+                ProgramAdminReportsSubTab_SelectSections_GridCount_Xpath_locator);
+           for (int initialCount =1;initialCount <= getRowCount; initialCount++)
+                {
+                     base.WaitForElement(By.XPath(string.
+                    Format(
+                        ProgramAdminReportsSubTabPageResource.
+                        ProgramAdminReportsSubTab_SelectSections_TemplateName_Xpath_locator, initialCount)));
+                    //Get the template name
+                    string getTemplateName=base.GetElementTextByXPath(string.Format(
+                         ProgramAdminReportsSubTabPageResource.
+                        ProgramAdminReportsSubTab_SelectSections_TemplateName_Xpath_locator, initialCount));
+                    if (getTemplateName.Contains(templateName))
+                    {
+                        base.WaitForElement(By.XPath(string.
+                        Format( ProgramAdminReportsSubTabPageResource.
+                            ProgramAdminReportsSubTab_SelectSections_TemplateExpand_Icon_Xpath_locator, initialCount)));
+                        //Click on expand image of the template
+                        IWebElement clickExpand = base.GetWebElementPropertiesByXPath(string.Format(
+                            ProgramAdminReportsSubTabPageResource.
+                            ProgramAdminReportsSubTab_SelectSections_TemplateExpand_Icon_Xpath_locator, initialCount));
+                        base.ClickByJavaScriptExecutor(clickExpand);
+                        //Get the Count of sections displayed
+                        initialCount++;
+                        int getSectionCount = base.GetElementCountByXPath(string.Format(
+                             ProgramAdminReportsSubTabPageResource.
+                             ProgramAdminReportsSubTab_SelectSections_SectionCount_Xpath_locator, initialCount));
+                        for (int sectionCount = 1; sectionCount <= getSectionCount; sectionCount++)
+                        {
+                            base.WaitForElement(By.XPath(string.
+                               Format(ProgramAdminReportsSubTabPageResource.
+                                 ProgramAdminReportsSubTab_SelectSections_SectionName_Xpath_locator, initialCount,
+                                 sectionCount)));
+                            //Get the section name
+                            string getSectionName = base.GetElementTextByXPath(string.Format(
+                                ProgramAdminReportsSubTabPageResource.
+                                 ProgramAdminReportsSubTab_SelectSections_SectionName_Xpath_locator, initialCount,
+                                 sectionCount));
+                            if (getSectionName.Contains(sectionName))
+                            {
+                                //Click on the check box of the section
+                                IWebElement selectCheckBox = base.GetWebElementPropertiesByXPath(string.Format(
+                                    ProgramAdminReportsSubTabPageResource.
+                                   ProgramAdminReportsSubTab_SelectSections_SectionCheckBox_Xpath_locator,
+                                   initialCount, sectionCount));
+                                base.ClickByJavaScriptExecutor(selectCheckBox);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+           new RptSelectSectionsPage().ClickAddandCloseButton();
+           Logger.LogMethodExit("ProgramAdminReportsSubTabPage", "SelectSectionBasedOnTemplate",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Opens the selec setion window.
+        /// </summary>
+         public void OpenSectionWindow()
+         {
+             Logger.LogMethodEntry("ProgramAdminReportsSubTabPage", "OpenSectionWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+             try
+             {
+                 base.WaitForElement(By.XPath(
+                     ProgramAdminReportsSubTabPageResource.
+                     ProgramAdminReportsSubTab_SelectSections_Button_Xpath_locator));
+                 IWebElement getButton = base.GetWebElementPropertiesByXPath(
+                     ProgramAdminReportsSubTabPageResource.
+                     ProgramAdminReportsSubTab_SelectSections_Button_Xpath_locator);
+                 //Click assesment button
+                 base.ClickByJavaScriptExecutor(getButton);
+                 //Switch to window
+                 base.WaitUntilWindowLoads(
+                     ProgramAdminReportsSubTabPageResource.
+                     ProgramAdminReportsSubTab_SelectSections_Window_Title_Locator);
+                 base.SelectWindow(
+                     ProgramAdminReportsSubTabPageResource.
+                     ProgramAdminReportsSubTab_SelectSections_Window_Title_Locator);
+             }
+             catch (Exception e)
+             {
+                 ExceptionHandler.HandleException(e);
+             }
+             Logger.LogMethodExit("ProgramAdminReportsSubTabPage", "OpenSectionWindow",
+                   base.IsTakeScreenShotDuringEntryExit);
+         }
     }
 }

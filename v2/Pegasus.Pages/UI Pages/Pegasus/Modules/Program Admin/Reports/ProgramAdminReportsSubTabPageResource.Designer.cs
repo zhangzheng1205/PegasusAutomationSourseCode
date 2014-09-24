@@ -62,6 +62,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mainframe.
+        /// </summary>
+        internal static string ProgramAdmin_Page_Frame_Id_Locator {
+            get {
+                return ResourceManager.GetString("ProgramAdmin_Page_Frame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Program Administration.
         /// </summary>
         internal static string ProgramAdmin_Page_Report_Window_Name {
@@ -126,6 +135,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //a/span/span[text()=&apos;Select Students&apos;].
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_CriteriaPage_SelectStudents_XPath_locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_CriteriaPage_SelectStudents_XPath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to RPT_EXAMFREQRPT.
         /// </summary>
         internal static string ProgramAdminReportsSubTab_ExamFrequencyAnalysis_Link_Id_locator {
@@ -158,6 +176,78 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Reports {
         internal static string ProgramAdminReportsSubTab_MyReports_ReportCmenuRunReport_Id_Locator {
             get {
                 return ResourceManager.GetString("ProgramAdminReportsSubTab_MyReports_ReportCmenuRunReport_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //a/span/span[text()=&apos;Select Sections&apos;].
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_SelectSections_Button_Xpath_locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_SelectSections_Button_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;PAdimSections__ctl1&apos;]/tbody/tr.
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_SelectSections_GridCount_Xpath_locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_SelectSections_GridCount_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;PAdimSections__ctl1&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr[{1}]/td[1]/input.
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_SelectSections_SectionCheckBox_Xpath_locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_SelectSections_SectionCheckBox_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;PAdimSections__ctl1&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr.
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_SelectSections_SectionCount_Xpath_locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_SelectSections_SectionCount_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;PAdimSections__ctl1&apos;]/tbody/tr[{0}]/td[2]/table/tbody/tr[{1}]/td[2].
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_SelectSections_SectionName_Xpath_locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_SelectSections_SectionName_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;PAdimSections__ctl1&apos;]/tbody/tr[{0}]/td[1]/img.
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_SelectSections_TemplateExpand_Icon_Xpath_locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_SelectSections_TemplateExpand_Icon_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;PAdimSections__ctl1&apos;]/tbody/tr[{0}]/td[3].
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_SelectSections_TemplateName_Xpath_locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_SelectSections_TemplateName_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Sections.
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_SelectSections_Window_Title_Locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_SelectSections_Window_Title_Locator", resourceCulture);
             }
         }
         

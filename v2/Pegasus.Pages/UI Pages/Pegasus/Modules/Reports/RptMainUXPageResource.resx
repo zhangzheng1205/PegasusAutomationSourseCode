@@ -333,4 +333,7 @@
   <data name="RptMainUX_Page_SelectStudentds_Button_Xpath_Locator" xml:space="preserve">
     <value>//a/span/span[text()='Select Students']</value>
   </data>
+  <data name="RptMainUX_Page_AssessmentWindow_Add_Button_Xpath_Locator" xml:space="preserve">
+    <value>//a/span/span[text()='Add']</value>
+  </data>
 </root>

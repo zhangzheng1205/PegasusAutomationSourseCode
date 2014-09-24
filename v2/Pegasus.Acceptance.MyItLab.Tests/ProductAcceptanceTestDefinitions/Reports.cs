@@ -7,6 +7,9 @@ using Pegasus.Pages;
 using Pegasus.Pages.UI_Pages;
 using Pegasus.Automation.DataTransferObjects;
 using TechTalk.SpecFlow;
+using Pegasus.Pages.CommonResource;
+
+
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -721,7 +724,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="criteriaPageName">This is the name of the criteria page.</param>
         /// <param name="userTypeEnum">This is the user type enum.</param>
-        [Then(@"I should see the ""(.*)"" in criteria page as ""(.*)""")]
+        [Then(@"I should open ""(.*)"" criteria page as ""(.*)""")]
         public void VerifyCriteriaPageOpened(string criteriaPageName, User.UserTypeEnum userTypeEnum)
         {
             // Verify the opened criteria page based on user
@@ -751,6 +754,32 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 new RptMainUXPage().GetActivityNameFromReport()));
             Logger.LogMethodExit("Reports", "VerifyExpectedActivity",
               base.IsTakeScreenShotDuringEntryExit);
+        }        
+
+        /// <summary>
+        /// Selects a section under a template.
+        /// </summary>
+        /// <param name="sectionName">This is section name.</param>
+        /// <param name="templateName">This is template name.</param>
+        /// <param name="p2"></param>
+        [When(@"I select ""(.*)"" section under ""(.*)"" template in 'Section Options'")]
+        public void SelectSectionBasedOnTemplate(Course.CourseTypeEnum sectionNameTypeEnum, 
+            Course.CourseTypeEnum templateNameTypeEnum)
+        {
+            // Selects a section under a template
+            Logger.LogMethodEntry("Reports",
+              "SelectSectionBasedOnTemplate",
+              base.IsTakeScreenShotDuringEntryExit);
+            Course template = Course.Get(templateNameTypeEnum);
+            Course course = Course.Get(sectionNameTypeEnum);
+            // Selects a section under a template
+            new ProgramAdminReportsSubTabPage().SelectSectionBasedOnTemplate
+                (course.SectionName, template.Name);
+            Logger.LogMethodExit("Reports",
+                "SelectSectionBasedOnTemplate",
+              base.IsTakeScreenShotDuringEntryExit);
         }
+
+
     }
 }

@@ -233,6 +233,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //a/span/span[text()=&apos;Add&apos;].
+        /// </summary>
+        internal static string RptMainUX_Page_AssessmentWindow_Add_Button_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUX_Page_AssessmentWindow_Add_Button_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AssignedToCopyInterval.
         /// </summary>
         internal static string RptMainUX_Page_AssignToCopy_AppConfig_Key {

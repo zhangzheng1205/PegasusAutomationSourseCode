@@ -326,11 +326,13 @@ testRunner.When("I close the \"Certificate of Completion (Exam)\" window", ((str
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Report generation along with report data verification by SMS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Activity Result (Multiple students and activities) report generation and data ver" +
+            "ification by SMS Instructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorReport")]
-        public virtual void ReportGenerationAlongWithReportDataVerificationBySMSInstructor()
+        public virtual void ActivityResultMultipleStudentsAndActivitiesReportGenerationAndDataVerificationBySMSInstructor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Report generation along with report data verification by SMS Instructor", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Activity Result (Multiple students and activities) report generation and data ver" +
+                    "ification by SMS Instructor", ((string[])(null)));
 #line 124
 this.ScenarioSetup(scenarioInfo);
 #line 125
@@ -341,8 +343,8 @@ testRunner.Then("I should be on the \"Reports\" page", ((string)(null)), ((TechT
 testRunner.When("I click on \"Activity Result (Multiple students and activities)\" report link as \"C" +
                     "sSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 128
-testRunner.Then("I should see the \"Options for Activity Results (Multiple students and activities)" +
-                    "\" in criteria page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should open \"Options for Activity Results (Multiple students and activities)\" c" +
+                    "riteria page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 129
 testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" asset in \"Sele" +
                     "ct Activities\" by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -357,20 +359,81 @@ testRunner.Then("I should be on the \"Save settings to My Reports\" page", ((str
 #line 134
 testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 135
-testRunner.And("I enter the \"MyItLabTrainingFrequencyAnalysis\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I enter the \"MyItLabActivityResultsMultipleStudentsAdActivities\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 136
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 137
-testRunner.Then("I should see \"Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" +
-                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenari" +
+                    "o 1)\" with section \"ReportsAutomation1\" average score \" 50%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 138
-testRunner.When("I close the \"Activity Results (Multiple students and activities)\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I should see the \"CsSmsStudent\" along with attempt as \"2\" score as \"100.00% (10/1" +
+                    "0)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 139
-testRunner.And("I click on the \"Cancel\" button in reports by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see \'Zero\' \"CsSmsStudent\" along with attempt as \"1\" score as \"0.00% (0/1" +
+                    "0)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 140
-testRunner.And("I select \"Run Report\" for \"MyItLabTrainingFrequencyAnalysis\" report in \'My Report" +
-                    "s\' grid by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I close the \"Activity Results (Multiple students and activities) \" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 141
+testRunner.And("I click on the \"Cancel\" button in reports by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 142
+testRunner.And("I select \"Run Report\" for \"MyItLabActivityResultsMultipleStudentsAdActivities\" re" +
+                    "port in \'My Reports\' grid by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 143
+testRunner.Then("I should be on the \"Activity Results (Multiple students and activities)\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Activity Result (Multiple students and activities) report generation and data ver" +
+            "ification by Program Admin")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorReport")]
+        public virtual void ActivityResultMultipleStudentsAndActivitiesReportGenerationAndDataVerificationByProgramAdmin()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Activity Result (Multiple students and activities) report generation and data ver" +
+                    "ification by Program Admin", ((string[])(null)));
+#line 148
+this.ScenarioSetup(scenarioInfo);
+#line 149
+testRunner.When("I navigate to \"Reports\" tab of the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 150
+testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 151
+testRunner.When("I click on \"Activity Result (Multiple students and activities)\" report link as \"H" +
+                    "edProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 152
+testRunner.Then("I should open \"Options for Activity Results (Multiple students and activities)\" c" +
+                    "riteria page as \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 153
+testRunner.When("I select \"MyITLabOffice2013Program\" section under \"MyITLabForOffice2013Master\" te" +
+                    "mplate in \'Section Options\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 154
+testRunner.And("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" asset in \"Sele" +
+                    "ct Activities\" by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 155
+testRunner.And("I \'Select All\' in \'Student Options\' by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 156
+testRunner.And("I select \'save settings to My Reports\' option by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 157
+testRunner.And("I click on the \"Run Report\" button in reports by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 158
+testRunner.Then("I should be on the \"Save settings to My Reports\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 159
+testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 160
+testRunner.And("I enter the \"MyItLabActivityResultsMultipleStudentsAdActivities\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 161
+testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 162
+testRunner.Then("I should be on the \"Activity Results (Multiple students and activities)\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 163
+testRunner.When("I close the \"Activity Results (Multiple students and activities)\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 164
+testRunner.And("I click on the \"Cancel\" button in reports by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 165
+testRunner.And("I select \"Run Report\" for \"MyItLabActivityResultsMultipleStudentsAdActivities\" re" +
+                    "port in \'My Reports\' grid by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 166
 testRunner.Then("I should be on the \"Activity Results (Multiple students and activities)\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

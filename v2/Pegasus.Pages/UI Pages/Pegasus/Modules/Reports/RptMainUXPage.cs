@@ -1414,6 +1414,8 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                bool link = base.IsElementPresent(By.Id(linkId));
+                bool link2 = base.IsElementPresent(By.XPath("//span[@id='RPT_MULTIPLESTU_MULTIPLEASSMT']"));
                 base.WaitForElement(By.Id(linkId));
                 IWebElement getReportLink = base.GetWebElementPropertiesById
                     (linkId);
@@ -1519,7 +1521,7 @@ namespace Pegasus.Pages.UI_Pages
                     RptMainUX_Page_MyReports_ActualReport_Xpath_Locator, initialCount)));
                     getSearchedReportName = base.GetElementTextByXPath(string.
                     Format(RptMainUXPageResource.
-                    RptMainUX_Page_MyReports_ActualReport_Xpath_Locator, initialCount, initialCount));
+                    RptMainUX_Page_MyReports_ActualReport_Xpath_Locator, initialCount));
                     string actualMyReportName = string.Empty;
                     Report report = Report.Get(reportTypeEnum);
                     actualMyReportName = report.Name;
@@ -1798,11 +1800,11 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.XPath(string.
                            Format(RptMainUXPageResource.
                                   RptmainUX_Page_AssesmentButton_Xpath_Locator, assesmentType)));
-                IWebElement getWindowName = base.GetWebElementPropertiesByXPath(string.
+                IWebElement getButton = base.GetWebElementPropertiesByXPath(string.
                         Format(RptMainUXPageResource.
                                RptmainUX_Page_AssesmentButton_Xpath_Locator, assesmentType));
                 //Click assesment button
-                base.ClickByJavaScriptExecutor(getWindowName);
+                base.ClickByJavaScriptExecutor(getButton);
                 //Switch to window
                 base.WaitUntilWindowLoads(assessmentWindow);
                 base.SelectWindow(assessmentWindow);
@@ -1865,13 +1867,17 @@ namespace Pegasus.Pages.UI_Pages
             // Click on add button
             Logger.LogMethodEntry("RptMainUXPageResource", "ClickAddButton",
                   base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.XPath("//a/span/span[text()='Add']"));
-            bool addButton = base.IsElementPresent(By.XPath("//a/span/span[text()='Add']"));
+            base.WaitForElement(By.XPath(RptMainUXPageResource.
+                RptMainUX_Page_AssessmentWindow_Add_Button_Xpath_Locator));
+            bool addButton = base.IsElementPresent(By.XPath(RptMainUXPageResource.
+                RptMainUX_Page_AssessmentWindow_Add_Button_Xpath_Locator));
             // Click on add button
-            base.ClickButtonByXPath("//a/span/span[text()='Add']");
+            base.ClickButtonByXPath(RptMainUXPageResource.
+                RptMainUX_Page_AssessmentWindow_Add_Button_Xpath_Locator);
             Logger.LogMethodExit("RptMainUXPageResource", "ClickAddButton",
                      base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Returns the criteria page heading based on instructor type.
