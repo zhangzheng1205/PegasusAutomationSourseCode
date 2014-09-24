@@ -371,31 +371,59 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
             Logger.LogMethodEntry("ActivitySubmission", "ActivitySuccessfullyLaunchedInBrowserNormalMode",
                 base.IsTakeScreenShotDuringEntryExit);
-        }
-
+        }       
 
         /// <summary>
         /// Open the activity
         /// </summary>
-        /// /// <param name="activityCount">This is activity name.</param>
-        [When(@"I launch the activity named as ""(.*)"" in Course Materials")]
-        public void OpenTheActivityToLaunch(string activityName)
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="studentName">This is User type enum</param>
+        [When(@"I launch the ""(.*)"" activity in content by ""(.*)""")]
+        public void OpenTheActivityToLaunch(string activityName,
+            User.UserTypeEnum studentName)
         {
             // Open The Activity
             Logger.LogMethodEntry("ActivitySubmission",
             "OpenTheActivityToLaunch",
             base.IsTakeScreenShotDuringEntryExit);
+            StudentPresentationPage studentPresentationPage =
+                new StudentPresentationPage();
             //Select Window And Frame
-            new StudentPresentationPage().SelectWindowAndFrame();
+            studentPresentationPage.SelectWindowAndFrame();
             //wait for frame to load
-            new StudentPresentationPage().WaitForActivitytoLoad(activityName);
-            //Get asset id
-            this.AssetId = new StudentPresentationPage().GetSIM5AssetIdFromUrl(activityName);
-            //Click on the Activity In CourseMaterial
-            //new StudentPresentationPage().SelectActivityNameInCourseMaterialTab(activityName);
-            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityToLaunch", base.IsTakeScreenShotDuringEntryExit);
+            studentPresentationPage.WaitForActivitytoLoad(activityName);
+            studentPresentationPage.SelectSIMActivityStudentWindowName(studentName, activityName);
+            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityToLaunch", 
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Open The Activity To Launch Based On Scnerio.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="studentName">This is User type enum</param>
+        /// <param name="scenerioName">This is scenerio name.</param>
+        [When(@"I launch the ""(.*)"" activity by ""(.*)"" with ""(.*)""")]
+        public void OpenTheActivityToLaunchBasedOnScnerio(string activityName,
+            User.UserTypeEnum studentName, string scenerioName)
+        {
+            //Open The Activity To Launch Based On Scnerio
+            Logger.LogMethodEntry("ActivitySubmission",
+            "OpenTheActivityToLaunchBasedOnScnerio",
+            base.IsTakeScreenShotDuringEntryExit);
+            StudentPresentationPage studentPresentationPage =
+                new StudentPresentationPage();
+            //Select Window And Frame
+            studentPresentationPage.SelectWindowAndFrame();
+            //wait for frame to load
+            studentPresentationPage.WaitForActivitytoLoad(activityName);
+            //Select the window
+            studentPresentationPage.SelectSIMActivityStudentWindowName(studentName, 
+                activityName,scenerioName);
+            Logger.LogMethodExit("ActivitySubmission", 
+                "OpenTheActivityToLaunchBasedOnScnerio",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Verify the pass due message

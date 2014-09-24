@@ -1859,6 +1859,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="activityName">This is Activity Name.</param>
         private void SelectTheSIMStudyplanWindow(string activityName)
         {
+            User user = User.Get(User.UserTypeEnum.CsSmsStudent);
             //Select The SIMStudyplan Window
             logger.LogMethodEntry("StudentPresentationPage",
                 "SelectTheSIMStudyplanWindow",
@@ -3898,5 +3899,49 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Select SIM5Activity Student Window.
+        /// </summary>
+        /// <param name="studentName">This is user type enum.</param>
+        /// <param name="activityName">This is activity name.</param>
+        public void SelectSIMActivityStudentWindowName(User.UserTypeEnum studentName,
+            string activityName, string scenerioName = "Default Value")
+        {
+            //Select Presentation Player Window
+            logger.LogMethodEntry("StudentPresentationPage", "SelectSIM5ActivityStudentWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                User user = new User();
+                if (scenerioName != "Default Value")
+                {
+                    switch (scenerioName)
+                    {
+                        case "ZeroScore":
+                            user = User.Get(CommonResource.CommonResource
+                                       .SMS_STU_UC1);
+                            break;
+                        case "setidle":
+                            user = User.Get(CommonResource.CommonResource
+                                      .SMS_STU_UC2);
+                            break;
+                    }
+                }
+                else
+                {
+                    //Wait for the SIM5 assignment launch window
+                    user = User.Get(studentName);
+                }
+                // Wait for window
+                base.WaitUntilWindowLoads(activityName + " - " + user.FirstName + " " + user.LastName);
+                base.SelectWindow(activityName + " - " + user.FirstName + " " + user.LastName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "SelectSIM5ActivityStudentWindow",
+               base.IsTakeScreenShotDuringEntryExit);
+        }   
     }
 }
