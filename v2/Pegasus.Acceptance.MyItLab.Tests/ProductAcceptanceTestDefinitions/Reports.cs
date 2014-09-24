@@ -754,7 +754,110 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 new RptMainUXPage().GetActivityNameFromReport()));
             Logger.LogMethodExit("Reports", "VerifyExpectedActivity",
               base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
+
+        /// <summary>
+        /// Verify report heading ,section name and average score.
+        /// </summary>
+        /// <param name="reportHeading">This is a heading in the report.</param>
+        /// <param name="sectionName">This is section name.</param>
+        /// <param name="averageScore">This is average score value.</param>
+        [Then(@"I should see the ""(.*)"" with section ""(.*)"" average score ""(.*)""")]
+        public void VerifyMultipleActivityReportDataInMultipleStudentAndActivities(string reportHeading,
+            string sectionName, string averageScore)
+        {
+            // Verify report heading ,section name and average score
+            Logger.LogMethodEntry("Reports",
+                "VerifyMultipleActivityReportDataInMultipleStudentAndActivities",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Asserts Report heading value
+            Logger.LogAssertion("VerifyCriteriaPageOpened",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                  Assert.AreEqual(reportHeading,
+                  new RptAllAssessmentAllStudentPage().GetActivityHeading()));
+            //Assert report section name
+            Logger.LogAssertion("VerifyCriteriaPageOpened",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                  Assert.AreEqual(sectionName,
+                   new RptAllAssessmentAllStudentPage().GetSectionName()));
+            //Assert report average score value
+            Logger.LogAssertion("VerifyCriteriaPageOpened",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+               Assert.AreEqual(averageScore,
+               new RptAllAssessmentAllStudentPage().GetAverageScore()));
+            Logger.LogMethodExit("Reports",
+                "VerifyMultipleActivityReportDataInMultipleStudentAndActivities",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verfies data displayed for the 100% scoring student in the report.
+        /// </summary>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        /// <param name="attempCount">This is the attempt count.</param>
+        /// <param name="scorePercentage">This is the score.</param>
+        [Then(@"I should see the ""(.*)"" along with attempt as ""(.*)"" score as ""(.*)""")]
+        public void Verify100ScoringStudentActivityReportDataInMultipleStudentAndActivities
+            (User.UserTypeEnum userTypeEnum,
+            string attempCount, string scorePercentage)
+        {
+            // Verify report heading ,section name and average score
+            Logger.LogMethodEntry("Reports",
+                "Verify100ScoringStudentActivityReportDataInMultipleStudentAndActivities",
+                base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userTypeEnum);
+            String firstName = user.FirstName;
+            String lastName = user.LastName;
+            String studentName = lastName + ", " + firstName;
+            Logger.LogAssertion("VerifyStudentPresent",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.IsTrue(new RptAllAssessmentAllStudentPage().
+              IsStudentPresent(studentName)));
+            Logger.LogAssertion("Verify100ScoringStudentAttempts",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(attempCount,
+             new RptAllAssessmentAllStudentPage().GetStudentAttempt(studentName)));
+            Logger.LogAssertion("VerifyCriteriaPageOpened",
+               ScenarioContext.Current.ScenarioInfo.Title, () =>
+                 Assert.AreEqual(scorePercentage,
+                 new RptAllAssessmentAllStudentPage().GetStudentScorePercentage(studentName)));
+            Logger.LogMethodExit("Reports",
+                "Verify100ScoringStudentActivityReportDataInMultipleStudentAndActivities",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verfies data displayed for the 0% scoring student in the report.
+        /// </summary>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        /// <param name="attempCount"></param>
+        /// <param name="scorePercentage"></param>
+        [Then(@"I should see 'Zero' ""(.*)"" along with attempt as ""(.*)"" score as ""(.*)""")]
+        public void VerifyZeroScoringStudentActivityReportDataInMultipleStudentAndActivities(User.UserTypeEnum userTypeEnum,
+            string attempCount, string scorePercentage)
+        {
+            // Verify report heading ,section name and average score
+            Logger.LogMethodEntry("Reports",
+              "VerifyZeroScoringStudentActivityReportDataInMultipleStudentAndActivities",
+              base.IsTakeScreenShotDuringEntryExit);
+            string studentName = new RptAllAssessmentAllStudentPage().
+                GetZeroScoreUsername(userTypeEnum);
+            Logger.LogAssertion("VerifyZeroScoringStudentPresent",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.IsTrue(new RptAllAssessmentAllStudentPage().
+              IsStudentPresent(studentName)));
+            Logger.LogAssertion("VerifyZeroScoringStudentAttempts",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(attempCount,
+             new RptAllAssessmentAllStudentPage().GetStudentAttempt(studentName)));
+            Logger.LogAssertion("VerifyZeroScoringStudentScore",
+               ScenarioContext.Current.ScenarioInfo.Title, () =>
+                 Assert.AreEqual(scorePercentage,
+                 new RptAllAssessmentAllStudentPage().GetStudentScorePercentage(studentName)));
+            Logger.LogMethodExit("Reports",
+                "VerifyZeroScoringStudentActivityReportDataInMultipleStudentAndActivities",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Selects a section under a template.
