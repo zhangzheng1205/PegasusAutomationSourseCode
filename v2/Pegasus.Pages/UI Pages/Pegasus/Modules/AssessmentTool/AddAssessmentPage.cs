@@ -430,7 +430,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click On Save And Continue Button
             this.ClickOnSaveAndContinueButton();
             //Select Create Random Activity
-            this.SelectCreateActivityWindow();
+            this.SelectCreateRandomActivity();
             //Click On Add Question Link
             new RandomTopicListPage().ClickOnAddQuestionLink();
             logger.LogMethodExit("AddAssessmentPage", 
@@ -516,6 +516,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AddAssessmentPage", "SelectCreateActivityWindow",
                    base.IsTakeScreenShotDuringEntryExit);
         }
+       
 
         /// <summary>
         /// Fill Asset Name
@@ -660,7 +661,7 @@ namespace Pegasus.Pages.UI_Pages
             new RandomTopicListPage().SelectQuestionFromBankForBasicRandom();
             //Get Fill In the Blanks Question Details from Memory
             Question fillInTheBlanksQuestion = Question.
-               Get(Question.QuestionTypeEnum.FillInTheBlank);
+              Get(Question.QuestionTypeEnum.FillInTheBlank);
             //Slect Fill in the Blank Question
             new ContentBrowserUXPage().SelectQuestion(fillInTheBlanksQuestion.Name);
             //Select Create Random Activity

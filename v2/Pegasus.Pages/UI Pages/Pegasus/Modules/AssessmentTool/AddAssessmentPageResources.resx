@@ -252,4 +252,7 @@
   <data name="AddAssessment_Page_SelectFromCourseMaterialsLibrary_XPath_Locator" xml:space="preserve">
     <value>//td[contains(.,'Select from Course Materials Library')]</value>
   </data>
+  <data name="AddAssessment_Page_CreateActivityFillInTheBlanksQuestion_Value" xml:space="preserve">
+    <value>FIB</value>
+  </data>
 </root>
