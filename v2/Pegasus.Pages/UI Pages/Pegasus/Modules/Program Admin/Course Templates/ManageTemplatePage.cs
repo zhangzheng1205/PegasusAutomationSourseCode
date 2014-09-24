@@ -477,6 +477,7 @@ namespace Pegasus.Pages.UI_Pages
                     (ManageTemplatePageResource.ManageTemplate_Page_SectionName_XPath_Locator);
                 //Perform mouse over on section name
                 base.PerformMouseHoverByJavaScriptExecutor(getMouseHoverProperty);
+                Thread.Sleep(3000);
                 //Wait for the image option element
                 base.WaitForElement(By.ClassName(ManageTemplatePageResource.
                     ManageTemplate_Page_SectionName_Img_ClassNmae));
@@ -488,6 +489,7 @@ namespace Pegasus.Pages.UI_Pages
                 IWebElement getCmenuOption =
                     base.GetWebElementPropertiesByPartialLinkText(cMenuOption);
                 base.ClickByJavaScriptExecutor(getCmenuOption);
+                Thread.Sleep(3000);
             }
             catch (Exception e)
             {
