@@ -93,7 +93,7 @@ When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "C
 And I launch the "Excel Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "ZeroScore"
 And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Skill-Based Training"
 Then I should be on the "Course Materials" page
-And I should see "Not passed" status for the activity "Excel Chapter 1 Skill-Based Training"
+And I should see the "Not passed" status for the activity "Excel Chapter 1 Skill-Based Training"
 And I should see "0.00%" score for the activity "Excel Chapter 1 Skill-Based Training" in course material page
 
 #Purpose : Submitting Sim 5 Word activity and Student scoring a Zero.
@@ -106,7 +106,7 @@ When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Cour
 And I launch the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity by "CsSmsStudent" with "ZeroScore"
 And I click on submit button answering incorrectly of "Word" type "Exam" mode activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 Then I should be on the "Course Materials" page
-And I should see "Not passed" status for the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I should see the "Not passed" status for the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 And I should see "0.00%" score for the activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
 
 
@@ -120,7 +120,7 @@ When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" 
 And I launch the "PowerPoint Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "ZeroScore"
 And I click on submit button answering incorrectly of "PowerPoint" type "Training" mode activity "PowerPoint Chapter 1 Skill-Based Training"
 Then I should be on the "Course Materials" page
-And I should see "Not passed" status for the activity "PowerPoint Chapter 1 Skill-Based Training"
+And I should see the "Not passed" status for the activity "PowerPoint Chapter 1 Skill-Based Training"
 And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Skill-Based Training" in course material page
 
 
@@ -134,7 +134,7 @@ When I select "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Co
 And I launch the "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity by "CsSmsStudent" with "ZeroScore"
 And I click on submit button answering incorrectly of "Access" type "Exam" mode activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 Then I should be on the "Course Materials" page
-And I should see "Not passed" status for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I should see the "Not passed" status for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 And I should see "0.00%" score for the activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in course material page
 And I click on 'Back' link in View all course materials
 
@@ -160,7 +160,7 @@ Then I should see message "Your file, go_p01_grader_h3.pptx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
+Then I should see the "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
 And I should see "100.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -189,7 +189,7 @@ Then I should see message "Your file, go_p01_grader_h3.pptx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Not passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
+Then I should see the "Not passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
 And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -218,7 +218,7 @@ Then I should see message "Your file, go_p01_grader_h3.pptx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
+Then I should see the "Passed" status for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]"
 And I should see "74.00%" score for the activity "PowerPoint Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -247,7 +247,7 @@ Then I should see message "Your file, go_w01_grader_a3.docx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
+Then I should see the "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
 And I should see "74.50%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -276,7 +276,7 @@ Then I should see message "Your file, go_w01_grader_a3.docx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Not passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
+Then I should see the "Not passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
 And I should see "0.00%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -305,7 +305,7 @@ Then I should see message "Your file, go_w01_grader_a3.docx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
+Then I should see the "Passed" status for the activity "Word Chapter 1 Grader Project [Assessment 3]"
 And I should see "100.00%" score for the activity "Word Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -334,7 +334,7 @@ Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
+Then I should see the "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
 And I should see "100.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -363,7 +363,7 @@ Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Not passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
+Then I should see the "Not passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
 And I should see "0.00%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 And I navigate to "Course Materials" tab
@@ -393,7 +393,7 @@ Then I should see message "Your file, go_e01_grader_h3.xlsx, has been successful
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Grader Project [Homework 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
+Then I should see the "Passed" status for the activity "Excel Chapter 1 Grader Project [Homework 3]"
 And I should see "71.30%" score for the activity "Excel Chapter 1 Grader Project [Homework 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -420,7 +420,7 @@ Then I should see message "Your file, go_a01_grader_a3_Open_Houses.accdb, has be
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Not passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
+Then I should see the "Not passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
 And I should see "0.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -449,7 +449,7 @@ Then I should see message "Your file, go_a01_grader_a3_Open_Houses.accdb, has be
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
+Then I should see the "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
 And I should see "76.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -478,7 +478,7 @@ Then I should see message "Your file, go_a01_grader_a3_Open_Houses.accdb, has be
 When I click on Return To Course button
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsStudent"
-Then I should see "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
+Then I should see the "Passed" status for the activity "Access Chapter 1 Grader Project [Assessment 3]"
 And I should see "100.00%" score for the activity "Access Chapter 1 Grader Project [Assessment 3]" in course material page
 When I refresh the View All Course Materials frame
 Then I should be on the "Course Materials" page
@@ -500,5 +500,5 @@ When I enter in the "MyITLabOffice2013Program" course from the Global Home page 
 And I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
-And I launch the activity named as "PowerPoint Chapter 1 Skill-Based Training" in Course Materials
+And I launch the "PowerPoint Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "Set Idle"
 And I attempt questions in "PowerPoint Chapter 1 Skill-Based Training"

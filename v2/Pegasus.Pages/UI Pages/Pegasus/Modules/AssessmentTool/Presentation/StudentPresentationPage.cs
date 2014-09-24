@@ -1745,7 +1745,8 @@ namespace Pegasus.Pages.UI_Pages
         /// in SIM5 presentation window.
         /// </summary>
         /// <param name="activityName">Name of the activity.</param>
-        public void SubmitSIMActivityWithoutAnswering(string applicationType, string activityMode, string activityName)
+        public void SubmitSIMActivityWithoutAnswering(string applicationType,
+            string activityMode, string activityName)
         {
             //Submit SIM5 activity
             logger.LogMethodEntry("StudentPresentationPage",
@@ -1753,12 +1754,7 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Wait for the SIM5 assignment launch window
-                base.WaitUntilWindowLoads(activityName + StudentPresentationPageResource.
-                StudentPresentation_Page_SimPresentation_Window_Name);
-                //Select the SIM5 assignment launch window
-                base.SelectWindow(activityName + StudentPresentationPageResource.
-                StudentPresentation_Page_SimPresentation_Window_Name);
+                this.SelectSIMActivityZeroScoreStudentWindowName(activityName);
                 //Answer incorrectly
                 this.SIM5QuestionIncorrectAnswer(activityMode, applicationType);
                 //Click on SIM5 activity Submit button
@@ -3942,6 +3938,45 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("StudentPresentationPage", "SelectSIM5ActivityStudentWindow",
                base.IsTakeScreenShotDuringEntryExit);
-        }   
+        }
+
+        /// <summary>
+        /// Select SIMActivity ZeroScore Student WindowName.
+        /// </summary>
+        /// <param name="activityName"></param>
+        public void SelectSIMActivityZeroScoreStudentWindowName(string activityName)
+        {
+            //Select Presentation Player Window
+            logger.LogMethodEntry("StudentPresentationPage", 
+                "SelectSIMActivityZeroScoreStudentWindowName",
+                base.IsTakeScreenShotDuringEntryExit);
+            User user = user = User.Get(CommonResource.CommonResource
+                                     .SMS_STU_UC1);
+            // Wait for window
+            base.WaitUntilWindowLoads(activityName + " - " + user.FirstName + " " + user.LastName);
+            base.SelectWindow(activityName + " - " + user.FirstName + " " + user.LastName);
+            logger.LogMethodExit("StudentPresentationPage", 
+                "SelectSIMActivityZeroScoreStudentWindowName",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select SIMActivity 100 score Student WindowName.
+        /// </summary>
+        /// <param name="activityName"></param>
+        public void SelectSIMActivityNormalStudentWindowName(string activityName)
+        {
+            //Select Presentation Player Window
+            logger.LogMethodEntry("StudentPresentationPage",
+                "SelectSIMActivityZeroScoreStudentWindowName",
+                base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(User.UserTypeEnum.CsSmsStudent);
+            // Wait for window
+            base.WaitUntilWindowLoads(activityName + " - " + user.FirstName + " " + user.LastName);
+            base.SelectWindow(activityName + " - " + user.FirstName + " " + user.LastName);
+            logger.LogMethodExit("StudentPresentationPage",
+                "SelectSIMActivityZeroScoreStudentWindowName",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

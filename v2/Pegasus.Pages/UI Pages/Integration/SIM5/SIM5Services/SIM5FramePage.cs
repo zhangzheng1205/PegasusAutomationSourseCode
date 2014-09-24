@@ -32,15 +32,9 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Wait for the SIM5 assignment launch window
-                // TODO: using PPE Window Locator which needs to be changed depending upon the Environment
-                base.WaitUntilWindowLoads(activityName + SIM5FramePageResource.
-                SIM5Frame_Page_SimPresentation_Window_Name_Locator);
-                //Select the SIM5 assignment launch window
-                // TODO: using PPE Window Locator which needs to be changed depending upon the Environment
-                base.SelectWindow(activityName + SIM5FramePageResource.
-                SIM5Frame_Page_SimPresentation_Window_Name_Locator);
-
+                //Select window name
+                new StudentPresentationPage().SelectSIMActivityNormalStudentWindowName
+                    (activityName);
                 //Answer first excel question
                 this.StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook();
                 Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.

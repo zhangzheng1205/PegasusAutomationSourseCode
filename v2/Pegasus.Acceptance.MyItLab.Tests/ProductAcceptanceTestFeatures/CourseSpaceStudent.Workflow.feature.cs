@@ -274,8 +274,8 @@ testRunner.And("I click on submit button answering incorrectly of \"Excel\" type
 #line 95
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 96
-testRunner.And("I should see \"Not passed\" status for the activity \"Excel Chapter 1 Skill-Based Tr" +
-                    "aining\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the \"Not passed\" status for the activity \"Excel Chapter 1 Skill-Base" +
+                    "d Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 97
 testRunner.And("I should see \"0.00%\" score for the activity \"Excel Chapter 1 Skill-Based Training" +
                     "\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -303,8 +303,8 @@ testRunner.And("I click on submit button answering incorrectly of \"Word\" type 
 #line 108
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 109
-testRunner.And("I should see \"Not passed\" status for the activity \"Word Chapter 1 Project 1A Skil" +
-                    "l-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the \"Not passed\" status for the activity \"Word Chapter 1 Project 1A " +
+                    "Skill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 110
 testRunner.And("I should see \"0.00%\" score for the activity \"Word Chapter 1 Project 1A Skill-Base" +
                     "d Exam (Scenario 1)\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -332,8 +332,8 @@ testRunner.And("I click on submit button answering incorrectly of \"PowerPoint\"
 #line 122
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 123
-testRunner.And("I should see \"Not passed\" status for the activity \"PowerPoint Chapter 1 Skill-Bas" +
-                    "ed Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the \"Not passed\" status for the activity \"PowerPoint Chapter 1 Skill" +
+                    "-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 124
 testRunner.And("I should see \"0.00%\" score for the activity \"PowerPoint Chapter 1 Skill-Based Tra" +
                     "ining\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -361,8 +361,8 @@ testRunner.And("I click on submit button answering incorrectly of \"Access\" typ
 #line 136
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 137
-testRunner.And("I should see \"Not passed\" status for the activity \"Access Chapter 1 Project 1A Sk" +
-                    "ill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the \"Not passed\" status for the activity \"Access Chapter 1 Project 1" +
+                    "A Skill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 138
 testRunner.And("I should see \"0.00%\" score for the activity \"Access Chapter 1 Project 1A Skill-Ba" +
                     "sed Exam (Scenario 1)\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -419,8 +419,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"PowerPoint Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\"" +
                     " by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 163
-testRunner.Then("I should see \"Passed\" status for the activity \"PowerPoint Chapter 1 Grader Projec" +
-                    "t [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Passed\" status for the activity \"PowerPoint Chapter 1 Grader Pr" +
+                    "oject [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 164
 testRunner.And("I should see \"100.00%\" score for the activity \"PowerPoint Chapter 1 Grader Projec" +
                     "t [Homework 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -483,8 +483,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"PowerPoint Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\"" +
                     " by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 192
-testRunner.Then("I should see \"Not passed\" status for the activity \"PowerPoint Chapter 1 Grader Pr" +
-                    "oject [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Not passed\" status for the activity \"PowerPoint Chapter 1 Grade" +
+                    "r Project [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 193
 testRunner.And("I should see \"0.00%\" score for the activity \"PowerPoint Chapter 1 Grader Project " +
                     "[Homework 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -547,8 +547,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"PowerPoint Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\"" +
                     " by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 221
-testRunner.Then("I should see \"Passed\" status for the activity \"PowerPoint Chapter 1 Grader Projec" +
-                    "t [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Passed\" status for the activity \"PowerPoint Chapter 1 Grader Pr" +
+                    "oject [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 222
 testRunner.And("I should see \"74.00%\" score for the activity \"PowerPoint Chapter 1 Grader Project" +
                     " [Homework 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -611,8 +611,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"Word Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" by " +
                     "\"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 250
-testRunner.Then("I should see \"Passed\" status for the activity \"Word Chapter 1 Grader Project [Ass" +
-                    "essment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Passed\" status for the activity \"Word Chapter 1 Grader Project " +
+                    "[Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 251
 testRunner.And("I should see \"74.50%\" score for the activity \"Word Chapter 1 Grader Project [Asse" +
                     "ssment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -675,8 +675,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"Word Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" by " +
                     "\"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 279
-testRunner.Then("I should see \"Not passed\" status for the activity \"Word Chapter 1 Grader Project " +
-                    "[Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Not passed\" status for the activity \"Word Chapter 1 Grader Proj" +
+                    "ect [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 280
 testRunner.And("I should see \"0.00%\" score for the activity \"Word Chapter 1 Grader Project [Asses" +
                     "sment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -739,8 +739,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"Word Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" by " +
                     "\"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 308
-testRunner.Then("I should see \"Passed\" status for the activity \"Word Chapter 1 Grader Project [Ass" +
-                    "essment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Passed\" status for the activity \"Word Chapter 1 Grader Project " +
+                    "[Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 309
 testRunner.And("I should see \"100.00%\" score for the activity \"Word Chapter 1 Grader Project [Ass" +
                     "essment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -803,8 +803,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"Excel Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\" by \"" +
                     "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 337
-testRunner.Then("I should see \"Passed\" status for the activity \"Excel Chapter 1 Grader Project [Ho" +
-                    "mework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Passed\" status for the activity \"Excel Chapter 1 Grader Project" +
+                    " [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 338
 testRunner.And("I should see \"100.00%\" score for the activity \"Excel Chapter 1 Grader Project [Ho" +
                     "mework 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -867,8 +867,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"Excel Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\" by \"" +
                     "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 366
-testRunner.Then("I should see \"Not passed\" status for the activity \"Excel Chapter 1 Grader Project" +
-                    " [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Not passed\" status for the activity \"Excel Chapter 1 Grader Pro" +
+                    "ject [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 367
 testRunner.And("I should see \"0.00%\" score for the activity \"Excel Chapter 1 Grader Project [Home" +
                     "work 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -933,8 +933,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"Excel Chapter 1 Grader Project [Homework 3]\" in \"Course Materials\" by \"" +
                     "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 396
-testRunner.Then("I should see \"Passed\" status for the activity \"Excel Chapter 1 Grader Project [Ho" +
-                    "mework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Passed\" status for the activity \"Excel Chapter 1 Grader Project" +
+                    " [Homework 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 397
 testRunner.And("I should see \"71.30%\" score for the activity \"Excel Chapter 1 Grader Project [Hom" +
                     "ework 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -993,8 +993,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"Access Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" b" +
                     "y \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 423
-testRunner.Then("I should see \"Not passed\" status for the activity \"Access Chapter 1 Grader Projec" +
-                    "t [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Not passed\" status for the activity \"Access Chapter 1 Grader Pr" +
+                    "oject [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 424
 testRunner.And("I should see \"0.00%\" score for the activity \"Access Chapter 1 Grader Project [Ass" +
                     "essment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1057,8 +1057,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"Access Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" b" +
                     "y \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 452
-testRunner.Then("I should see \"Passed\" status for the activity \"Access Chapter 1 Grader Project [A" +
-                    "ssessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Passed\" status for the activity \"Access Chapter 1 Grader Projec" +
+                    "t [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 453
 testRunner.And("I should see \"76.00%\" score for the activity \"Access Chapter 1 Grader Project [As" +
                     "sessment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1121,8 +1121,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"Access Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" b" +
                     "y \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 481
-testRunner.Then("I should see \"Passed\" status for the activity \"Access Chapter 1 Grader Project [A" +
-                    "ssessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Passed\" status for the activity \"Access Chapter 1 Grader Projec" +
+                    "t [Assessment 3]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 482
 testRunner.And("I should see \"100.00%\" score for the activity \"Access Chapter 1 Grader Project [A" +
                     "ssessment 3]\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1165,8 +1165,8 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 503
-testRunner.And("I launch the activity named as \"PowerPoint Chapter 1 Skill-Based Training\" in Cou" +
-                    "rse Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I launch the \"PowerPoint Chapter 1 Skill-Based Training\" activity by \"CsSmsStuden" +
+                    "t\" with \"Set Idle\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 504
 testRunner.And("I attempt questions in \"PowerPoint Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

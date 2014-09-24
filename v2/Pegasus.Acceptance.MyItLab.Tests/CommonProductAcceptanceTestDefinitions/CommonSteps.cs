@@ -88,6 +88,29 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         }
 
         /// <summary>
+        /// Validate Activity Status For The Activity.
+        /// </summary>
+        /// <param name="activityStatus"></param>
+        /// <param name="activityName"></param>
+        [Then(@"I should see the ""(.*)"" status for the activity ""(.*)""")]
+        public void ValidateActivityStatusForTheActivity(string activityStatus, 
+            string activityName)
+        {
+            //Validate the submitted activity status
+            Logger.LogMethodEntry("CommonSteps",
+                "ValidateActivityStatusForTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Validate the submitted activity status
+            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(activityStatus, new StudentPresentationPage().
+                    GetStatusOfSubmittedActivityInCourseMaterial(activityName)));
+            Logger.LogMethodExit("CommonSteps",
+                "ValidateActivityStatusForTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Validate score of the submitted activity.
         /// </summary>
         /// <param name="activityScore">Activity score.</param>
