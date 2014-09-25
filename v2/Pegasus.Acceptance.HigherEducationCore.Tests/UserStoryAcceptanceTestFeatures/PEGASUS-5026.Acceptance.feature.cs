@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFeatures
+namespace Pegasus.Acceptance.HigherEducation.WL.Tests.UserStoryAcceptanceTestFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -50,7 +50,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "PEGASUS-5026 - Include Unread Comments channel in Customize Notification")))
             {
-                Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFeatures.PEGASUS_5026_IncludeUnreadCommentsChannelInCustomizeNotificationFeature.FeatureSetup(null);
+                Pegasus.Acceptance.HigherEducation.WL.Tests.UserStoryAcceptanceTestFeatures.PEGASUS_5026_IncludeUnreadCommentsChannelInCustomizeNotificationFeature.FeatureSetup(null);
             }
         }
         

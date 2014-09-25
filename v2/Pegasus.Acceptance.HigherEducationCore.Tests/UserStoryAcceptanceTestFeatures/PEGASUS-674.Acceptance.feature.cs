@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFeatures
+namespace Pegasus.Acceptance.HigherEducation.WL.Tests.UserStoryAcceptanceTestFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -32,8 +32,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PEGASUS-674 Create notification for Instructors to know that comments have been v" +
-                    "iewed by student", "\t\t\t\tAs a Hed Core Instructor\n\t\t\t\tI want to verify the functionality of \"Unread Co" +
-                    "mments\" channel\n\t\t\t\tso that students who are unread the comments should list.", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "iewed by student", "\t\t\t\tAs a Hed Core Instructor\r\n\t\t\t\tI want to verify the functionality of \"Unread C" +
+                    "omments\" channel\r\n\t\t\t\tso that students who are unread the comments should list.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "PEGASUS-674 Create notification for Instructors to know that comments have been v" +
                             "iewed by student")))
             {
-                Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFeatures.PEGASUS_674CreateNotificationForInstructorsToKnowThatCommentsHaveBeenViewedByStudentFeature.FeatureSetup(null);
+                Pegasus.Acceptance.HigherEducation.WL.Tests.UserStoryAcceptanceTestFeatures.PEGASUS_674CreateNotificationForInstructorsToKnowThatCommentsHaveBeenViewedByStudentFeature.FeatureSetup(null);
             }
         }
         
