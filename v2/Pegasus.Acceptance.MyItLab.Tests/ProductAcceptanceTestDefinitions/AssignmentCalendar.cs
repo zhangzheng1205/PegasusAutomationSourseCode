@@ -616,7 +616,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Verify folder asset is present.
         /// </summary>
         /// <param name="folderAssetName">This is a string text.</param>
-        [Then(@"I should see ""(.*)"" asset")]
+       [Then(@"I should see ""(.*)"" asset")]
         public void VerifyFolderAssetPresent(string expectedFolderAssetName)
         {
             //Verify expected folder name is same as actual folder name
@@ -636,7 +636,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         ///  /// Drag and drop 'Word Chapter 1: Simulation Activities' folder to current date.
         /// </summary>
-        [When(@"I drag and drop the '(.*)' folder to the current date")]
+        [When(@"I drag and drop the 'Word Chapter 1: Simulation Activities' folder to the current date")]
         public void DragAndDropFolderToCurrentDate()
         {
             // Drag and drop a folder asset to current date.
@@ -734,13 +734,14 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("AssignmentCalendar",
                "AssignTheAsset",
                base.IsTakeScreenShotDuringEntryExit);
+            base.SelectWindow("Assign");
             AssignContentPage assignContentPage = new AssignContentPage();
             //Select 'Assigned' radiobutton
             assignContentPage.SelectAssignRadiobutton();
             //Select current date
             assignContentPage.SelectCurrentDate();
             //Save the properties
-            assignContentPage.SaveProperties();
+           // assignContentPage.ClickOnSave();
             Logger.LogMethodExit("AssignmentCalendar",
                 "AssignTheAsset",
               base.IsTakeScreenShotDuringEntryExit);
@@ -768,6 +769,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyDueDateIconInCalendar",
               base.IsTakeScreenShotDuringEntryExit);
-        } 
+        }     
+
     }
 }
