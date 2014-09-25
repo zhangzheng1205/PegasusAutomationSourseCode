@@ -116,6 +116,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //span[@id=&apos;lblContainer&apos;]/div/div/div/div/table/tbody/tr[{0}]/td[3]/table[1]/tbody/tr/td[2].
+        /// </summary>
+        internal static string RptAllAssessmentAllStudent_Page_StudentAttemptValueProgramAdmin_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptAllAssessmentAllStudent_Page_StudentAttemptValueProgramAdmin_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //span[@id=&apos;lblContainer&apos;]/div/div/div/div/table/tbody/tr[{0}]/td[1]/span[1].
         /// </summary>
         internal static string RptAllAssessmentAllStudent_Page_StudentName_XPath_Locator {
@@ -125,11 +134,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //span[@id=&apos;lblContainer&apos;]/div/div/div/div/table/tbody/tr[{0}]/td[3]/table[1]/tbody/tr/td[5].
+        ///   Looks up a localized string similar to //span[@id=&apos;lblContainer&apos;]/div/div/div/div/table/tbody/tr[{0}]/td[2]/table[1]/tbody/tr/td[5].
         /// </summary>
         internal static string RptAllAssessmentAllStudent_Page_StudentScoreValue_XPath_Locator {
             get {
                 return ResourceManager.GetString("RptAllAssessmentAllStudent_Page_StudentScoreValue_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //span[@id=&apos;lblContainer&apos;]/div/div/div/div/table/tbody/tr[{0}]/td[3]/table[1]/tbody/tr/td[5].
+        /// </summary>
+        internal static string RptAllAssessmentAllStudent_Page_StudentScoreValueProgramAdmin_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptAllAssessmentAllStudent_Page_StudentScoreValueProgramAdmin_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //span[@id=&apos;lblContainer&apos;]/div/div/div/div/table/tbody/tr[{0}]/td[2].
+        /// </summary>
+        internal static string RptAllAssessmentAllStudent_Page_StudentSectionName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptAllAssessmentAllStudent_Page_StudentSectionName_Xpath_Locator", resourceCulture);
             }
         }
         

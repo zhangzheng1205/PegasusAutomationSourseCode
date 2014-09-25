@@ -135,14 +135,14 @@ When I select "Createnewreport" radiobutton
 And I enter the "MyItLabActivityResultsMultipleStudentsAdActivities" report name
 And I click on "SaveandRun" button
 Then I should see the "Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" with section "ReportsAutomation1" average score " 50%"
-And I should see the "CsSmsStudent" along with attempt as "2" score as "100.00% (10/10)"
-And I should see 'Zero' "CsSmsStudent" along with attempt as "1" score as "0.00% (0/10)"
+And I should see the "CsSmsStudent" along with attempt as "2" score as "100.0%"
+And I should see 'Zero' "CsSmsStudent" along with attempt as "1" score as "0.0%"
 When I close the "Activity Results (Multiple students and activities) " window
 And I click on the "Cancel" button in reports by "CsSmsInstructor"
 And I select "Run Report" for "MyItLabActivityResultsMultipleStudentsAdActivities" report in 'My Reports' grid by "CsSmsInstructor"
 Then I should be on the "Activity Results (Multiple students and activities)" page
 
-#Purpose : Generate “Activity Result (Multiple students and activities)" Report by SMS Instructor
+#Purpose : Generate “Activity Result (Multiple students and activities)" Report by Program Admin
 #Test Case Id:peg-2117
 #MyITLabOffice2013Program
 Scenario: Activity Result (Multiple students and activities) report generation and data verification by Program Admin
@@ -159,8 +159,32 @@ Then I should be on the "Save settings to My Reports" page
 When I select "Createnewreport" radiobutton
 And I enter the "MyItLabActivityResultsMultipleStudentsAdActivities" report name
 And I click on "SaveandRun" button
-Then I should be on the "Activity Results (Multiple students and activities)" page
+Then I should see the "Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" with average score " 50%"
+And I should see the "CsSmsStudent" along with section "MyITLabOffice2013Program" attempt as "2" submitted as score as "100.00%"
+And I should see 'Zero' "CsSmsStudent" along with section "MyITLabOffice2013Program" attempt as "1" submitted as score as "0.00%"
 When I close the "Activity Results (Multiple students and activities)" window
 And I click on the "Cancel" button in reports by "HedProgramAdmin"
 And I select "Run Report" for "MyItLabActivityResultsMultipleStudentsAdActivities" report in 'My Reports' grid by "HedProgramAdmin"
 Then I should be on the "Activity Results (Multiple students and activities)" page
+
+#Purpose : Generate “Activity Results (Multiple Students)" Report by Section Instructor
+#Test Case Id:peg-21984
+#MyITLabOffice2013Program
+Scenario: Activity Results (Multiple Students) report generation and data verification by SMS Instructor
+When I navigate to "Gradebook" tab and selected "Reports" subtab
+Then I should be on the "Reports" page
+When I click on "Activity Results (Multiple Students)" report link as "CsSmsInstructor"
+Then I should open "Options for Activity Results (Multiple Students)" criteria page as "CsSmsInstructor"
+When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in 'Select Activity' 
+And I 'Select All' in 'Student Options' by "CsSmsInstructor"
+And I select 'save settings to My Reports' option by "CsSmsInstructor"
+And I click on the "Run Report" button in reports by "CsSmsInstructor"
+Then I should be on the "Save settings to My Reports" page
+When I select "Createnewreport" radiobutton
+And I enter the "MyITLabActivityResultsMultipleStudents" report name
+And I click on "SaveandRun" button
+Then I should be on the "Activity Results (Multiple Students)" page
+When I close the "Activity Results (Multiple Students)" window
+And I click on the "Cancel" button in reports by "CsSmsInstructor"
+And I select "Run Report" for "MyITLabActivityResultsMultipleStudents" report in 'My Reports' grid by "CsSmsInstructor"
+Then I should be on the "Activity Results (Multiple Students)" page

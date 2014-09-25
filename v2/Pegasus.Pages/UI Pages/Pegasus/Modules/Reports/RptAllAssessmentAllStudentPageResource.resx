@@ -132,14 +132,23 @@
   <data name="RptAllAssessmentAllStudent_Page_SectionName_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='_ctl3_SectionPlaceHolder']/table/tbody/tr/td/span</value>
   </data>
+  <data name="RptAllAssessmentAllStudent_Page_StudentAttemptValueProgramAdmin_XPath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/div/div/table/tbody/tr[{0}]/td[3]/table[1]/tbody/tr/td[2]</value>
+  </data>
   <data name="RptAllAssessmentAllStudent_Page_StudentAttemptValue_XPath_Locator" xml:space="preserve">
     <value>//span[@id='lblContainer']/div/div/div/div/table/tbody/tr[{0}]/td[2]/table[1]/tbody/tr/td[2]</value>
   </data>
   <data name="RptAllAssessmentAllStudent_Page_StudentName_XPath_Locator" xml:space="preserve">
     <value>//span[@id='lblContainer']/div/div/div/div/table/tbody/tr[{0}]/td[1]/span[1]</value>
   </data>
-  <data name="RptAllAssessmentAllStudent_Page_StudentScoreValue_XPath_Locator" xml:space="preserve">
+  <data name="RptAllAssessmentAllStudent_Page_StudentScoreValueProgramAdmin_XPath_Locator" xml:space="preserve">
     <value>//span[@id='lblContainer']/div/div/div/div/table/tbody/tr[{0}]/td[3]/table[1]/tbody/tr/td[5]</value>
+  </data>
+  <data name="RptAllAssessmentAllStudent_Page_StudentScoreValue_XPath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/div/div/table/tbody/tr[{0}]/td[2]/table[1]/tbody/tr/td[5]</value>
+  </data>
+  <data name="RptAllAssessmentAllStudent_Page_StudentSectionName_Xpath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/div/div/table/tbody/tr[{0}]/td[2]</value>
   </data>
   <data name="RptAllAssessmentAllStudent_Page_Window_Title_Locator" xml:space="preserve">
     <value>Activity Results (Multiple students and activities)</value>

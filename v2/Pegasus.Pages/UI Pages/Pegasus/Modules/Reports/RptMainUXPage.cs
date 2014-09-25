@@ -1382,14 +1382,14 @@ namespace Pegasus.Pages.UI_Pages
                                     RptMainUX_Page_ExamFrequencyAnalysis_Link_Id_Locator);
                                 break;
                             case "Training Frequency Analysis":
-                                //Click 'Exam Frequency Analysis' report link
+                                //Click 'Training Frequency Analysis' report link
                                 this.ClickReportLink(RptMainUXPageResource.
                                     RptMainUX_Page_TrainingFrequencyAnalysis_Link_Id_Locator);
                                 break;
                             case "Activity Results (Multiple Students)":
-                                //Click 'Exam Frequency Analysis' report link
+                                //Click 'Activity Results (Multiple Students)' report link
                                 this.ClickReportLink(RptMainUXPageResource.
-                                    RptMainUX_Page_ActivityResultMultipleStudents_Link_Id_Locator);
+                                   RptMainUX_Page_ActivityResultMultipleStudents_Link_Id_Locator);
                                 break;
                         }
                         break;
@@ -1414,8 +1414,6 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                bool link = base.IsElementPresent(By.Id(linkId));
-                bool link2 = base.IsElementPresent(By.XPath("//span[@id='RPT_MULTIPLESTU_MULTIPLEASSMT']"));
                 base.WaitForElement(By.Id(linkId));
                 IWebElement getReportLink = base.GetWebElementPropertiesById
                     (linkId);
@@ -1787,6 +1785,39 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Click on 'Select Activity' and switch to 'Select Activities' window.
+        /// </summary>
+        /// /// <param name="assesmentName">This is the assessment to be selected.</param>
+        public void SelectSingleActivity(string assesmentName)
+        {
+            // Click on 'Select Activity' and switch to 'Select Activities' window
+            Logger.LogMethodEntry("RptMainUXPageResource", "SelectSingleActivity",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.XPath(RptMainUXPageResource.
+                    RptMainUX_Page_SelectActivity_Button_Xpath_Locator));
+                IWebElement getButton = base.GetWebElementPropertiesByXPath(
+                    RptMainUXPageResource.
+                    RptMainUX_Page_SelectActivity_Button_Xpath_Locator);
+                //Click assesment button
+                base.ClickByJavaScriptExecutor(getButton);
+                //Switch to window
+                base.WaitUntilWindowLoads(RptMainUXPageResource.
+                    RptMainUX_Page_SelectActivities_Window_Title_Value);
+                base.SelectWindow(RptMainUXPageResource.
+                    RptMainUX_Page_SelectActivities_Window_Title_Value);
+                AddAssessment(assesmentName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPageResource", "SelectSingleActivity",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Opens the assesment window ad switch to it.
         /// </summary>
         /// <param name="assesmentType">This is the assesment button name.</param>
@@ -1808,7 +1839,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Switch to window
                 base.WaitUntilWindowLoads(assessmentWindow);
                 base.SelectWindow(assessmentWindow);
-            }
+              }
             catch (Exception e)
             {                
                  ExceptionHandler.HandleException(e);
@@ -1858,6 +1889,8 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("RptMainUXPage", "AddAssesment",
                      base.IsTakeScreenShotDuringEntryExit);
         }
+
+        
         
         /// <summary>
         /// Click on add button.

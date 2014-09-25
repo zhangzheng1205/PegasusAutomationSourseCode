@@ -647,6 +647,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select Activities.
+        /// </summary>
+        internal static string RptMainUX_Page_SelectActivities_Window_Title_Value {
+            get {
+                return ResourceManager.GetString("RptMainUX_Page_SelectActivities_Window_Title_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //a/span/span[text()=&apos;Select Activity&apos;].
+        /// </summary>
+        internal static string RptMainUX_Page_SelectActivity_Button_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUX_Page_SelectActivity_Button_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0:InnerPageContent:imgAssessment.
         /// </summary>
         internal static string RptMainUX_Page_SelectExam_Button_Id_Locator {
