@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFeatures
+namespace Pegasus.Acceptance.HigherEducation.WL.Tests.UserStoryAcceptanceTestFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "27616")))
             {
-                Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFeatures._27616Feature.FeatureSetup(null);
+                Pegasus.Acceptance.HigherEducation.WL.Tests.UserStoryAcceptanceTestFeatures._27616Feature.FeatureSetup(null);
             }
         }
         

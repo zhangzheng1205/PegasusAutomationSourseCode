@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.HigherEducationCore.Tests.CommonProductAcceptanceTestFeatures
+namespace Pegasus.Acceptance.HigherEducation.WL.Tests.CommonProductAcceptanceTestFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -49,7 +49,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.CommonProductAcceptanceTe
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "CommonUserLoginLogOut")))
             {
-                Pegasus.Acceptance.HigherEducationCore.Tests.CommonProductAcceptanceTestFeatures.CommonUserLoginLogOutFeature.FeatureSetup(null);
+                Pegasus.Acceptance.HigherEducation.WL.Tests.CommonProductAcceptanceTestFeatures.CommonUserLoginLogOutFeature.FeatureSetup(null);
             }
         }
         

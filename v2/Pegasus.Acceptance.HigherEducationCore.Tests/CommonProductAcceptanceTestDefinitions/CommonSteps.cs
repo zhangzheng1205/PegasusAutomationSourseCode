@@ -10,6 +10,7 @@ using Pegasus.Pages.UI_Pages;
 using Pegasus.Pages.Exceptions;
 using TechTalk.SpecFlow;
 using Pegasus.Pages.CommonPageObjects;
+using Pegasus.Acceptance.HigherEducation.WL.Tests.CommonProductAcceptanceTestDefinitions;
 
 namespace Pegasus.Acceptance.HigherEducationCore.Tests.
     CommonProductAcceptanceTestDefinitions

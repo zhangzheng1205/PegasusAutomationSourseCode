@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFeatures
+namespace Pegasus.Acceptance.HigherEducation.WL.Tests.UserStoryAcceptanceTestFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFe
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "Pegasus-8550 : MMND Sidedoor: Create a publisher branding preference for MMND bac" +
                             "kdoor login page")))
             {
-                Pegasus.Acceptance.HigherEducationCore.Tests.UserStoryAcceptanceTestFeatures.Pegasus_8550MMNDSidedoorCreateAPublisherBrandingPreferenceForMMNDBackdoorLoginPageFeature.FeatureSetup(null);
+                Pegasus.Acceptance.HigherEducation.WL.Tests.UserStoryAcceptanceTestFeatures.Pegasus_8550MMNDSidedoorCreateAPublisherBrandingPreferenceForMMNDBackdoorLoginPageFeature.FeatureSetup(null);
             }
         }
         

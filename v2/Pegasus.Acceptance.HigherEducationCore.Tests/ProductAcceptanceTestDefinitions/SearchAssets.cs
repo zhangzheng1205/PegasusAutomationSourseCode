@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
-using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
-using Pegasus.HigherEducation.Tests.ProductAcceptanceTestDefinitions;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.HigherEducationCore.Tests
-    .ProductAcceptanceTestDefinitions
+namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestDefinitions
 {
     /// <summary>
     /// This Class Handles the Search Assets Actions
@@ -20,7 +16,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(SearchAssets));
 
         /// <summary>

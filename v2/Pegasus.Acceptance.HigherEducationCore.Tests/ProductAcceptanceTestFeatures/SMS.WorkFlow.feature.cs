@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pegasus.Acceptance.HigherEducationCore.Tests.ProductAcceptanceTestFeatures
+namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatures
 {
     using TechTalk.SpecFlow;
     
@@ -49,7 +49,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.ProductAcceptanceTestFeat
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
                         && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "User Subscription Through SMS")))
             {
-                Pegasus.Acceptance.HigherEducationCore.Tests.ProductAcceptanceTestFeatures.UserSubscriptionThroughSMSFeature.FeatureSetup(null);
+                Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatures.UserSubscriptionThroughSMSFeature.FeatureSetup(null);
             }
         }
         

@@ -3,12 +3,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
-using Pegasus.Automation.DataTransferObjects;
-using Pegasus.HigherEducation.Tests.ProductAcceptanceTestDefinitions;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.HigherEducationCore.Tests.
+namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
     ProductAcceptanceTestDefinitions
 {
     /// <summary>
@@ -21,12 +19,12 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <summary>
         /// The instance for Login Page.
         /// </summary>
-        BrowsePegasusUserURL loginPage;
+        BrowsePegasusUserURL _loginPage;
 
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(LoginLogout));
 
         /// <summary>
@@ -43,16 +41,16 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodEntry("LoginLogout", "BrowsePegasusLoginUrl",
                 base.IsTakeScreenShotDuringEntryExit);
             // Pick Url based on user type enum
-            loginPage = new BrowsePegasusUserURL((User.UserTypeEnum)
+            _loginPage = new BrowsePegasusUserURL((User.UserTypeEnum)
                 Enum.Parse(typeof(User.UserTypeEnum), userType));
             //Login  the type of the user
             Boolean isBasePegasusUrlBrowsedSuccessful =
-                loginPage.IsUrlBrowsedSuccessful();
+                _loginPage.IsUrlBrowsedSuccessful();
             //Check Is Url Browsed Successfully
             if (isBasePegasusUrlBrowsedSuccessful)
             {
                 //Open Url in Browser
-                loginPage.GoToLoginUrl();
+                _loginPage.GoToLoginUrl();
             }
             Logger.LogMethodExit("LoginLogout", "BrowsePegasusLoginUrl",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -88,13 +86,13 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                     {
                         case BrowsePegasusUserURL.PegasusLoginSpace.WorkSpace:
                             //Login as the given user with password in workspace
-                            loginPage.Authenticate(user.Name, user.Password,
+                            _loginPage.Authenticate(user.Name, user.Password,
                                  BrowsePegasusUserURL.PegasusLoginSpace.WorkSpace, userTypeEnum);
                             LoginSpace = BrowsePegasusUserURL.PegasusLoginSpace.WorkSpace.ToString();
                             break;
                         case BrowsePegasusUserURL.PegasusLoginSpace.CourseSpace:
                             //Login as the given user with password in course space
-                            loginPage.Authenticate(user.Name, user.Password,
+                            _loginPage.Authenticate(user.Name, user.Password,
                                 BrowsePegasusUserURL.PegasusLoginSpace.CourseSpace, userTypeEnum);
                             LoginSpace = BrowsePegasusUserURL.PegasusLoginSpace.CourseSpace.ToString();
                             break;
@@ -194,7 +192,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Assert Url Appended Successfully
             Logger.LogAssertion("LoginLogout",
                 "VerifyCorrectURLAppended",
-                () => Assert.IsTrue(loginPage.GetCurrentURL()
+                () => Assert.IsTrue(_loginPage.GetCurrentURL()
                     .Contains(LoginLogoutResource.LoginPage_Backdoor_Mode)));
             Logger.LogMethodExit("LoginLogout", "VerifyURLAppended",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -212,7 +210,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Assert visibility of Forgot Password and Registration Link
             Logger.LogAssertion("LoginLogout",
                 "VerifyForgotPassword_RegistrationLink",
-                () => Assert.IsFalse(loginPage
+                () => Assert.IsFalse(_loginPage
                     .IsForgotPasswordAndRegistrationLinkPresntInLoginPage()));
             Logger.LogMethodExit("LoginLogout", "VerifyForgotPassword_RegistrationLink",
                 base.IsTakeScreenShotDuringEntryExit);

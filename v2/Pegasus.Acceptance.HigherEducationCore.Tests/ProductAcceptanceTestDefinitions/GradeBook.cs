@@ -3,11 +3,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
-using Pegasus.HigherEducation.Tests.ProductAcceptanceTestDefinitions;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.HigherEducationCore.Tests.
+namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
     ProductAcceptanceTestDefinitions
 {
     /// <summary>
@@ -20,7 +19,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <summary>
         /// This is the logger.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(GradeBook));
 
         /// <summary>
