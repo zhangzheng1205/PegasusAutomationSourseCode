@@ -426,7 +426,7 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.GradeBook.BVT.MyItLab.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.InstructorGradeBook.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.TodaysView.BVT.MyItLab.orderedtest">
