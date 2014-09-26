@@ -1139,19 +1139,19 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             // Verifying All the Elements Displayed for first question in Exam Frequency report
             Logger.LogMethodEntry("Reports", "VerifyFirstQuestionDetailsInExamFrequencyReport",
                base.IsTakeScreenShotDuringEntryExit);
-            //Verifying Activityt Question Displayed in Report.
+            //Verifying Activityt Question Displayed in Report
             Logger.LogAssertion("VerifyQuestionName", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(questionName.ToString(),
                     new RptExamFreqAnalysisPage().GetExamFrequencyAnalysisReportQuestionName()));
-            //Verifying Activity Type Displayed in Report.
+            //Verifying Activity Type Displayed in Report
             Logger.LogAssertion("VerifyQuestionType", ScenarioContext.Current.ScenarioInfo.Title,
               () => Assert.AreEqual(questionType.ToString(), 
                   new RptExamFreqAnalysisPage().GetExamFrequencyAnalysisReportTypeName()));                 
-            //Verifying Application Name Displayed in Report.
+            //Verifying Application Name Displayed in Report
             Logger.LogAssertion("VerifyApplicationType", ScenarioContext.Current.ScenarioInfo.Title,
               () => Assert.AreEqual(applicationType.ToString(), 
                   new RptExamFreqAnalysisPage().GetExamFrequencyAnalysisReportApplicationName()));                  
-            //Verifying Correct Percentage Displayed in Report.
+            //Verifying Correct Percentage Displayed in Report
             Logger.LogAssertion("VerifyCorrectPercentage", ScenarioContext.Current.ScenarioInfo.Title,
               () => Assert.AreEqual(score.ToString(), 
                   new RptExamFreqAnalysisPage().GetExamFrequencyAnalysisCorrectPercentInReport()));
