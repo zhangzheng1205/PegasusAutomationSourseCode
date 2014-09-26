@@ -195,6 +195,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                         break;
                                     //Folder navigation for Excel
                                     case "Excel Chapter 1 Skill-Based Training":
+                                    case "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test":
                                         this.SelectExcelActivityFolderNavigationInInstructorCalendar(CommonPageResource.
                                             CommonPage_Instructor_Calendar_Content_Id_Locator);
                                         break;

@@ -510,6 +510,119 @@ testRunner.When("I close the \"Activity Results (Multiple Students)\" window", (
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To run and save \"Exam Frequency Analysis\" Report As Section instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorReport")]
+        public virtual void ToRunAndSaveExamFrequencyAnalysisReportAsSectionInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To run and save \"Exam Frequency Analysis\" Report As Section instructor", ((string[])(null)));
+#line 201
+this.ScenarioSetup(scenarioInfo);
+#line 202
+testRunner.When("I navigate to \"Gradebook\" tab and selected \"Reports\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 203
+testRunner.Then("I should be on the \"Reports\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 204
+testRunner.When("I click on \"Exam Frequency Analysis\" report link as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 205
+testRunner.Then("I should open \"Options for Exam Frequency Analysis\" criteria page as \"CsSmsInstru" +
+                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 206
+testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" asset in \"Sele" +
+                    "ct Exams\" by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 207
+testRunner.And("I select \'save settings to My Reports\' option by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 208
+testRunner.And("I click on the \"Run Report\" button in reports by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 209
+testRunner.Then("I should be on the \"Save settings to My Reports\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 210
+testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 211
+testRunner.And("I enter the \" MyITLabExamFrequencyAnalysis\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 212
+testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 213
+testRunner.Then("I should see questions details \"WD Activity 1.01: Starting a New Word Document\" \"" +
+                    "SIM5 Question\" \"Word 2013\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 214
+testRunner.And("I should see correct incorrect and skipped attempt details \"1\" \"1\" \"0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 215
+testRunner.And("I should see question detail \"WD Activity 1.02: Inserting Text from Another Docum" +
+                    "ent\" \"SIM5 Question\" \"Word 2013\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 216
+testRunner.And("I should see attempt correct incorrect and skipped details \"1\" \"0\" \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 217
+testRunner.When("I close the \"Exam Frequency Analysis\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 218
+testRunner.And("I click on the \"Cancel\" button in reports by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 219
+testRunner.And("I select \"Run Report\" for \" MyITLabExamFrequencyAnalysis\" report in \'My Reports\' " +
+                    "grid by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 220
+testRunner.Then("I should be on the \"Exam Frequency Analysis\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 221
+testRunner.When("I close the \"Exam Frequency Analysis\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To run and save \"Training Frequency Analysis\" Report As Section instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorReport")]
+        public virtual void ToRunAndSaveTrainingFrequencyAnalysisReportAsSectionInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To run and save \"Training Frequency Analysis\" Report As Section instructor", ((string[])(null)));
+#line 227
+this.ScenarioSetup(scenarioInfo);
+#line 228
+testRunner.When("I navigate to \"Gradebook\" tab and selected \"Reports\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 229
+testRunner.Then("I should be on the \"Reports\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 230
+testRunner.When("I click on \"Training Frequency Analysis\" report link as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 231
+testRunner.Then("I should open \"Options for Training Frequency Analysis\" criteria page as \"CsSmsIn" +
+                    "structor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 232
+testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" asset in \"Select Trainings\" by \"C" +
+                    "sSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 233
+testRunner.And("I select \'save settings to My Reports\' option by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 234
+testRunner.And("I click on the \"Run Report\" button in reports by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 235
+testRunner.Then("I should be on the \"Save settings to My Reports\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 236
+testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 237
+testRunner.And("I enter the \"MyITLabTrainingFrequencyAnalysis\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 238
+testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 239
+testRunner.Then("I should see the \"Excel Chapter 1 Skill-Based Training\" along with average score " +
+                    "\"50%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 240
+testRunner.And("I should see question details \"XL Activity 1.01: Starting Excel, Navigating Excel" +
+                    ", and Naming and Saving a Workbook\" \"Excel 2013\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 241
+testRunner.And("I should see training question details \"XL Activity 1.02: Entering Text, Using Au" +
+                    "toComplete, and Using the Name Box to Select a Cell\" \"Excel 2013\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 242
+testRunner.When("I close the \"Training Frequency Analysis\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 243
+testRunner.And("I click on the \"Cancel\" button in reports by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 244
+testRunner.And("I select \"Run Report\" for \" MyITLabTrainingFrequencyAnalysis\" report in \'My Repor" +
+                    "ts\' grid by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 245
+testRunner.Then("I should be on the \"Training Frequency Analysis\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 246
+testRunner.When("I close the \"Training Frequency Analysis\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

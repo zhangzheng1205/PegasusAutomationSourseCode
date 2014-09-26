@@ -117,11 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RptTrainingFreqAnalysisPage_Resource_ActivityName" xml:space="preserve">
+    <value>//div[@id='_ctl5_AssessmentplaceHolder']/table/tbody/tr/td/span</value>
+  </data>
   <data name="RptTrainingFreqAnalysisPage_Resource_ActivityScore_SplittingCharacter" xml:space="preserve">
     <value>%</value>
   </data>
   <data name="RptTrainingFreqAnalysisPage_Resource_ActivityScore_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='_ctl5_AveragePlaceHolder']/table/tbody/tr/td[2]/span</value>
+  </data>
+  <data name="RptTrainingFreqAnalysisPage_Resource_ApplicationName" xml:space="preserve">
+    <value>//table[@id='MainTBLSIM']/tbody/tr[3]/td[2]</value>
+  </data>
+  <data name="RptTrainingFreqAnalysisPage_Resource_FirstApplicationName" xml:space="preserve">
+    <value>//table[@id='MainTBLSIM']/tbody/tr/td[2]</value>
+  </data>
+  <data name="RptTrainingFreqAnalysisPage_Resource_FirstQuestionName" xml:space="preserve">
+    <value>//table[@id='MainTBLSIM']/tbody/tr/td/span</value>
+  </data>
+  <data name="RptTrainingFreqAnalysisPage_Resource_FirstQuestionPercentage" xml:space="preserve">
+    <value>//table[@id='MainTBLSIM']/tbody/tr/td[5]</value>
+  </data>
+  <data name="RptTrainingFreqAnalysisPage_Resource_QuestionPercentage" xml:space="preserve">
+    <value>//table[@id='MainTBLSIM']/tbody/tr[3]/td[5]</value>
+  </data>
+  <data name="RptTrainingFreqAnalysisPage_Resource_Score" xml:space="preserve">
+    <value>//div[@id='_ctl5_AveragePlaceHolder']/table/tbody/tr/td[2]/span</value>
+  </data>
+  <data name="RptTrainingFreqAnalysisPage_Resource_SecondQuestionName" xml:space="preserve">
+    <value>//table[@id='MainTBLSIM']/tbody/tr[3]/td/span</value>
   </data>
   <data name="RptTrainingFreqAnalysisPage_Resource_SplittedScore_Index_Value" xml:space="preserve">
     <value>0</value>

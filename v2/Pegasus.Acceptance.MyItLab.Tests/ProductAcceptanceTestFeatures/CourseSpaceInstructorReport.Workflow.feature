@@ -194,3 +194,53 @@ And I click on the "Cancel" button in reports by "CsSmsInstructor"
 And I select "Run Report" for "MyITLabActivityResultsMultipleStudents" report in 'My Reports' grid by "CsSmsInstructor"
 Then I should be on the "Activity Results (Multiple Students)" page
 When I close the "Activity Results (Multiple Students)" window
+
+#Purpose: To run and save the "Exam Frequency Analysis" Report As Section instructor
+#Test Case Id: peg-21956
+#MyITLabOffice2013Program
+Scenario: To run and save "Exam Frequency Analysis" Report As Section instructor
+When I navigate to "Gradebook" tab and selected "Reports" subtab
+Then I should be on the "Reports" page
+When I click on "Exam Frequency Analysis" report link as "CsSmsInstructor"
+Then I should open "Options for Exam Frequency Analysis" criteria page as "CsSmsInstructor"
+When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in "Select Exams" by "CsSmsInstructor"
+And I select 'save settings to My Reports' option by "CsSmsInstructor"
+And I click on the "Run Report" button in reports by "CsSmsInstructor"
+Then I should be on the "Save settings to My Reports" page
+When I select "Createnewreport" radiobutton
+And I enter the " MyITLabExamFrequencyAnalysis" report name
+And I click on "SaveandRun" button
+Then I should see questions details "WD Activity 1.01: Starting a New Word Document" "SIM5 Question" "Word 2013" "50.00%"
+And I should see correct incorrect and skipped attempt details "1" "1" "0"
+And I should see question detail "WD Activity 1.02: Inserting Text from Another Document" "SIM5 Question" "Word 2013" "50.00%"
+And I should see attempt correct incorrect and skipped details "1" "0" "1"
+When I close the "Exam Frequency Analysis" window
+And I click on the "Cancel" button in reports by "CsSmsInstructor"
+And I select "Run Report" for " MyITLabExamFrequencyAnalysis" report in 'My Reports' grid by "CsSmsInstructor"
+Then I should be on the "Exam Frequency Analysis" page
+When I close the "Exam Frequency Analysis" window
+
+
+#Purpose: To run and save the "Training Frequency Analysis" Report As Section instructor
+#Test Case Id: peg-21962
+#MyITLabOffice2013Program
+Scenario: To run and save "Training Frequency Analysis" Report As Section instructor
+When I navigate to "Gradebook" tab and selected "Reports" subtab
+Then I should be on the "Reports" page
+When I click on "Training Frequency Analysis" report link as "CsSmsInstructor"
+Then I should open "Options for Training Frequency Analysis" criteria page as "CsSmsInstructor"
+When I select "Excel Chapter 1 Skill-Based Training" asset in "Select Trainings" by "CsSmsInstructor"
+And I select 'save settings to My Reports' option by "CsSmsInstructor"
+And I click on the "Run Report" button in reports by "CsSmsInstructor"
+Then I should be on the "Save settings to My Reports" page
+When I select "Createnewreport" radiobutton
+And I enter the "MyITLabTrainingFrequencyAnalysis" report name
+And I click on "SaveandRun" button
+Then I should see the "Excel Chapter 1 Skill-Based Training" along with average score "50%"
+And I should see question details "XL Activity 1.01: Starting Excel, Navigating Excel, and Naming and Saving a Workbook" "Excel 2013" "50.00%"
+And I should see training question details "XL Activity 1.02: Entering Text, Using AutoComplete, and Using the Name Box to Select a Cell" "Excel 2013" "50.00%" 
+When I close the "Training Frequency Analysis" window
+And I click on the "Cancel" button in reports by "CsSmsInstructor"
+And I select "Run Report" for " MyITLabTrainingFrequencyAnalysis" report in 'My Reports' grid by "CsSmsInstructor"
+Then I should be on the "Training Frequency Analysis" page
+When I close the "Training Frequency Analysis" window
