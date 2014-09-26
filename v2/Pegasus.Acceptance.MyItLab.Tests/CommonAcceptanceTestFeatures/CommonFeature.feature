@@ -176,6 +176,13 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
 
+#Purpose: Login as Zero Score SMS Student
+Scenario: User login as SMS student to score zero percent in Globalhomepage
+Given I browsed the login url for "CsSmsStudent"
+When I login as "scoring 0" into the pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+
 #Purpose: Login as Set Idle SMS Student
 Scenario: User Login as Set Idle SMS Student
 Given I browsed the login url for "CsSmsStudent"
