@@ -435,7 +435,7 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ManageCourse.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.Reports.BVT.MyItLab.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.InstructorReports.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.AssignmentCalendar.BVT.MyItLab.orderedtest">
@@ -461,6 +461,9 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.InstructorEnrollment.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdminReports.BVT.MyItLab.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
