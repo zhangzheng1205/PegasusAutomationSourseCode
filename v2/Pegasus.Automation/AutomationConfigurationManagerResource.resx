@@ -231,17 +231,23 @@
   <data name="SMSAdminURLRootST_Key" xml:space="preserve">
     <value>SMSAdminURLRootST</value>
   </data>
+  <data name="SMSAdminURLRootVCD_Key" xml:space="preserve">
+    <value>SMSAdminURLRootVCD</value>
+  </data>
   <data name="SMSAdminURLRootVM_Key" xml:space="preserve">
     <value>SMSAdminURLRootVM</value>
   </data>
   <data name="SMSInstructorAccessCodePPE_Key" xml:space="preserve">
     <value>SMSInstructorAccessCodePPE</value>
   </data>
-  <data name="SMSInstructorAccessCodePROD_key" xml:space="preserve">
+  <data name="SMSInstructorAccessCodePROD_Key" xml:space="preserve">
     <value>SMSInstructorAccessCodePROD</value>
   </data>
   <data name="SMSInstructorAccessCodeST_Key" xml:space="preserve">
     <value>SMSInstructorAccessCodeST</value>
+  </data>
+  <data name="SMSInstructorAccessCodeVCD_Key" xml:space="preserve">
+    <value>SMSInstructorAccessCodeVCD</value>
   </data>
   <data name="SMSInstructorAccessCodeVM_Key" xml:space="preserve">
     <value>SMSInstructorAccessCodeVM</value>
@@ -255,6 +261,9 @@
   <data name="SMSModuleIDST_Key" xml:space="preserve">
     <value>SMSModuleIDST</value>
   </data>
+  <data name="SMSModuleIDVCD_Key" xml:space="preserve">
+    <value>SMSModuleIDVCD</value>
+  </data>
   <data name="SMSModuleIDVM_key" xml:space="preserve">
     <value>SMSModuleIDVM</value>
   </data>
@@ -266,6 +275,9 @@
   </data>
   <data name="SMSStudentAccessCodeST_Key" xml:space="preserve">
     <value>SMSStudentAccessCodeST</value>
+  </data>
+  <data name="SMSStudentAccessCodeVCD_Key" xml:space="preserve">
+    <value>SMSStudentAccessCodeVCD</value>
   </data>
   <data name="SMSStudentAccessCodeVM_Key" xml:space="preserve">
     <value>SMSStudentAccessCodeVM</value>

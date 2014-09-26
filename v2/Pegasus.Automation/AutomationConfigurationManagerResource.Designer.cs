@@ -403,6 +403,15 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SMSAdminURLRootVCD.
+        /// </summary>
+        internal static string SMSAdminURLRootVCD_Key {
+            get {
+                return ResourceManager.GetString("SMSAdminURLRootVCD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SMSAdminURLRootVM.
         /// </summary>
         internal static string SMSAdminURLRootVM_Key {
@@ -423,9 +432,9 @@ namespace Pegasus.Automation {
         /// <summary>
         ///   Looks up a localized string similar to SMSInstructorAccessCodePROD.
         /// </summary>
-        internal static string SMSInstructorAccessCodePROD_key {
+        internal static string SMSInstructorAccessCodePROD_Key {
             get {
-                return ResourceManager.GetString("SMSInstructorAccessCodePROD_key", resourceCulture);
+                return ResourceManager.GetString("SMSInstructorAccessCodePROD_Key", resourceCulture);
             }
         }
         
@@ -435,6 +444,15 @@ namespace Pegasus.Automation {
         internal static string SMSInstructorAccessCodeST_Key {
             get {
                 return ResourceManager.GetString("SMSInstructorAccessCodeST_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SMSInstructorAccessCodeVCD.
+        /// </summary>
+        internal static string SMSInstructorAccessCodeVCD_Key {
+            get {
+                return ResourceManager.GetString("SMSInstructorAccessCodeVCD_Key", resourceCulture);
             }
         }
         
@@ -475,6 +493,15 @@ namespace Pegasus.Automation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SMSModuleIDVCD.
+        /// </summary>
+        internal static string SMSModuleIDVCD_Key {
+            get {
+                return ResourceManager.GetString("SMSModuleIDVCD_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SMSModuleIDVM.
         /// </summary>
         internal static string SMSModuleIDVM_key {
@@ -507,6 +534,15 @@ namespace Pegasus.Automation {
         internal static string SMSStudentAccessCodeST_Key {
             get {
                 return ResourceManager.GetString("SMSStudentAccessCodeST_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SMSStudentAccessCodeVCD.
+        /// </summary>
+        internal static string SMSStudentAccessCodeVCD_Key {
+            get {
+                return ResourceManager.GetString("SMSStudentAccessCodeVCD_Key", resourceCulture);
             }
         }
         

@@ -201,6 +201,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminURLRootPROD_Key];
                     break;
+                case "VCD":
+                    url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminURLRootVCD_Key];
+                    break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
             return url;
@@ -307,6 +311,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     smsStuAccessCode = ConfigurationManager.AppSettings
                         [AutomationConfigurationManagerResource.SMSStudentAccessCodePROD_Key];
                     break;
+                case "VCD":
+                    smsStuAccessCode = ConfigurationManager.AppSettings
+                        [AutomationConfigurationManagerResource.SMSStudentAccessCodeVCD_Key];
+                    break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
             return smsStuAccessCode;
@@ -339,7 +347,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodePPE_Key];
                     break;
                 case "PROD":
-                    smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodePROD_key];
+                    smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodePROD_Key];
+                    break;
+                case "VCD":
+                    smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodeVCD_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
@@ -374,6 +385,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     break;
                 case "PROD":
                     smsModuleId = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSModuleIDPROD_key];
+                    break;
+                case "VCD":
+                    smsModuleId = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSModuleIDVCD_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
