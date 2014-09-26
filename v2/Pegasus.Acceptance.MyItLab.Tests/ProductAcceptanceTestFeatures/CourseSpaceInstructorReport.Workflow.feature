@@ -141,6 +141,7 @@ When I close the "Activity Results (Multiple students and activities) " window
 And I click on the "Cancel" button in reports by "CsSmsInstructor"
 And I select "Run Report" for "MyItLabActivityResultsMultipleStudentsAdActivities" report in 'My Reports' grid by "CsSmsInstructor"
 Then I should be on the "Activity Results (Multiple students and activities)" page
+When I close the "Activity Results (Multiple students and activities) " window
 
 #Purpose : Generate “Activity Result (Multiple students and activities)" Report by Program Admin
 #Test Case Id:peg-2117
@@ -166,8 +167,9 @@ When I close the "Activity Results (Multiple students and activities)" window
 And I click on the "Cancel" button in reports by "HedProgramAdmin"
 And I select "Run Report" for "MyItLabActivityResultsMultipleStudentsAdActivities" report in 'My Reports' grid by "HedProgramAdmin"
 Then I should be on the "Activity Results (Multiple students and activities)" page
+When I close the "Activity Results (Multiple students and activities)" window
 
-#Purpose : Generate “Activity Results (Multiple Students)" Report by Section Instructor
+#Purpose : Generate “Activity Results (Multiple Students)" Report by SMS Instructor
 #Test Case Id:peg-21984
 #MyITLabOffice2013Program
 Scenario: Activity Results (Multiple Students) report generation and data verification by SMS Instructor
@@ -184,7 +186,11 @@ When I select "Createnewreport" radiobutton
 And I enter the "MyITLabActivityResultsMultipleStudents" report name
 And I click on "SaveandRun" button
 Then I should be on the "Activity Results (Multiple Students)" page
+Then I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" along with section "ReportsAutomation1" average score "50%"
+And I should see the "CsSmsStudent" along with attempt as "2" submitted as score as "100%"
+And I should see 'Zero' "CsSmsStudent" along with attempt as "1" submitted as score as "0%"
 When I close the "Activity Results (Multiple Students)" window
 And I click on the "Cancel" button in reports by "CsSmsInstructor"
 And I select "Run Report" for "MyITLabActivityResultsMultipleStudents" report in 'My Reports' grid by "CsSmsInstructor"
 Then I should be on the "Activity Results (Multiple Students)" page
+When I close the "Activity Results (Multiple Students)" window

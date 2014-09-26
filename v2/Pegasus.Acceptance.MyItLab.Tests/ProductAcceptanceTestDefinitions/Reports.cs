@@ -809,25 +809,23 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             String firstName = user.FirstName;
             String lastName = user.LastName;
             String studentName = lastName + ", " + firstName;
+            //Verify student name
             Logger.LogAssertion("VerifyStudentPresent",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
               Assert.IsTrue(new RptAllAssessmentAllStudentPage().
               IsStudentPresent(studentName)));
+            //Verify attempt value
             Logger.LogAssertion("Verify100ScoringStudentAttempts",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
              Assert.AreEqual(attempCount,
              new RptAllAssessmentAllStudentPage().GetStudentAttempt(studentName)));
+            //Verify student score value
             Logger.LogAssertion("VerifyStudentPresent",
             ScenarioContext.Current.ScenarioInfo.Title, () =>
              Assert.IsTrue(new RptAllAssessmentAllStudentPage().
              IsStudentScorePercentagePresent(
                  scorePercentage, studentName)));
-          /*  Logger.LogAssertion("VerifyCriteriaPageOpened",
-               ScenarioContext.Current.ScenarioInfo.Title, () =>
-                 Assert.AreEqual(scorePercentage,
-                 new RptAllAssessmentAllStudentPage().IsStudentScorePercentagePresent(
-                 scorePercentage,studentName)));*/
-            Logger.LogMethodExit("Reports",
+                     Logger.LogMethodExit("Reports",
                 "Verify100ScoringStudentActivityReportDataInMultipleStudentAndActivities",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -848,24 +846,23 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
               base.IsTakeScreenShotDuringEntryExit);
             string studentName = new RptAllAssessmentAllStudentPage().
                 GetZeroScoreUsername(userTypeEnum);
+            //Verify student name
             Logger.LogAssertion("VerifyZeroScoringStudentPresent",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
               Assert.IsTrue(new RptAllAssessmentAllStudentPage().
               IsStudentPresent(studentName)));
+            //Verify attempt value
             Logger.LogAssertion("VerifyZeroScoringStudentAttempts",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
              Assert.AreEqual(attempCount,
              new RptAllAssessmentAllStudentPage().GetStudentAttempt(studentName)));
+            //Verify student score
             Logger.LogAssertion("VerifyStudentPresent",
            ScenarioContext.Current.ScenarioInfo.Title, () =>
             Assert.IsTrue(new RptAllAssessmentAllStudentPage().
             IsStudentScorePercentagePresent(
                 scorePercentage, studentName)));
-           /* Logger.LogAssertion("VerifyZeroScoringStudentScore",
-               ScenarioContext.Current.ScenarioInfo.Title, () =>
-                 Assert.AreEqual(scorePercentage,
-                 new RptAllAssessmentAllStudentPage().IsStudentScorePercentagePresent(studentName)));*/
-            Logger.LogMethodExit("Reports",
+                 Logger.LogMethodExit("Reports",
                 "VerifyZeroScoringStudentActivityReportDataInMultipleStudentAndActivities",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1028,6 +1025,104 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("Reports",
              "AddSingleActivity",
            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verifies multiple values in “Activity Results (Multiple Students)" Report.
+        /// </summary>
+        /// <param name="reportHeading">This is report heading.</param>
+        /// <param name="sectionName">This is section name.</param>
+        /// <param name="averageScore">This is average score</param>
+        [Then(@"I should see the ""(.*)"" along with section ""(.*)"" average score ""(.*)""")]
+        public void VerifyActivityReportDataInMultipleStudents(string reportHeading,
+            string sectionName, string averageScore)
+        {
+            // Verify report heading ,section name and average score
+            Logger.LogMethodEntry("Reports",
+                "VerifyActivityReportDataInMultipleStudents",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Asserts Report heading value
+            Logger.LogAssertion("VerifyCriteriaPageOpened",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                  Assert.AreEqual(reportHeading,
+                  new RptAssessmentAllStudentsPage().GetActivityHeading()));
+            //Assert report section name
+            Logger.LogAssertion("VerifyCriteriaPageOpened",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                  Assert.AreEqual(sectionName,
+                   new RptAssessmentAllStudentsPage().GetSectionName()));
+            //Assert report average score value
+            Logger.LogAssertion("VerifyCriteriaPageOpened",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+               Assert.AreEqual(averageScore,
+               new RptAssessmentAllStudentsPage().GetAverageScore()));
+            Logger.LogMethodExit("Reports",
+                "VerifyActivityReportDataInMultipleStudents",
+              base.IsTakeScreenShotDuringEntryExit); 
+        }
+
+        [Then(@"I should see the ""(.*)"" along with attempt as ""(.*)"" submitted as score as ""(.*)""")]
+        public void Verify100ScoreStudentReportDataInMultipleStudentInReports(User.UserTypeEnum userTypeEnum,
+            string attempCount, string scorePercentage)
+        {
+            // Verify report heading ,section name and average score
+            Logger.LogMethodEntry("Reports",
+                "Verify100ScoreStudentReportDataInMultipleStudentInReports",
+                base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userTypeEnum);
+            String firstName = user.FirstName;
+            String lastName = user.LastName;
+            String studentName = lastName + ", " + firstName;
+            //Verifies student name
+            Logger.LogAssertion("VerifyStudentPresent",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.IsTrue(new RptAssessmentAllStudentsPage().
+              IsStudentPresent(studentName)));
+            //Verifies attemp value
+            Logger.LogAssertion("Verify100ScoringStudentAttempts",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(attempCount,
+             new RptAssessmentAllStudentsPage().GetStudentAttempt(studentName)));
+            //Verify score value
+            Logger.LogAssertion("VerifyStudentPresent",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.IsTrue(new RptAssessmentAllStudentsPage().
+             IsStudentScorePercentagePresent(
+                 scorePercentage, studentName)));
+            Logger.LogMethodExit("Reports",
+                "Verify100ScoreStudentReportDataInMultipleStudentInReports",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see 'Zero' ""(.*)"" along with attempt as ""(.*)"" submitted as score as ""(.*)""")]
+        public void VerifyZeroScoreStudentReportDataInMultipleStudentInReports(User.UserTypeEnum userTypeEnum,
+            string attempCount, string scorePercentage)
+        {
+            // Verify report heading ,section name and average score
+            Logger.LogMethodEntry("Reports",
+              "VerifyZeroScoreStudentReportDataInMultipleStudentInReports",
+              base.IsTakeScreenShotDuringEntryExit);
+            string studentName = new RptAllAssessmentAllStudentPage().
+                GetZeroScoreUsername(userTypeEnum);
+            //Verifies student name
+            Logger.LogAssertion("VerifyStudentPresent",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.IsTrue(new RptAssessmentAllStudentsPage().
+              IsStudentPresent(studentName)));
+            //Verifies attemp value
+            Logger.LogAssertion("Verify100ScoringStudentAttempts",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(attempCount,
+             new RptAssessmentAllStudentsPage().GetStudentAttempt(studentName)));
+            //Verify score value
+            Logger.LogAssertion("VerifyStudentPresent",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.IsTrue(new RptAssessmentAllStudentsPage().
+             IsStudentScorePercentagePresent(
+                 scorePercentage, studentName)));
+            Logger.LogMethodExit("Reports",
+           "VerifyZeroScoreStudentReportDataInMultipleStudentInReports",
+         base.IsTakeScreenShotDuringEntryExit);
         }
 
 

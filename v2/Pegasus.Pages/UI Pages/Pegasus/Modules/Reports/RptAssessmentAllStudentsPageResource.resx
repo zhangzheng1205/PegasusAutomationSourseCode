@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RptAssessmentAllStudents_Page_GridElementsCount_XPath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr</value>
+  </data>
   <data name="RptAssessmentAllStudent_Page_Activity_Result_Single_window_Name" xml:space="preserve">
     <value>Activity Results (Single Student)</value>
   </data>
@@ -128,6 +131,9 @@
   </data>
   <data name="RptAssessmentAllStudent_Page_Activity_Title_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='tblMainStyle']/tbody/tr/td/span</value>
+  </data>
+  <data name="RptAssessmentAllStudent_Page_AverageScoreValue_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='_ctl3_AveragePlaceHolder']/table/tbody/tr/td/span</value>
   </data>
   <data name="RptAssessmentAllStudent_Page_Close_Link_Locator" xml:space="preserve">
     <value>Close</value>
@@ -144,8 +150,17 @@
   <data name="RptAssessmentAllStudent_Page_Score_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='tblSubmissionID']/tbody/tr/td[4][@id='StudentScore']</value>
   </data>
+  <data name="RptAssessmentAllStudent_Page_StudentAttemptValue_XPath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]//table[@id='tblSubmissionID']/tbody/tr/td[1]</value>
+  </data>
   <data name="RptAssessmentAllStudent_Page_StudentName_Xpath_Locator" xml:space="preserve">
     <value>//table[@class='HeaderMainStyle']/tbody/tr/td/div/table/tbody/tr/td/span</value>
+  </data>
+  <data name="RptAssessmentAllStudent_Page_StudentScoreValue_XPath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]//td[@id='StudentScore']</value>
+  </data>
+  <data name="RptAssessmentAllStudent_Page_StudentsName_XPath_Locator" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]/td[1]/span[1]</value>
   </data>
   <data name="RptAssessmentAllStudent_Page_Student_Name_SplittingCharacter" xml:space="preserve">
     <value>,</value>
@@ -155,6 +170,9 @@
   </data>
   <data name="RptAssessmentAllStudent_Page_Window_Name" xml:space="preserve">
     <value>Report: Activity Results by Student</value>
+  </data>
+  <data name="RptAssessmentAllStudent_Page__Activity_Result_Multiple_Students_Window_Title_Locator" xml:space="preserve">
+    <value>Activity Results (Multiple Students)</value>
   </data>
   <data name="RptAssessmentAllStudent_StudentResultsByActivity_Window_Name" xml:space="preserve">
     <value>Report: Student Results by Activity</value>

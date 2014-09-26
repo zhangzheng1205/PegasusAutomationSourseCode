@@ -336,4 +336,10 @@
   <data name="RptMainUX_Page_AssessmentWindow_Add_Button_Xpath_Locator" xml:space="preserve">
     <value>//a/span/span[text()='Add']</value>
   </data>
+  <data name="RptMainUX_Page_SelectActivities_Window_Title_Value" xml:space="preserve">
+    <value>Select Activities</value>
+  </data>
+  <data name="RptMainUX_Page_SelectActivity_Button_Xpath_Locator" xml:space="preserve">
+    <value>//a/span/span[text()='Select Activity']</value>
+  </data>
 </root>

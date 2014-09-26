@@ -32,7 +32,7 @@ namespace Pegasus.Pages
         /// /// <summary>
         /// Switch to 'Reports' window.
         /// </summary>
-        private void SwitchToGeneratedReportWindow(string windowName)
+        public void SwitchToGeneratedReportWindow(string windowName)
         {
             // Switch to 'Reports' window
             logger.LogMethodEntry("RptAllAssessmentAllStudentPage", "SwitchToGeneratedReportWindow",
@@ -43,6 +43,7 @@ namespace Pegasus.Pages
             logger.LogMethodExit("RptAllAssessmentAllStudentPage", "SwitchToGeneratedReportWindow",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Gets a heading displayed in the 'Activity Results (Multiple students and activities)' report.
@@ -60,7 +61,7 @@ namespace Pegasus.Pages
                 //Switch to report window
                 this.SwitchToGeneratedReportWindow(RptAllAssessmentAllStudentPageResource.
                        RptAllAssessmentAllStudent_Page_Window_Title_Locator);
-                base.WaitForElement(By.XPath(RptAllAssessmentAllStudentPageResource.
+               base.WaitForElement(By.XPath(RptAllAssessmentAllStudentPageResource.
                 RptAllAssessmentAllStudent_Page_ActivityHeading_Xpath_Locator));
                 //Gets the text from the element
                 getActualHeading = base.GetElementInnerTextByXPath
@@ -223,7 +224,7 @@ namespace Pegasus.Pages
                     if (getStudentName == studentName)
                     {
                         base.WaitForElement(By.XPath(string.Format(RptAllAssessmentAllStudentPageResource.
-                       RptAllAssessmentAllStudent_Page_StudentName_XPath_Locator, studentSearch)));
+                        RptAllAssessmentAllStudent_Page_StudentAttemptValue_XPath_Locator, studentSearch)));
                         getStudentAttempts = base.GetElementTextByXPath(string.
                        Format(RptAllAssessmentAllStudentPageResource.
                        RptAllAssessmentAllStudent_Page_StudentAttemptValue_XPath_Locator, studentSearch));
