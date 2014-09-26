@@ -137,6 +137,11 @@ Scenario: User Logout as SMS Instructor
 When I "Sign out" from the "CsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
+#Purpose: Logout as SMS Instructor
+Scenario: User Logout as Program Admin
+When I "Sign out" from the "HedProgramAdmin"
+Then I should see the successfull message "You have been signed out of the application."
+
 #Purpose: Login as Coursespace Admin
 Scenario: User Login as Coursespace Admin
 Given I browsed the login url for "HedCsAdmin"
