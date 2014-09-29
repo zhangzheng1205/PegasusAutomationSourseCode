@@ -14,7 +14,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// This is the logger
         /// </summary>
-        private static readonly Logger logger = Logger.GetInstance(typeof(Reg3Page));
+        private static readonly Logger Logger = Logger.GetInstance(typeof(Reg3Page));
 
         
         /// <summary>
@@ -23,7 +23,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnLogInNowButton()
         {
             //Click On Log In Now Button
-            logger.LogMethodEntry("Reg3Page", "ClickOnLogInNowButton",
+            Logger.LogMethodEntry("Reg3Page", "ClickOnLogInNowButton",
               base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);                
             }
-            logger.LogMethodExit("Reg3Page", "ClickOnLogInNowButton",
+            Logger.LogMethodExit("Reg3Page", "ClickOnLogInNowButton",
                base.IsTakeScreenShotDuringEntryExit);
         }
     }

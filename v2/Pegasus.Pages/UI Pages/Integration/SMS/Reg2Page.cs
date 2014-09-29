@@ -22,17 +22,17 @@ namespace Pegasus.Pages.UI_Pages
         /// Fill SMS User Account Information for Registeration
         /// </summary>
         /// <param name="userType">This is user type enum.</param>
+        /// <param name="scenarioName">This is scenarion name.</param>
         public void EnterSmsUserAccountInformation(User.UserTypeEnum userType,
             string scenarioName="Default Value")
         {
             // Fill SMS User Account Information
             Logger.LogMethodEntry("Reg2Page", "EnterSmsUserAccountInformation",
                 base.IsTakeScreenShotDuringEntryExit);
-            string getLastName = string.Empty;
             try
             {
                 //Enter SmsUser Personal Information.
-               getLastName= this.EnterSmsUserPersonalInformation(userType);
+               string getLastName = this.EnterSmsUserPersonalInformation(userType);
                if (scenarioName != "Default Value")
                {
                    //Update The User LastName In Memory
