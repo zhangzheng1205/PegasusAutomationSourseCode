@@ -615,7 +615,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Verify folder asset is present.
         /// </summary>
-        /// <param name="folderAssetName">This is a string text.</param>
+        /// <param name="expectedFolderAssetName">This is a activity folder name.</param>
        [Then(@"I should see ""(.*)"" asset")]
         public void VerifyFolderAssetPresent(string expectedFolderAssetName)
         {

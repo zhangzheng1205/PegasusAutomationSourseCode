@@ -106,7 +106,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("ContentLibrary",
                 "SelectCheckboxOfAssets",
                 base.IsTakeScreenShotDuringEntryExit);
-            ContentLibraryUXPage contentLibrary = new ContentLibraryUXPage();
+            var contentLibrary = new ContentLibraryUXPage();
             Assert.AreEqual(contentLibrary.GetClipboardItemsCount(),
                 contentLibrary.GetCountOfAssetTitleByColorAndFontStyle(
                 titleColor, fontStyle));
@@ -134,7 +134,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("ContentLibrary",
                 "VerifyAssetCopiedPosition",
                 base.IsTakeScreenShotDuringEntryExit);
-            ContentLibraryUXPage contentLibrary = new ContentLibraryUXPage();
+            var contentLibrary = new ContentLibraryUXPage();
             contentLibrary.SelectAndSwitchToContentLibrary();
             Assert.AreEqual(contentLibrary.GetCountOfAssetTitleByColorAndFontStyle(
                 "Red", "Italic"),contentLibrary.GetPastedItemCount());
@@ -152,7 +152,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("ContentLibrary",
                "VerifyAssetCopiedPosition",
                base.IsTakeScreenShotDuringEntryExit);
-            ShowMessagePage showMessagePage = new ShowMessagePage();
+            var showMessagePage = new ShowMessagePage();
             Assert.AreEqual(firstButton, 
                 showMessagePage.GetOkButtonText());
             Assert.AreEqual(secondButton, 
@@ -163,14 +163,14 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         [When(@"I click on OK button on Delete confirmation pop up")]
-        public void ClickOKButtonOnDeleteConfirmationPopUp()
+        public void ClickOkButtonOnDeleteConfirmationPopUp()
         {
             Logger.LogMethodEntry("ContentLibrary",
-               "ClickOKButtonOnDeleteConfirmationPopUp",
+               "ClickOkButtonOnDeleteConfirmationPopUp",
                base.IsTakeScreenShotDuringEntryExit);
             new ShowMessagePage().ClickOkButton();
             Logger.LogMethodExit("ContentLibrary",
-               "ClickOKButtonOnDeleteConfirmationPopUp",
+               "ClickOkButtonOnDeleteConfirmationPopUp",
                base.IsTakeScreenShotDuringEntryExit);
         }
 

@@ -377,11 +377,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (//div[text()=&apos;GO! with Microsoft Office 2013, Volume 1&apos;])[2].
+        ///   Looks up a localized string similar to //div[contains(text(),&apos;GO! with Microsoft Office 2013, Volume 1&apos;)].
         /// </summary>
-        internal static string CalendarHEDDefaultUXPage_GOwithMicrosoftOffice2013Volume1Folder_XPath_Locator {
+        internal static string CalendarHEDDefaultUXPage_GOwithMicrosoftOffice2013Volume1_Folder_XPath_Locator {
             get {
-                return ResourceManager.GetString("CalendarHEDDefaultUXPage_GOwithMicrosoftOffice2013Volume1Folder_XPath_Locator", resourceCulture);
+                return ResourceManager.GetString("CalendarHEDDefaultUXPage_GOwithMicrosoftOffice2013Volume1_Folder_XPath_Locator", resourceCulture);
             }
         }
         

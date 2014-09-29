@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using Pearson.Pegasus.TestAutomation.Frameworks;
@@ -1945,7 +1946,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-                  ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                 "IsCurrentDayHighlighted",
@@ -1964,19 +1965,15 @@ namespace Pegasus.Pages.UI_Pages
                 "GetActualFolderName",
                     base.IsTakeScreenShotDuringEntryExit);
             //Initialize getStatusText variable
-            string actualFolderAssetName = string.Empty;
+            IWebElement actualFolderAssetName = null;
             try
             {
                 //Select Calendar Window
                 this.SelectCalendarWindow();
                 //Get the inner text of the folder
-                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource
-                    .CalendarHEDDefaultUXPage_GOwithMicrosoftOffice2013Volume1Folder_XPath_Locator));
-                actualFolderAssetName = base.GetTitleAttributeValueByXPath
-                    (CalendarHEDDefaultUXPageResource
-                     .CalendarHEDDefaultUXPage_GOwithMicrosoftOffice2013Volume1Folder_XPath_Locator);
-                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
-                   CalendarHEDDefaultUXPage_SleepTime));
+                actualFolderAssetName =
+                    GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource
+                    .CalendarHEDDefaultUXPage_GOwithMicrosoftOffice2013Volume1_Folder_XPath_Locator);
             }
             catch (Exception e)
             {
@@ -1985,7 +1982,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("StudentPresentationPage",
               "GetActualFolderName",
                   base.IsTakeScreenShotDuringEntryExit);
-            return actualFolderAssetName;
+            return actualFolderAssetName.Text.ToString(CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -2047,7 +2044,7 @@ namespace Pegasus.Pages.UI_Pages
                 IsStartDateFlagDisplayed = base.IsElementPresent(By.ClassName
                     (CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_FlagImage_Class_Locator));
-                    
+
             }
             catch (Exception e)
             {
