@@ -281,20 +281,25 @@ testRunner.Then("I should see the successfull message \"Items deleted successful
 #line 96
 this.ScenarioSetup(scenarioInfo);
 #line 97
-testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 98
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
+                    "SmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 99
-testRunner.When("I select the checkbox of \"Folder\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 100
-testRunner.And("I Click on the Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 101
-testRunner.Then("I should see the selected \"Folder\" in Hidden state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I select the checkbox of \"Folder\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 102
-testRunner.When("I select the checkbox of added \"Folder\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I Click on the Add button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 103
-testRunner.And("I click on Show/Hide action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see the selected \"Folder\" in Hidden state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 104
+testRunner.When("I select the checkbox of added \"Folder\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 105
+testRunner.And("I click on Show/Hide action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 106
 testRunner.Then("I should see the selected \"Folder\" in Shown state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
