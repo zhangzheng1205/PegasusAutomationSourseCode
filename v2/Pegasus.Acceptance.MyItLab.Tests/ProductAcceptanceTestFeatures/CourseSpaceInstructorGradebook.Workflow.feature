@@ -92,7 +92,7 @@ Scenario: Instructor Validating student grade in instructor grade book By SMS In
 When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Gradebook" by "CsSmsInstructor"
-Then I should see the score "0" of "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity for "CsSmsStudent"
+Then I should see score "0" of "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity for "ZeroScore"  with "CsSmsStudent" 
 And I click on 'My Course' link in gradebook by "CsSmsInstructor"
 
 #Purpose: Instructor Validaing student submissin and grade in Instructor Gradebook
@@ -103,7 +103,7 @@ When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Gradebook" by "CsSmsInstructor"
 And I select the cmenu "ViewAllSubmissions" of asset "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
-Then I should see "0" score in view submission page
+Then I should see the "0" score in view submission page for a "ZeroScore" with "CsSmsStudent"
 And I click on 'My Course' link in gradebook by "CsSmsInstructor"
 
 #Purpose: Validating Apply GradeSchema in Instructor Gradebook
@@ -116,7 +116,8 @@ When I select "PowerPoint Chapter 1 Skill-Based Training" in "Gradebook" by "CsS
 And I select the cmenu "ApplyGradeSchema" of asset "PowerPoint Chapter 1 Skill-Based Training"
 And I 'Apply' the grade schema for the submitted activity
 Then I should see the "PowerPoint Chapter 1 Skill-Based Training" activity status "A" in Gradebook for enrollled "CsSmsStudent"
-And I click on 'My Course' link in gradebook by "CsSmsInstructor"
+When I select the cmenu "RemoveGradeSchema" of asset "PowerPoint Chapter 1 Skill-Based Training"
+Then I click on 'My Course' link in gradebook by "CsSmsInstructor"
 
 #Purpose: Instructor Validating student Study Plan Grade in Instructor Gradebook
 # TestCase Id: peg-22027

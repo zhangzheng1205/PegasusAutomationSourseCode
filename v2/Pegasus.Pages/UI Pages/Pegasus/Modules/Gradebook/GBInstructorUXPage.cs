@@ -4132,6 +4132,33 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="scenerioName"></param>
+        /// <param name="userTypeEnum"></param>
+        public User FetchTheUserDetails(string scenerioName, User.UserTypeEnum studentName)
+        {
+            //Click on MyCourse in Gradebook
+            logger.LogMethodEntry("GBInstructorUXPage", "FetchTheUserDetails",
+                base.IsTakeScreenShotDuringEntryExit);
+            //User declaration
+            User user = new User();
+            switch (scenerioName)
+            {
+                case "ZeroScore":
+                    user = User.Get(CommonResource.CommonResource
+                               .SMS_STU_UC1);
+                    break;
+                case "IdleScore":
+                    user = User.Get(CommonResource.CommonResource
+                              .SMS_STU_UC2);
+                    break;
+            }
+            logger.LogMethodExit("LoginContentPage", "FetchTheUserDetails",
+             base.IsTakeScreenShotDuringEntryExit);
+            return user;
+        }
     }
 }
 

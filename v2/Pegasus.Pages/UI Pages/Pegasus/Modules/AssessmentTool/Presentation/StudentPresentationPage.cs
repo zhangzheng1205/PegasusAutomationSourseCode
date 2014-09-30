@@ -2426,7 +2426,7 @@ namespace Pegasus.Pages.UI_Pages
             //Perform Mouse Hover on Cmenu Icon
             base.ClickByJavaScriptExecutor(getCmenuIconProperty1);
             //Wait for element
-            base.WaitForElement(By.PartialLinkText(activityName));
+            //base.WaitForElement(By.PartialLinkText(activityName));
             }
             catch (Exception e)
             {
@@ -3373,6 +3373,7 @@ namespace Pegasus.Pages.UI_Pages
             StudentPresentation_Page_SubmitAssignment_OK_Button_Id_Locator);
             //Click on the Submit Assignment 'OK' button
             base.ClickByJavaScriptExecutor(getSubmitAssignment);
+            Thread.Sleep(3000);
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSIM5ActivitySubmitButton",
             base.IsTakeScreenShotDuringEntryExit);
         }
