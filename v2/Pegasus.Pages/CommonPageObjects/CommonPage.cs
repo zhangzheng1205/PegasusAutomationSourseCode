@@ -93,11 +93,13 @@ namespace Pegasus.Pages.CommonPageObjects
                                         break;
                                     // Grader IT for Excel Activity
                                     case "Excel Chapter 1 Grader Project [Homework 3]":
+                                    case "Excel Chapter 1 Grader Project [Homework 3] (Project G)":
                                         this.NavigateToExcelChapter1GraderActivitiesFolder
                                             (CommonPageResource.CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
                                         break;
                                     // Grader IT for PowerPoint Activity
                                     case "PowerPoint Chapter 1 Grader Project [Homework 3]":
+                                    case "PowerPoint Chapter 1 Grader Project [Homework 3] (Project G)":
                                         this.NavigateToPowerPointChapter1GraderActivitiesFolder
                                             (CommonPageResource.CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator);
                                         break;

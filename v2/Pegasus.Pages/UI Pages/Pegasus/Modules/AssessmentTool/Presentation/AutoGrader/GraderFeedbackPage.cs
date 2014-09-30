@@ -4,6 +4,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.AutoGrader;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
+using System.Threading;
 namespace Pegasus.Pages.UI_Pages.Pegasus
 {
     public class GraderFeedbackPage : BasePage
@@ -125,8 +126,10 @@ namespace Pegasus.Pages.UI_Pages.Pegasus
             base.SelectWindow(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_Window_Title_Name_HED);
             base.RefreshIFrameByJavaScriptExecutor("ifrmCoursePreview");
+            Thread.Sleep(120000);
             Logger.LogMethodExit("GraderFeedbackPage", "ClickReturnToCourseButton",
                       base.IsTakeScreenShotDuringEntryExit);
+
         }
 
         /// <summary>
