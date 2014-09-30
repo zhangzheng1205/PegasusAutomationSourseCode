@@ -33,16 +33,17 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Enter SmsUser Personal Information.
                string getLastName = this.EnterSmsUserPersonalInformation(userType);
+               string getFirstName = this.EnterSmsFirstNameDetails();
                if (scenarioName != "Default Value")
                {
                    //Update The User LastName In Memory
                    this.UpdateTheUserLastNameInMemoryOnScenerioBasis(userType, 
-                       getLastName, scenarioName);
+                       getLastName, scenarioName,getFirstName);
                }
                else
                {
                    //Update The User LastName In Memory
-                   this.UpdateTheUserLastNameInMemory(userType, getLastName);
+                   this.UpdateTheUserLastNameInMemory(userType, getLastName, getFirstName);
                }
                 base.WaitForElement(By.Id(Reg2PageResource.
                     Reg2_Page_Entered_Country_DropDown_Id_Locator));
@@ -62,19 +63,49 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Enter SmsFirst Name Details.
+        /// </summary>
+        /// <returns></returns>
+        private string EnterSmsFirstNameDetails()
+        {
+            //Enter Personal Information
+            Logger.LogMethodEntry("Reg2Page", "EnterSmsFirstNameDetails",
+                base.IsTakeScreenShotDuringEntryExit);          
+            //Initialize Variable
+            string getUserFirstName = Reg2PageResource.
+                Reg2_Page_FirstName_TextBox_Value;
+            //Select Window
+            base.SelectWindow(Reg2PageResource.
+                    Reg2_Page_AccountInformation_Window_Title_Name);
+            //Wait for Element
+            base.WaitForElement(By.Id(Reg2PageResource.
+                Reg2_Page_FirstName_TextBox_Id_Locator));
+            base.ClearTextById(Reg2PageResource.
+                Reg2_Page_FirstName_TextBox_Id_Locator);
+            //Enter First Name
+            base.FillTextBoxById(Reg2PageResource.
+                Reg2_Page_FirstName_TextBox_Id_Locator,
+                getUserFirstName);
+            Logger.LogMethodExit("Reg2Page", "EnterSmsFirstNameDetails",
+            base.IsTakeScreenShotDuringEntryExit);
+            return getUserFirstName;
+        }
+
+        /// <summary>
         /// Update The User LastName In Memory.
         /// </summary>
         /// <param name="userType">This is user type enum.</param>
         /// <param name="getLastName">This is last name.</param>
         private void UpdateTheUserLastNameInMemory(User.UserTypeEnum userType,
-            string getLastName)
+            string lastName,string firstName)
         {
             //Update The User LastName In Memory
             Logger.LogMethodEntry("Reg2Page", "UpdateTheUserLastNameInMemory",
                 base.IsTakeScreenShotDuringEntryExit);
             //The the user details from memory
             User user = User.Get(userType);
-            user.LastName = getLastName;
+            user.LastName = lastName;
+            user.FirstName = firstName;
             //Update the last name in memory
             user.UpdateUserInMemory(user);
             Logger.LogMethodExit("Reg2Page", "UpdateTheUserLastNameInMemory",
@@ -88,7 +119,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="getLastName">This Is Last Name.</param>
         /// <param name="scenarioName">This Is scenerion Basis Name.</param>
         private void UpdateTheUserLastNameInMemoryOnScenerioBasis(User.UserTypeEnum userType, 
-            string getLastName, string scenarioName)
+            string lastName, string scenarioName,string firstName)
         {
             //Update The User LastName In Memory On Scenerio Basis
             Logger.LogMethodEntry("Reg2Page", "UpdateTheUserLastNameInMemoryOnScenerioBasis",
@@ -98,13 +129,15 @@ namespace Pegasus.Pages.UI_Pages
                    case "scoring 0":
                        User user = User.Get(CommonResource.CommonResource
                          .SMS_STU_UC1);
-                       user.LastName = getLastName;
+                       user.LastName = lastName;
+                       user.FirstName = firstName;
                        user.UpdateUserInMemory(user);
                        break;
                    case "set idle":
                        User user2 = User.Get(CommonResource.CommonResource
                          .SMS_STU_UC2);
-                       user2.LastName = getLastName;
+                       user2.LastName = lastName;
+                       user2.FirstName = firstName;
                        user2.UpdateUserInMemory(user2);
                        break;
                }
@@ -129,16 +162,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select Window
                 base.SelectWindow(Reg2PageResource.
-                        Reg2_Page_AccountInformation_Window_Title_Name);
-                //Wait for Element
-                base.WaitForElement(By.Id(Reg2PageResource.
-                    Reg2_Page_FirstName_TextBox_Id_Locator));
-                base.ClearTextById(Reg2PageResource.
-                    Reg2_Page_FirstName_TextBox_Id_Locator);
-                //Enter First Name
-                base.FillTextBoxById(Reg2PageResource.
-                    Reg2_Page_FirstName_TextBox_Id_Locator,
-                    Reg2PageResource.Reg2_Page_FirstName_TextBox_Value);
+                        Reg2_Page_AccountInformation_Window_Title_Name); 
                 //Splitt User Last Name
                 string[] getSplittedUserLastName = userLastName.ToString().Split('-');
                 //Get Splitted User Last Name
@@ -178,7 +202,7 @@ namespace Pegasus.Pages.UI_Pages
                 Reg2_Page_Email_TextBox_Id_Locator);
             //Enter Email Id
             base.FillTextBoxById(Reg2PageResource.
-                Reg2_Page_Email_TextBox_Id_Locator,
+                Reg2_Page_Email_TextBox_Id_Locator, 
                 Reg2PageResource.Reg2_Page_Email_TextBox_Value);
             //Wait For Element
             base.WaitForElement(By.Id(Reg2PageResource.

@@ -832,6 +832,57 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
+        /// Verify The Score Of Activity.
+        /// </summary>
+        /// <param name="activityScore">This is Activity Score.</param>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="userTypeEnum">This is User Type Enum.</param>
+        /// <param name="scenerioName">This is scenerio name of the student.</param>
+        [Then(@"I should see score ""(.*)"" of ""(.*)"" activity for ""(.*)""  with ""(.*)""")]
+        public void VerifyTheScoreOfActivityBasedOnScenerio(string activityScore, 
+            string activityName,
+            string scenerioName, User.UserTypeEnum userTypeEnum)
+        {
+            //Verify The Score Of Activity
+            Logger.LogMethodEntry("Gradebook",
+                "VerifyTheScoreOfActivityBasedOnScenerio",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = new GBInstructorUXPage().FetchTheUserDetails(scenerioName, userTypeEnum);            
+            //Select the window
+            new GBInstructorUXPage().SelectGradebookFrame();
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (activityScore, new GBInstructorUXPage().GetActivityStatus(
+                    activityName, user.LastName, user.FirstName)));
+            Logger.LogMethodExit("Gradebook",
+                "VerifyTheScoreOfActivityBasedOnScenerio",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see the ""(.*)"" score in view submission page for a ""(.*)"" with ""(.*)""")]
+        public void VerifyTheScoreInViewSubmissionPageBasedOnScenerio(string submissionScore,
+            string scenerioName, User.UserTypeEnum userTypeEnum)
+        {
+            //Verify The Score Of Activity
+            Logger.LogMethodEntry("Gradebook",
+                "VerifyTheScoreOfActivityBasedOnScenerio",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            User user = new GBInstructorUXPage().FetchTheUserDetails(scenerioName, userTypeEnum);
+            //Assert Grades of Submitted Activity
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (submissionScore, new ViewSubmissionPage().GetSubmissionScoreByStudent
+                 (user.LastName, user.FirstName)));
+            Logger.LogMethodExit("Gradebook",
+                "VerifyTheScoreOfActivityBasedOnScenerio",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// Select The Cmenu Of Asset In Instructor GradeBook.
         /// </summary>
         /// <param name="assetCmenu">This is Asset Cmenu.</param>
