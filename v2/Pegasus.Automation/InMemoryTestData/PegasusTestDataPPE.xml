@@ -671,6 +671,11 @@
       <ActivityBehavioralMode>SkillBased</ActivityBehavioralMode>
       <IsCreated>true</IsCreated>
     </Activity>
+    <Activity>
+      <Name>Technology in Action, 10e</Name>
+      <ActivityType>Folder</ActivityType>
+      <IsCreated>true</IsCreated>
+    </Activity>
   </ArrayOfActivity>
   <!--This is already created class  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
