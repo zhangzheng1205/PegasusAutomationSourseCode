@@ -1809,6 +1809,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <see cref="Perform">A convenience method for performing the actions without calling build() first.</see>
         protected void PerformMoveToElementClickAction(IWebElement webElement)
         {
+            
             new Actions(WebDriver).MoveToElement(webElement).Click().Build().Perform();
         }
 
@@ -1840,6 +1841,31 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             new Actions(WebDriver).DragAndDropToOffset(sourceElementLocation, offsetX, offsetY).Perform();
         }
+
+        /// <summary>
+        /// Use this Method to Place Cursor to Specified Position.
+        /// </summary>
+        /// <param name="webElement">Element to move to.</param>
+        /// <param name="xCoordinateValue">This is X Coordinate Value Where Cursor need to Place.</param>
+        /// <param name="yCoordinateValue">This is Y Coordinate Value Where Cursor need to Place.</param>
+        protected void PlaceCursorPosition(IWebElement webElement, int xCoordinateValue, int yCoordinateValue)
+        {
+            new Actions(WebDriver).MoveToElement(webElement, xCoordinateValue, yCoordinateValue).Click().Perform();
+        }
+
+        /// <summary>
+        /// Releases the depressed left mouse button at the current mouse location.
+        /// </summary>
+        /// <see cref="Actions">The user-facing API for emulating complex user gestures. 
+        /// Use this class rather than using the Keyboard or Mouse directly. Implements the builder pattern: 
+        /// Builds a CompositeAction containing all actions specified by the method calls.</see>
+        /// <seealso cref="Release">Releasing an element after clicking and holding it.</seealso>
+        /// <see cref="Perform">A convenience method for performing the actions without calling build() first.</see>
+        protected void PerformReleaseAction()
+        {
+            new Actions(WebDriver).Release().Perform();
+        }
+
         #endregion
 
         #region WebDriver IJavaScriptExecutor
@@ -2012,6 +2038,29 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected void MouseOverByJavaScriptExecutor(IWebElement webElement)
         {
             ((IJavaScriptExecutor)WebDriver).ExecuteScript("return $(arguments[0]).mouseover();", webElement);
+        }
+
+        /// <summary>
+        /// Use this Method to Fill Text to Inner HTML of Text Area Using Javascript.
+        /// </summary>
+        /// <param name="by">This is HTML element locating mechanism to use.</param>
+        /// <param name="textToFill">This is Text to Fill in the Text Area.</param>
+        private void FillTexttoInnerHtmlByJavaScriptExecutor(By by, string textToFill)
+        {
+            base.WaitForElement(by);
+            IWebElement iWebElementName = WebDriver.FindElement(by);
+            ((IJavaScriptExecutor)WebDriver).ExecuteScript(String.Format("arguments[0].innerHTML = '{0}'", textToFill), iWebElementName);
+        }
+
+        /// <summary>
+        /// Use this Method to Fill text in Inner HTML Property of Text Area Using Xpath Attribute Value Through Javascript.
+        /// </summary>
+        /// <param name="xPathAttributeValue">This is Xpath Attribute Value.</param>
+        /// <param name="textValue">This is Text Value to Fill.</param>
+        protected void FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor
+            (String xPathAttributeValue, String textValue)
+        {
+            FillTexttoInnerHtmlByJavaScriptExecutor(By.XPath(xPathAttributeValue), textValue);
         }
 
         #endregion
@@ -2466,39 +2515,5 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         #endregion WebDriver FindElements
-
-        /// <summary>
-        /// Use this Method to Fill Text to Inner HTML of Text Area Using Javascript.
-        /// </summary>
-        /// <param name="by">This is HTML element locating mechanism to use.</param>
-        /// <param name="textToFill">This is Text to Fill in the Text Area.</param>
-        private void FillTexttoInnerHTMLByJavaScriptExecutor(By by, string textToFill)
-        {
-            base.WaitForElement(by);
-            IWebElement iWebElementName = WebDriver.FindElement(by);
-            ((IJavaScriptExecutor)WebDriver).ExecuteScript(String.Format("arguments[0].innerHTML = '{0}'", textToFill), iWebElementName);
-        }
-
-        /// <summary>
-        /// Use this Method to Fill text in Inner HTML Property of Text Area Using Xpath Attribute Value Through Javascript.
-        /// </summary>
-        /// <param name="xPathAttributeValue">This is Xpath Attribute Value.</param>
-        /// <param name="textValue">This is Text Value to Fill.</param>
-        protected void FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor
-            (String xPathAttributeValue, String textValue)
-        {
-            FillTexttoInnerHTMLByJavaScriptExecutor(By.XPath(xPathAttributeValue), textValue);
-        }
-
-        /// <summary>
-        /// Use this Method to Place Cursor to Specified Position.
-        /// </summary>
-        /// <param name="WebElement">Element to move to.</param>
-        /// <param name="xCoordinateValue">This is X Coordinate Value Where Cursor need to Place.</param>
-        /// <param name="yCoordinateValue">This is Y Coordinate Value Where Cursor need to Place.</param>
-        protected void PlaceCursorPosition(IWebElement WebElement, int xCoordinateValue, int yCoordinateValue)
-        {
-            new Actions(WebDriver).MoveToElement(WebElement, xCoordinateValue, yCoordinateValue).Click().Perform();
-        }
     }
 }

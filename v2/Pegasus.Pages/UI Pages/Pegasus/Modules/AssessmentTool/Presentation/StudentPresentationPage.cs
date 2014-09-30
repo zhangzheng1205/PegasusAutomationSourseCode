@@ -3425,7 +3425,7 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPrsentation_Page_Notes_Button_Xpath_Locator);
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
-            base.FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor(
+            base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(
                 StudentPresentationPageResource.StudentPrsentation_Page_Notes_Area_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_Notes_Text_Value);
             //Click and place cursor Location
@@ -3487,7 +3487,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_Time_to_Wait));
             //Enter Text in bulleted Point
-            base.FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor(
+            base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(
                 StudentPresentationPageResource.StudentPrsentation_Page_Third_Bulleted_Point_Text_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_Third_Bulleted_Point_Text_Value);
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
@@ -3528,7 +3528,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                  StudentPrsentation_Page_SIM5_Sleep_Time));
             //Enter Text in bulleted Point
-            base.FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor(
+            base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(
                 StudentPresentationPageResource.StudentPrsentation_Page_Second_Bulleted_Point_Text_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_Second_Bulleted_Point_Text_Value);
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
@@ -3563,7 +3563,7 @@ namespace Pegasus.Pages.UI_Pages
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
             //Enter Text in bulleted Point
-            base.FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor(
+            base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(
                 StudentPresentationPageResource.StudentPrsentation_Page_First_Bulleted_Point_Text_Xpath_Locator, 
                 StudentPresentationPageResource.StudentPrsentation_Page_First_Bulleted_Point_Text_Value);
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
@@ -3597,7 +3597,7 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPrsentation_Page_Title_Xpath_Locator);
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
-            base.FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor(StudentPresentationPageResource.
+            base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(StudentPresentationPageResource.
                 StudentPrsentation_Page_Title_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_Title_Content_Slide_Title_Value);
             base.PressKey(StudentPresentationPageResource.StudentPrsentation_Page_Down_Key_Value);
@@ -3606,7 +3606,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Content
             this.ClickOnElementByXpath(StudentPresentationPageResource.
                 StudentPrsentation_Page_Content_Text);
-            base.FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor(StudentPresentationPageResource.
+            base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(StudentPresentationPageResource.
                 StudentPrsentation_Page_Content_Text, StudentPresentationPageResource.
                 StudentPrsentation_Page_Content_FirstBullet_Text);
             base.PressKey(StudentPresentationPageResource.StudentPrsentation_Page_Down_Key_Value);
@@ -3636,7 +3636,7 @@ namespace Pegasus.Pages.UI_Pages
                 StudentPrsentation_Page_Title_Xpath_Locator);
             Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
-            base.FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor(StudentPresentationPageResource.
+            base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(StudentPresentationPageResource.
                 StudentPrsentation_Page_Title_Xpath_Locator, StudentPresentationPageResource.
                 StudentPrsentation_Page_Fourth_Question_Title_Value);
             base.PressKey(StudentPresentationPageResource.StudentPrsentation_Page_Down_Key_Value);
@@ -3777,13 +3777,13 @@ namespace Pegasus.Pages.UI_Pages
             this.ClickOnElementByXpath(StudentPresentationPageResource.
             StudentPrsentation_Page_SubTitle_FirstText_Xpath_Locator);
             //Enter Sub Title 'Your Travel'
-            base.FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor(StudentPresentationPageResource.
+            base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(StudentPresentationPageResource.
                 StudentPrsentation_Page_SubTitle_FirstText_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_SubTitle_FirstText_Value);
             base.PressKey(StudentPresentationPageResource.StudentPrsentation_Page_Down_Key_Value);
             base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
             //Enter Sub Title 'Your Way'
-            base.FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor(StudentPresentationPageResource.
+            base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(StudentPresentationPageResource.
                 StudentPrsentation_Page_SubTitle_SecondText_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_SubTitle_SecondText_Value);
             base.PressKey(StudentPresentationPageResource.StudentPrsentation_Page_Down_Key_Value);
@@ -3805,7 +3805,7 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
                 StudentPrsentation_Page_Title_TextArea_Xpath_Locator));
             //Enter Title
-            base.FillTexttoInnerHTMLByXpathFillTexttoInnerHTMLThroughJavaScriptExecutor(
+            base.FillTextToInnerHtmlByXpathFillTexttoInnerHtmlThroughJavaScriptExecutor(
                 StudentPresentationPageResource.
                 StudentPrsentation_Page_Title_TextArea_Xpath_Locator,
                 StudentPresentationPageResource.StudentPrsentation_Page_Title_Text_Value);

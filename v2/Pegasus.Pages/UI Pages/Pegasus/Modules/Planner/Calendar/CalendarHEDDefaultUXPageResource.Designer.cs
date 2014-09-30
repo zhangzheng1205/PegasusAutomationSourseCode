@@ -449,7 +449,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 10000.
+        ///   Looks up a localized string similar to 5000.
         /// </summary>
         internal static string CalendarHEDDefaultUXPage_SleepTime {
             get {
@@ -936,7 +936,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 10.
+        ///   Looks up a localized string similar to 5.
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_TimeToWaitForElement {
             get {

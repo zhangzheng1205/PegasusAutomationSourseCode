@@ -2010,7 +2010,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.PerformMoveToElementClickAction(base.
                     GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
-                //Wait for 10 Secs
+                // Releasing an element after clicking and holding it
+                base.PerformReleaseAction();
+                //Wait for 5 Secs
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_SleepTime));
             }
@@ -2081,7 +2083,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.PerformMoveToElementClickAction(base.
                     GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
-                //Wait for 10 Secs
+                // Releasing an element after clicking and holding it
+                base.PerformReleaseAction();
+                //Wait for 5 Secs
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_SleepTime));
             }
