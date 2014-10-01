@@ -1086,5 +1086,19 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("AssignContentPage", "SelectCurrentDate",
                             base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        ///To click on save.
+        /// </summary>
+        public void ClickOnSave()
+        {
+            logger.LogMethodEntry("AssignContentPage", "ClickOnSave",
+                        base.IsTakeScreenShotDuringEntryExit);
+            IWebElement clickSave = base.GetWebElementPropertiesById("Save");
+            base.ClickByJavaScriptExecutor(clickSave);
+            logger.LogMethodExit("AssignContentPage", "ClickOnSave",
+                            base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

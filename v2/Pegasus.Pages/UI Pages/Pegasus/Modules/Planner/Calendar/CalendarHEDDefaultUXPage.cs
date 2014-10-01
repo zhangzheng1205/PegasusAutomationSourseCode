@@ -2070,22 +2070,11 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select Calendar Window
                 this.SelectCalendarWindow();
+                Thread.Sleep(3000);
                 //Wait for the element
-                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource
-                    .CalendarHEDDefaultUXPageResource_ExcelSkillBasedTrainingAsset_Xpath_Locator));
-                //Drag and Drop
-                base.PerformClickAndHoldAction(base.
-                    GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource
-                    .CalendarHEDDefaultUXPageResource_ExcelSkillBasedTrainingAsset_Xpath_Locator));
-                //Wait for the element
-                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
-                base.PerformMoveToElementClickAction(base.
-                    GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
-                // Releasing an element after clicking and holding it
-                base.PerformReleaseAction();
-                //Wait for 5 Secs
+                IWebElement element = WebDriver.FindElement(By.XPath("//div[@title='Excel Chapter 1 Skill-Based Training']"));
+                IWebElement target = WebDriver.FindElement(By.XPath("//td[@class='HighlightTodayCell']"));
+                base.PerformDragAndDropAction(element, target);
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_SleepTime));
             }
@@ -2205,14 +2194,14 @@ namespace Pegasus.Pages.UI_Pages
             string getActivityName = string.Empty;
             try
             {
+                bool jdg = base.IsElementPresent(By.XPath(String.Format("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div")), 10);
                 //Get the total no of assets assigned count
-                int getRowCount = base.GetElementCountByXPath(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource_AssetText_XPath_locator);
+                int getRowCount = base.GetElementCountByXPath("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div");
                 for (int row = 0; row <= getRowCount; row++)
                 {
+                    bool yy = base.IsElementPresent(By.XPath(String.Format("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday'/div/div//div/span")), 10);
 
-                    base.WaitForElement(By.XPath(String.Format(CalendarHEDDefaultUXPageResource.
-                        CalendarHEDDefaultUXPageResource_AssetInnerText_XPath_Locator, row)));
+                    base.WaitForElement(By.XPath(String.Format("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_dvContainer'/div/div/div/span", row)));
                     //Get the asset inner text
                     getActivityName = base.GetElementInnerTextByXPath(String.Format
                         (CalendarHEDDefaultUXPageResource.

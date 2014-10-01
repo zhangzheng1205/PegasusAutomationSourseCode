@@ -134,7 +134,7 @@ Then I should be on the "Save settings to My Reports" page
 When I select "Createnewreport" radiobutton
 And I enter the "MyItLabActivityResultsMultipleStudentsAdActivities" report name
 And I click on "SaveandRun" button
-Then I should see the "Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" with section "ReportsAutomation1" average score " 50%"
+Then I should see the "Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" with section "ReportsAutomation1" average score "50%"
 And I should see the "CsSmsStudent" along with attempt as "2" score as "100.0%"
 And I should see 'Zero' "CsSmsStudent" along with attempt as "1" score as "0.0%"
 When I close the "Activity Results (Multiple students and activities) " window
@@ -160,14 +160,14 @@ Then I should be on the "Save settings to My Reports" page
 When I select "Createnewreport" radiobutton
 And I enter the "MyItLabActivityResultsMultipleStudentsAdActivities" report name
 And I click on "SaveandRun" button
-Then I should see the "Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" with average score " 50%"
+Then I should see the "Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" with average score "50%"
 And I should see the "CsSmsStudent" along with section "MyITLabOffice2013Program" attempt as "2" submitted as score as "100.00%"
 And I should see 'Zero' "CsSmsStudent" along with section "MyITLabOffice2013Program" attempt as "1" submitted as score as "0.00%"
 When I close the "Activity Results (Multiple students and activities)" window
 And I click on the "Cancel" button in reports by "HedProgramAdmin"
 And I select "Run Report" for "MyItLabActivityResultsMultipleStudentsAdActivities" report in 'My Reports' grid by "HedProgramAdmin"
 Then I should be on the "Activity Results (Multiple students and activities)" page
-When I close the "Activity Results (Multiple students and activities)" window
+And I close the "Activity Results (Multiple students and activities)" window
 
 #Purpose : Generate “Activity Results (Multiple Students)" Report by SMS Instructor
 #Test Case Id:peg-21984
@@ -193,7 +193,7 @@ When I close the "Activity Results (Multiple Students)" window
 And I click on the "Cancel" button in reports by "CsSmsInstructor"
 And I select "Run Report" for "MyITLabActivityResultsMultipleStudents" report in 'My Reports' grid by "CsSmsInstructor"
 Then I should be on the "Activity Results (Multiple Students)" page
-When I close the "Activity Results (Multiple Students)" window
+And I close the "Activity Results (Multiple Students)" window
 
 #Purpose: To run and save the "Exam Frequency Analysis" Report As Section instructor
 #Test Case Id: peg-21956
@@ -218,11 +218,11 @@ When I close the "Exam Frequency Analysis" window
 And I click on the "Cancel" button in reports by "CsSmsInstructor"
 And I select "Run Report" for " MyITLabExamFrequencyAnalysis" report in 'My Reports' grid by "CsSmsInstructor"
 Then I should be on the "Exam Frequency Analysis" page
-When I close the "Exam Frequency Analysis" window
+And I close the "Exam Frequency Analysis" window
 
 
 #Purpose: To run and save the "Training Frequency Analysis" Report As Section instructor
-#Test Case Id: peg-21962
+#Test Case Id: peg-21960
 #MyITLabOffice2013Program
 Scenario: To run and save "Training Frequency Analysis" Report As Section instructor
 When I navigate to "Gradebook" tab and selected "Reports" subtab
@@ -243,4 +243,54 @@ When I close the "Training Frequency Analysis" window
 And I click on the "Cancel" button in reports by "CsSmsInstructor"
 And I select "Run Report" for " MyITLabTrainingFrequencyAnalysis" report in 'My Reports' grid by "CsSmsInstructor"
 Then I should be on the "Training Frequency Analysis" page
+And I close the "Training Frequency Analysis" window
+
+#Purpose : Generate "Training Frequency Analysis" Report by Program Admin
+#Test Case Id: peg-21962
+#MyITLabOffice2013Program
+Scenario:To run and save "Training Frequency Analysis" Report by Program Admin
+When I navigate to "Reports" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
+When I click on "Training Frequency Analysis" report link as "HedProgramAdmin"
+Then I should open "Options for Training Frequency Analysis" criteria page as "HedProgramAdmin"
+When I select "MyITLabOffice2013Program" section under "MyITLabForOffice2013Master" template in 'Section Options'
+And I select "Excel Chapter 1 Skill-Based Training" asset in "Select Trainings" by "HedProgramAdmin"
+And I select 'save settings to My Reports' option by "HedProgramAdmin"
+And I click on the "Run Report" button in reports by "HedProgramAdmin"
+Then I should be on the "Save settings to My Reports" page
+When I select "Createnewreport" radiobutton
+And I enter the "MyITLabTrainingFrequencyAnalysis" report name
+And I click on "SaveandRun" button
+Then I should see the question details "XL Activity 1.01: Starting Excel, Navigating Excel, and Naming and Saving a Workbook" "ReportsAutomation1" "Excel 2013" "50.00%"
+And I should see the question details "XL Activity 1.02: Entering Text, Using AutoComplete, and Using the Name Box to Select a Cell" "ReportsAutomation1" "Excel 2013" "50.00%"
+When I close the "Activity Results (Multiple students and activities)" window
+And I click on the "Cancel" button in reports by "HedProgramAdmin"
+And I select "Run Report" for " MyITLabTrainingFrequencyAnalysis" report in 'My Reports' grid by "HedProgramAdmin"
+Then I should be on the "Training Frequency Analysis" page
 When I close the "Training Frequency Analysis" window
+
+#Purpose: To run and save the "Exam Frequency Analysis" Report by Program Admin
+#Test Case Id: peg-21947
+#MyITLabOffice2013Program
+Scenario: To run and save "Exam Frequency Analysis" Report by Program Admin
+When I navigate to "Reports" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
+When I click on "Exam Frequency Analysis" report link as "HedProgramAdmin"
+Then I should open "Options for Exam Frequency Analysis" criteria page as "HedProgramAdmin"
+When I select "MyITLabOffice2013Program" section under "MyITLabForOffice2013Master" template in 'Section Options'
+And I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in "Select Exams" by "HedProgramAdmin"
+And I select 'save settings to My Reports' option by "HedProgramAdmin"
+And I click on the "Run Report" button in reports by "HedProgramAdmin"
+Then I should be on the "Save settings to My Reports" page
+When I select "Createnewreport" radiobutton
+And I enter the " MyITLabExamFrequencyAnalysis" report name
+And I click on "SaveandRun" button
+Then I should see details of the question "WD Activity 1.01: Starting a New Word Document" "ReportsAutomation1" "SIM5 Question" "Word 2013" "50.00%"
+And I should see details of the question "WD Activity 1.02: Inserting Text from Another Document" "ReportsAutomation1" "SIM5 Question" "Word 2013" "50.00%"
+When I close the "Exam Frequency Analysis" window
+And I click on the "Cancel" button in reports by "HedProgramAdmin"
+And I select "Run Report" for " MyITLabExamFrequencyAnalysis" report in 'My Reports' grid by "HedProgramAdmin"
+Then I should be on the "Exam Frequency Analysis" page
+And I close the "Exam Frequency Analysis" window
+
+

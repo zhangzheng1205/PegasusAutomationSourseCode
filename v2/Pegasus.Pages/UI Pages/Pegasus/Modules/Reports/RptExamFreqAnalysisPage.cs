@@ -41,7 +41,7 @@ namespace Pegasus.Pages.UI_Pages
                     RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
-                    RptExamFreqAnalysisPage_ReportScore_Xpath_Locator));
+                    RptExamFreqAnalysisPage_ReportScore_Xpath_Locator),10);
                 //Get Activity Score
                 getActivityScore = base.GetElementTextByXPath(
                     RptExamFreqAnalysisPageResource.
@@ -63,6 +63,24 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Select Window.
+        /// </summary>
+        private void SelectWindow()
+        {
+            //Select Window
+            logger.LogMethodEntry("RptExamFreqAnalysisPage", "SelectWindow"
+                , base.IsTakeScreenShotDuringEntryExit);
+            //Wait Until Window
+            base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
+                    RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+            //Selecting the 'Training Frequency Analysis' window                
+            base.SelectWindow(RptExamFreqAnalysisPageResource.
+                    RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+            logger.LogMethodExit("RptExamFreqAnalysisPage", "SelectWindow"
+               , base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         ///  Verifying Question Name in Report Generated.
         /// </summary>
         /// <returns>Get Question Name.</returns>
@@ -76,10 +94,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element           
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                     RptExamFreqAnalysisPage_ExamFrequencyAnalysis_QuestionName));
@@ -112,10 +127,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element            
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                     RptMainUX_Page_ExamFrequencyAnalysis_TypeName_Locator));
@@ -148,10 +160,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                     RptExamFreqAnalysisPage_ExamFrequencyAnalysis_ApplicationName));
@@ -185,10 +194,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                      RptExamFreqAnalysisPage_ExamFrequencyAnalysis_CorrectPercentage));
@@ -221,10 +227,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                      RptExamFreqAnalysisPage_ExamFrequencyAnalysis_CorrectAttempt));
@@ -257,10 +260,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                      RptExamFreqAnalysisPage_ExamFrequencyAnalysis_InCorrectAttempt));
@@ -293,10 +293,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                      RptExamFreqAnalysisPage_ExamFrequencyAnalysis_SkippedAttempt));
@@ -329,10 +326,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();                
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                      RptExamFreqAnalysisPage_ExamFrequencyAnalysis_ySecondQuestionName));
@@ -364,10 +358,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                      RptExamFreqAnalysisPage_ExamFrequencyAnalysis_ySecondQuestionType));
@@ -399,10 +390,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                      RptExamFreqAnalysisPage_ApplicationName));
@@ -437,10 +425,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                      RptExamFreqAnalysisPage_ExamFrequencyAnalysisy_SecondActivityPercent));
@@ -474,10 +459,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                      RptExamFreqAnalysisPage_ExamFrequencyAnalysisy_SecondCorrectAttempt));
@@ -498,7 +480,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Verify InCorrect Attempt Displayed in Report Generated.
         /// </summary>
-        /// <returns>InCorrect Attempt</returns>
+        /// <returns>InCorrect Attempt.</returns>
         public string GetExamFrequencySecondQuestionInCorrectAttemptDetails()
         {
             //Verify InCorrect Attempt Displayed in Report Generated
@@ -509,10 +491,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                      RptExamFreqAnalysisPage_ExamFrequencyAnalysisy_SecondInCorrectAttempt));
@@ -545,10 +524,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select the window
-                base.WaitUntilWindowLoads(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
-                base.SelectWindow(RptExamFreqAnalysisPageResource.
-                        RptExamFreqAnalysisPage_ExamFrequencyAnalysis_Window_name);
+                this.SelectWindow();
                 //Wait for the element
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                      RptExamFreqAnalysisPage_ExamFrequencyAnalysisy_SecondSkippedAttempt));
@@ -567,6 +543,101 @@ namespace Pegasus.Pages.UI_Pages
             return getSkippedAttemptDetails;
         }
 
+        /// <summary>
+        /// Verify the Question name in Exam frequency analysis report.
+        /// </summary>
+        /// <param name="questionName">This is a question name.</param>
+        /// <returns>Question name.</returns>
+        public Boolean IsQuestionPresentInExamFrequencyAnalysis(string questionName)
+        {
+            //Verify the Question name
+            logger.LogMethodEntry("RptExamFreqAnalysisPage",
+                "IsQuestionPresentInExamFrequencyAnalysis",
+                base.IsTakeScreenShotDuringEntryExit);
+            bool isQuestionPresent = false;
+            string getQuestionName = string.Empty;
+            //Select reports window
+            this.SelectWindow();
+            try
+            {
+                base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
+                    RptMainUX_Page_ExamFrequencyAnalysis_QuestionCount_Xpath_Locator));
+                int getCount = base.GetElementCountByXPath(RptExamFreqAnalysisPageResource.
+                    RptMainUX_Page_ExamFrequencyAnalysis_QuestionCount_Xpath_Locator);
+                for (int questionSearch = 1; questionSearch <= getCount; questionSearch++)
+                {
+                    //Get the question name
+                    getQuestionName = base.GetElementTextByXPath(string.
+                       Format(RptExamFreqAnalysisPageResource.
+                       RptMainUX_Page_ExamFrequencyAnalysis_QuestionName_Xpath_Locator, 
+                       questionSearch));
+                    if (getQuestionName == questionName)
+                    {
+                        isQuestionPresent = true;
+                        break;
+                    }                    
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptExamFreqAnalysisPage", 
+                "IsQuestionPresentInExamFrequencyAnalysis",
+                base.IsTakeScreenShotDuringEntryExit);
+            return isQuestionPresent;
+        }
+
+        /// <summary>
+        /// Verify the Question details in Exam frequency analysis report.
+        /// </summary>
+        /// <param name="questionName">This is a Question name.</param>
+        /// <param name="questionColumnData">This is Question details column name.</param>
+        /// <returns>Question details.</returns>
+        public string GetExamFrequencyAnalysisQuestionDetails(string questionName,
+            int questionColumnData)
+        {
+            //Verify the Question details
+            logger.LogMethodEntry("RptExamFreqAnalysisPage", "GetQuestionDetails",
+                   base.IsTakeScreenShotDuringEntryExit);
+            string getQuestionName = string.Empty;
+            string getQuestionDetails = string.Empty;
+            this.SelectWindow();
+            try
+            {
+                base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
+                    RptMainUX_Page_ExamFrequencyAnalysis_QuestionCount_Xpath_Locator));
+                int getCount = base.GetElementCountByXPath(RptExamFreqAnalysisPageResource.
+                    RptMainUX_Page_ExamFrequencyAnalysis_QuestionCount_Xpath_Locator);
+                for (int questionSearch = 1; questionSearch <= getCount; questionSearch++)
+                {
+                    //Get the question name
+                    getQuestionName = base.GetElementTextByXPath(
+                        String.Format(RptExamFreqAnalysisPageResource.
+                       RptMainUX_Page_ExamFrequencyAnalysis_QuestionName_Xpath_Locator, 
+                       questionSearch));
+                    if (getQuestionName == questionName)
+                    {                        
+                        //Get the question details
+                        base.WaitForElement(By.XPath(String.Format(RptExamFreqAnalysisPageResource.
+                            RptMainUX_Page_ExamFrequencyAnalysis_QuestionDetails_Xpath_Locator,
+                            questionSearch, questionColumnData)));
+                        getQuestionDetails = base.GetElementTextByXPath(String.
+                            Format(RptExamFreqAnalysisPageResource.
+                            RptMainUX_Page_ExamFrequencyAnalysis_QuestionDetails_Xpath_Locator,
+                            questionSearch, questionColumnData));
+                        break;
+                    }                    
+                 }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptExamFreqAnalysisPage", "GetQuestionDetails",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getQuestionDetails;
+        }
     }
 }
 
