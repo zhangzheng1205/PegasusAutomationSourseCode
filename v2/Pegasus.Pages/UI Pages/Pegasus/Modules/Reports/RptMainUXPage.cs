@@ -1439,7 +1439,7 @@ namespace Pegasus.Pages.UI_Pages
            User.UserTypeEnum userTypeEnum)
         {
             // Perform 'Run Report' or 'Edit Settings' or 'Delete' at 'My reports' based on user.
-            Logger.LogMethodEntry("RptMainUXPage", "NavigateToReport",
+            Logger.LogMethodEntry("RptMainUXPage", "PerformActionOnMyReports",
               base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -1452,33 +1452,24 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Switch to this case when user is 'SMS Instructor' os 'Section Instructor'
                     case User.UserTypeEnum.CsSmsInstructor:
-                        SwitchToReportsWindow();
+                        this.SwitchToReportsWindow();
                         //Switch to 'Reports' page 'Mainframe' iframe
-                        SwitchToMainFrame();
+                        this.SwitchToMainFrame();
                         switch (reportActionOption)
                         {
                             //Perform 'Run Report' on selected report
-                            case "Run Report": ClickReportCMenu(reportTypeEnum);
-                                base.WaitForElement(By.Id(RptMainUXPageResource.
-                                    RptmainUX_Page_MyReports_ReportCmenuRunReport_Id_Locator));
-                                   IWebElement getCmenuRunReport = base.GetWebElementPropertiesById
-                                       (RptMainUXPageResource.
-                                    RptmainUX_Page_MyReports_ReportCmenuRunReport_Id_Locator);
-                                     //Click on cmenu of the asset
-                                   base.ClickByJavaScriptExecutor(getCmenuRunReport);
+                            case "Run Report": this.ClickReportCMenu(reportTypeEnum);
+                                this.SelectTheReportCmenuOptions(RptMainUXPageResource.
+                                    RptmainUX_Page_MyReports_ReportCmenuRunReport_Id_Locator);                                                               
                                 break;
                             //Perform 'Edit Settings' on selected report
-                            case "Edit Settings": ClickReportCMenu(reportTypeEnum);
-                                base.WaitForElement(By.Id(RptMainUXPageResource.
-                                   RptmainUX_Page_MyReports_ReportCmenuEditSettings_Id_Locator));
-                                base.ClickLinkById(RptMainUXPageResource.
+                            case "Edit Settings": this.ClickReportCMenu(reportTypeEnum);
+                                this.SelectTheReportCmenuOptions(RptMainUXPageResource.
                                     RptmainUX_Page_MyReports_ReportCmenuEditSettings_Id_Locator);
                                 break;
                             //Perform 'Delete' on selected report
-                            case "Delete": ClickReportCMenu(reportTypeEnum);
-                                base.WaitForElement(By.Id(RptMainUXPageResource.
-                                    RptmainUX_Page_MyReports_ReportCmenuDelete_Id_Locator));
-                                base.ClickLinkById(RptMainUXPageResource.
+                            case "Delete": this.ClickReportCMenu(reportTypeEnum);
+                                this.SelectTheReportCmenuOptions(RptMainUXPageResource.
                                     RptmainUX_Page_MyReports_ReportCmenuDelete_Id_Locator);
                                 break;
                         }
@@ -1490,6 +1481,25 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "PerformActionOnMyReports",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select The Report Cmenu Options.
+        /// </summary>
+        /// <param name="selectElementId">This is attribute ID locator.</param>
+        private void SelectTheReportCmenuOptions(string selectElementId)
+        {
+            //Select The Report Cmenu Options
+            Logger.LogMethodEntry("RptMainUXPage", "SelectTheReportCmenuOptions",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Wait for the element
+            base.WaitForElement(By.Id(selectElementId));
+            IWebElement getCmenuRunReport = base.GetWebElementPropertiesById
+                (selectElementId);
+            //Click on cmenu of the asset
+            base.ClickByJavaScriptExecutor(getCmenuRunReport);
+            Logger.LogMethodExit("RptMainUXPage", "SelectTheReportCmenuOptions",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1571,8 +1581,10 @@ namespace Pegasus.Pages.UI_Pages
                         base.WaitForElement(By.XPath(RptMainUXPageResource.
                             RptMainUX_Page_SelectStudentds_Button_Xpath_Locator));
                         //Click 'Select Students' button
-                        base.ClickButtonByXPath(RptMainUXPageResource.
+                        IWebElement selectStudent = base.GetWebElementPropertiesByXPath(
+                            RptMainUXPageResource.
                             RptMainUX_Page_SelectStudentds_Button_Xpath_Locator);
+                        base.ClickByJavaScriptExecutor(selectStudent);
                         //check 'Select All' at Students Option
                         new RptSelectStudentsPage().CheckSelectAll();
                         break;
@@ -1676,25 +1688,33 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="buttonName">This is the button to be clicked.</param>
         /// <param name="userTypeEnum">This is user type enum.</param>
-        public void ClickButtonInReportByUser(string buttonName, User.UserTypeEnum userTypeEnum)
+        public void ClickButtonInReportByUser(string buttonName,
+            User.UserTypeEnum userTypeEnum)
         {
             // Click buttons in criteria page base on instructor
             Logger.LogMethodEntry("RptMainUXPage", "ClickButtonInReportByUser",
                 base.IsTakeScreenShotDuringEntryExit);
-            switch (userTypeEnum)
+            try
             {
-                //Switch to this case when user is 'Program Admin'
-                case User.UserTypeEnum.HedProgramAdmin:
-                    new ProgramAdminReportsSubTabPage().ClickButtonInReports(buttonName);
-                    break;
-                //Switch to this case when user is 'SMS Instructor'
-                case User.UserTypeEnum.CsSmsInstructor:
-                    this.SwitchToReportsWindow();
-                    //Switch to 'Reports' page 'Mainframe' iframe
-                    this.SwitchToMainFrame();
-                    //Click on the expected button In Reports
-                    this.ClickButtonInReport(buttonName);
-                    break;
+                switch (userTypeEnum)
+                {
+                    //Switch to this case when user is 'Program Admin'
+                    case User.UserTypeEnum.HedProgramAdmin:
+                        new ProgramAdminReportsSubTabPage().ClickButtonInReports(buttonName);
+                        break;
+                    //Switch to this case when user is 'SMS Instructor'
+                    case User.UserTypeEnum.CsSmsInstructor:
+                        this.SwitchToReportsWindow();
+                        //Switch to 'Reports' page 'Mainframe' iframe
+                        this.SwitchToMainFrame();
+                        //Click on the expected button In Reports
+                        this.ClickButtonInReport(buttonName);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("RptMainUXPage", "ClickButtonInReportByUser",
                    base.IsTakeScreenShotDuringEntryExit);
@@ -1905,8 +1925,9 @@ namespace Pegasus.Pages.UI_Pages
             bool addButton = base.IsElementPresent(By.XPath(RptMainUXPageResource.
                 RptMainUX_Page_AssessmentWindow_Add_Button_Xpath_Locator));
             // Click on add button
-            base.ClickButtonByXPath(RptMainUXPageResource.
+            IWebElement clickOnAdd=base.GetWebElementPropertiesByXPath(RptMainUXPageResource.
                 RptMainUX_Page_AssessmentWindow_Add_Button_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(clickOnAdd);
             Logger.LogMethodExit("RptMainUXPageResource", "ClickAddButton",
                      base.IsTakeScreenShotDuringEntryExit);
         }

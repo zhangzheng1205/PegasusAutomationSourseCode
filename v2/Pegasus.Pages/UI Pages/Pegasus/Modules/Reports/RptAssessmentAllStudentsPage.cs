@@ -417,7 +417,7 @@ namespace Pegasus.Pages
                 //Gets the text from the element
                 getActualAverageScore = base.GetElementInnerTextByXPath
                     (RptAssessmentAllStudentsPageResource.
-                 RptAssessmentAllStudent_Page_AverageScoreValue_Xpath_Locator);
+                 RptAssessmentAllStudent_Page_AverageScoreValue_Xpath_Locator).Trim();
                 Thread.Sleep(Convert.ToInt32(RptAllAssessmentAllStudentPageResource.
                 RptAllAssessmentAllStudent_Page_ReportCriteriaPage_WindowTime));
             }
@@ -617,7 +617,7 @@ namespace Pegasus.Pages
                 //Gets the text from the element
                 getActualHeading = base.GetElementInnerTextByXPath
                     (RptAllAssessmentAllStudentPageResource.
-                 RptAllAssessmentAllStudent_Page_ActivityHeading_Xpath_Locator);
+                 RptAllAssessmentAllStudent_Page_ActivityHeading_Xpath_Locator).Trim();
                 Thread.Sleep(Convert.ToInt32(RptAllAssessmentAllStudentPageResource.
                 RptAllAssessmentAllStudent_Page_ReportCriteriaPage_WindowTime));
             }
@@ -651,7 +651,7 @@ namespace Pegasus.Pages
                 //Gets the text from the element
                 getActualSectionName = base.GetElementInnerTextByXPath
                     (RptAllAssessmentAllStudentPageResource.
-                 RptAllAssessmentAllStudent_Page_SectionName_Xpath_Locator);
+                 RptAllAssessmentAllStudent_Page_SectionName_Xpath_Locator).Trim();
                 Thread.Sleep(Convert.ToInt32(RptAllAssessmentAllStudentPageResource.
                 RptAllAssessmentAllStudent_Page_ReportCriteriaPage_WindowTime));
             }

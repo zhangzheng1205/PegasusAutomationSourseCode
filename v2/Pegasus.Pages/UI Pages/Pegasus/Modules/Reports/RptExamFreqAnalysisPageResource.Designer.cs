@@ -106,7 +106,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;//table[@id=&apos;MainTBL&apos;]/tbody/tr/td/span&quot;.
+        ///   Looks up a localized string similar to //table[@id=&apos;MainTBL&apos;]/tbody/tr/td/span.
         /// </summary>
         internal static string RptExamFreqAnalysisPage_ExamFrequencyAnalysis_QuestionName {
             get {
@@ -192,6 +192,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         internal static string RptExamFreqAnalysisPage_ReportScore_Xpath_Locator {
             get {
                 return ResourceManager.GetString("RptExamFreqAnalysisPage_ReportScore_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;MainTBL&apos;]/tbody/tr.
+        /// </summary>
+        internal static string RptMainUX_Page_ExamFrequencyAnalysis_QuestionCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUX_Page_ExamFrequencyAnalysis_QuestionCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;MainTBL&apos;]/tbody/tr[{0}]/td[{1}].
+        /// </summary>
+        internal static string RptMainUX_Page_ExamFrequencyAnalysis_QuestionDetails_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUX_Page_ExamFrequencyAnalysis_QuestionDetails_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;MainTBL&apos;]/tbody/tr[{0}]/td/span.
+        /// </summary>
+        internal static string RptMainUX_Page_ExamFrequencyAnalysis_QuestionName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUX_Page_ExamFrequencyAnalysis_QuestionName_Xpath_Locator", resourceCulture);
             }
         }
         

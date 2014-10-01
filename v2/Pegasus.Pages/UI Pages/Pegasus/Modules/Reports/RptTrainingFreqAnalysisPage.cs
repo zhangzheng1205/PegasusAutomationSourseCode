@@ -85,65 +85,74 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Verifying Activity Name in Report Generated.
         /// </summary>
-        /// <returns>Get Activity Name</returns>
+        /// <returns>Get Activity Name.</returns>
         public string GetFrequencyAnalysisActivityNameInReport(string chapterName)
         {
             //Verifying Activity Name in Report Generated
-            logger.LogMethodExit("RptTrainingFreqAnalysisPage", "VerifyingActivityNameinReport",
+            logger.LogMethodExit("RptTrainingFreqAnalysisPage",
+                "GetFrequencyAnalysisActivityNameInReport",
                 base.IsTakeScreenShotDuringEntryExit);
             string getActivityName = string.Empty;
-            switch (chapterName)
+            try
             {
-                case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
-                    base.WaitUntilWindowLoads("Exam Frequency Analysis");
-                    base.SelectWindow("Exam Frequency Analysis");
-                    break;
-                case "Excel Chapter 1 Skill-Based Training":
-                    base.WaitUntilWindowLoads("Training Frequency Analysis");
-                    base.SelectWindow("Training Frequency Analysis");
-                    break;
-            }           
-            //Wait for the element
-            base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_ActivityName));
-            //Get Activity Name
-            getActivityName =
-                base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_ActivityName);                
-            logger.LogMethodExit("RptTrainingFreqAnalysisPage", "VerifyingActivityNameinReport",
+                switch (chapterName)
+                {
+                    case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                    case "Excel Chapter 1 Skill-Based Training":
+                        this.SelectWindow();
+                        break;
+                }
+                //Wait for the element
+                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_ActivityName));
+                //Get Activity Name
+                getActivityName =
+                    base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_ActivityName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptTrainingFreqAnalysisPage",
+                "GetFrequencyAnalysisActivityNameInReport",
                 base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
 
         /// <summary>
-        /// Verifying Activity Report Score as 50%.
+        /// Verifying Activity Report Score.
         /// </summary>
         /// <returns>Get Activity Score</returns>
         public string GetFrequencyAnalysisScoreInReport(string score)
         {
-            //Verifying Activity Report Score as 50%
-            logger.LogMethodEntry("RptTrainingFreqAnalysisPage", " VerifyingActivityReportScore",
+            //Verifying Activity Report Score 
+            logger.LogMethodEntry("RptTrainingFreqAnalysisPage",
+                " GetFrequencyAnalysisScoreInReport",
                   base.IsTakeScreenShotDuringEntryExit);
             string getActivityScore = string.Empty;
-            switch (score)
+            try
             {
-                case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
-                    base.WaitUntilWindowLoads("Exam Frequency Analysis");
-                    base.SelectWindow("Exam Frequency Analysis");
-                    break;
-                case "Excel Chapter 1 Skill-Based Training":
-                    base.WaitUntilWindowLoads("Training Frequency Analysis");
-                    base.SelectWindow("Training Frequency Analysis");
-                    break;
-            }           
-            //Wait for the element
-            base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_Score));               
-            //Get Activity Score
-            getActivityScore =
-                base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_Score);
-            logger.LogMethodExit("RptTrainingFreqAnalysisPage", "VerifyingActivityReportScore",
+                switch (score)
+                {
+                    case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                    case "Excel Chapter 1 Skill-Based Training":
+                        this.SelectWindow();
+                        break;
+                }
+                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_Score));
+                //Get Activity Score
+                getActivityScore =
+                    base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_Score);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptTrainingFreqAnalysisPage",
+                "GetFrequencyAnalysisScoreInReport",
                  base.IsTakeScreenShotDuringEntryExit);
             return getActivityScore;
         }
@@ -155,19 +164,27 @@ namespace Pegasus.Pages.UI_Pages
         public string GetTrainingFrequencyFirstQuestionName()
         {
             //Verify question name in Training Frequency report generated
-            logger.LogMethodEntry("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyName",
+            logger.LogMethodEntry("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyFirstQuestionName",
              base.IsTakeScreenShotDuringEntryExit);
             string getTrainingQuestionName = string.Empty;
-            base.WaitUntilWindowLoads("Training Frequency Analysis");
-            base.SelectWindow("Training Frequency Analysis");            
-            //Wait for the element
-            base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_FirstQuestionName));
-            //Get Question Name
-            getTrainingQuestionName =
-                base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_FirstQuestionName);
-            logger.LogMethodExit("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyName",
+            try
+            {
+                this.SelectWindow();
+                //Wait for the element
+                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_FirstQuestionName));
+                //Get Question Name
+                getTrainingQuestionName =
+                    base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_FirstQuestionName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyFirstQuestionName",
           base.IsTakeScreenShotDuringEntryExit);
             return getTrainingQuestionName;
         }
@@ -179,19 +196,27 @@ namespace Pegasus.Pages.UI_Pages
         public string GetTrainingFrequencyFirstApplicationName()
         {
             //Verify Application name in  Training Frequency report generated
-            logger.LogMethodEntry("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyAppNAme",
+            logger.LogMethodEntry("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyFirstApplicationName",
            base.IsTakeScreenShotDuringEntryExit);
             string getTrainingAppName = string.Empty;
-            base.WaitUntilWindowLoads("Training Frequency Analysis");
-            base.SelectWindow("Training Frequency Analysis");
-                       //Wait for the element
-            base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_FirstApplicationName));
-            //Get Application Name
-            getTrainingAppName =
-                base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_FirstApplicationName);
-            logger.LogMethodExit("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyAppNAme",
+            try
+            {
+                this.SelectWindow();
+                //Wait for the element
+                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_FirstApplicationName));
+                //Get Application Name
+                getTrainingAppName =
+                    base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_FirstApplicationName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyFirstApplicationName",
          base.IsTakeScreenShotDuringEntryExit);
             return getTrainingAppName;
         }
@@ -203,19 +228,27 @@ namespace Pegasus.Pages.UI_Pages
         public string GetTrainingFrequencyFirstQuestionPercentage()
         {
             //Verify Percentage in  Training Frequency report generated
-            logger.LogMethodEntry("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyPercentage",
+            logger.LogMethodEntry("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyFirstQuestionPercentage",
           base.IsTakeScreenShotDuringEntryExit);
             string getTrainingPercentage = string.Empty;
-            base.WaitUntilWindowLoads("Training Frequency Analysis");
-            base.SelectWindow("Training Frequency Analysis");            
-            //Wait for the element
-            base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_FirstQuestionPercentage));
-            //Get SIM Percentage
-            getTrainingPercentage =
-                base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_FirstQuestionPercentage);
-            logger.LogMethodExit("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyPercentage",
+            try
+            {
+                this.SelectWindow();
+                //Wait for the element
+                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_FirstQuestionPercentage));
+                //Get SIM Percentage
+                getTrainingPercentage =
+                    base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_FirstQuestionPercentage);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyFirstQuestionPercentage",
         base.IsTakeScreenShotDuringEntryExit);
             return getTrainingPercentage;
         }
@@ -226,19 +259,27 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns>Question Name.</returns>
         public string GetTrainingFrequencyAnalysisSecondQuestionName()
         {
-            logger.LogMethodEntry("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyAnalysisQuestionName",
+            logger.LogMethodEntry("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyAnalysisSecondQuestionName",
           base.IsTakeScreenShotDuringEntryExit);
             string getTrainingAnalysisQuestion = string.Empty;
-            base.WaitUntilWindowLoads("Training Frequency Analysis");
-            base.SelectWindow("Training Frequency Analysis");           
-            //Wait for the element
-            base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_SecondQuestionName));
-            //Get Question Name
-            getTrainingAnalysisQuestion =
-                base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_SecondQuestionName);
-            logger.LogMethodExit("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyAnalysisQuestionName",
+            try
+            {
+                this.SelectWindow();
+                //Wait for the element
+                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_SecondQuestionName));
+                //Get Question Name
+                getTrainingAnalysisQuestion =
+                    base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_SecondQuestionName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyAnalysisSecondQuestionName",
         base.IsTakeScreenShotDuringEntryExit);
             return getTrainingAnalysisQuestion;
         }
@@ -249,19 +290,27 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns>Application Name.</returns>
         public string GetTrainingFrequencyAnalysisSecondApplicationName()
         {
-            logger.LogMethodEntry("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyAnalysisApplicationName",
+            logger.LogMethodEntry("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyAnalysisSecondApplicationName",
           base.IsTakeScreenShotDuringEntryExit);
             string getTrainingAnalysisApplication = string.Empty;
-            base.WaitUntilWindowLoads("Training Frequency Analysis");
-            base.SelectWindow("Training Frequency Analysis");           
-            //Wait for the element
-            base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_ApplicationName));
-            //Get Application Name
-            getTrainingAnalysisApplication =
-                base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_ApplicationName);
-            logger.LogMethodExit("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyAnalysisApplicationName",
+            try
+            {
+                this.SelectWindow();
+                //Wait for the element
+                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_ApplicationName));
+                //Get Application Name
+                getTrainingAnalysisApplication =
+                    base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_ApplicationName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyAnalysisSecondApplicationName",
          base.IsTakeScreenShotDuringEntryExit);
             return getTrainingAnalysisApplication;
         }
@@ -272,23 +321,124 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns>Percentage</returns>
         public string GetTrainingFrequencyAnalysisSecondQuestionPercentage()
         {
-            logger.LogMethodEntry("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyAnalysisPercentage",
+            logger.LogMethodEntry("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyAnalysisSecondQuestionPercentage",
          base.IsTakeScreenShotDuringEntryExit);
             string getTrainingAnalysisPercentage = string.Empty;
-            base.WaitUntilWindowLoads("Training Frequency Analysis");
-            base.SelectWindow("Training Frequency Analysis");            
-            //Wait for the element
-            base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_QuestionPercentage));
-            //Get SIM Percentage
-            getTrainingAnalysisPercentage =
-                base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
-               RptTrainingFreqAnalysisPage_Resource_QuestionPercentage);
-            logger.LogMethodExit("RptTrainingFreqAnalysisPage", "GetTrainingFrequencyAnalysisPercentage",
+            try
+            {
+                this.SelectWindow();
+                //Wait for the element
+                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_QuestionPercentage));
+                //Get SIM Percentage
+                getTrainingAnalysisPercentage =
+                    base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
+                   RptTrainingFreqAnalysisPage_Resource_QuestionPercentage);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptTrainingFreqAnalysisPage",
+                "GetTrainingFrequencyAnalysisSecondQuestionPercentage",
         base.IsTakeScreenShotDuringEntryExit);
             return getTrainingAnalysisPercentage;
         }
 
+        /// <summary>
+        /// Verify the Question name.
+        /// </summary>
+        /// <param name="questionName">This is a question name.</param>
+        /// <returns>Question name.</returns>
+        public Boolean IsQuestionPresent(string questionName)
+        {
+            //Verify the Question name
+            logger.LogMethodEntry("RptTrainingFreqAnalysisPage", "IsQuestionPresent",
+                base.IsTakeScreenShotDuringEntryExit);
+            bool isQuestionPresent = false;
+            string getQuestionName = string.Empty;
+            //Select reports window
+            this.SelectWindow();
+            try
+            {
+                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
+                    RptTrainingFreqAnalysisPage_Resource_QuestionCount_Xpath_Locator));
+                int getCount = base.GetElementCountByXPath(RptTrainingFreqAnalysisPageResource.
+                    RptTrainingFreqAnalysisPage_Resource_QuestionCount_Xpath_Locator);
+                for (int questionSearch = 1; questionSearch <= getCount; questionSearch++)
+                {
+                    //Get the question name
+                    getQuestionName = base.GetElementTextByXPath(string.
+                       Format(RptTrainingFreqAnalysisPageResource.
+                       RptTrainingFreqAnalysisPage_Resource_QuestionName_Xpath_Locator,
+                       questionSearch));
+                    if (getQuestionName == questionName)
+                    {
+                        isQuestionPresent = true;
+                        break;
+                    }
+                    questionSearch++;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptTrainingFreqAnalysisPage", "IsQuestionPresent",
+                base.IsTakeScreenShotDuringEntryExit);
+            return isQuestionPresent;
+        }
+
+        /// <summary>
+        /// Verify the Question details in Exam frequency analysis report.
+        /// </summary>
+        /// <param name="questionName">This is a question name.</param>
+        /// <param name="questionColumnData">This is question detail column.</param>
+        /// <returns>Question details.</returns>
+        public string GetQuestionDetails(string questionName, int questionColumnData)
+        {
+            logger.LogMethodEntry("RptTrainingFreqAnalysisPage", "GetQuestionDetails",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Intialize the variable
+            string getQuestionName = string.Empty;
+            string getQuestionDetails = string.Empty;
+            this.SelectWindow();
+            try
+            {
+                //Verify the Question details in Exam frequency analysis report.
+                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
+                    RptTrainingFreqAnalysisPage_Resource_QuestionCount_Xpath_Locator));
+                int getCount = base.GetElementCountByXPath(RptTrainingFreqAnalysisPageResource.
+                    RptTrainingFreqAnalysisPage_Resource_QuestionCount_Xpath_Locator);
+                for (int questionSearch = 1; questionSearch <= getCount; questionSearch++)
+                {
+                    getQuestionName = base.GetElementTextByXPath(
+                        String.Format(RptTrainingFreqAnalysisPageResource.
+                       RptTrainingFreqAnalysisPage_Resource_QuestionName_Xpath_Locator,
+                       questionSearch));
+                    if (getQuestionName == questionName)
+                    {
+                        base.WaitForElement(By.XPath(String.Format(RptTrainingFreqAnalysisPageResource.
+                            RptTrainingFreqAnalysisPage_Resource_QuestionDetails_Xpath_Locator, 
+                            questionSearch, questionColumnData)));
+                        getQuestionDetails = base.GetElementTextByXPath(String.
+                            Format(RptTrainingFreqAnalysisPageResource.
+                            RptTrainingFreqAnalysisPage_Resource_QuestionDetails_Xpath_Locator,
+                            questionSearch, questionColumnData));
+                        break;
+                    }
+                    questionSearch++;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptTrainingFreqAnalysisPage", "GetQuestionDetails",
+                    base.IsTakeScreenShotDuringEntryExit);
+            return getQuestionDetails;
+        }
     }
 }
 

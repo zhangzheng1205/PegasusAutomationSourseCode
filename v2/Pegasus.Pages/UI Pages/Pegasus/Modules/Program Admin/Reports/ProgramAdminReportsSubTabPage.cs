@@ -195,6 +195,8 @@ namespace Pegasus.Pages.UI_Pages
             this.SwitchToProgramAdminWindow();
             //Switch to 'Mainframe' iframe in 'Program  Administration' page
             this.SwitchToMainFrame();
+            bool jk = base.IsElementPresent(By.XPath(ProgramAdminReportsSubTabPageResource.
+            ProgramAdminReportsSubTab_CriteriaPage_SelectStudents_XPath_locator),10);
             base.WaitForElement(By.XPath(ProgramAdminReportsSubTabPageResource.
             ProgramAdminReportsSubTab_CriteriaPage_SelectStudents_XPath_locator));
             IWebElement getSelectStudentsButton = base.GetWebElementPropertiesByXPath

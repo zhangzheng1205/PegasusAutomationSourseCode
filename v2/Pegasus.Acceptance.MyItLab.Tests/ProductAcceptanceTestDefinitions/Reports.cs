@@ -1227,7 +1227,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="inCorrectAttempt">This is Incorrect Attempt.</param>
         /// <param name="skippedAttempt">>This is Skipped Attempt.</param>
         [Then(@"I should see attempt correct incorrect and skipped details ""(.*)"" ""(.*)"" ""(.*)""")]
-        public void VerifyAttemptCorrectIncorrectAndSkippedDetailsDisplayed(int correctAttempt, int inCorrectAttempt, int skippedAttempt)
+        public void VerifyAttemptCorrectIncorrectAndSkippedDetailsDisplayed(int correctAttempt, 
+            int inCorrectAttempt, int skippedAttempt)
         {
             //Verify the attempt details for second question Exam Frequency report
             Logger.LogMethodEntry("Reports", "VerifyAttemptCorrectIncorrectAndSkippedDetailsDisplayed",
@@ -1261,8 +1262,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
             // Verifying the Activity Name
             Logger.LogAssertion("VerifyActivityName", ScenarioContext.Current.ScenarioInfo.Title,
-                           () => Assert.AreEqual(chapterName.ToString(), new RptTrainingFreqAnalysisPage().
-                               GetFrequencyAnalysisActivityNameInReport(chapterName)));
+             () => Assert.AreEqual(chapterName.ToString(), new RptTrainingFreqAnalysisPage().
+                   GetFrequencyAnalysisActivityNameInReport(chapterName)));
             // Verifying the Activity Score
             Logger.LogAssertion("VerifyActivityScore", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(score.ToString(), new RptTrainingFreqAnalysisPage().
@@ -1292,7 +1293,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                     GetTrainingFrequencyFirstQuestionName()));
             //verify Activity application
             Logger.LogAssertion("VerifyApplicationDisplayed", ScenarioContext.Current.ScenarioInfo.Title,
-               () => Assert.AreEqual(questionName.ToString(), new RptTrainingFreqAnalysisPage().
+               () => Assert.AreEqual(applicationName.ToString(), new RptTrainingFreqAnalysisPage().
                    GetTrainingFrequencyFirstApplicationName()));
             //verify Activity score
             Logger.LogAssertion("VerifySimActivityDetailsDisplayed", ScenarioContext.Current.ScenarioInfo.Title,
@@ -1310,23 +1311,110 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="simApplication"></param>
         /// <param name="simPercentage"></param>
         [Then(@"I should see training question details ""(.*)"" ""(.*)"" ""(.*)""")]
-        public void GetTrainingfrequencySecondQuestionDetails(string simQuestion, string simApplication, string simPercentage)
+        public void GetTrainingfrequencySecondQuestionDetails(string simQuestion, 
+            string simApplication, string simPercentage)
         {
             Logger.LogMethodEntry("Reports", "VerifySimActivityDetailsDisplayed",
              base.IsTakeScreenShotDuringEntryExit);
+            //Verify the question name
             Logger.LogAssertion("VerifySimActivityDetailsDisplayed", ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(simQuestion.ToString(), new RptTrainingFreqAnalysisPage().
                    GetTrainingFrequencyAnalysisSecondQuestionName()));
-
+            //Verify the application name in report
             Logger.LogAssertion("VerifySimActivityDetailsDisplayed", ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.AreEqual(simApplication.ToString(), new RptTrainingFreqAnalysisPage().
                    GetTrainingFrequencyAnalysisSecondApplicationName()));
-
+            //Verify the score details in report
             Logger.LogAssertion("VerifySimActivityDetailsDisplayed", ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.AreEqual(simPercentage.ToString(), new RptTrainingFreqAnalysisPage().
                    GetTrainingFrequencyAnalysisSecondQuestionPercentage()));
             Logger.LogMethodExit("Reports", "VerifySimActivityDetailsDisplayed",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// To verify the report detalils in training frequency report by program admin.
+        /// </summary>
+        /// <param name="questionName">This is a questionName.</param>
+        /// <param name="applicationName">This is a applicationName.</param>
+        /// <param name="sectionName">This is a sectionName.</param>
+        /// <param name="percentScore">This is a percentScore.</param>
+        [Then(@"I should see the question details ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)""")]
+        public void VerifyTrainingFrequencyQuestionDetailsByProgramAdmin(string questionName,
+            string sectionName , string applicationName, string percentScore)
+        {
+            Logger.LogMethodEntry("Reports",
+                "VerifyTrainingFrequencyQuestionDetailsByProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);  
+            //Verify the question name
+            Logger.LogAssertion("VerifyQuestionDisplayed",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.IsTrue(new RptTrainingFreqAnalysisPage().
+              IsQuestionPresent(questionName)));
+            //Assert the application name
+            Logger.LogAssertion("VerifyApplicationName",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(applicationName, new RptTrainingFreqAnalysisPage().
+             GetQuestionDetails(questionName, 2)));
+            //Assert the section name
+            Logger.LogAssertion("VerifyApplicationName",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(sectionName, new RptTrainingFreqAnalysisPage().
+             GetQuestionDetails(questionName, 3)));
+            //Assert the score
+            Logger.LogAssertion("VerifyApplicationName",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(percentScore, new RptTrainingFreqAnalysisPage().
+             GetQuestionDetails(questionName, 6)));
+            Logger.LogMethodExit("Reports",
+                "VerifyTrainingFrequencyQuestionDetailsByProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);  
+        }
+
+        /// <summary>
+        /// Verify the Report details in Exam frequency analysis by Program Admin.
+        /// </summary>
+        /// <param name="questionName">This is a questionName.</param>
+        /// <param name="sectionName">This is a Section name.</param>
+        /// <param name="questionType">This is a Question type.</param>
+        /// <param name="applicationName">This is a Application name.</param>
+        /// <param name="percentScore">This is a Score.</param>
+        [Then(@"I should see details of the question ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)""")]
+        public void VerifyExamFrequencyQuestionDetailsByProgramAdmin(
+            string questionName,string sectionName, string questionType,
+            string applicationName, string percentScore)
+        {           
+            Logger.LogMethodEntry("Reports",
+                "VerifyExamFrequencyQuestionDetailsByProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);  
+            //Verify the question name
+            Logger.LogAssertion("VerifyQuestionDisplayed",
+              ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.IsTrue(new RptExamFreqAnalysisPage().
+              IsQuestionPresentInExamFrequencyAnalysis(questionName)));
+            //Assert the section name
+            Logger.LogAssertion("VerifyApplicationName",
+              ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.AreEqual(sectionName, new RptExamFreqAnalysisPage().
+             GetExamFrequencyAnalysisQuestionDetails(questionName, 3)));
+            //Assert the question type name
+            Logger.LogAssertion("VerifyApplicationName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(questionType, new RptExamFreqAnalysisPage().
+             GetExamFrequencyAnalysisQuestionDetails(questionName, 2)));
+            //Assert the application name
+            Logger.LogAssertion("VerifyApplicationName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(applicationName, new RptExamFreqAnalysisPage().
+             GetExamFrequencyAnalysisQuestionDetails(questionName, 4)));
+            //Assert the score
+            Logger.LogAssertion("VerifyApplicationName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(percentScore, new RptExamFreqAnalysisPage().
+            GetExamFrequencyAnalysisQuestionDetails(questionName, 7)));
+            Logger.LogMethodExit("Reports",
+                "VerifyExamFrequencyQuestionDetailsByProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);  
+        } 
     }
 }
