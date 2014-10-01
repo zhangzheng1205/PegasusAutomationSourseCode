@@ -465,6 +465,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdminReports.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.Dependent.BVT.MyItLabFull.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceAdmin.Workflow.feature.cs</LastGenOutput>
