@@ -287,8 +287,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptSelectStudentsResource.
                     RptSelectStudents_Page_SelectAll_Checkbox_Id_Locator));
                 //Check select all in 'Select Students' window
-                base.SelectCheckBoxById(RptSelectStudentsResource.
+                IWebElement selectAll=base.GetWebElementPropertiesById(RptSelectStudentsResource.
                     RptSelectStudents_Page_SelectAll_Checkbox_Id_Locator);
+                base.ClickByJavaScriptExecutor(selectAll);
             }
             catch (Exception e)
             {

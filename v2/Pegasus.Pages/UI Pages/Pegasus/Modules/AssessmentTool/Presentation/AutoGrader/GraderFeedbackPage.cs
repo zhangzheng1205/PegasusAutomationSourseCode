@@ -126,7 +126,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus
             base.SelectWindow(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_Window_Title_Name_HED);
             base.RefreshIFrameByJavaScriptExecutor("ifrmCoursePreview");
-            Thread.Sleep(120000);
+            Thread.Sleep(12000);
             Logger.LogMethodExit("GraderFeedbackPage", "ClickReturnToCourseButton",
                       base.IsTakeScreenShotDuringEntryExit);
 

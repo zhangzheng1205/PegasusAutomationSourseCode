@@ -125,6 +125,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;MainTBLSIM&apos;]/tbody/tr.
+        /// </summary>
+        internal static string RptTrainingFreqAnalysisPage_Resource_QuestionCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptTrainingFreqAnalysisPage_Resource_QuestionCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;MainTBLSIM&apos;]/tbody/tr[{0}]/td[{1}].
+        /// </summary>
+        internal static string RptTrainingFreqAnalysisPage_Resource_QuestionDetails_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptTrainingFreqAnalysisPage_Resource_QuestionDetails_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;MainTBLSIM&apos;]/tbody/tr[{0}]/td/span.
+        /// </summary>
+        internal static string RptTrainingFreqAnalysisPage_Resource_QuestionName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptTrainingFreqAnalysisPage_Resource_QuestionName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;MainTBLSIM&apos;]/tbody/tr[3]/td[5].
         /// </summary>
         internal static string RptTrainingFreqAnalysisPage_Resource_QuestionPercentage {

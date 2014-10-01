@@ -138,6 +138,15 @@
   <data name="RptTrainingFreqAnalysisPage_Resource_FirstQuestionPercentage" xml:space="preserve">
     <value>//table[@id='MainTBLSIM']/tbody/tr/td[5]</value>
   </data>
+  <data name="RptTrainingFreqAnalysisPage_Resource_QuestionCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='MainTBLSIM']/tbody/tr</value>
+  </data>
+  <data name="RptTrainingFreqAnalysisPage_Resource_QuestionDetails_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='MainTBLSIM']/tbody/tr[{0}]/td[{1}]</value>
+  </data>
+  <data name="RptTrainingFreqAnalysisPage_Resource_QuestionName_Xpath_Locator" xml:space="preserve">
+    <value>//table[@id='MainTBLSIM']/tbody/tr[{0}]/td/span</value>
+  </data>
   <data name="RptTrainingFreqAnalysisPage_Resource_QuestionPercentage" xml:space="preserve">
     <value>//table[@id='MainTBLSIM']/tbody/tr[3]/td[5]</value>
   </data>
