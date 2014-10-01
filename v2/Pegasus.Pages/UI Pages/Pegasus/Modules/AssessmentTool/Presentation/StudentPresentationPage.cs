@@ -1754,11 +1754,11 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                this.SelectSIMActivityZeroScoreStudentWindowName(activityName);
+                this.SelectSimActivityZeroScoreStudentWindowName(activityName);
                 //Answer incorrectly
                 this.SIM5QuestionIncorrectAnswer(activityMode, applicationType);
                 //Click on SIM5 activity Submit button
-                this.ClickOnSIM5ActivitySubmitButton();
+                this.ClickOnSim5ActivitySubmitButton();
             }
             catch (Exception e)
             {
@@ -2435,9 +2435,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("StudentPresentationPage", "WaitForActivitytoLoad",
                     base.IsTakeScreenShotDuringEntryExit);
         }
-
-
-
+        
         /// <summary>
         /// Set Activity pass due message
         /// </summary>
@@ -2454,13 +2452,10 @@ namespace Pegasus.Pages.UI_Pages
                 //Get Actual Pass due message
                 string actualPastDueActivityMessage = base.GetElementInnerTextById(StudentPresentationPageResource.
                     StudentPresentation_Page_PassDue_Message_Id);
-                return actualPastDueActivityMessage;            
-            
             logger.LogMethodExit("StudentPresentationPage", "GetActivityPastDueStatusMessage",
                     base.IsTakeScreenShotDuringEntryExit);
+            return actualPastDueActivityMessage;     
         }
-
-
         
         /// <summary>
         /// Submit the pass due activity
@@ -2821,9 +2816,9 @@ namespace Pegasus.Pages.UI_Pages
         /// Get the SIM5 assetid from the current url.
         /// </summary>
         /// <returns></returns>
-        public string GetSIM5AssetIdFromUrl(string assetName)
+        public string GetSim5AssetIdFromUrl(string assetName)
         {
-            logger.LogMethodEntry("StudentPresentationPage", "GetSIM5AssetIdFromUrl",
+            logger.LogMethodEntry("StudentPresentationPage", "GetSim5AssetIdFromUrl",
             base.IsTakeScreenShotDuringEntryExit);
             // Switch Window
             base.SwitchToLastOpenedWindow();
@@ -2832,20 +2827,21 @@ namespace Pegasus.Pages.UI_Pages
             StudentPresentation_Page_SimPresentation_Window_Name);
             //Get the current url
             string strURL = base.GetCurrentUrl;
-            int searchIndex = strURL.IndexOf("resLinkID=") + 10;
+            int searchIndex = strURL.IndexOf("resLinkID=", System.StringComparison.Ordinal) + 10;
             // Get the assetId
             string assetId = strURL.Substring(searchIndex, strURL.IndexOf('&', searchIndex) - searchIndex);
-            logger.LogMethodExit("StudentPresentationPage", "GetSIM5AssetIdFromUrl",
+            logger.LogMethodExit("StudentPresentationPage", "GetSim5AssetIdFromUrl",
             base.IsTakeScreenShotDuringEntryExit);
             return assetId;
         }
+
         /// <summary>
         /// Submit SIM5 Excel type activity.
         /// </summary>
-        public void SubmitSIMExcelTypeActivity(String activityName)
+        public void SubmitSimExcelTypeActivity(String activityName)
         {
             //Submit SIM5 Excel type activity
-            logger.LogMethodEntry("StudentPresentationPage",
+            logger.LogMethodEntry("SubmitSimExcelTypeActivity",
                 "SubmitSIM5ExcelTypeActivity",
                base.IsTakeScreenShotDuringEntryExit);
             try
@@ -2880,24 +2876,18 @@ namespace Pegasus.Pages.UI_Pages
                 this.ConstructingAFormulaAndUsingTheSumFunction();
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                    StudentPrsentation_Page_SIM5_Launch_Sleep_Time));
-            
-
-                //Click on SIM5 activity Submit button
-                this.ClickOnSIM5ActivitySubmitButton();
-
+            //Click on SIM5 activity Submit button
+                this.ClickOnSim5ActivitySubmitButton();
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage",
-                 "SubmitSIM5ExcelTypeActivity",
+                 "SubmitSimExcelTypeActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
-
         
-
-
         /// <summary>
         /// Setting Data In Cell.
         /// </summary>
@@ -2944,8 +2934,8 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Put Excel Value In Cell And Press Formula Button Center.
         /// </summary>
-        /// <param name="refCell">Cell Id</param>
-        /// <param name="formulaValue">Cell value</param>
+        /// <param name="referenceCellId">Cell Id.</param>
+        /// <param name="dataValue">Cell value.</param>
         private void PutExcelValueInCellAndPressFormulaButtonCenter(string referenceCellId, string dataValue)
         {
             //Fill Excel cell
@@ -3093,9 +3083,7 @@ namespace Pegasus.Pages.UI_Pages
             "SelectCellRangeAndAlignData",
             base.IsTakeScreenShotDuringEntryExit);
         }
-
-
-
+        
         /// <summary>
         /// Answers Autofill and Keyboard shortcuts
         /// </summary>     
@@ -3190,7 +3178,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Excel blank workbook icon button
 
             base.ClickByJavaScriptExecutor(getBlankWorkbookIconButton);
-            SaveFilesInUSB();
+            SaveFilesInUsb();
             logger.LogMethodExit("StudentPresentationPage",
                 "AnswersFirstExcelQuestion",
               base.IsTakeScreenShotDuringEntryExit);
@@ -3200,11 +3188,11 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Save office file in USB in SIM5.
         /// </summary>
-        private void SaveFilesInUSB()
+        private void SaveFilesInUsb()
         {
             //Save office file in USB in SIM5        
             logger.LogMethodEntry("StudentPresentationPage",
-                    "SaveFilesInUSB",
+                    "SaveFilesInUsb",
                    base.IsTakeScreenShotDuringEntryExit);
             //Get Excel save icon button Property
             IWebElement getSaveIconButton = base.GetWebElementPropertiesByXPath
@@ -3219,11 +3207,11 @@ namespace Pegasus.Pages.UI_Pages
             //Click on computer browse icon button
             base.ClickByJavaScriptExecutor(getComputerBrowseIconButton);
             //Get  USB disk icon button Property
-            IWebElement getUSBDiskIconButton = base.GetWebElementPropertiesByXPath
+            IWebElement getUsbDiskIconButton = base.GetWebElementPropertiesByXPath
                 (StudentPresentationPageResource.
                  StudentPrsentation_Page_Save_USB_Disk_Xpath_Locator);
             //Click on USB disk icon button
-            base.ClickByJavaScriptExecutor(getUSBDiskIconButton);
+            base.ClickByJavaScriptExecutor(getUsbDiskIconButton);
 
             //Get  New Folder button Property
             IWebElement getNewFolderButton = base.GetWebElementPropertiesById
@@ -3276,7 +3264,7 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getSaveFileButton);
 
             logger.LogMethodExit("StudentPresentationPage",
-                "SaveFilesInUSB",
+                "SaveFilesInUsb",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -3320,8 +3308,8 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Fill Excel cell.
         /// </summary>
-        /// <param name="refCell">Cell Id</param>
-        /// <param name="formulaValue">Cell value</param>
+        /// <param name="referenceCellId">Cell Id.</param>
+        /// <param name="formulaValue">Cell value.</param>
         private void PutExcelValueInCell(string referenceCellId, string formulaValue)
         {
             //Fill Excel cell
@@ -3356,9 +3344,9 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click On SIM5 Activity Submit Button.
         /// </summary>
-        public void ClickOnSIM5ActivitySubmitButton()
+        public void ClickOnSim5ActivitySubmitButton()
         {
-            logger.LogMethodEntry("StudentPresentationPage", "ClickOnSIM5ActivitySubmitButton",
+            logger.LogMethodEntry("StudentPresentationPage", "ClickOnSim5ActivitySubmitButton",
             base.IsTakeScreenShotDuringEntryExit);
 
             //Click on Ok button
@@ -3374,7 +3362,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on the Submit Assignment 'OK' button
             base.ClickByJavaScriptExecutor(getSubmitAssignment);
             Thread.Sleep(3000);
-            logger.LogMethodExit("StudentPresentationPage", "ClickOnSIM5ActivitySubmitButton",
+            logger.LogMethodExit("StudentPresentationPage", "ClickOnSim5ActivitySubmitButton",
             base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -3402,7 +3390,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Sixth Question Submission
                 AttemptSixthQuestion();
                 //Click On SIM5 Activity Submit Button
-                this.ClickOnSIM5ActivitySubmitButton();
+                this.ClickOnSim5ActivitySubmitButton();
             }
             catch (Exception e)
             {
@@ -3901,7 +3889,8 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="studentName">This is user type enum.</param>
         /// <param name="activityName">This is activity name.</param>
-        public void SelectSIMActivityStudentWindowName(User.UserTypeEnum studentName,
+        /// <param name="scenerioName">This is scenario name.</param>
+        public void SelectSimActivityStudentWindowName(User.UserTypeEnum studentName,
             string activityName, string scenerioName = "Default Value")
         {
             //Select Presentation Player Window
@@ -3945,19 +3934,19 @@ namespace Pegasus.Pages.UI_Pages
         /// Select SIMActivity ZeroScore Student WindowName.
         /// </summary>
         /// <param name="activityName"></param>
-        public void SelectSIMActivityZeroScoreStudentWindowName(string activityName)
+        public void SelectSimActivityZeroScoreStudentWindowName(string activityName)
         {
             //Select Presentation Player Window
-            logger.LogMethodEntry("StudentPresentationPage", 
-                "SelectSIMActivityZeroScoreStudentWindowName",
+            logger.LogMethodEntry("StudentPresentationPage",
+                "SelectSimActivityZeroScoreStudentWindowName",
                 base.IsTakeScreenShotDuringEntryExit);
             User user = user = User.Get(CommonResource.CommonResource
                                      .SMS_STU_UC1);
             // Wait for window
             base.WaitUntilWindowLoads(activityName + " - " + user.FirstName + " " + user.LastName);
             base.SelectWindow(activityName + " - " + user.FirstName + " " + user.LastName);
-            logger.LogMethodExit("StudentPresentationPage", 
-                "SelectSIMActivityZeroScoreStudentWindowName",
+            logger.LogMethodExit("StudentPresentationPage",
+                "SelectSimActivityZeroScoreStudentWindowName",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -3965,18 +3954,18 @@ namespace Pegasus.Pages.UI_Pages
         /// Select SIMActivity 100 score Student WindowName.
         /// </summary>
         /// <param name="activityName"></param>
-        public void SelectSIMActivityNormalStudentWindowName(string activityName)
+        public void SelectSimActivityNormalStudentWindowName(string activityName)
         {
             //Select Presentation Player Window
             logger.LogMethodEntry("StudentPresentationPage",
-                "SelectSIMActivityZeroScoreStudentWindowName",
+                "SelectSimActivityNormalStudentWindowName",
                 base.IsTakeScreenShotDuringEntryExit);
             User user = User.Get(User.UserTypeEnum.CsSmsStudent);
             // Wait for window
             base.WaitUntilWindowLoads(activityName + " - " + user.FirstName + " " + user.LastName);
             base.SelectWindow(activityName + " - " + user.FirstName + " " + user.LastName);
             logger.LogMethodExit("StudentPresentationPage",
-                "SelectSIMActivityZeroScoreStudentWindowName",
+                "SelectSimActivityNormalStudentWindowName",
                base.IsTakeScreenShotDuringEntryExit);
         }
     }

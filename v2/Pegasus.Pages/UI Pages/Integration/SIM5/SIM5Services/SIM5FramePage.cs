@@ -16,24 +16,23 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// The Static Instance Of The Logger For The Class.
         /// </summary>
-        private static Logger logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(SIM5FramePage));
 
-        private int waitTimeOut = Convert.ToInt32(
-            ConfigurationManager.AppSettings["ElementFindTimeOutInSeconds"]);
-        /// <summary>
+       /// <summary>
         /// Submit SIM5 Excel type activity.
+        /// <param name="activityName">This is activity name.</param>
         /// </summary>
-        public void SubmitSIM5ExcelActivityExcelChapter1SkillBasedTraining(String activityName)
+        public void SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining(String activityName)
         {
             //Submit SIM5 Excel type activity
-            logger.LogMethodEntry("SIM5FramePage",
-                "SubmitSIM5ExcelTypeActivity",
+            Logger.LogMethodEntry("SIM5FramePage",
+                "SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining",
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select window name
-                new StudentPresentationPage().SelectSIMActivityNormalStudentWindowName
+                new StudentPresentationPage().SelectSimActivityNormalStudentWindowName
                     (activityName);
                 //Answer first excel question
                 this.StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook();
@@ -83,10 +82,11 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("SIM5FramePage",
-                 "SubmitSIM5ExcelTypeActivity",
+            Logger.LogMethodExit("SIM5FramePage",
+                 "SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
         #region SIM5 Excel First Question
         /// <summary>
         /// Answers Starting Excel Navigating Excel And Naming And Saving A Workbook.
@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
         private void StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook()
         {
             //Answers first Excel Question            
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                     "AnswersFirstExcelQuestion",
                    base.IsTakeScreenShotDuringEntryExit);
             //Get Excel desktop icon button Property
@@ -111,7 +111,7 @@ namespace Pegasus.Pages.UI_Pages
 
             base.ClickByJavaScriptExecutor(getBlankWorkbookIconButton);
             SaveFilesInUSB();
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "AnswersFirstExcelQuestion",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -122,7 +122,7 @@ namespace Pegasus.Pages.UI_Pages
         private void SaveFilesInUSB()
         {
             //Save office file in USB in SIM5        
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                     "SaveFilesInUSB",
                    base.IsTakeScreenShotDuringEntryExit);
             //Get Excel save icon button Property
@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on  save button
             base.ClickByJavaScriptExecutor(getSaveFileButton);
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "SaveFilesInUSB",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -207,7 +207,7 @@ namespace Pegasus.Pages.UI_Pages
         private void EnteringTextUsingAutoCompleteAndUsingTheNameBoxToSelectACell()
         {
             //Answer second Excel Question       
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                     "AnswerSecondExcelQuestion",
                    base.IsTakeScreenShotDuringEntryExit);
             //Fill A1 cell value
@@ -232,7 +232,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_SIM5_Excel_A5_Cell_Id,
                 SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_First_Activity_A5_Cell_Value);
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "AnswerSecondExcelQuestion",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -245,7 +245,7 @@ namespace Pegasus.Pages.UI_Pages
         private void AutoFillAndKeyboardShortcuts()
         {
             //Answer third Excel Question       
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                     "AutoFillAndKeyboardShortcuts",
                    base.IsTakeScreenShotDuringEntryExit);
             //Fill B3 cell value
@@ -274,7 +274,7 @@ namespace Pegasus.Pages.UI_Pages
             base.PerformDragAndDropToOffset(getBorderBullet,
                 Convert.ToInt32(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_D3_Cell_OffsetX),
                 Convert.ToInt32(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_D3_Cell_OffsetY));
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "AutoFillAndKeyboardShortcuts",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -287,7 +287,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SettingCellWidthAndSelectingCellRangeToAlignData()
         {
             //Submit SIM5 Excel type activity
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "SettingCellWidthAndSelectingCellRangeToAlignData",
             base.IsTakeScreenShotDuringEntryExit);
             try
@@ -301,7 +301,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "SettingCellWidthAndSelectingCellRangeToAlignData",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -310,7 +310,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SetCellWidth()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "SetCellWidth",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -342,7 +342,7 @@ namespace Pegasus.Pages.UI_Pages
             //click on ok button for setting the column width value
             base.ClickByJavaScriptExecutor(clickOKButton);
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "SetCellWidth",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -351,7 +351,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void ClickFormatColumnWidth()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "ClickFormatColumnWidth",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -386,7 +386,7 @@ namespace Pegasus.Pages.UI_Pages
                 count++;
             }
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "ClickFormatColumnWidth",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -395,7 +395,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SelectCellRangeAndAlignData()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "SelectCellRangeAndAlignData",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -422,7 +422,7 @@ namespace Pegasus.Pages.UI_Pages
             // Click Center Alighment Button
             this.ClickCenterAlighmentButton();
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "SelectCellRangeAndAlignData",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -431,7 +431,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void ClickCenterAlighmentButton()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "ClickCenterAlighmentButton",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -451,7 +451,7 @@ namespace Pegasus.Pages.UI_Pages
                 count++;
             }
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "ClickCenterAlighmentButton",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -464,7 +464,7 @@ namespace Pegasus.Pages.UI_Pages
         public void SettingDataInCell()
         {
             //Answer second Excel Question
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "SettingDataInCell",
             base.IsTakeScreenShotDuringEntryExit);
             //Fill B4 cell value
@@ -496,7 +496,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_D5_Cell_Id,
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_D5_Cell_Value);
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "SettingDataInCell",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -509,7 +509,7 @@ namespace Pegasus.Pages.UI_Pages
         private void PutExcelValueInCellAndPressFormulaButtonCenter(string referenceCellId, string dataValue)
         {
             //Fill Excel cell
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "PutExcelValueInCellAndPressFormulaButtonCenter",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -538,7 +538,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Cell A1 inorder to commit the change made to the Formula Box above
             base.PerformMouseClickAction(cellA1);
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "PutExcelValueInCellAndPressFormulaButtonCenter",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -551,7 +551,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ConstructingAFormulaAndUsingTheSumFunction()
         {
             //Answer second Excel Question       
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                     "ConstructingAFormulaAndUsingTheSumFunction",
                    base.IsTakeScreenShotDuringEntryExit);
             //Fill B8 cell value
@@ -570,7 +570,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_SIM5_Excel_D8_Cell_Id,
                 SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_First_Activity_D8_Cell_Value);
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "ConstructingAFormulaAndUsingTheSumFunction",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -583,7 +583,7 @@ namespace Pegasus.Pages.UI_Pages
         private void CopyingAFormulaByUsingTheFillHandle()
         {
 
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "CopyingAFormulaByUsingTheFillHandle",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -595,7 +595,7 @@ namespace Pegasus.Pages.UI_Pages
             this.PutExcelValueInCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_F3_Cell_Id,
                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_SeventhQuestion_ColumnData_Trend);
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "CopyingAFormulaByUsingTheFillHandle",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -604,7 +604,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void ApplySumFormulaToMultipleCells()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "ApplySumFormulaToMultipleCells",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -619,7 +619,7 @@ namespace Pegasus.Pages.UI_Pages
                 Convert.ToInt16(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Border_DragDrop_XYOffset),
                 Convert.ToInt16(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Border_DragDrop_XYOffset));
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "ApplySumFormulaToMultipleCells",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -628,7 +628,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SumColumnNumericData()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "SumColumnNumericData",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -649,7 +649,7 @@ namespace Pegasus.Pages.UI_Pages
             this.PressEnterKeyById(SIM5FramePageResource.
             SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "SumColumnNumericData",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -662,7 +662,7 @@ namespace Pegasus.Pages.UI_Pages
         private void UsingMergerAndCenterAndApplyingCellStyles()
         {
 
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "UsingMergerAndCenterAndApplyingCellStyles",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -691,7 +691,7 @@ namespace Pegasus.Pages.UI_Pages
             // Select Range And Apply Cell Style
             this.SelectRangeAndApplyCellStyle();
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "CopyingAFormulaByUsingTheFillHandle",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -700,7 +700,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SelectRangeAndApplyCellStyle()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "SelectRangeAndApplyCellStyle",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -730,7 +730,7 @@ namespace Pegasus.Pages.UI_Pages
             // select the cell style 'Heading4'
             this.SetTheCellStyleHeading4();
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "SelectRangeAndApplyCellStyle",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -739,14 +739,14 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SetTheCellStyleTitle()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "SetTheCellStyleTitle",
             base.IsTakeScreenShotDuringEntryExit);
 
             this.SelectCellStyle(Convert.ToInt16(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_CellStyle_Title_CSSLocator_Class_Index));
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "SetTheCellStyleTitle",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -756,14 +756,14 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SetTheCellStyleHeading1()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "SetTheCellStyleHeading1",
             base.IsTakeScreenShotDuringEntryExit);
 
             this.SelectCellStyle(Convert.ToInt16(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_CellStyle_Heading1_CSSLocator_Class_Index));
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "SetTheCellStyleHeading1",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -773,14 +773,14 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SetTheCellStyleHeading4()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "SetTheCellStyleHeading4",
             base.IsTakeScreenShotDuringEntryExit);
 
             this.SelectCellStyle(Convert.ToInt16(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_CellStyle_Heading4_CSSLocator_Class_Index));
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "SetTheCellStyleHeading4",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -789,7 +789,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SelectTheRangeA2ToF2()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "SelectTheRangeA2ToF2",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -813,7 +813,7 @@ namespace Pegasus.Pages.UI_Pages
             //select and drag the range B3:D3
             base.PerformDragAndDropAction(getCellA2, getCellF2);
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "SelectTheRangeA2ToF2",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -823,7 +823,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SelectTherangeA1ToF1()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "SelectTherangeA1ToF1",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -847,7 +847,7 @@ namespace Pegasus.Pages.UI_Pages
             //select and drag the range B3:D3
             base.PerformDragAndDropAction(getCellA1, getCellF1);
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "SelectTherangeA1ToF1",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -857,7 +857,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void MergeAndCenter()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
             "MergeAndCenter",
             base.IsTakeScreenShotDuringEntryExit);
 
@@ -868,7 +868,7 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_SIM5_Excel_MergeAndCenter_CSS_Selector_Class_Locator);
             base.ClickByJavaScriptExecutor(getMergeAndCenterObject);
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
             "MergeAndCenter",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -880,7 +880,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SimultaneouslyFormatMultipleCells()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                     "SimultaneouslyFormatMultipleCells",
                    base.IsTakeScreenShotDuringEntryExit);
 
@@ -921,7 +921,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectCellStyle(Convert.ToInt16(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_CellStyle_Total_CSSLocator_Class_Index));
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "SimultaneouslyFormatMultipleCells",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -931,7 +931,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void ApplyCommaStyle()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                     "ApplyCommaStyle",
                    base.IsTakeScreenShotDuringEntryExit);
 
@@ -951,7 +951,7 @@ namespace Pegasus.Pages.UI_Pages
                 count++;
             }
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "ApplyCommaStyle",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -960,7 +960,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void ApplyAccountNumberFormat()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                     "ApplyAccountNumberFormat",
                    base.IsTakeScreenShotDuringEntryExit);
 
@@ -976,7 +976,7 @@ namespace Pegasus.Pages.UI_Pages
             base.PressEnterKeyByCssSelector(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_Number_Format_TextBox_CSS_Selector);
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "ApplyAccountNumberFormat",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -985,7 +985,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void SelectCellRange(string firstCellID, string lastCellID)
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                     "SelectCellRange",
                    base.IsTakeScreenShotDuringEntryExit);
 
@@ -996,7 +996,7 @@ namespace Pegasus.Pages.UI_Pages
             //select and drag the range from the first cell above to the last cell
             base.PerformDragAndDropAction(getFirstCellObject, getLastCellObject);
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "SelectCellRange",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1009,7 +1009,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public void SetWorksheetThemeToRetrospect()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                     "SetWorksheetThemeToRetrospect",
                    base.IsTakeScreenShotDuringEntryExit);
 
@@ -1037,7 +1037,7 @@ namespace Pegasus.Pages.UI_Pages
                 }
             }
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "SetWorksheetThemeToRetrospect",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1050,7 +1050,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         private void OpenCellStyleDropdown()
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                 "OpenCellStyleDropdown",
                base.IsTakeScreenShotDuringEntryExit);
 
@@ -1070,7 +1070,7 @@ namespace Pegasus.Pages.UI_Pages
                 count++;
             }
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "OpenCellStyleDropdown",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1081,7 +1081,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="countCellStyle">the cell style count</param>
         private void SelectCellStyle(int countCellStyle)
         {
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                 "SelectCellStyle",
                base.IsTakeScreenShotDuringEntryExit);
 
@@ -1101,7 +1101,7 @@ namespace Pegasus.Pages.UI_Pages
                 count++;
             }
 
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "SelectCellStyle",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1114,7 +1114,7 @@ namespace Pegasus.Pages.UI_Pages
         private void PutExcelValueInCell(string referenceCellId, string formulaValue)
         {
             //Fill Excel cell
-            logger.LogMethodEntry("SIM5FramePage",
+            Logger.LogMethodEntry("SIM5FramePage",
                 "PutExcelValueInCell",
                base.IsTakeScreenShotDuringEntryExit);
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
@@ -1137,7 +1137,7 @@ namespace Pegasus.Pages.UI_Pages
             //Press Enter in Formula Box
             PressEnterKeyById(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator);
-            logger.LogMethodExit("SIM5FramePage",
+            Logger.LogMethodExit("SIM5FramePage",
                 "PutExcelValueInCell",
               base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1150,7 +1150,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public void ClickOnSIM5ActivitySubmitButton()
         {
-            logger.LogMethodEntry("SIM5FramePage", "ClickOnSIM5ActivitySubmitButton",
+            Logger.LogMethodEntry("SIM5FramePage", "ClickOnSIM5ActivitySubmitButton",
             base.IsTakeScreenShotDuringEntryExit);
 
             //Click on Ok button
@@ -1165,7 +1165,7 @@ namespace Pegasus.Pages.UI_Pages
             SIM5Frame_Page_SubmitAssignment_OK_Button_Id_Locator);
             //Click on the Submit Assignment 'OK' button
             base.ClickByJavaScriptExecutor(getSubmitAssignment);
-            logger.LogMethodExit("SIM5FramePage", "ClickOnSIM5ActivitySubmitButton",
+            Logger.LogMethodExit("SIM5FramePage", "ClickOnSIM5ActivitySubmitButton",
             base.IsTakeScreenShotDuringEntryExit);
         }
         #endregion

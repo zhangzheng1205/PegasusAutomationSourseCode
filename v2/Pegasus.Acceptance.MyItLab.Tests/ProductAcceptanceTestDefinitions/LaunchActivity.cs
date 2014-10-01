@@ -16,7 +16,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// The static instance of the logger for the class.
         /// </summary>
-        private static Logger Logger = 
+        private static readonly Logger Logger = 
             Logger.GetInstance(typeof(LaunchActivity));
         
         /// <summary>
@@ -24,14 +24,14 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity by Type Enum.</param>
         [When(@"I open the ""(.*)"" Activity")]
-        public void OpenTheSIMStudyPlan(Activity.ActivityTypeEnum activityTypeEnum)
+        public void OpenTheSimStudyPlan(Activity.ActivityTypeEnum activityTypeEnum)
         {
             // Open The Activity As Student
-            Logger.LogMethodEntry("LaunchActivity", "OpenTheActivity",
+            Logger.LogMethodEntry("LaunchActivity", "OpenTheSimStudyPlan",
                 base.IsTakeScreenShotDuringEntryExit);
             //Launch The Activity
             new CoursePreviewMainUXPage().OpenActivity(activityTypeEnum);
-            Logger.LogMethodExit("LaunchActivity", "OpenTheActivity",
+            Logger.LogMethodExit("LaunchActivity", "OpenTheSimStudyPlan",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -39,17 +39,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Click on Start Pre test button of SIM Study Plan by SMS Student
         /// </summary>
         [When(@"I click on Start Pre test button of SIM Study Plan by SMS Student")]
-        public void LaunchPreTestOfSIMStudyPlanBySMSStudent()
+        public void LaunchPreTestOfSimStudyPlanBySmsStudent()
         {
             //Logger Enrty
-            Logger.LogMethodEntry("LaunchActivity", 
-                "LaunchPreTestOfSIMStudyPlanBySMSStudent",
+            Logger.LogMethodEntry("LaunchActivity",
+                "LaunchPreTestOfSimStudyPlanBySmsStudent",
                 base.IsTakeScreenShotDuringEntryExit);
             //Launch SIM Study Plan Pre Test
             new SIMStudyPlanStudentUXPage().LaunchSIMStudyPlanPreTestByStudent();
             //Logger Exit
             Logger.LogMethodExit("LaunchActivity",
-                "LaunchPreTestOfSIMStudyPlanBySMSStudent",
+                "LaunchPreTestOfSimStudyPlanBySmsStudent",
                 base.IsTakeScreenShotDuringEntryExit);
             
         }
@@ -59,11 +59,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// </summary>
         /// <param name="activityTyepEnum">This activity type enum.</param>
         [When(@"I Submit the SIM Study Plan ""(.*)""")]
-        public void SubmitTheSIMStudyPlanPreTest(Activity.ActivityTypeEnum activityTyepEnum)
+        public void SubmitTheSimStudyPlanPreTest(Activity.ActivityTypeEnum activityTyepEnum)
         {
             //Logger Enrty
             Logger.LogMethodEntry("LaunchActivity",
-                "SubmitTheSIMStudyPlanPreTest",
+                "SubmitTheSimStudyPlanPreTest",
                 base.IsTakeScreenShotDuringEntryExit);
             //Get Activity name from memeory
             Activity activity= Activity.Get(activityTyepEnum);
@@ -71,7 +71,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             new StudentPresentationPage().SubmitSIMStudyPlanPreTestActivityByStudent(activity.Name);
             //Logger Exit
             Logger.LogMethodExit("LaunchActivity",
-                "SubmitTheSIMStudyPlanPreTest",
+                "SubmitTheSimStudyPlanPreTest",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -118,15 +118,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
         /// <summary>
         /// Submit SIM5 Excel type activity.
+        /// <param name="activityName">This of the activity name.</param>
         /// </summary>
         [When(@"I should answer activity ""(.*)"" correctly and click on Submit button")]
-        public void SubmitSIM5ExcelTypeActivity(String activityName)
+        public void SubmitSim5ExcelTypeActivity(String activityName)
         {
             //Submit SIM5 Excel type activity
-            Logger.LogMethodEntry("LaunchActivity", "SubmitSIM5ExcelTypeActivity",
+            Logger.LogMethodEntry("LaunchActivity", "SubmitSim5ExcelTypeActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            new SIM5FramePage().SubmitSIM5ExcelActivityExcelChapter1SkillBasedTraining(activityName);
-            Logger.LogMethodExit("LaunchActivity", "SubmitSIM5ExcelTypeActivity",
+            new SIM5FramePage().SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining(activityName);
+            Logger.LogMethodExit("LaunchActivity", "SubmitSim5ExcelTypeActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -134,7 +135,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Click on Submit button in SIM5
         /// presentation page after answering a question incorrectly.
         /// </summary>
-        /// <param name="activityName">Name of the activity.</param>
+        /// <param name="activityMode">This is activity mode name.</param>
+        /// <param name="activityName">This of the activity name.</param>
+        /// <param name="applicationType">This is activity type name.</param>
         [When(@"I click on submit button answering incorrectly of ""(.*)"" type ""(.*)"" mode activity ""(.*)""")]
         public void ClickonSubmitButtonAfterAnsweringIncorrectly(string applicationType,
             string activityMode, string activityName)

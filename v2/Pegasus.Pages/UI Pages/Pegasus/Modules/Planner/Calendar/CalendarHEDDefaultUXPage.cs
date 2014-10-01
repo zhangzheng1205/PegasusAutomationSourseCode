@@ -2035,7 +2035,7 @@ namespace Pegasus.Pages.UI_Pages
                 "IsStartDateFlagDisplayed",
                 base.IsTakeScreenShotDuringEntryExit);
             //Intialize the value
-            Boolean IsStartDateFlagDisplayed = false;
+            Boolean isStartDateFlagDisplayed = false;
             try
             {
                 //Select the calendar window
@@ -2043,7 +2043,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.ClassName(CalendarHEDDefaultUXPageResource.
                         CalendarHEDDefaultUXPageResource_FlagImage_Class_Locator));
                 // Verify Start Date Icon by Is True Assert
-                IsStartDateFlagDisplayed = base.IsElementPresent(By.ClassName
+                isStartDateFlagDisplayed = base.IsElementPresent(By.ClassName
                     (CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_FlagImage_Class_Locator));
 
@@ -2055,7 +2055,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                            "IsStartDateFlagDisplayed",
                            base.IsTakeScreenShotDuringEntryExit);
-            return IsStartDateFlagDisplayed;
+            return isStartDateFlagDisplayed;
         }
 
         /// <summary>

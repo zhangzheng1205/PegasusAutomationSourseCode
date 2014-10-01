@@ -22,12 +22,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// The Static Instance Of The Logger For The Class.
         /// </summary>
-        private static Logger Logger =
+        private static readonly Logger Logger =
             Logger.GetInstance(typeof(ActivitySubmission));
         /// <summary>
         /// AssetId
         /// </summary>
-        private string AssetId = string.Empty;
+        private string _assetId = string.Empty;
         /// <summary>
         /// Submit The Activity.
         /// </summary>
@@ -392,7 +392,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             studentPresentationPage.SelectWindowAndFrame();
             //wait for frame to load
             studentPresentationPage.WaitForActivitytoLoad(activityName);
-            studentPresentationPage.SelectSIMActivityStudentWindowName(studentName, activityName);
+            studentPresentationPage.SelectSimActivityStudentWindowName(studentName, activityName);
             Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityToLaunch", 
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -418,7 +418,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //wait for frame to load
             studentPresentationPage.WaitForActivitytoLoad(activityName);
             //Select the window
-            studentPresentationPage.SelectSIMActivityStudentWindowName(studentName, 
+            studentPresentationPage.SelectSimActivityStudentWindowName(studentName, 
                 activityName,scenerioName);
             Logger.LogMethodExit("ActivitySubmission", 
                 "OpenTheActivityToLaunchBasedOnScnerio",
@@ -535,7 +535,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //new StudentPresentationPage().ClickStartButtonOnPresentationWindow(
             //    activityType);
 
-            this.AssetId = new StudentPresentationPage().GetAssetIdFromUrl();
+            this._assetId = new StudentPresentationPage().GetAssetIdFromUrl();
             // Attempt Activity 
             new StudentPresentationPage().AttemptActivityForSaveforlater();
             Logger.LogMethodExit("ActivitySubmission",
@@ -597,7 +597,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Select The Cmenu Option Of Asset
             objViewSubmissionPage.SelectAssetCMenuOption(
                 (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
-                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum, AssetId);
+                GBInstructorUXPage.AssetCmenuOptionEnum), assetCmenu), activity.Name, activityTypeEnum, _assetId);
             Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebook",
                  IsTakeScreenShotDuringEntryExit);
         }
@@ -620,7 +620,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Select The Cmenu Option Of Asset
             objViewSubmissionPage.SelectAssetCMenuOption(
             (GBInstructorUXPage.AssetCmenuOptionEnum)Enum.Parse(typeof(
-            GBInstructorUXPage.AssetCmenuOptionEnum), cmenuOption), activityName, activityTypeEnum, AssetId);
+            GBInstructorUXPage.AssetCmenuOptionEnum), cmenuOption), activityName, activityTypeEnum, _assetId);
 
             Logger.LogMethodExit("GradeBook", "SubmitTheSIM5Activity",
             IsTakeScreenShotDuringEntryExit);
