@@ -741,7 +741,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Select current date
             assignContentPage.SelectCurrentDate();
             //Save the properties
-           // assignContentPage.ClickOnSave();
+            assignContentPage.ClickOnSave();
             Logger.LogMethodExit("AssignmentCalendar",
                 "AssignTheAsset",
               base.IsTakeScreenShotDuringEntryExit);
