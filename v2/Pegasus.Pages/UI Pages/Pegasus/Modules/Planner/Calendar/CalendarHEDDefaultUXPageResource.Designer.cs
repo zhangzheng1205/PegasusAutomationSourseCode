@@ -675,6 +675,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_btnYes.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_Button_Yes_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_Button_Yes_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to dueImgAssignment.
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_CalendarIcon_Id_Locator {
@@ -833,6 +842,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         internal static string CalendarHEDDefaultUXPageResource_FlagImage_Class_Locator {
             get {
                 return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_FlagImage_Class_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to iframeContentList.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_Iframe_iframeContentList_Id_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_Iframe_iframeContentList_Id_Locator", resourceCulture);
             }
         }
         
