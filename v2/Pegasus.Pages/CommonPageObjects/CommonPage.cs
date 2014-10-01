@@ -801,11 +801,6 @@ namespace Pegasus.Pages.CommonPageObjects
             // activity folder navigation
             Logger.LogMethodEntry("CommonPage", "NavigateInsideActivityFolderUnderTab",
                 base.IsTakeScreenShotDuringEntryExit);
-            base.WaitUntilWindowLoads("Course Materials");
-            // select window
-            base.SelectWindow("Course Materials");
-            base.SwitchToIFrame(CommonPageResource.CommonPage_CoursePreviewFrame_Id_Locator);
-            bool sd = base.IsElementPresent(By.PartialLinkText(activityFolderName),10);
             //Wait for the element
             base.WaitForElement(By.PartialLinkText(activityFolderName));
             IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
@@ -814,7 +809,7 @@ namespace Pegasus.Pages.CommonPageObjects
             base.ClickByJavaScriptExecutor(getFolderLink);
             Thread.Sleep(Convert.ToInt32(CommonPageResource.CommonPage_FolderNavigation_Sleep_Time));
             //Wait for element
-            base.WaitForElement(By.Id(webElementToWait));
+            //base.WaitForElement(By.Id(webElementToWait));
             Logger.LogMethodExit("CommonPage", "NavigateInsideActivityFolderUnderTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }
