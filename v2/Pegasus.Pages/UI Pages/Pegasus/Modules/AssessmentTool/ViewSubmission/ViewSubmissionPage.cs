@@ -1263,6 +1263,8 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Click on Submission Grade
                 this.ClickonSubmissionGrade();
+                bool dfdf=base.IsElementPresent(By.Id(ViewSubmissionPageResource.
+                    ViewSubmission_Page_GradeScore_Id_Locator),10);
                 //Get Submission Grade
                 getSubmissionScore = base.GetElementTextById(ViewSubmissionPageResource.
                     ViewSubmission_Page_GradeScore_Id_Locator);
