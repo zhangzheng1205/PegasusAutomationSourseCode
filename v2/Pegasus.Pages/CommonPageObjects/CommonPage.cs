@@ -41,7 +41,7 @@ namespace Pegasus.Pages.CommonPageObjects
             try
             {
                 //Select Window With Frame For Folder Navigation
-                this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+                //this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
                 // folder navigation based on user type
                 switch (userTypeEnum)
                 {
@@ -573,7 +573,7 @@ namespace Pegasus.Pages.CommonPageObjects
             base.ClickByJavaScriptExecutor(getFolderProperty);
             Thread.Sleep(Convert.ToInt32(CommonPageResource.
                 CommonPage_FolderNavigation_Sleep_Time));
-            base.WaitForElement(By.Id(webElementToWait));
+           // base.WaitForElement(By.Id(webElementToWait));
             Logger.LogMethodExit("CommonPage",
                 "NavigateToActivityFolderInInstructorCalendar",
               base.IsTakeScreenShotDuringEntryExit);
@@ -996,7 +996,7 @@ namespace Pegasus.Pages.CommonPageObjects
                     base.ClickByJavaScriptExecutor(getFolderNameProperty);
                     Thread.Sleep(Convert.ToInt32(CommonPageResource.
                         ComonPage_Wait_Time));
-                    base.WaitForElement(By.Id(webElementToWait));
+                   // base.WaitForElement(By.Id(webElementToWait));
                     break;
                 }
             }
