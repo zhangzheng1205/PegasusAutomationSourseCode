@@ -957,10 +957,6 @@ namespace Pegasus.Pages.UI_Pages
                 // enter after 3 minutes from current minute value
                 base.FillTextBoxById(AssignContentPageResource
                     .AssignContent_Page_Minutes_TextBox_Id_Locator, String.Format("{0:m }", getDueDate).Trim());
-                //Setting AM/PM
-                base.SelectDropDownValueThroughTextById(AssignContentPageResource.
-                   AssignContent_Page_DuedateAMPM_Dropdown_Id_Locator,
-                   String.Format("{0:tt}", getDueDate));
             }
             catch (Exception e)
             {
