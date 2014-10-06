@@ -1836,6 +1836,7 @@ namespace Pegasus.Pages.UI_Pages
             foreach (IWebElement checkBox in checkBoxList)
             {
                 string checkBoxId = checkBox.GetAttribute("id");
+                base.FocusOnElementById(checkBoxId);
                 base.ClickByJavaScriptExecutor(checkBox);
                 this.StoreAssignUnAssignActivityInMemory(
                     checkBoxId.Split('_')[1]);
