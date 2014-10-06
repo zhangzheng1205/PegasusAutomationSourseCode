@@ -653,7 +653,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Verify due date icon is diplayed in assigned date.
         /// </summary>
-        [Then(@"I should see Due Date Icon displayed in current date")]
+        [Then(@"I should see due date icon displayed in current date")]
         public void VerifyDueDateIconDisplayed()
         {
             // Verify due date icon is diplayed in assigned date
