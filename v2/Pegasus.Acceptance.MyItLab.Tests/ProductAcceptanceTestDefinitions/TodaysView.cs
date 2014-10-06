@@ -654,7 +654,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="activityName">This is activity name.</param>
         /// <param name="header">This is activity header name.</param>
         /// <param name="headerValue">This is expected activity header value.</param>
-        [Then(@"I should see ""(.*)"" having ""(.*)"" as ""(.*)""")]
+        [Then(@"I should see the ""(.*)"" having ""(.*)"" as ""(.*)""")]
         public void ValidateActivityCoursePerformanceChannel(string activityName, string header, string headerValue)
         {
             Logger.LogMethodEntry("TodaysView", "ValidateActivityCoursePerformanceChannel",

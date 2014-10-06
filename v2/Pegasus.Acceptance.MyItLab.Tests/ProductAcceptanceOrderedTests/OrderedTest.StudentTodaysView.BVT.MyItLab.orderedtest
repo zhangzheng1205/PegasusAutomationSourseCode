@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.StudentTodaysView.BVT.MyItLab" storage="d:\stash_automation\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.studenttodaysview.bvt.myitlab.orderedtest" id="89b5bf0e-5c77-4984-b650-29c13481b27d" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="3a7c05b4-9a3d-79a9-5c7d-88a2e8f4e9c3" name="UserLoginAsSMSStudentAndNavigateToMyITLabOffice2013SectionCourse" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="50addb14-9770-afc6-ab09-042920592060" name="StudentValidatesGradeDisplayInMyProgressChannel" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="69731675-54c3-148e-88a8-245ac3d6cd76" name="UserLogoutAsSMSStudent" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

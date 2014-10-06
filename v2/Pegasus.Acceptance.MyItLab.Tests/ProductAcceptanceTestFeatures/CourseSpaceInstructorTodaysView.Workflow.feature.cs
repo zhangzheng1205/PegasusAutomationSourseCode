@@ -404,13 +404,13 @@ testRunner.When("I click on the \"Course Performance\" link in notifications cha
 testRunner.And("I select \"Word Chapter 1 Skill-Based Training\" in \"Today\'s View\" by \"CsSmsInstruc" +
                     "tor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 165
-testRunner.Then("I should see \"Word Chapter 1 Skill-Based Training\" having \"Grade\" as \"6.9%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Word Chapter 1 Skill-Based Training\" having \"Grade\" as \"6.9%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 166
-testRunner.And("I should see \"Word Chapter 1 Skill-Based Training\" having \"Content Completed\" as " +
-                    "\"25%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the \"Word Chapter 1 Skill-Based Training\" having \"Content Completed\"" +
+                    " as \"25%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 167
-testRunner.And("I should see \"Word Chapter 1 Skill-Based Training\" having \"Time on Task\" as \"00:0" +
-                    "3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the \"Word Chapter 1 Skill-Based Training\" having \"Time on Task\" as \"" +
+                    "00:03\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
