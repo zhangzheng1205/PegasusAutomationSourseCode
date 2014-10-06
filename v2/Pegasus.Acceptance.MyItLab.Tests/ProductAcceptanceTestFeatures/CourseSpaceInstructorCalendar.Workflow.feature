@@ -108,3 +108,17 @@ Then I should see the "Properties" popup
 When I assign the asset for current date in the properties popup
 Then I should see the duedate icon along with the checkmark in the calendar
 
+
+#PEGASUS-21971
+#Purpose : To validate Assign one content using Assign/Unassign link
+#Test Case Id :peg-21971 -Assign one content using Assign/Unassign link
+Scenario: Assign one content using Assign Unassign link by SMS Instructor
+When I navigate to the "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+When I select "Access Chapter 1 Skill-Based Training" in "Calendar" by "CsSmsInstructor"
+And I select the check box of any 1 activities in "Access Chapter 1: Simulation Activities"
+Then I should see Assign/Unassign link in active state on the content frame header
+When I click on assign/Unassign link displayed in content frame header
+Then I should see the check mark in assigned status column next to the assets
+
+

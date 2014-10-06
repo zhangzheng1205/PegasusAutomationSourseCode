@@ -206,6 +206,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                             userTypeEnum, activityUnderTabName);
                                         break;
                                     //Folder navigation for Access
+                                    case "Access Chapter 1 Skill-Based Training":
                                     case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
                                         this.SelectAccessActivityFolderNavigationInInstructorCalendar(CommonPageResource.
                                             CommonPage_Instructor_Calendar_Content_Id_Locator,
@@ -225,6 +226,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_Instructor_Calendar_Content_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
+
                                 }
                                 break;
                             case "Today's View":
