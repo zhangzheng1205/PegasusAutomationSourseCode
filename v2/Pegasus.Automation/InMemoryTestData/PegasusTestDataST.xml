@@ -132,7 +132,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>ST_Automation</Name>
+      <Name>ST_ProgramAdminCourse</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
