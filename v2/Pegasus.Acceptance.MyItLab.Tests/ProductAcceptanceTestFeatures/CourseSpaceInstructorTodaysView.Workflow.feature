@@ -162,7 +162,7 @@ When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 When I click on the "Course Performance" link in notifications channel
 And I select "Word Chapter 1 Skill-Based Training" in "Today's View" by "CsSmsInstructor"
-Then I should see "Word Chapter 1 Skill-Based Training" having "Grade" as "6.9%"
-And I should see "Word Chapter 1 Skill-Based Training" having "Content Completed" as "25%"
-And I should see "Word Chapter 1 Skill-Based Training" having "Time on Task" as "00:03"
+Then I should see the "Word Chapter 1 Skill-Based Training" having "Grade" as "6.9%"
+And I should see the "Word Chapter 1 Skill-Based Training" having "Content Completed" as "25%"
+And I should see the "Word Chapter 1 Skill-Based Training" having "Time on Task" as "00:03"
 
