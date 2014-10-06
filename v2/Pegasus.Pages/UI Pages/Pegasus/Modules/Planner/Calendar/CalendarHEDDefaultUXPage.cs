@@ -2078,19 +2078,6 @@ namespace Pegasus.Pages.UI_Pages
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_SleepTime));
                 
-                //If Iframe Exist then Click on Yes button
-                if (base.IsElementPresent(By.Id(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource_Iframe_iframeContentList_Id_Locator),
-                    Convert.ToInt32(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource_TimeToWaitForElement)))
-                {
-                    base.SwitchToIFrameById(CalendarHEDDefaultUXPageResource.
-                        CalendarHEDDefaultUXPageResource_Iframe_iframeContentList_Id_Locator);
-                    //Click on the Yes button
-                    base.ClickButtonById(CalendarHEDDefaultUXPageResource.
-                        CalendarHEDDefaultUXPageResource_Button_Yes_Id_Locator);
-                    base.SwitchToDefaultWindow();
-                }
             }
             catch (Exception e)
             {

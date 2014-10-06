@@ -20,7 +20,7 @@ Then I should see Due Date Icon displayed in current date
 #Test case ID : peg-21981.
 #Pre condition :Excel SIM5 activity should be created by instructor/Author in the following course.
 #MyITLabOffice2013Program
-Scenario:Drag and drop multiple assets to assignment calendar by SMS Instructor
+Scenario: Drag and drop the more than one assets to current date in Assignment calendar
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 And I should see "GO! with Microsoft Office 2013, Volume 1" asset
@@ -28,7 +28,7 @@ And I should see the current date highlighted in the calendar frame
 When I select "Excel Chapter 1 Skill-Based Training" in "Calendar" by "CsSmsInstructor"
 And I select the check box of any 2 activities in "Excel Chapter 1: Simulation Activities"
 And I should drag and drop multiple assets to the current date
-Then I should see Due Date Icon displayed in current date
+Then I should see due date icon displayed in current date
 
 
 
