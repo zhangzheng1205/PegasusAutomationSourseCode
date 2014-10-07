@@ -14,7 +14,7 @@ And I should see "GO! with Microsoft Office 2013, Volume 1" asset
 And I should see the current date highlighted in the calendar frame
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Calendar" by "CsSmsInstructor"
 And I drag and drop the 'Word Chapter 1: Simulation Activities' folder to the current date
-Then I should see Due Date Icon displayed in current date
+Then I should see due date icon displayed in current date
 
 #Purpose: To drag and drop multiple assets in assignment calendar.
 #Test case ID : peg-21981.
