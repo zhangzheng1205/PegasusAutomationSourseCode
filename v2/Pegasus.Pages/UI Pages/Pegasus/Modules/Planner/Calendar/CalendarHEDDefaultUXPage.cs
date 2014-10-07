@@ -2071,10 +2071,14 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select Calendar Window
                 this.SelectCalendarWindow();
-                Thread.Sleep(3000);
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_SleepTime));
                 //Wait for the element
-                IWebElement element = WebDriver.FindElement(By.XPath("//div[@title='Excel Chapter 1 Skill-Based Training']"));
-                IWebElement target = WebDriver.FindElement(By.XPath("//td[@class='HighlightTodayCell']"));
+                IWebElement element = WebDriver.FindElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_ExcelSkillBasedTrainingAsset_Xpath_Locator));
+                IWebElement target = WebDriver.FindElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                //Drag and drop the asset to current date
                 base.PerformDragAndDropAction(element, target);
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_SleepTime));
