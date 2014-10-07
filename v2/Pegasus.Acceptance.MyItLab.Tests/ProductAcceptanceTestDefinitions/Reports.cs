@@ -8,8 +8,7 @@ using Pegasus.Pages.UI_Pages;
 using Pegasus.Automation.DataTransferObjects;
 using TechTalk.SpecFlow;
 using Pegasus.Pages.CommonResource;
-
-
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports;
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -739,6 +738,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+
         /// <summary>
         /// Verify expected activity in 'Activity Results (Multiple students and activities)' report
         /// </summary>
@@ -1021,7 +1022,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             "AddSingleActivity",
             base.IsTakeScreenShotDuringEntryExit);
             // Select an activity
-            new RptMainUXPage().SelectSingleActivity(activityName);
+            //new RptMainUXPage().SelectSingleActivity(activityName);
             Logger.LogMethodExit("Reports",
              "AddSingleActivity",
            base.IsTakeScreenShotDuringEntryExit);
@@ -1060,6 +1061,23 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 "VerifyActivityReportDataInMultipleStudents",
               base.IsTakeScreenShotDuringEntryExit); 
         }
+       
+        /// <summary>
+        /// Select activity in Learning Aid Usage report generation.
+        /// </summary>
+        /// <param name="activityName">This is a activity name.</param>
+        [When(@"I select the ""(.*)"" asset in'Select Activity'")]
+        public void AddActivity(string activityName)
+        {
+             // Select an activity
+            Logger.LogMethodEntry("Reports","AddActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Select an activity
+            new RptMainUXPage().SelectActivity(activityName);
+            Logger.LogMethodExit("Reports","AddActivity",
+           base.IsTakeScreenShotDuringEntryExit);
+        }
+     
 
         [Then(@"I should see the ""(.*)"" along with attempt as ""(.*)"" submitted as score as ""(.*)""")]
         public void Verify100ScoreStudentReportDataInMultipleStudentInReports(User.UserTypeEnum userTypeEnum,
@@ -1415,6 +1433,71 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("Reports",
                 "VerifyExamFrequencyQuestionDetailsByProgramAdmin",
                 base.IsTakeScreenShotDuringEntryExit);  
-        } 
-    }
+        }
+
+       
+
+        /// <summary>
+        ///  Verify the Report details in Learning Aid Usage by Program Admin.
+        /// </summary>
+        /// <param name="questionName">This is a Question name.</param>
+        /// <param name="questionType">This is a Question type.</param>
+        /// <param name="sectionName">This is a Section name.</param
+        /// <param name="applicationName">This is a Application name.</param>
+        [Then(@"I should see the details of the question ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)""")]
+        public void VerifyLearningAidUsageReportDetailsByProgramAdmin(string questionName,
+            string questionType, Course.CourseTypeEnum courseTypeEnum, string applicationName)
+        {
+            Logger.LogMethodEntry("Reports",
+                "VerifyLearningAidUsageReportDetailsByProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseTypeEnum);
+            //Verify question name
+            Logger.LogAssertion("VerifyQuestionNameDisplayed",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.IsTrue(new RptLearningAidFrequencyPage().
+             IsQuestionPresentInLearningAidUsageReport(questionName)));
+            //verify question details
+            Logger.LogAssertion("VerifyquestionType",
+               ScenarioContext.Current.ScenarioInfo.Title, () =>
+               Assert.AreEqual(questionType, new RptLearningAidFrequencyPage().
+              GetLearningAidUsageQuestionDetails(questionName, 2)));
+            //Assert the question type name
+            Logger.LogAssertion("VerifysectionName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(course.SectionId, new RptLearningAidFrequencyPage().
+             GetLearningAidUsageQuestionDetails(questionName, 3)));
+            //Assert the application name
+            Logger.LogAssertion("VerifyApplicationName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(applicationName, new RptLearningAidFrequencyPage().
+             GetLearningAidUsageQuestionDetails(questionName, 4)));
+            Logger.LogMethodExit("Reports",
+                "VerifyLearningAidUsageReportDetailsByProgramAdmin",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// Verify the average score and activity name in Learning Aid Usage Report.
+        /// </summary>
+        /// <param name="chapterName">This is a Chapter name.</param>
+        /// <param name="score">This is the Score.</param>
+        [Then(@"I should see  ""(.*)"" along with average score ""(.*)""")]
+        public void VerifyNameAverageScore(string chapterName, string score)
+        {
+            //Verify the average score and activity name in Training Frequency Analysis Report
+            Logger.LogMethodEntry("Reports", "NameAverageScoreDisplayed",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Verifying the Activity Name
+            Logger.LogAssertion("VerifyActivityName", ScenarioContext.Current.ScenarioInfo.Title,
+             () => Assert.AreEqual(chapterName.ToString(), new RptLearningAidFrequencyPage().
+                 GetLearningAidUsageActivityNameInReport(chapterName)));
+            // Verifying the Activity Score
+            Logger.LogAssertion("VerifyActivityScore", ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(score.ToString(), new RptLearningAidFrequencyPage().
+                   GetLearningAidUsageScoreInReport(score)));
+            Logger.LogMethodExit("Reports", "NameAverageScoreDisplayed",
+         base.IsTakeScreenShotDuringEntryExit);
+
+        }
+     }
 }

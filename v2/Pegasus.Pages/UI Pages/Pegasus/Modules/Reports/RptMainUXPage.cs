@@ -1807,19 +1807,21 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click on 'Select Activity' and switch to 'Select Activities' window.
         /// </summary>
-        /// /// <param name="assesmentName">This is the assessment to be selected.</param>
-        public void SelectSingleActivity(string assesmentName)
+        /// /// <param name="activityName">This is the assessment to be selected.</param>
+        public void SelectActivity(string activityName)
         {
             // Click on 'Select Activity' and switch to 'Select Activities' window
-            Logger.LogMethodEntry("RptMainUXPageResource", "SelectSingleActivity",
+            Logger.LogMethodEntry("RptMainUXPageResource", "SelectActivity",
                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                base.WaitForElement(By.XPath(RptMainUXPageResource.
-                    RptMainUX_Page_SelectActivity_Button_Xpath_Locator));
-                IWebElement getButton = base.GetWebElementPropertiesByXPath(
-                    RptMainUXPageResource.
-                    RptMainUX_Page_SelectActivity_Button_Xpath_Locator);
+                this.SelectReportWindowforLearningaidUsage();
+               //Wait for the element
+                base.WaitForElement(By.Id(RptMainUXPageResource.
+                    RptMainUXPage_LearningAidUsage_ActivityButton_Id_Locator));
+                IWebElement getButton = base.GetWebElementPropertiesById(
+                   RptMainUXPageResource.
+                    RptMainUXPage_LearningAidUsage_ActivityButton_Id_Locator);
                 //Click assesment button
                 base.ClickByJavaScriptExecutor(getButton);
                 //Switch to window
@@ -1827,14 +1829,37 @@ namespace Pegasus.Pages.UI_Pages
                     RptMainUX_Page_SelectActivities_Window_Title_Value);
                 base.SelectWindow(RptMainUXPageResource.
                     RptMainUX_Page_SelectActivities_Window_Title_Value);
-                AddAssessment(assesmentName);
+                AddAssessment(activityName);
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("RptMainUXPageResource", "SelectSingleActivity",
+            Logger.LogMethodExit("RptMainUXPageResource", "SelectActivity",
                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Report Window for Learningaid Usage.
+        /// </summary>
+        private void SelectReportWindowforLearningaidUsage()
+        {
+            //Select Report Window for Learningaid Usage
+            Logger.LogMethodEntry("RptMainUXPageResource",
+                "SelectReportWindowforLearningaidUsage",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Select the window
+            base.WaitUntilWindowLoads(RptMainUXPageResource.
+                RptMainUXPage_LearningAidUsage_WindowName);
+            base.SelectWindow(RptMainUXPageResource.
+                RptMainUXPage_LearningAidUsage_WindowName);
+            base.SwitchToIFrame(RptMainUXPageResource.
+                RptMainUXPage_LearningAidUsage_Iframe_Value);
+            base.SwitchToIFrame(RptMainUXPageResource.
+                RptMainUXPage_LearningAidUsage_frame_Value);
+            Logger.LogMethodExit("RptMainUXPageResource", 
+                "SelectReportWindowforLearningaidUsage",
+                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -2009,8 +2034,8 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("RptMainUXPageResource", "GetActivityNameFromReport",
                         base.IsTakeScreenShotDuringEntryExit);
             return getActualActivityName;
-        }
-
+        }     
+        
         /// <summary>
         /// /// <summary>
         /// Switch to 'Reports' window.
