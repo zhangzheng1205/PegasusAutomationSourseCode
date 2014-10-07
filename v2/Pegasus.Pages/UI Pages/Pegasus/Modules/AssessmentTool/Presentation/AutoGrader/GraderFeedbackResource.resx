@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="GraderFeedbackResource_CourseMaterials_frame_Id_locator" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
+  </data>
+  <data name="GraderFeedbackResource_Element_Waittime" xml:space="preserve">
+    <value>20000</value>
+  </data>
   <data name="GraderFeedbackResource_MaximumScore_ID" xml:space="preserve">
     <value>lblScore</value>
   </data>
@@ -127,6 +133,6 @@
     <value>Test Feedback</value>
   </data>
   <data name="GraderFeedbackResource_ReturnToCourse_Button_ID" xml:space="preserve">
-    <value>btnReturnToCourseTop</value>
+    <value>btn_p</value>
   </data>
 </root>

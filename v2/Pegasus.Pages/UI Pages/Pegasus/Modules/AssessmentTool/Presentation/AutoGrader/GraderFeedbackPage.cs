@@ -118,15 +118,21 @@ namespace Pegasus.Pages.UI_Pages.Pegasus
                                   base.IsTakeScreenShotDuringEntryExit);
             base.WaitUntilWindowLoads(GraderFeedbackResource.
                 GraderFeedbackResource_Popup_Title);
+            base.SelectWindow(GraderFeedbackResource.
+                GraderFeedbackResource_Popup_Title);
             // Wait untill "Retuen To Course" button loads and click.
-            IWebElement returnToCoursebtnid = base.GetWebElementPropertiesByClassName("btn_p");
+            IWebElement returnToCoursebtnid = base.GetWebElementPropertiesByClassName
+                (GraderFeedbackResource.
+                GraderFeedbackResource_ReturnToCourse_Button_ID);
             base.ClickByJavaScriptExecutor(returnToCoursebtnid);
             base.WaitUntilWindowLoads(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_Window_Title_Name_HED);
             base.SelectWindow(CoursePreviewUXPageResource.
                 CoursePreviewUX_Page_Window_Title_Name_HED);
-            base.RefreshIFrameByJavaScriptExecutor("ifrmCoursePreview");
-            Thread.Sleep(12000);
+            base.RefreshIFrameByJavaScriptExecutor(GraderFeedbackResource.
+                GraderFeedbackResource_CourseMaterials_frame_Id_locator);
+            Thread.Sleep(Convert.ToInt32(GraderFeedbackResource.
+                GraderFeedbackResource_Element_Waittime));
             Logger.LogMethodExit("GraderFeedbackPage", "ClickReturnToCourseButton",
                       base.IsTakeScreenShotDuringEntryExit);
 

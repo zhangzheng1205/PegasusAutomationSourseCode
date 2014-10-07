@@ -62,6 +62,8 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
             IWebElement getSubmitButtonID = base.GetWebElementPropertiesById
                 (PresentationPageResource.PresentationPage_Page_Submit_Button_Id);
             base.ClickByJavaScriptExecutor(getSubmitButtonID);
+            Thread.Sleep(Convert.ToInt32(PresentationPageResource.
+                PresentationPage_Page_Element_WaitTime_Value));
             logger.LogMethodExit("PresentationPage",
                "ClickSubmitButton",
                base.IsTakeScreenShotDuringEntryExit);

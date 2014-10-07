@@ -227,7 +227,10 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
                         base.ClickByJavaScriptExecutor(getUploadButtonPropertyForAccess100Percent);
                         break;
                 }
+                Thread.Sleep(Convert.ToInt32(PresentationPageResource.
+                PresentationPage_Page_Element_WaitTime_Value));
             }
+
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);

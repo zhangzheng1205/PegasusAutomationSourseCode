@@ -123,6 +123,9 @@
   <data name="PresentationPage_Page_Download_Button_Id" xml:space="preserve">
     <value>btnDownload</value>
   </data>
+  <data name="PresentationPage_Page_Element_WaitTime_Value" xml:space="preserve">
+    <value>2000</value>
+  </data>
   <data name="PresentationPage_Page_Submit_Button_Id" xml:space="preserve">
     <value>btnTopSubmit</value>
   </data>
