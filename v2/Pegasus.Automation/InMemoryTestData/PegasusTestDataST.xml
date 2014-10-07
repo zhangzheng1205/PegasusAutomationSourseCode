@@ -136,8 +136,8 @@
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
-      <SectionName>Automation_Section 1</SectionName>
-      <SectionId>CRSKLCL-12000021</SectionId>
+      <SectionName>Dependant_section</SectionName>
+      <SectionId>CRSKLSG-12000184</SectionId>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>

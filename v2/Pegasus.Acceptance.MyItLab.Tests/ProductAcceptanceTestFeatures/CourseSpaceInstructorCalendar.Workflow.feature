@@ -75,6 +75,13 @@ And I select the check box of any 2 activities in "PowerPoint Chapter 1: Simulat
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
 Then I should see the check mark in assigned status column next to the assets
+When I navigate to the "Assignment Calendar" tab
+When I select "PowerPoint Chapter 1 Skill-Based Training" in "Calendar" by "CsSmsInstructor"
+And I select the check box of any 2 activities in "PowerPoint Chapter 1: Simulation Activities"
+And I click on assign/Unassign link displayed in content frame header
+
+
+
 
 #Purpose: To validate the current date assigned content in calendar frame by Coursespace Instructor
 #Test Case Id: peg-21985
@@ -120,5 +127,13 @@ And I select the check box of any 1 activities in "Access Chapter 1: Simulation 
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
 Then I should see the check mark in assigned status column next to the assets
+When I navigate to the "Assignment Calendar" tab
+When I select "Access Chapter 1 Skill-Based Training" in "Calendar" by "CsSmsInstructor"
+And I select the check box of any 1 activities in "Access Chapter 1: Simulation Activities"
+And I click on assign/Unassign link displayed in content frame header
+
+
+
+
 
 

@@ -144,6 +144,10 @@ namespace Pegasus.Pages.UI_Pages
                     new RptMainUXPage().ClickReportLink(ProgramAdminReportsSubTabPageResource.
                         ProgramAdminReportsSubTab_ActivityResultMultipleStudents_Link_Id_locator);
                     break;
+                case "Learning Aid Usage":
+                    //Click 'Learning Aid Usage' report link
+                    new RptMainUXPage().ClickReportLink("RPT_Learning_Aid_Efficacy");
+                    break;      
             }
             Logger.LogMethodExit("ProgramAdminReportsSubTabPage", " ClickOnReportLink",
               base.IsTakeScreenShotDuringEntryExit);
@@ -168,7 +172,7 @@ namespace Pegasus.Pages.UI_Pages
                     new RptMainUXPage().OpenAssessmentWindow(assessmentType, "Select Activities");
                     //Selects the expected activity and click 'Add'
                     new RptMainUXPage().AddAssessment(assessmentName);
-                    break;
+                    break;                
                 case "Select Exams":
                     new RptMainUXPage().OpenAssessmentWindow(assessmentType, "Select Exam");
                     //Selects the expected exam and click 'Add'
@@ -178,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages
                     new RptMainUXPage().OpenAssessmentWindow(assessmentType, "Select Training");
                     //Selects the expected training and click 'Add'
                     new RptMainUXPage().AddAssessment(assessmentName);
-                    break;
+                    break;              
             }
             Logger.LogMethodExit("ProgramAdminReportsSubTabPage", "SelectAnAssessment",
             base.IsTakeScreenShotDuringEntryExit);

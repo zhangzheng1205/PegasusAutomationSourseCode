@@ -342,4 +342,16 @@
   <data name="RptMainUX_Page_SelectActivity_Button_Xpath_Locator" xml:space="preserve">
     <value>//a/span/span[text()='Select Activity']</value>
   </data>
+  <data name="RptMainUXPage_LearningAidUsage_ActivityButton_Id_Locator" xml:space="preserve">
+    <value>imgAssessment</value>
+  </data>
+  <data name="RptMainUXPage_LearningAidUsage_frame_Value" xml:space="preserve">
+    <value>Mainframe</value>
+  </data>
+  <data name="RptMainUXPage_LearningAidUsage_Iframe_Value" xml:space="preserve">
+    <value>_ctl0_PageContent_ifrmMiddle</value>
+  </data>
+  <data name="RptMainUXPage_LearningAidUsage_WindowName" xml:space="preserve">
+    <value>Program Administration</value>
+  </data>
 </root>
