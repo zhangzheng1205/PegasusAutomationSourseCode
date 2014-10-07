@@ -1866,6 +1866,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             new Actions(WebDriver).Release().Perform();
         }
 
+        /// <summary>
+        /// Performs Drag and Drop of a Webelement into another.
+        /// </summary>
+        /// <param name="destination">Element to be dragged.</param>
+        /// <param name="target">Element to be dropped at.</param>
+        protected void DragAndDropWebElement(IWebElement destination ,IWebElement target)
+        {
+             new Actions(WebDriver).ClickAndHold(destination).MoveToElement(target).Release(target).Build().Perform();
+        }
+
         #endregion
 
         #region WebDriver IJavaScriptExecutor
