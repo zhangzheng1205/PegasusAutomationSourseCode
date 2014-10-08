@@ -1287,6 +1287,39 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Click on 'Select Activity' and switch to 'Select Activities' window.
+        /// </summary>
+        /// /// <param name="assesmentName">This is the assessment to be selected.</param>
+        public void SelectSingleActivity(string assesmentName)
+        {
+            // Click on 'Select Activity' and switch to 'Select Activities' window
+            Logger.LogMethodEntry("RptMainUXPageResource", "SelectSingleActivity",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.XPath(RptMainUXPageResource.
+                    RptMainUX_Page_SelectActivity_Button_Xpath_Locator));
+                IWebElement getButton = base.GetWebElementPropertiesByXPath(
+                    RptMainUXPageResource.
+                    RptMainUX_Page_SelectActivity_Button_Xpath_Locator);
+                //Click assesment button
+                base.ClickByJavaScriptExecutor(getButton);
+                //Switch to window
+                base.WaitUntilWindowLoads(RptMainUXPageResource.
+                    RptMainUX_Page_SelectActivities_Window_Title_Value);
+                base.SelectWindow(RptMainUXPageResource.
+                    RptMainUX_Page_SelectActivities_Window_Title_Value);
+                AddAssessment(assesmentName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("RptMainUXPageResource", "SelectSingleActivity",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Select Student.
         /// </summary>
         /// <param name="userLastName">This is User Last Name.</param>

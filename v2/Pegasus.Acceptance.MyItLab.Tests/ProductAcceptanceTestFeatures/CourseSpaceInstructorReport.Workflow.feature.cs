@@ -364,11 +364,11 @@ testRunner.And("I enter the \"MyItLabActivityResultsMultipleStudentsAdActivities
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 137
 testRunner.Then("I should see the \"Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenari" +
-                    "o 1)\" with section \"ReportsAutomation1\" average score \"50%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "o 1)\" with section \"MyITLabOffice2013Program\" average score \"5.9%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 138
-testRunner.And("I should see the \"CsSmsStudent\" along with attempt as \"2\" score as \"100.0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 139
 testRunner.And("I should see \'Zero\' \"CsSmsStudent\" along with attempt as \"1\" score as \"0.0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 139
+testRunner.And("I should see the \"CsSmsStudent\" along with attempt as \"1\" score as \"100.0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 140
 testRunner.When("I close the \"Activity Results (Multiple students and activities) \" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 141
@@ -426,13 +426,13 @@ testRunner.And("I enter the \"MyItLabActivityResultsMultipleStudentsAdActivities
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 163
 testRunner.Then("I should see the \"Activities: Word Chapter 1 Project 1A Skill-Based Exam (Scenari" +
-                    "o 1)\" with average score \"50%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "o 1)\" with average score \"11.5%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 164
-testRunner.And("I should see the \"CsSmsStudent\" along with section \"MyITLabOffice2013Program\" att" +
-                    "empt as \"2\" submitted as score as \"100.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 165
 testRunner.And("I should see \'Zero\' \"CsSmsStudent\" along with section \"MyITLabOffice2013Program\" " +
                     "attempt as \"1\" submitted as score as \"0.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 165
+testRunner.And("I should see the \"CsSmsStudent\" along with section \"MyITLabOffice2013Program\" att" +
+                    "empt as \"1\" submitted as score as \"100.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 166
 testRunner.When("I close the \"Activity Results (Multiple students and activities)\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 167
@@ -489,13 +489,13 @@ testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.
 testRunner.Then("I should be on the \"Activity Results (Multiple Students)\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 189
 testRunner.Then("I should see the \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" along " +
-                    "with section \"ReportsAutomation1\" average score \"50%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "with section \"MyITLabOffice2013Program\" average score \"11.5%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 190
-testRunner.And("I should see the \"CsSmsStudent\" along with attempt as \"2\" submitted as score as \"" +
-                    "100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 191
 testRunner.And("I should see \'Zero\' \"CsSmsStudent\" along with attempt as \"1\" submitted as score a" +
                     "s \"0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 191
+testRunner.And("I should see the \"CsSmsStudent\" along with attempt as \"1\" submitted as score as \"" +
+                    "100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 192
 testRunner.When("I close the \"Activity Results (Multiple Students)\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 193
@@ -552,7 +552,7 @@ testRunner.And("I should see correct incorrect and skipped attempt details \"1\"
 testRunner.And("I should see question detail \"WD Activity 1.02: Inserting Text from Another Docum" +
                     "ent\" \"SIM5 Question\" \"Word 2013\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 216
-testRunner.And("I should see attempt correct incorrect and skipped details \"1\" \"0\" \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see attempt correct incorrect and skipped details \"0\" \"1\" \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 217
 testRunner.When("I close the \"Exam Frequency Analysis\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 218
@@ -602,7 +602,7 @@ testRunner.And("I enter the \"MyITLabTrainingFrequencyAnalysis\" report name", (
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 239
 testRunner.Then("I should see the \"Excel Chapter 1 Skill-Based Training\" along with average score " +
-                    "\"50%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "\"10%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 240
 testRunner.And("I should see question details \"XL Activity 1.01: Starting Excel, Navigating Excel" +
                     ", and Naming and Saving a Workbook\" \"Excel 2013\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -661,12 +661,12 @@ testRunner.And("I enter the \"MyITLabTrainingFrequencyAnalysis\" report name", (
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 264
 testRunner.Then("I should see the question details \"XL Activity 1.01: Starting Excel, Navigating E" +
-                    "xcel, and Naming and Saving a Workbook\" \"ReportsAutomation1\" \"Excel 2013\" \"50.00" +
-                    "%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "xcel, and Naming and Saving a Workbook\" \"MyITLabOffice2013Program\" \"Excel 2013\" " +
+                    "\"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 265
 testRunner.And("I should see the question details \"XL Activity 1.02: Entering Text, Using AutoCom" +
-                    "plete, and Using the Name Box to Select a Cell\" \"ReportsAutomation1\" \"Excel 2013" +
-                    "\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                    "plete, and Using the Name Box to Select a Cell\" \"MyITLabOffice2013Program\" \"Exce" +
+                    "l 2013\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 266
 testRunner.When("I close the \"Activity Results (Multiple students and activities)\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 267
@@ -719,10 +719,10 @@ testRunner.And("I enter the \" MyITLabExamFrequencyAnalysis\" report name", ((st
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 288
 testRunner.Then("I should see details of the question \"WD Activity 1.01: Starting a New Word Docum" +
-                    "ent\" \"ReportsAutomation1\" \"SIM5 Question\" \"Word 2013\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "ent\" \"MyITLabOffice2013Program\" \"SIM5 Question\" \"Word 2013\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 289
 testRunner.And("I should see details of the question \"WD Activity 1.02: Inserting Text from Anoth" +
-                    "er Document\" \"ReportsAutomation1\" \"SIM5 Question\" \"Word 2013\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                    "er Document\" \"MyITLabOffice2013Program\" \"SIM5 Question\" \"Word 2013\" \"50.00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 290
 testRunner.When("I close the \"Exam Frequency Analysis\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 291

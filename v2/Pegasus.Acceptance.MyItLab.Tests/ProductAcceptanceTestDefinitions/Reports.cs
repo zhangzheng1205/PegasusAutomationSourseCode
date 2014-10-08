@@ -765,12 +765,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="averageScore">This is average score value.</param>
         [Then(@"I should see the ""(.*)"" with section ""(.*)"" average score ""(.*)""")]
         public void VerifyMultipleActivityReportDataInMultipleStudentAndActivities(string reportHeading,
-            string sectionName, string averageScore)
+            Course.CourseTypeEnum courseTypeEnum, string averageScore)
         {
             // Verify report heading ,section name and average score
             Logger.LogMethodEntry("Reports",
                 "VerifyMultipleActivityReportDataInMultipleStudentAndActivities",
             base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseTypeEnum);
             //Asserts Report heading value
             Logger.LogAssertion("VerifyCriteriaPageOpened",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -779,7 +780,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Assert report section name
             Logger.LogAssertion("VerifyCriteriaPageOpened",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
-                  Assert.AreEqual(sectionName,
+                  Assert.AreEqual(course.SectionName,
                    new RptAllAssessmentAllStudentPage().GetSectionName()));
             //Assert report average score value
             Logger.LogAssertion("VerifyCriteriaPageOpened",
@@ -1011,6 +1012,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
   
         /// <summary>
+
+        /// <summary>
         /// Select an activity.
         /// </summary>
         /// <param name="activityName">This is activity to be selected.</param>
@@ -1022,7 +1025,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             "AddSingleActivity",
             base.IsTakeScreenShotDuringEntryExit);
             // Select an activity
-            //new RptMainUXPage().SelectSingleActivity(activityName);
+            new RptMainUXPage().SelectSingleActivity(activityName);
             Logger.LogMethodExit("Reports",
              "AddSingleActivity",
            base.IsTakeScreenShotDuringEntryExit);
@@ -1036,12 +1039,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="averageScore">This is average score.</param>
         [Then(@"I should see the ""(.*)"" along with section ""(.*)"" average score ""(.*)""")]
         public void VerifyActivityReportDataInMultipleStudents(string reportHeading,
-            string sectionName, string averageScore)
+           Course.CourseTypeEnum courseTypeEnum, string averageScore)
         {
             // Verify report heading ,section name and average score
             Logger.LogMethodEntry("Reports",
                 "VerifyActivityReportDataInMultipleStudents",
             base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseTypeEnum);
             //Asserts Report heading value
             Logger.LogAssertion("VerifyCriteriaPageOpened",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -1050,7 +1054,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Assert report section name
             Logger.LogAssertion("VerifyCriteriaPageOpened",
                 ScenarioContext.Current.ScenarioInfo.Title, () =>
-                  Assert.AreEqual(sectionName,
+                  Assert.AreEqual(course.SectionName,
                    new RptAssessmentAllStudentsPage().GetSectionName()));
             //Assert report average score value
             Logger.LogAssertion("VerifyCriteriaPageOpened",
@@ -1359,11 +1363,12 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="percentScore">This is a percentScore.</param>
         [Then(@"I should see the question details ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)""")]
         public void VerifyTrainingFrequencyQuestionDetailsByProgramAdmin(string questionName,
-            string sectionName , string applicationName, string percentScore)
+           Course.CourseTypeEnum courseTypeEnum  , string applicationName, string percentScore)
         {
             Logger.LogMethodEntry("Reports",
                 "VerifyTrainingFrequencyQuestionDetailsByProgramAdmin",
-                base.IsTakeScreenShotDuringEntryExit);  
+                base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseTypeEnum);
             //Verify the question name
             Logger.LogAssertion("VerifyQuestionDisplayed",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -1377,7 +1382,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Assert the section name
             Logger.LogAssertion("VerifyApplicationName",
             ScenarioContext.Current.ScenarioInfo.Title, () =>
-             Assert.AreEqual(sectionName, new RptTrainingFreqAnalysisPage().
+             Assert.AreEqual(course.SectionName, new RptTrainingFreqAnalysisPage().
              GetQuestionDetails(questionName, 3)));
             //Assert the score
             Logger.LogAssertion("VerifyApplicationName",
@@ -1399,12 +1404,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="percentScore">This is a Score.</param>
         [Then(@"I should see details of the question ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)""")]
         public void VerifyExamFrequencyQuestionDetailsByProgramAdmin(
-            string questionName,string sectionName, string questionType,
+            string questionName, Course.CourseTypeEnum courseTypeEnum, string questionType,
             string applicationName, string percentScore)
         {           
             Logger.LogMethodEntry("Reports",
                 "VerifyExamFrequencyQuestionDetailsByProgramAdmin",
-                base.IsTakeScreenShotDuringEntryExit);  
+                base.IsTakeScreenShotDuringEntryExit);
+            Course course = Course.Get(courseTypeEnum);
             //Verify the question name
             Logger.LogAssertion("VerifyQuestionDisplayed",
               ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -1413,7 +1419,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Assert the section name
             Logger.LogAssertion("VerifyApplicationName",
               ScenarioContext.Current.ScenarioInfo.Title, () =>
-              Assert.AreEqual(sectionName, new RptExamFreqAnalysisPage().
+              Assert.AreEqual(course.SectionName, new RptExamFreqAnalysisPage().
              GetExamFrequencyAnalysisQuestionDetails(questionName, 3)));
             //Assert the question type name
             Logger.LogAssertion("VerifyApplicationName",
@@ -1465,7 +1471,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             //Assert the question type name
             Logger.LogAssertion("VerifysectionName",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
-             Assert.AreEqual(course.SectionId, new RptLearningAidFrequencyPage().
+             Assert.AreEqual(course.SectionName, new RptLearningAidFrequencyPage().
              GetLearningAidUsageQuestionDetails(questionName, 3)));
             //Assert the application name
             Logger.LogAssertion("VerifyApplicationName",
