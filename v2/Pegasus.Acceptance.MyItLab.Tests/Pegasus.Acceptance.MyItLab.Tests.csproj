@@ -410,6 +410,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonFeature.feature.cs</LastGenOutput>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.GraderITAccessStudentSubmission.BVT.MyItLab.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Extended.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
