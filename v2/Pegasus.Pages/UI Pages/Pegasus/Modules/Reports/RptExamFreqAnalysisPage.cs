@@ -432,7 +432,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Get Correct Percent
                 getPercent =
                     base.GetElementTextByXPath(RptExamFreqAnalysisPageResource.
-                     RptExamFreqAnalysisPage_ExamFrequencyAnalysisy_SecondActivityPercent);
+                     RptExamFreqAnalysisPage_ExamFrequencyAnalysisy_SecondActivityPercent).Trim();
             }
             catch (Exception e)
             {

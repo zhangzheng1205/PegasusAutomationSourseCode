@@ -1217,7 +1217,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="applicationName">This is Application Name.</param>
         /// <param name="percentScore">This is Correct Percentage.</param>
         [Then(@"I should see question detail ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)""")]
-        public void VerifySecondQuestionsDetails(string questionName, string questionType, string applicationName, string percentScore)
+        public void VerifySecondQuestionsDetails(string questionName, 
+            string questionType,string applicationName, string percentScore)
         {
             // Verify the details for second question in Exam Frequency report
             Logger.LogMethodEntry("Reports", "VerifySecondQuestionsDetails",
