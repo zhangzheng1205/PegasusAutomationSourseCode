@@ -367,6 +367,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to btn_Sections.
+        /// </summary>
+        internal static string RptSaveReport_Page_SelectSection_button {
+            get {
+                return ResourceManager.GetString("RptSaveReport_Page_SelectSection_button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Button1.
         /// </summary>
         internal static string RptSaveReport_Page_SelectSections_Button_Id_Locator {
@@ -399,6 +408,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         internal static string RptSaveReport_Page_SelectStudent_RadioButton_Id_Locator {
             get {
                 return ResourceManager.GetString("RptSaveReport_Page_SelectStudent_RadioButton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btn_sel_stu.
+        /// </summary>
+        internal static string RptSaveReport_Page_SelectStudents_button {
+            get {
+                return ResourceManager.GetString("RptSaveReport_Page_SelectStudents_button", resourceCulture);
             }
         }
         

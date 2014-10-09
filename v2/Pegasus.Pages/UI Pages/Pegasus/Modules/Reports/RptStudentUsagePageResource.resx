@@ -141,4 +141,13 @@
   <data name="RptStudentUsage_Page_Window_Title" xml:space="preserve">
     <value>Student Enrollment</value>
   </data>
+  <data name="RptStudentUsage_Page_SectionTitle_Xpath" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr/td[2]</value>
+  </data>
+  <data name="RptStudentUsage_Page_StudentText_Xpath" xml:space="preserve">
+    <value>//span[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr/td[1]</value>
+  </data>
+  <data name="Rpt_Activity_Results_by_Student" xml:space="preserve">
+    <value>Report: Activity Results by Student</value>
+  </data>
 </root>

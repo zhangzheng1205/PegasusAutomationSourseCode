@@ -79,13 +79,16 @@ namespace Pegasus.Pages.UI_Pages
             {
                 switch (reportTypeEnum)
                 {
-                        //This is student enrollment report
+                    //This is student enrollment report
                     case ProgramAdminReportType.StudentEnrollment:
                         getSectionName = GetSectionText();
                         break;
                     // This is course section usage report
                     case ProgramAdminReportType.CourseSectionUsage:
                         getSectionName = new RptCourseUsagePage().GetSectionText();
+                        break;
+                    case ProgramAdminReportType.ActivityResultByStudent:
+                        getSectionName = HSSGetSectionText();
                         break;
                 }
             }
@@ -103,6 +106,22 @@ namespace Pegasus.Pages.UI_Pages
         /// Get Section text from the report window
         /// </summary>
         /// <returns>Section Name</returns>
+        private String HSSGetSectionText()
+        {
+            logger.LogMethodEntry("RptStudentUsagePage", "HSSGetSectionText",
+                   base.IsTakeScreenShotDuringEntryExit);
+
+            string getSectionName = string.Empty;
+            //Select Window
+            this.HSSSelectWindow();
+            getSectionName = base.GetElementTextByXPath(RptStudentUsagePageResource.RptStudentUsage_Page_SectionTitle_Xpath);
+
+            logger.LogMethodExit("RptStudentUsagePage", "HSSGetSectionText",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            return getSectionName;
+        }
+
         private String GetSectionText()
         {
             logger.LogMethodEntry("RptStudentUsagePage", "GetSectionText",
@@ -117,7 +136,6 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             return getSectionName;
         }
-
 
         /// <summary>
         /// To get Status of student in the report
@@ -142,6 +160,9 @@ namespace Pegasus.Pages.UI_Pages
                     case ProgramAdminReportType.CourseSectionUsage:
                         getStatus = new RptCourseUsagePage().GetSectionStatusText();
                         break;
+                    case ProgramAdminReportType.ActivityResultByStudent:
+                        getStatus = HSSGetStudentNameText();
+                        break;
                 }
             }
             catch (Exception e)
@@ -150,6 +171,29 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("RptStudentUsagePage", "GetStatusText",
+                base.IsTakeScreenShotDuringEntryExit);
+            return getStatus;
+        }
+
+        /// <summary>
+        /// Get Status of section 
+        /// </summary>
+        /// <returns>Status text</returns>
+        private string HSSGetStudentNameText()
+        {
+            logger.LogMethodEntry("RptStudentUsagePage", "HSSGetStudentNameText",
+                base.IsTakeScreenShotDuringEntryExit);
+            string getStatus = string.Empty;
+            //Select Window
+            this.HSSSelectWindow();
+            // Get Status Text 
+            getStatus = base.GetElementTextByXPath(RptStudentUsagePageResource.RptStudentUsage_Page_StudentText_Xpath);
+            base.CloseBrowserWindow();
+            base.WaitUntilWindowLoads(ProgramAdminUsersPageResource
+                .ProgramAdminUsers_Page_Window_Title_Name);
+            base.SelectWindow(ProgramAdminUsersPageResource
+            .ProgramAdminUsers_Page_Window_Title_Name);
+            logger.LogMethodExit("RptStudentUsagePage", "HSSGetStudentNameText",
                 base.IsTakeScreenShotDuringEntryExit);
             return getStatus;
         }
@@ -237,6 +281,21 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("RptStudentUsagePage", "GetEnrollmentDate",
                 base.IsTakeScreenShotDuringEntryExit);
             return getsplittedEnrollmentDate;
+        }
+
+        /// <summary>
+        /// Select Window.
+        /// </summary>
+        private void HSSSelectWindow()
+        {
+            //Select Window
+            logger.LogMethodEntry("RptStudentUsagePage", "HSSSelectWindow",
+                 base.IsTakeScreenShotDuringEntryExit);
+            //Select window title
+            base.WaitUntilWindowLoads(RptStudentUsagePageResource.Rpt_Activity_Results_by_Student);
+            base.SelectWindow(RptStudentUsagePageResource.Rpt_Activity_Results_by_Student);
+            logger.LogMethodExit("RptStudentUsagePage", "HSSSelectWindow",
+                base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

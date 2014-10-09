@@ -39,7 +39,32 @@ namespace Pegasus.Pages.UI_Pages
             /// </summary>
             AllStatuses = 2
         }
-      
+
+        /// <summary>
+        /// Click on the Select Students button.
+        /// </summary>
+        public void HSSClickOnSelectStudentButton()
+        {
+            //Click on Select Students Button
+            logger.LogMethodEntry("RptSaveReportPage", "ClickOnSelectStudentButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window And Frame
+                this.SelectWindowAndFrame();
+                // Click SelectStudents button
+                base.WaitForElement(By.ClassName(RptSaveReportPageResource.RptSaveReport_Page_SelectStudents_button));
+                //Click on Button
+                base.ClickButtonByClassName(RptSaveReportPageResource.RptSaveReport_Page_SelectStudents_button);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptSaveReportPage", "ClickOnSelectStudentButton",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Click on the Select Students button.
         /// </summary>
@@ -64,6 +89,30 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSaveReportPage", "ClickOnSelectStudentButton",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on the Select Sections button.
+        /// </summary>
+        public void HSSSelectSectionToGenerateReport()
+        {
+            //Click on the Select Sections Button
+            logger.LogMethodEntry("RptSaveReportPage", "SelectSectionToGenerateReport",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window And Frame
+                this.SelectWindowAndFrame();
+                // Click SelectSections button
+                base.WaitForElement(By.ClassName(RptSaveReportPageResource.RptSaveReport_Page_SelectSection_button));
+                base.ClickButtonByClassName(RptSaveReportPageResource.RptSaveReport_Page_SelectSection_button);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptSaveReportPage", "SelectSectionToGenerateReport",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -141,7 +190,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Focus on RunReport_Button
                 base.FocusOnElementByPartialLinkText((buttonName));
                 //Click On Button
-                IWebElement getButton = 
+                IWebElement getButton =
                     base.GetWebElementPropertiesByPartialLinkText(buttonName);
                 base.ClickByJavaScriptExecutor(getButton);
                 Thread.Sleep(Convert.ToInt32(RptSaveReportPageResource
@@ -345,7 +394,7 @@ namespace Pegasus.Pages.UI_Pages
                 + getShowAllLinkText + getCollapseLinkText + getPlaceHolderTextboxText;
             logger.LogMethodExit("RptSaveReportPage", "GetAllSectionOptionsFields",
                  base.IsTakeScreenShotDuringEntryExit);
-            return getAllFieldsText;            
+            return getAllFieldsText;
         }
 
         /// <summary>
@@ -368,7 +417,7 @@ namespace Pegasus.Pages.UI_Pages
                     RptSaveReportPageResource.
                     RptSaveReport_Page_SelectStudents_Button_Id_Locator)) &&
                     base.IsElementPresent(By.Id(RptSaveReportPageResource.
-                    RptSaveReport_Page_Textbox_StudentOptions_Id_Locator));                
+                    RptSaveReport_Page_Textbox_StudentOptions_Id_Locator));
             }
             catch (Exception e)
             {
@@ -405,7 +454,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsElementPresent(By.ClassName(RptSaveReportPageResource.
                 RptSaveReport_Page_Calendar_Image_Classname_Locator)) &&
                 base.IsElementPresent(By.Id(RptSaveReportPageResource.
-                RptSaveReport_Page_ToDate_Textbox_Id_Locator));                
+                RptSaveReport_Page_ToDate_Textbox_Id_Locator));
             }
             catch (Exception e)
             {
@@ -455,9 +504,9 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Select Activities
             logger.LogMethodEntry("RptSaveReportPage", "SelectActivities",
-                 base.IsTakeScreenShotDuringEntryExit);            
+                 base.IsTakeScreenShotDuringEntryExit);
             try
-            {                
+            {
                 //Select Window And Frame
                 this.SelectWindowAndFrame();
                 //Click On Select Activity Button
@@ -496,7 +545,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSaveReportPage", "SelectActivities",
-                  base.IsTakeScreenShotDuringEntryExit);            
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -506,7 +555,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Select Activity Button
             logger.LogMethodEntry("RptSaveReportPage", "ClickOnSelectActivityButton",
-                 base.IsTakeScreenShotDuringEntryExit);          
+                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(RptSaveReportPageResource.
                 RptSaveReport_Page_Select_Activities_Button_Id_Locator));
             //Click On 'Select Activities' Button
@@ -518,7 +567,7 @@ namespace Pegasus.Pages.UI_Pages
             base.SelectWindow(RptSelectAssessmentsResource.
                 RptSelectAssessments_Page_Ins_SelectActivities_Window_Title_Name);
             logger.LogMethodExit("RptSaveReportPage", "ClickOnSelectActivityButton",
-                  base.IsTakeScreenShotDuringEntryExit);       
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -528,7 +577,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Click On Add Button
             logger.LogMethodEntry("RptSaveReportPage", "ClickOnAddButton",
-                 base.IsTakeScreenShotDuringEntryExit);       
+                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.PartialLinkText(RptSelectAssessmentsResource.
                 RptSelectAssessments_Page_Ins_Add_Link_Locator));
             //Click on Add Button
@@ -537,7 +586,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsPopUpClosed(Convert.ToInt32(RptSelectAssessmentsResource.
                RptSelectAssessments_Page_Ins_Window_Count));
             logger.LogMethodExit("RptSaveReportPage", "ClickOnAddButton",
-                  base.IsTakeScreenShotDuringEntryExit);    
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -566,7 +615,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSaveReportPage", "SelectDate",
-                  base.IsTakeScreenShotDuringEntryExit);            
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -589,7 +638,7 @@ namespace Pegasus.Pages.UI_Pages
             base.FillTextBoxById(RptSaveReportPageResource.
                 RptSaveReport_Page_ToDate_Textbox_Id_Locator, date);
             logger.LogMethodExit("RptSaveReportPage", "EnterFromToDate",
-                  base.IsTakeScreenShotDuringEntryExit);       
+                  base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -663,7 +712,7 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectSimStudyPlanWindow();
             //Get Activity
             Activity activity = Activity.Get(Activity.ActivityTypeEnum.SIM5StudyPlan,
-                Activity.ActivityBehavioralModesEnum.SkillBased);                
+                Activity.ActivityBehavioralModesEnum.SkillBased);
             //Get Count of Total StudyPlan
             base.WaitForElement(By.XPath(RptSaveReportPageResource.
                 RptSaveReport_Page_StudyPlan_Count_Xpath_Locator));
@@ -687,7 +736,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.SelectRadioButtonByXPath(string.Format(RptSaveReportPageResource.
                         RptSaveReport_Page_StudyPlan_RadioButton_Xpath_Locator, initialCount));
                     //Click on Add Button In Select Activity Window
-                    this.ClickonAddButtonInSelectActivityWindow();                    
+                    this.ClickonAddButtonInSelectActivityWindow();
                     base.IsPopUpClosed(Convert.ToInt32(RptSelectStudentsResource.
                RptSelectStudents_Page_Ins_Window_Count));
                     break;
@@ -708,7 +757,7 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.Id(RptSaveReportPageResource.
               RptSaveReport_Page_StudyPlan_Add_Button_Id_Locator));
-            IWebElement getAddButton=base.GetWebElementPropertiesById
+            IWebElement getAddButton = base.GetWebElementPropertiesById
                 (RptSaveReportPageResource.
               RptSaveReport_Page_StudyPlan_Add_Button_Id_Locator);
             //Click On Add Button
@@ -842,7 +891,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Report Window and Frame
-                this.SelectReportWindowAndFrame();            
+                this.SelectReportWindowAndFrame();
                 base.WaitForElement(By.PartialLinkText(buttonName));
                 // Focus on Element
                 base.FocusOnElementByPartialLinkText((buttonName));
@@ -874,7 +923,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Select Training Button and Select Training
                 this.ClickonSelectTrainingButtonandSelectTraining();
                 //Close The Select Activity Add Button
-                this.ClickonAddButtonInSelectActivityWindow();    
+                this.ClickonAddButtonInSelectActivityWindow();
             }
             catch (Exception e)
             {
@@ -894,7 +943,7 @@ namespace Pegasus.Pages.UI_Pages
                 "ClickonSelectTrainingButtonandSelectTraining",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Window and Frame
-            this.SelectReportWindowAndFrame();            
+            this.SelectReportWindowAndFrame();
             base.WaitForElement(By.Id(RptSaveReportPageResource.
                 RptSaveReport_Page_SelectTraining_Button_Id_Locator));
             //Click On 'Select Training' Button
@@ -924,7 +973,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Window and Frame
-                this.SelectReportWindowAndFrame();  
+                this.SelectReportWindowAndFrame();
                 //Wait for the element
                 base.WaitForElement(By.Id(RptSaveReportPageResource.
                     RptSaveReport_Page_Training_MostButton_Id_Locator));
@@ -960,7 +1009,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("RptSaveReportPage", "SelectTrainingWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-       
+
         /// <summary>
         /// Select Student CheckBox.
         /// </summary>
@@ -988,7 +1037,7 @@ namespace Pegasus.Pages.UI_Pages
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
-            }   
+            }
             logger.LogMethodExit("RptSaveReportPage", "SelectStudentCheckBox",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1067,7 +1116,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Select Student Redio Button
             logger.LogMethodEntry("RptSaveReportPage", "SelectStudentRedioButton",
-                base.IsTakeScreenShotDuringEntryExit);    
+                base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
             base.WaitForElement(By.Id(RptSaveReportPageResource.
                 RptSaveReport_Page_SelectStudent_RadioButton_Id_Locator));
@@ -1113,9 +1162,9 @@ namespace Pegasus.Pages.UI_Pages
             // Click SelectStudents button
             base.WaitForElement(By.Id(RptSaveReportPageResource.
                RptSaveReport_Page_SelectStudent_Button_Id_Locator));
-            IWebElement getSelectStudentButton=base.GetWebElementPropertiesById
+            IWebElement getSelectStudentButton = base.GetWebElementPropertiesById
                 (RptSaveReportPageResource.
-               RptSaveReport_Page_SelectStudent_Button_Id_Locator); 
+               RptSaveReport_Page_SelectStudent_Button_Id_Locator);
             //Click on Button
             base.ClickByJavaScriptExecutor(getSelectStudentButton);
             logger.LogMethodExit("RptSaveReportPage", "SelectStudentButtonInReport",
@@ -1191,7 +1240,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-             ExceptionHandler.HandleException(e);
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptSaveReportPage",
                    "EnterDataInFieldsToGenerateCertificate",
@@ -1263,7 +1312,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Get Activity Column Count
                 int getActivityColumnCount = this.GetActivityColumnCount(activtyName);
                 //Select Student CheckBox
-                this.SelectStudentCheckBox(getActivityColumnCount);   
+                this.SelectStudentCheckBox(getActivityColumnCount);
             }
             catch (Exception e)
             {

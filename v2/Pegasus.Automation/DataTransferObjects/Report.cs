@@ -12,7 +12,7 @@ namespace Pegasus.Automation.DataTransferObjects
     /// </summary>
     public class Report : BaseEntityObject
     {
-      /// <summary>
+        /// <summary>
         /// This is report type enum.
         /// </summary>
         public enum ReportTypeEnum
@@ -22,11 +22,12 @@ namespace Pegasus.Automation.DataTransferObjects
             HedCoreStudentEnrollment = 3,
             HedMilStudentEnrollment = 4,
             MyTestStudentEnrollment = 5,
-            HedMilStudyPlanSingleStudent=6,
+            HedMilStudyPlanSingleStudent = 6,
             MyItLabTrainingFrequencyAnalysis = 7,
             MyItLabActivityResultsMultipleStudentsAdActivities = 8,
             MyITLabActivityResultsMultipleStudents = 9,
-            MyITLabExamFrequencyAnalysis = 10
+            MyITLabExamFrequencyAnalysis = 10,
+            HSSActivityResultsByStudent = 11
         }
 
         /// <summary>

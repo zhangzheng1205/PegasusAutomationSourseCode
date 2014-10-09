@@ -45,7 +45,7 @@ namespace Pegasus.Pages.UI_Pages
                         RptSelectStudents_Page_Ins_Window_Name);
                         //Select the Student
                         this.SelectStudentToGenerateReport(RptSelectStudentsResource
-                       .RptSelectStudents_Page_Ins_Student_LastName);                        
+                       .RptSelectStudents_Page_Ins_Student_LastName);
                         break;
 
                     case RptMainUXPage.PegasusInstructorReportEnum.StudentResultsbyActivity:
@@ -67,7 +67,7 @@ namespace Pegasus.Pages.UI_Pages
                         RptSelectStudents_Page_Ins_Window_Name);
                         //Select the Student
                         this.SelectStudentToGenerateReport(RptSelectStudentsResource
-                       .RptSelectStudents_Page_Ins_Student_LastName);                        
+                       .RptSelectStudents_Page_Ins_Student_LastName);
                         break;
                 }
                 base.WaitForElement(By.PartialLinkText(RptSelectStudentsResource.
@@ -117,10 +117,10 @@ namespace Pegasus.Pages.UI_Pages
                         base.WaitForElement(By.XPath(string.Format(RptSelectStudentsResource.
                             RptSelectStudents_Page_Ins_Student_Checkbox_Xpath_Locator, rowCount)));
                         //Select Student Checkbox
-                        IWebElement getStudentCheckbox=base.GetWebElementPropertiesByXPath
+                        IWebElement getStudentCheckbox = base.GetWebElementPropertiesByXPath
                             (string.Format(RptSelectStudentsResource.
                             RptSelectStudents_Page_Ins_Student_Checkbox_Xpath_Locator, rowCount));
-                        base.ClickByJavaScriptExecutor(getStudentCheckbox);                        
+                        base.ClickByJavaScriptExecutor(getStudentCheckbox);
                         break;
                     }
                 }
@@ -142,7 +142,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("RptSelectStudentsPage", "SelectStudentInProgramAdminReport"
                 , base.IsTakeScreenShotDuringEntryExit);
             try
-            {              
+            {
                 //Click on the Expand button
                 base.WaitForElement(By.XPath(RptSelectStudentsResource.
                     RptSelectStudents_Page_PgA_Expand_Image_Xpath_Locator));
@@ -253,19 +253,20 @@ namespace Pegasus.Pages.UI_Pages
             int getStudentCount = base.GetElementCountByXPath(RptSelectStudentsResource.
                            RptSelectStudents_Page_PgA_StudentCount_Xpath_Locator);
             // To select checkbox for required student
-            for (int initialCount = 1; initialCount <= getStudentCount; initialCount++)
+            for (int i = 1; i <= getStudentCount; i++)
             {
                 //Get text of student
-                string getStudentTextValue = base.GetElementTextByXPath(
+                string getStudentTextValue = base.GetElementTextByXPath(string.Format(
                     RptSelectStudentsResource.
-                                   RptSelectStudents_Page_PgA_StudentText_Xpath_Locator);
+                                   RptSelectStudents_Page_PgA_StudentText_Xpath_Locator, i));
+
                 if (getStudentTextValue.Contains(studentName))
                 {
                     base.WaitForElement(By.XPath(string.Format(RptSelectStudentsResource.
-                        RptSelectStudents_Page_PgA_Student_Checkbox_Xpath_Locator)));
+                        RptSelectStudents_Page_PgA_Student_Checkbox_Xpath_Locator, i)));
                     //Click on Checkbox of the Student Name
-                    base.SelectCheckBoxByXPath(RptSelectStudentsResource.
-                         RptSelectStudents_Page_PgA_Student_Checkbox_Xpath_Locator);
+                    base.SelectCheckBoxByXPath(string.Format(RptSelectStudentsResource.
+                         RptSelectStudents_Page_PgA_Student_Checkbox_Xpath_Locator, i));
                     break;
                 }
             }
@@ -287,9 +288,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.WaitForElement(By.Id(RptSelectStudentsResource.
                     RptSelectStudents_Page_SelectAll_Checkbox_Id_Locator));
                 //Check select all in 'Select Students' window
-                IWebElement selectAll=base.GetWebElementPropertiesById(RptSelectStudentsResource.
+                base.SelectCheckBoxById(RptSelectStudentsResource.
                     RptSelectStudents_Page_SelectAll_Checkbox_Id_Locator);
-                base.ClickByJavaScriptExecutor(selectAll);
             }
             catch (Exception e)
             {

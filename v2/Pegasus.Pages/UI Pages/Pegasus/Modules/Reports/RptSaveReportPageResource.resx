@@ -294,4 +294,10 @@
   <data name="RptSaveReport_Page_SelectStudents_Window" xml:space="preserve">
     <value>Select Students</value>
   </data>
+  <data name="RptSaveReport_Page_SelectStudents_button" xml:space="preserve">
+    <value>btn_sel_stu</value>
+  </data>
+  <data name="RptSaveReport_Page_SelectSection_button" xml:space="preserve">
+    <value>btn_Sections</value>
+  </data>
 </root>

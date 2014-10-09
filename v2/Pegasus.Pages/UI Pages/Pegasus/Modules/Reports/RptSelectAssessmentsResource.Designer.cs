@@ -79,6 +79,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl4.
+        /// </summary>
+        internal static string RptSelectAssessments_Page_ADD_Assessment {
+            get {
+                return ResourceManager.GetString("RptSelectAssessments_Page_ADD_Assessment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to btn_s.
         /// </summary>
         internal static string RptSelectAssessments_Page_AddButton_Class_Locator {
@@ -219,6 +228,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         internal static string RptSelectAssessments_Page_Reports_Window_Name {
             get {
                 return ResourceManager.GetString("RptSelectAssessments_Page_Reports_Window_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to imgAssessment.
+        /// </summary>
+        internal static string RptSelectAssessments_Page_Select_Assessment {
+            get {
+                return ResourceManager.GetString("RptSelectAssessments_Page_Select_Assessment", resourceCulture);
             }
         }
         

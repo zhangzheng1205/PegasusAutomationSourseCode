@@ -45,6 +45,30 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Select Report.
+        /// </summary>
+        /// <param name="getReportName">This is the report name.</param>
+        public void SelectReportLinkType(string getReportName)
+        {
+            //Select report
+            logger.LogMethodEntry("RptMainPage", "SelectReportLinkType",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Select report frame
+                SelectReportFrame();
+                // Click on report link
+                ClickOnReportLinkType(getReportName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptMainPage", "SelectReportLinkType",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Select Student Enrollment reports option.
         /// </summary>
         public void SelectReportFrame()
@@ -120,6 +144,32 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("RptMainPage", "ClickOnReportLink",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Search report on page by its name and click on it.
+        /// </summary>
+        /// <param name="getReportName">This is the report name.</param>
+        public void ClickOnReportLinkType(string getReportName)
+        {
+            //Select Student Enrollement Report
+            logger.LogMethodEntry("RptMainPage", "ClickOnReportLinkType",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.XPath(RptMainPageResource
+                    .RptMain_Page_tablerow_count));
+                base.WaitForElement(By.Id(RptMainPageResource.RptMain_Page_Report_Type_Link));
+                // Click on matched report name
+                IWebElement reportName = base.GetWebElementPropertiesById(RptMainPageResource.RptMain_Page_Report_Type_Link);
+                base.ClickByJavaScriptExecutor(reportName);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptMainPage", "ClickOnReportLinkType",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -220,7 +270,7 @@ namespace Pegasus.Pages.UI_Pages
                 for (int rowCount = Convert.ToInt32(
                     RptMainPageResource.RptMain_Page_Loop_Initial_Value);
                     rowCount <= getCertificateCount; rowCount++)
-                {                    
+                {
                     base.WaitForElement(By.XPath(string.Format(RptMainPageResource.
                         RptMain_Page_GetCertificateName_Xpath_Locator, rowCount)));
                     //Get Certificate Name
@@ -232,7 +282,7 @@ namespace Pegasus.Pages.UI_Pages
                         //Get Certificate Property
                         IWebElement getCertificateProperty = base.GetWebElementPropertiesByXPath(
                             string.Format(RptMainPageResource.
-                            RptMain_Page_CertificateName_Xpath_Locator,rowCount));
+                            RptMain_Page_CertificateName_Xpath_Locator, rowCount));
                         //Click On Certificate
                         base.ClickByJavaScriptExecutor(getCertificateProperty);
                         break;
@@ -246,5 +296,27 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("RptMainPage", "ClickOnCertificateInActivityResultsPanel",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select Save report check box
+        /// </summary>
+        /// <param name="checkbox id">HTML check box id</param>
+        public void selectCheckBox(string chkID)
+        {
+            logger.LogMethodEntry("RptMainPage", "selectCheckBox",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id(RptMainPageResource.RptMain_Page_Report_Save_CheckBox));
+                base.SelectCheckBoxById(RptMainPageResource.RptMain_Page_Report_Save_CheckBox);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptMainPage", "selectCheckBox",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }

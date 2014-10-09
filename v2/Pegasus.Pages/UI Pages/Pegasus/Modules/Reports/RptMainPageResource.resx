@@ -165,4 +165,10 @@
   <data name="RptMain_Page_GetCertificateName_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='pnlCertificates']/table/tbody/tr[2]/td/div/table/tbody/tr[{0}]</value>
   </data>
+  <data name="RptMain_Page_Report_Type_Link" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+<data name="RptMain_Page_Report_Save_CheckBox" xml:space="preserve">
+    <value>chkSaveReport</value>
+  </data>
 </root>

@@ -174,4 +174,10 @@
   <data name="RptSelectAssessments_Page_SelectExam_Window_Name" xml:space="preserve">
     <value>Select Exam</value>
   </data>
+  <data name="RptSelectAssessments_Page_Select_Assessment" xml:space="preserve">
+    <value>imgAssessment</value>
+  </data>
+  <data name="RptSelectAssessments_Page_ADD_Assessment" xml:space="preserve">
+    <value>_ctl4</value>
+  </data>
 </root>

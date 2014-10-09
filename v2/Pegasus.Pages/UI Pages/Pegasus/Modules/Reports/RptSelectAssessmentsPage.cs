@@ -61,7 +61,7 @@ namespace Pegasus.Pages.UI_Pages
             //Select the Activity
             logger.LogMethodEntry("RptSelectAssessmentsPage",
                 "SelectWtritingspaceActivityToGenerateReport",
-                base.IsTakeScreenShotDuringEntryExit);            
+                base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.SwitchToLastOpenedWindow();
@@ -86,8 +86,8 @@ namespace Pegasus.Pages.UI_Pages
         private void SelectActivityRadiobutton(string activityName)
         {
             //Select Activity Radio button
-            logger.LogMethodEntry("RptSelectAssessmentsPage","SelectActivityRadiobutton",
-                base.IsTakeScreenShotDuringEntryExit);  
+            logger.LogMethodEntry("RptSelectAssessmentsPage", "SelectActivityRadiobutton",
+                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(RptSelectAssessmentsResource.
                 RptSelectAssessments_Page_Ins_ActivityCount_Xpath_Locator));
             //Get Activity Count
@@ -117,7 +117,7 @@ namespace Pegasus.Pages.UI_Pages
                     break;
                 }
             }
-            logger.LogMethodExit("RptSelectAssessmentsPage","SelectActivityRadiobutton",
+            logger.LogMethodExit("RptSelectAssessmentsPage", "SelectActivityRadiobutton",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -127,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages
         private void ClickonAddButton()
         {
             //Click on Add Button
-            logger.LogMethodEntry("RptSelectAssessmentsPage","ClickonAddButton",
+            logger.LogMethodEntry("RptSelectAssessmentsPage", "ClickonAddButton",
                 base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.PartialLinkText(RptSelectAssessmentsResource.
                 RptSelectAssessments_Page_Ins_Add_Link_Locator));
@@ -136,14 +136,14 @@ namespace Pegasus.Pages.UI_Pages
                 RptSelectAssessments_Page_Ins_Add_Link_Locator);
             base.IsPopUpClosed(Convert.ToInt32(RptSelectAssessmentsResource.
                RptSelectAssessments_Page_Ins_Window_Count));
-            logger.LogMethodExit("RptSelectAssessmentsPage","ClickonAddButton",
+            logger.LogMethodExit("RptSelectAssessmentsPage", "ClickonAddButton",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
         /// Selecting the RadioButton of the Activity in Instructor Report
         /// </summary>   
-        private void SelectActivityToGenerateReport()
+        public void SelectActivityToGenerateReport()
         {
             //Selecting Radibutton of Activity
             logger.LogMethodEntry("RptSelectAssessmentsPage", "SelectActivityToGenerateReport",
@@ -173,6 +173,62 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("RptSelectAssessmentsPage", "SelectActivityToGenerateReport",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on the Select Assessment button.
+        /// </summary>
+        public void ClickOnSelectActivity()
+        {
+            //Click on the Select Sections Button
+            logger.LogMethodEntry("RptSaveReportPage", "ClickOnSelectActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window And Frame
+                this.SelectWindowAndFrame();
+                // Click SelectSections button
+                base.WaitForElement(By.Id(RptSelectAssessmentsResource.RptSelectAssessments_Page_Select_Assessment));
+                base.ClickLinkById(RptSelectAssessmentsResource.RptSelectAssessments_Page_Select_Assessment);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptSaveReportPage", "ClickOnSelectActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Window And Frame.
+        /// </summary>
+        public void SelectWindowAndFrame()
+        {
+            //Select Window And Frame
+            logger.LogMethodEntry("RptSaveReportPage", "SelectWindowAndFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                base.SelectWindow(RptSaveReportPageResource
+                    .RptSaveReport_Page_Window_Title);
+                //Select top frame
+                base.WaitForElement(By.Id(RptSaveReportPageResource.
+                    RptSaveReport_Page_Middle_Frame_Id_Locator));
+                base.SwitchToIFrame(RptSaveReportPageResource.
+                    RptSaveReport_Page_Middle_Frame_Id_Locator);
+                //Select frame
+                base.WaitForElement(By.Id(RptSaveReportPageResource.
+                    RptSaveReport_Page_Main_Frame_Id_Locator));
+                base.SwitchToIFrame(RptSaveReportPageResource.
+                    RptSaveReport_Page_Main_Frame_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptSaveReportPage", "SelectWindowAndFrame",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -256,7 +312,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Select the Activity
         /// </summary>
         /// <param name="activityName">This is Activity Name</param>
-        private void SelectActivity(string activityName)
+        public void SelectActivity(string activityName)
         {
             //Select the Activity
             logger.LogMethodEntry("RptSelectAssessmentsPage", "SelectActivity",
@@ -588,6 +644,33 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on the AddandClose button.
+        /// </summary>
+        public void ClickAddButton()
+        {
+            //Click on the AddandClose button
+            logger.LogMethodEntry("RptSelectSectionsPage", "ClickAddandCloseButton"
+                , base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Click Add and Close button
+                base.WaitForElement(By.Id(RptSelectAssessmentsResource.RptSelectAssessments_Page_ADD_Assessment));
+                //Focus on AddandClose Button
+                base.FocusOnElementById(RptSelectAssessmentsResource.RptSelectAssessments_Page_ADD_Assessment);
+                //Click on AddandClose Button
+                base.ClickButtonById(RptSelectAssessmentsResource.RptSelectAssessments_Page_ADD_Assessment);
+                //Check Select sections popup closed                
+                IsPopUpClosed(Convert.ToInt32(RptSelectSectionsPageResource.
+                    RptSelectSections_Page_Window_Count));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptSelectSectionsPage", "ClickAddandCloseButton"
+               , base.IsTakeScreenShotDuringEntryExit);
+        }
 
     }
 }

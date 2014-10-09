@@ -136,7 +136,7 @@
     <value>//table[@id='GridStudent']/tbody/tr[{0}]/td/input[@id='GridStudent$_ctrl1']</value>
   </data>
   <data name="RptSelectStudents_Page_Ins_Student_LastName" xml:space="preserve">
-    <value>SMSUSER</value>
+    <value>automation</value>
   </data>
   <data name="RptSelectStudents_Page_Ins_Student_Name" xml:space="preserve">
     <value>SMSUSER, BDD</value>
@@ -160,10 +160,10 @@
     <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr</value>
   </data>
   <data name="RptSelectStudents_Page_PgA_StudentText_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[" + i.ToString() + "]/td[2]</value>
+    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[{0}]/td[2]</value>
   </data>
   <data name="RptSelectStudents_Page_PgA_Student_Checkbox_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[" + i.ToString() + "]/td/input</value>
+    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[{0}]/td/input</value>
   </data>
   <data name="RptSelectStudents_Page_SelectAll_Checkbox_Id_Locator" xml:space="preserve">
     <value>chkSelectAll</value>
