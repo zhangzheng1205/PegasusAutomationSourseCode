@@ -132,12 +132,12 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>ST_ProgramAdminCourse</Name>
+      <Name>ST_AdminAutomation</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
-      <SectionName>Dependant_section</SectionName>
-      <SectionId>CRSKLSG-12000184</SectionId>
+      <SectionName>ST_ReportSection</SectionName>
+      <SectionId>CRSKL92-12000196</SectionId>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
