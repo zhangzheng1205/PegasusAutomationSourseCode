@@ -1,6 +1,3 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <OrderedTest name="orderedtest.demoacceptancetest.hed.hss" storage="g:\stash\pegasusprojects\automation\v2\pegasus.acceptance.highereducation.hss.tests\productacceptanceorderedtests\orderedtest.demoacceptancetest.hed.hss.orderedtest" id="b40fbc44-813d-4baa-ba7b-1be3d6ef9642" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <TestLinks>
-    <TestLink id="ddf3e14f-cbad-9805-7fd1-cba3ca44dbb1" name="GenerateAndSaveTheActivityResultsByStudentAsAProgramAdmin" storage="..\bin\debug\pegasus.acceptance.highereducation.hss.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  </TestLinks>
 </OrderedTest>
