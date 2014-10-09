@@ -443,7 +443,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("AssignmentCalendar",
                   "ExpandsTheAssetPath",
                            base.IsTakeScreenShotDuringEntryExit);
-
         }
 
         /// <summary>
@@ -513,9 +512,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 .ClickOnAssignUnassignButton();
             List<Activity> assignedActivityList =
                 Activity.Get(a => a.IsAssigned == true);
-            if ((assignedActivityList.Count > 0) && base
-                .IsPopupPresent(CourseContentResource
-               .CourseContent_ShowHide_ConfirmationPopup_Name))
+            if (base.IsPopupPresent(CourseContentResource
+               .CourseContent_ShowHide_ConfirmationPopup_Name,10))
             {
                 this.ClickOkButtonOnPegasusConfirmationPopUp();
                 base.SelectDefaultWindow();
@@ -541,17 +539,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 Activity.Get(a => a.IsAssigned == false);
             CalendarHedDefaultUxPage calendarHEDDefaultUXPage =
                 new CalendarHedDefaultUxPage();
-            foreach (Activity assignedActivity in assignedActivityList)
-            {
-                Assert.IsFalse(calendarHEDDefaultUXPage
-                    .IsAssetAssigned(assignedActivity.ActivityId));
-            }
             foreach (Activity unAssignedActivity in unAssignedActivityList)
             {
                 Assert.IsTrue(calendarHEDDefaultUXPage
                     .IsAssetAssigned(unAssignedActivity.ActivityId));
+                unAssignedActivity.IsAssigned = true;                
+                unAssignedActivity.UpdateActivityInMemory(unAssignedActivity);
             }
-
             Logger.LogMethodExit("AssignmentCalendar",
                   "VerifyCheckMarkInAssignedStatusColumn",
                            base.IsTakeScreenShotDuringEntryExit);

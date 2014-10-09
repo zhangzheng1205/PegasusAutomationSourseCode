@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestFeatures
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorCalendar", "               As a CS Instructor \r\n\t\t\tI want to manage all the coursespace instr" +
-                    "uctor calendar related usecases \r\n\t\t\tso that I would validate all the coursespac" +
-                    "e instructor calendar related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorCalendar", "               As a CS Instructor \n\t\t\tI want to manage all the coursespace instru" +
+                    "ctor calendar related usecases \n\t\t\tso that I would validate all the coursespace " +
+                    "instructor calendar related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -212,62 +212,24 @@ testRunner.Then("I should be on the \"Program Administration\" page", ((string)(
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Assign more than one content using Assign Unassign link by SMS Instructor")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorCalendar")]
-        public virtual void AssignMoreThanOneContentUsingAssignUnassignLinkBySMSInstructor()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign more than one content using Assign Unassign link by SMS Instructor", ((string[])(null)));
-#line 70
-this.ScenarioSetup(scenarioInfo);
-#line 71
-testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 72
-testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 73
-testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Calendar\" by \"CsSmsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 74
-testRunner.And("I select the check box of any 2 activities in \"PowerPoint Chapter 1: Simulation A" +
-                    "ctivities\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 75
-testRunner.Then("I should see Assign/Unassign link in active state on the content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 76
-testRunner.When("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 77
-testRunner.Then("I should see the check mark in assigned status column next to the assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 78
-testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 79
-testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Calendar\" by \"CsSmsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 80
-testRunner.And("I select the check box of any 2 activities in \"PowerPoint Chapter 1: Simulation A" +
-                    "ctivities\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 81
-testRunner.And("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To check the current date assigned content in the calendar by SMS Instructor")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorCalendar")]
         public virtual void ToCheckTheCurrentDateAssignedContentInTheCalendarBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To check the current date assigned content in the calendar by SMS Instructor", ((string[])(null)));
-#line 88
+#line 71
 this.ScenarioSetup(scenarioInfo);
-#line 89
+#line 72
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 90
+#line 73
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 91
+#line 74
 testRunner.And("I should see \"GO! with Microsoft Office 2013, Volume 1\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 92
+#line 75
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 93
+#line 76
 testRunner.When("I select the current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 94
+#line 77
 testRunner.Then("I should see the assigned content \"Excel Chapter 1 Skill-Based Training\" in the d" +
                     "ay view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -280,17 +242,17 @@ testRunner.Then("I should see the assigned content \"Excel Chapter 1 Skill-Based
         public virtual void ToValidateTheDisplayOfStartDateIconInCalendarFrameBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate the display of start date icon in calendar frame by SMS Instructor", ((string[])(null)));
-#line 99
+#line 82
 this.ScenarioSetup(scenarioInfo);
-#line 100
+#line 83
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 101
+#line 84
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 102
+#line 85
 testRunner.And("I should see \"GO! with Microsoft Office 2013, Volume 1\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 103
+#line 86
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 104
+#line 87
 testRunner.And("I should see the startdate Icon in calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -302,24 +264,52 @@ testRunner.And("I should see the startdate Icon in calendar frame", ((string)(nu
         public virtual void AssignTheContentWithDueDateToCurrentDateBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign the content with due date to current date by SMS Instructor", ((string[])(null)));
-#line 109
+#line 92
 this.ScenarioSetup(scenarioInfo);
-#line 110
+#line 93
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 111
+#line 94
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 112
+#line 95
 testRunner.When("I select \"Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test\" in \"Cal" +
                     "endar\" by \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 113
+#line 96
 testRunner.And("I select cmenu \"Set Scheduling option\" of activity \"Excel Chapter 1 Study Plan [S" +
                     "kill-Based]: Training > Post-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 114
+#line 97
 testRunner.Then("I should see the \"Properties\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 115
+#line 98
 testRunner.When("I assign the asset for current date in the properties popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 116
+#line 99
 testRunner.Then("I should see the duedate icon along with the checkmark in the calendar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Assign more than one content using Assign Unassign link by SMS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorCalendar")]
+        public virtual void AssignMoreThanOneContentUsingAssignUnassignLinkBySMSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign more than one content using Assign Unassign link by SMS Instructor", ((string[])(null)));
+#line 104
+this.ScenarioSetup(scenarioInfo);
+#line 105
+testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 106
+testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 107
+testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Calendar\" by \"CsSmsInstr" +
+                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 108
+testRunner.And("I select the check box of any 2 activities in \"PowerPoint Chapter 1: Simulation A" +
+                    "ctivities\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 109
+testRunner.Then("I should see Assign/Unassign link in active state on the content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 110
+testRunner.When("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 111
+testRunner.Then("I should see the check mark in assigned status column next to the assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -330,34 +320,24 @@ testRunner.Then("I should see the duedate icon along with the checkmark in the c
         public virtual void AssignOneContentUsingAssignUnassignLinkBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign one content using Assign Unassign link by SMS Instructor", ((string[])(null)));
-#line 122
+#line 116
 this.ScenarioSetup(scenarioInfo);
-#line 123
+#line 117
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 124
+#line 118
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 125
+#line 119
 testRunner.When("I select \"Access Chapter 1 Skill-Based Training\" in \"Calendar\" by \"CsSmsInstructo" +
                     "r\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 126
+#line 120
 testRunner.And("I select the check box of any 1 activities in \"Access Chapter 1: Simulation Activ" +
                     "ities\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 127
+#line 121
 testRunner.Then("I should see Assign/Unassign link in active state on the content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 128
+#line 122
 testRunner.When("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 129
+#line 123
 testRunner.Then("I should see the check mark in assigned status column next to the assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 130
-testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 131
-testRunner.When("I select \"Access Chapter 1 Skill-Based Training\" in \"Calendar\" by \"CsSmsInstructo" +
-                    "r\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 132
-testRunner.And("I select the check box of any 1 activities in \"Access Chapter 1: Simulation Activ" +
-                    "ities\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 133
-testRunner.And("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
