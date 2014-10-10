@@ -1096,5 +1096,36 @@ namespace Pegasus.Pages.UI_Pages
                             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        public void CheckAvailabilityNotification()
+        {
+
+            //Select ' Show availability notification on the calendar' Option
+            logger.LogMethodEntry("AssignContentPage",
+                "SelectDoNotProvideEndDateOption",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Properties Window
+                this.SelectPropertiesWindow();
+                base.WaitForElement(By.Id(AssignContentPageResource.
+                    AssignContent_Page_First_Checkbox_Id_Locator));
+                //Select 'Do Not Provide An End Date' Option
+                base.SelectCheckBoxById(AssignContentPageResource.
+                    AssignContent_Page_First_Checkbox_Id_Locator);
+                base.WaitForElement(By.Id(AssignContentPageResource.
+                    AssignContent_Page_Button_SaveAndAssign_Id_Locator));
+                //Click on 'Save' Button
+                base.ClickButtonById(AssignContentPageResource.
+                    AssignContent_Page_Button_SaveAndAssign_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage",
+                "SelectDoNotProvideEndDateOption",
+                base.IsTakeScreenShotDuringEntryExit);
+
+        }
     }
 }

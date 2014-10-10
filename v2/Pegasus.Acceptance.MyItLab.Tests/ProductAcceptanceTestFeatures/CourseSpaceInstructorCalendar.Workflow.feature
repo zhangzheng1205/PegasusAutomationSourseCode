@@ -75,6 +75,8 @@ And I should see "GO! with Microsoft Office 2013, Volume 1" asset
 And I should see the current date highlighted in the calendar frame
 When I select the current date 
 Then I should see the assigned content "Excel Chapter 1 Skill-Based Training" in the day view
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
 
 #PEGASUS-21987
 #Purpose : As Instructor for HED Product,I need to validate the display of start date icon in calendar frame
@@ -85,6 +87,8 @@ Then I should be on the "Calendar" page
 And I should see "GO! with Microsoft Office 2013, Volume 1" asset
 And I should see the current date highlighted in the calendar frame
 And I should see the startdate Icon in calendar frame
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
 
 #Purpose: To change the assigned content from due date to currentdate
 #Test Case Id: peg-21978
@@ -97,6 +101,8 @@ And I select cmenu "Set Scheduling option" of activity "Excel Chapter 1 Study Pl
 Then I should see the "Properties" popup
 When I assign the asset for current date in the properties popup
 Then I should see the duedate icon along with the checkmark in the calendar
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
 
 #PEGASUS-28905
 #Purpose : To validate Assign more than one content using Assign/Unassign link
@@ -109,6 +115,8 @@ And I select the check box of any 2 activities in "PowerPoint Chapter 1: Simulat
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
 Then I should see the check mark in assigned status column next to the assets
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
 
 #PEGASUS-21971
 #Purpose : To validate Assign one content using Assign/Unassign link
@@ -121,6 +129,8 @@ And I select the check box of any 1 activities in "Access Chapter 1: Simulation 
 Then I should see Assign/Unassign link in active state on the content frame header
 When I click on assign/Unassign link displayed in content frame header
 Then I should see the check mark in assigned status column next to the assets
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
 
 
 
