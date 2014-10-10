@@ -5,8 +5,8 @@
 
 #Purpose: Open Instructor Url
 Background: 
-Given I browsed the login url for "CsSmsInstructor"
-When  I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Given I browsed the login url for "HedProgramAdmin"
+When  I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
 Then  I should logged in successfully
 Given I am on the "Global Home" page
 
@@ -16,13 +16,13 @@ Given I am on the "Global Home" page
 #Pre condition : This test case is to generate the Activity Results by Student Report across the Sections in the program based on the below activities submissions available in the Course (Refer: Test link peg-22218)
 #Dependency : No dependency test can run with existing data
 Scenario: Generate and save the "Activity Results by Student" as a Program Admin
-When I enter in the "ProgramCourse" from the Global Home page as "CsSmsInstructor"
+When I enter in the "ProgramCourse" from the Global Home page as "HedProgramAdmin"
 Then I should be on the "Program Administration" page
 When I navigate to the "Reports" tab
 And  I clicked on the "Activity Results by Student" report link
 Then I should be on the "Program Administration" page
 When I select Section
-And  I select Activity
+And  I select Activity "Take the Chapter 1 Exam"
 And  I select Student
 Then I select 'save settings to My Reports' option
 When I click on the "Run Report" button in reports
@@ -34,6 +34,8 @@ Then I should see the "Save settings to My Reports" popup closed
 And  I should see "ActivityResultByStudent" report launched successfully
 When I click on the "Cancel" button in reports
 Then I should be on the "Program Administration" page
-
+When I select "Run Report" for "HSSActivityResultsByStudent" report in 'My Reports' grid by "HedProgramAdmin"
+Then I should see "ActivityResultByStudent" report launched successfully
+And  I should be on the "Program Administration" page
 When I "Sign out" from the "HedProgramAdmin"
 Then I should see the successfull message "You have been signed out of the application."

@@ -97,7 +97,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to automation.
+        ///   Looks up a localized string similar to SMSUSER.
         /// </summary>
         internal static string RptSelectStudents_Page_Ins_Student_LastName {
             get {

@@ -136,7 +136,7 @@
     <value>//table[@id='GridStudent']/tbody/tr[{0}]/td/input[@id='GridStudent$_ctrl1']</value>
   </data>
   <data name="RptSelectStudents_Page_Ins_Student_LastName" xml:space="preserve">
-    <value>automation</value>
+    <value>SMSUSER</value>
   </data>
   <data name="RptSelectStudents_Page_Ins_Student_Name" xml:space="preserve">
     <value>SMSUSER, BDD</value>

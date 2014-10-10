@@ -24,24 +24,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         /// <summary>
         /// Click the Student Enrollment link.
         /// </summary>
-        [When(@"I clicked on the ""(.*)"" link")]
-        public void ClickedOnTheStudentEnrollmentLink(
-            String getReportLink)
-        {
-            // Click on the Student Enrollment link
-            Logger.LogMethodEntry("ProgramAdminReports",
-                "ClickedOnTheStudentEnrollmentLink",
-                base.IsTakeScreenShotDuringEntryExit);
-            //Select Student Enrollment link
-            new RptMainPage().SelectReport(getReportLink);
-            Logger.LogMethodExit("ProgramAdminReports",
-                "ClickedOnTheStudentEnrollmentLink",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Click the Student Enrollment link.
-        /// </summary>
         [When(@"I clicked on the ""(.*)"" report link")]
         public void ClickedOnReportLink(
             String reportLink)
@@ -71,7 +53,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             //Get Course From Memory
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
             // Select the Section
-            new RptSelectSectionsPage().SelectSection("Automation Section");
+            new RptSelectSectionsPage().SelectSection(course.SectionName);
             // Click AddandClose button to close SelectSections PopUp
             new RptSelectSectionsPage().ClickAddandCloseButton();
             Logger.LogMethodExit("ProgramAdminReports", "SelectSection",
@@ -100,51 +82,19 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         /// <summary>
         /// Select the activity.
         /// </summary>
-        [When(@"I select Activity")]
-        public void SelectActivity()
+        [When(@"I select Activity""(.*)""")]
+        public void SelectActivity(string activity)
         {
             // Select the section to generate the report
             Logger.LogMethodEntry("ProgramAdminReports", "SelectActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on the Select Sections button
             new RptSelectAssessmentsPage().ClickOnSelectActivity();
-            //Get Course From Memory
-            //Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
             // Select the Section
-            new RptSelectAssessmentsPage().SelectActivity("Take the Chapter 1 Exam");
+            new RptSelectAssessmentsPage().SelectActivity(activity);
             // Click AddandClose button to close SelectSections PopUp
             new RptSelectAssessmentsPage().ClickAddButton();
             Logger.LogMethodExit("ProgramAdminReports", "SelectActivity",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Select the Save preference check box.
-        /// </summary>
-        /// <param name="saveCheckBoxTitile">Save preference checkbox title</param>
-        [Then(@"I should click on ""(.*)"" option")]
-        public void ClickOnSaveCheckBoxOption(string saveCheckBox)
-        {
-            // Select the section to generate the report
-            Logger.LogMethodEntry("ProgramAdminReports", "ClickOnSaveCheckBoxOption",
-                base.IsTakeScreenShotDuringEntryExit);
-            new RptMainPage().selectCheckBox(saveCheckBox);
-            Logger.LogMethodExit("ProgramAdminReports", "ClickOnSaveCheckBoxOption",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// validarte is "Activity Results by Student" report page.
-        /// </summary>
-        /// <param name="reportType">Type of report</param>
-        [Then(@"I should validarte the ""(.*)"" report")]
-        public void ValidarteTheReport(string reportType)
-        {
-            // Select the section to generate the report
-            Logger.LogMethodEntry("ProgramAdminReports", "ValidarteTheReport",
-                base.IsTakeScreenShotDuringEntryExit);
-
-            Logger.LogMethodExit("ProgramAdminReports", "ValidarteTheReport",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -182,13 +132,14 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
             //Assert to verify section name
             Logger.LogAssertion("VerifySectionName", ScenarioContext.
-                Current.ScenarioInfo.Title, () => Assert.AreEqual("Automation Section",
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(course.SectionName,
                     rptStudentUsagePage.
                     GetSectionName((RptStudentUsagePage.ProgramAdminReportType)Enum.
                     Parse(typeof(RptStudentUsagePage.ProgramAdminReportType), reportType))));
-            //Assert to verify status
+            User user = User.Get("CsSmsStudent");
+            //Assert to verify student
             Logger.LogAssertion("VerifyStatus", ScenarioContext.
-               Current.ScenarioInfo.Title, () => Assert.AreEqual("student1, automation", rptStudentUsagePage.GetStatusText
+               Current.ScenarioInfo.Title, () => Assert.AreEqual(user.FirstName + "," + user.LastName, rptStudentUsagePage.GetStatusText
                  ((RptStudentUsagePage.ProgramAdminReportType)Enum.
                 Parse(typeof(RptStudentUsagePage.ProgramAdminReportType), reportType))));
             Logger.LogMethodExit("ProgramAdminReports", "ProgramAdminReportLaunchedSuccessfully",
@@ -196,175 +147,8 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         }
 
         /// <summary>
-        /// Click On Select Sections.
-        /// </summary>
-        [When(@"I clicked on 'Select Sections'")]
-        public void ClickOnSelectSections()
-        {
-            // Click On Select Sections
-            Logger.LogMethodEntry("ProgramAdminReports", "ClickOnSelectSections",
-                base.IsTakeScreenShotDuringEntryExit);
-            //Click on the Select Sections button
-            new RptSaveReportPage().SelectSectionToGenerateReport();
-            Logger.LogMethodExit("ProgramAdminReports", "ClickOnSelectSections",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Click On Show/Hide Sections Link.
-        /// </summary>        
-        [When(@"I click on 'Show Sections' link")]
-        [When(@"I click on 'Hide Sections' link")]
-        public void ClickOnShowHideSectionsLink()
-        {
-            //Click On Show/Hide Sections Link
-            Logger.LogMethodEntry("ProgramAdminReports",
-                "ClickOnShowHideSectionsLink",
-               base.IsTakeScreenShotDuringEntryExit);
-            //Click On Show/Hide Sections Link
-            new RptSelectSectionsPage().ClickOnShowHideSectionLink();
-            Logger.LogMethodExit("ProgramAdminReports",
-                "ClickOnShowHideSectionsLink",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Verify The Display Of Section.
-        /// </summary>
-        [Then(@"I should see the section")]
-        public void VerifyTheDisplayOfSection()
-        {
-            //Verify The Display Of Section
-            Logger.LogMethodEntry("ProgramAdminReports", "VerifyTheDisplayOfSection",
-               base.IsTakeScreenShotDuringEntryExit);
-            //Get Course From Memory
-            Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
-            //Assert to verify section name
-            Logger.LogAssertion("VerifyTheDisplayOfSection", ScenarioContext.
-                Current.ScenarioInfo.Title, () => Assert.IsTrue(
-                    new RptSelectSectionsPage().IsSectionNameDisplay(course.SectionName +
-                    ProgramAdminReportsResource.ProgramAdminReports_Page_Space_Value_One)));
-            Logger.LogMethodExit("ProgramAdminReports", "VerifyTheDisplayOfSection",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Verify The Hidden State Of Section And Display Of Expand Button.
-        /// </summary>
-        [Then(@"I should not see the section")]
-        public void VerifyHiddenStateOfSectionAndDisplayOfExpandButton()
-        {
-            //Verify The Hidden State Of Section
-            Logger.LogMethodEntry("ProgramAdminReports",
-                "VerifyHiddenStateOfSectionAndDisplayOfExpandButton",
-               base.IsTakeScreenShotDuringEntryExit);
-            RptSelectSectionsPage rptSelectSelectionsPage = new RptSelectSectionsPage();
-            //Assert to Verify The Hidden State Of Section
-            Logger.LogAssertion("VerifyTheHiddenStateOfSections", ScenarioContext.
-                Current.ScenarioInfo.Title, () => Assert.IsFalse(
-                    rptSelectSelectionsPage.IsSectionPresent()));
-            //Assert to Verify The Display Of Expand Button
-            Logger.LogAssertion("VerifyTheDisplayOfExpandButton", ScenarioContext.
-                Current.ScenarioInfo.Title, () => Assert.AreEqual
-                    (ProgramAdminReportsResource.
-                    ProgramAdminReports_Page_Expand_Button_Title_Value,
-                    rptSelectSelectionsPage.GetExpandCollapseButtonTitle()));
-            Logger.LogMethodExit("ProgramAdminReports",
-                "VerifyHiddenStateOfSectionAndDisplayOfExpandButton",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Verify The Message In Select Sections PopUp.
-        /// </summary>
-        /// <param name="message">This is Error Message In Select Sections Popup.</param>
-        [Then(@"I should see the message ""(.*)"" in select sections popup")]
-        public void VerifyTheMessageInSelectSectionsPopUp(string message)
-        {
-            //Verify The Message In Select Sections PopUp
-            Logger.LogMethodEntry("ProgramAdminReports",
-                "VerifyTheMessageInSelectSectionsPopUp",
-               base.IsTakeScreenShotDuringEntryExit);
-            //Assert to verify message in select sections pop up
-            Logger.LogAssertion("VerifyTheMessageInSelectSectionsPopUp", ScenarioContext.
-                Current.ScenarioInfo.Title, () => Assert.AreEqual(message,
-                    new RptSelectSectionsPage().GetSelectSectionsPopupMessage()));
-            Logger.LogMethodExit("ProgramAdminReports",
-                "VerifyTheMessageInSelectSectionsPopUp",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Click On Expand Link.
-        /// </summary>
-        [When(@"I click on expand link")]
-        public void ClickOnExpandLink()
-        {
-            //Click On Expand Link
-            Logger.LogMethodEntry("ProgramAdminReports", "ClickOnExpandLink",
-                base.IsTakeScreenShotDuringEntryExit);
-            //Click On Expand Link
-            new RptSelectSectionsPage().ClickOnExpandLink();
-            Logger.LogMethodExit("ProgramAdminReports", "ClickOnExpandLink",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Click On Collapse Link.
-        /// </summary>
-        [When(@"I click on collapse link")]
-        public void ClickOnCollapseLink()
-        {
-            //Click On Collapse Link
-            Logger.LogMethodEntry("ProgramAdminReports", "ClickOnCollapseLink",
-                base.IsTakeScreenShotDuringEntryExit);
-            //Click On Collapse Link
-            new RptSelectSectionsPage().ClickOnCollapseLink();
-            Logger.LogMethodExit("ProgramAdminReports", "ClickOnCollapseLink",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Click On Button In Select Sections Popup.
-        /// </summary>
-        /// <param name="buttonName">This is Button Name.</param>
-        [When(@"I click on ""(.*)"" button in select sections popup")]
-        public void ClickOnButtonInSelectSectionsPopup(string buttonName)
-        {
-            //Click On Button In Select Sections Popup
-            Logger.LogMethodEntry("ProgramAdminReports", "ClickOnButtonInSelectSectionsPopup",
-                base.IsTakeScreenShotDuringEntryExit);
-            //Click On Button In Select Sections Popup
-            new RptSelectSectionsPage().ClickOnTheButtonInSelectSectionsPopup(
-                (RptSelectSectionsPage.
-                SelectSectionsPopupButtonTypeEnum)Enum.Parse(typeof(
-                RptSelectSectionsPage.SelectSectionsPopupButtonTypeEnum), buttonName));
-            Logger.LogMethodExit("ProgramAdminReports", "ClickOnButtonInSelectSectionsPopup",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Select Radio Button In Section Options Frame.
-        /// </summary>
-        /// <param name="statusRadioButtonName">This is Section Status Radio Button Name.</param>
-        [When(@"I select ""(.*)"" radio button in section options")]
-        public void SelectRadioButtonInSectionOptions(string statusRadioButtonName)
-        {
-            //Select Radio Button In Section Options Frame
-            Logger.LogMethodEntry("ProgramAdminReports", "SelectRadioButtonInSectionOptions",
-                base.IsTakeScreenShotDuringEntryExit);
-            //Select Radio Button In Section Options Frame
-            new RptSaveReportPage().SelectSectionStatusRadioButton(
-                (RptSaveReportPage.SectionStatusRadioButtonTypeEnum)Enum.Parse(typeof(
-                RptSaveReportPage.SectionStatusRadioButtonTypeEnum), statusRadioButtonName));
-            Logger.LogMethodExit("ProgramAdminReports", "SelectRadioButtonInSectionOptions",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
         /// Select Save Settings To My Reports Option.
         /// </summary>
-        [When(@"I select 'save settings to My Reports' option")]
         [Then(@"I select 'save settings to My Reports' option")]
         public void SelectSaveSettingsToMyReportsOption()
         {
@@ -473,6 +257,29 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("ProgramAdminReports",
                "VerifyPopupClosed", base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+        /// <summary>
+        ///Perform 'Run Report' or 'Edit Settings' or 'Delete' at 'My reports' based on user.
+        /// </summary>
+        /// <param name="reportActionOption">Action to be performed on the report.</param>
+        /// <param name="reportTypeEnum">Report name enum.</param>
+        /// <param name="userTypeEnum">This is the user type enum.</param>
+        [When(@"I select ""(.*)"" for ""(.*)"" report in '(.*)' grid by ""(.*)""")]
+        public void WhenISelectForReportInGridBy(string reportActionOption,
+            Report.ReportTypeEnum reportTypeEnum,
+           User.UserTypeEnum userTypeEnum)
+        {
+            //Perform 'Run Report' or 'Edit Settings' or 'Delete' at 'My reports' based on user
+            Logger.LogMethodEntry("Reports", "MyReportActionsThroughCmenu",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Perform 'Run Report' or 'Edit Settings' or 'Delete' at 'My reports' based on user
+            new RptMainUXPage().PerformActionOnMyReports
+                (reportActionOption, reportTypeEnum, userTypeEnum);
+            Logger.LogMethodExit("Reports", "MyReportActionsThroughCmenu",
+              base.IsTakeScreenShotDuringEntryExit);        
+        }
+
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
