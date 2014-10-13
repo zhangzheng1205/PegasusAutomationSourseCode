@@ -2267,18 +2267,20 @@ namespace Pegasus.Pages.UI_Pages
             string getActivityName = string.Empty;
             try
             {
-                bool jdg = base.IsElementPresent(By.XPath(String.Format("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div")), 10);
+                bool jdg = base.IsElementPresent(By.XPath
+                    ("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div"), 10);
                 //Get the total no of assets assigned count
                 int getRowCount = base.GetElementCountByXPath("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div");
-                for (int row = 0; row <= getRowCount; row++)
+                for (int row = 1; row <= getRowCount; row++)
                 {
-                    bool yy = base.IsElementPresent(By.XPath(String.Format("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday'/div/div//div/span")), 10);
+                    bool yy = base.IsElementPresent(By.XPath(String.Format
+                        ("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div[{0}]/div/span", row)), 10);
 
-                    base.WaitForElement(By.XPath(String.Format("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_dvContainer'/div/div/div/span", row)));
+                    base.WaitForElement(By.XPath(String.Format
+                        ("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div[{0}]/div/span", row)));
                     //Get the asset inner text
                     getActivityName = base.GetElementInnerTextByXPath(String.Format
-                        (CalendarHEDDefaultUXPageResource.
-                        CalendarHEDDefaultUXPageResource_AssetInnerText_XPath_Locator, row));
+                        ("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div[{0}]/div/span", row));
                     //Compare asset name with the inner text
                     if (getActivityName.Contains(assetName))
                     {
@@ -2294,7 +2296,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                "GetAssignAssetText",
               base.IsTakeScreenShotDuringEntryExit);
-            return getActivityName;
+            return getActivityName.Trim();
         }
 
         /// <summary>
