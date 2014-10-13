@@ -2155,7 +2155,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectCalendarWindow();
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Element_Time));
-               //Focus on the asset
+                //Focus on the asset
                 base.PerformFocusOnElementActionByXPath(String.Format(CalendarHEDDefaultUXPageResource
                  .CalendarHEDDefaultUXPage_Assets_Title_Xpath_Locator, assetName));
                 //Get the Asset property
@@ -2171,19 +2171,23 @@ namespace Pegasus.Pages.UI_Pages
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                    CalendarHEDDefaultUXPage_Element_Time));
                 //Click on cmenu of the asset
-                 IWebElement getCMenu = base.GetWebElementPropertiesByCssSelector
-                    (CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource_Asset_Cmenu_Image_CssLocator);
-                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
-                   CalendarHEDDefaultUXPage_Element_Time));
-                 base.PerformMouseHoverByJavaScriptExecutor(getCMenu);
+                IWebElement Parent = base.GetWebElementPropertiesByXPath(String
+                    .Format(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_AssetParentNode_Xpath_Locator, assetName));
+                string nodeId = Parent.GetAttribute("nodeid");
+                string cMenuId = "cmenuLN_gtRow_" + nodeId;
+                IWebElement getCMenu = base.GetWebElementPropertiesByXPath(String.Format(
+                   (CalendarHEDDefaultUXPageResource.CalendarHEDDefaultUXPageResource_Cmenu_XPath_Locator), cMenuId));
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                  CalendarHEDDefaultUXPage_Element_Time));
+                base.PerformMouseHoverByJavaScriptExecutor(getCMenu);
                 base.ClickByJavaScriptExecutor(getCMenu);
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                    CalendarHEDDefaultUXPage_Element_Time));
                 //Select an option in cmenu
                 IWebElement cMenuOption = base.GetWebElementPropertiesByXPath(String.
                     Format((CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefauktUXPage_AssetCmenuOption_Xpath_Locator),cmenuOption));
+                    CalendarHEDDefauktUXPage_AssetCmenuOption_Xpath_Locator), cmenuOption));
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Element_Time));
                 base.ClickByJavaScriptExecutor(cMenuOption);
@@ -2195,6 +2199,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("CalendarHEDDefaultUXPage", "SelectActivityCmenu",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Verify the Due Date Icon Dispaly.

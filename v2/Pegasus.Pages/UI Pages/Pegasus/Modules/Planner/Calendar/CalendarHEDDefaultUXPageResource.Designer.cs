@@ -665,6 +665,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[contains(@class, &apos;dvNodeContent&apos;) and text()=&apos;{0}&apos;]/parent::*.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_AssetParentNode_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_AssetParentNode_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_Droppable_DivPeriod__1110237016_1/div.
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_AssetText_XPath_locator {
@@ -738,7 +747,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //span[@id=&apos;cmenuLN_gtRow_7000000002856154&apos;]/img.
+        ///   Looks up a localized string similar to //span[@id=&apos;{0}&apos;]/img.
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_Cmenu_XPath_Locator {
             get {

@@ -412,7 +412,7 @@
     <value>//div[@title='{0}']</value>
   </data>
   <data name="CalendarHEDDefaultUXPageResource_Cmenu_XPath_Locator" xml:space="preserve">
-    <value>//span[@id='cmenuLN_gtRow_7000000002856154']/img</value>
+    <value>//span[@id='{0}']/img</value>
   </data>
   <data name="CalendarHEDDefaultUXPageResource_AssetInnerText_XPath_Locator" xml:space="preserve">
     <value>//div[@id=//div[@id=ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_Droppable_DivPeriod__1110237016_1/div[{0}]/div/span</value>
@@ -437,5 +437,8 @@
   </data>
   <data name="CalendarHEDDefaultUXPageResource_Asset_Cmenu_Image_CssLocator" xml:space="preserve">
     <value>span[id=cmenuLN_gtRow_7000000002856154] &gt; img</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_AssetParentNode_Xpath_Locator" xml:space="preserve">
+    <value>//div[contains(@class, 'dvNodeContent') and text()='{0}']/parent::*</value>
   </data>
 </root>
