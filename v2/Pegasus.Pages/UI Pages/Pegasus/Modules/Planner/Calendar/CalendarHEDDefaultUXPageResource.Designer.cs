@@ -864,6 +864,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Planner.Calendar {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday&apos;]/div[2]/div[{0}]/div/span.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_DayViewAssetName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_DayViewAssetName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday&apos;]/div[2]/div.
+        /// </summary>
+        internal static string CalendarHEDDefaultUXPageResource_DayViewAssetRecords_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CalendarHEDDefaultUXPageResource_DayViewAssetRecords_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@title=&apos;Excel Chapter 1 Skill-Based Training&apos;].
         /// </summary>
         internal static string CalendarHEDDefaultUXPageResource_ExcelSkillBasedTrainingAsset_Xpath_Locator {

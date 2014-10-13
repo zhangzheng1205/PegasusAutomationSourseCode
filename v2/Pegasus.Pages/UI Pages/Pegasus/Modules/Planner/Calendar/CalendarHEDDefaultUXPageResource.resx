@@ -441,4 +441,10 @@
   <data name="CalendarHEDDefaultUXPageResource_AssetParentNode_Xpath_Locator" xml:space="preserve">
     <value>//div[contains(@class, 'dvNodeContent') and text()='{0}']/parent::*</value>
   </data>
+  <data name="CalendarHEDDefaultUXPageResource_DayViewAssetName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div[{0}]/div/span</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_DayViewAssetRecords_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div</value>
+  </data>
 </root>

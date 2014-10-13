@@ -2272,20 +2272,20 @@ namespace Pegasus.Pages.UI_Pages
             string getActivityName = string.Empty;
             try
             {
-                bool jdg = base.IsElementPresent(By.XPath
-                    ("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div"), 10);
+              
                 //Get the total no of assets assigned count
-                int getRowCount = base.GetElementCountByXPath("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div");
+                int getRowCount = base.GetElementCountByXPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_DayViewAssetRecords_Xpath_Locator);
                 for (int row = 1; row <= getRowCount; row++)
                 {
-                    bool yy = base.IsElementPresent(By.XPath(String.Format
-                        ("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div[{0}]/div/span", row)), 10);
-
+               
                     base.WaitForElement(By.XPath(String.Format
-                        ("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div[{0}]/div/span", row)));
+                        (CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPageResource_DayViewAssetName_Xpath_Locator, row)));
                     //Get the asset inner text
                     getActivityName = base.GetElementInnerTextByXPath(String.Format
-                        ("//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div[{0}]/div/span", row));
+                        (CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPageResource_DayViewAssetName_Xpath_Locator, row));
                     //Compare asset name with the inner text
                     if (getActivityName.Contains(assetName))
                     {
