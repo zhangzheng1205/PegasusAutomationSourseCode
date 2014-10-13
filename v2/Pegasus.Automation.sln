@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Automation", "Pegasus.Automation\Pegasus.Automation.csproj", "{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.HigherEducationCore.Tests", "Pegasus.Acceptance.HigherEducationCore.Tests\Pegasus.Acceptance.HigherEducationCore.Tests.csproj", "{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{30917346-01F2-42D8-866B-65D7902C1358}"
 	ProjectSection(SolutionItems) = preProject
 		Local.testsettings = Local.testsettings
@@ -40,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.MyITLab.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.HigherEducation.HSS.Tests", "Pegasus.Acceptance.HigherEducation.HSS.Tests\Pegasus.Acceptance.HigherEducation.HSS.Tests.csproj", "{65C449DE-D792-40DA-8C65-F9559B245BB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegasus.Acceptance.HigherEducation.WL.Tests", "Pegasus.Acceptance.HigherEducationCore.Tests\Pegasus.Acceptance.HigherEducation.WL.Tests.csproj", "{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,10 +50,6 @@ Global
 		{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD66B308-05DC-48E0-B1C8-5B65B0FAB6EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D4D42739-288C-421F-A3AA-5DC32CB0C5D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4D42739-288C-421F-A3AA-5DC32CB0C5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4D42739-288C-421F-A3AA-5DC32CB0C5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -106,6 +102,10 @@ Global
 		{65C449DE-D792-40DA-8C65-F9559B245BB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65C449DE-D792-40DA-8C65-F9559B245BB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65C449DE-D792-40DA-8C65-F9559B245BB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF98C5D6-7A53-4A8B-BA2F-D41D9DD00DA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
