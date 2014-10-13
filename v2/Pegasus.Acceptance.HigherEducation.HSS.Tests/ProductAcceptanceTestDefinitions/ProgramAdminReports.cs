@@ -82,8 +82,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         /// <summary>
         /// Select the activity.
         /// </summary>
-        [When(@"I select Activity""(.*)""")]
-        public void SelectActivity(string activity)
+        /// <param name="activity">Name of the activity</param>
+        [When(@"I select Activity ""(.*)""")]
+        public void WhenISelectActivity(string activity)
         {
             // Select the section to generate the report
             Logger.LogMethodEntry("ProgramAdminReports", "SelectActivity",
