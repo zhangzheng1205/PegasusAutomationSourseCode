@@ -74,7 +74,8 @@ namespace Pegasus.Pages.UI_Pages
                 this.EnrollSmsUserInCourse();
                 //Store Enrollment Date
                 course.EnrollmentDate = DateTime.Now;
-            }
+                Thread.Sleep(5000);
+            }                
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
