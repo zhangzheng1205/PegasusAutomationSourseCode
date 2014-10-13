@@ -648,6 +648,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return GetWebElementProperties(By.XPath(xPathValue));
         }
 
+        
         /// <summary>
         /// Defines the interface through which the user controls elements on the page by Partial Link text value.
         /// </summary>
@@ -1895,6 +1896,37 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             ((IJavaScriptExecutor)WebDriver).ExecuteScript("arguments[0].click();", iWebElement);
         }
 
+       
+        /// <summary>
+        /// Performs double click on a web element when the browser is 'Chrome' or 'Firefox'.
+        /// </summary>
+        /// <param name="webElement">Represents an HTML element. Generally, 
+        /// all interesting operations to do with interacting with a page will be performed through this interface.</param>
+        /// <see cref="ExecuteScript">Executes JavaScript in the context of the currently selected frame or window. 
+        /// The script fragment provided will be executed as the body of an anonymous function.</see>
+        /// <seealso cref="IJavaScriptExecutor">Indicates that a driver can execute JavaScript, providing 
+        /// access to the mechanism to do so.</seealso>
+        protected void DoubleClickByJavaScriptExecuter(IWebElement iWebElemnt)
+        {
+            ((IJavaScriptExecutor)WebDriver).ExecuteScript("var evt = document.createEvent('MouseEvents');" +
+        "evt.initMouseEvent('dblclick',true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0,null);" +
+        "arguments[0].dispatchEvent(evt);", iWebElemnt);
+        }
+
+        /// <summary>
+        /// Performs double click on a web element when the browser is 'IE'.
+        /// </summary>
+        /// <param name="webElement">Represents an HTML element. Generally, 
+        /// all interesting operations to do with interacting with a page will be performed through this interface.</param>
+        /// <see cref="ExecuteScript">Executes JavaScript in the context of the currently selected frame or window. 
+        /// The script fragment provided will be executed as the body of an anonymous function.</see>
+        /// <seealso cref="IJavaScriptExecutor">Indicates that a driver can execute JavaScript, providing 
+        /// access to the mechanism to do so.</seealso>
+        protected void DoubleClickInIEByJavaScriptExecuter(IWebElement iWebElement)
+        {
+            ((IJavaScriptExecutor)WebDriver).ExecuteScript("arguments[0].fireEvent('ondblclick');", iWebElement);
+        }
+
         /// <summary>
         /// Executes JavaScript in the context of the currently selected frame or window. 
         /// The script fragment provided will be executed as the body of an fill text 
@@ -2011,7 +2043,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <summary>
         /// Hover the mouse on the element.
         /// </summary>
-        /// <param name="webElement">Element to move to.</param>
+        /// <param name="webElement">Represents an HTML element. Generally, 
+        /// all interesting operations to do with interacting with a page will be performed through this interface.</param>
         /// <see cref="ExecuteScript">Executes JavaScript in the context of the currently selected frame or window. 
         /// The script fragment provided will be executed as the body of an anonymous function.</see>
         /// <seealso cref="IJavaScriptExecutor">Indicates that a driver can execute JavaScript, providing 
