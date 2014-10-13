@@ -208,7 +208,7 @@
     <value>ckbSetEndDate</value>
   </data>
   <data name="AssignContent_Page_SleepTime_Value" xml:space="preserve">
-    <value>5000</value>
+    <value>3000</value>
   </data>
   <data name="AssignContent_Page_StartDate_Text_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='tblContentAvail']/tbody/tr[1]</value>
@@ -281,5 +281,14 @@
   </data>
   <data name="AssignContent_Page_CurrentDate_ClassName_Locator" xml:space="preserve">
     <value>ui-state-default ui-state-highlight ui-state-active</value>
+  </data>
+  <data name="AssignContent_Page_Calendar_ColumnCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='ui-datepicker-calendar']/tbody/tr[{0}]/td</value>
+  </data>
+  <data name="AssignContent_Page_Calendar_DateValueInColumn_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='ui-datepicker-calendar']/tbody/tr[{0}]/td[{1}]/a</value>
+  </data>
+  <data name="AssignContent_Page_Calendar_RowCount_Xpath_Locator" xml:space="preserve">
+    <value>//table[@class='ui-datepicker-calendar']/tbody/tr</value>
   </data>
 </root>

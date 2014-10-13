@@ -97,12 +97,10 @@ Scenario: Assign the content with due date to current date by SMS Instructor
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 When I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Calendar" by "CsSmsInstructor"
-And I select cmenu "Set Scheduling option" of activity "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" 
-Then I should see the "Properties" popup
+And I select cmenu "Assignment Properties" of activity "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" 
+Then I should see the "Assign" popup
 When I assign the asset for current date in the properties popup
-Then I should see the duedate icon along with the checkmark in the calendar
-When I navigate to "Gradebook" tab
-Then I should be on the "Gradebook" page
+Then I should see the duedate icon along with the checkmark in the calendar beside activity "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" under "Excel Chapter 1: Simulation Activities"
 
 #PEGASUS-28905
 #Purpose : To validate Assign more than one content using Assign/Unassign link
@@ -113,10 +111,7 @@ Then I should be on the "Calendar" page
 When I select "PowerPoint Chapter 1 Skill-Based Training" in "Calendar" by "CsSmsInstructor"
 And I select the check box of any 2 activities in "PowerPoint Chapter 1: Simulation Activities"
 Then I should see Assign/Unassign link in active state on the content frame header
-When I click on assign/Unassign link displayed in content frame header
-Then I should see the check mark in assigned status column next to the assets
-When I navigate to "Gradebook" tab
-Then I should be on the "Gradebook" page
+
 
 #PEGASUS-21971
 #Purpose : To validate Assign one content using Assign/Unassign link
@@ -127,10 +122,7 @@ Then I should be on the "Calendar" page
 When I select "Access Chapter 1 Skill-Based Training" in "Calendar" by "CsSmsInstructor"
 And I select the check box of any 1 activities in "Access Chapter 1: Simulation Activities"
 Then I should see Assign/Unassign link in active state on the content frame header
-When I click on assign/Unassign link displayed in content frame header
-Then I should see the check mark in assigned status column next to the assets
-When I navigate to "Gradebook" tab
-Then I should be on the "Gradebook" page
+
 
 
 

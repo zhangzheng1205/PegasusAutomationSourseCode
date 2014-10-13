@@ -132,7 +132,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
 
         /// <summary>
         /// Verifies the Pop Up Opened.
-        /// Verifies the Correct Pop Up Opened.
         /// </summary>
         /// <param name="popUpName">This is PopUp Name.</param>
         [Then("I should see the \"(.*)\" popup")]
@@ -142,6 +141,8 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
                 base.IsTakeScreenShotDuringEntryExit);
             //Is Pop Up Present
+            base.SwitchToLastOpenedWindow();
+            bool present = base.IsWindowsExists(popUpName,10);
             Boolean isPopUpExist = base.IsWindowsExists(popUpName);
             //Assert We Have Correct Pop Up Window Opened
             Logger.LogAssertion("VerifyOpenedPopUpTitle",

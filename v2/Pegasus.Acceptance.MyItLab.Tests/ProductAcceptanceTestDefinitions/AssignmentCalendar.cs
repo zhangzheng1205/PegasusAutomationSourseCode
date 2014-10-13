@@ -700,27 +700,9 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+       
         /// <summary>
-        /// Click on the cmenu option of the asset.
-        /// </summary>
-        /// <param name="cmenuOption">This is the cmenu option.</param>
-        /// <param name="assetName">This is a asset name.</param>
-        [When(@"I select cmenu ""(.*)"" of activity ""(.*)""")]
-        public void SelectCmenuOfActivity(string cmenuOption, string assetName)
-        {
-            Logger.LogMethodEntry("AssignmentCalendar",
-              "SelectCmenuOfActivity",
-              base.IsTakeScreenShotDuringEntryExit);
-            //click on cmenu option
-            new CalendarHedDefaultUxPage().SelectActivityCmenu
-                (cmenuOption, assetName);
-            Logger.LogMethodExit("AssignmentCalendar",
-                "SelectCmenuOfActivity",
-              base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        /// <summary>
-        /// Assign the asset to the current date and save.
+        /// Assign the asset to the current date,set start and end date,mark notification and save.
         /// </summary>
         [When(@"I assign the asset for current date in the properties popup")]
         public void AssignTheAsset()
@@ -731,15 +713,20 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             base.SelectWindow("Assign");
             AssignContentPage assignContentPage = new AssignContentPage();
             //Select 'Assigned' radiobutton
-            assignContentPage.SelectAssignRadiobutton();
+            assignContentPage.SelectAssignRadiobuttonInAssignWindow();
             //Select current date
-            assignContentPage.SelectCurrentDate();
+            assignContentPage.SelectCurrentDateInAssignWindow();
+            //Set start and end date
+            assignContentPage.SetStartAndEndDateAssignWindow();
+            //Check availability notification
+            assignContentPage.CheckAvailabilityNotification();
             //Save the properties
-            assignContentPage.ClickOnSave();
+            assignContentPage.SaveProperties();
             Logger.LogMethodExit("AssignmentCalendar",
                 "AssignTheAsset",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Verify the due date icon display next to the activity in calendar page.
@@ -763,7 +750,51 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyDueDateIconInCalendar",
               base.IsTakeScreenShotDuringEntryExit);
-        }     
+        }
 
+       
+
+        // <summary>
+        /// Click on the cmenu option of the asset.
+        /// </summary>
+        /// <param name="cmenuOption">This is the cmenu option.</param>
+        /// <param name="assetName">This is a asset name.</param>
+        [When(@"I select cmenu ""(.*)"" of activity ""(.*)""")]
+        public void SelectCmenuOfActivity(string cmenuOption, string assetName)
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+              "SelectCmenuOfActivity",
+              base.IsTakeScreenShotDuringEntryExit);
+            //click on cmenu option
+            new CalendarHedDefaultUxPage().SelectActivityCmenu
+                (cmenuOption, assetName);
+            Logger.LogMethodExit("AssignmentCalendar",
+                "SelectCmenuOfActivity",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the schedule checkmark and due date icon beside the activity name.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="folderName">This is the activity folder name.</param>
+        [Then(@"I should see the duedate icon along with the checkmark in the calendar beside activity ""(.*)"" under ""(.*)""")]
+        public void VerifyDueDateIconAndCheckMarkForAsset(string activityName, string folderName)
+        {
+            new CalendarHedDefaultUxPage().SelectCalendarWindow();
+            String activityId = new CalendarHedDefaultUxPage().GetAssetId(folderName);
+            String containerId = "ContainerID_" + activityId;
+            //verify duedate icon
+            Logger.LogAssertion("VerifyDueDateIconInCalendar",
+                ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.IsTrue(new CalendarHedDefaultUxPage().
+                    IsScheduleCheckMarkDisplayedBesideAsset(activityName, containerId)));
+            //Verify CheckMark icon
+            Logger.LogAssertion("VerifyCheckMarkIconInCalendar",
+                ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.IsTrue(new CalendarHedDefaultUxPage().
+                    IsDuedateIconDisplayedBesideAsset(activityName, containerId)));
+
+        }
     }
 }

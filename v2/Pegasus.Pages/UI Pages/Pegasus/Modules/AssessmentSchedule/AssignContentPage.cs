@@ -998,7 +998,7 @@ namespace Pegasus.Pages.UI_Pages
                  base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                SelectSetavailabilitydaterangeRadiobutton();
+                this.SelectSetavailabilitydaterangeRadiobutton();
 
                 string dueDate = base.GetWebElementPropertiesById(AssignContentPageResource.
                     AssignContent_Page_DueDate_TextBox_Id_Locator).GetAttribute(AssignContentPageResource.
@@ -1096,36 +1096,195 @@ namespace Pegasus.Pages.UI_Pages
                             base.IsTakeScreenShotDuringEntryExit);
         }
 
-        public void CheckAvailabilityNotification()
-        {
+      
 
-            //Select ' Show availability notification on the calendar' Option
-            logger.LogMethodEntry("AssignContentPage",
-                "SelectDoNotProvideEndDateOption",
-                base.IsTakeScreenShotDuringEntryExit);
+        /// <summary>
+        /// To click on the current date in Assign Window.
+        /// </summary>
+        public void SelectCurrentDateInAssignWindow()
+        {
+            logger.LogMethodEntry("AssignContentPage", "SelectCurrentDateInAssignWindow",
+                         base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 //Select Properties Window
-                this.SelectPropertiesWindow();
+                this.SelectAssignWindow();
+                Thread.Sleep(Convert.ToInt32(AssignContentPageResource.
+                    AssignContent_Page_SleepTime_Value));
+                int calendarRowCount = base.GetElementCountByXPath(AssignContentPageResource.
+                    AssignContent_Page_Calendar_RowCount_Xpath_Locator);
+                for (int i = 1; i <= calendarRowCount; i++)
+                {
+                    int calendarColumnCount = base.GetElementCountByXPath(String.
+                        Format(AssignContentPageResource.
+                        AssignContent_Page_Calendar_ColumnCount_Xpath_Locator, i));
+                    for (int j = 1; j <= calendarColumnCount; j++)
+                    {
+                        //Verify if date value is present or blank in a cell in calendar
+                        bool dayValuePresent = base.IsElementPresent(By.XPath(String.
+                            Format(AssignContentPageResource.
+                            AssignContent_Page_Calendar_DateValueInColumn_Xpath_Locator, i, j)), 3);
+                        if (dayValuePresent)
+                        {
+                            //Gets the date value from calendar
+                            IWebElement getDateValue = base.GetWebElementPropertiesByXPath(String
+                                .Format(AssignContentPageResource.
+                                AssignContent_Page_Calendar_DateValueInColumn_Xpath_Locator, i, j));
+                            //Get the class name of the date 
+                            string dateClass = getDateValue.GetAttribute("class");
+                            if (dateClass == AssignContentPageResource.
+                                AssignContent_Page_CurrentDate_ClassName_Locator)
+                            {
+                                Thread.Sleep(Convert.ToInt32(AssignContentPageResource.
+                                    AssignContent_Page_SleepTime_Value));
+                                switch (base.Browser)
+                                {
+                                    //Double click on date if 'Chrome' or 'Firefox' browser
+                                    case PegasusBaseTestFixture.Chrome:
+                                    case PegasusBaseTestFixture.FireFox:
+                                        base.DoubleClickByJavaScriptExecuter(getDateValue);
+                                        break;
+                                    //Double click on date if 'IE' browser
+                                    case PegasusBaseTestFixture.InternetExplorer:
+                                        base.DoubleClickInIEByJavaScriptExecuter(getDateValue);
+                                        break;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "SelectCurrentDateInAssignWindow",
+                            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
+        /// <summary>
+        /// Sets start date and end date 
+        /// </summary>
+        public void SetStartAndEndDateAssignWindow()
+        {
+            logger.LogMethodEntry("AssignContentPage", "SetStartAndEndDateAssignWindow",
+                 base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Enters the start date
+                this.SelectSetavailabilitydaterangeRadiobuttonAssignWindow();
+                //Select 'Set End Date as Due Date'
                 base.WaitForElement(By.Id(AssignContentPageResource.
-                    AssignContent_Page_First_Checkbox_Id_Locator));
-                //Select 'Do Not Provide An End Date' Option
+                    AssignContent_Page_SetEndDateAsDueDate_Checkbox_Id_Locator));
                 base.SelectCheckBoxById(AssignContentPageResource.
-                    AssignContent_Page_First_Checkbox_Id_Locator);
+                    AssignContent_Page_SetEndDateAsDueDate_Checkbox_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "SetStartAndEndDateAssignWindow",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public void SelectSetavailabilitydaterangeRadiobuttonAssignWindow()
+        {
+
+            //Select 'Set availability date range' Radiobutton
+            logger.LogMethodEntry("AssignContentPage",
+                "SelectSetavailabilitydaterangeRadiobuttonAssignWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Get the Current date
+                string getCurrentDate = DateTime.Now.ToString
+                    (AssignContentPageResource.AssignContent_Page_DateFormat);
+                //Select Properties Window
+                this.SelectAssignWindow(); 
+                    //Check the Set Availability Date Range Radio Button
                 base.WaitForElement(By.Id(AssignContentPageResource.
-                    AssignContent_Page_Button_SaveAndAssign_Id_Locator));
-                //Click on 'Save' Button
+                    AssignContent_Page_SetAvailabilityDateRange_Radiobutton_Id_Locator));
+                //Select Set Avalability Date Range Radiobutton
                 base.ClickButtonById(AssignContentPageResource.
-                    AssignContent_Page_Button_SaveAndAssign_Id_Locator);
+                    AssignContent_Page_SetAvailabilityDateRange_Radiobutton_Id_Locator);
+                base.WaitForElement(By.Id(AssignContentPageResource.
+                    AssignContent_Page_FromDate_TextField_Id_Locator));
+                base.ClearTextById(AssignContentPageResource.
+                    AssignContent_Page_FromDate_TextField_Id_Locator);
+                //Enter Current Date
+                base.FillTextBoxById(AssignContentPageResource.
+                    AssignContent_Page_FromDate_TextField_Id_Locator, getCurrentDate);
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("AssignContentPage",
-                "SelectDoNotProvideEndDateOption",
+                "SelectSetavailabilitydaterangeRadiobuttonAssignWindow",
                 base.IsTakeScreenShotDuringEntryExit);
+        
+        }
 
+
+
+        /// <summary>
+        /// Selects availability notifuication check box.
+        /// </summary>
+        public void CheckAvailabilityNotification()
+        {
+            // Selects availability notifuication check box
+            logger.LogMethodEntry("AssignContentPage",
+                "CheckAvailabilityNotificatio",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                this.SelectAssignWindow();
+                base.WaitForElement(By.Id(AssignContentPageResource.
+                    AssignContent_Page_Third_Checkbox_Id_Locator));
+                // Selects availability notifuication check box
+                base.SelectCheckBoxById(AssignContentPageResource.
+                    AssignContent_Page_Third_Checkbox_Id_Locator);
+                base.WaitForElement(By.Id(AssignContentPageResource.
+                    AssignContent_Page_Button_SaveAndAssign_Id_Locator));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage",
+                "CheckAvailabilityNotificatio",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Select 'Assigned' Radiobutton.
+        /// </summary>
+        public void SelectAssignRadiobuttonInAssignWindow()
+        {
+            //Select 'Assigned' Radiobutton
+            logger.LogMethodEntry("AssignContentPage", "SelectAssignedRadiobutton",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Properties Window
+                this.SelectAssignWindow();
+                //Check the Assignd Radio Button               
+                IWebElement getRadioButton = base.GetWebElementPropertiesById(
+                    AssignContentPageResource.AssignContent_Page_RadioButton_Assigned_Id_Locator);
+                base.ClickByJavaScriptExecutor(getRadioButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "SelectAssignedRadiobutton",
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
+
 }
+

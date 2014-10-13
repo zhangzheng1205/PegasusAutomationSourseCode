@@ -349,7 +349,7 @@
     <value>//div[@id='TreeViewContainer']/table[{0}]</value>
   </data>
   <data name="CalendarHEDDefaultUXPage_Element_Time" xml:space="preserve">
-    <value>2000</value>
+    <value>3000</value>
   </data>
   <data name="CalendarHEDDefaultUXPage_Asset_AssignStatus_Assigned_Img_Xpath_Locator" xml:space="preserve">
     <value>//table[@nodeid='{0}']/tbody/tr/td[4]/div/div/div[@class='divIsAssigned']/img</value>
@@ -412,12 +412,30 @@
     <value>//div[@title='{0}']</value>
   </data>
   <data name="CalendarHEDDefaultUXPageResource_Cmenu_XPath_Locator" xml:space="preserve">
-    <value>"//id[@'cmenuLN_gtRow_6000000001589725']/img/src</value>
+    <value>//span[@id='cmenuLN_gtRow_7000000002856154']/img</value>
   </data>
   <data name="CalendarHEDDefaultUXPageResource_AssetInnerText_XPath_Locator" xml:space="preserve">
     <value>//div[@id=//div[@id=ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_Droppable_DivPeriod__1110237016_1/div[{0}]/div/span</value>
   </data>
   <data name="CalendarHEDDefaultUXPageResource_AssetText_XPath_locator" xml:space="preserve">
     <value>//div[@id=ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_Droppable_DivPeriod__1110237016_1/div</value>
+  </data>
+  <data name="CalendarHEDDefauktUXPage_AssetCmenuOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='PegMenu8192']/div[@id='cmenuCont']/div[@title='{0}']</value>
+  </data>
+  <data name="CalendarHEDDefauktUXPage_AssetDueDateIcon_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='{0}']/table[{1}]/tbody/tr/td[4]/div/div/div[2]/img[@class='cssDueDate']</value>
+  </data>
+  <data name="CalendarHEDDefauktUXPage_AssetName_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='{0}']/table[{1}]/tbody/tr/td[3]/table/tbody/tr/td/div</value>
+  </data>
+  <data name="CalendarHEDDefauktUXPage_AssetPropertiesCount_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='{0}']/table</value>
+  </data>
+  <data name="CalendarHEDDefauktUXPage_AssetScheduleCheckMark_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='{0}']/table[{1}]/tbody/tr/td[4]/div/div/div/img[@class='cssIsScheduled']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_Asset_Cmenu_Image_CssLocator" xml:space="preserve">
+    <value>span[id=cmenuLN_gtRow_7000000002856154] &gt; img</value>
   </data>
 </root>
