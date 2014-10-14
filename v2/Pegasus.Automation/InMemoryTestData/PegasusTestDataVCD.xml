@@ -137,7 +137,7 @@
     </Course>
     <!--Hard coded Course data for "HEDMIL" Product.-->
     <Course>
-      <Name>Copy of MyITLab for Office 2013: GO! Series + Technology in Action [01.01.14]</Name>
+      <Name>VCD_Automation_MyITLab for Office 2013: GO! Series + Technology in Action</Name>
       <CourseType>MyITLabForOffice2013Master</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -145,7 +145,7 @@
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>Automation Program</Name>
+      <Name>VCD_ProgramAdminCourse</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -408,46 +408,46 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>5.15.2automation</Name>
+      <Name>09542903-b170-43c6-8a55-483cf672db10</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>SMSUSER</LastName>
+      <LastName>d014</LastName>
       <UserType>HedProgramAdmin</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>guruprof5151</Name>
+      <Name>a9b8f5dc-f882-4070-ae8e-47cf1402f8ad</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>SMSUSER</LastName>
+      <LastName>54a1</LastName>
       <UserType>CsSmsInstructor</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>187bae30-3422-4f72-ae2d-67cbf84cee73</Name>
+      <Name>9a6a0f60-e553-4542-9776-8811ddb4ce6e</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>fn1</FirstName>
+      <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>ln1</LastName>
+      <LastName>6079</LastName>
       <UserType>CsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <!--Hard coded Users data for Zero Score "CsSMSStudent".-->
     <User>
-      <Name>187bae30-3422-4f72-ae2d-67cbf84cee73</Name>
+      <Name>4f3f5be7-d5d3-42b2-a45b-a99fd0cc9d2c</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>ln1</LastName>
+      <LastName>1e6f</LastName>
       <UserType>CsSmsStudent</UserType>
       <UserId>Hed_User_SMS_STU_UC1</UserId>
       <IsCreated>true</IsCreated>
@@ -455,12 +455,12 @@
     </User>
     <!--Hard coded Users data for Set Idle "CsSMSStudent".-->
     <User>
-      <Name>187bae30-3422-4f72-ae2d-67cbf84cee73</Name>
+      <Name>4dcd7327-f98d-41f1-bf40-8c7036435f0d</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>ln1</LastName>
+      <LastName>7dbe</LastName>
       <UserType>CsSmsStudent</UserType>
       <UserId>Hed_User_SMS_STU_UC2</UserId>
       <IsCreated>true</IsCreated>
