@@ -261,4 +261,7 @@
   <data name="CoursePreviewMainUX_Page_SetSchedulingOptions_Xpath_Locator" xml:space="preserve">
     <value>//div[@title='Set Scheduling Options']</value>
   </data>
+  <data name="CoursePreviewMainUX_Page_ViewSubmissions_Xpath_Locator" xml:space="preserve">
+    <value>//div[@id='PegMenu32']/div[@id='cmenuCont']/div[@id='11']</value>
+  </data>
 </root>

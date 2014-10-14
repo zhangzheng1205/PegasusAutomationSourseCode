@@ -165,8 +165,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodEntry("CourseContent", "CMenuOperationsForAnAsset",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Activity Cmenu Option
-            new CoursePreviewMainUXPage().SelectActivityCmenuForInstructor((CoursePreviewMainUXPage.ActivityCmenuEnum)
-                Enum.Parse(typeof(CoursePreviewMainUXPage.ActivityCmenuEnum), activityCmenuOption), assetName);
+            new CoursePreviewMainUXPage().SelectActivityCmenuForInstructor(
+                (CoursePreviewMainUXPage.ActivityCmenuEnum)
+                Enum.Parse(typeof(CoursePreviewMainUXPage.ActivityCmenuEnum),
+                activityCmenuOption), assetName);
             Logger.LogMethodExit("CourseContent", "CMenuOperationsForAnAsset",
                base.IsTakeScreenShotDuringEntryExit);
         }

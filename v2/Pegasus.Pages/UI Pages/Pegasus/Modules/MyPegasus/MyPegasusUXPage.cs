@@ -112,6 +112,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Window
                 this.SelectGlobalHomePage();
                 //Enter In Course 
+               
                 EnterInsideCourse(courseName, userTypeEnum);
             }
             catch (Exception e)
@@ -281,9 +282,14 @@ namespace Pegasus.Pages.UI_Pages
                     initialCount++)
                 {
                     //Get Master Library Name
+                    bool isCourseNameText = base.IsElementPresent(By.XPath(string.Format(MyPegasusUXPageResource.
+                        MyPegasusUX_Page_MasterLibrary_GetName_Xpath_Locator, initialCount)),10);
+                    if (isCourseNameText)
+                    {
                     string getCourseName = base.GetElementTextByXPath(
                         string.Format(MyPegasusUXPageResource.
                         MyPegasusUX_Page_MasterLibrary_GetName_Xpath_Locator, initialCount));
+
                     if (getCourseName.Contains(course))
                     {
                         base.WaitForElement(By.XPath(string.Format(
@@ -298,6 +304,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     }
                 }
+               }
             }
             catch (Exception e)
             {

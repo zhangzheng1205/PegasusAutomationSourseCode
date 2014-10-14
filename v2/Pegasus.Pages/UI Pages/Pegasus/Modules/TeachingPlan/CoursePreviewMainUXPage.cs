@@ -45,7 +45,8 @@ namespace Pegasus.Pages.UI_Pages
         public enum ActivityCmenuEnum
         {
             GetInformation=1,
-            SetSchedulingOptions=2
+            SetSchedulingOptions=2,
+            ViewSubmissions=3
         }
 
         /// <summary>
@@ -933,6 +934,10 @@ namespace Pegasus.Pages.UI_Pages
                         //Click On Scheduling Option
                         this.ClickOnSetSchedulingOption();
                         break;
+                    //Click On View Submissions Option
+                    case CoursePreviewMainUXPage.ActivityCmenuEnum.ViewSubmissions:
+                        this.ClickOnViewSubmissions();
+                        break;
                 }
             }
             catch (Exception e)
@@ -944,7 +949,7 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// 
+        /// Click On Set Scheduling Option
         /// </summary>
         private void ClickOnSetSchedulingOption()
         {
@@ -957,6 +962,29 @@ namespace Pegasus.Pages.UI_Pages
                 CoursePreviewMainUX_Page_SetSchedulingOptions_Xpath_Locator);
             //Click On GetInformation Link
             base.ClickByJavaScriptExecutor(getGetInformationProperty);
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickOnGetInformationOption",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click On View Submissions.
+        /// </summary>
+        private void ClickOnViewSubmissions()
+        {
+            //Click On Get Information Option
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "ClickOnGetInformationOption",
+                    base.IsTakeScreenShotDuringEntryExit);
+            //Wait for the element
+            base.WaitForElement(By.XPath (CoursePreviewMainUXPageResource.
+                CoursePreviewMainUX_Page_ViewSubmissions_Xpath_Locator));
+            //Get Information Property
+            IWebElement GetInformationProperty = base.GetWebElementPropertiesByXPath
+                (CoursePreviewMainUXPageResource.
+                CoursePreviewMainUX_Page_ViewSubmissions_Xpath_Locator);
+            //Click On GetInformation Link
+            Thread.Sleep(Convert.ToInt32(CoursePreviewMainUXPageResource.
+                   CoursePreviewMainUX_Page_ElementWait_Value));
+            base.ClickByJavaScriptExecutor(GetInformationProperty);
             Logger.LogMethodExit("CoursePreviewMainUXPage", "ClickOnGetInformationOption",
                    base.IsTakeScreenShotDuringEntryExit);
         }
@@ -989,11 +1017,15 @@ namespace Pegasus.Pages.UI_Pages
                     IWebElement getActivityProperty = base.GetWebElementPropertiesByXPath(
                         string.Format(CoursePreviewMainUXPageResource.
                         CoursePreviewMainUX_Page_Assets_Name_Xpath_Locator_Ins, initialCount));
+                    Thread.Sleep(Convert.ToInt32(CoursePreviewMainUXPageResource.
+                   CoursePreviewMainUX_Page_ElementWait_Value));
                     base.PerformMouseHoverByJavaScriptExecutor(getActivityProperty);
                     //Get Cmenu Property
                     IWebElement getCmenuProperty = base.
                         GetWebElementPropertiesByXPath(string.Format(CoursePreviewMainUXPageResource.
                         CoursePreviewMainUX_Page_Activitycmenu_Xpath_Locator_Ins, initialCount));
+                    Thread.Sleep(Convert.ToInt32(CoursePreviewMainUXPageResource.
+                   CoursePreviewMainUX_Page_ElementWait_Value));
                     //Click On Cmenu Option
                     base.ClickByJavaScriptExecutor(getCmenuProperty);
                     break;

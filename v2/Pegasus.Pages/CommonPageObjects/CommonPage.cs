@@ -140,6 +140,11 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
+                                    case "Word Chapter 1 Grader Project [Assessment 3]":
+                                        this.NavigateToWordChapter1GraderActivitiesFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                            userTypeEnum, activityUnderTabName);
+                                        break;
                                     case "Excel Chapter 1 Skill-Based Training":
                                     case "Excel Chapter 1 Skill-Based Exam (Scenario 1)":
                                     case "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test":
