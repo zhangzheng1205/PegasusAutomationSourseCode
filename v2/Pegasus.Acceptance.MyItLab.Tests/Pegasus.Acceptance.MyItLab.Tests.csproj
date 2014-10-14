@@ -410,6 +410,12 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonFeature.feature.cs</LastGenOutput>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.PROD.GraderITStudentSubmission.BVT.MyItLab.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.PROD.BuildVerificationTest.MyItLabFull.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.GraderITAccessStudentSubmission.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -443,6 +449,9 @@
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.AssignmentCalendar.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.PROD.StudentSubmission.BVT.MyItLab.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.StudentSubmission.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
