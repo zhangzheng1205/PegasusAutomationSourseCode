@@ -146,8 +146,14 @@ namespace Pegasus.Pages.UI_Pages
                     break;
                 case "Learning Aid Usage":
                     //Click 'Learning Aid Usage' report link
-                    new RptMainUXPage().ClickReportLink("RPT_Learning_Aid_Efficacy");
-                    break;      
+                    new RptMainUXPage().ClickReportLink(ProgramAdminReportsSubTabPageResource.
+                    ProgramAdminReportsSubTab_LearningAidUsage_Link_Id_locator);
+                    break;
+                case "Integrity Violation":
+                    //Click 'Integrity Violation' report link
+                    new RptMainUXPage().ClickReportLink(ProgramAdminReportsSubTabPageResource.
+                    ProgramAdminReportsSubTab_IntegrityViolation_Link_Id_locator);                   
+                    break;
             }
             Logger.LogMethodExit("ProgramAdminReportsSubTabPage", " ClickOnReportLink",
               base.IsTakeScreenShotDuringEntryExit);

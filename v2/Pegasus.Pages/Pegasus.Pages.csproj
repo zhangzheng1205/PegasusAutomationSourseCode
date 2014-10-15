@@ -1501,6 +1501,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RptStudentAllAssessmentsPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentIntegrityViolationPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentIntegrityViolationPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStudentIntegrityViolationPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentUsagePage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentUsagePageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2720,6 +2726,10 @@
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStudentAllAssessmentsPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>RptStudentAllAssessmentsPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStudentIntegrityViolationPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptStudentIntegrityViolationPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStudentUsagePageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

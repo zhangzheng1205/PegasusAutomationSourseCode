@@ -1958,8 +1958,9 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     base.WaitForElement(By.XPath(string.Format(RptMainUXPageResource.
                     RptmainUX_Page_MyReports_ActualAssessmentCheckBox_Xpath_Locator, initialCount)));
-                    base.ClickImageByXPath(string.Format(RptMainUXPageResource.
+                    IWebElement selectActivity = base.GetWebElementPropertiesByXPath(string.Format(RptMainUXPageResource.
                     RptmainUX_Page_MyReports_ActualAssessmentCheckBox_Xpath_Locator, initialCount));
+                    base.ClickByJavaScriptExecutor(selectActivity);
                     break;
                 }
             }

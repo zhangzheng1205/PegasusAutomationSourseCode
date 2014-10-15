@@ -195,5 +195,23 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
                 return ResourceManager.GetString("RptTrainingFreqAnalysisPage_Resource_Window_Title", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl4_AveragePlaceHolder&apos;]/table/tbody/tr/td[2]/span.
+        /// </summary>
+        internal static string RptTrainingFrequencyPage_Resource_ActivityScore {
+            get {
+                return ResourceManager.GetString("RptTrainingFrequencyPage_Resource_ActivityScore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;_ctl4_AssessmentplaceHolder&apos;]/div/table/tbody/tr/td/span.
+        /// </summary>
+        internal static string RptTrainingFrequencyPage_Resource_NameOfActivity {
+            get {
+                return ResourceManager.GetString("RptTrainingFrequencyPage_Resource_NameOfActivity", resourceCulture);
+            }
+        }
     }
 }

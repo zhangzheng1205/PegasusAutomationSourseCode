@@ -153,6 +153,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Program_Admin.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Label17.
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_IntegrityViolation_Link_Id_locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_IntegrityViolation_Link_Id_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RPT_Learning_Aid_Efficacy.
+        /// </summary>
+        internal static string ProgramAdminReportsSubTab_LearningAidUsage_Link_Id_locator {
+            get {
+                return ResourceManager.GetString("ProgramAdminReportsSubTab_LearningAidUsage_Link_Id_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to RPT_DELETE.
         /// </summary>
         internal static string ProgramAdminReportsSubTab_MyReports_ReportCmenuDelete_Id_Locator {

@@ -113,7 +113,7 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             // Wait For Element
             base.WaitForElement(By.CssSelector(SelfEnrollmentPageResource.
-                SelfEnrollment_Page_CourseID_Span_CssSelector_Locator));
+                SelfEnrollment_Page_CourseID_Span_CssSelector_Locator),10);
             // Click Course ID Button
             IWebElement getConfirmButton = base.GetWebElementPropertiesByCssSelector(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_CourseID_Span_CssSelector_Locator);
@@ -160,7 +160,7 @@ namespace Pegasus.Pages.UI_Pages
             //Wait For Confirm Button
             base.WaitForElement(
                 By.CssSelector(SelfEnrollmentPageResource.
-                    SelfEnrollment_Page_CourseID_Confirm_Button_CssSelector_Locator));
+                    SelfEnrollment_Page_CourseID_Confirm_Button_CssSelector_Locator),10);
             //Click On Confirm Button
             base.ClickButtonByCssSelector(SelfEnrollmentPageResource.
                 SelfEnrollment_Page_CourseID_Confirm_Button_CssSelector_Locator);

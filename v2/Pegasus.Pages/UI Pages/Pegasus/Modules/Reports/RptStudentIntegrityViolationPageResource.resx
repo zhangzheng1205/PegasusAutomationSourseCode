@@ -117,67 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RptSelectAssessments_Page_ActivityRadiobutton_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='AssessmentGrid']/tbody/tr[{0}]/td/input[@id='AssessmentGrid$_ctrl1']</value>
+  <data name="RptStudentIntegrityViolationPageResource_PageName_Id_Locator" xml:space="preserve">
+    <value>StuIntegrityRptHeader_lblReportSub</value>
   </data>
-  <data name="RptSelectAssessments_Page_Activity_Text_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='AssessmentGrid']/tbody/tr[{0}]</value>
+  <data name="RptStudentIntegrityViolationPageResource__integrityViolatedColumnDetails_XPath_Locator" xml:space="preserve">
+    <value>//table[@class='cssTblIvActivity']/tbody/tr/td[9]/span</value>
   </data>
-  <data name="RptSelectAssessments_Page_AddButton_Class_Locator" xml:space="preserve">
-    <value>btn_s</value>
+  <data name="RptStudentIntegrityViolationPageResource__ReportDetails_XPath_Locator" xml:space="preserve">
+    <value>//table[@class='cssTblIvActivity']/tbody/tr[{0}]/td[{1}]</value>
   </data>
-  <data name="RptSelectAssessments_Page_Frame_Id_Locator" xml:space="preserve">
-    <value>Mainframe</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_ActivityCount_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='AssessmentGrid']/tbody/tr</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_ActivityName" xml:space="preserve">
-    <value>PA-01 Span Practice- Vocabulary: Saludos, despedidas y presentaciones</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_ActivityRadioButton_Id_Locator" xml:space="preserve">
-    <value>AssessmentGrid$_ctrl1</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_ActivitySelect_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='AssessmentGrid']/tbody/tr[{0}]/td[2]/span</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_Activity_InitialCount_Value" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_Activity_Radibutton_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='AssessmentGrid']/tbody/tr[{0}]/td[1]/input</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_Activity_RowNo" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_Add_Link_Locator" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_Checkbox_Xpath_Locator" xml:space="preserve">
-    <value>//table[@id='AssessmentGrid']/tbody/tr[{0}]/td/input[@id='AssessmentGrid$_ctrl1']</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_SelectActivities_Window_Title_Name" xml:space="preserve">
-    <value>Select Activities</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_SelectStudyPlans_Popup_Window_Title_Name" xml:space="preserve">
-    <value>Select Study Plan</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_SelectStudyPlans_Window_Title_Name" xml:space="preserve">
-    <value>Select Study Plans</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Ins_Window_Count" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Reports_Window_Name" xml:space="preserve">
-    <value>Reports</value>
-  </data>
-  <data name="RptSelectAssessments_Page_SelectExam_Window_Name" xml:space="preserve">
-    <value>Select Exam</value>
-  </data>
-  <data name="RptSelectAssessments_Page_Select_Assessment" xml:space="preserve">
-    <value>imgAssessment</value>
-  </data>
-  <data name="RptSelectAssessments_Page_ADD_Assessment" xml:space="preserve">
-    <value>_ctl4</value>
+  <data name="RptStudentIntegrityViolationPageResource_Section_Id_Locator" xml:space="preserve">
+    <value>DrdSection</value>
   </data>
 </root>

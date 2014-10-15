@@ -129,6 +129,12 @@
   <data name="ProgramAdminReportsSubTab_ExamFrequencyAnalysis_Link_Id_locator" xml:space="preserve">
     <value>RPT_EXAMFREQRPT</value>
   </data>
+  <data name="ProgramAdminReportsSubTab_IntegrityViolation_Link_Id_locator" xml:space="preserve">
+    <value>Label17</value>
+  </data>
+  <data name="ProgramAdminReportsSubTab_LearningAidUsage_Link_Id_locator" xml:space="preserve">
+    <value>RPT_Learning_Aid_Efficacy</value>
+  </data>
   <data name="ProgramAdminReportsSubTab_MyReports_ReportCmenuDelete_Id_Locator" xml:space="preserve">
     <value>RPT_DELETE</value>
   </data>

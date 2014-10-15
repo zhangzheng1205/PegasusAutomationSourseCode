@@ -145,11 +145,11 @@
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>VM_Automation</Name>
+      <Name>VM_ReportAutomation</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
-      <SectionName>Automation_Section</SectionName>
+      <SectionName>VM_ReportSection</SectionName>
       <SectionId>CRSKLQX-16002250</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>

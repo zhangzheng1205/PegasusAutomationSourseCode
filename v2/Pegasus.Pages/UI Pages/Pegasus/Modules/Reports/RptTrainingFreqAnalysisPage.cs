@@ -85,7 +85,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Verifying Activity Name in Report Generated.
         /// </summary>
-        /// <returns>Get Activity Name.</returns>
+        /// <returns>Activity Name.</returns>
         public string GetFrequencyAnalysisActivityNameInReport(string chapterName)
         {
             //Verifying Activity Name in Report Generated
@@ -98,18 +98,21 @@ namespace Pegasus.Pages.UI_Pages
                 switch (chapterName)
                 {
                     case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
-                    case "Excel Chapter 1 Skill-Based Training":
-                        this.SelectWindow();
+                        base.SwitchToLastOpenedWindow();                        
+                        getActivityName = base.GetElementTextByXPath(
+                            RptTrainingFreqAnalysisPageResource.
+                            RptTrainingFrequencyPage_Resource_NameOfActivity);
                         break;
-                }
-                //Wait for the element
-                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
-                   RptTrainingFreqAnalysisPage_Resource_ActivityName));
-                //Get Activity Name
-                getActivityName =
-                    base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
+
+                    case "Excel Chapter 1 Skill-Based Training":
+                        base.SwitchToLastOpenedWindow();                        
+                        getActivityName = base.GetElementTextByXPath(
+                            RptTrainingFreqAnalysisPageResource.
                    RptTrainingFreqAnalysisPage_Resource_ActivityName);
-            }
+                      break;
+               }                                     
+              }
+                              
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -124,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Verifying Activity Report Score.
         /// </summary>
         /// <returns>Get Activity Score</returns>
-        public string GetFrequencyAnalysisScoreInReport(string score)
+        public string GetFrequencyAnalysisScoreInReport(string chapterName,string score)
         {
             //Verifying Activity Report Score 
             logger.LogMethodEntry("RptTrainingFreqAnalysisPage",
@@ -133,20 +136,26 @@ namespace Pegasus.Pages.UI_Pages
             string getActivityScore = string.Empty;
             try
             {
-                switch (score)
+                switch (chapterName)
                 {
                     case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                        base.SwitchToLastOpenedWindow(); 
+                        getActivityScore =
+                            base.GetElementTextByXPath(
+                            RptTrainingFreqAnalysisPageResource.
+                            RptTrainingFrequencyPage_Resource_ActivityScore);
+                        break;
+
                     case "Excel Chapter 1 Skill-Based Training":
-                        this.SelectWindow();
+                        base.SwitchToLastOpenedWindow(); 
+                        getActivityScore =
+                             base.GetElementTextByXPath(
+                             RptTrainingFreqAnalysisPageResource.
+                             RptTrainingFreqAnalysisPage_Resource_Score);
                         break;
                 }
-                base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
-                   RptTrainingFreqAnalysisPage_Resource_Score));
-                //Get Activity Score
-                getActivityScore =
-                    base.GetElementTextByXPath(RptTrainingFreqAnalysisPageResource.
-                   RptTrainingFreqAnalysisPage_Resource_Score);
-            }
+                      
+            }               
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);

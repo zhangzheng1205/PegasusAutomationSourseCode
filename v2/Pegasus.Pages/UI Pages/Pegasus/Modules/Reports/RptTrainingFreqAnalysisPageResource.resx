@@ -162,4 +162,10 @@
   <data name="RptTrainingFreqAnalysisPage_Resource_Window_Title" xml:space="preserve">
     <value>Training Frequency Analysis</value>
   </data>
+  <data name="RptTrainingFrequencyPage_Resource_ActivityScore" xml:space="preserve">
+    <value>//div[@id='_ctl4_AveragePlaceHolder']/table/tbody/tr/td[2]/span</value>
+  </data>
+  <data name="RptTrainingFrequencyPage_Resource_NameOfActivity" xml:space="preserve">
+    <value>//div[@id='_ctl4_AssessmentplaceHolder']/div/table/tbody/tr/td/span</value>
+  </data>
 </root>

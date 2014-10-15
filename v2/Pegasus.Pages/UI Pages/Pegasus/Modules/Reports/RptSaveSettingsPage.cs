@@ -275,8 +275,10 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(By.Id(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_SaveandRun_Button_Id_locator));
             //Click On 'Save and Run' Button
-            base.ClickButtonById(RptSaveSettingsPageResource.
+            IWebElement buttonCLick = base.GetWebElementPropertiesById(
+                RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_SaveandRun_Button_Id_locator);
+            base.ClickByJavaScriptExecutor(buttonCLick);
             Thread.Sleep(Convert.ToInt32(RptSaveSettingsPageResource.
                 RptSaveSettingsPage_Resource_Wait_Time_Value));
             logger.LogMethodExit("RptSaveSettingsPage", "ClickOnSaveAndRun",
