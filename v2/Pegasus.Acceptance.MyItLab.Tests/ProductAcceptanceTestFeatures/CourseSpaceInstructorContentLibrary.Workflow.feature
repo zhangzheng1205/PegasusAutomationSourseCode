@@ -94,8 +94,6 @@ Then I should see the successfull message "Items deleted successfully."
 #Pre condition : Atleat one folder should be created in the CL with the given name
 #Dependency : No dependency test can run with existing data
 Scenario: To add folder from Content Library to Course Content
-Given I am on the "Global Home" page
-When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsInstructor"
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select the checkbox of "Folder" activity
