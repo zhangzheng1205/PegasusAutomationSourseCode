@@ -3760,7 +3760,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="getActivityColumnCount">This is Column count.</param>
         private void ClickTheCmenuIconInNovaNetGradebook(int getActivityColumnCount)
-        {
+         {
             // Click The Cmenu Icon In Gradebook
             logger.LogMethodEntry("GBInstructorUXPage", "ClickTheCmenuIconInNovaNetGradebook",
                          base.IsTakeScreenShotDuringEntryExit);
@@ -3774,7 +3774,6 @@ namespace Pegasus.Pages.UI_Pages
             base.FocusOnElementByXPath(String.Format
                 (GBInstructorUXPageResource.
                 GBInstructorUXPage_Gradebook_CmenuImage_Xpath_Locator, getActivityColumnCount));
-            base.PerformMouseHoverAction(getCmenuIconProperty);
             base.ClickByJavaScriptExecutor(getCmenuIconProperty);
             logger.LogMethodExit("GBInstructorUXPage", "ClickTheCmenuIconInNovaNetGradebook",
                           base.IsTakeScreenShotDuringEntryExit);

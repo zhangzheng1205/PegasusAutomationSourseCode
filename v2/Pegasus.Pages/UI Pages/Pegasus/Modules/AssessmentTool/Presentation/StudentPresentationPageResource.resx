@@ -807,4 +807,7 @@
   <data name="StudentPrsentation_Page_Title_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='ContentDiv_TP_3']/ul/li</value>
   </data>
+  <data name="StudentPresentation_Page_ReturnToCourse_Button_Xpath_Locator" xml:space="preserve">
+    <value>//a/span/span[contains(text(),'Return to Course')]</value>
+  </data>
 </root>
