@@ -60,6 +60,14 @@ namespace Pegasus.Automation.DataTransferObjects
         }
 
         /// <summary>
+        /// This method is used to update the section.
+        /// </summary>
+        public void UpdateSectionInMemory()
+        {
+            InMemoryDatabaseSingleton.DatabaseInstance.Update(this);
+        }
+
+        /// <summary>
         /// This method returns all created sections of the given type.
         /// </summary>
         /// <param name="sectionType">This is the type of the section.</param>

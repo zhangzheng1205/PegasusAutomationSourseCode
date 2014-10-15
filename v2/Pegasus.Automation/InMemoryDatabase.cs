@@ -75,6 +75,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             if (_database.ContainsKey(typeof(T)) == false) throw new KeyNotFoundException("The object type has not been insinaciated");
             if (!_database[typeof(T)].Keys.Contains(value.GuidId)) throw new KeyNotFoundException("The Object doesnt exist in data store");
+            // set entity creation date 
+            value.CreationDate = DateTime.Now;
             _database[typeof(T)][value.GuidId] = value;
         }
 
