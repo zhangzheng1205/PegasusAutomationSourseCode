@@ -170,7 +170,7 @@ namespace Pegasus.Pages.UI_Pages
                 case Activity.ActivityTypeEnum.Test:
                     //Update Customized Activity Name
                     activity = Activity.Get(CommonResource.CommonResource.
-                        DigitalPath_Activity_Test_UC1);
+                        DigitalPath_Activity_TestData_UC1);
                     activity.Name = customizeActivityName.ToString();
                     activity.UpdateActivityInMemory(activity);
                     break;

@@ -289,7 +289,7 @@ namespace Pegasus.Pages.UI_Pages
                 case Activity.ActivityTypeEnum.Test:
                     newActivity = new Activity
                     {
-                        ActivityId = CommonResource.CommonResource.DigitalPath_Activity_Test_UC1,
+                        ActivityId = CommonResource.CommonResource.DigitalPath_Activity_TestData_UC1,
                         Name = activityName,
                         ActivityType = Activity.ActivityTypeEnum.Test,
                         IsCreated = true,

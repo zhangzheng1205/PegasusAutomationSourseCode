@@ -79,15 +79,6 @@ namespace Pegasus.Pages.CommonResource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DigitalPath_Activity_Test_UC1.
-        /// </summary>
-        internal static string DigitalPath_Activity_Test_UC1 {
-            get {
-                return ResourceManager.GetString("DigitalPath_Activity_Test_UC1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to DigitalPath_Activity_Test_UC2.
         /// </summary>
         internal static string DigitalPath_Activity_Test_UC2 {
@@ -102,6 +93,15 @@ namespace Pegasus.Pages.CommonResource {
         internal static string DigitalPath_Activity_Test_UC3 {
             get {
                 return ResourceManager.GetString("DigitalPath_Activity_Test_UC3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DigitalPath_Activity_Test_UC1.
+        /// </summary>
+        internal static string DigitalPath_Activity_TestData_UC1 {
+            get {
+                return ResourceManager.GetString("DigitalPath_Activity_TestData_UC1", resourceCulture);
             }
         }
         

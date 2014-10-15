@@ -155,7 +155,7 @@ namespace Pegasus.Pages.UI_Pages
                 case Activity.ActivityTypeEnum.Test:
                     //Get activity from In-Memory
                     Activity activity = Activity.Get(CommonResource.CommonResource.
-                        DigitalPath_Activity_Test_UC1);
+                        DigitalPath_Activity_TestData_UC1);
                     //Search activity name 
                     new ContentLibraryPage().SearchActivity(activity.Name);
                     break;
@@ -736,7 +736,7 @@ namespace Pegasus.Pages.UI_Pages
                     case AddAssessmentPage.AssetTypeEnum.Licensed:
                         //Get the Activity from memory           
                         Activity newActivityTest = Activity.Get(CommonResource.
-                           CommonResource.DigitalPath_Activity_Test_UC1);           
+                           CommonResource.DigitalPath_Activity_TestData_UC1);           
                         //Select the Licensed Activity Asset        
                         this.SelectLicensedActivityTest(newActivityTest.Name);
                         break;
@@ -1349,7 +1349,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Get Activity Name From Memory
                 Activity activity = Activity.Get(CommonResource.CommonResource.
-                            DigitalPath_Activity_Test_UC1);
+                            DigitalPath_Activity_TestData_UC1);
                 //Get Updated Activity Name
                 getUpdatedActivityName = activity.Name; ;
             }

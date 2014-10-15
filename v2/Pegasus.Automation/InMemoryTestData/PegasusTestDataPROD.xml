@@ -588,7 +588,7 @@
     <Activity>
       <Name>9d5636b6-c29b-46d6-805f-616af150bf67</Name>
       <ActivityType>Test</ActivityType>
-      <ActivityID>DigitalPath_Activity_Test_UC1</ActivityID>
+      <ActivityId>DigitalPath_Activity_Test_UC1</ActivityId>
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
