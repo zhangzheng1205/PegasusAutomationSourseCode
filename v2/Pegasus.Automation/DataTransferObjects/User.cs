@@ -175,7 +175,7 @@ namespace Pearson.Pegasus.TestAutomation.
         }
 
         /// <summary>
-        /// This method is used to update the activity.
+        /// This method is used to update the user.
         /// </summary>
         public void UpdateUserInMemory(User user)
         {
