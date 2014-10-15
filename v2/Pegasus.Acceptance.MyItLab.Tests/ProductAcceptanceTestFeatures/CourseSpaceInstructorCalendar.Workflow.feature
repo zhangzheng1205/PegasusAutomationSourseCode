@@ -111,6 +111,8 @@ Then I should be on the "Calendar" page
 When I select "PowerPoint Chapter 1 Skill-Based Training" in "Calendar" by "CsSmsInstructor"
 And I select the check box of any 2 activities in "PowerPoint Chapter 1: Simulation Activities"
 Then I should see Assign/Unassign link in active state on the content frame header
+When I click on assign/Unassign link displayed in content frame header
+Then I should see the check mark in assigned status column next to the assets
 
 
 #PEGASUS-21971
@@ -122,6 +124,8 @@ Then I should be on the "Calendar" page
 When I select "Access Chapter 1 Skill-Based Training" in "Calendar" by "CsSmsInstructor"
 And I select the check box of any 1 activities in "Access Chapter 1: Simulation Activities"
 Then I should see Assign/Unassign link in active state on the content frame header
+When I click on assign/Unassign link displayed in content frame header
+Then I should see the check mark in assigned status column next to the assets
 
 
 
