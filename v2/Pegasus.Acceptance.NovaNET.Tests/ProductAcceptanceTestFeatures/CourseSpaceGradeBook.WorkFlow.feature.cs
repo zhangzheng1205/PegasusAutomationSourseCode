@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestFeatures
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceGradeBook", "               As a CS Teacher \n\t\t\tI want to manage all the coursespace gradebook" +
-                    " related usecases \n\t\t\tso that I would validate all the gradebook scenarios are w" +
-                    "orking fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceGradeBook", "               As a CS Teacher \r\n\t\t\tI want to manage all the coursespace gradeboo" +
+                    "k related usecases \r\n\t\t\tso that I would validate all the gradebook scenarios are" +
+                    " working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -102,7 +102,7 @@ testRunner.When("I navigate to \"Gradebook\" tab and selected \"Grades\" subtab"
 #line 19
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 20
-testRunner.When("I click on cmenu \"EditGrades\" of asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on cmenu \"EditGrades\" of asset \"NNTest\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 21
 testRunner.And("I edit the score in Edit Grade Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 22
@@ -127,14 +127,14 @@ testRunner.When("I navigate to \"Gradebook\" tab and selected \"Grades\" subtab"
 #line 29
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 30
-testRunner.When("I click on cmenu \"ApplyGradeSchema\" of asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on cmenu \"ApplyGradeSchema\" of asset \"NNTest\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 31
 testRunner.And("I \'Apply\' the grade schema for the submitted activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
 testRunner.Then("I should see the successfull message \"Schema applied successfully.\" in \"Gradebook" +
                     "\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 33
-testRunner.And("I should see the updated apply grade schema value \"B\" for Activity \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the updated apply grade schema value \"B\" for Activity \"NNTest\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -154,7 +154,7 @@ testRunner.When("I navigate to \"Gradebook\" tab and selected \"Grades\" subtab"
 #line 40
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 41
-testRunner.When("I click on cmenu \"ViewAllSubmissions\" of asset \"Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on cmenu \"ViewAllSubmissions\" of asset \"NNTest\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 42
 testRunner.And("I edit the grade in view submission window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 43
@@ -202,8 +202,8 @@ testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((Tec
 #line 60
 testRunner.When("I select \'Show Status for All Items\' filter option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 61
-testRunner.Then("I should see the \"Test\" activity in Gradebook for all the enrollled \"NovaNETCsStu" +
-                    "dent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"NNTest\" activity in Gradebook for all the enrollled \"NovaNETCsS" +
+                    "tudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -227,7 +227,7 @@ testRunner.When("I click on \'Assignment Types\' link in gradebook", ((string)(n
 #line 70
 testRunner.And("I select \"Test\" Assignment Type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 71
-testRunner.Then("I should see the \"Test\" activity in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"NNTest\" activity in Gradebook", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
