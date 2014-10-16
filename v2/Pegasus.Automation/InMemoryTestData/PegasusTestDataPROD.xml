@@ -515,9 +515,9 @@
       <Name>qannautomationteacher1</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>NovaNET</FirstName>
+      <FirstName>QA</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>CsStudent</LastName>
+      <LastName>Automation</LastName>
       <UserType>NovaNETCsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
