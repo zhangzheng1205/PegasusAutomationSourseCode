@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.BVT.Production.MyItLab" storage="d:\pegasus_automation\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.bvt.production.myitlab.orderedtest" id="eb5730a5-6116-4a25-b054-80c40ee09ba1" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="bf774aef-0988-4b12-b304-bf6de5548825" name="orderedtest.prod.buildverificationtest.myitlabfull" storage="orderedtest.prod.buildverificationtest.myitlabfull.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="9205b868-f247-af39-e644-5c6b7b8941b6" name="UpdateTheSectionNameAndSectionId" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="750b9176-83f1-4119-992b-f73c31bfdcc5" name="orderedtest.dependent.bvt.myitlabfull" storage="orderedtest.dependent.bvt.myitlabfull.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
