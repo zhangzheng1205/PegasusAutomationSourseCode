@@ -649,6 +649,20 @@ testRunner.When("I enter in the \"MyItLabProgramCourse\" course from the Global 
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute(": Update the section name and section id")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserScenarios")]
+        public virtual void UpdateTheSectionNameAndSectionId()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo(": Update the section name and section id", ((string[])(null)));
+#line 206
+this.ScenarioSetup(scenarioInfo);
+#line 207
+testRunner.When("I update section name and course id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

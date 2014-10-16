@@ -175,9 +175,9 @@ namespace Pegasus.Automation.DataTransferObjects
         /// <summary>
         /// This method is used to update the course.
         /// </summary>
-        public void UpdateCourseInMemory()
+        public void UpdateCourseInMemory(Course course)
         {
-            InMemoryDatabaseSingleton.DatabaseInstance.Update(this);
+            InMemoryDatabaseSingleton.DatabaseInstance.Update(course);
         }
 
         /// <summary>

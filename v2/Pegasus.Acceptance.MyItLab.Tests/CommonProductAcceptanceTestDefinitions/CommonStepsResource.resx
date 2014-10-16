@@ -180,4 +180,40 @@
   <data name="CommonSteps_WaitTimeOut_Value" xml:space="preserve">
     <value>20</value>
   </data>
+  <data name="CommonStep_" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CommonSteps_PPE_CourseId_Value" xml:space="preserve">
+    <value>NotReady</value>
+  </data>
+  <data name="CommonSteps_PPE_SectionName_Value" xml:space="preserve">
+    <value>NotReady</value>
+  </data>
+  <data name="CommonSteps_PROD_CourseId_Value" xml:space="preserve">
+    <value>CRSKLJV-10015919</value>
+  </data>
+  <data name="CommonSteps_PROD_SectionName_Value" xml:space="preserve">
+    <value>Automation - MyITLab for Office 2013 1</value>
+  </data>
+  <data name="CommonSteps_ST_CourseId_Value" xml:space="preserve">
+    <value>CRSKL92-12000196</value>
+  </data>
+  <data name="CommonSteps_ST_SectionName_Value" xml:space="preserve">
+    <value>ST_ReportSection</value>
+  </data>
+  <data name="CommonSteps_VCD_CourseId_Value" xml:space="preserve">
+    <value>NotReady</value>
+  </data>
+  <data name="CommonSteps_VCD_SectionName_Value" xml:space="preserve">
+    <value>Notready</value>
+  </data>
+  <data name="CommonSteps_VM_CourseId_Value" xml:space="preserve">
+    <value>CRSKLI5-12001621</value>
+  </data>
+  <data name="CommonSteps_VM_SectionName_Value" xml:space="preserve">
+    <value>VM_ReportSection</value>
+  </data>
+  <data name="TestEnvironment_Key" xml:space="preserve">
+    <value>TestEnvironment</value>
+  </data>
 </root>
