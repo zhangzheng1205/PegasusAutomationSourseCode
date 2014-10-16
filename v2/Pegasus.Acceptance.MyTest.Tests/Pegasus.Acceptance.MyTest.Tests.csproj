@@ -214,13 +214,13 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Extended.MyTest.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MyTestFull.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MyTestFull2.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProductAcceptanceTest.MyTest.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BTS.MyTest.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MyTestFull.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.GroupingUsecaseTest.MyTest.orderedtest">

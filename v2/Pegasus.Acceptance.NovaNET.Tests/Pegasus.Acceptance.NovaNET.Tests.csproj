@@ -209,7 +209,7 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommomUserLoginLogout.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BTS.NovaNET.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.NovaNETFull.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.NovaNET.orderedtest">
@@ -253,7 +253,7 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProductAcceptanceTest.NovaNET.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.NovaNETFull.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.NovaNETFull2.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
