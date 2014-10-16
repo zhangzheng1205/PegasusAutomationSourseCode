@@ -483,14 +483,17 @@ namespace Pegasus.Pages.UI_Pages
                 if (base.IsElementPresent(By.Id(TodaysViewUXPageResource.
                                                     TodaysViewUXPageResource_MoreLink_Id_Locator),
                                           Convert.ToInt32(TodaysViewUXPageResource.
-                                                              TodaysViewUXPageResource_Custom_WaitTime))
-                    && !base.IsElementPresent(By.PartialLinkText(tabName),
+                                                              TodaysViewUXPageResource_Custom_WaitTime)))
+                {
+
+                    if (!base.IsElementPresent(By.PartialLinkText(tabName),
                                               Convert.ToInt32(TodaysViewUXPageResource.
                                                                   TodaysViewUXPageResource_Custom_WaitTime)))
-                {
-                    //Click On More Link if More Link Is Present
-                    base.ClickButtonById(TodaysViewUXPageResource.
-                                             TodaysViewUXPageResource_MoreLink_Id_Locator);
+                    {
+                        //Click On More Link if More Link Is Present
+                        base.ClickButtonById(TodaysViewUXPageResource.
+                                                 TodaysViewUXPageResource_MoreLink_Id_Locator);
+                    }
                 }
             }
             catch (Exception e)
