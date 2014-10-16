@@ -192,6 +192,10 @@ testRunner.And("I should see assigned icon for \"Excel Chapter 1 Project 1A Skil
 #line 58
 testRunner.And("I should see scheduled icon for \"Excel Chapter 1 Project 1A Skill-Based Exam (Sce" +
                     "nario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 59
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -202,22 +206,26 @@ testRunner.And("I should see scheduled icon for \"Excel Chapter 1 Project 1A Ski
         public virtual void InstructorValidatingTheGradeOfStudentInViewSubmissionPageByInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor validating the grade of student in view submission page By Instructor", ((string[])(null)));
-#line 63
+#line 65
 this.ScenarioSetup(scenarioInfo);
-#line 64
+#line 66
 testRunner.When("I navigate to \"Course Materials\" tab and selected \"Manage Course Materials\" subta" +
                     "b", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 65
+#line 67
 testRunner.When("I select \"Word Chapter 1 Grader Project [Assessment 3]\" in \"Course Materials\" by " +
                     "\"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
+#line 68
 testRunner.And("I click on \"ViewSubmissions\" option in c menu of \"Word Chapter 1 Grader Project [" +
                     "Assessment 3]\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 67
-testRunner.Then("I should see the \"100\" score in view submission page for a \"ZeroScore\" with \"CsSm" +
-                    "sStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 68
+#line 69
+testRunner.Then("I should see the \"0\" score in view submission page for a \"ZeroScore\" with \"CsSmsS" +
+                    "tudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 70
 testRunner.And("I close the \"View Submission\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 71
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 72
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

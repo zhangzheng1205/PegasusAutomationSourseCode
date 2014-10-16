@@ -56,6 +56,8 @@ When I assign and schedule the asset and save
 Then I should see the successfull message "Properties updated successfully."
 And I should see assigned icon for "Excel Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" 
 And I should see scheduled icon for "Excel Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" 
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
 
 #Purpose: : Instructor Validating student grade in view submission
 #TestCase Id: peg-22002
@@ -64,5 +66,7 @@ Scenario: Instructor validating the grade of student in view submission page By 
 When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
 When I select "Word Chapter 1 Grader Project [Assessment 3]" in "Course Materials" by "CsSmsInstructor"
 And I click on "ViewSubmissions" option in c menu of "Word Chapter 1 Grader Project [Assessment 3]" asset
-Then I should see the "100" score in view submission page for a "ZeroScore" with "CsSmsStudent"
+Then I should see the "0" score in view submission page for a "ZeroScore" with "CsSmsStudent"
 And I close the "View Submission" window
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
