@@ -336,13 +336,13 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CommonUserLoginLogOut.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MGM.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MGM2.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProductAcceptanceTest2.MGM.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BTS.MGM.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTestFull.MGM.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Extended.MGM.orderedtest">
@@ -418,7 +418,7 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProductAcceptanceTest.MGM.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTestFull.MGM.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTestFull.MGM2.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-26905.Acceptance.feature">
