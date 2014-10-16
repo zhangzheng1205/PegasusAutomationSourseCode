@@ -57,7 +57,8 @@ namespace Pegasus.Automation.DataTransferObjects
             CalculatedColumn=26,
             QuestionFolder = 27,
             ObjectiveBasedQuestionOnly=28,
-            SkillBased=29
+            SkillBased=29,
+            NNTest=30
         }
 
         /// <summary>
