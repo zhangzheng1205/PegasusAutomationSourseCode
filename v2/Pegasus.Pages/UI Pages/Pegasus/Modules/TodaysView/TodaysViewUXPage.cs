@@ -3702,6 +3702,7 @@ namespace Pegasus.Pages.UI_Pages
                        (String.Format(TodaysViewUXPageResource.TodayViewUXPageResource_CoursePerformance_Activity_TimeOnTask_Xpath_Locator, i));
                                 break;
                         }
+                        break;
 
                     }
                 }
