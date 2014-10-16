@@ -153,6 +153,8 @@ When I click On cancel button on MyTest download popup
 #Purpose : Options c-menu for Test Folder 
 #TestCase Id:HED_MYTest_PWF_095
 Scenario: Options Cmenu for Test Folder By SMS Instructor
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
 When I navigate to "MyTest" tab
 Then I should be on the "MyTest" page
 When I click on c-menu option of "MyTest" activity
