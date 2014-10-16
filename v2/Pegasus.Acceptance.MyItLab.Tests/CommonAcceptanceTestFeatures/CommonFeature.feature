@@ -202,3 +202,8 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyItLabProgramCourse" course from the Global Home page as "CsSmsInstructor"
 
+#Purpose: Update the section name value in run time at in memory
+Scenario: : Update the section name and section id
+When I update section name and course id
+
+

@@ -232,11 +232,12 @@ namespace Pegasus.Pages.CommonPageObjects
 
                                 }
                                 break;
-                            case "Today's View":
+                            case "TodaysView":
                                 {
                                     switch (activityName)
                                     {
                                         case "Word Chapter 1 Skill-Based Training":
+                                        case "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
                                             this.NavigateToWordChapter1SimulationActivitiesFolder
                                                 (CommonPageResource.CommonPage_CoursePerformance_Table_Id_Locator,
                                                 userTypeEnum, activityUnderTabName);
@@ -627,6 +628,9 @@ namespace Pegasus.Pages.CommonPageObjects
                             break;
                         case "Calendar":
                             this.SelectWindowNameForFoldernavigation(activityUnderTabName);
+                            break;
+                        case "TodaysView":
+                            this.SelectWindowNameForFoldernavigation("Today's View");
                             break;
                     }
                     break;

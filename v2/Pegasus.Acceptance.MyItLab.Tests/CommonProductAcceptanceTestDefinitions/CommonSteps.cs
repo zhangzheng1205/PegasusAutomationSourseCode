@@ -9,6 +9,8 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using System.Configuration;
+
 
 namespace Pegasus.Acceptance.MyITLab.Tests.
     CommonProductAcceptanceTestDefinitions
@@ -749,5 +751,60 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         {
             new CommonSteps().WebDriverCleanUp();
         }
+
+        /// <summary>
+        /// Updates the section name and id at in-memory during runtime.
+        /// </summary>
+        [When(@"I update section name and course id")]
+        public void UpdateSectionNameAndCourseId()
+        {
+            // Updates the section name and id at in-memory during runtime
+            Logger.LogMethodEntry("CommonSteps", "UpdateSectionNameAndCourseId",
+                 base.IsTakeScreenShotDuringEntryExit);
+            switch (ConfigurationManager.AppSettings[CommonStepsResource.TestEnvironment_Key])
+            {
+                //Updates the section name and id at in-memory during runtime when environment is ST
+                case "ST":
+                    Course courseST = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
+                    courseST.SectionName = CommonStepsResource.CommonSteps_ST_SectionName_Value;
+                    courseST.SectionId = CommonStepsResource.CommonSteps_ST_CourseId_Value;
+                    courseST.UpdateCourseInMemory(courseST);
+                    break;
+                //Updates the section name and id at in-memory during runtime when environment is VM
+                case "VM":
+                    Course courseVM = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
+                    courseVM.SectionName = CommonStepsResource.CommonSteps_VM_SectionName_Value;
+                    courseVM.SectionId = CommonStepsResource.CommonSteps_VM_CourseId_Value;
+                    courseVM.UpdateCourseInMemory(courseVM);
+                    break;
+                //Updates the section name and id at in-memory during runtime when environment is PPE
+                case "PPE":
+                    Course coursePPE = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
+                     coursePPE.SectionName = CommonStepsResource.CommonSteps_PPE_SectionName_Value;
+                     coursePPE.SectionId = CommonStepsResource.CommonSteps_PPE_CourseId_Value;
+                     coursePPE.UpdateCourseInMemory(coursePPE);
+                     break;
+                //Updates the section name and id at in-memory during runtime when environment is PROD
+                case "PROD":
+                    Course coursePROD = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
+                     coursePROD.SectionName = CommonStepsResource.CommonSteps_PROD_SectionName_Value;
+                     coursePROD.SectionId = CommonStepsResource.CommonSteps_PROD_CourseId_Value;
+                     coursePROD.UpdateCourseInMemory(coursePROD);
+                     break;
+                //Updates the section name and id at in-memory during runtime when environment is VCD
+                case "VCD":
+                    Course courseVCD = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
+                     courseVCD.SectionName = CommonStepsResource.CommonSteps_VCD_SectionName_Value;
+                     courseVCD.SectionId = CommonStepsResource.CommonSteps_VCD_CourseId_Value;
+                     courseVCD.UpdateCourseInMemory(courseVCD);
+                    
+                    break;
+                default: throw new ArgumentException("The suggested application environment was not found");
+                   
+            }
+            Logger.LogMethodExit("CommonSteps", "UpdateSectionNameAndCourseId",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
