@@ -309,6 +309,12 @@
   <data name="RptMainUX_Page_MyReports_ActualReport_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='Main']/table/tbody/tr[{0}]/td[2]/span</value>
   </data>
+   <data name="RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator2" xml:space="preserve">
+    <value>.//*[@id='Main']/table/tbody/tr[{0}]/td[2]/img</value>
+  </data>
+  <data name="RptMainUX_Page_MyReports_ActualReport_Xpath_Locator2" xml:space="preserve">
+    <value>.//*[@id='Main']/table/tbody/tr[{0}]/td[1]/span[1]</value>
+  </data>  
   <data name="RptMainUX_Page_MyReports_AssessmentCount_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='AssessmentGrid']/tbody/tr</value>
   </data>

@@ -266,7 +266,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         /// <param name="reportActionOption">Action to be performed on the report.</param>
         /// <param name="reportTypeEnum">Report name enum.</param>
         /// <param name="userTypeEnum">This is the user type enum.</param>
-        [When(@"I select ""(.*)"" for ""(.*)"" report in '(.*)' grid by ""(.*)""")]
+        [When(@"I select ""(.*)"" for ""(.*)"" report in 'My Reports' grid by ""(.*)""")]
         public void WhenISelectForReportInGridBy(string reportActionOption,
             Report.ReportTypeEnum reportTypeEnum,
            User.UserTypeEnum userTypeEnum)

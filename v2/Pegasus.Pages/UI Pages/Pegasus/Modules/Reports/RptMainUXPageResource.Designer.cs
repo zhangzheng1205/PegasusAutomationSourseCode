@@ -521,11 +521,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;Main&apos;]/table/tbody/tr[{0}]/td[1]/span[1].
+        /// </summary>
+        internal static string RptMainUX_Page_MyReports_ActualReport_Xpath_Locator2 {
+            get {
+                return ResourceManager.GetString("RptMainUX_Page_MyReports_ActualReport_Xpath_Locator2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;Main&apos;]/table/tbody/tr[{0}]/td[3]/img.
         /// </summary>
         internal static string RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator {
             get {
                 return ResourceManager.GetString("RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;Main&apos;]/table/tbody/tr[{0}]/td[2]/img.
+        /// </summary>
+        internal static string RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator2 {
+            get {
+                return ResourceManager.GetString("RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator2", resourceCulture);
             }
         }
         

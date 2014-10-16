@@ -6,7 +6,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 
-namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
+namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
     ProductAcceptanceTestDefinitions
 {
     /// <summary>
