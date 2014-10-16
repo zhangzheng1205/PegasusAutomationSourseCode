@@ -569,7 +569,7 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.FeatureAcceptanceTest.HedCore.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BTS.HedCore.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTestFull.HedCore.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.5.15.2.BVTTestPlan.HSS.orderedtest">
@@ -781,7 +781,7 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProductAcceptanceTest.HedCore.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTestFull.HedCore.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTestFull.HedCore2.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-21120.Acceptance.feature">
