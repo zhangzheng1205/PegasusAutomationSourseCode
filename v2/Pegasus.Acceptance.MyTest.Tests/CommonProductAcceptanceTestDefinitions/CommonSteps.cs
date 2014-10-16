@@ -280,6 +280,23 @@ namespace Pegasus.Acceptance.MyTest.Tests.CommonProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Navigate To Tab.
+        /// </summary>
+        /// <param name="tabName">This is Tab Name.</param>
+        [When(@"I navigate to ""(.*)"" tab")]
+
+        public void NavigateToTab(string tabName)
+        {
+            //Navigate to Tab
+            Logger.LogMethodEntry("CommonSteps", "NavigateToTab",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Select Tab
+            new TodaysViewUxPage().SelectTab(tabName);
+            Logger.LogMethodExit("CommonSteps", "NavigateToTab",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
          /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

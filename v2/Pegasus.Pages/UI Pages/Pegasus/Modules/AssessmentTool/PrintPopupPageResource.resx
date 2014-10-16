@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="PrintPopup_Page_Cancelbutton_Id_Locator" xml:space="preserve">
+    <value>ibtnCancel</value>
+  </data>
   <data name="PrintPopup_Page_CreateNewTest_Table_Id_Locator" xml:space="preserve">
     <value>grdCreateNewTest</value>
   </data>

@@ -48,6 +48,13 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool
                 getVersionNumberOfRows = base.GetElementCountByXPath(
                     PrintPopupPageResource.
                     PrintPopup_Page_CreateNewTest_Version_Row_XPath_Locator);
+                //Wait for the cancel button
+                base.WaitForElement(By.Id(PrintPopupPageResource.
+                    PrintPopup_Page_Cancelbutton_Id_Locator));
+                IWebElement getcancelbutton = base.GetWebElementPropertiesById
+                    (PrintPopupPageResource.
+                    PrintPopup_Page_Cancelbutton_Id_Locator);
+                base.ClickByJavaScriptExecutor(getcancelbutton);
             }
             catch (Exception e)
             {

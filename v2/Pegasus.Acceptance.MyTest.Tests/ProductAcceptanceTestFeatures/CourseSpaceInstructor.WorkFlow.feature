@@ -65,7 +65,7 @@ Then I should see "MyTestInstructorCourse" on the Global Home page in Active Sta
 #Purpose: Create new Test in MyTest Tab By SMS Instructor
 #TestCase Id : HED_MYTest_PWF_001 
 Scenario: Create New Test By SMS Instructor
-When I navigate to the "MyTest" tab
+When I navigate to "MyTest" tab
 Then I should be on the "MyTest" page
 When I click on the "Create New Test" link in Manage Your Tests and created Test using "TrueFalse" question
 Then I should see the successfull message "Test saved successfully." in MyTest tab
@@ -74,6 +74,8 @@ Then I should see the successfull message "Test saved successfully." in MyTest t
 #Purpose: Display of View All Test Button inside a Test
 #TestCase Id: HED_MYTest_PWF_078
 Scenario: Display of View All Test Button inside a Test By SMS Instructor
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
 When I select "Open" c-menu option from "MyTest" activity
 Then I should see the "View all tests" button
 
@@ -81,6 +83,8 @@ Then I should see the "View all tests" button
 #Purpose: Verify the Funtionality of View All Test button inside a Test
 #TestCase Id: HED_MYTest_PWF_079
 Scenario: Verify the Funtionality of View All Test button inside a Test
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
 When I select "Open" c-menu option from "MyTest" activity
 Then I should see the "View all tests" button
 When I click on 'View all tests' button inside test
@@ -90,6 +94,8 @@ Then I should navigate back to "Manage Your Tests" Frame
 #Purpose : Display of Download option in Test Folder
 #TestCase Id: HED_MYTest_PWF_082
 Scenario: Display of Download option in Test Folder By SMS Instructor
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
 When I select "Open" c-menu option from "MyTest" activity
 Then  I should see the "Download" button
 
@@ -145,6 +151,8 @@ When I click On cancel button on MyTest download popup
 #Purpose : Options c-menu for Test Folder 
 #TestCase Id:HED_MYTest_PWF_095
 Scenario: Options Cmenu for Test Folder By SMS Instructor
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
 When I click on c-menu option of "MyTest" activity
 Then I should able to see Display of cmenu options for test created 
 | ExpectedResult                    | ActualResult                      |
@@ -173,6 +181,10 @@ When I click on 'OK' button in "Pegasus" popup
 #Purpose : Displaying Number of Test Versions
 #TestCase Id:HED_MYTest_PWF_027
 Scenario: Display of Number of Test Versions By SMS Instructor
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
 When I select "Download as Word (.doc)" c-menu option from the Test drop down
 And  I enter "3" in the Create Multiple Versions text box and click on the ok button in Print pop up
 Then I should see "3" versions entered in the Print pop up should be displayed in the Multiple version pop up
@@ -181,16 +193,19 @@ Then I should see "3" versions entered in the Print pop up should be displayed i
 #Purpose: Displaying Number of Test Versions when single version is selected
 #TestCase Id:HED_MYTest_PWF_032
 Scenario: Functionality of Number of Test Versions By SMS Instructor
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
 When I select "Download as Word (.doc)" c-menu option from the Test drop down
 And  I enter "1" in the Create Multiple Versions text box and click on the ok button in Print pop up
 Then I should see "1" versions entered in the Print pop up should be displayed in the Multiple version pop up
-And I should see Select the links you want to download: should be displayed with "MyTest" name 
 
 #MyTestInstructorCourse Scenario
 #Purpose: Deleting the Test in Manage your test Frame
 #New activity created to execute delete functionality to preserve Test data
 #TestCase Id : HED_MYTest_PWF_016
 Scenario: Deleting the Test in Manage your test Frame By SMS Instructor
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
 When I click on the "Create New Test" link in Manage Your Tests and created Test using "TrueFalse" question
 Then I should see the successfull message "Test saved successfully." in MyTest tab
 When I select "Delete" c-menu option from the Test drop down
@@ -201,12 +216,18 @@ Then I should see the successfull message "Test deleted successfully."
 #Purpose: Display of Test options in Manage your Test frame action row
 #TestCase Id :HED_MYTest_PWF_050
 Scenario: Display of Test options in Manage your Test frame action row By SMS Instructor
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
 Then I should see the Display of Test options headers in manage your tests frame
 
 #MyTestInstructorCourse Scenario
 #Purpose: Creating New Test with Essay Question.
 #TestCase Id : HED_MYTest_PWF_003
 Scenario: Creating New Test with Essay Question By SMS Instructor
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I navigate to "MyTest" tab
+Then I should be on the "MyTest" page
 When I click on the "Create New Test" link in Manage Your Tests and created Test using "Essay" question
 Then I should see the successfull message "Test saved successfully." in MyTest tab
 
