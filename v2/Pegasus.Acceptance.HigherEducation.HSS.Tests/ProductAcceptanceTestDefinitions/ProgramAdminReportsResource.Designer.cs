@@ -157,5 +157,15 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
                 return ResourceManager.GetString("ProgramAdminReports_Page_Wait_Time", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to 30.
+        /// </summary>
+        internal static string ProgramAdminReports_Page_Student_LastName
+        {
+            get
+            {
+                return ResourceManager.GetString("ProgramAdminReports_Page_Student_LastName", resourceCulture);
+            }
+        }
     }
 }

@@ -141,4 +141,7 @@
   <data name="ProgramAdminReports_Page_Wait_Time" xml:space="preserve">
     <value>30</value>
   </data>
+<data name="ProgramAdminReports_Page_Student_LastName" xml:space="preserve">
+    <value>automation</value>
+  </data>
 </root>

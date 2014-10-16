@@ -85,7 +85,9 @@
     <Folder Include="ProductAcceptanceTestFeatures\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.DemoAcceptanceTest.Hed.HSS.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -97,7 +99,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CommonProductAcceptanceTestDefinitions\CommonStepsResource.resx" />
     <EmbeddedResource Include="ProductAcceptanceTestDefinitions\LoginLogoutResource.resx" />
-    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\ProgramAdminReportsResource.resx" />
+    <EmbeddedResource Include="ProductAcceptanceTestDefinitions\ProgramAdminReportsResource.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

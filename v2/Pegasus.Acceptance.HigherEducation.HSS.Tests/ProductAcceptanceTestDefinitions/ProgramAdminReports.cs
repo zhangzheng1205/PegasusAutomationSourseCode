@@ -137,12 +137,12 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                     rptStudentUsagePage.
                     GetSectionName((RptStudentUsagePage.ProgramAdminReportType)Enum.
                     Parse(typeof(RptStudentUsagePage.ProgramAdminReportType), reportType))));
-            User user = User.Get("CsSmsStudent");
             //Assert to verify student
             Logger.LogAssertion("VerifyStatus", ScenarioContext.
-               Current.ScenarioInfo.Title, () => Assert.AreEqual(user.FirstName + "," + user.LastName, rptStudentUsagePage.GetStatusText
+               Current.ScenarioInfo.Title, () => Assert.IsTrue(rptStudentUsagePage.GetStatusText
                  ((RptStudentUsagePage.ProgramAdminReportType)Enum.
-                Parse(typeof(RptStudentUsagePage.ProgramAdminReportType), reportType))));
+                Parse(typeof(RptStudentUsagePage.ProgramAdminReportType), reportType))
+                .Contains(ProgramAdminReportsResource.ProgramAdminReports_Page_Student_LastName)));
             Logger.LogMethodExit("ProgramAdminReports", "ProgramAdminReportLaunchedSuccessfully",
                 base.IsTakeScreenShotDuringEntryExit);
         }
