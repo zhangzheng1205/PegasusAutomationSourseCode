@@ -83,6 +83,8 @@ Then I should see the "View all tests" button
 #Purpose: Verify the Funtionality of View All Test button inside a Test
 #TestCase Id: HED_MYTest_PWF_079
 Scenario: Verify the Funtionality of View All Test button inside a Test
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
 When I navigate to "MyTest" tab
 Then I should be on the "MyTest" page
 When I select "Open" c-menu option from "MyTest" activity

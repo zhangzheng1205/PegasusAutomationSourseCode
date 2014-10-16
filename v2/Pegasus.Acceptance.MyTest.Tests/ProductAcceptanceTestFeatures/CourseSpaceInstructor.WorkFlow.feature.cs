@@ -260,16 +260,20 @@ testRunner.Then("I should see the \"View all tests\" button", ((string)(null)), 
 #line 85
 this.ScenarioSetup(scenarioInfo);
 #line 86
-testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 87
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 88
-testRunner.When("I select \"Open\" c-menu option from \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 89
-testRunner.Then("I should see the \"View all tests\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 90
-testRunner.When("I click on \'View all tests\' button inside test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select \"Open\" c-menu option from \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 91
+testRunner.Then("I should see the \"View all tests\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 92
+testRunner.When("I click on \'View all tests\' button inside test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 93
 testRunner.Then("I should navigate back to \"Manage Your Tests\" Frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -281,15 +285,15 @@ testRunner.Then("I should navigate back to \"Manage Your Tests\" Frame", ((strin
         public virtual void DisplayOfDownloadOptionInTestFolderBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Download option in Test Folder By SMS Instructor", ((string[])(null)));
-#line 96
-this.ScenarioSetup(scenarioInfo);
-#line 97
-testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 98
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 99
-testRunner.When("I select \"Open\" c-menu option from \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 100
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 101
+testRunner.When("I select \"Open\" c-menu option from \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 102
 testRunner.Then("I should see the \"Download\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -301,15 +305,15 @@ testRunner.Then("I should see the \"Download\" button", ((string)(null)), ((Tech
         public virtual void FunctionalityOfDownloadOptionBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Functionality of Download option By SMS Instructor", ((string[])(null)));
-#line 105
-this.ScenarioSetup(scenarioInfo);
-#line 106
-testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 107
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 108
-testRunner.When("I select \"Open\" c-menu option from \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 109
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 110
+testRunner.When("I select \"Open\" c-menu option from \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 111
 testRunner.And("I click on the \'Download\' options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -330,7 +334,7 @@ testRunner.And("I click on the \'Download\' options", ((string)(null)), ((TechTa
             table1.AddRow(new string[] {
                         "Blackboard Vista(WebCT)",
                         "Blackboard Vista(WebCT)"});
-#line 110
+#line 112
 testRunner.Then("I should able to see Display of Download cmenu options for test", ((string)(null)), table1, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -342,30 +346,30 @@ testRunner.Then("I should able to see Display of Download cmenu options for test
         public virtual void DownloadingTheQuestionsInWordFormatBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Downloading the questions in word format By SMS Instructor", ((string[])(null)));
-#line 121
-this.ScenarioSetup(scenarioInfo);
-#line 122
-testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 123
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 124
-testRunner.When("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 125
-testRunner.Then("I should see print details are in disabled state by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 126
-testRunner.When("I select the \"Create multiple versions\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 127
-testRunner.Then("I should see \"Scramble question order\" dropdown option is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see print details are in disabled state by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 128
+testRunner.When("I select the \"Create multiple versions\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 129
+testRunner.Then("I should see \"Scramble question order\" dropdown option is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 130
 testRunner.When("I select the \"Include area for student response\" checkbox on My Test Download Pag" +
                     "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 129
-testRunner.Then("I should see \"As blank on left side of test\" radio is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 130
-testRunner.When("I select the \"Include answer key in\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 131
-testRunner.Then("I should see \"Separate file\" radio button is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"As blank on left side of test\" radio is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 132
+testRunner.When("I select the \"Include answer key in\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 133
+testRunner.Then("I should see \"Separate file\" radio button is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 134
 testRunner.When("I click On cancel button on MyTest download popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -377,30 +381,30 @@ testRunner.When("I click On cancel button on MyTest download popup", ((string)(n
         public virtual void DownloadingTheQuestionsInPDFFormatBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Downloading the questions in PDF format By SMS Instructor", ((string[])(null)));
-#line 137
-this.ScenarioSetup(scenarioInfo);
-#line 138
-testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 139
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 140
-testRunner.When("I select \"Download as PDF (.pdf)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 141
-testRunner.Then("I should see print details are in disabled state by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 142
-testRunner.When("I select the \"Create multiple versions\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select \"Download as PDF (.pdf)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 143
-testRunner.Then("I should see \"Scramble question order\" dropdown option is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see print details are in disabled state by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 144
+testRunner.When("I select the \"Create multiple versions\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 145
+testRunner.Then("I should see \"Scramble question order\" dropdown option is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 146
 testRunner.When("I select the \"Include area for student response\" checkbox on My Test Download Pag" +
                     "e", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 145
-testRunner.Then("I should see \"As blank on left side of test\" radio is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 146
-testRunner.When("I select the \"Include answer key in\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 147
-testRunner.Then("I should see \"Separate file\" radio button is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"As blank on left side of test\" radio is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 148
+testRunner.When("I select the \"Include answer key in\" checkbox on My Test Download Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 149
+testRunner.Then("I should see \"Separate file\" radio button is selected bydefault", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 150
 testRunner.When("I click On cancel button on MyTest download popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -412,13 +416,13 @@ testRunner.When("I click On cancel button on MyTest download popup", ((string)(n
         public virtual void OptionsCmenuForTestFolderBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Options Cmenu for Test Folder By SMS Instructor", ((string[])(null)));
-#line 153
-this.ScenarioSetup(scenarioInfo);
-#line 154
-testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 155
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 156
+testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 157
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 158
 testRunner.When("I click on c-menu option of \"MyTest\" activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -451,7 +455,7 @@ testRunner.When("I click on c-menu option of \"MyTest\" activity", ((string)(nul
             table2.AddRow(new string[] {
                         "Delete",
                         "Delete"});
-#line 157
+#line 159
 testRunner.Then("I should able to see Display of cmenu options for test created", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -465,20 +469,20 @@ testRunner.Then("I should able to see Display of cmenu options for test created"
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creating New Test with Adding the 500 Questions to the test from Testbank Using \"" +
                     "Number of Random Questions to add\" option By SMS Instructor", ((string[])(null)));
-#line 172
-this.ScenarioSetup(scenarioInfo);
-#line 173
-testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 174
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 175
-testRunner.When("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to the \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 176
-testRunner.And("I Enter \"500\" question to add randon question to MyTest", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 177
+testRunner.When("I select \"Open\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 178
+testRunner.And("I Enter \"500\" question to add randon question to MyTest", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 179
 testRunner.Then("I should see validation message \"You are about to add or copy questions that are " +
                     "already included in your test. Do you want to create duplicate test questions?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 178
+#line 180
 testRunner.When("I click on \'OK\' button in \"Pegasus\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -490,22 +494,22 @@ testRunner.When("I click on \'OK\' button in \"Pegasus\" popup", ((string)(null)
         public virtual void DisplayOfNumberOfTestVersionsBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Number of Test Versions By SMS Instructor", ((string[])(null)));
-#line 183
-this.ScenarioSetup(scenarioInfo);
-#line 184
-testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 185
-testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 186
-testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 187
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 188
-testRunner.When("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 189
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 190
+testRunner.When("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 191
 testRunner.And("I enter \"3\" in the Create Multiple Versions text box and click on the ok button i" +
                     "n Print pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 190
+#line 192
 testRunner.Then("I should see \"3\" versions entered in the Print pop up should be displayed in the " +
                     "Multiple version pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -518,18 +522,18 @@ testRunner.Then("I should see \"3\" versions entered in the Print pop up should 
         public virtual void FunctionalityOfNumberOfTestVersionsBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Functionality of Number of Test Versions By SMS Instructor", ((string[])(null)));
-#line 195
-this.ScenarioSetup(scenarioInfo);
-#line 196
-testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 197
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 198
-testRunner.When("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 199
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 200
+testRunner.When("I select \"Download as Word (.doc)\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 201
 testRunner.And("I enter \"1\" in the Create Multiple Versions text box and click on the ok button i" +
                     "n Print pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 200
+#line 202
 testRunner.Then("I should see \"1\" versions entered in the Print pop up should be displayed in the " +
                     "Multiple version pop up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -542,22 +546,22 @@ testRunner.Then("I should see \"1\" versions entered in the Print pop up should 
         public virtual void DeletingTheTestInManageYourTestFrameBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deleting the Test in Manage your test Frame By SMS Instructor", ((string[])(null)));
-#line 206
-this.ScenarioSetup(scenarioInfo);
-#line 207
-testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 208
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 209
+testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 210
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 211
 testRunner.When("I click on the \"Create New Test\" link in Manage Your Tests and created Test using" +
                     " \"TrueFalse\" question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 210
-testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 211
-testRunner.When("I select \"Delete\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 212
-testRunner.And("I click on \'OK\' button in confirmation popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 213
+testRunner.When("I select \"Delete\" c-menu option from the Test drop down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 214
+testRunner.And("I click on \'OK\' button in confirmation popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 215
 testRunner.Then("I should see the successfull message \"Test deleted successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -569,13 +573,13 @@ testRunner.Then("I should see the successfull message \"Test deleted successfull
         public virtual void DisplayOfTestOptionsInManageYourTestFrameActionRowBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Test options in Manage your Test frame action row By SMS Instructor", ((string[])(null)));
-#line 218
-this.ScenarioSetup(scenarioInfo);
-#line 219
-testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 220
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 221
+testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 222
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 223
 testRunner.Then("I should see the Display of Test options headers in manage your tests frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -587,20 +591,20 @@ testRunner.Then("I should see the Display of Test options headers in manage your
         public virtual void CreatingNewTestWithEssayQuestionBySMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Creating New Test with Essay Question By SMS Instructor", ((string[])(null)));
-#line 226
-this.ScenarioSetup(scenarioInfo);
-#line 227
-testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 228
-testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 229
-testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 230
-testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 231
+testRunner.When("I navigate to \"MyTest\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 232
+testRunner.Then("I should be on the \"MyTest\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 233
 testRunner.When("I click on the \"Create New Test\" link in Manage Your Tests and created Test using" +
                     " \"Essay\" question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 232
+#line 234
 testRunner.Then("I should see the successfull message \"Test saved successfully.\" in MyTest tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
