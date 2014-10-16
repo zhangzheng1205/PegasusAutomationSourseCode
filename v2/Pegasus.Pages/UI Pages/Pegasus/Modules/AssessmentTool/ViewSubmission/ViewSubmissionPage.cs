@@ -551,6 +551,7 @@ namespace Pegasus.Pages.UI_Pages
             //Click The Edit Link
             logger.LogMethodEntry("ViewSubmissionPage", "ClickTheEditLink",
                base.IsTakeScreenShotDuringEntryExit);
+            Thread.Sleep(3000);
             //Wait for the 'Edit' link
             base.WaitForElement(By.Id(ViewSubmissionPageResource.
                 ViewSubmission_Page_Edit_Link_Id_Locator));
