@@ -159,6 +159,7 @@ namespace Pegasus.Pages.UI_Pages
                     CalendarDefaultGlobalUX_Page_ClearResultLink_Id_Locator);
                 //Click on Clear Results Link
                 ClickByJavaScriptExecutor(getClearResult);
+                Thread.Sleep(3000);
             }
             catch (Exception e)
             {
@@ -232,8 +233,12 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on Advanced Search Link
                 base.WaitForElement(By.Id(CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_AdvancedSearchLink_Id_Locator));
-                base.ClickLinkById(CalendarDefaultGlobalUXPageResource.
+                IWebElement advancedSearchLink=base.GetWebElementPropertiesById(
+                    CalendarDefaultGlobalUXPageResource.
                     CalendarDefaultGlobalUX_Page_AdvancedSearchLink_Id_Locator);
+                Thread.Sleep(3000);
+                base.ClickByJavaScriptExecutor(advancedSearchLink);
+                Thread.Sleep(3000);
             }
             catch (Exception e)
             {
