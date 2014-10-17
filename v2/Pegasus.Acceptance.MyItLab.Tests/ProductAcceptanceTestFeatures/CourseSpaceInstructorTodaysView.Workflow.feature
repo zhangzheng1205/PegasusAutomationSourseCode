@@ -69,7 +69,7 @@ When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
 And I should see the alert count updated as "1" in "Idle Students" channel
 When I click on the "Idle Students" option
-Then I should see "1" Idle Student "faad , BDD" in "Idle Students" channel
+Then I should see "1" Idle Student "sing , manish" in "Idle Students" channel
 
 #Purpose : To validate display of alert counts and contents in Not Passed alert channel
 #Test case ID : peg-16736
@@ -79,9 +79,9 @@ Then I should see "1" Idle Student "faad , BDD" in "Idle Students" channel
 Scenario: Instructor views Alert update in Not Passed channel of Todays View page for Activity
 When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
-And I should see the alert count updated as "3" in "Not Passed" channel
+And I should see the alert count updated as "2" in "Not Passed" channel
 When I click on the "Not Passed" option
-Then I should see "3" activity in the "Not Passed" channel
+Then I should see "2" activity in the "Not Passed" channel
 
 #Purpose : As a instructor i should be notified with alert counts and contents when student does not submits Past due activity.
 #Test case ID : peg-16742.
@@ -104,7 +104,7 @@ Scenario: Instructor validates grade display in Student performance channel
 When I navigate to "Today's View" tab
 Then I should see the "Notifications" channels in 'Todays view' page
 When I click on the "Student Performance" option
-Then I should see "62.5%" as overall Grade in "Student Performance" alert channel
+Then I should see "75%" as overall Grade in "Student Performance" alert channel
 
 #Purpose : As a instructor i should be notified with alert counts and contents when student submits Past due activity
 #Test case ID : peg-16762.
@@ -163,6 +163,7 @@ Then I should be on the "Today's View" page
 When I click on the "Course Performance" link in notifications channel
 And I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "TodaysView" by "CsSmsInstructor"
 Then I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" having "Grade" as "50%"
-And I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" having "Content Completed" as "100%"
-And I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" having "Time on Task" as "00:07"
+And I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" having "Content Completed" as "66.67%"
+And I should see the "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" having "Time on Task" as "00:35"
+
 
