@@ -212,7 +212,7 @@ testRunner.And("I should see the alert count updated as \"1\" in \"Idle Students
 #line 71
 testRunner.When("I click on the \"Idle Students\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 72
-testRunner.Then("I should see \"1\" Idle Student \"faad , BDD\" in \"Idle Students\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"1\" Idle Student \"sing , manish\" in \"Idle Students\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -232,11 +232,11 @@ testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechT
 #line 81
 testRunner.Then("I should see the \"Notifications\" channels in \'Todays view\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 82
-testRunner.And("I should see the alert count updated as \"3\" in \"Not Passed\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the alert count updated as \"2\" in \"Not Passed\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 83
 testRunner.When("I click on the \"Not Passed\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 84
-testRunner.Then("I should see \"3\" activity in the \"Not Passed\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"2\" activity in the \"Not Passed\" channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -278,7 +278,7 @@ testRunner.Then("I should see the \"Notifications\" channels in \'Todays view\' 
 #line 106
 testRunner.When("I click on the \"Student Performance\" option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 107
-testRunner.Then("I should see \"62.5%\" as overall Grade in \"Student Performance\" alert channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"75%\" as overall Grade in \"Student Performance\" alert channel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -408,10 +408,10 @@ testRunner.Then("I should see the \"Word Chapter 1 Project 1A Skill-Based Exam (
                     " \"Grade\" as \"50%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 166
 testRunner.And("I should see the \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" having" +
-                    " \"Content Completed\" as \"100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                    " \"Content Completed\" as \"66.67%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 167
 testRunner.And("I should see the \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" having" +
-                    " \"Time on Task\" as \"00:07\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                    " \"Time on Task\" as \"00:35\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
