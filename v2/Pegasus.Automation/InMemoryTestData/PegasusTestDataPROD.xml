@@ -615,7 +615,7 @@
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Benchmark Test 1</Name>
+      <Name>9d5636b6-c29b-46d6-805f-616af150bf67</Name>
       <ActivityType>Test</ActivityType>
       <ActivityId>DigitalPath_Activity_Test_UC1</ActivityId>
       <IsCreated>true</IsCreated>
@@ -649,7 +649,7 @@
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Page_Wimba</Name>
+      <Name>6934585e-58fb-4672-8864-536ac3ac7ea3</Name>
       <ActivityType>Page</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
