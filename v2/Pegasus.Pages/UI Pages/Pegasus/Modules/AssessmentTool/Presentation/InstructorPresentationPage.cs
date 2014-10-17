@@ -74,7 +74,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Used SendKeys to Close modal pop up
                 SendKeys.SendWait(StudentPresentationPageResource.
                     StudentPresentation_Page_EnterKey_Value);
-                base.SelectDefaultWindow();
+                Thread.Sleep(Convert.ToInt32(InstructorPresentationPageResource.
+                    InstructorPresentation_Page_Sleep_Value));
             }
             catch (Exception e)
             {
