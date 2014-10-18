@@ -731,12 +731,15 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                Thread.Sleep(4000);
                 //Wait For Element
-                base.WaitForElement(By.PartialLinkText("to Course"), 10);
+                base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                    StudentPresentation_Page_ReturnToCourse_Button_Xpath_Locator),10);
                 //Get Link Property
                 IWebElement getReturnToCourseLinkProperties = base.
-                    GetWebElementPropertiesByPartialLinkText
-                    ("to Course");
+                    GetWebElementPropertiesByXPath
+                    (StudentPresentationPageResource.
+                    StudentPresentation_Page_ReturnToCourse_Button_Xpath_Locator);
                 //Click on Button
                 base.ClickByJavaScriptExecutor(getReturnToCourseLinkProperties);
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.

@@ -49,6 +49,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
             }
+            base.WaitUntilWindowLoads(expectedPageTitle);
             //Wait For Page Get Switched
             base.WaitUntilPageGetSwitchedSuccessfully(expectedPageTitle);
             //Get The Actual Title of Page

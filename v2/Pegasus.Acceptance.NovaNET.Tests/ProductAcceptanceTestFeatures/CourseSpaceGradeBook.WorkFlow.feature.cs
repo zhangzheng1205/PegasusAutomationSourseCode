@@ -79,7 +79,7 @@ namespace Pegasus.Acceptance.NovaNET.Tests.ProductAcceptanceTestFeatures
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 10
-testRunner.When("I navigate to \"Gradebook\" tab and selected \"Grades\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 12
@@ -98,7 +98,7 @@ testRunner.And("I should see the grade under activity column of the submitted \"
 #line 17
 this.ScenarioSetup(scenarioInfo);
 #line 18
-testRunner.When("I navigate to \"Gradebook\" tab and selected \"Grades\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 20
@@ -123,7 +123,7 @@ testRunner.Then("I should see the successfull message \"Batch update completed s
 #line 27
 this.ScenarioSetup(scenarioInfo);
 #line 28
-testRunner.When("I navigate to \"Gradebook\" tab and selected \"Grades\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 30
@@ -150,7 +150,7 @@ testRunner.And("I should see the updated apply grade schema value \"B\" for Acti
 #line 38
 this.ScenarioSetup(scenarioInfo);
 #line 39
-testRunner.When("I navigate to \"Gradebook\" tab and selected \"Grades\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 40
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 41
@@ -176,7 +176,7 @@ testRunner.When("I close the \"View Submission\" window", ((string)(null)), ((Te
 #line 49
 this.ScenarioSetup(scenarioInfo);
 #line 50
-testRunner.When("I navigate to \"Gradebook\" tab and selected \"Grades\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 51
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 52
@@ -196,7 +196,7 @@ testRunner.When("I click the \'View Filters\' link in gradebook", ((string)(null
 #line 57
 this.ScenarioSetup(scenarioInfo);
 #line 58
-testRunner.When("I navigate to \"Gradebook\" tab and selected \"Grades\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 59
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 60
@@ -219,7 +219,7 @@ testRunner.Then("I should see the \"NNTest\" activity in Gradebook for all the e
 #line 66
 this.ScenarioSetup(scenarioInfo);
 #line 67
-testRunner.When("I navigate to \"Gradebook\" tab and selected \"Grades\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 68
 testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 69
