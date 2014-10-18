@@ -35,14 +35,15 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                Thread.Sleep(Convert.ToInt32(CustomizeNotificationPageResource.
+                    CustomizeNotification_Page_Sleep));
                 if (IsPopupPresent(CustomizeNotificationPageResource.
-                        CustomizeNotification_Page_Window_TitleName, 3))
-                {
+                        CustomizeNotification_Page_Window_TitleName, 10))
+                {                    
                     base.WaitUntilWindowLoads(CustomizeNotificationPageResource.
                             CustomizeNotification_Page_Window_TitleName);
                     //Select Window
-                    base.SelectWindow(CustomizeNotificationPageResource.
-                        CustomizeNotification_Page_Window_TitleName);
+                    base.SwitchToLastOpenedWindow();
                     //Click On Button
                     base.WaitForElement(By.PartialLinkText(CustomizeNotificationPageResource.
                         CustomizeNotification_Page_DoneButton_PartialLinkText_Locator));

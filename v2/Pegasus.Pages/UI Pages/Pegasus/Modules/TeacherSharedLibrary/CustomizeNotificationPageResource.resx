@@ -120,6 +120,9 @@
   <data name="CustomizeNotification_Page_DoneButton_PartialLinkText_Locator" xml:space="preserve">
     <value>Done</value>
   </data>
+  <data name="CustomizeNotification_Page_Sleep" xml:space="preserve">
+    <value>5000</value>
+  </data>
   <data name="CustomizeNotification_Page_Window_TitleName" xml:space="preserve">
     <value>Customized Item Saved</value>
   </data>
