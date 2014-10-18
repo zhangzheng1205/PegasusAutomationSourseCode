@@ -441,8 +441,8 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>prodautoinstructor1</Name>
-      <Password>pass@word1</Password>
+      <Name>5.15.2smsins2</Name>
+      <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>Deepa</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -452,12 +452,12 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
-      <Name>prodautostudent1</Name>
+      <Name>5.15.2smsstudent1</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
-      <FirstName>Chethan</FirstName>
+      <FirstName>ramya</FirstName>
       <MiddleName>Pegasus</MiddleName>
-      <LastName>Gangoor</LastName>
+      <LastName>nb</LastName>
       <UserType>CsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
@@ -649,7 +649,7 @@
       <IsCreated>true</IsCreated>
     </Activity>
     <Activity>
-      <Name>Page_Wimba</Name>
+      <Name>6934585e-58fb-4672-8864-536ac3ac7ea3</Name>
       <ActivityType>Page</ActivityType>
       <IsCreated>true</IsCreated>
     </Activity>
