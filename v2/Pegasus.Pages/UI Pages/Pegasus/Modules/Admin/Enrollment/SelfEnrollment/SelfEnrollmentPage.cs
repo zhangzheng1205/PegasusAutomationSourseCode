@@ -161,9 +161,11 @@ namespace Pegasus.Pages.UI_Pages
             base.WaitForElement(
                 By.CssSelector(SelfEnrollmentPageResource.
                     SelfEnrollment_Page_CourseID_Confirm_Button_CssSelector_Locator),10);
+            IWebElement getConfirmbutton = base.GetWebElementPropertiesByCssSelector
+                (SelfEnrollmentPageResource.
+                    SelfEnrollment_Page_CourseID_Confirm_Button_CssSelector_Locator);
             //Click On Confirm Button
-            base.ClickButtonByCssSelector(SelfEnrollmentPageResource.
-                SelfEnrollment_Page_CourseID_Confirm_Button_CssSelector_Locator);
+            base.ClickByJavaScriptExecutor(getConfirmbutton);
             Logger.LogMethodExit("SelfEnrollmentPage", "ClickOnConfirmButton",
              base.IsTakeScreenShotDuringEntryExit);
         }
