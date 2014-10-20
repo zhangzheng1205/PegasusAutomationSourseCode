@@ -731,7 +731,8 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                Thread.Sleep(4000);
+                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPrsentation_Page_SIM5_Sleep_Time));
                 //Wait For Element
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
                     StudentPresentation_Page_ReturnToCourse_Button_Xpath_Locator),10);
