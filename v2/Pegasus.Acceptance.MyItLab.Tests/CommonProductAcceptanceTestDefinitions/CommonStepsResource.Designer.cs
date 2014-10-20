@@ -188,7 +188,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.CommonProductAcceptanceTestDefinition
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NotReady.
+        ///   Looks up a localized string similar to CRSKLKR-2041974.
         /// </summary>
         internal static string CommonSteps_PPE_CourseId_Value {
             get {
@@ -197,7 +197,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.CommonProductAcceptanceTestDefinition
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to NotReady.
+        ///   Looks up a localized string similar to PPE_ReportSection.
         /// </summary>
         internal static string CommonSteps_PPE_SectionName_Value {
             get {

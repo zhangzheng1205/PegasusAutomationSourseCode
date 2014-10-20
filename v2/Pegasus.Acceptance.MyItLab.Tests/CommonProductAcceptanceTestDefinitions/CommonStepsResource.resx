@@ -184,10 +184,10 @@
     <value />
   </data>
   <data name="CommonSteps_PPE_CourseId_Value" xml:space="preserve">
-    <value>NotReady</value>
+    <value>CRSKLKR-2041974</value>
   </data>
   <data name="CommonSteps_PPE_SectionName_Value" xml:space="preserve">
-    <value>NotReady</value>
+    <value>PPE_ReportSection</value>
   </data>
   <data name="CommonSteps_PROD_CourseId_Value" xml:space="preserve">
     <value>CRSKLJV-10015919</value>
