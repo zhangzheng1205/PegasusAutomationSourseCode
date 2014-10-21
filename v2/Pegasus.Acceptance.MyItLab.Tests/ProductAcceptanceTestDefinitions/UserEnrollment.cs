@@ -126,6 +126,31 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="courseTypeEnum"></param>
+        [Then(@"I should see enrolled ""(.*)"" Section course in Global Home Page")]
+        public void VerifyTheDisplayOfEnrolledSectionCourseInGlobalHomePage
+            (Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Section Display in Global Home Page
+            Logger.LogMethodEntry("UserEnrollment",
+                "VerifyTheDisplayOfEnrolledSectionCourseInGlobalHomePage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            bool isCourseVisibleInGlobalHomePage = new HEDGlobalHomePage().
+                   IsCoursePresentInGlobalHomePage(course.SectionName);
+            //Assert section displays in global home page           
+            Logger.LogAssertion("VerifySmsStudentEnrollInCourse", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.IsTrue(isCourseVisibleInGlobalHomePage));
+            Logger.LogMethodExit("UserEnrollment",
+                "VerifyTheDisplayOfEnrolledSectionCourseInGlobalHomePage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
         /// To verify InstructorCourse displays in global home page.
         /// </summary>
         [Then(@"I should see enrolled InstructorCourse in Global Home Page")]

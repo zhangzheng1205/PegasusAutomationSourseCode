@@ -94,7 +94,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-                ExceptionHandler.HandleException(e);                    
+                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("HEDGlobalHomePage", "ClickCreateaCourse",
                base.IsTakeScreenShotDuringEntryExit);
@@ -258,7 +258,7 @@ namespace Pegasus.Pages.UI_Pages
             //Fill Text Box With Empty String
             base.FillEmptyTextById(HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_AnnouncementsManageAll_Button_Id_Locator);
-            IWebElement getManageButton=base.GetWebElementPropertiesById
+            IWebElement getManageButton = base.GetWebElementPropertiesById
                 (HEDGlobalHomePageResource
                 .HEDGlobalHome_Page_AnnouncementsManageAll_Button_Id_Locator);
             base.ClickByJavaScriptExecutor(getManageButton);
@@ -318,7 +318,7 @@ namespace Pegasus.Pages.UI_Pages
                     .HEDGlobalHome_Page_ThreadSleep_Value));
                 //Wait for Element
                 base.WaitForElement(By.Id(HEDGlobalHomePageResource
-                         .HEDGlobalHome_Page_Course_Table_Id_Locator),10);
+                         .HEDGlobalHome_Page_Course_Table_Id_Locator), 10);
                 //Get Course Text
                 getCourseText = base.GetElementTextById(HEDGlobalHomePageResource
                         .HEDGlobalHome_Page_Course_Table_Id_Locator);
@@ -573,7 +573,7 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.HedWsInstructor:
                     case User.UserTypeEnum.HedProgramAdmin:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
-                    switch (courseTypeEnum)
+                        switch (courseTypeEnum)
                         {
                             //Course Type Enum
                             case Course.CourseTypeEnum.ProgramCourse:
@@ -591,13 +591,13 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.MyTestBankCourse:
                             case Course.CourseTypeEnum.HedEmptyClass:
                             case Course.CourseTypeEnum.GraderITSIM5Course:
-                            case Course.CourseTypeEnum.MyITLabOffice2013Program:                            
+                            case Course.CourseTypeEnum.MyITLabOffice2013Program:
                                 //Open the Course
                                 this.OpenTheCourse(course.Name);
                                 break;
                         }
                         break;
-                    case User.UserTypeEnum.HedTeacherAssistant:                    
+                    case User.UserTypeEnum.HedTeacherAssistant:
                     case User.UserTypeEnum.CsSmsStudent:
                         switch (courseTypeEnum)
                         {
@@ -1187,7 +1187,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             // Get MyCourse Name In GlobalHome
             Logger.LogMethodEntry("HEDGlobalHomePage", "GetMyCourseNameInGlobalHome",
-                   base.IsTakeScreenShotDuringEntryExit);  
+                   base.IsTakeScreenShotDuringEntryExit);
             //Initialize the vatiable
             string getCourseName = string.Empty;
             try
@@ -1272,6 +1272,43 @@ namespace Pegasus.Pages.UI_Pages
                 "IsAnnouncementChannelManageAllButtonDisplayed",
                   base.IsTakeScreenShotDuringEntryExit);
             return isManageAllButtonDisplayedInAnnouncementChannel;
+        }
+
+        /// <summary>
+        /// Is Course Present In GlobalHome Page.
+        /// </summary>
+        /// <param name="sectionName">This is section name.</param>
+        /// <returns>section name.</returns>
+        public bool IsCoursePresentInGlobalHomePage(string sectionName)
+        {
+            //Is Course Present In GlobalHome Page
+            Logger.LogMethodEntry("HEDGlobalHomePage", "IsCoursePresentInGlobalHomePage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Initialized Course Text
+            bool isCourseText = false;
+            try
+            {
+                //Select Window
+                this.SelectHedGlobalHomePageWindow();
+                //Set Thread To Wait
+                Thread.Sleep(Convert.ToInt32(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_Course_Load_TimeValue));
+                //Wait for Element
+                base.WaitForElement(By.Id(HEDGlobalHomePageResource
+                         .HEDGlobalHome_Page_Course_Table_Id_Locator));
+                //Get Course Text
+                isCourseText = base.IsElementPresent(By.PartialLinkText(sectionName));
+                //Select Global Home Window
+                base.SelectWindow(HEDGlobalHomePageResource
+                    .HEDGlobalHome_Page_Window_Title_Name);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("HEDGlobalHomePage","IsCoursePresentInGlobalHomePage",
+                base.IsTakeScreenShotDuringEntryExit);
+            return isCourseText;
         }
     }
 }

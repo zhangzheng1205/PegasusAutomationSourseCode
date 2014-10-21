@@ -228,4 +228,7 @@
   <data name="HEDGlobalHome_Page_CreateaCourse_LinkButton_Locator" xml:space="preserve">
     <value>Create a Course</value>
   </data>
+  <data name="HEDGlobalHome_Page_Course_Load_TimeValue" xml:space="preserve">
+    <value>20000</value>
+  </data>
 </root>

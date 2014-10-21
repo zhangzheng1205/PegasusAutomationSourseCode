@@ -106,6 +106,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 20000.
+        /// </summary>
+        internal static string HEDGlobalHome_Page_Course_Load_TimeValue {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_Course_Load_TimeValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 3000.
         /// </summary>
         internal static string HEDGlobalHome_Page_Course_Open_Time_Value {
