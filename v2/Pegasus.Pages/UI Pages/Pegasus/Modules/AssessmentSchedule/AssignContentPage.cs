@@ -981,6 +981,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on save button
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText
                         (AssignContentPageResource.AssignContent_Page_Button_Save_Id_Locator));
+                Thread.Sleep(7000);
             }
             catch (Exception e)
             {
