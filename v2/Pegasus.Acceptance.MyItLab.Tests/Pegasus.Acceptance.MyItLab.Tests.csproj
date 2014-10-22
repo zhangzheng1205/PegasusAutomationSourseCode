@@ -427,7 +427,7 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.Extended.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MyItLabFull.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MyItLabFull2.orderedtest" />
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.DemoAcceptanceTest.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -437,7 +437,7 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.StudentGradeBook.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.BVT.MyItLab.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MyItLabFull.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.InstructorGradeBook.BVT.MyItLab.orderedtest">
