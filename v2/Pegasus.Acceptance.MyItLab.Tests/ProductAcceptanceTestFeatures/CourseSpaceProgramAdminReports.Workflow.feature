@@ -95,14 +95,14 @@ Then I should be on the "Save settings to My Reports" page
 When I select "Createnewreport" radiobutton
 And I enter the " MyITLabExamFrequencyAnalysis" report name
 And I click on "SaveandRun" button
-Then I should see  "Word Chapter 1 Skill-Based Training" along with average score "76.92%"
-Then I should see the details of the question "WD Activity 1.01: Starting a New Word Document" "SIM5" "MyITLabOffice2013Program" "Word 2013"
-And I should see the details of the question "WD Activity 1.02: Inserting Text from Another Document" "SIM5" "MyITLabOffice2013Program" "Word 2013"
+Then I should see  "Word Chapter 1 Skill-Based Training" along with average score "100.00%"
+Then I should see the details for the question "WD Activity 1.01: Starting a New Word Document" "SIM5" "MyITLabOffice2013Program" "Word 2013" "100.00" "--"
+And I should see the details for the question "WD Activity 1.02: Inserting Text from Another Document" "SIM5" "MyITLabOffice2013Program" "Word 2013" "--" "100.00"
 When I close the "Learning Aid Usage" window
 And I click on the "Cancel" button in reports by "HedProgramAdmin"
 And I select "Run Report" for " MyITLabExamFrequencyAnalysis" report in 'My Reports' grid by "HedProgramAdmin"
-Then I should be on the "Learning Aid Usage" page
-And I close the "Learning Aid Usage" window
+And I click  "Close" button
+
 
 #Purpose: To generate and save the "Integrity Violation" Report by Program Admin
 #Test Case Id: peg-22132
@@ -114,8 +114,8 @@ When I click on "Integrity Violation" report link as "HedProgramAdmin"
 Then I should be on "Student Integrity Violation" page as HedProgramAdmin
 When I select section ID from the dropdown in "MyITLabOffice2013Program" course
 And I click  "Generate Report" button
-Then I should see for row "1" in the report "CsSmsStudent" "Word Chapter 1 Grader Project [Assessment 3]" "Document Level" "Yes" column details
-And I should see for row "3" in the report "ZeroScore" for "CsSmsStudent" "Word Chapter 1 Grader Project [Assessment 3]" with "Document Level" "Yes" column details
+Then I should see row "1" in the report "ZeroScore" for "CsSmsStudent" "Word Chapter 1 Grader Project [Assessment 3]" with "Document Level" "Yes" column details
+And I should see row "3" in the report "CsSmsStudent" "Word Chapter 1 Grader Project [Assessment 3]" "Document Level" "Yes" column details
 And I close the "Student Integrity Violation" window
 
 	                

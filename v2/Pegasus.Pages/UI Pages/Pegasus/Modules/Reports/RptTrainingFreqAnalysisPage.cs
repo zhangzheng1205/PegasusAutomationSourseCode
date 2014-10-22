@@ -83,12 +83,12 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Verifying Activity Name in Report Generated.
+        /// Verifying activity name in the report generated.
         /// </summary>
         /// <returns>Activity Name.</returns>
         public string GetFrequencyAnalysisActivityNameInReport(string chapterName)
         {
-            //Verifying Activity Name in Report Generated
+            //Verifying activity name in the report generated
             logger.LogMethodExit("RptTrainingFreqAnalysisPage",
                 "GetFrequencyAnalysisActivityNameInReport",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -124,12 +124,12 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Verifying Activity Report Score.
+        /// Verifying activity report score.
         /// </summary>
-        /// <returns>Get Activity Score</returns>
+        /// <returns>Activity Score.</returns>
         public string GetFrequencyAnalysisScoreInReport(string chapterName,string score)
         {
-            //Verifying Activity Report Score 
+            //Verifying activity report score 
             logger.LogMethodEntry("RptTrainingFreqAnalysisPage",
                 " GetFrequencyAnalysisScoreInReport",
                   base.IsTakeScreenShotDuringEntryExit);
@@ -167,12 +167,12 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Verify question name in Training Frequency report generated.
+        /// Verify question name in training frequency report generated.
         /// </summary>
         /// <returns>Question Name.</returns>
         public string GetTrainingFrequencyFirstQuestionName()
         {
-            //Verify question name in Training Frequency report generated
+            //Verify question name in training frequency report generated
             logger.LogMethodEntry("RptTrainingFreqAnalysisPage",
                 "GetTrainingFrequencyFirstQuestionName",
              base.IsTakeScreenShotDuringEntryExit);
@@ -373,9 +373,10 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
                     RptTrainingFreqAnalysisPage_Resource_QuestionCount_Xpath_Locator));
-                int getCount = base.GetElementCountByXPath(RptTrainingFreqAnalysisPageResource.
+                //Get the count of the total questions displayed
+                int getQuestionCount = base.GetElementCountByXPath(RptTrainingFreqAnalysisPageResource.
                     RptTrainingFreqAnalysisPage_Resource_QuestionCount_Xpath_Locator);
-                for (int questionSearch = 1; questionSearch <= getCount; questionSearch++)
+                for (int questionSearch = 1; questionSearch <= getQuestionCount; questionSearch++)
                 {
                     //Get the question name
                     getQuestionName = base.GetElementTextByXPath(string.
@@ -407,6 +408,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <returns>Question details.</returns>
         public string GetQuestionDetails(string questionName, int questionColumnData)
         {
+            // //Verify the Question details in Exam frequency analysis report
             logger.LogMethodEntry("RptTrainingFreqAnalysisPage", "GetQuestionDetails",
                    base.IsTakeScreenShotDuringEntryExit);
             //Intialize the variable
@@ -418,10 +420,12 @@ namespace Pegasus.Pages.UI_Pages
                 //Verify the Question details in Exam frequency analysis report.
                 base.WaitForElement(By.XPath(RptTrainingFreqAnalysisPageResource.
                     RptTrainingFreqAnalysisPage_Resource_QuestionCount_Xpath_Locator));
+                //Get the count of the questions present
                 int getCount = base.GetElementCountByXPath(RptTrainingFreqAnalysisPageResource.
                     RptTrainingFreqAnalysisPage_Resource_QuestionCount_Xpath_Locator);
                 for (int questionSearch = 1; questionSearch <= getCount; questionSearch++)
                 {
+                    //Fetch the question name
                     getQuestionName = base.GetElementTextByXPath(
                         String.Format(RptTrainingFreqAnalysisPageResource.
                        RptTrainingFreqAnalysisPage_Resource_QuestionName_Xpath_Locator,
@@ -431,6 +435,7 @@ namespace Pegasus.Pages.UI_Pages
                         base.WaitForElement(By.XPath(String.Format(RptTrainingFreqAnalysisPageResource.
                             RptTrainingFreqAnalysisPage_Resource_QuestionDetails_Xpath_Locator, 
                             questionSearch, questionColumnData)));
+                        //Get the question details
                         getQuestionDetails = base.GetElementTextByXPath(String.
                             Format(RptTrainingFreqAnalysisPageResource.
                             RptTrainingFreqAnalysisPage_Resource_QuestionDetails_Xpath_Locator,

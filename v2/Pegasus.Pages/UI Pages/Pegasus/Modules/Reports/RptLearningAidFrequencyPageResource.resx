@@ -127,7 +127,7 @@
     <value>//div[@class='rpt_div_Row']</value>
   </data>
   <data name="RptLearningAidUsage_Page_QuestionDetails_XPath_Locator" xml:space="preserve">
-    <value>//div[@class='rpt_div_Row']/div[{1}]</value>
+    <value>//div[@class='rpt_div_Row'][{0}]/div[{1}]</value>
   </data>
   <data name="RptLearningAidUsage_Page_QuestionName_XPath_Locator" xml:space="preserve">
     <value>(//div[@class='rpt_div_Row']/div/span)[{0}]</value>

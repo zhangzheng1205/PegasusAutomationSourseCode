@@ -1273,7 +1273,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// Verify the average score and activity name in Training Frequency Analysis Report.
+        /// Verify the average score and activity name in Training frequency analysis report.
         /// </summary>
         /// <param name="chapterName">This is a Chapter name.</param>
         /// <param name="score">This is the Score.</param>
@@ -1299,7 +1299,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
 
         /// <summary>
-        /// Verify the Detalils for First Activity In Training Frequency report. 
+        /// Verify the detalils for first activity in training frequency report. 
         /// </summary>
         /// <param name="questionName">This is the question name.</param>
         /// <param name="applicationName">This is the application name.</param>
@@ -1328,7 +1328,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 
 
         /// <summary>
-        /// Verify the Detalils for Second Activity
+        /// Verify the detalils for second activity
         /// </summary>
         /// <param name="simQuestion"></param>
         /// <param name="simApplication"></param>
@@ -1398,7 +1398,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Verify the Report details in Exam frequency analysis by Program Admin.
         /// </summary>
-        /// <param name="questionName">This is a questionName.</param>
+        /// <param name="questionName">This is a QuestionName.</param>
         /// <param name="sectionName">This is a Section name.</param>
         /// <param name="questionType">This is a Question type.</param>
         /// <param name="applicationName">This is a Application name.</param>
@@ -1442,18 +1442,20 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);  
         }
 
-       
-
         /// <summary>
         ///  Verify the Report details in Learning Aid Usage by Program Admin.
         /// </summary>
         /// <param name="questionName">This is a Question name.</param>
         /// <param name="questionType">This is a Question type.</param>
         /// <param name="sectionName">This is a Section name.</param
-        /// <param name="applicationName">This is a Application name.</param>
-        [Then(@"I should see the details of the question ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)""")]
-        public void VerifyLearningAidUsageReportDetailsByProgramAdmin(string questionName,
-            string questionType, Course.CourseTypeEnum courseTypeEnum, string applicationName)
+        /// <param name="applicationName">This is a Application name.</param>        
+        /// <param name="practiceScore">This is a practiceScore.</param>
+        /// <param name="videoScore">This is a videoScore.</param>
+        [Then(@"I should see the details for the question ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)""")]
+        public void VerifyLearningAidUsageReportDetailsByProgramAdmin(
+           string questionName,string questionType, 
+           Course.CourseTypeEnum courseTypeEnum, 
+           string applicationName, string practiceScore, string videoScore)
         {
             Logger.LogMethodEntry("Reports",
                 "VerifyLearningAidUsageReportDetailsByProgramAdmin",
@@ -1479,11 +1481,19 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              ScenarioContext.Current.ScenarioInfo.Title, () =>
              Assert.AreEqual(applicationName, new RptLearningAidFrequencyPage().
              GetLearningAidUsageQuestionDetails(questionName, 4)));
+            Logger.LogAssertion("VerifyPractiseScore",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(practiceScore, new RptLearningAidFrequencyPage().
+             GetLearningAidUsageQuestionDetails(questionName, 6)));
+            Logger.LogAssertion("VerifyVideoScore",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(videoScore, new RptLearningAidFrequencyPage().
+             GetLearningAidUsageQuestionDetails(questionName, 7)));
             Logger.LogMethodExit("Reports",
                 "VerifyLearningAidUsageReportDetailsByProgramAdmin",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
+      
         /// Verify the average score and activity name in Learning Aid Usage Report.
         /// </summary>
         /// <param name="chapterName">This is a Chapter name.</param>
@@ -1527,16 +1537,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
-        /// Select section in Integrity Violation Report generation.
+        /// Select section in Integrity violation report generation.
         /// </summary>
         /// <param name="courseTypeEnum">This is a section name.</param>
         [When(@"I select section ID from the dropdown in ""(.*)"" course")]
         public void SelectSectionID(Course.CourseTypeEnum courseTypeEnum)
-        {           
+        {
+            //Select section in Integrity violation report generation
             Logger.LogMethodEntry("Reports",
                 "SelectSectionID",
-                base.IsTakeScreenShotDuringEntryExit);
-            //Select section in Integrity Violation Report generation
+                base.IsTakeScreenShotDuringEntryExit);            
             Course course = Course.Get(courseTypeEnum);
             new RptStudentIntegrityViolationPage().
                 SelectSectioFromTheDropDown(course.SectionId);
@@ -1566,11 +1576,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Verify the details in Integrity violation report.
         /// </summary>
         /// <param name="rowNumber">This is row number.</param>
-        /// <param name="studentName">This is Expected student name.</param>
+        /// <param name="studentName">This is expected student name.</param>
         /// <param name="activityName">This is activity name.</param>
         /// <param name="integrityLevel">This is integrity level.</param>
         /// <param name="integrityViolation">This is integrity violation.</param>
-        [Then(@"I should see for row ""(.*)"" in the report ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)"" column details")]
+        [Then(@"I should see row ""(.*)"" in the report ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)"" column details")]       
         public void VerifyIntegrityViolationReportDetails(int rowNumber, User.UserTypeEnum userTypeEnum,
             string activityName, string integrityLevel, string integrityViolation)
         {
@@ -1603,7 +1613,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("Reports",
                "VerifyIntegrityViolationReportDetails",
                base.IsTakeScreenShotDuringEntryExit);
-        }
+        }      
 
         /// <summary>
         /// Verify the 'Zero Scoring Student'details in Integrity violation report.
@@ -1614,7 +1624,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="activityName">This is activity name.</param>
         /// <param name="integrityLevel">This is integrity level.</param>
         /// <param name="integrityViolation">This is integrity violation.</param>
-        [Then(@"I should see for row ""(.*)"" in the report ""(.*)"" for ""(.*)"" ""(.*)"" with ""(.*)"" ""(.*)"" column details")]
+        [Then(@"I should see row ""(.*)"" in the report ""(.*)"" for ""(.*)"" ""(.*)"" with ""(.*)"" ""(.*)"" column details")]
         public void VerifyIntegrityViolationReportDetailsForZeroScoreSudent
             (int rowNumber, string scenerioName, User.UserTypeEnum userTypeEnum,
             string activityName, string integrityLevel, string integrityViolation)

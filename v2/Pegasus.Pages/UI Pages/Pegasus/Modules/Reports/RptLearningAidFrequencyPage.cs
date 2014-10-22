@@ -100,7 +100,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             string getActivityName = string.Empty;
             this.SelectWindow();
             try
-            {
+            {               
                 getActivityName = base.GetElementTextByXPath(
                     RptLearningAidFrequencyPageResource.
                     RptLearningAidUsage_Page_ActivityName_XPath_Locator);
@@ -129,7 +129,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             string getScore = string.Empty;
             this.SelectWindow();
             try
-            {
+            {               
                 getScore = base.GetElementTextByXPath(
                     RptLearningAidFrequencyPageResource.
                     RptLearningAidUsage_Page_ActivityScore_XPath_Locator);
@@ -173,8 +173,8 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                     RptLearningAidUsage_Page_QuestionName_XPath_Locator,
                         questionSearch));
                     if (getQuestionName == questionName)
-                    {
-                        //Get the question details                       
+                    {                    
+                        //Get the question details                          
                         base.WaitForElement(By.XPath(String.Format(
                             RptLearningAidFrequencyPageResource.
                             RptLearningAidUsage_Page_QuestionDetails_XPath_Locator,
@@ -182,7 +182,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                         getQuestionDetails = base.GetElementTextByXPath(String.
                             Format(RptLearningAidFrequencyPageResource.
                             RptLearningAidUsage_Page_QuestionDetails_XPath_Locator,
-                            questionSearch, questionData));
+                            questionSearch, questionData));                       
                         break;
                     }
                 }

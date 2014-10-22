@@ -562,6 +562,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                     RptMainUX_Page_ExamFrequencyAnalysis_QuestionCount_Xpath_Locator));
+                //Get the count of all the questions displayed in the report
                 int getCount = base.GetElementCountByXPath(RptExamFreqAnalysisPageResource.
                     RptMainUX_Page_ExamFrequencyAnalysis_QuestionCount_Xpath_Locator);
                 for (int questionSearch = 1; questionSearch <= getCount; questionSearch++)
@@ -607,6 +608,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitForElement(By.XPath(RptExamFreqAnalysisPageResource.
                     RptMainUX_Page_ExamFrequencyAnalysis_QuestionCount_Xpath_Locator));
+                //Get the count of all the questions displayed in the report
                 int getCount = base.GetElementCountByXPath(RptExamFreqAnalysisPageResource.
                     RptMainUX_Page_ExamFrequencyAnalysis_QuestionCount_Xpath_Locator);
                 for (int questionSearch = 1; questionSearch <= getCount; questionSearch++)

@@ -289,14 +289,14 @@ testRunner.And("I enter the \" MyITLabExamFrequencyAnalysis\" report name", ((st
 #line 97
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 98
-testRunner.Then("I should see  \"Word Chapter 1 Skill-Based Training\" along with average score \"76." +
-                    "92%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see  \"Word Chapter 1 Skill-Based Training\" along with average score \"100" +
+                    ".00%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 99
-testRunner.Then("I should see the details of the question \"WD Activity 1.01: Starting a New Word D" +
-                    "ocument\" \"SIM5\" \"MyITLabOffice2013Program\" \"Word 2013\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the details for the question \"WD Activity 1.01: Starting a New Word " +
+                    "Document\" \"SIM5\" \"MyITLabOffice2013Program\" \"Word 2013\" \"100.00\" \"--\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 100
-testRunner.And("I should see the details of the question \"WD Activity 1.02: Inserting Text from A" +
-                    "nother Document\" \"SIM5\" \"MyITLabOffice2013Program\" \"Word 2013\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the details for the question \"WD Activity 1.02: Inserting Text from " +
+                    "Another Document\" \"SIM5\" \"MyITLabOffice2013Program\" \"Word 2013\" \"--\" \"100.00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 101
 testRunner.When("I close the \"Learning Aid Usage\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 102
@@ -305,9 +305,7 @@ testRunner.And("I click on the \"Cancel\" button in reports by \"HedProgramAdmin
 testRunner.And("I select \"Run Report\" for \" MyITLabExamFrequencyAnalysis\" report in \'My Reports\' " +
                     "grid by \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 104
-testRunner.Then("I should be on the \"Learning Aid Usage\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 105
-testRunner.And("I close the \"Learning Aid Usage\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click  \"Close\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -333,11 +331,11 @@ testRunner.When("I select section ID from the dropdown in \"MyITLabOffice2013Pro
 #line 116
 testRunner.And("I click  \"Generate Report\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 117
-testRunner.Then("I should see for row \"1\" in the report \"CsSmsStudent\" \"Word Chapter 1 Grader Proj" +
-                    "ect [Assessment 3]\" \"Document Level\" \"Yes\" column details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see row \"1\" in the report \"ZeroScore\" for \"CsSmsStudent\" \"Word Chapter 1" +
+                    " Grader Project [Assessment 3]\" with \"Document Level\" \"Yes\" column details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 118
-testRunner.And("I should see for row \"3\" in the report \"ZeroScore\" for \"CsSmsStudent\" \"Word Chapt" +
-                    "er 1 Grader Project [Assessment 3]\" with \"Document Level\" \"Yes\" column details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see row \"3\" in the report \"CsSmsStudent\" \"Word Chapter 1 Grader Project " +
+                    "[Assessment 3]\" \"Document Level\" \"Yes\" column details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 119
 testRunner.And("I close the \"Student Integrity Violation\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

@@ -24,12 +24,12 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         /// <summary>
         /// Get the reports page name.
         /// </summary>
-        /// <returns>page name.</returns>
+        /// <returns>Page name.</returns>
         public string GetPageName()
         {
-            logger.LogMethodEntry("RptStudentIntegrityViolationPage", "GetPageName",
-              base.IsTakeScreenShotDuringEntryExit);
             //Get the reports page name
+            logger.LogMethodEntry("RptStudentIntegrityViolationPage", "GetPageName",
+              base.IsTakeScreenShotDuringEntryExit);           
             string getPageHeading = string.Empty;
             base.SwitchToLastOpenedWindow();
             try
@@ -37,7 +37,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 base.WaitForElement(By.Id(
                     RptStudentIntegrityViolationPageResource.
                     RptStudentIntegrityViolationPageResource_PageName_Id_Locator));
-                //Gets the text of the element
+                //Get the text of the element
                 getPageHeading = base.GetElementTextById(
                     RptStudentIntegrityViolationPageResource.
                     RptStudentIntegrityViolationPageResource_PageName_Id_Locator);
@@ -131,8 +131,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 getReportDetails = base.GetElementTextByXPath(String.Format(
                     RptStudentIntegrityViolationPageResource.
              RptStudentIntegrityViolationPageResource__ReportDetails_XPath_Locator,
-                               rowNumber, reportColumn));
-                //Get the report column details
+                               rowNumber, reportColumn));                
             }
             catch (Exception e)
             {
