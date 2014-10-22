@@ -69,7 +69,10 @@ namespace Pegasus.Automation.DataTransferObjects
             HedEmptyClass = 44,
             // mil GraderIT Courses
             GraderITSIM5Course = 45,
-            HedMilSelfStudy = 46
+            HedMilSelfStudy = 46,
+            //HSS Course and Template Enum
+            HedMyPsychLabProgram=47,
+            HedMyPsychLabMaster=48
         }
 
         /// <summary>
