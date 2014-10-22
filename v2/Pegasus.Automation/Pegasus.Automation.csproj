@@ -114,7 +114,9 @@
     <None Include="TestData\metadataExport_Gold-1.zip" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="InMemoryTestData\PegasusTestDataPROD.xml" />
+    <Content Include="InMemoryTestData\PegasusTestDataPROD.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="InMemoryTestData\PegasusTestDataST.xml">
       <SubType>Designer</SubType>
     </Content>

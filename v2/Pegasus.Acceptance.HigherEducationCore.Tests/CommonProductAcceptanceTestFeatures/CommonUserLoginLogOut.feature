@@ -204,3 +204,31 @@ Given I am on the "Global Home" page
 When I enter in the "InstructorCourse" from the Global Home page as "CsSmsInstructor"
 Then I should be on the "Calendar" page
 
+#-------------------------HSS----------------------------------
+#Purpose:Verify The User Login As CourseSpaceProgramAdmin
+Scenario: User Login As ProgramAdmin and Navigate To HedMyPsychLabProgram Course
+Given I browsed the login url for "HedProgramAdmin"
+When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "HedMyPsychLabProgram" from the Global Home page as "HedProgramAdmin"
+
+#Purpose: Verify The User Login As CourseSpaceSMSInstructor To HedMyPsychLabProgram Course
+Scenario: User Login As CsSMSInstructor and Navigate To HedMyPsychLabProgram Course
+Given I browsed the login url for "CsSmsInstructor"
+When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "HedMyPsychLabProgram" from the Global Home page as "CsSmsInstructor"
+
+#Purpose: Verify The User Login As CourseSpaceSMSStudent To HedMyPsychLabProgram Course
+Scenario: User Login As CsSMSStudent and Navigate To HedMyPsychLabProgram Course
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "HedMyPsychLabProgram" from the Global Home page as "CsSmsStudent"
+
+
+
+

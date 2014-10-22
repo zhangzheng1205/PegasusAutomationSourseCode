@@ -110,6 +110,25 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
+      <Name>MyPsychLab for Ciccarelli</Name>
+      <CourseType>HedMyPsychLabProgram</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <SectionName>HSS_AutomationSection</SectionName>
+      <SectionId>CRSKL6J-16002350</SectionId>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
+      <Name>Copy of MyPsychLab for Ciccarelli, Psychology, 3/e</Name>
+      <CourseType>HedMyPsychLabMaster</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    
+    <Course>
       <Name>cea6d68f-24fe-4f0e-9010-6bd7dbbb15c7</Name>
       <CourseType>HedMilSelfStudy</CourseType>
       <IsCreated>true</IsCreated>

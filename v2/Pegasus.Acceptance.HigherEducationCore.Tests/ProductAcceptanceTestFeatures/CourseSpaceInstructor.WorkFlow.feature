@@ -43,15 +43,15 @@ Scenario: Create Section by Program Admin
 When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
 When I click on Add Sections link from the Program Administration page
-And I create Section from "MySpanishLabMaster" Template as a Program Admin
+And I create Section from "HedMyPsychLabMaster" Template as a Program Admin
 
 #Verify the usecase in ProgramCourse
 #Purpose: Validate Section to get out from the assigned to copy state
 Scenario: Validate Section To Get Out From Assigned To Copy State
 When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
-When I verify the Section created from "ProgramCourse" course Template for AssignedToCopy state
-Then I should see the Section created from "ProgramCourse" course Template to be successfully out of AssignedToCopy state
+When I verify the Section created from "HedMyPsychLabProgram" course Template for AssignedToCopy state
+Then I should see the Section created from "HedMyPsychLabProgram" course Template to be successfully out of AssignedToCopy state
 
 #Verify the usecase in ProgramCourse
 #Purpose: To verify Enrolled SMSstudent present in Users Tab
