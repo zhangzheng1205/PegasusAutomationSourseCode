@@ -349,8 +349,8 @@ namespace Pegasus.Pages.UI_Pages
                     AddNewSection_Page_Section_Actual_EndDate_Format_DDMMYYYY)))
                 {
                     // enter section start and end date                           
-                    this.AddSectionStartAndEndDate(DateTime.Now.ToString(AddNewSectionPageResource.
-                        AddNewSection_Page_Date_Format_DDMMYYYY), DateTime.Now.AddDays(90).
+                    this.AddSectionStartAndEndDate(DateTime.UtcNow.ToString(AddNewSectionPageResource.
+                        AddNewSection_Page_Date_Format_DDMMYYYY), DateTime.UtcNow.AddDays(90).
                         ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_DDMMYYYY));
                 }
                 if (getStartDateFormat.Trim().Equals(AddNewSectionPageResource.
@@ -359,8 +359,8 @@ namespace Pegasus.Pages.UI_Pages
                    AddNewSection_Page_Section_Actual_EndDate_Format_MMDDYYYY)))
                 {
                     // enter section start and end date                           
-                    this.AddSectionStartAndEndDate(DateTime.Now.ToString(AddNewSectionPageResource.
-                        AddNewSection_Page_Date_Format_MMDDYYYY), DateTime.Now.AddDays(90).
+                    this.AddSectionStartAndEndDate(DateTime.UtcNow.ToString(AddNewSectionPageResource.
+                        AddNewSection_Page_Date_Format_MMDDYYYY), DateTime.UtcNow.AddDays(90).
                         ToString(AddNewSectionPageResource.AddNewSection_Page_Date_Format_MMDDYYYY));
                 }
                 // check copy content check box
