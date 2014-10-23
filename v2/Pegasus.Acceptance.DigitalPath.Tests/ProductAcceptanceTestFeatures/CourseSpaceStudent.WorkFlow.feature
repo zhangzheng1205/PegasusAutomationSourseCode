@@ -33,6 +33,8 @@ Scenario: Display of Enrolled Classes in the Overview Tab by CS Student
 When I navigate to the "Overview" tab
 Then I should be on the "Overview" page
 Then I should see the "DigitalPathMasterLibrary" class present in the overview tab
+When I navigate to the "View All Content" tab
+Then I should be on the "Content" page
 
 #Purpose: To View Assigned Contents in the Overview Tab
 Scenario: Display of Assigned Contents in the Overview Tab by CS Student
