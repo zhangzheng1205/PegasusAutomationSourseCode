@@ -102,11 +102,11 @@ When I navigate to the "Course Enrollment" tab
 Then I should be on the "Course Enrollment" page
 When I search "DigitsAuthoredCourse" in workspace by "CourseName" and "Equals" dropdown option
 Then I should see the searched "DigitsAuthoredCourse" course in Manage Courses frame
-When I create testing type course copy as "CTCDigitsAuthoredCourse"
+When I create testing type course copy as "MasterLibrary"
 Then I should see the successfull message "Copied as test course."
-When I verify the course "CTCDigitsAuthoredCourse" for AssignedToCopy state by "CourseName" and "Equals" dropdown option
+When I verify the course "MasterLibrary" for AssignedToCopy state by "CourseName" and "Equals" dropdown option
 Then I should see the copied course out of Assigned to Copy State
-And I should see the searched "CTCDigitsAuthoredCourse" course in Manage Courses frame
+And I should see the searched "MasterLibrary" course in Manage Courses frame
 
 #Purpose: Unenrol the Enrolled Student to the Course
 Scenario: UnEnrol the Enrolled Student by Workspace Admin
