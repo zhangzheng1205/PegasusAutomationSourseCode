@@ -72,7 +72,8 @@ namespace Pegasus.Automation.DataTransferObjects
             HedMilSelfStudy = 46,
             //HSS Course and Template Enum
             HedMyPsychLabProgram=47,
-            HedMyPsychLabMaster=48
+            HedMyPsychLabMaster=48,
+            NNMasterLibrary=49
         }
 
         /// <summary>

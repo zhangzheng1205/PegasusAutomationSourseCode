@@ -74,7 +74,56 @@ namespace Pegasus.Acceptance.NovaNET.Tests.
                 "VerifyTheCourseForAssignedToCopyState",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
+        /// <summary>
+        /// Search the course in right frame.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is Course Type Enum.</param>
+        /// <param name="searchRadioButton">This is Search Radio Button.</param>
+        /// <param name="dropdownOption">This is Dropdown Option.</param>
+        [When(@"I search ""(.*)"" in workspace by ""(.*)"" and ""(.*)"" dropdown option")]
+        public void SearchTheCourse(Course.CourseTypeEnum courseTypeEnum,
+            string searchRadioButton, string dropdownOption)
+        {
+            //Search Course in right frame
+            Logger.LogMethodEntry("CourseCopy", "SearchTheCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get the Course from Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Search course
+            new SearchCoursesPage().SearchCourse(
+                (SearchCoursesPage.SearchRadioButtonEnum)Enum.Parse(typeof(
+                SearchCoursesPage.SearchRadioButtonEnum),
+                searchRadioButton), course.Name, dropdownOption);
+            //Select CourseEnrollement Window
+            new ManageCoursesPage().SelectCourseEnrollementWindow();
+            Logger.LogMethodExit("CourseCopy", "SearchTheCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Create Copy As Testing Course In Workspace.
+        /// </summary>      
+        /// <param name="courseTypeEnum">>This is course type enum.</param>
+        [When(@"I create testing type course copy as ""(.*)""")]
+        public void CreateCopyAsTestingCourseInWorkspace(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Create Copy As Testing Course In Workspace 
+            Logger.LogMethodEntry("CourseCopy",
+               "CreateCopyAsTestingCourseInWorkspace",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Click of CMenu Option
+            new ManageCoursesPage().ClickCourseCMenuOption
+             (CourseCopyResource.
+             CreateCourseCopy_CopyasTestingrCourse_CMenu_CTC_Option_Name);
+            //Create Copy Course As Testing Course
+            new NewCoursePage().CopyCourseAsTestingCourse(courseTypeEnum);
+            Logger.LogMethodExit("CourseCopy",
+                "CreateCopyAsTestingCourseInWorkspace",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Ensure Course Is Out Of AssignedToCopy State Or Not.
         /// </summary>

@@ -20,10 +20,10 @@ Given I browsed the login url for "WsTeacher"
 When I login to Pegasus as "WsTeacher" in "WorkSpace"
 Then I should be logged in successfully
 Given I am on the "Global Home" page
-When I enter in the "NovaNETMasterLibrary" course as "WsTeacher" from the Global Home page
+When I enter in the "NNMasterLibrary" course as "WsTeacher" from the Global Home page
 
 #Purpose:Verify The User Logout As WsTeacher
-Scenario: User Login As WsTeacher
+Scenario: User LogOut As WsTeacher
 When I "Sign out" from the "WsTeacher"
 Then I should see the successfull message "You have been signed out of the application."
 

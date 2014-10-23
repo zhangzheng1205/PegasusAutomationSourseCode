@@ -121,18 +121,17 @@ testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTa
 #line 22
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 23
-testRunner.When("I enter in the \"NovaNETMasterLibrary\" course as \"WsTeacher\" from the Global Home " +
-                    "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter in the \"NNMasterLibrary\" course as \"WsTeacher\" from the Global Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As WsTeacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User LogOut As WsTeacher")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogout")]
-        public virtual void UserLoginAsWsTeacher()
+        public virtual void UserLogOutAsWsTeacher()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As WsTeacher", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User LogOut As WsTeacher", ((string[])(null)));
 #line 26
 this.ScenarioSetup(scenarioInfo);
 #line 27

@@ -15,6 +15,18 @@ Then I should see the successfull message "New course created successfully."
 When I search "NovaNETMasterLibrary" course in workspace by "CourseName" and "Equals" dropdown option
 Then I should see the searched "NovaNETMasterLibrary" course in Manage Courses frame
 
+#Purpose: UseCase To Create Copy As Testing Course of authored course 
+Scenario: Course Copy Creation as Testing Course by Ws Admin
+When I navigate to the "Course Enrollment" tab
+Then I should be on the "Course Enrollment" page
+When I search "NovaNETAuthored" in workspace by "CourseName" and "Equals" dropdown option
+Then I should see the searched "NovaNETAuthored" course in Manage Courses frame
+When I create testing type course copy as "NNMasterLibrary"
+Then I should see the successfull message "Copied as test course."
+When I verify the course "NNMasterLibrary" for AssignedToCopy state by "CourseName" and "Equals" dropdown option
+Then I should see the copied course out of Assigned to Copy State
+And I should see the searched "NNMasterLibrary" course in Manage Courses frame
+
 #Purpose: UseCase To Create Empty Course
 Scenario: Create Empty Course by Ws Admin
 When I navigate to the "Course Enrollment" tab
@@ -76,9 +88,9 @@ And I should see the enrolled "WsTeacher" in the Manage Courses frame
 Scenario: Enroll the User to the NovaNetMasterLibrary Course by Ws Admin
 When I navigate to the "Course Enrollment" tab
 Then I Should be on the "Course Enrollment" page
-When I search "NovaNETMasterLibrary" course in workspace by "CourseName" and "Equals" dropdown option
-Then I should see the searched "NovaNETMasterLibrary" course in Manage Courses frame
-When I select the created "NovaNETMasterLibrary" course
+When I search "NNMasterLibrary" course in workspace by "CourseName" and "Equals" dropdown option
+Then I should see the searched "NNMasterLibrary" course in Manage Courses frame
+When I select the created "NNMasterLibrary" course
 And I select the "WsTeacher" user
 And I enroll the "WsTeacher" in the selected course
 Then I should see the successfull message "Teachers enrolled successfully."

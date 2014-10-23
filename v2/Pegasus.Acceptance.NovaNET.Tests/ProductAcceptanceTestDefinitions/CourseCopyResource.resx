@@ -123,4 +123,7 @@
   <data name="CourseCopy_CopyAsMasterCourse_ReturnValue_Match" xml:space="preserve">
     <value>False</value>
   </data>
+  <data name="CreateCourseCopy_CopyasTestingrCourse_CMenu_CTC_Option_Name" xml:space="preserve">
+    <value>Copy as Testing Course</value>
+  </data>
 </root>
