@@ -38,3 +38,10 @@ Then I should be on the "Gradebook" page
 When I click the "NNTest" activity of cmneu "View Submission" 
 Then I should see the grade "100" in view submission page
 When I close the "View Submission" window
+
+#NovaNETMasterLibrary Scenario
+Scenario: To Verify the tab navigation by CS Student
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I navigate to the "Content" tab
+Then I should be on the "Content" page

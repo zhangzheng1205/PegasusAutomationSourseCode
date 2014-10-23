@@ -70,4 +70,9 @@ When I click on 'Assignment Types' link in gradebook
 And I select "Test" Assignment Type
 Then I should see the "NNTest" activity in Gradebook
 
-
+#NovaNETMasterLibrary Scenario
+Scenario: To Verify the tab navigation by CS Teacher
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I navigate to the "Content" tab
+Then I should be on the "Content" page

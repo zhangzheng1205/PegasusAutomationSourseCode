@@ -75,7 +75,7 @@ Then I should be logged in successfully
 Given I am on the "Global Home" page
 
 #Purpose:Verify The User Login As NovaNETCsStudent
-Scenario: User Login As NovaNETCsStudent
+Scenario: User Login As NovaNETCsStudent and Navigate to Masterlibrary
 Given I browsed the login url for "NovaNETCsStudent"
 When I login to Pegasus as "NovaNETCsStudent" in "CourseSpace"
 Then I should be logged in successfully

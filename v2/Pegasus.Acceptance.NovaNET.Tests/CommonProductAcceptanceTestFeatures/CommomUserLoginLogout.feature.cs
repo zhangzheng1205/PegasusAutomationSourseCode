@@ -282,11 +282,11 @@ testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTal
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As NovaNETCsStudent")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As NovaNETCsStudent and Navigate to Masterlibrary")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonLoginLogout")]
-        public virtual void UserLoginAsNovaNETCsStudent()
+        public virtual void UserLoginAsNovaNETCsStudentAndNavigateToMasterlibrary()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As NovaNETCsStudent", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As NovaNETCsStudent and Navigate to Masterlibrary", ((string[])(null)));
 #line 78
 this.ScenarioSetup(scenarioInfo);
 #line 79
