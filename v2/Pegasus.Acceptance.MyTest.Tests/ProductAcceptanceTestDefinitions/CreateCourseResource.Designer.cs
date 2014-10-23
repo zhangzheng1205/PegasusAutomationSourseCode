@@ -60,5 +60,23 @@ namespace Pegasus.Acceptance.MyTest.Tests.ProductAcceptanceTestDefinitions {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy as Testing Course.
+        /// </summary>
+        internal static string CourseCopy_CopyasMasterCourse_CMenu_CTC_Option_Name {
+            get {
+                return ResourceManager.GetString("CourseCopy_CopyasMasterCourse_CMenu_CTC_Option_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to False.
+        /// </summary>
+        internal static string CourseCopy_CopyAsMasterCourse_ReturnValue_Match {
+            get {
+                return ResourceManager.GetString("CourseCopy_CopyAsMasterCourse_ReturnValue_Match", resourceCulture);
+            }
+        }
     }
 }

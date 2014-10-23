@@ -23,6 +23,17 @@ Then I should see the successfull message "New course created successfully."
 When I search "MySpanishLabMaster" course in workspace by "CourseName" and "Equals" dropdown option
 Then I should see the searched "MySpanishLabMaster" course in Manage Courses frame
 
+#Purpose: UseCase To Create Copy As Testing Course of authored course
+Scenario: Course Copy Creation as Testing Course by Ws Admin
+When I navigate to "Course Enrollment" tab of the "Course Enrollment" page
+Then I should be on the "Course Enrollment" page
+When I search "MyTestAuthoredCourse" course in workspace by "CourseName" and "Equals" dropdown option
+Then I should be able to see the searched "MyTestAuthoredCourse" course
+When I create testing type course copy as "MySpanishLabMaster" course
+Then I should see the successfull message "Copied as test course."
+When I verified the course "MySpanishLabMaster" for AssignedToCopy state by "CourseName" and "Equals" dropdown option
+Then I should see the Copied "MySpanishLabMaster" Course Out Of Assigned to Copy State
+
 #Purpose: UseCase To Enroll User To Master Course
 Scenario: Enroll Teacher in Master Course by WS Admin
 When I navigate to "Course Enrollment" tab of the "Course Enrollment" page
