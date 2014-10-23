@@ -12,14 +12,14 @@ Given I am on the "Global Home" page
 
 #Purpose: Open Ws Url and Login as Workspace Admin
 Scenario: User Login as Workspace Admin in HedMil
-Given I browsed the login url for "HedMiLWsAdmin"
-When I logged into the Pegasus as "HedMiLWsAdmin" in "WorkSpace"
+Given I browsed the login url for "HedWsAdmin"
+When I logged into the Pegasus as "HedWsAdmin" in "WorkSpace"
 Then I should logged in successfully
 Given I am on the "Course Enrollment" page
 
 #Purpose: Open Ws Url and Logout as Workspace Admin
 Scenario: User Logout as Workspace Admin in HedMil
-When I "Sign out" from the "HedMiLWsAdmin"
+When I "Sign out" from the "HedWsAdmin"
 Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose: Open Ws Url and Login as CTGPublisher Admin

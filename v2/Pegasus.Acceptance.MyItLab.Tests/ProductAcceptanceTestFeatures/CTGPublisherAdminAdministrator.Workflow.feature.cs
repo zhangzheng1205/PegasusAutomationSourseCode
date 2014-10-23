@@ -97,7 +97,7 @@ testRunner.And("I should see the default contents of Workspace tab", ((string)(n
 #line 14
 this.ScenarioSetup(scenarioInfo);
 #line 15
-testRunner.When("I \"Create\" the new \"HEDMilWorkSpace\" admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I \"Create\" the new \"HedWsAdmin\" admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
 testRunner.Then("I should see the successfull message \"New workspace created successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

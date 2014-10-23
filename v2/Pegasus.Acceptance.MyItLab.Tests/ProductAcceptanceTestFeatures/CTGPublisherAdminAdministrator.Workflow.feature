@@ -12,5 +12,5 @@ And I should see the default contents of Workspace tab
 #Purpose: Creating the Workspace by CTG Publisheradmin
 # TestCase Id : HED_MIL_PWF_003
 Scenario: Creating the Workspace by CTG Publisheradmin
-When I "Create" the new "HEDMilWorkSpace" admin
+When I "Create" the new "HedWsAdmin" admin
 Then I should see the successfull message "New workspace created successfully."
