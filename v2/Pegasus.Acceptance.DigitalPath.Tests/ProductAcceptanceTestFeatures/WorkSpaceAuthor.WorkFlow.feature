@@ -46,6 +46,15 @@ Then I should see the successfull message "Announcement created successfully." i
 Scenario: View Default Tabs by WS Teacher
 Then I should see the defaults tabs for "WsTeacher"
 
+#View Tabs Navigation by WS Teacher
+Scenario: View Tabs Navigation by WS Teacher
+When I navigate to the "Content" tab
+Then I should be on the "Content" page
+When I navigate to the "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I navigate to the "Today's View" tab
+Then I should be on the "Today's View" page
+
 #This Usecase related to "MasterLibrary" course
 #Purpose: Launch different type of activities by WS Teacher
 Scenario: Launch Skill Study Plan Activity by WS Teacher
