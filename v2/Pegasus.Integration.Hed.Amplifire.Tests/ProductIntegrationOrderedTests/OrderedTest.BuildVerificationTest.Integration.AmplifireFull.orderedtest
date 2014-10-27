@@ -1,0 +1,11 @@
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.BuildVerificationTest.Integration.AmplifireFull" storage="e:\c$\v2\pegasus.integration.hed.amplifire.tests\productintegrationorderedtests\orderedtest.buildverificationtest.integration.amplifirefull.orderedtest" id="9662adcc-e83e-4215-8f3a-5de015e63f13" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+=======
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.BuildVerificationTest.Integration.AmplifireFull" storage="e:\c$\v2\pegasus.integration.hed.amplifire.tests\productintegrationorderedtests\orderedtest.buildverificationtest.integration.amplifirefull.orderedtest" id="c4562e97-f29a-4ee0-af94-ed66d88df19c" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="45748642-b8d0-8f20-5d0c-55192945c4c2" name="AccessClassByCSTeacher" storage="..\..\pegasus.acceptance.digitalpath.tests\bin\debug\pegasus.acceptance.digitalpath.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+>>>>>>> 595170f... Build Fail Corrected
+</OrderedTest>
