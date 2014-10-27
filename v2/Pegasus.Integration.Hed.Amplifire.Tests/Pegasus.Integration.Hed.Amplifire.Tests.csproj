@@ -73,8 +73,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CommonIntegrationTestFeatures\" />
     <Folder Include="CommonProductIntegrationTestDefinitions\" />
+    <Folder Include="CommonProductIntegrationTestFeatures\" />
     <Folder Include="ProductIntegrationTestDefinitions\" />
     <Folder Include="ProductIntegrationTestFeatures\" />
   </ItemGroup>
