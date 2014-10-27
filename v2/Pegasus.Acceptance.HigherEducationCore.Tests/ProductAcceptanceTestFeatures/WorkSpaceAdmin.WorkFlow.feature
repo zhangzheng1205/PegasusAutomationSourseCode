@@ -68,6 +68,16 @@ And I select the "HedWsInstructor"
 When I enrolled the "HedWsInstructor" in the Master course
 Then I should see the successfull message "Instructors enrolled successfully."
 
+#Purpose: UseCase To Enroll User(s) To Copy of Testing Course
+Scenario: Enroll Teacher to Copy of Testing Course by WS Admin
+When I navigate to "Course Enrollment" tab of the "Course Enrollment" page
+Then I should be on the "Course Enrollment" page
+When I search "MySpanishLabTestingMaster" course in workspace by "CourseName" and "Equals" dropdown option
+Then I should be able to see the searched "MySpanishLabTestingMaster" course
+When I select the created "MySpanishLabTestingMaster" course
+And I select the "HedWsInstructor"
+When I enrolled the "HedWsInstructor" in the Master course
+Then I should see the successfull message "Instructors enrolled successfully."
 
 #Purpose: To publish the authored master course
 @PublishCourse

@@ -77,6 +77,14 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "HEDGeneral" from the Global Home page as "HedWsInstructor"
 
+#Purpose:Verify The User Login As WorkSpaceTeacher Copy of Testing Course
+Scenario: User Login As WorkSpaceTeacher Navigate to TestingCourse
+Given I browsed the login url for "HedWsInstructor"
+When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabTestingMaster" from the Global Home page as "HedWsInstructor" 
+
 #Purpose:Verify The User Login As WorkSpaceTeacher MasterCourse
 Scenario: User Login As WorkSpaceTeacher Navigate to MasterCourse
 Given I browsed the login url for "HedWsInstructor"

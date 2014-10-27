@@ -578,6 +578,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.DemoAcceptanceTest.HedCore.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.SpotCheckTest.HedCore.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdvancedSearchInManageCourseMaterialsAndAddContentLibrary.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceAdvancedSearchInManageCourseMaterialsAndAddContentLibrary.feature.cs</LastGenOutput>
