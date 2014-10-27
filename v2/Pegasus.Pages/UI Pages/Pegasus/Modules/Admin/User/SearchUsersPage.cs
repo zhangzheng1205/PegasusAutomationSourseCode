@@ -5,6 +5,7 @@ using System.Text;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.Exceptions;
+using System.Threading;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Admin.User;
 
 namespace Pegasus.Pages.UI_Pages
@@ -46,6 +47,7 @@ namespace Pegasus.Pages.UI_Pages
                     SearchUsers_Page_ImageCourseSearch_Xpath_Locator);
                 //Get Web Element 
                 base.ClickByJavaScriptExecutor(getSearchButton);
+                Thread.Sleep(3000);
                 base.SwitchToDefaultWindow();
             }
             catch (Exception e)

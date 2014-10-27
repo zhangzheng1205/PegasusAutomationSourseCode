@@ -80,10 +80,12 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 // To click New Search link
-                if (base.GetWebElementPropertiesById(AdminToolPageResource
-                    .AdminTool_Page_SearchLink_Id_Locator).Displayed)
+                if (base.IsElementPresent(By.Id(AdminToolPageResource
+                    .AdminTool_Page_SearchLink_Id_Locator),2))
+                {
                     base.GetWebElementPropertiesById(AdminToolPageResource
                         .AdminTool_Page_SearchLink_Id_Locator).Click();
+                }
                 //Search User 
                 new SearchUsersPage().SearchUser(username);
             }

@@ -52,8 +52,8 @@ When I navigate to the "Content" tab
 Then I should be on the "Content" page
 When I navigate to the "Gradebook" tab
 Then I should be on the "Gradebook" page
-When I navigate to the "Today's View" tab
-Then I should be on the "Today's View" page
+When I navigate to the "Preferences" tab
+Then I should be on the "Preferences" page
 
 #This Usecase related to "MasterLibrary" course
 #Purpose: Launch different type of activities by WS Teacher

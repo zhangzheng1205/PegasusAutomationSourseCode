@@ -164,8 +164,8 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("SearchCoursesPage", "ClickOnNewSearchLink",
              base.IsTakeScreenShotDuringEntryExit);
             //Click On Search Link if Displaying
-            if (base.GetWebElementPropertiesById(SearchCoursesPageResource.
-                                                     SearchCourses_Page_Search_Link_Id_Locator).Displayed)
+            if (base.IsElementPresent(By.Id(SearchCoursesPageResource.
+                   SearchCourses_Page_Search_Link_Id_Locator),2))
             {
                 //Wait For Element
                 base.WaitForElement(By.Id(SearchCoursesPageResource.
