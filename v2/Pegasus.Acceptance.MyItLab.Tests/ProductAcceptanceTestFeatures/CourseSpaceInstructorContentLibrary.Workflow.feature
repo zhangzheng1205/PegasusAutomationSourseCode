@@ -12,8 +12,6 @@ And I click on the "Homework" activity type
 Then I should be on the "Create activity" page
 When I create "Homework" activity of behavioral mode "BasicRandom" type using True-False question
 Then I should see the successfull message "Activity added successfully."
-When I "Sign out" from the "HedWsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
 
 #Test Case ID: peg-22162
 #Purpose: To Create a Skill based activity with Native and SIM5 questions
