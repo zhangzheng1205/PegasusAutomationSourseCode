@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructor", "               As a CS Instructor \r\n\t\t\tI want to manage all the coursespace instr" +
-                    "uctor related usecases \r\n\t\t\tso that I would validate all the coursespace instruc" +
-                    "tor scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructor", "               As a CS Instructor \n\t\t\tI want to manage all the coursespace instru" +
+                    "ctor related usecases \n\t\t\tso that I would validate all the coursespace instructo" +
+                    "r scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -367,6 +367,55 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
                         "Gradebook"});
 #line 117
 testRunner.And("I should see the following tabs", ((string)(null)), table4, "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To Verify The Tab Navigation By SMS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructor")]
+        public virtual void ToVerifyTheTabNavigationBySMSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify The Tab Navigation By SMS Instructor", ((string[])(null)));
+#line 125
+this.ScenarioSetup(scenarioInfo);
+#line 126
+testRunner.When("I navigate to the \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "SubtabName",
+                        "WindowTitle"});
+            table5.AddRow(new string[] {
+                        "Add from Library",
+                        "Course Materials"});
+            table5.AddRow(new string[] {
+                        "Manage Course Materials",
+                        "Course Materials"});
+            table5.AddRow(new string[] {
+                        "Map Learning Objectives",
+                        "Course Materials"});
+            table5.AddRow(new string[] {
+                        "Manage Question Bank",
+                        "Question Bank"});
+#line 127
+testRunner.Then("I should see the following subtabs under Course Materials page", ((string)(null)), table5, "Then ");
+#line 133
+testRunner.When("I navigate to the \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "SubtabName",
+                        "WindowTitle"});
+            table6.AddRow(new string[] {
+                        "Grades",
+                        "Gradebook"});
+            table6.AddRow(new string[] {
+                        "Custom View",
+                        "Custom View"});
+            table6.AddRow(new string[] {
+                        "Reports",
+                        "Reports"});
+#line 134
+testRunner.Then("I should see the following subtabs under Gradebook page", ((string)(null)), table6, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

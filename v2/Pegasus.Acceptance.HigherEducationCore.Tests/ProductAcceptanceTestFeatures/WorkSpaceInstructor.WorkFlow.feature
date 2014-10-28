@@ -140,4 +140,11 @@ Then I should see the successfull message "Folder saved successfully."
 When I associate the "Folder" activity Content Library to MyCourse frame
 Then I should see the successfull message "Content item is added to My Course"
 
-
+#Purpose: Verify the tab navigation in workspace teacher
+Scenario: To Verify Tab Navigation By Ws Instructor
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page

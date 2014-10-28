@@ -121,8 +121,21 @@ And I should see the following tabs
 | Communicate              | Communicate      |
 | Grades                   | Gradebook        |
 
-
-
+#Purpose: To verify the tab navigation inside the course
+Scenario: To Verify The Tab Navigation By SMS Instructor
+When I navigate to the "Course Materials" tab
+Then I should see the following subtabs under Course Materials page
+| SubtabName                           | WindowTitle      |
+| Add from Library                     | Course Materials |
+| Manage Course Materials              | Course Materials |
+| Map Learning Objectives              | Course Materials |
+| Manage Question Bank                 | Question Bank    |
+When I navigate to the "Gradebook" tab
+Then I should see the following subtabs under Gradebook page
+| SubtabName      | WindowTitle      |
+| Grades           | Gradebook        |
+| Custom View      | Custom View      |
+| Reports		   | Reports          |
 
 
 
