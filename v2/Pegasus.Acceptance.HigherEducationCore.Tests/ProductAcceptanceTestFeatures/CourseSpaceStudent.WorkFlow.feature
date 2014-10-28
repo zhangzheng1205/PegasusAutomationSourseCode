@@ -114,4 +114,11 @@ When I open the activity with learnosity audio essay question
 And I submit the 'Manually Gradable' Activity with learnosity audio question
 Then I should see the status of activity with learnosity audio question as "Submitted"
 
- 
+# To Verify the Tab Navigation By SMS Student
+Scenario: To Verify Tab Navigation By SMS Student
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I navigate to "Grades" tab
+Then I should be on the "Gradebook" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page 
