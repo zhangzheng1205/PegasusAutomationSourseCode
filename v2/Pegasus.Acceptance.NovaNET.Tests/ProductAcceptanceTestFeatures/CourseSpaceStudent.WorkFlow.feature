@@ -41,7 +41,7 @@ When I close the "View Submission" window
 
 #NovaNETMasterLibrary Scenario
 Scenario: To Verify the tab navigation by CS Student
-When I navigate to "Gradebook" tab
+When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
-When I navigate to the "Content" tab
-Then I should be on the "Content" page
+When I navigate to the "Overview" tab
+Then I should be on the "Overview" page

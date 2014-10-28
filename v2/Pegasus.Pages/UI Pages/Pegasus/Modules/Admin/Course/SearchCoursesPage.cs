@@ -170,12 +170,14 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait For Element
                 base.WaitForElement(By.Id(SearchCoursesPageResource.
                                           SearchCourses_Page_Search_Link_Id_Locator));
-                //Submit Button
-                base.SubmitButtonById(SearchCoursesPageResource.
+                IWebElement getSearchButton=base.GetWebElementPropertiesById
+                    (SearchCoursesPageResource.
                                           SearchCourses_Page_Search_Link_Id_Locator);
+                //Submit Button
+                base.ClickByJavaScriptExecutor(getSearchButton);
                 //Pause For Sleep Time 
-                Thread.Sleep(Convert.ToInt32
-                    (SearchCoursesPageResource.SearchCourses_Page_SleepTime_Value));
+                Thread.Sleep(Convert.ToInt32(SearchCoursesPageResource.
+                            SearchCourses_Page_Search_Time_Value));
             }
             Logger.LogMethodExit("SearchCoursesPage", "ClickOnNewSearchLink",
              base.IsTakeScreenShotDuringEntryExit);

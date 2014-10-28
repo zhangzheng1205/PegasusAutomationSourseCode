@@ -74,5 +74,5 @@ Then I should see the "NNTest" activity in Gradebook
 Scenario: To Verify the tab navigation by CS Teacher
 When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
-When I navigate to the "Content" tab
-Then I should be on the "Content" page
+When I navigate to the "Preferences" tab
+Then I should be on the "Preferences" page
