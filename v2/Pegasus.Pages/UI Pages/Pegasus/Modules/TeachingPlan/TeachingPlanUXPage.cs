@@ -84,8 +84,6 @@ namespace Pegasus.Pages.UI_Pages
                                    base.IsTakeScreenShotDuringEntryExit);
             //Wait for Element
             base.WaitForElement(By.PartialLinkText(tabName));
-            //Focus on Element
-            base.FocusOnElementByPartialLinkText(tabName);
             //Click on Tab
             IWebElement getSubTabName = base.GetWebElementPropertiesByPartialLinkText(tabName);
             base.ClickByJavaScriptExecutor(getSubTabName);

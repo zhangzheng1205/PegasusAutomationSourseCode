@@ -124,9 +124,20 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             //Click on the Link
             Logger.LogMethodEntry("CommonSteps", "ClickOnTheLink",
                 base.IsTakeScreenShotDuringEntryExit);
-            //Switch To Frame
-            base.SwitchToIFrame(CommonStepsResource.
-                CommonSteps_IFrame + frame + string.Empty);
+            switch (Browser)
+            {
+                case PegasusBaseTestFixture.InternetExplorer:
+                    //Switch To Frame
+                    SwitchToIFrame(CommonStepsResource.
+                        CommonSteps_IFrame + frame + string.Empty);
+                    break;
+                case PegasusBaseTestFixture.FireFox:
+                case PegasusBaseTestFixture.Chrome:
+                    //Switch To Frame
+                    SwitchToIFrame(CommonStepsResource.
+                        CommonSteps_IFrame + "left" + string.Empty);
+                    break;
+            }             
             //Wait For Partial Link Text 
             base.WaitForElement(By.PartialLinkText(linkName));
             //Get link Property

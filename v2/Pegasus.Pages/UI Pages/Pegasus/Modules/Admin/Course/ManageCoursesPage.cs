@@ -78,7 +78,6 @@ namespace Pegasus.Pages.UI_Pages
                 IWebElement imageCourseCMenu = base.GetWebElementPropertiesByXPath
                     (ManageCoursesPageResource.
                     ManageCourses_Page_CourseCmenu_Image_Xpath_Locator);
-                imageCourseCMenu.SendKeys(string.Empty);
                 //Click on the Course CMenu 
                 base.ClickByJavaScriptExecutor(imageCourseCMenu);
                 base.WaitForElement(By.PartialLinkText(courseCMenuOptionName));

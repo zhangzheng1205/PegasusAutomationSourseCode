@@ -144,9 +144,20 @@ namespace Pegasus.Acceptance.DigitalPath.Tests.
             //Click on the Link
             Logger.LogMethodEntry("CommonSteps", "ClickOnTheLink",
                 IsTakeScreenShotDuringEntryExit);
-            //Switch To Frame
-            SwitchToIFrame(CommonStepsResource.
-                CommonSteps_IFrame + frame + string.Empty);
+            switch (Browser)
+            {
+                case PegasusBaseTestFixture.InternetExplorer:
+                        //Switch To Frame
+                        SwitchToIFrame(CommonStepsResource.
+                            CommonSteps_IFrame + frame + string.Empty);
+                        break;
+                case PegasusBaseTestFixture.FireFox:
+                case PegasusBaseTestFixture.Chrome:
+                    //Switch To Frame
+                    SwitchToIFrame(CommonStepsResource.
+                        CommonSteps_IFrame + "left" + string.Empty);
+                    break;
+            }            
             //Wait For Partial Link Text 
             WaitForElement(By.PartialLinkText(linkName));
             //Click on the Link
