@@ -823,8 +823,11 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 // Get the Current date
-                string getCurrentDate = DateTime.Now.ToString
-                    (AssignContentPageResource.AssignContent_Page_DateFormat);
+                User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
+                DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
+                String currentTime = instance.ToString();
+
+                string date = currentTime.Split(' ')[0];
                 //Select Properties Window
                 this.SelectPropertiesWindow();
                 //Check the Set Availability Date Range Radio Button
@@ -839,7 +842,7 @@ namespace Pegasus.Pages.UI_Pages
                     AssignContent_Page_FromDate_TextField_Id_Locator);
                 //Enter Current Date
                 base.FillTextBoxById(AssignContentPageResource.
-                    AssignContent_Page_FromDate_TextField_Id_Locator, getCurrentDate);
+                    AssignContent_Page_FromDate_TextField_Id_Locator, date);
             }
             catch (Exception e)
             {
@@ -935,9 +938,17 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("AssignContentPage", "GetAndFillDueDate",
                  base.IsTakeScreenShotDuringEntryExit);
             try
-            {
-                // Get the due date
-                DateTime getDueDate = DateTime.Now.AddMinutes(5);
+            { 
+                // Get the current date and time
+                User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
+                DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
+                String currentTime = instance.ToString();
+
+                string date = currentTime.Split(' ')[0];
+                string hour = (currentTime.Split(' ')[1]).Split(':')[0];
+                string minutes = (currentTime.Split(' ')[1]).Split(':')[1];
+                string dayTime = currentTime.Split(' ')[2];
+
 
                 // Enter the due date in due date text box
                 base.WaitForElement(By.Id(AssignContentPageResource
@@ -945,18 +956,20 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClearTextById(AssignContentPageResource
                .AssignContent_Page_DueDate_TextBox_Id_Locator);
                 base.FillTextBoxById(AssignContentPageResource
-                .AssignContent_Page_DueDate_TextBox_Id_Locator, getDueDate.ToString(AssignContentPageResource.AssignContent_Page_DateFormat));
+                .AssignContent_Page_DueDate_TextBox_Id_Locator, date);
                 //clear current hours
                 base.ClearTextById(AssignContentPageResource
                     .AssignContent_Page_Hours_TextBox_Id_Locator);
-                // enter current hours
+                //enter current hours
                 base.FillTextBoxById(AssignContentPageResource
-                    .AssignContent_Page_Hours_TextBox_Id_Locator, String.Format("{0:h }", getDueDate).Trim());
+                   .AssignContent_Page_Hours_TextBox_Id_Locator, hour);
                 base.ClearTextById(AssignContentPageResource
-                    .AssignContent_Page_Minutes_TextBox_Id_Locator);
-                // enter after 3 minutes from current minute value
+                   .AssignContent_Page_Minutes_TextBox_Id_Locator);
+                //// enter after 3 minutes from current minute value
                 base.FillTextBoxById(AssignContentPageResource
-                    .AssignContent_Page_Minutes_TextBox_Id_Locator, String.Format("{0:m }", getDueDate).Trim());
+                   .AssignContent_Page_Minutes_TextBox_Id_Locator, minutes);
+                //enter am/pm 
+                base.SelectDropDownValueThroughTextById("CMBAMPMDUEDT", dayTime);
             }
             catch (Exception e)
             {
@@ -1201,12 +1214,17 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                // Get the Current date
-                string getCurrentDate = DateTime.Now.ToString
-                    (AssignContentPageResource.AssignContent_Page_DateFormat);
+
+
+                // Get the current date and time
+                User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
+                DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
+                String currentTime = instance.ToString();
+
+                string date = currentTime.Split(' ')[0];
                 //Select Properties Window
-                this.SelectAssignWindow(); 
-                    //Check the Set Availability Date Range Radio Button
+                this.SelectAssignWindow();
+                //Check the Set Availability Date Range Radio Button
                 base.WaitForElement(By.Id(AssignContentPageResource.
                     AssignContent_Page_SetAvailabilityDateRange_Radiobutton_Id_Locator));
                 //Select Set Avalability Date Range Radiobutton
@@ -1218,7 +1236,7 @@ namespace Pegasus.Pages.UI_Pages
                     AssignContent_Page_FromDate_TextField_Id_Locator);
                 //Enter Current Date
                 base.FillTextBoxById(AssignContentPageResource.
-                    AssignContent_Page_FromDate_TextField_Id_Locator, getCurrentDate);
+                    AssignContent_Page_FromDate_TextField_Id_Locator, date);
             }
             catch (Exception e)
             {
@@ -1285,6 +1303,53 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage", "SelectAssignedRadiobutton",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public void FillDueDateNearPastDueDate()
+        {
+            logger.LogMethodEntry("AssignContentPage", "GetAndFillDueDate",
+                  base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // Get the current date and time
+                User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
+                DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
+                String currentTime = instance.ToString();
+                
+                string date=currentTime.Split(' ')[0];
+                string hour = (currentTime.Split(' ')[1]).Split(':')[0];
+                string minutes =(currentTime.Split(' ')[1]).Split(':')[1];
+                string dayTime = currentTime.Split(' ')[2];
+
+
+                // Enter the due date in due date text box
+                base.WaitForElement(By.Id(AssignContentPageResource
+               .AssignContent_Page_DueDate_TextBox_Id_Locator));
+                base.ClearTextById(AssignContentPageResource
+               .AssignContent_Page_DueDate_TextBox_Id_Locator);
+                base.FillTextBoxById(AssignContentPageResource
+                .AssignContent_Page_DueDate_TextBox_Id_Locator, date);
+                //clear current hours
+                base.ClearTextById(AssignContentPageResource
+                    .AssignContent_Page_Hours_TextBox_Id_Locator);
+                //enter current hours
+                base.FillTextBoxById(AssignContentPageResource
+                   .AssignContent_Page_Hours_TextBox_Id_Locator, hour);
+                base.ClearTextById(AssignContentPageResource
+                   .AssignContent_Page_Minutes_TextBox_Id_Locator);
+                //// enter after 3 minutes from current minute value
+                base.FillTextBoxById(AssignContentPageResource
+                   .AssignContent_Page_Minutes_TextBox_Id_Locator, minutes);
+                //enter am/pm 
+                base.SelectDropDownValueThroughTextById("CMBAMPMDUEDT", dayTime);
+                this.SaveProperties();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "GetAndFillDueDate",
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 

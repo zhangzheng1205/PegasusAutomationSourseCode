@@ -207,3 +207,9 @@ Scenario: : Update the section name and section id
 When I update section name and course id
 
 
+#Purpose:To get the date and time of the instructor
+Scenario: Set the date and time of SMS Instructor
+When I click 'My Profile' link
+And I store user current date and time of the instructor
+
+
