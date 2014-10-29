@@ -4,6 +4,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
+using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 
 namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
 {
@@ -151,5 +152,56 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("LaunchActivity", "ClickonSubmitButton",
                base.IsTakeScreenShotDuringEntryExit);
         }
+              
+        /// <summary>
+        /// Submit the Study plan Training activity.
+        /// </summary>
+        /// <param name="studentName">This is Student Name.</param>
+        /// <param name="activityName">This is Activity Name.</param>
+        /// <param name="scenerioName">This is Scenerio Name.</param>
+        [When(@"I click on 'Start Training' button of the ""(.*)"" activity by ""(.*)"" with ""(.*)""")]
+        public void SubmitStudyPlanActivity(string activityName,User.UserTypeEnum studentName, 
+                string scenerioName)
+        {
+            //select start training button of sim5 activity
+            Logger.LogMethodEntry("LaunchActivity", "ClickonSubmitButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on start training button
+            new SIMStudyPlanStudentUXPage().SelectStartTrainingButton();
+          //select the window
+            new StudentPresentationPage().SelectSimActivityStudentWindowName(studentName,
+                 activityName, scenerioName);
+           //Click on 'submit' button
+            new StudentPresentationPage().ClickOnSubmitButton();
+            Logger.LogMethodExit("LaunchActivity", "ClickonSubmitButton",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the Score and status of the activity.
+        /// </summary>
+        /// <param name="Score">This is the score.</param>
+        /// <param name="ActivityName">This is the activity name.</param>
+        /// <param name="Status">This is the Stauts.</param>
+       [Then(@"I should see the score ""(.*)"" for the activity ""(.*)"" also the status as""(.*)""")]
+       public void VerifyTheActivityResult(string score, string assetName, string status)
+       {
+           //Verify the Score and status of the activity
+           Logger.LogMethodEntry("LaunchActivity", "VerifyTheActivityResult",
+                base.IsTakeScreenShotDuringEntryExit);
+           //Verify Activity score displayed
+           Logger.LogAssertion("VerifyActivityScore",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(score, new SIMStudyPlanStudentUXPage().
+                    GetActivityScore()));
+           //Verify Activity status
+           Logger.LogAssertion("VerifyActivityStatus",
+               ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(status, new StudentPresentationPage().
+                    GetStatusOfSubmittedActivityInCourseMaterial(assetName)));
+           Logger.LogMethodExit("LaunchActivity", "VerifyTheActivityResult",
+               base.IsTakeScreenShotDuringEntryExit);
+       }
+
     }
 }

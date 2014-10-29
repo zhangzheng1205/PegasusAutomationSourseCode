@@ -502,3 +502,15 @@ Then I should be on the "Course Materials" page
 When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
 And I launch the "PowerPoint Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "Set Idle"
 And I attempt questions in "PowerPoint Chapter 1 Skill-Based Training"
+
+#Purpose : Submitting training material in SIM5 Study Plan 
+#Test Case ID : peg-22011.
+#Product : MyItLab.
+Scenario: Student submitting training material in SIM5 Word activity study plan
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Word Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent" 
+And I open the activity named as "Word Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
+Then I should be on the "myitlab Study Plan" page
+When I click on 'Start Training' button of the "Word Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "ZeroScore"
+Then I should see the score "0%" for the activity "Word Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" also the status as"In Progress" 

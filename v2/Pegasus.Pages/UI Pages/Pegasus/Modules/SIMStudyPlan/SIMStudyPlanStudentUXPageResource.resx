@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="SIMStudyPlanStudentUXPage_ActivityScore_XPathLocator" xml:space="preserve">
+    <value>//span[@id='Span24']/b</value>
+  </data>
   <data name="SIMStudyPlanStudentUXPage_Activity_Alert_PopUp_Name" xml:space="preserve">
     <value>Activity Alert</value>
+  </data>
+  <data name="SIMStudyPlanStudentUXPage_CancelButton_IdLocator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_btnReturn</value>
   </data>
   <data name="SIMStudyPlanStudentUXPage_Contineo_Button_Id" xml:space="preserve">
     <value>imgOk</value>
@@ -129,6 +135,9 @@
   <data name="SIMStudyPlanStudentUXPage_StartPreTest_Button_Xpath_Locator" xml:space="preserve">
     <value>//td[@class='ssp_textETLabl']/span/img</value>
   </data>
+  <data name="SIMStudyPlanStudentUXPage_StartTrainingButton_XPathLocator" xml:space="preserve">
+    <value>//span[@id='Span1']/img</value>
+  </data>
   <data name="SIMStudyPlanStudentUXPage_Submission_Expand_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='tblMain']/tbody/tr[2]/td/table/thead/tr[3]/td/table/thead/tr/td[2]/center/img</value>
   </data>
@@ -137,5 +146,8 @@
   </data>
   <data name="SIMStudyPlanStudentUXPage_ViewSubmission_Cmenu_Option_Id_Locator" xml:space="preserve">
     <value>_ctl0__ctl0_phBody_PageContent_lblviewsubmissions2</value>
+  </data>
+  <data name="SIMStudyPlanStudentUXPage_WindowName" xml:space="preserve">
+    <value>myitlab Study Plan</value>
   </data>
 </root>

@@ -216,5 +216,67 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
             return isStartPreTestButtonPresent;
         }
-    }
+
+        /// <summary>
+        /// Select 'Start Training' button.
+        /// </summary>
+        public void SelectStartTrainingButton()
+        {
+            //Select start training button
+            Logger.LogMethodEntry("SIMStudyPlanStudentUXPage", "SelectStartTrainingButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.XPath(SIMStudyPlanStudentUXPageResource.
+                       SIMStudyPlanStudentUXPage_StartTrainingButton_XPathLocator));
+                //Click on 'Start Training' button
+                IWebElement clickStartTraining = base.GetWebElementPropertiesByXPath(
+                    SIMStudyPlanStudentUXPageResource.
+                    SIMStudyPlanStudentUXPage_StartTrainingButton_XPathLocator);
+                base.ClickByJavaScriptExecutor(clickStartTraining);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("SIMStudyPlanStudentUXPage", "SelectStartTrainingButton",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Fetch the score of the activity.
+        /// </summary>
+        /// <returns>Activity name.</returns>
+        public string GetActivityScore()
+        {
+            Logger.LogMethodEntry("SIMStudyPlanStudentUXPage", "GetActivityScore",
+                base.IsTakeScreenShotDuringEntryExit);
+            string activityScore = string.Empty;
+            try
+            {
+                base.SelectWindow(SIMStudyPlanStudentUXPageResource.
+                        SIMStudyPlanStudentUXPage_WindowName);
+                base.WaitForElement(By.XPath(SIMStudyPlanStudentUXPageResource.
+                    SIMStudyPlanStudentUXPage_ActivityScore_XPathLocator));
+                //Get activity score
+                activityScore = base.GetElementTextByXPath(
+                    SIMStudyPlanStudentUXPageResource.
+                    SIMStudyPlanStudentUXPage_ActivityScore_XPathLocator);
+                //Click on cancel button
+                base.WaitForElement(By.Id(SIMStudyPlanStudentUXPageResource
+                    .SIMStudyPlanStudentUXPage_CancelButton_IdLocator));
+                IWebElement clickCancel = base.GetWebElementPropertiesById
+                    (SIMStudyPlanStudentUXPageResource
+                    .SIMStudyPlanStudentUXPage_CancelButton_IdLocator);
+                base.ClickByJavaScriptExecutor(clickCancel);
+            }
+            catch (Exception e)
+            {
+               ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("SIMStudyPlanStudentUXPage", "GetActivityScore",
+            base.IsTakeScreenShotDuringEntryExit);
+            return activityScore;
+        }
+     }
 }
