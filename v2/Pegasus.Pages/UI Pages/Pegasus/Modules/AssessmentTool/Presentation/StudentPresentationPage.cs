@@ -1657,7 +1657,7 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                       StudentPresentation_Page_FillText_TextBoxPosition_Value));
+                      StudentPresentation_Page_FillText_TextBoxPosition_Value)); 
                 //Wait for the element
                 base.WaitForElement(By.Id(StudentPresentationPageResource.
                     StudentPresentation_Page_StudyPlan_Submit_Button_Id_Locator));
@@ -1668,6 +1668,12 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickByJavaScriptExecutor(getSubmitButton);
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                     StudentPresentation_Page_FillText_TextBoxPosition_Value));
+                //Get the Submit Assignment 'OK' button as WebElement
+                IWebElement getSubmitAssignment = base.GetWebElementPropertiesByXPath
+                (StudentPresentationPageResource.
+                StudentPresentation_Page_SubmitAssignment_OK_Button_Id_Locator);
+                //Click on the Submit Assignment 'OK' button
+                base.ClickByJavaScriptExecutor(getSubmitAssignment);
             }
             catch (Exception e)
             {
