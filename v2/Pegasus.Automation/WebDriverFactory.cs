@@ -244,7 +244,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             profile.SetPreference("browser.download.folderList", 2);
             profile.SetPreference("browser.download.dir", DownloadFilePath);
             profile.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream doc docx xls xlsx pdf txt zip");
-            IWebDriver webDriver = new FirefoxDriver(new FirefoxBinary(), profile, TimeSpan.FromMinutes(3));
+            profile.EnableNativeEvents = true;
+            IWebDriver webDriver = new FirefoxDriver(new FirefoxBinary(), profile, TimeSpan.FromMinutes(20));
             // set page load duration
             webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
             // set cursor position center of the screen
