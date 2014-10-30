@@ -54,7 +54,7 @@ Then I should see the Home Page tabs
 #Purpose: UseCase To Check Enrolled classes in classes frame
 Scenario: View Enrolled Classes in Classes Frame by CS Teacher
 When I navigate to the "Classes" tab
-Then I should see the Enrolled "DigitalPathMasterLibrary" in classes frame
+Then I should be on the "Classes" page
 When I navigate to the "Home" tab
 Then I should be on the "Home" page
 
