@@ -57,6 +57,11 @@ namespace Pearson.Pegasus.TestAutomation.
         public DateTime LastLogin { get; set; }
 
         /// <summary>
+        /// This is the Users Profile Date and Time.
+        /// </summary>
+        public DateTime CurrentProfileDateTime { get; set; }
+
+        /// <summary>
         /// This is the type of the user
         /// </summary>
         public enum UserTypeEnum

@@ -146,8 +146,6 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Add As Instructor link
             base.WaitForElement(By.Id(AdminToolPageResource.
                 AdminTool_Page_AddAsInstructor_Id_Locator));
-            base.FocusOnElementById(AdminToolPageResource.
-                AdminTool_Page_AddAsInstructor_Id_Locator);
             IWebElement getInstructorLink = base.GetWebElementPropertiesById
                 (AdminToolPageResource.
                 AdminTool_Page_AddAsInstructor_Id_Locator);

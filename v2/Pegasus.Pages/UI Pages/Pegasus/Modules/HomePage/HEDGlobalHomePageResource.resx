@@ -231,4 +231,10 @@
   <data name="HEDGlobalHome_Page_Course_Load_TimeValue" xml:space="preserve">
     <value>20000</value>
   </data>
+  <data name="HEDGlobalHome__Page_MyProfile_Date_Dropdown_Xpath_Locator" xml:space="preserve">
+    <value>//select[@id='cmbDateFormat2']/option[@value='1~']</value>
+  </data>
+  <data name="HEDGlobalHome__Page_MyProfile_Time_Dropdown_Xpath_Locator" xml:space="preserve">
+    <value>//select[@id='cmbTimeFormat2']/option[@value='3~h:mm tt']</value>
+  </data>
 </root>

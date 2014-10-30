@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Threading;
 using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
@@ -1312,6 +1313,61 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("HEDGlobalHomePage","IsCoursePresentInGlobalHomePage",
                 base.IsTakeScreenShotDuringEntryExit);
             return isCourseText;
+        }
+
+        /// <summary>
+        /// Store user profile date and time in memory.
+        /// </summary>
+        public void setUserCurrentDate()
+        {
+            // Store user profile date and time in memory
+            Logger.LogMethodEntry("HEDGlobalHomePage", "setUserCurrentDate",
+               base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(HEDGlobalHomePageResource.
+                    HEDGlobalHome_Page_MyProfile_Id_Locator));
+            //Click on the Link
+            base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesById(
+                HEDGlobalHomePageResource.HEDGlobalHome_Page_MyProfile_Id_Locator));
+            //Select MyProfile frame
+            this.SelectMyProfileIframe();
+            //get the date value from dropdown
+            base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
+                HEDGlobalHome__Page_MyProfile_Date_Dropdown_Xpath_Locator));
+            String currentDate = base.GetElementTextByXPath(HEDGlobalHomePageResource.
+                HEDGlobalHome__Page_MyProfile_Date_Dropdown_Xpath_Locator);
+            //get the time value from dropdown
+            base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
+                HEDGlobalHome__Page_MyProfile_Time_Dropdown_Xpath_Locator));
+            String currentTime = base.GetElementTextByXPath(HEDGlobalHomePageResource.
+                HEDGlobalHome__Page_MyProfile_Time_Dropdown_Xpath_Locator);
+            //store date and time in memory
+            String instance = currentDate + " " + currentTime;
+            DateTime datetime = DateTime.ParseExact(instance, "MM/dd/yyyy h:mm tt", CultureInfo.InvariantCulture);
+            User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
+            user.CurrentProfileDateTime = datetime;
+            Logger.LogMethodExit("HEDGlobalHomePage", "setUserCurrentDate",
+                 base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+       /// <summary>
+       /// Select MyProfile Iframe.
+       /// </summary>
+        private void SelectMyProfileIframe()
+        {
+            //Select MyProfile Iframe
+            Logger.LogMethodEntry("HEDGlobalHomePage", "SelectMyProfileIframe",
+               base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
+                HEDGlobalHome__Page_MyProfile_IFrame_Xpath_Locator), 10);
+            IWebElement frame = WebDriver.FindElement(By.XPath(
+                   HEDGlobalHomePageResource.
+                HEDGlobalHome__Page_MyProfile_IFrame_Xpath_Locator));
+            //Select MyProfile Iframe
+            base.SwitchToIFrameByWebElement(frame);
+            Logger.LogMethodExit("HEDGlobalHomePage", "SelectMyProfileIframe",
+                 base.IsTakeScreenShotDuringEntryExit);
+
         }
     }
 }
