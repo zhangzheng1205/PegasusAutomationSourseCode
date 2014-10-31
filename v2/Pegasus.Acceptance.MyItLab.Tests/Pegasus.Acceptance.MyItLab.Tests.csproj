@@ -418,7 +418,7 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.PROD.GraderITStudentSubmission.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.BuildVerificationTest.MyItLabFullPROD.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.Production.BuildVerificationTest.MyItLabFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.GraderITAccessStudentSubmission.BVT.MyItLab.orderedtest">

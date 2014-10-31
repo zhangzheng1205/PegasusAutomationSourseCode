@@ -31,8 +31,8 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.CommonProductAcceptanceTes
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CommonUserLoginLogOut", "\t\tAs a Pegasus User\n\t\tI want to manage all the Pegasus User related usecases \n\t\ts" +
-                    "o that I would validate all the Pegasus User scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CommonUserLoginLogOut", "\t\tAs a Pegasus User\r\n\t\tI want to manage all the Pegasus User related usecases \r\n\t" +
+                    "\tso that I would validate all the Pegasus User scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
