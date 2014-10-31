@@ -40,6 +40,10 @@
     <Reference Include="TechTalk.SpecFlow">
       <HintPath>..\..\ExternalAssemblies\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
+    <Reference Include="WebDriver, Version=2.44.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalAssemblies\WebDriver.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -54,12 +58,29 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CommonProductIntegrationTestDefinitions\CommonSteps.cs" />
+    <Compile Include="CommonProductIntegrationTestDefinitions\CommonStepsResource.Designer.cs" />
+    <Compile Include="ProductIntegrationTestDefinitions\LoginLogout.cs" />
+    <Compile Include="ProductIntegrationTestDefinitions\LoginLogoutResource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginLogoutResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserStoryAcceptanceTestFeatures\PEGASUS-31804.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-31804.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ProductIntegrationOrderedTests\OrderedTest.BuildVerificationTest.Integration.AmplifireFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="UserStoryAcceptanceTestFeatures\PEGASUS-31804.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-31804.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -73,10 +94,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CommonProductIntegrationTestDefinitions\" />
     <Folder Include="CommonProductIntegrationTestFeatures\" />
-    <Folder Include="ProductIntegrationTestDefinitions\" />
     <Folder Include="ProductIntegrationTestFeatures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProductIntegrationTestDefinitions\LoginLogoutResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginLogoutResource1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
