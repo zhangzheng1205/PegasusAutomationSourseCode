@@ -66,6 +66,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LaunchingTheAmplifireLinkWithTargetIDbyInstructor.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31804.feature.cs" />
+    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-318041.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-31804.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +82,10 @@
     <None Include="ProductIntegrationTestFeatures\LaunchingTheAmplifireLinkWithTargetIDbyInstructor.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LaunchingTheAmplifireLinkWithTargetIDbyInstructor.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductIntegrationTestFeatures\PEGASUS-31804.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-318041.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
