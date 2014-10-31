@@ -35,10 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="TechTalk.SpecFlow">
       <HintPath>..\..\ExternalAssemblies\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\ExternalAssemblies\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Choose>
@@ -47,19 +54,28 @@
         <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
       </ItemGroup>
     </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
-      </ItemGroup>
-    </Otherwise>
+    <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="CommonProductIntegrationTestDefinitions\CommonSteps.cs" />
+    <Compile Include="CommonProductIntegrationTestDefinitions\CommonStepsResource.Designer.cs" />
+    <Compile Include="ProductIntegrationTestDefinitions\LoginLogout.cs" />
+    <Compile Include="ProductIntegrationTestDefinitions\LoginLogoutResource.Designer.cs" />
+    <Compile Include="ProductIntegrationTestFeatures\LaunchingTheAmplifireLinkWithTargetIDbyInstructor.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaunchingTheAmplifireLinkWithTargetIDbyInstructor.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ProductIntegrationOrderedTests\OrderedTest.BuildVerificationTest.Integration.AmplifireFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductIntegrationTestFeatures\LaunchingTheAmplifireLinkWithTargetIDbyInstructor.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LaunchingTheAmplifireLinkWithTargetIDbyInstructor.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -73,10 +89,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CommonProductIntegrationTestDefinitions\" />
     <Folder Include="CommonProductIntegrationTestFeatures\" />
-    <Folder Include="ProductIntegrationTestDefinitions\" />
-    <Folder Include="ProductIntegrationTestFeatures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommonProductIntegrationTestDefinitions\CommonStepsResource.resx" />
+    <EmbeddedResource Include="ProductIntegrationTestDefinitions\LoginLogoutResource.resx" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
