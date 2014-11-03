@@ -61,10 +61,10 @@
     <Compile Include="CommonProductIntegrationTestDefinitions\CommonStepsResource.Designer.cs" />
     <Compile Include="ProductIntegrationTestDefinitions\LoginLogout.cs" />
     <Compile Include="ProductIntegrationTestDefinitions\LoginLogoutResource.Designer.cs" />
-    <Compile Include="ProductIntegrationTestFeatures\LaunchingTheAmplifireLinkWithTargetIDbyInstructor.feature.cs">
+    <Compile Include="ProductIntegrationTestFeatures\CourseSpaceInstructor.WorkFlow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LaunchingTheAmplifireLinkWithTargetIDbyInstructor.feature</DependentUpon>
+      <DependentUpon>CourseSpaceInstructor.WorkFlow.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,9 +73,9 @@
     <None Include="ProductIntegrationOrderedTests\OrderedTest.BuildVerificationTest.Integration.AmplifireFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductIntegrationTestFeatures\LaunchingTheAmplifireLinkWithTargetIDbyInstructor.feature">
+    <None Include="ProductIntegrationTestFeatures\CourseSpaceInstructor.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>LaunchingTheAmplifireLinkWithTargetIDbyInstructor.feature.cs</LastGenOutput>
+      <LastGenOutput>CourseSpaceInstructor.WorkFlow.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
