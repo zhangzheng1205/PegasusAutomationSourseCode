@@ -227,8 +227,8 @@
   <!--This is already created users present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfUser>
     <User>
-      <Name>autoworkspaceadmin</Name>
-      <Password>password@1234</Password>
+      <Name>dpworkspaceadmin</Name>
+      <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>WsAdmin></FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -505,8 +505,8 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>cbb0c302-7753-4ec7-a0e1-95db42b20ed0</Name>
-      <Password>password2</Password>
+      <Name>5.15.1dpteaches_001</Name>
+      <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>CsTeacher</FirstName>
       <MiddleName>Pegasus</MiddleName>
@@ -560,7 +560,7 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>17e8e13e-a034-47d9-86b4-e2f4ea680c50</Name>
+      <Name>5.15.1dpstudent_001</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>17e8e13e-a034-47d9-86b4-e2f4ea680c50</FirstName>
@@ -635,7 +635,7 @@
   <!--This is already created class  present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
   <ArrayOfClass>
     <Class>
-      <Name>fe61abb4-a856-499e-a36a-ecfc896cc932</Name>
+      <Name>5.15.3_Class1</Name>
       <ClassType>DigitalPathMasterLibrary</ClassType>
       <IsCreated>true</IsCreated>
     </Class>
