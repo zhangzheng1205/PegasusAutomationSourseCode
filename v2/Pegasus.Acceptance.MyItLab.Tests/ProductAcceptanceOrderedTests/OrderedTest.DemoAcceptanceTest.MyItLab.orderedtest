@@ -2,7 +2,7 @@
 <OrderedTest name="orderedtest.demoacceptancetest.myitlab" storage="d:\pegasus_automation\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.demoacceptancetest.myitlab.orderedtest" id="4832f769-562b-4403-be78-5dd4081dda44" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Execution id="0204e348-f426-43cb-b8f3-1000aefc3b1c" />
   <TestLinks>
-    <TestLink id="e38467e8-1a64-b7c3-4042-50d2c044b4a8" name="UserLoginAsSMSInstructorAndNavigateMyITLabOffice2013SectionCourse" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="3a7c05b4-9a3d-79a9-5c7d-88a2e8f4e9c3" name="UserLoginAsSMSStudentAndNavigateToMyITLabOffice2013SectionCourse" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <TestLink id="107eb5ac-4193-79e3-20d2-e3c2ff9b6f96" name="Sim5ExcelActivityAndStudentScoringAZero_" storage="..\bin\debug\pegasus.acceptance.myitlab.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   </TestLinks>
 </OrderedTest>
