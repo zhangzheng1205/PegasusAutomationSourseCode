@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pegasus.Integration.Hed.ETextS11.Tests.IntegrationAcceptanceTestDefinitions {
+namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestDefinitions {
     using System;
     
     
@@ -39,8 +39,8 @@ namespace Pegasus.Integration.Hed.ETextS11.Tests.IntegrationAcceptanceTestDefini
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pegasus.Integration.Hed.ETextS11.Tests.IntegrationAcceptanceTestDefinitions.Login" +
-                            "LogoutResource", typeof(LoginLogoutResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestDefinitions.LoginLo" +
+                            "goutResource", typeof(LoginLogoutResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -80,7 +80,7 @@ namespace Pegasus.Integration.Hed.ETextS11.Tests.IntegrationAcceptanceTestDefini
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Login_URL_DP_.
+        ///   Looks up a localized string similar to Login_URL_Hed_.
         /// </summary>
         internal static string Login_URL_Prefix {
             get {
@@ -89,7 +89,7 @@ namespace Pegasus.Integration.Hed.ETextS11.Tests.IntegrationAcceptanceTestDefini
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 5.
+        ///   Looks up a localized string similar to 2.
         /// </summary>
         internal static string LoginLogout_Custom_TimeToWait_Element {
             get {
@@ -166,6 +166,15 @@ namespace Pegasus.Integration.Hed.ETextS11.Tests.IntegrationAcceptanceTestDefini
         internal static string LoginLogout_Window_Name_Title {
             get {
                 return ResourceManager.GetString("LoginLogout_Window_Name_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to mode=backdoor.
+        /// </summary>
+        internal static string LoginPage_Backdoor_Mode {
+            get {
+                return ResourceManager.GetString("LoginPage_Backdoor_Mode", resourceCulture);
             }
         }
         

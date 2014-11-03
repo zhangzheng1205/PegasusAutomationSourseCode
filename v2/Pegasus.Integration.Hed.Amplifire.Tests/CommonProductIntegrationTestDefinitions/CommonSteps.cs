@@ -9,8 +9,7 @@ using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 using Pegasus.Integration.Hed.ETextS11.Tests.CommonIntegrationAcceptanceTestDefinitions;
 
-namespace Pegasus.Integration.ETextS11.Tests.
-    CommonIntegrationAcceptanceTestDefinitions
+namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDefinitions
 {
     /// <summary>
     /// This class contains the common feature steps

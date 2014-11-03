@@ -6,10 +6,10 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
-using Pegasus.Integration.Hed.ETextS11.Tests.IntegrationAcceptanceTestDefinitions;
 
-namespace Pegasus.Integration.ETextS11.Tests.
-    IntegrationAcceptanceTestDefinitions
+
+
+namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestDefinitions
 {
     /// <summary>
     /// This class contains the details of LoginLogout page 
@@ -162,6 +162,65 @@ namespace Pegasus.Integration.ETextS11.Tests.
                     break;
             }
             Logger.LogMethodExit("LoginLogout", "SignOutFromThePegasus",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Login with the User of Given Type.
+        /// </summary>
+        /// <param name="userTypeEnum">This is User Type. </param>
+        /// <param name="loginMode">This is User Login Type.</param>
+        /// <seealso cref="User.UserTypeEnum"/>
+        [When("I logged into the Pegasus as \"(.*)\" in \"(.*)\"")]
+        public void LoginIntoThePegasus(User.UserTypeEnum userTypeEnum,
+            BrowsePegasusUserURL.PegasusLoginSpace loginMode)
+        {
+            //Login in Pegasus
+            Logger.LogMethodEntry("LoginLogout", "LoginIntoThePegasus",
+                base.IsTakeScreenShotDuringEntryExit);
+            Boolean isUserAlreadyLoggedIn = base.IsElementPresent
+                (By.PartialLinkText(LoginLogoutResource.
+                LoginLogout_Signout_Link_Title_Locator),
+                Convert.ToInt32(LoginLogoutResource.
+                LoginLogout_Custom_TimeToWait_Element));
+            // check user already logged in
+            if (!isUserAlreadyLoggedIn)
+            {
+                //Get the user of the given type from Memory Data Store
+                User user = User.Get(userTypeEnum);
+                //Login as according to the Pegasus Login Mode
+                try
+                {
+                    switch (loginMode)
+                    {
+                        case BrowsePegasusUserURL.PegasusLoginSpace.WorkSpace:
+                            //Login as the given user with password in workspace
+                            loginPage.Authenticate(user.Name, user.Password,
+                                 BrowsePegasusUserURL.PegasusLoginSpace.WorkSpace, userTypeEnum);
+                            LoginSpace = BrowsePegasusUserURL.PegasusLoginSpace.WorkSpace.ToString();
+                            break;
+                        case BrowsePegasusUserURL.PegasusLoginSpace.CourseSpace:
+                            //Login as the given user with password in course space
+                            loginPage.Authenticate(user.Name, user.Password,
+                                BrowsePegasusUserURL.PegasusLoginSpace.CourseSpace, userTypeEnum);
+                            LoginSpace = BrowsePegasusUserURL.PegasusLoginSpace.CourseSpace.ToString();
+                            break;
+                    }
+                    UserName = user.Name;
+                    Password = user.Password;
+                    UserType = userTypeEnum.ToString();
+                }
+                catch (Exception)
+                {
+                    LoginSpace = "";
+                    UserName = "";
+                    UserType = "";
+                    Password = "";
+                    throw;
+                }
+            }
+
+            Logger.LogMethodExit("LoginLogout", "LoginIntoThePegasus",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 

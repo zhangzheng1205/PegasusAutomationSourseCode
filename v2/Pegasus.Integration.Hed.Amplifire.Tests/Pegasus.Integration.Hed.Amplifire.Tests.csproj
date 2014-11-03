@@ -60,11 +60,20 @@
     <Compile Include="CommonProductIntegrationTestDefinitions\CommonSteps.cs" />
     <Compile Include="CommonProductIntegrationTestDefinitions\CommonStepsResource.Designer.cs" />
     <Compile Include="ProductIntegrationTestDefinitions\LoginLogout.cs" />
-    <Compile Include="ProductIntegrationTestDefinitions\LoginLogoutResource.Designer.cs" />
+    <Compile Include="ProductIntegrationTestDefinitions\LoginLogoutResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginLogoutResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="ProductIntegrationTestFeatures\CourseSpaceInstructor.WorkFlow.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceInstructor.WorkFlow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31804.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-31804.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -76,6 +85,10 @@
     <None Include="ProductIntegrationTestFeatures\CourseSpaceInstructor.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceInstructor.WorkFlow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductIntegrationTestFeatures\PEGASUS-31804.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-31804.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -96,7 +109,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CommonProductIntegrationTestDefinitions\CommonStepsResource.resx" />
-    <EmbeddedResource Include="ProductIntegrationTestDefinitions\LoginLogoutResource.resx" />
+    <EmbeddedResource Include="ProductIntegrationTestDefinitions\LoginLogoutResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginLogoutResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
