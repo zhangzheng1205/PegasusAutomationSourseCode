@@ -8,6 +8,7 @@ using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 using Pegasus.Integration.Hed.ETextS11.Tests.CommonIntegrationAcceptanceTestDefinitions;
+using Pegasus.Pages.CommonPageObjects;
 
 namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDefinitions
 {
@@ -221,6 +222,80 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("CommonSteps", " EnterInCourse",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Navigate To Course Space User Tabs.
+        /// </summary>
+        /// <param name="parentTabName">This is Parent Tab Name.</param>
+        /// <param name="childTabName">This is Child Tab Name.</param>      
+        [When(@"I navigate to ""(.*)"" tab and selected ""(.*)"" subtab")]
+        public void NavigateToCourseSpaceUserTabs(
+            string parentTabName, string childTabName)
+        {
+            //Navigate to Tab
+            Logger.LogMethodEntry("CommonSteps", "NavigateToCourseSpaceUserTabs",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Select Tab
+            new TodaysViewUxPage().SelectTab(parentTabName, childTabName);
+            Logger.LogMethodExit("CommonSteps", "NavigateToCourseSpaceUserTabs",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Navigating to the folder where given asset exists
+        /// </summary>
+        /// <param name="Assetname">Asset Name</param>
+        /// <param name="tabName">Tab</param>
+        /// <param name="userTypeEnum">User type</param>
+        [When(@"I navigate to ""(.*)"" asset in ""(.*)"" tab as ""(.*)""")]
+        public void NavigateToFolder(string Assetname, string tabName, User.UserTypeEnum userTypeEnum)
+        {
+            //Select Cmenu Option Of Activity
+            Logger.LogMethodEntry("CourseContent", "NavigateToFolder",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CommonPage().ManageTheActivityFolderLevelNavigation(Assetname, tabName, userTypeEnum);
+            Logger.LogMethodExit("CourseContent", "NavigateToFolder",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Open the Activity As Student.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity by Type Enum.</param>
+        [When(@"I open the ""(.*)"" Activity")]
+        public void OpenTheActivityForSubmission(String ActivityName)
+        {
+            // Open The Activity As Student
+            Logger.LogMethodEntry("ActivitySubmission", "OpenTheActivityForSubmission",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Switch to default window after closing of presentation pop up            
+            //Launch The Activity
+            new CoursePreviewMainUXPage().OpenActivity(ActivityName);
+            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityForSubmission",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Launch Activity Presentation Window.
+        /// </summary>
+        [Then(@"I should see the activity successfully launched")]
+        public void ActivitySuccessfullyLaunched()
+        {
+            //Launching of Activity Presentation Window
+            Logger.LogMethodEntry("ActivitySubmission",
+                "ActivitySuccessfullyLaunched"
+                , base.IsTakeScreenShotDuringEntryExit);
+            //Assert Launch Activity Window
+            Logger.LogAssertion("VerifyActivityLaunched",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new StudentPresentationPage().
+                    IsActivityPresentationPageOpened()));
+            Logger.LogMethodExit("ActivitySubmission",
+                "ActivitySuccessfullyLaunched"
+                , base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

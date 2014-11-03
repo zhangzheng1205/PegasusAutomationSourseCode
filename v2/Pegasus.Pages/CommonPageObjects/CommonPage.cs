@@ -124,6 +124,11 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
+                                    case "Amplifier link 1(Content)":
+                                        this.NavigateToAmplifierFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                            userTypeEnum, activityUnderTabName);
+                                        break;
                                 }
                                 break;
                         }
@@ -258,7 +263,24 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigation",
               base.IsTakeScreenShotDuringEntryExit);
         }
-       
+
+        /// <summary>
+        /// Navigate To Access Chapter1 Grader Activities Folder.
+        /// </summary>
+        private void NavigateToAmplifierFolder(string webElementToWait,
+            User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            // navigate inside access chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_Amplifier_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Navigate To Chapter 04: The Brain and Nervous System Folder.
         /// </summary>

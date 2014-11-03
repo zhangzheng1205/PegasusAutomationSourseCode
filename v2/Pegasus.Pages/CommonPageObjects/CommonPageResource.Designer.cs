@@ -106,6 +106,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GO! with Microsoft Office 2013, Volume 1.
+        /// </summary>
+        internal static string CommonPage_Amplifier_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_Amplifier_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to backicon.
         /// </summary>
         internal static string CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator {
