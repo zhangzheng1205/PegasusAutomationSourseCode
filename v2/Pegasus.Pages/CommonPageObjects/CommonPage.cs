@@ -124,7 +124,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
-                                    case "Amplifier link 1(Content)":
+                                    case "Amplifire Study Module 0P: Vocabulario en contexto":
                                         this.NavigateToAmplifierFolder(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
@@ -284,6 +284,26 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        public void NavigateInsideTheFolder(string FolderName)
+        {
+            // navigate inside access chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            //this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            //this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+            //    CommonPage_Amplifier_FolderName, webElementToWait);
+            base.SelectWindow("Course Materials");            
+            base.SwitchToIFrameById("ifrmCoursePreview");            
+            base.WaitForElement(By.PartialLinkText(FolderName));
+            IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
+                (FolderName);
+            base.ClickByJavaScriptExecutor(getFolderLink);
+            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Navigate To Chapter 04: The Brain and Nervous System Folder.
@@ -1038,6 +1058,33 @@ namespace Pegasus.Pages.CommonPageObjects
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+        public string GetFolderNameByXpath(string FolderName)
+        {
+            Logger.LogMethodEntry("CommonPage",
+                "GetFolderNameByXpath",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            string ActualFolderName=String.Empty;
+            switch (FolderName)
+            {
+                case "Capítulo preliminar: Bienvenidos a Unidos":
+                    base.SelectWindow("Course Materials");
+                    base.SwitchToIFrameById("ifrmCoursePreview");
+                    base.WaitForElement(By.XPath(CommonPageResource.AmplifierFolderOneXpath));
+                    ActualFolderName= base.GetElementInnerTextByXPath(CommonPageResource.AmplifierFolderOneXpath);
+                    break;                
+                case "¡Comprueba lo que sabes!":
+                    base.SelectWindow("Course Materials");
+                    base.SwitchToIFrameById("ifrmCoursePreview");
+                    base.WaitForElement(By.XPath(CommonPageResource.AmplifierFolderTwoXpath));
+                    ActualFolderName= base.GetElementInnerTextByXPath(CommonPageResource.AmplifierFolderTwoXpath);
+                    break;
+            }            
+            Logger.LogMethodExit("CommonPage",
+                "GetFolderNameByXpath",
+              base.IsTakeScreenShotDuringEntryExit);
+            return ActualFolderName;
+        }
         
         /// <summary>
         /// Manage The Activity Folder Level Navigation HED Core.

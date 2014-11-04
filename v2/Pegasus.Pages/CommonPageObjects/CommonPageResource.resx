@@ -249,4 +249,10 @@
   <data name="CommonPage_Amplifier_FolderName1" xml:space="preserve">
     <value>¡Comprueba lo que sabes!</value>
   </data>
+  <data name="AmplifierFolderOneXpath" xml:space="preserve">
+    <value>//table[@id='tblBC']/tbody/tr/td/span[2]/span[2]/a/span/span</value>
+  </data>
+  <data name="AmplifierFolderTwoXpath" xml:space="preserve">
+    <value>//*[@id="tblBC"]/tbody/tr/td/span[3]/span[2]/a/span/span</value>
+  </data>
 </root>

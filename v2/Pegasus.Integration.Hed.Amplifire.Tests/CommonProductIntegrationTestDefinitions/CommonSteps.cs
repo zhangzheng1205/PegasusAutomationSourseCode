@@ -371,6 +371,38 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [When(@"I click on ""(.*)"" folder")]
+        public void ClickOnFolder(String FolderName)
+        {
+            Logger.LogMethodEntry("CommonSteps", "ClickOnFolder",
+            IsTakeScreenShotDuringEntryExit);
+            //Navigating inside the folder
+            new CommonPage().NavigateInsideTheFolder(FolderName);
+            Logger.LogMethodExit("CommonSteps", "ClickOnFolder",
+                IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should be inside the folder ""(.*)""")]
+        public void ValidateFolderNavigation(string FolderName)
+        {
+            //Check If Expected Page Is Opened
+            Logger.LogMethodEntry("CommonSteps", "ValidateFolderNavigation",
+                IsTakeScreenShotDuringEntryExit);          
+            //Wait For Page Get Switched
+            WaitUntilPageGetSwitchedSuccessfully("Course Materials");
+            //Get current opened page title
+            string getActualPageTitle = GetPageTitle;
+            string ActualFolderName = new CommonPage().GetFolderNameByXpath(FolderName);
+            //Assert we have correct page opened            
+            Logger.LogAssertion("VerifyOpenedPageTitle",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(FolderName, ActualFolderName));
+            Logger.LogMethodExit("CommonSteps", "ValidateFolderNavigation",
+                IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
