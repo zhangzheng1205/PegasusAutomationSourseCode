@@ -296,6 +296,81 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 , base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify The Asset Name In 'My Course' Frame.
+        /// </summary>
+        /// <param name="activityTypeEnum">This is Activity Type Enum</param>
+        [Then(@"I should see the ""(.*)"" in 'My Course'")]
+        public void VerifyAssetNameInMyCourse(Activity.ActivityTypeEnum activityTypeEnum)
+        {
+            //Verify The Asset Name In 'My Course' Frame
+            Logger.LogMethodEntry("CopyContent", "VerifyAssetNameInMyCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Fetch the data from memory
+            Activity activity = Activity.Get(activityTypeEnum);
+            //Verify The Searched Asset Name
+            Logger.LogAssertion("VerifyAssetName",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(activity.Name,
+                    new CourseContentUXPage().GetAssetNameFromMyCourseTab(activity.Name)));
+            Logger.LogMethodExit("CopyContent", "VerifyAssetNameInMyCourse",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select The Activity CmenuOption In MyCourseFrame.
+        /// </summary>
+        [When(@"I click the activity cmenu option in MyCourse Frame")]
+        public void SelectTheActivityCmenuOptionInMyCourseFrame()
+        {
+            //Select The Activity CmenuOption In MyCourseFrame
+            Logger.LogMethodEntry("CopyContent",
+                "SelectTheActivityCmenuOptionInMyCourseFrame",
+               base.IsTakeScreenShotDuringEntryExit);
+            // Click On The Activity Cmenu In MyCourse Frame
+            new CourseContentUXPage().ClickTheActivityCmneuImageIcon();
+            Logger.LogMethodExit("CopyContent",
+                "SelectTheActivityCmenuOptionInMyCourseFrame",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click The Cmenu of Activity.
+        /// </summary>
+        /// <param name="cmenuOption">This is cmenu option.</param>
+        [When(@"I click on ""(.*)"" cmenu option")]
+        public void ClickTheCmenuofActivity(string cmenuOption)
+        {
+            //Click The Cmenu of Activity
+            Logger.LogMethodEntry("CopyContent", "ClickTheCmenuofActivity"
+               , base.IsTakeScreenShotDuringEntryExit);
+            //Click On Cmenu of Activity
+            new CourseContentUXPage().ClickTheCmenuOptionofActivity(cmenuOption);
+            Logger.LogMethodExit("CopyContent", "ClickTheCmenuofActivity"
+                , base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Verify The Activity In The MyCourse.
+        /// </summary>
+        /// <param name="activity">This is Activity Name.</param>
+        [Then(@"I should see ""(.*)"" activity in the MyCourse")]
+        public void VerifyTheActivityInTheMyCourse(string activity)
+        {
+            //Verify The Activity In The MyCourse
+            Logger.LogMethodEntry("CreateActivity",
+                "VerifyTheActivityInTheMyCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Asserts the Activity Name
+            Logger.LogAssertion("VerifyAssignedActivityName", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual(activity,
+                    new CourseContentUXPage().GetActivityName(activity)));
+            Logger.LogMethodExit("CreateActivity",
+                "VerifyTheActivityInTheMyCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

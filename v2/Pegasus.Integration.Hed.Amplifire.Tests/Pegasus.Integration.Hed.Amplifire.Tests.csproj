@@ -70,6 +70,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceInstructor.WorkFlow.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31802.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-31802.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31804.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,6 +90,10 @@
     <None Include="ProductIntegrationTestFeatures\CourseSpaceInstructor.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceInstructor.WorkFlow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductIntegrationTestFeatures\PEGASUS-31802.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-31802.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductIntegrationTestFeatures\PEGASUS-31804.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
