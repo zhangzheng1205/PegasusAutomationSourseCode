@@ -106,11 +106,20 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GO! with Microsoft Office 2013, Volume 1.
+        ///   Looks up a localized string similar to Capítulo preliminar: Bienvenidos a Unidos.
         /// </summary>
         internal static string CommonPage_Amplifier_FolderName {
             get {
                 return ResourceManager.GetString("CommonPage_Amplifier_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ¡Comprueba lo que sabes!.
+        /// </summary>
+        internal static string CommonPage_Amplifier_FolderName1 {
+            get {
+                return ResourceManager.GetString("CommonPage_Amplifier_FolderName1", resourceCulture);
             }
         }
         

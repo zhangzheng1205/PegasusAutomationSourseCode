@@ -12,6 +12,6 @@
 
 	When I navigate to "Course Materials" tab and selected "View All Course Materials" subtab
 	Then I should be on the "Course Materials" page
-	When I navigate to "Amplifier link 1(Content)" asset in "Course Materials" tab as "CsSmsStudent" 
-	And I open the "Amplifier link 1(Content)" Activity
+	When I navigate to "Amplifire Study Module 0P: Vocabulario en contexto" asset in "Course Materials" tab as "CsSmsStudent" 
+	And I open the "Amplifire Study Module 0P: Vocabulario en contexto" Activity
 	Then I should see the activity successfully launched
