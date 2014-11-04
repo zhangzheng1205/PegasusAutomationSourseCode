@@ -86,6 +86,7 @@ namespace Pegasus.Pages.UI_Pages
             Boolean isAcceptButtonPresent = false;
             try
             {
+                base.WaitUntilWindowLoads(ConsentPageResource.Consent_Page_Window_Page_Name);
                 //Select Window
                 base.SelectWindow(ConsentPageResource.Consent_Page_Window_Page_Name);
                 base.WaitForElement(By.XPath(ConsentPageResource.

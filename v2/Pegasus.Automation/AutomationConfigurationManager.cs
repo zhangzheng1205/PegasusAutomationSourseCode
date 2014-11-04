@@ -77,7 +77,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             string applicationMmnDurl;
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
             {
-                case "VM":
+                case "VCD":
                     applicationMmnDurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_ST_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MMNDCertAdminURLRoot_Key];
                     break;
@@ -231,6 +231,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminStudentURLRootVM_Key];
                     break;
+                case "VCD":
+                    url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminStudentURLRootVCD_Key];
+                    break;
                 case "PPE":
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminStudentURLRootPPE_Key];
@@ -261,9 +265,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             string url = string.Empty;
             switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
             {
-                case "VM":
+                case "VCD":
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
-                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MMNDVMPortalURLRoot_Key];
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.MMNDVCDPortalURLRoot_Key];
                     break;
                 case "PPE":
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)

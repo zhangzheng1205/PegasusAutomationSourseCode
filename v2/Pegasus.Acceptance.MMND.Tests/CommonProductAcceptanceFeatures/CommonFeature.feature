@@ -12,7 +12,7 @@ And I should be on the "Administrative Pages" page
 
 Scenario: User Sign off as Admin in Ecollege admin pages
 When I log out from the application as "MMNDAdmin"
-Then I should be on the "Academics PSH" page
+Then I should be on the "Course Compass Next Gen | LOGIN" page
 
 Scenario: User Sign in as MMND Instructor
 Given I browsed the URL of "MMNDInstructor"

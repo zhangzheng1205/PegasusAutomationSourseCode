@@ -150,8 +150,8 @@
   <data name="MMNDPRODPortalURLRoot_Key" xml:space="preserve">
     <value>MMNDPRODPortalURLRoot</value>
   </data>
-  <data name="MMNDVMPortalURLRoot_Key" xml:space="preserve">
-    <value>MMNDVMPortalURLRoot</value>
+  <data name="MMNDVCDPortalURLRoot_Key" xml:space="preserve">
+    <value>MMNDVCDPortalURLRoot</value>
   </data>
   <data name="PCTInstructorResourceToolsPPE_Key" xml:space="preserve">
     <value>PCTInstructorResourceToolbarURLPPE</value>
@@ -218,6 +218,9 @@
   </data>
   <data name="SMSAdminStudentURLRootPROD_Key" xml:space="preserve">
     <value>SMSAdminStudentURLRootPROD</value>
+  </data>
+  <data name="SMSAdminStudentURLRootVCD_Key" xml:space="preserve">
+    <value>SMSAdminStudentURLRootVCD</value>
   </data>
   <data name="SMSAdminStudentURLRootVM_Key" xml:space="preserve">
     <value>SMSAdminStudentURLRootVM</value>
