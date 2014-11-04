@@ -994,7 +994,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click on save button
                 base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText
                         (AssignContentPageResource.AssignContent_Page_Button_Save_Id_Locator));
-                Thread.Sleep(8000);
+                Thread.Sleep(7000);
             }
             catch (Exception e)
             {
@@ -1207,22 +1207,23 @@ namespace Pegasus.Pages.UI_Pages
 
         public void SelectSetavailabilitydaterangeRadiobuttonAssignWindow()
         {
-
             //Select 'Set availability date range' Radiobutton
             logger.LogMethodEntry("AssignContentPage",
                 "SelectSetavailabilitydaterangeRadiobuttonAssignWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-
-
-                // Get the current date and time
+                // Get the Current date
                 User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
                 DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
                 String currentTime = instance.ToString();
 
                 string date = currentTime.Split(' ')[0];
-                //Select Properties Window
+                string hour = (currentTime.Split(' ')[1]).Split(':')[0];
+                string minutes = (currentTime.Split(' ')[1]).Split(':')[1];
+                string dayTime = currentTime.Split(' ')[2];
+
+                //Select Assign Window
                 this.SelectAssignWindow();
                 //Check the Set Availability Date Range Radio Button
                 base.WaitForElement(By.Id(AssignContentPageResource.
@@ -1235,8 +1236,27 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClearTextById(AssignContentPageResource.
                     AssignContent_Page_FromDate_TextField_Id_Locator);
                 //Enter Current Date
-                base.FillTextBoxById(AssignContentPageResource.
-                    AssignContent_Page_FromDate_TextField_Id_Locator, date);
+                // Enter the due date in due date text box
+                base.WaitForElement(By.Id(AssignContentPageResource
+               .AssignContent_Page_FromDate_TextField_Id_Locator));
+                base.ClearTextById(AssignContentPageResource
+               .AssignContent_Page_FromDate_TextField_Id_Locator);
+                base.FillTextBoxById(AssignContentPageResource
+                .AssignContent_Page_FromDate_TextField_Id_Locator, date);
+                //clear current hours
+                base.ClearTextById(AssignContentPageResource
+                    .AssignContent_Page_From_Hours_Id_Locator);
+                //enter current hours
+                base.FillTextBoxById(AssignContentPageResource
+                   .AssignContent_Page_From_Hours_Id_Locator, hour);
+                base.ClearTextById(AssignContentPageResource
+                   .AssignContent_Page_From_Minutes_Id_Locator);
+                //// enter after 3 minutes from current minute value
+                base.FillTextBoxById(AssignContentPageResource
+                   .AssignContent_Page_From_Minutes_Id_Locator, minutes);
+                //enter am/pm 
+                base.SelectDropDownValueThroughTextById(AssignContentPageResource.
+                    AssignContent_Page_FromAMPM_Id_Locator, dayTime);
             }
             catch (Exception e)
             {
