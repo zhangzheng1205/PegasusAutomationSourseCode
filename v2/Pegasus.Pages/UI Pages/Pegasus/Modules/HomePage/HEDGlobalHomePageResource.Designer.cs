@@ -61,33 +61,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //select[@id=&apos;cmbDateFormat2&apos;]/option[@value=&apos;1~&apos;].
-        /// </summary>
-        internal static string HEDGlobalHome__Page_MyProfile_Date_Dropdown_Xpath_Locator {
-            get {
-                return ResourceManager.GetString("HEDGlobalHome__Page_MyProfile_Date_Dropdown_Xpath_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to //iframe[contains(@src,&apos;/Pegasus/Modules/MyPrefernce/frmMyAccountSetting.aspx?mode=1&apos;)].
-        /// </summary>
-        internal static string HEDGlobalHome__Page_MyProfile_IFrame_Xpath_Locator {
-            get {
-                return ResourceManager.GetString("HEDGlobalHome__Page_MyProfile_IFrame_Xpath_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to //select[@id=&apos;cmbTimeFormat2&apos;]/option[@value=&apos;3~h:mm tt&apos;].
-        /// </summary>
-        internal static string HEDGlobalHome__Page_MyProfile_Time_Dropdown_Xpath_Locator {
-            get {
-                return ResourceManager.GetString("HEDGlobalHome__Page_MyProfile_Time_Dropdown_Xpath_Locator", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to rndDiscipline.
         /// </summary>
         internal static string HEDGlobalHome_Catalog_Frame_Program_RadioButton_ID_Locator {
@@ -322,11 +295,38 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.HomePage {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //select[@id=&apos;cmbDateFormat2&apos;]/option[@value=&apos;1~&apos;].
+        /// </summary>
+        internal static string HEDGlobalHome_Page_MyProfile_Date_Dropdown_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_MyProfile_Date_Dropdown_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl6_pegHello_ancMyAccount.
         /// </summary>
         internal static string HEDGlobalHome_Page_MyProfile_Id_Locator {
             get {
                 return ResourceManager.GetString("HEDGlobalHome_Page_MyProfile_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //select[@id=&apos;cmbTimeFormat2&apos;]/option[@value=&apos;3~h:mm tt&apos;].
+        /// </summary>
+        internal static string HEDGlobalHome_Page_MyProfile_Time_Dropdown_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_MyProfile_Time_Dropdown_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //iframe[contains( @src,&apos;/Pegasus/Modules/MyPrefernce/frmMyAccountSetting.aspx?mode=1&apos;)].
+        /// </summary>
+        internal static string HEDGlobalHome_Page_MyProfileFrame_XPath_Locator {
+            get {
+                return ResourceManager.GetString("HEDGlobalHome_Page_MyProfileFrame_XPath_Locator", resourceCulture);
             }
         }
         

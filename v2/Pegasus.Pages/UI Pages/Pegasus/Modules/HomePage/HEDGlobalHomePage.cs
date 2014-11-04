@@ -1332,17 +1332,18 @@ namespace Pegasus.Pages.UI_Pages
             this.SelectMyProfileIframe();
             //get the date value from dropdown
             base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
-                HEDGlobalHome__Page_MyProfile_Date_Dropdown_Xpath_Locator));
+                HEDGlobalHome_Page_MyProfile_Date_Dropdown_Xpath_Locator));
             String currentDate = base.GetElementTextByXPath(HEDGlobalHomePageResource.
-                HEDGlobalHome__Page_MyProfile_Date_Dropdown_Xpath_Locator);
+                HEDGlobalHome_Page_MyProfile_Date_Dropdown_Xpath_Locator);
             //get the time value from dropdown
             base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
-                HEDGlobalHome__Page_MyProfile_Time_Dropdown_Xpath_Locator));
+                HEDGlobalHome_Page_MyProfile_Time_Dropdown_Xpath_Locator));
             String currentTime = base.GetElementTextByXPath(HEDGlobalHomePageResource.
-                HEDGlobalHome__Page_MyProfile_Time_Dropdown_Xpath_Locator);
+                HEDGlobalHome_Page_MyProfile_Time_Dropdown_Xpath_Locator);
             //store date and time in memory
             String instance = currentDate + " " + currentTime;
-            DateTime datetime = DateTime.ParseExact(instance, "MM/dd/yyyy h:mm tt", CultureInfo.InvariantCulture);
+            DateTime datetime= Convert.ToDateTime(instance);
+          //  DateTime datetime = DateTime.ParseExact(instance, "MM/dd/yyyy h:mm tt", CultureInfo.InvariantCulture);
             User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
             user.CurrentProfileDateTime = datetime;
             Logger.LogMethodExit("HEDGlobalHomePage", "setUserCurrentDate",
@@ -1359,10 +1360,10 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("HEDGlobalHomePage", "SelectMyProfileIframe",
                base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.XPath(HEDGlobalHomePageResource.
-                HEDGlobalHome__Page_MyProfile_IFrame_Xpath_Locator), 10);
+                HEDGlobalHome_Page_MyProfileFrame_XPath_Locator));
             IWebElement frame = WebDriver.FindElement(By.XPath(
                    HEDGlobalHomePageResource.
-                HEDGlobalHome__Page_MyProfile_IFrame_Xpath_Locator));
+                HEDGlobalHome_Page_MyProfileFrame_XPath_Locator));
             //Select MyProfile Iframe
             base.SwitchToIFrameByWebElement(frame);
             Logger.LogMethodExit("HEDGlobalHomePage", "SelectMyProfileIframe",
