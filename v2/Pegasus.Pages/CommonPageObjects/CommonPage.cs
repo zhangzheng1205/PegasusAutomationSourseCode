@@ -277,6 +277,10 @@ namespace Pegasus.Pages.CommonPageObjects
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_Amplifier_FolderName, webElementToWait);
+            //click folder second leve
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_Amplifier_FolderName1, webElementToWait);
             Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
         }
