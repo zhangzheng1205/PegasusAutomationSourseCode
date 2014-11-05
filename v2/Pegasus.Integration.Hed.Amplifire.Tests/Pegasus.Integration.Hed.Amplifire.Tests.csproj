@@ -59,6 +59,11 @@
   <ItemGroup>
     <Compile Include="CommonProductIntegrationTestDefinitions\CommonSteps.cs" />
     <Compile Include="CommonProductIntegrationTestDefinitions\CommonStepsResource.Designer.cs" />
+    <Compile Include="CommonProductIntegrationTestFeatures\CommonUserLoginLogout.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonUserLoginLogout.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductIntegrationTestDefinitions\LoginLogout.cs" />
     <Compile Include="ProductIntegrationTestDefinitions\LoginLogoutResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -89,6 +94,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CommonProductIntegrationTestFeatures\CommonUserLoginLogout.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CommonUserLoginLogout.feature.cs</LastGenOutput>
+    </None>
     <None Include="ProductIntegrationOrderedTests\OrderedTest.BuildVerificationTest.Integration.AmplifireFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -119,9 +128,7 @@
       <Name>Pegasus.Pages</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CommonProductIntegrationTestFeatures\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>

@@ -140,8 +140,8 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             //Click on Tab   
             ClickByJavaScriptExecutor(getTabProperty);
             //Wait For Page Load 
-            Thread.Sleep(Convert.ToInt32(CommonStepsResource.
-                 CommonSteps_SleepTime_Value));
+            //Thread.Sleep(Convert.ToInt32(CommonStepsResource.
+            //     CommonSteps_SleepTime_Value));
             Logger.LogMethodExit("CommonSteps", "NavigateToTheTab",
                  IsTakeScreenShotDuringEntryExit);
         }
@@ -400,8 +400,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("CommonSteps", "ValidateFolderNavigation",
                 IsTakeScreenShotDuringEntryExit);
         }
-
-
+       
         /// <summary>
         /// Enter Into Course.
         /// </summary>
@@ -477,7 +476,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
-        [BeforeScenario]
+        [BeforeTestRun]
         public static void Setup()
         {
             //Reset Webdriver Instance
@@ -488,7 +487,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         /// Deinitialize Pegasus test after the execution of test.
         /// and stops the webdriver.
         /// </summary>
-        [AfterScenario]
+        [AfterTestRun]
         public static void TearDown()
         {
             // clean processess
