@@ -182,6 +182,13 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
+                                    case "Capítulo preliminar: Bienvenidos a Unidos":
+                                    case "¡Comprueba lo que sabes!":
+                                    case "Amplifire Study Module 0P: Vocabulario en contexto":
+                                        this.NavigateToAmplifierFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                            userTypeEnum, activityUnderTabName, activityName);
+                                        break;
                                 }
                                 break;
                             case "Gradebook":
@@ -299,6 +306,26 @@ namespace Pegasus.Pages.CommonPageObjects
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
                 CommonPage_Amplifier_FolderName, webElementToWait);
+            //click folder second leve
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_Amplifier_FolderName1, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Access Chapter1 Grader Activities Folder.
+        /// </summary>
+        private void NavigateToAmplifierFolder(string webElementToWait,
+            User.UserTypeEnum userTypeEnum, string activityUnderTabName, string folderName)
+        {
+            // navigate inside access chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(folderName, webElementToWait);
             //click folder second leve
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.

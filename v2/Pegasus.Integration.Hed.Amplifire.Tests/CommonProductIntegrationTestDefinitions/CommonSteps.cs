@@ -297,6 +297,26 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         }
 
         /// <summary>
+        /// Launch Activity Presentation Window.
+        /// </summary>
+        [Then(@"I should see the activity successfully launched by Instructor")]
+        public void ActivitySuccessfullyLaunched()
+        {
+            //Launching of Activity Presentation Window
+            Logger.LogMethodEntry("ActivitySubmission",
+                "ActivitySuccessfullyLaunched"
+                , base.IsTakeScreenShotDuringEntryExit);
+            //Assert Launch Activity Window
+            Logger.LogAssertion("VerifyActivityLaunched",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new InstructorPresentationPage().
+                    IsActivityPresentationPageOpened()));
+            Logger.LogMethodExit("ActivitySubmission",
+                "ActivitySuccessfullyLaunched"
+                , base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Verify The Asset Name In 'My Course' Frame.
         /// </summary>
         /// <param name="activityTypeEnum">This is Activity Type Enum</param>
