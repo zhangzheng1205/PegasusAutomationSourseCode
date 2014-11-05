@@ -49,9 +49,11 @@ namespace Pegasus.Pages.UI_Pages
                     {
                         base.WaitForElement(By.XPath(string.Format(CourseToolAssociationViewPageResource.
                             CourseToolAssociationView_Page_EditIcon_XpathLocator, i)));
+                        IWebElement getEditlink = base.GetWebElementPropertiesByXPath
+                            (string.Format(CourseToolAssociationViewPageResource.
+                            CourseToolAssociationView_Page_EditIcon_XpathLocator, i));
                         //Click on Edit Icon
-                        base.ClickButtonByXPath((string.Format(CourseToolAssociationViewPageResource.
-                            CourseToolAssociationView_Page_EditIcon_XpathLocator, i)));
+                        base.ClickByJavaScriptExecutor(getEditlink);
                         break;
                     }
                 }                

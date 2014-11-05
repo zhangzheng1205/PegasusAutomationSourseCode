@@ -50,11 +50,15 @@ namespace Pegasus.Pages.UI_Pages
                     ManageCourseToolSettingsView_Page_Input_IntructorId_Xpath_Locator);
                 //Fill Integration Id
                 getCourseTextBoxProperty.SendKeys(integrationPointId);
+                Thread.Sleep(Convert.ToInt32(ManageCourseToolSettingsViewPageResource.
+                    ManageCourseToolSettingsView_Page_TimeValue));
                 base.WaitForElement(By.Id(ManageCourseToolSettingsViewPageResource.
                     ManageCourseToolSettingsView_Page_SaveButton_Id_Locator));
-                //Click on Save Button
-                base.ClickButtonById(ManageCourseToolSettingsViewPageResource.
+                IWebElement getSaveButton=base.GetWebElementPropertiesById
+                    (ManageCourseToolSettingsViewPageResource.
                     ManageCourseToolSettingsView_Page_SaveButton_Id_Locator);
+                //Click on Save Button
+                base.ClickByJavaScriptExecutor(getSaveButton);
             }
             catch (Exception e)
             {

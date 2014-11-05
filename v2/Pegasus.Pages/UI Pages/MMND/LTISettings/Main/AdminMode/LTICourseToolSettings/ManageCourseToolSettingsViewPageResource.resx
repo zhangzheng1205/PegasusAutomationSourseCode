@@ -126,6 +126,9 @@
   <data name="ManageCourseToolSettingsView_Page_SaveButton_Id_Locator" xml:space="preserve">
     <value>btnSave</value>
   </data>
+  <data name="ManageCourseToolSettingsView_Page_TimeValue" xml:space="preserve">
+    <value>2000</value>
+  </data>
   <data name="ManageCourseToolSettingsView_Page_Window_Name" xml:space="preserve">
     <value>Administration Pages</value>
   </data>

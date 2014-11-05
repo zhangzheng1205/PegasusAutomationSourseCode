@@ -72,9 +72,11 @@ namespace Pegasus.Pages.UI_Pages
                 base.FillTextBoxById(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Search_Textbox_Id_Locator,
                     getSearchTerm);
-                //Click on GO button
-                base.ClickButtonById(UserLayoutRootNodeTargetPageResource.
+                IWebElement getGoButton=base.GetWebElementPropertiesById
+                    (UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Go_Button_Id_Locator);
+                //Click on GO button
+                base.ClickByJavaScriptExecutor(getGoButton);
             }
             catch (Exception e)
             {
@@ -109,14 +111,14 @@ namespace Pegasus.Pages.UI_Pages
                         {
                             //Click on the NonCoOrdinate Course Type button
                             this.ClickOnCourseTypeButton(UserLayoutRootNodeTargetPageResource.
-                                UserLayoutRootNodeTargetPage_NonCoOrdinate_Course_Title);
+                                  UserLayoutRootNodeTargetPage_NonCoOrdinate_Course_Title);
                         }
                         break;
                     case Course.CourseTypeEnum.MMNDCoOrdinate:
                         {
                             //Click on the CoOrdinate Course Type button
                             this.ClickOnCourseTypeButton(UserLayoutRootNodeTargetPageResource.
-                                UserLayoutRootNodeTargetPage_CoOrdinate_Course_Title);
+                               UserLayoutRootNodeTargetPage_CoOrdinate_Course_Title);
                         }
                         break;
                 }
@@ -157,10 +159,12 @@ namespace Pegasus.Pages.UI_Pages
                         UserLayoutRootNodeTargetPage_SelectCourseMaterials_CourseName_Xpath_Locator, rowCount));
                     if (getCourseName.Contains(courseName))
                     {
-                        //Click on the Course type button
-                        base.ClickButtonByXPath(string.Format(UserLayoutRootNodeTargetPageResource.
+                        IWebElement getCourseNamePath=base.GetWebElementPropertiesByXPath
+                            (string.Format(UserLayoutRootNodeTargetPageResource.
                             UserLayoutRootNodeTargetPage_SelectCourseMaterials_CourseType_Button_Xpath_Locator,
                             rowCount));
+                        //Click on the Course type button
+                        base.ClickByJavaScriptExecutor(getCourseNamePath);
                         break;
                     }
                 }
@@ -363,7 +367,7 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("UserLayoutRootNodeTargetPage", "EnterCourseName",
                 base.IsTakeScreenShotDuringEntryExit);            
             base.WaitForElement(By.Id(UserLayoutRootNodeTargetPageResource.
-                UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseName_Textbox_Id_Locator));
+                UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseName_Textbox_Id_Locator),10);
             //Clear the Text
             base.ClearTextById(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CourseName_Textbox_Id_Locator);
@@ -388,8 +392,10 @@ namespace Pegasus.Pages.UI_Pages
             //Wait for "Create Course Now" option
             base.FocusOnElementByXPath(UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CreateCourseNow_Button_Xpath_Locator);
-            base.ClickButtonByXPath(UserLayoutRootNodeTargetPageResource.
+            IWebElement getClickCourseButton=base.GetWebElementPropertiesByXPath
+                (UserLayoutRootNodeTargetPageResource.
                 UserLayoutRootNodeTargetPage_EnterCourseInformation_CreateCourseNow_Button_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(getClickCourseButton);
             logger.LogMethodExit("UserLayoutRootNodeTargetPage", "ClickOnCreateCourseButton",
                 base.IsTakeScreenShotDuringEntryExit);
         }
@@ -634,11 +640,12 @@ namespace Pegasus.Pages.UI_Pages
                 UserLayoutRootNodeTargetPage_CourseCreateConfirmation_Loop_Initializer);
                 rowCount <= totalCoursesCount; rowCount++)
             {
+                bool sasdsd = base.IsElementPresent(By.XPath(string.Format("//div[@class='bi']/div[@class='bm']/div[{0}]/h4",
+                    rowCount)),5);
                 //Check if it is a Course or Section
                 if ((base.IsElementPresent(By.XPath(string.Format(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_MyLabMasteringPearson_AssignedToCopy_Course_Name_Xpath_Locator,
-                    rowCount)), Convert.ToInt32(UserLayoutRootNodeTargetPageResource.
-                    UserLayoutRootNodeTargetPage_CourseCreateConfirmation_Customized_Time))))
+                    rowCount)), Convert.ToInt32(5))))
                 {
                     //Get the course name
                     string getCourseName = base.GetElementTextByXPath(string.Format(UserLayoutRootNodeTargetPageResource.
@@ -855,18 +862,22 @@ namespace Pegasus.Pages.UI_Pages
                 //Select the 'CoordinatorButton' Radio button
                 base.WaitForElement(By.Id(UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Section_RadioButton_Id_Locator));
-                base.ClickButtonById(UserLayoutRootNodeTargetPageResource.
+                IWebElement getSectionButton = base.GetWebElementPropertiesById
+                    (UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Section_RadioButton_Id_Locator);
+                base.ClickByJavaScriptExecutor(getSectionButton);
                 //Fetch the Course Details
                 Course course = Course.Get(courseTypeEnum);                
                 //Wait for Dropdown control
                 base.WaitForElement(By.Name(UserLayoutRootNodeTargetPageResource.
-                    UserLayoutRootNodeTargetPage_CreateOrCopyACourse_CoOrdinatorCourse_DropDown_Name_Locator));
+                    UserLayoutRootNodeTargetPage_CreateOrCopyACourse_CoOrdinatorCourse_DropDown_Name_Locator),10);
                 //Select the Coordinate Course base on the Course Id
-                this.SelectTheCoOrdinateCourseOption(course.ECollegeIntegrationId);            
-                //Click on GO button
-                base.ClickButtonById(UserLayoutRootNodeTargetPageResource.
+                this.SelectTheCoOrdinateCourseOption(course.ECollegeIntegrationId);   
+                IWebElement getCopyButton=base.GetWebElementPropertiesById
+                    (UserLayoutRootNodeTargetPageResource.
                     UserLayoutRootNodeTargetPage_CreateOrCopyACourse_Go_Button_Id_Locator);
+                //Click on GO button
+                base.ClickByJavaScriptExecutor(getCopyButton);
             }
             catch (Exception e)
             {

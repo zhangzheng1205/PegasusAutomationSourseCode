@@ -120,6 +120,9 @@
   <data name="CampusAdminNav_Page_CourseToolSettings_Link_Locator" xml:space="preserve">
     <value>Course Tool Settings</value>
   </data>
+  <data name="CampusAdminNav_Page_ElementValue" xml:space="preserve">
+    <value>2000</value>
+  </data>
   <data name="CampusAdminNav_Page_Frame_Name_Locator" xml:space="preserve">
     <value>subnav</value>
   </data>

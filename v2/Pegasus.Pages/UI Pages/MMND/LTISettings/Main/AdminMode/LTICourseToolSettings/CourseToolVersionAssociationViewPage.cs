@@ -41,9 +41,11 @@ namespace Pegasus.Pages.UI_Pages
                     CourseToolVersionAssociatioView_Page_Frame_Name_Locator);
                 base.WaitForElement(By.Id(CourseToolVersionAssociationViewPageResource.
                     CourseToolVersionAssociationView_Page_NextButton_Id_Locator));
+                IWebElement getNextButton = base.GetWebElementPropertiesById
+                    (CourseToolVersionAssociationViewPageResource.
+                    CourseToolVersionAssociationView_Page_NextButton_Id_Locator);                
                 //Click On Next Button
-                base.ClickButtonById(CourseToolVersionAssociationViewPageResource.
-                    CourseToolVersionAssociationView_Page_NextButton_Id_Locator);
+                base.ClickByJavaScriptExecutor(getNextButton);
             }
             catch (Exception e)
             {

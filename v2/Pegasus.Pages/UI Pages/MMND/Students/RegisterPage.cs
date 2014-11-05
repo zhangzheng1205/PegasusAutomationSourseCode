@@ -33,18 +33,17 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Select Register Pearson my Mastering Window
-                base.SelectWindow(RegisterPageResource.
-                        Register_Page_RegisterPearsonMyLabMastering_Window_Name);
+                //base.SelectWindow(RegisterPageResource.
+                //        Register_Page_RegisterPearsonMyLabMastering_Window_Name);
+                base.SelectWindow("Register | Pearson MyLab & Mastering");
                 base.WaitForElement(By.Id(RegisterPageResource.
                     Register_Page_Enter_Course_Id_Locator));
                 //Enter Seciton Id
                 base.FillTextBoxById(RegisterPageResource.
                     Register_Page_Enter_Course_Id_Locator, sectionId);
-                base.WaitForElement(By.XPath(RegisterPageResource.
-                    Register_Page_RegisterCourse_XPath_Locator));
+                base.WaitForElement(By.Id("course-id-button"));
                 //Click On Register Course
-                base.ClickButtonByXPath(RegisterPageResource.
-                    Register_Page_RegisterCourse_XPath_Locator);
+                base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesById("course-id-button"));
                 Thread.Sleep(Convert.ToInt32(RegisterPageResource.
                     Register_Page_Wait_Window_Sleep_Value));
             }

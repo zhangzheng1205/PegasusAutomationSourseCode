@@ -121,7 +121,7 @@
     <value>AssignedToCopyInterval</value>
   </data>
   <data name="UserLayoutRootNodeTargetPage_CoOrdinate_Course_Title" xml:space="preserve">
-    <value>PegasusMMND_PPE_Coord</value>
+    <value>MMND Pegasus Spnaish Zayas-Bazam Coord Sixth Edition</value>
   </data>
   <data name="UserLayoutRootNodeTargetPage_CourseCreateConfirmation_BackToYourCoursesPage_Link_Text" xml:space="preserve">
     <value>Back to your Courses page</value>
@@ -268,7 +268,7 @@
     <value>MyLab &amp; Mastering | Pearson</value>
   </data>
   <data name="UserLayoutRootNodeTargetPage_NonCoOrdinate_Course_Title" xml:space="preserve">
-    <value>PegasusMMND_PPE</value>
+    <value>MMND Pegasus BizLab</value>
   </data>
   <data name="UserLayoutRootNodeTargetPage_SearchTerm_AppSettings_Key_Value" xml:space="preserve">
     <value>CourseSearchTerm</value>
