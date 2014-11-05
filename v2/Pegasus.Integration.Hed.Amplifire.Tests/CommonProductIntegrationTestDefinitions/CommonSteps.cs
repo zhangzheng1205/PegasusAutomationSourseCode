@@ -289,13 +289,27 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             //Assert Launch Activity Window
             Logger.LogAssertion("VerifyActivityLaunched",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new StudentPresentationPage().
-                    IsActivityPresentationPageOpened()));
+                () => Assert.IsTrue(new CommonPage().IsPageOpened()));
             Logger.LogMethodExit("ActivitySubmission",
                 "ActivitySuccessfullyLaunched"
                 , base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [Then(@"I should see the BookTilte as ""(.*)""")]
+        public void ThenIShouldSeeTheBookTilteAs(string BookTilte)
+        {
+            //Check If Expected Page Is Opened
+            Logger.LogMethodEntry("CommonSteps", "ValidateFolderNavigation",
+                IsTakeScreenShotDuringEntryExit);
+            string ActualBookTilte = new CommonPage().GetTextByXpath(BookTilte);
+            //Assert we have correct page opened            
+            Logger.LogAssertion("VerifyOpenedPageTitle",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(ActualBookTilte, BookTilte));
+            base.CloseBrowserWindow();
+            Logger.LogMethodExit("CommonSteps", "ValidateFolderNavigation",
+                IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Launch Amplifier Presentation Window.
         /// </summary>

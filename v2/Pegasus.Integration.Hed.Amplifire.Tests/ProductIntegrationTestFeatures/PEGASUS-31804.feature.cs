@@ -106,6 +106,9 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures
  testRunner.When("I open the \"Amplifire Study Module 0P: Vocabulario en contexto\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
  testRunner.Then("I should see the activity successfully launched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 21
+ testRunner.And("I should see the BookTilte as \"Chapter 16: Innate Immunity: Nonspecific Defenses " +
+                    "of the Host\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -18,3 +18,4 @@
 	Then I should be inside the folder "¡Comprueba lo que sabes!"
 	When I open the "Amplifire Study Module 0P: Vocabulario en contexto" Activity
 	Then I should see the activity successfully launched
+	And I should see the BookTilte as "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host"

@@ -1158,6 +1158,74 @@ namespace Pegasus.Pages.CommonPageObjects
             return ActualFolderName;
         }
 
+        public Boolean IsPageOpened()
+        {
+
+            Logger.LogMethodEntry("StudentPresentationPage",
+                "IsPageOpened",
+                base.IsTakeScreenShotDuringEntryExit);
+            Boolean IsPageOpened = false;
+            Thread.Sleep(7000);
+            base.SwitchToLastOpenedWindow();
+            base.WaitForElement(By.Id("ASSIGNMENT_NAVIGATION_VIEW"));
+            string getTheUrl = base.GetCurrentUrl;
+            if ((getTheUrl.Contains("amplifire")))
+            {
+                IsPageOpened = true;
+
+            }
+            Logger.LogMethodExit("StudentPresentationPage",
+                "IsPageOpened",
+                base.IsTakeScreenShotDuringEntryExit);
+            return IsPageOpened;
+        }
+
+        /// <summary>
+        /// Method to fetch current URL.
+        /// </summary>
+        /// <returns>Current Url.</returns>
+        public string GetCurrentURL()
+        {
+            Logger.LogMethodEntry("StudentPresentationPage", "GetCurrentURL",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Initialize the Variable
+            String getCurrentURL = string.Empty;
+            try
+            {
+                //set current window URL
+                getCurrentURL = base.GetCurrentUrl;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("StudentPresentationPage", "GetCurrentURL",
+                base.IsTakeScreenShotDuringEntryExit);
+            return getCurrentURL;
+        }
+
+        public string GetTextByXpath(string Text)
+        {
+            Logger.LogMethodEntry("CommonPage",
+                "GetFolderNameByXpath",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            string ActualString = String.Empty;
+            switch (Text)
+            {
+                case "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host":
+                    base.SwitchToLastOpenedWindow();
+                    base.WaitForElement(By.XPath(CommonPageResource.ComonPage_BookTitle_For_Amplifire));
+                    ActualString = base.GetElementInnerTextByXPath(CommonPageResource.ComonPage_BookTitle_For_Amplifire);
+                    break;
+
+            }
+            Logger.LogMethodExit("CommonPage",
+                "GetFolderNameByXpath",
+              base.IsTakeScreenShotDuringEntryExit);
+            return ActualString;
+        }
+
         /// <summary>
         /// Manage The Activity Folder Level Navigation HED Core.
         /// </summary>

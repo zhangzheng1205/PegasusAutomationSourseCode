@@ -439,6 +439,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&quot;page&quot;]/div[1]/div/h2.
+        /// </summary>
+        internal static string ComonPage_BookTitle_For_Amplifire {
+            get {
+                return ResourceManager.GetString("ComonPage_BookTitle_For_Amplifire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Excel Chapter 1: Grader Activities.
         /// </summary>
         internal static string ComonPage_ExcelChapter1GraderActivities_FolderName {

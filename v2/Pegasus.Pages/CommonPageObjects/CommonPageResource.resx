@@ -267,4 +267,7 @@
   <data name="CommonPage_Course_Materials_iFrame" xml:space="preserve">
     <value>ifrmCoursePreview</value>
   </data>
+  <data name="ComonPage_BookTitle_For_Amplifire" xml:space="preserve">
+    <value>//*[@id="page"]/div[1]/div/h2</value>
+  </data>
 </root>
