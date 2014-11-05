@@ -13,4 +13,4 @@ When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I navigate to "Amplifier" asset in "Course Materials" tab as "HedProgramAdmin"
 And I open the "Amplifier link 1 (Content)" Activity
-Then I should be on the "Pegasus" page
+Then I should see the Amplifire launched successfully

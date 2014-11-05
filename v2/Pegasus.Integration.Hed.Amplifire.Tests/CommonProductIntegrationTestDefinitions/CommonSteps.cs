@@ -492,6 +492,25 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 , base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Launch Amplifire Link Window.
+        /// </summary>
+        [Then(@"I should see the Amplifire launched successfully")]
+        public void ValidateAmplifireLaunchedSuccessfully()
+        {
+            //Launch Amplifire Link Window.
+            Logger.LogMethodEntry("ActivitySubmission",
+                "ValidateAmplifireLaunchedSuccessfully"
+                , base.IsTakeScreenShotDuringEntryExit);
+            //Assert Launch Amplifire Window
+            Logger.LogAssertion("VerifyActivityLaunched",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new StudentPresentationPage().
+                    IsAmplifireLinkPageOpened()));
+            Logger.LogMethodExit("ActivitySubmission",
+                "ValidateAmplifireLaunchedSuccessfully"
+                , base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

@@ -89,7 +89,7 @@ testRunner.When("I navigate to \"Amplifier\" asset in \"Course Materials\" tab a
 #line 15
 testRunner.And("I open the \"Amplifier link 1 (Content)\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
-testRunner.Then("I should be on the \"Pegasus\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the Amplifire launched successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

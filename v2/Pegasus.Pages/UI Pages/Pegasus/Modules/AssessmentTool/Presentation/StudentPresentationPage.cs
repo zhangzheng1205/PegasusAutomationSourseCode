@@ -70,6 +70,39 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             return isActivityPresentationPageDisplayed;
         }
+        /// <summary>
+        /// Opens Amplifire Link Window.
+        /// </summary>
+        /// <returns>Amplifire Link Window Open Result.</returns>
+        public Boolean IsAmplifireLinkPageOpened()
+        {
+            //Opens Amplifire Link Window
+            logger.LogMethodEntry("StudentPresentationPage",
+                "IsAmplifireLinkPageOpened",
+                base.IsTakeScreenShotDuringEntryExit);
+            Boolean isAmplifireLinkPageDisplayed = false;
+            try
+            {
+                //Select Amplifire pop up Window               
+                base.SwitchToLastOpenedWindow();
+                // Is Activity Displayed in Presentation Window
+                isAmplifireLinkPageDisplayed = base.IsElementDisplayedById
+                    (StudentPresentationPageResource.
+                    StudentPresentation_Page_AmplifireBookImage_Id_Locator);                
+                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPresentation_Page_LaunchWindow_TimeValue));            
+                //Close The Window
+                base.CloseBrowserWindow();               
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+                "IsAmplifireLinkPageOpened",
+                base.IsTakeScreenShotDuringEntryExit);
+            return isAmplifireLinkPageDisplayed;
+        }
 
         /// <summary>
         /// Click on Back image icon
