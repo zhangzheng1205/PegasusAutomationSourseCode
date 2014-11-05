@@ -134,6 +134,7 @@ namespace Pegasus.Pages.CommonPageObjects
                         }
                         break;
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.HedProgramAdmin:
                         // folder navigation based on Tab name
                         switch (activityUnderTabName)
                         {
@@ -173,6 +174,11 @@ namespace Pegasus.Pages.CommonPageObjects
                                     case "PowerPoint Chapter 1 Skill-Based Training":
                                     case "PowerPoint Chapter 1 Skill-Based Exam (Scenario 1)":
                                         this.NavigateToPowerPointChapter1SimulationActivitiesFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                            userTypeEnum, activityUnderTabName);
+                                        break;
+                                    case "Amplifier":
+                                        this.NavigateToSectionAmplifierFolder(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
@@ -262,6 +268,22 @@ namespace Pegasus.Pages.CommonPageObjects
             }
             Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigation",
               base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Navigate To Access Coursespace Section Amplifier Folder.
+        /// </summary>
+        private void NavigateToSectionAmplifierFolder(string webElementToWait,
+            User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            // navigate inside Access Coursespace Section Amplifier Folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_SectionAmplifier_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -662,6 +684,7 @@ namespace Pegasus.Pages.CommonPageObjects
                     }
                     break;
                 case User.UserTypeEnum.CsSmsInstructor:
+                case User.UserTypeEnum.HedProgramAdmin:
                     switch (activityUnderTabName)
                     {
                         //Generate Activity Result by Student Report

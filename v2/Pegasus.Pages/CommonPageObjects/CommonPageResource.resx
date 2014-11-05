@@ -255,4 +255,7 @@
   <data name="AmplifierFolderTwoXpath" xml:space="preserve">
     <value>//*[@id="tblBC"]/tbody/tr/td/span[3]/span[2]/a/span/span</value>
   </data>
+  <data name="CommonPage_SectionAmplifier_FolderName" xml:space="preserve">
+    <value>Amplifier</value>
+  </data>
 </root>
