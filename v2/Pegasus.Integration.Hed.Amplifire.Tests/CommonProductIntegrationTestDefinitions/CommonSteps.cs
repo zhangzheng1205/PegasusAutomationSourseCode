@@ -297,10 +297,10 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         }
 
         /// <summary>
-        /// Launch Activity Presentation Window.
+        /// Launch Amplifier Presentation Window.
         /// </summary>
-        [Then(@"I should see the activity successfully launched by Instructor")]
-        public void ActivitySuccessfullyLaunchedByIns()
+        [Then(@"I should see Amplifier link should be opened in new pop up")]
+        public void AmplifierSuccessfullyLaunchedByIns()
         {
             //Launching of Activity Presentation Window
             Logger.LogMethodEntry("ActivitySubmission",
@@ -310,7 +310,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogAssertion("VerifyActivityLaunched",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new InstructorPresentationPage().
-                    IsActivityPresentationPageOpened()));
+                    IsAmplifierPresentationPageOpened()));
             Logger.LogMethodExit("ActivitySubmission",
                 "ActivitySuccessfullyLaunched"
                 , base.IsTakeScreenShotDuringEntryExit);
@@ -420,7 +420,29 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("CommonSteps", "ValidateFolderNavigation",
                 IsTakeScreenShotDuringEntryExit);
         }
-       
+
+        /// <summary>
+        /// Validate the selected folder.
+        /// </summary>
+        /// <param name="FolderName">Name of the selected folder</param>
+        [Then(@"I should be inside the selected folder ""(.*)""")]
+        public void ValidateSelectedFolderNavigation(string FolderName)
+        {
+            //Check If Expected Page Is Opened
+            Logger.LogMethodEntry("CommonSteps", "ValidateFolderNavigation",
+                IsTakeScreenShotDuringEntryExit);
+            //Wait For Page Get Switched
+            WaitUntilPageGetSwitchedSuccessfully(CommonStepsResource.CommonSteps_Course_Materials);
+            //Get current opened page title
+            string ActualFolderName = new CommonPage().GetBreathCrumbItemSelected();
+            //Assert we have correct page opened            
+            Logger.LogAssertion("VerifyOpenedFolderTitle",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(FolderName, ActualFolderName));
+            Logger.LogMethodExit("CommonSteps", "ValidateFolderNavigation",
+                IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Enter Into Course.
         /// </summary>

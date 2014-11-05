@@ -141,4 +141,7 @@
   <data name="CommonSteps_WaitTimeOut_Value" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="CommonSteps_Course_Materials" xml:space="preserve">
+    <value>Course Materials</value>
+  </data>
 </root>

@@ -132,5 +132,16 @@ namespace Pegasus.Integration.Hed.ETextS11.Tests.CommonIntegrationAcceptanceTest
                 return ResourceManager.GetString("CommonSteps_WaitTimeOut_Value", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Course Materials.
+        /// </summary>
+        internal static string CommonSteps_Course_Materials
+        {
+            get
+            {
+                return ResourceManager.GetString("CommonSteps_Course_Materials", resourceCulture);
+            }
+        }
     }
 }

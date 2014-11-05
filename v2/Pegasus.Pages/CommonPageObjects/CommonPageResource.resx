@@ -258,4 +258,13 @@
   <data name="CommonPage_SectionAmplifier_FolderName" xml:space="preserve">
     <value>Amplifier</value>
   </data>
+  <data name="CommonPage_BreathCrumbItemSelected" xml:space="preserve">
+    <value>.//*[@id='tdSelectedFolder']/a</value>
+  </data>
+  <data name="CommonPage_Course_Materials" xml:space="preserve">
+    <value>Course Materials</value>
+  </data>
+  <data name="CommonPage_Course_Materials_iFrame" xml:space="preserve">
+    <value>ifrmCoursePreview</value>
+  </data>
 </root>

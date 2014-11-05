@@ -160,6 +160,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;tdSelectedFolder&apos;]/a.
+        /// </summary>
+        internal static string CommonPage_BreathCrumbItemSelected {
+            get {
+                return ResourceManager.GetString("CommonPage_BreathCrumbItemSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Chapter 1: The Science of Psychology.
         /// </summary>
         internal static string CommonPage_Chapter1TheScienceofPsychology_FolderName {
@@ -183,6 +192,24 @@ namespace Pegasus.Pages.CommonPageObjects {
         internal static string CommonPage_Chapter4BrainAndNervous_FolderName {
             get {
                 return ResourceManager.GetString("CommonPage_Chapter4BrainAndNervous_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Course Materials.
+        /// </summary>
+        internal static string CommonPage_Course_Materials {
+            get {
+                return ResourceManager.GetString("CommonPage_Course_Materials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ifrmCoursePreview.
+        /// </summary>
+        internal static string CommonPage_Course_Materials_iFrame {
+            get {
+                return ResourceManager.GetString("CommonPage_Course_Materials_iFrame", resourceCulture);
             }
         }
         

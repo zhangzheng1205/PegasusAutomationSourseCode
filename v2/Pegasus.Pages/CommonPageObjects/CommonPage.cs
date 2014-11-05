@@ -328,8 +328,6 @@ namespace Pegasus.Pages.CommonPageObjects
             this.NavigateInsideActivityFolderUnderTab(folderName, webElementToWait);
             //click folder second leve
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_Amplifier_FolderName1, webElementToWait);
             Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
         }
@@ -1135,7 +1133,31 @@ namespace Pegasus.Pages.CommonPageObjects
               base.IsTakeScreenShotDuringEntryExit);
             return ActualFolderName;
         }
-        
+
+        /// <summary>
+        /// To get Breath crumb selected item in course Materials.
+        /// </summary>
+        /// <remarks>Return selected folder name</remarks>
+        public string GetBreathCrumbItemSelected()
+        {
+            Logger.LogMethodEntry("CommonPage",
+                "GetFolderNameByXpath",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            string ActualFolderName = String.Empty;
+
+            base.SelectWindow(CommonPageResource.CommonPage_Course_Materials);
+            base.SwitchToIFrameById(CommonPageResource.CommonPage_Course_Materials_iFrame);
+            base.WaitForElement(By.XPath(CommonPageResource.CommonPage_BreathCrumbItemSelected));
+            ActualFolderName = base.GetElementInnerTextByXPath(CommonPageResource.CommonPage_BreathCrumbItemSelected);
+
+            Logger.LogMethodExit("CommonPage",
+                "GetFolderNameByXpath",
+              base.IsTakeScreenShotDuringEntryExit);
+
+            return ActualFolderName;
+        }
+
         /// <summary>
         /// Manage The Activity Folder Level Navigation HED Core.
         /// </summary>

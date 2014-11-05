@@ -22,6 +22,50 @@ namespace Pegasus.Pages.UI_Pages
         private static Logger logger = Logger.GetInstance(typeof(InstructorPresentationPage));
 
         /// <summary>
+        /// Opens Amplifier Presentation Window.
+        /// </summary>
+        /// <returns>Amplifier Presentation Window Open Result.</returns>
+        public Boolean IsAmplifierPresentationPageOpened()
+        {
+            //Opens Activity Presentation Window
+            logger.LogMethodEntry("InstructorPresentationPage",
+                "IsAmplifierPresentationPageOpened",
+                base.IsTakeScreenShotDuringEntryExit);
+            Boolean isAmplifirePresentationPageDisplayed = false;
+            try
+            {
+                //Select Amplifire Window    
+                base.SwitchToLastOpenedWindow();
+                // Wait till Amplifire page open
+                Thread.Sleep(Convert.ToInt32(InstructorPresentationPageResource
+                    .InstructorPresentation_Page_LaunchWindowClose_TimeValue));
+
+                // Is Activity Displayed in Presentation Window
+                isAmplifirePresentationPageDisplayed = base.IsElementDisplayedById
+                    (InstructorPresentationPageResource.
+                    InstructorPresentation_Page_AssessmentHolder_Id_Locator);
+
+                //Close The Window
+                base.CloseBrowserWindow();
+                //Used SendKeys to Close modal pop up
+                SendKeys.SendWait(InstructorPresentationPageResource.
+                    InstructorPresentation_Page_EnterKey_Value);
+
+                base.SelectWindow(InstructorPresentationPageResource
+                    .InstructorPresentation_Page_BaseWindow_Title_Name);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("InstructorPresentationPage",
+                "IsAmplifierPresentationPageOpened",
+                base.IsTakeScreenShotDuringEntryExit);
+
+            return isAmplifirePresentationPageDisplayed;
+        }
+
+        /// <summary>
         /// Launch Study Plan Activity.
         /// </summary>
         /// <returns>True if the element is found in the presentation 
