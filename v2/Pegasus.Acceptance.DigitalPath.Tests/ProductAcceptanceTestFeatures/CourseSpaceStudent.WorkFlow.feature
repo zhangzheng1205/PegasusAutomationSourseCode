@@ -29,7 +29,7 @@ When I close the welcome message
 Then I should see the welcome message popup closed successfully for "DPCsStudent"
 
 #Purpose: To View Enrolled Classes in the Overview Tab
-Scenario: Display of Enrolled Classes in the Overview Tab by CS Student
+Scenario: To Verify The Tab Navigation By CS Student
 When I navigate to the "Overview" tab
 Then I should be on the "Overview" page
 Then I should see the "DigitalPathMasterLibrary" class present in the overview tab

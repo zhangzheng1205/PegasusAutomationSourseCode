@@ -209,11 +209,11 @@ testRunner.Then("I should see the Home Page tabs", ((string)(null)), ((TechTalk.
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("View Enrolled Classes in Classes Frame by CS Teacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To Verify Tab Navigation by CS Teacher")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceTeacher")]
-        public virtual void ViewEnrolledClassesInClassesFrameByCSTeacher()
+        public virtual void ToVerifyTabNavigationByCSTeacher()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Enrolled Classes in Classes Frame by CS Teacher", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify Tab Navigation by CS Teacher", ((string[])(null)));
 #line 55
 this.ScenarioSetup(scenarioInfo);
 #line 7
