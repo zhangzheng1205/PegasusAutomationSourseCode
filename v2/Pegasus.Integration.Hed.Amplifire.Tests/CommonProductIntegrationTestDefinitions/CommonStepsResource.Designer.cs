@@ -8,10 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pegasus.Integration.Hed.ETextS11.Tests.CommonIntegrationAcceptanceTestDefinitions {
+namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDefinitions
+{
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,23 +23,28 @@ namespace Pegasus.Integration.Hed.ETextS11.Tests.CommonIntegrationAcceptanceTest
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class CommonStepsResource {
-        
+    internal class CommonStepsResource
+    {
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal CommonStepsResource() {
+        internal CommonStepsResource()
+        {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
-            get {
-                if (object.ReferenceEquals(resourceMan, null)) {
+        internal static global::System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                if (object.ReferenceEquals(resourceMan, null))
+                {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pegasus.Integration.Hed.ETextS11.Tests.CommonIntegrationAcceptanceTestDefinitions" +
                             ".CommonStepsResource", typeof(CommonStepsResource).Assembly);
                     resourceMan = temp;
@@ -46,89 +52,108 @@ namespace Pegasus.Integration.Hed.ETextS11.Tests.CommonIntegrationAcceptanceTest
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
-            get {
+        internal static global::System.Globalization.CultureInfo Culture
+        {
+            get
+            {
                 return resourceCulture;
             }
-            set {
+            set
+            {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Create New User.
         /// </summary>
-        internal static string CommonSteps_CreateNewUserWindow_Name_Locator {
-            get {
+        internal static string CommonSteps_CreateNewUserWindow_Name_Locator
+        {
+            get
+            {
                 return ResourceManager.GetString("CommonSteps_CreateNewUserWindow_Name_Locator", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 30.
         /// </summary>
-        internal static string CommonSteps_CustomTimeToWait {
-            get {
+        internal static string CommonSteps_CustomTimeToWait
+        {
+            get
+            {
                 return ResourceManager.GetString("CommonSteps_CustomTimeToWait", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ifrm.
         /// </summary>
-        internal static string CommonSteps_IFrame {
-            get {
+        internal static string CommonSteps_IFrame
+        {
+            get
+            {
                 return ResourceManager.GetString("CommonSteps_IFrame", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Page not opened in the specified amount of time..
         /// </summary>
-        internal static string CommonSteps_PageNotOpened_Message {
-            get {
+        internal static string CommonSteps_PageNotOpened_Message
+        {
+            get
+            {
                 return ResourceManager.GetString("CommonSteps_PageNotOpened_Message", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 3000.
         /// </summary>
-        internal static string CommonSteps_SleepTime_Value {
-            get {
+        internal static string CommonSteps_SleepTime_Value
+        {
+            get
+            {
                 return ResourceManager.GetString("CommonSteps_SleepTime_Value", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to messageBoardText.
         /// </summary>
-        internal static string CommonSteps_SuccessMessage_Class_Locator {
-            get {
+        internal static string CommonSteps_SuccessMessage_Class_Locator
+        {
+            get
+            {
                 return ResourceManager.GetString("CommonSteps_SuccessMessage_Class_Locator", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to PegasusMessageBoard.
         /// </summary>
-        internal static string CommonSteps_SuccessMessage_Id_Locator {
-            get {
+        internal static string CommonSteps_SuccessMessage_Id_Locator
+        {
+            get
+            {
                 return ResourceManager.GetString("CommonSteps_SuccessMessage_Id_Locator", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
-        internal static string CommonSteps_WaitTimeOut_Value {
-            get {
+        internal static string CommonSteps_WaitTimeOut_Value
+        {
+            get
+            {
                 return ResourceManager.GetString("CommonSteps_WaitTimeOut_Value", resourceCulture);
             }
         }

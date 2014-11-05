@@ -7,7 +7,7 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
-using Pegasus.Integration.Hed.ETextS11.Tests.CommonIntegrationAcceptanceTestDefinitions;
+using Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDefinitions;
 using Pegasus.Pages.CommonPageObjects;
 
 namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDefinitions

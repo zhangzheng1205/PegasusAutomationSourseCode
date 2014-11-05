@@ -42,8 +42,7 @@ namespace Pegasus.Pages.UI_Pages
 
                 // Is Activity Displayed in Presentation Window
                 isAmplifirePresentationPageDisplayed = base.IsElementDisplayedById
-                    (InstructorPresentationPageResource.
-                    InstructorPresentation_Page_AssessmentHolder_Id_Locator);
+                    (InstructorPresentationPageResource.InstructorPresentation_Amplifire_Containeer);
 
                 //Close The Window
                 base.CloseBrowserWindow();

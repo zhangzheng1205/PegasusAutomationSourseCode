@@ -153,4 +153,7 @@
   <data name="InstructorPresentation_Page_BaseWindow_Title_Name" xml:space="preserve">
     <value>Course Materials</value>
   </data>
+  <data name="InstructorPresentation_Amplifire_Containeer" xml:space="preserve">
+    <value>ASSIGNMENT_NAVIGATION_VIEW</value>
+  </data>
 </root>

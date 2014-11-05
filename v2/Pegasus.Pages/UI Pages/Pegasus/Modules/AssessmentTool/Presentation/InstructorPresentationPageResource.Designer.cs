@@ -62,6 +62,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ASSIGNMENT_NAVIGATION_VIEW.
+        /// </summary>
+        internal static string InstructorPresentation_Amplifire_Containeer {
+            get {
+                return ResourceManager.GetString("InstructorPresentation_Amplifire_Containeer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0:btnMasterFinish.
         /// </summary>
         internal static string InstructorPresentation_Page_ActivityFinish_Button_Id_Locator {
