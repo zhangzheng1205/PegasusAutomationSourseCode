@@ -402,6 +402,76 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         }
 
 
+        /// <summary>
+        /// Enter Into Course.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is Course by Type.</param>
+        /// <param name="userTypeEnum">This is user time enum.</param>
+        [When(@"I enter in the ""(.*)"" course from the Global Home page as ""(.*)""")]
+        public void EnterCourse(Course.CourseTypeEnum courseTypeEnum,
+            User.UserTypeEnum userTypeEnum)
+        {
+            //Enter in Course from Global Home Page 
+            Logger.LogMethodEntry("CommonSteps", "EnterInCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Enter Into The Course
+            new HEDGlobalHomePage().EnterInsideCourse(
+                courseTypeEnum, userTypeEnum);
+            Logger.LogMethodExit("CommonSteps", " EnterInCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Navigate To Tab Of The Particular Page.
+        /// </summary>
+        /// <param name="subNavigationTabName">This is Tab Name.</param>
+        /// <param name="subNavigationTabParentWindowName">This is Page Name.</param>
+        [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page")]
+        public void NavigateToTabInProgramAdminPage(
+            string subNavigationTabName, string subNavigationTabParentWindowName)
+        {
+            // navigate program administrator page
+            Logger.LogMethodEntry("AdminToolPage", "NavigateToTabOfTheParticularPage",
+                base.IsTakeScreenShotDuringEntryExit);
+            new ProgramAdminToolPage().NavigateProgramAdminTabs(
+                subNavigationTabParentWindowName, subNavigationTabName);
+            Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfTheParticularPage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Search Section
+        /// </summary>
+        /// <param name="courseTypeEnum">This is Course Type Enum</param>
+        [When(@"I search the ""(.*)"" first section")]
+        public void SearchFirstSection(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Search Section
+            Logger.LogMethodEntry("CopyContent", "SearchFirstSection",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Search Section
+            new ManageTemplatePage().SearchSection(course.SectionName);
+            Logger.LogMethodExit("CopyContent", " SearchFirstSection",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Click The Enter Section As Instructor.
+        /// </summary>
+        /// <param name="cMenuOption">This is Cmenu option.</param>
+        [When(@"I click the ""(.*)""")]
+        public void ClickTheEnterSectionAsInstructor(String cMenuOption)
+        {
+            //Click The Enter Section As Instructor
+            Logger.LogMethodEntry("CommonSteps", "ClickTheEnterSectionAsInstructor"
+                , base.IsTakeScreenShotDuringEntryExit);
+            //Click On Cmenu of Enter Section As Instructor
+            new ManageTemplatePage().
+                ClickOnCmenuOfSectionOrTemplate(cMenuOption);
+            Logger.LogMethodExit("CommonSteps", "ClickTheEnterSectionAsInstructor"
+                , base.IsTakeScreenShotDuringEntryExit);
+        }
 
 
         /// <summary>

@@ -358,6 +358,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Amplifier.
+        /// </summary>
+        internal static string CommonPage_SectionAmplifier_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_SectionAmplifier_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Word 2013.
         /// </summary>
         internal static string CommonPage_Word2013_FolderName {
