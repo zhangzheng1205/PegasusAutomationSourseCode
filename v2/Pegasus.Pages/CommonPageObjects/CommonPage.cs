@@ -124,11 +124,17 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
+                                    case "Amplifire Study Module 0P: Vocabulario en contexto":
+                                        this.NavigateToAmplifierFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                            userTypeEnum, activityUnderTabName);
+                                        break;
                                 }
                                 break;
                         }
                         break;
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.HedProgramAdmin:
                         // folder navigation based on Tab name
                         switch (activityUnderTabName)
                         {
@@ -170,6 +176,18 @@ namespace Pegasus.Pages.CommonPageObjects
                                         this.NavigateToPowerPointChapter1SimulationActivitiesFolder(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
+                                        break;
+                                    case "Amplifier":
+                                        this.NavigateToSectionAmplifierFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                            userTypeEnum, activityUnderTabName);
+                                        break;
+                                    case "Capítulo preliminar: Bienvenidos a Unidos":
+                                    case "¡Comprueba lo que sabes!":
+                                    case "Amplifire Study Module 0P: Vocabulario en contexto":
+                                        this.NavigateToAmplifierFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                            userTypeEnum, activityUnderTabName, activityName);
                                         break;
                                 }
                                 break;
@@ -258,7 +276,84 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigation",
               base.IsTakeScreenShotDuringEntryExit);
         }
-       
+        /// <summary>
+        /// Navigate To Access Coursespace Section Amplifier Folder.
+        /// </summary>
+        private void NavigateToSectionAmplifierFolder(string webElementToWait,
+            User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            // navigate inside Access Coursespace Section Amplifier Folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_SectionAmplifier_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Access Chapter1 Grader Activities Folder.
+        /// </summary>
+        private void NavigateToAmplifierFolder(string webElementToWait,
+            User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            // navigate inside access chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_Amplifier_FolderName, webElementToWait);
+            //click folder second leve
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_Amplifier_FolderName1, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate To Access Chapter1 Grader Activities Folder.
+        /// </summary>
+        private void NavigateToAmplifierFolder(string webElementToWait,
+            User.UserTypeEnum userTypeEnum, string activityUnderTabName, string folderName)
+        {
+            // navigate inside access chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(folderName, webElementToWait);
+            //click folder second leve
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                CommonPage_Amplifier_FolderName1, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public void NavigateInsideTheFolder(string FolderName)
+        {
+            // navigate inside access chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            //this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            //this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+            //    CommonPage_Amplifier_FolderName, webElementToWait);
+            base.SelectWindow("Course Materials");            
+            base.SwitchToIFrameById("ifrmCoursePreview");            
+            base.WaitForElement(By.PartialLinkText(FolderName));
+            IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
+                (FolderName);
+            base.ClickByJavaScriptExecutor(getFolderLink);
+            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Navigate To Chapter 04: The Brain and Nervous System Folder.
         /// </summary>
@@ -616,6 +711,7 @@ namespace Pegasus.Pages.CommonPageObjects
                     }
                     break;
                 case User.UserTypeEnum.CsSmsInstructor:
+                case User.UserTypeEnum.HedProgramAdmin:
                     switch (activityUnderTabName)
                     {
                         //Generate Activity Result by Student Report
@@ -1012,6 +1108,33 @@ namespace Pegasus.Pages.CommonPageObjects
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+        public string GetFolderNameByXpath(string FolderName)
+        {
+            Logger.LogMethodEntry("CommonPage",
+                "GetFolderNameByXpath",
+               base.IsTakeScreenShotDuringEntryExit);
+
+            string ActualFolderName=String.Empty;
+            switch (FolderName)
+            {
+                case "Capítulo preliminar: Bienvenidos a Unidos":
+                    base.SelectWindow("Course Materials");
+                    base.SwitchToIFrameById("ifrmCoursePreview");
+                    base.WaitForElement(By.XPath(CommonPageResource.AmplifierFolderOneXpath));
+                    ActualFolderName= base.GetElementInnerTextByXPath(CommonPageResource.AmplifierFolderOneXpath);
+                    break;                
+                case "¡Comprueba lo que sabes!":
+                    base.SelectWindow("Course Materials");
+                    base.SwitchToIFrameById("ifrmCoursePreview");
+                    base.WaitForElement(By.XPath(CommonPageResource.AmplifierFolderTwoXpath));
+                    ActualFolderName= base.GetElementInnerTextByXPath(CommonPageResource.AmplifierFolderTwoXpath);
+                    break;
+            }            
+            Logger.LogMethodExit("CommonPage",
+                "GetFolderNameByXpath",
+              base.IsTakeScreenShotDuringEntryExit);
+            return ActualFolderName;
+        }
         
         /// <summary>
         /// Manage The Activity Folder Level Navigation HED Core.

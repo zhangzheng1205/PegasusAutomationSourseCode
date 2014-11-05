@@ -153,4 +153,7 @@
   <data name="EPContet_Page_CourseType_DropDown_Name" xml:space="preserve">
     <value>ClientID</value>
   </data>
+  <data name="EPContet_Page_SelctDropdown_Time" xml:space="preserve">
+    <value>3000</value>
+  </data>
 </root>

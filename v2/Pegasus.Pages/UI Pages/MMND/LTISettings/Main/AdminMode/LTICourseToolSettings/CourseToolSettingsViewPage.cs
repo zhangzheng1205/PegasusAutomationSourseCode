@@ -42,9 +42,13 @@ namespace Pegasus.Pages.UI_Pages
                     CourseToolSettingsView_Page_Input_Course_Id_Locator, ecollegeCourseId);
                 base.WaitForElement(By.Id(CourseToolSettingsViewPageResource.
                     CourseToolSettingsView_Page_SearchButton_Id_Locator));
-                //Click On Search Button
-                base.ClickButtonById(CourseToolSettingsViewPageResource.
+                IWebElement getSearchButton = base.GetWebElementPropertiesById
+                    (CourseToolSettingsViewPageResource.
                     CourseToolSettingsView_Page_SearchButton_Id_Locator);
+                //Click On Search Button
+                base.ClickByJavaScriptExecutor(getSearchButton);
+                Thread.Sleep(Convert.ToInt32(CourseToolSettingsViewPageResource.
+                    CourseToolSettingsView_Page_TimeValue));
                 //Switch to Course Frame
                 this.SwitchToCourseFrame();
                 base.WaitForElement(By.XPath(CourseToolSettingsViewPageResource.

@@ -38,6 +38,8 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Course Compo Next Generation in Drop Down
                 base.SelectDropDownValueThroughTextByName(EPContentPageResource.
                     EPContet_Page_CourseType_DropDown_Name, coursType);
+                Thread.Sleep(Convert.ToInt32(EPContentPageResource.
+                    EPContet_Page_SelctDropdown_Time));
                 base.WaitForElement(By.XPath(EPContentPageResource.
                     EPContent_Page_NextButton_Name_Xpath_Locator));
                 //Focus on Next Button
@@ -75,21 +77,25 @@ namespace Pegasus.Pages.UI_Pages
                     EPContent_Page_HeaderFrame_Name_Locator);
                 base.WaitForElement(By.PartialLinkText(EPContentPageResource.
                     EPContent_Page_Exit_Link_Locator));
-                //Click on Exit Link
-                base.ClickButtonByPartialLinkText(EPContentPageResource.
+                IWebElement getExitLink=base.GetWebElementPropertiesByPartialLinkText
+                    (EPContentPageResource.
                     EPContent_Page_Exit_Link_Locator);
-                //base.WaitUntilWindowLoads(EPContentPageResource.
-                //    EPContent_Page_HomePSH_Window_Name);
-                ////Select HomePSH Window
-                //base.SelectWindow(EPContentPageResource.
-                //    EPContent_Page_HomePSH_Window_Name);
-                //base.WaitForElement(By.PartialLinkText(EPContentPageResource.
-                //    EPContent_Page_Signoff_Link_Locator));
-                ////Click On Sign Off Link
-                //base.ClickButtonByPartialLinkText(EPContentPageResource.
-                //    EPContent_Page_Signoff_Link_Locator);
-                //base.WaitUntilWindowLoads(EPContentPageResource.
-                //    EPContent_Page_CourseCompassNextGen_Window_Name);
+                //Click on Exit Link
+                base.ClickByJavaScriptExecutor(getExitLink);
+                base.WaitUntilWindowLoads(EPContentPageResource.
+                    EPContent_Page_HomePSH_Window_Name);
+                //Select HomePSH Window
+                base.SelectWindow(EPContentPageResource.
+                    EPContent_Page_HomePSH_Window_Name);
+                base.WaitForElement(By.PartialLinkText(EPContentPageResource.
+                    EPContent_Page_Signoff_Link_Locator),10);
+                IWebElement getsignoff=base.GetWebElementPropertiesByPartialLinkText
+                    (EPContentPageResource.
+                    EPContent_Page_Signoff_Link_Locator);
+                //Click On Sign Off Link
+                base.ClickByJavaScriptExecutor(getsignoff);
+                base.WaitUntilWindowLoads(EPContentPageResource.
+                    EPContent_Page_CourseCompassNextGen_Window_Name);
             }
             catch (Exception e)
             {

@@ -672,24 +672,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CourseContent", "NavigateToFolder",
              base.IsTakeScreenShotDuringEntryExit);
         }
-        /// <summary>
-        /// Initialize Pegasus test before test execution starts.
-        /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
-        {
-            new CommonSteps().ResetWebdriver();
-        }
-
-        /// <summary>
-        /// Deinitialize Pegasus test after the execution of test
-        /// and clean the WebDriver Instance.
-        /// </summary>
-        [AfterTestRun]
-        public static void TearDown()
-        {
-            new CommonSteps().WebDriverCleanUp();
-        }
+       
 
         /// <summary>
         /// Manage The Activity Folder Level Navigation HED Core.
@@ -723,6 +706,25 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
             Logger.LogMethodExit("CommonSteps",
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Initialize Pegasus test before test execution starts.
+        /// </summary>
+        [BeforeTestRun]
+        public static void Setup()
+        {
+            new CommonSteps().ResetWebdriver();
+        }
+
+        /// <summary>
+        /// Deinitialize Pegasus test after the execution of test
+        /// and clean the WebDriver Instance.
+        /// </summary>
+        [AfterTestRun]
+        public static void TearDown()
+        {
+            new CommonSteps().WebDriverCleanUp();
         }
     }
 }

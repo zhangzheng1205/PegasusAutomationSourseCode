@@ -34,9 +34,11 @@ namespace Pegasus.Pages.UI_Pages
                 //Wait for Edit Button
                 base.WaitForElement(By.Id(CourseToolSettingsUpdateViewPageResource.
                         CourseToolSettingsUpdateView_Page_EditButton_Id_Locator));
+                IWebElement getEditButton = base.GetWebElementPropertiesById
+                    (CourseToolSettingsUpdateViewPageResource.
+                        CourseToolSettingsUpdateView_Page_EditButton_Id_Locator);
                 //Click On Edit Button
-                base.ClickButtonById(CourseToolSettingsUpdateViewPageResource.
-                    CourseToolSettingsUpdateView_Page_EditButton_Id_Locator);
+                base.ClickByJavaScriptExecutor(getEditButton);
                 base.WaitForElement(By.Name(CourseToolSettingsUpdateViewPageResource.
                     CourseToolSettingsUPdateView_Page_Input_Course_Name_Locator));
             }

@@ -61,6 +61,24 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblBC&apos;]/tbody/tr/td/span[2]/span[2]/a/span/span.
+        /// </summary>
+        internal static string AmplifierFolderOneXpath {
+            get {
+                return ResourceManager.GetString("AmplifierFolderOneXpath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&quot;tblBC&quot;]/tbody/tr/td/span[3]/span[2]/a/span/span.
+        /// </summary>
+        internal static string AmplifierFolderTwoXpath {
+            get {
+                return ResourceManager.GetString("AmplifierFolderTwoXpath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Access 2013.
         /// </summary>
         internal static string CommonPage_Access2013_FolderName {
@@ -102,6 +120,24 @@ namespace Pegasus.Pages.CommonPageObjects {
         internal static string CommonPage_AccessChapter1SimulationActivities_FolderName {
             get {
                 return ResourceManager.GetString("CommonPage_AccessChapter1SimulationActivities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Capítulo preliminar: Bienvenidos a Unidos.
+        /// </summary>
+        internal static string CommonPage_Amplifier_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_Amplifier_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ¡Comprueba lo que sabes!.
+        /// </summary>
+        internal static string CommonPage_Amplifier_FolderName1 {
+            get {
+                return ResourceManager.GetString("CommonPage_Amplifier_FolderName1", resourceCulture);
             }
         }
         
@@ -318,6 +354,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         internal static string CommonPage_PowerPointChapter1SimulationActivities_FolderName {
             get {
                 return ResourceManager.GetString("CommonPage_PowerPointChapter1SimulationActivities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amplifier.
+        /// </summary>
+        internal static string CommonPage_SectionAmplifier_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_SectionAmplifier_FolderName", resourceCulture);
             }
         }
         

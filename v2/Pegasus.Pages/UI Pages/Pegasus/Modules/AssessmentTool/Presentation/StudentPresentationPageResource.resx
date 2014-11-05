@@ -810,4 +810,7 @@
   <data name="StudentPresentation_Page_ReturnToCourse_Button_Xpath_Locator" xml:space="preserve">
     <value>//a/span/span[contains(text(),'Return to Course')]</value>
   </data>
+  <data name="StudentPresentation_Page_AmplifireBookImage_Id_Locator" xml:space="preserve">
+    <value>BOOK_IMAGE</value>
+  </data>
 </root>

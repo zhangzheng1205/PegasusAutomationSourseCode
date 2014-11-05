@@ -132,6 +132,9 @@
   <data name="CourseToolSettingsView_Page_SearchButton_Id_Locator" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="CourseToolSettingsView_Page_TimeValue" xml:space="preserve">
+    <value>3000</value>
+  </data>
   <data name="CourseToolSettingsView_Page_Window_Name" xml:space="preserve">
     <value>Administration Pages</value>
   </data>

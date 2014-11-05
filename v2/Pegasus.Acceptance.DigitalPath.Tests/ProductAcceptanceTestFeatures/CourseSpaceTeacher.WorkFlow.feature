@@ -52,7 +52,7 @@ Then I should be on the "Home" page
 Then I should see the Home Page tabs 
 
 #Purpose: UseCase To Check Enrolled classes in classes frame
-Scenario: View Enrolled Classes in Classes Frame by CS Teacher
+Scenario: To Verify Tab Navigation by CS Teacher
 When I navigate to the "Classes" tab
 Then I should be on the "Classes" page
 When I navigate to the "Home" tab

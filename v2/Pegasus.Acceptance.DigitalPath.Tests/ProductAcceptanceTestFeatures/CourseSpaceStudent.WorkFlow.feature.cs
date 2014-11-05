@@ -139,11 +139,11 @@ testRunner.Then("I should see the welcome message popup closed successfully for 
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Display of Enrolled Classes in the Overview Tab by CS Student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To Verify The Tab Navigation By CS Student")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent")]
-        public virtual void DisplayOfEnrolledClassesInTheOverviewTabByCSStudent()
+        public virtual void ToVerifyTheTabNavigationByCSStudent()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Display of Enrolled Classes in the Overview Tab by CS Student", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify The Tab Navigation By CS Student", ((string[])(null)));
 #line 32
 this.ScenarioSetup(scenarioInfo);
 #line 33

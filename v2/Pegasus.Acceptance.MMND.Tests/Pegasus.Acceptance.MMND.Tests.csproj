@@ -186,11 +186,17 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDUserRegistration.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDCourseCreation.orderedtest">
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDVerifyCopyState.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDToolLaunch.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDStudentRegistration.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMND.ToolLaunch.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\GDXStub.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -228,7 +234,7 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>US73796.Workflow.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDEnvironmentRefresh.orderedtest" />
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.MMNDCourseCreation.orderedtest" />
     <None Include="ProductAcceptanceTestFeatures\WorkSpaceTeacher.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WorkSpaceTeacher.WorkFlow.feature.cs</LastGenOutput>

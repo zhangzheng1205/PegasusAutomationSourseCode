@@ -12,7 +12,7 @@ And I should be on the "Administrative Pages" page
 
 Scenario: User Sign off as Admin in Ecollege admin pages
 When I log out from the application as "MMNDAdmin"
-Then I should be on the "Academics PSH" page
+Then I should be on the "Course Compass Next Gen | LOGIN" page
 
 Scenario: User Sign in as MMND Instructor
 Given I browsed the URL of "MMNDInstructor"
@@ -21,4 +21,13 @@ Then I should be logged in successfully as "MMNDInstructor"
 
 Scenario: User Sign out as MMND Instructor
 When I log out from the application as "MMNDInstructor"
+Then I should see the application logout successfully
+
+Scenario: User Sign in as MMND Student
+Given I browsed the URL of "MMNDStudent"
+When I login to MMND Cert as "MMNDStudent"
+Then I should be logged in successfully as "MMNDStudent"
+
+Scenario: User Sign out as MMND Student
+When I log out from the application as "MMNDStudent"
 Then I should see the application logout successfully

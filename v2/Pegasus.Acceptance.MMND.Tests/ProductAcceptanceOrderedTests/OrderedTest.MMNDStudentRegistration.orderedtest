@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.MMNDStudentRegistration" storage="d:\automation_pegasus\v2\pegasus.acceptance.mmnd.tests\productacceptanceorderedtests\orderedtest.mmndstudentregistration.orderedtest" id="6d3d477e-8332-4809-8467-77cb12e6ef04" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="3d1430f1-11a3-940f-d983-c70103adae8b" name="CreateNewStudentInSMS" storage="..\bin\debug\pegasus.acceptance.mmnd.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="07bd15a1-c02d-b8f8-3fd7-039677910747" name="UserSignInAsMMNDStudent" storage="..\bin\debug\pegasus.acceptance.mmnd.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="86d3775c-221d-eaea-5a46-6f1ea478d927" name="EnrollStudentToSectionCourse" storage="..\bin\debug\pegasus.acceptance.mmnd.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

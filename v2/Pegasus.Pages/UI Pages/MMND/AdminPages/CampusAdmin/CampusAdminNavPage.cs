@@ -33,9 +33,12 @@ namespace Pegasus.Pages.UI_Pages
                     CampusAdminNav_Page_Frame_Name_Locator);
                 base.WaitForElement(By.PartialLinkText(CampusAdminNavPageResource.
                     CampusAdminNav_Page_CourseToolSettings_Link_Locator));
-                //Click On CourseToolSettings
-                base.ClickButtonByPartialLinkText(CampusAdminNavPageResource.
+                IWebElement getCourseSettingTool = base.GetWebElementPropertiesByPartialLinkText
+                    (CampusAdminNavPageResource.
                     CampusAdminNav_Page_CourseToolSettings_Link_Locator);
+                base.ClickByJavaScriptExecutor(getCourseSettingTool);
+                Thread.Sleep(Convert.ToInt32(CampusAdminNavPageResource.
+                    CampusAdminNav_Page_ElementValue));
             }
             catch (Exception e)
             {
