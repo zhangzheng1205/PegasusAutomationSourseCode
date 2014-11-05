@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
@@ -112,6 +113,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 }
                 // object representing the image of the page on the screen
                 webDriver = new ScreenShotRemoteWebDriver(new Uri(_remoteHubUrl), remoteCapability);
+                webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
             }
             else
             {
@@ -128,6 +130,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             }
             return webDriver;
         }
+
+
 
         /// <summary>
         /// Multi Browser Web Driver.
@@ -252,6 +256,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             Cursor.Position = new Point(Screen.PrimaryScreen.Bounds.Width / 2, Screen.PrimaryScreen.Bounds.Height / 2);
             return webDriver;
         }
+
+
+       
 
         /// <summary>
         /// Returns an instance of Safari based driver.
