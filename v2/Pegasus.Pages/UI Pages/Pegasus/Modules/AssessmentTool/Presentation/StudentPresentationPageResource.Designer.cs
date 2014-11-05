@@ -440,6 +440,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 10000.
+        /// </summary>
+        internal static string StudentPresentation_Page_LaunchAmplifireWindowClose_TimeValue {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_LaunchAmplifireWindowClose_TimeValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 2000.
         /// </summary>
         internal static string StudentPresentation_Page_LaunchWindow_TimeValue {

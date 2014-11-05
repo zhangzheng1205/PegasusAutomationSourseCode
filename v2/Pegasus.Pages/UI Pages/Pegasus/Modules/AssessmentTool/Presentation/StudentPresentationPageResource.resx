@@ -813,4 +813,7 @@
   <data name="StudentPresentation_Page_AmplifireBookImage_Id_Locator" xml:space="preserve">
     <value>BOOK_IMAGE</value>
   </data>
+  <data name="StudentPresentation_Page_LaunchAmplifireWindowClose_TimeValue" xml:space="preserve">
+    <value>10000</value>
+  </data>
 </root>

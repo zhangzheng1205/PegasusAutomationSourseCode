@@ -85,12 +85,13 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //Select Amplifire pop up Window               
                 base.SwitchToLastOpenedWindow();
+                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPresentation_Page_LaunchAmplifireWindowClose_TimeValue));    
                 // Is Activity Displayed in Presentation Window
                 isAmplifireLinkPageDisplayed = base.IsElementDisplayedById
                     (StudentPresentationPageResource.
-                    StudentPresentation_Page_AmplifireBookImage_Id_Locator);                
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPresentation_Page_LaunchWindow_TimeValue));            
+                    StudentPresentation_Page_AmplifireBookImage_Id_Locator);              
+                        
                 //Close The Window
                 base.CloseBrowserWindow();               
             }
