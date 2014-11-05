@@ -80,6 +80,51 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to assessmentHolder.
+        /// </summary>
+        internal static string InstructorPresentation_Page_AssessmentHolder_Id_Locator {
+            get {
+                return ResourceManager.GetString("InstructorPresentation_Page_AssessmentHolder_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Course Materials.
+        /// </summary>
+        internal static string InstructorPresentation_Page_BaseWindow_Title_Name {
+            get {
+                return ResourceManager.GetString("InstructorPresentation_Page_BaseWindow_Title_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {ENTER}.
+        /// </summary>
+        internal static string InstructorPresentation_Page_EnterKey_Value {
+            get {
+                return ResourceManager.GetString("InstructorPresentation_Page_EnterKey_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2000.
+        /// </summary>
+        internal static string InstructorPresentation_Page_LaunchWindow_TimeValue {
+            get {
+                return ResourceManager.GetString("InstructorPresentation_Page_LaunchWindow_TimeValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5000.
+        /// </summary>
+        internal static string InstructorPresentation_Page_LaunchWindowClose_TimeValue {
+            get {
+                return ResourceManager.GetString("InstructorPresentation_Page_LaunchWindowClose_TimeValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to questestinterop_td.
         /// </summary>
         internal static string InstructorPresentation_Page_Question_Frame_Id_Locator {
@@ -103,6 +148,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string InstructorPresentation_Page_StudyPlanTypeActivity_PostTest_Window_Title_Name {
             get {
                 return ResourceManager.GetString("InstructorPresentation_Page_StudyPlanTypeActivity_PostTest_Window_Title_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extra Practice.
+        /// </summary>
+        internal static string InstructorPresentation_Page_Window_Title_Name {
+            get {
+                return ResourceManager.GetString("InstructorPresentation_Page_Window_Title_Name", resourceCulture);
             }
         }
         

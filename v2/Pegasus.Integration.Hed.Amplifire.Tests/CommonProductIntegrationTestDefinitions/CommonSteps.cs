@@ -300,7 +300,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         /// Launch Activity Presentation Window.
         /// </summary>
         [Then(@"I should see the activity successfully launched by Instructor")]
-        public void ActivitySuccessfullyLaunched()
+        public void ActivitySuccessfullyLaunchedByIns()
         {
             //Launching of Activity Presentation Window
             Logger.LogMethodEntry("ActivitySubmission",

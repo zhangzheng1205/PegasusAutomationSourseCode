@@ -135,4 +135,22 @@
   <data name="InstructorPresentation_Page_StudyPlanTypeActivity_PostTest_Window_Title_Name" xml:space="preserve">
     <value>Post Test</value>
   </data>
+  <data name="InstructorPresentation_Page_Window_Title_Name" xml:space="preserve">
+    <value>Extra Practice</value>
+  </data>
+  <data name="InstructorPresentation_Page_AssessmentHolder_Id_Locator" xml:space="preserve">
+    <value>assessmentHolder</value>
+  </data>
+  <data name="InstructorPresentation_Page_LaunchWindow_TimeValue" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="InstructorPresentation_Page_EnterKey_Value" xml:space="preserve">
+    <value>{ENTER}</value>
+  </data>
+  <data name="InstructorPresentation_Page_LaunchWindowClose_TimeValue" xml:space="preserve">
+    <value>5000</value>
+  </data>
+  <data name="InstructorPresentation_Page_BaseWindow_Title_Name" xml:space="preserve">
+    <value>Course Materials</value>
+  </data>
 </root>

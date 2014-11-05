@@ -60,6 +60,50 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
+        /// Opens Activity Presentation Window.
+        /// </summary>
+        /// <returns>Activity Presentation Window Open Result.</returns>
+        public Boolean IsActivityPresentationPageOpened()
+        {
+            //Opens Activity Presentation Window
+            logger.LogMethodEntry("StudentPresentationPage",
+                "IsActivityPresentationPageOpened",
+                base.IsTakeScreenShotDuringEntryExit);
+            Boolean isActivityPresentationPageDisplayed = false;
+            try
+            {
+                //Select Window
+                base.SelectWindow(InstructorPresentationPageResource.
+                        InstructorPresentation_Page_Window_Title_Name);
+                base.WaitForElement(By.Id(InstructorPresentationPageResource.
+                    InstructorPresentation_Page_AssessmentHolder_Id_Locator));
+                // Is Activity Displayed in Presentation Window
+                isActivityPresentationPageDisplayed = base.IsElementDisplayedById
+                    (InstructorPresentationPageResource.
+                    InstructorPresentation_Page_AssessmentHolder_Id_Locator);
+                //Close The Window
+                base.CloseBrowserWindow();
+                Thread.Sleep(Convert.ToInt32(InstructorPresentationPageResource.
+                    InstructorPresentation_Page_LaunchWindow_TimeValue));
+                //Used SendKeys to Close modal pop up
+                SendKeys.SendWait(InstructorPresentationPageResource.
+                    InstructorPresentation_Page_EnterKey_Value);
+                Thread.Sleep(Convert.ToInt32(InstructorPresentationPageResource
+                    .InstructorPresentation_Page_LaunchWindowClose_TimeValue));
+                base.SelectWindow(InstructorPresentationPageResource
+                    .InstructorPresentation_Page_BaseWindow_Title_Name);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage",
+                "IsActivityPresentationPageOpened",
+                base.IsTakeScreenShotDuringEntryExit);
+            return isActivityPresentationPageDisplayed;
+        }
+
+        /// <summary>
         /// Close Activity Presentaion Window.
         /// </summary>
         public void CloseActivityPresentationWindow()
@@ -73,7 +117,7 @@ namespace Pegasus.Pages.UI_Pages
                     InstructorPresentation_Page_Sleep_Value));
                 //Used SendKeys to Close modal pop up
                 base.AcceptAlert();
-                //  SendKeys.SendWait(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
+                //  SendKeys.SendWait(InstructorPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
                 base.SelectDefaultWindow();
             }
             catch (Exception e)
