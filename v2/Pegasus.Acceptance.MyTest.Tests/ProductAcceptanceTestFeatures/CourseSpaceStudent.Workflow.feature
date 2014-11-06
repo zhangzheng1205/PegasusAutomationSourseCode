@@ -16,7 +16,7 @@ Then I should see enrolled InstructorCourse in Global Home Page
 Scenario: To check the Student tab navigation By SMS Student
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
-When I navigate to "Gradebook" tab
+When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 
 #MyTestInstructorCourse Scenario	
