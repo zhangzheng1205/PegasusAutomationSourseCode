@@ -30,6 +30,9 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
             logger.LogMethodEntry("PresentationPage",
                "GetDownloadFilesButtonText",
                base.IsTakeScreenShotDuringEntryExit);
+            //Wait for Window Load
+            base.WaitUntilWindowLoads(PresentationPageResource.
+                      PresentationPage_Page_Title_Value);
             //Select Presentation Page window
             base.SelectWindow(PresentationPageResource.
                       PresentationPage_Page_Title_Value);
