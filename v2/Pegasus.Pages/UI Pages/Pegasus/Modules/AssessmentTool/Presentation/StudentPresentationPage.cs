@@ -2469,8 +2469,7 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getCmenuIconProperty1 = base.GetWebElementPropertiesByPartialLinkText(activityName);
             //Perform Mouse Hover on Cmenu Icon
             base.ClickByJavaScriptExecutor(getCmenuIconProperty1);
-            //Wait for element
-            //base.WaitForElement(By.PartialLinkText(activityName));
+            Thread.Sleep(10000);
             }
             catch (Exception e)
             {

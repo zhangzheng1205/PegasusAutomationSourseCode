@@ -515,17 +515,17 @@ Then I should be on the "myitlab Study Plan" page
 When I click on 'Start Training' button of the "Word Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "ZeroScore"
 Then I should see the score "0%" for the activity "Word Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" also the status as"In Progress" 
 
-#Purpose : Submitting Sim 5 excel activity and Student scoring a Zero for past due activity.
+#Purpose : Submitting Sim 5 Access activity and Student scoring a Zero for past due activity.
 #Products : MyItLab.
-#Pre condition : Excel SIM5 activity should be created by instructor/Author in the following course and
+#Pre condition : Access SIM5 activity should be created by instructor/Author in the following course and
 # “Trap ALT+TAB and Browser Lock-Down” option should be un checked in the activity preference tab.
 #Dependency : Always dependent.
-Scenario: Sim5 Excel submission for past due date activity
+Scenario:  Sim5 Access submission for past due date activity
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
-When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
-And I launch the "Excel Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "ZeroScore"
-And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Skill-Based Training"
+When I select "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
+And I launch the "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity by "CsSmsStudent" with "ZeroScore"
+And I click on submit button answering incorrectly of "Access" type "Exam" mode activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 Then I should be on the "Course Materials" page
 
 #Purpose : Submitting Sim 5 Word activity and Student scoring a Zero.

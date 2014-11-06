@@ -229,6 +229,113 @@ testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((Tec
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Assign Access Sim5 Activity to past due date")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void AssignAccessSim5ActivityToPastDueDate()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign Access Sim5 Activity to past due date", ((string[])(null)));
+#line 76
+this.ScenarioSetup(scenarioInfo);
+#line 77
+testRunner.When("I navigate to \"Course Materials\" tab and selected \"Manage Course Materials\" subta" +
+                    "b", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 78
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 79
+testRunner.When("I navigate to \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" asset i" +
+                    "n \"Course Materials\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 80
+testRunner.And("I click on \"SetSchedulingOptions\" option in c menu of \"Excel Chapter 1 Project 1A" +
+                    " Skill-Based Training\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 81
+testRunner.Then("I should be on the \"Properties\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 82
+testRunner.When("I assign the asset to with a due date near to past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 83
+testRunner.Then("I should see the successfull message \"Properties updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 84
+testRunner.And("I should see assigned icon for \"Access Chapter 1 Project 1A Skill-Based Exam (Sce" +
+                    "nario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 85
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 86
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Assign Word Sim5 Activity to past due date")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void AssignWordSim5ActivityToPastDueDate()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign Word Sim5 Activity to past due date", ((string[])(null)));
+#line 90
+this.ScenarioSetup(scenarioInfo);
+#line 91
+testRunner.When("I navigate to \"Course Materials\" tab and selected \"Manage Course Materials\" subta" +
+                    "b", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 92
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 93
+testRunner.When("I navigate to \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" asset in " +
+                    "\"Course Materials\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 94
+testRunner.And("I click on \"SetSchedulingOptions\" option in c menu of \"Excel Chapter 1 Project 1A" +
+                    " Skill-Based Training\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 95
+testRunner.Then("I should be on the \"Properties\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 96
+testRunner.When("I assign the asset to with a due date near to past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 97
+testRunner.Then("I should see the successfull message \"Properties updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 98
+testRunner.And("I should see assigned icon for \"Word Chapter 1 Project 1A Skill-Based Exam (Scena" +
+                    "rio 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 99
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 100
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Assign PowerPoint Sim5 Activity to past due date")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceInstructorViewSubmission")]
+        public virtual void AssignPowerPointSim5ActivityToPastDueDate()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign PowerPoint Sim5 Activity to past due date", ((string[])(null)));
+#line 104
+this.ScenarioSetup(scenarioInfo);
+#line 105
+testRunner.When("I navigate to \"Course Materials\" tab and selected \"Manage Course Materials\" subta" +
+                    "b", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 106
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 107
+testRunner.When("I navigate to \"PowerPoint Chapter 1 Skill-Based Training\" asset in \"Course Materi" +
+                    "als\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 108
+testRunner.And("I click on \"SetSchedulingOptions\" option in c menu of \"PowerPoint Chapter 1 Skill" +
+                    "-Based Training\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 109
+testRunner.Then("I should be on the \"Properties\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 110
+testRunner.When("I assign the asset to with a due date near to past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 111
+testRunner.Then("I should see the successfull message \"Properties updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 112
+testRunner.And("I should see assigned icon for \"Excel Chapter 1 Project 1A Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 113
+testRunner.When("I navigate to \"Gradebook\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 114
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

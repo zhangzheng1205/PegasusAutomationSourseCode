@@ -1204,11 +1204,11 @@ testRunner.Then("I should see the score \"0%\" for the activity \"Word Chapter 1
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Sim5 Excel submission for past due date activity")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Sim5 Access submission for past due date activity")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
-        public virtual void Sim5ExcelSubmissionForPastDueDateActivity()
+        public virtual void Sim5AccessSubmissionForPastDueDateActivity()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sim5 Excel submission for past due date activity", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sim5 Access submission for past due date activity", ((string[])(null)));
 #line 523
 this.ScenarioSetup(scenarioInfo);
 #line 524
@@ -1216,14 +1216,14 @@ testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((Te
 #line 525
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 526
-testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsSt" +
-                    "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course M" +
+                    "aterials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 527
-testRunner.And("I launch the \"Excel Chapter 1 Skill-Based Training\" activity by \"CsSmsStudent\" wi" +
-                    "th \"ZeroScore\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I launch the \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" activity" +
+                    " by \"CsSmsStudent\" with \"ZeroScore\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 528
-testRunner.And("I click on submit button answering incorrectly of \"Excel\" type \"Training\" mode ac" +
-                    "tivity \"Excel Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I click on submit button answering incorrectly of \"Access\" type \"Exam\" mode activ" +
+                    "ity \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 529
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

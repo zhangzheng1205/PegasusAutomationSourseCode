@@ -70,3 +70,48 @@ Then I should see the "0" score in view submission page for a "ZeroScore" with "
 And I close the "View Submission" window
 When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
+
+#Purpose: Assign Access Sim5 Activity to past due date
+#MyItLabProgramCourse
+Scenario:Assign Access Sim5 Activity to past due date
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in "Course Materials" tab as "CsSmsInstructor"
+And I click on "SetSchedulingOptions" option in c menu of "Excel Chapter 1 Project 1A Skill-Based Training" asset
+Then I should be on the "Properties" page
+When I assign the asset to with a due date near to past due date
+Then I should see the successfull message "Properties updated successfully."
+And I should see assigned icon for "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" 
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
+#Purpose: Assign Word Sim5 Activity to past due date
+#MyItLabProgramCourse
+Scenario:Assign Word Sim5 Activity to past due date
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" asset in "Course Materials" tab as "CsSmsInstructor"
+And I click on "SetSchedulingOptions" option in c menu of "Excel Chapter 1 Project 1A Skill-Based Training" asset
+Then I should be on the "Properties" page
+When I assign the asset to with a due date near to past due date
+Then I should see the successfull message "Properties updated successfully."
+And I should see assigned icon for "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" 
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
+#Purpose: Assign PowerPoint Sim5 Activity to past due date
+#MyItLabProgramCourse
+Scenario:Assign PowerPoint Sim5 Activity to past due date
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+Then I should be on the "Course Materials" page
+When I navigate to "PowerPoint Chapter 1 Skill-Based Training" asset in "Course Materials" tab as "CsSmsInstructor"
+And I click on "SetSchedulingOptions" option in c menu of "PowerPoint Chapter 1 Skill-Based Training" asset
+Then I should be on the "Properties" page
+When I assign the asset to with a due date near to past due date
+Then I should see the successfull message "Properties updated successfully."
+And I should see assigned icon for "Excel Chapter 1 Project 1A Skill-Based Training" 
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
+
+

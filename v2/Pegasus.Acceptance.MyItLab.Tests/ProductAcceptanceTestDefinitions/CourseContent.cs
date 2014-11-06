@@ -266,5 +266,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [When(@"I assign the asset to with a due date near to past due date")]
+        public void AssignWithDueDateNearToPastDueDate()
+        {
+            Logger.LogMethodEntry("CourseContent", "AssignAndScheduleTheAssetAndSave",
+                base.IsTakeScreenShotDuringEntryExit);
+            AssignContentPage assignContent = new AssignContentPage();
+            //Selecting assign radio button
+            assignContent.SelectAssignedRadiobutton();
+            //Setting due date
+            assignContent.FillDueDateNearPastDueDate();
+        }
+
     }
 }
