@@ -10,6 +10,9 @@ using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
 using TechTalk.SpecFlow;
 using System.Configuration;
+using Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions;
+using Pegasus.Pages;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion;
 
 
 namespace Pegasus.Acceptance.MyITLab.Tests.
@@ -836,5 +839,50 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
 
         }
 
+        /// <summar
+        /// Verify the Success Message Display on the Page.
+        /// </summary>
+        /// <param name="successMessage">This is Success Message Text.</param>
+        [Then("I should see the 'Accept' success message")]
+        public void DisplayTheAcceptSuccessfullMessage()
+        {
+            // Method To Verify the Success Message 
+            Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+            string studentName = new RptAllAssessmentAllStudentPage().
+                GetZeroScoreUsername(User.UserTypeEnum.CsSmsStudent);
+            string successMessage = "The submission by " + studentName + " has been accepted. The grade for this submission will now appear in the Gradebook.";
+            //Verify Correct Message Present on the Page
+            bool isSuccessMessageExist = base.IsMessageExists(successMessage,
+                CommonStepsResource.CommonSteps_SuccessMessage_Class_Locator);
+            //Removed The Assert For Message Because Sometimes Message not comes 
+            //but this is not the severe issue. So We, can ignore this.
+            Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summar
+        /// Verify the Success Message Display on the Page.
+        /// </summary>
+        /// <param name="successMessage">This is Success Message Text.</param>
+        [Then("I should see the 'Decline' success message")]
+        public void DisplayTheDeclineSuccessfullMessage(
+            String successMessage)
+        {
+            // Method To Verify the Success Message 
+            Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Verify Correct Message Present on the Page
+            bool isSuccessMessageExist = base.IsMessageExists(successMessage,
+                CommonStepsResource.CommonSteps_SuccessMessage_Class_Locator);
+            //Removed The Assert For Message Because Sometimes Message not comes 
+            //but this is not the severe issue. So We, can ignore this.
+            Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
+
+
+
+

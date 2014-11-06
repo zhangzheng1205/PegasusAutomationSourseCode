@@ -665,5 +665,25 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Validate the Past due submitted activity name.
+        /// </summary>
+        [Then(@"I should see the First, Last name in Past Due: Submitted channel")]
+        public void ValidateStudentNameInPastDueSubmitted()
+        {
+            //Click on Back navigation link
+            Logger.LogMethodEntry("TodaysView", "ValidateStudentNameInPastDueSubmitted",
+                base.IsTakeScreenShotDuringEntryExit);
+            string studentName = new RptAllAssessmentAllStudentPage().
+                GetZeroScoreUsername(User.UserTypeEnum.CsSmsStudent);
+            //Validate student first, last name in past due submitted channel
+            Logger.LogAssertion("ValidateStudentNameInPastDueSubmittedChannel", ScenarioContext.Current
+                .ScenarioInfo.Title, () => Assert.AreEqual(studentName, new
+                    TodaysViewUxPage().GetStudentNameFromPastDueSubmittedChannel()));
+            Logger.LogMethodExit("TodaysView", "ValidateStudentNameInPastDueSubmitted",
+               base.IsTakeScreenShotDuringEntryExit); ;
+        }
+
+
     }
 }
