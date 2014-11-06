@@ -192,6 +192,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
             try
             {
                 //TO select the pop window so as to set focus to its elements.
+                base.WaitUntilWindowLoads(pageName);
                 base.SelectWindow(pageName);
                 switch (pageName)
                 {
