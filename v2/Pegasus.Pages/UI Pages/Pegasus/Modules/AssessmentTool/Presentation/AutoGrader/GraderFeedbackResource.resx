@@ -121,7 +121,7 @@
     <value>ifrmCoursePreview</value>
   </data>
   <data name="GraderFeedbackResource_Element_Waittime" xml:space="preserve">
-    <value>20000</value>
+    <value>90000</value>
   </data>
   <data name="GraderFeedbackResource_MaximumScore_ID" xml:space="preserve">
     <value>lblScore</value>

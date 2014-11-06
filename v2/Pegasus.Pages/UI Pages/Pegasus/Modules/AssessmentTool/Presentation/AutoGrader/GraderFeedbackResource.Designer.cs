@@ -71,7 +71,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation.Aut
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 20000.
+        ///   Looks up a localized string similar to 90000.
         /// </summary>
         internal static string GraderFeedbackResource_Element_Waittime {
             get {
