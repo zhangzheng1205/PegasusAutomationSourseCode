@@ -124,56 +124,10 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     case PegasusBaseTestFixture.FireFox: webDriver = FireFoxWebDriver(); break;
                     case PegasusBaseTestFixture.Safari: webDriver = SafariWebDriver(); break;
                     case PegasusBaseTestFixture.Chrome: webDriver = ChromeWebDriver(); break;
-                    case PegasusBaseTestFixture.MultiBrowser: MultiBrowserWebDriver(ref webDriver); break;
                     default: throw new ArgumentException("The suggested browser was not found");
                 }
             }
             return webDriver;
-        }
-
-
-
-        /// <summary>
-        /// Multi Browser Web Driver.
-        /// </summary>
-        /// <param name="webDriver">This is instance of webdriver.</param>
-        /// <returns>Driver browser list.</returns>
-        private static DesiredCapabilities[] MultiBrowserWebDriver(ref IWebDriver webDriver)
-        {
-            // set each browser desired capabilities
-            var browserList = new DesiredCapabilities[] { 
-                DesiredCapabilities.Chrome(), 
-                DesiredCapabilities.Firefox(),
-                DesiredCapabilities.InternetExplorer()
-            };
-            foreach (DesiredCapabilities browser in browserList)
-            {
-                if ((_isChromeExecuted == false) || ((_isChromeExecuted == true) && (_counter == 2)))
-                {
-                    if (_counter == 4)
-                    {
-                        _counter = 2;
-                    }
-                    if (browser.BrowserName == "chrome")
-                    {
-                        _isChromeExecuted = true;
-                        _counter = _counter + 1;
-                        webDriver = ChromeWebDriver(); break;
-                    }
-                }
-                else if ((_isChromeExecuted == true) && (_counter == 3))
-                {
-                    _counter = _counter + 1;
-                    webDriver = FireFoxWebDriver(); break;
-                }
-
-                else if ((IsInternetExplorerExecuted == false) && (_counter > 3))
-                {
-                    _isChromeExecuted = false;
-                    webDriver = IeWebDriver(); break;
-                }
-            }
-            return browserList;
         }
 
         /// <summary>
@@ -258,7 +212,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
 
-       
+
 
         /// <summary>
         /// Returns an instance of Safari based driver.

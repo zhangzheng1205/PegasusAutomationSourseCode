@@ -648,7 +648,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return GetWebElementProperties(By.XPath(xPathValue));
         }
 
-        
+
         /// <summary>
         /// Defines the interface through which the user controls elements on the page by Partial Link text value.
         /// </summary>
@@ -1508,62 +1508,22 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             //Get InnerText for the element based on browser 
             string getInnerText = string.Empty;
-            if (Browser == MultiBrowser)
+            switch (Browser)
             {
-                //Initialize String Variable
-                string getBrowserInformation = string.Empty;
-                string getBrowserName = string.Empty;
-                //Get Browser Information
-                getBrowserInformation = GetCurrentBrowserInformationByJavaScriptExecutor();
-                if (getBrowserInformation.Contains("Chrome"))
-                {
-                    getBrowserName = "Chrome";
-
-                }
-                else if (getBrowserInformation.Contains("Firefox"))
-                {
-                    getBrowserName = "FireFox";
-                }
-                else
-                {
-                    getBrowserName = "Internet Explorer";
-                }
-                switch (getBrowserName)
-                {
-                    // This is for Internet Explorer Browser
-                    case InternetExplorer:
-                        getInnerText = WebDriver.FindElement(by).GetAttribute("innerText");
-                        break;
-                    // This is for Chrome Browser
-                    case Chrome:
-                        getInnerText = WebDriver.FindElement(by).GetAttribute("innerText");
-                        break;
-                    // This is for Firefox Browser
-                    case FireFox:
-                        getInnerText = WebDriver.FindElement(by).Text;
-                        break;
-                }
-                return getInnerText;
+                // This is for Internet Explorer Browser
+                case InternetExplorer:
+                    getInnerText = WebDriver.FindElement(by).GetAttribute("innerText");
+                    break;
+                // This is for Chrome Browser
+                case Chrome:
+                    getInnerText = WebDriver.FindElement(by).GetAttribute("innerText");
+                    break;
+                // This is for Firefox Browser
+                case FireFox:
+                    getInnerText = WebDriver.FindElement(by).Text;
+                    break;
             }
-            else
-            {
-                switch (Browser)
-                {
-                    // This is for Internet Explorer Browser
-                    case InternetExplorer:
-                        getInnerText = WebDriver.FindElement(by).GetAttribute("innerText");
-                        break;
-                    // This is for Chrome Browser
-                    case Chrome:
-                        getInnerText = WebDriver.FindElement(by).GetAttribute("innerText");
-                        break;
-                    // This is for Firefox Browser
-                    case FireFox:
-                        getInnerText = WebDriver.FindElement(by).Text;
-                        break;
-                }
-                return getInnerText;
-            }
+            return getInnerText;
         }
 
         /// <summary>
@@ -1810,7 +1770,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <see cref="Perform">A convenience method for performing the actions without calling build() first.</see>
         protected void PerformMoveToElementClickAction(IWebElement webElement)
         {
-            
+
             new Actions(WebDriver).MoveToElement(webElement).Click().Build().Perform();
         }
 
@@ -1872,9 +1832,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// </summary>
         /// <param name="destination">Element to be dragged.</param>
         /// <param name="target">Element to be dropped at.</param>
-        protected void DragAndDropWebElement(IWebElement destination ,IWebElement target)
+        protected void DragAndDropWebElement(IWebElement destination, IWebElement target)
         {
-             new Actions(WebDriver).ClickAndHold(destination).MoveToElement(target).Release(target).Build().Perform();
+            new Actions(WebDriver).ClickAndHold(destination).MoveToElement(target).Release(target).Build().Perform();
         }
 
         #endregion
@@ -1896,7 +1856,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             ((IJavaScriptExecutor)WebDriver).ExecuteScript("arguments[0].click();", iWebElement);
         }
 
-       
+
         /// <summary>
         /// Performs double click on a web element when the browser is 'Chrome' or 'Firefox'.
         /// </summary>

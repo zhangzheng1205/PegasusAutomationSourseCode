@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Globalization;
+using System.Windows.Forms;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -29,9 +30,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         public const string InternetExplorer = "Internet Explorer";
         public const string Safari = "Safari";
         public const string FireFox = "FireFox";
-        public const string MultiBrowser = "MultiBrowser";
-
-
+        
         /// <summary>
         /// This is the Broswer variable called from AppSettings.
         /// </summary>
@@ -104,9 +103,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 WebDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(timeOut));
             }
             //Exception Handling
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 
@@ -264,9 +263,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                 }
             }
             //Exception Handling
-            catch (Exception)
+            catch (Exception exception)
             {
-                throw;
+                throw exception;
             }
             return false;
         }
@@ -345,44 +344,38 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Is Window Opened In the Specified Interval of Time or not.
         /// </summary>
         /// <param name="windowName">This is the name of the window.</param>
-        /// <param name="timeOut">This is the time to wait for window get open.</param>
+        /// <param name="waitTimeOutDuration">This is the time to wait for window get open.</param>
         /// <exception cref="TimeoutException">If the window not able to find in the specified time.</exception>
         /// <exception cref="NoSuchWindowException">If the window not exists on the page.</exception>
         protected void WaitUntilWindowLoads(
-            String windowName, int timeOut = -1)
+            String windowName, int waitTimeOutDuration = -1)
         {
             //Wait Until Window Loads
-            bool isWindowFound = false;
-            Stopwatch stopWatch = new Stopwatch();
+            var stopWatch = new Stopwatch();
             stopWatch.Start();
-            if (timeOut == -1)
+            if (waitTimeOutDuration == -1)
             {
-                timeOut = this._waitTimeOut;
+                waitTimeOutDuration = this._waitTimeOut;
             }
             try
             {
-                while (stopWatch.Elapsed.TotalSeconds < timeOut)
+                while (stopWatch.Elapsed.TotalSeconds < waitTimeOutDuration)
                 {
                     if (WebDriver.WindowHandles.Any(item => WebDriver.SwitchTo().
-                        Window(item).Title == windowName))
+                        Window(item).Title.Equals(windowName)))
                     {
-                        isWindowFound = true;
                         break;
                     }
                 }
             }
             //Exception Handling
-            catch (Exception)
+            catch (Exception ex)
             {
                 stopWatch.Stop();
-                throw;
+                throw ex;
             }
             stopWatch.Stop();
-            if (!isWindowFound)
-            {
-                throw new Exception("Window Not Found.");
-            }
-        }
+           }
 
         /// <summary>
         /// Wait for pop up window till it gets load on the page.
@@ -410,9 +403,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     break;
                 }
                 //Exception Handling
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    throw;
+                    throw ex;
                 }
             }
         }
@@ -426,33 +419,22 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected void SelectWindow(String windowName)
         {
             //Select Already Present Window
-            bool isWindowSelected = false;
-            WaitUntilWindowLoads(windowName);
-            if (WebDriver.WindowHandles.All(item => WebDriver.SwitchTo().Window(item).Title != windowName))
-            {
-
-                throw new NoSuchWindowException("No Such Window Present.");
-            }
             try
             {
                 foreach (string item in WebDriver.WindowHandles)
                 {
-                    if (WebDriver.SwitchTo().Window(item).Title == windowName)
+                    if (WebDriver.SwitchTo().Window(item).Title.Equals(windowName))
                     {
-                        WebDriver.SwitchTo().Window(item);
-                        isWindowSelected = true;
+                        WebDriver.SwitchTo().Window(item).Title.
+                        ToString(CultureInfo.InvariantCulture);
                         break;
                     }
                 }
             }
             //Exception Handling
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
-            }
-            if (!isWindowSelected)
-            {
-                throw new Exception("Window Not Selected.");
+                throw ex;
             }
         }
 
@@ -474,7 +456,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             //Exception Handling
             catch (Exception)
             {
-
                 throw;
             }
         }

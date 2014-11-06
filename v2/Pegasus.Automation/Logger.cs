@@ -122,7 +122,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="isTakeScreenShot">This tells if a screen shot should be taken default to false.</param>
         public void LogException(string className, string methodName, Exception exception, bool isTakeScreenShot = false)
         {
-            LogMessage(className, methodName, "~ Exception = " + exception + "~ Stack Trace =" + exception.StackTrace, isTakeScreenShot);
+            LogMessage(className, methodName, "~ Exception Message = " + exception.Message + " ~ Inner Exception = " + exception.InnerException + " ~ Stack Trace =" + exception.StackTrace, isTakeScreenShot);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="isTakeScreenShot">This tells if a screen shot should be taken default to false</param>
         public void LogException(string className, string methodName, Exception exception, string message, bool isTakeScreenShot = false)
         {
-            LogMessage(className, methodName, "~ UserMessage = " + message + "  ~ Exception = " + exception + " ~ Stack Trace =" + exception.StackTrace, isTakeScreenShot);
+            LogMessage(className, methodName, "~ Exception Message = " + exception.Message + " ~ Inner Exception = " + exception.InnerException + " ~ Stack Trace =" + exception.StackTrace, isTakeScreenShot);
         }
 
         /// <summary>

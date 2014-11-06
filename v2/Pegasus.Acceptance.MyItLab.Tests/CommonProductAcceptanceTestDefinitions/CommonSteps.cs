@@ -65,7 +65,6 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 () => Assert.AreEqual(expectedPageTitle, actualPageTitle));
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
                 base.IsTakeScreenShotDuringEntryExit);
-            Thread.Sleep(30000);
         }
 
         /// <summary>
@@ -96,7 +95,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         /// <param name="activityStatus"></param>
         /// <param name="activityName"></param>
         [Then(@"I should see the ""(.*)"" status for the activity ""(.*)""")]
-        public void ValidateActivityStatusForTheActivity(string activityStatus, 
+        public void ValidateActivityStatusForTheActivity(string activityStatus,
             string activityName)
         {
             //Validate the submitted activity status
@@ -145,7 +144,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             //Is Pop Up Present
             base.SwitchToLastOpenedWindow();
-            bool present = base.IsWindowsExists(popUpName,10);
+            bool present = base.IsWindowsExists(popUpName, 10);
             Boolean isPopUpExist = base.IsWindowsExists(popUpName);
             //Assert We Have Correct Pop Up Window Opened
             Logger.LogAssertion("VerifyOpenedPopUpTitle",
@@ -715,11 +714,11 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-       /// <summary>
-       /// Click on Back icon in
-       /// View all course materials
-       /// </summary>
-       /// <param name="p0"></param>
+        /// <summary>
+        /// Click on Back icon in
+        /// View all course materials
+        /// </summary>
+        /// <param name="p0"></param>
         [Then(@"I click on 'Back' link in View all course materials")]
         public void ClickBackIconInViewAllCourseMaterials()
         {
@@ -730,7 +729,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             new StudentPresentationPage().ClickOnBackIconInCourseMaterials();
             Logger.LogMethodExit("CommonSteps", "ClickBackIconInViewAllCourseMaterials",
               base.IsTakeScreenShotDuringEntryExit);
-            
+
         }
 
 
@@ -781,27 +780,27 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 //Updates the section name and id at in-memory during runtime when environment is PPE
                 case "PPE":
                     Course coursePPE = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
-                     coursePPE.SectionName = CommonStepsResource.CommonSteps_PPE_SectionName_Value;
-                     coursePPE.SectionId = CommonStepsResource.CommonSteps_PPE_CourseId_Value;
-                     coursePPE.UpdateCourseInMemory(coursePPE);
-                     break;
+                    coursePPE.SectionName = CommonStepsResource.CommonSteps_PPE_SectionName_Value;
+                    coursePPE.SectionId = CommonStepsResource.CommonSteps_PPE_CourseId_Value;
+                    coursePPE.UpdateCourseInMemory(coursePPE);
+                    break;
                 //Updates the section name and id at in-memory during runtime when environment is PROD
                 case "PROD":
                     Course coursePROD = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
-                     coursePROD.SectionName = CommonStepsResource.CommonSteps_PROD_SectionName_Value;
-                     coursePROD.SectionId = CommonStepsResource.CommonSteps_PROD_CourseId_Value;
-                     coursePROD.UpdateCourseInMemory(coursePROD);
-                     break;
+                    coursePROD.SectionName = CommonStepsResource.CommonSteps_PROD_SectionName_Value;
+                    coursePROD.SectionId = CommonStepsResource.CommonSteps_PROD_CourseId_Value;
+                    coursePROD.UpdateCourseInMemory(coursePROD);
+                    break;
                 //Updates the section name and id at in-memory during runtime when environment is VCD
                 case "VCD":
                     Course courseVCD = Course.Get(Course.CourseTypeEnum.MyITLabOffice2013Program);
-                     courseVCD.SectionName = CommonStepsResource.CommonSteps_VCD_SectionName_Value;
-                     courseVCD.SectionId = CommonStepsResource.CommonSteps_VCD_CourseId_Value;
-                     courseVCD.UpdateCourseInMemory(courseVCD);
-                    
+                    courseVCD.SectionName = CommonStepsResource.CommonSteps_VCD_SectionName_Value;
+                    courseVCD.SectionId = CommonStepsResource.CommonSteps_VCD_CourseId_Value;
+                    courseVCD.UpdateCourseInMemory(courseVCD);
+
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
-                   
+
             }
             Logger.LogMethodExit("CommonSteps", "UpdateSectionNameAndCourseId",
              base.IsTakeScreenShotDuringEntryExit);
@@ -831,10 +830,10 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             // Store users profile time and date
             Logger.LogMethodEntry("CommonSteps", "StoreUserCurrentDateAndTime",
                 base.IsTakeScreenShotDuringEntryExit);
-           new HEDGlobalHomePage().setUserCurrentDate();
-           Logger.LogMethodExit("CommonSteps", "StoreUserCurrentDateAndTime",
-           base.IsTakeScreenShotDuringEntryExit);
-         
+            new HEDGlobalHomePage().setUserCurrentDate();
+            Logger.LogMethodExit("CommonSteps", "StoreUserCurrentDateAndTime",
+            base.IsTakeScreenShotDuringEntryExit);
+
         }
 
     }
