@@ -84,9 +84,10 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
                 IsTakeScreenShotDuringEntryExit);
             //Verify Correct Message Present on the Page
-            IsMessageExists(successMessage,
-                                 CommonStepsResource.
-                                 CommonSteps_SuccessMessage_Class_Locator);
+            //IsMessageExists(successMessage,
+            //                     CommonStepsResource.
+            //                     CommonSteps_SuccessMessage_Class_Locator);
+            IsMessageExists(successMessage, "messageBoardText");
             //Removed The Assert For Message Because Sometimes Message not comes 
             //but this is not the severe issue. So We, can ignore this.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessage",
@@ -446,7 +447,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodEntry("CommonSteps", "ValidateFolderNavigation",
                 IsTakeScreenShotDuringEntryExit);
             //Wait For Page Get Switched
-            WaitUntilPageGetSwitchedSuccessfully(CommonStepsResource.CommonSteps_Course_Materials);
+            WaitUntilPageGetSwitchedSuccessfully("Course Materials");
             //Get current opened page title
             string ActualFolderName = new CommonPage().GetBreathCrumbItemSelected();
             //Assert we have correct page opened            
