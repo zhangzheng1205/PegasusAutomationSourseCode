@@ -418,6 +418,8 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("ContentLibraryPage",
                 "MouseHoverOnActivity",
                  base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(ContentLibraryPageResource.
+                ContnetLibrary_Page_SearchedAssetName_Id_Locator));
             //Mouse Hover On Searched Activity Name
             IWebElement testName = base.GetWebElementPropertiesById(ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchedAssetName_Id_Locator);
@@ -526,6 +528,7 @@ namespace Pegasus.Pages.UI_Pages
                   base.IsTakeScreenShotDuringEntryExit);
             //Selects Window and Switch to Frame
             this.SelectWindowAndFrame();
+            Thread.Sleep(3000);
             //Enter Search Text
             base.WaitForElement(By.Id(ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchTextBox_Id_Locator));
@@ -537,8 +540,11 @@ namespace Pegasus.Pages.UI_Pages
             //Click on Search Button
             base.WaitForElement(By.Id(ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchButton_Id_Locator));
-            base.ClickButtonById(ContentLibraryPageResource.
+            IWebElement getsearchText=base.GetWebElementPropertiesById
+                (ContentLibraryPageResource.
                 ContnetLibrary_Page_SearchButton_Id_Locator);
+            base.ClickByJavaScriptExecutor(getsearchText);
+            Thread.Sleep(5000);
             logger.LogMethodExit("ContentLibraryPage", "SearchActivity",
                   base.IsTakeScreenShotDuringEntryExit);
         }
