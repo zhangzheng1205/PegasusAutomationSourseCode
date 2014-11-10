@@ -3,15 +3,15 @@
 				I want to manage all the Pegasus User related usecases 
 				so that I would validate all the Pegasus User scenarios are working fine.
 
-#Purpose: Login as HED Program Admin 
-Scenario: User Login as CourseSpace Program Admin 
-Given I browsed the login url for "HedProgramAdmin"
-When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
+
+#Purpose: Login as HED SMS Instructor
+Scenario: User Login as CourseSpace SMS Instructor
+Given I browsed the login url for "CsSmsInstructor"
+When  I login to Pegasus as "CsSmsInstructor" in "CourseSpace"
 Then  I should be logged in successfully
 Given I am on the "Global Home" page
 
 #Purpose: Login as HED Program Admin and Navigate to  ProgramCourse
-#PEGASUS-31805 Automation : HED BVT : peg-22716:Launching Amplifire content link
 Scenario: User Login CourseSpace Program Admin and Navigate ProgramCourse Course
 Given I browsed the login url for "HedProgramAdmin"
 When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
@@ -23,3 +23,29 @@ When I navigate to "Sections" tab of the "Program Administration" page
 Then I should be on the "Program Administration" page
 When I search the "ProgramCourse" first section
 And I click the "Enter Section as Instructor"
+
+#Purpose: Login as SMS Student
+Scenario: User Login As CsSMSStudent Navigate To InstructorCourse
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should be logged in successfully
+Given I am on the "Global Home" page
+
+
+#Purpose: Logout as SMS Instructor
+Scenario: User Logout as SMS Instructor
+When I "Sign out" from the "CsSmsInstructor"
+Then I should see the successfull message "You have been signed out of the application."
+
+#Purpose: Logout as Program Admin
+Scenario: User Logout as Program Admin
+When I "Sign out" from the "HedProgramAdmin"
+Then I should see the successfull message "You have been signed out of the application."
+
+#Purpose: Logout as SMS Student
+Scenario: User Logout as SMS Student
+When I "Sign out" from the "CsSmsStudent"
+Then I should see the successfull message "You have been signed out of the application."
+
+
+

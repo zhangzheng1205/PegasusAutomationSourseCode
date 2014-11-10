@@ -3,12 +3,7 @@ Feature: CourseSpaceInstructor
 				As a SMS CS instructor, 
 				I should be able to launch the amplifier link successfully.
 
-#Purpose: Open Instructor Url
-Background: 
-Given I browsed the login url for "CsSmsInstructor"
-When  I login to Pegasus as "CsSmsInstructor" in "CourseSpace"
-Then  I should be logged in successfully
-Given I am on the "Global Home" page
+
 
 #Purpose: To launch the Amplifier link from instructor side
 #Test case ID: peg-5957
@@ -26,6 +21,5 @@ When I navigate to "¡Comprueba lo que sabes!" asset in "Course Materials" tab a
 Then I should be inside the selected folder "¡Comprueba lo que sabes!"
 When I open the "Amplifire Study Module 0P: Vocabulario en contexto" Activity
 Then I should see Amplifier link should be opened in new pop up
-When I "Sign out" from the "CsSmsInstructor"
-Then I should see the successfull message "You have been signed out of the application."
+
 

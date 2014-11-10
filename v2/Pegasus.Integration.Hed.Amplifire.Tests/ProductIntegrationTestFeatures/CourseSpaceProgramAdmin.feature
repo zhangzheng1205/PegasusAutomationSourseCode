@@ -7,10 +7,14 @@
 					
 #PEGASUS-31805 Automation : HED BVT : peg-22716:Launching Amplifire content link copied using Add to multiple sections feature
 #Purpose: Launch the Amplifire Asset using section course
-Scenario: Launch the Amplifire Asset using section course 
+Scenario: Launch the Amplifire Asset using section course as Program Admin
 Then I should be on the "Today's View" page
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I navigate to "Amplifier" asset in "Course Materials" tab as "HedProgramAdmin"
 And I open the "Amplifier link 1 (Content)" Activity
 Then I should see the Amplifire launched successfully
+
+
+
+
