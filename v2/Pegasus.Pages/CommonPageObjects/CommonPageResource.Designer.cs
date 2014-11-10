@@ -448,6 +448,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Course Materials.
+        /// </summary>
+        internal static string ComonPage_Course_TabName {
+            get {
+                return ResourceManager.GetString("ComonPage_Course_TabName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Excel Chapter 1: Grader Activities.
         /// </summary>
         internal static string ComonPage_ExcelChapter1GraderActivities_FolderName {
@@ -498,6 +507,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         internal static string ComonPage_Loop_Initializer {
             get {
                 return ResourceManager.GetString("ComonPage_Loop_Initializer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ifrmRight.
+        /// </summary>
+        internal static string ComonPage_MainCourse_FrameID {
+            get {
+                return ResourceManager.GetString("ComonPage_MainCourse_FrameID", resourceCulture);
             }
         }
         

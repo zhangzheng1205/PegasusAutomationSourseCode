@@ -47,5 +47,13 @@ Scenario: User Logout as SMS Student
 When I "Sign out" from the "CsSmsStudent"
 Then I should see the successfull message "You have been signed out of the application."
 
+#Purpose: Login as WSInstructor
+Scenario: User Login As WSInstructor
+Given I browsed the login url for "HedWsInstructor"
+When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
+Then I should be logged in successfully
+Given I am on the "Global Home" page
+
+
 
 

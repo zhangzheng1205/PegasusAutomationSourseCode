@@ -332,7 +332,7 @@ namespace Pegasus.Pages.CommonPageObjects
                base.IsTakeScreenShotDuringEntryExit);
         }
 
-        public void NavigateInsideTheFolder(string FolderName)
+        public void NavigateInsideTheFolder(string FolderName,User.UserTypeEnum userTypeEnum)
         {
             // navigate inside access chapter1 simulation activities folder
             Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
@@ -341,8 +341,15 @@ namespace Pegasus.Pages.CommonPageObjects
             //this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             //this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
             //    CommonPage_Amplifier_FolderName, webElementToWait);
-            base.SelectWindow("Course Materials");            
-            base.SwitchToIFrameById("ifrmCoursePreview");            
+            base.SelectWindow("Course Materials");
+            if (User.UserTypeEnum.HedWsInstructor.Equals(userTypeEnum))
+            {
+                base.SwitchToIFrameById("ifrmRight");
+            }
+            else
+            {
+                base.SwitchToIFrameById("ifrmCoursePreview");
+            }
             base.WaitForElement(By.PartialLinkText(FolderName));
             IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
                 (FolderName);
@@ -1279,6 +1286,22 @@ namespace Pegasus.Pages.CommonPageObjects
             }
             Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigationHEDCore",
               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public void NavigateInsideTheFolderUnderMycourse(string FolderName, User.UserTypeEnum UserType)
+        {
+            // navigate inside access chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
+            base.SwitchToIFrameById(CommonPageResource.ComonPage_MainCourse_FrameID);
+            base.WaitForElement(By.PartialLinkText(FolderName));
+            IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
+                (FolderName);
+            base.ClickByJavaScriptExecutor(getFolderLink);
+            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -1152,5 +1152,58 @@ namespace Pegasus.Pages.UI_Pages
             return isScheduled & isStartDateExists & isEndDateExists;
         }
 
+
+        public void OpenTheActivityFromMyCourse(string ActivityName)
+        {
+            // Launch The Activity
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "OpenTheActivityFromMyCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Window
+                base.WaitUntilWindowLoads(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Window_Title_Name_HED);
+                base.SelectWindow(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Window_Title_Name_HED);
+                base.WaitForElement(By.Id("ifrmRight"));
+                //Switch To Frame
+                base.SwitchToIFrameById("ifrmRight");
+
+                //Wait For The Activity Name
+                base.WaitForElement(By.PartialLinkText(ActivityName));
+                //Get Activity Property
+                IWebElement getActivityProperty = base.GetWebElementPropertiesByPartialLinkText
+                    (ActivityName);
+                base.ClickByJavaScriptExecutor(getActivityProperty);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenTheActivityFromMyCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public String getDisplayedMessage()
+        {
+
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "getDisplayedMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+            String Message = null;
+            try
+            {
+                base.SwitchToLastOpenedWindow();
+                base.WaitForElement(By.Id("spnError"), 10);
+                Message = base.GetInnerTextAttributeValueById("spnError");               
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "getDisplayedMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+            return Message;
+        }
     }
 }

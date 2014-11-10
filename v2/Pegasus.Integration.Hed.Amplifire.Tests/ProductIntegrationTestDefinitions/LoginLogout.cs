@@ -224,6 +224,24 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestDefiniti
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [When(@"I select the ""(.*)"" link in Global Home page")]
+        public void SelectTheGotoStudentViewLinkInGlobalHomePage(
+            String goToStudentViewLink)
+        {
+            //Select The Go to Student View Link In Global HomePage
+            Logger.LogMethodEntry("LoginLogout",
+                "SelectTheGotoStudentViewLinkInGlobalHomePage",
+               base.IsTakeScreenShotDuringEntryExit);
+            //Click The Go to Student View Link In Global HomePage
+            new CalendarDefaultUXPage().
+                ClickTheGotoStudentViewLinkInGlobalHomePage(goToStudentViewLink);
+            Logger.LogMethodEntry("LoginLogout",
+                "SelectTheGotoStudentViewLinkInGlobalHomePage",
+                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>

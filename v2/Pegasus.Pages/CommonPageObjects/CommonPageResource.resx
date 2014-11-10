@@ -270,4 +270,10 @@
   <data name="ComonPage_BookTitle_For_Amplifire" xml:space="preserve">
     <value>//*[@id="page"]/div[1]/div/h2</value>
   </data>
+  <data name="ComonPage_Course_TabName" xml:space="preserve">
+    <value>Course Materials</value>
+  </data>
+  <data name="ComonPage_MainCourse_FrameID" xml:space="preserve">
+    <value>ifrmRight</value>
+  </data>
 </root>

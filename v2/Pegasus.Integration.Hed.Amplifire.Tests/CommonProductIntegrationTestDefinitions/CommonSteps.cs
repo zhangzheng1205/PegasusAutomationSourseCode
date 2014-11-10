@@ -277,6 +277,39 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [When(@"I open the ""(.*)"" Activity from MyCourse")]
+        public void OpenTheActivityFromMyCourse(string ActivityName)
+        {
+            // Open The Activity As Student
+            Logger.LogMethodEntry("CommonSteps", "OpenTheActivityFromMyCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Switch to default window after closing of presentation pop up            
+            //Launch The Activity
+            new CoursePreviewMainUXPage().OpenTheActivityFromMyCourse(ActivityName);
+            Logger.LogMethodExit("CommonSteps", "OpenTheActivityFromMyCourse",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        [Then(@"I should see the Message as ""(.*)""")]
+        public void VerifyWariningMessage(string Message)
+        {
+            //Launching of Activity Presentation Window
+            Logger.LogMethodEntry("CommonSteps",
+                "VerifyWariningMessage"
+                , base.IsTakeScreenShotDuringEntryExit);
+            //Assert Launch Activity Window
+            Logger.LogAssertion("CommonSteps",
+               ScenarioContext.Current.ScenarioInfo.
+               Title, () => Assert.AreEqual(Message,
+                   new CoursePreviewMainUXPage().getDisplayedMessage()));
+
+            Logger.LogMethodExit("CommonSteps",
+                "VerifyWariningMessage"
+                , base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         /// <summary>
         /// Launch Activity Presentation Window.
         /// </summary>
@@ -311,6 +344,8 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("CommonSteps", "ValidateFolderNavigation",
                 IsTakeScreenShotDuringEntryExit);
         }
+
+
         /// <summary>
         /// Launch Amplifier Presentation Window.
         /// </summary>
@@ -406,13 +441,24 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-        [When(@"I click on ""(.*)"" folder")]
-        public void ClickOnFolder(String FolderName)
+        //[When(@"I click on ""(.*)"" folder")]
+        //public void ClickOnFolder(String FolderName)
+        //{
+        //    Logger.LogMethodEntry("CommonSteps", "ClickOnFolder",
+        //    IsTakeScreenShotDuringEntryExit);
+        //    //Navigating inside the folder
+        //    new CommonPage().NavigateInsideTheFolder(FolderName);
+        //    Logger.LogMethodExit("CommonSteps", "ClickOnFolder",
+        //        IsTakeScreenShotDuringEntryExit);
+        //}
+
+        [When(@"I click on ""(.*)"" folder as ""(.*)""")]
+        public void WhenIClickOnFolderAs(string FolderName,User.UserTypeEnum UserType)
         {
             Logger.LogMethodEntry("CommonSteps", "ClickOnFolder",
             IsTakeScreenShotDuringEntryExit);
             //Navigating inside the folder
-            new CommonPage().NavigateInsideTheFolder(FolderName);
+            new CommonPage().NavigateInsideTheFolder(FolderName, UserType);
             Logger.LogMethodExit("CommonSteps", "ClickOnFolder",
                 IsTakeScreenShotDuringEntryExit);
         }
@@ -548,6 +594,21 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 "ValidateAmplifireLaunchedSuccessfully"
                 , base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+        [When(@"I navigate to ""(.*)"" tab")]
+        public void NavigateToTab(string tabName)
+        {
+            //Navigate to Tab
+            Logger.LogMethodEntry("CommonSteps", "NavigateToTab",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Select Tab
+            new TodaysViewUxPage().SelectTab(tabName);
+            Logger.LogMethodExit("CommonSteps", "NavigateToTab",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
