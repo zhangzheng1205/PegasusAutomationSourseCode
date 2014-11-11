@@ -202,6 +202,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             profile.SetPreference("browser.download.folderList", 2);
             profile.SetPreference("browser.download.dir", DownloadFilePath);
             profile.SetPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream doc docx xls xlsx pdf txt zip");
+            profile.SetPreference("dom.max_script_run_time", 0);
             profile.EnableNativeEvents = true;
             IWebDriver webDriver = new FirefoxDriver(new FirefoxBinary(), profile, TimeSpan.FromMinutes(20));
             // set page load duration
@@ -240,7 +241,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     {"download.default_directory", DownloadFilePath},
                     {"download.prompt_for_download", false},
                     {"profile.default_content_settings.popups", 0},
-                    {"intl.accept_languages", "nl"}
+                    {"intl.accept_languages", "nl"},
+                    {"dom.max_chrome_script_run_time", 0}
                 }
             };
 
