@@ -154,6 +154,11 @@ namespace Pegasus.Pages.UI_Pages
                     new RptMainUXPage().ClickReportLink(ProgramAdminReportsSubTabPageResource.
                     ProgramAdminReportsSubTab_IntegrityViolation_Link_Id_locator);                   
                     break;
+                case "Certificate of Completion (Custom)":
+                    //Click 'Activity Results (Multiple Students)' report link
+                    new RptMainUXPage().ClickReportLink(ProgramAdminReportsSubTabPageResource.
+                     ProgramAdminReportsSubTab_CustomCertificate_Report_Id_Locator); 
+                    break;
             }
             Logger.LogMethodExit("ProgramAdminReportsSubTabPage", " ClickOnReportLink",
               base.IsTakeScreenShotDuringEntryExit);

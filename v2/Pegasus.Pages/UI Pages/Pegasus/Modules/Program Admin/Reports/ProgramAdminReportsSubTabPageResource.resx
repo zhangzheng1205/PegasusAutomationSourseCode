@@ -126,6 +126,9 @@
   <data name="ProgramAdminReportsSubTab_CriteriaPage_SelectStudents_XPath_locator" xml:space="preserve">
     <value>//a/span/span[text()='Select Students']</value>
   </data>
+  <data name="ProgramAdminReportsSubTab_CustomCertificate_Report_Id_Locator" xml:space="preserve">
+    <value>RPT_CUSTOMCERTIFICATE</value>
+  </data>
   <data name="ProgramAdminReportsSubTab_ExamFrequencyAnalysis_Link_Id_locator" xml:space="preserve">
     <value>RPT_EXAMFREQRPT</value>
   </data>

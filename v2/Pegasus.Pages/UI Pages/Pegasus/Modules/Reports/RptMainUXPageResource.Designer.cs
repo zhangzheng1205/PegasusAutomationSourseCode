@@ -99,9 +99,9 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         /// <summary>
         ///   Looks up a localized string similar to Mainframe.
         /// </summary>
-        internal static string RptMain_Page_Frame_Id_Locator {
+        internal static string RptMain_Page_MainFrame_Id_Locator {
             get {
-                return ResourceManager.GetString("RptMain_Page_Frame_Id_Locator", resourceCulture);
+                return ResourceManager.GetString("RptMain_Page_MainFrame_Id_Locator", resourceCulture);
             }
         }
         
@@ -755,6 +755,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RPT_CUSTOMCERTIFICATE.
+        /// </summary>
+        internal static string RptMainUXPage_CustomCertificate_Report_Id_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_CustomCertificate_Report_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to imgAssessment.
         /// </summary>
         internal static string RptMainUXPage_LearningAidUsage_ActivityButton_Id_Locator {
@@ -773,20 +782,20 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _ctl0_PageContent_ifrmMiddle.
-        /// </summary>
-        internal static string RptMainUXPage_LearningAidUsage_Iframe_Value {
-            get {
-                return ResourceManager.GetString("RptMainUXPage_LearningAidUsage_Iframe_Value", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Program Administration.
         /// </summary>
         internal static string RptMainUXPage_LearningAidUsage_WindowName {
             get {
                 return ResourceManager.GetString("RptMainUXPage_LearningAidUsage_WindowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_PageContent_ifrmMiddle.
+        /// </summary>
+        internal static string RptMainUXPage_PageContent_Middle_IFrame_Name {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_PageContent_Middle_IFrame_Name", resourceCulture);
             }
         }
     }

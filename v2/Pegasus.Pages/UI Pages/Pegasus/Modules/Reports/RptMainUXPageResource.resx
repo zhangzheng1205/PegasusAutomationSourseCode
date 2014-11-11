@@ -180,7 +180,7 @@
   <data name="RptMain_Page_CustomReport_Cmenu_Window_Time" xml:space="preserve">
     <value>10000</value>
   </data>
-  <data name="RptMain_Page_Frame_Id_Locator" xml:space="preserve">
+  <data name="RptMain_Page_MainFrame_Id_Locator" xml:space="preserve">
     <value>Mainframe</value>
   </data>
   <data name="RptMain_Page_ManageOrg_Window_Frame_Name" xml:space="preserve">
@@ -309,12 +309,12 @@
   <data name="RptMainUX_Page_MyReports_ActualReport_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='Main']/table/tbody/tr[{0}]/td[2]/span</value>
   </data>
-   <data name="RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator2" xml:space="preserve">
+  <data name="RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator2" xml:space="preserve">
     <value>.//*[@id='Main']/table/tbody/tr[{0}]/td[2]/img</value>
   </data>
   <data name="RptMainUX_Page_MyReports_ActualReport_Xpath_Locator2" xml:space="preserve">
     <value>.//*[@id='Main']/table/tbody/tr[{0}]/td[1]/span[1]</value>
-  </data>  
+  </data>
   <data name="RptMainUX_Page_MyReports_AssessmentCount_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='AssessmentGrid']/tbody/tr</value>
   </data>
@@ -354,10 +354,13 @@
   <data name="RptMainUXPage_LearningAidUsage_frame_Value" xml:space="preserve">
     <value>Mainframe</value>
   </data>
-  <data name="RptMainUXPage_LearningAidUsage_Iframe_Value" xml:space="preserve">
+  <data name="RptMainUXPage_PageContent_Middle_IFrame_Name" xml:space="preserve">
     <value>_ctl0_PageContent_ifrmMiddle</value>
   </data>
   <data name="RptMainUXPage_LearningAidUsage_WindowName" xml:space="preserve">
     <value>Program Administration</value>
+  </data>
+  <data name="RptMainUXPage_CustomCertificate_Report_Id_Locator" xml:space="preserve">
+    <value>RPT_CUSTOMCERTIFICATE</value>
   </data>
 </root>

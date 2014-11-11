@@ -118,5 +118,16 @@ Then I should see row "1" in the report "ZeroScore" for "CsSmsStudent" "Word Cha
 And I should see row "3" in the report "CsSmsStudent" "Word Chapter 1 Grader Project [Assessment 3]" "Document Level" "Yes" column details
 And I close the "Student Integrity Violation" window
 
+#Purpose: To view Availability of 'Certificate of Completion (Custom) Report Link Under Report Tab
+#Test Case Id: peg-2142
+#MyITLabOffice2013Program
+Scenario: To View Availability of 'Certificate of Completion (Custom) Report Link Under Report Tab
+When I navigate to "Reports" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
+And I should see "Certificate of Completion (Custom)" report under report page
+When I click on "Certificate of Completion (Custom)" report link as "HedProgramAdmin"
+Then I should see "Options for Certificate of Completion (Custom)" header present
+
+
 	                
 					  

@@ -125,9 +125,9 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Wait for Frame
-                base.WaitForElement(By.Id(RptMainUXPageResource.RptMain_Page_Frame_Id_Locator));
+                base.WaitForElement(By.Id(RptMainUXPageResource.RptMain_Page_MainFrame_Id_Locator));
                 //Switch To Frame
-                base.SwitchToIFrame(RptMainUXPageResource.RptMain_Page_Frame_Id_Locator);
+                base.SwitchToIFrame(RptMainUXPageResource.RptMain_Page_MainFrame_Id_Locator);
                 base.WaitForElement(By.PartialLinkText(RptGCOptionsUXPageResource.
                     RptGCOptionsUX_Page_SelectStudents_Link_Locator));
                 //Click on Select Student Button
@@ -176,8 +176,8 @@ namespace Pegasus.Pages.UI_Pages
             try
             {
                 //Wait for Frame
-                base.WaitForElement(By.Id(RptMainUXPageResource.RptMain_Page_Frame_Id_Locator));
-                base.SwitchToIFrame(RptMainUXPageResource.RptMain_Page_Frame_Id_Locator);
+                base.WaitForElement(By.Id(RptMainUXPageResource.RptMain_Page_MainFrame_Id_Locator));
+                base.SwitchToIFrame(RptMainUXPageResource.RptMain_Page_MainFrame_Id_Locator);
                 //Wait for RunReport Link
                 base.WaitForElement(By.PartialLinkText(RptGCOptionsUXPageResource.
                     RptGCOptionsUX_Page_RunReport_Link_Locator));
