@@ -84,7 +84,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>a960cd3a-65a6-4f5f-a490-b4f24d0777c7</Name>
+      <Name>Unidos: An Interactive Approach, 1e ONLINE COMPONENT Powered by MySpanishLab Summer 2013 Re-Release_updated</Name>
       <CourseType>MySpanishLabMaster</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -92,7 +92,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>Amplifier _Automation</Name>
+      <Name>Unidos: An Interactive Approach, 1e</Name>
       <CourseType>InstructorCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
@@ -100,12 +100,12 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>amplifier program</Name>
+      <Name>Amplifier program</Name>
       <CourseType>ProgramCourse</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
-      <SectionName>5.15.3 Amplifier sectin</SectionName>
-      <SectionId>CRSKLXY-14003234</SectionId>
+      <SectionName>Unios:An Interactive Approach</SectionName>
+      <SectionId>CRSKLEW-16002359</SectionId>
       <IsPublished>false</IsPublished>
       <IsApproved>false</IsApproved>
     </Course>
@@ -145,7 +145,7 @@
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
-      <Name>VCD_ProgramAdminCourse</Name>
+      <Name>Unidos: An Interactive Approach, 1e</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
@@ -408,7 +408,7 @@
       <IsCreated>true</IsCreated>
     </User>
     <User>
-      <Name>5153ampteach</Name>
+      <Name>amplinstrutor01</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
@@ -419,7 +419,7 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>5153ampteach</Name>
+      <Name>amplinstrutor01</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
@@ -430,7 +430,7 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>5143ampstudent</Name>
+      <Name>amplstudent01</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>BDD</FirstName>
@@ -467,7 +467,7 @@
       <EnrolementStatus>true</EnrolementStatus>
     </User>
     <User>
-      <Name>7e291029-3cdf-4df0-a3c8-4cc6545facac</Name>
+      <Name>wsteacher12</Name>
       <Password>password2</Password>
       <Email>manish.singh@imfinity.com</Email>
       <FirstName>45f1937e-5049-42b1-b50e-dcbab74f24b6</FirstName>

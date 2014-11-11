@@ -54,6 +54,11 @@ When I logged into the Pegasus as "HedWsInstructor" in "WorkSpace"
 Then I should be logged in successfully
 Given I am on the "Global Home" page
 
+#Purpose: Open Ws Url and Logout as Workspace Instructor
+Scenario: User Logout as Workspace Teacher
+When I "Sign out" from the "HedWsInstructor"
+Then I should see the successfull message "You have been signed out of the application."
+
 
 
 

@@ -1172,7 +1172,10 @@ namespace Pegasus.Pages.CommonPageObjects
                 "IsPageOpened",
                 base.IsTakeScreenShotDuringEntryExit);
             Boolean IsPageOpened = false;
-            Thread.Sleep(7000);
+            //string getWindowTitle = base.GetPageTitle;
+            //base.WaitUntilWindowLoads(getWindowTitle); 
+            //base.SelectWindow(getWindowTitle);
+            Thread.Sleep(20000);
             base.SwitchToLastOpenedWindow();
             base.WaitForElement(By.Id("ASSIGNMENT_NAVIGATION_VIEW"));
             string getTheUrl = base.GetCurrentUrl;

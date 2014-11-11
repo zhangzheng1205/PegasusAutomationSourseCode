@@ -212,6 +212,23 @@ testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTal
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Logout as Workspace Teacher")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
+        public virtual void UserLogoutAsWorkspaceTeacher()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Logout as Workspace Teacher", ((string[])(null)));
+#line 58
+this.ScenarioSetup(scenarioInfo);
+#line 59
+testRunner.When("I \"Sign out\" from the \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
+testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
+                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

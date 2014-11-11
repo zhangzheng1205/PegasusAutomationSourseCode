@@ -277,6 +277,10 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on the activity.
+        /// </summary>
+        /// <param name="ActivityName">This the activity name.</param>
         [When(@"I open the ""(.*)"" Activity from MyCourse")]
         public void OpenTheActivityFromMyCourse(string ActivityName)
         {
@@ -290,24 +294,38 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        ///// <summary>
+        ///// Verifies the warning message.
+        ///// </summary>
+        ///// <param name="message">This is the warning message.</param>
+        //[Then(@"I should see the ""(.*)"" warning message")]
+        //public void VerifyTheWarningMessage(string message)
+        //{
+        //    //Launching of Activity Presentation Window
+        //    Logger.LogMethodEntry("CommonSteps",
+        //        "VerifyTheWarningMessage"
+        //        , base.IsTakeScreenShotDuringEntryExit);
+        //    //Assert Launch Activity Window
+        //    Logger.LogAssertion("VerifyTheWarningMessage", ScenarioContext.Current.ScenarioInfo.Title,
+        //     () => Assert.AreEqual(message, new CoursePreviewMainUXPage().getDisplayedMessage()));
 
-        [Then(@"I should see the Message as ""(.*)""")]
-        public void VerifyWariningMessage(string Message)
+        //    Logger.LogMethodExit("CommonSteps",
+        //        "VerifyTheWarningMessage"
+        //        , base.IsTakeScreenShotDuringEntryExit);
+        //}
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        [Then(@"I should see ""(.*)"" warning")]
+        public void ThenIShouldSeeWarning(string message)
         {
-            //Launching of Activity Presentation Window
-            Logger.LogMethodEntry("CommonSteps",
-                "VerifyWariningMessage"
-                , base.IsTakeScreenShotDuringEntryExit);
-            //Assert Launch Activity Window
-            Logger.LogAssertion("CommonSteps",
-               ScenarioContext.Current.ScenarioInfo.
-               Title, () => Assert.AreEqual(Message,
-                   new CoursePreviewMainUXPage().getDisplayedMessage()));
-
-            Logger.LogMethodExit("CommonSteps",
-                "VerifyWariningMessage"
-                , base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyTheMessage", ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual
+                (message, new TodaysViewUxPage().getDisplayedMessage()));
         }
+
+      
 
 
         /// <summary>

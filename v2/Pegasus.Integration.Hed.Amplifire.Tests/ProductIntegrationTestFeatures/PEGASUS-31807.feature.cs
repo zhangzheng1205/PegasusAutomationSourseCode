@@ -70,44 +70,42 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Instructor Launches the Amplifire using section course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("demo student Launches the Amplifire using section course as")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PEGASUS-31807")]
-        public virtual void InstructorLaunchesTheAmplifireUsingSectionCourse()
+        public virtual void DemoStudentLaunchesTheAmplifireUsingSectionCourseAs()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor Launches the Amplifire using section course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("demo student Launches the Amplifire using section course as", ((string[])(null)));
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 10
 testRunner.When("I select the \"Go to Student View\" link in Global Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 16
+#line 13
 testRunner.When("I navigate to \"Course Materials\" tab and selected \"View All Course Materials\" sub" +
                     "tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
+#line 14
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 18
+#line 15
 testRunner.When("I click on \"Capítulo preliminar: Bienvenidos a Unidos\" folder as \"CsSmsInstructor" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
+#line 16
 testRunner.Then("I should be inside the folder \"Capítulo preliminar: Bienvenidos a Unidos\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 20
+#line 17
 testRunner.When("I click on \"¡Comprueba lo que sabes!\" folder as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 18
 testRunner.Then("I should be inside the folder \"¡Comprueba lo que sabes!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 22
+#line 19
 testRunner.When("I open the \"Amplifire Study Module 0P: Vocabulario en contexto\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
+#line 20
 testRunner.Then("I should see the activity successfully launched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 24
+#line 21
 testRunner.And("I should see the BookTilte as \"Chapter 16: Innate Immunity: Nonspecific Defenses " +
                     "of the Host\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

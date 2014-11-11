@@ -3777,5 +3777,29 @@ namespace Pegasus.Pages.UI_Pages
             // return string value
             return gettingStartedContentText;
         }
+
+        public string getDisplayedMessage()
+        {
+            Logger.LogMethodEntry("CoursePreviewMainUXPage", "getDisplayedMessage",
+               base.IsTakeScreenShotDuringEntryExit);
+            String getMessage = string.Empty;
+            try
+            {
+                
+                base.WaitUntilWindowLoads("Pegasus");
+                base.SelectWindow("Pegasus");
+                base.WaitForElement(By.Id("spnError"));
+                getMessage = base.GetElementInnerTextById("spnError");
+                
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+
+            Logger.LogMethodExit("CoursePreviewMainUXPage", "getDisplayedMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+            return getMessage;
+        }
     }
 }

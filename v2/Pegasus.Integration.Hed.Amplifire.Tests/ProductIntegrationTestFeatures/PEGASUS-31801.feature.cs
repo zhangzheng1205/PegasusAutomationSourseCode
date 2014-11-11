@@ -77,24 +77,25 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter in the \"MySpanishLabMaster\" from the Global Home page as \"HedWsInstructor" +
+                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 6
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 7
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 11
+#line 9
 testRunner.When("I click on \"Capítulo preliminar: Bienvenidos a Unidos\" folder as \"HedWsInstructor" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
+testRunner.And("I click on \"¡Comprueba lo que sabes!\" folder as \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+testRunner.And("I open the \"Amplifire Study Module 0P: Vocabulario en contexto\" Activity from MyC" +
+                    "ourse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
-testRunner.When("I click on \"¡Comprueba lo que sabes!\" folder as \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
-testRunner.When("I open the \"Amplifire Study Module 0P: Vocabulario en contexto\" Activity from MyC" +
-                    "ourse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 14
-testRunner.Then("I should see the Message as \"You don\'t have subscription to the site. Please conf" +
-                    "irm that your subscription includes access to the Amplifire product.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"You don\'t have subscription to the site. Please confirm that your s" +
+                    "ubscription includes access to the Amplifire product.\" warning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

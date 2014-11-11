@@ -11,9 +11,13 @@ Scenario: Launch the Amplifire Asset using section course as Program Admin
 Then I should be on the "Today's View" page
 When I navigate to the "Course Materials" tab
 Then I should be on the "Course Materials" page
-When I navigate to "Amplifier" asset in "Course Materials" tab as "HedProgramAdmin"
-And I open the "Amplifier link 1 (Content)" Activity
-Then I should see the Amplifire launched successfully
+When I navigate to "Capítulo preliminar: Bienvenidos a Unidos" asset in "Course Materials" tab as "CsSmsInstructor" 
+Then I should be inside the selected folder "Capítulo preliminar: Bienvenidos a Unidos"
+When I navigate to "¡Comprueba lo que sabes!" asset in "Course Materials" tab as "CsSmsInstructor" 
+Then I should be inside the selected folder "¡Comprueba lo que sabes!"
+When I open the "Amplifire Study Module 0P: Vocabulario en contexto" Activity
+Then I should see the activity successfully launched
+And I should see the BookTilte as "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host"
 
 
 
