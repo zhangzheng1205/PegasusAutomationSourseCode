@@ -278,6 +278,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {DELETE}.
+        /// </summary>
+        internal static string StudentPresentation_Page_DeleteKey_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_DeleteKey_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@type=&apos;Question&apos;].
         /// </summary>
         internal static string StudentPresentation_Page_Div_Count {
@@ -296,11 +305,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {END}.
+        /// </summary>
+        internal static string StudentPresentation_Page_EndKey_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_EndKey_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {ENTER}.
         /// </summary>
         internal static string StudentPresentation_Page_EnterKey_Value {
             get {
                 return ResourceManager.GetString("StudentPresentation_Page_EnterKey_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {ESC}.
+        /// </summary>
+        internal static string StudentPresentation_Page_EscapeKey_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_EscapeKey_Value", resourceCulture);
             }
         }
         
@@ -616,6 +643,51 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPresentation_Page_PostTest_Id_Locator {
             get {
                 return ResourceManager.GetString("StudentPresentation_Page_PostTest_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;2_PPTSlideThumbnails_SVM_011&apos;]/div[1]/div[2]/div/img.
+        /// </summary>
+        internal static string StudentPresentation_Page_PPT_Slide2_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_PPT_Slide2_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;2_PPTSlideThumbnails_SVM_013&apos;]/div[1]/div[2]/div/img.
+        /// </summary>
+        internal static string StudentPresentation_Page_PPT_Slide4_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_PPT_Slide4_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;2_PPTSlideThumbnails_SVM_014&apos;]/div[1]/div[2]/div/img.
+        /// </summary>
+        internal static string StudentPresentation_Page_PPT_Slide5_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_PPT_Slide5_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;2_PPTSlideThumbnails_SVM_016&apos;]/div[1]/div[2]/div/img.
+        /// </summary>
+        internal static string StudentPresentation_Page_PPT_Slide7_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_PPT_Slide7_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;2_PPTSlideThumbnails_SVM_018&apos;]/div[1]/div[2]/div/img.
+        /// </summary>
+        internal static string StudentPresentation_Page_PPT_Slide9_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_PPT_Slide9_Value", resourceCulture);
             }
         }
         
@@ -1358,6 +1430,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to e.
+        /// </summary>
+        internal static string StudentPrsentation_Page_E_Key {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_E_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Manual Gradable Asset.
         /// </summary>
         internal static string StudentPrsentation_Page_Essay_Text {
@@ -1475,11 +1556,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to editable-text-area.
+        ///   Looks up a localized string similar to //*[@id=&apos;item-9-contextmenu&apos;]/div[2].
         /// </summary>
-        internal static string StudentPrsentation_Page_FolderName_Textbox_ClassName_Locator {
+        internal static string StudentPrsentation_Page_FolderName_Textbox_Xpath_Locator {
             get {
-                return ResourceManager.GetString("StudentPrsentation_Page_FolderName_Textbox_ClassName_Locator", resourceCulture);
+                return ResourceManager.GetString("StudentPrsentation_Page_FolderName_Textbox_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -1610,6 +1691,852 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //*[text()=&apos;Artistic Effects&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_10_ArtisticEffectsButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_10_ArtisticEffectsButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Picture Tools Format&apos;]//div[@title=&apos;Glow Diffused&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_10_GlowDiffusedButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_10_GlowDiffusedButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Picture Tools Format&apos;]//div[@title=&apos;None&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_10_NoneButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_10_NoneButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[text()=&apos;From Beginning&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_11_FromBeginingButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_11_FromBeginingButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;5_PPTPresenter_AB_01_&apos;]/div/div[13]/div/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_12_AllSlides_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_12_AllSlides_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;5_PPTPresenter_AB_01_&apos;]/div/div[1]/div[3].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_12_EndSlideShow_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_12_EndSlideShow_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;5_PPTPresenter_AB_01_&apos;]/div/div[11].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_12_Font_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_12_Font_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@class=&apos;SlideCounter&apos;]/div[4].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_12_NextSlideButton_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_12_NextSlideButton_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Slide Show&apos;]/li[3]/span/span[1]/span/span/span[2]/div[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_12_PresenterCheckBox_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_12_PresenterCheckBox_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;6&apos;]/div/div[4]/div/div[1]/div[1]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_12_Slides1_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_12_Slides1_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;4&apos;]/div/button[1]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_13_AppyToAll_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_13_AppyToAll_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-8.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_13_DateTimeCheckBox_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_13_DateTimeCheckBox_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-13.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_13_FooterCheckBox_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_13_FooterCheckBox_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1A_KWT_Overview.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_13_FooterTextBox_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_13_FooterTextBox_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;4&apos;]/div/div/ul[2]/li[2]/div[1]/fieldset[1]/input[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_13_FooterTextBox_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_13_FooterTextBox_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[text()=&apos;Header &amp; Footer&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_13_HeaderButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_13_HeaderButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;4&apos;]/div/div/ul[1]/li[2]/div/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_13_NotesTab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_13_NotesTab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-19.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_14_SLideNoCheckBox_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_14_SLideNoCheckBox_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;4&apos;]/div/div/ul[1]/li[1]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_14_SlideTab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_14_SlideTab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-7.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_14_TitleCheckBox_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_14_TitleCheckBox_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@class=&apos;print-page-container relative-pos&apos;]/span[1]/div/div[2]/div/div/div[10]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_15__Slidehorizontal_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_15__Slidehorizontal_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-PrintButton.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_15_PrintButton_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_15_PrintButton_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;fileMenuId&apos;]/li[6].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_15_PrintOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_15_PrintOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@class=&apos;print-page-container relative-pos&apos;]/span[1]/div/div[2]/div/div/div[16]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_16_FrameSLidesButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_16_FrameSLidesButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@class=&apos;print-page-container relative-pos&apos;]/span[1]/div/div[2]/div/div/div[3]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_16_NotesButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_16_NotesButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_16_NotesInputButton_value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_16_NotesInputButton_value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@class=&apos;print-page-container relative-pos&apos;]/div[2]/div[2]/div[5]/input.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_16_NotesInputButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_16_NotesInputButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Design&apos;]/li[3]/span/span[1]/span/span/span[1]/div[1]/div[1]/div[1]/div[1]/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_17_SlideSizeButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_17_SlideSizeButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[text()=&apos;Widescreen (16:9)&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_17_SlidetypeButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_17_SlidetypeButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;4&apos;]/div/div[4].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_18_BrowseFile_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_18_BrowseFile_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1-listItem.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_18_BrowseFileOption_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_18_BrowseFileOption_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;4&apos;]/div/div[1]/div[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_18_CloseButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_18_CloseButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;item-0-contextmenu&apos;]/div[1]/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_18_Image_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_18_Image_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[1]/div[1]/div[1]/span/div[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_18_NewSlideArrow_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_18_NewSlideArrow_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;5&apos;]/div/div[8]/div[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_18_OpenButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_18_OpenButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@class=&apos;screen2-container&apos;]/div[1]/div[1]/div/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_18_ReusedSlide1_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_18_ReusedSlide1_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@class=&apos;screen2-container&apos;]/div[1]/div[4]/div/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_18_ReusedSlide4_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_18_ReusedSlide4_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[1]/div[1]/div[2]/div/div[5].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_18_ReusedSlides_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_18_ReusedSlides_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;1&apos;]/div/div[1]/span[2]/span[1]/span&quot;.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_2_SaveIcon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_2_SaveIcon_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-4.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_21_CloseButton_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_21_CloseButton_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-3.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_21_ReplaceAll_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_21_ReplaceAll_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[6]/span/span[1]/span/span/span[2]/div[1]/div[1]/div/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_21_ReplaceButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_21_ReplaceButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pike Place Market.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_21_ReplaceText_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_21_ReplaceText_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;4&apos;]/div[2]/div/input.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_21_ReplaceText_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_21_ReplaceText_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pike Market.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_21_SearchText_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_21_SearchText_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;4&apos;]/div[@id=&apos;4-6&apos;]/div/input.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_21_SearchText_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_21_SearchText_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;CM_cm0003&apos;]/li[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_22_ApplyToAllSlidesButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_22_ApplyToAllSlidesButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;CM_cm0003&apos;]/li[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_22_ApplyToSelectedlSlidesButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_22_ApplyToSelectedlSlidesButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ppt_design_variants&apos;]/div[1]/div/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_22_Frame1_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_22_Frame1_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ppt_design_variants&apos;]/div[3]/div/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_22_Frame3_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_22_Frame3_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[4]/span/span[1]/span/span[1]/span[2]/span[2]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_25_CenterAllign_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_25_CenterAllign_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #ContentDiv_TP_5 &gt; ul.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_25_Paragraph_CSSLocator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_25_Paragraph_CSSLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[4]/span/span[1]/span/span[1]/span[1]/span[7]/div[1]/div[1]/div/div[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_26_LineSpacing_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_26_LineSpacing_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[4]/span/span[1]/span/span[1]/span[1]/span[7]/div[1]/div[2]/div/div[3]/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_26_LineSpacingOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_26_LineSpacingOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PPT_TextPlaceHolderListParent.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_26_Title_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_26_Title_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[2]/span[1]/div[1]/div[1]/div/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_27_Layout_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_27_Layout_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[2]/span[1]/div[1]/div[2]/div/div/div[4]/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_27_SectionHeader_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_27_SectionHeader_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;PPT_AB_SS_01200&apos;]/div[2]/div/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_27_Slide1_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_27_Slide1_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;4&apos;]/div/div[2]/div[@title=&apos;Slide Sorter&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_27_SlideSorter_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_27_SlideSorter_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[text()=&apos;Apply To All&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_31_ApplyToAllOptions_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_31_ApplyToAllOptions_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Transitions&apos;]/li[2]/span/span[1]/span/span[1]/div[1]/div[2]/div[3].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_31_DownarrowButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_31_DownarrowButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Transitions&apos;]/li[2]/span/span[1]/span/span[2]/div[1]/div[1]/div[1]/div[1]/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_31_EffectOptions_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_31_EffectOptions_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Transitions&apos;]/li[2]/span/span[1]/span/span[1]/div[1]/div[1]/div[4]/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_31_FadeButton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_31_FadeButton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[text()=&apos;Smoothly&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_31_SmoothlyOptions_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_31_SmoothlyOptions_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to spinUpBtnID.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_32_Upbutton_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_32_Upbutton_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;CM_PPTMenu_SVM_0111&apos;]/li[11].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_33_EndShowIcon_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_33_EndShowIcon_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to mainImage.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_33_MainPage_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_33_MainPage_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 5_PPTReadingViewMenu_AB_01_.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_33_MenuIcon_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_33_MenuIcon_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;2&apos;]/div/div[2]/div[@title=&apos;Reading View&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_33_ReadingViewIcon_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_33_ReadingViewIcon_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kodiak West Travel has locations in Juneau, Anchorage, and Victoria..
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_6_Notes_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_6_Notes_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PPTMenu_SVM_07NotesArea5.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_6_NotesIcon_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_6_NotesIcon_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;PPTMenu_SVM_07NotesArea5&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_6_NotesIcon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_6_NotesIcon_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .ContentPictures.contentButton.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_8_ContentTitleButton_CSSLocator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_8_ContentTitleButton_CSSLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to item-5-contextmenu.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_8_ImageIcon1_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_8_ImageIcon1_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to item-6-contextmenu.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_8_ImageIcon2_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_8_ImageIcon2_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .button.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_8_InsertButton_CSSLocator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_8_InsertButton_CSSLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Picture Tools Format&apos;]/li[2]/span/span[1]/span/span[1]/div[1]/div[2]/div[3].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_9_DownArrow_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_9_DownArrow_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Picture Tools Format&apos;]/li[2]/span/span[1]/span/span[1]/div[1]/div[1]/div[9]/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_9_PitctureStyle_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_9_PitctureStyle_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;1&apos;]/div/ul/li[9].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_DesignTab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_DesignTab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;1&apos;]/div/ul/li[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_FileTab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_FileTab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .tab-header.tab-header-contextual.tab-header-picturetoolsformat.accessible.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_FormatTab_CSSLocator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_FormatTab_CSSLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .tab-header.tab-header-home.accessible.tab-header-selected.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_HomeTab_CSSLocator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_HomeTab_CSSLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;1&apos;]/div/ul/li[6].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_HomeTab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_HomeTab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;1&apos;]/div/ul/li[8].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_InsertTab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_InsertTab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ViewAllFrame&apos;]/div/div[3]/button[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_Launch_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_Launch_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_OkButton_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_OkButton_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;1&apos;]/div/ul/li[12].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_SlideShowTab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_SlideShowTab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@class=&apos;print-page-container relative-pos&apos;]/span[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_SlideStyle_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_SlideStyle_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .contentEditorDiv.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_TitleOfSLide_CssLocator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_TitleOfSLide_CssLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .tab-header.tab-header-transitions.accessible.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_TransactionTab_CSSLocator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_TransactionTab_CSSLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;1&apos;]/div/ul/li[10].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_TransactionTab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_TransactionTab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to viewallbutton.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_ViewAll_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_ViewAll_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ViewAllDlg&apos;]/div[2]/div[2]/table/tbody/tr[5]/td[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_ViewAll_Page_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_ViewAll_Page_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;//*[@id=&apos;ViewAllDlg&apos;]/div[2]/div[2]/table/tbody/tr[{0}]/td[1]&quot;.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PPT_ViewAll_Question_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PPT_ViewAll_Question_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Objective-Based Question Only.
         /// </summary>
         internal static string StudentPrsentation_Page_Presentation_Window_Name {
@@ -1637,11 +2564,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //button[@id=&apos;9-ButtonSave&apos;].
+        ///   Looks up a localized string similar to 9-ButtonSave.
         /// </summary>
-        internal static string StudentPrsentation_Page_Save_Button_Xpath_Locator {
+        internal static string StudentPrsentation_Page_Save_Button_ID_Locator {
             get {
-                return ResourceManager.GetString("StudentPrsentation_Page_Save_Button_Xpath_Locator", resourceCulture);
+                return ResourceManager.GetString("StudentPrsentation_Page_Save_Button_ID_Locator", resourceCulture);
             }
         }
         
@@ -2006,7 +2933,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 5000.
+        ///   Looks up a localized string similar to 6000.
         /// </summary>
         internal static string StudentPrsentation_Page_SIM5_Sleep_Time {
             get {

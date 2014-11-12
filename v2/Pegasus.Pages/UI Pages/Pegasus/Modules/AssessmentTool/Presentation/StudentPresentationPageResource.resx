@@ -529,7 +529,7 @@
     <value>4-TextBoxFileName</value>
   </data>
   <data name="StudentPrsentation_Page_SIM5_Sleep_Time" xml:space="preserve">
-    <value>5000</value>
+    <value>6000</value>
   </data>
   <data name="CoursePreviewMainUX_Page_ActivityScore_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='tblCoursePreview']/tbody/tr[{0}]/td[4]</value>
@@ -711,8 +711,8 @@
   <data name="StudentPrsentation_Page_First_Bulleted_Point_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='ContentDiv_TP_4']/ul/li/span</value>
   </data>
-  <data name="StudentPrsentation_Page_FolderName_Textbox_ClassName_Locator" xml:space="preserve">
-    <value>editable-text-area</value>
+  <data name="StudentPrsentation_Page_FolderName_Textbox_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='item-9-contextmenu']/div[2]</value>
   </data>
   <data name="StudentPrsentation_Page_Folder_Name_Value" xml:space="preserve">
     <value>PowerPoint Chapter 1</value>
@@ -753,8 +753,8 @@
   <data name="StudentPrsentation_Page_PowerPoint_Option_Id_Locator" xml:space="preserve">
     <value>ppt</value>
   </data>
-  <data name="StudentPrsentation_Page_Save_Button_Xpath_Locator" xml:space="preserve">
-    <value>//button[@id='9-ButtonSave']</value>
+  <data name="StudentPrsentation_Page_Save_Button_ID_Locator" xml:space="preserve">
+    <value>9-ButtonSave</value>
   </data>
   <data name="StudentPrsentation_Page_Save_Option_Xpath_Locator" xml:space="preserve">
     <value>//div[@class='title-bar']/span[2]/span/span/div/span/img</value>
@@ -810,10 +810,319 @@
   <data name="StudentPresentation_Page_ReturnToCourse_Button_Xpath_Locator" xml:space="preserve">
     <value>//a/span/span[contains(text(),'Return to Course')]</value>
   </data>
+  <data name="StudentPresentation_Page_DeleteKey_Value" xml:space="preserve">
+    <value>{DELETE}</value>
+  </data>
+  <data name="StudentPresentation_Page_EndKey_Value" xml:space="preserve">
+    <value>{END}</value>
+  </data>
+  <data name="StudentPresentation_Page_EscapeKey_Value" xml:space="preserve">
+    <value>{ESC}</value>
+  </data>
+  <data name="StudentPresentation_Page_PPT_Slide4_Value" xml:space="preserve">
+    <value>//*[@id='2_PPTSlideThumbnails_SVM_013']/div[1]/div[2]/div/img</value>
+  </data>
+  <data name="StudentPresentation_Page_PPT_Slide7_Value" xml:space="preserve">
+    <value>//*[@id='2_PPTSlideThumbnails_SVM_016']/div[1]/div[2]/div/img</value>
+  </data>
+  <data name="StudentPresentation_Page_PPT_Slide9_Value" xml:space="preserve">
+    <value>//*[@id='2_PPTSlideThumbnails_SVM_018']/div[1]/div[2]/div/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_15_PrintButton_ID_Locator" xml:space="preserve">
+    <value>4-PrintButton</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_15_PrintOption_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='fileMenuId']/li[6]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_15__Slidehorizontal_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@class='print-page-container relative-pos']/span[1]/div/div[2]/div/div/div[10]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_25_CenterAllign_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[4]/span/span[1]/span/span[1]/span[2]/span[2]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_26_LineSpacingOption_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[4]/span/span[1]/span/span[1]/span[1]/span[7]/div[1]/div[2]/div/div[3]/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_26_LineSpacing_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[4]/span/span[1]/span/span[1]/span[1]/span[7]/div[1]/div[1]/div/div[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_33_EndShowIcon_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='CM_PPTMenu_SVM_0111']/li[11]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_33_MainPage_ClassName_Locator" xml:space="preserve">
+    <value>mainImage</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_33_MenuIcon_ID_Locator" xml:space="preserve">
+    <value>5_PPTReadingViewMenu_AB_01_</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_33_ReadingViewIcon_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='2']/div/div[2]/div[@title='Reading View']</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_6_NotesIcon_ID_Locator" xml:space="preserve">
+    <value>PPTMenu_SVM_07NotesArea5</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_6_NotesIcon_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='PPTMenu_SVM_07NotesArea5']</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_6_Notes_Value" xml:space="preserve">
+    <value>Kodiak West Travel has locations in Juneau, Anchorage, and Victoria.</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_DesignTab_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='1']/div/ul/li[9]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_FileTab_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='1']/div/ul/li[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_HomeTab_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='1']/div/ul/li[6]</value>
+  </data>
+  <data name="StudentPresentation_Page_PPT_Slide2_Value" xml:space="preserve">
+    <value>//div[@id='2_PPTSlideThumbnails_SVM_011']/div[1]/div[2]/div/img</value>
+  </data>
+  <data name="StudentPresentation_Page_PPT_Slide5_Value" xml:space="preserve">
+    <value>//*[@id='2_PPTSlideThumbnails_SVM_014']/div[1]/div[2]/div/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_13_AppyToAll_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='4']/div/button[1]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_13_DateTimeCheckBox_Xpath_Locator" xml:space="preserve">
+    <value>4-8</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_13_FooterCheckBox_Xpath_Locator" xml:space="preserve">
+    <value>4-13</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_13_FooterTextBox_Value" xml:space="preserve">
+    <value>1A_KWT_Overview</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_13_FooterTextBox_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='4']/div/div/ul[2]/li[2]/div[1]/fieldset[1]/input[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_13_NotesTab_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='4']/div/div/ul[1]/li[2]/div/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_14_SLideNoCheckBox_ID_Locator" xml:space="preserve">
+    <value>4-19</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_14_SlideTab_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='4']/div/div/ul[1]/li[1]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_14_TitleCheckBox_ID_Locator" xml:space="preserve">
+    <value>4-7</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_17_SlideSizeButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Design']/li[3]/span/span[1]/span/span/span[1]/div[1]/div[1]/div[1]/div[1]/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_27_Layout_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[1]/div[1]/div[1]/div/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_27_SectionHeader_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[1]/div[1]/div[2]/div/div/div[4]/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_27_Slide1_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='PPT_AB_SS_01200']/div[2]/div/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_27_SlideSorter_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='4']/div/div[2]/div[@title='Slide Sorter']</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_31_DownarrowButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Transitions']/li[2]/span/span[1]/span/span[1]/div[1]/div[2]/div[3]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_31_EffectOptions_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Transitions']/li[2]/span/span[1]/span/span[2]/div[1]/div[1]/div[1]/div[1]/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_31_FadeButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Transitions']/li[2]/span/span[1]/span/span[1]/div[1]/div[1]/div[4]/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_InsertTab_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='1']/div/ul/li[8]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_OkButton_ID_Locator" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_TransactionTab_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='1']/div/ul/li[10]</value>
+  </data>
+  <data name="StudentPrsentation_Page_E_Key" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_10_ArtisticEffectsButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[text()='Artistic Effects']</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_10_GlowDiffusedButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Picture Tools Format']//div[@title='Glow Diffused']</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_10_NoneButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Picture Tools Format']//div[@title='None']</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_11_FromBeginingButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[text()='From Beginning']</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_13_HeaderButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[text()='Header &amp; Footer']</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_16_FrameSLidesButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@class='print-page-container relative-pos']/span[1]/div/div[2]/div/div/div[16]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_16_NotesButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@class='print-page-container relative-pos']/span[1]/div/div[2]/div/div/div[3]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_16_NotesInputButton_value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_16_NotesInputButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@class='print-page-container relative-pos']/div[2]/div[2]/div[5]/input</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_17_SlidetypeButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[text()='Widescreen (16:9)']</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_18_BrowseFileOption_ID_Locator" xml:space="preserve">
+    <value>1-listItem</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_18_NewSlideArrow_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[1]/div[1]/div[1]/span/div[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_18_ReusedSlide1_Xpath_Locator" xml:space="preserve">
+    <value>//*[@class='screen2-container']/div[1]/div[1]/div/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_18_ReusedSlide4_Xpath_Locator" xml:space="preserve">
+    <value>//*[@class='screen2-container']/div[1]/div[4]/div/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_18_ReusedSlides_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[1]/div[1]/div[2]/div/div[5]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_31_ApplyToAllOptions_Xpath_Locator" xml:space="preserve">
+    <value>//*[text()='Apply To All']</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_21_CloseButton_ID_Locator" xml:space="preserve">
+    <value>4-4</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_21_ReplaceAll_ID_Locator" xml:space="preserve">
+    <value>4-3</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_21_ReplaceText_Value" xml:space="preserve">
+    <value>Pike Place Market</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_21_SearchText_Value" xml:space="preserve">
+    <value>Pike Market</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_31_SmoothlyOptions_Xpath_Locator" xml:space="preserve">
+    <value>//*[text()='Smoothly']</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_32_Upbutton_ID_Locator" xml:space="preserve">
+    <value>spinUpBtnID</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_8_ContentTitleButton_CSSLocator" xml:space="preserve">
+    <value>.ContentPictures.contentButton</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_8_ImageIcon1_ID_Locator" xml:space="preserve">
+    <value>item-5-contextmenu</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_8_ImageIcon2_ID_Locator" xml:space="preserve">
+    <value>item-6-contextmenu</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_8_InsertButton_CSSLocator" xml:space="preserve">
+    <value>.button</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_FormatTab_CSSLocator" xml:space="preserve">
+    <value>.tab-header.tab-header-contextual.tab-header-picturetoolsformat.accessible</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_HomeTab_CSSLocator" xml:space="preserve">
+    <value>.tab-header.tab-header-home.accessible.tab-header-selected</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_TitleOfSLide_CssLocator" xml:space="preserve">
+    <value>.contentEditorDiv</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_TransactionTab_CSSLocator" xml:space="preserve">
+    <value>.tab-header.tab-header-transitions.accessible</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_18_BrowseFile_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='4']/div/div[4]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_18_CloseButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='4']/div/div[1]/div[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_18_Image_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='item-0-contextmenu']/div[1]/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_18_OpenButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='5']/div/div[8]/div[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_21_ReplaceButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[6]/span/span[1]/span/span/span[2]/div[1]/div[1]/div/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_21_ReplaceText_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='4']/div[2]/div/input</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_21_SearchText_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='4']/div[@id='4-6']/div/input</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_22_ApplyToAllSlidesButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='CM_cm0003']/li[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_22_ApplyToSelectedlSlidesButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='CM_cm0003']/li[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_22_Frame1_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ppt_design_variants']/div[1]/div/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_22_Frame3_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ppt_design_variants']/div[3]/div/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_26_Title_ClassName_Locator" xml:space="preserve">
+    <value>PPT_TextPlaceHolderListParent</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_2_SaveIcon_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='1']/div/div[1]/span[2]/span[1]/span"</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_9_DownArrow_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Picture Tools Format']/li[2]/span/span[1]/span/span[1]/div[1]/div[2]/div[3]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_9_PitctureStyle_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Picture Tools Format']/li[2]/span/span[1]/span/span[1]/div[1]/div[1]/div[9]/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_SlideShowTab_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='1']/div/ul/li[12]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_SlideStyle_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@class='print-page-container relative-pos']/span[1]</value>
+  </data>
   <data name="StudentPresentation_Page_AmplifireBookImage_Id_Locator" xml:space="preserve">
     <value>BOOK_IMAGE</value>
   </data>
   <data name="StudentPresentation_Page_LaunchAmplifireWindowClose_TimeValue" xml:space="preserve">
     <value>10000</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_12_AllSlides_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='5_PPTPresenter_AB_01_']/div/div[13]/div/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_12_EndSlideShow_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='5_PPTPresenter_AB_01_']/div/div[1]/div[3]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_12_Font_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='5_PPTPresenter_AB_01_']/div/div[11]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_12_NextSlideButton_XPath_Locator" xml:space="preserve">
+    <value>//*[@class='SlideCounter']/div[4]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_12_PresenterCheckBox_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Slide Show']/li[3]/span/span[1]/span/span/span[2]/div[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_12_Slides1_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='6']/div/div[4]/div/div[1]/div[1]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_25_Paragraph_CSSLocator" xml:space="preserve">
+    <value>#ContentDiv_TP_5 &gt; ul</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_Launch_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ViewAllFrame']/div/div[3]/button[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_ViewAll_ID_Locator" xml:space="preserve">
+    <value>viewallbutton</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_ViewAll_Page_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ViewAllDlg']/div[2]/div[2]/table/tbody/tr[5]/td[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_ViewAll_Question_Xpath_Locator" xml:space="preserve">
+    <value>"//*[@id='ViewAllDlg']/div[2]/div[2]/table/tbody/tr[{0}]/td[1]"</value>
   </data>
 </root>
