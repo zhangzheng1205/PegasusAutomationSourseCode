@@ -547,3 +547,24 @@ When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" 
 And I launch the "PowerPoint Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "ZeroScore"
 And I click on submit button answering incorrectly of "PowerPoint" type "Training" mode activity "PowerPoint Chapter 1 Skill-Based Training"
 Then I should be on the "Course Materials" page
+
+
+#Purpose : Submitting Sim 5 Excel activity and Student scoring a Zero.
+#Products : MyItLab.
+#Pre condition : Excel SIM5 should be assigned with due date and due date should be passed.
+# TestLink Id: peg:19330
+#Dependency : Always dependent.
+Scenario: Sim5 Excel submission for past Due Activity
+When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the "Excel Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "ZeroScore"
+And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Skill-Based Training"
+Then I should be on the "Course Materials" page
+
+#Purpose: Student Launches and submit Posttest with score Zero
+# TestCase Id: peg-22019
+#MyItLabProgramCourse
+Scenario: Student Launches and submit Posttest with score Zero
+When I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent"
+And I launch the "Excel Chapter 1 Study Plan [Skill-Based]: Training" activity by "CsSmsStudent" with "ZeroScore"
+And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Study Plan [Skill-Based]: Training"
+Then I should be on the "Course Materials" page
