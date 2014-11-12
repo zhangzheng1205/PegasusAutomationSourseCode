@@ -70,35 +70,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginLogoutResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="ProductIntegrationTestFeatures\CourseSpaceInstructor.WorkFlow.feature.cs">
+    <Compile Include="ProductIntegrationTestFeatures\CourseSpaceProgramAdminAmplifierLaunch.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CourseSpaceInstructor.WorkFlow.feature</DependentUpon>
+      <DependentUpon>CourseSpaceProgramAdminAmplifierLaunch.feature</DependentUpon>
     </Compile>
-    <Compile Include="ProductIntegrationTestFeatures\CourseSpaceProgramAdmin.feature.cs">
+    <Compile Include="ProductIntegrationTestFeatures\WorkSpaceInstructorAmplifierLaunch.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CourseSpaceProgramAdmin.feature</DependentUpon>
+      <DependentUpon>WorkSpaceInstructorAmplifierLaunch.feature</DependentUpon>
     </Compile>
-    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31801.feature.cs">
+    <Compile Include="ProductIntegrationTestFeatures\CourseSpaceSMSInstructorAmplifierLaunch.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PEGASUS-31801.feature</DependentUpon>
+      <DependentUpon>CourseSpaceSMSInstructorAmplifierLaunch.feature</DependentUpon>
     </Compile>
-    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31802.feature.cs">
+    <Compile Include="ProductIntegrationTestFeatures\CourseSpaceSMSStudentAmplifierLaunch.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PEGASUS-31802.feature</DependentUpon>
-    </Compile>
-    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31804.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PEGASUS-31804.feature</DependentUpon>
-    </Compile>
-    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31807.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PEGASUS-31807.feature</DependentUpon>
+      <DependentUpon>CourseSpaceSMSStudentAmplifierLaunch.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -111,29 +101,21 @@
     <None Include="ProductIntegrationOrderedTests\OrderedTest.BuildVerificationTest.Integration.AmplifireFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductIntegrationTestFeatures\CourseSpaceInstructor.WorkFlow.feature">
+    <None Include="ProductIntegrationTestFeatures\CourseSpaceProgramAdminAmplifierLaunch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CourseSpaceInstructor.WorkFlow.feature.cs</LastGenOutput>
+      <LastGenOutput>CourseSpaceProgramAdminAmplifierLaunch.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductIntegrationTestFeatures\CourseSpaceProgramAdmin.feature">
+    <None Include="ProductIntegrationTestFeatures\WorkSpaceInstructorAmplifierLaunch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CourseSpaceProgramAdmin.feature.cs</LastGenOutput>
+      <LastGenOutput>WorkSpaceInstructorAmplifierLaunch.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductIntegrationTestFeatures\PEGASUS-31801.feature">
+    <None Include="ProductIntegrationTestFeatures\CourseSpaceSMSInstructorAmplifierLaunch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>PEGASUS-31801.feature.cs</LastGenOutput>
+      <LastGenOutput>CourseSpaceSMSInstructorAmplifierLaunch.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductIntegrationTestFeatures\PEGASUS-31802.feature">
+    <None Include="ProductIntegrationTestFeatures\CourseSpaceSMSStudentAmplifierLaunch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>PEGASUS-31802.feature.cs</LastGenOutput>
-    </None>
-    <None Include="ProductIntegrationTestFeatures\PEGASUS-31804.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>PEGASUS-31804.feature.cs</LastGenOutput>
-    </None>
-    <None Include="ProductIntegrationTestFeatures\PEGASUS-31807.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>PEGASUS-31807.feature.cs</LastGenOutput>
+      <LastGenOutput>CourseSpaceSMSStudentAmplifierLaunch.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

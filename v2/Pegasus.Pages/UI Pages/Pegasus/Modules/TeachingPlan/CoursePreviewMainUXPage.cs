@@ -1182,28 +1182,6 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("CoursePreviewMainUXPage", "OpenTheActivityFromMyCourse",
                 base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        public String getDisplayedMessage()
-        {
-
-            Logger.LogMethodEntry("CoursePreviewMainUXPage", "getDisplayedMessage",
-                base.IsTakeScreenShotDuringEntryExit);
-            String Message = null;
-            try
-            {
-                base.SwitchToLastOpenedWindow();
-                base.WaitForElement(By.Id("spnError"), 10);
-                Message = base.GetInnerTextAttributeValueById("spnError");               
-            }
-            catch (Exception e)
-            {
-                ExceptionHandler.HandleException(e);
-            }
-            
-            Logger.LogMethodExit("CoursePreviewMainUXPage", "getDisplayedMessage",
-                base.IsTakeScreenShotDuringEntryExit);
-            return Message;
-        }
+        }       
     }
 }

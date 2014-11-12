@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
@@ -61,13 +62,14 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
             }
             //Wait For Page Get Switched
-            WaitUntilPageGetSwitchedSuccessfully(expectedPageTitle);
+            base.WaitUntilWindowLoads(expectedPageTitle);
             //Get current opened page title
-            string getActualPageTitle = GetPageTitle;
+            string actualPageTitle =
+                WebDriver.Title.ToString(CultureInfo.InvariantCulture);
             //Assert we have correct page opened
             Logger.LogAssertion("VerifyOpenedPageTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(expectedPageTitle, getActualPageTitle));
+                () => Assert.AreEqual(expectedPageTitle, actualPageTitle));
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
                 IsTakeScreenShotDuringEntryExit);
         }
@@ -204,7 +206,6 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
         /// <summary>
         /// Enter Into Course.
         /// </summary>
@@ -223,6 +224,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("CommonSteps", " EnterInCourse",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Navigate To Course Space User Tabs.
         /// </summary>
@@ -284,7 +286,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         [When(@"I open the ""(.*)"" Activity from MyCourse")]
         public void OpenTheActivityFromMyCourse(string ActivityName)
         {
-            // Open The Activity As Student
+            // Open The Activity 
             Logger.LogMethodEntry("CommonSteps", "OpenTheActivityFromMyCourse",
                 base.IsTakeScreenShotDuringEntryExit);
             // Switch to default window after closing of presentation pop up            
@@ -294,39 +296,26 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-        ///// <summary>
-        ///// Verifies the warning message.
-        ///// </summary>
-        ///// <param name="message">This is the warning message.</param>
-        //[Then(@"I should see the ""(.*)"" warning message")]
-        //public void VerifyTheWarningMessage(string message)
-        //{
-        //    //Launching of Activity Presentation Window
-        //    Logger.LogMethodEntry("CommonSteps",
-        //        "VerifyTheWarningMessage"
-        //        , base.IsTakeScreenShotDuringEntryExit);
-        //    //Assert Launch Activity Window
-        //    Logger.LogAssertion("VerifyTheWarningMessage", ScenarioContext.Current.ScenarioInfo.Title,
-        //     () => Assert.AreEqual(message, new CoursePreviewMainUXPage().getDisplayedMessage()));
-
-        //    Logger.LogMethodExit("CommonSteps",
-        //        "VerifyTheWarningMessage"
-        //        , base.IsTakeScreenShotDuringEntryExit);
-        //}
-
         /// <summary>
-        /// 
+        /// Verify the warning message.
         /// </summary>
-        /// <param name="message"></param>
+        /// <param name="message">This is the message.</param>
         [Then(@"I should see ""(.*)"" warning")]
-        public void ThenIShouldSeeWarning(string message)
+        public void VerifyWarning(string message)
         {
+            //Verify the warning message
+            Logger.LogMethodEntry("CommonSteps",
+                "VerifyWarning"
+                , base.IsTakeScreenShotDuringEntryExit);
+            //Verify the warning message
             Logger.LogAssertion("VerifyTheMessage", ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual
                 (message, new TodaysViewUxPage().getDisplayedMessage()));
+            //Close the amplifier popup
+            base.CloseBrowserWindow();
+            Logger.LogMethodExit("CommonSteps",
+                "VerifyWarning"
+                , base.IsTakeScreenShotDuringEntryExit);
         }
-
-      
-
 
         /// <summary>
         /// Launch Activity Presentation Window.
@@ -347,40 +336,45 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 , base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify the title displayed in book.
+        /// </summary>
+        /// <param name="BookTilte">This is the title.</param>
         [Then(@"I should see the BookTilte as ""(.*)""")]
-        public void ThenIShouldSeeTheBookTilteAs(string BookTilte)
+        public void VerifyBookTitle(string BookTilte)
         {
-            //Check If Expected Page Is Opened
-            Logger.LogMethodEntry("CommonSteps", "ValidateFolderNavigation",
+            //Verify the title displayed in book
+            Logger.LogMethodEntry("CommonSteps", "VerifyBookTitle",
                 IsTakeScreenShotDuringEntryExit);
             string ActualBookTilte = new CommonPage().GetTextByXpath(BookTilte);
-            //Assert we have correct page opened            
+            //Verify the title displayed in book          
             Logger.LogAssertion("VerifyOpenedPageTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(ActualBookTilte, BookTilte));
+                () => Assert.AreEqual(BookTilte, ActualBookTilte));
+            //Close the amplifier popup
             base.CloseBrowserWindow();
-            Logger.LogMethodExit("CommonSteps", "ValidateFolderNavigation",
+            Logger.LogMethodExit("CommonSteps", "VerifyBookTitle",
                 IsTakeScreenShotDuringEntryExit);
         }
 
 
         /// <summary>
-        /// Launch Amplifier Presentation Window.
+        /// Verify the launch of amplifier pop up.
         /// </summary>
         [Then(@"I should see Amplifier link should be opened in new pop up")]
-        public void AmplifierSuccessfullyLaunchedByIns()
+        public void VerifyAmplifierLaunch()
         {
-            //Launching of Activity Presentation Window
-            Logger.LogMethodEntry("ActivitySubmission",
-                "ActivitySuccessfullyLaunched"
+            // Verify the launch of amplifier pop up
+            Logger.LogMethodEntry("CommonSteps",
+                "VerifyAmplifierLaunch"
                 , base.IsTakeScreenShotDuringEntryExit);
-            //Assert Launch Activity Window
-            Logger.LogAssertion("VerifyActivityLaunched",
+            // Verify the launch of amplifier pop up
+            Logger.LogAssertion("VerifyAmplifierLaunch",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new InstructorPresentationPage().
                     IsAmplifierPresentationPageOpened()));
-            Logger.LogMethodExit("ActivitySubmission",
-                "ActivitySuccessfullyLaunched"
+            Logger.LogMethodExit("CommonSteps",
+                "VerifyAmplifierLaunch"
                 , base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -459,28 +453,27 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-        //[When(@"I click on ""(.*)"" folder")]
-        //public void ClickOnFolder(String FolderName)
-        //{
-        //    Logger.LogMethodEntry("CommonSteps", "ClickOnFolder",
-        //    IsTakeScreenShotDuringEntryExit);
-        //    //Navigating inside the folder
-        //    new CommonPage().NavigateInsideTheFolder(FolderName);
-        //    Logger.LogMethodExit("CommonSteps", "ClickOnFolder",
-        //        IsTakeScreenShotDuringEntryExit);
-        //}
-
+        /// <summary>
+        /// Click on folder based on user type.
+        /// </summary>
+        /// <param name="FolderName">This is the folder name.</param>
+        /// <param name="UserType">This is the user type enum.</param>
         [When(@"I click on ""(.*)"" folder as ""(.*)""")]
-        public void WhenIClickOnFolderAs(string FolderName,User.UserTypeEnum UserType)
+        public void ClickOnFolderBasedOnUserType(string FolderName,User.UserTypeEnum UserType)
         {
-            Logger.LogMethodEntry("CommonSteps", "ClickOnFolder",
+            // Click on folder based on user type
+            Logger.LogMethodEntry("CommonSteps", "ClickOnFolderBasedOnUserType",
             IsTakeScreenShotDuringEntryExit);
             //Navigating inside the folder
             new CommonPage().NavigateInsideTheFolder(FolderName, UserType);
-            Logger.LogMethodExit("CommonSteps", "ClickOnFolder",
+            Logger.LogMethodExit("CommonSteps", "ClickOnFolderBasedOnUserType",
                 IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify the navigation to folder.
+        /// </summary>
+        /// <param name="FolderName">This is the folder name.</param>
         [Then(@"I should be inside the folder ""(.*)""")]
         public void ValidateFolderNavigation(string FolderName)
         {
@@ -503,7 +496,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         /// <summary>
         /// Validate the selected folder.
         /// </summary>
-        /// <param name="FolderName">Name of the selected folder</param>
+        /// <param name="FolderName">Name of the selected folder.</param>
         [Then(@"I should be inside the selected folder ""(.*)""")]
         public void ValidateSelectedFolderNavigation(string FolderName)
         {
@@ -559,6 +552,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfTheParticularPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Search Section
         /// </summary>
@@ -576,6 +570,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("CopyContent", " SearchFirstSection",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Click The Enter Section As Instructor.
         /// </summary>
@@ -613,7 +608,10 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 , base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        /// <summary>
+        /// Navigate to a Tab.
+        /// </summary>
+        /// <param name="tabName">This is the tab name.</param>
         [When(@"I navigate to ""(.*)"" tab")]
         public void NavigateToTab(string tabName)
         {
@@ -625,8 +623,6 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("CommonSteps", "NavigateToTab",
                base.IsTakeScreenShotDuringEntryExit);
         }
-
-
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

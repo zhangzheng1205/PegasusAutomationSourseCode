@@ -1,6 +1,12 @@
-﻿Feature: PEGASUS-31801
+﻿Feature: WorkSpace Instructor Amplifier Launch
+	                As a WS Instuctor
+					I want to manage all the workspace instructor amplifier related usecases 
+					so that I would validate all the workspace instructor amplifier scenarios are working fine
 
 
+#Purpose: Launch Amplifire by Workspace instructor
+#PEGASUS-31802
+#peg-16872
 Scenario: WSInstructor Launches the Amplifire using section course 
 When I enter in the "MySpanishLabMaster" from the Global Home page as "HedWsInstructor"
 Then I should be on the "Today's View" page

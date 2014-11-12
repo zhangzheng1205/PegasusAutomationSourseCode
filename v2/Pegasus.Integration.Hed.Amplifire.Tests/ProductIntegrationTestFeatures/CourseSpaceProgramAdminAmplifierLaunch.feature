@@ -1,15 +1,15 @@
-﻿Feature: CourseSpaceProgramAdmin
+﻿Feature: CourseSpace Program Admin Amplifier Launch
 	                As a CS Program Admin
-					I want to manage all the coursespace instructor related usecases 
-					so that I would validate all the coursespace instructor scenarios are working fine.
-
-
+					I want to manage all the coursespace instructor amplifier related usecases 
+					so that I would validate all the coursespace instructor amplifier scenarios are working fine
 					
-#PEGASUS-31805 Automation : HED BVT : peg-22716:Launching Amplifire content link copied using Add to multiple sections feature
-#Purpose: Launch the Amplifire Asset using section course
+
+#Purpose: Launching Amplifire content link copied using Add to multiple sections feature
+#PEGASUS-31805 
+#peg-22716
 Scenario: Launch the Amplifire Asset using section course as Program Admin
 Then I should be on the "Today's View" page
-When I navigate to the "Course Materials" tab
+When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I navigate to "Capítulo preliminar: Bienvenidos a Unidos" asset in "Course Materials" tab as "CsSmsInstructor" 
 Then I should be inside the selected folder "Capítulo preliminar: Bienvenidos a Unidos"

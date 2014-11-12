@@ -54,10 +54,18 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         [Given(@"I am on the ""(.*)"" page")]
         public void ShowThePageInPegasus(String expectedPageTitle)
         {
-            //Verify Correct Page Opened
+            //Check If Expected Page Is Opened
             Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
-                base.IsTakeScreenShotDuringEntryExit);
-            //wait for the window
+                IsTakeScreenShotDuringEntryExit);
+            //Wait Till Thinking Indicator Loads
+            bool isThinkingIndicatorLoading = IsThinkingIndicatorLoading();
+            //If Thinking Indicator In Process After Specified Time Interval then Fail This Step
+            if (isThinkingIndicatorLoading)
+            {
+                Logger.LogAssertion("VerifyOpenedPageTitle", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.Fail(CommonStepsResource.CommonSteps_PageNotOpened_Message));
+            }
+            //Wait For Page Get Switched
             base.WaitUntilWindowLoads(expectedPageTitle);
             //Get current opened page title
             string actualPageTitle =
@@ -67,7 +75,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedPageTitle, actualPageTitle));
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
-                base.IsTakeScreenShotDuringEntryExit);
+                IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

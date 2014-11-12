@@ -353,6 +353,7 @@ namespace Pegasus.Pages.CommonPageObjects
             base.WaitForElement(By.PartialLinkText(FolderName));
             IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
                 (FolderName);
+            
             base.ClickByJavaScriptExecutor(getFolderLink);
             Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
@@ -1225,8 +1226,8 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 case "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host":
                     base.SwitchToLastOpenedWindow();
-                    base.WaitForElement(By.XPath(CommonPageResource.ComonPage_BookTitle_For_Amplifire));
-                    ActualString = base.GetElementInnerTextByXPath(CommonPageResource.ComonPage_BookTitle_For_Amplifire);
+                    base.WaitForElement(By.XPath(CommonPageResource.ComonPage_BookTitle_For_Amplifire),10);
+                    ActualString = base.GetElementInnerTextByXPath(CommonPageResource.ComonPage_BookTitle_For_Amplifire).Trim();
                     break;
 
             }
