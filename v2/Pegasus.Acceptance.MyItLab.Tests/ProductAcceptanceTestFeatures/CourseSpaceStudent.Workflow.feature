@@ -485,24 +485,6 @@ Then I should be on the "Course Materials" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 
-#Purpose : Submitting Sim 5 Powerpoint activity and Student scoring 70
-#Test case ID : peg-21995.
-#Products : MyItLab.
-#Pre condition : This test case depends on Power Point SIM5 activity should be created by instructor/Author in the following course and 
-#“Trap ALT+TAB and Browser Lock-Down” option  should be un checked in the activity preference tab.
-#Dependency : Always dependent.
-Scenario: Student scoring 70 in SIM5 Powerpoint activity
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
-And I navigate to "Course Materials" tab
-Then I should be on the "Course Materials" page
-When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
-And I launch the "PowerPoint Chapter 1 Skill-Based Training" activity by "CsSmsStudent" with "Set Idle"
-And I attempt questions in "PowerPoint Chapter 1 Skill-Based Training"
-
 #Purpose : Submitting training material in SIM5 Study Plan 
 #Test Case ID : peg-22011.
 #Product : MyItLab.
@@ -568,3 +550,24 @@ When I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" i
 And I launch the "Excel Chapter 1 Study Plan [Skill-Based]: Training" activity by "CsSmsStudent" with "ZeroScore"
 And I click on submit button answering incorrectly of "Excel" type "Training" mode activity "Excel Chapter 1 Study Plan [Skill-Based]: Training"
 Then I should be on the "Course Materials" page
+
+#Purpose : Submitting Sim 5 Powerpoint activity and Student scoring 70
+#Test case ID : peg-21995.
+#Products : MyItLab.
+#Pre condition : This test case depends on Power Point SIM5 activity should be created by instructor/Author in the following course and 
+#“Trap ALT+TAB and Browser Lock-Down” option  should be un checked in the activity preference tab.
+#Dependency : Always dependent.
+Scenario: Student scoring 70 in SIM5 Powerpoint activity
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
+And I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "PowerPoint Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the "PowerPoint Chapter 1 Skill-Based Training" activity in content by "CsSmsStudent"
+And I attempt questions in "PowerPoint Chapter 1 Skill-Based Training"
+Then I should be on the "Course Materials" page
+And I should see the "Passed" status for the activity "PowerPoint Chapter 1 Skill-Based Training"
+#And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Skill-Based Training" in course material page

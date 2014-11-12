@@ -1755,6 +1755,23 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         }
 
         /// <summary>
+        /// Right Clicks in the middle of the given element.
+        /// </summary>
+        /// <param name="webElement">Element to move to.</param>
+        /// <see cref="Actions">The user-facing API for emulating complex user gestures. 
+        /// Use this class rather than using the Keyboard or Mouse directly. Implements the builder pattern: 
+        /// Builds a CompositeAction containing all actions specified by the method calls.</see>
+        /// /// <seealso cref="MoveToElement">Moves the mouse to the middle of the element. 
+        /// The element is scrolled into view and its location is calculated using getBoundingClientRect.
+        /// Clicks in the middle of the given element. Equivalent to: Actions.moveToElement(onElement).click()		</seealso>
+        /// <see cref="Click">Clicks at the current mouse location.</see>
+        /// <see cref="Perform">A convenience method for performing the actions without calling build() 		first.</see>
+        protected void PerformMouseRightClickAction(IWebElement webElement)
+        {
+            new Actions(WebDriver).MoveToElement(webElement).ContextClick().Build().Perform();
+        }
+
+        /// <summary>
         /// Moves the mouse to the middle of the element and Clicks in the middle of the given element.
         /// </summary>
         /// <param name="webElement">Element to move to.</param>

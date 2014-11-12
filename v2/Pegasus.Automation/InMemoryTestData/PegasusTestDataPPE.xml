@@ -27,12 +27,12 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>PPE_Automation</Name>
+      <Name>Gokul_Automation</Name>
       <CourseType>MyITLabOffice2013Program</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>true</IsPreferenceStatus>
-      <SectionName>30809dee-8570-4320-81f5-1df37ca9306e</SectionName>
-      <SectionId>CRSKLLH-2041824</SectionId>
+      <SectionName>Gokul_Automation</SectionName>
+      <SectionId>CRSKLRM-2041991</SectionId>
       <IsPublished>true</IsPublished>
       <IsApproved>true</IsApproved>
     </Course>
