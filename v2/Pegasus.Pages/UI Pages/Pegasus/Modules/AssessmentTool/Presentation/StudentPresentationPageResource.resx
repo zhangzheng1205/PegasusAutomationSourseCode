@@ -1123,6 +1123,9 @@
     <value>//*[@id='ViewAllDlg']/div[2]/div[2]/table/tbody/tr[5]/td[1]</value>
   </data>
   <data name="StudentPrsentation_Page_PPT_ViewAll_Question_Xpath_Locator" xml:space="preserve">
-    <value>"//*[@id='ViewAllDlg']/div[2]/div[2]/table/tbody/tr[{0}]/td[1]"</value>
+    <value>//*[@id='ViewAllDlg']/div[2]/div[2]/table/tbody/tr[{0}]/td[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_25_Paragraph1_CSSLocator" xml:space="preserve">
+    <value>#ContentDiv_TP_6 &gt; ul</value>
   </data>
 </root>

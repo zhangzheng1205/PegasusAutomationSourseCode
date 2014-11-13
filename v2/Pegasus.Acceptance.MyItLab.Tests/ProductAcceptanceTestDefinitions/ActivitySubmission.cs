@@ -833,16 +833,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// Sim5 Power Point Questions Submission.
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
-        [When(@"I attempt questions in ""(.*)""")]
-        public void AttemptSim5PowerPointQuestions(string activityName)
+        [When(@"I attempt questions ""(.*)"" in ""(.*)""")]
+        public void AttemptSim5PowerPointQuestions(string NoOfQuestions,string activityName)
         {
             //Sim5 Power Point Questions Submission
             Logger.LogMethodEntry("ActivitySubmission", "AttemptSim5PowerPointQuestions",
             IsTakeScreenShotDuringEntryExit);
             //Attempt Sim5 Power Point Questions
-            new StudentPresentationPage().AttemptSim5PowerPointQuestions(activityName);
+            new StudentPresentationPage().AttemptSim5PowerPointQuestions(activityName, NoOfQuestions);
             Logger.LogMethodExit("ActivitySubmission", "AttemptSim5PowerPointQuestions",
             IsTakeScreenShotDuringEntryExit);
         }
+
     }
 }

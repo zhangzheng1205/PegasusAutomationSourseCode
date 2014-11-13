@@ -3415,15 +3415,23 @@ namespace Pegasus.Pages.UI_Pages
         /// Attempt Sim5 Power Point Questions.
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
-        public void AttemptSim5PowerPointQuestions(string activityName)
+        public void AttemptSim5PowerPointQuestions(string activityName, string NoOfQuestions)
         {
             //Attempt Sim5 Power Point Questions
             logger.LogMethodEntry("StudentPresentationPage", "AttemptSim5PowerPointQuestions",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+               if(NoOfQuestions.Equals("100%"))
+               {
                 ServetyPercentScoringQuestions(activityName);
                 // ThirtyPercentScoringQuestions();
+               }
+               else if (NoOfQuestions.Equals("70%"))
+               {
+                   ServetyPercentScoringQuestions(activityName);
+               }
+
 
                 //Click On SIM5 Activity Submit Button
                 this.ClickOnSim5ActivitySubmitButton();
@@ -3438,21 +3446,33 @@ namespace Pegasus.Pages.UI_Pages
 
         private void ThirtyPercentScoringQuestions()
         {
+            //Second Question Submission
+           AttemptSecondQuestion();
+           //Fourth Question Submission
+           AttemptFourthQuestion();
+           //Fifth Question Submission
+           AttemptFifthQuestion();
             //Seventh Question Submission
-            //AttemptSeventhQuestion();
+            AttemptSeventhQuestion();
+
+
+            //Fifteenth Question submission
+            AttemptFifteenthQuestioin();
+            //Sixteenth Question submission
+            AttemptSixteenthQuestion();
 
             //Nineteenth Question submission
-            //AttemptNineteenthQuestioin();
+            AttemptNineteenthQuestioin();
             //Twentieth Question submission
-            // AttemptTwentiethQuestioin();
+             AttemptTwentiethQuestioin();
 
             //TwentyThird Question submission
-            //AttemptTwentyThirdQuestioin();
-            ////TwentyFourth Question submission
-            //AttemptTwentyFourthQuestioin();
+            AttemptTwentyThirdQuestioin();
+            //TwentyFourth Question submission
+            AttemptTwentyFourthQuestioin();
 
             //Twentyninth Question submission
-            //AttemptTwentyninthQuestioin();
+            AttemptTwentyninthQuestioin();
             //Thirtyth Question submission
             //AttemptThirtythQuestioin();
         }
@@ -3465,15 +3485,13 @@ namespace Pegasus.Pages.UI_Pages
             {
                 //First Question Submission
                 AttemptFirstQuestion(activityName);
-                //Second Question Submission
-                AttemptSecondQuestion();
+                
                 //Third Question Submission
+                getQuestionNumber(3);
                 AttemptThirdQuestion();
-                //Fourth Question Submission
-                AttemptFourthQuestion();
-                //Fifth Question Submission
-                AttemptFifthQuestion();
+                
                 //Sixth Question Submission
+                getQuestionNumber(6);
                 AttemptSixthQuestion();
 
                 //Eight Question Submission
@@ -3491,11 +3509,9 @@ namespace Pegasus.Pages.UI_Pages
                 AttemptThirteenthQuestion();
                 //Fourteenth Question submission
                 AttemptFourteenthQuestion();
-                //Fifteenth Question submission
-                AttemptFifteenthQuestioin();
-                //Sixteenth Question submission
-                AttemptSixteenthQuestion();
+
                 //Seventeenth Question submission
+                getQuestionNumber(17);
                 AttemptSeventeenthQuestioin();
                 //Eighteenth Question submission
                 AttemptEighteenthQuestioin();
@@ -3911,7 +3927,7 @@ namespace Pegasus.Pages.UI_Pages
                  StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on slide title and press cntrl+E
                 IWebElement title = base.GetWebElementPropertiesByCssSelector(
-                StudentPresentationPageResource.StudentPrsentation_Page_PPT_25_Paragraph_CSSLocator);
+                StudentPresentationPageResource.StudentPrsentation_Page_PPT_25_Paragraph1_CSSLocator);
                 base.PerformMoveToElementClickAction(title);
                 base.PerformKeyDownThenPressKeyToElement(Keys.Control,
                 StudentPresentationPageResource.StudentPrsentation_Page_E_Key, 1);
@@ -4539,15 +4555,14 @@ namespace Pegasus.Pages.UI_Pages
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
                 // press space bar to proceed to slide 2-6
-                base.SwitchToDefaultWindow();
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < 5; i++)
                 {
-                    base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);
+                    base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EnterKey_Value);                   
                     Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                      StudentPrsentation_Page_SIM5_Sleep_Time));
                 }
                 // Press Esc to return Normal view
-              // base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EscapeKey_Value);
+                base.PressKey(StudentPresentationPageResource.StudentPresentation_Page_EscapeKey_Value);
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
 
@@ -5079,7 +5094,7 @@ namespace Pegasus.Pages.UI_Pages
                     StudentPrsentation_Page_Title_Xpath_Locator);
                 base.PerformMouseClickAction(Perfclick);
                 base.PressKey(StudentPresentationPageResource.StudentPrsentation_Page_Down_Key_Value);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                     StudentPrsentation_Page_SIM5_Sleep_Time));
             }
             catch (Exception e)
