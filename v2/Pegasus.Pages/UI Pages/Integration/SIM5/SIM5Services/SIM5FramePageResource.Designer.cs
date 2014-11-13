@@ -61,11 +61,137 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to accss.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessDatabase_Icon_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessDatabase_Icon_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-slickGridCell_5_0_0.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessGridCell0_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessGridCell0_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 123456789.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessGridCell0_TextBox_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessGridCell0_TextBox_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-slickGridCell_5_0_1.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessGridCell1_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessGridCell1_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TOLIVER.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessGridCell1_TextBox_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessGridCell1_TextBox_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-slickGridCell_5_0_2.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessGridCell2_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessGridCell2_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to M.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessGridCell2_TextBox_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessGridCell2_TextBox_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-slickGridCell_5_0_3.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessGridCell3_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessGridCell3_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pamela.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessGridCell3_TextBox_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessGridCell3_TextBox_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-slickGridCell_5_0_4.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessGridCell4_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessGridCell4_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11/22/1985.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessGridCell4_TextBox_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessGridCell4_TextBox_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to templateItemImage.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessTemplate_Image_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessTemplate_Image_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to div:contains(&apos;USB Disk (E:)&apos;).
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessUsbDisk_Menu_CssSelector_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessUsbDisk_Menu_CssSelector_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ul#ribbon-tab-Home li:nth-child(3) .icon-wrapper.button-icon.
         /// </summary>
         internal static string SIM5Frame_Page_AlignmentObjects_Collection_CssSelector {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_AlignmentObjects_Collection_CssSelector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to label:contains(&apos;Create&apos;).
+        /// </summary>
+        internal static string SIM5Frame_Page_CreateFile_Button_CssSelector_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_CreateFile_Button_CssSelector_Locator", resourceCulture);
             }
         }
         
@@ -84,6 +210,33 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_Excel_Save_Xpath_Locator {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_Excel_Save_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4-TextBoxFileName.
+        /// </summary>
+        internal static string SIM5Frame_Page_FileName_TextBox_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_FileName_TextBox_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1A_Drivers.
+        /// </summary>
+        internal static string SIM5Frame_Page_FileName_TextBox_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_FileName_TextBox_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .btntextSpan.
+        /// </summary>
+        internal static string SIM5Frame_Page_FileSave_Button_CssSelector_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_FileSave_Button_CssSelector_Locator", resourceCulture);
             }
         }
         
@@ -111,6 +264,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_New_Excel_Workbook_Xpath_Locator {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_New_Excel_Workbook_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to fwdtaskbtn.
+        /// </summary>
+        internal static string SIM5Frame_Page_NextQuestion_Button_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_NextQuestion_Button_Id_Locator", resourceCulture);
             }
         }
         

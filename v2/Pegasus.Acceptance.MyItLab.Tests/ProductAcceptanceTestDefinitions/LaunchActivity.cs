@@ -122,13 +122,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="activityName">This of the activity name.</param>
         /// </summary>
         [When(@"I should answer activity ""(.*)"" correctly and click on Submit button")]
-        public void SubmitSim5ExcelTypeActivity(String activityName)
+        public void SubmitSim5Activity(String activityName)
         {
             //Submit SIM5 Excel type activity
-            Logger.LogMethodEntry("LaunchActivity", "SubmitSim5ExcelTypeActivity",
+            Logger.LogMethodEntry("LaunchActivity", "SubmitSim5Activity",
                 base.IsTakeScreenShotDuringEntryExit);
-            new SIM5FramePage().SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining(activityName);
-            Logger.LogMethodExit("LaunchActivity", "SubmitSim5ExcelTypeActivity",
+            new Sim5FramePage().SubmitSimActivityWithScore(activityName);
+            Logger.LogMethodExit("LaunchActivity", "SubmitSim5Activity",
                base.IsTakeScreenShotDuringEntryExit);
         }
 

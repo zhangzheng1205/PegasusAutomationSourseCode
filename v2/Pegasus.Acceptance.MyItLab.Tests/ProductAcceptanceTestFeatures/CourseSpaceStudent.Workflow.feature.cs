@@ -1326,6 +1326,74 @@ testRunner.And("I should see the \"Passed\" status for the activity \"PowerPoint
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student launches a Sim 5 Access activity and Student scoring a 100% compares the " +
+            "result and status")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void StudentLaunchesASim5AccessActivityAndStudentScoringA100ComparesTheResultAndStatus()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student launches a Sim 5 Access activity and Student scoring a 100% compares the " +
+                    "result and status", ((string[])(null)));
+#line 580
+this.ScenarioSetup(scenarioInfo);
+#line 581
+testRunner.When("I select \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course M" +
+                    "aterials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 582
+testRunner.And("I launch the \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" activity" +
+                    " in content by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 583
+testRunner.And("I should answer activity \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario " +
+                    "1)\" correctly and click on Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 584
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 585
+testRunner.When("I click on cmenu \"ViewSubmissions\" of asset \"Access Chapter 1 Project 1A Skill-Ba" +
+                    "sed Exam (Scenario 1)\" with mode \"SkillBased\" in Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 586
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 587
+testRunner.When("I click on the last submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 588
+testRunner.Then("I should see the grade is \"5.9%\" in View Submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student launches a Sim 5 Access activity and Student scoring a 70% compares the r" +
+            "esult and status")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void StudentLaunchesASim5AccessActivityAndStudentScoringA70ComparesTheResultAndStatus()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student launches a Sim 5 Access activity and Student scoring a 70% compares the r" +
+                    "esult and status", ((string[])(null)));
+#line 595
+this.ScenarioSetup(scenarioInfo);
+#line 596
+testRunner.When("I select \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course M" +
+                    "aterials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 597
+testRunner.And("I launch the \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" activity" +
+                    " in content by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 598
+testRunner.And("I should answer activity \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario " +
+                    "1)\" correctly and click on Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 599
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 600
+testRunner.When("I click on cmenu \"ViewSubmissions\" of asset \"Access Chapter 1 Project 1A Skill-Ba" +
+                    "sed Exam (Scenario 1)\" with mode \"SkillBased\" in Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 601
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 602
+testRunner.When("I click on the last submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 603
+testRunner.Then("I should see the grade is \"5.9%\" in View Submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
