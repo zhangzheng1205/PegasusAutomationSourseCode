@@ -3509,9 +3509,11 @@ namespace Pegasus.Pages.UI_Pages
                 AttemptThirteenthQuestion();
                 //Fourteenth Question submission
                 AttemptFourteenthQuestion();
-
+                //Fifteenth Question submission
+                AttemptFifteenthQuestioin();
+                //Sixteenth Question submission
+                AttemptSixteenthQuestion();
                 //Seventeenth Question submission
-                getQuestionNumber(17);
                 AttemptSeventeenthQuestioin();
                 //Eighteenth Question submission
                 AttemptEighteenthQuestioin();
