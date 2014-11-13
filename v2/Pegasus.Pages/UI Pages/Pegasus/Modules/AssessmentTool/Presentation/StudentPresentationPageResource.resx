@@ -1128,4 +1128,136 @@
   <data name="StudentPrsentation_Page_PPT_25_Paragraph1_CSSLocator" xml:space="preserve">
     <value>#ContentDiv_TP_6 &gt; ul</value>
   </data>
+  <data name="StudentPrsentation_Page_BevelImage_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[2]/span/span[1]/span/span[2]/span[2]/div[1]/div[2]/div/div[7]/div[5]/div/div[13]/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_BevelOption_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[2]/span/span[1]/span/span[2]/span[2]/div[1]/div[2]/div/div[7]/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Blankdocument__Xpath_Locator" xml:space="preserve">
+    <value>//div[@title='Blank document']</value>
+  </data>
+  <data name="StudentPrsentation_Page_BlueColor_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/div/ul[2]/li[2]/div/div[2]/div[2]/div[2]/div/ul/div[3]/div[4]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_BoxOption_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/div/ul[2]/li[2]/div/div[1]/div/div[2]/div/button</value>
+  </data>
+  <data name="StudentPrsentation_Page_ButtonOk_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/button[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Centertext_Xpath_locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[5]/ul/li[3]/span/span[1]/span/span[2]/span[1]/span[2]/span/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_Colordropdown_Xpath_locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[5]/ul/li[2]/span/span[1]/span/span[2]/span[3]/span[3]/div[1]/div[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_ColorDrop_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/div/ul[2]/li[2]/div/div[2]/div[2]/div[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Color_Xpath_locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[5]/ul/li[2]/span/span[1]/span/span[2]/span[3]/span[3]/div[1]/div[2]/div/div[1]/div/ul/div[2]/div[4]/div</value>
+  </data>
+  <data name="StudentPrsentation_Page_DesineTab_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/ul/li[7]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Effect_Image_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[1]/span/span[1]/span/span[3]/span[3]/div[1]/div[2]/div/div[1]/div[20]/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_Formattool_Tab_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[1]/div[5]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Image_Id_Locator" xml:space="preserve">
+    <value>GO_A1_Image1</value>
+  </data>
+  <data name="StudentPrsentation_Page_insert_Tab_Xpath_Locator" xml:space="preserve">
+    <value>//ul[@class='ribbon-tabs-wrapper']/li[6]</value>
+  </data>
+  <data name="StudentPrsentation_Page_MarginAlignOption_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/ul[2]/li[1]/div[2]/div[1]/div[3]/div[2]/div/div[1]/ul/li[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_MarginAlign_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/ul[2]/li[1]/div[2]/div[1]/div[3]/div[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_MoreOptions_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[3]/span/span[1]/span/span[1]/div[1]/div[2]/div/div[6]/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Pagealign_Okbutton_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[5]/div/div[2]/div/button[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PageAlign_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/ul[2]/li[1]/div[1]/div/div[1]/label[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PageBorders_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[8]/ul/li[2]/span/span[1]/span/span/span[3]/span/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_PageOptions_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[3]/span/span[1]/span/span[1]/div[1]/div[1]/div/div[1]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Persoectivelink_Xpath_locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[2]/div/div[4]/div[5]/div/div[1]/div[8]/div[3]/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_Pictureeffects_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[2]/span/span[1]/span/span[2]/span[2]/div[1]/div[1]/div/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PictureEffect_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[1]/span/span[1]/span/span[3]/span[3]/div[1]/div[1]/div/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Raptext_Option_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[3]/div/div/span[9]/span[1]/span[13]/span[4]/span[3]/span[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Raptext_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='imageContextMenu']/span/span[13]/span[@class='text']</value>
+  </data>
+  <data name="StudentPrsentation_Page_RightAlignOption_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/ul[2]/li[1]/div[2]/div[1]/div[1]/div[2]/div/div[1]/ul/li[3]</value>
+  </data>
+  <data name="StudentPrsentation_Page_RightAlign_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/ul[2]/li[1]/div[2]/div[1]/div[1]/div[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Shadoweffect_Xpath_locator" xml:space="preserve">
+    <value>//ul[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Shadowlink_Xpath_locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[2]/div/div[4]/div[2]</value>
+  </data>
+  <data name="StudentPrsentation_Page_Shadow_Dropdown_Xpath_locator" xml:space="preserve">
+    <value>//ul[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[1]/span</value>
+  </data>
+  <data name="StudentPrsentation_Page_Shadow_Xpath_locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[2]/div/div[1]/div[2]/div/span/img</value>
+  </data>
+  <data name="StudentPrsentation_Page_Sleep_time" xml:space="preserve">
+    <value>4000</value>
+  </data>
+  <data name="StudentPrsentation_Page_Textfill__Id_Locator" xml:space="preserve">
+    <value>task01selstart</value>
+  </data>
+  <data name="StudentPrsentation_Page_Textselect_Xpath_locator" xml:space="preserve">
+    <value>//*[@id='task3selStart']</value>
+  </data>
+  <data name="StudentPrsentation_Page_Textsize" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="StudentPrsentation_Page_Textsize_Xpath_locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[2]/span/span[1]/span/span[1]/span[1]/span[2]/div[1]/div[1]/div/input</value>
+  </data>
+  <data name="StudentPrsentation_Page_Text_tofill" xml:space="preserve">
+    <value>Sharks: Myth or Fact?</value>
+  </data>
+  <data name="StudentPrsentation_Page_Thread_sleep" xml:space="preserve">
+    <value>3000</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__End_Key" xml:space="preserve">
+    <value>{END}</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__Forwardbutton_id_Locator" xml:space="preserve">
+    <value>fwdtaskbtn</value>
+  </data>
+  <data name="StudentPrsentation_Page_Worddocument__Id_Locator" xml:space="preserve">
+    <value>wrd</value>
+  </data>
+  <data name="StudentPrsentation_Page__Textfill_Id_Locator" xml:space="preserve">
+    <value>task01selstart</value>
+  </data>
 </root>

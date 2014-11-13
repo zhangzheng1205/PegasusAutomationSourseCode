@@ -1322,6 +1322,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to task01selstart.
+        /// </summary>
+        internal static string StudentPrsentation_Page__Textfill_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page__Textfill_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quiz.
         /// </summary>
         internal static string StudentPrsentation_Page_ActivityQuiz_WindowName_Locator {
@@ -1331,11 +1340,101 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[2]/span/span[1]/span/span[2]/span[2]/div[1]/div[2]/div/div[7]/div[5]/div/div[13]/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_BevelImage_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_BevelImage_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[2]/span/span[1]/span/span[2]/span[2]/div[1]/div[2]/div/div[7]/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_BevelOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_BevelOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@title=&apos;Blank document&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Blankdocument__Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Blankdocument__Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/div/ul[2]/li[2]/div/div[2]/div[2]/div[2]/div/ul/div[3]/div[4]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_BlueColor_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_BlueColor_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/div/ul[2]/li[2]/div/div[1]/div/div[2]/div/button.
+        /// </summary>
+        internal static string StudentPrsentation_Page_BoxOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_BoxOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@class=&apos;saveAsRightPaneDiv&apos;]/div/div[4].
         /// </summary>
         internal static string StudentPrsentation_Page_Browse_Option_Xpath_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_Browse_Option_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/button[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_ButtonOk_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_ButtonOk_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[5]/ul/li[3]/span/span[1]/span/span[2]/span[1]/span[2]/span/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Centertext_Xpath_locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Centertext_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[5]/ul/li[2]/span/span[1]/span/span[2]/span[3]/span[3]/div[1]/div[2]/div/div[1]/div/ul/div[2]/div[4]/div.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Color_Xpath_locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Color_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/div/ul[2]/li[2]/div/div[2]/div[2]/div[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_ColorDrop_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_ColorDrop_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[5]/ul/li[2]/span/span[1]/span/span[2]/span[3]/span[3]/div[1]/div[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Colordropdown_Xpath_locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Colordropdown_Xpath_locator", resourceCulture);
             }
         }
         
@@ -1421,6 +1520,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/ul/li[7].
+        /// </summary>
+        internal static string StudentPrsentation_Page_DesineTab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_DesineTab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {DOWN}.
         /// </summary>
         internal static string StudentPrsentation_Page_Down_Key_Value {
@@ -1435,6 +1543,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_E_Key {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_E_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[1]/span/span[1]/span/span[3]/span[3]/div[1]/div[2]/div/div[1]/div[20]/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Effect_Image_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Effect_Image_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -1565,6 +1682,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[1]/div[5].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Formattool_Tab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Formattool_Tab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your Dreams.
         /// </summary>
         internal static string StudentPrsentation_Page_Fourth_Question_Title_Value {
@@ -1583,11 +1709,56 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GO_A1_Image1.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Image_Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Image_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;ribbon-tab-container-home&apos;]/ul/li[4]/span/span/span/span/span/span[5]/span/div/span.
         /// </summary>
         internal static string StudentPrsentation_Page_IncreaseList_Level_Xpath_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_IncreaseList_Level_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@class=&apos;ribbon-tabs-wrapper&apos;]/li[6].
+        /// </summary>
+        internal static string StudentPrsentation_Page_insert_Tab_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_insert_Tab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/ul[2]/li[1]/div[2]/div[1]/div[3]/div[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_MarginAlign_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_MarginAlign_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/ul[2]/li[1]/div[2]/div[1]/div[3]/div[2]/div/div[1]/ul/li[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_MarginAlignOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_MarginAlignOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[3]/span/span[1]/span/span[1]/div[1]/div[2]/div/div[6]/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_MoreOptions_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_MoreOptions_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -1673,11 +1844,74 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[5]/div/div[2]/div/button[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Pagealign_Okbutton_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Pagealign_Okbutton_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/ul[2]/li[1]/div[1]/div/div[1]/label[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PageAlign_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PageAlign_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[8]/ul/li[2]/span/span[1]/span/span/span[3]/span/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_PageBorders_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PageBorders_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[3]/span/span[1]/span/span[1]/div[1]/div[1]/div/div[1].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PageOptions_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PageOptions_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@title=&apos;Panoramic Picture with Caption&apos;]/div/span.
         /// </summary>
         internal static string StudentPrsentation_Page_Panoramic_Slide_Xpath_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_Panoramic_Slide_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[2]/div/div[4]/div[5]/div/div[1]/div[8]/div[3]/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Persoectivelink_Xpath_locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Persoectivelink_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[1]/span/span[1]/span/span[3]/span[3]/div[1]/div[1]/div/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_PictureEffect_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_PictureEffect_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[1]/div/div/div/div[15]/ul/li[2]/span/span[1]/span/span[2]/span[2]/div[1]/div[1]/div/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Pictureeffects_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Pictureeffects_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -2564,6 +2798,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[3]/div/div/span[9]/span[1]/span[13]/span[4]/span[3]/span[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Raptext_Option_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Raptext_Option_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;imageContextMenu&apos;]/span/span[13]/span[@class=&apos;text&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Raptext_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Raptext_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/ul[2]/li[1]/div[2]/div[1]/div[1]/div[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_RightAlign_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_RightAlign_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/div[1]/div[2]/div[5]/div/div[2]/div/div/ul[2]/li[1]/div[2]/div[1]/div[1]/div[2]/div/div[1]/ul/li[3].
+        /// </summary>
+        internal static string StudentPrsentation_Page_RightAlignOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_RightAlignOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SAM Activity.
         /// </summary>
         internal static string StudentPrsentation_Page_SAMActivity_WindowName_Locator {
@@ -2632,6 +2902,42 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_Second_Bulleted_Point_Text_Xpath_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_Second_Bulleted_Point_Text_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Shadow_Dropdown_Xpath_locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Shadow_Dropdown_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[2]/div/div[1]/div[2]/div/span/img.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Shadow_Xpath_locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Shadow_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //ul[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[1]/span.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Shadoweffect_Xpath_locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Shadoweffect_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[2]/span[3]/span[1]/div[1]/div[2]/div/div[4]/div[2].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Shadowlink_Xpath_locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Shadowlink_Xpath_locator", resourceCulture);
             }
         }
         
@@ -2960,6 +3266,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 4000.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Sleep_time {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Sleep_time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  - .
         /// </summary>
         internal static string StudentPrsentation_Page_Space_Hypen_Value {
@@ -3023,6 +3338,51 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sharks: Myth or Fact?.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Text_tofill {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Text_tofill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to task01selstart.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Textfill__Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Textfill__Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;task3selStart&apos;].
+        /// </summary>
+        internal static string StudentPrsentation_Page_Textselect_Xpath_locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Textselect_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 30.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Textsize {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Textsize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[2]/span/span[1]/span/span[1]/span[1]/span[2]/div[1]/div[1]/div/input.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Textsize_Xpath_locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Textsize_Xpath_locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pacific Northwest including U.S. And Canada.
         /// </summary>
         internal static string StudentPrsentation_Page_Third_Bulleted_Point_Text_Value {
@@ -3037,6 +3397,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_Third_Bulleted_Point_Text_Xpath_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_Third_Bulleted_Point_Text_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3000.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Thread_sleep {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Thread_sleep", resourceCulture);
             }
         }
         
@@ -3091,6 +3460,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_Title_Xpath_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_Title_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {END}.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__End_Key {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__End_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to fwdtaskbtn.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__Forwardbutton_id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__Forwardbutton_id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to wrd.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Worddocument__Id_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Worddocument__Id_Locator", resourceCulture);
             }
         }
     }

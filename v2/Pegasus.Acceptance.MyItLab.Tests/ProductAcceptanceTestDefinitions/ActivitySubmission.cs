@@ -845,5 +845,21 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Sim5 Word Questions Submission.
+        /// </summary>
+        /// <param name="attemptPercentage"></param>
+        /// <param name="activityName"></param>
+        [When(@"I attempt questions for ""(.*)"" in activity ""(.*)""")]
+        public void WhenIAttemptQuestionsForInActivity(string attemptPercentage, string activityName)
+        {
+            //Sim5 Power Point Questions Submission
+            Logger.LogMethodEntry("ActivitySubmission", "AttemptSim5PowerPointQuestions",
+            IsTakeScreenShotDuringEntryExit);
+            //Attempt Sim5 Power Point Questions
+            new StudentPresentationPage().AttemptSim5WordactivityQuestions(attemptPercentage, activityName);
+            Logger.LogMethodExit("ActivitySubmission", "AttemptSim5PowerPointQuestions",
+            IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
