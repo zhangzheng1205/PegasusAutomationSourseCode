@@ -264,4 +264,7 @@
   <data name="CoursePreviewMainUX_Page_ViewSubmissions_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='PegMenu32']/div[@id='cmenuCont']/div[@id='11']</value>
   </data>
+  <data name="CoursePreviewMainUX_Page_Iframe_Id_Locator" xml:space="preserve">
+    <value>ifrmRight</value>
+  </data>
 </root>

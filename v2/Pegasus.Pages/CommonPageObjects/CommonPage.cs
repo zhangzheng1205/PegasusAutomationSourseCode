@@ -359,8 +359,8 @@ namespace Pegasus.Pages.CommonPageObjects
                 }
                 //Click on the folder link
                 base.WaitForElement(By.PartialLinkText(FolderName));
-                IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
-                    (FolderName);
+                IWebElement getFolderLink = base.
+                    GetWebElementPropertiesByPartialLinkText(FolderName);
                 base.ClickByJavaScriptExecutor(getFolderLink);
             }
             catch (Exception e)
@@ -1179,19 +1179,25 @@ namespace Pegasus.Pages.CommonPageObjects
             return ActualFolderName;
         }
 
+        /// <summary>
+        /// Returns boolean value for window launch.
+        /// </summary>
+        /// <returns>Boolean value.</returns>
         public Boolean IsPageOpened()
         {
-
+            // Returns boolean value for window launch
             Logger.LogMethodEntry("CommonPage",
                 "IsPageOpened",
                 base.IsTakeScreenShotDuringEntryExit);
             Boolean IsPageOpened = false;
             Thread.Sleep(Convert.ToInt32(CommonPageResource.
                          ComonPage_Amplifier_Launch_Wait_Time));
+            //Switch to window
             base.SwitchToLastOpenedWindow();
             base.WaitForElement(By.Id(CommonPageResource.
                 ComonPage_Amplifier_AssignmentNavigationView_Id_Locator));
             string getTheUrl = base.GetCurrentUrl;
+            // Returns boolean value for window launch
             if ((getTheUrl.Contains("amplifire")))
             {
                 IsPageOpened = true;
@@ -1227,20 +1233,27 @@ namespace Pegasus.Pages.CommonPageObjects
             return getCurrentURL;
         }
 
+        /// <summary>
+        /// Gets the text displayed in the window.
+        /// </summary>
+        /// <param name="Text">The text displayed in window.</param>
+        /// <returns></returns>
         public string GetTextByXpath(string Text)
         {
+            // Gets the text displayed in the window
             Logger.LogMethodEntry("CommonPage",
                 "GetTextByXpath",
                base.IsTakeScreenShotDuringEntryExit);
-
             string ActualString = String.Empty;
             try
             {
+                // Gets the text displayed in the window
                 switch (Text)
                 {
                     case "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host":
                         base.SwitchToLastOpenedWindow();
-                        base.WaitForElement(By.XPath(CommonPageResource.ComonPage_BookTitle_For_Amplifire),10);
+                        base.WaitForElement(By.XPath(CommonPageResource.
+                            ComonPage_BookTitle_For_Amplifire),10);
                         ActualString = base.GetElementInnerTextByXPath(CommonPageResource.
                             ComonPage_BookTitle_For_Amplifire).Trim();
                         break;
@@ -1254,6 +1267,7 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage",
                 "GetTextByXpath",
               base.IsTakeScreenShotDuringEntryExit);
+            // Returns the text displayed in the window
             return ActualString;
         }
 

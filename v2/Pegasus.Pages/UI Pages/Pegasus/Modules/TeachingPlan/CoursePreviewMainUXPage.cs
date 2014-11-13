@@ -1152,7 +1152,10 @@ namespace Pegasus.Pages.UI_Pages
             return isScheduled & isStartDateExists & isEndDateExists;
         }
 
-
+        /// <summary>
+        /// Open the activity.
+        /// </summary>
+        /// <param name="ActivityName">This is the activity.</param>
         public void OpenTheActivityFromMyCourse(string ActivityName)
         {
             // Launch The Activity
@@ -1165,10 +1168,11 @@ namespace Pegasus.Pages.UI_Pages
                     CoursePreviewMainUX_Page_Window_Title_Name_HED);
                 base.SelectWindow(CoursePreviewMainUXPageResource.
                     CoursePreviewMainUX_Page_Window_Title_Name_HED);
-                base.WaitForElement(By.Id("ifrmRight"));
+                base.WaitForElement(By.Id(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Iframe_Id_Locator));
                 //Switch To Frame
-                base.SwitchToIFrameById("ifrmRight");
-
+                base.SwitchToIFrameById(CoursePreviewMainUXPageResource.
+                    CoursePreviewMainUX_Page_Iframe_Id_Locator);
                 //Wait For The Activity Name
                 base.WaitForElement(By.PartialLinkText(ActivityName));
                 //Get Activity Property

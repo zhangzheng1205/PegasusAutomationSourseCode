@@ -288,8 +288,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         {
             // Open The Activity 
             Logger.LogMethodEntry("CommonSteps", "OpenTheActivityFromMyCourse",
-                base.IsTakeScreenShotDuringEntryExit);
-            // Switch to default window after closing of presentation pop up            
+                base.IsTakeScreenShotDuringEntryExit);           
             //Launch The Activity
             new CoursePreviewMainUXPage().OpenTheActivityFromMyCourse(ActivityName);
             Logger.LogMethodExit("CommonSteps", "OpenTheActivityFromMyCourse",

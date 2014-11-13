@@ -3778,20 +3778,26 @@ namespace Pegasus.Pages.UI_Pages
             return gettingStartedContentText;
         }
 
+        /// <summary>
+        /// Get the message displayed in the window.
+        /// </summary>
+        /// <returns>The message displayed.</returns>
         public string getDisplayedMessage()
         {
+            // Get the message displayed in the window
             Logger.LogMethodEntry("TodaysViewUXPage", "getDisplayedMessage",
                base.IsTakeScreenShotDuringEntryExit);
             String getMessage = string.Empty;
             try
             {
-
+                //Switch to the window
                 base.WaitUntilWindowLoads(TodaysViewUXPageResource.
                     TodayViewUXPageResource_Workspace_Amplifier_Window_Title_Value);
                 base.SelectWindow(TodaysViewUXPageResource.
                     TodayViewUXPageResource_Workspace_Amplifier_Window_Title_Value);
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodayViewUXPageResource_Workspace_Amplifier_Window_Warning_Id_Locator));
+                // Get the message displayed in the window
                 getMessage = base.GetElementInnerTextById(TodaysViewUXPageResource.
                     TodayViewUXPageResource_Workspace_Amplifier_Window_Warning_Id_Locator);
                 
