@@ -321,41 +321,53 @@ namespace Pegasus.Pages.CommonPageObjects
             User.UserTypeEnum userTypeEnum, string activityUnderTabName, string folderName)
         {
             // navigate inside access chapter1 simulation activities folder
-            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+            Logger.LogMethodEntry("CommonPage", "NavigateToAmplifierFolder",
                base.IsTakeScreenShotDuringEntryExit);
             // click folder level
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             this.NavigateInsideActivityFolderUnderTab(folderName, webElementToWait);
             //click folder second leve
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+            Logger.LogMethodExit("CommonPage", "NavigateToAmplifierFolder",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Navigate inside the folder based on user.
+        /// </summary>
+        /// <param name="FolderName">This is the folder.</param>
+        /// <param name="userTypeEnum">This is the user type.</param>
         public void NavigateInsideTheFolder(string FolderName,User.UserTypeEnum userTypeEnum)
         {
-            // navigate inside access chapter1 simulation activities folder
-            Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+            // Navigate inside the folder based on user
+            Logger.LogMethodEntry("CommonPage", "NavigateInsideTheFolder",
                base.IsTakeScreenShotDuringEntryExit);
-            // click folder level
-            //this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            //this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-            //    CommonPage_Amplifier_FolderName, webElementToWait);
-            base.SelectWindow("Course Materials");
-            if (User.UserTypeEnum.HedWsInstructor.Equals(userTypeEnum))
+            try
             {
-                base.SwitchToIFrameById("ifrmRight");
+                base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
+                //Switch to the iframe usertype is WS instructor
+                if (User.UserTypeEnum.HedWsInstructor.Equals(userTypeEnum))
+                {
+                    base.SwitchToIFrameById(CommonPageResource.
+                        ComonPage_MainCourse_FrameID);
+                }
+                //Switch to the iframe if usertype is other than WS instructor. 
+                else
+                {
+                    base.SwitchToIFrameById(CommonPageResource.
+                        CommonPage_Course_Materials_iFrame);
+                }
+                //Click on the folder link
+                base.WaitForElement(By.PartialLinkText(FolderName));
+                IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
+                    (FolderName);
+                base.ClickByJavaScriptExecutor(getFolderLink);
             }
-            else
+            catch (Exception e)
             {
-                base.SwitchToIFrameById("ifrmCoursePreview");
+                ExceptionHandler.HandleException(e);
             }
-            base.WaitForElement(By.PartialLinkText(FolderName));
-            IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
-                (FolderName);
-            
-            base.ClickByJavaScriptExecutor(getFolderLink);
-            Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
+            Logger.LogMethodExit("CommonPage", "NavigateInsideTheFolder",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1157,7 +1169,8 @@ namespace Pegasus.Pages.CommonPageObjects
             base.SelectWindow(CommonPageResource.CommonPage_Course_Materials);
             base.SwitchToIFrameById(CommonPageResource.CommonPage_Course_Materials_iFrame);
             base.WaitForElement(By.XPath(CommonPageResource.CommonPage_BreathCrumbItemSelected));
-            ActualFolderName = base.GetElementInnerTextByXPath(CommonPageResource.CommonPage_BreathCrumbItemSelected);
+            ActualFolderName = base.GetElementInnerTextByXPath(CommonPageResource.
+                CommonPage_BreathCrumbItemSelected);
 
             Logger.LogMethodExit("CommonPage",
                 "GetFolderNameByXpath",
@@ -1169,23 +1182,22 @@ namespace Pegasus.Pages.CommonPageObjects
         public Boolean IsPageOpened()
         {
 
-            Logger.LogMethodEntry("StudentPresentationPage",
+            Logger.LogMethodEntry("CommonPage",
                 "IsPageOpened",
                 base.IsTakeScreenShotDuringEntryExit);
             Boolean IsPageOpened = false;
-            //string getWindowTitle = base.GetPageTitle;
-            //base.WaitUntilWindowLoads(getWindowTitle); 
-            //base.SelectWindow(getWindowTitle);
-            Thread.Sleep(20000);
+            Thread.Sleep(Convert.ToInt32(CommonPageResource.
+                         ComonPage_Amplifier_Launch_Wait_Time));
             base.SwitchToLastOpenedWindow();
-            base.WaitForElement(By.Id("ASSIGNMENT_NAVIGATION_VIEW"));
+            base.WaitForElement(By.Id(CommonPageResource.
+                ComonPage_Amplifier_AssignmentNavigationView_Id_Locator));
             string getTheUrl = base.GetCurrentUrl;
             if ((getTheUrl.Contains("amplifire")))
             {
                 IsPageOpened = true;
 
             }
-            Logger.LogMethodExit("StudentPresentationPage",
+            Logger.LogMethodExit("CommonPage",
                 "IsPageOpened",
                 base.IsTakeScreenShotDuringEntryExit);
             return IsPageOpened;
@@ -1197,7 +1209,7 @@ namespace Pegasus.Pages.CommonPageObjects
         /// <returns>Current Url.</returns>
         public string GetCurrentURL()
         {
-            Logger.LogMethodEntry("StudentPresentationPage", "GetCurrentURL",
+            Logger.LogMethodEntry("CommonPage", "GetCurrentURL",
                base.IsTakeScreenShotDuringEntryExit);
             //Initialize the Variable
             String getCurrentURL = string.Empty;
@@ -1210,7 +1222,7 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("StudentPresentationPage", "GetCurrentURL",
+            Logger.LogMethodExit("CommonPage", "GetCurrentURL",
                 base.IsTakeScreenShotDuringEntryExit);
             return getCurrentURL;
         }
@@ -1218,21 +1230,29 @@ namespace Pegasus.Pages.CommonPageObjects
         public string GetTextByXpath(string Text)
         {
             Logger.LogMethodEntry("CommonPage",
-                "GetFolderNameByXpath",
+                "GetTextByXpath",
                base.IsTakeScreenShotDuringEntryExit);
 
             string ActualString = String.Empty;
-            switch (Text)
+            try
             {
-                case "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host":
-                    base.SwitchToLastOpenedWindow();
-                    base.WaitForElement(By.XPath(CommonPageResource.ComonPage_BookTitle_For_Amplifire),10);
-                    ActualString = base.GetElementInnerTextByXPath(CommonPageResource.ComonPage_BookTitle_For_Amplifire).Trim();
-                    break;
+                switch (Text)
+                {
+                    case "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host":
+                        base.SwitchToLastOpenedWindow();
+                        base.WaitForElement(By.XPath(CommonPageResource.ComonPage_BookTitle_For_Amplifire),10);
+                        ActualString = base.GetElementInnerTextByXPath(CommonPageResource.
+                            ComonPage_BookTitle_For_Amplifire).Trim();
+                        break;
 
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CommonPage",
-                "GetFolderNameByXpath",
+                "GetTextByXpath",
               base.IsTakeScreenShotDuringEntryExit);
             return ActualString;
         }

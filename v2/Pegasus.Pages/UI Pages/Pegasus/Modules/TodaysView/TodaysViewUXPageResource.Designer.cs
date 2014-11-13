@@ -1664,6 +1664,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to tr#trSubNavigationTab td.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Subtab_Count_CSS_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Subtab_Count_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //tr[@id=&apos;trSubNavigationTab&apos;]/td.
         /// </summary>
         internal static string TodayViewUXPageResource_Subtab_Count_Xpath_Locator {
@@ -1696,6 +1705,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_VerbChart_Image_Id_Locator {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_VerbChart_Image_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pegasus.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Workspace_Amplifier_Window_Title_Value {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Workspace_Amplifier_Window_Title_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to spnError.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Workspace_Amplifier_Window_Warning_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Workspace_Amplifier_Window_Warning_Id_Locator", resourceCulture);
             }
         }
     }

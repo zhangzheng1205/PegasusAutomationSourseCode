@@ -308,7 +308,8 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 "VerifyWarning"
                 , base.IsTakeScreenShotDuringEntryExit);
             //Verify the warning message
-            Logger.LogAssertion("VerifyTheMessage", ScenarioContext.Current.ScenarioInfo.Title, () => Assert.AreEqual
+            Logger.LogAssertion("VerifyTheMessage",
+                ScenarioContext.Current.ScenarioInfo.Title,() => Assert.AreEqual
                 (message, new TodaysViewUxPage().getDisplayedMessage()));
             //Close the amplifier popup
             base.CloseBrowserWindow();

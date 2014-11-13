@@ -1606,6 +1606,16 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             return GetElementCount(By.XPath(xPathValue));
         }
 
+        /// <summary>
+        /// Returns the number of nodes that match the specified css selector
+        /// </summary>
+        /// <param name="CSSSelectorValue"> The css selector expression to evaluate.</param>
+        /// <returns>the number of nodes that match the specified css selector.</returns>
+        protected int GetElementCountByCSSSelector(String CSSSelectorValue)
+        {
+            return GetElementCount(By.CssSelector(CSSSelectorValue));
+        }
+
         #endregion
 
         #region WebDriver Navigate

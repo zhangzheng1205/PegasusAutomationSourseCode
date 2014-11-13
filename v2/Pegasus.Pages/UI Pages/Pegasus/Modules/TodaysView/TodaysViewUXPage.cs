@@ -3297,11 +3297,11 @@ namespace Pegasus.Pages.UI_Pages
                 if (childTabName != "Default Value")
                 {
                     //Get Subtab Counts
-                    base.WaitForElement(By.XPath(TodaysViewUXPageResource.
-                        TodayViewUXPageResource_Subtab_Count_Xpath_Locator));
+                    base.WaitForElement(By.CssSelector(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Subtab_Count_CSS_Locator));
                     //Get Tab Count
-                    int getSubTabCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
-                        TodayViewUXPageResource_Subtab_Count_Xpath_Locator);
+                    int getSubTabCount = base.GetElementCountByCSSSelector(TodaysViewUXPageResource.
+                        TodayViewUXPageResource_Subtab_Count_CSS_Locator);
                     for (int csTabCountNo = Convert.ToInt32(
                         TodaysViewUXPageResource.TodaysViewUXPageResource_Page_Initial_Value);
                         csTabCountNo <= getSubTabCount; csTabCountNo++)
@@ -3780,16 +3780,20 @@ namespace Pegasus.Pages.UI_Pages
 
         public string getDisplayedMessage()
         {
-            Logger.LogMethodEntry("CoursePreviewMainUXPage", "getDisplayedMessage",
+            Logger.LogMethodEntry("TodaysViewUXPage", "getDisplayedMessage",
                base.IsTakeScreenShotDuringEntryExit);
             String getMessage = string.Empty;
             try
             {
-                
-                base.WaitUntilWindowLoads("Pegasus");
-                base.SelectWindow("Pegasus");
-                base.WaitForElement(By.Id("spnError"));
-                getMessage = base.GetElementInnerTextById("spnError");
+
+                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_Workspace_Amplifier_Window_Title_Value);
+                base.SelectWindow(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_Workspace_Amplifier_Window_Title_Value);
+                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_Workspace_Amplifier_Window_Warning_Id_Locator));
+                getMessage = base.GetElementInnerTextById(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_Workspace_Amplifier_Window_Warning_Id_Locator);
                 
             }
             catch (Exception e)
@@ -3797,7 +3801,7 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
 
-            Logger.LogMethodExit("CoursePreviewMainUXPage", "getDisplayedMessage",
+            Logger.LogMethodExit("TodaysViewUXPage", "getDisplayedMessage",
                 base.IsTakeScreenShotDuringEntryExit);
             return getMessage;
         }
