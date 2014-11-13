@@ -439,6 +439,24 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ASSIGNMENT_NAVIGATION_VIEW.
+        /// </summary>
+        internal static string ComonPage_Amplifier_AssignmentNavigationView_Id_Locator {
+            get {
+                return ResourceManager.GetString("ComonPage_Amplifier_AssignmentNavigationView_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20000.
+        /// </summary>
+        internal static string ComonPage_Amplifier_Launch_Wait_Time {
+            get {
+                return ResourceManager.GetString("ComonPage_Amplifier_Launch_Wait_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //*[@id=&quot;page&quot;]/div[1]/div/h2.
         /// </summary>
         internal static string ComonPage_BookTitle_For_Amplifire {

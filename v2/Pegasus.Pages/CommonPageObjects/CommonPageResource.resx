@@ -276,4 +276,10 @@
   <data name="ComonPage_MainCourse_FrameID" xml:space="preserve">
     <value>ifrmRight</value>
   </data>
+  <data name="ComonPage_Amplifier_AssignmentNavigationView_Id_Locator" xml:space="preserve">
+    <value>ASSIGNMENT_NAVIGATION_VIEW</value>
+  </data>
+  <data name="ComonPage_Amplifier_Launch_Wait_Time" xml:space="preserve">
+    <value>20000</value>
+  </data>
 </root>

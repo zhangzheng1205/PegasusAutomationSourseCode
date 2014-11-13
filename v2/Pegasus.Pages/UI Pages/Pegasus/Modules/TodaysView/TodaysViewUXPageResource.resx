@@ -663,4 +663,13 @@
   <data name="TodayViewUXPageResource_GettingStarted_ByID" xml:space="preserve">
     <value>_ctl0__ctl0_phBody_PageContent__ctl0__ctl2__ctl0__ctl0__ctl0_lblHeading</value>
   </data>
+  <data name="TodayViewUXPageResource_Subtab_Count_CSS_Locator" xml:space="preserve">
+    <value>tr#trSubNavigationTab td</value>
+  </data>
+  <data name="TodayViewUXPageResource_Workspace_Amplifier_Window_Title_Value" xml:space="preserve">
+    <value>Pegasus</value>
+  </data>
+  <data name="TodayViewUXPageResource_Workspace_Amplifier_Window_Warning_Id_Locator" xml:space="preserve">
+    <value>spnError</value>
+  </data>
 </root>

@@ -11,23 +11,72 @@ using System.Threading;
 
 namespace Pegasus.Pages.UI_Pages
 {
-    public class SIM5FramePage:BasePage
+    public class Sim5FramePage : BasePage
     {
         /// <summary>
         /// The Static Instance Of The Logger For The Class.
         /// </summary>
         private static readonly Logger Logger =
-            Logger.GetInstance(typeof(SIM5FramePage));
+            Logger.GetInstance(typeof(Sim5FramePage));
 
-       /// <summary>
-        /// Submit SIM5 Excel type activity.
+        /// <summary>
+        /// Submit SIM5 Type Activity To Score.
+        /// <param name="activityName">This is activity name.</param>
+        /// /// <param name="score">This is achieve score.</param>
+        /// </summary>
+        public void SubmitSimActivityWithScore(string activityName, string score)
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+               "SubmitSimActivityWithScore",
+              base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (score)
+                {
+                    case "100%":
+                        // complete question based on asset name
+                        switch (activityName)
+                        {
+                            case "Excel Chapter 1 Skill-Based Training":
+                                this.SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100(activityName);
+                                break;
+                            case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                                this.SubmitSim5AccessChapter1Project1ASkillBasedExamScenario1ToScore100(activityName);
+                                break;
+                        }
+                        break;
+
+                    case "70%":
+                        // complete question based on asset name
+                        switch (activityName)
+                        {
+                            case "Excel Chapter 1 Skill-Based Training":
+                                this.SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore70(activityName);
+                                break;
+                            case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                                this.SubmitSim5AccessChapter1Project1ASkillBasedExamScenario1ToScore70(activityName);
+                                break;
+                        }
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodEntry("SIM5FramePage", "SubmitSimActivityWithScore",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Submit SIM5 Excel type activity to score 100%.
         /// <param name="activityName">This is activity name.</param>
         /// </summary>
-        public void SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining(String activityName)
+        private void SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100(String activityName)
         {
             //Submit SIM5 Excel type activity
             Logger.LogMethodEntry("SIM5FramePage",
-                "SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining",
+                "SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100",
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -83,7 +132,55 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SIM5FramePage",
-                 "SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining",
+                 "SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Submit SIM5 Excel type activity to score 70%.
+        /// <param name="activityName">This is activity name.</param>
+        /// </summary>
+        private void SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore70(String activityName)
+        {
+            //Submit SIM5 Excel type activity
+            Logger.LogMethodEntry("SIM5FramePage",
+                "SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore70",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select window name
+                new StudentPresentationPage().SelectSimActivityNormalStudentWindowName
+                    (activityName);
+                //Answer first excel question
+                this.StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                    SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                //Answer second question
+                this.EnteringTextUsingAutoCompleteAndUsingTheNameBoxToSelectACell();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                    SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                //Answer third question
+                this.AutoFillAndKeyboardShortcuts();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                    SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                // Answer Fourth question
+                this.SettingCellWidthAndSelectingCellRangeToAlignData();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                   SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                //Answer Fifth excel quetion
+                this.SettingDataInCell();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                   SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+
+                //Click on SIM5 activity Submit button
+                this.ClickOnSIM5ActivitySubmitButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("SIM5FramePage",
+                 "SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore70",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1148,7 +1245,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click On SIM5 Activity Submit Button.
         /// </summary>
-        public void ClickOnSIM5ActivitySubmitButton()
+        private void ClickOnSIM5ActivitySubmitButton()
         {
             Logger.LogMethodEntry("SIM5FramePage", "ClickOnSIM5ActivitySubmitButton",
             base.IsTakeScreenShotDuringEntryExit);
@@ -1168,6 +1265,117 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("SIM5FramePage", "ClickOnSIM5ActivitySubmitButton",
             base.IsTakeScreenShotDuringEntryExit);
         }
-        #endregion
+
+        #endregion SIM5 Excel Activity Submission
+
+        /// <summary>
+        /// Click On SIM5 Activity Submit Button.
+        /// </summary>
+        public void ClickOnSim5ActivitySubmitButton()
+        {
+            Logger.LogMethodEntry("SIM5FramePage", "ClickOnSim5ActivitySubmitButton",
+            base.IsTakeScreenShotDuringEntryExit);
+
+            //Click on Ok button
+            IWebElement getSubmitButton = base.GetWebElementPropertiesById
+            (SIM5FramePageResource.
+            SIM5Frame_Page_Submit_Button_Id_Locator);
+            base.ClickByJavaScriptExecutor(getSubmitButton);
+
+            //Get the Submit Assignment 'OK' button as WebElement
+            IWebElement getSubmitAssignment = base.GetWebElementPropertiesByXPath
+            (SIM5FramePageResource.
+            SIM5Frame_Page_SubmitAssignment_OK_Button_Id_Locator);
+            //Click on the Submit Assignment 'OK' button
+            base.ClickByJavaScriptExecutor(getSubmitAssignment);
+            Logger.LogMethodExit("SIM5FramePage", "ClickOnSim5ActivitySubmitButton",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Submit Access SIM Activity To Score 100%.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        private void SubmitSim5AccessChapter1Project1ASkillBasedExamScenario1ToScore100(string activityName)
+        {
+            // select window name
+            new StudentPresentationPage().SelectSimActivityNormalStudentWindowName
+                (activityName);
+            // complete access question 
+            this.AcActivity102StartingWithABlankDesktopDatabase();
+            this.AcActivity105AddingARecordToATable();
+            //Click on SIM5 activity Submit button
+            this.ClickOnSIM5ActivitySubmitButton();
+        }
+
+        /// <summary>
+        /// Submit Access SIM Activity To Score 70%.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        private void SubmitSim5AccessChapter1Project1ASkillBasedExamScenario1ToScore70(string activityName)
+        {
+            // select window name
+            new StudentPresentationPage().SelectSimActivityNormalStudentWindowName
+                (activityName);
+            // complete access question 
+            this.AcActivity102StartingWithABlankDesktopDatabase();
+            //Click on SIM5 activity Submit button
+            this.ClickOnSIM5ActivitySubmitButton();
+        }
+
+        /// <summary>
+        /// Complete Access Question 2.
+        /// </summary>
+        private void AcActivity105AddingARecordToATable()
+        {
+            // access question 2
+            Logger.LogMethodEntry("SIM5FramePage", "AcActivity105AddingARecordToATable",
+               base.IsTakeScreenShotDuringEntryExit);
+            base.ClickButtonById(SIM5FramePageResource.SIM5Frame_Page_NextQuestion_Button_Id_Locator);
+            base.ClickButtonById(SIM5FramePageResource.SIM5Frame_Page_NextQuestion_Button_Id_Locator);
+            base.FillTextBoxById(SIM5FramePageResource.SIM5Frame_Page_AccessGridCell0_TextBox_Id_Locator
+                , SIM5FramePageResource.SIM5Frame_Page_AccessGridCell0_TextBox_Value);
+            base.FillTextBoxById(SIM5FramePageResource.SIM5Frame_Page_AccessGridCell1_TextBox_Id_Locator
+                , SIM5FramePageResource.SIM5Frame_Page_AccessGridCell1_TextBox_Value);
+            base.FillTextBoxById(SIM5FramePageResource.SIM5Frame_Page_AccessGridCell2_TextBox_Id_Locator
+                , SIM5FramePageResource.SIM5Frame_Page_AccessGridCell2_TextBox_Value);
+            base.FillTextBoxById(SIM5FramePageResource.SIM5Frame_Page_AccessGridCell3_TextBox_Id_Locator
+                , SIM5FramePageResource.SIM5Frame_Page_AccessGridCell3_TextBox_Value);
+            base.FillTextBoxById(SIM5FramePageResource.SIM5Frame_Page_AccessGridCell4_TextBox_Id_Locator
+                , SIM5FramePageResource.SIM5Frame_Page_AccessGridCell4_TextBox_Value);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+            Logger.LogMethodExit("SIM5FramePage", "AcActivity105AddingARecordToATable",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Complete Access Question 5.
+        /// </summary>
+        private void AcActivity102StartingWithABlankDesktopDatabase()
+        {
+            // access question 5
+            Logger.LogMethodEntry("SIM5FramePage", "AcActivity102StartingWithABlankDesktopDatabase",
+               base.IsTakeScreenShotDuringEntryExit);
+            base.ClickButtonById(SIM5FramePageResource.SIM5Frame_Page_NextQuestion_Button_Id_Locator);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.SIM5Frame_Page_SIM5_Sleep_Time));
+            base.ClickButtonById(SIM5FramePageResource.SIM5Frame_Page_AccessDatabase_Icon_Id_Locator);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.SIM5Frame_Page_SIM5_Sleep_Time));
+            var propertyTemplateImage = (IList<IWebElement>)base.GetWebElementsCollectionByClassName
+                (SIM5FramePageResource.SIM5Frame_Page_AccessTemplate_Image_ClassName_Locator);
+            base.ClickButtonByClassName(propertyTemplateImage[1].ToString());
+            base.ClickButtonByCssSelector(SIM5FramePageResource
+                .SIM5Frame_Page_AccessUsbDisk_Menu_CssSelector_Locator);
+            base.ClearTextById(SIM5FramePageResource.SIM5Frame_Page_FileName_TextBox_Id_Locator);
+            base.FillTextBoxById(SIM5FramePageResource.SIM5Frame_Page_FileName_TextBox_Id_Locator
+                , SIM5FramePageResource.SIM5Frame_Page_FileName_TextBox_Value);
+            base.ClickButtonByCssSelector(SIM5FramePageResource.SIM5Frame_Page_FileSave_Button_CssSelector_Locator);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.SIM5Frame_Page_SIM5_Sleep_Time));
+            base.ClickButtonByCssSelector(SIM5FramePageResource.SIM5Frame_Page_CreateFile_Button_CssSelector_Locator);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+            Logger.LogMethodExit("SIM5FramePage", "AcActivity102StartingWithABlankDesktopDatabase",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
