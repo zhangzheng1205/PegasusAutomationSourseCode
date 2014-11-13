@@ -22,22 +22,41 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Submit SIM5 Type Activity To Score.
         /// <param name="activityName">This is activity name.</param>
+        /// /// <param name="score">This is achieve score.</param>
         /// </summary>
-        public void SubmitSimActivityWithScore(string activityName)
+        public void SubmitSimActivityWithScore(string activityName, string score)
         {
             Logger.LogMethodEntry("SIM5FramePage",
                "SubmitSimActivityWithScore",
               base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                // complete question based on asset name
-                switch (activityName)
+                switch (score)
                 {
-                    case "Excel Chapter 1 Skill-Based Training":
-                        this.SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining(activityName);
+                    case "100%":
+                        // complete question based on asset name
+                        switch (activityName)
+                        {
+                            case "Excel Chapter 1 Skill-Based Training":
+                                this.SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100(activityName);
+                                break;
+                            case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                                this.SubmitSim5AccessChapter1Project1ASkillBasedExamScenario1ToScore100(activityName);
+                                break;
+                        }
                         break;
-                    case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
-                        this.SubmitSim5AccessChapter1Project1ASkillBasedExamScenario1(activityName);
+
+                    case "70%":
+                        // complete question based on asset name
+                        switch (activityName)
+                        {
+                            case "Excel Chapter 1 Skill-Based Training":
+                                this.SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore70(activityName);
+                                break;
+                            case "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)":
+                                this.SubmitSim5AccessChapter1Project1ASkillBasedExamScenario1ToScore70(activityName);
+                                break;
+                        }
                         break;
                 }
             }
@@ -48,16 +67,16 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("SIM5FramePage", "SubmitSimActivityWithScore",
               base.IsTakeScreenShotDuringEntryExit);
         }
-        
+
         /// <summary>
-        /// Submit SIM5 Excel type activity.
+        /// Submit SIM5 Excel type activity to score 100%.
         /// <param name="activityName">This is activity name.</param>
         /// </summary>
-        private void SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining(String activityName)
+        private void SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100(String activityName)
         {
             //Submit SIM5 Excel type activity
             Logger.LogMethodEntry("SIM5FramePage",
-                "SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining",
+                "SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100",
                base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -113,7 +132,55 @@ namespace Pegasus.Pages.UI_Pages
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("SIM5FramePage",
-                 "SubmitSim5ExcelActivityExcelChapter1SkillBasedTraining",
+                 "SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Submit SIM5 Excel type activity to score 70%.
+        /// <param name="activityName">This is activity name.</param>
+        /// </summary>
+        private void SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore70(String activityName)
+        {
+            //Submit SIM5 Excel type activity
+            Logger.LogMethodEntry("SIM5FramePage",
+                "SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore70",
+               base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select window name
+                new StudentPresentationPage().SelectSimActivityNormalStudentWindowName
+                    (activityName);
+                //Answer first excel question
+                this.StartingExcelNavigatingExcelAndNamingAndSavingAWorkbook();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                    SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                //Answer second question
+                this.EnteringTextUsingAutoCompleteAndUsingTheNameBoxToSelectACell();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                    SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                //Answer third question
+                this.AutoFillAndKeyboardShortcuts();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                    SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                // Answer Fourth question
+                this.SettingCellWidthAndSelectingCellRangeToAlignData();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                   SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                //Answer Fifth excel quetion
+                this.SettingDataInCell();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                   SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+
+                //Click on SIM5 activity Submit button
+                this.ClickOnSIM5ActivitySubmitButton();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("SIM5FramePage",
+                 "SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore70",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1178,7 +1245,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click On SIM5 Activity Submit Button.
         /// </summary>
-        public void ClickOnSIM5ActivitySubmitButton()
+        private void ClickOnSIM5ActivitySubmitButton()
         {
             Logger.LogMethodEntry("SIM5FramePage", "ClickOnSIM5ActivitySubmitButton",
             base.IsTakeScreenShotDuringEntryExit);
@@ -1198,7 +1265,8 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("SIM5FramePage", "ClickOnSIM5ActivitySubmitButton",
             base.IsTakeScreenShotDuringEntryExit);
         }
-        #endregion
+
+        #endregion SIM5 Excel Activity Submission
 
         /// <summary>
         /// Click On SIM5 Activity Submit Button.
@@ -1224,14 +1292,35 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void SubmitSim5AccessChapter1Project1ASkillBasedExamScenario1(string activityName)
+        /// <summary>
+        /// Submit Access SIM Activity To Score 100%.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        private void SubmitSim5AccessChapter1Project1ASkillBasedExamScenario1ToScore100(string activityName)
         {
             // select window name
             new StudentPresentationPage().SelectSimActivityNormalStudentWindowName
                 (activityName);
             // complete access question 
-            AcActivity102StartingWithABlankDesktopDatabase();
-            AcActivity105AddingARecordToATable();
+            this.AcActivity102StartingWithABlankDesktopDatabase();
+            this.AcActivity105AddingARecordToATable();
+            //Click on SIM5 activity Submit button
+            this.ClickOnSIM5ActivitySubmitButton();
+        }
+
+        /// <summary>
+        /// Submit Access SIM Activity To Score 70%.
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        private void SubmitSim5AccessChapter1Project1ASkillBasedExamScenario1ToScore70(string activityName)
+        {
+            // select window name
+            new StudentPresentationPage().SelectSimActivityNormalStudentWindowName
+                (activityName);
+            // complete access question 
+            this.AcActivity102StartingWithABlankDesktopDatabase();
+            //Click on SIM5 activity Submit button
+            this.ClickOnSIM5ActivitySubmitButton();
         }
 
         /// <summary>

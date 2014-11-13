@@ -63,17 +63,34 @@ Then I should be on the "Gradebook" page
 When I click on the "SIM5StudyPlan" 'View Grades' option 
 Then I should see the pre test training "Sim5PreTest" score "100"
 
-#PEGASUS-29285 
-#PEGASUS-29985 
-#PEGASUS-29987
-#peg-21998:Sim 5 Excel activity and Student scoring a 100%
-#Purpose : Student launches a Sim 5 Excel activity and Student scoring a 100%
+#Purpose : Submitting Sim 5 Excel activity and Student scoring a 100%
+#Test case ID : peg-21998.
+#Products : MyItLab.
+#Pre condition : Excel SIM5 activity should be created by instructor/Author in the following course and “Trap ALT+TAB and Browser Lock-Down” option should be un checked in the activity preference tab.
+#Dependency : Always dependent.
 Scenario: Student launches a Sim 5 Excel activity and Student scoring a 100% compares the result and status
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
 And I launch the "Excel Chapter 1 Skill-Based Training" activity in content by "CsSmsStudent"
-And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly and click on Submit button
+And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly and click on Submit button with score "100%"
+Then I should be on the "Course Materials" page
+When I click on cmenu "ViewSubmissions" of asset "Excel Chapter 1 Skill-Based Training" with mode "SkillBased" in Course Materials
+Then I should be on the "View Submission" page
+When I click on the last submission
+Then I should see the grade is "22.22%" in View Submission page
+
+#Purpose : Submitting Sim 5 Excel activity and Student scoring a 70%
+#Test case ID : peg-21994.
+#Products : MyItLab.
+#Pre condition : Excel SIM5 activity should be created by instructor/Author in the following course and “Trap ALT+TAB and Browser Lock-Down” option should be un checked in the activity preference tab.
+#Dependency : Always dependent.
+Scenario: Student launches a Sim 5 Excel activity and Student scoring a 70% compares the result and status
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the "Excel Chapter 1 Skill-Based Training" activity in content by "CsSmsStudent"
+And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly and click on Submit button with score "70%"
 Then I should be on the "Course Materials" page
 When I click on cmenu "ViewSubmissions" of asset "Excel Chapter 1 Skill-Based Training" with mode "SkillBased" in Course Materials
 Then I should be on the "View Submission" page
@@ -580,7 +597,7 @@ And I should see the "Passed" status for the activity "PowerPoint Chapter 1 Skil
 Scenario: Student launches a Sim 5 Access activity and Student scoring a 100% compares the result and status
 When I select "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
 And I launch the "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity in content by "CsSmsStudent"
-And I should answer activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" correctly and click on Submit button
+And I should answer activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" correctly and click on Submit button with score "100%"
 Then I should be on the "Course Materials" page
 When I click on cmenu "ViewSubmissions" of asset "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" with mode "SkillBased" in Course Materials
 Then I should be on the "View Submission" page
@@ -595,7 +612,7 @@ Then I should see the grade is "5.9%" in View Submission page
 Scenario: Student launches a Sim 5 Access activity and Student scoring a 70% compares the result and status
 When I select "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
 And I launch the "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity in content by "CsSmsStudent"
-And I should answer activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" correctly and click on Submit button
+And I should answer activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" correctly and click on Submit button with score "70%"
 Then I should be on the "Course Materials" page
 When I click on cmenu "ViewSubmissions" of asset "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" with mode "SkillBased" in Course Materials
 Then I should be on the "View Submission" page
