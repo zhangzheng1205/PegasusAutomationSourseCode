@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<OrderedTest name="orderedtest.buildverificationtest.myitlabfull" storage="d:\pegasus_automation\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.buildverificationtest.myitlabfull.orderedtest" id="1e54335d-f6d8-4b6c-9df7-ec51478b834e" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<OrderedTest name="orderedtest.buildverificationtest.myitlabfull" storage="d:\latest_automation\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.buildverificationtest.myitlabfull.orderedtest" id="1e54335d-f6d8-4b6c-9df7-ec51478b834e" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Execution id="84aadfeb-8e49-4338-abdc-717cc51638b8" />
   <TestLinks>
     <TestLink id="8a976fd2-214e-4f4c-a081-4273f7209064" name="orderedtest.programadmin.bvt.myitlab" storage="orderedtest.programadmin.bvt.myitlab.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
