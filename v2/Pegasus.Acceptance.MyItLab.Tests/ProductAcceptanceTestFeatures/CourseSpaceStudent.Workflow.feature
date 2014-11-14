@@ -574,7 +574,7 @@ And I launch the "PowerPoint Chapter 1 Skill-Based Training" activity in content
 And I attempt questions "100%" in "PowerPoint Chapter 1 Skill-Based Training"
 Then I should be on the "Course Materials" page
 And I should see the "Passed" status for the activity "PowerPoint Chapter 1 Skill-Based Training"
-#And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Skill-Based Training" in course material page
+And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Skill-Based Training" in course material page
 
 #PEGASUS-29285 
 #PEGASUS-29985 
@@ -618,3 +618,22 @@ When I click on cmenu "ViewSubmissions" of asset "Excel Chapter 1 Skill-Based Tr
 Then I should be on the "View Submission" page
 When I click on the last submission
 Then I should see the grade is "22.22%" in View Submission page
+
+
+#Purpose : Submitting Sim 5 Word activity and Student scoring 70
+#Test case ID : peg-21993.
+#Products : MyItLab.
+#Pre condition : This test case depends on Word SIM5 activity should be created by instructor/Author in the following course and 
+#“Trap ALT+TAB and Browser Lock-Down” option  should be un checked in the activity preference tab.
+#Dependency : Always dependent.
+Scenario: Student scoring 70 in SIM5 Word activity
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
+And I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
+And I open the activity named as "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I attempt questions for "70%" in activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
