@@ -15,6 +15,7 @@ When I click on "Capítulo preliminar: Bienvenidos a Unidos" folder as "CsSmsStu
 Then I should be inside the folder "Capítulo preliminar: Bienvenidos a Unidos"
 When I click on "¡Comprueba lo que sabes!" folder as "CsSmsStudent"
 Then I should be inside the folder "¡Comprueba lo que sabes!"
+And  I should see the "Amplifire Study Module 0P: Vocabulario en contexto" amplifier link as "CsSmsStudent"
 When I open the "Amplifire Study Module 0P: Vocabulario en contexto" Activity
-Then I should see the activity successfully launched
+Then I should see the "amplifier" activity successfully launched
 And I should see the BookTilte as "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host"

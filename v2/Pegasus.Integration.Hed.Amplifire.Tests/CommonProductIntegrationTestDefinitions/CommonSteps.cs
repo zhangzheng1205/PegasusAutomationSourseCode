@@ -279,6 +279,8 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+       
+
         /// <summary>
         /// Click on the activity.
         /// </summary>
@@ -298,9 +300,9 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         /// <summary>
         /// Verify the warning message.
         /// </summary>
-        /// <param name="message">This is the message.</param>
+        /// <param name="warningMessage">This is the message.</param>
         [Then(@"I should see ""(.*)"" warning")]
-        public void VerifyWarning(string message)
+        public void VerifyWarning(string warningMessage)
         {
             //Verify the warning message
             Logger.LogMethodEntry("CommonSteps",
@@ -309,7 +311,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             //Verify the warning message
             Logger.LogAssertion("VerifyTheMessage",
                 ScenarioContext.Current.ScenarioInfo.Title,() => Assert.AreEqual
-                (message, new TodaysViewUxPage().getDisplayedMessage()));
+                (warningMessage, new TodaysViewUxPage().GetDisplayedMessage()));
             //Close the amplifier popup
             base.CloseBrowserWindow();
             Logger.LogMethodExit("CommonSteps",
@@ -320,8 +322,9 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         /// <summary>
         /// Launch Activity Presentation Window.
         /// </summary>
-        [Then(@"I should see the activity successfully launched")]
-        public void ActivitySuccessfullyLaunched()
+        /// /// <param name="message">This is the activity.</param>
+        [Then(@"I should see the ""(.*)"" activity successfully launched")]
+        public void ActivitySuccessfullyLaunched(string amplifierUrlText)
         {
             //Launching of Activity Presentation Window
             Logger.LogMethodEntry("ActivitySubmission",
@@ -330,7 +333,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             //Assert Launch Activity Window
             Logger.LogAssertion("VerifyActivityLaunched",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.IsTrue(new CommonPage().IsPageOpened()));
+                () => Assert.IsTrue(new CommonPage().IsPageOpened(amplifierUrlText)));
             Logger.LogMethodExit("ActivitySubmission",
                 "ActivitySuccessfullyLaunched"
                 , base.IsTakeScreenShotDuringEntryExit);
@@ -339,18 +342,18 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         /// <summary>
         /// Verify the title displayed in book.
         /// </summary>
-        /// <param name="BookTilte">This is the title.</param>
+        /// <param name="expectedBookTilte">This is the title.</param>
         [Then(@"I should see the BookTilte as ""(.*)""")]
-        public void VerifyBookTitle(string BookTilte)
+        public void VerifyBookTitle(string expectedBookTilte)
         {
             //Verify the title displayed in book
             Logger.LogMethodEntry("CommonSteps", "VerifyBookTitle",
                 IsTakeScreenShotDuringEntryExit);
-            string ActualBookTilte = new CommonPage().GetTextByXpath(BookTilte);
+            string actualBookTilte = new CommonPage().GetTextByXpath(expectedBookTilte);
             //Verify the title displayed in book          
             Logger.LogAssertion("VerifyOpenedPageTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(BookTilte, ActualBookTilte));
+                () => Assert.AreEqual(expectedBookTilte, actualBookTilte));
             //Close the amplifier popup
             base.CloseBrowserWindow();
             Logger.LogMethodExit("CommonSteps", "VerifyBookTitle",
@@ -623,6 +626,18 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("CommonSteps", "NavigateToTab",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Verifies the amplifier 
+        /// </summary>
+        /// <param name="amplifierLinkName"></param>
+        /// <param name="userType"></param>
+        [Then(@"I should see the ""(.*)"" amplifier link as ""(.*)""")]
+        public void VerifyAmplifierLink(string amplifierLinkName, string userType)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

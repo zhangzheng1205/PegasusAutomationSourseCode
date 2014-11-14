@@ -1184,7 +1184,7 @@ namespace Pegasus.Pages.CommonPageObjects
         /// Returns boolean value for window launch.
         /// </summary>
         /// <returns>Boolean value.</returns>
-        public Boolean IsPageOpened()
+        public Boolean IsPageOpened(string amplifierUrlText)
         {
             // Returns boolean value for window launch
             Logger.LogMethodEntry("CommonPage",
@@ -1195,11 +1195,9 @@ namespace Pegasus.Pages.CommonPageObjects
                          ComonPage_Amplifier_Launch_Wait_Time));
             //Switch to window
             base.SwitchToLastOpenedWindow();
-            base.WaitForElement(By.Id(CommonPageResource.
-                ComonPage_Amplifier_AssignmentNavigationView_Id_Locator));
             string getTheUrl = base.GetCurrentUrl;
             // Returns boolean value for window launch
-            if ((getTheUrl.Contains("amplifire")))
+            if ((getTheUrl.Contains(amplifierUrlText)))
             {
                 IsPageOpened = true;
 
@@ -1209,6 +1207,7 @@ namespace Pegasus.Pages.CommonPageObjects
                 base.IsTakeScreenShotDuringEntryExit);
             return IsPageOpened;
         }
+
 
         /// <summary>
         /// Method to fetch current URL.

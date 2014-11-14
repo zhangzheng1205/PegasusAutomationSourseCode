@@ -16,7 +16,7 @@ Then I should be inside the selected folder "Capítulo preliminar: Bienvenidos a
 When I navigate to "¡Comprueba lo que sabes!" asset in "Course Materials" tab as "CsSmsInstructor" 
 Then I should be inside the selected folder "¡Comprueba lo que sabes!"
 When I open the "Amplifire Study Module 0P: Vocabulario en contexto" Activity
-Then I should see the activity successfully launched
+Then I should see the "amplifier" activity successfully launched
 And I should see the BookTilte as "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host"
 
 

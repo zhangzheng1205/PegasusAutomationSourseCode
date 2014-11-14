@@ -3782,23 +3782,21 @@ namespace Pegasus.Pages.UI_Pages
         /// Get the message displayed in the window.
         /// </summary>
         /// <returns>The message displayed.</returns>
-        public string getDisplayedMessage()
+        public string GetDisplayedMessage()
         {
             // Get the message displayed in the window
             Logger.LogMethodEntry("TodaysViewUXPage", "getDisplayedMessage",
                base.IsTakeScreenShotDuringEntryExit);
-            String getMessage = string.Empty;
+            String getActualMessage = string.Empty;
             try
             {
                 //Switch to the window
-                base.WaitUntilWindowLoads(TodaysViewUXPageResource.
-                    TodayViewUXPageResource_Workspace_Amplifier_Window_Title_Value);
-                base.SelectWindow(TodaysViewUXPageResource.
-                    TodayViewUXPageResource_Workspace_Amplifier_Window_Title_Value);
+                LoadAndSwitchToWindow(TodaysViewUXPageResource.
+                TodayViewUXPageResource_Workspace_Amplifier_Window_Title_Value);
                 base.WaitForElement(By.Id(TodaysViewUXPageResource.
                     TodayViewUXPageResource_Workspace_Amplifier_Window_Warning_Id_Locator));
                 // Get the message displayed in the window
-                getMessage = base.GetElementInnerTextById(TodaysViewUXPageResource.
+                getActualMessage = base.GetElementInnerTextById(TodaysViewUXPageResource.
                     TodayViewUXPageResource_Workspace_Amplifier_Window_Warning_Id_Locator);
                 
             }
@@ -3809,7 +3807,23 @@ namespace Pegasus.Pages.UI_Pages
 
             Logger.LogMethodExit("TodaysViewUXPage", "getDisplayedMessage",
                 base.IsTakeScreenShotDuringEntryExit);
-            return getMessage;
+            return getActualMessage;
+        }
+
+        /// <summary>
+        /// Load and switch to a window.
+        /// </summary>
+        /// <param name="windowName">The window name.</param>
+        private void LoadAndSwitchToWindow(string windowName)
+        {
+            // Load and switch to a window
+            Logger.LogMethodEntry("TodaysViewUXPage", "LoadAndSwitchToWindow",
+              base.IsTakeScreenShotDuringEntryExit);
+            // Load and switch to a window
+            base.WaitUntilWindowLoads(windowName);
+            base.SelectWindow(windowName);
+            Logger.LogMethodExit("TodaysViewUXPage", "LoadAndSwitchToWindow",
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

@@ -13,7 +13,7 @@ Then I should be on the "Course Materials" page
 When I click on "Capítulo preliminar: Bienvenidos a Unidos" folder as "CsSmsInstructor"
 And I click on "¡Comprueba lo que sabes!" folder as "CsSmsInstructor"
 And I open the "Amplifire Study Module 0P: Vocabulario en contexto" Activity
-Then I should see the activity successfully launched
+Then I should see the "amplifier" activity successfully launched
 And I should see the BookTilte as "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host"
 
 #Purpose: Amplifire content link launch by Demo student
@@ -32,7 +32,7 @@ Then I should be inside the folder "Capítulo preliminar: Bienvenidos a Unidos"
 When I click on "¡Comprueba lo que sabes!" folder as "CsSmsInstructor"
 Then I should be inside the folder "¡Comprueba lo que sabes!"
 When I open the "Amplifire Study Module 0P: Vocabulario en contexto" Activity
-Then I should see the activity successfully launched
+Then I should see the "amplifier" activity successfully launched
 And I should see the BookTilte as "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host"
 
 
