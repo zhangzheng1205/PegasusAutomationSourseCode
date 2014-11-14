@@ -1773,9 +1773,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// Builds a CompositeAction containing all actions specified by the method calls.</see>
         /// /// <seealso cref="MoveToElement">Moves the mouse to the middle of the element. 
         /// The element is scrolled into view and its location is calculated using getBoundingClientRect.
-        /// Clicks in the middle of the given element. Equivalent to: Actions.moveToElement(onElement).click()		</seealso>
+        /// Clicks in the middle of the given element. Equivalent to: Actions.moveToElement(onElement).click()</seealso>
         /// <see cref="Click">Clicks at the current mouse location.</see>
-        /// <see cref="Perform">A convenience method for performing the actions without calling build() 		first.</see>
+        /// <see cref="Perform">A convenience method for performing the actions without calling build() first.</see>
         protected void PerformMouseRightClickAction(IWebElement webElement)
         {
             new Actions(WebDriver).MoveToElement(webElement).ContextClick().Build().Perform();
@@ -1839,6 +1839,25 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         protected void PlaceCursorPosition(IWebElement webElement, int xCoordinateValue, int yCoordinateValue)
         {
             new Actions(WebDriver).MoveToElement(webElement, xCoordinateValue, yCoordinateValue).Click().Perform();
+        }
+
+        /// <summary>
+        ///To select the text based on X and Y co-ordinates. 
+        /// </summary>
+        /// <param name="webElement">Element to move.</param>
+        /// <param name="xCoordinateStartValue">This is X Coordinate Value Where Cursor need to Place.</param>
+        /// <param name="yCoordinateStartValue">This is Y Coordinate Value Where Cursor need to Place.</param>
+        /// <param name="offsetX">This is X Coordinate Value Where Cursor need to End.</param>
+        /// <param name="offsetY">This is Y Coordinate Value Where Cursor need to End.</param>
+        protected void SelectTextUsingCoordinates(IWebElement webElement, int xCoordinateStartValue,
+            int yCoordinateStartValue, int offsetX, int offsetY)
+        {
+            Actions actions = new Actions(WebDriver);
+            actions.MoveToElement(webElement, xCoordinateStartValue, yCoordinateStartValue)
+                .ClickAndHold()
+                .MoveByOffset(offsetX, offsetY)
+                .Release()
+                .Perform();
         }
 
         /// <summary>
@@ -2165,6 +2184,19 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             // ASCII code 1 for Ctrl-A
             const char character = '\u0001';
+            iWebElement.SendKeys(Convert.ToString(character));
+        }
+
+        /// <summary>
+        /// Press Ctrl+B by locating element.
+        /// </summary>
+        /// <param name="iWebElement">The IWebElement interface represents an HTML element. 
+        /// Generally, all interesting operations to do with interacting with a page will be performed through this interface.</param>
+        protected void PressCtrlBKey(IWebElement iWebElement)
+        {
+            // ASCII code 1 for Ctrl-B
+            Actions builder = new Actions(WebDriver);           
+            const char character = '\u0062';
             iWebElement.SendKeys(Convert.ToString(character));
         }
 

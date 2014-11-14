@@ -64,8 +64,6 @@ And I should see the Status of the assigned content in status column
 When I select 'Home' option
 Then I should be on the "Program Administration" page
 
-
-
 #Purpose: To validate the current date assigned content in calendar frame by Coursespace Instructor
 #Test Case Id: peg-21985
 Scenario: To check the current date assigned content in the calendar by SMS Instructor
@@ -75,18 +73,6 @@ And I should see "GO! with Microsoft Office 2013, Volume 1" asset
 And I should see the current date highlighted in the calendar frame
 When I select the current date 
 Then I should see the assigned content "Excel Chapter 1 Skill-Based Training" in the day view
-When I navigate to "Gradebook" tab
-Then I should be on the "Gradebook" page
-
-#PEGASUS-21987
-#Purpose : As Instructor for HED Product,I need to validate the display of start date icon in calendar frame
-#Test Case Id :peg-21987
-Scenario: To validate the display of start date icon in calendar frame by SMS Instructor
-When I navigate to the "Assignment Calendar" tab
-Then I should be on the "Calendar" page
-And I should see "GO! with Microsoft Office 2013, Volume 1" asset
-And I should see the current date highlighted in the calendar frame
-And I should see the startdate Icon in calendar frame
 When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 
@@ -114,6 +100,18 @@ Then I should see Assign/Unassign link in active state on the content frame head
 When I click on assign/Unassign link displayed in content frame header
 Then I should see the check mark in assigned status column next to the assets
 
+
+#PEGASUS-21987
+#Purpose : As Instructor for HED Product,I need to validate the display of start date icon in calendar frame
+#Test Case Id :peg-21987
+Scenario: To validate the display of start date icon in calendar frame by SMS Instructor
+When I navigate to the "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+And I should see "GO! with Microsoft Office 2013, Volume 1" asset
+And I should see the current date highlighted in the calendar frame
+And I should see the startdate Icon in calendar frame
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
 
 #PEGASUS-21971
 #Purpose : To validate Assign one content using Assign/Unassign link

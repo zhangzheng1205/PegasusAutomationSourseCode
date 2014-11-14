@@ -203,5 +203,73 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Launch the Study plan training activity.
+        /// </summary>
+        /// <param name="activityName">This is Student Name.</param>
+        /// <param name="activityType">This is type of activity.</param>
+        /// <param name="studentName">This is Activity Name.</param>
+        /// <param name="scenerioName">This is Scenerio Name.</param>  
+        [When(@"I launch the 'Start Training' button of the ""(.*)"" of ""(.*)"" activity by ""(.*)"" with ""(.*)""")]
+        public void SubmitStudyPlanTrainingActivity(string activityName, string activityType,
+            User.UserTypeEnum studentName,
+                string scenerioName)
+        {
+            //Launch the Study plan training activity
+            Logger.LogMethodEntry("LaunchActivity", "SubmitStudyPlanTrainingActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Click on start training button
+            new SIMStudyPlanStudentUXPage().SelectStartTrainingButton();
+            //select the window
+            new StudentPresentationPage().SelectSimActivityStudentWindowName(studentName,
+                 activityName, scenerioName);
+            Logger.LogMethodExit("LaunchActivity", "SubmitStudyPlanTrainingActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }       
+
+        /// <summary>
+        /// Submit the access activity with 100% score.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        [When(@"I answer activity ""(.*)"" correctly")]
+        public void SubmitSim5AccessTypeActivity(string activityName)
+        {
+            //Submit SIM5 Access type activity
+            Logger.LogMethodEntry("LaunchActivity", "SubmitSim5AccessTypeActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            new Sim5FramePage().SubmitSim5AccessPreTestActivityQuestions(activityName);
+            Logger.LogMethodExit("LaunchActivity", "SubmitSim5AccessTypeActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Crash the Access training activity post-test.
+        /// </summary>
+        [When(@"I click on cancel button to crash the post-test")]
+        public void CrashAccessPostTestActivity()
+        {
+            //Crash the Access training activity post-test
+            Logger.LogMethodEntry("LaunchActivity", "CrashAccessPostTestActivity",
+                 base.IsTakeScreenShotDuringEntryExit);
+            new Sim5FramePage().CrashSim5AccessActivity();
+            Logger.LogMethodExit("LaunchActivity", "CrashAccessPostTestActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [When(@"I answer the questions in ""(.*)""")]
+        public void AccessActivitySubmission(string activityName)
+        {
+            Logger.LogMethodEntry("LaunchActivity", "AccessActivitySubmission",
+                base.IsTakeScreenShotDuringEntryExit);
+            new Sim5FramePage().SubmitSim5AccessActivitySeventyPercentScore(activityName);
+            Logger.LogMethodExit("LaunchActivity", "AccessActivitySubmission",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
+
+
     }
 }
