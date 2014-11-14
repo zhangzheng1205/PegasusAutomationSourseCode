@@ -2198,7 +2198,9 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             Actions builder = new Actions(WebDriver);           
             const char character = '\u0062';
             iWebElement.SendKeys(Convert.ToString(character));
+            builder.KeyDown(Keys.Control).SendKeys(Convert.ToString(character)).Perform();
         }
+        
 
         /// <summary>
         /// Perform key down and then press alternate key. 
