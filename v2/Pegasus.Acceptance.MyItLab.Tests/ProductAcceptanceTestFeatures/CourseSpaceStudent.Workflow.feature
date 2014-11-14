@@ -63,23 +63,6 @@ Then I should be on the "Gradebook" page
 When I click on the "SIM5StudyPlan" 'View Grades' option 
 Then I should see the pre test training "Sim5PreTest" score "100"
 
-#PEGASUS-29285 
-#PEGASUS-29985 
-#PEGASUS-29987
-#peg-21998:Sim 5 Excel activity and Student scoring a 100%
-#Purpose : Student launches a Sim 5 Excel activity and Student scoring a 100%
-Scenario: Student launches a Sim 5 Excel activity and Student scoring a 100% compares the result and status
-When I navigate to "Course Materials" tab
-Then I should be on the "Course Materials" page
-When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
-And I launch the "Excel Chapter 1 Skill-Based Training" activity in content by "CsSmsStudent"
-And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly and click on Submit button
-Then I should be on the "Course Materials" page
-When I click on cmenu "ViewSubmissions" of asset "Excel Chapter 1 Skill-Based Training" with mode "SkillBased" in Course Materials
-Then I should be on the "View Submission" page
-When I click on the last submission
-Then I should see the grade is "22.22%" in View Submission page
-
 #Purpose : Submitting Sim 5 excel activity and Student scoring a Zero.
 #Test case ID : peg-21990.
 #Products : MyItLab.
@@ -592,3 +575,46 @@ And I attempt questions "100%" in "PowerPoint Chapter 1 Skill-Based Training"
 Then I should be on the "Course Materials" page
 And I should see the "Passed" status for the activity "PowerPoint Chapter 1 Skill-Based Training"
 #And I should see "0.00%" score for the activity "PowerPoint Chapter 1 Skill-Based Training" in course material page
+
+#PEGASUS-29285 
+#PEGASUS-29985 
+#PEGASUS-29987
+#PEGASUS-30866
+#peg-21998:Sim 5 Excel activity and Student scoring a 100%
+#Purpose : Student launches a Sim 5 Excel activity and Student scoring a 100%
+Scenario: Student launches a Sim 5 Excel activity and Student scoring a 100% compares the result and status
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the "Excel Chapter 1 Skill-Based Training" activity in content by "CsSmsStudent"
+And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly and click on Submit button with score "100%"
+Then I should be on the "Course Materials" page
+When I click on cmenu "ViewSubmissions" of asset "Excel Chapter 1 Skill-Based Training" with mode "SkillBased" in Course Materials
+Then I should be on the "View Submission" page
+When I click on the last submission
+Then I should see the grade is "22.22%" in View Submission page
+
+#PEGASUS-29245
+#peg-21994:Sim 5 Excel activity and Student scoring a 100%
+#Purpose : Student launches a Sim 5 Excel activity and Student scoring a 100%
+Scenario: Student launches a Sim 5 Excel activity and Student scoring a 70% compares the result and status
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Excel Chapter 1 Skill-Based Training" in "Course Materials" by "CsSmsStudent"
+And I launch the "Excel Chapter 1 Skill-Based Training" activity in content by "CsSmsStudent"
+And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly and click on Submit button with score "70%"
+Then I should be on the "Course Materials" page
+When I click on cmenu "ViewSubmissions" of asset "Excel Chapter 1 Skill-Based Training" with mode "SkillBased" in Course Materials
+Then I should be on the "View Submission" page
+When I click on the last submission
+Then I should see the grade is "22.22%" in View Submission page
