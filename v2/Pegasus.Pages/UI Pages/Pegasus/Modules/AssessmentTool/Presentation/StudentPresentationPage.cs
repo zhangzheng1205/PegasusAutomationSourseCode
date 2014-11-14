@@ -413,7 +413,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Click on Next Question Button
         /// </summary>
-        private void ClickNextQuestionButton()
+        public void ClickNextQuestionButton()
         {
             //Click Next Question Button
             logger.LogMethodEntry("StudentPresentationPage", "ClickNextQuestionButton",
