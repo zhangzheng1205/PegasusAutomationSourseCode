@@ -3448,10 +3448,7 @@ namespace Pegasus.Pages.UI_Pages
         {
             //Second Question Submission
             AttemptSecondQuestion();
-            //Fourth Question Submission
-            AttemptFourthQuestion();
-            //Fifth Question Submission
-            AttemptFifthQuestion();
+  
             //Seventh Question Submission
             AttemptSeventhQuestion();
 
@@ -3489,9 +3486,11 @@ namespace Pegasus.Pages.UI_Pages
                 //Third Question Submission
                 getQuestionNumber(3);
                 AttemptThirdQuestion();
-
+                //Fourth Question Submission
+                AttemptFourthQuestion();
+                //Fifth Question Submission
+                AttemptFifthQuestion();
                 //Sixth Question Submission
-                getQuestionNumber(6);
                 AttemptSixthQuestion();
 
                 //Eight Question Submission
