@@ -6007,5 +6007,17 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSim5NextQuestionButton",
          base.IsTakeScreenShotDuringEntryExit);
         }
+
+        public void SelectStartTraining()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "SelectStartTraining",
+    base.IsTakeScreenShotDuringEntryExit);
+            IWebElement StartTestButton = base.GetWebElementPropertiesById
+                 (StudentPresentationPageResource.
+                 StudentPresentation_Page_StartPreTest_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(StartTestButton);
+            logger.LogMethodExit("StudentPresentationPage", "SelectStartTraining",
+        base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

@@ -1070,6 +1070,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//span[@id=&apos;Span1&apos;]/img.
+        /// </summary>
+        internal static string StudentPresentation_Page_StartPreTest_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_StartPreTest_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id =&apos;divSection_{0}&apos;]/descendant::div[@id =&apos;nextQuextion&apos;]/div[1]/descendant::table[@class=&apos;ChoiceBorder&apos;]/tbody/tr/td[2]/input.
         /// </summary>
         internal static string StudentPresentation_Page_StudyPlan_AnswersChoice_Xpath_Locator {

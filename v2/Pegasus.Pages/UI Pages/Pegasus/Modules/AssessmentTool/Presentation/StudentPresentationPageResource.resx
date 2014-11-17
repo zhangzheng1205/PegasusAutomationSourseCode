@@ -1260,4 +1260,7 @@
   <data name="StudentPrsentation_Page__Textfill_Id_Locator" xml:space="preserve">
     <value>task01selstart</value>
   </data>
+  <data name="StudentPresentation_Page_StartPreTest_Xpath_Locator" xml:space="preserve">
+    <value>.//span[@id='Span1']/img</value>
+  </data>
 </root>
