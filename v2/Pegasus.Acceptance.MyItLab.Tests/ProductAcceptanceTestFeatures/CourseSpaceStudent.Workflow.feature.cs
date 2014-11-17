@@ -1497,6 +1497,9 @@ testRunner.When("I select \"Excel Chapter 1 Study Plan [Skill-Based]: Training >
 #line 653
 testRunner.And("I launch the \"Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test\" act" +
                     "ivity in content by \"CsSmsStudent\" for Pre-test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 654
+testRunner.And("I should answer activity \"Excel Chapter 1 Skill-Based Training\" correctly and cli" +
+                    "ck on Submit button with score \"100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

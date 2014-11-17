@@ -651,3 +651,4 @@ When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent"
 And I launch the "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" activity in content by "CsSmsStudent" for Pre-test
+And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly and click on Submit button with score "100%"
