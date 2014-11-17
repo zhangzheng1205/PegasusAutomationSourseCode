@@ -349,7 +349,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             //Verify the title displayed in book
             Logger.LogMethodEntry("CommonSteps", "VerifyBookTitle",
                 IsTakeScreenShotDuringEntryExit);
-            string actualBookTilte = new CommonPage().GetTextByXpath(expectedBookTilte);
+            string actualBookTilte = new CommonPage().GetTextByXpath();
             //Verify the title displayed in book          
             Logger.LogAssertion("VerifyOpenedPageTitle",
                 ScenarioContext.Current.ScenarioInfo.Title,

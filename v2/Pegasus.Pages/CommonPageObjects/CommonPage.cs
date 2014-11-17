@@ -1233,33 +1233,29 @@ namespace Pegasus.Pages.CommonPageObjects
             return getCurrentURL;
         }
 
+
+
         /// <summary>
         /// Gets the text displayed in the window.
         /// </summary>
         /// <param name="Text">The text displayed in window.</param>
         /// <returns></returns>
-        public string GetTextByXpath(string Text)
+        public string GetTextByXpath()
         {
             // Gets the text displayed in the window
             Logger.LogMethodEntry("CommonPage",
                 "GetTextByXpath",
                base.IsTakeScreenShotDuringEntryExit);
-            string ActualString = String.Empty;
+            string getActualContent = String.Empty;
             try
             {
-                // Gets the text displayed in the window
-                switch (Text)
-                {
-                    case "Chapter 16: Innate Immunity: Nonspecific Defenses of the Host":
-                        base.SwitchToLastOpenedWindow();
-                        base.WaitForElement(By.XPath(CommonPageResource.
-                            ComonPage_BookTitle_For_Amplifire),10);
-                        ActualString = base.GetElementInnerTextByXPath(CommonPageResource.
-                            ComonPage_BookTitle_For_Amplifire).Trim();
-                        break;
-
-                }
+                base.SwitchToLastOpenedWindow();
+                base.WaitForElement(By.XPath(CommonPageResource.
+                    ComonPage_BookTitle_For_Amplifire), 10);
+                getActualContent = base.GetElementInnerTextByXPath(CommonPageResource.
+                    ComonPage_BookTitle_For_Amplifire).Trim();
             }
+
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -1268,8 +1264,9 @@ namespace Pegasus.Pages.CommonPageObjects
                 "GetTextByXpath",
               base.IsTakeScreenShotDuringEntryExit);
             // Returns the text displayed in the window
-            return ActualString;
+            return getActualContent;
         }
+
 
         /// <summary>
         /// Manage The Activity Folder Level Navigation HED Core.
