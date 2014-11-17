@@ -1173,4 +1173,85 @@
   <data name="SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='44']/div[2]/div[3]/div[5]/div[2]/div[1]/div[5]/input</value>
   </data>
+  <data name="SIM5Frame_Page_AccessPage_PostTest_FirstField_InputValue" xml:space="preserve">
+    <value>Driver ID</value>
+  </data>
+  <data name="SIM5Frame_Page_AccessPostTest_CommonField_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SIM5Frame_Page_AccessPostTest_DateMenu_Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="SIM5Frame_Page_AccessPostTest_SaveTableName_Value" xml:space="preserve">
+    <value>1A Drivers</value>
+  </data>
+  <data name="SIM5Frame_Page_AccessPreTest_CommonField_Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_ClickOnField_Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_CommonField_Locator" xml:space="preserve">
+    <value>//table[@id='table2UniqueID']/tbody/tr[1]/td[{0}]</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_Field4_Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_FirstName_Column_Value" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_DateField_Value" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_FileName" xml:space="preserve">
+    <value>1A_Drivers</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_Q5_DateofBirth_FieldValue" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_Q5_DateofBirth_Value" xml:space="preserve">
+    <value>11/22/1985</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_Q5_DriverId_FieldValue" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_Q5_DriverId_Value" xml:space="preserve">
+    <value>123456789</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_Q5_Field_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='slick_grid_canvas']/div/div[{0}]/input</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_Q5_FirstName_FieldValue" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_Q5_FirstName_Value" xml:space="preserve">
+    <value>Pamela</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_Q5_LastName_FieldValue" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_Q5_LastName_Value" xml:space="preserve">
+    <value>TOLIVER</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_Q5_MiddleInitial_FieldValue" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PostTest_Q5_MiddleInitial_Value" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_PreTest_FileName" xml:space="preserve">
+    <value>1A_Advising</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ChangeSpelling_Button_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='9']/button[4]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_OK_Id_Locator" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Review_Menu_CSSLocator" xml:space="preserve">
+    <value>li.tab-header.tab-header-review.accessible.tab-header-selected</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Spelling_Button_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Review']/li[1]/span/span[1]/span/span[1]/span</value>
+  </data>
 </root>
