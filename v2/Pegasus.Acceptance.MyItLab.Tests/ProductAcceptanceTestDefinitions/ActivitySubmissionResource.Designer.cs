@@ -62,6 +62,15 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Excel Chapter 1 Skill-Based Training.
+        /// </summary>
+        internal static string ActivitySubmission_Resource_ExcelPreTest_Window_Name {
+            get {
+                return ResourceManager.GetString("ActivitySubmission_Resource_ExcelPreTest_Window_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Homework.
         /// </summary>
         internal static string ActivitySubmission_Resource_Homework_Window_Name {

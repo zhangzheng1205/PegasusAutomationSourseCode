@@ -90,6 +90,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                             userTypeEnum, activityUnderTabName);
                                         break;
                                     case "Excel Chapter 1 Skill-Based Training":
+                                    case "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test":
                                         this.NavigateToExcelChapter1SimulationActivitiesFolder(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);

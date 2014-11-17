@@ -398,6 +398,31 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         }
 
         /// <summary>
+        /// Open the Pre-Test activity
+        /// </summary>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="studentName">This is User type enum</param>
+        [When(@"I launch the ""(.*)"" activity in content by ""(.*)"" for Pre-test")]
+        public void LaunchTheActivityForPreTest(string activityName,
+            User.UserTypeEnum studentName)
+        {
+            // Open The Activity
+            Logger.LogMethodEntry("ActivitySubmission",
+            "OpenTheActivityToLaunch",
+            base.IsTakeScreenShotDuringEntryExit);
+            StudentPresentationPage studentPresentationPage =
+                new StudentPresentationPage();
+            //Select Window And Frame
+            studentPresentationPage.SelectWindowAndFrame();
+            //wait for frame to load
+            studentPresentationPage.WaitForActivitytoLoad(activityName);
+            studentPresentationPage.SelectStartTraining();
+            studentPresentationPage.SelectSimActivityStudentWindowName(studentName, ActivitySubmissionResource.ActivitySubmission_Resource_ExcelPreTest_Window_Name);
+            Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityToLaunch",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Open The Activity To Launch Based On Scnerio.
         /// </summary>
         /// <param name="activityName">This is activity name.</param>

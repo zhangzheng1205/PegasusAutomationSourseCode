@@ -637,3 +637,17 @@ Then I should be on the "Course Materials" page
 When I select "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
 And I open the activity named as "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 And I attempt questions for "70%" in activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+
+#Products : MyItLab.
+#Pre condition : This test case depends on Word SIM5 activity should be created by instructor/Author in the following course and 
+#“Trap ALT+TAB and Browser Lock-Down” option  should be un checked in the activity preference tab.
+Scenario: Student launches a Sim 5 Excel activity Pre-test and Student scoring a 70% result
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent"
+And I launch the "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" activity in content by "CsSmsStudent" for Pre-test
