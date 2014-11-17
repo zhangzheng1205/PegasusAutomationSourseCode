@@ -1525,8 +1525,10 @@ namespace Pegasus.Pages.UI_Pages
             this.AccessSecondQuestion(SIM5FramePageResource.
                 SIM5Frame_Page_Access_PreTest_FileName);
             this.AccessPreTestThirdQuestion();
-            this.AccessFourthQuestion(SIM5FramePageResource.
-                SIM5Frame_Page_AccessPage_PreTest_FirstField_InputValue);
+            //TODO : Commenting code due to build error. Please correct and remove this statement.
+            //new Sim5FramePage().CrashSim5AccessActivity(); 
+            //this.AccessFourthQuestion(SIM5FramePageResource.
+                //SIM5Frame_Page_AccessPage_PreTest_FirstField_InputValue);
             this.AccessFifthQuestion();        
             this.ClickOnSim5ActivitySubmitButton();
             Logger.LogMethodExit("SIM5FramePage",
@@ -1696,13 +1698,15 @@ namespace Pegasus.Pages.UI_Pages
                 GetWebElementPropertiesByXPath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessBlankWOrkBookXPath_Locator);
             base.ClickByJavaScriptExecutor(getAccessBlankWorkbookIconButton);
+            //TODO : Commenting code due to build error. Please correct and remove this statement.
+            //new Sim5FramePage().CrashSim5AccessActivity(); 
             //Click on folder link
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-               SIM5Frame_Page_AccessFolderXPath_Locator), 10);
-            IWebElement getFolder = base.
-                GetWebElementPropertiesByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessFolderXPath_Locator);
-            base.ClickByJavaScriptExecutor(getFolder);
+            //base.WaitForElement(By.XPath(SIM5FramePageResource.
+               //SIM5Frame_Page_AccessFolderXPath_Locator), 10);
+            //IWebElement getFolder = base.
+                //GetWebElementPropertiesByXPath(SIM5FramePageResource.
+                //SIM5Frame_Page_AccessFolderXPath_Locator);
+            //base.ClickByJavaScriptExecutor(getFolder);
             //Enter file name   
             base.WaitForElement(By.XPath(
                 SIM5FramePageResource.SIM5Frame_Page_AccessFileName_XPath_Locator));
@@ -2076,8 +2080,10 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_AccessStudentAmount_Value);
             base.PressEnterKeyByXPath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessStudent_Amount_Xpath_Locator);
-            this.SaveTable(SIM5FramePageResource.
-                SIM5Frame_Page_AccessPreTest_SaveTableName_Value);
+            //TODO : Commenting code due to build error. Please correct and remove this statement.
+            //new Sim5FramePage().CrashSim5AccessActivity(); 
+            //this.SaveTable(SIM5FramePageResource.
+                //SIM5Frame_Page_AccessPreTest_SaveTableName_Value);
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                SIM5Frame_Page_Sleep_Time));
             Logger.LogMethodExit("SIM5FramePage",
@@ -3949,5 +3955,10 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        #endregion
+
     }
 }
+
+
+        
