@@ -3549,7 +3549,7 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void getQuestionNumber(int questNo)
+        public void getQuestionNumber(int questNo)
         {
             logger.LogMethodEntry("StudentPresentationPage", "QuestionNumber",
             base.IsTakeScreenShotDuringEntryExit);

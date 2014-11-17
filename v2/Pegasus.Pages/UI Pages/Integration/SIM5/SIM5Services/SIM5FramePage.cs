@@ -125,7 +125,11 @@ namespace Pegasus.Pages.UI_Pages
                 this.SetWorksheetThemeToRetrospect();
                 Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                        SIM5Frame_Page_SIM5_Launch_Sleep_Time));
-
+                //Answer fourteenth Question
+                new StudentPresentationPage().getQuestionNumber(14);
+                this.SetMarginsAndPageLayout();
+                //Answer Fifteenth Question
+                this.DisplayDocumentProperties();
                 //Click on SIM5 activity Submit button
                 this.ClickOnSIM5ActivitySubmitButton();
             }
@@ -137,6 +141,99 @@ namespace Pegasus.Pages.UI_Pages
                  "SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        #region SIM5 Excel Fifteenth Question
+        /// <summary>
+        /// Set and DisplayDocumentProperties.
+        /// </summary>
+        public void DisplayDocumentProperties()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+                    "DisplayDocumentProperties",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //click on File Tab
+            IWebElement getFileMenuItem = base.GetWebElementPropertiesByCssSelector(
+             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_File_Menu_CSSLocator);
+            base.ClickByJavaScriptExecutor(getFileMenuItem);
+            //click on show All properties
+            IWebElement PropButton = base.GetWebElementPropertiesByXPath(
+             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ShowAllProperties_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(PropButton);
+            //click on right tag ans type " cardio sales"
+            IWebElement tagButton = base.GetWebElementPropertiesByXPath(
+              SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AddTagTextBox_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(tagButton);
+            base.FillTextBoxByXPath(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AddTagTextBox_Xpath_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AddTagTextBox_Value);
+            //click on subject and type "Course, Section #"
+            IWebElement SubjectButton = base.GetWebElementPropertiesByXPath(
+             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(SubjectButton);
+            base.FillTextBoxByXPath(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Xpath_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Value);
+            //press tab
+            base.PressKey(Keys.Enter);
+            //click on Print option and print button
+            IWebElement PrintButton = base.GetWebElementPropertiesByCssSelector(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PrintTab_CssLocator);
+            base.ClickByJavaScriptExecutor(PrintButton);
+            IWebElement HorizontalCheckBox = base.GetWebElementPropertiesById(
+              SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PrintButton_ID_Locator);
+            base.ClickByJavaScriptExecutor(HorizontalCheckBox);
+            Logger.LogMethodExit("SIM5FramePage",
+                "DisplayDocumentProperties",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+        #endregion
+
+        #region SIM5 Excel Fourteenth Question
+        /// <summary>
+        /// Set the Margins And PageLayout
+        /// </summary>
+        public void SetMarginsAndPageLayout()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+                    "SetMarginsAndPageLayout",
+                   base.IsTakeScreenShotDuringEntryExit);
+
+            //Click on PageLayout file menu item
+            IWebElement getPageLayoutMenuItem = base.GetWebElementPropertiesByCssSelector(
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PageLayout_Menu);
+            base.ClickByJavaScriptExecutor(getPageLayoutMenuItem);
+            //click on margins arrow and select Custom margins
+            IWebElement getMarginItem = base.GetWebElementPropertiesByXPath(
+               SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_MarginsButton_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(getMarginItem);
+            IWebElement getCustomMarginItem = base.GetWebElementPropertiesByXPath(
+             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_CustomMarginsButton_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(getCustomMarginItem);
+            //select check box horizontal margins
+            IWebElement HorizontalCheckBox = base.GetWebElementPropertiesById(
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_HorizontalMarginCheckBox_ID_Locator);
+            base.ClickByJavaScriptExecutor(HorizontalCheckBox);
+            //navigate header/footer tab and click on custom footer
+            IWebElement HeaderTab = base.GetWebElementPropertiesByXPath(
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_HeaderTab_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(HeaderTab);
+            IWebElement CustomFooter = base.GetWebElementPropertiesByXPath(
+             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_CustomFooterButton_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(CustomFooter);
+            //click on insert file name button and click OK
+            IWebElement InsertFileName = base.GetWebElementPropertiesById(
+                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_InsertFNIcon_ID_Locator);
+            base.ClickByJavaScriptExecutor(InsertFileName);
+            IWebElement Accept = base.GetWebElementPropertiesById(
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_OKButton_ID_Locator);
+            base.ClickByJavaScriptExecutor(Accept);
+            //Click on OK
+            IWebElement AcceptOk = base.GetWebElementPropertiesByXPath(
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AcceptOKButton_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(AcceptOk);
+            Logger.LogMethodExit("SIM5FramePage",
+                "SetMarginsAndPageLayout",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+        #endregion
 
         /// <summary>
         /// Submit SIM5 Excel type activity to score 70%.

@@ -1125,4 +1125,52 @@
   <data name="SIM5Frame_Page_StudentId_Locator" xml:space="preserve">
     <value>studentId</value>
   </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_AcceptOKButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='4']/div/button[4]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_AddTagTextBox_Value" xml:space="preserve">
+    <value>cardio sales</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_AddTagTextBox_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='44']/div[2]/div[3]/div[5]/div[2]/div[1]/div[2]/input</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_CustomFooterButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='tabControl_ExcelPageSetup']/ul[2]/li[3]/button[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_CustomMarginsButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Page Layout']/li[2]/span/span[1]/span/span[1]/div[1]/div[2]/div/div[2]/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_File_Menu_CSSLocator" xml:space="preserve">
+    <value>li.tab-header.tab-header-backstage.tab-header-file.accessible</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_HeaderTab_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='tabControl_ExcelPageSetup']/ul[1]/li[3]/div/div</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_HorizontalMarginCheckBox_ID_Locator" xml:space="preserve">
+    <value>tab2_checkBoxHorizontally</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_InsertFNIcon_ID_Locator" xml:space="preserve">
+    <value>6-ButtonInsertFileName</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_MarginsButton_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Page Layout']/li[2]/span/span[1]/span/span[1]/div[1]/div[1]/div/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_OKButton_ID_Locator" xml:space="preserve">
+    <value>6-ButtonOk</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_PrintButton_ID_Locator" xml:space="preserve">
+    <value>44-PrintButton</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_PrintTab_CssLocator" xml:space="preserve">
+    <value>li.menuItem.menuItem_5.accessible.filemenu-manipulator</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ShowAllProperties_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='44']/div[2]/div[3]/div[5]/div[2]/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Value" xml:space="preserve">
+    <value>Course, Section #</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='44']/div[2]/div[3]/div[5]/div[2]/div[1]/div[5]/input</value>
+  </data>
 </root>
