@@ -876,15 +876,16 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="attemptPercentage"></param>
         /// <param name="activityName"></param>
         [When(@"I attempt questions for ""(.*)"" in activity ""(.*)""")]
-        public void WhenIAttemptQuestionsForInActivity(string attemptPercentage, string activityName)
+        public void AttemptQuestionsForWordActivity(string attemptPercentage, string activityName)
         {
             //Sim5 Power Point Questions Submission
             Logger.LogMethodEntry("ActivitySubmission", "AttemptSim5PowerPointQuestions",
             IsTakeScreenShotDuringEntryExit);
             //Attempt Sim5 Power Point Questions
-            new StudentPresentationPage().AttemptSim5WordactivityQuestions(attemptPercentage, activityName);
+            new StudentPresentationPage().AttemptSim5WordActivityQuestions(attemptPercentage, activityName);
             Logger.LogMethodExit("ActivitySubmission", "AttemptSim5PowerPointQuestions",
             IsTakeScreenShotDuringEntryExit);
         }
     }
+
 }

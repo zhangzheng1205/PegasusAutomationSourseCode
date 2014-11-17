@@ -5554,72 +5554,142 @@ namespace Pegasus.Pages.UI_Pages
                 "SelectSimActivityNormalStudentWindowName",
                base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
-        /// Attempt Sim5 Word Questions.
+        /// 
         /// </summary>
-        /// <param name="activityName">This is Activity Name.</param>
-        public void AttemptSim5WordactivityQuestions(string attemptPercentage, string activityName)
-        {
-            //Attempt Sim5 Power Point Questions
-            logger.LogMethodEntry("StudentPresentationPage", "AttemptSim5PowerPointQuestions",
-                base.IsTakeScreenShotDuringEntryExit);
-
-            try
+        /// <param name="?"></param>
+         public void AttemptSim5WordActivityQuestions(string attemptPercentage, string activityName)
+         {
+             logger.LogMethodEntry("StudentPresentationPage", "SelectSimActivityNormalStudentWindowName",
+               base.IsTakeScreenShotDuringEntryExit);
+           try
             {
-                //First Question Submission
-                AttemptingFirstWordQuestion(activityName);
-                Thread.Sleep(Convert.ToInt32
-                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                ClickOnSim5NextQuestionButton();
-                Thread.Sleep(Convert.ToInt32
-                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                //Third Question Submission
-                AttemptingThirdWordQuestion();
-                Thread.Sleep(Convert.ToInt32
-                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                ClickOnSim5NextQuestionButton();
-                Thread.Sleep(Convert.ToInt32
-                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                //Fifth Question Submission
-                AttemptingFifthWordQuestion();
-                Thread.Sleep(Convert.ToInt32
-                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                ClickOnSim5NextQuestionButton();
-                Thread.Sleep(Convert.ToInt32
-                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                Thread.Sleep(Convert.ToInt32
-                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                // Seventh Question Submission
-                AttemptingSeventhWordQuestion();
-                Thread.Sleep(Convert.ToInt32
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                // Eighth Question Submission
-                AttemptingEighthWordQuestion();
-                Thread.Sleep(Convert.ToInt32
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                // Ninth Question Submission
-                AttemptingNinthWordQuestion();
-                Thread.Sleep(Convert.ToInt32
-
-(StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
-                // Tenth Question Submission
-                AttemptingTenthWordQuestion();
-                Thread.Sleep(Convert.ToInt32
-                    (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                if (attemptPercentage.Equals("100%"))
+                {
+                    AttemptSim5WordactivityQuestionsToScore100Percent(activityName);
+                    // ThirtyPercentScoringQuestions();
+                }
+                else if (attemptPercentage.Equals("70%"))
+                {
+                    AttemptSim5WordactivityQuestionsToScore70Percent(activityName);
+                }
                 //Click On SIM5 Activity Submit Button
                 this.ClickOnSim5ActivitySubmitButton();
-
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("StudentPresentationPage", "AttemptSim5PowerPointQuestions",
+            logger.LogMethodExit("StudentPresentationPage", "AttemptSim5WordActivityQuestions",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+         /// <summary>
+         /// Attempt Sim5 Word Questions for 100 percent.
+         /// </summary>
+         /// <param name="activityName">This is Activity Name.</param>
+         public void AttemptSim5WordactivityQuestionsToScore100Percent(string activityName)
+         {
+             //Attempt Sim5 Power Point Questions
+             logger.LogMethodEntry("StudentPresentationPage", "AttemptSim5WordactivityQuestionsToScore100Percent",
+                 base.IsTakeScreenShotDuringEntryExit);
+             try
+             {
+                 //First Question Submission
+                 AttemptingFirstWordQuestion(activityName);
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 ClickOnSim5NextQuestionButton();
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 //Third Question Submission
+                 AttemptingThirdWordQuestion();
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 ClickOnSim5NextQuestionButton();
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 //Fifth Question Submission
+                 AttemptingFifthWordQuestion();
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 ClickOnSim5NextQuestionButton();
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 // Seventh Question Submission
+                 AttemptingSeventhWordQuestion();
+                 Thread.Sleep(Convert.ToInt32
+
+ (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 // Eighth Question Submission
+                 AttemptingEighthWordQuestion();
+                 Thread.Sleep(Convert.ToInt32
+
+ (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 // Ninth Question Submission
+                 AttemptingNinthWordQuestion();
+                 Thread.Sleep(Convert.ToInt32
+
+ (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 // Tenth Question Submission
+                 AttemptingTenthWordQuestion();
+             }
+             catch (Exception e)
+             {
+                 ExceptionHandler.HandleException(e);
+             }
+             logger.LogMethodExit("StudentPresentationPage", "AttemptSim5PowerPointQuestions",
+                 base.IsTakeScreenShotDuringEntryExit);
+         }
+        /// <summary>
+        /// Attempt Sim5 Word Questions for 70 percent.
+        /// </summary>
+        /// <param name="activityName">This is Activity Name.</param>
+         public void AttemptSim5WordactivityQuestionsToScore70Percent(string activityName)
+         {
+             //Attempt Sim5 Power Point Questions
+             logger.LogMethodEntry("StudentPresentationPage", "AttemptSim5WordactivityQuestionsToScore70Percent",
+                 base.IsTakeScreenShotDuringEntryExit);
+             try
+             {
+                 //First Question Submission
+                 AttemptingFirstWordQuestion(activityName);
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 ClickOnSim5NextQuestionButton();
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 //Third Question Submission
+                 AttemptingThirdWordQuestion();
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 ClickOnSim5NextQuestionButton();
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 //Fifth Question Submission
+                 AttemptingFifthWordQuestion();
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 ClickOnSim5NextQuestionButton();
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+                 // Seventh Question Submission
+                 AttemptingSeventhWordQuestion();
+                 Thread.Sleep(Convert.ToInt32
+                     (StudentPresentationPageResource.StudentPrsentation_Page_Thread_sleep));
+             }
+             catch (Exception e)
+             {
+                 ExceptionHandler.HandleException(e);
+                 logger.LogMethodExit("StudentPresentationPage", "AttemptSim5WordactivityQuestionsToScore70Percent",
+                    base.IsTakeScreenShotDuringEntryExit);
+             }
+         }
+        
         /// <summary>
         /// Attempt First Word Question.
         /// </summary>
@@ -5935,18 +6005,6 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             Thread.Sleep(Convert.ToInt32
                 (StudentPresentationPageResource.StudentPrsentation_Page_Sleep_time));
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSim5NextQuestionButton",
-         base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        public void SelectStartTraining()
-        {
-            logger.LogMethodEntry("StudentPresentationPage", "SelectStartTraining",
-          base.IsTakeScreenShotDuringEntryExit);
-
-            IWebElement StartButton = base.GetWebElementPropertiesByCssSelector("#Span1>img");
-            base.ClickByJavaScriptExecutor(StartButton);
-
-            logger.LogMethodExit("StudentPresentationPage", "SelectStartTraining",
          base.IsTakeScreenShotDuringEntryExit);
         }
     }
