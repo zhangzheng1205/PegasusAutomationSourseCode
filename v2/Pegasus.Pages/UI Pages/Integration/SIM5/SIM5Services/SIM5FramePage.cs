@@ -128,11 +128,28 @@ namespace Pegasus.Pages.UI_Pages
                 //Answer fourteenth Question
                 new StudentPresentationPage().getQuestionNumber(14);
                 this.SetMarginsAndPageLayout();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Sleep_Time));
                 //Answer Fifteenth Question
                 this.DisplayDocumentProperties();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Sleep_Time));
+                //Answer Sixteenth Question
+                this.PrintingUsingKeyboard();
+                //Answer Seventeenth Question
+                this.ChangingPageDetailsandFormulas();
                 //Answer Eighteenth Question
-                new StudentPresentationPage().getQuestionNumber(18);
                 this.SpellCheckingSheet();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Sleep_Time));
+                //Answer Nineteenth Question
+                this.EnteringDataByRange();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Sleep_Time));
+                //Answer Twentyth Question
+                this.ApplyNumberingtoCells();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Sleep_Time));
                 //Click on SIM5 activity Submit button
                 this.ClickOnSIM5ActivitySubmitButton();
             }
@@ -145,6 +162,152 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        private void PrintingUsingKeyboard()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+            "PrintingUsingKeyboard", base.IsTakeScreenShotDuringEntryExit);
+            //click on A3 and select A3:F5
+            IWebElement getA4Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A3_Cell_Id_Locator);
+            base.PerformMouseClickAction(getA4Cell);
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A3_Cell_Id_Locator,
+             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_F5_Cell_Id_Locator);
+            //Press Cntrl+F2
+            base.PerformKeyDownThenPressKeyToElement(Keys.Control, Keys.F2, 1);
+            // Click on Print Active sheets and select Print Selection
+            base.WaitForElement(By.CssSelector(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PrintStyle_CSSLocator));
+            IWebElement PrintOption= base.GetWebElementPropertiesByCssSelector(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PrintStyle_CSSLocator);
+            base.PerformMouseClickAction(PrintOption);
+            IWebElement SelectionButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PrintOption_Xpath_Locator);
+            base.PerformMouseClickAction(SelectionButton);
+            //click on Print
+            IWebElement PrintButton = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PrintButtonOption_Id_Locator);
+            base.PerformMouseClickAction(PrintButton);
+
+            Logger.LogMethodExit("SIM5FramePage",
+          "PrintingUsingKeyboard", base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        private void ChangingPageDetailsandFormulas()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+           "ChangingPageDetailsandFormulas", base.IsTakeScreenShotDuringEntryExit);
+            //click on Formulas Tab and show formulas
+            IWebElement getFormulasMenuItem = base.GetWebElementPropertiesByCssSelector(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Formulas_Menu_CSSLocator);
+            base.ClickByJavaScriptExecutor(getFormulasMenuItem);
+            IWebElement ShowFormulaButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ShowFormulas_Xpath_Locator);
+            base.PerformMouseClickAction(ShowFormulaButton);
+            //select A:F and double click on right column of A
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A_Column_Id_Locator,
+             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_F_Column_Id_Locator);
+            IWebElement getAutoFitSize = base.GetWebElementPropertiesByCssSelector(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AutoFitForA_CSSLocator);
+            base.DoubleClickByJavaScriptExecuter(getAutoFitSize);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Sleep_Time));
+            //click on PageLayout ,orientation and select Landscape
+            IWebElement getPagelayoutMenuItem = base.GetWebElementPropertiesByCssSelector(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Pagelayout_Menu_CSSLocator);
+            base.ClickByJavaScriptExecutor(getPagelayoutMenuItem);
+            IWebElement orientationButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_orientationButton_Xpath_Locator);
+            base.PerformMouseClickAction(orientationButton);
+            IWebElement LandscapeButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_LandscapeStyle_Xpath_Locator);
+            base.PerformMouseClickAction(LandscapeButton);
+            //click on width arrow under scale fit and then click page 1
+            IWebElement widthButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_WidthArrow_Xpath_Locator);
+            base.PerformMouseClickAction(widthButton);
+            IWebElement PageOption = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Page1Option_Xpath_Locator);
+            base.PerformMouseClickAction(PageOption);
+            Logger.LogMethodExit("SIM5FramePage",
+            "ChangingPageDetailsandFormulas",base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        #region SIM5 Excel Twentyth Question
+        /// <summary>
+        /// Apply Numbering and decimal places to Cells
+        /// </summary>
+        private void EnteringDataByRange()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+            "EnteringDataByRange",base.IsTakeScreenShotDuringEntryExit);
+            //Select Range B4:D9
+            this.SelectCellRange("Sheet1_B4", "Sheet1_D9");
+            //type 125 in cell B4 and press Enter
+            this.PutExcelValueInCell("Sheet1_B4","125");
+            //type 1125 in cell B5 and press Enter
+            this.PutExcelValueInCell("Sheet1_B5", "1125");
+            //type 450 in cell B6 and press Enter
+            this.PutExcelValueInCell("Sheet1_B6", "450");
+            //type 1105 in cell B7 and press Enter
+            this.PutExcelValueInCell("Sheet1_B7", "1105");
+            //type 255 in cell B8 and press Enter
+            this.PutExcelValueInCell("Sheet1_B8", "255");
+            //type 215 in cell B9 and press Enter
+            this.PutExcelValueInCell("Sheet1_B9", "215");
+            //type 15.50 in cell C4 and press Enter
+            this.PutExcelValueInCell("Sheet1_C4", "15.50");
+            Logger.LogMethodExit("SIM5FramePage",
+                "EnteringDataByRange",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+        #endregion
+
+        #region SIM5 Excel Twentyth Question
+        /// <summary>
+        /// Apply Numbering and decimal places to Cells
+        /// </summary>
+        private void ApplyNumberingtoCells()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+            "ApplyNumberingtoCells",
+            base.IsTakeScreenShotDuringEntryExit);
+            //click on E4 and type "=b4*d4"
+            IWebElement getE4Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E4_Cell_Id_Locator);
+            base.PerformMouseClickAction(getE4Cell);
+            this.PutExcelValueInCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E4_Cell_Id_Locator,
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E4_Cell_Value);
+            //press Enter
+            base.PressKey(Keys.Enter);
+            //click on E4 and drag down till E9
+            IWebElement getE9Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E9_Cell_Id_Locator);
+            base.PerformMouseClickAction(getE4Cell);
+            IWebElement E4Setter = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E4Setter_Xpath_Locator);
+            base.DragAndDropWebElement(E4Setter, getE9Cell);
+            //select B4 to B9
+            IWebElement getB4Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator);
+            IWebElement getB9Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B9_Cell_Id_Locator);
+            base.PerformDragAndDropAction(getB4Cell, getB9Cell);
+            // click on Home tab
+            IWebElement getHomeMenuItem = base.GetWebElementPropertiesByCssSelector(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Home_Menu_CSSLocator);
+            base.ClickByJavaScriptExecutor(getHomeMenuItem);
+            // Under numbering group click on comma
+            IWebElement commaButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_CommaOption_Xpath_Locator);
+            base.PerformMouseClickAction(commaButton);
+            // click on decrease decimal icon twice
+            IWebElement DecimalButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_DecreaseDecimalOption_Xpath_Locator);
+            base.PerformMouseClickAction(commaButton);
+            Logger.LogMethodExit("SIM5FramePage",
+            "ApplyNumberingtoCells",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+        #endregion
 
         #region SIM5 Excel Eighteenth Question
         /// <summary>
@@ -153,8 +316,8 @@ namespace Pegasus.Pages.UI_Pages
         public void SpellCheckingSheet()
         {
             Logger.LogMethodEntry("SIM5FramePage",
-                    "SpellCheckingSheet",
-                   base.IsTakeScreenShotDuringEntryExit);
+            "SpellCheckingSheet",
+            base.IsTakeScreenShotDuringEntryExit);
             //click on Review Tab
             IWebElement getReviewMenuItem = base.GetWebElementPropertiesByCssSelector(
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Review_Menu_CSSLocator);
@@ -172,8 +335,8 @@ namespace Pegasus.Pages.UI_Pages
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_OK_Id_Locator);
             base.ClickByJavaScriptExecutor(tagButton);
             Logger.LogMethodExit("SIM5FramePage",
-                "SpellCheckingSheet",
-              base.IsTakeScreenShotDuringEntryExit);
+            "SpellCheckingSheet",
+            base.IsTakeScreenShotDuringEntryExit);
         }
         #endregion
 
@@ -184,28 +347,28 @@ namespace Pegasus.Pages.UI_Pages
         public void DisplayDocumentProperties()
         {
             Logger.LogMethodEntry("SIM5FramePage",
-                    "DisplayDocumentProperties",
-                   base.IsTakeScreenShotDuringEntryExit);
+            "DisplayDocumentProperties",
+            base.IsTakeScreenShotDuringEntryExit);
             //click on File Tab
             IWebElement getFileMenuItem = base.GetWebElementPropertiesByCssSelector(
-             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_File_Menu_CSSLocator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_File_Menu_CSSLocator);
             base.ClickByJavaScriptExecutor(getFileMenuItem);
             //click on show All properties
             IWebElement PropButton = base.GetWebElementPropertiesByXPath(
-             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ShowAllProperties_Xpath_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ShowAllProperties_Xpath_Locator);
             base.ClickByJavaScriptExecutor(PropButton);
             //click on right tag ans type " cardio sales"
             IWebElement tagButton = base.GetWebElementPropertiesByXPath(
-              SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AddTagTextBox_Xpath_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AddTagTextBox_Xpath_Locator);
             base.ClickByJavaScriptExecutor(tagButton);
             base.FillTextBoxByXPath(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AddTagTextBox_Xpath_Locator,
-                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AddTagTextBox_Value);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AddTagTextBox_Value);
             //click on subject and type "Course, Section #"
             IWebElement SubjectButton = base.GetWebElementPropertiesByXPath(
-             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Xpath_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Xpath_Locator);
             base.ClickByJavaScriptExecutor(SubjectButton);
             base.FillTextBoxByXPath(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Xpath_Locator,
-                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Value);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Value);
             //press tab
             base.PressKey(Keys.Enter);
             //click on Print option and print button
@@ -213,11 +376,11 @@ namespace Pegasus.Pages.UI_Pages
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PrintTab_CssLocator);
             base.ClickByJavaScriptExecutor(PrintButton);
             IWebElement HorizontalCheckBox = base.GetWebElementPropertiesById(
-              SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PrintButton_ID_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PrintButton_ID_Locator);
             base.ClickByJavaScriptExecutor(HorizontalCheckBox);
             Logger.LogMethodExit("SIM5FramePage",
-                "DisplayDocumentProperties",
-              base.IsTakeScreenShotDuringEntryExit);
+            "DisplayDocumentProperties",
+            base.IsTakeScreenShotDuringEntryExit);
         }
         #endregion
 
@@ -227,46 +390,44 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public void SetMarginsAndPageLayout()
         {
-            Logger.LogMethodEntry("SIM5FramePage",
-                    "SetMarginsAndPageLayout",
-                   base.IsTakeScreenShotDuringEntryExit);
-
+            Logger.LogMethodEntry("SIM5FramePage","SetMarginsAndPageLayout",
+            base.IsTakeScreenShotDuringEntryExit);
             //Click on PageLayout file menu item
             IWebElement getPageLayoutMenuItem = base.GetWebElementPropertiesByCssSelector(
-                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PageLayout_Menu);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_PageLayout_Menu);
             base.ClickByJavaScriptExecutor(getPageLayoutMenuItem);
             //click on margins arrow and select Custom margins
             IWebElement getMarginItem = base.GetWebElementPropertiesByXPath(
-               SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_MarginsButton_Xpath_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_MarginsButton_Xpath_Locator);
             base.ClickByJavaScriptExecutor(getMarginItem);
             IWebElement getCustomMarginItem = base.GetWebElementPropertiesByXPath(
-             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_CustomMarginsButton_Xpath_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_CustomMarginsButton_Xpath_Locator);
             base.ClickByJavaScriptExecutor(getCustomMarginItem);
             //select check box horizontal margins
             IWebElement HorizontalCheckBox = base.GetWebElementPropertiesById(
-                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_HorizontalMarginCheckBox_ID_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_HorizontalMarginCheckBox_ID_Locator);
             base.ClickByJavaScriptExecutor(HorizontalCheckBox);
             //navigate header/footer tab and click on custom footer
             IWebElement HeaderTab = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_HeaderTab_Xpath_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_HeaderTab_Xpath_Locator);
             base.ClickByJavaScriptExecutor(HeaderTab);
             IWebElement CustomFooter = base.GetWebElementPropertiesByXPath(
-             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_CustomFooterButton_Xpath_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_CustomFooterButton_Xpath_Locator);
             base.ClickByJavaScriptExecutor(CustomFooter);
             //click on insert file name button and click OK
             IWebElement InsertFileName = base.GetWebElementPropertiesById(
-                 SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_InsertFNIcon_ID_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_InsertFNIcon_ID_Locator);
             base.ClickByJavaScriptExecutor(InsertFileName);
             IWebElement Accept = base.GetWebElementPropertiesById(
-                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_OKButton_ID_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_OKButton_ID_Locator);
             base.ClickByJavaScriptExecutor(Accept);
             //Click on OK
             IWebElement AcceptOk = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AcceptOKButton_Xpath_Locator);
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_AcceptOKButton_Xpath_Locator);
             base.ClickByJavaScriptExecutor(AcceptOk);
             Logger.LogMethodExit("SIM5FramePage",
-                "SetMarginsAndPageLayout",
-              base.IsTakeScreenShotDuringEntryExit);
+            "SetMarginsAndPageLayout",
+            base.IsTakeScreenShotDuringEntryExit);
         }
         #endregion
 

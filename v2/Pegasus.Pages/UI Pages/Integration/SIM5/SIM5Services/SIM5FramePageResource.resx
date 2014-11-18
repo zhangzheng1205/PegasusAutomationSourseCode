@@ -1263,4 +1263,73 @@
   <data name="SIM5Frame_Page_SIM5_Excel_Spelling_Button_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='ribbon-tab-Review']/li[1]/span/span[1]/span/span[1]/span</value>
   </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A3_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_A3</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_AutoFitForA_CSSLocator" xml:space="preserve">
+    <value>#__A &gt; div</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A_Column_Id_Locator" xml:space="preserve">
+    <value>__A</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator1" xml:space="preserve">
+    <value>Sheet1_B4</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B9_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_B9</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_CommaOption_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[4]/span/span[1]/span/span/span[2]/span[1]/span[3]/span</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_DecreaseDecimalOption_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[4]/span/span[1]/span/span/span[2]/span[2]/span[2]/span</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_E4Setter_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='12_selectionBorder1']/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_E4_Cell_Value1" xml:space="preserve">
+    <value>"=b4*d4"</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_E9_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_E9</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_F5_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_F5</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Formulas_Menu_CSSLocator" xml:space="preserve">
+    <value>li.tab-header.tab-header-formulas.accessible</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_F_Column_Id_Locator" xml:space="preserve">
+    <value>__F</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Home_Menu_CSSLocator" xml:space="preserve">
+    <value>li.tab-header.tab-header-home.accessible.tab-header-selected</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_LandscapeStyle_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Page Layout']/li[2]/span/span[1]/span/span[2]/div[1]/div[2]/div/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_orientationButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Page Layout']/li[2]/span/span[1]/span/span[2]/div[1]/div[1]/div</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Page1Option_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Page Layout']/li[3]/span/span[1]/span/span/span[1]/span[2]/div[1]/div[2]/div/div[2]/div[1]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Pagelayout_Menu_CSSLocator" xml:space="preserve">
+    <value>li.tab-header.tab-header-pagelayout.accessible</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_PrintButtonOption_Id_Locator" xml:space="preserve">
+    <value>20-PrintButton</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_PrintOption_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@class='menuWorkspace']/div[6]/span[5]/div[1]/div[2]/div/div[1]/div[3]/div</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_PrintStyle_CSSLocator" xml:space="preserve">
+    <value>span.office-control.ctrl-dropdownbuttonhorizontalfm.accessible.absolute-pos.dropdown-print-options</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ShowFormulas_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Formulas']/li[3]/span/span[1]/span/span[1]/span[2]/span[1</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_WidthArrow_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Page Layout']/li[3]/span/span[1]/span/span/span[1]/span[2]/div[1]/div[1]/span</value>
+  </data>
 </root>
