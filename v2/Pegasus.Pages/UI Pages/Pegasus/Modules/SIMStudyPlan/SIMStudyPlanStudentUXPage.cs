@@ -227,13 +227,13 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                base.WaitForElement(By.XPath(SIMStudyPlanStudentUXPageResource.
-                       SIMStudyPlanStudentUXPage_StartTrainingButton_XPathLocator));
-                //Click on 'Start Training' button
-                IWebElement clickStartTraining = base.GetWebElementPropertiesByXPath(
-                    SIMStudyPlanStudentUXPageResource.
-                    SIMStudyPlanStudentUXPage_StartTrainingButton_XPathLocator);
-                base.ClickByJavaScriptExecutor(clickStartTraining);
+                        base.WaitForElement(By.XPath(SIMStudyPlanStudentUXPageResource.
+                          SIMStudyPlanStudentUXPage_StartPostTestButton_XPathLocator));
+                        //Click on 'Start Training' button                
+                        IWebElement clickStartTraining= base.GetWebElementPropertiesByXPath(
+                         SIMStudyPlanStudentUXPageResource.
+                          SIMStudyPlanStudentUXPage_StartPostTestButton_XPathLocator);
+                        base.ClickByJavaScriptExecutor(clickStartTraining);
             }
             catch (Exception e)
             {
@@ -243,6 +243,47 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+
+        /// <summary>
+        /// Select 'Start Training' button.
+        /// </summary>
+        public void SelectStartButton(string activityType)
+        {
+            //Select start training button
+            Logger.LogMethodEntry("SIMStudyPlanStudentUXPage", "SelectStartTrainingButton",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                switch (activityType)
+                {
+                    case "Start Training":
+                        base.WaitForElement(By.XPath(SIMStudyPlanStudentUXPageResource.
+                         SIMStudyPlanStudentUXPage_StartTrainingButton_XPathLocator));
+                        //Click on 'Start Training' button                
+                        IWebElement clickStartTraining = base.GetWebElementPropertiesByXPath(
+                         SIMStudyPlanStudentUXPageResource.
+                          SIMStudyPlanStudentUXPage_StartTrainingButton_XPathLocator);
+                        base.ClickByJavaScriptExecutor(clickStartTraining);
+                        break;
+                    case "Start Post-Test":
+                        base.WaitForElement(By.XPath(SIMStudyPlanStudentUXPageResource.
+                          SIMStudyPlanStudentUXPage_StartPostTestButton_XPathLocator));
+                        //Click on 'Start Training' button                
+                        IWebElement clickStartPostTest = base.GetWebElementPropertiesByXPath(
+                         SIMStudyPlanStudentUXPageResource.
+                          SIMStudyPlanStudentUXPage_StartPostTestButton_XPathLocator);
+                        base.ClickByJavaScriptExecutor(clickStartPostTest);
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("SIMStudyPlanStudentUXPage", "SelectStartTrainingButton",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Fetch the score of the activity.
         /// </summary>

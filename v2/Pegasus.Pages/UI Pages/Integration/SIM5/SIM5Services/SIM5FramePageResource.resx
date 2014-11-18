@@ -1201,7 +1201,7 @@
     <value>2</value>
   </data>
   <data name="SIM5Frame_Page_Access_CommonField_Locator" xml:space="preserve">
-    <value>//table[@id='table2UniqueID']/tbody/tr[1]/td[{0}]</value>
+    <value>//table[@id='table2UniqueID']/tbody/tr/td[{0}]</value>
   </data>
   <data name="SIM5Frame_Page_Access_Field4_Value" xml:space="preserve">
     <value>4</value>

@@ -1682,6 +1682,12 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             new Actions(WebDriver).Click(webElement).Perform();
         }
 
+        protected void ClickAction(IWebElement webElement)
+        {
+            new Actions(WebDriver).Click(webElement);
+        }
+
+
         /// <summary>
         ///  Moves the mouse to the middle of the element.
         /// </summary>
@@ -1882,6 +1888,23 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         {
             new Actions(WebDriver).ClickAndHold(destination).MoveToElement(target).Release(target).Build().Perform();
         }
+
+        /// <summary>
+        /// Select multiple elements using Shift key.
+        /// </summary>
+        /// <param name="keyValue">This is the key name.</param>
+        /// <param name="element1">First element to be selected.</param>
+        /// <param name="element2">Second element to be selected.</param>
+        protected void SelectMultipleElementsUsingShift(String keyValue, IWebElement element1, IWebElement element2)
+        {
+            new Actions(WebDriver).KeyDown(keyValue).Click(element1).Click(element2).KeyUp(keyValue).Perform();
+        }
+
+        protected void PerformKeyUp(String keyValue)
+        {
+            new Actions(WebDriver).KeyUp(keyValue).Perform();
+        }
+
 
         #endregion
 

@@ -652,7 +652,6 @@ Then I should be on the "Course Materials" page
 When I select "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent"
 And I launch the "Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" activity in content by "CsSmsStudent" for Pre-test
 And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly and click on Submit button with score "100%"
-
 And I attempt questions for "70%" in activity "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 
 #Purpose : Submitting Sim 5 Word activity and Student scoring 100
@@ -701,9 +700,9 @@ Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent" 
 And I open the activity named as "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
 Then I should be on the "myitlab Study Plan" page
-When I launch the 'Start Training' button of the "Access Chapter 1 Skill-Based Training" of "pre-test" activity by "CsSmsStudent"
+When I launch the "Start Training" button of the "Access Chapter 1 Skill-Based Training" of activity by "CsSmsStudent"
 And I answer activity "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" correctly
-When I launch the 'Start Post-Test' button of the "Access Chapter 1 Skill-Based Exam (Scenario 1)" of "post-test" activity by "CsSmsStudent" 
+When I launch the "Start Post-Test" button of the "Access Chapter 1 Skill-Based Exam (Scenario 1)" of activity by "CsSmsStudent" 
 When I close the "Access Chapter 1 Skill-Based Exam (Scenario 1) - BDD 4976" window
 Then I should see the "In Progress" status for the activity "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
 
@@ -721,7 +720,7 @@ Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent" 
 And I open the activity named as "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
 Then I should be on the "myitlab Study Plan" page
-When I launch the 'Start Training' button of the "Access Chapter 1 Skill-Based Exam (Scenario 1)" of "post-test" activity by "CsSmsStudent"
+When I launch the "Start Post-Test" button of the "Access Chapter 1 Skill-Based Exam (Scenario 1)" of activity by "CsSmsStudent" 
 And I should answer activity "Access Chapter 1 Skill-Based Exam (Scenario 1)" correctly and click on Submit button with score "100%"
 Then I should see the "InProgress" status for the activity "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
 
@@ -739,6 +738,6 @@ Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent" 
 And I open the activity named as "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
 Then I should be on the "myitlab Study Plan" page
-When I launch the 'Start Post-Test' button of the "Access Chapter 1 Skill-Based Exam (Scenario 1)" of "post-test" activity by "CsSmsStudent" 
+When I launch the "Start Post-Test" button of the "Access Chapter 1 Skill-Based Exam (Scenario 1)" of activity by "CsSmsStudent" 
 And I should answer activity "Access Chapter 1 Skill-Based Exam (Scenario 1)" correctly and click on Submit button with score "70%"
 Then I should see the "InProgress" status for the activity "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"

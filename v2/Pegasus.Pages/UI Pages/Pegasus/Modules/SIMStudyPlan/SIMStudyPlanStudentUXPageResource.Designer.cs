@@ -107,6 +107,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.SIMStudyPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //span[@id=&apos;Span1&apos;]/img[@src=&apos;../../images/SIMStudyPlan/btn_startPost_test.gif&apos;].
+        /// </summary>
+        internal static string SIMStudyPlanStudentUXPage_StartPostTestButton_XPathLocator {
+            get {
+                return ResourceManager.GetString("SIMStudyPlanStudentUXPage_StartPostTestButton_XPathLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //td[@class=&apos;ssp_textETLabl&apos;]/span/img.
         /// </summary>
         internal static string SIMStudyPlanStudentUXPage_StartPreTest_Button_Xpath_Locator {

@@ -233,16 +233,15 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <param name="activityName">This is the activity name.</param>
         /// <param name="activityType">This is type of activity.</param>
         /// <param name="studentName">This is Student Name.</param>
-        [When(@"I launch the 'Start Post-Test' button of the ""(.*)"" of ""(.*)"" activity by ""(.*)""")]        
-        [When(@"I launch the 'Start Training' button of the ""(.*)"" of ""(.*)"" activity by ""(.*)""")]
-        public void LaunchTheActivity(string activityName, string activityType,
+        [When(@"I launch the ""(.*)"" button of the ""(.*)"" of activity by ""(.*)""")]
+        public void LaunchTheActivity(string activityType, string activityName,
              User.UserTypeEnum studentName)
         {
             //Launch the Study plan activity
             Logger.LogMethodEntry("LaunchActivity", "SubmitStudyPlanTrainingActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             //Click on start training button
-            new SIMStudyPlanStudentUXPage().SelectStartTrainingButton();
+            new SIMStudyPlanStudentUXPage().SelectStartButton(activityType);
             //select the window
             new StudentPresentationPage().SelectSimActivityStudentWindowName(studentName,
                  activityName);

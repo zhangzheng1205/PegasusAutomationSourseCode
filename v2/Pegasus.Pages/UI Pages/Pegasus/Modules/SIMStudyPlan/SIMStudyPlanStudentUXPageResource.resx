@@ -132,6 +132,9 @@
   <data name="SIMStudyPlanStudentUXPage_MyItLabStudyplan_Window_Name" xml:space="preserve">
     <value>myitlab Study Plan</value>
   </data>
+  <data name="SIMStudyPlanStudentUXPage_StartPostTestButton_XPathLocator" xml:space="preserve">
+    <value>//span[@id='Span1']/img[@src='../../images/SIMStudyPlan/btn_startPost_test.gif']</value>
+  </data>
   <data name="SIMStudyPlanStudentUXPage_StartPreTest_Button_Xpath_Locator" xml:space="preserve">
     <value>//td[@class='ssp_textETLabl']/span/img</value>
   </data>

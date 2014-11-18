@@ -126,7 +126,6 @@ namespace Pegasus.Pages.UI_Pages
                 Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                        SIM5Frame_Page_SIM5_Launch_Sleep_Time));
                 //Answer fourteenth Question
-                new StudentPresentationPage().getQuestionNumber(14);
                 this.SetMarginsAndPageLayout();
                 Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Sleep_Time));
@@ -3495,6 +3494,216 @@ namespace Pegasus.Pages.UI_Pages
                       "PrintRecord",
              base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Creating, Modifying and Printing a report.
+        /// </summary>
+        private void AccessActivityQuestionSixteen()
+        {
+            //Creating, Modifying and Printing a report
+            Logger.LogMethodEntry("SIM5FramePage",
+                                 "AccessActivityQuestionSixteen",
+                base.IsTakeScreenShotDuringEntryExit);
+            this.CreateReport();
+            this.AlterFieldProperty();
+            //this.DeletePageNumberAndPrintReport();
+            base.WaitForElement(By.XPath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_PageNumber_XPath_Locator));
+            base.FocusOnElementByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_PageNumber_XPath_Locator);
+            //Press 'Delete' key
+            base.PressKey(SIM5FramePageResource.
+                 SIM5Frame_Page_Access_Delete_Key);
+            Thread.Sleep(3000);
+            //Open file for printing
+            this.OpenFileToPrinting();
+            //Delete page number and print report
+            this.DeletePageNumberAndPrintReport();
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+               SIM5Frame_Page_Sleep_Time));
+            Logger.LogMethodExit("SIM5FramePage",
+                             "AccessActivityQuestionSixteen",
+            base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        /// <summary>
+        /// Create the report and delete selected column.
+        /// </summary>
+        private void CreateReport()
+        {
+            //Create the report and delete selected column
+            Logger.LogMethodEntry("SIM5FramePage",
+                                  "CreateReport",
+                           base.IsTakeScreenShotDuringEntryExit);
+            //Click on 'Report' link
+            base.WaitForElement(By.XPath(SIM5FramePageResource.
+            SIM5Frame_Page_Access_ReportButton_XPath_Locator));
+            IWebElement getReport = base.GetWebElementPropertiesByXPath(
+                SIM5FramePageResource.
+            SIM5Frame_Page_Access_ReportButton_XPath_Locator); ;
+            base.ClickByJavaScriptExecutor(getReport);
+            //Click on 'Faculty Id' field
+            base.WaitForElement(By.XPath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_ReportName_XPath_Locator));
+            base.FocusOnElementById(SIM5FramePageResource.
+                SIM5Frame_Page_Access_ReportName_XPath_Locator);
+            Thread.Sleep(2000);
+            IWebElement getFacultyField = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.
+                SIM5Frame_Page_Access_ReportName_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getFacultyField);
+            Thread.Sleep(5000);
+            //Select 'Arrange' button
+            base.WaitForElement(By.XPath(
+                SIM5FramePageResource.SIM5Frame_Page_Access_ArrangeButton_XPath_Locator));
+            IWebElement getArrange = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_Access_ArrangeButton_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getArrange);
+            //Select the column
+            base.WaitForElement(By.XPath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_ColumnSelectButton_XPath_Locator));
+            base.FocusOnElementByXPath
+                (SIM5FramePageResource.
+                SIM5Frame_Page_Access_ColumnSelectButton_XPath_Locator);
+            IWebElement getColumn = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.
+                SIM5Frame_Page_Access_ColumnSelectButton_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getColumn);
+            Thread.Sleep(3000);
+            //Press 'Delete' key
+            base.PressKey(SIM5FramePageResource.
+                SIM5Frame_Page_Access_Delete_Key);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+               SIM5Frame_Page_Sleep_Time));
+            Logger.LogMethodExit("SIM5FramePage",
+                       "CreateReport",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Alter the column Properties.
+        /// </summary>
+        private void AlterFieldProperty()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+                         "AlterFieldPropert",
+                base.IsTakeScreenShotDuringEntryExit);
+            Thread.Sleep(3000);
+            bool h = base.IsElementPresent(By.XPath(".//*[@id='Campus']"), 10);
+            IWebElement getCampus = base.GetWebElementPropertiesByXPath(".//*[@id='Campus']");
+            Thread.Sleep(3000);
+            IWebElement getFirstName = base.GetWebElementPropertiesByXPath(".//*[@id='First_Name']");
+            Thread.Sleep(3000);
+            base.SelectMultipleElementsUsingShift(Keys.Shift, getCampus, getFirstName);
+            Thread.Sleep(3000);
+            //Click on 'Property Sheet' option
+            IWebElement getPropertyField = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_Access_PropertySheet_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getPropertyField);
+            //Click on 'Format'
+            IWebElement getFormatField = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_Access_Format_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getFormatField);
+            //Click on 'Width' row
+            IWebElement getWidthRow = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.
+            SIM5Frame_Page_Access_PropertySheet_Width_XPath_Locator);
+            base.PerformClickAction(getWidthRow);
+            //Enter the width
+            base.FillTextBoxByXPath(SIM5FramePageResource.
+            SIM5Frame_Page_Access_PropertySheet_Width_XPath_Locator, SIM5FramePageResource.
+            SIM5Frame_Page_Access_PropertySheet_Width_Value_XPath_Locator);
+            //Close the 'Property Sheet'
+            IWebElement getCloseProperty = base.GetWebElementPropertiesByXPath(
+           SIM5FramePageResource.SIM5Frame_Page_Access_PropertySheet_Close_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getCloseProperty);
+            //Sort the last name field
+            this.SortLastNameField();
+
+            Logger.LogMethodExit("SIM5FramePage",
+                         "AlterFieldPropert",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Sort the colum names in ascending order.
+        /// </summary>
+        private void SortLastNameField()
+        {
+            //Sort the colum names in ascending order
+            Logger.LogMethodEntry("SIM5FramePage",
+                                        "SortLastNameField",
+                            base.IsTakeScreenShotDuringEntryExit);
+            //Click Last name field
+            base.WaitForElement(By.XPath(SIM5FramePageResource.
+                SIM5Frame_Page_LastNameField_XPath_Locator), 10);
+            base.FocusOnElementByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_LastNameField_XPath_Locator);
+            IWebElement getLastNameField = base.GetWebElementPropertiesByXPath(
+                        SIM5FramePageResource.
+                SIM5Frame_Page_LastNameField_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getLastNameField);
+            //Click 'Home'
+            base.WaitForElement(By.XPath(SIM5FramePageResource.
+                SIM5Frame_Page_Access_Home_Button_XPath_Locator), 10);
+            IWebElement getHomeProperty = base.GetWebElementPropertiesByXPath(
+              SIM5FramePageResource.SIM5Frame_Page_Access_Home_Button_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getHomeProperty);
+            //Click on 'Ascending' button
+            base.WaitForElement(By.XPath(SIM5FramePageResource.
+                SIM5Frame_Page_AscendingOrderButton_XPath_Locator), 10);
+            IWebElement getAscendingButtonProperty = base.GetWebElementPropertiesByXPath(
+                SIM5FramePageResource.SIM5Frame_Page_AscendingOrderButton_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getAscendingButtonProperty);
+            Logger.LogMethodExit("SIM5FramePage",
+                             "SortLastNameField",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Delete the page number and print the report
+        /// </summary>
+        private void DeletePageNumberAndPrintReport()
+        {
+            //Delete the page number and print the report
+            Logger.LogMethodEntry("SIM5FramePage",
+                            "DeletePageNumberAndPrintReport",
+                            base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.XPath(SIM5FramePageResource.
+                SIM5Frame_Page_PageNumber_XPath_Locator));
+            //Focus on the page number
+            base.FocusOnElementByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_PageNumber_XPath_Locator);
+            //Press 'Delete' key
+            base.PressKey(SIM5FramePageResource.
+                SIM5Frame_Page_Access_Delete_Key);
+            //Open file for printing
+            this.OpenFileToPrinting();
+            //Click on Print Preview
+            base.WaitForElement(By.XPath(SIM5FramePageResource.
+                SIM5Frame_Page_PrintPreviewpage_XPath_Locator));
+            IWebElement clickOnPrintPreview = base.GetWebElementPropertiesByXPath(
+                   SIM5FramePageResource.SIM5Frame_Page_PrintPreviewpage_XPath_Locator);
+            base.ClickByJavaScriptExecutor(clickOnPrintPreview);
+            //Select 'Print'
+            base.WaitForElement(By.XPath(SIM5FramePageResource.
+            SIM5Frame_Page_Printpage_XPath_Locator));
+            IWebElement selectPrint = base.GetWebElementPropertiesByXPath(
+                SIM5FramePageResource.
+            SIM5Frame_Page_Printpage_XPath_Locator);
+            base.ClickByJavaScriptExecutor(selectPrint);
+            //Click ok
+            base.WaitForElement(By.XPath(SIM5FramePageResource.
+                SIM5Frame_Page_PrintpageOk_XPath_Locator));
+            IWebElement getOkProperty = base.GetWebElementPropertiesByXPath(
+                SIM5FramePageResource.SIM5Frame_Page_PrintpageOk_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getOkProperty);
+            Logger.LogMethodExit("SIM5FramePage",
+                  "DeletePageNumberAndPrintReport",
+                base.IsTakeScreenShotDuringEntryExit);
+        }        
 
         /// <summary>
         /// Closing the database and exiting the access.
