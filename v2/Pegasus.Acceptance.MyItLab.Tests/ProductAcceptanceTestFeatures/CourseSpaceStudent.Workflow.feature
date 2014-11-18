@@ -692,7 +692,7 @@ And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly an
 #Product : MyItLab
 Scenario: Student launches and crash the Sim5 Access activity
 Given I browsed the login url for "CsSmsStudent"
-When I login as "scoring 0" into the pegasus as "CsSmsStudent" in "CourseSpace"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
@@ -701,9 +701,9 @@ Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent" 
 And I open the activity named as "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
 Then I should be on the "myitlab Study Plan" page
-When I launch the 'Start Training' button of the "Access Chapter 1 Skill-Based Training" of "pre-test" activity by "CsSmsStudent" with "ZeroScore"
+When I launch the 'Start Training' button of the "Access Chapter 1 Skill-Based Training" of "pre-test" activity by "CsSmsStudent"
 And I answer activity "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" correctly
-When I launch the 'Start Training' button of the "Access Chapter 1 Skill-Based Training" of "post-test" activity by "CsSmsStudent" with "ZeroScore"
+When I launch the 'Start Post-Test' button of the "Access Chapter 1 Skill-Based Exam (Scenario 1)" of "post-test" activity by "CsSmsStudent" 
 When I close the "Access Chapter 1 Skill-Based Exam (Scenario 1) - BDD 4976" window
 Then I should see the "In Progress" status for the activity "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
 
@@ -712,7 +712,7 @@ Then I should see the "In Progress" status for the activity "Access Chapter 1 St
 #Product : MyItLab
 Scenario: Student Launches and submit post test and score 100 when training material score is 100
 Given I browsed the login url for "CsSmsStudent"
-When I login as "scoring 0" into the pegasus as "CsSmsStudent" in "CourseSpace"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
@@ -721,6 +721,24 @@ Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent" 
 And I open the activity named as "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
 Then I should be on the "myitlab Study Plan" page
-When I launch the 'Start Training' button of the "Access Chapter 1 Skill-Based Exam (Scenario 1)" of "post-test" activity by "CsSmsStudent" with ""
-And I should answer activity "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" correctly and click on Submit button with score "100%"
+When I launch the 'Start Training' button of the "Access Chapter 1 Skill-Based Exam (Scenario 1)" of "post-test" activity by "CsSmsStudent"
+And I should answer activity "Access Chapter 1 Skill-Based Exam (Scenario 1)" correctly and click on Submit button with score "100%"
+Then I should see the "InProgress" status for the activity "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
+
+#Purpose : Student Launches and submit training material with score 100
+#Test Case ID : peg-22018
+#Product : MyItLab
+Scenario: Student Launches and submit training material with score 100
+Given I browsed the login url for "CsSmsStudent"
+When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent" 
+And I open the activity named as "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"
+Then I should be on the "myitlab Study Plan" page
+When I launch the 'Start Post-Test' button of the "Access Chapter 1 Skill-Based Exam (Scenario 1)" of "post-test" activity by "CsSmsStudent" 
+And I should answer activity "Access Chapter 1 Skill-Based Exam (Scenario 1)" correctly and click on Submit button with score "70%"
 Then I should see the "InProgress" status for the activity "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test"

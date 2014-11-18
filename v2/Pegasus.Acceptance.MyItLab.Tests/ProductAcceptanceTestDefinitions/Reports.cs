@@ -1689,6 +1689,60 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+
+        /// <summary>
+        /// Verify the 'Learning Aid Frequency' report details by Section instructor.
+        /// </summary>
+        /// <param name="rowNumber">This is the question row number.</param>
+        /// <param name="questionName">This is the question name.</param>
+        /// <param name="questionType">This is the question type.</param>
+        /// <param name="sectionName">This is the section name.</param>
+        /// <param name="applicationName">This is the application name.</param>
+        /// <param name="practiseScore">This is the practise score.</param>
+        /// <param name="videoScore">This is the video score.</param>
+        [Then(@"I should see the details of the row number ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)"" ""(.*)""")]
+        public void VerifyLearningAidFrequencyReportBySectionInstructor(int rowNumber, string questionName,
+            string questionType, string sectionName, string applicationName,
+            string practiseScore, string videoScore)
+        {
+            //Verify the 'Learning Aid Frequency' report details by Section instructor
+            Logger.LogMethodEntry("Reports",
+                "VerifyLearningAidFrequencyReportBySectionInstructor",
+                  base.IsTakeScreenShotDuringEntryExit);
+            //Verify Question name
+            Logger.LogAssertion("VerifyQuestionNameDisplayed",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.IsTrue(new RptLearningAidFrequencyPage().
+             IsQuestionPresentInLearningAidUsageReport(questionName)));
+            //Verify Question type
+            Logger.LogAssertion("VerifyIntegrityLevel",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+            Assert.AreEqual(questionType, new RptLearningAidFrequencyPage().
+           GetLearningAidFrequencyQuestionDetailsBySectionInstructor(
+           questionName, rowNumber, 2)));
+            //Verify Application Name
+            Logger.LogAssertion("VerifyIntegrityViolation",
+           ScenarioContext.Current.ScenarioInfo.Title, () =>
+           Assert.AreEqual(applicationName, new RptLearningAidFrequencyPage().
+          GetLearningAidFrequencyQuestionDetailsBySectionInstructor(
+          questionName, rowNumber, 4)));
+            //Verify Practise Score 
+            Logger.LogAssertion("VerifyIntegrityViolation",
+           ScenarioContext.Current.ScenarioInfo.Title, () =>
+           Assert.AreEqual(practiseScore, new RptLearningAidFrequencyPage().
+          GetLearningAidFrequencyQuestionDetailsBySectionInstructor(
+          questionName, rowNumber, 6)));
+            //Verify Video Score 
+            Logger.LogAssertion("VerifyIntegrityViolation",
+           ScenarioContext.Current.ScenarioInfo.Title, () =>
+           Assert.AreEqual(videoScore, new RptLearningAidFrequencyPage().
+          GetLearningAidFrequencyQuestionDetailsBySectionInstructor(
+          questionName, rowNumber, 7)));
+            Logger.LogMethodExit("Reports",
+               "VerifyLearningAidFrequencyReportBySectionInstructor",
+               base.IsTakeScreenShotDuringEntryExit);
+        }      
+
     }
 
 }

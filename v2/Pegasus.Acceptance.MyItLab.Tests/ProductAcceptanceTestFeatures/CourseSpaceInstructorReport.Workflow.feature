@@ -219,6 +219,38 @@ And I select "Run Report" for " MyITLabTrainingFrequencyAnalysis" report in 'My 
 Then I should be on the "Training Frequency Analysis" page
 And I close the "Training Frequency Analysis" window
 
+#Purpose: To run and save the "Learning Aid Usage" Report by Section Instructor
+#Test Case Id: peg-22196
+#MyITLabOffice2013Program
+Scenario: To run and save "Learning Aid Usage" Report by Section Instructor
+Given I browsed the login url for "HedProgramAdmin"
+When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
+Then I should logged in successfully
+When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "HedProgramAdmin"
+Then I should be on the "Program Administration" page
+When I navigate to "Sections" tab of the "Program Administration" page
+Then I should be on the "Program Administration" page
+When I search the "MyITLabOffice2013Program" first section
+And I click the "Enter Section as Instructor"
+When I navigate to "Gradebook" tab and selected "Reports" subtab
+Then I should be on the "Reports" page
+When I click on "Learning Aid Usage" report link as "CsSmsInstructor"
+Then I should open "Options for Learning Aid Usage" criteria page as "CsSmsInstructor"
+When I select "Word Chapter 1 Skill-Based Training" asset in 'Select Activity' 
+And I select 'save settings to My Reports' option by "CsSmsInstructor"
+And I click on the "Run Report" button in reports by "CsSmsInstructor"
+Then I should be on the "Save settings to My Reports" page
+When I select "Createnewreport" radiobutton
+And I enter the " MyITLabExamFrequencyAnalysis" report name
+And I click on "SaveandRun" button
+Then I should see  "Word Chapter 1 Skill-Based Training" along with average score "42.86%"
+And I should see the details of the row number "1" "WD Activity 1.01: Starting a New Word Document" "SIM5" "ST_ReportSection" "Word 2013" "100.00" "100.00"
+And I should see the details of the row number "3" "WD Activity 1.02: Inserting Text from Another Document" "SIM5" "ST_ReportSection" "Word 2013" "--" "--"
+When I close the "Learning Aid Usage" window
+And I click on the "Cancel" button in reports by "HedProgramAdmin"
+And I select "Run Report" for " MyITLabExamFrequencyAnalysis" report in 'My Reports' grid by "HedProgramAdmin"
+And I click  "Close" button
+
 
  
 

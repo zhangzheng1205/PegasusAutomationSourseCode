@@ -1735,6 +1735,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;button2&apos;].
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessFolderXPath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessFolderXPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 4-slickGridCell_5_0_0.
         /// </summary>
         internal static string SIM5Frame_Page_AccessGridCell0_TextBox_Id_Locator {
@@ -1888,6 +1897,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Student ID.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessPage_PreTest_FirstField_InputValue {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessPage_PreTest_FirstField_InputValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .//*[@id=&apos;AccessGrid&apos;]/div[12]/div[1].
         /// </summary>
         internal static string SIM5Frame_Page_AccessPage_Scroll_XPathLocator {
@@ -1929,6 +1947,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_AccessPreTest_CommonField_Value {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_AccessPreTest_CommonField_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1A Students.
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessPreTest_SaveTableName_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessPreTest_SaveTableName_Value", resourceCulture);
             }
         }
         

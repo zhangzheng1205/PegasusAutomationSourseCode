@@ -1173,8 +1173,14 @@
   <data name="SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='44']/div[2]/div[3]/div[5]/div[2]/div[1]/div[5]/input</value>
   </data>
+  <data name="SIM5Frame_Page_AccessFolderXPath_Locator" xml:space="preserve">
+    <value>.//*[@id='button2']</value>
+  </data>
   <data name="SIM5Frame_Page_AccessPage_PostTest_FirstField_InputValue" xml:space="preserve">
     <value>Driver ID</value>
+  </data>
+  <data name="SIM5Frame_Page_AccessPage_PreTest_FirstField_InputValue" xml:space="preserve">
+    <value>Student ID</value>
   </data>
   <data name="SIM5Frame_Page_AccessPostTest_CommonField_Value" xml:space="preserve">
     <value>1</value>
@@ -1187,6 +1193,9 @@
   </data>
   <data name="SIM5Frame_Page_AccessPreTest_CommonField_Value" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="SIM5Frame_Page_AccessPreTest_SaveTableName_Value" xml:space="preserve">
+    <value>1A Students</value>
   </data>
   <data name="SIM5Frame_Page_Access_ClickOnField_Value" xml:space="preserve">
     <value>2</value>

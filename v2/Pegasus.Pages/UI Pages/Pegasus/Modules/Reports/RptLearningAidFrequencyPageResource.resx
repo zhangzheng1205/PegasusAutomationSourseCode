@@ -132,4 +132,7 @@
   <data name="RptLearningAidUsage_Page_QuestionName_XPath_Locator" xml:space="preserve">
     <value>(//div[@class='rpt_div_Row']/div/span)[{0}]</value>
   </data>
+  <data name="RptLearningAidUsage_Page_SectionInstructor_QuestionDetails_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='headerReportMain']/div[4]/div[{0}]/div[{1}]</value>
+  </data>
 </root>

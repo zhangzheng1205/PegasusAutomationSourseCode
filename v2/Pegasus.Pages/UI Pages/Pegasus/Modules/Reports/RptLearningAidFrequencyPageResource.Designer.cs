@@ -105,5 +105,14 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
                 return ResourceManager.GetString("RptLearningAidUsage_Page_QuestionName_XPath_Locator", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;headerReportMain&apos;]/div[4]/div[{0}]/div[{1}].
+        /// </summary>
+        internal static string RptLearningAidUsage_Page_SectionInstructor_QuestionDetails_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptLearningAidUsage_Page_SectionInstructor_QuestionDetails_XPath_Locator", resourceCulture);
+            }
+        }
     }
 }

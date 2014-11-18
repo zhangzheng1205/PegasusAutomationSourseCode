@@ -196,6 +196,54 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                     base.IsTakeScreenShotDuringEntryExit);
             return getQuestionDetails;
         }
+
+        /// <summary>
+        /// Verift Learning Aid Usage Report detail by Section Instructor.
+        /// </summary>
+        /// <param name="questionName">This is the question name.</param>
+        /// <param name="rownumber">This is the question row number.</param>
+        /// <param name="questionData">This is the question data field.</param>
+        /// <returns>Question details.</returns>
+        public string GetLearningAidFrequencyQuestionDetailsBySectionInstructor(
+            string questionName, int rowNumber, int questionData)
+        {
+            //Verify the Question details
+            logger.LogMethodEntry("RptLearningAidFrequencyPage",
+                "GetLearningAidUsageQuestionDetails",
+                   base.IsTakeScreenShotDuringEntryExit);
+            string getQName = string.Empty;
+            string getQDetails = string.Empty;
+            this.SelectWindow();
+            base.WaitForElement(By.XPath(RptLearningAidFrequencyPageResource.
+                    RptLearningAidUsage_Page_QuestionCount_XPath_Locator));
+            int getCount = base.GetElementCountByXPath(RptLearningAidFrequencyPageResource.
+                RptLearningAidUsage_Page_QuestionCount_XPath_Locator);
+            for (int questionSearch = 1; questionSearch <= getCount; questionSearch++)
+            {
+                //Get the question name                 
+                getQName = base.GetElementTextByXPath(String.Format(
+                    RptLearningAidFrequencyPageResource.
+                RptLearningAidUsage_Page_QuestionName_XPath_Locator,
+                    questionSearch));
+                if (getQName == questionName)
+                {                    
+                    base.WaitForElement(By.XPath(String.Format(
+                        RptLearningAidFrequencyPageResource.
+                       RptLearningAidUsage_Page_SectionInstructor_QuestionDetails_XPath_Locator, 
+                       rowNumber, questionData)));
+                    getQDetails = base.GetElementTextByXPath(
+                        String.Format(RptLearningAidFrequencyPageResource.
+                       RptLearningAidUsage_Page_SectionInstructor_QuestionDetails_XPath_Locator,
+                       rowNumber, questionData));
+                    break;
+                }
+
+            }
+            return getQDetails;
+            logger.LogMethodExit("RptLearningAidFrequencyPage",
+                   "GetLearningAidUsageQuestionDetails",
+                      base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 
 }

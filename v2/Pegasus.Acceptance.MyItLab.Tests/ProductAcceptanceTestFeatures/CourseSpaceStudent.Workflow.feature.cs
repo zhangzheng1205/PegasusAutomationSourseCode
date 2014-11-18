@@ -1578,7 +1578,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 694
 testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 695
-testRunner.When("I login as \"scoring 0\" into the pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 696
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 697
@@ -1600,13 +1600,13 @@ testRunner.And("I open the activity named as \"Access Chapter 1 Study Plan [Skil
 testRunner.Then("I should be on the \"myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 704
 testRunner.When("I launch the \'Start Training\' button of the \"Access Chapter 1 Skill-Based Trainin" +
-                    "g\" of \"pre-test\" activity by \"CsSmsStudent\" with \"ZeroScore\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                    "g\" of \"pre-test\" activity by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 705
 testRunner.And("I answer activity \"Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Tes" +
                     "t\" correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 706
-testRunner.When("I launch the \'Start Training\' button of the \"Access Chapter 1 Skill-Based Trainin" +
-                    "g\" of \"post-test\" activity by \"CsSmsStudent\" with \"ZeroScore\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I launch the \'Start Post-Test\' button of the \"Access Chapter 1 Skill-Based Exam (" +
+                    "Scenario 1)\" of \"post-test\" activity by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 707
 testRunner.When("I close the \"Access Chapter 1 Skill-Based Exam (Scenario 1) - BDD 4976\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 708
@@ -1629,7 +1629,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 714
 testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 715
-testRunner.When("I login as \"scoring 0\" into the pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 716
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 717
@@ -1651,11 +1651,55 @@ testRunner.And("I open the activity named as \"Access Chapter 1 Study Plan [Skil
 testRunner.Then("I should be on the \"myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 724
 testRunner.When("I launch the \'Start Training\' button of the \"Access Chapter 1 Skill-Based Exam (S" +
-                    "cenario 1)\" of \"post-test\" activity by \"CsSmsStudent\" with \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                    "cenario 1)\" of \"post-test\" activity by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 725
-testRunner.And("I should answer activity \"Access Chapter 1 Study Plan [Skill-Based]: Training > P" +
-                    "ost-Test\" correctly and click on Submit button with score \"100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should answer activity \"Access Chapter 1 Skill-Based Exam (Scenario 1)\" correct" +
+                    "ly and click on Submit button with score \"100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 726
+testRunner.Then("I should see the \"InProgress\" status for the activity \"Access Chapter 1 Study Pla" +
+                    "n [Skill-Based]: Training > Post-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student Launches and submit training material with score 100")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void StudentLaunchesAndSubmitTrainingMaterialWithScore100()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student Launches and submit training material with score 100", ((string[])(null)));
+#line 731
+this.ScenarioSetup(scenarioInfo);
+#line 732
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 733
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 734
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 735
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 736
+testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
+                    "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 737
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 738
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 739
+testRunner.When("I select \"Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test\" in \"Co" +
+                    "urse Materials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 740
+testRunner.And("I open the activity named as \"Access Chapter 1 Study Plan [Skill-Based]: Training" +
+                    " > Post-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 741
+testRunner.Then("I should be on the \"myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 742
+testRunner.When("I launch the \'Start Post-Test\' button of the \"Access Chapter 1 Skill-Based Exam (" +
+                    "Scenario 1)\" of \"post-test\" activity by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 743
+testRunner.And("I should answer activity \"Access Chapter 1 Skill-Based Exam (Scenario 1)\" correct" +
+                    "ly and click on Submit button with score \"70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 744
 testRunner.Then("I should see the \"InProgress\" status for the activity \"Access Chapter 1 Study Pla" +
                     "n [Skill-Based]: Training > Post-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
