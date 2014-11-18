@@ -145,6 +145,7 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+
         #region SIM5 Excel Eighteenth Question
         /// <summary>
         /// Spell Checking.
@@ -174,6 +175,7 @@ namespace Pegasus.Pages.UI_Pages
                 "SpellCheckingSheet",
               base.IsTakeScreenShotDuringEntryExit);
         }
+        #endregion
 
         #region SIM5 Excel Fifteenth Question
         /// <summary>
@@ -344,6 +346,7 @@ namespace Pegasus.Pages.UI_Pages
                 "AnswersFirstExcelQuestion",
               base.IsTakeScreenShotDuringEntryExit);
         }
+         #endregion
 
         /// <summary>
         /// Save office file in USB in SIM5.
@@ -427,8 +430,7 @@ namespace Pegasus.Pages.UI_Pages
                 "SaveFilesInUSB",
               base.IsTakeScreenShotDuringEntryExit);
         }
-        #endregion
-
+        
         #region SIM5 Excel Second Question
         /// <summary>
         /// Answers Entering Text Using AutoComplete And Using The NameBox To Select A Cell.
@@ -3953,10 +3955,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("SIM5FramePage",
                      "AccessActivityQuestionFive",
             base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        #endregion
-
+        }        
     }
 }
 
