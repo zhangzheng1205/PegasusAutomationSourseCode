@@ -93,9 +93,12 @@ testRunner.When("I click on \"Capítulo preliminar: Bienvenidos a Unidos\" folde
 #line 16
 testRunner.And("I click on \"¡Comprueba lo que sabes!\" folder as \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
-testRunner.And("I open the \"Amplifire Study Module 0P: Vocabulario en contexto\" Activity from MyC" +
-                    "ourse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.Then("I should see the \"Amplifire Study Module 0P: Vocabulario en contexto\" amplifier l" +
+                    "ink as \"HedWsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 18
+testRunner.When("I open the \"Amplifire Study Module 0P: Vocabulario en contexto\" Activity from MyC" +
+                    "ourse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 19
 testRunner.Then("I should see \"You don\'t have subscription to the site. Please confirm that your s" +
                     "ubscription includes access to the Amplifire product.\" warning", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

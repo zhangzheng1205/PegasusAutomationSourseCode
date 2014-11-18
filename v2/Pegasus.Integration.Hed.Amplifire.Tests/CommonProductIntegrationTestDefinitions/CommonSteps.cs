@@ -628,14 +628,18 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         }
 
         /// <summary>
-        /// Verifies the amplifier 
+        /// Verifies the amplifier link .
         /// </summary>
-        /// <param name="amplifierLinkName"></param>
-        /// <param name="userType"></param>
+        /// <param name="amplifierLinkName">Tis is the amplifier link name.</param>
+        /// <param name="userType">This is the user type.</param>
         [Then(@"I should see the ""(.*)"" amplifier link as ""(.*)""")]
-        public void VerifyAmplifierLink(string amplifierLinkName, string userType)
+        public void VerifyAmplifierLink(string amplifierLinkName, User.UserTypeEnum userType)
         {
-            ScenarioContext.Current.Pending();
+            //Assert Launch Amplifire Window
+            Logger.LogAssertion("VerifyActivityLaunched",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.IsTrue(new CommonPage().
+                    IsAmplifireLinkPresent(amplifierLinkName, userType)));
         }
 
 

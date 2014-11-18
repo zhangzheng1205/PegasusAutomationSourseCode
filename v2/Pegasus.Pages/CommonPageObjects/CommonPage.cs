@@ -1339,6 +1339,65 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        public Boolean IsAmplifireLinkPresent(string linkname, User.UserTypeEnum userTypeEnum)
+        {
+            bool isAmplifireLinkPresent = false;
+            switch (userTypeEnum)
+            {
+                case User.UserTypeEnum.HedWsInstructor:
+                    base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
+                    base.SwitchToIFrameById(CommonPageResource.
+                       ComonPage_MainCourse_FrameID);
+                    string amplifierIconClassWS = this.GetAmplifierIconClassAsInsturctor(linkname);
+                    if (amplifierIconClassWS == "cssAmplifireSImg")
+                    {
+                        isAmplifireLinkPresent = true;
+                    }
+                    break;
+
+                case User.UserTypeEnum.CsSmsInstructor:
+                case User.UserTypeEnum.HedProgramAdmin:
+                    base.SelectWindow("Course Materials");
+                    base.SwitchToIFrameById("ifrmCoursePreview");
+                    string amplifierIconClassCSInstructor = this.GetAmplifierIconClassAsInsturctor(linkname);
+
+                    if (amplifierIconClassCSInstructor == "cssAmplifireBImg")
+                    {
+                        isAmplifireLinkPresent = true;
+                    }
+                    break;
+                case User.UserTypeEnum.CsSmsStudent:
+                    base.SelectWindow("Course Materials");
+                    base.SwitchToIFrameById("ifrmCoursePreview");
+                    string amplifierIconClassCSStudent = this.GetAmplifierIconClassAsStudent(linkname);
+                    if (amplifierIconClassCSStudent == "cssAmplifireBImg")
+                    {
+                        isAmplifireLinkPresent = true;
+                    }
+                    break;
+
+            }
+            return isAmplifireLinkPresent;
+        }
+
+        private string GetAmplifierIconClassAsStudent(string linkname)
+        {
+            string linkId = base.GetWebElementPropertiesByLinkText(linkname).GetAttribute("id");
+            string amplifierIconId = "trCP_" + linkId.Split('_')[1];
+
+            string amplifierIconClass = base.GetWebElementPropertiesByXPath(string.Format("//tr[@id2='{0}'/td/img", amplifierIconId)).GetAttribute("class");
+            return amplifierIconClass;
+        }
+
+        private string GetAmplifierIconClassAsInsturctor(string linkname)
+        {
+
+            string linkId = base.GetWebElementPropertiesByLinkText(linkname).GetAttribute("id");
+            string amplifierIconId = "tdImage_" + linkId.Split('_')[1];
+            string amplifierIconClass = base.GetWebElementPropertiesByXPath(string.Format("//td[@id='{0}']/img", amplifierIconId)).GetAttribute("class");
+            return amplifierIconClass;
+        }
     }
 }
 
