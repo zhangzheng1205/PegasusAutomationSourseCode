@@ -162,8 +162,7 @@ namespace Pegasus.Pages.UI_Pages
                 Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Sleep_Time));
                 //Answer twenty third question
-                //this.EditWorksheetValues();
-
+                this.FormatCellWithPercentStyle();
                 //Answer TwentySeventh Question
                 this.ChangingWorkSheetTheme();
                 //Click on SIM5 activity Submit button
@@ -4469,8 +4468,35 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("SIM5FramePage",
                              "AttemptingthirteenthExcelQuestion",
                     base.IsTakeScreenShotDuringEntryExit);
-        }
+        }               
 
+        /// <summary>
+        /// Formatting cells with the percent style.
+        /// </summary>
+        private void FormatCellWithPercentStyle()
+        {
+            //Formatting cells with the percent style
+           Logger.LogMethodEntry("SIM5FramePage",
+                  "FormatCellWithPercentStyle",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Select the cells
+           this.SelectCellRange(SIM5FramePageResource.
+               SIM5Frame_Page_Excel_E24_CellStart_Id_Locator,
+               SIM5FramePageResource.SIM5Frame_Page_Excel_E24_CellEnd_Id_Locator);
+            //Click on Percentile 
+            IWebElement getPercentile = base.GetWebElementPropertiesByXPath(SIM5FramePageResource.
+                 SIM5Frame_Page_Excel_E24_Percentile_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getPercentile);
+            //Click on Increase decimal option
+            IWebElement getIncreaseDecimal = base.GetWebElementPropertiesByXPath(SIM5FramePageResource.
+                  SIM5Frame_Page_Excel_E24_IncreasePercent_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getIncreaseDecimal);
+            base.ClickByJavaScriptExecutor(getIncreaseDecimal);
+            //Apply center align
+            IWebElement getCenterAlign = base.GetWebElementPropertiesByXPath(SIM5FramePageResource.
+                 SIM5Frame_Page_Excel_E24_CenterAlign_XPath_Locator);
+            base.ClickByJavaScriptExecutor(getCenterAlign);
+        }
 
     }
 }

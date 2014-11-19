@@ -2410,6 +2410,51 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sheet1_F9.
+        /// </summary>
+        internal static string SIM5Frame_Page_Excel_E24_CellEnd_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Excel_E24_CellEnd_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_F4.
+        /// </summary>
+        internal static string SIM5Frame_Page_Excel_E24_CellStart_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Excel_E24_CellStart_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Home&apos;]/li[3]/span/span[1]/span/span[1]/span[2]/span[2]/span.
+        /// </summary>
+        internal static string SIM5Frame_Page_Excel_E24_CenterAlign_XPath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Excel_E24_CenterAlign_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Home&apos;]/li[4]/span/span[1]/span/span/span[2]/span[2]/span[1]/span.
+        /// </summary>
+        internal static string SIM5Frame_Page_Excel_E24_IncreasePercent_XPath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Excel_E24_IncreasePercent_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;ribbon-tab-Home&apos;]/li[4]/span/span[1]/span/span/span[2]/span[1]/span[2]/span.
+        /// </summary>
+        internal static string SIM5Frame_Page_Excel_E24_Percentile_XPath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Excel_E24_Percentile_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to excl.
         /// </summary>
         internal static string SIM5Frame_Page_Excel_Icon_Id_Locator {
