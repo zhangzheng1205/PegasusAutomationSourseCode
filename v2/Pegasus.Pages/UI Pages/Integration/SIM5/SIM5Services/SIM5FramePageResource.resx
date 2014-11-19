@@ -1395,4 +1395,10 @@
   <data name="SIM5Frame_Page_SparkStyle_Type_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='ribbon-tab-Sparklines Tools Design']/li[4]/span/span[1]/span/span[1]/div[1]/div[1]/div[10]/div/span/img</value>
   </data>
+  <data name="SIM5Frame_Page_Access16_Field3_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='First_Name']</value>
+  </data>
+  <data name="SIM5Frame_Page_Access16_FirstField_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='Campus']</value>
+  </data>
 </root>

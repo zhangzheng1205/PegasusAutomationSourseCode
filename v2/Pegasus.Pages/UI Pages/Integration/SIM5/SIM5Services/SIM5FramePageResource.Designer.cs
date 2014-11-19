@@ -1681,6 +1681,24 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;First_Name&apos;].
+        /// </summary>
+        internal static string SIM5Frame_Page_Access16_Field3_XPath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Access16_Field3_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;Campus&apos;].
+        /// </summary>
+        internal static string SIM5Frame_Page_Access16_FirstField_XPath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Access16_FirstField_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .//*[@id=&apos;3&apos;]/div[2]/div[3]/div/div[3]/div[1]/ul/li[2]/div/div[1].
         /// </summary>
         internal static string SIM5Frame_Page_AccessBlankWOrkBookXPath_Locator {
