@@ -1272,9 +1272,6 @@
   <data name="SIM5Frame_Page_SIM5_Excel_A_Column_Id_Locator" xml:space="preserve">
     <value>__A</value>
   </data>
-  <data name="SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator1" xml:space="preserve">
-    <value>Sheet1_B4</value>
-  </data>
   <data name="SIM5Frame_Page_SIM5_Excel_B9_Cell_Id_Locator" xml:space="preserve">
     <value>Sheet1_B9</value>
   </data>

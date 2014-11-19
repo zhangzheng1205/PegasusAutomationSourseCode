@@ -149,6 +149,10 @@ namespace Pegasus.Pages.UI_Pages
                 this.ApplyNumberingtoCells();
                 Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Sleep_Time));
+
+
+                //Answer TwentySeventh Question
+                this.ChangingWorkSheetTheme();
                 //Click on SIM5 activity Submit button
                 this.ClickOnSIM5ActivitySubmitButton();
             }
@@ -159,6 +163,28 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("SIM5FramePage",
                  "SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100",
                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
+        private void ChangingWorkSheetTheme()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+            "ChangingWorkSheetTheme", base.IsTakeScreenShotDuringEntryExit);
+            //click on Page Layout
+            IWebElement getPagelayoutMenuItem = base.GetWebElementPropertiesByCssSelector(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Pagelayout_Menu_CSSLocator);
+            base.ClickByJavaScriptExecutor(getPagelayoutMenuItem);
+            //click on colors under themes
+            IWebElement ColorsButton = base.GetWebElementPropertiesByXPath(
+            ".//*[@id='ribbon-tab-Page Layout']/li[1]/span/span[1]/span/span[2]/span[1]/div[1]/div[1]/div/div[2]");
+            base.PerformMouseClickAction(ColorsButton);
+            //click on 8th color-Green
+            IWebElement Choice = base.GetWebElementPropertiesByXPath(
+            ".//div[text()='Green']");
+            base.PerformMouseClickAction(Choice);
+            Logger.LogMethodExit("SIM5FramePage", 
+            "ChangingWorkSheetTheme", base.IsTakeScreenShotDuringEntryExit);
         }
 
         private void PrintingUsingKeyboard()
