@@ -1329,4 +1329,70 @@
   <data name="SIM5Frame_Page_SIM5_Excel_WidthArrow_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='ribbon-tab-Page Layout']/li[3]/span/span[1]/span/span/span[1]/span[2]/div[1]/div[1]/span</value>
   </data>
+  <data name="SIM5Frame_Page_Block_A10_Id_Locator" xml:space="preserve">
+    <value>Sheet1_A10</value>
+  </data>
+  <data name="SIM5Frame_Page_Block_A3_Id_Locator" xml:space="preserve">
+    <value>Sheet1_A3</value>
+  </data>
+  <data name="SIM5Frame_Page_Block_B4_Id_Locator" xml:space="preserve">
+    <value>Sheet1_B4</value>
+  </data>
+  <data name="SIM5Frame_Page_Block_D7_Id_Locator" xml:space="preserve">
+    <value>Sheet1_D7</value>
+  </data>
+  <data name="SIM5Frame_Page_Chart_Image_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='12_sheet1']/div[14]/img</value>
+  </data>
+  <data name="SIM5Frame_Page_Chart_Title_Id_Locator" xml:space="preserve">
+    <value>12_sheet1_graphTitle1</value>
+  </data>
+  <data name="SIM5Frame_Page_ColorOption_Image_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Chart Tools Design']/li[2]/span/span[1]/span/span[1]/div[1]/div[1]/div[1]/div[1]/div/span/img</value>
+  </data>
+  <data name="SIM5Frame_Page_Design_Tab_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='1']/div/ul/li[10]</value>
+  </data>
+  <data name="SIM5Frame_Page_FormulaBox_Id_Locator" xml:space="preserve">
+    <value>formulaBox</value>
+  </data>
+  <data name="SIM5Frame_Page_FormulaBox_Text_Fill" xml:space="preserve">
+    <value>First Quarter Cardio Sales</value>
+  </data>
+  <data name="SIM5Frame_Page_Insert_Button_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='1']/div/ul/li[3]</value>
+  </data>
+  <data name="SIM5Frame_Page_LocationRange_Text_Fill" xml:space="preserve">
+    <value>f4:f7</value>
+  </data>
+  <data name="SIM5Frame_Page_LocationRange_Xpath_Locator" xml:space="preserve">
+    <value>html/body/div[1]/div[2]/div[4]/div/div[2]/div/div[4]/input</value>
+  </data>
+  <data name="SIM5Frame_Page_Markers_CheckBox_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Sparklines Tools Design']/li[3]/span/span[1]/span/span/span[2]/span[3]/div[1]</value>
+  </data>
+  <data name="SIM5Frame_Page_Ok_Button_Id_Locator" xml:space="preserve">
+    <value>buttonOK</value>
+  </data>
+  <data name="SIM5Frame_Page_Ok_Button_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='50']/button[1]</value>
+  </data>
+  <data name="SIM5Frame_Page_RecomendedChart_Image_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Insert']/li[4]/span/span[1]/span/span[1]/span/div/span/img</value>
+  </data>
+  <data name="SIM5Frame_Page_RecomendedChart_Type5_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='rcChart-5']/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_Shape6_Image_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Chart Tools Design']/li[2]/span/span[1]/span/span[2]/div[1]/div[1]/div[6]/div/span/img</value>
+  </data>
+  <data name="SIM5Frame_Page_Sparkline_Option_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Insert']/li[6]/span/span[1]/span/span/span[1]/span/span</value>
+  </data>
+  <data name="SIM5Frame_Page_SparkStyle_CSS_Locator" xml:space="preserve">
+    <value>.gallery-button.gallery-button-expand.office-hover-default</value>
+  </data>
+  <data name="SIM5Frame_Page_SparkStyle_Type_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Sparklines Tools Design']/li[4]/span/span[1]/span/span[1]/div[1]/div[1]/div[10]/div/span/img</value>
+  </data>
 </root>

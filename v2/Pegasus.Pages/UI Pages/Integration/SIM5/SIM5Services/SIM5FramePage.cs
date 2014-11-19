@@ -125,6 +125,18 @@ namespace Pegasus.Pages.UI_Pages
                 this.SetWorksheetThemeToRetrospect();
                 Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                        SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                //Answer Eleventh Question
+                this.ChartingDataUsingRecomendedChartsInsertChart();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                     SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                //Answer Twelfth Question
+                this.UsingChartToolsSetChartLayoutsandStyles();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                     SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                //Answer Thirteenth Question
+                this.CreatingandFormattingSparkLines();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                     SIM5Frame_Page_SIM5_Launch_Sleep_Time));
                 //Answer fourteenth Question
                 this.SetMarginsAndPageLayout();
                 Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
@@ -4351,7 +4363,115 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("SIM5FramePage",
                      "AccessActivityQuestionFive",
             base.IsTakeScreenShotDuringEntryExit);
-        }        
+        }
+
+        /// <summary>
+        /// Attempting Excel Eleventh Question
+        /// </summary>
+        public void ChartingDataUsingRecomendedChartsInsertChart()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+                   "AttemptingEleventhExcelQuestion",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Selecting Cell Range
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_Block_A3_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_Block_D7_Id_Locator);
+            //Clicking on Insert Button
+            base.ClickButtonByXPath(SIM5FramePageResource.SIM5Frame_Page_Insert_Button_Xpath_Locator);
+            //Selecting RecomendedChart Image
+            base.ClickImageByXPath(SIM5FramePageResource.SIM5Frame_Page_RecomendedChart_Image_Xpath_Locator);
+            //Selecting Style Type 5
+            base.FocusOnElementByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_RecomendedChart_Type5_Xpath_Locator);
+            IWebElement shape = base.GetWebElementPropertiesByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_RecomendedChart_Type5_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(shape);
+            //Clicking OK Button
+            base.ClickButtonById(SIM5FramePageResource.SIM5Frame_Page_Ok_Button_Id_Locator);
+            Logger.LogMethodExit("SIM5FramePage",
+                           "AttemptingEleventhExcelQuestion",
+                  base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        ///  Attempting Excel Twelfth Question
+        /// </summary>
+        public void UsingChartToolsSetChartLayoutsandStyles()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+                  "AttemptingTwelfthExcelQuestion",
+           base.IsTakeScreenShotDuringEntryExit);
+            //Selecting Chart Image
+            base.ClickImageById(SIM5FramePageResource.SIM5Frame_Page_Chart_Title_Id_Locator);
+            //Selecting Formula Box
+            IWebElement formulaBox = base.GetWebElementPropertiesById
+                (SIM5FramePageResource.SIM5Frame_Page_FormulaBox_Id_Locator);
+            base.ClickByJavaScriptExecutor(formulaBox);
+            //Filling Text to Formula Box
+            base.FillTextBoxById(SIM5FramePageResource.SIM5Frame_Page_FormulaBox_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_FormulaBox_Text_Fill);
+            //Enter Key Action
+            base.PressEnterKeyById(SIM5FramePageResource.
+                SIM5Frame_Page_FormulaBox_Id_Locator);
+            base.ClickImageByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_Chart_Image_Xpath_Locator);
+            IWebElement designTab = base.GetWebElementPropertiesByXPath
+                (SIM5FramePageResource.SIM5Frame_Page_Design_Tab_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(designTab);
+            IWebElement shape6 = base.GetWebElementPropertiesByXPath
+                (SIM5FramePageResource.SIM5Frame_Page_Shape6_Image_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(shape6);
+            base.ClickImageByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_ColorOption_Image_Xpath_Locator);
+            base.FocusOnElementByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_ColorOption_Image_Xpath_Locator);
+            base.ClickImageByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_ColorOption_Image_Xpath_Locator);
+            //Drag and Drop Chart Image
+            IWebElement imageBlock = base.GetWebElementPropertiesByXPath
+                (SIM5FramePageResource.SIM5Frame_Page_Chart_Image_Xpath_Locator);
+            IWebElement blockId = base.GetWebElementPropertiesById
+                (SIM5FramePageResource.SIM5Frame_Page_Block_A10_Id_Locator);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_Sleep_Time));
+            base.DragAndDropWebElement(imageBlock, blockId);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                   SIM5Frame_Page_Sleep_Time));
+            Logger.LogMethodExit("SIM5FramePage",
+                             "AttemptingTwelfthExcelQuestion",
+                    base.IsTakeScreenShotDuringEntryExit);
+
+        }
+        /// <summary>
+        /// Attempting thirteenth Excel Question
+        /// </summary>
+        public void CreatingandFormattingSparkLines()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+                    "AttemptingthirteenthExcelQuestion",
+             base.IsTakeScreenShotDuringEntryExit);
+            //Selecting Box Range
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_Block_B4_Id_Locator, SIM5FramePageResource.
+                SIM5Frame_Page_Block_D7_Id_Locator);
+            base.ClickButtonByXPath(SIM5FramePageResource.SIM5Frame_Page_Insert_Button_Xpath_Locator);
+            IWebElement sparkOption = base.GetWebElementPropertiesByXPath(SIM5FramePageResource.
+                SIM5Frame_Page_Sparkline_Option_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(sparkOption);
+            //Filling Text to Range Location
+            IWebElement getpointer = base.GetWebElementPropertiesByXPath
+             (SIM5FramePageResource.SIM5Frame_Page_LocationRange_Xpath_Locator);
+            base.DoubleClickByJavaScriptExecuter(getpointer);
+            getpointer.SendKeys(Keys.Control + "a");
+            base.FillTextBoxByXPath(SIM5FramePageResource.SIM5Frame_Page_LocationRange_Xpath_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_LocationRange_Text_Fill);
+            base.ClickButtonByXPath(SIM5FramePageResource.SIM5Frame_Page_Ok_Button_Xpath_Locator);
+            base.SelectCheckBoxByXPath(SIM5FramePageResource.SIM5Frame_Page_Markers_CheckBox_Xpath_Locator);
+            base.ClickButtonByCssSelector(SIM5FramePageResource.SIM5Frame_Page_SparkStyle_CSS_Locator);
+           base.ClickImageByXPath(SIM5FramePageResource.SIM5Frame_Page_SparkStyle_Type_Xpath_Locator);
+            Logger.LogMethodExit("SIM5FramePage",
+                             "AttemptingthirteenthExcelQuestion",
+                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
 
