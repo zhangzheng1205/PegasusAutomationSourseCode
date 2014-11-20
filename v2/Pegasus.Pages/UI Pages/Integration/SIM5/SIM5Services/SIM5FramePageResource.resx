@@ -1458,4 +1458,91 @@
   <data name="SIM5Frame_Page_Access_EventList_XPath_Locator1" xml:space="preserve">
     <value>//div[@id='slick_grid_canvas']/div/div[{0}]/input</value>
   </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A11_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_A11</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A3_Cell_Value" xml:space="preserve">
+    <value>As of September 30</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B10_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_B10</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B_Column_Id_Locator" xml:space="preserve">
+    <value>__B</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_cellStyles_Heading2_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[5]/span/span[1]/span/span/span[3]/div[1]/div[2]/div/div[1]/div[6]/div[2]/div/span/img</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_cellStyles_Heading4_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[5]/span/span[1]/span/span/span[3]/div[1]/div[2]/div/div[1]/div[6]/div[4]/div/span/img</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_cellStyles_Heading4_Xpath_Locator1" xml:space="preserve">
+    <value>.//*[@id='12_selectionBorder1']/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_cellStyles_ThemedStyleButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[5]/span/span[1]/span/span/span[3]/div[1]/div[2]/div/div[1]/div[8]/div[7]/div/span/img</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_cellStyles_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[5]/span/span[1]/span/span/span[3]/div[1]/div[1]/span</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_centerAlignButton_Menu_CSSLocator" xml:space="preserve">
+    <value>span.office-control.ctrl-minimaltogglebutton.align-center.accessible &gt; span</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_centerAlignButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='myMenu']/div[2]/div[1]/div[3]/div</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ColorTheme_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Page Layout']/li[1]/span/span[1]/span/span[2]/span[1]/div[1]/div[1]/div/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_Color_Xpath_Locator" xml:space="preserve">
+    <value>.//div[text()='Green']</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ColumnWidthButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[6]/span/span[1]/span/span/span[3]/div[1]/div[2]/div/div[1]/div[4]/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ColumnWidthTextBox_Value" xml:space="preserve">
+    <value>12.86</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ColumnWidthTextBox_Xpath_Locator" xml:space="preserve">
+    <value>inputTxtBox</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_DeleteColButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='myMenu']/div[1]/span[15]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_D_Column_Id_Locator" xml:space="preserve">
+    <value>__D</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_F4_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_F4</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_FormatButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[6]/span/span[1]/span/span/span[3]/div[1]/div[1]/span</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_F_Column_Id_Locator1" xml:space="preserve">
+    <value>__F</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_InsertColButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='myMenu']/div[1]/span[12]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_InsertOkButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='parentFormId']/button[1]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_InsertRowButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='myMenu']/div[1]/span[11]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_MergeAndcenterLink_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='ribbon-tab-Home']/li[3]/span/span[1]/span/span[4]/span[2]/div[1]/div[1]/div/div[1]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_middleAlignButton_Menu_CSSLocator" xml:space="preserve">
+    <value>span.office-control.ctrl-minimaltogglebutton.middlealign.accessible &gt; span</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_RowButton_Xpath_Locator" xml:space="preserve">
+    <value>radioEntireRowId</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_ScrollButton_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='verticalScroll']/div/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_wrapTextButton_Menu_CSSLocator" xml:space="preserve">
+    <value>span.office-control.ctrl-togglebutton.wraptext.accessible &gt; span</value>
+  </data>
 </root>

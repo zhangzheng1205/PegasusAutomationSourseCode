@@ -1263,4 +1263,10 @@
   <data name="StudentPresentation_Page_StartPreTest_Xpath_Locator" xml:space="preserve">
     <value>.//span[@id='Span1']/img</value>
   </data>
+  <data name="StudentPrsentation_Page_PPT_25_SubTitleCenterAllign_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='5']/div[3]/div[1]/div[5]</value>
+  </data>
+  <data name="StudentPrsentation_Page_PPT_25_TitleCenterAllign_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='6']/div[3]/div[1]/div[5]</value>
+  </data>
 </root>

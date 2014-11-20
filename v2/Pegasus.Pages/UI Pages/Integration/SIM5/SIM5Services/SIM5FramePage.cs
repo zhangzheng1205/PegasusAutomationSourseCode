@@ -163,10 +163,23 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_SIM5_Sleep_Time));
                 //Answer Twenty First Question
                 this.UsingQuickAnalysisTool();
-                //Answer twenty third question
+                //Answer Twentyfourth question
+                new StudentPresentationPage().getQuestionNumber(24);
                 this.FormatCellWithPercentStyle();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                //Answer Tewntyfifth Question
+                this.insertAndDeletingRows();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+                //Answer TewntySixth Question
+                this.AdjustingcolumnAndText();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Launch_Sleep_Time));
                 //Answer TwentySeventh Question
                 this.ChangingWorkSheetTheme();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Launch_Sleep_Time));
                 //Click on SIM5 activity Submit button
                 this.ClickOnSIM5ActivitySubmitButton();
             }
@@ -179,8 +192,184 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        #region SIM5 Tewntyfifth Question
+        /// <summary>
+        /// Inserting and Deleting Rows in Workbook.
+        /// </summary>
+        private void insertAndDeletingRows()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+            "insertAndDeletingRows", base.IsTakeScreenShotDuringEntryExit);
+            //rightclick on Row 3 and select Insert
+            IWebElement Test = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A3_Cell_Id_Locator);
+            base.PerformMouseRightClickAction(Test);
+            IWebElement InsertCdolButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_InsertRowButton_Xpath_Locator);
+            base.PerformMoveToElementClickAction(InsertCdolButton);
+            IWebElement insertOption = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_RowButton_Xpath_Locator);
+            base.PerformMouseClickAction(insertOption);
+            IWebElement OkButton = base.GetWebElementPropertiesByXPath(
+           SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_InsertOkButton_Xpath_Locator);
+            base.PerformMoveToElementClickAction(OkButton);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Sleep_Time));
+            //type As of September 30 press Enter
+            IWebElement getA3Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A3_Cell_Id_Locator);
+            base.PerformMouseClickAction(getA3Cell);
+            this.PutExcelValueInCell(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Excel_A3_Cell_Id_Locator, SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A3_Cell_Value);
+            //select A3:F3
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A3_Cell_Id_Locator,
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_F3_Cell_ID_Locator);
+            //Under Home tab click Merge and center
+            IWebElement wrapTextButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_MergeAndcenterLink_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(wrapTextButton);
+            //click on cell styles
+            base.WaitForElement(By.XPath(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_cellStyles_Xpath_Locator), 10);
+            IWebElement cellStyles = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_cellStyles_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(cellStyles);
+            //select heading 2 inder titles 
+            base.WaitForElement(By.XPath(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_cellStyles_Heading2_Xpath_Locator), 10);
+            IWebElement HeaderButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_cellStyles_Heading2_Xpath_Locator);
+            base.PerformMouseClickAction(HeaderButton);
+            //rightclick on column B header and select Insert
+            IWebElement getBCell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B_Column_Id_Locator);
+            base.PerformMouseRightClickAction(getBCell);
+            IWebElement InsertColButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_InsertColButton_Xpath_Locator);
+            base.PerformMoveToElementClickAction(InsertColButton);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Sleep_Time));
+            //rightclick on column D header and select Delete
+            IWebElement getDCell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_D_Column_Id_Locator);
+            base.PerformMouseRightClickAction(getDCell);
+            IWebElement DeleteColButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_DeleteColButton_Xpath_Locator);
+            base.PerformMoveToElementClickAction(DeleteColButton);
 
+            Logger.LogMethodExit("SIM5FramePage",
+            "insertAndDeletingRows", base.IsTakeScreenShotDuringEntryExit);
+        }
+        #endregion
 
+        #region SIM5 TewntySixth Question
+        /// <summary>
+        /// Adjusting column and Textarea in Workbook.
+        /// </summary>
+        private void AdjustingcolumnAndText()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+            "AdjustingcolumnAndText", base.IsTakeScreenShotDuringEntryExit);
+
+            //click and drag from B:F
+            IWebElement getBCell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B_Column_Id_Locator);
+            base.PerformMouseClickAction(getBCell);
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B_Column_Id_Locator,
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_F_Column_Id_Locator);
+            //minimize the size of B to (12.86)95px
+            base.WaitForElement(By.XPath(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_FormatButton_Xpath_Locator), 10);
+            IWebElement FormatButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_FormatButton_Xpath_Locator);
+            base.PerformMouseClickAction(FormatButton);
+            base.WaitForElement(By.XPath(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ColumnWidthButton_Xpath_Locator), 10);
+            IWebElement ColWidth = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ColumnWidthButton_Xpath_Locator);
+            base.PerformMouseClickAction(ColWidth);
+            base.FillTextBoxById(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ColumnWidthTextBox_Xpath_Locator, 
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ColumnWidthTextBox_Value);
+            IWebElement clickOKButton = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_ColumnWidth_OK_Button_ID_Locator);
+            base.ClickByJavaScriptExecutor(clickOKButton);
+            base.WaitForElement(By.XPath(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ScrollButton_Xpath_Locator), 10);
+            IWebElement scroll = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ScrollButton_Xpath_Locator);
+            for (int i = 0; i < 18; i++)
+            base.PerformMouseClickAction(scroll);
+            //select from B4:F4
+            IWebElement getB4Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator);
+            base.PerformMouseClickAction(getB4Cell);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Sleep_Time));
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator,
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_F4_Cell_ID_Locator);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Sleep_Time));
+            //click on wrap text under home tab 
+            IWebElement wrapTextButton = base.GetWebElementPropertiesByCssSelector(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_wrapTextButton_Menu_CSSLocator);
+            base.ClickByJavaScriptExecutor(wrapTextButton);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Sleep_Time));
+            //click on center under alignment group 
+            IWebElement centerAlignButton = base.GetWebElementPropertiesByCssSelector(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_centerAlignButton_Menu_CSSLocator);
+            base.ClickByJavaScriptExecutor(centerAlignButton);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Sleep_Time));
+            //click middle align
+            IWebElement middleAlignButton = base.GetWebElementPropertiesByCssSelector(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_middleAlignButton_Menu_CSSLocator);
+            base.ClickByJavaScriptExecutor(middleAlignButton);
+            //click on cell styles
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Sleep_Time));
+            base.WaitForElement(By.XPath(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_cellStyles_Heading4_Xpath_Locator), 10);
+            IWebElement cellStyles = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_cellStyles_Xpath_Locator);
+            base.ClickByJavaScriptExecutor(cellStyles);
+            //select heading 4 inder titles 
+            IWebElement HeaderButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_cellStyles_Heading4_Xpath_Locator);
+            base.PerformMouseClickAction(HeaderButton);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Sleep_Time));
+            //click on A11
+            IWebElement getA11Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A11_Cell_ID_Locator);
+            base.PerformMouseClickAction(getA11Cell);
+            //click on cell styles
+            base.ClickByJavaScriptExecutor(cellStyles);
+            IWebElement ThemedStyleButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_cellStyles_ThemedStyleButton_Xpath_Locator);
+            base.PerformMouseClickAction(ThemedStyleButton);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Sleep_Time));
+            //Select B5:B10
+            IWebElement getB5Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B5_Cell_Id_Locator);
+            base.PerformMouseClickAction(getB5Cell);
+
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B5_Cell_Id_Locator,
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B10_Cell_ID_Locator);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Sleep_Time));
+            IWebElement Selction = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_cellStyles_Heading4_Xpath_Locator);
+            //right click and align center
+            base.PerformMouseRightClickAction(Selction);
+            IWebElement CenterAlignButton = base.GetWebElementPropertiesByXPath(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_centerAlignButton_Xpath_Locator);
+            base.PerformMouseClickAction(CenterAlignButton);
+
+            Logger.LogMethodExit("SIM5FramePage",
+            "AdjustingcolumnAndText", base.IsTakeScreenShotDuringEntryExit);
+        }
+        #endregion
+
+        #region SIM5 TewntySeventh Question
+        /// <summary>
+        /// Adjusting column and Textarea in Workbook.
+        /// </summary>
         private void ChangingWorkSheetTheme()
         {
             Logger.LogMethodEntry("SIM5FramePage",
@@ -191,16 +380,21 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getPagelayoutMenuItem);
             //click on colors under themes
             IWebElement ColorsButton = base.GetWebElementPropertiesByXPath(
-            ".//*[@id='ribbon-tab-Page Layout']/li[1]/span/span[1]/span/span[2]/span[1]/div[1]/div[1]/div/div[2]");
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_ColorTheme_Xpath_Locator);
             base.PerformMouseClickAction(ColorsButton);
             //click on 8th color-Green
             IWebElement Choice = base.GetWebElementPropertiesByXPath(
-            ".//div[text()='Green']");
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_Color_Xpath_Locator);
             base.PerformMouseClickAction(Choice);
             Logger.LogMethodExit("SIM5FramePage", 
             "ChangingWorkSheetTheme", base.IsTakeScreenShotDuringEntryExit);
         }
+        #endregion
 
+        #region SIM5 Sixteenth Question
+        /// <summary>
+        /// Printing Using Keyboard shorcuts.
+        /// </summary>
         private void PrintingUsingKeyboard()
         {
             Logger.LogMethodEntry("SIM5FramePage",
@@ -229,7 +423,12 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("SIM5FramePage",
           "PrintingUsingKeyboard", base.IsTakeScreenShotDuringEntryExit);
         }
+        #endregion
 
+        #region SIM5 Seventeenth Question
+        /// <summary>
+        /// Changing PageDetails and Formulas in sheet.
+        /// </summary>
         private void ChangingPageDetailsandFormulas()
         {
             Logger.LogMethodEntry("SIM5FramePage",
@@ -269,6 +468,7 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("SIM5FramePage",
             "ChangingPageDetailsandFormulas",base.IsTakeScreenShotDuringEntryExit);
         }
+        #endregion
 
         #region SIM5 Excel Twentyth Question
         /// <summary>

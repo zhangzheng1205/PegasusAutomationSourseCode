@@ -3415,24 +3415,23 @@ namespace Pegasus.Pages.UI_Pages
         /// Attempt Sim5 Power Point Questions.
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
-        public void AttemptSim5PowerPointQuestions(string activityName, string NoOfQuestions)
+        public void AttemptSim5PowerPointQuestions(string activityName, string score)
         {
             //Attempt Sim5 Power Point Questions
             logger.LogMethodEntry("StudentPresentationPage", "AttemptSim5PowerPointQuestions",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                if (NoOfQuestions.Equals("100%"))
+                switch (score)
                 {
-                    ServetyPercentScoringQuestions(activityName);
-                    // ThirtyPercentScoringQuestions();
-                }
-                else if (NoOfQuestions.Equals("70%"))
-                {
-                    ServetyPercentScoringQuestions(activityName);
-                }
+                    case "100%": ServetyPercentScoringQuestions(activityName);
+                                 // ThirtyPercentScoringQuestions();
+                                 break;
+                        
 
-
+                    case "70%": ServetyPercentScoringQuestions(activityName);           
+                                break;
+                }
                 //Click On SIM5 Activity Submit Button
                 this.ClickOnSim5ActivitySubmitButton();
             }
@@ -3452,24 +3451,21 @@ namespace Pegasus.Pages.UI_Pages
             //Seventh Question Submission
             AttemptSeventhQuestion();
 
-
-            //Fifteenth Question submission
-            AttemptFifteenthQuestioin();
-            //Sixteenth Question submission
-            AttemptSixteenthQuestion();
+            //Twelfth Question submission
+            AttempttwelfthQuestion();
 
             //Nineteenth Question submission
-            AttemptNineteenthQuestioin();
+            //AttemptNineteenthQuestioin();
             //Twentieth Question submission
-            AttemptTwentiethQuestioin();
+            //AttemptTwentiethQuestioin();
 
             //TwentyThird Question submission
-            AttemptTwentyThirdQuestioin();
+            //AttemptTwentyThirdQuestioin();
             //TwentyFourth Question submission
-            AttemptTwentyFourthQuestioin();
+            //AttemptTwentyFourthQuestioin();
 
             //Twentyninth Question submission
-            AttemptTwentyninthQuestioin();
+            //AttemptTwentyninthQuestioin();
             //Thirtyth Question submission
             //AttemptThirtythQuestioin();
         }
@@ -3502,9 +3498,9 @@ namespace Pegasus.Pages.UI_Pages
                 AttemptTenthQuestion();
                 //Eleventh Question submission
                 AttemptEleventhQuestion();
-                //Twelfth Question submission
-                AttempttwelfthQuestion();
+
                 //Thirteenth Question submission
+                getQuestionNumber(13);
                 AttemptThirteenthQuestion();
                 //Fourteenth Question submission
                 AttemptFourteenthQuestion();
@@ -3636,38 +3632,6 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptNineteenthQuestioin()
-        {
-            logger.LogMethodEntry("StudentPresentationPage", "AttemptNineteenthQuestioin",
-                    base.IsTakeScreenShotDuringEntryExit);
-
-            // click on view tab and click on outer line view
-            bool tss = base.IsElementPresent(By.XPath("//*[@id='1']/div/ul/li[6]"));
-            base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath("//*[@id='1']/div/ul/li[14]"));
-            bool t = base.IsElementPresent(By.XPath("//span[text()='Outline View']"));
-            base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByXPath("//span[text()='Outline View']"));
-            // on otline pane, select second and third bullet point of the slide 7
-            bool s = base.IsElementPresent(By.XPath("//*[@id='4']/div[10]/div[7]/div[5]"));
-            IWebElement title = base.GetWebElementPropertiesByXPath("//*[@id='4']/div[10]/div[7]/div[5]");
-            base.PerformMoveToElementClickAction(title);
-            base.PerformKeyDownThenPressKeyToElement(Keys.Control, Keys.Left, 3);
-            // base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesById("ContentDiv_TP_6")); 
-            base.PerformKeyDownThenPressKeyToElement(Keys.Control, Keys.Down, 2);
-            Actions act = new Actions(WebDriver);
-            act.DoubleClick().Build().Perform();
-            base.PerformKeyDownThenPressKeyToElement(Keys.Shift, Keys.Down, 3);
-
-            // click on home tab
-            // in pragraph group click on increase list level
-            // on outline pane,click on last bullet point of the slide 7 and press ENTER
-            // type " Pike Place Market for dinner"
-            // on status bar clicl on normal view
-            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-             StudentPrsentation_Page_SIM5_Sleep_Time));
-            logger.LogMethodExit("StudentPresentationPage", "AttemptNineteenthQuestioin",
-              base.IsTakeScreenShotDuringEntryExit);
-        }
-
         private void AttemptEighteenthQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptEighteenthQuestioin",
@@ -3735,104 +3699,6 @@ namespace Pegasus.Pages.UI_Pages
             }
 
             logger.LogMethodExit("StudentPresentationPage", "AttemptEighteenthQuestioin",
-              base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        private void AttemptTwentyFourthQuestioin()
-        {
-            logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentyFourthQuestioin",
-                    base.IsTakeScreenShotDuringEntryExit);
-            // on slide3 select both lines 
-            bool t = base.IsElementPresent(By.XPath(".//*[@id='ContentDiv_TP_5']/ul/li[1]/span"));
-            IWebElement title = base.GetWebElementPropertiesByXPath(".//*[@id='ContentDiv_TP_5']");
-            double ts = base.GetElementPositionLeftByXPath(".//*[@id='ContentDiv_TP_5']/ul");
-            double tsa = base.GetElementPositionTopByXPath(".//*[@id='ContentDiv_TP_5']/ul");
-            base.PerformClickAction(title);
-            Actions actions = new Actions(WebDriver);
-            // and some variation of this:
-            actions.MoveToElement(title, 641, 380)
-               .ClickAndHold()
-               .MoveByOffset(646, 382)
-               .Release()
-               .Perform();
-
-            //  base.ClickByJavaScriptExecutor(title);
-            // IWebElement title1 = base.GetWebElementPropertiesByXPath(".//*[@id='ContentDiv_TP_5']/ul/li[2]");
-            // and some variation of this:
-            // Actions act = new Actions(WebDriver);
-            //act.ClickAndHold(title).Build().Perform();
-            // act.MoveToElement(title);//.Build().Perform();
-            //act.Release().Perform();
-            // act.DoubleClick(title).Build().Perform();
-            //act.ClickAndHold(title).Build().Perform();
-            //act.MoveToElement(title1).Build().Perform();
-            //base.PerformKeyDownThenPressKeyToElement(Keys.Shift, Keys.Down, 1);
-            // click on home tab and click on font color arrow under  font group
-            // click on turquosie
-            // on slide3 select both lines and click on BOld followed by italic under HOme tab of font group
-            // click on slide 4 and select the title and in the mini tool bar click on font color
-            // select the sub title in the mini tool bar click on font color
-            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-             StudentPrsentation_Page_SIM5_Sleep_Time));
-
-            logger.LogMethodExit("StudentPresentationPage", "AttemptTwentyFourthQuestioin",
-              base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        private void AttemptTwentyThirdQuestioin()
-        {
-            logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentyThirdQuestioin",
-         base.IsTakeScreenShotDuringEntryExit);
-            // on slide 2 select both lines in the title bar
-            bool t = base.IsElementPresent(By.XPath("//*[@id='ContentDiv_TP_5']/ul/li[1]"));
-            IWebElement title = base.GetWebElementPropertiesByXPath("//*[@id='ContentDiv_TP_5']");
-            base.PerformMouseClickAction(title);
-            // and some variation of this:
-            Actions act = new Actions(WebDriver);
-            act.ClickAndHold(title).Build().Perform();
-            act.MoveToElement(title).Build().Perform();
-            act.Release().Perform();
-            act.DoubleClick(title).Build().Perform();
-            base.PerformKeyDownThenPressKeyToElement(Keys.Shift, Keys.Up, 4);
-            act.ContextClick(title);
-            // in the mini tool bar click on font arrow
-            // scroll down and then click on georgia
-            // select the 1st line of the title
-            // in the mini tool bar click on font arrow and select 80
-            // select the 2nd line of the title
-            // click on home tab and click on font arrow,select 36
-            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-             StudentPrsentation_Page_SIM5_Sleep_Time));
-
-            logger.LogMethodExit("StudentPresentationPage", "AttemptTwentyThirdQuestioin",
-              base.IsTakeScreenShotDuringEntryExit);
-        }
-
-        private void AttemptTwentyninthQuestioin()
-        {
-            logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentyninthQuestioin",
-            base.IsTakeScreenShotDuringEntryExit);
-
-            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-             StudentPrsentation_Page_SIM5_Sleep_Time));
-            // move the Slide 2 to right of the slide 6 position
-            IWebElement slideoldPostiotion = base.GetWebElementPropertiesByXPath("//*[@id='PPT_AB_SS_01211']/div[2]/div/img");
-            base.ClickByJavaScriptExecutor(slideoldPostiotion);
-            IWebElement slideNewPostiotion = base.GetWebElementPropertiesByXPath("//*[@id='PPT_AB_SS_01255']/div[2]/div/img");
-            // base.DragAndDropWebElement(slideoldPostiotion, slideNewPostiotion);
-            // base.PerformDragAndDropAction(slideoldPostiotion, slideNewPostiotion);
-            var builder = new Actions(WebDriver);
-            builder.ClickAndHold(slideoldPostiotion);
-            builder.MoveToElement(slideNewPostiotion);
-            builder.Perform();
-            Thread.Sleep(250);
-            builder.Release(slideoldPostiotion);
-            builder.Perform();
-            //base.PerformDragAndDropToOffset(element,360,373);
-            Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-            StudentPrsentation_Page_SIM5_Sleep_Time));
-
-            logger.LogMethodExit("StudentPresentationPage", "AttemptTwentyninthQuestioin",
               base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -3930,16 +3796,24 @@ namespace Pegasus.Pages.UI_Pages
                 IWebElement title = base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_25_Paragraph1_CSSLocator);
                 base.PerformMoveToElementClickAction(title);
-                base.PerformKeyDownThenPressKeyToElement(Keys.Control,
-                StudentPresentationPageResource.StudentPrsentation_Page_E_Key, 1);
+                base.PerformMouseRightClickAction(title);
+                base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_PPT_25_TitleCenterAllign_Xpath_Locator), 10);
+                IWebElement CenterRight = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_PPT_25_TitleCenterAllign_Xpath_Locator);
+                base.PerformMouseClickAction(CenterRight);
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click on sub title and press cntrl+E
                 IWebElement Subtitlea = base.GetWebElementPropertiesByCssSelector(
                 StudentPresentationPageResource.StudentPrsentation_Page_PPT_25_Paragraph_CSSLocator);
                 base.PerformMoveToElementClickAction(Subtitlea);
-                base.PerformKeyDownThenPressKeyToElement(Keys.Control,
-                StudentPresentationPageResource.StudentPrsentation_Page_E_Key, 1);
+                base.PerformMouseRightClickAction(Subtitlea);
+                base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_PPT_25_SubTitleCenterAllign_Xpath_Locator), 10);
+                IWebElement CenterRight1 = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
+                    StudentPrsentation_Page_PPT_25_SubTitleCenterAllign_Xpath_Locator);
+                base.PerformMouseClickAction(CenterRight1);
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
             }
@@ -4486,7 +4360,8 @@ namespace Pegasus.Pages.UI_Pages
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                 StudentPrsentation_Page_SIM5_Sleep_Time));
                 // Press Alt+F5
-                base.PerformKeyDownThenPressKeyToElement(Keys.Alt, Keys.F5, 1);
+               base.PerformKeyDownThenPressKeyToElement(Keys.Alt, Keys.F5, 1);
+
                 Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
                  StudentPrsentation_Page_SIM5_Sleep_Time));
                 // click Advance to next slide twice 

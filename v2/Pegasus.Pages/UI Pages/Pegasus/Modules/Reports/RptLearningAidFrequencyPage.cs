@@ -239,10 +239,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 }
 
             }
-            return getQDetails;
+
             logger.LogMethodExit("RptLearningAidFrequencyPage",
                    "GetLearningAidUsageQuestionDetails",
                       base.IsTakeScreenShotDuringEntryExit);
+            return getQDetails;
         }
     }
 
