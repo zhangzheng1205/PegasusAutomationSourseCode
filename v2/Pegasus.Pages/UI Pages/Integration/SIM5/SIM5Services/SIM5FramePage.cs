@@ -163,6 +163,10 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_SIM5_Sleep_Time));
                 //Answer Twenty First Question
                 this.UsingQuickAnalysisTool();
+                ////Answer Twenty Second Question
+                this.CopyingFormulasContainingAbsoluteCellReferences();
+                Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Sleep_Time));
                 //Answer Twentythird Question
                 this.EditingTheValuesInWorksheet();
                 //Answer Twentyfourth question
