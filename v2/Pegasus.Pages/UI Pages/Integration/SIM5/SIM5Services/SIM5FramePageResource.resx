@@ -1416,4 +1416,37 @@
   <data name="SIM5Frame_Page_Excel_E24_Percentile_XPath_Locator" xml:space="preserve">
     <value>.//*[@id='ribbon-tab-Home']/li[4]/span/span[1]/span/span/span[2]/span[1]/span[2]/span</value>
   </data>
+  <data name="SIM5Frame_Page_CellStyles_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[5]/span/span[1]/span/span/span[3]/div[1]/div[1]/div/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_CommaImage_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[4]/span/span[1]/span/span/span[2]/span[1]/span[3]/span/div/span/img</value>
+  </data>
+  <data name="SIM5Frame_Page_DollarImage_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[4]/span/span[1]/span/span/span[2]/span[1]/span[1]/div[1]/div[1]/div/div[1]/div/span/img</value>
+  </data>
+  <data name="SIM5Frame_Page_QuickSumOption_CSS_Locator" xml:space="preserve">
+    <value>.sprite-Sum</value>
+  </data>
+  <data name="SIM5Frame_Page_QuickToolBar_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='2_sheet1']/div[@class='quickAnalysisToolBar']</value>
+  </data>
+  <data name="SIM5Frame_Page_QuickTotalBar_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='excelQuickAnylsMainDiv']/div[2]/div[1]/ul/li[3]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_C4toE4_Selector_Border_Xpath_Locator" xml:space="preserve">
+    <value>.//*[@id='2_selectionBorder1']/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_C4_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_C4</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_C5_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_C5</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_E10_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_E10</value>
+  </data>
+  <data name="SIM5Frame_Page_Total_CellStyles_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='ribbon-tab-Home']/li[5]/span/span[1]/span/span/span[3]/div[1]/div[2]/div/div[1]/div[6]/div[6]/div/span/img</value>
+  </data>
 </root>

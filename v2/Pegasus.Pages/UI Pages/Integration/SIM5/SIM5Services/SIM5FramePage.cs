@@ -161,6 +161,8 @@ namespace Pegasus.Pages.UI_Pages
                 this.ApplyNumberingtoCells();
                 Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                 SIM5Frame_Page_SIM5_Sleep_Time));
+                //Answer Twenty First Question
+                this.UsingQuickAnalysisTool();
                 //Answer twenty third question
                 this.FormatCellWithPercentStyle();
                 //Answer TwentySeventh Question
@@ -4497,6 +4499,64 @@ namespace Pegasus.Pages.UI_Pages
                  SIM5Frame_Page_Excel_E24_CenterAlign_XPath_Locator);
             base.ClickByJavaScriptExecutor(getCenterAlign);
         }
+        /// <summary>
+        /// Attempting Twenty First Question
+        /// </summary>
+        public void UsingQuickAnalysisTool()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+                   "AttemptingTwentyFirstQuestion",
+            base.IsTakeScreenShotDuringEntryExit);
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E4_Cell_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E9_Cell_Id_Locator);
+            IWebElement Sheet1_E9Properties = base.GetWebElementPropertiesById
+                (SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E9_Cell_Id_Locator);
+            base.PerformMouseHoverAction(Sheet1_E9Properties);
+            IWebElement quickToolBar = base.GetWebElementPropertiesByXPath
+                (SIM5FramePageResource.SIM5Frame_Page_QuickToolBar_Xpath_Locator);
+            base.PerformMouseHoverByJavaScriptExecutor(quickToolBar);
+            base.ClickImageByXPath(SIM5FramePageResource.SIM5Frame_Page_QuickToolBar_Xpath_Locator);
+            base.ClickButtonByXPath(SIM5FramePageResource.SIM5Frame_Page_QuickTotalBar_Xpath_Locator);
+            IWebElement sumOption = base.GetWebElementPropertiesByCssSelector
+                (SIM5FramePageResource.SIM5Frame_Page_QuickSumOption_CSS_Locator);
+            base.PerformMouseClickAction(sumOption);
+
+            //Applying Comma Style
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                  SIM5Frame_Page_Sleep_Time));
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_C5_Cell_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E9_Cell_Id_Locator);
+            IWebElement comaImg = base.GetWebElementPropertiesByXPath
+                (SIM5FramePageResource.SIM5Frame_Page_CommaImage_Xpath_Locator);         
+            base.ClickByJavaScriptExecutor(comaImg);
+
+            //Simultaneously Selecting Text Box          
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_C4_Cell_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E4_Cell_Id_Locator);
+            IWebElement Sheet1_C4_path = base.GetWebElementPropertiesByXPath
+                (SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_C4toE4_Selector_Border_Xpath_Locator);        
+            base.PerformMouseClickAction(Sheet1_C4_path);
+            IWebElement blockE10 = base.GetWebElementPropertiesById
+                (SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E10_Cell_Id_Locator);         
+            new Actions(WebDriver).KeyDown(Keys.Control).Click(blockE10).KeyUp(Keys.Control).Perform();
+            IWebElement dollarimage = base.GetWebElementPropertiesByXPath
+                (SIM5FramePageResource.SIM5Frame_Page_DollarImage_Xpath_Locator);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                   SIM5Frame_Page_Sleep_Time));
+            base.ClickByJavaScriptExecutor(dollarimage);
+            //Selecting Totals Cell Styles
+            base.ClickByJavaScriptExecutor(blockE10);
+            IWebElement cellStyles = base.GetWebElementPropertiesByXPath
+                (SIM5FramePageResource.SIM5Frame_Page_CellStyles_Xpath_Locator);
+            base.PerformMoveToElementClickAction(cellStyles);
+            base.ClickImageByXPath(SIM5FramePageResource.SIM5Frame_Page_Total_CellStyles_Xpath_Locator);
+            Logger.LogMethodExit("SIM5FramePage",
+                            "AttemptingTwentyFirstQuestion",
+                   base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+
 
     }
 }

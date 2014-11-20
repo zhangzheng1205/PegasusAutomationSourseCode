@@ -2302,6 +2302,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[5]/span/span[1]/span/span/span[3]/div[1]/div[1]/div/div[2].
+        /// </summary>
+        internal static string SIM5Frame_Page_CellStyles_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_CellStyles_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .//*[@id=&apos;12_sheet1&apos;]/div[14]/img.
         /// </summary>
         internal static string SIM5Frame_Page_Chart_Image_Xpath_Locator {
@@ -2356,6 +2365,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[4]/span/span[1]/span/span/span[2]/span[1]/span[3]/span/div/span/img.
+        /// </summary>
+        internal static string SIM5Frame_Page_CommaImage_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_CommaImage_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .//*[@id=&apos;button1&apos;].
         /// </summary>
         internal static string SIM5Frame_Page_CreateButton_XPath_Locator {
@@ -2397,6 +2415,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_Design_Tab_Xpath_Locator {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_Design_Tab_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[4]/span/span[1]/span/span/span[2]/span[1]/span[1]/div[1]/div[1]/div/div[1]/div/span/img.
+        /// </summary>
+        internal static string SIM5Frame_Page_DollarImage_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_DollarImage_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -2694,6 +2721,33 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_PrintPreviewpage_XPath_Locator {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_PrintPreviewpage_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .sprite-Sum.
+        /// </summary>
+        internal static string SIM5Frame_Page_QuickSumOption_CSS_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_QuickSumOption_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;2_sheet1&apos;]/div[@class=&apos;quickAnalysisToolBar&apos;].
+        /// </summary>
+        internal static string SIM5Frame_Page_QuickToolBar_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_QuickToolBar_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;excelQuickAnylsMainDiv&apos;]/div[2]/div[1]/ul/li[3].
+        /// </summary>
+        internal static string SIM5Frame_Page_QuickTotalBar_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_QuickTotalBar_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -3022,6 +3076,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sheet1_C4.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_C4_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_C4_Cell_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 86894.82.
         /// </summary>
         internal static string SIM5Frame_Page_SIM5_Excel_C4_Cell_Value {
@@ -3031,11 +3094,29 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;2_selectionBorder1&apos;]/div[2].
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_C4toE4_Selector_Border_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_C4toE4_Selector_Border_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C5.
         /// </summary>
         internal static string SIM5Frame_Page_SIM5_Excel_C5_Cell_Id {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_C5_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_C5.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_C5_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_C5_Cell_Id_Locator", resourceCulture);
             }
         }
         
@@ -3234,6 +3315,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_SIM5_Excel_DecreaseDecimalOption_Xpath_Locator {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_DecreaseDecimalOption_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_E10.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_E10_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_E10_Cell_Id_Locator", resourceCulture);
             }
         }
         
@@ -3954,6 +4044,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_SubmitAssignment_OK_Button_Id_Locator {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_SubmitAssignment_OK_Button_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;ribbon-tab-Home&apos;]/li[5]/span/span[1]/span/span/span[3]/div[1]/div[2]/div/div[1]/div[6]/div[6]/div/span/img.
+        /// </summary>
+        internal static string SIM5Frame_Page_Total_CellStyles_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Total_CellStyles_Xpath_Locator", resourceCulture);
             }
         }
     }
