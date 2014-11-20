@@ -163,6 +163,8 @@ namespace Pegasus.Pages.UI_Pages
                 SIM5Frame_Page_SIM5_Sleep_Time));
                 //Answer Twenty First Question
                 this.UsingQuickAnalysisTool();
+                //Answer Twentythird Question
+                this.EditingTheValuesInWorksheet();
                 //Answer Twentyfourth question
                 new StudentPresentationPage().getQuestionNumber(24);
                 this.FormatCellWithPercentStyle();
@@ -191,6 +193,62 @@ namespace Pegasus.Pages.UI_Pages
                  "SubmitSim5ExcelActivityExcelChapter1SkillBasedTrainingToScore100",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        #region SIM5 TewntyThrid Question
+        /// <summary>
+        /// Editing the Values In Workbook.
+        /// </summary>
+        private void EditingTheValuesInWorksheet()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+            "EditingTheValuesInWorksheet", base.IsTakeScreenShotDuringEntryExit);
+
+            IWebElement getB5Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B5_Cell_Id_Locator);
+            base.PerformMouseClickAction(getB5Cell);
+            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B5_Cell_Id_Locator,
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B5_Cell_Integer_Value);
+            IWebElement getD8Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_D8_Cell_ID_Locator);
+            base.PerformMouseClickAction(getD8Cell);
+            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_D8_Cell_ID_Locator
+            , SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel__D8_Cell_Decimal_Value);
+            AppendTheTextInsideCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A2_Cell_ID_Locator,
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_A2_Cell_Text_Value);
+            AppendTheTextInsideCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B3_Cell_ID_Locator,
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B3_Cell_Text_Value);
+
+            Logger.LogMethodExit("SIM5FramePage",
+            "EditingTheValuesInWorksheet", base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        private void AppendTheTextInsideCell(string CellID, string CellValue)
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+            "AppendTheTextInsideCell", base.IsTakeScreenShotDuringEntryExit);
+
+            IWebElement getB3Cell = base.GetWebElementPropertiesById(
+            SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B3_Cell_ID_Locator);
+            base.PerformMouseClickAction(getB3Cell);
+            base.ClearTextById(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Fill Cell ID in Reference Box 
+            base.FillTextBoxById(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator, CellID);
+            base.ClearTextById(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator);
+            //Fill vlaue in Formula Box 
+            base.FillTextBoxById(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator, CellValue);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+            SIM5Frame_Page_SIM5_Launch_Sleep_Time));
+            base.PressKey(SIM5FramePageResource.SIM5Frame_Page_SIM5_EnterKey_Value);
+
+            Logger.LogMethodExit("SIM5FramePage",
+            "AppendTheTextInsideCell", base.IsTakeScreenShotDuringEntryExit);
+        }
+        #endregion
 
         #region SIM5 Tewntyfifth Question
         /// <summary>
@@ -348,7 +406,6 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getB5Cell = base.GetWebElementPropertiesById(
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B5_Cell_Id_Locator);
             base.PerformMouseClickAction(getB5Cell);
-
             this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B5_Cell_Id_Locator,
             SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B10_Cell_ID_Locator);
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
@@ -470,7 +527,7 @@ namespace Pegasus.Pages.UI_Pages
         }
         #endregion
 
-        #region SIM5 Excel Twentyth Question
+        #region SIM5 Excel Nineteenth Question
         /// <summary>
         /// Apply Numbering and decimal places to Cells
         /// </summary>
@@ -479,24 +536,53 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("SIM5FramePage",
             "EnteringDataByRange",base.IsTakeScreenShotDuringEntryExit);
             //Select Range B4:D9
-            this.SelectCellRange("Sheet1_B4", "Sheet1_D9");
+            this.SelectCellRange(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_D9_Cell_Id_Locator);
             //type 125 in cell B4 and press Enter
-            this.PutExcelValueInCell("Sheet1_B4","125");
+            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B4_Cell_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_B4_Cell_Value);
             //type 1125 in cell B5 and press Enter
-            this.PutExcelValueInCell("Sheet1_B5", "1125");
+            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B5_Cell_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_B5_Cell_Value);
             //type 450 in cell B6 and press Enter
-            this.PutExcelValueInCell("Sheet1_B6", "450");
+            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B6_Cell_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_B6_Cell_Value);
             //type 1105 in cell B7 and press Enter
-            this.PutExcelValueInCell("Sheet1_B7", "1105");
+            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B7_Cell_Id_Locator, 
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_B7_Cell_Value);
             //type 255 in cell B8 and press Enter
-            this.PutExcelValueInCell("Sheet1_B8", "255");
+            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B8_Cell_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_B8_Cell_Value);
             //type 215 in cell B9 and press Enter
-            this.PutExcelValueInCell("Sheet1_B9", "215");
+            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_B9_Cell_Id_Locator, 
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_B9_Cell_Value);
             //type 15.50 in cell C4 and press Enter
-            this.PutExcelValueInCell("Sheet1_C4", "15.50");
+            this.EnterValuesToSelectedCell(SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_C4_Cell_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_19_C4_Cell_Value);
             Logger.LogMethodExit("SIM5FramePage",
-                "EnteringDataByRange",
-              base.IsTakeScreenShotDuringEntryExit);
+                "EnteringDataByRange",base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        private void EnterValuesToSelectedCell(string CellID, string CellValue)
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+            "EnterValuesToSelectedCell", base.IsTakeScreenShotDuringEntryExit);
+
+            base.ClearTextById(SIM5FramePageResource.
+                    SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Fill Cell ID in Reference Box 
+            base.FillTextBoxById(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator, CellID);
+            //Clear Formula Box
+            base.ClearTextById(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator);
+            //Fill vlaue in Formula Box 
+            base.FillTextBoxById(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator, CellValue);
+            base.PressKey(SIM5FramePageResource.SIM5Frame_Page_SIM5_EnterKey_Value);
+
+            Logger.LogMethodExit("SIM5FramePage",
+            "EnterValuesToSelectedCell", base.IsTakeScreenShotDuringEntryExit);
         }
         #endregion
 

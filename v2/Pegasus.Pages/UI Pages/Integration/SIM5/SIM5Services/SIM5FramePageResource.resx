@@ -1458,14 +1458,53 @@
   <data name="SIM5Frame_Page_Access_EventList_XPath_Locator1" xml:space="preserve">
     <value>//div[@id='slick_grid_canvas']/div/div[{0}]/input</value>
   </data>
+  <data name="SIM5Frame_Page_SIM5_EnterKey_Value" xml:space="preserve">
+    <value>{ENTER}</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_19_B4_Cell_Value" xml:space="preserve">
+    <value>125</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_19_B5_Cell_Value" xml:space="preserve">
+    <value>1125</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_19_B6_Cell_Value" xml:space="preserve">
+    <value>450</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_19_B7_Cell_Value" xml:space="preserve">
+    <value>1105</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_19_B8_Cell_Value" xml:space="preserve">
+    <value>225</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_19_B9_Cell_Value" xml:space="preserve">
+    <value>215</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_19_C4_Cell_Value" xml:space="preserve">
+    <value>15.50</value>
+  </data>
   <data name="SIM5Frame_Page_SIM5_Excel_A11_Cell_ID_Locator" xml:space="preserve">
     <value>Sheet1_A11</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_A2_Cell_Text_Value" xml:space="preserve">
+    <value>Plyometric Products Inventory Valuation</value>
   </data>
   <data name="SIM5Frame_Page_SIM5_Excel_A3_Cell_Value" xml:space="preserve">
     <value>As of September 30</value>
   </data>
   <data name="SIM5Frame_Page_SIM5_Excel_B10_Cell_ID_Locator" xml:space="preserve">
     <value>Sheet1_B10</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B3_Cell_Text_Value" xml:space="preserve">
+    <value>Quantity In Stock</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B5_Cell_Integer_Value" xml:space="preserve">
+    <value>995</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B6_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_B6</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_B7_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_B7</value>
   </data>
   <data name="SIM5Frame_Page_SIM5_Excel_B_Column_Id_Locator" xml:space="preserve">
     <value>__B</value>
@@ -1506,6 +1545,12 @@
   <data name="SIM5Frame_Page_SIM5_Excel_ColumnWidthTextBox_Xpath_Locator" xml:space="preserve">
     <value>inputTxtBox</value>
   </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_D8_Cell_ID_Locator" xml:space="preserve">
+    <value>Sheet1_D8</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel_D9_Cell_Id_Locator" xml:space="preserve">
+    <value>Sheet1_D9</value>
+  </data>
   <data name="SIM5Frame_Page_SIM5_Excel_DeleteColButton_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='myMenu']/div[1]/span[15]</value>
   </data>
@@ -1544,5 +1589,8 @@
   </data>
   <data name="SIM5Frame_Page_SIM5_Excel_wrapTextButton_Menu_CSSLocator" xml:space="preserve">
     <value>span.office-control.ctrl-togglebutton.wraptext.accessible &gt; span</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Excel__D8_Cell_Decimal_Value" xml:space="preserve">
+    <value>158.05</value>
   </data>
 </root>

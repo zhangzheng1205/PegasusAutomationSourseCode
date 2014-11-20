@@ -2860,6 +2860,87 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {ENTER}.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_EnterKey_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_EnterKey_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 158.05.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel__D8_Cell_Decimal_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel__D8_Cell_Decimal_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 125.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_19_B4_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_19_B4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1125.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_19_B5_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_19_B5_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 450.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_19_B6_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_19_B6_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1105.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_19_B7_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_19_B7_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 225.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_19_B8_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_19_B8_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 215.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_19_B9_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_19_B9_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 15.50.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_19_C4_Cell_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_19_C4_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to __A.
         /// </summary>
         internal static string SIM5Frame_Page_SIM5_Excel_A_Column_Id_Locator {
@@ -2910,6 +2991,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_SIM5_Excel_A2_Cell_ID_Locator {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_A2_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plyometric Products Inventory Valuation.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_A2_Cell_Text_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_A2_Cell_Text_Value", resourceCulture);
             }
         }
         
@@ -3040,6 +3130,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quantity In Stock.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B3_Cell_Text_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B3_Cell_Text_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to B4.
         /// </summary>
         internal static string SIM5Frame_Page_SIM5_Excel_B4_Cell_Id {
@@ -3085,11 +3184,38 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 995.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B5_Cell_Integer_Value {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B5_Cell_Integer_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 28836.
         /// </summary>
         internal static string SIM5Frame_Page_SIM5_Excel_B5_Cell_Value {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B5_Cell_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_B6.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B6_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B6_Cell_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_B7.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_B7_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_B7_Cell_Id_Locator", resourceCulture);
             }
         }
         
@@ -3486,6 +3612,24 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_SIM5_Excel_D8_Cell_Id {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_D8_Cell_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_D8.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_D8_Cell_ID_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_D8_Cell_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sheet1_D9.
+        /// </summary>
+        internal static string SIM5Frame_Page_SIM5_Excel_D9_Cell_Id_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_SIM5_Excel_D9_Cell_Id_Locator", resourceCulture);
             }
         }
         
