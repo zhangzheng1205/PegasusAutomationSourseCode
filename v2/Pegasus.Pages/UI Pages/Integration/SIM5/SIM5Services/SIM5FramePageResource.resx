@@ -603,8 +603,8 @@
   <data name="SIM5Frame_Page_Access_AppendOkButton_Id_Locator" xml:space="preserve">
     <value>GetExternalData_Ok</value>
   </data>
-  <data name="SIM5Frame_Page_Access_AppendradioButton_XPath_Locator" xml:space="preserve">
-    <value>.//*[@id='GetExternalData_ExcelRadio2']/label[1]</value>
+  <data name="SIM5Frame_Page_Access_AppendradioButton_Id_Locator" xml:space="preserve">
+    <value>GetExternalData_ExcelRadio2</value>
   </data>
   <data name="SIM5Frame_Page_Access_ArrangeButton_XPath_Locator" xml:space="preserve">
     <value>.//*[@id='1']/div/ul/li[12]</value>
@@ -615,7 +615,7 @@
   <data name="SIM5Frame_Page_Access_BrowseButton_Id_Locator" xml:space="preserve">
     <value>GetExternalData_Browse</value>
   </data>
-  <data name="SIM5Frame_Page_Access_CampusLocation_Field_Value_XPath_Locator" xml:space="preserve">
+  <data name="SIM5Frame_Page_Access_CampusLocation_Field_Value" xml:space="preserve">
     <value>Northeast Campus</value>
   </data>
   <data name="SIM5Frame_Page_Access_CampusLocation_Field_XPath_Locator" xml:space="preserve">
@@ -816,7 +816,7 @@
   <data name="SIM5Frame_Page_Access_Home_Button_XPath_Locator" xml:space="preserve">
     <value>.//*[@id='1']/div/ul/li[2]</value>
   </data>
-  <data name="SIM5Frame_Page_Access_IdField_Value_XPath_Locator" xml:space="preserve">
+  <data name="SIM5Frame_Page_Access_IdField_Value" xml:space="preserve">
     <value>NE-01</value>
   </data>
   <data name="SIM5Frame_Page_Access_IdField_XPath_Locator" xml:space="preserve">
@@ -913,10 +913,10 @@
     <value>.//*[@id='14']/div/div[1]</value>
   </data>
   <data name="SIM5Frame_Page_Access_PropertySheet_Width_Value_XPath_Locator" xml:space="preserve">
-    <value>1.5</value>
+    <value>1.5 </value>
   </data>
   <data name="SIM5Frame_Page_Access_PropertySheet_Width_XPath_Locator" xml:space="preserve">
-    <value>.//*[@id='PropertySheet_PropertyTable']/table/tbody/tr[3]/td[1]</value>
+    <value>.//*[@id='PropertySheet_PropertyTable']/table/tbody/tr[3]/td[2]/input</value>
   </data>
   <data name="SIM5Frame_Page_Access_PropertySheet_XPath_Locator" xml:space="preserve">
     <value>.//*[@id='ribbon-tab-Report Layout Tools Design']/li[6]/span/span[1]/span/span[2]/span</value>
@@ -942,10 +942,10 @@
   <data name="SIM5Frame_Page_Access_ReportButton_XPath_Locator" xml:space="preserve">
     <value>.//*[@id='ribbon-tab-CREATE']/li[5]/span/span[1]/span/span[1]/span/span</value>
   </data>
-  <data name="SIM5Frame_Page_Access_ReportName_XPath_Locator" xml:space="preserve">
+  <data name="SIM5Frame_Page_Access_ReportName_Id_Locator" xml:space="preserve">
     <value>selectID</value>
   </data>
-  <data name="SIM5Frame_Page_Access_Room_Field_Value_XPath_Locator" xml:space="preserve">
+  <data name="SIM5Frame_Page_Access_Room_Field_Value" xml:space="preserve">
     <value>H265</value>
   </data>
   <data name="SIM5Frame_Page_Access_Room_Field_XPath_Locator" xml:space="preserve">
@@ -966,7 +966,7 @@
   <data name="SIM5Frame_Page_Access_Save_YesButton_XPath_Locator" xml:space="preserve">
     <value>.//*[@id='7']/div[2]/button[1]</value>
   </data>
-  <data name="SIM5Frame_Page_Access_Seat_Field_Value_XPath_Locator" xml:space="preserve">
+  <data name="SIM5Frame_Page_Access_Seat_Field_Value" xml:space="preserve">
     <value>150</value>
   </data>
   <data name="SIM5Frame_Page_Access_Seat_Field_XPath_Locator" xml:space="preserve">
@@ -1448,5 +1448,14 @@
   </data>
   <data name="SIM5Frame_Page_Total_CellStyles_Xpath_Locator" xml:space="preserve">
     <value>//*[@id='ribbon-tab-Home']/li[5]/span/span[1]/span/span/span[3]/div[1]/div[2]/div/div[1]/div[6]/div[6]/div/span/img</value>
+  </data>
+  <data name="SIM5Frame_Page_AccessPage_FirstField_XPathLocator1" xml:space="preserve">
+    <value>.//*[@id='slickgrid_colheader_ID']</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_Delete_PrintPreview_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='16']/div[2]/div[3]/div[6]/div[2]/ul/li[3]</value>
+  </data>
+  <data name="SIM5Frame_Page_Access_EventList_XPath_Locator1" xml:space="preserve">
+    <value>//div[@id='slick_grid_canvas']/div/div[{0}]/input</value>
   </data>
 </root>

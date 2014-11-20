@@ -151,11 +151,11 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .//*[@id=&apos;GetExternalData_ExcelRadio2&apos;]/label[1].
+        ///   Looks up a localized string similar to GetExternalData_ExcelRadio2.
         /// </summary>
-        internal static string SIM5Frame_Page_Access_AppendradioButton_XPath_Locator {
+        internal static string SIM5Frame_Page_Access_AppendradioButton_Id_Locator {
             get {
-                return ResourceManager.GetString("SIM5Frame_Page_Access_AppendradioButton_XPath_Locator", resourceCulture);
+                return ResourceManager.GetString("SIM5Frame_Page_Access_AppendradioButton_Id_Locator", resourceCulture);
             }
         }
         
@@ -189,9 +189,9 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         /// <summary>
         ///   Looks up a localized string similar to Northeast Campus.
         /// </summary>
-        internal static string SIM5Frame_Page_Access_CampusLocation_Field_Value_XPath_Locator {
+        internal static string SIM5Frame_Page_Access_CampusLocation_Field_Value {
             get {
-                return ResourceManager.GetString("SIM5Frame_Page_Access_CampusLocation_Field_Value_XPath_Locator", resourceCulture);
+                return ResourceManager.GetString("SIM5Frame_Page_Access_CampusLocation_Field_Value", resourceCulture);
             }
         }
         
@@ -372,6 +372,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_Access_Delete_Key {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_Access_Delete_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;16&apos;]/div[2]/div[3]/div[6]/div[2]/ul/li[3].
+        /// </summary>
+        internal static string SIM5Frame_Page_Access_Delete_PrintPreview_XPath_Locator {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Access_Delete_PrintPreview_XPath_Locator", resourceCulture);
             }
         }
         
@@ -561,6 +570,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_Access_EventList_XPath_Locator {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_Access_EventList_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;slick_grid_canvas&apos;]/div/div[{0}]/input.
+        /// </summary>
+        internal static string SIM5Frame_Page_Access_EventList_XPath_Locator1 {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_Access_EventList_XPath_Locator1", resourceCulture);
             }
         }
         
@@ -837,9 +855,9 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         /// <summary>
         ///   Looks up a localized string similar to NE-01.
         /// </summary>
-        internal static string SIM5Frame_Page_Access_IdField_Value_XPath_Locator {
+        internal static string SIM5Frame_Page_Access_IdField_Value {
             get {
-                return ResourceManager.GetString("SIM5Frame_Page_Access_IdField_Value_XPath_Locator", resourceCulture);
+                return ResourceManager.GetString("SIM5Frame_Page_Access_IdField_Value", resourceCulture);
             }
         }
         
@@ -1240,7 +1258,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.5.
+        ///   Looks up a localized string similar to 1.5 .
         /// </summary>
         internal static string SIM5Frame_Page_Access_PropertySheet_Width_Value_XPath_Locator {
             get {
@@ -1249,7 +1267,7 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .//*[@id=&apos;PropertySheet_PropertyTable&apos;]/table/tbody/tr[3]/td[1].
+        ///   Looks up a localized string similar to .//*[@id=&apos;PropertySheet_PropertyTable&apos;]/table/tbody/tr[3]/td[2]/input.
         /// </summary>
         internal static string SIM5Frame_Page_Access_PropertySheet_Width_XPath_Locator {
             get {
@@ -1332,18 +1350,18 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         /// <summary>
         ///   Looks up a localized string similar to selectID.
         /// </summary>
-        internal static string SIM5Frame_Page_Access_ReportName_XPath_Locator {
+        internal static string SIM5Frame_Page_Access_ReportName_Id_Locator {
             get {
-                return ResourceManager.GetString("SIM5Frame_Page_Access_ReportName_XPath_Locator", resourceCulture);
+                return ResourceManager.GetString("SIM5Frame_Page_Access_ReportName_Id_Locator", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to H265.
         /// </summary>
-        internal static string SIM5Frame_Page_Access_Room_Field_Value_XPath_Locator {
+        internal static string SIM5Frame_Page_Access_Room_Field_Value {
             get {
-                return ResourceManager.GetString("SIM5Frame_Page_Access_Room_Field_Value_XPath_Locator", resourceCulture);
+                return ResourceManager.GetString("SIM5Frame_Page_Access_Room_Field_Value", resourceCulture);
             }
         }
         
@@ -1404,9 +1422,9 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         /// <summary>
         ///   Looks up a localized string similar to 150.
         /// </summary>
-        internal static string SIM5Frame_Page_Access_Seat_Field_Value_XPath_Locator {
+        internal static string SIM5Frame_Page_Access_Seat_Field_Value {
             get {
-                return ResourceManager.GetString("SIM5Frame_Page_Access_Seat_Field_Value_XPath_Locator", resourceCulture);
+                return ResourceManager.GetString("SIM5Frame_Page_Access_Seat_Field_Value", resourceCulture);
             }
         }
         
@@ -1902,6 +1920,15 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         internal static string SIM5Frame_Page_AccessPage_FirstField_XPathLocator {
             get {
                 return ResourceManager.GetString("SIM5Frame_Page_AccessPage_FirstField_XPathLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;slickgrid_colheader_ID&apos;].
+        /// </summary>
+        internal static string SIM5Frame_Page_AccessPage_FirstField_XPathLocator1 {
+            get {
+                return ResourceManager.GetString("SIM5Frame_Page_AccessPage_FirstField_XPathLocator1", resourceCulture);
             }
         }
         
