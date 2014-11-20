@@ -2180,21 +2180,21 @@ namespace Pegasus.Pages.UI_Pages
                 GetWebElementPropertiesByXPath(SIM5FramePageResource.
                 SIM5Frame_Page_AccessBlankWOrkBookXPath_Locator);
             base.ClickByJavaScriptExecutor(getAccessBlankWorkbookIconButton);            
-            //Click on folder link
-            base.WaitForElement(By.XPath(SIM5FramePageResource.
-               SIM5Frame_Page_AccessFolderXPath_Locator), 10);
+            //Click on folder link         
+            bool hfgf = base.IsElementPresent(By.Id(SIM5FramePageResource.
+               SIM5Frame_Page_AccessFolderId_Locator), 10);
             IWebElement getFolder = base.
-                GetWebElementPropertiesByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessFolderXPath_Locator);
+                GetWebElementPropertiesById(SIM5FramePageResource.
+               SIM5Frame_Page_AccessFolderId_Locator);
             base.ClickByJavaScriptExecutor(getFolder);
-            //Enter file name   
-            base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_AccessFileName_XPath_Locator));
-            IWebElement inputs = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_AccessFileName_XPath_Locator);
-            inputs.SendKeys(Keys.Control + "a");
-            base.FillTextBoxByXPath(SIM5FramePageResource.
-                SIM5Frame_Page_AccessFileName_XPath_Locator, accessFileName);
+            //Enter file name  
+            bool hjsdf = base.IsElementPresent(By.Id(SIM5FramePageResource.
+                 SIM5Frame_Page_AccessFileName_Id_Locator), 10);
+            base.WaitForElement(By.Id(SIM5FramePageResource.
+                 SIM5Frame_Page_AccessFileName_Id_Locator));
+            base.FillTextBoxById(SIM5FramePageResource.
+                 SIM5Frame_Page_AccessFileName_Id_Locator, accessFileName);
+            Thread.Sleep(2000);
             //Click Ok
             base.WaitForElement(By.XPath(
                 SIM5FramePageResource.SIM5Frame_Page_Access_TemplateOk_XPath_Locator));
@@ -2459,7 +2459,7 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement scroll = base.GetWebElementPropertiesByXPath(
                 SIM5FramePageResource.
                 SIM5Frame_Page_AccessPage_Scroll_XPathLocator);
-            for (int i = 1; i <= 8; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 base.ClickByJavaScriptExecutor(scroll);
             }
@@ -3343,8 +3343,7 @@ namespace Pegasus.Pages.UI_Pages
                                     "SetCityFieldColumnWidth",
                                       base.IsTakeScreenShotDuringEntryExit);
         }
-
-
+        
         /// <summary>
         /// Set the column width of all the rows.
         /// </summary>
@@ -4837,6 +4836,100 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("SIM5FramePage",
                             "AttemptingTwentyFirstQuestion",
                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Fill Excel cell.
+        /// </summary>
+        /// <param name="refCell">Cell Id</param>
+        /// <param name="formulaValue">Cell value</param>
+        private void PutExcelValueInCellWithoutErasingText(string referenceCellId, string formulaValue)
+        {
+            //Fill Excel cell
+            Logger.LogMethodEntry("SIM5FramePage",
+                "PutExcelValueInCellWithoutErasingText",
+               base.IsTakeScreenShotDuringEntryExit);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Sleep_Time));
+            //Clear Reference Box
+            base.ClearTextById(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Fill Cell ID in Reference Box 
+            base.FillTextBoxById(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator, referenceCellId);
+            //Press Enter in Reference Box
+            PressEnterKeyById(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Excel_Reference_TextBox_Id_Locator);
+            //Clear Formula Box
+            base.ClearTextById(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator);
+            //Fill vlaue in Formula Box 
+            base.FillTextBoxById(SIM5FramePageResource.
+                SIM5Frame_Page_SIM5_Excel_Formula_TextBox_Id_Locator, formulaValue);
+            Logger.LogMethodExit("SIM5FramePage",
+                          "PutExcelValueInCellWithoutErasingText",
+                 base.IsTakeScreenShotDuringEntryExit);
+
+        }
+        /// <summary>
+        /// Attempting Twenty Second Question
+        /// </summary>
+        private void CopyingFormulasContainingAbsoluteCellReferences()
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+               "PutExcelValueInCellWithoutErasingText",
+              base.IsTakeScreenShotDuringEntryExit);
+            base.SwitchToLastOpenedWindow();
+            IWebElement BlockF4 = base.GetWebElementPropertiesById
+                (SIM5FramePageResource.SIM5Frame_Page_Excel_E24_CellStart_Id_Locator);
+            base.PerformMouseClickAction(BlockF4);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                    SIM5Frame_Page_SIM5_Buffer_Sleep_Time));
+
+            this.PutExcelValueInCellWithoutErasingText
+                (SIM5FramePageResource.SIM5Frame_Page_Excel_E24_CellStart_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_BlockF4_Text_Fill);
+            IWebElement BlockE4 = base.GetWebElementPropertiesById
+                (SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E4_Cell_Id_Locator);
+            base.PerformMouseClickAction(BlockE4);
+            Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
+                   SIM5Frame_Page_SIM5_Buffer_Sleep_Time));
+            base.FillTextBoxById
+                (SIM5FramePageResource.SIM5Frame_Page_FormulaBox_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_BlockF4_Formulabox_Text_Fill);
+            IWebElement BlockE10 = base.GetWebElementPropertiesById
+                (SIM5FramePageResource.SIM5Frame_Page_SIM5_Excel_E10_Cell_Id_Locator);
+            base.PerformMouseClickAction(BlockE10);
+            base.ClearTextById(SIM5FramePageResource.SIM5Frame_Page_FormulaBox_Id_Locator);
+            base.FillTextBoxById
+                (SIM5FramePageResource.SIM5Frame_Page_FormulaBox_Id_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_SIM5_BlockF4_10_Formulabox_Text_Fill);
+            base.PressKey(SIM5FramePageResource.SIM5Frame_Page_SIM5_EnterKey_Value);            
+            base.PerformMouseClickAction(BlockF4);
+            this.SelectCellRangeByXpath
+                (SIM5FramePageResource.SIM5Frame_Page_SIM5_Block_Dragger_Xpath_Locator,
+                SIM5FramePageResource.SIM5Frame_Page_Excel_E24_CellEnd_Id_Locator);
+            Logger.LogMethodEntry("SIM5FramePage",
+               "PutExcelValueInCellWithoutErasingText",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Select Cell Range By Xpath
+        /// </summary>
+        private void SelectCellRangeByXpath(string firstCellID, string lastCellID)
+        {
+            Logger.LogMethodEntry("SIM5FramePage",
+                    "SelectCellRange",
+                   base.IsTakeScreenShotDuringEntryExit);
+            //Get first cell object          
+            IWebElement getFirstCellObject = base.GetWebElementPropertiesByXPath(firstCellID);
+            //Get Last cell object
+            IWebElement getLastCellObject = base.GetWebElementPropertiesById(lastCellID);
+            //select and drag the range from the first cell above to the last cell
+            base.PerformDragAndDropAction(getFirstCellObject, getLastCellObject);
+            Logger.LogMethodExit("SIM5FramePage",
+                "SelectCellRange",
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
 

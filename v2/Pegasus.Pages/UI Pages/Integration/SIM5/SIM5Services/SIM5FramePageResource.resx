@@ -465,8 +465,8 @@
   <data name="SIM5Frame_Page_AccessFileName" xml:space="preserve">
     <value>1A_Advising</value>
   </data>
-  <data name="SIM5Frame_Page_AccessFileName_XPath_Locator" xml:space="preserve">
-    <value>.//*[@id='10']/div[2]/div/div[1]/input</value>
+  <data name="SIM5Frame_Page_AccessFileName_Id_Locator" xml:space="preserve">
+    <value>4-TextBoxFileName</value>
   </data>
   <data name="SIM5Frame_Page_AccessFillField_XPath_Locator" xml:space="preserve">
     <value>//div[@id='acGridColHeaderContainer']/div[{0}]/input</value>
@@ -1173,8 +1173,8 @@
   <data name="SIM5Frame_Page_SIM5_Excel_SubjectTextBox_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='44']/div[2]/div[3]/div[5]/div[2]/div[1]/div[5]/input</value>
   </data>
-  <data name="SIM5Frame_Page_AccessFolderXPath_Locator" xml:space="preserve">
-    <value>.//*[@id='button2']</value>
+  <data name="SIM5Frame_Page_AccessFolderId_Locator" xml:space="preserve">
+    <value>button2</value>
   </data>
   <data name="SIM5Frame_Page_AccessPage_PostTest_FirstField_InputValue" xml:space="preserve">
     <value>Driver ID</value>
@@ -1592,5 +1592,20 @@
   </data>
   <data name="SIM5Frame_Page_SIM5_Excel__D8_Cell_Decimal_Value" xml:space="preserve">
     <value>158.05</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_BlockF4_10_Formulabox_Text_Fill" xml:space="preserve">
+    <value>=E4/$E$10</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_BlockF4_Formulabox_Text_Fill" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_BlockF4_Text_Fill" xml:space="preserve">
+    <value>=</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Block_Dragger_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='2_selectionBorder1']/div[2]</value>
+  </data>
+  <data name="SIM5Frame_Page_SIM5_Buffer_Sleep_Time" xml:space="preserve">
+    <value>2000</value>
   </data>
 </root>
