@@ -278,5 +278,13 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             assignContent.FillDueDateNearPastDueDate();
         }
 
+
+        [Then(@"I should unassign the activity and save")]
+        public void UnAssignTheActivity()
+        {
+            AssignContentPage assignContent = new AssignContentPage();
+            //Selecting assign radio button
+            assignContent.SelectNotAssignedRadiobuttonInProperties();
+        }
     }
 }

@@ -1333,7 +1333,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 // Get the current date and time
                 User user = User.Get(User.UserTypeEnum.CsSmsInstructor);
-                DateTime instance = user.CurrentProfileDateTime.AddMinutes(10);
+                DateTime instance = user.CurrentProfileDateTime.AddMinutes(15);
                 String currentTime = instance.ToString();
                 
                 string date=currentTime.Split(' ')[0];
@@ -1370,6 +1370,41 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("AssignContentPage", "GetAndFillDueDate",
                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Select Not Assigned Radiobutton.
+        /// </summary>
+        public void SelectNotAssignedRadiobuttonInProperties()
+        {
+            //Select Not Assigned Radiobutton
+            logger.LogMethodEntry("AssignContentPage", "SelectNotAssignedRadiobutton",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+
+                //Select Properties Window
+                this.SelectPropertiesWindow();
+                //Wait For Element
+                base.WaitForElement(By.Id(AssignContentPageResource.
+                    AssignContent_Page_NotAssigned_Radiobutton_Id_Locator));
+                if (!base.IsElementSelectedById(AssignContentPageResource.
+                    AssignContent_Page_NotAssigned_Radiobutton_Id_Locator))
+                {
+                    //Select Radiobutton
+                    base.SelectRadioButtonById(AssignContentPageResource.
+                    AssignContent_Page_NotAssigned_Radiobutton_Id_Locator);
+                }
+                // click on save button
+                base.ClickByJavaScriptExecutor(base.GetWebElementPropertiesByPartialLinkText
+                    (AssignContentPageResource.AssignContent_Page_Button_Save_Id_Locator));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("AssignContentPage", "SelectNotAssignedRadiobutton",
+                base.IsTakeScreenShotDuringEntryExit);
         }
     }
 
