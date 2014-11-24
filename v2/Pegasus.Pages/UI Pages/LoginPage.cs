@@ -113,6 +113,9 @@ namespace Pegasus.Pages.UI_Pages
                     case User.UserTypeEnum.CsSmsInstructor:
                     case User.UserTypeEnum.CsSmsStudent:
                     case User.UserTypeEnum.HedProgramAdmin:
+                    case User.UserTypeEnum.HSSCsSmsInstructor:
+                    case User.UserTypeEnum.HSSCsSmsStudent:
+                    case User.UserTypeEnum.HSSProgramAdmin:
                     case User.UserTypeEnum.HedTeacherAssistant:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
                     case User.UserTypeEnum.HedMilAcceptanceStudent:
@@ -560,12 +563,15 @@ namespace Pegasus.Pages.UI_Pages
                     //User Type SMS Instructor and Student
                     case User.UserTypeEnum.CsSmsInstructor:
                     case User.UserTypeEnum.CsSmsStudent:
+                    case User.UserTypeEnum.HSSCsSmsInstructor:
+                    case User.UserTypeEnum.HSSCsSmsStudent:
                     case User.UserTypeEnum.HedTeacherAssistant:
                     case User.UserTypeEnum.HedCoreAcceptanceInstructor:
                     case User.UserTypeEnum.HedCoreAcceptanceStudent:
                     case User.UserTypeEnum.HedMilAcceptanceInstructor:
                     case User.UserTypeEnum.HedMilPPEStudent:
                     case User.UserTypeEnum.HedProgramAdmin:
+                    case User.UserTypeEnum.HSSProgramAdmin:
                         //Enter SMS User Name    
                         this.EnterSmsUserName(userName);
                         break;
@@ -752,12 +758,15 @@ namespace Pegasus.Pages.UI_Pages
                 //Logged in by SMS Instructor and Student
                 case User.UserTypeEnum.CsSmsInstructor:
                 case User.UserTypeEnum.CsSmsStudent:
+                case User.UserTypeEnum.HSSCsSmsInstructor:
+                case User.UserTypeEnum.HSSCsSmsStudent:
                 case User.UserTypeEnum.HedTeacherAssistant:
                 case User.UserTypeEnum.HedCoreAcceptanceInstructor:
                 case User.UserTypeEnum.HedCoreAcceptanceStudent:
                 case User.UserTypeEnum.HedMilAcceptanceInstructor:
                 case User.UserTypeEnum.HedMilPPEStudent:
                 case User.UserTypeEnum.HedProgramAdmin:
+                case User.UserTypeEnum.HSSProgramAdmin:
                     //Validate Hed SMS User Login    
                     isLoginSuccessful = this.IsSmsUserLoggedIn(false);
                     break;

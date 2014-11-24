@@ -50,6 +50,10 @@ namespace Pegasus.Pages.UI_Pages
                         new ManageTemplatePage().StoreSectionID(sectionName,
                             Course.CourseTypeEnum.HedMyPsychLabProgram);
                         break;
+                    case Course.CourseTypeEnum.HSSMyPsychLabMaster:
+                        new ManageTemplatePage().StoreSectionID(sectionName,
+                            Course.CourseTypeEnum.HSSMyPsychLabProgram);
+                        break;
                     case Course.CourseTypeEnum.GraderITSIM5Course:
                     case Course.CourseTypeEnum.MyItLabSIM5MasterCourse:
                         new ManageTemplatePage().StoreSectionID(sectionName,
