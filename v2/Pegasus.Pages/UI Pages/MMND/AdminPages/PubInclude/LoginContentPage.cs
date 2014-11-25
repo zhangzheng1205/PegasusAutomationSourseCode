@@ -103,13 +103,18 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         /// <param name="scenerioName">This is based on scenerio.</param>
         /// <returns>User details.</returns>
-        public User SelectUserDetailsBaesdOnScenerio(string scenerioName)
+        public User SelectUserDetailsBaesdOnScenerio(string scenerioName,
+            User.UserTypeEnum userTypeEnum)
         {
             //Select User Details Baesd On Scenerio
-            Logger.LogMethodEntry("LoginContentPage", "SelectUserDetailsBaesdOnScenerio",
+            Logger.LogMethodEntry("LoginContentPage", 
+                "SelectUserDetailsBaesdOnScenerio",
              base.IsTakeScreenShotDuringEntryExit);
             //User declaration
             User user = new User();
+            switch (userTypeEnum)
+            {
+                case User.UserTypeEnum.CsSmsStudent:
             switch (scenerioName)
             {
                 case "scoring 0":
@@ -121,6 +126,22 @@ namespace Pegasus.Pages.UI_Pages
                               .SMS_STU_UC2);
                               break;
             }
+            break;
+            
+                case User.UserTypeEnum.HSSCsSmsStudent:
+            switch (scenerioName)
+            {
+                case "scoring 0":
+                    user = User.Get(CommonResource.CommonResource
+                               .SMS_STU_UC3);
+                    break;
+                case "set idle":
+                    user = User.Get(CommonResource.CommonResource
+                              .SMS_STU_UC4);
+                              break;
+            }
+            break;
+        }
             Logger.LogMethodExit("LoginContentPage", "SelectUserDetailsBaesdOnScenerio",
              base.IsTakeScreenShotDuringEntryExit);
             return user;

@@ -153,4 +153,10 @@
   <data name="SMS_STU_UC2" xml:space="preserve">
     <value>Hed_User_SMS_STU_UC2</value>
   </data>
+  <data name="SMS_STU_UC3" xml:space="preserve">
+    <value>HSS_User_SMS_STU_UC3</value>
+  </data>
+  <data name="SMS_STU_UC4" xml:space="preserve">
+    <value>HSS_User_SMS_STU_UC4</value>
+  </data>
 </root>

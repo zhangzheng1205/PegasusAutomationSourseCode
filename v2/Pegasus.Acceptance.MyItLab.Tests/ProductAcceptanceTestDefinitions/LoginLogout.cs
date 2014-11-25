@@ -106,7 +106,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             {
                 //Get the user of the given type from Memory Data Store
                 User user = new LoginContentPage().
-                    SelectUserDetailsBaesdOnScenerio(scenerioName);                
+                    SelectUserDetailsBaesdOnScenerio(scenerioName,userTypeEnum);                
                 //Login as according to the Pegasus Login Mode
                 this.CommonLoginIntoThePegasus(userTypeEnum, loginMode, user);
             }
