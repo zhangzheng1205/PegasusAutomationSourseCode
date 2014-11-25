@@ -282,4 +282,10 @@
   <data name="ComonPage_Amplifier_Launch_Wait_Time" xml:space="preserve">
     <value>20000</value>
   </data>
+  <data name="CommonPage_HssChapter1Activities_FolderName" xml:space="preserve">
+    <value>Chapter 1: The Science of Psychology</value>
+  </data>
+  <data name="CommonPage_HssChapter1ExamActivities_Link" xml:space="preserve">
+    <value>Take the Chapter 1 Exam</value>
+  </data>
 </root>

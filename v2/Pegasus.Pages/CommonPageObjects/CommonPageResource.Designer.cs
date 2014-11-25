@@ -313,6 +313,24 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chapter 1: The Science of Psychology.
+        /// </summary>
+        internal static string CommonPage_HssChapter1Activities_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_HssChapter1Activities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Take the Chapter 1 Exam.
+        /// </summary>
+        internal static string CommonPage_HssChapter1ExamActivities_Link {
+            get {
+                return ResourceManager.GetString("CommonPage_HssChapter1ExamActivities_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TreeViewContainer.
         /// </summary>
         internal static string CommonPage_Instructor_Calendar_Content_Id_Locator {

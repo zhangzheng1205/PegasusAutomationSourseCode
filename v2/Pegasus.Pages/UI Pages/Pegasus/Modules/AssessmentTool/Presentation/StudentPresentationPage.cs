@@ -5894,5 +5894,27 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             logger.LogMethodExit("StudentPresentationPage", "SelectStartTraining",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
+        public void CloseWindow(string windowName)
+        {
+            //Close the Window
+            logger.LogMethodEntry("StudentPresentationPage", "CloseWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.SwitchToLastOpenedWindow();
+                //Close the Window
+                base.CloseBrowserWindow();
+                base.AcceptAlert();
+                //Switch to Default Window
+                base.SwitchToDefaultWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "CloseWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }

@@ -136,6 +136,43 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
+
+        public void LaunchEText()
+        {
+            //Find EText Activity Present In Launch Window
+            logger.LogMethodEntry("LauncheTextPage", "LaunchEText",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_ucs_RT_tdHEDEbook"));
+                IWebElement EtextLink = base.GetWebElementPropertiesById("_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_ucs_RT_tdHEDEbook");
+                base.ClickByJavaScriptExecutor(EtextLink);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("LauncheTextPage", "LaunchEText",
+               base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+        public void CloseEtextWindow()
+        {
+            logger.LogMethodEntry("LauncheTextPage", "CloseEtextWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                base.SwitchToLastOpenedWindow();
+                base.CloseBrowserWindow();
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("LauncheTextPage", "CloseEtextWindow",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
 

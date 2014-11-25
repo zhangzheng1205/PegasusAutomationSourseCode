@@ -718,6 +718,7 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 // Get User Type
                 case User.UserTypeEnum.CsSmsStudent:
+                case User.UserTypeEnum.HSSCsSmsStudent:
                     switch (activityUnderTabName)
                     {
                         //Generate Activity Result by Student Report
@@ -732,6 +733,7 @@ namespace Pegasus.Pages.CommonPageObjects
                     }
                     break;
                 case User.UserTypeEnum.CsSmsInstructor:
+                case User.UserTypeEnum.HSSCsSmsInstructor:
                 case User.UserTypeEnum.HedProgramAdmin:
                     switch (activityUnderTabName)
                     {
@@ -1292,6 +1294,7 @@ namespace Pegasus.Pages.CommonPageObjects
                 switch (userTypeEnum)
                 {
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.HSSCsSmsInstructor:
                         // folder navigation based on Tab name
                         switch (activityUnderTabName)
                         {
@@ -1311,18 +1314,48 @@ namespace Pegasus.Pages.CommonPageObjects
                                         break;
                                 }
                                 break;
+
+                        }
+                        break;
+                    case User.UserTypeEnum.HSSCsSmsStudent:
+                    case User.UserTypeEnum.CsSmsStudent:
+                        switch (activityUnderTabName)
+                        {
+                            case "Course Materials":
+                                switch (activityName)
+                                {
+                                    // folder navigation based on activity name
+                                    case "Take the Chapter 1 Exam":
+                                        this.NavigateToChapter1ExamActivitiesFolder(CommonPageResource.CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                                    userTypeEnum, activityUnderTabName);
+                                        break;
+                                }
+                                break;
                         }
                         break;
                 }
-                
             }
-                
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigationHEDCore",
               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        private void NavigateToChapter1ExamActivitiesFolder(string webElementToWait,
+                User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            Logger.LogMethodEntry("CommonPage", "NavigateToChapter1ExamActivitiesFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter1Activities_FolderName, webElementToWait);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter1ExamActivities_Link, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToChapter1ExamActivitiesFolder",
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         public void NavigateInsideTheFolderUnderMycourse(string FolderName, User.UserTypeEnum UserType)

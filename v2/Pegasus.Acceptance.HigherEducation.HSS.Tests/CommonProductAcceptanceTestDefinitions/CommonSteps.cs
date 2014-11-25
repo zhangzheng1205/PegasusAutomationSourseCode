@@ -71,6 +71,46 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [Then(@"I should be on the ""(.*)"" page displayed with questions")]
+        public void ShowWindowInPegasus(string expectedWindowTitle)
+        {
+            Logger.LogMethodEntry("CommonSteps", "ShowThePageInPegasus",
+            base.IsTakeScreenShotDuringEntryExit);
+            base.SwitchToLastOpenedWindow();
+            this.ShowThePageInPegasus(expectedWindowTitle);
+            Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [When(@"I forcibly close the ""(.*)"" window abdruplty")]
+        public void ForciblyCloseTheWindow(string windowName)
+        {
+            //Close the window
+            Logger.LogMethodEntry("CommonSteps", "CloseTheManageOrganizationWindow",
+                IsTakeScreenShotDuringEntryExit);
+            //Close the Window
+            new StudentPresentationPage().CloseWindow(windowName);
+            Logger.LogMethodExit("CommonSteps", "CloseTheManageOrganizationWindow",
+                IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I should see the ""(.*)"" status for the activity ""(.*)""")]
+        public void StatusForTheActivity(string activityStatus,
+            string activityName)
+        {
+            //Validate the submitted activity status
+            Logger.LogMethodEntry("CommonSteps",
+                "ValidateActivityStatusForTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Validate the submitted activity status
+            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(activityStatus, new StudentPresentationPage().
+                    GetStatusOfSubmittedActivityInCourseMaterial(activityName)));
+            Logger.LogMethodExit("CommonSteps",
+                "ValidateActivityStatusForTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
         /// <summary>
         /// Verifies the Pop Up Opened
         /// Verifies the Correct Pop Up Opened.
@@ -698,13 +738,13 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
             // select particular window here
             base.SelectWindow(base.GetPageTitle);
-
-            // select grade book right iframe here
-            new GBInstructorUXPage().SelectGradebookFrame();
-
-            // make sleep intentionally to load frame completely
-            Thread.Sleep(15000);
-
+            if (activityUnderTabName.Equals("Gradebook"))
+            {
+                // select grade book right iframe here
+                new GBInstructorUXPage().SelectGradebookFrame();
+                // make sleep intentionally to load frame completely
+                Thread.Sleep(15000);
+            }
             //Manage The Folder Navigation
             new CommonPage().ManageTheActivityFolderLevelNavigationHEDCore(
                activityName, activityUnderTabName, userTypeEnum);
@@ -713,5 +753,30 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        [When(@"I Click on eText link")]
+        public void NavigateToEtextWindow()
+        {
+            Logger.LogMethodEntry("CommonSteps",
+                "NavigateToEtextWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().LaunchEText();
+            Logger.LogMethodExit("CommonSteps",
+                "NavigateToEtextWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        [Then(@"I close eText Window")]
+        public void CloseETextWindow()
+        {
+            Logger.LogMethodEntry("CommonSteps",
+                "NavigateToEtextWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().CloseEtextWindow();
+            Logger.LogMethodExit("CommonSteps",
+                "NavigateToEtextWindow",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
