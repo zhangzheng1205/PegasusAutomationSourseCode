@@ -10,28 +10,14 @@ namespace Pegasus.Automation.DataTransferObjects
     /// </summary>
     public class ActivityQuestionsList : BaseEntityObject
     {
-        /// <summary>
-        /// This is the first option.
-        /// </summary>
-        public String FirstOption { get; set; }
 
         /// <summary>
-        /// This is the second option.
+        /// This is the in correct answer(s).
         /// </summary>
-        public String SecondOption { get; set; }
+        public String InCorrectOption { get; set; }
 
         /// <summary>
-        /// This is the third option.
-        /// </summary>
-        public String ThirdOption { get; set; }
-
-        /// <summary>
-        /// This is the fourth option.
-        /// </summary>
-        public String FourthOption { get; set; }
-
-        /// <summary>
-        /// This is the correct answer.
+        /// This is the correct answer(s).
         /// </summary>
         public String CorrectOption { get; set; }
 

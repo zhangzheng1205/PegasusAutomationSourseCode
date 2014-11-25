@@ -757,4 +757,16 @@
       <IsCreated>true</IsCreated>
     </Product>
   </ArrayOfProduct>
+  <!--This is already created questions and answers present on the UI to execute the scenarios. This would be change as per data on the UI deleted or refreshed.-->
+  <ArrayOfActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>QuestionName</Name>
+      <InCorrectOption>Yellow</InCorrectOption>
+      <CorrectOption>Yellow</CorrectOption>
+      <ActivityName>TakeTheChapter1Exam</ActivityName>
+      <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+  </ArrayOfActivityQuestionsList>
 </Data>

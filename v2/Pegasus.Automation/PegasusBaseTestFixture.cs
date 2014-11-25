@@ -648,13 +648,14 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         /// <param name="activityBehaviourTypeEnum">This is name of the activity type behaviour.</param>
         /// <param name="activityNameEnum">This is name of the activity.</param>
         /// <param name="questionNameFromUi">This is question name present on UI.</param>
+        /// <param name="optionType">This is option type correct or incorrect.</param>
         /// <exception cref="ArgumentNullException">This is error when received a null argument for correct option variable.</exception>
-        /// <returns>Correct option based on question name.</returns>
-        protected string GetQuestionCorrectOption(ActivityQuestionsList.ActivityTypeEnum activityTypeEnum,
+        /// <returns>Option name based on question name.</returns>
+        protected string GetQuestionOptionName(ActivityQuestionsList.ActivityTypeEnum activityTypeEnum,
             ActivityQuestionsList.ActivityBehaviourTypeEnum activityBehaviourTypeEnum,
-            ActivityQuestionsList.ActivityNameEnum activityNameEnum, string questionNameFromUi)
+            ActivityQuestionsList.ActivityNameEnum activityNameEnum, string questionNameFromUi, string optionType)
         {
-            string correctOption = string.Empty;
+            string optionName = string.Empty;
             List<ActivityQuestionsList> activityQuestionsList = ActivityQuestionsList.
                     GetAll(activityTypeEnum, activityBehaviourTypeEnum, activityNameEnum);
 
@@ -662,11 +663,21 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             {
                 if ((activityQuestion.Name).Equals(questionNameFromUi))
                 {
-                    // select correct option
-                    correctOption = activityQuestion.CorrectOption;
+                    switch (optionType)
+                    {
+                        case "correctOption":
+                            // correct option
+                            optionName = activityQuestion.CorrectOption;
+                            break;
+                        case "InCorrectOption":
+                            // in correct option
+                            optionName = activityQuestion.InCorrectOption;
+                            break;
+                    }
+                    
                 }
             }
-            return correctOption;
+            return optionName;
         }
     }
 }
