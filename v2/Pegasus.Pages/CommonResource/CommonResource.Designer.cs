@@ -167,5 +167,23 @@ namespace Pegasus.Pages.CommonResource {
                 return ResourceManager.GetString("SMS_STU_UC2", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HSS_User_SMS_STU_UC3.
+        /// </summary>
+        internal static string SMS_STU_UC3 {
+            get {
+                return ResourceManager.GetString("SMS_STU_UC3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HSS_User_SMS_STU_UC4.
+        /// </summary>
+        internal static string SMS_STU_UC4 {
+            get {
+                return ResourceManager.GetString("SMS_STU_UC4", resourceCulture);
+            }
+        }
     }
 }

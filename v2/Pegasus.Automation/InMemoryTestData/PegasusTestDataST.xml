@@ -508,7 +508,7 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>4976</LastName>
       <UserType>HSSCsSmsStudent</UserType>
-      <UserId>Hed_User_SMS_STU_UC1</UserId>
+      <UserId>HSS_User_SMS_STU_UC3</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -521,7 +521,7 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>06c5</LastName>
       <UserType>HSSCsSmsStudent</UserType>
-      <UserId>Hed_User_SMS_STU_UC2</UserId>
+      <UserId>HSS_User_SMS_STU_UC4</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
