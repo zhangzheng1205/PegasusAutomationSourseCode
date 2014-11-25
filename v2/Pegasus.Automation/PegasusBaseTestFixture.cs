@@ -658,23 +658,22 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             string optionName = string.Empty;
             List<ActivityQuestionsList> activityQuestionsList = ActivityQuestionsList.
                     GetAll(activityTypeEnum, activityBehaviourTypeEnum, activityNameEnum);
-
+            // list all questions and there options
             foreach (var activityQuestion in activityQuestionsList)
             {
-                if ((activityQuestion.Name).Equals(questionNameFromUi))
+                if ((activityQuestion.Name).Equals(questionNameFromUi, StringComparison.CurrentCultureIgnoreCase))
                 {
-                    switch (optionType)
+                    switch (optionType.ToLower())
                     {
-                        case "correctOption":
+                        case "correct":
                             // correct option
                             optionName = activityQuestion.CorrectOption;
                             break;
-                        case "InCorrectOption":
+                        case "incorrect":
                             // in correct option
                             optionName = activityQuestion.InCorrectOption;
                             break;
                     }
-                    
                 }
             }
             return optionName;
