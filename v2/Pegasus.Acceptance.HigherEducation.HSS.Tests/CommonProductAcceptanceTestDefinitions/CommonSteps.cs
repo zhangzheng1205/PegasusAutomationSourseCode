@@ -70,7 +70,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
+        /// <summary>
+        /// Verifies the Correct Page Opened.
+        /// </summary>
         [Then(@"I should be on the ""(.*)"" page displayed with questions")]
         public void ShowWindowInPegasus(string expectedWindowTitle)
         {
@@ -82,6 +84,10 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Closing the Window abdruptly
+        /// <param name="windowName">window name which should be closed.</param>
+        /// </summary>
         [When(@"I forcibly close the ""(.*)"" window abdruplty")]
         public void ForciblyCloseTheWindow(string windowName)
         {
@@ -94,6 +100,11 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Validate Activity Status For The Activity.
+        /// </summary>
+        /// <param name="activityStatus"></param>
+        /// <param name="activityName"></param>
         [Then(@"I should see the ""(.*)"" status for the activity ""(.*)""")]
         public void StatusForTheActivity(string activityStatus,
             string activityName)
@@ -726,7 +737,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         /// <param name="activityName">This is activity name.</param>
         /// <param name="userTypeEnum">This is user Type Enum.</param>
         /// <param name="activityUnderTabName">This is Tab Name.</param>
-        /// <remarks>This folder navigation is only valid for MyLab authored course such as
+        /// <remarks>This folder navigation is only valid for MyLab/HSS authored course such as
         /// section course, instructor course and Templates will only valid for this method.</remarks>
         [When(@"I select ""(.*)"" in ""(.*)"" by ""(.*)""")]
         public void ManageTheActivityFolderLevelNavigation(string activityName,
@@ -754,6 +765,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Navigate To the Etext Window.
+        /// </summary>
         [When(@"I Click on eText link")]
         public void NavigateToEtextWindow()
         {
@@ -766,6 +780,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// close the Etext Window.
+        /// </summary>
         [Then(@"I close eText Window")]
         public void CloseETextWindow()
         {
