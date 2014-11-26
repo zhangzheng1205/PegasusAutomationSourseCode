@@ -431,6 +431,69 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0:APH:btnfinish.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_ConfirmSave_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_ConfirmSave_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to correct.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to partial.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to legendCSS.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_Question_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_Question_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to legend.legendCSS.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_QuestionCount_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_QuestionCount_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to saveForLater.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btnNextQuestion1.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_ActivityNewxtQuestion_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_ActivityNewxtQuestion_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
         internal static string StudentPresentation_Page_Initial_Value {

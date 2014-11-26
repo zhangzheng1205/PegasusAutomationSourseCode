@@ -12,6 +12,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using System.Collections.Generic;
 using Keys = OpenQA.Selenium.Keys;
 
 namespace Pegasus.Pages.UI_Pages
@@ -5429,6 +5430,7 @@ namespace Pegasus.Pages.UI_Pages
                 "SelectSimActivityNormalStudentWindowName",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -5518,6 +5520,7 @@ namespace Pegasus.Pages.UI_Pages
              logger.LogMethodExit("StudentPresentationPage", "AttemptSim5PowerPointQuestions",
                  base.IsTakeScreenShotDuringEntryExit);
          }
+
         /// <summary>
         /// Attempt Sim5 Word Questions for 70 percent.
         /// </summary>
@@ -5626,6 +5629,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             logger.LogMethodExit("StudentPresentationPage", "AttemptingFirstWordQuestion",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         ///  Attempting Third Word Question
         /// </summary>
@@ -5706,6 +5710,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             logger.LogMethodExit("StudentPresentationPage", "AttemptingThirdWordQuestion",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Attempting Fifth Word Question.
         /// </summary>
@@ -5733,7 +5738,6 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// <summary>
         /// Attempting Seventh Word Question.
         /// </summary>
-
         private void AttemptingSeventhWordQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptingSeventhWordQuestion",
@@ -5781,6 +5785,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
 
 
         }
+
         /// <summary>
         /// Attempting Eighth Word Question.
         /// </summary>
@@ -5806,6 +5811,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             logger.LogMethodExit("StudentPresentationPage", "AttemptingEighthWordQuestion",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Attempting Ninth Word Question.
         /// </summary>
@@ -5830,6 +5836,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             logger.LogMethodExit("StudentPresentationPage", "AttemptingNinthWordQuestion",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Attempting Tenth Word Question.
         /// </summary>
@@ -5861,6 +5868,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             logger.LogMethodExit("StudentPresentationPage", "AttemptingTenthWordQuestion",
           base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Click On Sim5 Next Question Button.
         /// </summary>
@@ -5895,7 +5903,10 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             base.IsTakeScreenShotDuringEntryExit);
         }
 
-        public void CloseWindow(string windowName)
+        /// <summary>
+        /// Closing the Window abdruptly
+        /// </summary>
+        public void CloseWindow()
         {
             //Close the Window
             logger.LogMethodEntry("StudentPresentationPage", "CloseWindow",
@@ -5915,6 +5926,82 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             }
             logger.LogMethodExit("StudentPresentationPage", "CloseWindow",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Answer the Questions of activity.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="activityBehaviourType">This is the activityBehaviourType of an activity.</param>
+        /// <param name="activityType">This is the activity type.</param>
+        /// <param name="OptionType">This is the Type of answer that has to be updated.</param>
+        public void AnswerActivityQuestions(ActivityQuestionsList.ActivityNameEnum activityName,
+            ActivityQuestionsList.ActivityBehaviourTypeEnum activityBehaviourType,
+            ActivityQuestionsList.ActivityTypeEnum activityType, String OptionType)
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "AnswerActivityQuestions",
+                base.IsTakeScreenShotDuringEntryExit);
+            string ActualQuestion = String.Empty;
+            int QuestionCount = base.GetElementCountByCSSSelector(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_QuestionCount_Value);
+            if (OptionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue))
+            {
+                QuestionCount = 2;
+                OptionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
+            }
+            for (int i = 1; i <= QuestionCount; i++)
+            {
+                IList<IWebElement> Qus = WebDriver.FindElements(By.ClassName(
+                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Question_Value));
+                foreach (IWebElement element in Qus)
+                {
+                    if (element.Text.Equals(String.Empty)) continue;
+                    else
+                    {
+                        ActualQuestion = element.Text;
+                        String Option = base.GetQuestionOptionName(activityType, activityBehaviourType, activityName, ActualQuestion, OptionType);
+                        if (Option.Contains("|"))
+                        {
+                            string[] words = Option.Split('|');
+                            foreach (string word in words)
+                            {
+                                IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(word);
+                                base.ClickByJavaScriptExecutor(SelectOption);
+                            }
+                        }
+                        else
+                        {
+                            IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(Option);
+                            base.ClickByJavaScriptExecutor(SelectOption);
+                        }
+
+                        break;
+                    }
+                }
+                IWebElement NextQuestButton = base.GetWebElementPropertiesById(
+                    StudentPresentationPageResource.StudentPresentation_Page_HSS_ActivityNewxtQuestion_ID_Locator);
+                base.ClickByJavaScriptExecutor(NextQuestButton);
+            }
+            logger.LogMethodExit("StudentPresentationPage", "AnswerActivityQuestions",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Save For Later Option.
+        /// </summary>
+        /// 
+        public void ClickOnSaveForLaterOption()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "ClickOnSaveForLaterOption",
+            base.IsTakeScreenShotDuringEntryExit);
+            IWebElement SaveForLaterButton = base.GetWebElementPropertiesById(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator);
+            base.ClickByJavaScriptExecutor(SaveForLaterButton);
+            IWebElement SaveButton = base.GetWebElementPropertiesById(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ConfirmSave_ID_Locator);
+            base.ClickByJavaScriptExecutor(SaveButton);
+            logger.LogMethodExit("StudentPresentationPage", "ClickOnSaveForLaterOption",
+             base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

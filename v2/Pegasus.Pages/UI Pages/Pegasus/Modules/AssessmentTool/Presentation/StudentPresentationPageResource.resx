@@ -1269,4 +1269,25 @@
   <data name="StudentPrsentation_Page_PPT_25_TitleCenterAllign_Xpath_Locator" xml:space="preserve">
     <value>.//*[@id='6']/div[3]/div[1]/div[5]</value>
   </data>
+  <data name="StudentPresentation_Page_HSS_ActivityNewxtQuestion_ID_Locator" xml:space="preserve">
+    <value>btnNextQuestion1</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_ConfirmSave_ID_Locator" xml:space="preserve">
+    <value>_ctl0:APH:btnfinish</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue" xml:space="preserve">
+    <value>correct</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue" xml:space="preserve">
+    <value>partial</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_QuestionCount_Value" xml:space="preserve">
+    <value>legend.legendCSS</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_Question_Value" xml:space="preserve">
+    <value>legendCSS</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator" xml:space="preserve">
+    <value>saveForLater</value>
+  </data>
 </root>
