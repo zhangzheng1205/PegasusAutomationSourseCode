@@ -48,6 +48,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         /// </summary>
         /// <param name="expectedPageTitle">This is Expected Page Title.</param>
         [Then("I should be on the \"(.*)\" page")]
+        [Then("I should be on the \"(.*)\" window")]
         [Given(@"I am on the ""(.*)"" page")]
         [When(@"I am on the ""(.*)"" page")]
         public void ShowThePageInPegasus(String expectedPageTitle)
@@ -70,6 +71,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Verifies the Correct Page Opened.
         /// </summary>
@@ -85,17 +87,48 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         }
 
         /// <summary>
-        /// Closing the Window abdruptly
-        /// <param name="windowName">window name which should be closed.</param>
+        /// Answer the Questions of activity.
         /// </summary>
-        [When(@"I forcibly close the ""(.*)"" window abdruplty")]
-        public void ForciblyCloseTheWindow(string windowName)
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="activityBehaviourType">This is the activityBehaviourType of an activity.</param>
+        /// <param name="activityType">This is the activity type.</param>
+        /// <param name="OptionType">This is the Type of answer that has to be updated.</param>
+        [Then(@"I answer activity ""(.*)"" with behaviour ""(.*)"" of ""(.*)"" type with ""(.*)"" answers")]
+        public void AnswerActivityQuestion(ActivityQuestionsList.ActivityNameEnum activityName, 
+            ActivityQuestionsList.ActivityBehaviourTypeEnum activityBehaviourType,
+            ActivityQuestionsList.ActivityTypeEnum activityType,String OptionType)
+        {
+            Logger.LogMethodEntry("CommonSteps", "AnswerActivityQuestion",
+            base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().AnswerActivityQuestions(activityName, activityBehaviourType, activityType, OptionType);
+            Logger.LogMethodExit("CommonSteps", "AnswerActivityQuestion",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on Save For Later Option.
+        /// </summary>
+        [When(@"I click on save for later button")]
+        public void ClickOnSaveForLaterButton()
+        {
+            Logger.LogMethodEntry("CommonSteps", "AnswerActivityQuestion",
+            base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().ClickOnSaveForLaterOption();
+            Logger.LogMethodExit("CommonSteps", "AnswerActivityQuestion",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Closing the Window abdruptly
+        /// </summary>
+        [When(@"I forcibly close the Exam window abdruplty")]
+        public void ForciblyCloseTheWindow()
         {
             //Close the window
             Logger.LogMethodEntry("CommonSteps", "CloseTheManageOrganizationWindow",
                 IsTakeScreenShotDuringEntryExit);
             //Close the Window
-            new StudentPresentationPage().CloseWindow(windowName);
+            new StudentPresentationPage().CloseWindow();
             Logger.LogMethodExit("CommonSteps", "CloseTheManageOrganizationWindow",
                 IsTakeScreenShotDuringEntryExit);
         }
@@ -712,6 +745,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CourseContent", "NavigateToFolder",
              base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
