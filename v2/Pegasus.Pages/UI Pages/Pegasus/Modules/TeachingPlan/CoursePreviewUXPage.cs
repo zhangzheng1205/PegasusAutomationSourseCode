@@ -20,7 +20,6 @@ namespace Pegasus.Pages.UI_Pages
         /// The static instance of the logger for the class.
         /// </summary>
         private static Logger logger = Logger.GetInstance(typeof(CoursePreviewUXPage));
-
         /// <summary>
         /// Get To Do Page window Title.
         /// If Window is accessible then window title should be as expected.
@@ -48,7 +47,6 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             return getWindowTitle;
         }
-
         /// <summary>
         /// Select Window.
         /// </summary>
@@ -65,7 +63,6 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("CoursePreviewUXPage", "SelectCourseMaterialsWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Switch To Iframe
         /// </summary>
@@ -82,7 +79,6 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("CoursePreviewUXPage", "SwitchToIframe",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Get Activity Name In Course Materials Tab.
         /// </summary>
@@ -136,7 +132,9 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
-
+        /// <summary>
+        /// Launches the Etext Window.
+        /// </summary>
         public void LaunchEText()
         {
             //Find EText Activity Present In Launch Window
@@ -144,8 +142,8 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                base.WaitForElement(By.Id("_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_ucs_RT_tdHEDEbook"));
-                IWebElement EtextLink = base.GetWebElementPropertiesById("_ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_ucs_RT_tdHEDEbook");
+                base.WaitForElement(By.Id(CoursePreviewUXPageResource.CoursePreviewUX_Page_Etext_Link));
+                IWebElement EtextLink = base.GetWebElementPropertiesById(CoursePreviewUXPageResource.CoursePreviewUX_Page_Etext_Link);
                 base.ClickByJavaScriptExecutor(EtextLink);
             }
             catch (Exception e)
@@ -156,7 +154,9 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
 
         }
-
+        /// <summary>
+        /// close the Etext Window.
+        /// </summary>
         public void CloseEtextWindow()
         {
             logger.LogMethodEntry("LauncheTextPage", "CloseEtextWindow",

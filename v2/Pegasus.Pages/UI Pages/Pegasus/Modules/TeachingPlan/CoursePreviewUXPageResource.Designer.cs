@@ -106,6 +106,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0__ctl0_phHeader__ctl0_ucs_Toolbar_ucs_SubMenubar_ucs_RT_tdHEDEbook.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_Etext_Link {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_Etext_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 3.
         /// </summary>
         internal static string CoursePreviewUX_Page_Loop_Initialization_Value {
