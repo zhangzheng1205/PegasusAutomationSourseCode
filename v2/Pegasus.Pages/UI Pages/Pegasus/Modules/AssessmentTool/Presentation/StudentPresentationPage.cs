@@ -5934,53 +5934,52 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// <param name="activityName">This is the activity name.</param>
         /// <param name="activityBehaviourType">This is the activityBehaviourType of an activity.</param>
         /// <param name="activityType">This is the activity type.</param>
-        /// <param name="OptionType">This is the Type of answer that has to be updated.</param>
+        /// <param name="optionType">This is the Type of answer that has to be updated.</param>
         public void AnswerActivityQuestions(ActivityQuestionsList.ActivityNameEnum activityName,
             ActivityQuestionsList.ActivityBehaviourTypeEnum activityBehaviourType,
-            ActivityQuestionsList.ActivityTypeEnum activityType, String OptionType)
+            ActivityQuestionsList.ActivityTypeEnum activityType, String optionType)
         {
             logger.LogMethodEntry("StudentPresentationPage", "AnswerActivityQuestions",
                 base.IsTakeScreenShotDuringEntryExit);
-            string ActualQuestion = String.Empty;
-            int QuestionCount = base.GetElementCountByCSSSelector(
+            int questionCount = base.GetElementCountByCSSSelector(
                 StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_QuestionCount_Value);
-            if (OptionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue))
+            if (optionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue))
             {
-                QuestionCount = 2;
-                OptionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
+                questionCount = 2;
+                optionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
             }
-            for (int i = 1; i <= QuestionCount; i++)
+            for (int i = 1; i <= questionCount; i++)
             {
-                IList<IWebElement> Qus = WebDriver.FindElements(By.ClassName(
+                IList<IWebElement> questionList = WebDriver.FindElements(By.ClassName(
                     StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Question_Value));
-                foreach (IWebElement element in Qus)
+                foreach (IWebElement question in questionList)
                 {
-                    if (element.Text.Equals(String.Empty)) continue;
+                    if (question.Text.Equals(String.Empty)) continue;
                     else
                     {
-                        ActualQuestion = element.Text;
-                        String Option = base.GetQuestionOptionName(activityType, activityBehaviourType, activityName, ActualQuestion, OptionType);
-                        if (Option.Contains("|"))
+                        string actualQuestion = question.Text;
+                        string questionOptions = base.GetQuestionOptionName(activityType, activityBehaviourType, activityName, actualQuestion, optionType);
+                        if (questionOptions.Contains("|"))
                         {
-                            string[] words = Option.Split('|');
-                            foreach (string word in words)
+                            string[] questionOptionsList = questionOptions.Split('|');
+                            foreach (string questionOption in questionOptionsList)
                             {
-                                IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(word);
-                                base.ClickByJavaScriptExecutor(SelectOption);
+                                IWebElement selectQuestionOption = base.GetWebElementPropertiesByLinkText(questionOption);
+                                base.ClickByJavaScriptExecutor(selectQuestionOption);
                             }
                         }
                         else
                         {
-                            IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(Option);
-                            base.ClickByJavaScriptExecutor(SelectOption);
+                            IWebElement selectOption = base.GetWebElementPropertiesByLinkText(questionOptions);
+                            base.ClickByJavaScriptExecutor(selectOption);
                         }
 
                         break;
                     }
                 }
-                IWebElement NextQuestButton = base.GetWebElementPropertiesById(
+                IWebElement nextQuestionButton = base.GetWebElementPropertiesById(
                     StudentPresentationPageResource.StudentPresentation_Page_HSS_ActivityNewxtQuestion_ID_Locator);
-                base.ClickByJavaScriptExecutor(NextQuestButton);
+                base.ClickByJavaScriptExecutor(nextQuestionButton);
             }
             logger.LogMethodExit("StudentPresentationPage", "AnswerActivityQuestions",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -5989,17 +5988,16 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// <summary>
         /// Click on Save For Later Option.
         /// </summary>
-        /// 
         public void ClickOnSaveForLaterOption()
         {
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSaveForLaterOption",
             base.IsTakeScreenShotDuringEntryExit);
-            IWebElement SaveForLaterButton = base.GetWebElementPropertiesById(
+            IWebElement saveForLaterButton = base.GetWebElementPropertiesById(
                 StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator);
-            base.ClickByJavaScriptExecutor(SaveForLaterButton);
-            IWebElement SaveButton = base.GetWebElementPropertiesById(
+            base.ClickByJavaScriptExecutor(saveForLaterButton);
+            IWebElement saveButton = base.GetWebElementPropertiesById(
                 StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ConfirmSave_ID_Locator);
-            base.ClickByJavaScriptExecutor(SaveButton);
+            base.ClickByJavaScriptExecutor(saveButton);
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSaveForLaterOption",
              base.IsTakeScreenShotDuringEntryExit);
         }

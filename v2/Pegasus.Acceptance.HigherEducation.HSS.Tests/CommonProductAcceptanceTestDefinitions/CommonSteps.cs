@@ -92,15 +92,15 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         /// <param name="activityName">This is the activity name.</param>
         /// <param name="activityBehaviourType">This is the activityBehaviourType of an activity.</param>
         /// <param name="activityType">This is the activity type.</param>
-        /// <param name="OptionType">This is the Type of answer that has to be updated.</param>
+        /// <param name="optionType">This is the Type of answer that has to be updated.</param>
         [Then(@"I answer activity ""(.*)"" with behaviour ""(.*)"" of ""(.*)"" type with ""(.*)"" answers")]
         public void AnswerActivityQuestion(ActivityQuestionsList.ActivityNameEnum activityName, 
             ActivityQuestionsList.ActivityBehaviourTypeEnum activityBehaviourType,
-            ActivityQuestionsList.ActivityTypeEnum activityType,String OptionType)
+            ActivityQuestionsList.ActivityTypeEnum activityType,String optionType)
         {
             Logger.LogMethodEntry("CommonSteps", "AnswerActivityQuestion",
             base.IsTakeScreenShotDuringEntryExit);
-            new StudentPresentationPage().AnswerActivityQuestions(activityName, activityBehaviourType, activityType, OptionType);
+            new StudentPresentationPage().AnswerActivityQuestions(activityName, activityBehaviourType, activityType, optionType);
             Logger.LogMethodExit("CommonSteps", "AnswerActivityQuestion",
              base.IsTakeScreenShotDuringEntryExit);
         }
