@@ -458,6 +458,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.PROD.StudentSubmission.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.StudentSubmission.ForPastDueDateActivities.BVT.MyItLab.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.StudentSubmission.BVT.MyItLab.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -492,6 +495,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.SpotCheckTest.MyItLab.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.AssignActivitiesNearPastDueDate.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.Instructor.TodaysView.PastDueDate.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAdmin.Workflow.feature">

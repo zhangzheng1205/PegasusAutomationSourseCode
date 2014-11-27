@@ -202,7 +202,7 @@ namespace Pegasus.Pages.UI_Pages
                 // Wait till entity enters from inactive state to active state
                 int minutesToWait = Int32.Parse(ConfigurationManager.
                     AppSettings["AssignedToCopyInterval"]);
-                while (stopwatch.Elapsed.TotalMinutes < 10)
+                while (stopwatch.Elapsed.TotalMinutes < 15)
                 {
                     StudentPresentationPage studentPresentationPage =
                     new StudentPresentationPage();
