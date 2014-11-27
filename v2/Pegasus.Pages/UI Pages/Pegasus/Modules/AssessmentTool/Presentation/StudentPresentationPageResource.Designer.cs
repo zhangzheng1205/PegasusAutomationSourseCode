@@ -431,6 +431,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblGradeBook.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #divgradeholder &gt; a.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_ActivityScore_CSS_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_ActivityScore_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0:APH:btnfinish.
         /// </summary>
         internal static string StudentPresentation_Page_HSS_Activity_ConfirmSave_ID_Locator {
@@ -445,6 +463,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue {
             get {
                 return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0:APH:btnfinish.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_FinishButton_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_FinishButton_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@itempos=&apos;{0}&apos;]/table/tbody/tr[2]/td/div/table/tbody/tr/td[2]/fieldset/table/tbody/tr[2]/td/table/tbody/tr[{1}]/td[3]/label/a.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator", resourceCulture);
             }
         }
         
@@ -476,11 +512,56 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to _ctl0:btnReturnCourse.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_ReturnToCourseButton_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_ReturnToCourseButton_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to saveForLater.
         /// </summary>
         internal static string StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator {
             get {
                 return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblStudentName.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&apos;]/span/div[2].
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0:btnMasterFinish.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_SubmitButton_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_SubmitButton_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0_InnerPageContent_ContentSynapse_rptCoursePreview__ctl5_btnViewSubmission.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_ViewSubmissionButton_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_ViewSubmissionButton_ID_Locator", resourceCulture);
             }
         }
         

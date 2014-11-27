@@ -27,6 +27,14 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsStudent"
 
+#Purpose: Login as Zero Score SMS Student
+Scenario: User login as SMS student to score zero percent
+Given I browsed the login url for "HSSCsSmsStudent"
+When I login as "scoring 0" into the pegasus as "HSSCsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsStudent"
+
 #Purpose:Verify The User LogOut As HSSCourseSpaceSMSInstructor
 Scenario: User LogOut As HSSCsSMSInstructor
 When I "Sign out" from the "HSSCsSmsInstructor"

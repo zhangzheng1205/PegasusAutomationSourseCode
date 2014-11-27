@@ -111,10 +111,10 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         [When(@"I click on save for later button")]
         public void ClickOnSaveForLaterButton()
         {
-            Logger.LogMethodEntry("CommonSteps", "AnswerActivityQuestion",
+            Logger.LogMethodEntry("CommonSteps", "ClickOnSaveForLaterButton",
             base.IsTakeScreenShotDuringEntryExit);
             new StudentPresentationPage().ClickOnSaveForLaterOption();
-            Logger.LogMethodExit("CommonSteps", "AnswerActivityQuestion",
+            Logger.LogMethodExit("CommonSteps", "ClickOnSaveForLaterButton",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -125,11 +125,11 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         public void ForciblyCloseTheWindow()
         {
             //Close the window
-            Logger.LogMethodEntry("CommonSteps", "CloseTheManageOrganizationWindow",
+            Logger.LogMethodEntry("CommonSteps", "ForciblyCloseTheWindow",
                 IsTakeScreenShotDuringEntryExit);
             //Close the Window
             new StudentPresentationPage().CloseWindow();
-            Logger.LogMethodExit("CommonSteps", "CloseTheManageOrganizationWindow",
+            Logger.LogMethodExit("CommonSteps", "ForciblyCloseTheWindow",
                 IsTakeScreenShotDuringEntryExit);
         }
 
@@ -144,15 +144,108 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         {
             //Validate the submitted activity status
             Logger.LogMethodEntry("CommonSteps",
-                "ValidateActivityStatusForTheActivity",
+                "StatusForTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             //Validate the submitted activity status
             Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
                 Title, () => Assert.AreEqual(activityStatus, new StudentPresentationPage().
                     GetStatusOfSubmittedActivityInCourseMaterial(activityName)));
             Logger.LogMethodExit("CommonSteps",
-                "ValidateActivityStatusForTheActivity",
+                "StatusForTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// click on Submit the activity
+        /// </summary>
+        [When(@"I click on Submit the activity ""(.*)"" score should be displayed in the screen")]
+        public void ClickOnSubmitTheActivity(String activityScore)
+        {
+            Logger.LogMethodEntry("CommonSteps", "ClickOnSubmitTheActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+            StudentPresentationPage obj = new StudentPresentationPage();
+            obj.SubmitForGrading();
+            Logger.LogAssertion("AnswerActivityQuestion", ScenarioContext.Current.ScenarioInfo.
+               Title, () => Assert.AreEqual(activityScore, obj.GetActivityScore()));
+            obj.RuturnBackToCourseSpace();
+            Logger.LogMethodExit("CommonSteps", "ClickOnSubmitTheActivity",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Submission Score of an activity
+        /// </summary>
+        [Then(@"I should see the ""(.*)"" score in the left frame")]
+        public void VerifySubmissionScore(string score)
+        {
+            Logger.LogMethodEntry("CommonSteps", "VerifySubmissionScore",
+            IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (score, new StudentPresentationPage().GetSubmissionScoreByStudent()));
+            Logger.LogMethodExit("CommonSteps", "VerifySubmissionScore",
+                IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on View Submission of an activity
+        /// </summary>
+        [When(@"I click on View Submission")]
+        public void ClickOnViewSubmission()
+        {
+            Logger.LogMethodEntry("CommonSteps", "ClickOnViewSubmission",
+            IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().ClickOnViewSubmission();
+            Logger.LogMethodExit("CommonSteps", "ClickOnViewSubmission",
+                IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Submission Score of an activity and student details 
+        /// </summary>
+        [Then(@"I should see Student ""(.*)"" as ""(.*)"" and displayed like ""(.*)"" in the right frame")]
+        public void VerifyStudentDetaisInRightFrame(string scenerioName,
+           User.UserTypeEnum userTypeEnum, string activityGrade)
+        {
+            Logger.LogMethodEntry("CommonSteps", "VerifyStudentDetaisInRightFrame",
+            IsTakeScreenShotDuringEntryExit);
+            //Verify the grade of the activity
+            StudentPresentationPage obj = new StudentPresentationPage();
+            Logger.LogAssertion("VerifyGradesoftheSubmittedActivity", ScenarioContext.
+                Current.ScenarioInfo.Title, () => Assert.AreEqual
+                 (activityGrade, obj.GetactivityGradeByStudent()));
+            String ExpectedUserDetail = this.GetExpectedUserDetails(scenerioName, userTypeEnum);
+            String ActualUserDetail = obj.getStudentDetails();
+            //Verify Expected student name
+            Logger.LogAssertion("VerifyUserDetailsPresent", ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(ExpectedUserDetail, ActualUserDetail));
+            base.CloseBrowserWindow();
+            Logger.LogMethodExit("CommonSteps", "VerifyStudentDetaisInRightFrame",
+                IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Get the Expected User details from the view submission page
+        /// </summary>
+        private String GetExpectedUserDetails(string scenerioName,
+           User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("CommonSteps", "GetExpectedUserDetails",
+            IsTakeScreenShotDuringEntryExit);
+            String ExpectedUserDetail = String.Empty;
+            if (scenerioName.Equals("scoring 0"))
+            {
+                User user = new LoginContentPage().
+                 SelectUserDetailsBaesdOnScenerio(scenerioName, userTypeEnum);
+                ExpectedUserDetail = user.LastName + ", " + user.FirstName;
+            }
+            else
+            {
+                User user = User.Get(userTypeEnum);
+                ExpectedUserDetail = user.LastName + ", " + user.FirstName;
+            }
+            Logger.LogMethodEntry("CommonSteps", "GetExpectedUserDetails",
+            IsTakeScreenShotDuringEntryExit);
+            return ExpectedUserDetail;
         }
 
         /// <summary>

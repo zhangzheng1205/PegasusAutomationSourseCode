@@ -1290,4 +1290,31 @@
   <data name="StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator" xml:space="preserve">
     <value>saveForLater</value>
   </data>
+  <data name="StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblGradeBook</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_ActivityScore_CSS_Locator" xml:space="preserve">
+    <value>#divgradeholder &gt; a</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_FinishButton_ID_Locator" xml:space="preserve">
+    <value>_ctl0:APH:btnfinish</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator" xml:space="preserve">
+    <value>//div[@itempos='{0}']/table/tbody/tr[2]/td/div/table/tbody/tr/td[2]/fieldset/table/tbody/tr[2]/td/table/tbody/tr[{1}]/td[3]/label/a</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_ReturnToCourseButton_ID_Locator" xml:space="preserve">
+    <value>_ctl0:btnReturnCourse</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator" xml:space="preserve">
+    <value>_ctl0_PopupPageContent_SubmissionHeaderMaster_StudentHeader_lblStudentName</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span/div[2]</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_SubmitButton_ID_Locator" xml:space="preserve">
+    <value>_ctl0:btnMasterFinish</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_ViewSubmissionButton_ID_Locator" xml:space="preserve">
+    <value>_ctl0_InnerPageContent_ContentSynapse_rptCoursePreview__ctl5_btnViewSubmission</value>
+  </data>
 </root>

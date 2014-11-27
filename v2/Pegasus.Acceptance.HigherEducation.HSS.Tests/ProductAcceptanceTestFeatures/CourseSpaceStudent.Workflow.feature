@@ -31,3 +31,35 @@ Then I should be on the "Exam" page displayed with questions
 And I answer activity "TakeTheChapter1Exam" with behaviour "BasicRandom" of "Homework" type with "partial" answers
 When I click on save for later button
 Then I should see the "In Progress" status for the activity "Take the Chapter 1 Exam"
+
+#Purpose : Basic/Random activity from Course Calendar and student scoring 100%
+#Test case ID : peg-22151
+#PEGASUS-29428
+Scenario: Student answers the questions and scores 100%
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStudent"
+Then I should be on the "Exam" page displayed with questions
+And I answer activity "TakeTheChapter1Exam" with behaviour "BasicRandom" of "Homework" type with "correct" answers
+When I click on Submit the activity "100%" score should be displayed in the screen
+Then I should be on the "Course Materials" page
+And I should see the "Passed" status for the activity "Take the Chapter 1 Exam"
+When I click on View Submission 
+Then I should see the "100 %" score in the left frame
+And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 100.00%" in the right frame
+
+#Purpose : Basic/Random activity from Course Calendar and student scoring 0%
+#Test case ID : peg-22146
+#PEGASUS-29427
+Scenario: Student answers the questions and scores 0%
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
+When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStudent"
+Then I should be on the "Exam" page displayed with questions
+And I answer activity "TakeTheChapter1Exam" with behaviour "BasicRandom" of "Homework" type with "incorrect" answers
+When I click on Submit the activity "0%" score should be displayed in the screen
+Then I should be on the "Course Materials" page
+And I should see the "Not passed" status for the activity "Take the Chapter 1 Exam"
+When I click on View Submission 
+Then I should see the "0 %" score in the left frame
+And I should see Student "scoring 0" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 0.00%" in the right frame

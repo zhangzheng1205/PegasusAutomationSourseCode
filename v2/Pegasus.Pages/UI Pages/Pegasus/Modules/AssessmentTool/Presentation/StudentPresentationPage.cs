@@ -5937,52 +5937,172 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// <param name="optionType">This is the Type of answer that has to be updated.</param>
         public void AnswerActivityQuestions(ActivityQuestionsList.ActivityNameEnum activityName,
             ActivityQuestionsList.ActivityBehaviourTypeEnum activityBehaviourType,
-            ActivityQuestionsList.ActivityTypeEnum activityType, String optionType)
+            ActivityQuestionsList.ActivityTypeEnum activityType, String OptionType)
         {
             logger.LogMethodEntry("StudentPresentationPage", "AnswerActivityQuestions",
                 base.IsTakeScreenShotDuringEntryExit);
-            int questionCount = base.GetElementCountByCSSSelector(
+            string ActualQuestion = String.Empty;
+            int QuestionCount = base.GetElementCountByCSSSelector(
                 StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_QuestionCount_Value);
-            if (optionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue))
+            if (OptionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue))
             {
-                questionCount = 2;
-                optionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
+                QuestionCount = 2;
+                OptionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
             }
-            for (int i = 1; i <= questionCount; i++)
+            for (int i = 1; i <= QuestionCount; i++)
             {
-                IList<IWebElement> questionList = WebDriver.FindElements(By.ClassName(
+                IList<IWebElement> Qus = WebDriver.FindElements(By.ClassName(
                     StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Question_Value));
-                foreach (IWebElement question in questionList)
+                foreach (IWebElement element in Qus)
                 {
-                    if (question.Text.Equals(String.Empty)) continue;
+                    if (element.Text.Equals(String.Empty)) continue;
                     else
                     {
-                        string actualQuestion = question.Text;
-                        string questionOptions = base.GetQuestionOptionName(activityType, activityBehaviourType, activityName, actualQuestion, optionType);
-                        if (questionOptions.Contains("|"))
+                        ActualQuestion = element.Text;
+                        String Option = base.GetQuestionOptionName(activityType, activityBehaviourType, activityName, ActualQuestion, OptionType);
+                        if (Option.Contains("|"))
                         {
-                            string[] questionOptionsList = questionOptions.Split('|');
-                            foreach (string questionOption in questionOptionsList)
+                            string[] words = Option.Split('|');
+                            foreach (string word in words)
                             {
-                                IWebElement selectQuestionOption = base.GetWebElementPropertiesByLinkText(questionOption);
-                                base.ClickByJavaScriptExecutor(selectQuestionOption);
+                                IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(word);
+                                base.ClickByJavaScriptExecutor(SelectOption);
                             }
                         }
                         else
                         {
-                            IWebElement selectOption = base.GetWebElementPropertiesByLinkText(questionOptions);
-                            base.ClickByJavaScriptExecutor(selectOption);
+                            int numberOption = 0;
+                            bool result = int.TryParse(Option, out numberOption);
+                            if (numberOption != 0)
+                            {                                
+                                for (int k = 1; k <= 8; k++)
+                                {
+                                    if (k % 2 != 0)
+                                    {
+                                        base.WaitForElement(By.XPath(string.Format(
+                                            StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator,i,k)), 10);
+                                        IWebElement RadioOption = base.GetWebElementPropertiesByXPath(string.Format(
+                                            StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator,i,k));
+                                        String TempOption = RadioOption.Text;
+                                        if (TempOption.Equals(Option))
+                                        {
+                                            base.ClickByJavaScriptExecutor(RadioOption);
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(Option);
+                                base.ClickByJavaScriptExecutor(SelectOption);
+                            }
                         }
-
+                        IWebElement NextQuestButton = base.GetWebElementPropertiesById("btnNext");
+                        base.PerformMouseClickAction(NextQuestButton);                    
                         break;
                     }
                 }
-                IWebElement nextQuestionButton = base.GetWebElementPropertiesById(
-                    StudentPresentationPageResource.StudentPresentation_Page_HSS_ActivityNewxtQuestion_ID_Locator);
-                base.ClickByJavaScriptExecutor(nextQuestionButton);
+
             }
             logger.LogMethodExit("StudentPresentationPage", "AnswerActivityQuestions",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Click on SubmitForGrading
+        /// </summary>
+        /// 
+        public void SubmitForGrading()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "SubmitForGrading",
+            base.IsTakeScreenShotDuringEntryExit);
+            IWebElement SubmitButton = base.GetWebElementPropertiesById(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmitButton_ID_Locator);
+            base.ClickByJavaScriptExecutor(SubmitButton);
+            IWebElement FinishButton = base.GetWebElementPropertiesById(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_FinishButton_ID_Locator);
+            base.ClickByJavaScriptExecutor(FinishButton);
+            logger.LogMethodExit("StudentPresentationPage", "SubmitForGrading",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public string GetActivityScore()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "GetActivityScore",
+            base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.CssSelector(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ActivityScore_CSS_Locator), 10);
+            IWebElement getScore = base.GetWebElementPropertiesByXPath("//*[@id='divgradeholder']/a");
+            String ActualScore = getScore.Text;
+            logger.LogMethodExit("StudentPresentationPage", "GetActivityScore",
+            base.IsTakeScreenShotDuringEntryExit);
+            return ActualScore;
+        }
+
+        public void RuturnBackToCourseSpace()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "RuturnBackToCourseSpace",
+            base.IsTakeScreenShotDuringEntryExit);
+            IWebElement ReturnToCourseButton = base.GetWebElementPropertiesById(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ReturnToCourseButton_ID_Locator);
+            base.ClickByJavaScriptExecutor(ReturnToCourseButton);
+            logger.LogMethodExit("StudentPresentationPage", "RuturnBackToCourseSpace",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public void ClickOnViewSubmission()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "ClickOnViewSubmission",
+            base.IsTakeScreenShotDuringEntryExit);
+            IWebElement ViewSubmissionButton = base.GetWebElementPropertiesById(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ViewSubmissionButton_ID_Locator);
+            base.ClickByJavaScriptExecutor(ViewSubmissionButton);
+            logger.LogMethodExit("StudentPresentationPage", "ClickOnViewSubmission",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public String GetSubmissionScoreByStudent()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "GetSubmissionScoreByStudent",
+            base.IsTakeScreenShotDuringEntryExit);
+            base.SwitchToLastOpenedWindow();
+            base.WaitForElement(By.XPath(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator), 10);
+            IWebElement getScore = base.GetWebElementPropertiesByXPath(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator);
+            String ActualScore = getScore.Text;
+            base.PerformMouseClickAction(getScore);
+            logger.LogMethodExit("StudentPresentationPage", "GetSubmissionScoreByStudent",
+            base.IsTakeScreenShotDuringEntryExit);
+            return ActualScore;
+        }
+
+        public String GetactivityGradeByStudent()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "GetactivityGradeByStudent",
+            base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator), 10);
+            IWebElement activityGrade = base.GetWebElementPropertiesById(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator);
+            String ActualScore = activityGrade.Text;
+            logger.LogMethodExit("StudentPresentationPage", "GetactivityGradeByStudent",
+            base.IsTakeScreenShotDuringEntryExit);
+            return ActualScore;
+        }
+
+        public String getStudentDetails()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "getStudentDetails",
+            base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator), 10);
+            IWebElement StudentDetails = base.GetWebElementPropertiesById(
+                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator);
+            String StudentDetail = StudentDetails.Text;
+            logger.LogMethodExit("StudentPresentationPage", "getStudentDetails",
+            base.IsTakeScreenShotDuringEntryExit);
+            return StudentDetail;
         }
 
         /// <summary>
