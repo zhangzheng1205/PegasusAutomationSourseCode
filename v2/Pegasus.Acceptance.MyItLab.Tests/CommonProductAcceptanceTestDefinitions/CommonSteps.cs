@@ -874,13 +874,17 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
         /// </summary>
         /// <param name="successMessage">This is Success Message Text.</param>
         [Then("I should see the 'Decline' success message")]
-        public void DisplayTheDeclineSuccessfullMessage(
-            String successMessage)
+        public void DisplayTheDeclineSuccessfullMessage()
         {
             // Method To Verify the Success Message 
             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
                 base.IsTakeScreenShotDuringEntryExit);
             //Verify Correct Message Present on the Page
+             Logger.LogMethodEntry("CommonSteps", "DisplayTheSuccessfullMessage",
+                base.IsTakeScreenShotDuringEntryExit);
+            string studentName = new RptAllAssessmentAllStudentPage().
+                GetZeroScoreUsername(User.UserTypeEnum.CsSmsStudent);
+            string successMessage = "The submission by " + studentName + " has been declined.  This submission will receive a zero in the Gradebook.";
             bool isSuccessMessageExist = base.IsMessageExists(successMessage,
                 CommonStepsResource.CommonSteps_SuccessMessage_Class_Locator);
             //Removed The Assert For Message Because Sometimes Message not comes 
@@ -888,6 +892,25 @@ namespace Pegasus.Acceptance.MyITLab.Tests.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+      
+        /// <summary>
+        /// Wait for past due date icon to be displayed.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="tabName">This is the Tab name.</param>
+        /// <param name="userType">This is the user type enum.</param>
+        [When(@"I see past duedate icon for ""(.*)"" activity in ""(.*)"" by ""(.*)""")]
+        public void ValidatePastDueDateIcon(string activityName, string tabName, User.UserTypeEnum userType)
+        {
+            // Wait for past due date icon to be displayed 
+            Logger.LogMethodEntry("CommonSteps", "ValidatePastDueDateIcon",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().WaitForPastDueDateIcon(activityName, tabName, userType);
+            Logger.LogMethodExit("CommonSteps", "ValidatePastDueDateIcon",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
     }
 }
 

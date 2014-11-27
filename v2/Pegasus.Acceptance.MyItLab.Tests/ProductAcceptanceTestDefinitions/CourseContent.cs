@@ -266,25 +266,38 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Assign activity with due date nearing past due date.
+        /// </summary>
         [When(@"I assign the asset to with a due date near to past due date")]
         public void AssignWithDueDateNearToPastDueDate()
         {
-            Logger.LogMethodEntry("CourseContent", "AssignAndScheduleTheAssetAndSave",
+            // Assign activity with due date nearing past due date.
+            Logger.LogMethodEntry("CourseContent", "AssignWithDueDateNearToPastDueDate",
                 base.IsTakeScreenShotDuringEntryExit);
             AssignContentPage assignContent = new AssignContentPage();
             //Selecting assign radio button
             assignContent.SelectAssignedRadiobutton();
             //Setting due date
             assignContent.FillDueDateNearPastDueDate();
+            Logger.LogMethodExit("CourseContent", "AssignWithDueDateNearToPastDueDate",
+          base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        /// <summary>
+        /// Unassign an activity and save.
+        /// </summary>
         [Then(@"I should unassign the activity and save")]
         public void UnAssignTheActivity()
         {
+            // Unassign an activity and save
+            Logger.LogMethodEntry("CourseContent", "UnAssignTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
             AssignContentPage assignContent = new AssignContentPage();
-            //Selecting assign radio button
+            //Selecting not assigned radio button
             assignContent.SelectNotAssignedRadiobuttonInProperties();
+            Logger.LogMethodExit("CourseContent", "UnAssignTheActivity",
+          base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

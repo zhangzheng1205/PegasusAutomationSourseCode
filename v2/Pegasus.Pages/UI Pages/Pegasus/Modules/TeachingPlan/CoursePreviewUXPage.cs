@@ -8,6 +8,15 @@ using System.Linq;
 using System.Text;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
+using Pegasus.Pages.UI_Pages;
+using Pegasus.Pages.CommonPageObjects;
+using System.Configuration;
+using System.Diagnostics;
+using System.Globalization;
+
+
+
+
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -138,7 +147,7 @@ namespace Pegasus.Pages.UI_Pages
         public void LaunchEText()
         {
             //Find EText Activity Present In Launch Window
-            logger.LogMethodEntry("LauncheTextPage", "LaunchEText",
+            logger.LogMethodEntry("CoursePreviewUXPage", "LaunchEText",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -150,7 +159,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("LauncheTextPage", "LaunchEText",
+            logger.LogMethodExit("CoursePreviewUXPage", "LaunchEText",
                base.IsTakeScreenShotDuringEntryExit);
 
         }
@@ -159,7 +168,7 @@ namespace Pegasus.Pages.UI_Pages
         /// </summary>
         public void CloseEtextWindow()
         {
-            logger.LogMethodEntry("LauncheTextPage", "CloseEtextWindow",
+            logger.LogMethodEntry("CoursePreviewUXPage", "CloseEtextWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -170,9 +179,86 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("LauncheTextPage", "CloseEtextWindow",
+            logger.LogMethodExit("CoursePreviewUXPage", "CloseEtextWindow",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Wait for past due date icon to be displayed.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="activityUnderTabName">This is the Tab name.</param>
+        /// <param name="userType">This is the user type enum.</param>
+        public void WaitForPastDueDateIcon(string activityName, 
+            string activityUnderTabName, User.UserTypeEnum userType)
+        {
+            logger.LogMethodEntry("CoursePreviewUXPage", "WaitForPastDueDateIcon",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Wait for past due date icon to be displayed
+            try
+            {
+                var stopwatch = new Stopwatch();
+                stopwatch.Start();
+                // Wait till entity enters from inactive state to active state
+                int minutesToWait = Int32.Parse(ConfigurationManager.
+                    AppSettings["AssignedToCopyInterval"]);
+                while (stopwatch.Elapsed.TotalMinutes < 10)
+                {
+                    StudentPresentationPage studentPresentationPage =
+                    new StudentPresentationPage();
+                    //Select Window And Frame
+                    studentPresentationPage.SelectWindowAndFrame();
+                    //Get the class name of the icon
+                    string dueDateClass = this.GetActivityClassName(activityName);
+                    //Verify if Past Due date icon is displayed.
+                    if (dueDateClass == CoursePreviewUXPageResource.
+                        CoursePreviewUX_Page_PastDueDateIcon_Class_Id_Locator) break;
+                    {
+                        //Search the Entity
+                        new TodaysViewUxPage().SelectTab(CoursePreviewUXPageResource.
+                            CoursePreviewUX_Page_Window_Title_Name_HED);
+                        new CommonPage().ManageTheActivityFolderLevelNavigation(
+                        activityName, activityUnderTabName, userType);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CoursePreviewUXPage", "WaitForPastDueDateIcon",
+               base.IsTakeScreenShotDuringEntryExit);
+
+        }
+
+            /// <summary>
+            /// Returns the class name of the icon of the activity.
+            /// </summary>
+            /// <param name="activityName">This is the activity.</param>
+            /// <returns></returns>
+            private string  GetActivityClassName(string activityName)
+        {
+                // Returns the class name of the icon of the activity
+            logger.LogMethodEntry("CoursePreviewUXPage", "GetActivityClassName",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Returns the class name of the icon of the activity
+            string activityLinkId = base.GetWebElementPropertiesByLinkText(activityName)
+                .GetAttribute(CoursePreviewUXPageResource.
+                CoursePreviewUX_Page_Activity_WebElement_Property_Name);
+            string pastDueDateIconId = CoursePreviewUXPageResource.
+                CoursePreviewUX_Page_PastDueDateIcon_WebelementProperty_Id_PartialValue 
+                + activityLinkId.Split('_')[1];
+            // Returns the class name of the icon of the activity
+            string pastDueDateClass = base.GetWebElementPropertiesByXPath(string.
+                Format(CoursePreviewUXPageResource.
+                CoursePreviewUX_Page_PastDueDateIcon_Xpath_Locator, pastDueDateIconId)).
+                GetAttribute("class");
+            logger.LogMethodExit("CoursePreviewUXPage", "GetActivityClassName",
+          base.IsTakeScreenShotDuringEntryExit);
+            return pastDueDateClass;
+            }
+        
+        }
     }
-}
+
 

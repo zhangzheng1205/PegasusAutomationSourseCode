@@ -1146,12 +1146,15 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
 testRunner.When("I select \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course M" +
                     "aterials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 492
+testRunner.And("I see past duedate icon for \"Access Chapter 1 Project 1A Skill-Based Exam (Scenar" +
+                    "io 1)\" activity in \"Course Materials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 493
 testRunner.And("I launch the \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" activity" +
                     " by \"CsSmsStudent\" with \"ZeroScore\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 493
+#line 494
 testRunner.And("I click on submit button answering incorrectly of \"Access\" type \"Exam\" mode activ" +
                     "ity \"Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 494
+#line 495
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1163,18 +1166,18 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         public virtual void Sim5WordSubmissionForPastDueDateActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sim5 Word submission for past due date activity", ((string[])(null)));
-#line 500
-this.ScenarioSetup(scenarioInfo);
 #line 501
+this.ScenarioSetup(scenarioInfo);
+#line 502
 testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course Mat" +
                     "erials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 502
+#line 503
 testRunner.And("I launch the \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" activity b" +
                     "y \"CsSmsStudent\" with \"ZeroScore\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 503
+#line 504
 testRunner.And("I click on submit button answering incorrectly of \"Word\" type \"Exam\" mode activit" +
                     "y \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 504
+#line 505
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1186,18 +1189,18 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         public virtual void Sim5PowerPointSubmissionForPastDueDateActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sim5 PowerPoint submission for past due date activity", ((string[])(null)));
-#line 510
-this.ScenarioSetup(scenarioInfo);
 #line 511
+this.ScenarioSetup(scenarioInfo);
+#line 512
 testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 512
+#line 513
 testRunner.And("I launch the \"PowerPoint Chapter 1 Skill-Based Training\" activity by \"CsSmsStuden" +
                     "t\" with \"ZeroScore\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 513
+#line 514
 testRunner.And("I click on submit button answering incorrectly of \"PowerPoint\" type \"Training\" mo" +
                     "de activity \"PowerPoint Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 514
+#line 515
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1209,18 +1212,18 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         public virtual void Sim5ExcelSubmissionForPastDueActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sim5 Excel submission for past Due Activity", ((string[])(null)));
-#line 522
-this.ScenarioSetup(scenarioInfo);
 #line 523
+this.ScenarioSetup(scenarioInfo);
+#line 524
 testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsSt" +
                     "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 524
+#line 525
 testRunner.And("I launch the \"Excel Chapter 1 Skill-Based Training\" activity by \"CsSmsStudent\" wi" +
                     "th \"ZeroScore\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 525
+#line 526
 testRunner.And("I click on submit button answering incorrectly of \"Excel\" type \"Training\" mode ac" +
                     "tivity \"Excel Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 526
+#line 527
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1232,18 +1235,18 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         public virtual void StudentLaunchesAndSubmitPosttestWithScoreZero()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student Launches and submit Posttest with score Zero", ((string[])(null)));
-#line 531
-this.ScenarioSetup(scenarioInfo);
 #line 532
+this.ScenarioSetup(scenarioInfo);
+#line 533
 testRunner.When("I select \"Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test\" in \"Cou" +
                     "rse Materials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 533
+#line 534
 testRunner.And("I launch the \"Excel Chapter 1 Study Plan [Skill-Based]: Training\" activity by \"Cs" +
                     "SmsStudent\" with \"ZeroScore\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 534
+#line 535
 testRunner.And("I click on submit button answering incorrectly of \"Excel\" type \"Training\" mode ac" +
                     "tivity \"Excel Chapter 1 Study Plan [Skill-Based]: Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 535
+#line 536
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1255,31 +1258,31 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         public virtual void StudentScoring70InSIM5PowerpointActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student scoring 70 in SIM5 Powerpoint activity", ((string[])(null)));
-#line 543
-this.ScenarioSetup(scenarioInfo);
 #line 544
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 545
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 546
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 547
 testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 547
+#line 548
 testRunner.And("I launch the \"PowerPoint Chapter 1 Skill-Based Training\" activity in content by \"" +
                     "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 548
-testRunner.And("I attempt questions \"70%\" in \"PowerPoint Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 549
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I attempt questions \"70%\" in \"PowerPoint Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 550
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 551
 testRunner.And("I should see the \"Passed\" status for the activity \"PowerPoint Chapter 1 Skill-Bas" +
                     "ed Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 551
+#line 552
 testRunner.And("I should see \"72.73%\" score for the activity \"PowerPoint Chapter 1 Skill-Based Tr" +
                     "aining\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 552
-testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 553
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 554
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1291,37 +1294,37 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         public virtual void StudentScoring100InSIM5PowerpointActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student scoring 100 in SIM5 Powerpoint activity", ((string[])(null)));
-#line 561
-this.ScenarioSetup(scenarioInfo);
 #line 562
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 563
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 564
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 565
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 566
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 567
 testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 567
-testRunner.And("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 568
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 569
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 570
 testRunner.When("I select \"PowerPoint Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 570
+#line 571
 testRunner.And("I launch the \"PowerPoint Chapter 1 Skill-Based Training\" activity in content by \"" +
                     "CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 571
-testRunner.And("I attempt questions \"100%\" in \"PowerPoint Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 572
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I attempt questions \"100%\" in \"PowerPoint Chapter 1 Skill-Based Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 573
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 574
 testRunner.And("I should see the \"Passed\" status for the activity \"PowerPoint Chapter 1 Skill-Bas" +
                     "ed Training\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 574
+#line 575
 testRunner.And("I should see \"0.00%\" score for the activity \"PowerPoint Chapter 1 Skill-Based Tra" +
                     "ining\" in course material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1336,42 +1339,42 @@ testRunner.And("I should see \"0.00%\" score for the activity \"PowerPoint Chapt
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student launches a Sim 5 Excel activity and Student scoring a 100% compares the r" +
                     "esult and status", ((string[])(null)));
-#line 582
-this.ScenarioSetup(scenarioInfo);
 #line 583
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 584
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 585
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 586
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 587
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 588
 testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 588
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 589
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 590
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 591
 testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsSt" +
                     "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 591
+#line 592
 testRunner.And("I launch the \"Excel Chapter 1 Skill-Based Training\" activity in content by \"CsSms" +
                     "Student\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 592
+#line 593
 testRunner.And("I should answer activity \"Excel Chapter 1 Skill-Based Training\" correctly and cli" +
                     "ck on Submit button with score \"100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 593
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 594
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 595
 testRunner.When("I click on cmenu \"ViewSubmissions\" of asset \"Excel Chapter 1 Skill-Based Training" +
                     "\" with mode \"SkillBased\" in Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 595
-testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 596
-testRunner.When("I click on the last submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 597
+testRunner.When("I click on the last submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 598
 testRunner.Then("I should see the grade is \"22.22%\" in View Submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1385,42 +1388,42 @@ testRunner.Then("I should see the grade is \"22.22%\" in View Submission page", 
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student launches a Sim 5 Excel activity and Student scoring a 70% compares the re" +
                     "sult and status", ((string[])(null)));
-#line 602
-this.ScenarioSetup(scenarioInfo);
 #line 603
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 604
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 605
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 606
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 607
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 608
 testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 608
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 609
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 610
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 611
 testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" in \"Course Materials\" by \"CsSmsSt" +
                     "udent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 611
+#line 612
 testRunner.And("I launch the \"Excel Chapter 1 Skill-Based Training\" activity in content by \"CsSms" +
                     "Student\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 612
+#line 613
 testRunner.And("I should answer activity \"Excel Chapter 1 Skill-Based Training\" correctly and cli" +
                     "ck on Submit button with score \"70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 613
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 614
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 615
 testRunner.When("I click on cmenu \"ViewSubmissions\" of asset \"Excel Chapter 1 Skill-Based Training" +
                     "\" with mode \"SkillBased\" in Course Materials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 615
-testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 616
-testRunner.When("I click on the last submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 617
+testRunner.When("I click on the last submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 618
 testRunner.Then("I should see the grade is \"22.22%\" in View Submission page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -1432,30 +1435,30 @@ testRunner.Then("I should see the grade is \"22.22%\" in View Submission page", 
         public virtual void StudentScoring70InSIM5WordActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student scoring 70 in SIM5 Word activity", ((string[])(null)));
-#line 626
-this.ScenarioSetup(scenarioInfo);
 #line 627
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 628
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 629
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 630
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 631
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 632
 testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 632
-testRunner.And("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 633
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 634
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 635
 testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course Mat" +
                     "erials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 635
+#line 636
 testRunner.And("I open the activity named as \"Word Chapter 1 Project 1A Skill-Based Exam (Scenari" +
                     "o 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 636
+#line 637
 testRunner.And("I attempt questions for \"70%\" in activity \"Word Chapter 1 Project 1A Skill-Based " +
                     "Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1470,33 +1473,33 @@ testRunner.And("I attempt questions for \"70%\" in activity \"Word Chapter 1 Pro
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student launches a Sim 5 Excel activity Pre-test and Student scoring a 70% result" +
                     "", ((string[])(null)));
-#line 641
-this.ScenarioSetup(scenarioInfo);
 #line 642
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 643
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 644
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 645
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 646
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 647
 testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 647
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 648
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 649
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 650
 testRunner.When("I select \"Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test\" in \"Cou" +
                     "rse Materials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 650
+#line 651
 testRunner.And("I launch the \"Excel Chapter 1 Study Plan [Skill-Based]: Training > Post-Test\" act" +
                     "ivity in content by \"CsSmsStudent\" for Pre-test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 651
+#line 652
 testRunner.And("I should answer activity \"Excel Chapter 1 Skill-Based Training\" correctly and cli" +
                     "ck on Submit button with score \"100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 652
+#line 653
 testRunner.And("I attempt questions for \"70%\" in activity \"Word Chapter 1 Project 1A Skill-Based " +
                     "Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1509,30 +1512,30 @@ testRunner.And("I attempt questions for \"70%\" in activity \"Word Chapter 1 Pro
         public virtual void StudentScoring100InSIM5WordActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student scoring 100 in SIM5 Word activity", ((string[])(null)));
-#line 660
-this.ScenarioSetup(scenarioInfo);
 #line 661
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 662
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 663
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 664
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 665
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 666
 testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 666
-testRunner.And("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 667
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 668
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 669
 testRunner.When("I select \"Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)\" in \"Course Mat" +
                     "erials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 669
+#line 670
 testRunner.And("I open the activity named as \"Word Chapter 1 Project 1A Skill-Based Exam (Scenari" +
                     "o 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 670
+#line 671
 testRunner.And("I attempt questions for \"100%\" in activity \"Word Chapter 1 Project 1A Skill-Based" +
                     " Exam (Scenario 1)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1545,18 +1548,18 @@ testRunner.And("I attempt questions for \"100%\" in activity \"Word Chapter 1 Pr
         public virtual void StudentSubmittingPastDueSim5ExcelActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submitting past due Sim 5 excel activity", ((string[])(null)));
-#line 679
-this.ScenarioSetup(scenarioInfo);
 #line 680
-testRunner.When("I navigate to \"Assignments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 681
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Assignments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 682
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 683
 testRunner.And("I should see \'past due date icon\' for \"Excel Chapter 1 Skill-Based Training\" acti" +
                     "vity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 683
-testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" activity in \"Course Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 684
+testRunner.When("I select \"Excel Chapter 1 Skill-Based Training\" activity in \"Course Materials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 685
 testRunner.And("I should answer activity \"Excel Chapter 1 Skill-Based Training\" correctly and cli" +
                     "ck on Submit button with score \"70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -1569,43 +1572,43 @@ testRunner.And("I should answer activity \"Excel Chapter 1 Skill-Based Training\
         public virtual void StudentLaunchesAndCrashTheSim5AccessActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student launches and crash the Sim5 Access activity", ((string[])(null)));
-#line 689
-this.ScenarioSetup(scenarioInfo);
 #line 690
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 691
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 692
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 693
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 694
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 695
 testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 695
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 696
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 697
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 698
 testRunner.When("I select \"Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test\" in \"Co" +
                     "urse Materials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 698
+#line 699
 testRunner.And("I open the activity named as \"Access Chapter 1 Study Plan [Skill-Based]: Training" +
                     " > Post-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 699
-testRunner.Then("I should be on the \"myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 700
+testRunner.Then("I should be on the \"myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 701
 testRunner.When("I launch the \"Start Training\" button of the \"Access Chapter 1 Skill-Based Trainin" +
                     "g\" of activity by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 701
+#line 702
 testRunner.And("I answer activity \"Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Tes" +
                     "t\" correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 702
+#line 703
 testRunner.When("I launch the \"Start Post-Test\" button of the \"Access Chapter 1 Skill-Based Exam (" +
                     "Scenario 1)\" of activity by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 703
-testRunner.When("I close the \"Access Chapter 1 Skill-Based Exam (Scenario 1) - BDD 4976\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 704
+testRunner.When("I close the \"Access Chapter 1 Skill-Based Exam (Scenario 1) - BDD 4976\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 705
 testRunner.Then("I should see the \"In Progress\" status for the activity \"Access Chapter 1 Study Pl" +
                     "an [Skill-Based]: Training > Post-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -1620,38 +1623,38 @@ testRunner.Then("I should see the \"In Progress\" status for the activity \"Acce
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student Launches and submit post test and score 100 when training material score " +
                     "is 100", ((string[])(null)));
-#line 709
-this.ScenarioSetup(scenarioInfo);
 #line 710
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 711
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 712
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 713
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 714
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 715
 testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 715
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 716
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 717
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 718
 testRunner.When("I select \"Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test\" in \"Co" +
                     "urse Materials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 718
+#line 719
 testRunner.And("I open the activity named as \"Access Chapter 1 Study Plan [Skill-Based]: Training" +
                     " > Post-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 719
-testRunner.Then("I should be on the \"myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 720
+testRunner.Then("I should be on the \"myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 721
 testRunner.When("I launch the \"Start Post-Test\" button of the \"Access Chapter 1 Skill-Based Exam (" +
                     "Scenario 1)\" of activity by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 721
+#line 722
 testRunner.And("I should answer activity \"Access Chapter 1 Skill-Based Exam (Scenario 1)\" correct" +
                     "ly and click on Submit button with score \"100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 722
+#line 723
 testRunner.Then("I should see the \"InProgress\" status for the activity \"Access Chapter 1 Study Pla" +
                     "n [Skill-Based]: Training > Post-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -1664,38 +1667,38 @@ testRunner.Then("I should see the \"InProgress\" status for the activity \"Acces
         public virtual void StudentLaunchesAndSubmitTrainingMaterialWithScore100()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student Launches and submit training material with score 100", ((string[])(null)));
-#line 727
-this.ScenarioSetup(scenarioInfo);
 #line 728
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 729
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 730
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 731
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 732
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 733
 testRunner.When("I enter in the \"MyITLabOffice2013Program\" course from the Global Home page as \"Cs" +
                     "SmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 733
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 734
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 735
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 736
 testRunner.When("I select \"Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test\" in \"Co" +
                     "urse Materials\" by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 736
+#line 737
 testRunner.And("I open the activity named as \"Access Chapter 1 Study Plan [Skill-Based]: Training" +
                     " > Post-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 737
-testRunner.Then("I should be on the \"myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 738
+testRunner.Then("I should be on the \"myitlab Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 739
 testRunner.When("I launch the \"Start Post-Test\" button of the \"Access Chapter 1 Skill-Based Exam (" +
                     "Scenario 1)\" of activity by \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 739
+#line 740
 testRunner.And("I should answer activity \"Access Chapter 1 Skill-Based Exam (Scenario 1)\" correct" +
                     "ly and click on Submit button with score \"70%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 740
+#line 741
 testRunner.Then("I should see the \"InProgress\" status for the activity \"Access Chapter 1 Study Pla" +
                     "n [Skill-Based]: Training > Post-Test\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

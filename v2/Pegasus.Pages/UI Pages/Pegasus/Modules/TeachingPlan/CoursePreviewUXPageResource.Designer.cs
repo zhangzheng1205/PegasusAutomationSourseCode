@@ -79,6 +79,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to id.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_Activity_WebElement_Property_Name {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_Activity_WebElement_Property_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;tblCoursePreview&apos;]/tbody/tr.
         /// </summary>
         internal static string CoursePreviewUX_Page_Assets_Count_Xpath_Locator {
@@ -120,6 +129,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         internal static string CoursePreviewUX_Page_Loop_Initialization_Value {
             get {
                 return ResourceManager.GetString("CoursePreviewUX_Page_Loop_Initialization_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CC_Past_due.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_PastDueDateIcon_Class_Id_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_PastDueDateIcon_Class_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to span_.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_PastDueDateIcon_WebelementProperty_Id_PartialValue {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_PastDueDateIcon_WebelementProperty_Id_PartialValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //span[@id=&apos;{0}&apos;]/img.
+        /// </summary>
+        internal static string CoursePreviewUX_Page_PastDueDateIcon_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CoursePreviewUX_Page_PastDueDateIcon_Xpath_Locator", resourceCulture);
             }
         }
         

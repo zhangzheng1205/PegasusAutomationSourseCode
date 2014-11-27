@@ -106,7 +106,7 @@ When I navigate to "PowerPoint Chapter 1 Skill-Based Training" asset in "Course 
 And I click on "SetSchedulingOptions" option in c menu of "PowerPoint Chapter 1 Skill-Based Training" asset
 Then I should be on the "Properties" page
 And I should unassign the activity and save
-When I navigate to "PowerPoint Chapter 1 Skill-Based Training" asset in "Course Materials" tab as "CsSmsInstructor"
+When I click on "SetSchedulingOptions" option in c menu of "PowerPoint Chapter 1 Skill-Based Training" asset
 And I assign the asset to with a due date near to past due date
 Then I should see the successfull message "Properties updated successfully."
 When I navigate to "Gradebook" tab

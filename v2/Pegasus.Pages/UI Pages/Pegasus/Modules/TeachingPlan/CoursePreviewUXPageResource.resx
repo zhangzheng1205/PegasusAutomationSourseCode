@@ -123,6 +123,9 @@
   <data name="CouresPreviewUX_Page_ToDo_Window_Title" xml:space="preserve">
     <value>ToDo</value>
   </data>
+  <data name="CoursePreviewUX_Page_Activity_WebElement_Property_Name" xml:space="preserve">
+    <value>id</value>
+  </data>
   <data name="CoursePreviewUX_Page_Assets_Count_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='tblCoursePreview']/tbody/tr</value>
   </data>
@@ -137,6 +140,15 @@
   </data>
   <data name="CoursePreviewUX_Page_Loop_Initialization_Value" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="CoursePreviewUX_Page_PastDueDateIcon_Class_Id_Locator" xml:space="preserve">
+    <value>CC_Past_due</value>
+  </data>
+  <data name="CoursePreviewUX_Page_PastDueDateIcon_WebelementProperty_Id_PartialValue" xml:space="preserve">
+    <value>span_</value>
+  </data>
+  <data name="CoursePreviewUX_Page_PastDueDateIcon_Xpath_Locator" xml:space="preserve">
+    <value>//span[@id='{0}']/img</value>
   </data>
   <data name="CoursePreviewUX_Page_Sleep_Time" xml:space="preserve">
     <value>5000</value>

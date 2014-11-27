@@ -489,6 +489,7 @@ Scenario:  Sim5 Access submission for past due date activity
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" in "Course Materials" by "CsSmsStudent"
+And I see past duedate icon for "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity in "Course Materials" by "CsSmsStudent"
 And I launch the "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity by "CsSmsStudent" with "ZeroScore"
 And I click on submit button answering incorrectly of "Access" type "Exam" mode activity "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
 Then I should be on the "Course Materials" page

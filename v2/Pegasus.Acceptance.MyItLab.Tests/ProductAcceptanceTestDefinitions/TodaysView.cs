@@ -585,20 +585,19 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
         /// <summary>
         /// Verify submitted past due activity details.
         /// </summary>
-        /// <param name="userTypeEnum">This is user type enum.</param>
         /// <param name="activityName">This is activity name.</param>
-        [Then(@"I should see ""(.*)"" name and ""(.*)"" activity name and due date and time and submitted date and time which is submitted post due date")]
-        public void ValidateDetailsForSubmittedPostDueDateActivity(User.UserTypeEnum userTypeEnum, string activityName)
+        [Then(@"I should see ""(.*)"" activity name and due date and time and submitted date and time which is submitted post due date")]
+        public void ValidateDetailsForSubmittedPostDueDateActivity(string activityName)
         {
             Logger.LogMethodEntry("TodaysView", "ValidateDetailsForSubmittedPostDueDateActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             // user details
-            User user = User.Get(userTypeEnum);
-            // verify user details present
-            Logger.LogAssertion("VerifyUserDetailsPresent", ScenarioContext.Current.ScenarioInfo.Title,
-                () => Assert.AreEqual(user.LastName + ',' +
-                    " " + user.FirstName, new TodaysViewUxPage()
-                .GetUserNameWhoHasSubmittedTheActivity()));
+            //User user = User.Get(userTypeEnum);
+            //// verify user details present
+            //Logger.LogAssertion("VerifyUserDetailsPresent", ScenarioContext.Current.ScenarioInfo.Title,
+            //    () => Assert.AreEqual(user.LastName + ',' +
+            //        " " + user.FirstName, new TodaysViewUxPage()
+            //.GetUserNameWhoHasSubmittedTheActivity()));
             // replace not required characters from activity name 
             int activityLength = activityName.Length;
             string replaceNewLineFromActivityName = new TodaysViewUxPage().
@@ -616,6 +615,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogMethodExit("TodaysView", "ValidateDetailsForSubmittedPostDueDateActivity",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
 
         /// <summary>
         /// Verify activity can be select.

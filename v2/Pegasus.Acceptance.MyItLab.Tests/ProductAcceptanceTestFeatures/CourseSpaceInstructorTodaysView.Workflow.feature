@@ -118,8 +118,10 @@ And I should see the alert count updated as "3" in "Past Due: Submitted" channel
 When I click on the "Past Due: Submitted" option
 Then I should see the First, Last name in Past Due: Submitted channel
 When I click on the expand icon of student
-Then I should see the activity name "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
-And I should see "CsSmsStudent" name and "Training [Skill-Based]: Excel Chapter 1 Project 1A Skill-Based Training" activity name and due date and time and submitted date and time which is submitted post due date
+Then I should see the activity name "Exam [Skill-Based]: Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)"
+And I should see "Exam [Skill-Based]: Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity name and due date and time and submitted date and time which is submitted post due date
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
 
 #Purpose : Instructor accepts past due submission from Past due: Submitted channel.
 #Test case ID : peg-21949.
@@ -132,10 +134,12 @@ Then I should be on the "Today's View" page
 When I click on the "Past Due: Submitted" option
 Then I should see the First, Last name in Past Due: Submitted channel
 When I click on the expand icon of student
-Then I should see "CsSmsStudent" name and "Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity name and due date and time and submitted date and time which is submitted post due date
+Then I should see "Exam [Skill-Based]: Access Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity name and due date and time and submitted date and time which is submitted post due date
 When I selected the check box of the past due activity submitted
 And I click on "Accept" activities past due date
 Then I should see the 'Accept' success message
+When I navigate to "Course Materials" tab
+Then I should be on the "Course Materials" page
 
 #Test case ID : peg-21953.
 #Products : MyItLab, HSS and World Language.
@@ -147,7 +151,7 @@ Then I should be on the "Today's View" page
 When I click on the "Past Due: Submitted" option
 Then I should see the First, Last name in Past Due: Submitted channel
 When I click on the expand icon of student
-Then I should see "CsSmsStudent" name and "Word Chapter 1 Project 1A Skill-Based Exam (Scenario 1)" activity name and due date and time and submitted date and time which is submitted post due date
+Then I should see "Training [Skill-Based]: PowerPoint Chapter 1 Skill-Based Training" activity name and due date and time and submitted date and time which is submitted post due date
 When I selected the check box of the past due activity submitted
 When I click on "Decline" activities past due date
 Then I should see the 'Decline' success message

@@ -320,8 +320,8 @@ testRunner.Then("I should be on the \"Properties\" page", ((string)(null)), ((Te
 #line 108
 testRunner.And("I should unassign the activity and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 109
-testRunner.When("I navigate to \"PowerPoint Chapter 1 Skill-Based Training\" asset in \"Course Materi" +
-                    "als\" tab as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I click on \"SetSchedulingOptions\" option in c menu of \"PowerPoint Chapter 1 Skill" +
+                    "-Based Training\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 110
 testRunner.And("I assign the asset to with a due date near to past due date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 111

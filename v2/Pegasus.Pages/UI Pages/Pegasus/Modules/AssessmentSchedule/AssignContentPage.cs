@@ -1325,9 +1325,13 @@ namespace Pegasus.Pages.UI_Pages
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Assign the activity to due date nearing past due date.
+        /// </summary>
         public void FillDueDateNearPastDueDate()
         {
-            logger.LogMethodEntry("AssignContentPage", "GetAndFillDueDate",
+            // Assign the activity to due date nearing past due date
+            logger.LogMethodEntry("AssignContentPage", "FillDueDateNearPastDueDate",
                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -1368,7 +1372,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("AssignContentPage", "GetAndFillDueDate",
+            logger.LogMethodExit("AssignContentPage", "FillDueDateNearPastDueDate",
                base.IsTakeScreenShotDuringEntryExit);
         }
 
