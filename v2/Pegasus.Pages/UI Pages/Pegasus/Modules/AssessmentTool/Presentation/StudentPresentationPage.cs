@@ -5931,7 +5931,6 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-
         /// <summary>
         /// Answer the Questions of activity.
         /// </summary>
@@ -5941,7 +5940,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// <param name="optionType">This is the Type of answer that has to be updated.</param>
         public void AnswerActivityQuestions(ActivityQuestionsList.ActivityNameEnum activityName,
             ActivityQuestionsList.ActivityBehaviourTypeEnum activityBehaviourType,
-            ActivityQuestionsList.ActivityTypeEnum activityType, String OptionType)
+            ActivityQuestionsList.ActivityTypeEnum activityType, String OptionType,String TestType="Default Type")
         {
             logger.LogMethodEntry("StudentPresentationPage", "AnswerActivityQuestions",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -5950,13 +5949,24 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             {
                 int QuestionCount = base.GetElementCountByCSSSelector(
                         StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_QuestionCount_Value);
-                if (OptionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue))
+                if (OptionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue)
+                    && (TestType.Equals("Default Type")))
                 {
                     QuestionCount = 2;
                     OptionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
                 }
-                for (int i = 1; i <= QuestionCount; i++)
+                if (!(TestType.Equals("Default Type")))
                 {
+                    OptionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
+                }
+                for (int NthQuestion = 1; NthQuestion <= QuestionCount; NthQuestion++)
+                {
+                    while (NthQuestion > 18 && !(TestType.Equals("Default Type"))
+                        && OptionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue))
+                    {
+                        OptionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_inCorrect_AnswerOptionValue;
+                        break;
+                    }
                     IList<IWebElement> Qus = WebDriver.FindElements(By.ClassName(
                         StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Question_Value));
                     foreach (IWebElement element in Qus)
@@ -5981,14 +5991,14 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                                 bool result = int.TryParse(Option, out numberOption);
                                 if (numberOption != 0)
                                 {
-                                    for (int k = 1; k <= 8; k++)
+                                    for (int NthOption = 1; NthOption <= 8; NthOption++)
                                     {
-                                        if (k % 2 != 0)
+                                        if (NthOption % 2 != 0)
                                         {
                                             base.WaitForElement(By.XPath(string.Format(
-                                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator, i, k)), 10);
+                                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator, NthQuestion, NthOption)), 10);
                                             IWebElement RadioOption = base.GetWebElementPropertiesByXPath(string.Format(
-                                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator, i, k));
+                                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator, NthQuestion, NthOption));
                                             String TempOption = RadioOption.Text;
                                             if (TempOption.Equals(Option))
                                             {
@@ -6004,7 +6014,8 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                                     base.ClickByJavaScriptExecutor(SelectOption);
                                 }
                             }
-                            IWebElement NextQuestButton = base.GetWebElementPropertiesById("btnNext");
+                            IWebElement NextQuestButton = base.GetWebElementPropertiesById(
+                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NextButton_ID_Locator);
                             base.PerformMouseClickAction(NextQuestButton);
                             break;
                         }
@@ -6061,9 +6072,9 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 base.WaitForElement(By.CssSelector(
                         StudentPresentationPageResource.
                         StudentPresentation_Page_HSS_Activity_ActivityScore_CSS_Locator), 10);
-                IWebElement getScore = base.GetWebElementPropertiesByXPath(
-                    StudentPresentationPageResource.
-                    StudentPresentation_Page_Exem_ActivityScore_XPath_Locator);
+                IWebElement getScore = base.GetWebElementPropertiesByCssSelector(
+                        StudentPresentationPageResource.
+                        StudentPresentation_Page_HSS_Activity_ActivityScore_CSS_Locator);
                 actualScore = getScore.Text;
             }
             catch (Exception e)
@@ -6107,6 +6118,8 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                //Select Window And Frame
+                this.SelectWindowAndFrame();
                 IWebElement getViewSubmissionButton = base.GetWebElementPropertiesById(
                         StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ViewSubmissionButton_ID_Locator);
                 base.ClickByJavaScriptExecutor(getViewSubmissionButton);
@@ -6247,6 +6260,8 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                     StudentPresentationPageResource.
                     StudentPresentation_Page_StudyPlan_Open_ID_Locator);
                 base.PerformMoveToElementClickAction(OpenButton);
+                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
+                    StudentPresentation_Page_Sleep_Value));
                 base.SwitchToLastOpenedWindow();
                 //Wait for 'Continue' button and click
                 base.WaitForElement(By.Id(StudentPresentationPageResource.
@@ -6254,7 +6269,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 IWebElement ContinueButton = base.GetWebElementPropertiesById(
                     StudentPresentationPageResource.
                     StudentPresentation_Page_StudyPlan_Continue_ID_Locator);
-                base.ClickByJavaScriptExecutor(ContinueButton);
+                base.PerformMoveToElementClickAction(ContinueButton);
             }
             catch (Exception e)
             {

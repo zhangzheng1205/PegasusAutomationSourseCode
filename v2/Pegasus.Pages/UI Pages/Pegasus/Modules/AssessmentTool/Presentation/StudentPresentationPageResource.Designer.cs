@@ -485,6 +485,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to incorrect.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_inCorrect_AnswerOptionValue {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_inCorrect_AnswerOptionValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to btnNext.
+        /// </summary>
+        internal static string StudentPresentation_Page_HSS_Activity_NextButton_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_HSS_Activity_NextButton_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@itempos=&apos;{0}&apos;]/table/tbody/tr[2]/td/div/table/tbody/tr/td[2]/fieldset/table/tbody/tr[2]/td/table/tbody/tr[{1}]/td[3]/label/a.
         /// </summary>
         internal static string StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator {

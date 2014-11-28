@@ -1332,4 +1332,10 @@
   <data name="StudentPresentation_Page_StudyPlan_Open_ID_Locator" xml:space="preserve">
     <value>_ctl0__ctl0_phBody_PageContent_lblOpen</value>
   </data>
+  <data name="StudentPresentation_Page_HSS_Activity_inCorrect_AnswerOptionValue" xml:space="preserve">
+    <value>incorrect</value>
+  </data>
+  <data name="StudentPresentation_Page_HSS_Activity_NextButton_ID_Locator" xml:space="preserve">
+    <value>btnNext</value>
+  </data>
 </root>

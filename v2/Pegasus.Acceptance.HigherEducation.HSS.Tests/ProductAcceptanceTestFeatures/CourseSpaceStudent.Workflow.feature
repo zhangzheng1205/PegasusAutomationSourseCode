@@ -70,10 +70,10 @@ When I click on View Submission
 Then I should see the "0 %" score in the left frame
 And I should see Student "scoring 0" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 0.00%" in the right frame
 
-#Purpose : Student submits the Non gradable assets from the TO DO tab
+#Purpose : Student submits the Non gradable assets from the To Do tab
 #Test case ID : peg-22150
 #Products : HSS
-Scenario: Student submits the Non gradable assets from the TO DO tab
+Scenario: Student submits the Non gradable assets from the To Do tab
 When I navigate to "Assignments" tab and selected "To Do" subtab
 Then I should be on the "Assignments - To Do" page
 When I launch "Review the Chapter 1 Learning Objectives" asset
@@ -97,7 +97,7 @@ When I click on Submit the activity "0%" score should be displayed in the screen
 Then I should be on the "Assignments - To Do" page
 And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan"
 
-#Purpose : Study plan submission from To Do and student scoring 0% in pretest
+#Purpose : Study plan submission from To Do and student scoring 0% in postest
 #Test case ID : peg-22155
 #PEGASUS-29436
 Scenario: Student answers the Study plan posttest questions and scores 0%
@@ -109,5 +109,35 @@ When I Click open under "PostTest" frame to launch the Questions
 Then I should be on the "PostTest" page displayed with questions
 And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" of "Homework" type with "incorrect" answers
 When I click on Submit the activity "0%" score should be displayed in the screen
+Then I should be on the "Assignments - To Do" page
+And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan"
+
+#Purpose : Study plan submission from To Do and student scoring 70% in pretest
+#Test case ID : peg-22155
+#PEGASUS-29436
+Scenario: Student answers the Study plan pretest questions and scores 70%
+When I navigate to "Assignments" tab and selected "To Do" subtab
+Then I should be on the "Assignments - To Do" page
+When I launch "Complete the Chapter 1 Study Plan" asset
+Then I should be on the "Open Study Plan" page
+When I Click open under "PreTest" frame to launch the Questions
+Then I should be on the "PreTest" page displayed with questions
+And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" of "Homework" type with "partial" answers of "pretest"
+When I click on Submit the activity "72%" score should be displayed in the screen
+Then I should be on the "Assignments - To Do" page
+And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan"
+
+#Purpose : Study plan submission from To Do and student scoring 70% in posttest
+#Test case ID : peg-22154
+#PEGASUS-29435
+Scenario: Student answers the Study plan posttest questions and scores 70%
+When I navigate to "Assignments" tab and selected "To Do" subtab
+Then I should be on the "Assignments - To Do" page
+When I launch "Complete the Chapter 1 Study Plan" asset
+Then I should be on the "Open Study Plan" page
+When I Click open under "PosTest" frame to launch the Questions
+Then I should be on the "PosTest" page displayed with questions
+And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" of "Homework" type with "partial" answers of "postest"
+When I click on Submit the activity "72%" score should be displayed in the screen
 Then I should be on the "Assignments - To Do" page
 And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan"
