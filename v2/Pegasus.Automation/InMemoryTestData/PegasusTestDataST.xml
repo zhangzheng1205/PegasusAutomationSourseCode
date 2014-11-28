@@ -49,6 +49,14 @@
     <IsApproved>false</IsApproved>
     </Course>
     <Course>
+      <Name>MASTER, MyPsychLab for Ciccarelli, Psychology, 3/e</Name>
+      <CourseType>HSSMyPsychLabMaster</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>false</IsPreferenceStatus>
+      <IsPublished>false</IsPublished>
+      <IsApproved>false</IsApproved>
+    </Course>
+    <Course>
       <Name>US History A 2.0 (Sequential)</Name>
       <CourseType>NovaNETAuthored</CourseType>
       <IsCreated>true</IsCreated>
@@ -225,7 +233,7 @@
       <IsApproved>false</IsApproved>
     </Course>
     <Course>
-      <Name>Hss_AutomationSection</Name>
+      <Name>Hss_Automation</Name>
       <CourseType>HSSMyPsychLabProgram</CourseType>
       <IsCreated>true</IsCreated>
       <IsPreferenceStatus>false</IsPreferenceStatus>
