@@ -236,6 +236,28 @@ testRunner.Then("I should see \"Review the Chapter 1 Learning Objectives\" in th
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the Study plan pretest questions and scores 0%")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void StudentAnswersTheStudyPlanPretestQuestionsAndScores0()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the Study plan pretest questions and scores 0%", ((string[])(null)));
+#line 82
+this.ScenarioSetup(scenarioInfo);
+#line 83
+testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 84
+testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 85
+testRunner.When("I launch \"Complete the Chapter 1 Study Plan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 86
+testRunner.Then("I should be on the \"Open Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 87
+testRunner.When("I Click open under \"PreTest\" frame to launch the Questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

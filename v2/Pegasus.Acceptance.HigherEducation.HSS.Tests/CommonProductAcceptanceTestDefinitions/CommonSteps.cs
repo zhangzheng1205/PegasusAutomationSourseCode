@@ -73,6 +73,19 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Click on C menu->open under the Testtype frame
+        /// </summary>
+        /// <param name="expectedPageTitle">This is Expected Page Title.</param>
+        [When(@"I Click open under ""(.*)"" frame to launch the Questions")]
+        public void ClickOpenToLaunchTheQuestions(string TestType)
+        {
+            Logger.LogMethodEntry("CommonSteps", "ClickOpenToLaunchTheQuestions",
+            base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().ClickOpenToLaunchTheQuestions(TestType);
+            Logger.LogMethodExit("CommonSteps", "ClickOpenToLaunchTheQuestions",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
 
         /// <summary>
         /// Verifies the Correct Page Opened.

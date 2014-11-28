@@ -75,3 +75,13 @@ Then I should be on the "Learning Objectives - Chapter 1" page
 When I close the "Learning Objectives - Chapter 1" window
 Then I should see "Viewed" status for the asset
 Then I should see "Review the Chapter 1 Learning Objectives" in the 'Completed' tab
+
+#Purpose : Study plan submission from To Do and student scoring 0% in pretest
+#Test case ID : peg-22152
+#PEGASUS-29433
+Scenario: Student answers the Study plan pretest questions and scores 0%
+When I navigate to "Assignments" tab and selected "To Do" subtab
+Then I should be on the "Assignments - To Do" page
+When I launch "Complete the Chapter 1 Study Plan" asset
+Then I should be on the "Open Study Plan" page
+When I Click open under "PreTest" frame to launch the Questions

@@ -6144,5 +6144,48 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSaveForLaterOption",
              base.IsTakeScreenShotDuringEntryExit);
         }
+
+        public void ClickOpenToLaunchTheQuestions(string TestType)
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "ClickOpenToLaunchTheQuestions",
+            base.IsTakeScreenShotDuringEntryExit);
+            switch (TestType)
+            {
+                case "PreTest": LaunchThePreTestQuestions();
+                                break;
+                case "PostTest": LaunchThePostTestQuestions();
+                                break;
+            }
+            IWebElement OpenButton = base.GetWebElementPropertiesById("_ctl0__ctl0_phBody_PageContent_lblOpen");
+            base.PerformMoveToElementClickAction(OpenButton);
+            base.SwitchToLastOpenedWindow();
+            base.WaitForElement(By.Id("imgOk"));
+            IWebElement ContinueButton = base.GetWebElementPropertiesById("imgOk");
+            base.ClickByJavaScriptExecutor(OpenButton);
+            logger.LogMethodExit("StudentPresentationPage", "ClickOpenToLaunchTheQuestions",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        private void LaunchThePreTestQuestions()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "LaunchThePreTestQuestions",
+            base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.Id("cnimg"), 10);
+            IWebElement cMmenuButton = base.GetWebElementPropertiesById("cnimg");
+            base.ClickByJavaScriptExecutor(cMmenuButton);
+
+            logger.LogMethodExit("StudentPresentationPage", "LaunchThePreTestQuestions",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        private void LaunchThePostTestQuestions()
+        {
+            logger.LogMethodEntry("StudentPresentationPage", "LaunchThePostTestQuestions",
+            base.IsTakeScreenShotDuringEntryExit);
+            IWebElement cMmenuButton = base.GetWebElementPropertiesById("cnpost");
+            base.ClickByJavaScriptExecutor(cMmenuButton);
+            logger.LogMethodExit("StudentPresentationPage", "LaunchThePostTestQuestions",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
     }
 }
