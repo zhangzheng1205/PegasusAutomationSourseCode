@@ -1661,16 +1661,16 @@
       <ActivityType>Homework</ActivityType>
       <IsCreated>true</IsCreated>
      </ActivityQuestionsList>  
-     <ActivityQuestionsList>
+     <ActivityQuestionsList>       
       <Name>In measuring the effect of violent cartoons on childhood aggression, researchers must identify the __________ of “aggressive behavior.”</Name>
       <InCorrectOption>disorder</InCorrectOption>
-      <CorrectOption>hypothesis</CorrectOption>
+      <CorrectOption>operational definition</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
       <IsCreated>true</IsCreated>
      </ActivityQuestionsList>  
-     <ActivityQuestionsList>
+     <ActivityQuestionsList>       
       <Name>A drug company conducts a study in which the experimenter gives half of the participants the drug being tested and the other half a placebo. This is an example of</Name>
       <InCorrectOption>a double-blind study.</InCorrectOption>
       <CorrectOption>a single-blind study.</CorrectOption>
@@ -1687,16 +1687,16 @@
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
       <IsCreated>true</IsCreated>
-     </ActivityQuestionsList>  
+     </ActivityQuestionsList>    
      <ActivityQuestionsList>
       <Name>How does humanism differ from psychodynamic theory and behaviorism?</Name>
       <InCorrectOption>Humanism is less like philosophy and more practical.</InCorrectOption>
-      <CorrectOption>Humanism is a much more "mechanical" theory.</CorrectOption>
+      <CorrectOption>Humanism focuses on people's ability to direct their own lives.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
       <IsCreated>true</IsCreated>
-     </ActivityQuestionsList>  
+     </ActivityQuestionsList>     
      <ActivityQuestionsList>
       <Name>In testing whether children are influenced by violence on TV, the best method would be</Name>
       <InCorrectOption>observation.</InCorrectOption>
@@ -1750,18 +1750,18 @@
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
       <IsCreated>true</IsCreated>
-     </ActivityQuestionsList> 
+     </ActivityQuestionsList>     
      <ActivityQuestionsList>
       <Name>By making a loud noise when "Little Albert" was presented with a rat, John Watson taught the baby to fear rats. This proved that</Name>
       <InCorrectOption>children are inherently afraid of rats.</InCorrectOption>
-      <CorrectOption>rats can easily frighten young children.</CorrectOption>
+      <CorrectOption>phobias could be learned through conditioning.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
       <ActivityBehaviourType>BasicRandom</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
       <IsCreated>true</IsCreated>
-     </ActivityQuestionsList>  
+     </ActivityQuestionsList>     
      <ActivityQuestionsList>
-      <Name>Behaviorism influenced the field of</Name>
+       <Name>Behaviorism influenced the field of</Name>
       <InCorrectOption>structuralism.</InCorrectOption>
       <CorrectOption>cognitive psychology.</CorrectOption>
       <ActivityName>TakeTheChapter1Exam</ActivityName>
