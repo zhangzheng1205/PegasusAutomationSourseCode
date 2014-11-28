@@ -21,3 +21,16 @@ When I assign asset with due date and save
 Then I should see the successfull message "Properties updated successfully."
 And I should see assigned icon for "Review the Chapter 4 Learning Objectives" 
 
+
+
+
+#Purpose: To drag and drop a folder in assignment calendar.
+#Test case ID : peg-21948.
+#MyITLabOffice2013Program
+Scenario: Instructor drag and drop a folder in assignment calendar by SMS Instructor
+When I navigate to the "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+And I should see "Chapter 1: The Science of Psychology" asset
+When I drag and drop the "Chapter 1: The Science of Psychology" folder to the current date
+
+

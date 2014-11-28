@@ -621,7 +621,7 @@ namespace Pegasus.Acceptance.MyITLab.Tests.ProductAcceptanceTestDefinitions
             Logger.LogAssertion("VerifyFolderAssetPresent",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedFolderAssetName,
-                    new CalendarHedDefaultUxPage().GetActualFolderName()));
+                    new CalendarHedDefaultUxPage().GetActualFolderName(expectedFolderAssetName)));
             Logger.LogMethodExit("AssignmentCalendar",
                 "VerifyFolderAssetPresent",
               base.IsTakeScreenShotDuringEntryExit);

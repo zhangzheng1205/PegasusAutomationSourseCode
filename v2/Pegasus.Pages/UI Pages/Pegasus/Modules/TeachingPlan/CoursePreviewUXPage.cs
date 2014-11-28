@@ -13,6 +13,7 @@ using Pegasus.Pages.CommonPageObjects;
 using System.Configuration;
 using System.Diagnostics;
 using System.Globalization;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -348,35 +349,39 @@ namespace Pegasus.Pages.UI_Pages
        /// <param name="assetName">This is the asset name.</param>
        /// <returns>The asset name.</returns>
          public string GetAssetNameInCompletedTab(string assetName)
-            {
-                logger.LogMethodEntry("LauncheTextPage", "GetAssetStatus",
-                        base.IsTakeScreenShotDuringEntryExit);
-                string assetNameInCompleted = string.Empty;
-                //Click on Completed tab
-                IWebElement getCompleted = base.GetWebElementPropertiesByPartialLinkText(
-                    CoursePreviewUXPageResource.CouresPreviewUX_Page_TodoPage_Completed_PartialLinkText);
-                base.ClickByJavaScriptExecutor(getCompleted);
-                //Switch to Iframe
-                base.SwitchToIFrame(CoursePreviewUXPageResource.
-                    CouresPreviewUX_Page_TodoPage_Iframe_Name);
-                //Count the number of assets
-                int getCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
-                    CouresPreviewUX_Page_TodoPage_AssetCount_XPath_Locator);
-                for (int assetSearch = 2; assetSearch <= getCount; assetSearch++)
-                {
-                    //Get asset name     
-                    assetNameInCompleted = base.GetElementTextByXPath(String.Format(CoursePreviewUXPageResource.
-                        CouresPreviewUX_Page_TodoPage_AssetName_XPathLocator, assetSearch));
-                    if (assetNameInCompleted == assetName)
-                    {
-                        break;
-                    }
-                    logger.LogMethodExit("LauncheTextPage", "GetAssetStatus",
-                         base.IsTakeScreenShotDuringEntryExit);
-                }
-                return assetNameInCompleted;
-            }
-        
+         {
+             logger.LogMethodEntry("LauncheTextPage", "GetAssetStatus",
+                     base.IsTakeScreenShotDuringEntryExit);
+             string assetNameInCompleted = string.Empty;
+             //Click on Completed tab
+             IWebElement getCompleted = base.GetWebElementPropertiesByPartialLinkText(
+                 CoursePreviewUXPageResource.CouresPreviewUX_Page_TodoPage_Completed_PartialLinkText);
+             base.ClickByJavaScriptExecutor(getCompleted);
+             //Switch to Iframe
+             base.SwitchToIFrame(CoursePreviewUXPageResource.
+                 CouresPreviewUX_Page_TodoPage_Iframe_Name);
+             //Count the number of assets
+             int getCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                 CouresPreviewUX_Page_TodoPage_AssetCount_XPath_Locator);
+             for (int assetSearch = 2; assetSearch <= getCount; assetSearch++)
+             {
+                 //Get asset name     
+                 assetNameInCompleted = base.GetElementTextByXPath(String.Format(CoursePreviewUXPageResource.
+                     CouresPreviewUX_Page_TodoPage_AssetName_XPathLocator, assetSearch));
+                 if (assetNameInCompleted == assetName)
+                 {
+                     break;
+                 }
+
+             }
+             //Select main Window
+             base.SelectWindow("Course Materials");
+             logger.LogMethodExit("LauncheTextPage", "GetAssetStatus",
+                              base.IsTakeScreenShotDuringEntryExit);
+             return assetNameInCompleted;
+
+             
+         }
     }
 }
 

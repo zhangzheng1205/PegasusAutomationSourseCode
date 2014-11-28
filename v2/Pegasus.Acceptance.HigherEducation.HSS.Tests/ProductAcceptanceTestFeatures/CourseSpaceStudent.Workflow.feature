@@ -41,7 +41,7 @@ Then I should be on the "Today's View" page
 #Purpose : Basic/Random activity from Course Calendar and student scoring 100%
 #Test case ID : peg-22151
 #PEGASUS-29428
-Scenario: Student answers the Basic/Random activity questions and scores 100%
+Scenario: Student answers the questions and scores 100%
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStudent"
@@ -53,11 +53,14 @@ And I should see the "Passed" status for the activity "Take the Chapter 1 Exam"
 When I click on View Submission 
 Then I should see the "100 %" score in the left frame
 And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 100.00%" in the right frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Basic/Random activity from Course Calendar and student scoring 0%
 #Test case ID : peg-22146
 #PEGASUS-29427
-Scenario: Student answers the Basic/Random activity questions and scores 0%
+Scenario: Student answers the questions and scores 0%
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStudent"
@@ -69,11 +72,15 @@ And I should see the "Not passed" status for the activity "Take the Chapter 1 Ex
 When I click on View Submission 
 Then I should see the "0 %" score in the left frame
 And I should see Student "scoring 0" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 0.00%" in the right frame
+Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
-#Purpose : Student submits the Non gradable assets from the To Do tab
+#Purpose : Student submits the Non gradable assets from the TO DO tab
 #Test case ID : peg-22150
+#PEGASUS-29432
 #Products : HSS
-Scenario: Student submits the Non gradable assets from the To Do tab
+Scenario: Student submits the Non gradable assets from the TO DO tab
 When I navigate to "Assignments" tab and selected "To Do" subtab
 Then I should be on the "Assignments - To Do" page
 When I launch "Review the Chapter 1 Learning Objectives" asset

@@ -1054,7 +1054,65 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps",
                 "OpenAsset",
                 base.IsTakeScreenShotDuringEntryExit);
-        }       
+        }
+
+        /// <summary>
+        /// Verify folder asset is present.
+        /// </summary>
+        /// <param name="expectedFolderAssetName">This is a activity folder name.</param>
+        [Then(@"I should see ""(.*)"" asset")]
+        public void VerifyFolderAssetPresent(string expectedFolderAssetName)
+        {
+            //Verify expected folder name is same as actual folder name
+            Logger.LogMethodEntry("AssignmentCalendar",
+              "VerifyFolderAssetPresent",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Assert expected and actual folder values
+            Logger.LogAssertion("VerifyFolderAssetPresent",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(expectedFolderAssetName,
+                    new CalendarHedDefaultUxPage().GetActualFolderName(expectedFolderAssetName)));
+            Logger.LogMethodExit("AssignmentCalendar",
+                "VerifyFolderAssetPresent",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        [When(@"I drag and drop the ""(.*)"" folder to the current date")]
+        public void WhenIDragAndDropTheFolderToTheCurrentDate(string activityName)
+        {
+            // Drag and drop a folder asset to current date.
+            Logger.LogMethodEntry("AssignmentCalendar",
+               "DragAndDropFolderToCurrentDate",
+               base.IsTakeScreenShotDuringEntryExit);
+            // Drag and drop a folder asset to current date.
+            new CalendarHedDefaultUxPage().DragAndDropFolderAsset(activityName);
+            Logger.LogMethodExit("AssignmentCalendar",
+              "DragAndDropFolderToCurrentDate",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Verify due date icon is diplayed in assigned date.
+        /// </summary>
+        [Then(@"I should see due date icon displayed in current date")]
+        public void VerifyDueDateIconDisplayed()
+        {
+            // Verify due date icon is diplayed in assigned date
+            Logger.LogMethodEntry("AssignmentCalendar",
+              "VerifyDueDateIconDisplayed",
+              base.IsTakeScreenShotDuringEntryExit);
+            // Verify due date icon is diplayed in assigned date
+            Logger.LogAssertion("VerifyDueDateIconDisplayed",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.IsTrue(new CalendarHedDefaultUxPage()
+                   .IsActivityDueDateStatusPresent()));
+            Logger.LogMethodEntry("AssignmentCalendar",
+             "VerifyDueDateIconDisplayed",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
 
     }

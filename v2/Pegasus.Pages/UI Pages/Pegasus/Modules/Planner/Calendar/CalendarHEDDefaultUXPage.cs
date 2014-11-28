@@ -2003,7 +2003,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Get the Folder Name.
         /// </summary>
         /// <returns>Asset Name.</returns>    
-        public string GetActualFolderName()
+        public string GetActualFolderName(string folderName)
         {
             //Get the Folder Name
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
@@ -2017,8 +2017,7 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectCalendarWindow();
                 //Get the inner text of the folder
                 actualFolderAssetName =
-                    GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource
-                    .CalendarHEDDefaultUXPage_GOwithMicrosoftOffice2013Volume1_Folder_XPath_Locator);
+                    GetWebElementPropertiesByXPath(String.Format("//div[contains(text(),'{0}')]",folderName));
             }
             catch (Exception e)
             {
@@ -2049,6 +2048,44 @@ namespace Pegasus.Pages.UI_Pages
                 base.PerformClickAndHoldAction(base.
                     GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource
                     .CalendarHEDDefaultUXPage_WordChapter1SimulationActivitiesFolder_Xpath_Locator));
+                //Wait for the element
+                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                base.PerformMoveToElementClickAction(base.
+                    GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                // Releasing an element after clicking and holding it
+                base.PerformReleaseAction();
+                //Wait for 5 Secs
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_SleepTime));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CalendarHEDDefaultUXPage", "DragAndDropWordFolderAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Drag and drop an asset.
+        /// </summary>
+        public void DragAndDropFolderAsset(string activityName)
+        {
+            // Drag and drop 'Word Chapter 1: Simulation Activities' folder to current date
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage", "DragAndDropWordFolderAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Calendar Window
+                this.SelectCalendarWindow();
+                //Wait for the element
+                base.WaitForElement(By.XPath(String.Format("//div[contains(text(),'{0}')]", activityName)));
+                //Drag and Drop
+                base.PerformClickAndHoldAction(base.
+                    GetWebElementPropertiesByXPath(String.Format("//div[contains(text(),'{0}')]", activityName)));
                 //Wait for the element
                 base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
