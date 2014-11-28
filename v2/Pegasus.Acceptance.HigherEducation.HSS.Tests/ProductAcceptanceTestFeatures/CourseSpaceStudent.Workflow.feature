@@ -13,7 +13,7 @@ Then I should be on the "Course Materials" page
 
 #Purpose : Basic/Random activity launch from Course Calendar and student abruptly closes the presentation
 #Test case ID : peg-22160
-Scenario: Student abruptly closes the presentation
+Scenario: Student abruptly closes the Basic/Random activity presentation
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStudent"
@@ -26,7 +26,7 @@ Then I should be on the "Today's View" page
 #Purpose : Basic/Random activity from Course Calendar and student perform Save for later
 #Test case ID : peg-22156
 #PEGASUS-29429
-Scenario: Student answers the questions and perform Save for later
+Scenario: Student answers the Basic/Random activity questions and perform Save for later
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStudent"
@@ -41,7 +41,7 @@ Then I should be on the "Today's View" page
 #Purpose : Basic/Random activity from Course Calendar and student scoring 100%
 #Test case ID : peg-22151
 #PEGASUS-29428
-Scenario: Student answers the questions and scores 100%
+Scenario: Student answers the Basic/Random activity questions and scores 100%
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStudent"
@@ -57,7 +57,7 @@ And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "
 #Purpose : Basic/Random activity from Course Calendar and student scoring 0%
 #Test case ID : peg-22146
 #PEGASUS-29427
-Scenario: Student answers the questions and scores 0%
+Scenario: Student answers the Basic/Random activity questions and scores 0%
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStudent"
@@ -91,3 +91,23 @@ Then I should be on the "Assignments - To Do" page
 When I launch "Complete the Chapter 1 Study Plan" asset
 Then I should be on the "Open Study Plan" page
 When I Click open under "PreTest" frame to launch the Questions
+Then I should be on the "PreTest" page displayed with questions
+And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" of "Homework" type with "incorrect" answers
+When I click on Submit the activity "0%" score should be displayed in the screen
+Then I should be on the "Assignments - To Do" page
+And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan"
+
+#Purpose : Study plan submission from To Do and student scoring 0% in pretest
+#Test case ID : peg-22155
+#PEGASUS-29436
+Scenario: Student answers the Study plan posttest questions and scores 0%
+When I navigate to "Assignments" tab and selected "To Do" subtab
+Then I should be on the "Assignments - To Do" page
+When I launch "Complete the Chapter 1 Study Plan" asset
+Then I should be on the "Open Study Plan" page
+When I Click open under "PostTest" frame to launch the Questions
+Then I should be on the "PostTest" page displayed with questions
+And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" of "Homework" type with "incorrect" answers
+When I click on Submit the activity "0%" score should be displayed in the screen
+Then I should be on the "Assignments - To Do" page
+And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan"

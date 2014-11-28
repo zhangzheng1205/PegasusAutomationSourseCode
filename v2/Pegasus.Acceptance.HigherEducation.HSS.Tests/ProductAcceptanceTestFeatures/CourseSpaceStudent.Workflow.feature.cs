@@ -91,11 +91,11 @@ testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null))
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student abruptly closes the presentation")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student abruptly closes the Basic/Random activity presentation")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
-        public virtual void StudentAbruptlyClosesThePresentation()
+        public virtual void StudentAbruptlyClosesTheBasicRandomActivityPresentation()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student abruptly closes the presentation", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student abruptly closes the Basic/Random activity presentation", ((string[])(null)));
 #line 16
 this.ScenarioSetup(scenarioInfo);
 #line 17
@@ -119,11 +119,11 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the questions and perform Save for later")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the Basic/Random activity questions and perform Save for later")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
-        public virtual void StudentAnswersTheQuestionsAndPerformSaveForLater()
+        public virtual void StudentAnswersTheBasicRandomActivityQuestionsAndPerformSaveForLater()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the questions and perform Save for later", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the Basic/Random activity questions and perform Save for later", ((string[])(null)));
 #line 29
 this.ScenarioSetup(scenarioInfo);
 #line 30
@@ -152,11 +152,11 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the questions and scores 100%")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the Basic/Random activity questions and scores 100%")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
-        public virtual void StudentAnswersTheQuestionsAndScores100()
+        public virtual void StudentAnswersTheBasicRandomActivityQuestionsAndScores100()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the questions and scores 100%", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the Basic/Random activity questions and scores 100%", ((string[])(null)));
 #line 44
 this.ScenarioSetup(scenarioInfo);
 #line 45
@@ -188,11 +188,11 @@ testRunner.And("I should see Student \"scoring 100\" as \"HSSCsSmsStudent\" and 
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the questions and scores 0%")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the Basic/Random activity questions and scores 0%")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
-        public virtual void StudentAnswersTheQuestionsAndScores0()
+        public virtual void StudentAnswersTheBasicRandomActivityQuestionsAndScores0()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the questions and scores 0%", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the Basic/Random activity questions and scores 0%", ((string[])(null)));
 #line 60
 this.ScenarioSetup(scenarioInfo);
 #line 61
@@ -267,6 +267,52 @@ testRunner.When("I launch \"Complete the Chapter 1 Study Plan\" asset", ((string
 testRunner.Then("I should be on the \"Open Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 93
 testRunner.When("I Click open under \"PreTest\" frame to launch the Questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 94
+testRunner.Then("I should be on the \"PreTest\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 95
+testRunner.And("I answer activity \"CompleteTheChapter1StudyPlan\" with behaviour \"StudyPlan\" of \"H" +
+                    "omework\" type with \"incorrect\" answers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 96
+testRunner.When("I click on Submit the activity \"0%\" score should be displayed in the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 97
+testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 98
+testRunner.And("I should see the \"In Progress\" status for the activity \"Complete the Chapter 1 St" +
+                    "udy Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the Study plan posttest questions and scores 0%")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
+        public virtual void StudentAnswersTheStudyPlanPosttestQuestionsAndScores0()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the Study plan posttest questions and scores 0%", ((string[])(null)));
+#line 103
+this.ScenarioSetup(scenarioInfo);
+#line 104
+testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 105
+testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 106
+testRunner.When("I launch \"Complete the Chapter 1 Study Plan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 107
+testRunner.Then("I should be on the \"Open Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 108
+testRunner.When("I Click open under \"PostTest\" frame to launch the Questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 109
+testRunner.Then("I should be on the \"PostTest\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 110
+testRunner.And("I answer activity \"CompleteTheChapter1StudyPlan\" with behaviour \"StudyPlan\" of \"H" +
+                    "omework\" type with \"incorrect\" answers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 111
+testRunner.When("I click on Submit the activity \"0%\" score should be displayed in the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 112
+testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 113
+testRunner.And("I should see the \"In Progress\" status for the activity \"Complete the Chapter 1 St" +
+                    "udy Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
