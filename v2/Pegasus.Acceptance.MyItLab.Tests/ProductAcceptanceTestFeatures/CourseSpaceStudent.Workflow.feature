@@ -688,11 +688,6 @@ And I should answer activity "Excel Chapter 1 Skill-Based Training" correctly an
 #Test Case ID : peg-22023
 #Product : MyItLab
 Scenario: Student launches and crash the Sim5 Access activity
-Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "MyITLabOffice2013Program" course from the Global Home page as "CsSmsStudent"
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Access Chapter 1 Study Plan [Skill-Based]: Training > Post-Test" in "Course Materials" by "CsSmsStudent" 
