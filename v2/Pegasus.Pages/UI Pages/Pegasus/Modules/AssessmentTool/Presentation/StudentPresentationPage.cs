@@ -5931,6 +5931,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
+
         /// <summary>
         /// Answer the Questions of activity.
         /// </summary>
@@ -5945,86 +5946,102 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             logger.LogMethodEntry("StudentPresentationPage", "AnswerActivityQuestions",
                 base.IsTakeScreenShotDuringEntryExit);
             string ActualQuestion = String.Empty;
-            int QuestionCount = base.GetElementCountByCSSSelector(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_QuestionCount_Value);
-            if (OptionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue))
+            try
             {
-                QuestionCount = 2;
-                OptionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
-            }
-            for (int i = 1; i <= QuestionCount; i++)
-            {
-                IList<IWebElement> Qus = WebDriver.FindElements(By.ClassName(
-                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Question_Value));
-                foreach (IWebElement element in Qus)
+                int QuestionCount = base.GetElementCountByCSSSelector(
+                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_QuestionCount_Value);
+                if (OptionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue))
                 {
-                    if (element.Text.Equals(String.Empty)) continue;
-                    else
+                    QuestionCount = 2;
+                    OptionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
+                }
+                for (int i = 1; i <= QuestionCount; i++)
+                {
+                    IList<IWebElement> Qus = WebDriver.FindElements(By.ClassName(
+                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Question_Value));
+                    foreach (IWebElement element in Qus)
                     {
-                        ActualQuestion = element.Text;
-                        String Option = base.GetQuestionOptionName(activityType, activityBehaviourType, activityName, ActualQuestion, OptionType);
-                        if (Option.Contains("|"))
-                        {
-                            string[] words = Option.Split('|');
-                            foreach (string word in words)
-                            {
-                                IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(word);
-                                base.ClickByJavaScriptExecutor(SelectOption);
-                            }
-                        }
+                        if (element.Text.Equals(String.Empty)) continue;
                         else
                         {
-                            int numberOption = 0;
-                            bool result = int.TryParse(Option, out numberOption);
-                            if (numberOption != 0)
-                            {                                
-                                for (int k = 1; k <= 8; k++)
+                            ActualQuestion = element.Text;
+                            String Option = base.GetQuestionOptionName(activityType, activityBehaviourType, activityName, ActualQuestion, OptionType);
+                            if (Option.Contains("|"))
+                            {
+                                string[] words = Option.Split('|');
+                                foreach (string word in words)
                                 {
-                                    if (k % 2 != 0)
-                                    {
-                                        base.WaitForElement(By.XPath(string.Format(
-                                            StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator,i,k)), 10);
-                                        IWebElement RadioOption = base.GetWebElementPropertiesByXPath(string.Format(
-                                            StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator,i,k));
-                                        String TempOption = RadioOption.Text;
-                                        if (TempOption.Equals(Option))
-                                        {
-                                            base.ClickByJavaScriptExecutor(RadioOption);
-                                            break;
-                                        }
-                                    }
+                                    IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(word);
+                                    base.ClickByJavaScriptExecutor(SelectOption);
                                 }
                             }
                             else
                             {
-                                IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(Option);
-                                base.ClickByJavaScriptExecutor(SelectOption);
+                                int numberOption = 0;
+                                bool result = int.TryParse(Option, out numberOption);
+                                if (numberOption != 0)
+                                {
+                                    for (int k = 1; k <= 8; k++)
+                                    {
+                                        if (k % 2 != 0)
+                                        {
+                                            base.WaitForElement(By.XPath(string.Format(
+                                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator, i, k)), 10);
+                                            IWebElement RadioOption = base.GetWebElementPropertiesByXPath(string.Format(
+                                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator, i, k));
+                                            String TempOption = RadioOption.Text;
+                                            if (TempOption.Equals(Option))
+                                            {
+                                                base.ClickByJavaScriptExecutor(RadioOption);
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(Option);
+                                    base.ClickByJavaScriptExecutor(SelectOption);
+                                }
                             }
+                            IWebElement NextQuestButton = base.GetWebElementPropertiesById("btnNext");
+                            base.PerformMouseClickAction(NextQuestButton);
+                            break;
                         }
-                        IWebElement NextQuestButton = base.GetWebElementPropertiesById("btnNext");
-                        base.PerformMouseClickAction(NextQuestButton);                    
-                        break;
                     }
-                }
 
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("StudentPresentationPage", "AnswerActivityQuestions",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Click on SubmitForGrading
+        /// Click on SubmitForGrading.
         /// </summary>
         public void SubmitForGrading()
         {
+            //Click on SubmitForGrading
             logger.LogMethodEntry("StudentPresentationPage", "SubmitForGrading",
             base.IsTakeScreenShotDuringEntryExit);
-            IWebElement SubmitButton = base.GetWebElementPropertiesById(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmitButton_ID_Locator);
-            base.ClickByJavaScriptExecutor(SubmitButton);
-            IWebElement FinishButton = base.GetWebElementPropertiesById(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_FinishButton_ID_Locator);
-            base.ClickByJavaScriptExecutor(FinishButton);
+            try
+            {
+                IWebElement SubmitButton = base.GetWebElementPropertiesById(
+                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmitButton_ID_Locator);
+                base.ClickByJavaScriptExecutor(SubmitButton);
+                //Click on Finish button
+                IWebElement FinishButton = base.GetWebElementPropertiesById(
+                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_FinishButton_ID_Locator);
+                base.ClickByJavaScriptExecutor(FinishButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage", "SubmitForGrading",
              base.IsTakeScreenShotDuringEntryExit);
         }
@@ -6032,19 +6049,30 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// <summary>
         /// Get the score of the activity.
         /// </summary>
-        /// <returns>ACtivity score.</returns>
+        /// <returns>Activity score.</returns>
         public string GetActivityScore()
         {
             //Get the score of the activity
             logger.LogMethodEntry("StudentPresentationPage", "GetActivityScore",
             base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.CssSelector(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ActivityScore_CSS_Locator), 10);
-            IWebElement getScore = base.GetWebElementPropertiesByXPath("//*[@id='divgradeholder']/a");
-            String ActualScore = getScore.Text;
+            string actualScore = string.Empty;
+            try
+            {
+                base.WaitForElement(By.CssSelector(
+                        StudentPresentationPageResource.
+                        StudentPresentation_Page_HSS_Activity_ActivityScore_CSS_Locator), 10);
+                IWebElement getScore = base.GetWebElementPropertiesByXPath(
+                    StudentPresentationPageResource.
+                    StudentPresentation_Page_Exem_ActivityScore_XPath_Locator);
+                actualScore = getScore.Text;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage", "GetActivityScore",
             base.IsTakeScreenShotDuringEntryExit);
-            return ActualScore;
+            return actualScore;
         }
 
         /// <summary>
@@ -6055,9 +6083,16 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             //Click on return to  course.
             logger.LogMethodEntry("StudentPresentationPage", "RuturnBackToCourseSpace",
             base.IsTakeScreenShotDuringEntryExit);
-            IWebElement ReturnToCourseButton = base.GetWebElementPropertiesById(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ReturnToCourseButton_ID_Locator);
-            base.ClickByJavaScriptExecutor(ReturnToCourseButton);
+            try
+            {
+                IWebElement getReturnToCourseButton = base.GetWebElementPropertiesById(
+                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ReturnToCourseButton_ID_Locator);
+                base.ClickByJavaScriptExecutor(getReturnToCourseButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage", "RuturnBackToCourseSpace",
             base.IsTakeScreenShotDuringEntryExit);
         }
@@ -6067,16 +6102,14 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// </summary>
         public void ClickOnViewSubmission()
         {
+            //Click on View all submission
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnViewSubmission",
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                //Select Window And Frame
-                this.SelectWindowAndFrame();
-                IWebElement ViewSubmissionButton = base.GetWebElementPropertiesById(
-                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ViewSubmissionButton_ID_Locator);
-                //Click on view submission.
-                base.ClickByJavaScriptExecutor(ViewSubmissionButton);
+                IWebElement getViewSubmissionButton = base.GetWebElementPropertiesById(
+                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ViewSubmissionButton_ID_Locator);
+                base.ClickByJavaScriptExecutor(getViewSubmissionButton);
             }
             catch (Exception e)
             {
@@ -6090,55 +6123,79 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// Get the activity score of the student.
         /// </summary>
         /// <returns>Activity score.</returns>
-        public String GetSubmissionScoreByStudent()
+        public string GetSubmissionScoreByStudent()
         {
             logger.LogMethodEntry("StudentPresentationPage", "GetSubmissionScoreByStudent",
             base.IsTakeScreenShotDuringEntryExit);
-            base.SwitchToLastOpenedWindow();
-            base.WaitForElement(By.XPath(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator), 10);
-            IWebElement getScore = base.GetWebElementPropertiesByXPath(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator);
-            String ActualScore = getScore.Text;
-            base.PerformMouseClickAction(getScore);
+            string actualScore = string.Empty;
+            try
+            {
+                base.SwitchToLastOpenedWindow();
+                base.WaitForElement(By.XPath(
+                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator), 10);
+                IWebElement getScore = base.GetWebElementPropertiesByXPath(
+                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator);
+                actualScore = getScore.Text;
+                base.PerformMouseClickAction(getScore);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage", "GetSubmissionScoreByStudent",
             base.IsTakeScreenShotDuringEntryExit);
-            return ActualScore;
+            return actualScore;
         }
 
         /// <summary>
         /// Get the activity grade of the student.
         /// </summary>
         /// <returns>Activity grade.</returns>
-        public String GetactivityGradeByStudent()
+        public string GetactivityGradeByStudent()
         {
             logger.LogMethodEntry("StudentPresentationPage", "GetactivityGradeByStudent",
             base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.Id(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator), 10);
-            IWebElement activityGrade = base.GetWebElementPropertiesById(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator);
-            String ActualScore = activityGrade.Text;
+            string actualScore = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator), 10);
+                IWebElement activityGrade = base.GetWebElementPropertiesById(
+                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator);
+                actualScore = activityGrade.Text;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage", "GetactivityGradeByStudent",
             base.IsTakeScreenShotDuringEntryExit);
-            return ActualScore;
+            return actualScore;
         }
 
         /// <summary>
         /// Get the Student details.
         /// </summary>
         /// <returns>Student details.</returns>
-        public String getStudentDetails()
+        public string getStudentDetails()
         {
             logger.LogMethodEntry("StudentPresentationPage", "getStudentDetails",
             base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.Id(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator), 10);
-            IWebElement StudentDetails = base.GetWebElementPropertiesById(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator);
-            String StudentDetail = StudentDetails.Text;
+            string studentDetail = string.Empty;
+            try
+            {
+                base.WaitForElement(By.Id(
+                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator), 10);
+                IWebElement StudentDetails = base.GetWebElementPropertiesById(
+                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator);
+                studentDetail = StudentDetails.Text;
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage", "getStudentDetails",
             base.IsTakeScreenShotDuringEntryExit);
-            return StudentDetail;
+            return studentDetail;
         }
 
         /// <summary>
@@ -6148,55 +6205,109 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         {
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSaveForLaterOption",
             base.IsTakeScreenShotDuringEntryExit);
-            IWebElement saveForLaterButton = base.GetWebElementPropertiesById(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator);
-            base.ClickByJavaScriptExecutor(saveForLaterButton);
-            IWebElement saveButton = base.GetWebElementPropertiesById(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ConfirmSave_ID_Locator);
-            base.ClickByJavaScriptExecutor(saveButton);
+            try
+            {
+                IWebElement getSaveForLaterButton = base.GetWebElementPropertiesById(
+                         StudentPresentationPageResource.
+                         StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator);
+                base.ClickByJavaScriptExecutor(getSaveForLaterButton);
+                IWebElement getSaveButton = base.GetWebElementPropertiesById(
+                    StudentPresentationPageResource.
+                    StudentPresentation_Page_HSS_Activity_ConfirmSave_ID_Locator);
+                base.ClickByJavaScriptExecutor(getSaveButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage", "ClickOnSaveForLaterOption",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Launch the Studyplan Pre Test / Post Test.
+        /// </summary>
+        /// <param name="TestType">This is the test type.</param>
         public void ClickOpenToLaunchTheQuestions(string TestType)
         {
+            //Launch the test
             logger.LogMethodEntry("StudentPresentationPage", "ClickOpenToLaunchTheQuestions",
             base.IsTakeScreenShotDuringEntryExit);
-            switch (TestType)
+            try
             {
-                case "PreTest": LaunchThePreTestQuestions();
-                                break;
-                case "PostTest": LaunchThePostTestQuestions();
-                                break;
+                switch (TestType)
+                {
+                    case "PreTest": LaunchThePreTestQuestions();
+                        break;
+                    case "PostTest": LaunchThePostTestQuestions();
+                        break;
+                }
+                //CLick on 'Open' option
+                IWebElement OpenButton = base.GetWebElementPropertiesById(
+                    StudentPresentationPageResource.
+                    StudentPresentation_Page_StudyPlan_Open_ID_Locator);
+                base.PerformMoveToElementClickAction(OpenButton);
+                base.SwitchToLastOpenedWindow();
+                //Wait for 'Continue' button and click
+                base.WaitForElement(By.Id(StudentPresentationPageResource.
+                    StudentPresentation_Page_StudyPlan_Continue_ID_Locator));
+                IWebElement ContinueButton = base.GetWebElementPropertiesById(
+                    StudentPresentationPageResource.
+                    StudentPresentation_Page_StudyPlan_Continue_ID_Locator);
+                base.ClickByJavaScriptExecutor(ContinueButton);
             }
-            IWebElement OpenButton = base.GetWebElementPropertiesById("_ctl0__ctl0_phBody_PageContent_lblOpen");
-            base.PerformMoveToElementClickAction(OpenButton);
-            base.SwitchToLastOpenedWindow();
-            base.WaitForElement(By.Id("imgOk"));
-            IWebElement ContinueButton = base.GetWebElementPropertiesById("imgOk");
-            base.ClickByJavaScriptExecutor(OpenButton);
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage", "ClickOpenToLaunchTheQuestions",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on Pre Test cmenu.
+        /// </summary>
         private void LaunchThePreTestQuestions()
         {
+            //Click on Pre Test cmenu
             logger.LogMethodEntry("StudentPresentationPage", "LaunchThePreTestQuestions",
             base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.Id("cnimg"), 10);
-            IWebElement cMmenuButton = base.GetWebElementPropertiesById("cnimg");
-            base.ClickByJavaScriptExecutor(cMmenuButton);
-
+            try
+            {
+                base.WaitForElement(By.Id(
+                       StudentPresentationPageResource.
+                       StudentPresentation_Page_Pretest_Cmenu_ID_Locator), 10);
+                IWebElement cMmenuButton = base.GetWebElementPropertiesById(
+                    StudentPresentationPageResource.
+                    StudentPresentation_Page_Pretest_Cmenu_ID_Locator);
+                base.ClickByJavaScriptExecutor(cMmenuButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage", "LaunchThePreTestQuestions",
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on Post Test cmenu.
+        /// </summary>
         private void LaunchThePostTestQuestions()
         {
+            //Click on Post Test cmenu
             logger.LogMethodEntry("StudentPresentationPage", "LaunchThePostTestQuestions",
             base.IsTakeScreenShotDuringEntryExit);
-            IWebElement cMmenuButton = base.GetWebElementPropertiesById("cnpost");
-            base.ClickByJavaScriptExecutor(cMmenuButton);
+            try
+            {
+                IWebElement cMenuButton = base.GetWebElementPropertiesById(
+                        StudentPresentationPageResource.StudentPresentation_Page_Posttest_Cmenu_ID_Locator);
+                base.ClickByJavaScriptExecutor(cMenuButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage", "LaunchThePostTestQuestions",
              base.IsTakeScreenShotDuringEntryExit);
         }

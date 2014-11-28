@@ -332,6 +332,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;divgradeholder&apos;]/a.
+        /// </summary>
+        internal static string StudentPresentation_Page_Exem_ActivityScore_XPath_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_Exem_ActivityScore_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to feedbackimg.
         /// </summary>
         internal static string StudentPresentation_Page_Feedback_Button_Id {
@@ -782,6 +791,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to cnpost.
+        /// </summary>
+        internal static string StudentPresentation_Page_Posttest_Cmenu_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_Posttest_Cmenu_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PostTestName.
         /// </summary>
         internal static string StudentPresentation_Page_PostTest_Id_Locator {
@@ -832,6 +850,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPresentation_Page_PPT_Slide9_Value {
             get {
                 return ResourceManager.GetString("StudentPresentation_Page_PPT_Slide9_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cnimg.
+        /// </summary>
+        internal static string StudentPresentation_Page_Pretest_Cmenu_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_Pretest_Cmenu_ID_Locator", resourceCulture);
             }
         }
         
@@ -1237,6 +1264,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPresentation_Page_Studyplan_Cancel_Id_Locator {
             get {
                 return ResourceManager.GetString("StudentPresentation_Page_Studyplan_Cancel_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to imgOk.
+        /// </summary>
+        internal static string StudentPresentation_Page_StudyPlan_Continue_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_StudyPlan_Continue_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0__ctl0_phBody_PageContent_lblOpen.
+        /// </summary>
+        internal static string StudentPresentation_Page_StudyPlan_Open_ID_Locator {
+            get {
+                return ResourceManager.GetString("StudentPresentation_Page_StudyPlan_Open_ID_Locator", resourceCulture);
             }
         }
         

@@ -1317,4 +1317,19 @@
   <data name="StudentPresentation_Page_HSS_Activity_ViewSubmissionButton_ID_Locator" xml:space="preserve">
     <value>_ctl0_InnerPageContent_ContentSynapse_rptCoursePreview__ctl5_btnViewSubmission</value>
   </data>
+  <data name="StudentPresentation_Page_Exem_ActivityScore_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='divgradeholder']/a</value>
+  </data>
+  <data name="StudentPresentation_Page_Posttest_Cmenu_ID_Locator" xml:space="preserve">
+    <value>cnpost</value>
+  </data>
+  <data name="StudentPresentation_Page_Pretest_Cmenu_ID_Locator" xml:space="preserve">
+    <value>cnimg</value>
+  </data>
+  <data name="StudentPresentation_Page_StudyPlan_Continue_ID_Locator" xml:space="preserve">
+    <value>imgOk</value>
+  </data>
+  <data name="StudentPresentation_Page_StudyPlan_Open_ID_Locator" xml:space="preserve">
+    <value>_ctl0__ctl0_phBody_PageContent_lblOpen</value>
+  </data>
 </root>

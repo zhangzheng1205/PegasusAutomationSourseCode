@@ -2331,7 +2331,7 @@
       <Name>Which of the following is a guideline for doing research with people?</Name>
       <InCorrectOption>Participants must understand that confidentiality is not guaranteed.</InCorrectOption>
       <CorrectOption>Participants must be allowed to make an informed decision about participation.</CorrectOption>
-      <ActivityName>TakeTheChapter1Exam</ActivityName>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
       <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
       <ActivityType>Homework</ActivityType>
       <IsCreated>true</IsCreated>
