@@ -63,3 +63,15 @@ And I should see the "Not passed" status for the activity "Take the Chapter 1 Ex
 When I click on View Submission 
 Then I should see the "0 %" score in the left frame
 And I should see Student "scoring 0" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 0.00%" in the right frame
+
+#Purpose : Student submits the Non gradable assets from the TO DO tab
+#Test case ID : peg-22150
+#Products : HSS
+Scenario: Student submits the Non gradable assets from the TO DO tab
+When I navigate to "Assignments" tab and selected "To Do" subtab
+Then I should be on the "Assignments - To Do" page
+When I launch "Review the Chapter 1 Learning Objectives" asset
+Then I should be on the "Learning Objectives - Chapter 1" page
+When I close the "Learning Objectives - Chapter 1" window
+Then I should see "Viewed" status for the asset
+Then I should see "Review the Chapter 1 Learning Objectives" in the 'Completed' tab

@@ -79,6 +79,60 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;TodoList&apos;]/div/div.
+        /// </summary>
+        internal static string CouresPreviewUX_Page_TodoPage_AssetCount_XPath_Locator {
+            get {
+                return ResourceManager.GetString("CouresPreviewUX_Page_TodoPage_AssetCount_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;TodoList&apos;]/div/div[{0}]/div/div[2]/table/tbody/tr/td[2]/div[1].
+        /// </summary>
+        internal static string CouresPreviewUX_Page_TodoPage_AssetName_XPathLocator {
+            get {
+                return ResourceManager.GetString("CouresPreviewUX_Page_TodoPage_AssetName_XPathLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;TodoList&apos;]/div/div[{0}]/div/div[2]/table/tbody/tr/td[3]/div[1]/div/div[2].
+        /// </summary>
+        internal static string CouresPreviewUX_Page_TodoPage_AssetStatus_XPathLocator {
+            get {
+                return ResourceManager.GetString("CouresPreviewUX_Page_TodoPage_AssetStatus_XPathLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Completed.
+        /// </summary>
+        internal static string CouresPreviewUX_Page_TodoPage_Completed_PartialLinkText {
+            get {
+                return ResourceManager.GetString("CouresPreviewUX_Page_TodoPage_Completed_PartialLinkText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ViewAll Course Material.
+        /// </summary>
+        internal static string CouresPreviewUX_Page_TodoPage_Iframe_Name {
+            get {
+                return ResourceManager.GetString("CouresPreviewUX_Page_TodoPage_Iframe_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;TodoList&apos;]/div/div[3]/div/div[2]/table/tbody/tr/td[4]/div/a/span.
+        /// </summary>
+        internal static string CouresPreviewUX_Page_TodoPage_ImDone_XPath_Locator {
+            get {
+                return ResourceManager.GetString("CouresPreviewUX_Page_TodoPage_ImDone_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to id.
         /// </summary>
         internal static string CoursePreviewUX_Page_Activity_WebElement_Property_Name {

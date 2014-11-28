@@ -2207,9 +2207,9 @@ namespace Pegasus.Pages.UI_Pages
             base.ClickByJavaScriptExecutor(getFileNameOk);
             //Click on create button
             base.WaitForElement(By.XPath(
-                SIM5FramePageResource.SIM5Frame_Page_CreateButton_XPath_Locator));
+                SIM5FramePageResource.SIM5Frame_Page_CreateButton_ID_Locator));
             IWebElement getCreateBox = base.GetWebElementPropertiesByXPath(
-                SIM5FramePageResource.SIM5Frame_Page_CreateButton_XPath_Locator);
+                SIM5FramePageResource.SIM5Frame_Page_CreateButton_ID_Locator);
             base.ClickByJavaScriptExecutor(getCreateBox);
             Thread.Sleep(Convert.ToInt32(SIM5FramePageResource.
                SIM5Frame_Page_Sleep_Time));
@@ -4935,10 +4935,6 @@ namespace Pegasus.Pages.UI_Pages
                 "SelectCellRange",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
-
-
-
     }
 }
 

@@ -240,8 +240,8 @@
   <data name="CommonPage_Chapter3_Sensation_and_Perception_FolderName" xml:space="preserve">
     <value>Chapter 3: Sensation and Perception</value>
   </data>
-  <data name="CommonPage_Chapter4BrainAndNervous_FolderName" xml:space="preserve">
-    <value>Chapter 04: The Brain and Nervous System</value>
+  <data name="CommonPage_Chapter4_FolderName" xml:space="preserve">
+    <value>Review the Chapter 4 Learning Objectives</value>
   </data>
   <data name="CommonPage_Amplifier_FolderName" xml:space="preserve">
     <value>Capítulo preliminar: Bienvenidos a Unidos</value>
@@ -287,5 +287,11 @@
   </data>
   <data name="CommonPage_HssChapter1ExamActivities_Link" xml:space="preserve">
     <value>Take the Chapter 1 Exam</value>
+  </data>
+  <data name="CommonPage_HssChapter4Activities_FolderName" xml:space="preserve">
+    <value>Chapter 4: Consciousness: Sleep, Dreams, Hypnosis, and Drugs</value>
+  </data>
+  <data name="CommonPage_HssChapter4ChapterReview_Activities_Link" xml:space="preserve">
+    <value>Review the Chapter 4 Learning Objectives</value>
   </data>
 </root>

@@ -2401,11 +2401,11 @@ namespace Pegasus.Pages.UI_Pages.Integration.SIM5.SIM5Services {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .//*[@id=&apos;button1&apos;].
+        ///   Looks up a localized string similar to button1.
         /// </summary>
-        internal static string SIM5Frame_Page_CreateButton_XPath_Locator {
+        internal static string SIM5Frame_Page_CreateButton_ID_Locator {
             get {
-                return ResourceManager.GetString("SIM5Frame_Page_CreateButton_XPath_Locator", resourceCulture);
+                return ResourceManager.GetString("SIM5Frame_Page_CreateButton_ID_Locator", resourceCulture);
             }
         }
         

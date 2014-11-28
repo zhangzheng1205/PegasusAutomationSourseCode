@@ -6012,7 +6012,6 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// <summary>
         /// Click on SubmitForGrading
         /// </summary>
-        /// 
         public void SubmitForGrading()
         {
             logger.LogMethodEntry("StudentPresentationPage", "SubmitForGrading",
@@ -6027,8 +6026,13 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Get the score of the activity.
+        /// </summary>
+        /// <returns>ACtivity score.</returns>
         public string GetActivityScore()
         {
+            //Get the score of the activity
             logger.LogMethodEntry("StudentPresentationPage", "GetActivityScore",
             base.IsTakeScreenShotDuringEntryExit);
             base.WaitForElement(By.CssSelector(
@@ -6040,8 +6044,12 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             return ActualScore;
         }
 
-        public void RuturnBackToCourseSpace()
+        /// <summary>
+        /// Click on return to  course.
+        /// </summary>
+        public void ReturnBackToCourseSpace()
         {
+            //Click on return to  course.
             logger.LogMethodEntry("StudentPresentationPage", "RuturnBackToCourseSpace",
             base.IsTakeScreenShotDuringEntryExit);
             IWebElement ReturnToCourseButton = base.GetWebElementPropertiesById(
@@ -6051,6 +6059,9 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click on View all submission.
+        /// </summary>
         public void ClickOnViewSubmission()
         {
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnViewSubmission",
@@ -6062,6 +6073,10 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Get the activity score of the student.
+        /// </summary>
+        /// <returns>Activity score.</returns>
         public String GetSubmissionScoreByStudent()
         {
             logger.LogMethodEntry("StudentPresentationPage", "GetSubmissionScoreByStudent",
@@ -6078,6 +6093,10 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             return ActualScore;
         }
 
+        /// <summary>
+        /// Get the activity grade of the student.
+        /// </summary>
+        /// <returns>Activity grade.</returns>
         public String GetactivityGradeByStudent()
         {
             logger.LogMethodEntry("StudentPresentationPage", "GetactivityGradeByStudent",
@@ -6091,6 +6110,10 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             return ActualScore;
         }
 
+        /// <summary>
+        /// Get the Student details.
+        /// </summary>
+        /// <returns>Student details.</returns>
         public String getStudentDetails()
         {
             logger.LogMethodEntry("StudentPresentationPage", "getStudentDetails",

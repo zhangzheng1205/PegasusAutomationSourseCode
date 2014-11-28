@@ -136,6 +136,7 @@ namespace Pegasus.Pages.CommonPageObjects
                         }
                         break;
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.HSSCsSmsInstructor:
                     case User.UserTypeEnum.HedProgramAdmin:
                         // folder navigation based on Tab name
                         switch (activityUnderTabName)
@@ -387,7 +388,7 @@ namespace Pegasus.Pages.CommonPageObjects
             // click folder level 
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_Chapter4BrainAndNervous_FolderName, webElementToWait);
+                CommonPage_Chapter4_FolderName, webElementToWait);
             Logger.LogMethodExit("CommonPage", "NavigateToExcelChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
         } 
@@ -1315,6 +1316,18 @@ namespace Pegasus.Pages.CommonPageObjects
                                 }
                                 break;
 
+                            case "Course Materials":
+                                switch (activityName)
+                                {
+                                    // folder navigation based on activity name
+                                    case "Review the Chapter 4 Learning Objectives":
+                                        this.NavigateToChapter4ExamActivitiesFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                                    userTypeEnum, activityUnderTabName);
+                                        break;
+                                }
+                                break;
+
                         }
                         break;
                     case User.UserTypeEnum.HSSCsSmsStudent:
@@ -1357,6 +1370,22 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodExit("CommonPage", "NavigateToChapter1ExamActivitiesFolder",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
+        private void NavigateToChapter4ExamActivitiesFolder(string webElementToWait,
+                User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            Logger.LogMethodEntry("CommonPage", "NavigateToChapter1ExamActivitiesFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter4Activities_FolderName, webElementToWait);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            //this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter4ChapterReview_Activities_Link, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateToChapter1ExamActivitiesFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         public void NavigateInsideTheFolderUnderMycourse(string FolderName, User.UserTypeEnum UserType)
         {

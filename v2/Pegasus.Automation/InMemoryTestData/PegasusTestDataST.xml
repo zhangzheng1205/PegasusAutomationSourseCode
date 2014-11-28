@@ -1878,5 +1878,671 @@
       <ActivityType>Homework</ActivityType>
       <IsCreated>true</IsCreated>
      </ActivityQuestionsList>
+     <ActivityQuestionsList>
+      <Name>Because psychologists want to be precise and measure as carefully as they can, they use ________ to study psychology.</Name>
+      <InCorrectOption>mental processes</InCorrectOption>
+      <CorrectOption>the scientific method</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+    <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Which of the following illustrates psychology's goal of control?</Name>
+      <InCorrectOption>giving psychological tests to a new therapy client to determine the client's symptoms.</InCorrectOption>
+      <CorrectOption>using rewards to help a smoker give up cigarettes.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Functionalism is heavily influenced by the work of</Name>
+      <InCorrectOption>Wilhelm Wundt.</InCorrectOption>
+      <CorrectOption>Charles Darwin.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Pavlov showed that _______ could be induced by a formerly unrelated stimulus.</Name>
+      <InCorrectOption>hallucinations</InCorrectOption>
+      <CorrectOption>a reflex</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>By making a loud noise when "Little Albert" was presented with a rat, John Watson taught the baby to fear rats. This proved that</Name>
+      <InCorrectOption>children are inherently afraid of rats.</InCorrectOption>
+      <CorrectOption>phobias could be learned through conditioning.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Researchers use ________ for reducing bias and error in the measurement of data.</Name>
+      <InCorrectOption>naturalistic observation</InCorrectOption>
+      <CorrectOption>the scientific method</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Behaviorism influenced the field of</Name>
+      <InCorrectOption>structuralism.</InCorrectOption>
+      <CorrectOption>cognitive psychology.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>According to B. F. Skinner, behavioral responses that are followed by pleasurable consequences are</Name>
+      <InCorrectOption>extinguished.</InCorrectOption>
+      <CorrectOption>strengthened, or reinforced.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Researchers who allow their expectations about what they will see to affect the results of their observation studies are suffering from</Name>
+      <InCorrectOption>the observer effect.</InCorrectOption>
+      <CorrectOption>observer bias.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>The tendency to feel that someone else is responsible for taking action when others are present is</Name>
+      <InCorrectOption>the free rider effect.</InCorrectOption>
+      <CorrectOption>diffusion of responsibility.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>The four goals of psychology are accomplished through</Name>
+      <InCorrectOption>laboratory observation.</InCorrectOption>
+      <CorrectOption>the scientific method.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Experimenters control the effects of extraneous or confounding variables upon members of experimental and control groups by using</Name>
+      <InCorrectOption>independent observers.</InCorrectOption>
+      <CorrectOption>random assignment.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>When you make an educated guess about the explanation for your observations, you are</Name>
+      <InCorrectOption>testing the hypothesis.</InCorrectOption>
+      <CorrectOption>forming a hypothesis.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>What is the main advantage of laboratory observation?</Name>
+      <InCorrectOption>that it is most cost effective</InCorrectOption>
+      <CorrectOption>the degree of control it gives the researcher</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>All of the following statements about surveys are true EXCEPT</Name>
+      <InCorrectOption>the order of the questions in the survey can affect its outcome.</InCorrectOption>
+      <CorrectOption>answers to survey questions are not impacted by courtesy bias.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>In an experiment, it is best to divide participants into the control or experimental group by</Name>
+      <InCorrectOption>surveying the participants first.</InCorrectOption>
+      <CorrectOption>using random assignment.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>If there is _________ in a medical experiment, the control group will show changes in the dependent variable even if they are given a harmless substitute rather than a real drug.</Name>
+      <InCorrectOption>random sample</InCorrectOption>
+      <CorrectOption>a placebo effect</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Neither the participants nor the experimenter know if the participants are in the control or experimental group in a</Name>
+      <InCorrectOption>single-blind study</InCorrectOption>
+      <CorrectOption>double-blind study</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Which of the following is a reason researchers prefer to use animals in experiments instead of humans?</Name>
+      <InCorrectOption>There are no limits to what researchers can do with animals.</InCorrectOption>
+      <CorrectOption>Studying long-term effects is much easier.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>A doctor informs the parents of a 14-year-old that without hospitalization her anorexia will worsen and cause grave medical conditions. The doctor is making a(n)</Name>
+      <InCorrectOption>diagnosis</InCorrectOption>
+      <CorrectOption>prediction.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>When a psychologist notes that children who watch violent cartoons tend to act more aggressively toward their peers, the psychologist is</Name>
+      <InCorrectOption>describing.</InCorrectOption>
+      <CorrectOption>explaining.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Wundt referred to the process of examining and measuring one's own thoughts and mental activities as</Name>
+      <InCorrectOption>evolutionary consciousness.</InCorrectOption>
+      <CorrectOption>objective introspection.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>The view that objective introspection could be used on thoughts as well as physical sensations is known as</Name>
+      <InCorrectOption>cognitive psychology.</InCorrectOption>
+      <CorrectOption>structuralism.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>A(n) ________ is a measure of the relationship between two or more variables.</Name>
+      <InCorrectOption>experiment</InCorrectOption>
+      <CorrectOption>correlation</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Which early perspective in psychology, associated with William James, focused on how the mind allows people to adapt, live, work, and play?</Name>
+      <InCorrectOption>psychoanalysis.</InCorrectOption>
+      <CorrectOption>functionalism.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Who was the first female president of the American Psychological Association?</Name>
+      <InCorrectOption>Francis Cecil Sumner</InCorrectOption>
+      <CorrectOption>Mary Whiton Calkins</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>In a negative correlation</Name>
+      <InCorrectOption>there is no relationship between the variables.</InCorrectOption>
+      <CorrectOption>the two variables have an inverse relationship.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Who believed that personality was formed in the first 6 years of life?</Name>
+      <InCorrectOption>John B. Watson</InCorrectOption>
+      <CorrectOption>Sigmund Freud</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Mary Cover Jones's research with a white rabbit focused on</Name>
+      <InCorrectOption>psychoanalysis.</InCorrectOption>
+      <CorrectOption>counterconditioning.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>The psychodynamic perspective draws from the work of</Name>
+      <InCorrectOption>Ivan Pavlov.</InCorrectOption>
+      <CorrectOption>Sigmund Freud.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Today, Gestalt psychology ideas are part of which branch of psychology?</Name>
+      <InCorrectOption>evolutionary psychology</InCorrectOption>
+      <CorrectOption>cognitive psychology</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>An institutional review board reviews</Name>
+      <InCorrectOption>double-blind studies only.</InCorrectOption>
+      <CorrectOption>a study’s safety and consideration for the research participants.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>The idea that sexual orientation may be related to the birth order of male children was posited by researchers in the field of</Name>
+      <InCorrectOption>behaviorism.</InCorrectOption>
+      <CorrectOption>biopsychology.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Which of the following is a guideline for dealing with human research participants?</Name>
+      <InCorrectOption>Subjects participate at their own risk.</InCorrectOption>
+      <CorrectOption>Data must remain confidential.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Over 40% of psychologists are</Name>
+      <InCorrectOption>employed by the federal government.</InCorrectOption>
+      <CorrectOption>employed in educational settings.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>If deception is necessary, participants must then be _________ after the study.</Name>
+      <InCorrectOption>apologized to</InCorrectOption>
+      <CorrectOption>debriefed</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Which of the following psychological professionals must always have a medical degree?</Name>
+      <InCorrectOption>psychologist</InCorrectOption>
+      <CorrectOption>psychiatrist</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Critical thinking is</Name>
+      <InCorrectOption>using one's brain at its maximum, or peak, potential.</InCorrectOption>
+      <CorrectOption>the ability to make reasoned judgments.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Which of the following is TRUE about crop circles?</Name>
+      <InCorrectOption>They are not subject to critical thinking.</InCorrectOption>
+      <CorrectOption>They have been shown to be a hoax.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>_____ is the rule of thumb stating that if there are two explanations for a phenomenon, the simplest explanation is more often the best one.</Name>
+      <InCorrectOption>Cognitive perspective-taking.</InCorrectOption>
+      <CorrectOption>The law of parsimony.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>The psychological perspective that is associated with William James is</Name>
+      <InCorrectOption>psychoanalysis.</InCorrectOption>
+      <CorrectOption>functionalism.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Freud believed that personality was formed</Name>
+      <InCorrectOption>after a traumatizing event.</InCorrectOption>
+      <CorrectOption>in the first 6 years of life.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>If a correlation coefficient is positive,</Name>
+      <InCorrectOption>the number is represented by the letter p.</InCorrectOption>
+      <CorrectOption>the two variables increase in the same direction.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>What did Watson believe about behavior?</Name>
+      <InCorrectOption>that it and personality form in the first six years of life.</InCorrectOption>
+      <CorrectOption>that it is learned.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Correlation will tell researchers all of the following EXCEPT ________ between variables.</Name>
+      <InCorrectOption>if there is a relationship</InCorrectOption>
+      <CorrectOption>if there is causation</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>John Watson believed that phobias</Name>
+      <InCorrectOption>are the result of a traumatic event.</InCorrectOption>
+      <CorrectOption>are learned through the process of conditioning.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Freud’s theory of psychoanalysis</Name>
+      <InCorrectOption>has no place in modern scientific study.</InCorrectOption>
+      <CorrectOption>is still in use by professionals today, with less emphasis on sex and sexual motivations.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>________ focuses on how people think, remember, store, and use information.</Name>
+      <InCorrectOption>Behaviorism</InCorrectOption>
+      <CorrectOption>Cognitive psychology</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>A ________ has a medical degree and is a medical doctor.</Name>
+      <InCorrectOption>psychoanalyst</InCorrectOption>
+      <CorrectOption>psychiatrist</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Which of the following is a guideline for doing research with people?</Name>
+      <InCorrectOption>Participants must understand that confidentiality is not guaranteed.</InCorrectOption>
+      <CorrectOption>Participants must be allowed to make an informed decision about participation.</CorrectOption>
+      <ActivityName>TakeTheChapter1Exam</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Harboring a belief that all male motorcyclists wear beards, then only noticing bearded motorcyclists is an example of</Name>
+      <InCorrectOption>a single-blind study.</InCorrectOption>
+      <CorrectOption>confirmation bias.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Sasha sat in the preschool classroom and watched the children play, writing down how well they interacted with each other. The children could see that Sasha was watching them, so they made an attempt to be extra well-behaved for her. Sasha's research will be impacted by</Name>
+      <InCorrectOption>observer bias.</InCorrectOption>
+      <CorrectOption>the observer effect.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Dr. Jonas wanted to determine what would happen if rats were given food every time they completed a maze. He believed they would learn to complete the maze faster. This belief is called</Name>
+      <InCorrectOption>control.</InCorrectOption>
+      <CorrectOption>a prediction.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Step four of the scientific method, drawing conclusions, is related to psychology’s goal of</Name>
+      <InCorrectOption>explanation.</InCorrectOption>
+      <CorrectOption>prediction.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>When Mary took the survey in the mall, she noticed that the interviewer was wearing an Obama button. She answered the questions more favorably toward Obama than she might otherwise have, probably because</Name>
+      <InCorrectOption>the survey questions were biased.</InCorrectOption>
+      <CorrectOption>of courtesy bias.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Gestalt psychology is best described by the slogan,</Name>
+      <InCorrectOption>“If something sounds too good to be true, it probably is.”</InCorrectOption>
+      <CorrectOption>“The whole is greater than the sum of its parts.”</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>If a researcher is observing a third grade classroom in full view of the students and finds that all the students are extremely quiet, polite, and attentive, what would the researcher be most likely to conclude?</Name>
+      <InCorrectOption>A survey would be a better approach.</InCorrectOption>
+      <CorrectOption>The students’ behavior is due to the observer effect.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>According to the behavioral perspective, a child who cries and is rewarded by getting his mother’s attention will</Name>
+      <InCorrectOption>be more attached to his mother.</InCorrectOption>
+      <CorrectOption>cry again in the future.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Mrs. Lewis participated in a study in which she was given no treatment for her condition. Mrs. Lewis was in the ________ group.</Name>
+      <InCorrectOption>experimental</InCorrectOption>
+      <CorrectOption>control</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Evolutionary psychology looks at humans’ aversion to bitter tastes as a(n) ______ behavior born of early humans’ avoidance of poisonous plants.</Name>
+      <InCorrectOption>phobic</InCorrectOption>
+      <CorrectOption>adaptive</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Mary is a psychologist who focuses on the role of the conscious and unconscious mind. To which perspective does Mary ascribe?</Name>
+      <InCorrectOption>humanistic</InCorrectOption>
+      <CorrectOption>psychodynamic</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Anna is 45-years-old and is suffering from hot flashes and extreme moodiness. From a _____ perspective, Anna's symptoms can be attributed to menopause.</Name>
+      <InCorrectOption>analytical</InCorrectOption>
+      <CorrectOption>biopsychological</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Mrs. O'Connor participated in a study in which she was told she would try out a new allergy medicine. She was in the group that received a sugar pill but she believed that the pill did indeed help control her allergy symptoms. This phenomenon is known as</Name>
+      <InCorrectOption>a successful experiment.</InCorrectOption>
+      <CorrectOption>the placebo effect.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>A drug company is determining the effects of a treatment for depression. Neither the researcher nor the participants know who is getting the treatment and who is being given a sugar pill. This type of study is</Name>
+      <InCorrectOption>single-blind.</InCorrectOption>
+      <CorrectOption>double-blind.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>If a researcher finds that people’s shoe sizes increase as their height increases, then shoe size and height have a(n)</Name>
+      <InCorrectOption>inverse relationship.</InCorrectOption>
+      <CorrectOption>positive correlation.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Dr. Edwards wants to show a causal relationship between tobacco smoking and cancer. Dr. Edwards should</Name>
+      <InCorrectOption>observe people smoking.</InCorrectOption>
+      <CorrectOption>conduct an experiment using animal participants.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>In measuring the effect of violent cartoons on childhood aggression, researchers must identify the __________ of “aggressive behavior.”</Name>
+      <InCorrectOption>hypothesis</InCorrectOption>
+      <CorrectOption>operational definition</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>A drug company conducts a study in which the experimenter gives half of the participants the drug being tested and the other half a placebo. This is an example of</Name>
+      <InCorrectOption>the experimenter effect.</InCorrectOption>
+      <CorrectOption>a single-blind study.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>To test for the effect of age on a person’s behavior, researchers would use a</Name>
+      <InCorrectOption>placebo.</InCorrectOption>
+      <CorrectOption>quasi-experimental design.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>How does humanism differ from psychodynamic theory and behaviorism?</Name>
+      <InCorrectOption>Humanists study humans in relation to animals.</InCorrectOption>
+      <CorrectOption>Humanism focuses on people's ability to direct their own lives.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>A researcher wants to describe children's normal behavior on the playground. The best method for this research is to use</Name>
+      <InCorrectOption>a case study.</InCorrectOption>
+      <CorrectOption>naturalistic observation.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>In an experiment in which half of the participants are given a caffeinated product and half are given a decaffeinated product to determine if caffeine will make them more talkative, the independent variable is</Name>
+      <InCorrectOption>the decaffeinated product.</InCorrectOption>
+      <CorrectOption>the presence or absence of caffeine.</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>A researcher wants to determine how most U.S. college students feel about the president. Which of the following groups provides a representative sample for this researcher's survey?</Name>
+      <InCorrectOption>honor roll students who have pledged to be truthful</InCorrectOption>
+      <CorrectOption>students selected randomly at college campuses across the country</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
+    <ActivityQuestionsList>
+      <Name>Which research method will allow researchers to determine the cause of a behavior?</Name>
+      <InCorrectOption>naturalistic observation</InCorrectOption>
+      <CorrectOption>experiment</CorrectOption>
+      <ActivityName>CompleteTheChapter1StudyPlan</ActivityName>
+      <ActivityBehaviourType>StudyPlan</ActivityBehaviourType>
+      <ActivityType>Homework</ActivityType>
+      <IsCreated>true</IsCreated>
+    </ActivityQuestionsList>
   </ArrayOfActivityQuestionsList>
-</Data>
+  </Data>

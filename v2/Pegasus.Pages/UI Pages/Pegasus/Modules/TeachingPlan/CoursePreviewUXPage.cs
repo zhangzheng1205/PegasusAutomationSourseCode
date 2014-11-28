@@ -14,10 +14,6 @@ using System.Configuration;
 using System.Diagnostics;
 using System.Globalization;
 
-
-
-
-
 namespace Pegasus.Pages.UI_Pages
 {
     /// <summary>
@@ -231,14 +227,14 @@ namespace Pegasus.Pages.UI_Pages
 
         }
 
-            /// <summary>
-            /// Returns the class name of the icon of the activity.
-            /// </summary>
-            /// <param name="activityName">This is the activity.</param>
-            /// <returns></returns>
-            private string  GetActivityClassName(string activityName)
+        /// <summary>
+        /// Returns the class name of the icon of the activity.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <returns></returns>
+        private string  GetActivityClassName(string activityName)
         {
-                // Returns the class name of the icon of the activity
+             // Returns the class name of the icon of the activity
             logger.LogMethodEntry("CoursePreviewUXPage", "GetActivityClassName",
             base.IsTakeScreenShotDuringEntryExit);
             // Returns the class name of the icon of the activity
@@ -254,11 +250,134 @@ namespace Pegasus.Pages.UI_Pages
                 CoursePreviewUX_Page_PastDueDateIcon_Xpath_Locator, pastDueDateIconId)).
                 GetAttribute("class");
             logger.LogMethodExit("CoursePreviewUXPage", "GetActivityClassName",
-          base.IsTakeScreenShotDuringEntryExit);
+                base.IsTakeScreenShotDuringEntryExit);
             return pastDueDateClass;
             }
+
+        /// <summary>
+       /// Launch the asset from ToDO Tab.
+       /// </summary>        
+       /// <param name="assetName">This is the asset name.</param>
+        public void LaunchAssetFromToDoTab(string assetName)
+            {
+                //Launch the asset from ToDO Tab
+                logger.LogMethodEntry("LauncheTextPage", "LaunchAssetFromToDoTab",
+                            base.IsTakeScreenShotDuringEntryExit);
+                string getAssetName = string.Empty;
+                try
+                {
+                  //Switch to Iframe
+                  base.SwitchToIFrame(CoursePreviewUXPageResource.
+                            CouresPreviewUX_Page_TodoPage_Iframe_Name);
+                  //Get the count of assets
+                  int getCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                      CouresPreviewUX_Page_TodoPage_AssetCount_XPath_Locator);
+                  for (int assetSearch = 2; assetSearch <= getCount; assetSearch++)
+                   {
+                      //Get asset name     
+                      getAssetName = base.GetElementTextByXPath(String.Format(CoursePreviewUXPageResource.
+                            CouresPreviewUX_Page_TodoPage_AssetName_XPathLocator, assetSearch));
+                      if (getAssetName == assetName)
+                       {
+                         base.WaitForElement(By.XPath(String.Format(CoursePreviewUXPageResource.
+                                CouresPreviewUX_Page_TodoPage_AssetName_XPathLocator, assetSearch)));
+                         IWebElement selectAsset = base.GetWebElementPropertiesByXPath(String.Format(
+                                CoursePreviewUXPageResource.
+                               CouresPreviewUX_Page_TodoPage_AssetName_XPathLocator, assetSearch));
+                         base.ClickByJavaScriptExecutor(selectAsset);
+                         break;
+                       }
+                   }
+               }
+              catch (Exception e)
+              {
+                  ExceptionHandler.HandleException(e);
+              }
+             logger.LogMethodExit("LauncheTextPage", "LaunchAssetFromToDoTab",
+                   base.IsTakeScreenShotDuringEntryExit);
+         }
+
+        /// <summary>
+        /// Get the status of the asset from ToDO  Tab.
+        /// </summary>
+        /// <param name="assetStatus">This is the asset name.</param>
+        /// <returns>The asset status.</returns>
+         public string GetAssetStatus(string assetStatus)
+            {      
+              //Get the status of the asset
+                logger.LogMethodEntry("LauncheTextPage", "GetAssetStatus",
+                        base.IsTakeScreenShotDuringEntryExit);
+                string getAssetStatus = string.Empty;
+                try
+                {
+                    base.SwitchToIFrame(CoursePreviewUXPageResource.
+                            CouresPreviewUX_Page_TodoPage_Iframe_Name);
+                    int getCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                        CouresPreviewUX_Page_TodoPage_AssetCount_XPath_Locator);
+                    for (int statusSearch = 2; statusSearch <= getCount; statusSearch++)
+                    {
+                        base.WaitForElement(By.XPath(String.Format(CoursePreviewUXPageResource.
+                            CouresPreviewUX_Page_TodoPage_AssetStatus_XPathLocator, statusSearch)));
+                        getAssetStatus = base.GetElementTextByXPath(String.Format(
+                            CoursePreviewUXPageResource.
+                            CouresPreviewUX_Page_TodoPage_AssetStatus_XPathLocator, statusSearch));
+                        if (getAssetStatus == assetStatus)
+                        {
+                            break;
+                        }
+                    }
+                    //Click on 'I'm Done' button
+                    base.WaitForElement(By.XPath(CoursePreviewUXPageResource.
+                        CouresPreviewUX_Page_TodoPage_ImDone_XPath_Locator));
+                    IWebElement getImDone = base.GetWebElementPropertiesByXPath(CoursePreviewUXPageResource.
+                        CouresPreviewUX_Page_TodoPage_ImDone_XPath_Locator);
+                    base.ClickByJavaScriptExecutor(getImDone);
+                }
+                catch (Exception e)
+                {
+                    ExceptionHandler.HandleException(e);
+                }
+                logger.LogMethodExit("LauncheTextPage", "GetAssetStatus",
+                      base.IsTakeScreenShotDuringEntryExit);
+                return assetStatus;
+            }
+
+        /// <summary>
+        /// Get the asset name from Completed tab.
+       /// </summary>
+       /// <param name="assetName">This is the asset name.</param>
+       /// <returns>The asset name.</returns>
+         public string GetAssetNameInCompletedTab(string assetName)
+            {
+                logger.LogMethodEntry("LauncheTextPage", "GetAssetStatus",
+                        base.IsTakeScreenShotDuringEntryExit);
+                string assetNameInCompleted = string.Empty;
+                //Click on Completed tab
+                IWebElement getCompleted = base.GetWebElementPropertiesByPartialLinkText(
+                    CoursePreviewUXPageResource.CouresPreviewUX_Page_TodoPage_Completed_PartialLinkText);
+                base.ClickByJavaScriptExecutor(getCompleted);
+                //Switch to Iframe
+                base.SwitchToIFrame(CoursePreviewUXPageResource.
+                    CouresPreviewUX_Page_TodoPage_Iframe_Name);
+                //Count the number of assets
+                int getCount = base.GetElementCountByXPath(CoursePreviewUXPageResource.
+                    CouresPreviewUX_Page_TodoPage_AssetCount_XPath_Locator);
+                for (int assetSearch = 2; assetSearch <= getCount; assetSearch++)
+                {
+                    //Get asset name     
+                    assetNameInCompleted = base.GetElementTextByXPath(String.Format(CoursePreviewUXPageResource.
+                        CouresPreviewUX_Page_TodoPage_AssetName_XPathLocator, assetSearch));
+                    if (assetNameInCompleted == assetName)
+                    {
+                        break;
+                    }
+                    logger.LogMethodExit("LauncheTextPage", "GetAssetStatus",
+                         base.IsTakeScreenShotDuringEntryExit);
+                }
+                return assetNameInCompleted;
+            }
         
-        }
     }
+}
 
 

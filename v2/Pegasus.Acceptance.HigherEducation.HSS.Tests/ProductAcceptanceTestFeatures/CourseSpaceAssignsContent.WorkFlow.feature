@@ -7,12 +7,17 @@
 #TestCase Id: peg-22221
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: Instructor assign the asset with duedate in Managecoursework
+Given I browsed the login url for "HSSCsSmsInstructor"
+When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
 Then I should be on the "Course Materials" page
-When I navigate to "Review the Chapter 04 Learning Objectives" asset in "Course Materials" tab as "HSSCsSmsInstructor"
-And I click on "Properties" option in c menu of "Review the Chapter 04 Learning Objectives" asset
+When I select "Review the Chapter 4 Learning Objectives" in "Course Materials" by "HSSCsSmsInstructor"
+And I click on "Properties" option in c menu of "Review the Chapter 4 Learning Objectives" asset
 Then I should be on the "Properties" page
 When I assign asset with due date and save
 Then I should see the successfull message "Properties updated successfully."
-And I should see assigned icon for "Review the Chapter 04 Learning Objectives" 
+And I should see assigned icon for "Review the Chapter 4 Learning Objectives" 
 

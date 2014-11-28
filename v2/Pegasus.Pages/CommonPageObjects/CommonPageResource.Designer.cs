@@ -187,11 +187,11 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Chapter 04: The Brain and Nervous System.
+        ///   Looks up a localized string similar to Review the Chapter 4 Learning Objectives.
         /// </summary>
-        internal static string CommonPage_Chapter4BrainAndNervous_FolderName {
+        internal static string CommonPage_Chapter4_FolderName {
             get {
-                return ResourceManager.GetString("CommonPage_Chapter4BrainAndNervous_FolderName", resourceCulture);
+                return ResourceManager.GetString("CommonPage_Chapter4_FolderName", resourceCulture);
             }
         }
         
@@ -327,6 +327,24 @@ namespace Pegasus.Pages.CommonPageObjects {
         internal static string CommonPage_HssChapter1ExamActivities_Link {
             get {
                 return ResourceManager.GetString("CommonPage_HssChapter1ExamActivities_Link", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chapter 4: Consciousness: Sleep, Dreams, Hypnosis, and Drugs.
+        /// </summary>
+        internal static string CommonPage_HssChapter4Activities_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_HssChapter4Activities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Review the Chapter 4 Learning Objectives.
+        /// </summary>
+        internal static string CommonPage_HssChapter4ChapterReview_Activities_Link {
+            get {
+                return ResourceManager.GetString("CommonPage_HssChapter4ChapterReview_Activities_Link", resourceCulture);
             }
         }
         

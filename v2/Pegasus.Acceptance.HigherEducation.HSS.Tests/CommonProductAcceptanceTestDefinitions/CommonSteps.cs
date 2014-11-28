@@ -169,7 +169,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             obj.SubmitForGrading();
             Logger.LogAssertion("AnswerActivityQuestion", ScenarioContext.Current.ScenarioInfo.
                Title, () => Assert.AreEqual(activityScore, obj.GetActivityScore()));
-            obj.RuturnBackToCourseSpace();
+            obj.ReturnBackToCourseSpace();
             Logger.LogMethodExit("CommonSteps", "ClickOnSubmitTheActivity",
              base.IsTakeScreenShotDuringEntryExit);
         }
@@ -965,6 +965,64 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ApproveAssignedToCopyStateForSection",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+        /// <summary>
+        /// Launch the asset .
+        /// </summary>
+        /// <param name="assetName">This is the asset name.</param>
+        [When(@"I launch ""(.*)"" asset")]
+        public void LaunchAsset(string assetName)
+        {
+            //Launch the asset
+            Logger.LogMethodEntry("CommonSteps",
+                "LaunchchapterReviewAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().LaunchAssetFromToDoTab(assetName);
+            Logger.LogMethodExit("CommonSteps",
+             "LaunchchapterReviewAsset",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the status in TODO Tab.
+        /// </summary>
+        /// <param name="assetStatus">This is the Asset Status.</param>
+        [Then(@"I should see ""(.*)"" status for the asset")]
+        public void VerifyAssetStatus(string assetStatus)
+        {
+            //Verify the status of the asset
+            Logger.LogMethodEntry("CommonSteps",
+                "OpenAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyAssetStatus",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(assetStatus, new CoursePreviewUXPage().
+                   GetAssetStatus(assetStatus)));
+            Thread.Sleep(5000);
+            Logger.LogMethodExit("CommonSteps",
+                "OpenAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify the status in Completed Tab.
+        /// </summary>
+        /// <param name="assetName">This is the asset name.</param>
+        [Then(@"I should see ""(.*)"" in the 'Completed' tab")]
+        public void VerifyStatusInCompletedTab(string assetName)
+        {
+            Logger.LogMethodEntry("CommonSteps",
+                  "OpenAsset",
+                  base.IsTakeScreenShotDuringEntryExit);
+            Logger.LogAssertion("VerifyAssetStatus",
+               ScenarioContext.Current.ScenarioInfo.Title,
+               () => Assert.AreEqual(assetName, new CoursePreviewUXPage().
+                   GetAssetNameInCompletedTab(assetName)));
+            Logger.LogMethodExit("CommonSteps",
+                "OpenAsset",
+                base.IsTakeScreenShotDuringEntryExit);
+        }       
 
 
     }

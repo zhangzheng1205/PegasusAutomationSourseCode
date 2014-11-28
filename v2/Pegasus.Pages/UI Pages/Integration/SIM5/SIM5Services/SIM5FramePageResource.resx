@@ -1074,8 +1074,8 @@
   <data name="SIM5Frame_Page_CloseTable_XPath_Locator" xml:space="preserve">
     <value>.//*[@id='access-item-1']/div</value>
   </data>
-  <data name="SIM5Frame_Page_CreateButton_XPath_Locator" xml:space="preserve">
-    <value>.//*[@id='button1']</value>
+  <data name="SIM5Frame_Page_CreateButton_ID_Locator" xml:space="preserve">
+    <value>button1</value>
   </data>
   <data name="SIM5Frame_Page_CreateForm_Name" xml:space="preserve">
     <value>1A Student Form</value>

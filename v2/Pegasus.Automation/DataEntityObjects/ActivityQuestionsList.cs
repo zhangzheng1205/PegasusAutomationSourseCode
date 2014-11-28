@@ -27,8 +27,8 @@ namespace Pegasus.Automation.DataTransferObjects
         public enum ActivityNameEnum
         {
             #region Question Name
-            TakeTheChapter1Exam = 1
-
+            TakeTheChapter1Exam = 1,
+            CompleteTheChapter1StudyPlan = 2
             #endregion
         }
 
@@ -38,7 +38,8 @@ namespace Pegasus.Automation.DataTransferObjects
         public enum ActivityBehaviourTypeEnum
         {
             #region Activity Type
-            BasicRandom = 1
+            BasicRandom = 1,
+            StudyPlan = 2
             #endregion
         }
 
