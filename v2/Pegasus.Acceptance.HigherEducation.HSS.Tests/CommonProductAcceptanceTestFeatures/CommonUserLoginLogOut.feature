@@ -12,23 +12,37 @@ Given I am on the "Global Home" page
 When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSProgramAdmin"
 
 #Purpose: Verify The User Login As CourseSpaceSMSInstructor To HedMyPsychLabProgram Course
-Scenario: User Login As HSSCsSMSInstructor and Navigate To HSSMyPsychLabProgram Course
+Scenario: User Login As HSSCsSMSInstructor and navigate to HSSMyPsychLabProgram Course
 Given I browsed the login url for "HSSCsSmsInstructor"
 When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 
+#Purpose: Verify The User Login As CourseSpaceSMSStudent
+Scenario: User Login As HSSCsSMSStudent 
+Given I browsed the login url for "HSSCsSmsStudent"
+When I logged into the Pegasus as "HSSCsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+
 #Purpose: Verify The User Login As CourseSpaceSMSStudent To HedMyPsychLabProgram Course
-Scenario: User Login As HSSCsSMSStudent and Navigate To HSSMyPsychLabProgram Course
+Scenario: User Login As HSSCsSMSStudent and navigate to HSSMyPsychLabProgram Course
 Given I browsed the login url for "HSSCsSmsStudent"
 When I logged into the Pegasus as "HSSCsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsStudent"
 
-#Purpose: Login as Zero Score SMS Student
-Scenario: User login as SMS student to score zero percent
+#Purpose: Login as Zero Score SMS Student 
+Scenario: User login as HSSCsSMSStudent student to score zero percent
+Given I browsed the login url for "HSSCsSmsStudent"
+When I login as "scoring 0" into the pegasus as "HSSCsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+
+#Purpose: Login as Zero Score SMS Student and navigate to HSSMyPsychLabProgram
+Scenario: User login as HSSCsSMSStudent student to score zero percent and navigate to instructor course
 Given I browsed the login url for "HSSCsSmsStudent"
 When I login as "scoring 0" into the pegasus as "HSSCsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
@@ -50,12 +64,6 @@ Scenario: User LogOut As HSSCourseSpaceAdmin
 When I "Sign out" from the "HSSProgramAdmin"
 Then I should see the successfull message "You have been signed out of the application."
 
-#Purpose: Verify The User Login As CourseSpaceSMSStudent
-Scenario: User Login As HSSCsSMSStudent 
-Given I browsed the login url for "HSSCsSmsStudent"
-When I logged into the Pegasus as "HSSCsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
 
 #Purpose: Verify The User Login As CourseSpaceSMSInstructor 
 Scenario: User Login As HSSCsSMSInstructor
