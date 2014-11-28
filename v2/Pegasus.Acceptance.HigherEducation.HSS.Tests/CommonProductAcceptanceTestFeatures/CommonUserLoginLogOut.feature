@@ -50,6 +50,20 @@ Scenario: User LogOut As HSSCourseSpaceAdmin
 When I "Sign out" from the "HSSProgramAdmin"
 Then I should see the successfull message "You have been signed out of the application."
 
+#Purpose: Verify The User Login As CourseSpaceSMSStudent
+Scenario: User Login As HSSCsSMSStudent 
+Given I browsed the login url for "HSSCsSmsStudent"
+When I logged into the Pegasus as "HSSCsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+
+#Purpose: Verify The User Login As CourseSpaceSMSInstructor 
+Scenario: User Login As HSSCsSMSInstructor
+Given I browsed the login url for "HSSCsSmsInstructor"
+When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+
 
 
 

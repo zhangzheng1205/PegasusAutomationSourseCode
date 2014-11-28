@@ -63,6 +63,10 @@ namespace Pegasus.Pages.UI_Pages
                         new ManageTemplatePage().StoreSectionID(sectionName,
                             Course.CourseTypeEnum.MyITLabOffice2013Program);
                         break;
+                    
+
+                    
+
                 }
             }
             catch (Exception e)
@@ -180,6 +184,7 @@ namespace Pegasus.Pages.UI_Pages
                 case Course.CourseTypeEnum.HedMilAcceptanceSIMProgramCourse:
                 case Course.CourseTypeEnum.HedMilAcceptanceSIM5ProgramCourse:
                 case Course.CourseTypeEnum.MyITLabForOffice2013Master:
+                case Course.CourseTypeEnum.HSSMyPsychLabMaster:
                     // Enter section count in Drop Down box
                     base.FillTextBoxById(AddNewSectionPageResource.
                         AddNewSection_Page_NoList_Id_Locator, AddNewSectionPageResource.

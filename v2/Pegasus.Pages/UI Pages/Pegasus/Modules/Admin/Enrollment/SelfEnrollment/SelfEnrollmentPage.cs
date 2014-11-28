@@ -57,6 +57,7 @@ namespace Pegasus.Pages.UI_Pages
                     case Course.CourseTypeEnum.HedMilAcceptanceSIMProgramCourse:
                     case Course.CourseTypeEnum.HedMilAcceptanceSIM5ProgramCourse:
                     case Course.CourseTypeEnum.MyITLabOffice2013Program:
+                    case Course.CourseTypeEnum.HSSMyPsychLabProgram:
                         // Enter section id in the Textfield
                         base.FillTextBoxById(SelfEnrollmentPageResource.
                             SelfEnrollment_Page_CourseID_TextBox_Id_Locator,

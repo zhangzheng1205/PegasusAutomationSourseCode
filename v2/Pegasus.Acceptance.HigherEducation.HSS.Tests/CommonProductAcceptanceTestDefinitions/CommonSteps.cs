@@ -3,14 +3,16 @@ using System.Globalization;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using Pegasus.Pages.CommonPageObjects;
 using Pegasus.Automation.DataTransferObjects;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 using Pegasus.Pages.UI_Pages;
-using Pegasus.Pages.Exceptions;
 using TechTalk.SpecFlow;
-using Pegasus.Pages.CommonPageObjects;
-using Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTestDefinitions;
+using System.Configuration;
+using Pegasus.Pages;
+using Pegasus.Pages.UI_Pages.Pegasus.Modules.Discussion;
+
 
 namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
     CommonProductAcceptanceTestDefinitions
@@ -810,7 +812,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         /// </summary>
         /// <param name="tabName">This is Tab Name.</param>
         /// <param name="pageName">This is Page Name.</param>
-        [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page as PAdmin")]
+        [When(@"I navigate to ""(.*)"" tab of the ""(.*)"" page as Admin")]
         public void NavigateToTabInProgramAdminPage(
             string subNavigationTabName, string subNavigationTabParentWindowName)
         {
@@ -921,6 +923,49 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 "NavigateToEtextWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Verify Section in Active State.
+        /// </summary>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        [When(@"I verify the Section created from ""(.*)"" course Template for AssignedToCopy state")]
+        public void SectionInAssignedToCopyState(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Verify Section in Active State
+            Logger.LogMethodEntry("ProgramAdmin", "SectionInAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Approve Section in Active State
+            new ManageTemplatePage().ApproveInActiveStateOfEntityInProgramAdministration(
+                course.SectionName);
+            Logger.LogMethodExit("ProgramAdmin", "SectionInAssignedToCopyState",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify Section in Active State or not.
+        /// </summary>
+        /// /// <param name="courseTypeEnum">This is course type enum.</param>
+        [Then(@"I should see the Section created from ""(.*)"" course Template to be successfully out of AssignedToCopy state")]
+        public void ApproveAssignedToCopyStateForSection(
+            Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Verify Section in Active State
+            Logger.LogMethodEntry("CommonSteps", "ApproveAssignedToCopyStateForSection",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Assert Verify Template in Active State or not
+            Logger.LogAssertion("VerifyTemplateActiveState",
+                ScenarioContext.Current.ScenarioInfo.Title, () =>
+                Assert.AreEqual(false, new ManageTemplatePage().GetAssignToCopyStateText
+                (course.SectionName).Contains("Request is Processing and will be available soon")));
+            Logger.LogMethodExit("CommonSteps", "ApproveAssignedToCopyStateForSection",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
     }
 }

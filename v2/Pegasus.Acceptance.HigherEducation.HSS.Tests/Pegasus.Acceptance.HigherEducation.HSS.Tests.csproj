@@ -65,9 +65,11 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="ProductAcceptanceTestDefinitions\AssignmentCalendar.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\CourseSpaceEnrollments.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\GradeBook.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\LoginLogout.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\LoginLogoutResource.Designer.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\ProgramAdmin.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ProgramAdminReports.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ProgramAdminReportsResource.Designer.cs" />
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceAssignsContent.WorkFlow.feature.cs">
@@ -75,10 +77,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceEnrollments.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceEnrollments.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceGradeBook.WorkFlow.feature.cs">
       <DependentUpon>CourseSpaceGradeBook.WorkFlow.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceProgramAdmin.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceProgramAdmin.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceStudent.Workflow.feature.cs">
       <DependentUpon>CourseSpaceStudent.Workflow.feature</DependentUpon>
@@ -114,13 +126,24 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.DemoAcceptanceTest.Hed.HSS.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.BVT.HSS.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceAssignsContent.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceAssignsContent.WorkFlow.feature.cs</LastGenOutput>
     </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceEnrollments.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceEnrollments.feature.cs</LastGenOutput>
+    </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceGradeBook.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceGradeBook.WorkFlow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceProgramAdmin.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceProgramAdmin.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudent.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
