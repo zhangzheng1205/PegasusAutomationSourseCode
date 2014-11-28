@@ -84,6 +84,8 @@ testRunner.When("I Click on eText link", ((string)(null)), ((TechTalk.SpecFlow.T
 testRunner.Then("I should be on the \"Pearson eText Sign In Page\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 11
 testRunner.And("I close eText Window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -94,20 +96,24 @@ testRunner.And("I close eText Window", ((string)(null)), ((TechTalk.SpecFlow.Tab
         public virtual void StudentAbruptlyClosesThePresentation()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student abruptly closes the presentation", ((string[])(null)));
-#line 15
-this.ScenarioSetup(scenarioInfo);
 #line 16
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 17
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
-testRunner.When("I select \"Take the Chapter 1 Exam\" in \"Course Materials\" by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 19
-testRunner.Then("I should be on the \"Exam\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I select \"Take the Chapter 1 Exam\" in \"Course Materials\" by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
-testRunner.When("I forcibly close the Exam window abdruplty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should be on the \"Exam\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 21
+testRunner.When("I forcibly close the Exam window abdruplty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 22
 testRunner.Then("I should see the \"In Progress\" status for the activity \"Take the Chapter 1 Exam\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 23
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -118,23 +124,29 @@ testRunner.Then("I should see the \"In Progress\" status for the activity \"Take
         public virtual void StudentAnswersTheQuestionsAndPerformSaveForLater()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the questions and perform Save for later", ((string[])(null)));
-#line 26
-this.ScenarioSetup(scenarioInfo);
-#line 27
-testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 28
-testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 29
-testRunner.When("I select \"Take the Chapter 1 Exam\" in \"Course Materials\" by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 30
-testRunner.Then("I should be on the \"Exam\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 31
+testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 32
+testRunner.When("I select \"Take the Chapter 1 Exam\" in \"Course Materials\" by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 33
+testRunner.Then("I should be on the \"Exam\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 34
 testRunner.And("I answer activity \"TakeTheChapter1Exam\" with behaviour \"BasicRandom\" of \"Homework" +
                     "\" type with \"partial\" answers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
+#line 35
 testRunner.When("I click on save for later button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 33
+#line 36
 testRunner.Then("I should see the \"In Progress\" status for the activity \"Take the Chapter 1 Exam\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 37
+testRunner.And("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 38
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 39
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -145,30 +157,30 @@ testRunner.Then("I should see the \"In Progress\" status for the activity \"Take
         public virtual void StudentAnswersTheQuestionsAndScores100()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the questions and scores 100%", ((string[])(null)));
-#line 38
+#line 44
 this.ScenarioSetup(scenarioInfo);
-#line 39
+#line 45
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
+#line 46
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 41
+#line 47
 testRunner.When("I select \"Take the Chapter 1 Exam\" in \"Course Materials\" by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 42
+#line 48
 testRunner.Then("I should be on the \"Exam\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 43
+#line 49
 testRunner.And("I answer activity \"TakeTheChapter1Exam\" with behaviour \"BasicRandom\" of \"Homework" +
                     "\" type with \"correct\" answers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
+#line 50
 testRunner.When("I click on Submit the activity \"100%\" score should be displayed in the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
+#line 51
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 46
+#line 52
 testRunner.And("I should see the \"Passed\" status for the activity \"Take the Chapter 1 Exam\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 47
+#line 53
 testRunner.When("I click on View Submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 48
+#line 54
 testRunner.Then("I should see the \"100 %\" score in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 49
+#line 55
 testRunner.And("I should see Student \"scoring 100\" as \"HSSCsSmsStudent\" and displayed like \"Grade" +
                     "book Grade : 100.00%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -181,30 +193,30 @@ testRunner.And("I should see Student \"scoring 100\" as \"HSSCsSmsStudent\" and 
         public virtual void StudentAnswersTheQuestionsAndScores0()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the questions and scores 0%", ((string[])(null)));
-#line 54
+#line 60
 this.ScenarioSetup(scenarioInfo);
-#line 55
+#line 61
 testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 62
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 57
+#line 63
 testRunner.When("I select \"Take the Chapter 1 Exam\" in \"Course Materials\" by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 58
+#line 64
 testRunner.Then("I should be on the \"Exam\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 59
+#line 65
 testRunner.And("I answer activity \"TakeTheChapter1Exam\" with behaviour \"BasicRandom\" of \"Homework" +
                     "\" type with \"incorrect\" answers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 60
+#line 66
 testRunner.When("I click on Submit the activity \"0%\" score should be displayed in the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 61
+#line 67
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 62
+#line 68
 testRunner.And("I should see the \"Not passed\" status for the activity \"Take the Chapter 1 Exam\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 63
+#line 69
 testRunner.When("I click on View Submission", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
+#line 70
 testRunner.Then("I should see the \"0 %\" score in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 65
+#line 71
 testRunner.And("I should see Student \"scoring 0\" as \"HSSCsSmsStudent\" and displayed like \"Gradebo" +
                     "ok Grade : 0.00%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -217,21 +229,21 @@ testRunner.And("I should see Student \"scoring 0\" as \"HSSCsSmsStudent\" and di
         public virtual void StudentSubmitsTheNonGradableAssetsFromTheTODOTab()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submits the Non gradable assets from the TO DO tab", ((string[])(null)));
-#line 70
-this.ScenarioSetup(scenarioInfo);
-#line 71
-testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 72
-testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 73
-testRunner.When("I launch \"Review the Chapter 1 Learning Objectives\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 74
-testRunner.Then("I should be on the \"Learning Objectives - Chapter 1\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 75
-testRunner.When("I close the \"Learning Objectives - Chapter 1\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 76
-testRunner.Then("I should see \"Viewed\" status for the asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 77
+testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 78
+testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 79
+testRunner.When("I launch \"Review the Chapter 1 Learning Objectives\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 80
+testRunner.Then("I should be on the \"Learning Objectives - Chapter 1\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 81
+testRunner.When("I close the \"Learning Objectives - Chapter 1\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 82
+testRunner.Then("I should see \"Viewed\" status for the asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 83
 testRunner.Then("I should see \"Review the Chapter 1 Learning Objectives\" in the \'Completed\' tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -243,17 +255,17 @@ testRunner.Then("I should see \"Review the Chapter 1 Learning Objectives\" in th
         public virtual void StudentAnswersTheStudyPlanPretestQuestionsAndScores0()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the Study plan pretest questions and scores 0%", ((string[])(null)));
-#line 82
+#line 88
 this.ScenarioSetup(scenarioInfo);
-#line 83
+#line 89
 testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 84
+#line 90
 testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 85
+#line 91
 testRunner.When("I launch \"Complete the Chapter 1 Study Plan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 86
+#line 92
 testRunner.Then("I should be on the \"Open Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 87
+#line 93
 testRunner.When("I Click open under \"PreTest\" frame to launch the Questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();

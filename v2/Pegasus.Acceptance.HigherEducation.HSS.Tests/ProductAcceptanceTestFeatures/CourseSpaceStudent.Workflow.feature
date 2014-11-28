@@ -9,6 +9,7 @@ Scenario: Student launching eText
 When I Click on eText link
 Then I should be on the "Pearson eText Sign In Page" window
 And I close eText Window
+Then I should be on the "Course Materials" page
 
 #Purpose : Basic/Random activity launch from Course Calendar and student abruptly closes the presentation
 #Test case ID : peg-22160
@@ -19,6 +20,8 @@ When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStuden
 Then I should be on the "Exam" page displayed with questions
 When I forcibly close the Exam window abdruplty
 Then I should see the "In Progress" status for the activity "Take the Chapter 1 Exam"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Basic/Random activity from Course Calendar and student perform Save for later
 #Test case ID : peg-22156
@@ -31,6 +34,9 @@ Then I should be on the "Exam" page displayed with questions
 And I answer activity "TakeTheChapter1Exam" with behaviour "BasicRandom" of "Homework" type with "partial" answers
 When I click on save for later button
 Then I should see the "In Progress" status for the activity "Take the Chapter 1 Exam"
+And I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Basic/Random activity from Course Calendar and student scoring 100%
 #Test case ID : peg-22151

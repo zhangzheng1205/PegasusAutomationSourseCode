@@ -1744,6 +1744,9 @@ namespace Pegasus.Pages.UI_Pages
                 getActivitySubmittedStatus = base.GetElementTextByXPath(string.
                 Format(StudentPresentationPageResource.
                 StudentPresentation_Page_Activity_Status_Xpath_Locator, activityColumnCount));
+                //Select main Window
+                base.SelectWindow(StudentPresentationPageResource.
+                    StudentPresentation_Page_BaseWindow_Title_Name);
             }
             catch (Exception e)
             {
@@ -6066,9 +6069,19 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         {
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnViewSubmission",
             base.IsTakeScreenShotDuringEntryExit);
-            IWebElement ViewSubmissionButton = base.GetWebElementPropertiesById(
-                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ViewSubmissionButton_ID_Locator);
-            base.ClickByJavaScriptExecutor(ViewSubmissionButton);
+            try
+            {
+                //Select Window And Frame
+                this.SelectWindowAndFrame();
+                IWebElement ViewSubmissionButton = base.GetWebElementPropertiesById(
+                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ViewSubmissionButton_ID_Locator);
+                //Click on view submission.
+                base.ClickByJavaScriptExecutor(ViewSubmissionButton);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("StudentPresentationPage", "ClickOnViewSubmission",
             base.IsTakeScreenShotDuringEntryExit);
         }
