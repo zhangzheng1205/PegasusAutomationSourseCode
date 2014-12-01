@@ -98,7 +98,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         public static IWebDriver GetInstance()
         {
             IWebDriver webDriver = null;
-
+            
             if (_isRemote)
             {
                 DesiredCapabilities remoteCapability;
@@ -112,7 +112,8 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
                     default: throw new ArgumentException("The suggested browser was not found");
                 }
                 // object representing the image of the page on the screen
-                webDriver = new ScreenShotRemoteWebDriver(new Uri(_remoteHubUrl), remoteCapability);
+                webDriver = new RemoteWebDriver(new Uri(_remoteHubUrl), remoteCapability,
+                    commandTimeout: TimeSpan.FromSeconds(TimeOut));
                 webDriver.Manage().Timeouts().SetPageLoadTimeout(TimeSpan.FromSeconds(TimeOut));
             }
             else
