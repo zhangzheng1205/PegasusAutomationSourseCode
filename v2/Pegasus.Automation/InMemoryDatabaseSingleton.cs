@@ -35,11 +35,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
             _inMemoryDatabase = new InMeoryDatabase();
 
             // based on environment deserialize xml data in memory
-            switch (AutomationConfigurationManager.ApplicationTestEnvironment)
+            switch (AutomationConfigurationManager.ApplicationTestEnvironment.ToUpper())
             {
                 case "ST": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
-                case "VM": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
+                case "CGIE": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;
                 case "PPE": this.DeserializeTheXmlDataInMemory(GetInMemoryTestDataFilePath
                     (AutomationConfigurationManager.ApplicationTestEnvironment)); break;

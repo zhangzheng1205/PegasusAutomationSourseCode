@@ -124,7 +124,7 @@
     <Content Include="InMemoryTestData\PegasusTestDataVCD.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="InMemoryTestData\PegasusTestDataVM.xml">
+    <Content Include="InMemoryTestData\PegasusTestDataCGIE.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="TestData\Branding_Image.png" />
