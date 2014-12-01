@@ -120,6 +120,9 @@
   <data name="BrowserName_Key" xml:space="preserve">
     <value>Browser</value>
   </data>
+  <data name="CourseSpaceURLRootCGIE_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootCGIE</value>
+  </data>
   <data name="CourseSpaceURLRootPPE_Key" xml:space="preserve">
     <value>CourseSpaceURLRootPPE</value>
   </data>
@@ -131,9 +134,6 @@
   </data>
   <data name="CourseSpaceURLRootVCD_Key" xml:space="preserve">
     <value>CourseSpaceURLRootVCD</value>
-  </data>
-  <data name="CourseSpaceURLRootVM_Key" xml:space="preserve">
-    <value>CourseSpaceURLRootVM</value>
   </data>
   <data name="MMNDCertAdminURLRoot_Key" xml:space="preserve">
     <value>MMNDCertAdminURLRoot</value>
@@ -153,6 +153,9 @@
   <data name="MMNDVCDPortalURLRoot_Key" xml:space="preserve">
     <value>MMNDVCDPortalURLRoot</value>
   </data>
+  <data name="PCTInstructorResourceToolsCGIE_Key" xml:space="preserve">
+    <value>PCTInstructorResourceToolbarURLCGIE</value>
+  </data>
   <data name="PCTInstructorResourceToolsPPE_Key" xml:space="preserve">
     <value>PCTInstructorResourceToolbarURLPPE</value>
   </data>
@@ -162,8 +165,11 @@
   <data name="PCTInstructorResourceToolsST_Key" xml:space="preserve">
     <value>PCTInstructorResourceToolbarURLST</value>
   </data>
-  <data name="PCTInstructorResourceToolsVM_Key" xml:space="preserve">
-    <value>PCTInstructorResourceToolbarURLVM</value>
+  <data name="PEG_AUTOMATION_CGIE_CSURL_Key" xml:space="preserve">
+    <value>CourseSpaceURLRootCGIE</value>
+  </data>
+  <data name="PEG_AUTOMATION_CGIE_WSURL_Key" xml:space="preserve">
+    <value>WorkSpaceURLRootCGIE</value>
   </data>
   <data name="PEG_AUTOMATION_PPE_CSURL_Key" xml:space="preserve">
     <value>CourseSpaceURLRootPPE</value>
@@ -189,12 +195,6 @@
   <data name="PEG_AUTOMATION_VCD_WSURL_Key" xml:space="preserve">
     <value>WorkSpaceURLRootVCD</value>
   </data>
-  <data name="PEG_AUTOMATION_VM_CSURL_Key" xml:space="preserve">
-    <value>CourseSpaceURLRootVM</value>
-  </data>
-  <data name="PEG_AUTOMATION_VM_WSURL_Key" xml:space="preserve">
-    <value>WorkSpaceURLRootVM</value>
-  </data>
   <data name="PEG_DOWNLOAD_PATH_Key" xml:space="preserve">
     <value>PEG_DOWNLOAD_PATH</value>
   </data>
@@ -204,14 +204,17 @@
   <data name="PEG_TESTDATA_PATH_Key" xml:space="preserve">
     <value>PEG_TESTDATA_PATH</value>
   </data>
+  <data name="RumbaURLRootCGIE_Key" xml:space="preserve">
+    <value>RUMBAAdminURLRootCGIE</value>
+  </data>
   <data name="RumbaURLRootPROD_Key" xml:space="preserve">
     <value>RUMBAAdminURLRootPROD</value>
   </data>
   <data name="RumbaURLRootST_Key" xml:space="preserve">
     <value>RUMBAAdminURLRootST</value>
   </data>
-  <data name="RumbaURLRootVM_Key" xml:space="preserve">
-    <value>RUMBAAdminURLRootVM</value>
+  <data name="SMSAdminStudentURLRootCGIE_Key" xml:space="preserve">
+    <value>SMSAdminStudentURLRootCGIE</value>
   </data>
   <data name="SMSAdminStudentURLRootPPE_Key" xml:space="preserve">
     <value>SMSAdminStudentURLRootPPE</value>
@@ -222,8 +225,8 @@
   <data name="SMSAdminStudentURLRootVCD_Key" xml:space="preserve">
     <value>SMSAdminStudentURLRootVCD</value>
   </data>
-  <data name="SMSAdminStudentURLRootVM_Key" xml:space="preserve">
-    <value>SMSAdminStudentURLRootVM</value>
+  <data name="SMSAdminURLRootCGIE_Key" xml:space="preserve">
+    <value>SMSAdminURLRootCGIE</value>
   </data>
   <data name="SMSAdminURLRootPPE_Key" xml:space="preserve">
     <value>SMSAdminURLRootPPE</value>
@@ -237,8 +240,8 @@
   <data name="SMSAdminURLRootVCD_Key" xml:space="preserve">
     <value>SMSAdminURLRootVCD</value>
   </data>
-  <data name="SMSAdminURLRootVM_Key" xml:space="preserve">
-    <value>SMSAdminURLRootVM</value>
+  <data name="SMSInstructorAccessCodeCGIE_Key" xml:space="preserve">
+    <value>SMSInstructorAccessCodeCGIE</value>
   </data>
   <data name="SMSInstructorAccessCodePPE_Key" xml:space="preserve">
     <value>SMSInstructorAccessCodePPE</value>
@@ -252,8 +255,8 @@
   <data name="SMSInstructorAccessCodeVCD_Key" xml:space="preserve">
     <value>SMSInstructorAccessCodeVCD</value>
   </data>
-  <data name="SMSInstructorAccessCodeVM_Key" xml:space="preserve">
-    <value>SMSInstructorAccessCodeVM</value>
+  <data name="SMSModuleIDCGIE_key" xml:space="preserve">
+    <value>SMSModuleIDCGIE</value>
   </data>
   <data name="SMSModuleIDPPE_key" xml:space="preserve">
     <value>SMSModuleIDPPE</value>
@@ -267,8 +270,8 @@
   <data name="SMSModuleIDVCD_Key" xml:space="preserve">
     <value>SMSModuleIDVCD</value>
   </data>
-  <data name="SMSModuleIDVM_key" xml:space="preserve">
-    <value>SMSModuleIDVM</value>
+  <data name="SMSStudentAccessCodeCGIE_Key" xml:space="preserve">
+    <value>SMSStudentAccessCodeCGIE</value>
   </data>
   <data name="SMSStudentAccessCodePPE_Key" xml:space="preserve">
     <value>SMSStudentAccessCodePPE</value>
@@ -282,11 +285,11 @@
   <data name="SMSStudentAccessCodeVCD_Key" xml:space="preserve">
     <value>SMSStudentAccessCodeVCD</value>
   </data>
-  <data name="SMSStudentAccessCodeVM_Key" xml:space="preserve">
-    <value>SMSStudentAccessCodeVM</value>
-  </data>
   <data name="TestEnvironment_Key" xml:space="preserve">
     <value>TestEnvironment</value>
+  </data>
+  <data name="WorkSpaceURLRootCGIE_Key" xml:space="preserve">
+    <value>WorkSpaceURLRootCGIE</value>
   </data>
   <data name="WorkSpaceURLRootPPE_Key" xml:space="preserve">
     <value>WorkSpaceURLRootPPE</value>
@@ -299,8 +302,5 @@
   </data>
   <data name="WorkSpaceURLRootVCD_Key" xml:space="preserve">
     <value>WorkSpaceURLRootVCD</value>
-  </data>
-  <data name="WorkSpaceURLRootVM_Key" xml:space="preserve">
-    <value>WorkSpaceURLRootVM</value>
   </data>
 </root>

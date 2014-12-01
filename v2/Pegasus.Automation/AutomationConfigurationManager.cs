@@ -25,15 +25,15 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetCourseSpaceUrlRoot()
         {
             string applicationCsUrl;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
                 case "ST":
                     applicationCsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_ST_CSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootST_Key];
                     break;
-                case "VM":
-                    applicationCsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_VM_CSURL_Key)
-                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootVM_Key];
+                case "CGIE":
+                    applicationCsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_CGIE_CSURL_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.CourseSpaceURLRootCGIE_Key];
                     break;
                 case "PPE":
                     applicationCsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_PPE_CSURL_Key)
@@ -75,7 +75,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetMmndUrlRoot()
         {
             string applicationMmnDurl;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
                 case "VCD":
                     applicationMmnDurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_ST_WSURL_Key)
@@ -102,18 +102,15 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetWorkSpaceUrlRoot()
         {
             string applicationWsurl;
-
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {     
-                        
                 case "ST":
-
                     applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_ST_WSURL_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootST_Key];
                     break;
-                case "VM":
-                    applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_VM_WSURL_Key)
-                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootVM_Key];
+                case "CGIE":
+                    applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_CGIE_WSURL_Key)
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.WorkSpaceURLRootCGIE_Key];
                     break;
                 case "PPE":                    
                     applicationWsurl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_PPE_WSURL_Key)
@@ -183,15 +180,15 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetSmsAdminUrlRoot()
         {
             string url;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
                 case "ST":
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
                         ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminURLRootST_Key];
                     break;
-                case "VM":
+                case "CGIE":
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
-                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminURLRootVM_Key];
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminURLRootCGIE_Key];
                     break;
                 case "PPE":
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
@@ -225,11 +222,11 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetSmsMmndStudentRegistrationRoot()
         {
             string url;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
-                case "VM":
+                case "CGIE":
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
-                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminStudentURLRootVM_Key];
+                        ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSAdminStudentURLRootCGIE_Key];
                     break;
                 case "VCD":
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
@@ -263,7 +260,7 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetMmndUsersLoginUrlRoot()
         {
             string url = string.Empty;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
                 case "VCD":
                     url = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_SMSAdminURLRoot_Key)
@@ -297,15 +294,15 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetSmsstuAccessCode()
         {
             string smsStuAccessCode;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
                 case "ST":
                     smsStuAccessCode = ConfigurationManager.AppSettings
                         [AutomationConfigurationManagerResource.SMSStudentAccessCodeST_Key];
                     break;
-                case "VM":
+                case "CGIE":
                     smsStuAccessCode = ConfigurationManager.AppSettings
-                        [AutomationConfigurationManagerResource.SMSStudentAccessCodeVM_Key];
+                        [AutomationConfigurationManagerResource.SMSStudentAccessCodeCGIE_Key];
                     break;
                 case "PPE":
                     smsStuAccessCode = ConfigurationManager.AppSettings
@@ -339,13 +336,13 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetSmsinsAccessCode()
         {
             string smsInsAccessCode;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
                 case "ST":
                     smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodeST_Key];
                     break;
-                case "VM":
-                    smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodeVM_Key];
+                case "CGIE":
+                    smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodeCGIE_Key];
                     break;
                 case "PPE":
                     smsInsAccessCode = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSInstructorAccessCodePPE_Key];
@@ -376,13 +373,13 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetSmsModuleId()
         {
             string smsModuleId;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
                 case "ST":
                     smsModuleId = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSModuleIDST_Key];
                     break;
-                case "VM":
-                    smsModuleId = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSModuleIDVM_key];
+                case "CGIE":
+                    smsModuleId = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSModuleIDCGIE_key];
                     break;
                 case "PPE":
                     smsModuleId = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.SMSModuleIDPPE_key];
@@ -413,13 +410,13 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetRumbaUrlRoot()
         {
             string applicationRumbaUrl;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
                 case "ST":
                     applicationRumbaUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.RumbaURLRootST_Key];
                     break;
-                case "VM":
-                    applicationRumbaUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.RumbaURLRootVM_Key];
+                case "CGIE":
+                    applicationRumbaUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.RumbaURLRootCGIE_Key];
                     break;
                 case "PROD":
                     applicationRumbaUrl = ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.RumbaURLRootPROD_Key];
@@ -478,23 +475,23 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
         private static string GetPctInstructorResourceToolsUrl()
         {
             string pctInsUrl;
-            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key])
+            switch (ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.TestEnvironment_Key].ToUpper())
             {
                 case "ST":
                     pctInsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_ST_CSURL_Key)
                     ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.PCTInstructorResourceToolsST_Key];
                     break;
-                case "VM":
+                case "CGIE":
                     pctInsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_ST_CSURL_Key)
-                    ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.PCTInstructorResourceToolsVM_Key];
+                    ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.PCTInstructorResourceToolsCGIE_Key];
                     break;
                 case "PPE":
                     pctInsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_ST_CSURL_Key)
-                    ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.PCTInstructorResourceToolsVM_Key];
+                    ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.PCTInstructorResourceToolsCGIE_Key];
                     break;
                 case "PROD":
                     pctInsUrl = Environment.GetEnvironmentVariable(AutomationConfigurationManagerResource.PEG_AUTOMATION_ST_CSURL_Key)
-                    ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.PCTInstructorResourceToolsVM_Key];
+                    ?? ConfigurationManager.AppSettings[AutomationConfigurationManagerResource.PCTInstructorResourceToolsCGIE_Key];
                     break;
                 default: throw new ArgumentException("The suggested application environment was not found");
             }
