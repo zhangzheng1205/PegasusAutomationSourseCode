@@ -41,7 +41,7 @@ Then I should be on the "Today's View" page
 #Purpose : Basic/Random activity from Course Calendar and student scoring 100%
 #Test case ID : peg-22151
 #PEGASUS-29428
-Scenario: Student answers the questions and scores 100%
+Scenario: Student answers the Basic/Random questions and scores 100%
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStudent"
@@ -60,7 +60,7 @@ Then I should be on the "Today's View" page
 #Purpose : Basic/Random activity from Course Calendar and student scoring 0%
 #Test case ID : peg-22146
 #PEGASUS-29427
-Scenario: Student answers the questions and scores 0%
+Scenario: Student answers the Basic/Random questions and scores 0%
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStudent"
@@ -103,6 +103,8 @@ And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" 
 When I click on Submit the activity "0%" score should be displayed in the screen
 Then I should be on the "Assignments - To Do" page
 And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Study plan submission from To Do and student scoring 0% in postest
 #Test case ID : peg-22155
@@ -118,6 +120,8 @@ And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" 
 When I click on Submit the activity "0%" score should be displayed in the screen
 Then I should be on the "Assignments - To Do" page
 And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Study plan submission from To Do and student scoring 70% in pretest
 #Test case ID : peg-22155
@@ -133,6 +137,8 @@ And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" 
 When I click on Submit the activity "72%" score should be displayed in the screen
 Then I should be on the "Assignments - To Do" page
 And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Study plan submission from To Do and student scoring 70% in posttest
 #Test case ID : peg-22154
@@ -148,3 +154,5 @@ And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" 
 When I click on Submit the activity "72%" score should be displayed in the screen
 Then I should be on the "Assignments - To Do" page
 And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan"
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page

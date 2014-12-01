@@ -152,11 +152,11 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the questions and scores 100%")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the Basic/Random questions and scores 100%")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
-        public virtual void StudentAnswersTheQuestionsAndScores100()
+        public virtual void StudentAnswersTheBasicRandomQuestionsAndScores100()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the questions and scores 100%", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the Basic/Random questions and scores 100%", ((string[])(null)));
 #line 44
 this.ScenarioSetup(scenarioInfo);
 #line 45
@@ -194,11 +194,11 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the questions and scores 0%")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student answers the Basic/Random questions and scores 0%")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent Submission")]
-        public virtual void StudentAnswersTheQuestionsAndScores0()
+        public virtual void StudentAnswersTheBasicRandomQuestionsAndScores0()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the questions and scores 0%", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the Basic/Random questions and scores 0%", ((string[])(null)));
 #line 63
 this.ScenarioSetup(scenarioInfo);
 #line 64
@@ -291,6 +291,10 @@ testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(nul
 #line 105
 testRunner.And("I should see the \"In Progress\" status for the activity \"Complete the Chapter 1 St" +
                     "udy Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 106
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 107
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -301,30 +305,34 @@ testRunner.And("I should see the \"In Progress\" status for the activity \"Compl
         public virtual void StudentAnswersTheStudyPlanPosttestQuestionsAndScores0()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the Study plan posttest questions and scores 0%", ((string[])(null)));
-#line 110
-this.ScenarioSetup(scenarioInfo);
-#line 111
-testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 112
-testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 113
-testRunner.When("I launch \"Complete the Chapter 1 Study Plan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 114
-testRunner.Then("I should be on the \"Open Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 115
-testRunner.When("I Click open under \"PostTest\" frame to launch the Questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I launch \"Complete the Chapter 1 Study Plan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 116
-testRunner.Then("I should be on the \"PostTest\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Open Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 117
+testRunner.When("I Click open under \"PostTest\" frame to launch the Questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 118
+testRunner.Then("I should be on the \"PostTest\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 119
 testRunner.And("I answer activity \"CompleteTheChapter1StudyPlan\" with behaviour \"StudyPlan\" of \"H" +
                     "omework\" type with \"incorrect\" answers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 118
-testRunner.When("I click on Submit the activity \"0%\" score should be displayed in the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 119
-testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 120
+testRunner.When("I click on Submit the activity \"0%\" score should be displayed in the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 121
+testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 122
 testRunner.And("I should see the \"In Progress\" status for the activity \"Complete the Chapter 1 St" +
                     "udy Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 123
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 124
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -335,30 +343,34 @@ testRunner.And("I should see the \"In Progress\" status for the activity \"Compl
         public virtual void StudentAnswersTheStudyPlanPretestQuestionsAndScores70()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the Study plan pretest questions and scores 70%", ((string[])(null)));
-#line 125
-this.ScenarioSetup(scenarioInfo);
-#line 126
-testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 127
-testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 128
-testRunner.When("I launch \"Complete the Chapter 1 Study Plan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 129
-testRunner.Then("I should be on the \"Open Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 130
-testRunner.When("I Click open under \"PreTest\" frame to launch the Questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 131
-testRunner.Then("I should be on the \"PreTest\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 132
+testRunner.When("I launch \"Complete the Chapter 1 Study Plan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 133
+testRunner.Then("I should be on the \"Open Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 134
+testRunner.When("I Click open under \"PreTest\" frame to launch the Questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 135
+testRunner.Then("I should be on the \"PreTest\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 136
 testRunner.And("I answer activity \"CompleteTheChapter1StudyPlan\" with behaviour \"StudyPlan\" of \"H" +
                     "omework\" type with \"partial\" answers of \"pretest\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 133
+#line 137
 testRunner.When("I click on Submit the activity \"72%\" score should be displayed in the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 134
+#line 138
 testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 135
+#line 139
 testRunner.And("I should see the \"In Progress\" status for the activity \"Complete the Chapter 1 St" +
                     "udy Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 140
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 141
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -369,30 +381,34 @@ testRunner.And("I should see the \"In Progress\" status for the activity \"Compl
         public virtual void StudentAnswersTheStudyPlanPosttestQuestionsAndScores70()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student answers the Study plan posttest questions and scores 70%", ((string[])(null)));
-#line 140
-this.ScenarioSetup(scenarioInfo);
-#line 141
-testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 142
-testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 143
-testRunner.When("I launch \"Complete the Chapter 1 Study Plan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 144
-testRunner.Then("I should be on the \"Open Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 145
-testRunner.When("I Click open under \"PosTest\" frame to launch the Questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 146
-testRunner.Then("I should be on the \"PosTest\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
 #line 147
+testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 148
+testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 149
+testRunner.When("I launch \"Complete the Chapter 1 Study Plan\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 150
+testRunner.Then("I should be on the \"Open Study Plan\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 151
+testRunner.When("I Click open under \"PosTest\" frame to launch the Questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 152
+testRunner.Then("I should be on the \"PosTest\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 153
 testRunner.And("I answer activity \"CompleteTheChapter1StudyPlan\" with behaviour \"StudyPlan\" of \"H" +
                     "omework\" type with \"partial\" answers of \"postest\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 148
+#line 154
 testRunner.When("I click on Submit the activity \"72%\" score should be displayed in the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 149
+#line 155
 testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 150
+#line 156
 testRunner.And("I should see the \"In Progress\" status for the activity \"Complete the Chapter 1 St" +
                     "udy Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 157
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 158
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
