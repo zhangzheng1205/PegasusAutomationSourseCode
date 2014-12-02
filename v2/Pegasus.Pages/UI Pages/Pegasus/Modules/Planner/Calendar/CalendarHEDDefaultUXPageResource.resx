@@ -447,4 +447,19 @@
   <data name="CalendarHEDDefaultUXPageResource_DayViewAssetRecords_Xpath_Locator" xml:space="preserve">
     <value>//div[@id='ctl00_ctl00_phBody_PageContent_calendarContainer_ucHEDDayView_RptPeriods_ctl00_dvDueAssignmentsToday']/div[2]/div</value>
   </data>
+  <data name="CalendarHEDDefaultUXPage_HSS_ActivityStatus_ClassName_Locator" xml:space="preserve">
+    <value>dueImgAssignment</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_MultipleAsset_Xpath_Locator" xml:space="preserve">
+    <value>//div[@title='{0}']</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_HSS_FoldetName_XPath_Locator" xml:space="preserve">
+    <value>//div[contains(text(),'{0}')]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator" xml:space="preserve">
+    <value>//div[contains(text(),'{0}')]</value>
+  </data>
+  <data name="CalendarHEDDefaultUXPageResource_CheckBox_Attribute_Value" xml:space="preserve">
+    <value>id</value>
+  </data>
 </root>

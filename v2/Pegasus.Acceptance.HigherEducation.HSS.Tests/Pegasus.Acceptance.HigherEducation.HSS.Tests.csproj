@@ -57,8 +57,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CommonProductAcceptanceTestDefinitions\AssignmentCalendar.cs" />
     <Compile Include="CommonProductAcceptanceTestDefinitions\CommonSteps.cs" />
     <Compile Include="CommonProductAcceptanceTestDefinitions\CommonStepsResource.Designer.cs" />
+    <Compile Include="CommonProductAcceptanceTestDefinitions\CourseContentResource.Designer.cs">
+      <DependentUpon>CourseContentResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="CommonProductAcceptanceTestFeatures\CommonUserLoginLogOut.feature.cs">
       <DependentUpon>CommonUserLoginLogOut.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -156,6 +162,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CommonProductAcceptanceTestDefinitions\CommonStepsResource.resx" />
+    <EmbeddedResource Include="CommonProductAcceptanceTestDefinitions\CourseContentResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CourseContentResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductAcceptanceTestDefinitions\LoginLogoutResource.resx" />
     <EmbeddedResource Include="ProductAcceptanceTestDefinitions\ProgramAdminReportsResource.resx">
       <SubType>Designer</SubType>

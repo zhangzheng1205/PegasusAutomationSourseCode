@@ -931,11 +931,25 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodEntry("CommonPage", "NavigateInsideActivityFolderUnderTab",
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
-            base.WaitForElement(By.PartialLinkText(activityFolderName));
-            IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
-                (activityFolderName);
-            //Click the link
-            base.ClickByJavaScriptExecutor(getFolderLink);
+             int getFolderCount = Convert.ToInt32(CommonPageResource.
+                ComonPage_Folder_Count_Initial_Value);
+            string getFolderName = string.Empty;
+            //Get Folder Count
+            bool fg = base.IsElementPresent(By.XPath("//div[@id='TreeViewContainer']/table"), 10);
+            getFolderCount = base.GetElementCountByXPath("//div[@id='TreeViewContainer']/table");
+            for (int i = 1; i <= getFolderCount; i++)
+            {
+                //Get Folder Text
+                getFolderName = base.GetElementTextByXPath(string.Format(
+                    "//div[@id='TreeViewContainer']/table[{0}]/tbody/tr/td[3]/table/tbody/tr/td[1]/div", i));
+                if (getFolderName == activityFolderName)
+                {
+                    IWebElement expandFolder = base.GetWebElementPropertiesByXPath(string.Format(
+                        "//div[@id='TreeViewContainer']/table[{0}]/tbody/tr/td[3]/table/tbody/tr/td[1]/div",i));
+                    base.ClickByJavaScriptExecutor(expandFolder);
+                    break;
+                }
+            }            
             Thread.Sleep(Convert.ToInt32(CommonPageResource.CommonPage_FolderNavigation_Sleep_Time));
             Logger.LogMethodExit("CommonPage", "NavigateInsideActivityFolderUnderTab",
                 base.IsTakeScreenShotDuringEntryExit);
@@ -1328,6 +1342,43 @@ namespace Pegasus.Pages.CommonPageObjects
                                 }
                                 break;
 
+                            case "Calendar":
+                                switch (activityName)
+                                {
+                                    // folder navigation based on activity name
+                                    case "Review the Chapter 1 Learning Objectives":
+                                        this.NavigateToChapter1ExamActivitiesFolder(
+                                           CommonPageResource.
+                                           CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                                   userTypeEnum, activityUnderTabName);
+                                        break;
+                                    case "Complete the Chapter 1 Study Plan":
+                                        this.NavigateToChapter1ExamActivitiesFolder(
+                                           CommonPageResource.
+                                           CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                                   userTypeEnum, activityUnderTabName);
+                                        break;
+                                    case "Take the Chapter 2 Exam":
+                                        this.NavigateToChapter2ExamActivitiesFolder(
+                                           CommonPageResource.
+                                           CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                                   userTypeEnum, activityUnderTabName);
+                                        break;
+                                    case "Take the Chapter 3 Exam":
+                                        this.NavigateToChapter3ExamActivitiesFolder(
+                                           CommonPageResource.
+                                           CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                                   userTypeEnum, activityUnderTabName);
+                                        break;
+                                    case "Review the Chapter 4 Learning Objectives":
+                                        this.NavigateToChapter4ExamActivitiesFolder(CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                                    userTypeEnum, activityUnderTabName);
+                                        break;
+
+                                }
+                                break;
+
                         }
                         break;
                     case User.UserTypeEnum.HSSCsSmsStudent:
@@ -1339,7 +1390,9 @@ namespace Pegasus.Pages.CommonPageObjects
                                 {
                                     // folder navigation based on activity name
                                     case "Take the Chapter 1 Exam":
-                                        this.NavigateToChapter1ExamActivitiesFolder(CommonPageResource.CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
+                                        this.NavigateToChapter1ExamActivitiesFolder(
+                                            CommonPageResource.
+                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                                     userTypeEnum, activityUnderTabName);
                                         break;
                                 }
@@ -1356,49 +1409,139 @@ namespace Pegasus.Pages.CommonPageObjects
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Navigate to Chapter 1 Folder and launch the activity
+        /// </summary>
+        /// <param name="webElementToWait">This is the element to wait.</param>
+        /// <param name="userTypeEnum">This is the type of user.</param>
+        /// <param name="activityUnderTabName">This is the tabname.</param>
         private void NavigateToChapter1ExamActivitiesFolder(string webElementToWait,
                 User.UserTypeEnum userTypeEnum, string activityUnderTabName)
         {
             Logger.LogMethodEntry("CommonPage", "NavigateToChapter1ExamActivitiesFolder",
             base.IsTakeScreenShotDuringEntryExit);
-            // click folder level
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter1Activities_FolderName, webElementToWait);
-            // click folder level
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter1ExamActivities_Link, webElementToWait);
+            try
+            {
+                // click folder level
+                this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+                this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter1Activities_FolderName, webElementToWait);
+                if (activityUnderTabName == "Course Material")
+                {
+                    // click folder level
+                    this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+                    this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter1ExamActivities_Link, webElementToWait);
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             Logger.LogMethodExit("CommonPage", "NavigateToChapter1ExamActivitiesFolder",
             base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Navigate to Chapter 2 folder.
+        /// </summary>
+        /// <param name="webElementToWait">This is the element to wait.</param>
+        /// <param name="userTypeEnum">This is the type of user.</param>
+        /// <param name="activityUnderTabName">This is the tabname.</param>
+        private void NavigateToChapter2ExamActivitiesFolder(string webElementToWait,
+                User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            //Navigate to Chapter 2 folder
+            Logger.LogMethodEntry("CommonPage", "NavigateToChapter2ExamActivitiesFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // click folder level
+                this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+                this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                    CommonPage_Chapter2TheBiologicalPerspective_FolderName, webElementToWait);
+            }
+            catch (Exception e)
+            {
+               ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CommonPage", "NavigateToChapter2ExamActivitiesFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate to Chapter 3 folder.
+        /// </summary>
+        /// <param name="webElementToWait">This is the element to wait.</param>
+        /// <param name="userTypeEnum">This is the type of user.</param>
+        /// <param name="activityUnderTabName">This is the tabname.</param>
+        private void NavigateToChapter3ExamActivitiesFolder(string webElementToWait,
+                User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            Logger.LogMethodEntry("CommonPage", "NavigateToChapter3ExamActivitiesFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // click folder level
+                this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+                this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                    CommonPage_Chapter3_Sensation_and_Perception_FolderName, webElementToWait);
+            }
+            catch (Exception e)
+            {
+               ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CommonPage", "NavigateToChapter3ExamActivitiesFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate to Chapter 4 folder.
+        /// </summary>
+        /// <param name="webElementToWait">This is the element to wait.</param>
+        /// <param name="userTypeEnum">This is the type of user.</param>
+        /// <param name="activityUnderTabName">This is the tabname.</param>
         private void NavigateToChapter4ExamActivitiesFolder(string webElementToWait,
                 User.UserTypeEnum userTypeEnum, string activityUnderTabName)
         {
-            Logger.LogMethodEntry("CommonPage", "NavigateToChapter1ExamActivitiesFolder",
+            Logger.LogMethodEntry("CommonPage", "NavigateToChapter4ExamActivitiesFolder",
             base.IsTakeScreenShotDuringEntryExit);
-            // click folder level
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter4Activities_FolderName, webElementToWait);
-            // click folder level
-            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-            //this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter4ChapterReview_Activities_Link, webElementToWait);
-            Logger.LogMethodExit("CommonPage", "NavigateToChapter1ExamActivitiesFolder",
+            try
+            {
+                // click folder level
+                this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+                this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter4Activities_FolderName, webElementToWait);
+            }
+            catch (Exception e)
+            {
+               ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CommonPage", "NavigateToChapter4ExamActivitiesFolder",
             base.IsTakeScreenShotDuringEntryExit);
         }
 
-
+        /// <summary>
+        /// Navigate inside the  access chapter 1 folder
+        /// </summary>
+        /// <param name="FolderName"></param>
+        /// <param name="UserType"></param>
         public void NavigateInsideTheFolderUnderMycourse(string FolderName, User.UserTypeEnum UserType)
         {
             // navigate inside access chapter1 simulation activities folder
             Logger.LogMethodEntry("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
-            // click folder level
-            base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
-            base.SwitchToIFrameById(CommonPageResource.ComonPage_MainCourse_FrameID);
-            base.WaitForElement(By.PartialLinkText(FolderName));
-            IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
-                (FolderName);
-            base.ClickByJavaScriptExecutor(getFolderLink);
+            try
+            {
+                // click folder level
+                base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
+                base.SwitchToIFrameById(CommonPageResource.ComonPage_MainCourse_FrameID);
+                base.WaitForElement(By.PartialLinkText(FolderName));
+                IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
+                    (FolderName);
+                base.ClickByJavaScriptExecutor(getFolderLink);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             Logger.LogMethodExit("CommonPage", "NavigateToAccessChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
         }

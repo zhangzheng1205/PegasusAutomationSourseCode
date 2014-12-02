@@ -294,4 +294,7 @@
   <data name="CommonPage_HssChapter4ChapterReview_Activities_Link" xml:space="preserve">
     <value>Review the Chapter 4 Learning Objectives</value>
   </data>
+  <data name="CommonPage_Chapter2TheBiologicalPerspective_FolderName" xml:space="preserve">
+    <value>Chapter 2: The Biological Perspective</value>
+  </data>
 </root>

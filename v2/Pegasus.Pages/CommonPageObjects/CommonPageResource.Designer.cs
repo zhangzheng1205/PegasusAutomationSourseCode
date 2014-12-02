@@ -178,6 +178,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chapter 2: The Biological Perspective.
+        /// </summary>
+        internal static string CommonPage_Chapter2TheBiologicalPerspective_FolderName {
+            get {
+                return ResourceManager.GetString("CommonPage_Chapter2TheBiologicalPerspective_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Chapter 3: Sensation and Perception.
         /// </summary>
         internal static string CommonPage_Chapter3_Sensation_and_Perception_FolderName {

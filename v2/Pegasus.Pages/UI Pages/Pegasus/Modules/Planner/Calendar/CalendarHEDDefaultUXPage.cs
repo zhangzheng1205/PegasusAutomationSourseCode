@@ -771,20 +771,26 @@ namespace Pegasus.Pages.UI_Pages
             bool IsActivityDueDateStatusPresent = false;
             try
             {
-                //Select Calendar Window
+
+                    //Select Calendar Window
                 this.SelectCalendarWindow();
                 IsActivityDueDateStatusPresent = base.IsElementPresent(
                     By.ClassName(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_ActivityStatus_ClassName_Locator));
+
             }
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
-            }
-            logger.LogMethodExit("CalendarHEDDefaultUXPage", "IsActivityDueDateStatusPresent",
+            }          
+
+            
+       logger.LogMethodExit("CalendarHEDDefaultUXPage", "IsActivityDueDateStatusPresent",
               base.IsTakeScreenShotDuringEntryExit);
             return IsActivityDueDateStatusPresent;
         }
+        
+        
 
         /// <summary>
         /// Select Option In View By Dropdown.
@@ -1798,6 +1804,9 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             return base.IsElementEnabledById(CalendarHEDDefaultUXPageResource
                 .CalendarHEDDefaultUXPage_ContainerAssets_Id_Locator + nodeId);
+            logger.LogMethodExit("CalendarHEDDefaultUXPage",
+              "IsNodeExpanded",
+              base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
@@ -1809,10 +1818,22 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                "IsAssignedUnAssignedButtonEnabled",
                base.IsTakeScreenShotDuringEntryExit);
-            base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource
-                .CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator));
-            return base.IsElementEnabledById(CalendarHEDDefaultUXPageResource
-                  .CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator);
+            bool isAssignButtonEnabled = false;
+            try
+            {
+                base.WaitForElement(By.Id(CalendarHEDDefaultUXPageResource
+                        .CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator));
+                isAssignButtonEnabled = base.IsElementEnabledById(CalendarHEDDefaultUXPageResource
+                      .CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CalendarHEDDefaultUXPage",
+               "IsAssignedUnAssignedButtonEnabled",
+               base.IsTakeScreenShotDuringEntryExit);
+            return isAssignButtonEnabled;
         }
 
         /// <summary>
@@ -1825,25 +1846,34 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                "SelectCheckBoxOfActivity",
                base.IsTakeScreenShotDuringEntryExit);
-
-            ICollection<IWebElement> checkBoxList = base
-                .GetWebElementsCollectionByXPath(string.Format(
-                CalendarHEDDefaultUXPageResource
-                .CalendarHEDDefaultUXPage_ContainerAssets_Checkbox_Xpath_Locator,
-                containerNodeId));
-            if (checkBoxList == null) return;
-            int counter = 0;
-            foreach (IWebElement checkBox in checkBoxList)
+            try
             {
-                string checkBoxId = checkBox.GetAttribute("id");
-                base.FocusOnElementById(checkBoxId);
-                base.ClickByJavaScriptExecutor(checkBox);
-                this.StoreAssignUnAssignActivityInMemory(
-                    checkBoxId.Split('_')[1]);
-                ++counter;
-                if (counter >= assetCount) break;
-            }
 
+                ICollection<IWebElement> checkBoxList = base
+                    .GetWebElementsCollectionByXPath(string.Format(
+                    CalendarHEDDefaultUXPageResource
+                    .CalendarHEDDefaultUXPage_ContainerAssets_Checkbox_Xpath_Locator,
+                    containerNodeId));
+                if (checkBoxList == null) return;
+                int counter = 0;
+                foreach (IWebElement checkBox in checkBoxList)
+                {
+                    string checkBoxId = checkBox.GetAttribute(
+                        CalendarHEDDefaultUXPageResource.
+                        CalendarHEDDefaultUXPageResource_CheckBox_Attribute_Value);
+                    base.FocusOnElementById(checkBoxId);
+                    base.ClickByJavaScriptExecutor(checkBox);
+                    this.StoreAssignUnAssignActivityInMemory(
+                        checkBoxId.Split('_')[1]);
+                    ++counter;
+                    if (counter >= assetCount) break;
+                }
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                "SelectCheckBoxOfActivity",
            base.IsTakeScreenShotDuringEntryExit);
@@ -1893,10 +1923,17 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodEntry("CalendarHEDDefaultUXPage",
                "ClickOnAssignUnassignButton",
                base.IsTakeScreenShotDuringEntryExit);
-
-            base.ClickButtonById(CalendarHEDDefaultUXPageResource
-                .CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator);
-
+            try
+            {
+                IWebElement getAssignInassignButton = base.GetWebElementPropertiesById(
+                   CalendarHEDDefaultUXPageResource
+                       .CalendarHEDDefaultUXPage_AssignUnAssign_Link_Id_Locator);
+                base.ClickByJavaScriptExecutor(getAssignInassignButton);
+            }
+            catch (Exception e)
+            {
+               ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodExit("CalendarHEDDefaultUXPage",
                "ClickOnAssignUnassignButton",
            base.IsTakeScreenShotDuringEntryExit);
@@ -2017,7 +2054,10 @@ namespace Pegasus.Pages.UI_Pages
                 this.SelectCalendarWindow();
                 //Get the inner text of the folder
                 actualFolderAssetName =
-                    GetWebElementPropertiesByXPath(String.Format("//div[contains(text(),'{0}')]",folderName));
+                    GetWebElementPropertiesByXPath(String.Format(
+                    CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_HSS_FoldetName_XPath_Locator,
+                    folderName));
             }
             catch (Exception e)
             {
@@ -2082,10 +2122,16 @@ namespace Pegasus.Pages.UI_Pages
                 //Select Calendar Window
                 this.SelectCalendarWindow();
                 //Wait for the element
-                base.WaitForElement(By.XPath(String.Format("//div[contains(text(),'{0}')]", activityName)));
+                base.WaitForElement(By.XPath(String.Format(
+                    CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator,
+                    activityName)));
                 //Drag and Drop
                 base.PerformClickAndHoldAction(base.
-                    GetWebElementPropertiesByXPath(String.Format("//div[contains(text(),'{0}')]", activityName)));
+                    GetWebElementPropertiesByXPath(String.Format(
+                    CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator, 
+                    activityName)));
                 //Wait for the element
                 base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
@@ -2141,8 +2187,43 @@ namespace Pegasus.Pages.UI_Pages
         }
 
         /// <summary>
-        /// Drag and Drop selected 'Excel Chapter 1: Simulation Activities' assets to current date. 
+        /// Drag and Drop selected multiple assets to current date. 
         /// </summary>
+        public void DragAndDropMultipleActivities(string activityName)
+        {
+            //Drag and Drop selected multiple assets to current date
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage", "DragAndDropMultipleExcelActivities",
+                base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                //Select Calendar Window
+                this.SelectCalendarWindow();
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_SleepTime));
+                //Wait for the element
+                base.WaitForElement(By.XPath(String.Format(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_MultipleAsset_Xpath_Locator, activityName)));
+                IWebElement element = WebDriver.FindElement(By.XPath(String.Format(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPageResource_MultipleAsset_Xpath_Locator,activityName)));
+                base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                            CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                IWebElement target = WebDriver.FindElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                //Drag and drop the element
+                base.DragAndDropWebElement(element, target);
+                Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
+                    CalendarHEDDefaultUXPage_SleepTime));
+
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("CalendarHEDDefaultUXPage", "DragAndDropMultipleExcelActivities",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
         public void DragAndDropMultipleExcelActivities()
         {
             //Drag and Drop selected 'Excel Chapter 1: Simulation Activities' assets to current date
@@ -2200,7 +2281,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Get the cmenuid of the asset
                 string cMenuId = GetCMenuID(assetName);
                 // Select an option in cmenu
-                SelectOptionInCmenu(cmenuOption, cMenuId);
+                this.SelectOptionInCmenu(cmenuOption, cMenuId);
             }
             catch (Exception e)
             {
@@ -2225,11 +2306,18 @@ namespace Pegasus.Pages.UI_Pages
                 CalendarHEDDefaultUXPageResource_Cmenu_XPath_Locator), cMenuId));
             Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
               CalendarHEDDefaultUXPage_Element_Time));
-            base.PerformMouseHoverByJavaScriptExecutor(getCMenu);
+                base.PerformMouseHoverByJavaScriptExecutor(getCMenu);
             base.ClickByJavaScriptExecutor(getCMenu);
             Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                CalendarHEDDefaultUXPage_Element_Time));
             //Select an option in cmenu
+            bool hjg = base.IsElementPresent(By.ClassName("Classcmenu_main"), 10);
+            IWebElement getCmenuOption = base.GetWebElementPropertiesByClassName("Classcmenu_main");
+            getCmenuOption.GetAttribute("Text");
+
+
+
+
             IWebElement cMenuOption = base.GetWebElementPropertiesByXPath(String.
                 Format((CalendarHEDDefaultUXPageResource.
                 CalendarHEDDefauktUXPage_AssetCmenuOption_Xpath_Locator), cmenuOption));
@@ -2494,6 +2582,36 @@ namespace Pegasus.Pages.UI_Pages
           base.IsTakeScreenShotDuringEntryExit);
             //Returns bool value for display of due date icon
             return isDueDateIconPresent;
+        }
+
+        /// <summary>
+        /// Verify the due date icon for the activity.
+        /// </summary>
+        /// <returns>Due date icon present/Not present.</returns>
+        public bool IsActivityDueDateIconPresent()
+        {
+            //Verify Activity Due Date Icon
+            logger.LogMethodEntry("CalendarHEDDefaultUXPage", "IsActivityDueDateStatusPresent",
+              base.IsTakeScreenShotDuringEntryExit);
+            //Initialize Variable
+            bool IsActivityDueDateIconPresent = false;
+            try
+            {
+
+            this.SelectCalendarWindow();
+            IsActivityDueDateIconPresent = base.IsElementPresent(
+                By.ClassName(CalendarHEDDefaultUXPageResource.
+                CalendarHEDDefaultUXPage_HSS_ActivityStatus_ClassName_Locator));
+        }            
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }          
+
+            
+       logger.LogMethodExit("CalendarHEDDefaultUXPage", "IsActivityDueDateStatusPresent",
+              base.IsTakeScreenShotDuringEntryExit);
+            return IsActivityDueDateIconPresent;
         }
     }
 }
