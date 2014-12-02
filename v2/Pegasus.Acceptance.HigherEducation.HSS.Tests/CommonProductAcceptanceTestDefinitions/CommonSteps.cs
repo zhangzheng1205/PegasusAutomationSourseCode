@@ -1092,6 +1092,34 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [Then(@"I should see the ""(.*)"" status for the activity ""(.*)"" in Assignments Page")]
+        public void StatusForTheActivityInAssignmentsPage(string activityStatus,
+            string activityName)
+        {
+            //Validate the submitted activity status
+            Logger.LogMethodEntry("CommonSteps",
+                "StatusForTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Validate the submitted activity status
+            Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.AreEqual(activityStatus, new StudentPresentationPage().
+                    GetStatusOfSubmittedActivityInAssignmentsPage(activityName)));
+            Logger.LogMethodExit("CommonSteps",
+                "StatusForTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        [When(@"I click on return to course")]
+        public void ClickOnReturnToCourse()
+        {
+            Logger.LogMethodEntry("CommonSteps", "ClickOnReturnToCourse",
+            base.IsTakeScreenShotDuringEntryExit);
+            new StudentPresentationPage().ReturnToCourseSpace();
+            Logger.LogMethodExit("CommonSteps", "ClickOnReturnToCourse",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         ///// <summary>
         ///// Verify due date icon is diplayed in assigned date.
