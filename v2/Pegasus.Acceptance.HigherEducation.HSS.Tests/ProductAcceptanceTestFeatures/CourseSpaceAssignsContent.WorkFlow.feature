@@ -7,11 +7,6 @@
 #Test case ID : peg-21948.
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: Instructor drag and drop a folder in assignment calendar by Instructor
-Given I browsed the login url for "HSSCsSmsInstructor"
-When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 And I should see "Chapter 1: The Science of Psychology" asset
@@ -24,11 +19,6 @@ Then I should see due date icon displayed in current date
 #PEGASUS-28905
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: Assign more than one content using Assign Unassign link by Instructor
-Given I browsed the login url for "HSSCsSmsInstructor"
-When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 When I select "Take the Chapter 2 Exam" in "Calendar" by "HSSCsSmsInstructor"
@@ -42,11 +32,6 @@ Then I should see the check mark in assigned status column next to the assets
 #Test Case Id :peg-21971 -Assign one content using Assign/Unassign link
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: Assign one content using Assign Unassign link by Instructor
-Given I browsed the login url for "HSSCsSmsInstructor"
-When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 When I select "Take the Chapter 3 Exam" in "Calendar" by "HSSCsSmsInstructor"
@@ -59,11 +44,6 @@ Then I should see the check mark in assigned status column next to the assets
 #Test case ID : peg-21981.
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: Drag and drop the more than one assets to current date in Assignment calendar
-Given I browsed the login url for "HSSCsSmsInstructor"
-When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 And I should see "Chapter 4: Consciousness: Sleep, Dreams, Hypnosis, and Drugs" asset
@@ -82,11 +62,6 @@ When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
-Given I browsed the login url for "HSSCsSmsInstructor"
-When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 And I should see "Chapter 1: The Science of Psychology" asset
@@ -96,11 +71,6 @@ And I should see the startdate Icon in calendar frame
 #Purpose: To validate the current date assigned content in calendar frame by Coursespace Instructor
 #Test Case Id: peg-21985
 Scenario: To check the current date assigned content in the calendar by Instructor
-Given I browsed the login url for "HSSCsSmsInstructor"
-When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
 And I should see "Chapter 1: The Science of Psychology" asset
@@ -135,7 +105,7 @@ When I select "Complete the Chapter 1 Study Plan" in "Calendar" by "HSSCsSmsInst
 And I select cmenu "Assignment Properties" of activity "Complete the Chapter 1 Study Plan" 
 Then I should see the "Assign" popup
 And I assign the asset for current date in the properties popup
-
+Then I should see the duedate icon along with the checkmark in the calendar beside activity "Complete the Chapter 1 Study Plan" under "Chapter 1: The Science of Psychology"
 
 
  

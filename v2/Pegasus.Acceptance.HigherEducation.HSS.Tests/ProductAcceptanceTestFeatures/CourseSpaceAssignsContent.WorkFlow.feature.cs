@@ -79,28 +79,17 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestFeat
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 10
-testRunner.Given("I browsed the login url for \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
-testRunner.When("I logged into the Pegasus as \"HSSCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 13
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 14
-testRunner.When("I enter in the \"HSSMyPsychLabProgram\" from the Global Home page as \"HSSCsSmsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
+#line 11
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 17
+#line 12
 testRunner.And("I should see \"Chapter 1: The Science of Psychology\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 18
+#line 13
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
+#line 14
 testRunner.When("I drag and drop the \"Chapter 1: The Science of Psychology\" folder to the current " +
                     "date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
+#line 15
 testRunner.Then("I should see due date icon displayed in current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -112,33 +101,22 @@ testRunner.Then("I should see due date icon displayed in current date", ((string
         public virtual void AssignMoreThanOneContentUsingAssignUnassignLinkByInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign more than one content using Assign Unassign link by Instructor", ((string[])(null)));
-#line 26
+#line 21
 this.ScenarioSetup(scenarioInfo);
-#line 27
-testRunner.Given("I browsed the login url for \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 28
-testRunner.When("I logged into the Pegasus as \"HSSCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 30
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 31
-testRunner.When("I enter in the \"HSSMyPsychLabProgram\" from the Global Home page as \"HSSCsSmsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
+#line 22
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 33
+#line 23
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 34
+#line 24
 testRunner.When("I select \"Take the Chapter 2 Exam\" in \"Calendar\" by \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 35
+#line 25
 testRunner.And("I select the check box of any 2 activities in \"Chapter 2: The Biological Perspect" +
                     "ive\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 36
+#line 26
 testRunner.Then("I should see Assign/Unassign link in active state on the content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 37
+#line 27
 testRunner.When("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 28
 testRunner.Then("I should see the check mark in assigned status column next to the assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -150,33 +128,22 @@ testRunner.Then("I should see the check mark in assigned status column next to t
         public virtual void AssignOneContentUsingAssignUnassignLinkByInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assign one content using Assign Unassign link by Instructor", ((string[])(null)));
-#line 44
+#line 34
 this.ScenarioSetup(scenarioInfo);
-#line 45
-testRunner.Given("I browsed the login url for \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 46
-testRunner.When("I logged into the Pegasus as \"HSSCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 47
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 48
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 49
-testRunner.When("I enter in the \"HSSMyPsychLabProgram\" from the Global Home page as \"HSSCsSmsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 50
+#line 35
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 36
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 52
+#line 37
 testRunner.When("I select \"Take the Chapter 3 Exam\" in \"Calendar\" by \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 53
+#line 38
 testRunner.And("I select the check box of any 1 activities in \"Chapter 3: Sensation and Perceptio" +
                     "n\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 54
+#line 39
 testRunner.Then("I should see Assign/Unassign link in active state on the content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 55
+#line 40
 testRunner.When("I click on assign/Unassign link displayed in content frame header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 41
 testRunner.Then("I should see the check mark in assigned status column next to the assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -188,38 +155,27 @@ testRunner.Then("I should see the check mark in assigned status column next to t
         public virtual void DragAndDropTheMoreThanOneAssetsToCurrentDateInAssignmentCalendar()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Drag and drop the more than one assets to current date in Assignment calendar", ((string[])(null)));
-#line 61
+#line 46
 this.ScenarioSetup(scenarioInfo);
-#line 62
-testRunner.Given("I browsed the login url for \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 63
-testRunner.When("I logged into the Pegasus as \"HSSCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 65
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 66
-testRunner.When("I enter in the \"HSSMyPsychLabProgram\" from the Global Home page as \"HSSCsSmsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 67
+#line 47
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 68
+#line 48
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 69
+#line 49
 testRunner.And("I should see \"Chapter 4: Consciousness: Sleep, Dreams, Hypnosis, and Drugs\" asset" +
                     "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 70
+#line 50
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 71
+#line 51
 testRunner.When("I select \"Review the Chapter 4 Learning Objectives\" in \"Calendar\" by \"HSSCsSmsIns" +
                     "tructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 72
+#line 52
 testRunner.And("I select the check box of any 2 activities in \"Chapter 4: Consciousness: Sleep, D" +
                     "reams, Hypnosis, and Drugs\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 73
+#line 53
 testRunner.And("I should drag and drop multiple assets along with \"Review the Chapter 4 Learning " +
                     "Objectives\" to the current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 74
+#line 54
 testRunner.Then("I should see due date icon displayed in current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -231,39 +187,28 @@ testRunner.Then("I should see due date icon displayed in current date", ((string
         public virtual void ToValidateTheDisplayOfStartDateIconInCalendarFrameByInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate the display of start date icon in calendar frame by Instructor", ((string[])(null)));
-#line 79
+#line 59
 this.ScenarioSetup(scenarioInfo);
-#line 80
+#line 60
 testRunner.Given("I browsed the login url for \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 81
+#line 61
 testRunner.When("I logged into the Pegasus as \"HSSCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 82
+#line 62
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 83
+#line 63
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 84
+#line 64
 testRunner.When("I enter in the \"HSSMyPsychLabProgram\" from the Global Home page as \"HSSCsSmsInstr" +
                     "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 85
-testRunner.Given("I browsed the login url for \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 86
-testRunner.When("I logged into the Pegasus as \"HSSCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 87
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 88
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 89
-testRunner.When("I enter in the \"HSSMyPsychLabProgram\" from the Global Home page as \"HSSCsSmsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 90
+#line 65
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 91
+#line 66
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 92
+#line 67
 testRunner.And("I should see \"Chapter 1: The Science of Psychology\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 93
+#line 68
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 94
+#line 69
 testRunner.And("I should see the startdate Icon in calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -275,30 +220,19 @@ testRunner.And("I should see the startdate Icon in calendar frame", ((string)(nu
         public virtual void ToCheckTheCurrentDateAssignedContentInTheCalendarByInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To check the current date assigned content in the calendar by Instructor", ((string[])(null)));
-#line 98
+#line 73
 this.ScenarioSetup(scenarioInfo);
-#line 99
-testRunner.Given("I browsed the login url for \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 100
-testRunner.When("I logged into the Pegasus as \"HSSCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 101
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 102
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 103
-testRunner.When("I enter in the \"HSSMyPsychLabProgram\" from the Global Home page as \"HSSCsSmsInstr" +
-                    "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 104
+#line 74
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 105
+#line 75
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 106
+#line 76
 testRunner.And("I should see \"Chapter 1: The Science of Psychology\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 107
+#line 77
 testRunner.And("I should see the current date highlighted in the calendar frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 108
+#line 78
 testRunner.When("I select the current date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 109
+#line 79
 testRunner.Then("I should see the assigned content \"Complete the Chapter 1 Study Plan\" in the day " +
                     "view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -311,26 +245,26 @@ testRunner.Then("I should see the assigned content \"Complete the Chapter 1 Stud
         public virtual void InstructorAssignTheAssetWithDuedateInManagecoursework()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor assign the asset with duedate in Managecoursework", ((string[])(null)));
-#line 114
+#line 84
 this.ScenarioSetup(scenarioInfo);
-#line 115
+#line 85
 testRunner.When("I navigate to \"Course Materials\" tab and selected \"Manage Course Materials\" subta" +
                     "b", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 116
+#line 86
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 117
+#line 87
 testRunner.When("I select \"Review the Chapter 4 Learning Objectives\" in \"Course Materials\" by \"HSS" +
                     "CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 118
+#line 88
 testRunner.And("I click on \"Properties\" option in c menu of \"Review the Chapter 4 Learning Object" +
                     "ives\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 119
+#line 89
 testRunner.Then("I should be on the \"Properties\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 120
+#line 90
 testRunner.When("I assign asset with due date and save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 121
+#line 91
 testRunner.Then("I should see the successfull message \"Properties updated successfully.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 122
+#line 92
 testRunner.And("I should see assigned icon for \"Review the Chapter 4 Learning Objectives\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -344,33 +278,37 @@ testRunner.And("I should see assigned icon for \"Review the Chapter 4 Learning O
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Instructor assign the content with assign the content with due date ,startdate an" +
                     "d endate", ((string[])(null)));
-#line 126
+#line 96
 this.ScenarioSetup(scenarioInfo);
-#line 127
+#line 97
 testRunner.Given("I browsed the login url for \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 128
+#line 98
 testRunner.When("I logged into the Pegasus as \"HSSCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 129
+#line 99
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 130
+#line 100
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 131
+#line 101
 testRunner.When("I enter in the \"HSSMyPsychLabProgram\" from the Global Home page as \"HSSCsSmsInstr" +
                     "uctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 132
+#line 102
 testRunner.When("I navigate to the \"Assignment Calendar\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 133
+#line 103
 testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 134
+#line 104
 testRunner.When("I select \"Complete the Chapter 1 Study Plan\" in \"Calendar\" by \"HSSCsSmsInstructor" +
                     "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 135
+#line 105
 testRunner.And("I select cmenu \"Assignment Properties\" of activity \"Complete the Chapter 1 Study " +
                     "Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 136
+#line 106
 testRunner.Then("I should see the \"Assign\" popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 137
+#line 107
 testRunner.And("I assign the asset for current date in the properties popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 108
+testRunner.Then("I should see the duedate icon along with the checkmark in the calendar beside act" +
+                    "ivity \"Complete the Chapter 1 Study Plan\" under \"Chapter 1: The Science of Psych" +
+                    "ology\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

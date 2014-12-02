@@ -267,6 +267,30 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTe
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verify the schedule checkmark and due date icon beside the activity name.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="folderName">This is the activity folder name.</param>
+        [Then(@"I should see the duedate icon along with the checkmark in the calendar beside activity ""(.*)"" under ""(.*)""")]
+        public void VerifyDueDateIconAndCheckMarkForAsset(string activityName, string folderName)
+        {
+            new CalendarHedDefaultUxPage().SelectCalendarWindow();
+            String activityId = new CalendarHedDefaultUxPage().GetAssetId(folderName);
+            String containerId = "ContainerID_" + activityId;
+            //verify duedate icon
+            Logger.LogAssertion("VerifyDueDateIconInCalendar",
+                ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.IsTrue(new CalendarHedDefaultUxPage().
+                    IsScheduleCheckMarkDisplayedBesideAsset(activityName, containerId)));
+            //Verify CheckMark icon
+            Logger.LogAssertion("VerifyCheckMarkIconInCalendar",
+                ScenarioContext.Current.ScenarioInfo.
+                Title, () => Assert.IsTrue(new CalendarHedDefaultUxPage().
+                    IsDuedateIconDisplayedBesideAsset(activityName, containerId)));
+
+        }
+
 
     }
 }

@@ -1093,25 +1093,25 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         }
 
 
-        /// <summary>
-        /// Verify due date icon is diplayed in assigned date.
-        /// </summary>
-        [Then(@"I should see due date icon displayed in current date")]
-        public void VerifyDueDateIconDisplayed()
-        {
-            // Verify due date icon is diplayed in assigned date
-            Logger.LogMethodEntry("AssignmentCalendar",
-              "VerifyDueDateIconDisplayed",
-              base.IsTakeScreenShotDuringEntryExit);
-            // Verify due date icon is diplayed in assigned date
-            Logger.LogAssertion("VerifyDueDateIconDisplayed",
-               ScenarioContext.Current.ScenarioInfo.Title,
-               () => Assert.IsTrue(new CalendarHedDefaultUxPage()
-                   .IsActivityDueDateStatusPresent()));
-            Logger.LogMethodEntry("AssignmentCalendar",
-             "VerifyDueDateIconDisplayed",
-             base.IsTakeScreenShotDuringEntryExit);
-        }
+        ///// <summary>
+        ///// Verify due date icon is diplayed in assigned date.
+        ///// </summary>
+        //[Then(@"I should see due date icon displayed in current date")]
+        //public void VerifyDueDateIconDisplayed()
+        //{
+        //    // Verify due date icon is diplayed in assigned date
+        //    Logger.LogMethodEntry("AssignmentCalendar",
+        //      "VerifyDueDateIconDisplayed",
+        //      base.IsTakeScreenShotDuringEntryExit);
+        //    // Verify due date icon is diplayed in assigned date
+        //    Logger.LogAssertion("VerifyDueDateIconDisplayed",
+        //       ScenarioContext.Current.ScenarioInfo.Title,
+        //       () => Assert.IsTrue(new CalendarHedDefaultUxPage()
+        //           .IsActivityDueDateStatusPresent()));
+        //    Logger.LogMethodEntry("AssignmentCalendar",
+        //     "VerifyDueDateIconDisplayed",
+        //     base.IsTakeScreenShotDuringEntryExit);
+        //}
 
 
 
