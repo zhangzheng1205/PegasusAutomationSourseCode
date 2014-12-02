@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.InstructorAssignments.BVT.HSS" storage="d:\pegasus_automation_nov24\v2\pegasus.acceptance.highereducation.hss.tests\productacceptanceorderedtests\orderedtest.instructorassignments.bvt.hss.orderedtest" id="801d6362-2387-4c95-b414-ee071f3f13a0" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="13aead5c-4747-4874-e82b-1a6186de948c" name="UserLoginAsHSSCsSMSInstructorAndNavigateToHSSMyPsychLabProgramCourse" storage="..\bin\debug\pegasus.acceptance.highereducation.hss.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="1c86c705-439c-e2a6-1796-e67d19321f77" name="InstructorDragAndDropAFolderInAssignmentCalendarByInstructor" storage="..\bin\debug\pegasus.acceptance.highereducation.hss.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="40a1ce16-845e-90e4-ea03-1c3d4e1afae9" name="UserLogOutAsHSSCsSMSInstructor" storage="..\bin\debug\pegasus.acceptance.highereducation.hss.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

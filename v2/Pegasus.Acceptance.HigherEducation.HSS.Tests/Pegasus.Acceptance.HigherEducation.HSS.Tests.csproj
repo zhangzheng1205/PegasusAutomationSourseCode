@@ -135,6 +135,9 @@
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.DemoAcceptanceTest.Hed.HSS.orderedtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="ProductAcceptanceOrderedTests\OrderedTest.InstructorAssignments.BVT.HSS.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ProductAcceptanceOrderedTests\OrderedTest.ProgramAdmin.BVT.HSS.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
