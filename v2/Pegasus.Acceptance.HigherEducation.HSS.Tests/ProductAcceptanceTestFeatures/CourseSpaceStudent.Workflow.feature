@@ -156,8 +156,8 @@ When I navigate to "Assignments" tab and selected "To Do" subtab
 Then I should be on the "Assignments - To Do" page
 When I launch "Complete the Chapter 1 Study Plan" asset
 Then I should be on the "Open Study Plan" page
-When I Click open under "PosTest" frame to launch the Questions
-Then I should be on the "PosTest" page displayed with questions
+When I Click open under "PostTest" frame to launch the Questions
+Then I should be on the "PostTest" page displayed with questions
 And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" of "Homework" type with "partial" answers of "postest"
 When I click on Submit the activity "72%" score should be displayed in the screen
 And I click on return to course

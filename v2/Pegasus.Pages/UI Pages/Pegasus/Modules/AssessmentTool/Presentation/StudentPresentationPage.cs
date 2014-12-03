@@ -6267,12 +6267,15 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                     StudentPresentation_Page_Sleep_Value));
                 base.SwitchToLastOpenedWindow();
                 //Wait for 'Continue' button and click
-                base.WaitForElement(By.Id(StudentPresentationPageResource.
-                    StudentPresentation_Page_StudyPlan_Continue_ID_Locator));
-                IWebElement ContinueButton = base.GetWebElementPropertiesById(
-                    StudentPresentationPageResource.
-                    StudentPresentation_Page_StudyPlan_Continue_ID_Locator);
-                base.PerformMoveToElementClickAction(ContinueButton);
+                if (TestType.Equals("PreTest"))
+                {
+                    base.WaitForElement(By.Id(StudentPresentationPageResource.
+                        StudentPresentation_Page_StudyPlan_Continue_ID_Locator));
+                    IWebElement ContinueButton = base.GetWebElementPropertiesById(
+                        StudentPresentationPageResource.
+                        StudentPresentation_Page_StudyPlan_Continue_ID_Locator);
+                    base.PerformMoveToElementClickAction(ContinueButton);
+                }
             }
             catch (Exception e)
             {
