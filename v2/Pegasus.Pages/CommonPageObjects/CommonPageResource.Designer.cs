@@ -637,6 +637,24 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;TreeViewContainer&apos;]/table[{0}]/tbody/tr/td[3]/table/tbody/tr/td[1]/div.
+        /// </summary>
+        internal static string ComonPage_InstructorRow_Text_XPath_Locator {
+            get {
+                return ResourceManager.GetString("ComonPage_InstructorRow_Text_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //div[@id=&apos;TreeViewContainer&apos;]/table.
+        /// </summary>
+        internal static string ComonPage_InstructorRowCount {
+            get {
+                return ResourceManager.GetString("ComonPage_InstructorRowCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
         internal static string ComonPage_Loop_Initializer {

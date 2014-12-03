@@ -321,4 +321,10 @@
   <data name="CommonPage_Workspace_AmplifierIcon_Classname_Value" xml:space="preserve">
     <value>cssAmplifireSImg</value>
   </data>
+  <data name="ComonPage_InstructorRowCount" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/table</value>
+  </data>
+  <data name="ComonPage_InstructorRow_Text_XPath_Locator" xml:space="preserve">
+    <value>//div[@id='TreeViewContainer']/table[{0}]/tbody/tr/td[3]/table/tbody/tr/td[1]/div</value>
+  </data>
 </root>
