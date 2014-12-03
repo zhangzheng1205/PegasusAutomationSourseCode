@@ -1546,38 +1546,52 @@ namespace Pegasus.Pages.CommonPageObjects
                base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Verifies the display of amplifier link.
+        /// </summary>
+        /// <param name="linkname">This is the amplifier link name.</param>
+        /// <param name="userTypeEnum">This is usertype enum.</param>
+        /// <returns>This is the boolean vaue.</returns>
         public Boolean IsAmplifireLinkPresent(string linkname, User.UserTypeEnum userTypeEnum)
         {
+            // Verifies the display of amplifier link
             bool isAmplifireLinkPresent = false;
             switch (userTypeEnum)
             {
+                    //Verify the link in workspace
                 case User.UserTypeEnum.HedWsInstructor:
                     base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
                     base.SwitchToIFrameById(CommonPageResource.
                        ComonPage_MainCourse_FrameID);
                     string amplifierIconClassWS = this.GetAmplifierIconClassAsInsturctor(linkname);
-                    if (amplifierIconClassWS == "cssAmplifireSImg")
+                    if (amplifierIconClassWS == CommonPageResource.
+                        CommonPage_Workspace_AmplifierIcon_Classname_Value)
                     {
                         isAmplifireLinkPresent = true;
                     }
                     break;
-
+                //Verify the link in course space
                 case User.UserTypeEnum.CsSmsInstructor:
                 case User.UserTypeEnum.HedProgramAdmin:
-                    base.SelectWindow("Course Materials");
-                    base.SwitchToIFrameById("ifrmCoursePreview");
+                    base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
+                    base.SwitchToIFrameById(CommonPageResource.
+                        CommonPage_Course_Materials_iFrame);
                     string amplifierIconClassCSInstructor = this.GetAmplifierIconClassAsInsturctor(linkname);
 
-                    if (amplifierIconClassCSInstructor == "cssAmplifireBImg")
+                    if (amplifierIconClassCSInstructor == CommonPageResource.
+                        CommonPage_CourseSpace_AmplifierIcon_Classname_Value)
                     {
                         isAmplifireLinkPresent = true;
                     }
                     break;
+                //Verify the link in course space
                 case User.UserTypeEnum.CsSmsStudent:
-                    base.SelectWindow("Course Materials");
-                    base.SwitchToIFrameById("ifrmCoursePreview");
+                    base.SelectWindow(CommonPageResource.ComonPage_Course_TabName);
+                    base.SwitchToIFrameById(CommonPageResource.
+                        CommonPage_Course_Materials_iFrame);
                     string amplifierIconClassCSStudent = this.GetAmplifierIconClassAsStudent(linkname);
-                    if (amplifierIconClassCSStudent == "cssAmplifireBImg")
+                    if (amplifierIconClassCSStudent == CommonPageResource.
+                        CommonPage_CourseSpace_AmplifierIcon_Classname_Value)
                     {
                         isAmplifireLinkPresent = true;
                     }
@@ -1587,21 +1601,48 @@ namespace Pegasus.Pages.CommonPageObjects
             return isAmplifireLinkPresent;
         }
 
+        /// <summary>
+        /// This returns the amplifier icon class name when user is student.
+        /// </summary>
+        /// <param name="linkname">This is amplifer link name.</param>
+        /// <returns>The amplifier icon class name.</returns>
         private string GetAmplifierIconClassAsStudent(string linkname)
         {
-            string linkId = base.GetWebElementPropertiesByLinkText(linkname).GetAttribute("id");
-            string amplifierIconId = "trCP_" + linkId.Split('_')[1];
+            // This returns the amplifier icon class name when user is student
+            string linkId = base.GetWebElementPropertiesByLinkText(linkname).
+                GetAttribute(CommonPageResource.
+                CommonPage_WebElement_Property_Id);
+            string amplifierIconId = CommonPageResource.
+                CommonPage_AmplifierIcon_ClassName_PartialString_Value + linkId.Split('_')[1];
 
-            string amplifierIconClass = base.GetWebElementPropertiesByXPath(string.Format("//tr[@id2='{0}'/td/img", amplifierIconId)).GetAttribute("class");
+            string amplifierIconClass = base.GetWebElementPropertiesByXPath(string.
+                Format(CommonPageResource.
+                CommonPage_AmpliferIcon_Xpath_Value, amplifierIconId)).
+                GetAttribute(CommonPageResource.
+                CommonPage_WebElement_Property_Class);
+            // This returns the amplifier icon class name when user is student
             return amplifierIconClass;
         }
 
+        /// <summary>
+        /// This returns the amplifier icon class name when user is instructor.
+        /// </summary>
+        /// <param name="linkname">This is amplifer link name.</param>
+        /// <returns>The amplifier icon class name.</returns>
         private string GetAmplifierIconClassAsInsturctor(string linkname)
         {
-
-            string linkId = base.GetWebElementPropertiesByLinkText(linkname).GetAttribute("id");
-            string amplifierIconId = "tdImage_" + linkId.Split('_')[1];
-            string amplifierIconClass = base.GetWebElementPropertiesByXPath(string.Format("//td[@id='{0}']/img", amplifierIconId)).GetAttribute("class");
+            // This returns the amplifier icon class name when user is instructor
+            string linkId = base.GetWebElementPropertiesByLinkText(linkname).
+                GetAttribute(CommonPageResource.
+                CommonPage_WebElement_Property_Id);
+            string amplifierIconId = CommonPageResource.
+                CommonPage_Instructor_AmplifierIcon_ClassName_PartialString_Value + linkId.Split('_')[1];
+            string amplifierIconClass = base.GetWebElementPropertiesByXPath(string.
+                Format(CommonPageResource.
+                CommonPage_Instructor_AmpliferIcon_Xpath_Value, amplifierIconId)).
+                GetAttribute(CommonPageResource.
+                CommonPage_WebElement_Property_Class);
+            // This returns the amplifier icon class name when user is instructor
             return amplifierIconClass;
         }
     }

@@ -635,11 +635,16 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
         [Then(@"I should see the ""(.*)"" amplifier link as ""(.*)""")]
         public void VerifyAmplifierLink(string amplifierLinkName, User.UserTypeEnum userType)
         {
-            //Assert Launch Amplifire Window
+            // Verifies the amplifier link 
+            Logger.LogMethodEntry("CommonSteps", "VerifyAmplifierLink",
+                base.IsTakeScreenShotDuringEntryExit);
+            // Verifies the amplifier link 
             Logger.LogAssertion("VerifyActivityLaunched",
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.IsTrue(new CommonPage().
                     IsAmplifireLinkPresent(amplifierLinkName, userType)));
+            Logger.LogMethodExit("CommonSteps", "VerifyAmplifierLink",
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
 

@@ -297,4 +297,28 @@
   <data name="CommonPage_Chapter2TheBiologicalPerspective_FolderName" xml:space="preserve">
     <value>Chapter 2: The Biological Perspective</value>
   </data>
+  <data name="CommonPage_AmpliferIcon_Xpath_Value" xml:space="preserve">
+    <value>//tr[@id2='{0}'/td/img</value>
+  </data>
+  <data name="CommonPage_AmplifierIcon_ClassName_PartialString_Value" xml:space="preserve">
+    <value>trCP_</value>
+  </data>
+  <data name="CommonPage_CourseSpace_AmplifierIcon_Classname_Value" xml:space="preserve">
+    <value>cssAmplifireBImg</value>
+  </data>
+  <data name="CommonPage_Instructor_AmpliferIcon_Xpath_Value" xml:space="preserve">
+    <value>//td[@id='{0}']/img</value>
+  </data>
+  <data name="CommonPage_Instructor_AmplifierIcon_ClassName_PartialString_Value" xml:space="preserve">
+    <value>tdImage_</value>
+  </data>
+  <data name="CommonPage_WebElement_Property_Class" xml:space="preserve">
+    <value>class</value>
+  </data>
+  <data name="CommonPage_WebElement_Property_Id" xml:space="preserve">
+    <value>id</value>
+  </data>
+  <data name="CommonPage_Workspace_AmplifierIcon_Classname_Value" xml:space="preserve">
+    <value>cssAmplifireSImg</value>
+  </data>
 </root>

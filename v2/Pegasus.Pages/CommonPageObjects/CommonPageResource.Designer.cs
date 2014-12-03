@@ -124,6 +124,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //tr[@id2=&apos;{0}&apos;/td/img.
+        /// </summary>
+        internal static string CommonPage_AmpliferIcon_Xpath_Value {
+            get {
+                return ResourceManager.GetString("CommonPage_AmpliferIcon_Xpath_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Capítulo preliminar: Bienvenidos a Unidos.
         /// </summary>
         internal static string CommonPage_Amplifier_FolderName {
@@ -138,6 +147,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         internal static string CommonPage_Amplifier_FolderName1 {
             get {
                 return ResourceManager.GetString("CommonPage_Amplifier_FolderName1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to trCP_.
+        /// </summary>
+        internal static string CommonPage_AmplifierIcon_ClassName_PartialString_Value {
+            get {
+                return ResourceManager.GetString("CommonPage_AmplifierIcon_ClassName_PartialString_Value", resourceCulture);
             }
         }
         
@@ -237,6 +255,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         internal static string CommonPage_CoursePreviewFrame_Id_Locator {
             get {
                 return ResourceManager.GetString("CommonPage_CoursePreviewFrame_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cssAmplifireBImg.
+        /// </summary>
+        internal static string CommonPage_CourseSpace_AmplifierIcon_Classname_Value {
+            get {
+                return ResourceManager.GetString("CommonPage_CourseSpace_AmplifierIcon_Classname_Value", resourceCulture);
             }
         }
         
@@ -358,6 +385,24 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //td[@id=&apos;{0}&apos;]/img.
+        /// </summary>
+        internal static string CommonPage_Instructor_AmpliferIcon_Xpath_Value {
+            get {
+                return ResourceManager.GetString("CommonPage_Instructor_AmpliferIcon_Xpath_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to tdImage_.
+        /// </summary>
+        internal static string CommonPage_Instructor_AmplifierIcon_ClassName_PartialString_Value {
+            get {
+                return ResourceManager.GetString("CommonPage_Instructor_AmplifierIcon_ClassName_PartialString_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to TreeViewContainer.
         /// </summary>
         internal static string CommonPage_Instructor_Calendar_Content_Id_Locator {
@@ -439,6 +484,24 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to class.
+        /// </summary>
+        internal static string CommonPage_WebElement_Property_Class {
+            get {
+                return ResourceManager.GetString("CommonPage_WebElement_Property_Class", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to id.
+        /// </summary>
+        internal static string CommonPage_WebElement_Property_Id {
+            get {
+                return ResourceManager.GetString("CommonPage_WebElement_Property_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Word 2013.
         /// </summary>
         internal static string CommonPage_Word2013_FolderName {
@@ -480,6 +543,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         internal static string CommonPage_WordChapter1SimulationActivities_FolderName {
             get {
                 return ResourceManager.GetString("CommonPage_WordChapter1SimulationActivities_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cssAmplifireSImg.
+        /// </summary>
+        internal static string CommonPage_Workspace_AmplifierIcon_Classname_Value {
+            get {
+                return ResourceManager.GetString("CommonPage_Workspace_AmplifierIcon_Classname_Value", resourceCulture);
             }
         }
         
