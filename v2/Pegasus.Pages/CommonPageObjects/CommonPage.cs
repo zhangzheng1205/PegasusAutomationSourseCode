@@ -1396,8 +1396,8 @@ namespace Pegasus.Pages.CommonPageObjects
                                            CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                                    userTypeEnum, activityUnderTabName);
                                         break;
-                                    case "Review the Chapter 4 Learning Objectives":
-                                        this.NavigateToChapter4ExamActivitiesFolder(CommonPageResource.
+                                    case "Review the Chapter 5 Learning Objectives":
+                                        this.NavigateToChapter5ExamActivitiesFolder(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                                     userTypeEnum, activityUnderTabName);
                                         break;
@@ -1507,7 +1507,7 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 // click folder level
                 this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-                this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                this.NavigateInsideActivityFolderUnderTabByInstructor(CommonPageResource.
                     CommonPage_Chapter2TheBiologicalPerspective_FolderName, webElementToWait);
             }
             catch (Exception e)
@@ -1533,7 +1533,7 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 // click folder level
                 this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-                this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                this.NavigateInsideActivityFolderUnderTabByInstructor(CommonPageResource.
                     CommonPage_Chapter3_Sensation_and_Perception_FolderName, webElementToWait);
             }
             catch (Exception e)
@@ -1559,13 +1559,38 @@ namespace Pegasus.Pages.CommonPageObjects
             {
                 // click folder level
                 this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
-                this.NavigateInsideActivityFolderUnderTab(CommonPageResource.CommonPage_HssChapter4Activities_FolderName, webElementToWait);
+                this.NavigateInsideActivityFolderUnderTabByInstructor(CommonPageResource.CommonPage_HssChapter4Activities_FolderName, webElementToWait);
             }
             catch (Exception e)
             {
                ExceptionHandler.HandleException(e);
             }
             Logger.LogMethodExit("CommonPage", "NavigateToChapter4ExamActivitiesFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+         /// <summary>
+        /// Navigate to Chapter 5 folder.
+        /// </summary>
+        /// <param name="webElementToWait">This is the element to wait.</param>
+        /// <param name="userTypeEnum">This is the type of user.</param>
+        /// <param name="activityUnderTabName">This is the tabname.</param>
+        private void NavigateToChapter5ExamActivitiesFolder(string webElementToWait,
+                User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            Logger.LogMethodEntry("CommonPage", "NavigateToChapter5ExamActivitiesFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+            try
+            {
+                // click folder level
+                this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+                this.NavigateInsideActivityFolderUnderTabByInstructor("Chapter 5: Learning", webElementToWait);
+            }
+            catch (Exception e)
+            {
+               ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CommonPage", "NavigateToChapter5ExamActivitiesFolder",
             base.IsTakeScreenShotDuringEntryExit);
         }
 
