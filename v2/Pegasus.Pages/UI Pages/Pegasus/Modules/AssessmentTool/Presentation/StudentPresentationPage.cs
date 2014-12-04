@@ -772,7 +772,7 @@ namespace Pegasus.Pages.UI_Pages
                     StudentPrsentation_Page_SIM5_Sleep_Time));
                 //Wait For Element
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                    StudentPresentation_Page_ReturnToCourse_Button_Xpath_Locator), 10);
+                    StudentPresentation_Page_ReturnToCourse_Button_Xpath_Locator));
                 //Get Link Property
                 IWebElement getReturnToCourseLinkProperties = base.
                     GetWebElementPropertiesByXPath
@@ -3802,7 +3802,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.PerformMoveToElementClickAction(title);
                 base.PerformMouseRightClickAction(title);
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_PPT_25_TitleCenterAllign_Xpath_Locator), 10);
+                    StudentPrsentation_Page_PPT_25_TitleCenterAllign_Xpath_Locator));
                 IWebElement CenterRight = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                     StudentPrsentation_Page_PPT_25_TitleCenterAllign_Xpath_Locator);
                 base.PerformMouseClickAction(CenterRight);
@@ -3814,7 +3814,7 @@ namespace Pegasus.Pages.UI_Pages
                 base.PerformMoveToElementClickAction(Subtitlea);
                 base.PerformMouseRightClickAction(Subtitlea);
                 base.WaitForElement(By.XPath(StudentPresentationPageResource.
-                    StudentPrsentation_Page_PPT_25_SubTitleCenterAllign_Xpath_Locator), 10);
+                    StudentPrsentation_Page_PPT_25_SubTitleCenterAllign_Xpath_Locator));
                 IWebElement CenterRight1 = base.GetWebElementPropertiesByXPath(StudentPresentationPageResource.
                     StudentPrsentation_Page_PPT_25_SubTitleCenterAllign_Xpath_Locator);
                 base.PerformMouseClickAction(CenterRight1);
@@ -5996,7 +5996,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                                         if (NthOption % 2 != 0)
                                         {
                                             base.WaitForElement(By.XPath(string.Format(
-                                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator, NthQuestion, NthOption)), 10);
+                                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator, NthQuestion, NthOption)));
                                             IWebElement RadioOption = base.GetWebElementPropertiesByXPath(string.Format(
                                                 StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator, NthQuestion, NthOption));
                                             String TempOption = RadioOption.Text;
@@ -6071,7 +6071,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             {
                 base.WaitForElement(By.XPath(
                         StudentPresentationPageResource.
-                        StudentPresentation_Page_Exem_ActivityScore_XPath_Locator), 10);
+                        StudentPresentation_Page_Exem_ActivityScore_XPath_Locator));
                 IWebElement getScore = base.GetWebElementPropertiesByXPath(
                         StudentPresentationPageResource.
                         StudentPresentation_Page_Exem_ActivityScore_XPath_Locator);
@@ -6148,7 +6148,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 base.SwitchToLastOpenedWindow();
                
                 base.WaitForElement(By.XPath(
-                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator), 10);
+                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator));
                 IWebElement getScore = base.GetWebElementPropertiesByXPath(
                     StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator);
                 actualScore = getScore.Text;
@@ -6174,7 +6174,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             string actualScore = string.Empty;
             try
             {
-                base.WaitForElement(By.Id(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator), 10);
+                base.WaitForElement(By.Id(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator));
                 IWebElement activityGrade = base.GetWebElementPropertiesById(
                     StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator);
                 actualScore = activityGrade.Text;
@@ -6200,7 +6200,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             try
             {
                 base.WaitForElement(By.Id(
-                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator), 10);
+                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator));
                 IWebElement StudentDetails = base.GetWebElementPropertiesById(
                     StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator);
                 studentDetail = StudentDetails.Text;
@@ -6297,7 +6297,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             {
                 base.WaitForElement(By.Id(
                        StudentPresentationPageResource.
-                       StudentPresentation_Page_Pretest_Cmenu_ID_Locator), 10);
+                       StudentPresentation_Page_Pretest_Cmenu_ID_Locator));
                 IWebElement cMmenuButton = base.GetWebElementPropertiesById(
                     StudentPresentationPageResource.
                     StudentPresentation_Page_Pretest_Cmenu_ID_Locator);
@@ -6369,7 +6369,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 //Switch To Frame
                 base.SwitchToIFrameById(StudentPresentationPageResource.
                     StudentPresentation_Page_Content_Frame_Id_Locator);
-                bool pres = base.IsElementPresent(By.XPath("//*[@id='TodoList']/div/div"), 10);
+                bool pres = base.IsElementPresent(By.XPath("//*[@id='TodoList']/div/div"));
              int Test = base.GetElementCountByXPath("//*[@id='TodoList']/div/div");
              for (int i = 2; i <= Test; i++)
                 {
