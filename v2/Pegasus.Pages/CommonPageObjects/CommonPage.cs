@@ -1311,8 +1311,7 @@ namespace Pegasus.Pages.CommonPageObjects
             // Returns the text displayed in the window
             return getActualContent;
         }
-
-
+        
         /// <summary>
         /// Manage The Activity Folder Level Navigation HED Core.
         /// </summary>
@@ -1423,6 +1422,20 @@ namespace Pegasus.Pages.CommonPageObjects
                                         break;
                                 }
                                 break;
+                            case "Gradebook":
+                                switch (activityName)
+                                {
+                                    // folder navigation based on activity name
+                                    case "Take the Chapter 1 Exam":
+                                        this.NavigateToChapter1ExamGradeFolder(
+                                            CommonPageResource.CommonPage_Chapter1TheScienceofPsychology_FolderName);
+                                        break;
+                                    case "Complete the Chapter 1 Study Plan":
+                                        this.NavigateToChapter1StudyPlanGradeFolder(
+                                            CommonPageResource.CommonPage_Chapter1TheScienceofPsychology_FolderName, activityName);
+                                        break;
+                                }
+                                break;
                         }
                         break;
                 }
@@ -1433,6 +1446,58 @@ namespace Pegasus.Pages.CommonPageObjects
             }
             Logger.LogMethodExit("CommonPage", "ManageTheActivityFolderLevelNavigationHEDCore",
               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate to Chapter 1 Study Plan Grade Folder 
+        /// </summary>
+        /// <param name="folderName">This is the folderName.</param>
+        /// <param name="activityName">This is the activityName.</param>
+        private void NavigateToChapter1StudyPlanGradeFolder(string folderName, string activityName)
+        {
+            Logger.LogMethodEntry("CommonPage", "NavigateToChapter1StudyPlanGradeFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+            this.NavigateToChapter1ExamGradeFolder(folderName);
+            new GBInstructorUXPage().SelectGradebookFrame();
+            int assetCount = base.GetElementCountByXPath(CommonPageResource.CommonPage_assetCount_xpath_Locator);
+            try
+            {
+                for (int i = 1; i <= assetCount; i++)
+                {
+                    IWebElement assetElement = base.GetWebElementPropertiesByXPath(
+                        String.Format(CommonPageResource.CommonPage_AssesmentElement_Xpath_Locator, i));
+                    String elementText = assetElement.Text;
+                    if (elementText.Equals(activityName))
+                    {
+                        base.PerformMoveToElementClickAction(assetElement);
+                        break;
+                    }
+                }
+                Thread.Sleep(Convert.ToInt32(CommonPageResource.
+                CommonPage_FolderNavigation_Sleep_Time));
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("CommonPage", "NavigateToChapter1StudyPlanGradeFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Navigate to Chapter 1 Exam Grade Folder 
+        /// </summary>
+        /// <param name="folderName">This is the folderName.</param>
+        private void NavigateToChapter1ExamGradeFolder(string folderName)
+        {
+            Logger.LogMethodEntry("CommonPage", "NavigateToChapter1ExamGradeFolder",
+            base.IsTakeScreenShotDuringEntryExit);
+            IWebElement courseName = base.GetWebElementPropertiesByPartialLinkText(folderName);
+            base.PerformMoveToElementClickAction(courseName);
+            Thread.Sleep(Convert.ToInt32(CommonPageResource.
+            CommonPage_FolderNavigation_Sleep_Time));
+            Logger.LogMethodExit("CommonPage", "NavigateToChapter1ExamGradeFolder",
+            base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>

@@ -160,6 +160,24 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;GridStudent&apos;]/tbody/tr[{0}]/td[2]/span/span.
+        /// </summary>
+        internal static string CommonPage_AssesmentElement_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("CommonPage_AssesmentElement_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;GridStudent&apos;]/tbody/tr.
+        /// </summary>
+        internal static string CommonPage_assetCount_xpath_Locator {
+            get {
+                return ResourceManager.GetString("CommonPage_assetCount_xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to backicon.
         /// </summary>
         internal static string CommonPage_BackToPreviousContentFolder_BackIcon_Id_Locator {

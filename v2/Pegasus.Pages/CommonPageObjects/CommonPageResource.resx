@@ -327,4 +327,10 @@
   <data name="ComonPage_InstructorRow_Text_XPath_Locator" xml:space="preserve">
     <value>//div[@id='TreeViewContainer']/table[{0}]/tbody/tr/td[3]/table/tbody/tr/td[1]/div</value>
   </data>
+  <data name="CommonPage_AssesmentElement_Xpath_Locator" xml:space="preserve">
+    <value>//*[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span</value>
+  </data>
+  <data name="CommonPage_assetCount_xpath_Locator" xml:space="preserve">
+    <value>//*[@id='GridStudent']/tbody/tr</value>
+  </data>
 </root>

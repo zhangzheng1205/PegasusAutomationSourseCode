@@ -255,4 +255,25 @@
   <data name="GBStudentUXPage_Verify_GardebookActivity_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='GridStudent']</value>
   </data>
+  <data name="GBStudentUXPage_GradeBook_assetCount_xpath_Locator" xml:space="preserve">
+    <value>//*[@id='GridStudent']/tbody/tr</value>
+  </data>
+  <data name="GBStudentUXPage_GradeBook_assetElement_Cmenu_xpath_Locator" xml:space="preserve">
+    <value>//*[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/input</value>
+  </data>
+  <data name="GBStudentUXPage_GradeBook_assetElement_xpath_Locator" xml:space="preserve">
+    <value>//*[@id='GridStudent']/tbody/tr[{0}]/td[2]/span/span</value>
+  </data>
+  <data name="GBStudentUXPage_GradeBook_Cmenu_ReferencesCount_xpath_Locator" xml:space="preserve">
+    <value>//div[@id='{0}']/table/tbody/tr/td/div[2]/a</value>
+  </data>
+  <data name="GBStudentUXPage_GradeBook_Cmenu_Reference_ID_Locator" xml:space="preserve">
+    <value>cmenureferenceid</value>
+  </data>
+  <data name="GBStudentUXPage_GradeBook_Cmenu_ViewSubmissions_xpath_Locator" xml:space="preserve">
+    <value>//div[@id='{0}']/table/tbody/tr/td/div[2]/a[{1}]</value>
+  </data>
+  <data name="GBStudentUXPage_GradeBook_Temp_Cmenu_xpath_Locator" xml:space="preserve">
+    <value>//*[@id='GridStudent']/tbody/tr[{0}]/td[2]/span</value>
+  </data>
 </root>

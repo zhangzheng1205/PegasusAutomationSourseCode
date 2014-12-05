@@ -44,6 +44,18 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebookHED",
                  IsTakeScreenShotDuringEntryExit);
         }
+        [When(@"I click on cmenu option ""(.*)"" of asset ""(.*)"" in grades tab")]
+        public void ClickOnCmenuOptionOfAssetInGradesTab(string assetCmenu,
+            string assetName)
+        {
+            //Click On Cmenu Of Asset In Gradebook
+            Logger.LogMethodEntry("GradeBook", "ClickOnCmenuOfAssetInGradebookHED",
+                  IsTakeScreenShotDuringEntryExit);
+            new GBStudentUXPage().SelectCmenuOptionOnactivity(assetCmenu, assetName);
+            Logger.LogMethodExit("GradeBook", "ClickOnCmenuOfAssetInGradebookHED",
+                 IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Verify Student Submission Score In ViewSubmission Page.

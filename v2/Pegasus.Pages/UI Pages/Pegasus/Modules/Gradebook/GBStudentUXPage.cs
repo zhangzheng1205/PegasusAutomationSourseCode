@@ -1212,5 +1212,75 @@ namespace Pegasus.Pages.UI_Pages
                           base.IsTakeScreenShotDuringEntryExit);
             return getActivityCmenuOption;
         }
+
+        /// <summary>
+        /// Get Activity Cmenu Option In Student Gradebook.
+        /// </summary>   
+        /// <param name="assetCmenu">This is Activity Cmenu.</param>
+        /// <param name="assetName">This is Activity assetName.</param>
+        public void SelectCmenuOptionOnactivity(string assetCmenu, string assetName)
+        {
+            logger.LogMethodEntry("GBStudentUXPage", "SelectCmenuOptionOnactivity",
+            base.IsTakeScreenShotDuringEntryExit);
+            GBInstructorUXPage gbInstructorPage = new GBInstructorUXPage();
+            //Select Frame
+            gbInstructorPage.SelectGradebookFrame();
+            //open View submission page
+            this.GotoViewSubmissionPage(assetName,assetCmenu);
+            logger.LogMethodExit("GBStudentUXPage", "SelectCmenuOptionOnactivity",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Opens the submission window.
+        /// </summary>   
+        /// <param name="assetCmenu">This is Activity Cmenu.</param>
+        /// <param name="assetName">This is Activity assetName.</param>
+        private void GotoViewSubmissionPage(string assetName,string assetCmenu)
+        {
+            logger.LogMethodEntry("GBStudentUXPage", "GotoViewSubmissionPage",
+            base.IsTakeScreenShotDuringEntryExit);
+            int assetCount = base.GetElementCountByXPath(GBStudentUXPageResource.
+                GBStudentUXPage_GradeBook_assetCount_xpath_Locator);
+            try
+            {
+                for (int i = 1; i <= assetCount; i++)
+                {
+                    IWebElement assetElement = base.GetWebElementPropertiesByXPath(
+                        string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_assetElement_xpath_Locator, i));
+                    String elementText = assetElement.Text;
+                    if (elementText.Equals(assetName))
+                    {
+                        base.PerformMouseHoverAction(assetElement);
+                        IWebElement cmenuOption = base.GetWebElementPropertiesByXPath(
+                            string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_assetElement_Cmenu_xpath_Locator, i));
+                        base.ClickByJavaScriptExecutor(cmenuOption);
+                        IWebElement TempReference = base.GetWebElementPropertiesByXPath(
+                            string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Temp_Cmenu_xpath_Locator, i));
+                        string referenceId = TempReference.GetAttribute(
+                            string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Cmenu_Reference_ID_Locator));
+                        int count = base.GetElementCountByXPath(
+                            string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Cmenu_ReferencesCount_xpath_Locator, referenceId));
+                        for (int j = 1; j <= count; j++)
+                        {
+                            IWebElement viewSubmissionOption = base.GetWebElementPropertiesByXPath(
+                                string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Cmenu_ViewSubmissions_xpath_Locator, referenceId, i));
+                            if (viewSubmissionOption.Text.Contains(assetCmenu))
+                            {
+                                base.ClickByJavaScriptExecutor(viewSubmissionOption);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("GBStudentUXPage","GotoViewSubmissionPage",
+                          base.IsTakeScreenShotDuringEntryExit);
+         }
     }
 }
