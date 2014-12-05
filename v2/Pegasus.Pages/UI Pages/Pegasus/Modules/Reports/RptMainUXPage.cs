@@ -1479,6 +1479,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     //Switch to this case when user is 'Program Admin'
                     case User.UserTypeEnum.HedProgramAdmin:
+                    case User.UserTypeEnum.HSSProgramAdmin:
                         new ProgramAdminReportsSubTabPage().MyReportsActions
                             (reportActionOption, reportTypeEnum);
                         break;

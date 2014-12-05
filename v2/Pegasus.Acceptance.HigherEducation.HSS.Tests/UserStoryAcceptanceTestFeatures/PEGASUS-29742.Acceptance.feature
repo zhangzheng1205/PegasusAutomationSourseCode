@@ -37,5 +37,3 @@ Then I should be on the "Program Administration" page
 When I select "Run Report" for "HSSActivityResultsByStudent" report in 'My Reports' grid by "HSSProgramAdmin"
 Then I should see "ActivityResultByStudent" report launched successfully
 And  I should be on the "Program Administration" page
-When I "Sign out" from the "HSSProgramAdmin"
-Then I should see the successfull message "You have been signed out of the application."

@@ -149,8 +149,9 @@ namespace Pegasus.Pages.UI_Pages
                 base.ClickImageByXPath(RptSelectStudentsResource.
                     RptSelectStudents_Page_PgA_Expand_Image_Xpath_Locator);
                 // Check student Check box
-                this.SelectStudentToGenerateProgramAdminReport(
-                    RptSelectStudentsResource.RptSelectStudents_Page_Ins_Student_LastName);
+                User user = User.Get(User.UserTypeEnum.HSSCsSmsStudent);
+                String lastName = user.LastName;
+                this.SelectStudentToGenerateProgramAdminReport(lastName);
                 //Click On Add Button
                 this.ClickOnAddButton();
             }

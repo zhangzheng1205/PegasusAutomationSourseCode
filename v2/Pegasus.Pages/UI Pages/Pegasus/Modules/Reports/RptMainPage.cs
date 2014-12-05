@@ -161,9 +161,9 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitForElement(By.XPath(RptMainPageResource
                     .RptMain_Page_tablerow_count));
-                base.WaitForElement(By.Id(RptMainPageResource.RptMain_Page_Report_Type_Link));
+                base.WaitForElement(By.XPath(RptMainPageResource.RptMain_Page_ReportsName_Xpath_Locator));
                 // Click on matched report name
-                IWebElement reportName = base.GetWebElementPropertiesById(RptMainPageResource.RptMain_Page_Report_Type_Link);
+                IWebElement reportName = base.GetWebElementPropertiesByXPath(RptMainPageResource.RptMain_Page_ReportsName_Xpath_Locator);
                 base.ClickByJavaScriptExecutor(reportName);
             }
             catch (Exception e)

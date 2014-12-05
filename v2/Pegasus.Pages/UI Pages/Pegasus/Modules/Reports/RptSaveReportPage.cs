@@ -194,7 +194,7 @@ namespace Pegasus.Pages.UI_Pages
                     base.GetWebElementPropertiesByPartialLinkText(buttonName);
                 base.ClickByJavaScriptExecutor(getButton);
                 Thread.Sleep(Convert.ToInt32(RptSaveReportPageResource
-                .RptSaveReport_Page_ThreadTime_Value));
+                .RptSaveReport_Page_ThreadTime_FiveSecs));
             }
             catch (Exception e)
             {

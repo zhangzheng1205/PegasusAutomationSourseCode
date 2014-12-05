@@ -51,7 +51,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             //Click on the Select Sections button
             new RptSaveReportPage().HSSSelectSectionToGenerateReport();
             //Get Course From Memory
-            Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
+            Course course = Course.Get(Course.CourseTypeEnum.HSSMyPsychLabProgram);
             // Select the Section
             new RptSelectSectionsPage().SelectSection(course.SectionName);
             // Click AddandClose button to close SelectSections PopUp
@@ -130,19 +130,21 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             // Creating Object of class RptStudentUsagePage
             RptStudentUsagePage rptStudentUsagePage = new RptStudentUsagePage();
             //Get Course From Memory
-            Course course = Course.Get(Course.CourseTypeEnum.ProgramCourse);
+            Course course = Course.Get(Course.CourseTypeEnum.HSSMyPsychLabProgram);
             //Assert to verify section name
             Logger.LogAssertion("VerifySectionName", ScenarioContext.
                 Current.ScenarioInfo.Title, () => Assert.AreEqual(course.SectionName,
                     rptStudentUsagePage.
                     GetSectionName((RptStudentUsagePage.ProgramAdminReportType)Enum.
                     Parse(typeof(RptStudentUsagePage.ProgramAdminReportType), reportType))));
+            User user = User.Get(User.UserTypeEnum.HSSCsSmsStudent);
+            String lastName = user.LastName;
             //Assert to verify student
             Logger.LogAssertion("VerifyStatus", ScenarioContext.
                Current.ScenarioInfo.Title, () => Assert.IsTrue(rptStudentUsagePage.GetStatusText
                  ((RptStudentUsagePage.ProgramAdminReportType)Enum.
                 Parse(typeof(RptStudentUsagePage.ProgramAdminReportType), reportType))
-                .Contains(ProgramAdminReportsResource.ProgramAdminReports_Page_Student_LastName)));
+                .Contains(lastName)));
             Logger.LogMethodExit("ProgramAdminReports", "ProgramAdminReportLaunchedSuccessfully",
                 base.IsTakeScreenShotDuringEntryExit);
         }

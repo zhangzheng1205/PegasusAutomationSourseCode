@@ -327,9 +327,7 @@ namespace Pegasus.Pages.UI_Pages
             //Get Activity Count
             int getActivityCount = base.GetElementCountByXPath(RptSelectAssessmentsResource.
                 RptSelectAssessments_Page_Ins_ActivityCount_Xpath_Locator);
-            for (int initialCount = Convert.ToInt32(RptSelectAssessmentsResource.
-                RptSelectAssessments_Page_Ins_Activity_InitialCount_Value);
-                initialCount <= getActivityCount; initialCount++)
+            for (int initialCount = 2; initialCount <= getActivityCount; initialCount++)
             {
                 base.WaitForElement(By.XPath(string.Format(RptSelectAssessmentsResource.
                     RptSelectAssessments_Page_Ins_ActivitySelect_Xpath_Locator, initialCount)));

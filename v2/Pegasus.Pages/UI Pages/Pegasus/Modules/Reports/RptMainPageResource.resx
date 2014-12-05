@@ -168,7 +168,10 @@
   <data name="RptMain_Page_Report_Type_Link" xml:space="preserve">
     <value>Label6</value>
   </data>
-<data name="RptMain_Page_Report_Save_CheckBox" xml:space="preserve">
+  <data name="RptMain_Page_Report_Save_CheckBox" xml:space="preserve">
     <value>chkSaveReport</value>
+  </data>
+  <data name="RptMain_Page_ReportsName_Xpath_Locator" xml:space="preserve">
+    <value>//*[text()='{0}']</value>
   </data>
 </root>
