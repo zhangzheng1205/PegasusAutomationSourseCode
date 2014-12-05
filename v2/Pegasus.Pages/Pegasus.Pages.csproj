@@ -1183,6 +1183,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportsAssessmentCertificatePageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptActivityResultByStudentPageRecource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptActivityResultByStudentPageRecource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentReportByActivityPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStudentReportByActivityPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptActivityResultByStudentPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptLearningAidFrequencyPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1516,6 +1526,11 @@
       <DependentUpon>RptStudentUsagePageResource.resx</DependentUpon>
     </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudyPlanReportPage.cs" />
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudyPlanReportPageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptStudyPlanReportPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStuStudyPlanPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStuStudyPlanPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2638,6 +2653,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ReportsAssessmentCertificatePageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptActivityResultByStudentPageRecource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptActivityResultByStudentPageRecource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStudentReportByActivityPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptStudentReportByActivityPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptLearningAidFrequencyPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>RptLearningAidFrequencyPageResource.Designer.cs</LastGenOutput>
@@ -2737,6 +2760,10 @@
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStudentUsagePageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>RptStudentUsagePageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStudyPlanReportPageResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RptStudyPlanReportPageResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Pages\Pegasus\Modules\Reports\RptStuStudyPlanPageResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

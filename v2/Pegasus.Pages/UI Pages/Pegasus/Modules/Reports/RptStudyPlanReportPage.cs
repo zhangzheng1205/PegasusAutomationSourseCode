@@ -41,7 +41,9 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             //this.SelectWindow();
             try
             {
-                getaverageScore = base.GetElementTextByXPath("//*[@id='_ctl3_AveragePlaceHolder']/table/tbody/tr/td[1]/span");
+                getaverageScore = base.GetElementTextByXPath(
+                    RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_Average_XPath_Locator);
             }
             catch (Exception e)
             {
@@ -60,14 +62,18 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 base.IsTakeScreenShotDuringEntryExit);
             bool isStudentDisplayed = false;
             string getStudentName = string.Empty;
-            base.WaitForElement(By.XPath("//*[@id='MainDiv']/table[3]/tbody/tr"));
-            int getStudentNameCount = base.GetElementCountByXPath("//*[@id='MainDiv']/table[3]/tbody/tr");
+            base.WaitForElement(By.XPath(RptStudyPlanReportPageResource.
+                RptStudyPlanReportPage_StudentCount_XPath_Locator));
+            int getStudentNameCount = base.GetElementCountByXPath(RptStudyPlanReportPageResource.
+                RptStudyPlanReportPage_StudentCount_XPath_Locator);
             for (int i = 1; i <= getStudentNameCount; i++)
             {
                 base.WaitForElement(By.XPath(string.Format(
-                    "//*[@id='MainDiv']/table[3]/tbody/tr[{0}]/td/b", i)), 10);
+                    RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_StudentName_XPath_Locator, i)), 10);
                 getStudentName = base.GetElementTextByXPath(string.Format(
-                     "//*[@id='MainDiv']/table[3]/tbody/tr[{0}]/td/b", i));
+                     RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_StudentName_XPath_Locator, i));
                 if (getStudentName == studentName)
                 {
                     isStudentDisplayed = true;
@@ -97,22 +103,28 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 logger.LogMethodEntry("RptActivityResultByStudentPage",
                  "GetActivityDetailsInActivityResultByStudent",
                  base.IsTakeScreenShotDuringEntryExit);
-                base.WaitForElement(By.XPath("//*[@id='MainDiv']/table[3]/tbody/tr"));
-                int getStudentNameCount = base.GetElementCountByXPath("//*[@id='MainDiv']/table[3]/tbody/tr");
+                base.WaitForElement(By.XPath(RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_StudentCount_XPath_Locator));
+                int getStudentNameCount = base.GetElementCountByXPath(RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_StudentCount_XPath_Locator);
 
                 for (int i = 1; i <= getStudentNameCount; i++)
                 {
                     base.WaitForElement(By.XPath(string.Format(
-                        "//*[@id='MainDiv']/table[3]/tbody/tr[{0}]/td/b", i)), 10);
+                        RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_StudentName_XPath_Locator, i)), 10);
                     getStudentName = base.GetElementTextByXPath(string.Format(
-                         "//*[@id='MainDiv']/table[3]/tbody/tr[{0}]/td/b", i));
+                         RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_StudentName_XPath_Locator, i));
                     if (getStudentName == studentName)
                     {
                         base.WaitForElement(By.XPath(string.Format(
-                            ".//*[@id='MainDiv']/table[3]/tbody/tr[{0}]/td/table/tbody/tr[1]/td[4]/table/tbody/tr/td[2]/a", scoreRow)));
+                            RptStudyPlanReportPageResource.
+                            RptStudyPlanReportPage_PreTestScore_XPath_Locator, scoreRow)));
 
                         getStudentPreTestScore = base.GetElementTextByXPath(string.Format(
-                            ".//*[@id='MainDiv']/table[3]/tbody/tr[{0}]/td/table/tbody/tr[1]/td[4]/table/tbody/tr/td[2]/a", scoreRow));
+                            RptStudyPlanReportPageResource.
+                            RptStudyPlanReportPage_PreTestScore_XPath_Locator, scoreRow));
                         break;
                     }
                     getStudentNameCount++;
@@ -143,22 +155,27 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 logger.LogMethodEntry("RptActivityResultByStudentPage",
                  "GetActivityDetailsInActivityResultByStudent",
                  base.IsTakeScreenShotDuringEntryExit);
-                base.WaitForElement(By.XPath("//*[@id='MainDiv']/table[3]/tbody/tr"));
-                int getStudentNameCount = base.GetElementCountByXPath("//*[@id='MainDiv']/table[3]/tbody/tr");
-                //*[@id='MainDiv']/table[3]/tbody/tr[1]/td/b
+                base.WaitForElement(By.XPath(RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_StudentCount_XPath_Locator));
+                int getStudentNameCount = base.GetElementCountByXPath(RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_StudentCount_XPath_Locator);
                 for (int i = 1; i <= getStudentNameCount; i++)
                 {
                     base.WaitForElement(By.XPath(string.Format(
-                        "//*[@id='MainDiv']/table[3]/tbody/tr[{0}]/td/b", i)), 10);
+                        RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_StudentName_XPath_Locator, i)), 10);
                     getStudentName = base.GetElementTextByXPath(string.Format(
-                         "//*[@id='MainDiv']/table[3]/tbody/tr[{0}]/td/b", i));
+                         RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_StudentName_XPath_Locator, i));
                     if (getStudentName == studentName)
                     {
                         base.WaitForElement(By.XPath(string.Format(
-                            ".//*[@id='MainDiv']/table[3]/tbody/tr[{0}]/td/table/tbody/tr[1]/td[4]/table/tbody/tr/td[3]/a", scoreRow)));
+                            RptStudyPlanReportPageResource.
+                            RptStudyPlanReportPage_PostTestScore_XPath_Locator, scoreRow)));
 
                         getStudentPostTestScore = base.GetElementTextByXPath(string.
-                       Format(".//*[@id='MainDiv']/table[3]/tbody/tr[{0}]/td/table/tbody/tr[1]/td[4]/table/tbody/tr/td[3]/a", scoreRow));
+                       Format(RptStudyPlanReportPageResource.
+                            RptStudyPlanReportPage_PostTestScore_XPath_Locator, scoreRow));
                         break;
                     }
                     getStudentNameCount++;

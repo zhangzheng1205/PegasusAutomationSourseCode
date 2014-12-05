@@ -755,11 +755,38 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;GridStudent&apos;]/tbody/tr[{0}]/td[1]/input.
+        /// </summary>
+        internal static string RptMainUXPage_ClickSingleStudent_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_ClickSingleStudent_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to RPT_CUSTOMCERTIFICATE.
         /// </summary>
         internal static string RptMainUXPage_CustomCertificate_Report_Id_Locator {
             get {
                 return ResourceManager.GetString("RptMainUXPage_CustomCertificate_Report_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblrptgrid&apos;]/tbody/tr.
+        /// </summary>
+        internal static string RptMainUXPage_HSSReport_Link_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_HSSReport_Link_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblrptgrid&apos;]/tbody/tr[{0}]/td/span[1].
+        /// </summary>
+        internal static string RptMainUXPage_HSSReportOption_Link_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_HSSReportOption_Link_XPath_Locator", resourceCulture);
             }
         }
         
@@ -796,6 +823,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         internal static string RptMainUXPage_PageContent_Middle_IFrame_Name {
             get {
                 return ResourceManager.GetString("RptMainUXPage_PageContent_Middle_IFrame_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;GridStudent&apos;]/tbody/tr[{0}]/td[2]/span.
+        /// </summary>
+        internal static string RptMainUXPage_SelectSingleStudent_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_SelectSingleStudent_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;GridStudent&apos;]/tbody/tr.
+        /// </summary>
+        internal static string RptMainUXPage_SelectStudent_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptMainUXPage_SelectStudent_XPath_Locator", resourceCulture);
             }
         }
     }

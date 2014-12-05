@@ -1880,24 +1880,32 @@ namespace Pegasus.Pages.UI_Pages
             // This Selects Expected Student From UI
             base.SwitchToLastOpenedWindow();
             string getSearchedStudentName = string.Empty;
-            bool hdf = base.IsElementPresent(By.XPath("//*[@id='GridStudent']/tbody/tr"), 10);
-            base.WaitForElement(By.XPath("//*[@id='GridStudent']/tbody/tr"));
+            base.WaitForElement(By.XPath(
+                RptMainUXPageResource.
+                RptMainUXPage_SelectStudent_XPath_Locator));
             //Get count of the student listed 
-            int getStudentCount = base.GetElementCountByXPath("//*[@id='GridStudent']/tbody/tr");
+            int getStudentCount = base.GetElementCountByXPath(
+                RptMainUXPageResource.
+                RptMainUXPage_SelectStudent_XPath_Locator);
             int initialCountStudent = 2;
             //Search for expected student
             for (int initialCount = initialCountStudent;
                 initialCount <= getStudentCount; initialCount++)
             {
                 base.WaitForElement(By.XPath(string.
-                    Format("//*[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", initialCount)));
+                    Format(RptMainUXPageResource.
+                    RptMainUXPage_SelectSingleStudent_XPath_Locator, initialCount)));
                 getSearchedStudentName = base.GetElementTextByXPath(string.
-                Format("//*[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", initialCount));
+                Format(RptMainUXPageResource.
+                    RptMainUXPage_SelectSingleStudent_XPath_Locator, initialCount));
                 //Click on 'Checkbox' of the student
                 if (getSearchedStudentName == studentName)
                 {
-                    base.WaitForElement(By.XPath(string.Format("//*[@id='GridStudent']/tbody/tr[{0}]/td[1]/input", initialCount)));
-                    IWebElement selectStudent = base.GetWebElementPropertiesByXPath(string.Format("//*[@id='GridStudent']/tbody/tr[{0}]/td[1]/input", initialCount));
+                    base.WaitForElement(By.XPath(string.Format(RptMainUXPageResource.
+                    RptMainUXPage_ClickSingleStudent_XPath_Locator, initialCount)));
+                    IWebElement selectStudent = base.GetWebElementPropertiesByXPath(
+                        string.Format(RptMainUXPageResource.
+                    RptMainUXPage_ClickSingleStudent_XPath_Locator, initialCount));
                     base.ClickByJavaScriptExecutor(selectStudent);
                     break;
                 }
@@ -2227,17 +2235,24 @@ namespace Pegasus.Pages.UI_Pages
             switch (userTypeEnum)
             {
                 case User.UserTypeEnum.HSSCsSmsInstructor:
-
                     base.SwitchToLastOpenedWindow();
                     base.SwitchToIFrame(RptMainPageResource.
                       RptMain_Page_MainFrame_Id_Locator);
-                    int getreportLinkCount = base.GetElementCountByXPath("//table[@id='tblrptgrid']/tbody/tr");
+                    int getreportLinkCount = base.GetElementCountByXPath(
+                        RptMainUXPageResource.
+                        RptMainUXPage_HSSReport_Link_XPath_Locator);
                     for (int i = 3; i <= getreportLinkCount; i++)
                     {
-                        string getreportLinkName = base.GetElementTextByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
+                        string getreportLinkName = base.GetElementTextByXPath(
+                            string.Format(
+                            RptMainUXPageResource.
+                            RptMainUXPage_HSSReportOption_Link_XPath_Locator, i));
                         if (getreportLinkName == reportName)
                         {
-                            IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
+                            IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(
+                                string.Format(
+                                RptMainUXPageResource.
+                            RptMainUXPage_HSSReportOption_Link_XPath_Locator, i));
                             base.ClickByJavaScriptExecutor(reportLinkName);
                             break;
                         }

@@ -363,4 +363,19 @@
   <data name="RptMainUXPage_CustomCertificate_Report_Id_Locator" xml:space="preserve">
     <value>RPT_CUSTOMCERTIFICATE</value>
   </data>
+  <data name="RptMainUXPage_HSSReportOption_Link_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]</value>
+  </data>
+  <data name="RptMainUXPage_HSSReport_Link_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='tblrptgrid']/tbody/tr</value>
+  </data>
+  <data name="RptMainUXPage_ClickSingleStudent_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='GridStudent']/tbody/tr[{0}]/td[1]/input</value>
+  </data>
+  <data name="RptMainUXPage_SelectSingleStudent_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='GridStudent']/tbody/tr[{0}]/td[2]/span</value>
+  </data>
+  <data name="RptMainUXPage_SelectStudent_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='GridStudent']/tbody/tr</value>
+  </data>
 </root>
