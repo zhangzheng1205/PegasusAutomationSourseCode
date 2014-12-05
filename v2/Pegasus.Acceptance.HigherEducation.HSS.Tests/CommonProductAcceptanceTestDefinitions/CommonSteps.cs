@@ -1092,9 +1092,10 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
               base.IsTakeScreenShotDuringEntryExit);
         }
 
+        [Then(@"I should see the ""(.*)"" status for the activity ""(.*)"" in ""(.*)"" page")]
         [Then(@"I should see the ""(.*)"" status for the activity ""(.*)"" in Assignments Page")]
         public void StatusForTheActivityInAssignmentsPage(string activityStatus,
-            string activityName)
+            string activityName, string windowName)
         {
             //Validate the submitted activity status
             Logger.LogMethodEntry("CommonSteps",
@@ -1103,7 +1104,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             //Validate the submitted activity status
             Logger.LogAssertion("ValidateActivityStatus", ScenarioContext.Current.ScenarioInfo.
                 Title, () => Assert.AreEqual(activityStatus, new StudentPresentationPage().
-                    GetStatusOfSubmittedActivityInAssignmentsPage(activityName)));
+                    GetStatusOfSubmittedActivityInAssignmentsPage(activityName, windowName)));
             Logger.LogMethodExit("CommonSteps",
                 "StatusForTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);

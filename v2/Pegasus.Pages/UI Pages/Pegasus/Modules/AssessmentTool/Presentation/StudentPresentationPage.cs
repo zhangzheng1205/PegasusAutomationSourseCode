@@ -6354,7 +6354,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
 
         }
 
-        public string GetStatusOfSubmittedActivityInAssignmentsPage(string assetName)
+        public string GetStatusOfSubmittedActivityInAssignmentsPage(string assetName,string windowName)
         {
             //Get Status Of Submitted Activity In CourseMaterial
             logger.LogMethodEntry("StudentPresentationPage",
@@ -6364,12 +6364,12 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             string getActivitySubmittedStatus = string.Empty;
             try
             {
-                WaitUntilWindowLoads("Assignments - To Do");
-                base.SelectWindow("Assignments - To Do");
-                //Switch To Frame
-                base.SwitchToIFrameById(StudentPresentationPageResource.
-                    StudentPresentation_Page_Content_Frame_Id_Locator);
-                bool pres = base.IsElementPresent(By.XPath("//*[@id='TodoList']/div/div"));
+                    WaitUntilWindowLoads(windowName);
+                    base.SelectWindow(windowName);
+                    //Switch To Frame
+                    base.SwitchToIFrameById(StudentPresentationPageResource.
+                        StudentPresentation_Page_Content_Frame_Id_Locator);
+                             bool pres = base.IsElementPresent(By.XPath("//*[@id='TodoList']/div/div"));
              int Test = base.GetElementCountByXPath("//*[@id='TodoList']/div/div");
              for (int i = 2; i <= Test; i++)
                 {
@@ -6383,7 +6383,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                      break;
                 }
             }
-             base.SelectWindow("Assignments - To Do");
+             base.SelectWindow(windowName);
           }
             catch (Exception e)
             {

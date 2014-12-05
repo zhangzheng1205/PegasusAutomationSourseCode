@@ -10,6 +10,8 @@ When I Click on eText link
 Then I should be on the "Pearson eText Sign In Page" window
 And I close eText Window
 Then I should be on the "Course Materials" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Basic/Random activity launch from Course Calendar and student abruptly closes the presentation
 #Test case ID : peg-22160
@@ -88,6 +90,8 @@ Then I should be on the "Learning Objectives - Chapter 1" page
 When I close the "Learning Objectives - Chapter 1" window
 Then I should see "Viewed" status for the asset
 Then I should see "Review the Chapter 1 Learning Objectives" in the 'Completed' tab
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #Purpose : Study plan submission from To Do and student scoring 0% in pretest
 #Test case ID : peg-22152
@@ -103,7 +107,7 @@ And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" 
 When I click on Submit the activity "0%" score should be displayed in the screen
 And I click on return to course
 Then I should be on the "Assignments - To Do" page
-And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan" in Assignments Page
+And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan" in "Assignments - To Do" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 
@@ -126,7 +130,7 @@ And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" 
 When I click on Submit the activity "0%" score should be displayed in the screen
 And I click on return to course
 Then I should be on the "Assignments - To Do" page
-And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan" in Assignments Page
+And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan" in "Assignments - To Do" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 
@@ -144,7 +148,7 @@ And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" 
 When I click on Submit the activity "72%" score should be displayed in the screen
 And I click on return to course
 Then I should be on the "Assignments - To Do" page
-And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan" in Assignments Page
+And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan" in "Assignments - To Do" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 
@@ -162,7 +166,9 @@ And I answer activity "CompleteTheChapter1StudyPlan" with behaviour "StudyPlan" 
 When I click on Submit the activity "72%" score should be displayed in the screen
 And I click on return to course
 Then I should be on the "Assignments - To Do" page
-And I should see the "In Progress" status for the activity "Complete the Chapter 1 Study Plan" in Assignments Page
+When I navigate to "Assignments" tab and selected "Completed" subtab
+Then I should be on the "Assignments - Done" page
+And I should see the "Completed" status for the activity "Complete the Chapter 1 Study Plan" in "Assignments - Done" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 

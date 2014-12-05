@@ -2126,23 +2126,20 @@ namespace Pegasus.Pages.UI_Pages
                     CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator,
                     activityName)));
-                //Drag and Drop
-                base.PerformClickAndHoldAction(base.
-                    GetWebElementPropertiesByXPath(String.Format(
+                IWebElement element = WebDriver.FindElement(By.XPath(String.Format(
                     CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator, 
+                    CalendarHEDDefaultUXPageResource_DragNDrop_Asset_XPath_Locator,
                     activityName)));
-                //Wait for the element
+               
                 base.WaitForElement(By.XPath(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
-                base.PerformMoveToElementClickAction(base.
-                    GetWebElementPropertiesByXPath(CalendarHEDDefaultUXPageResource.
-                    CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
-                // Releasing an element after clicking and holding it
-                base.PerformReleaseAction();
-                //Wait for 5 Secs
+                  CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                IWebElement target = WebDriver.FindElement(By.XPath(CalendarHEDDefaultUXPageResource.
+                  CalendarHEDDefaultUXPage_Current_Day_Xpath_Locator));
+                //Drag and drop the element
+                base.DragAndDropWebElement(element, target);
                 Thread.Sleep(Convert.ToInt32(CalendarHEDDefaultUXPageResource.
                     CalendarHEDDefaultUXPage_SleepTime));
+             
             }
             catch (Exception e)
             {
