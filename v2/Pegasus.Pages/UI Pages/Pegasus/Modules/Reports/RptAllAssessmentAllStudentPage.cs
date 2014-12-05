@@ -312,9 +312,23 @@ namespace Pegasus.Pages
             string zeroScoreStudentName = string.Empty;
             try
             {
-                User user = User.Get(CommonResource.CommonResource
-                                      .SMS_STU_UC1);
-                zeroScoreStudentName = user.LastName + ", " + user.FirstName;
+                switch (userTypeEnum)
+                {
+                    case User.UserTypeEnum.CsSmsStudent:
+                        {
+                            User user = User.Get(CommonResource.CommonResource
+                                                   .SMS_STU_UC1);
+                            zeroScoreStudentName = user.LastName + ", " + user.FirstName;
+                            break;
+                        }
+                    case User.UserTypeEnum.HSSCsSmsStudent:
+                        {
+                            User user = User.Get(CommonResource.CommonResource
+                                                  .SMS_STU_UC3);
+                            zeroScoreStudentName = user.LastName + ", " + user.FirstName;
+                            break;
+                        }
+                }
             }
             catch (Exception e)
             {

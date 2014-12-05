@@ -78,6 +78,7 @@
     <Compile Include="ProductAcceptanceTestDefinitions\ProgramAdmin.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ProgramAdminReports.cs" />
     <Compile Include="ProductAcceptanceTestDefinitions\ProgramAdminReportsResource.Designer.cs" />
+    <Compile Include="ProductAcceptanceTestDefinitions\Reports.cs" />
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceAssignsContent.WorkFlow.feature.cs">
       <DependentUpon>CourseSpaceAssignsContent.WorkFlow.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -92,6 +93,11 @@
       <DependentUpon>CourseSpaceGradeBook.WorkFlow.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorReport.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CourseSpaceInstructorReport.feature</DependentUpon>
     </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceProgramAdmin.feature.cs">
       <AutoGen>True</AutoGen>
@@ -158,6 +164,10 @@
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceGradeBook.WorkFlow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceGradeBook.WorkFlow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CourseSpaceInstructorReport.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CourseSpaceInstructorReport.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceProgramAdmin.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
