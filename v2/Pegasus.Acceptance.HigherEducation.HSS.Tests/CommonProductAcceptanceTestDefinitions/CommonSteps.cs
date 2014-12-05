@@ -1120,6 +1120,57 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click The Enter Section As Instructor.
+        /// </summary>
+        /// <param name="cMenuOption">This is Cmenu option.</param>
+        [When(@"I click the ""(.*)""")]
+        public void ClickTheEnterSectionAsInstructor(String cMenuOption)
+        {
+            //Click The Enter Section As Instructor
+            Logger.LogMethodEntry("CommonSteps", "ClickTheEnterSectionAsInstructor"
+                , base.IsTakeScreenShotDuringEntryExit);
+            //Click On Cmenu of Enter Section As Instructor
+            new ManageTemplatePage().
+                ClickOnCmenuOfSectionOrTemplate(cMenuOption);
+            Logger.LogMethodExit("CommonSteps", "ClickTheEnterSectionAsInstructor"
+                , base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Search Section
+        /// </summary>
+        /// <param name="courseTypeEnum">This is Course Type Enum</param>
+        [When(@"I search the ""(.*)"" first section")]
+        public void SearchFirstSection(Course.CourseTypeEnum courseTypeEnum)
+        {
+            //Search Section
+            Logger.LogMethodEntry("CopyContent", "SearchFirstSection",
+                base.IsTakeScreenShotDuringEntryExit);
+            //Get Course From Memory
+            Course course = Course.Get(courseTypeEnum);
+            //Search Section
+            new ManageTemplatePage().SearchSection(course.SectionName);
+            Logger.LogMethodExit("CopyContent", " SearchFirstSection",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+
+        /// <summary>
+        /// Selecting Report Link In HSS.
+        /// </summary>
+        /// <param name="reportName"></param>
+        /// <param name="userTypeEnum"></param>
+        [When(@"I click on ""(.*)"" report link as ""(.*)""")]
+        public void ClickOnReportLink(string reportName, User.UserTypeEnum userTypeEnum)
+        {
+            Logger.LogMethodEntry("CommonSteps", "ClickReportButton",
+            base.IsTakeScreenShotDuringEntryExit);
+            // Click on the report link
+            new RptMainUXPage().ClickReportLinkInHSS(reportName, userTypeEnum);
+            Logger.LogMethodExit("CommonSteps", "ClickReportButton",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
 
         ///// <summary>
         ///// Verify due date icon is diplayed in assigned date.

@@ -11,12 +11,12 @@ Scenario: Generate and save the "Student Results by Activity" as a Section Instr
 Given I browsed the login url for "HSSProgramAdmin"
 When I logged into the Pegasus as "HSSProgramAdmin" in "CourseSpace"
 Then I should logged in successfully
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSProgramAdmin"
+When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 Then I should be on the "Program Administration" page
 When I navigate to "Sections" tab
 Then I should be on the "Program Administration" page
 When I search the "HSSMyPsychLabProgram" first section
-And I click the "Enter Section as Instructor"
+And I click the "Enter Section as Instructor" 
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
 When I click on "Student Results by Activity" report link as "HSSCsSmsInstructor"
@@ -32,11 +32,11 @@ Then I should see the "Save settings to My Reports" popup closed
 And I should be on the "Report: Student Results by Activity" page
 And I should see the section name "MyITLabOffice2013Program" for "HSSCsSmsStudent" with average score "100%" 
 And I should see " Take the Chapter 1 Exam " "Exam" details in the report
-When I close the "Activity Results (Multiple Students)" window
+When I close the "Report: Student Results by Activity" window
 And I click on the "Cancel" button in reports by "HSSCsSmsInstructor"
 And I select "Run Report" for "HSSActivityResultsByStudent" report in 'My Reports' grid by "HSSCsSmsInstructor"
 Then I should be on the "Report: Activity Results by Student" page
-And I close the "Report: Activity Results by Student" window
+When I close the "Report: Student Results by Activity" window
 When I "Sign out" from the "HSSCsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
@@ -50,12 +50,12 @@ Scenario: Generate and save the "Activity Results by Student" as a Section Instr
 Given I browsed the login url for "HSSProgramAdmin"
 When I logged into the Pegasus as "HSSProgramAdmin" in "CourseSpace"
 Then I should logged in successfully
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSProgramAdmin"
+When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 Then I should be on the "Program Administration" page
-When I navigate to "Sections" tab of the "Program Administration" page
+When I navigate to "Sections" tab
 Then I should be on the "Program Administration" page
 When I search the "HSSMyPsychLabProgram" first section
-And I click the "Enter Section as Instructor"
+And I click the "Enter Section as Instructor" 
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 When I click on "Activity Results by Student" report link as "HSSCsSmsInstructor"
 When I select "Take the Chapter 1 Exam" asset in "Select Activity" by "HSSCsSmsInstructor"
@@ -75,7 +75,7 @@ When I close the "Report: Activity Results by Student" window
 And I click on the "Cancel" button in reports by "HSSCsSmsInstructor"
 And I select "Run Report" for "HSSActivityResultsByStudent" report in 'My Reports' grid by "HSSCsSmsInstructor"
 Then I should be on the "Report: Activity Results by Student" page
-And I close the "Report: Activity Results by Student" window
+When I close the "Report: Activity Results by Student" window
 When I "Sign out" from the "HSSCsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
@@ -85,11 +85,6 @@ Then I should see the successfull message "You have been signed out of the appli
 #Pre condition : This test case is to generate the Activity Results by Student Report across the Sections in the program based on the below activities submissions available in the Course (Refer: Test link peg-22219)
 #Dependency : No dependency test can run with existing data
 Scenario: Generate and save the  "Study plan Results report"  as a Section Instructor
-Given I browsed the login url for "HSSCsSmsInstructor"
-When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 When I click on "Study Plan Results" report link as "HSSCsSmsInstructor"
 When I select "Complete the Chapter 1 Study Plan" asset in "Select Study Plans" by "HSSCsSmsInstructor"
@@ -109,6 +104,6 @@ When I close the "Study Plan Results" window
 And I click on the "Cancel" button in reports by "HSSCsSmsInstructor"
 And I select "Run Report" for "HSSStudytPlanResults" report in 'My Reports' grid by "HSSCsSmsInstructor"
 Then I should be on the "Study Plan Results" page
-And I close the "Study Plan Results" window
+When I close the "Study Plan Results" window
 When I "Sign out" from the "HSSCsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."

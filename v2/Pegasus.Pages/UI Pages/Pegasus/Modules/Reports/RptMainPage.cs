@@ -6,6 +6,7 @@ using OpenQA.Selenium;
 using Pearson.Pegasus.TestAutomation.Frameworks;
 using Pegasus.Pages.Exceptions;
 using Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports;
+using Pearson.Pegasus.TestAutomation.Frameworks.DataTransferObjects;
 
 namespace Pegasus.Pages.UI_Pages
 {
@@ -316,6 +317,51 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("RptMainPage", "selectCheckBox",
               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        public void ClickReportLinkInHSS(string reportName, User.UserTypeEnum userTypeEnum)
+        {
+            switch (userTypeEnum)
+            {
+                case User.UserTypeEnum.HSSCsSmsInstructor:
+
+                    base.SwitchToLastOpenedWindow();
+                    bool u = base.IsElementPresent(By.Id("Mainframe"), 10);
+                    base.SwitchToIFrame(RptMainPageResource.
+                      RptMain_Page_MainFrame_Id_Locator);
+                    int getreportLinkCount = base.GetElementCountByXPath("//table[@id='tblrptgrid']/tbody/tr");
+
+                    for (int i = 3; i <= getreportLinkCount; i++)
+                    {
+                        string getreportLinkName = base.GetElementTextByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
+                        if (getreportLinkName == reportName)
+                        {
+                            IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
+                            base.ClickByJavaScriptExecutor(reportLinkName);
+                            break;
+                        }
+                    }
+                    break;
+
+                case User.UserTypeEnum.HSSProgramAdmin:
+                    base.SwitchToLastOpenedWindow();
+                    bool you = base.IsElementPresent(By.Id("Mainframe"), 10);
+                    base.SwitchToIFrame(RptMainPageResource.
+                      RptMain_Page_MainFrame_Id_Locator);
+                    int getreportLinkCount2 = base.GetElementCountByXPath("//table[@id='tblrptgrid']/tbody/tr");
+
+                    for (int i = 3; i <= getreportLinkCount2; i++)
+                    {
+                        string getreportLinkName = base.GetElementTextByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
+                        if (getreportLinkName == reportName)
+                        {
+                            IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
+                            base.ClickByJavaScriptExecutor(reportLinkName);
+                            break;
+                        }
+                    }
+                    break;
+            }
         }
 
     }

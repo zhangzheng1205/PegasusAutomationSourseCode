@@ -1183,6 +1183,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportsAssessmentCertificatePageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptActivityResultByStudentPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptLearningAidFrequencyPageResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1507,12 +1508,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RptStudentIntegrityViolationPageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentReportByActivityPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentUsagePage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudentUsagePageResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptStudentUsagePageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStudyPlanReportPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStuStudyPlanPage.cs" />
     <Compile Include="UI Pages\Pegasus\Modules\Reports\RptStuStudyPlanPageResource.Designer.cs">
       <AutoGen>True</AutoGen>

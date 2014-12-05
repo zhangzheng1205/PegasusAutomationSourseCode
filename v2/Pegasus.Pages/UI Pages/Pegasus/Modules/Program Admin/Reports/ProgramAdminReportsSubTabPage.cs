@@ -417,6 +417,10 @@ namespace Pegasus.Pages.UI_Pages
                    base.IsTakeScreenShotDuringEntryExit);
              try
              {
+                 base.SwitchToLastOpenedWindow();
+                 base.SwitchToIFrameById("_ctl0_PageContent_ifrmMiddle");
+                 bool msdhf = base.IsElementPresent(By.XPath(ProgramAdminReportsSubTabPageResource.
+                     ProgramAdminReportsSubTab_SelectSections_Button_Xpath_locator), 10);
                  base.WaitForElement(By.XPath(
                      ProgramAdminReportsSubTabPageResource.
                      ProgramAdminReportsSubTab_SelectSections_Button_Xpath_locator));

@@ -1560,7 +1560,9 @@ namespace Pegasus.Pages.UI_Pages
                 Report report = Report.Get(reportTypeEnum);
                 actualMyReportName = report.Name;
 
-                if (reportTypeEnum == Report.ReportTypeEnum.HSSActivityResultsByStudent)
+                if (reportTypeEnum == Report.ReportTypeEnum.HSSStudentResultsbyActivity ||
+                   reportTypeEnum == Report.ReportTypeEnum.HSSActivityResultsByStudent ||
+                   reportTypeEnum == Report.ReportTypeEnum.HSSStudytPlanResults)
                 {
                     cmenu = RptMainUXPageResource.RptmainUX_Page_MyReports_ActualReportCmenu_Xpath_Locator2;
                     reportName = RptMainUXPageResource.RptMainUX_Page_MyReports_ActualReport_Xpath_Locator2;
@@ -1613,6 +1615,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Switch to this case when user is 'SMS Instructor'
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.HSSCsSmsInstructor:
                         this.SwitchToReportsWindow();
                         //Switch to 'Reports' page 'Mainframe' iframe
                         this.SwitchToMainFrame();
@@ -1685,6 +1688,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Switch to this case when user is 'SMS Instructor'
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.HSSCsSmsInstructor:
                         this.SwitchToReportsWindow();
                         //Switch to 'Reports' page 'Mainframe' iframe
                         this.SwitchToMainFrame();
@@ -1742,6 +1746,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Switch to this case when user is 'SMS Instructor'
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.HSSCsSmsInstructor:
                         this.SwitchToReportsWindow();
                         //Switch to 'Reports' page 'Mainframe' iframe
                         this.SwitchToMainFrame();
@@ -1810,6 +1815,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Selects the activity when instructor is 'SMS Instructor'
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.HSSCsSmsInstructor:
                         this.SwitchToReportsWindow();
                         //Switch to 'Mainframe' iframe in 'Reports' page
                         this.SwitchToMainFrame();
@@ -1830,6 +1836,22 @@ namespace Pegasus.Pages.UI_Pages
                                 //Selects the expected training and click 'Add'
                                 this.AddAssessment(assessmentName);
                                 break;
+                            case "Select Activity":
+                                this.OpenAssessmentWindow(assessmentType, "Select Activity");
+                                //Selects the expected activity and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Study Plans":
+                                this.OpenAssessmentWindow(assessmentType, "Select Study Plans");
+                                //Selects the expected activity and click 'Add'
+                                this.AddAssessment(assessmentName);
+                                break;
+                            case "Select Student":
+                                this.OpenAssessmentWindow(assessmentType, "Select Student");
+                                //Selects the expected activity and click 'Add'
+                                this.AddHSSCsSmsStudent((User.UserTypeEnum)
+                                     Enum.Parse(typeof(User.UserTypeEnum), assessmentName));
+                                break;
                         }
                         break;
                 }
@@ -1840,6 +1862,50 @@ namespace Pegasus.Pages.UI_Pages
             }
             Logger.LogMethodExit("RptMainRptMainUXPage", "SelectSingleAssesment",
                    base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// This selects the expected assessment.
+        /// </summary>
+        /// <param name="studentName">This is the assessment to be selected.</param>
+        public void AddHSSCsSmsStudent(User.UserTypeEnum studentType)
+        {
+            // This selects the expected Student From Xml
+            Logger.LogMethodEntry("RptMainUXPage", "AddAssesment",
+                  base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(studentType);
+            String firstName = user.FirstName;
+            String lastName = user.LastName;
+            String studentName = lastName + ", " + firstName;
+            // This Selects Expected Student From UI
+            base.SwitchToLastOpenedWindow();
+            string getSearchedStudentName = string.Empty;
+            bool hdf = base.IsElementPresent(By.XPath("//*[@id='GridStudent']/tbody/tr"), 10);
+            base.WaitForElement(By.XPath("//*[@id='GridStudent']/tbody/tr"));
+            //Get count of the student listed 
+            int getStudentCount = base.GetElementCountByXPath("//*[@id='GridStudent']/tbody/tr");
+            int initialCountStudent = 2;
+            //Search for expected student
+            for (int initialCount = initialCountStudent;
+                initialCount <= getStudentCount; initialCount++)
+            {
+                base.WaitForElement(By.XPath(string.
+                    Format("//*[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", initialCount)));
+                getSearchedStudentName = base.GetElementTextByXPath(string.
+                Format("//*[@id='GridStudent']/tbody/tr[{0}]/td[2]/span", initialCount));
+                //Click on 'Checkbox' of the student
+                if (getSearchedStudentName == studentName)
+                {
+                    base.WaitForElement(By.XPath(string.Format("//*[@id='GridStudent']/tbody/tr[{0}]/td[1]/input", initialCount)));
+                    IWebElement selectStudent = base.GetWebElementPropertiesByXPath(string.Format("//*[@id='GridStudent']/tbody/tr[{0}]/td[1]/input", initialCount));
+                    base.ClickByJavaScriptExecutor(selectStudent);
+                    break;
+                }
+            }
+            this.ClickAddButton();
+            Logger.LogMethodExit("RptMainUXPage", "AddAssesment",
+                     base.IsTakeScreenShotDuringEntryExit);
+
         }
 
         /// <summary>
@@ -1907,7 +1973,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <param name="assessmentWindow">This is the assesment window name.</param>
         public void OpenAssessmentWindow(string assesmentType, string assessmentWindow)
         {
-            Logger.LogMethodEntry("RptMainUXPageResource", "OpenAssesmentWindow",
+            Logger.LogMethodEntry("RptMainUXPage", "OpenAssesmentWindow",
                   base.IsTakeScreenShotDuringEntryExit);
             try
             {
@@ -1927,7 +1993,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            Logger.LogMethodExit("RptMainUXPageResource", "OpenAssesmentWindow",
+            Logger.LogMethodExit("RptMainUXPage", "OpenAssesmentWindow",
                   base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -1941,6 +2007,9 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodEntry("RptMainUXPage", "AddAssesment",
                   base.IsTakeScreenShotDuringEntryExit);
             string getSearchedAssesmentName = string.Empty;
+            base.SwitchToLastOpenedWindow();
+            bool jdvh = base.IsElementPresent(By.XPath(RptMainUXPageResource.
+                RptMainUX_Page_MyReports_AssessmentCount_Xpath_Locator),10);
             base.WaitForElement(By.XPath(RptMainUXPageResource.
                 RptMainUX_Page_MyReports_AssessmentCount_Xpath_Locator));
             //Get count of the reports listed under 'My Reports'
@@ -2153,6 +2222,55 @@ namespace Pegasus.Pages.UI_Pages
             return reportFrameHeader;
         }
 
+        public void ClickReportLinkInHSS(string reportName, User.UserTypeEnum userTypeEnum)
+        {
+            switch (userTypeEnum)
+            {
+                case User.UserTypeEnum.HSSCsSmsInstructor:
+
+                    base.SwitchToLastOpenedWindow();
+                    base.SwitchToIFrame(RptMainPageResource.
+                      RptMain_Page_MainFrame_Id_Locator);
+                    int getreportLinkCount = base.GetElementCountByXPath("//table[@id='tblrptgrid']/tbody/tr");
+                    for (int i = 3; i <= getreportLinkCount; i++)
+                    {
+                        string getreportLinkName = base.GetElementTextByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
+                        if (getreportLinkName == reportName)
+                        {
+                            IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
+                            base.ClickByJavaScriptExecutor(reportLinkName);
+                            break;
+                        }
+                    }
+                    break;
+
+                //case User.UserTypeEnum.HSSProgramAdmin:
+                //    base.SwitchToLastOpenedWindow();
+                //    bool you = base.IsElementPresent(By.Id("_ctl0_PageContent_ifrmMiddle"), 10);
+                //    base.SwitchToIFrame("_ctl0_PageContent_ifrmMiddle");
+                //    bool ygou = base.IsElementPresent(By.Id(RptMainPageResource.
+                //      RptMain_Page_MainFrame_Id_Locator), 10);
+                //    bool hdfg = base.IsElementPresent(By.Id("Div2"), 10);
+                //    int getReportLinkCount = base.GetElementCountByXPath("//div[@id='Div2']/table/tbody/tr[2]/td/div/table/tbody/tr");
+
+                //    for (int i = 1; i <= getReportLinkCount; i++)
+                //    {
+                //        string getreportLinkName = base.GetElementTextByXPath(
+                //            string.Format(
+                //            "//div[@id='Div2']/table/tbody/tr[2]/td/div/table/tbody/tr{0}/td/span/span", i));
+                //        if (getreportLinkName == reportName)
+                //        {
+                //            IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(
+                //                string.Format(
+                //                "//div[@id='Div2']/table/tbody/tr[2]/td/div/table/tbody/tr{0}/td/span/span", i));
+                //            base.ClickByJavaScriptExecutor(reportLinkName);
+                //            break;
+                //            i++;
+                //        }
+                //    }
+                //    break;
+            }
+        }
     }
 }
 
