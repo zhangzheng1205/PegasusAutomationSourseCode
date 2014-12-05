@@ -127,7 +127,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                             RptStudyPlanReportPage_PreTestScore_XPath_Locator, scoreRow));
                         break;
                     }
-                    getStudentNameCount++;
+                    i++;
                 }
             }
             catch (Exception e)
@@ -178,7 +178,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                             RptStudyPlanReportPage_PostTestScore_XPath_Locator, scoreRow));
                         break;
                     }
-                    getStudentNameCount++;
+                    i++;
                 }
             }
             catch (Exception e)

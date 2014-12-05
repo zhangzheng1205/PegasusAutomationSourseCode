@@ -25,17 +25,17 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         /// Click the Student Enrollment link.
         /// </summary>
         [When(@"I clicked on the ""(.*)"" report link")]
-        public void ClickedOnReportLink(
+        public void ClickOnReportLink(
             String reportLink)
         {
             // Click on the Student Enrollment link
             Logger.LogMethodEntry("ProgramAdminReports",
-                "ClickedOnTheStudentEnrollmentLink",
+                "ClickOnReportLink",
                 base.IsTakeScreenShotDuringEntryExit);
             //Select Student Enrollment link
             new RptMainPage().SelectReportLinkType(reportLink);
             Logger.LogMethodExit("ProgramAdminReports",
-                "ClickedOnTheStudentEnrollmentLink",
+                "ClickOnReportLink",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 

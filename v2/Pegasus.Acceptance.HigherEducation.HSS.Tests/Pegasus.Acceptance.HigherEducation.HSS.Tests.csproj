@@ -104,6 +104,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CourseSpaceProgramAdmin.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProductAcceptanceTestFeatures\CoursespaceProgramAdminReports.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoursespaceProgramAdminReports.feature</DependentUpon>
+    </Compile>
     <Compile Include="ProductAcceptanceTestFeatures\CourseSpaceStudent.Workflow.feature.cs">
       <DependentUpon>CourseSpaceStudent.Workflow.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -172,6 +177,10 @@
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceProgramAdmin.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CourseSpaceProgramAdmin.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductAcceptanceTestFeatures\CoursespaceProgramAdminReports.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CoursespaceProgramAdminReports.feature.cs</LastGenOutput>
     </None>
     <None Include="ProductAcceptanceTestFeatures\CourseSpaceStudent.Workflow.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

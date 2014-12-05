@@ -38,7 +38,6 @@ Then I should see the successfull message "You have been signed out of the appli
 # in the program based on the below activities submissions available in the Course (Refer: Test link peg-22219)
 #Dependency : No dependency test can run with existing data
 Scenario: Generate and save the "Activity Results by Student" as a Section Instructor
-Given I browsed the login url for "HSSProgramAdmin"
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 When I click on "Activity Results by Student" report link as "HSSCsSmsInstructor"
 When I select "Take the Chapter 1 Exam" asset in "Select Activity" by "HSSCsSmsInstructor"

@@ -311,7 +311,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             Logger.LogAssertion("GetStudentStudyPlanPostTestScore",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
              Assert.AreEqual(preTestScore,
-             new RptStudyPlanReportPage().GetStudentStudyPlanPostTestScore(studentName, 6)));
+             new RptStudyPlanReportPage().GetStudentStudyPlanPostTestScore(studentName, 2)));
             Logger.LogMethodExit("ProgramAdinReports",
            "VerifyStudentStudyPlanDetailsInReports",
          base.IsTakeScreenShotDuringEntryExit);
@@ -357,7 +357,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        [When(@"I select ""(.*)"" asset in the ""(.*)""")]
+        [When(@"I select ""(.*)"" student")]        
         public void SelectStudentByProgramAdmin(User.UserTypeEnum userTypeEnum,
             string studentButtonName)
         {
