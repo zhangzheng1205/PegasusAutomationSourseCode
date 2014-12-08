@@ -333,4 +333,7 @@
   <data name="CommonPage_assetCount_xpath_Locator" xml:space="preserve">
     <value>//*[@id='GridStudent']/tbody/tr</value>
   </data>
+  <data name="CommonPage_TodaysView_WindowTitle_Value" xml:space="preserve">
+    <value>Today's View</value>
+  </data>
 </root>

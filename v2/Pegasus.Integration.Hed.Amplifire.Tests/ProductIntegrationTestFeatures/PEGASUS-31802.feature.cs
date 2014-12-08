@@ -19,19 +19,19 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.3.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class WorkSpaceInstructorAmplifierLaunchFeature
+    public partial class PEGASUS_31802Feature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "WorkSpaceInstructorAmplifierLaunch.feature"
+#line 1 "PEGASUS-31802.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "WorkSpace Instructor Amplifier Launch", "               As a WS Instuctor\r\n\t\t\tI want to manage all the workspace instructo" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PEGASUS-31802", "               As a WS Instuctor\r\n\t\t\tI want to manage all the workspace instructo" +
                     "r amplifier related usecases \r\n\t\t\tso that I would validate all the workspace ins" +
                     "tructor amplifier scenarios are working fine", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
@@ -48,9 +48,9 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures
         public virtual void TestInitialize()
         {
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
-                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "WorkSpace Instructor Amplifier Launch")))
+                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "PEGASUS-31802")))
             {
-                Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures.WorkSpaceInstructorAmplifierLaunchFeature.FeatureSetup(null);
+                Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures.PEGASUS_31802Feature.FeatureSetup(null);
             }
         }
         
@@ -72,7 +72,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("WSInstructor Launches the Amplifire using section course")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WorkSpace Instructor Amplifier Launch")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PEGASUS-31802")]
         public virtual void WSInstructorLaunchesTheAmplifireUsingSectionCourse()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("WSInstructor Launches the Amplifire using section course", ((string[])(null)));

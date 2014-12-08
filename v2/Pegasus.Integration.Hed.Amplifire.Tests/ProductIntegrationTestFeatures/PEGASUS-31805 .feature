@@ -1,4 +1,4 @@
-﻿Feature: CourseSpace Program Admin Amplifier Launch
+﻿Feature: PEGASUS-31805
 	                As a CS Program Admin
 					I want to manage all the coursespace instructor amplifier related usecases 
 					so that I would validate all the coursespace instructor amplifier scenarios are working fine

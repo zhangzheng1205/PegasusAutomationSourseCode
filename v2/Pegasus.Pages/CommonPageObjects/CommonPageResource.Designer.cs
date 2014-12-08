@@ -502,6 +502,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Today&apos;s View.
+        /// </summary>
+        internal static string CommonPage_TodaysView_WindowTitle_Value {
+            get {
+                return ResourceManager.GetString("CommonPage_TodaysView_WindowTitle_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to class.
         /// </summary>
         internal static string CommonPage_WebElement_Property_Class {

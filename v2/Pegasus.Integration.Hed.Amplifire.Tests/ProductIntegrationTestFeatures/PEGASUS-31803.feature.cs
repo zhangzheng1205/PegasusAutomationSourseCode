@@ -19,21 +19,21 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.3.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CourseSpaceSMSStudentAmplifierLaunchFeature
+    public partial class PEGASUS_31803Feature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "CourseSpaceSMSStudentAmplifierLaunch.feature"
+#line 1 "PEGASUS-31803.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Course Space SMS Student Amplifier Launch", "As a CS SMS Student\r\nI want to manage all the CS SMS Student amplifier related us" +
-                    "ecases \r\nso that I would validate all the CS SMS Student amplifier scenarios are" +
-                    " working fine", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PEGASUS-31803", "     As a CS SMS Instructor\r\n  I want to manage all the CS SMS Instructor amplifi" +
+                    "er related usecases \r\n  so that I would validate all the CS SMS Instructor ampli" +
+                    "fier scenarios are working fine", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -48,9 +48,9 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures
         public virtual void TestInitialize()
         {
             if (((TechTalk.SpecFlow.FeatureContext.Current != null) 
-                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "Course Space SMS Student Amplifier Launch")))
+                        && (TechTalk.SpecFlow.FeatureContext.Current.FeatureInfo.Title != "PEGASUS-31803")))
             {
-                Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures.CourseSpaceSMSStudentAmplifierLaunchFeature.FeatureSetup(null);
+                Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures.PEGASUS_31803Feature.FeatureSetup(null);
             }
         }
         
@@ -71,38 +71,32 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.ProductIntegrationTestFeatures
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Launch amplifier and SSO to Amplifier as SMS Student")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Course Space SMS Student Amplifier Launch")]
-        public virtual void LaunchAmplifierAndSSOToAmplifierAsSMSStudent()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Launch amplifier and SSO to amplifier page as SMS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PEGASUS-31803")]
+        public virtual void LaunchAmplifierAndSSOToAmplifierPageAsSMSInstructor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch amplifier and SSO to Amplifier as SMS Student", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Launch amplifier and SSO to amplifier page as SMS Instructor", ((string[])(null)));
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 10
-testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter in the \"InstructorCourse\" from the Global Home page as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
-testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Course Materials\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
-testRunner.When("I navigate to \"Course Materials\" tab and selected \"View All Course Materials\" sub" +
-                    "tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 13
+testRunner.When("I click on \"Capítulo preliminar: Bienvenidos a Unidos\" folder as \"CsSmsInstructor" +
+                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
-testRunner.When("I click on \"Capítulo preliminar: Bienvenidos a Unidos\" folder as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I click on \"¡Comprueba lo que sabes!\" folder as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
-testRunner.Then("I should be inside the folder \"Capítulo preliminar: Bienvenidos a Unidos\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see the \"Amplifire Study Module 0P: Vocabulario en contexto\" amplifier l" +
+                    "ink as \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 16
-testRunner.When("I click on \"¡Comprueba lo que sabes!\" folder as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
-testRunner.Then("I should be inside the folder \"¡Comprueba lo que sabes!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 18
-testRunner.And("I should see the \"Amplifire Study Module 0P: Vocabulario en contexto\" amplifier l" +
-                    "ink as \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
 testRunner.When("I open the \"Amplifire Study Module 0P: Vocabulario en contexto\" Activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
+#line 17
 testRunner.Then("I should see the \"amplifire\" activity successfully launched", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 21
+#line 18
 testRunner.And("I should see the BookTilte as \"Chapter 16: Innate Immunity: Nonspecific Defenses " +
                     "of the Host\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

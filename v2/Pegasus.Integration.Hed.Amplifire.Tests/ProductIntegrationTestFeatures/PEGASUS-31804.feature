@@ -1,4 +1,4 @@
-﻿Feature: Course Space SMS Student Amplifier Launch
+﻿Feature: PEGASUS-31804
 	 As a CS SMS Student
 	I want to manage all the CS SMS Student amplifier related usecases 
 	so that I would validate all the CS SMS Student amplifier scenarios are working fine

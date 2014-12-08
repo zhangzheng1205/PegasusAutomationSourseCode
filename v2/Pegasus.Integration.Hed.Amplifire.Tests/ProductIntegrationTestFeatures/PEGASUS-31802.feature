@@ -1,4 +1,4 @@
-﻿Feature: WorkSpace Instructor Amplifier Launch
+﻿Feature: PEGASUS-31802
 	                As a WS Instuctor
 					I want to manage all the workspace instructor amplifier related usecases 
 					so that I would validate all the workspace instructor amplifier scenarios are working fine

@@ -245,7 +245,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
 
 
         /// <summary>
-        /// Navigating to the folder where given asset exists
+        /// Navigating to the folder where given asset exists.
         /// </summary>
         /// <param name="Assetname">Asset Name</param>
         /// <param name="tabName">Tab</param>
@@ -278,8 +278,7 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("ActivitySubmission", "OpenTheActivityForSubmission",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
-       
+   
 
         /// <summary>
         /// Click on the activity.
@@ -359,7 +358,6 @@ namespace Pegasus.Integration.Hed.Amplifire.Tests.CommonProductIntegrationTestDe
             Logger.LogMethodExit("CommonSteps", "VerifyBookTitle",
                 IsTakeScreenShotDuringEntryExit);
         }
-
 
         /// <summary>
         /// Verify the launch of amplifier pop up.

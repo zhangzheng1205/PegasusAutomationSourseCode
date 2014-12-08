@@ -70,25 +70,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginLogoutResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="ProductIntegrationTestFeatures\CourseSpaceProgramAdminAmplifierLaunch.feature.cs">
+    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31805 .feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CourseSpaceProgramAdminAmplifierLaunch.feature</DependentUpon>
+      <DependentUpon>PEGASUS-31805 .feature</DependentUpon>
     </Compile>
-    <Compile Include="ProductIntegrationTestFeatures\WorkSpaceInstructorAmplifierLaunch.feature.cs">
+    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31802.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>WorkSpaceInstructorAmplifierLaunch.feature</DependentUpon>
+      <DependentUpon>PEGASUS-31802.feature</DependentUpon>
     </Compile>
-    <Compile Include="ProductIntegrationTestFeatures\CourseSpaceSMSInstructorAmplifierLaunch.feature.cs">
+    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31803.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CourseSpaceSMSInstructorAmplifierLaunch.feature</DependentUpon>
+      <DependentUpon>PEGASUS-31803.feature</DependentUpon>
     </Compile>
-    <Compile Include="ProductIntegrationTestFeatures\CourseSpaceSMSStudentAmplifierLaunch.feature.cs">
+    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31804.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CourseSpaceSMSStudentAmplifierLaunch.feature</DependentUpon>
+      <DependentUpon>PEGASUS-31804.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ProductIntegrationTestFeatures\PEGASUS-31807.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PEGASUS-31807.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -101,21 +106,25 @@
     <None Include="ProductIntegrationOrderedTests\OrderedTest.BuildVerificationTest.Integration.AmplifireFull.orderedtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ProductIntegrationTestFeatures\CourseSpaceProgramAdminAmplifierLaunch.feature">
+    <None Include="ProductIntegrationTestFeatures\PEGASUS-31805 .feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CourseSpaceProgramAdminAmplifierLaunch.feature.cs</LastGenOutput>
+      <LastGenOutput>PEGASUS-31805 .feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductIntegrationTestFeatures\WorkSpaceInstructorAmplifierLaunch.feature">
+    <None Include="ProductIntegrationTestFeatures\PEGASUS-31802.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>WorkSpaceInstructorAmplifierLaunch.feature.cs</LastGenOutput>
+      <LastGenOutput>PEGASUS-31802.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductIntegrationTestFeatures\CourseSpaceSMSInstructorAmplifierLaunch.feature">
+    <None Include="ProductIntegrationTestFeatures\PEGASUS-31803.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CourseSpaceSMSInstructorAmplifierLaunch.feature.cs</LastGenOutput>
+      <LastGenOutput>PEGASUS-31803.feature.cs</LastGenOutput>
     </None>
-    <None Include="ProductIntegrationTestFeatures\CourseSpaceSMSStudentAmplifierLaunch.feature">
+    <None Include="ProductIntegrationTestFeatures\PEGASUS-31804.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>CourseSpaceSMSStudentAmplifierLaunch.feature.cs</LastGenOutput>
+      <LastGenOutput>PEGASUS-31804.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProductIntegrationTestFeatures\PEGASUS-31807.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PEGASUS-31807.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
