@@ -86,8 +86,8 @@ Scenario: Student submits the Non gradable assets from the TO DO tab
 When I navigate to "Assignments" tab and selected "To Do" subtab
 Then I should be on the "Assignments - To Do" page
 When I launch "Review the Chapter 5 Learning Objectives" asset
-Then I should be on the "Learning Objectives - Chapter 1" page
-When I close the "Learning Objectives - Chapter 1" window
+Then I should be on the "Learning Objectives - Chapter 5" page
+When I close the "Learning Objectives - Chapter 5" window
 Then I should see "Viewed" status for the asset
 And I should see the "Viewed" status for the activity "Review the Chapter 5 Learning Objectives" in "Assignments - Done" page
 When I navigate to "Today's View" tab

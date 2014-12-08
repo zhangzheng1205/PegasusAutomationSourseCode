@@ -254,9 +254,9 @@ testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(nul
 #line 88
 testRunner.When("I launch \"Review the Chapter 5 Learning Objectives\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 89
-testRunner.Then("I should be on the \"Learning Objectives - Chapter 1\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Learning Objectives - Chapter 5\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 90
-testRunner.When("I close the \"Learning Objectives - Chapter 1\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I close the \"Learning Objectives - Chapter 5\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 91
 testRunner.Then("I should see \"Viewed\" status for the asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 92

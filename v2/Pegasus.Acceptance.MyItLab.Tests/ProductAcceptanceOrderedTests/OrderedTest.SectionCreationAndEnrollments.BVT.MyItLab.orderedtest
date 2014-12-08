@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="OrderedTest.SectionCreationAndEnrollments.BVT.MyItLab" storage="d:\pegasus_automation_nov24\v2\pegasus.acceptance.myitlab.tests\productacceptanceorderedtests\orderedtest.sectioncreationandenrollments.bvt.myitlab.orderedtest" id="c01b7d28-9940-464f-b649-018a913ef4d5" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="8a976fd2-214e-4f4c-a081-4273f7209064" name="orderedtest.programadmin.bvt.myitlab" storage="orderedtest.programadmin.bvt.myitlab.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="004fa61a-3d7d-496d-867f-3f74b2651c9f" name="OrderedTest.UserEnrollments.BVT.MyItLab" storage="orderedtest.userenrollments.bvt.myitlab.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
