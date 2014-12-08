@@ -1459,13 +1459,15 @@ namespace Pegasus.Pages.CommonPageObjects
             base.IsTakeScreenShotDuringEntryExit);
             this.NavigateToChapter1ExamGradeFolder(folderName);
             new GBInstructorUXPage().SelectGradebookFrame();
-            int assetCount = base.GetElementCountByXPath(CommonPageResource.CommonPage_assetCount_xpath_Locator);
+            int assetCount = base.GetElementCountByXPath(CommonPageResource.
+                CommonPage_assetCount_xpath_Locator);
             try
             {
                 for (int i = 1; i <= assetCount; i++)
                 {
                     IWebElement assetElement = base.GetWebElementPropertiesByXPath(
-                        String.Format(CommonPageResource.CommonPage_AssesmentElement_Xpath_Locator, i));
+                        String.Format(CommonPageResource.
+                        CommonPage_AssesmentElement_Xpath_Locator, i));
                     String elementText = assetElement.Text;
                     if (elementText.Equals(activityName))
                     {

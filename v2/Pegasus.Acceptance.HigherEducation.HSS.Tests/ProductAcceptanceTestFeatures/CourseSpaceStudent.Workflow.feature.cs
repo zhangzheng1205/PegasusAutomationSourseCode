@@ -111,7 +111,7 @@ testRunner.When("I select \"Take the Chapter 1 Exam\" in \"Course Materials\" by
 #line 22
 testRunner.Then("I should be on the \"Exam\" page displayed with questions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 23
-testRunner.When("I forcibly close the Exam window abdruplty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I close the Exam window abruplty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 24
 testRunner.Then("I should see the \"In Progress\" status for the activity \"Take the Chapter 1 Exam\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 25

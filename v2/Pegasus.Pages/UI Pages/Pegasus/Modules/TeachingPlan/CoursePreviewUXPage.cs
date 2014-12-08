@@ -138,18 +138,22 @@ namespace Pegasus.Pages.UI_Pages
                base.IsTakeScreenShotDuringEntryExit);
             return getActivityName;
         }
+
         /// <summary>
         /// Launches the Etext Window.
         /// </summary>
         public void LaunchEText()
         {
-            //Find EText Activity Present In Launch Window
+            // Launches the Etext Window
             logger.LogMethodEntry("CoursePreviewUXPage", "LaunchEText",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                base.WaitForElement(By.Id(CoursePreviewUXPageResource.CoursePreviewUX_Page_Etext_Link));
-                IWebElement EtextLink = base.GetWebElementPropertiesById(CoursePreviewUXPageResource.CoursePreviewUX_Page_Etext_Link);
+                base.WaitForElement(By.Id(CoursePreviewUXPageResource.
+                CoursePreviewUX_Page_Etext_Link));
+                IWebElement EtextLink = base.GetWebElementPropertiesById(CoursePreviewUXPageResource.
+                CoursePreviewUX_Page_Etext_Link);
+                // Launches the Etext Window
                 base.ClickByJavaScriptExecutor(EtextLink);
             }
             catch (Exception e)
@@ -158,18 +162,20 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodExit("CoursePreviewUXPage", "LaunchEText",
                base.IsTakeScreenShotDuringEntryExit);
-
         }
+
         /// <summary>
-        /// close the Etext Window.
+        /// close the 'Etext' window.
         /// </summary>
         public void CloseEtextWindow()
         {
+            // close the 'Etext' window
             logger.LogMethodEntry("CoursePreviewUXPage", "CloseEtextWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
                 base.SwitchToLastOpenedWindow();
+                // close the 'Etext' window
                 base.CloseBrowserWindow();
             }
             catch (Exception e)

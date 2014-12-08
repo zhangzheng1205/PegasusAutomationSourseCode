@@ -29,7 +29,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
         public void EnrollSmsInstructorInCourse(
             Course.CourseTypeEnum courseTypeEnum)
         {
-            //Add Course From Search Catalog
+            // Enroll SMS Instructor in course
             Logger.LogMethodEntry("UserEnrollment", "EnrollSmsInstructorInCourse",
                 base.IsTakeScreenShotDuringEntryExit);
             // Click 'Enroll In a Course' Button 
@@ -70,7 +70,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
         public void EnrollSmsStudentInCourse(
             Course.CourseTypeEnum courseTypeEnum)
         {
-            //Add Course From Search Catalog
+            // Enroll SMS student in course
             Logger.LogMethodEntry("UserEnrollment", "EnrollSmsStudentInCourse",
                 base.IsTakeScreenShotDuringEntryExit);
             //Assert student Help Text Window Closed
@@ -85,28 +85,5 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="courseTypeEnum"></param>
-        [Then(@"I should see enrolled ""(.*)"" Section course in Global Home Page")]
-        public void VerifyTheDisplayOfEnrolledSectionCourseInGlobalHomePage
-            (Course.CourseTypeEnum courseTypeEnum)
-        {
-            //Section Display in Global Home Page
-            Logger.LogMethodEntry("UserEnrollment",
-                "VerifyTheDisplayOfEnrolledSectionCourseInGlobalHomePage",
-                base.IsTakeScreenShotDuringEntryExit);
-            //Get Course From Memory
-            Course course = Course.Get(courseTypeEnum);
-            bool isCourseVisibleInGlobalHomePage = new HEDGlobalHomePage().
-                   IsCoursePresentInGlobalHomePage(course.SectionName);
-            //Assert section displays in global home page           
-            Logger.LogAssertion("VerifySmsStudentEnrollInCourse", ScenarioContext.
-                Current.ScenarioInfo.Title, () => Assert.IsTrue(isCourseVisibleInGlobalHomePage));
-            Logger.LogMethodExit("UserEnrollment",
-                "VerifyTheDisplayOfEnrolledSectionCourseInGlobalHomePage",
-                base.IsTakeScreenShotDuringEntryExit);
-        }
     }
 }

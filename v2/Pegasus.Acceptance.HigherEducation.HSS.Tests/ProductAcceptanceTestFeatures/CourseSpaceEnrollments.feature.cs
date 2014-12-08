@@ -97,7 +97,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 14
 testRunner.When("I enroll SMS Student in \"HSSMyPsychLabProgram\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 15
-testRunner.Then("I should see enrolled \"HSSMyPsychLabProgram\" Section course in Global Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see enrolled \"HSSMyPsychLabProgram\" Section in Global Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

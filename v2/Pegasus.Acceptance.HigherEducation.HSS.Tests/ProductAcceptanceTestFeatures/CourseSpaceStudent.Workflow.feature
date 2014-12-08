@@ -20,7 +20,7 @@ When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
 When I select "Take the Chapter 1 Exam" in "Course Materials" by "HSSCsSmsStudent"
 Then I should be on the "Exam" page displayed with questions
-When I forcibly close the Exam window abdruplty
+When I close the Exam window abruplty
 Then I should see the "In Progress" status for the activity "Take the Chapter 1 Exam"
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page

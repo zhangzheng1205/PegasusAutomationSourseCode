@@ -5907,7 +5907,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         }
 
         /// <summary>
-        /// Closing the Window abdruptly
+        /// Close the window abruptly.
         /// </summary>
         public void CloseWindow()
         {
@@ -5942,46 +5942,56 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             ActivityQuestionsList.ActivityBehaviourTypeEnum activityBehaviourType,
             ActivityQuestionsList.ActivityTypeEnum activityType, String OptionType,String TestType="Default Type")
         {
+            // Answer the Questions of activity
             logger.LogMethodEntry("StudentPresentationPage", "AnswerActivityQuestions",
                 base.IsTakeScreenShotDuringEntryExit);
             string ActualQuestion = String.Empty;
             try
             {
                 int QuestionCount = base.GetElementCountByCSSSelector(
-                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_QuestionCount_Value);
-                if (OptionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue)
+                        StudentPresentationPageResource.
+                        StudentPresentation_Page_HSS_Activity_QuestionCount_Value);
+                if (OptionType.Equals(StudentPresentationPageResource.
+                    StudentPresentation_Page_HSS_Activity_Partial_AnswerOptionValue)
                     && (TestType.Equals("Default Type")))
                 {
                     QuestionCount = 2;
-                    OptionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
+                    OptionType = StudentPresentationPageResource.
+                        StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
                 }
                 if (!(TestType.Equals("Default Type")))
                 {
-                    OptionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
+                    OptionType = StudentPresentationPageResource.
+                        StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue;
                 }
                 for (int NthQuestion = 1; NthQuestion <= QuestionCount; NthQuestion++)
                 {
                     while (NthQuestion > 18 && !(TestType.Equals("Default Type"))
-                        && OptionType.Equals(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue))
+                        && OptionType.Equals(StudentPresentationPageResource.
+                        StudentPresentation_Page_HSS_Activity_Correct_AnswerOptionValue))
                     {
-                        OptionType = StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_inCorrect_AnswerOptionValue;
+                        OptionType = StudentPresentationPageResource.
+                            StudentPresentation_Page_HSS_Activity_inCorrect_AnswerOptionValue;
                         break;
                     }
                     IList<IWebElement> Qus = WebDriver.FindElements(By.ClassName(
-                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_Question_Value));
+                        StudentPresentationPageResource.
+                        StudentPresentation_Page_HSS_Activity_Question_Value));
                     foreach (IWebElement element in Qus)
                     {
                         if (element.Text.Equals(String.Empty)) continue;
                         else
                         {
                             ActualQuestion = element.Text;
-                            String Option = base.GetQuestionOptionName(activityType, activityBehaviourType, activityName, ActualQuestion, OptionType);
+                            String Option = base.GetQuestionOptionName(activityType, 
+                                activityBehaviourType, activityName, ActualQuestion, OptionType);
                             if (Option.Contains("|"))
                             {
                                 string[] words = Option.Split('|');
                                 foreach (string word in words)
                                 {
-                                    IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(word);
+                                    IWebElement SelectOption = base.
+                                        GetWebElementPropertiesByLinkText(word);
                                     base.ClickByJavaScriptExecutor(SelectOption);
                                 }
                             }
@@ -5996,9 +6006,13 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                                         if (NthOption % 2 != 0)
                                         {
                                             base.WaitForElement(By.XPath(string.Format(
-                                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator, NthQuestion, NthOption)));
+                                                StudentPresentationPageResource.
+                                                StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator,
+                                                NthQuestion, NthOption)));
                                             IWebElement RadioOption = base.GetWebElementPropertiesByXPath(string.Format(
-                                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator, NthQuestion, NthOption));
+                                                StudentPresentationPageResource.
+                                                StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator,
+                                                NthQuestion, NthOption));
                                             String TempOption = RadioOption.Text;
                                             if (TempOption.Equals(Option))
                                             {
@@ -6010,12 +6024,14 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                                 }
                                 else
                                 {
-                                    IWebElement SelectOption = base.GetWebElementPropertiesByLinkText(Option);
+                                    IWebElement SelectOption = base.
+                                        GetWebElementPropertiesByLinkText(Option);
                                     base.ClickByJavaScriptExecutor(SelectOption);
                                 }
                             }
                             IWebElement NextQuestButton = base.GetWebElementPropertiesById(
-                                StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_NextButton_ID_Locator);
+                                StudentPresentationPageResource.
+                                StudentPresentation_Page_HSS_Activity_NextButton_ID_Locator);
                             base.PerformMouseClickAction(NextQuestButton);
                             break;
                         }
@@ -6219,6 +6235,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
         /// </summary>
         public void ClickOnSaveForLaterOption()
         {
+            // Click on Save For Later Option
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnSaveForLaterOption",
             base.IsTakeScreenShotDuringEntryExit);
             try
@@ -6230,6 +6247,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 IWebElement getSaveButton = base.GetWebElementPropertiesById(
                     StudentPresentationPageResource.
                     StudentPresentation_Page_HSS_Activity_ConfirmSave_ID_Locator);
+                // Click on Save For Later Option
                 base.ClickByJavaScriptExecutor(getSaveButton);
             }
             catch (Exception e)

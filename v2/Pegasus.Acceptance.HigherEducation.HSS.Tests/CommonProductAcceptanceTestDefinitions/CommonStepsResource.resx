@@ -160,7 +160,7 @@
     <value>right</value>
   </data>
   <data name="CommonSteps_SleepTime_Value" xml:space="preserve">
-    <value>3000</value>
+    <value>5000</value>
   </data>
   <data name="CommonSteps_Subtab_Classname_Xpath_Locator" xml:space="preserve">
     <value>//tr[@id='trSubNavigationTab']/td[{0}]</value>

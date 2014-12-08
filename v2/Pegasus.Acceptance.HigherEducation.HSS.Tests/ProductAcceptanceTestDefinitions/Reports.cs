@@ -20,6 +20,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
         /// </summary>
         private static Logger Logger =
             Logger.GetInstance(typeof(Reports));
+
         /// <summary>
         /// Verify the details of "Student report by activity" report generated.
         /// </summary>
@@ -57,6 +58,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
                 "VerifySectionNameAndAverageScoreInStudentReportByActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Verify the details of the Student report by activity Report.
         /// </summary>
@@ -66,31 +68,35 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
         public void VerifyTheReportDetailsInStudentRepoprtByActivity(
             string activityName, string activityType)
         {
+            // Verify the details of the Student report by activity Report
             Logger.LogMethodEntry("Reports",
                 "VerifyTheReportDetailsInStudentRepoprtByActivity",
             base.IsTakeScreenShotDuringEntryExit);
             //Verify activity name
             Logger.LogAssertion("VerifyActivityName",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
-              Assert.AreEqual(activityName, new RptStudentReportByActivityPage().GetReportDetails(1)));
+              Assert.AreEqual(activityName, new RptStudentReportByActivityPage().
+              GetReportDetails(1)));
             //Verify Activity type
             Logger.LogAssertion("VerifyActivityType",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
-              Assert.AreEqual(activityType, new RptStudentReportByActivityPage().GetReportDetails(2)));
+              Assert.AreEqual(activityType, new RptStudentReportByActivityPage().
+              GetReportDetails(2)));
             Logger.LogMethodExit("Reports",
                 "VerifyTheReportDetailsInStudentRepoprtByActivity",
             base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
-        /// Verify The Activity Details In Activity Result By Student Report
+        /// Verify The Activity Details In Activity Result By Student Report.
         /// </summary>
-        /// <param name="activityName"></param>
-        /// <param name="courseTypeEnum"></param>
-        /// <param name="averageScore"></param>
+        /// <param name="activityName">This is activity name.</param>
+        /// <param name="courseTypeEnum">This is course type enum.</param>
+        /// <param name="averageScore">This is expected average score.</param>
         [Then(@"I should see the ""(.*)"" with section name ""(.*)"" with average score ""(.*)""")]
         public void VerifyTheActivityDetailsInActivityResultByStudentReport(string activityName,
             Course.CourseTypeEnum courseTypeEnum, string averageScore)
         {
+            // Verify The Activity Details In Activity Result By Student Report
             Logger.LogMethodEntry("Reports",
                 "VerifyTheActivityDetailsInActivityResultByStudentReport",
             base.IsTakeScreenShotDuringEntryExit);
@@ -115,11 +121,12 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             base.IsTakeScreenShotDuringEntryExit);
 
         }
+
         /// <summary>
-        /// Verify Zero Scoring Details In Activity Report By Student
+        /// Verify Zero Scoring Details In Activity Report By Student.
         /// </summary>
-        /// <param name="userTypeEnum"></param>
-        /// <param name="scorePercentage"></param>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        /// <param name="scorePercentage">This is expected percentage.</param>
         [Then(@"I should see 'Zero' ""(.*)"" along with submitted score as ""(.*)""")]
         public void VerifyZeroScoringDetailsInActivityReportByStudent(
             User.UserTypeEnum userTypeEnum, string scorePercentage)
@@ -144,11 +151,12 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
            "VerifyZeroScoringDetailsInActivityReportByStudent",
          base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Verify 100 Scoring Details In Activity Report By Student
         /// </summary>
-        /// <param name="userTypeEnum"></param>
-        /// <param name="scorePercentage"></param>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        /// <param name="scorePercentage">This is the percentage.</param>
         [Then(@"I should see the ""(.*)"" along with attempt submitted as score as ""(.*)""")]
         public void Verify100ScoringDetailsInActivityReportByStudent
             (User.UserTypeEnum userTypeEnum,
@@ -176,6 +184,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
        "Verify100ScoringDetailsInActivityReportByStudent",
      base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Select All Students Based on instructor.
         /// </summary>
@@ -191,6 +200,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             Logger.LogMethodExit("Reports", "SelectAllStudents",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Check 'Save settings to my report' base on instructor.
         /// </summary>
@@ -221,13 +231,15 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             Logger.LogMethodExit("Reports", "ClickReportButton",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
-        /// 
+        /// Verify score in study plan report.
         /// </summary>
-        /// <param name="averageScore"></param>
+        /// <param name="averageScore">This is the expected average score.</param>
         [Then(@"I should see average score ""(.*)""")]
         public void StudyPlanAverageScoreDisplayed(string averageScore)
         {
+            // Verify score in study plan report
             Logger.LogMethodEntry("Reports", "StudyPlanAverageScoreDisplayed",
           base.IsTakeScreenShotDuringEntryExit);
             // Verifying the Activity Score
@@ -237,6 +249,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             Logger.LogMethodEntry("Reports", "StudyPlanAverageScoreDisplayed",
           base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// This selects assessment from assessment window based on user.
         /// </summary>
@@ -256,6 +269,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             Logger.LogMethodExit("Reports", "SelectTheAssessmentInReport",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Selects a section under a template.
         /// </summary>
@@ -278,6 +292,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
                 "SelectSectionBasedOnTemplate",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Verify Student Study Plan Details In Reports
         /// </summary>
@@ -313,8 +328,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
            "VerifyStudentStudyPlanDetailsInReports",
          base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
-        /// 
+        /// Verify report heading ,section name and average score in study plan report.
         /// </summary>
         /// <param name="userTypeEnum"></param>
         /// <param name="attempCount"></param>
@@ -352,10 +368,17 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
                 "Verify100ScoreStudentDetailsInHSSStudyPlanReports",
               base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select student for report generation.
+        /// </summary>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        /// <param name="studentButtonName">This is button name.</param>
         [When(@"I select ""(.*)"" student in ""(.*)""")]
         public void SelectStudentByProgramAdmin(User.UserTypeEnum userTypeEnum,
             string studentButtonName)
         {
+            // Select student for report generation
             Logger.LogMethodEntry("Reports",
                              "SelectStudentByProgramAdmin",
                              base.IsTakeScreenShotDuringEntryExit);
@@ -364,11 +387,24 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             Logger.LogMethodExit("Reports",
                "SelectStudentByProgramAdmin",
              base.IsTakeScreenShotDuringEntryExit);
+        }
 
+        /// <summary>
+        /// Initialize Pegasus test before test execution starts.
+        /// </summary>
+        [BeforeTestRun]
+        public static void Setup()
+        {
 
         }
 
+        /// <summary>
+        /// Deinitialize Pegasus test after the execution of test.
+        /// </summary>
+        [AfterTestRun]
+        public static void TearDown()
+        {
 
-
+        }
     }
 }

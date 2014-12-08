@@ -85,6 +85,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("LoginLogout", "LoginIntoThePegasusBasedOnScenerios",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Common LoginInto The Pegasus.
         /// </summary>
@@ -129,6 +130,12 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("LoginLogout", "CommonLoginIntoThePegasus",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Login into pegasus based on user.
+        /// </summary>
+        /// <param name="userTypeEnum">This is the usertype enum</param>
+        /// <param name="loginMode">This is the course type.</param>
         [When(@"I logged into the Pegasus as ""(.*)"" in ""(.*)""")]
         [When("I logged into the Pegasus as \"(.*)\" in \"(.*)\"")]
         public void LoginIntoThePegasus(User.UserTypeEnum userTypeEnum,
@@ -184,7 +191,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         }
 
         /// <summary>
-        /// User Loggedin Successfully.
+        ///Verify the user login.
         /// </summary>
         [Then(@"I should logged in successfully")]
         public void LoggedInSuccessfully()
@@ -275,14 +282,16 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         public void VerifyForgotPasswordRegistrationLink()
         {
             //Login Success
-            Logger.LogMethodEntry("LoginLogout", "VerifyForgotPassword_RegistrationLink",
+            Logger.LogMethodEntry("LoginLogout", 
+                "VerifyForgotPassword_RegistrationLink",
                 base.IsTakeScreenShotDuringEntryExit);
             //Assert visibility of Forgot Password and Registration Link
             Logger.LogAssertion("LoginLogout",
                 "VerifyForgotPassword_RegistrationLink",
                 () => Assert.IsFalse(_loginPage
                     .IsForgotPasswordAndRegistrationLinkPresntInLoginPage()));
-            Logger.LogMethodExit("LoginLogout", "VerifyForgotPassword_RegistrationLink",
+            Logger.LogMethodExit("LoginLogout",
+                "VerifyForgotPassword_RegistrationLink",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
