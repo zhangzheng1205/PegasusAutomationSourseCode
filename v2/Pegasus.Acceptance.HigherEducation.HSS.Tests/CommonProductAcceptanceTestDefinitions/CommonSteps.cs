@@ -86,7 +86,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ClickOpenToLaunchTheQuestions",
              base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verifies the Correct Page Opened.
         /// </summary>
@@ -100,7 +99,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ShowThePageInPegass",
              base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Answer the Questions of activity.
         /// </summary>
@@ -138,7 +136,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "AnswerActivityQuestion",
              base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Click on Save For Later Option.
         /// </summary>
@@ -151,7 +148,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ClickOnSaveForLaterButton",
              base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Closing the Window abdruptly
         /// </summary>
@@ -166,7 +162,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ForciblyCloseTheWindow",
                 IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Validate Activity Status For The Activity.
         /// </summary>
@@ -188,7 +183,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 "StatusForTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// click on Submit the activity
         /// </summary>
@@ -205,7 +199,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ClickOnSubmitTheActivity",
              base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify Submission Score of an activity
         /// </summary>
@@ -220,7 +213,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "VerifySubmissionScore",
                 IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Click on View Submission of an activity
         /// </summary>
@@ -233,7 +225,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ClickOnViewSubmission",
                 IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify Submission Score of an activity and student details 
         /// </summary>
@@ -281,7 +272,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             IsTakeScreenShotDuringEntryExit);
             return ExpectedUserDetail;
         }
-
         /// <summary>
         /// Verifies the Pop Up Opened
         /// Verifies the Correct Pop Up Opened.
@@ -302,7 +292,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ShowThePopUpInPegasus",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify the display message is valid or not.
         /// </summary>
@@ -321,7 +310,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "DisplaySuccessfullMessageStopCopyEnroll",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         ///  Click on the Link .
         /// </summary>
@@ -361,7 +349,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ClickOnTheLink",
              base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         ///Navigate to Tab Window
         ///Verifies that Correct Window Opened.
@@ -399,7 +386,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToTheTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify the Success Message Display on the Page.
         /// </summary>
@@ -418,7 +404,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify Course Present In User's Home Page.
         /// </summary>
@@ -439,7 +424,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", " ShowCourseOnTheGlobalHomePage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Enter Into Course.
         /// </summary>
@@ -458,7 +442,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", " EnterInCourse",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify User Entered In Course.
         /// </summary>
@@ -480,7 +463,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "VerifyEnteringIntoTheCourse",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Close The Window.
         /// </summary>
@@ -495,7 +477,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "CloseTheWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Click On Home Link.
         /// </summary>
@@ -510,7 +491,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ClickHomeLink",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Successfull Message In MyTest Tab.
         /// </summary>
@@ -529,7 +509,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodEntry("CommonSteps", "SuccessfullMessageInMyTestTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Closes the Window.
         /// </summary>
@@ -545,7 +524,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "CloseTheManageOrganizationWindow",
                 IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify the Success Message Display on the Window.
         /// </summary>
@@ -579,7 +557,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "DisplayTheSuccessfullMessageInWindow",
                 IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Navigate To Tab Of The Perticular Page.
         /// </summary>
@@ -607,7 +584,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToTabOfThePerticularPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Navigate To Publishing Tab.
         /// </summary>
@@ -650,7 +626,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToPublishingTab",
                base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
          /// Get Subtab Value.
         /// </summary>
@@ -678,7 +653,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                base.IsTakeScreenShotDuringEntryExit);
             return getSubTabId;
         }
-
         /// <summary>
         /// Navigate To Course Space User Tabs.
         /// </summary>
@@ -696,7 +670,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToCourseSpaceUserTabs",
                base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Navigate To Tab.
         /// </summary>
@@ -712,7 +685,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToTab",
                base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Select Tab.
         /// </summary>
@@ -764,8 +736,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             }
             Logger.LogMethodExit("CommonSteps", "SelectTab",
               base.IsTakeScreenShotDuringEntryExit);
-        }
-        
+        }        
         /// <summary>
         /// Select MainTab.
         /// </summary>
@@ -795,7 +766,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "SelectCourseSpaceUserMainTab",
                base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Navigate To Tab As Program Administrator.
         /// This is For Program Course Tab Navigation
@@ -838,7 +808,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "NavigateToTabAsProgramAdministrator",
                base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Navigate To Tab Of The Particular Page.
         /// </summary>
@@ -849,11 +818,11 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             string subNavigationTabName, string subNavigationTabParentWindowName)
         {
             // navigate program administrator page
-            Logger.LogMethodEntry("AdminToolPage", "NavigateToTabOfTheParticularPage",
+            Logger.LogMethodEntry("CommonSteps", "NavigateToTabOfTheParticularPage",
                 base.IsTakeScreenShotDuringEntryExit);
             new ProgramAdminToolPage().NavigateProgramAdminTabs(
                 subNavigationTabParentWindowName, subNavigationTabName);
-            Logger.LogMethodExit("AdminToolPage", "NavigateToTabOfTheParticularPage",
+            Logger.LogMethodExit("CommonSteps", "NavigateToTabOfTheParticularPage",
                 base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
@@ -866,13 +835,12 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         public void NavigateToFolder(string Assetname, string tabName, User.UserTypeEnum userTypeEnum)
         {
             //Navigating to the folder where given asset exists
-            Logger.LogMethodEntry("CourseContent", "NavigateToFolder",
+            Logger.LogMethodEntry("CommonSteps", "NavigateToFolder",
                 base.IsTakeScreenShotDuringEntryExit);
             new CommonPage().ManageTheActivityFolderLevelNavigation(Assetname, tabName, userTypeEnum);
-            Logger.LogMethodExit("CourseContent", "NavigateToFolder",
+            Logger.LogMethodExit("CommonSteps", "NavigateToFolder",
              base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
@@ -881,7 +849,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         {
             new CommonSteps().ResetWebdriver();
         }
-
         /// <summary>
         /// Deinitialize Pegasus test after the execution of test
         /// and clean the WebDriver Instance.
@@ -891,7 +858,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         {
             new CommonSteps().WebDriverCleanUp();
         }
-
         /// <summary>
         /// Manage The Activity Folder Level Navigation HED Core.
         /// </summary>
@@ -925,7 +891,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Navigate To the Etext Window.
         /// </summary>
@@ -940,7 +905,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 "NavigateToEtextWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// close the Etext Window.
         /// </summary>
@@ -948,14 +912,13 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         public void CloseETextWindow()
         {
             Logger.LogMethodEntry("CommonSteps",
-                "NavigateToEtextWindow",
+                "CloseETextWindow",
                 base.IsTakeScreenShotDuringEntryExit);
             new CoursePreviewUXPage().CloseEtextWindow();
             Logger.LogMethodExit("CommonSteps",
-                "NavigateToEtextWindow",
+                "CloseETextWindow",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify Section in Active State.
         /// </summary>
@@ -965,17 +928,16 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Course.CourseTypeEnum courseTypeEnum)
         {
             //Verify Section in Active State
-            Logger.LogMethodEntry("ProgramAdmin", "SectionInAssignedToCopyState",
+            Logger.LogMethodEntry("CommonSteps", "SectionInAssignedToCopyState",
                 base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Approve Section in Active State
             new ManageTemplatePage().ApproveInActiveStateOfEntityInProgramAdministration(
                 course.SectionName);
-            Logger.LogMethodExit("ProgramAdmin", "SectionInAssignedToCopyState",
+            Logger.LogMethodExit("CommonSteps", "SectionInAssignedToCopyState",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify Section in Active State or not.
         /// </summary>
@@ -997,8 +959,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ApproveAssignedToCopyStateForSection",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
-
         /// <summary>
         /// Launch the asset .
         /// </summary>
@@ -1015,7 +975,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
              "LaunchchapterReviewAsset",
              base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify the status in TODO Tab.
         /// </summary>
@@ -1025,7 +984,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         {
             //Verify the status of the asset
             Logger.LogMethodEntry("CommonSteps",
-                "OpenAsset",
+                "VerifyAssetStatus",
                 base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("VerifyAssetStatus",
                ScenarioContext.Current.ScenarioInfo.Title,
@@ -1033,10 +992,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                    GetAssetStatus(assetStatus)));
             Thread.Sleep(5000);
             Logger.LogMethodExit("CommonSteps",
-                "OpenAsset",
+                "VerifyAssetStatus",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify the status in Completed Tab.
         /// </summary>
@@ -1045,17 +1003,16 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         public void VerifyStatusInCompletedTab(string assetName)
         {
             Logger.LogMethodEntry("CommonSteps",
-                  "OpenAsset",
+                  "VerifyStatusInCompletedTab",
                   base.IsTakeScreenShotDuringEntryExit);
             Logger.LogAssertion("VerifyAssetStatus",
                ScenarioContext.Current.ScenarioInfo.Title,
                () => Assert.AreEqual(assetName, new CoursePreviewUXPage().
                    GetAssetNameInCompletedTab(assetName)));
             Logger.LogMethodExit("CommonSteps",
-                "OpenAsset",
+                "VerifyStatusInCompletedTab",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Verify folder asset is present.
         /// </summary>
@@ -1064,7 +1021,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         public void VerifyFolderAssetPresent(string expectedFolderAssetName)
         {
             //Verify expected folder name is same as actual folder name
-            Logger.LogMethodEntry("AssignmentCalendar",
+            Logger.LogMethodEntry("CommonSteps",
               "VerifyFolderAssetPresent",
               base.IsTakeScreenShotDuringEntryExit);
             //Assert expected and actual folder values
@@ -1072,26 +1029,33 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 ScenarioContext.Current.ScenarioInfo.Title,
                 () => Assert.AreEqual(expectedFolderAssetName,
                     new CalendarHedDefaultUxPage().GetActualFolderName(expectedFolderAssetName)));
-            Logger.LogMethodExit("AssignmentCalendar",
+            Logger.LogMethodExit("CommonSteps",
                 "VerifyFolderAssetPresent",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
-
+        /// <summary>
+        /// Drag And Drop The Folder To The CurrentDate
+        /// </summary>
+        /// <param name="activityName"></param>
         [When(@"I drag and drop the ""(.*)"" folder to the current date")]
-        public void WhenIDragAndDropTheFolderToTheCurrentDate(string activityName)
+        public void DragAndDropTheFolderToTheCurrentDate(string activityName)
         {
             // Drag and drop a folder asset to current date.
-            Logger.LogMethodEntry("AssignmentCalendar",
+            Logger.LogMethodEntry("CommonSteps",
                "DragAndDropFolderToCurrentDate",
                base.IsTakeScreenShotDuringEntryExit);
             // Drag and drop a folder asset to current date.
             new CalendarHedDefaultUxPage().DragAndDropFolderAsset(activityName);
-            Logger.LogMethodExit("AssignmentCalendar",
+            Logger.LogMethodExit("CommonSteps",
               "DragAndDropFolderToCurrentDate",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
+        /// <summary>
+        /// Status For The Activity In Assignments Page
+        /// </summary>
+        /// <param name="activityStatus"></param>
+        /// <param name="activityName"></param>
+        /// <param name="windowName"></param>
         [Then(@"I should see the ""(.*)"" status for the activity ""(.*)"" in ""(.*)"" page")]
         [Then(@"I should see the ""(.*)"" status for the activity ""(.*)"" in Assignments Page")]
         public void StatusForTheActivityInAssignmentsPage(string activityStatus,
@@ -1109,8 +1073,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 "StatusForTheActivity",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
-
+        /// <summary>
+        /// Click On Return To Course
+        /// </summary>
         [When(@"I click on return to course")]
         public void ClickOnReturnToCourse()
         {
@@ -1120,7 +1085,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ClickOnReturnToCourse",
              base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Click The Enter Section As Instructor.
         /// </summary>
@@ -1137,7 +1101,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodExit("CommonSteps", "ClickTheEnterSectionAsInstructor"
                 , base.IsTakeScreenShotDuringEntryExit);
         }
-
         /// <summary>
         /// Search Section
         /// </summary>
@@ -1146,17 +1109,15 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         public void SearchFirstSection(Course.CourseTypeEnum courseTypeEnum)
         {
             //Search Section
-            Logger.LogMethodEntry("CopyContent", "SearchFirstSection",
+            Logger.LogMethodEntry("CommonSteps", "SearchFirstSection",
                 base.IsTakeScreenShotDuringEntryExit);
             //Get Course From Memory
             Course course = Course.Get(courseTypeEnum);
             //Search Section
             new ManageTemplatePage().SearchSection(course.SectionName);
-            Logger.LogMethodExit("CopyContent", " SearchFirstSection",
+            Logger.LogMethodExit("CommonSteps", " SearchFirstSection",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
-
         /// <summary>
         /// Selecting Report Link In HSS.
         /// </summary>
@@ -1165,35 +1126,13 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         [When(@"I click on ""(.*)"" report link as ""(.*)""")]
         public void ClickOnReportLink(string reportName, User.UserTypeEnum userTypeEnum)
         {
-            Logger.LogMethodEntry("CommonSteps", "ClickReportButton",
+            Logger.LogMethodEntry("CommonSteps", "ClickOnReportLink",
             base.IsTakeScreenShotDuringEntryExit);
             // Click on the report link
             new RptMainUXPage().ClickReportLinkInHSS(reportName, userTypeEnum);
-            Logger.LogMethodExit("CommonSteps", "ClickReportButton",
+            Logger.LogMethodExit("CommonSteps", "ClickOnReportLink",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
-        ///// <summary>
-        ///// Verify due date icon is diplayed in assigned date.
-        ///// </summary>
-        //[Then(@"I should see due date icon displayed in current date")]
-        //public void VerifyDueDateIconDisplayed()
-        //{
-        //    // Verify due date icon is diplayed in assigned date
-        //    Logger.LogMethodEntry("AssignmentCalendar",
-        //      "VerifyDueDateIconDisplayed",
-        //      base.IsTakeScreenShotDuringEntryExit);
-        //    // Verify due date icon is diplayed in assigned date
-        //    Logger.LogAssertion("VerifyDueDateIconDisplayed",
-        //       ScenarioContext.Current.ScenarioInfo.Title,
-        //       () => Assert.IsTrue(new CalendarHedDefaultUxPage()
-        //           .IsActivityDueDateStatusPresent()));
-        //    Logger.LogMethodEntry("AssignmentCalendar",
-        //     "VerifyDueDateIconDisplayed",
-        //     base.IsTakeScreenShotDuringEntryExit);
-        //}
-
-
 
     }
 }

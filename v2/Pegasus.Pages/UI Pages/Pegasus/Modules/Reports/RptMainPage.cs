@@ -161,9 +161,10 @@ namespace Pegasus.Pages.UI_Pages
             {
                 base.WaitForElement(By.XPath(RptMainPageResource
                     .RptMain_Page_tablerow_count));
-                base.WaitForElement(By.XPath(RptMainPageResource.RptMain_Page_ReportsName_Xpath_Locator));
+                bool stud = base.IsElementPresent(By.XPath(string.Format("//*[text()='{0}']", getReportName)), 10);
+                base.WaitForElement(By.XPath(string.Format(RptMainPageResource.RptMain_Page_ReportsName_Xpath_Locator, getReportName)));
                 // Click on matched report name
-                IWebElement reportName = base.GetWebElementPropertiesByXPath(RptMainPageResource.RptMain_Page_ReportsName_Xpath_Locator);
+                IWebElement reportName = base.GetWebElementPropertiesByXPath(string.Format(RptMainPageResource.RptMain_Page_ReportsName_Xpath_Locator, getReportName));
                 base.ClickByJavaScriptExecutor(reportName);
             }
             catch (Exception e)
@@ -210,7 +211,7 @@ namespace Pegasus.Pages.UI_Pages
         public void ClickOnReportInActivityResultsPanel(string reportType)
         {
             //Click On Report In Activity Results Panel
-            logger.LogMethodEntry("RptMainPage", "GetReportName",
+            logger.LogMethodEntry("RptMainPage", "ClickOnReportInActivityResultsPanel",
                base.IsTakeScreenShotDuringEntryExit);
             //Initialize Variable
             string getReportName = string.Empty;
@@ -244,7 +245,7 @@ namespace Pegasus.Pages.UI_Pages
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("RptMainPage", "GetReportName",
+            logger.LogMethodExit("RptMainPage", "ClickOnReportInActivityResultsPanel",
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
@@ -318,7 +319,11 @@ namespace Pegasus.Pages.UI_Pages
             logger.LogMethodExit("RptMainPage", "selectCheckBox",
               base.IsTakeScreenShotDuringEntryExit);
         }
-
+        /// <summary>
+        /// Click Report Link In HSS
+        /// </summary>
+        /// <param name="reportName"></param>
+        /// <param name="userTypeEnum"></param>
         public void ClickReportLinkInHSS(string reportName, User.UserTypeEnum userTypeEnum)
         {
             switch (userTypeEnum)
@@ -326,36 +331,21 @@ namespace Pegasus.Pages.UI_Pages
                 case User.UserTypeEnum.HSSCsSmsInstructor:
 
                     base.SwitchToLastOpenedWindow();
-                    bool u = base.IsElementPresent(By.Id("Mainframe"), 10);
+                    // Select main Frame
+                    base.WaitForElement(By.Id(RptMainPageResource.
+                        RptMain_Page_MainFrame_Id_Locator));
                     base.SwitchToIFrame(RptMainPageResource.
-                      RptMain_Page_MainFrame_Id_Locator);
-                    int getreportLinkCount = base.GetElementCountByXPath("//table[@id='tblrptgrid']/tbody/tr");
+                        RptMain_Page_MainFrame_Id_Locator);
+                    int getreportLinkCount = base.GetElementCountByXPath(RptMainPageResource.RptMain_Page_Report_LinksCount_Xpath_Locator);
 
                     for (int i = 3; i <= getreportLinkCount; i++)
                     {
-                        string getreportLinkName = base.GetElementTextByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
+                        string getreportLinkName = base.GetElementTextByXPath(string.Format
+                            (RptMainPageResource.RptMain_Page_Report_LinksName_Xpath_Locator, i));
                         if (getreportLinkName == reportName)
                         {
-                            IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
-                            base.ClickByJavaScriptExecutor(reportLinkName);
-                            break;
-                        }
-                    }
-                    break;
-
-                case User.UserTypeEnum.HSSProgramAdmin:
-                    base.SwitchToLastOpenedWindow();
-                    bool you = base.IsElementPresent(By.Id("Mainframe"), 10);
-                    base.SwitchToIFrame(RptMainPageResource.
-                      RptMain_Page_MainFrame_Id_Locator);
-                    int getreportLinkCount2 = base.GetElementCountByXPath("//table[@id='tblrptgrid']/tbody/tr");
-
-                    for (int i = 3; i <= getreportLinkCount2; i++)
-                    {
-                        string getreportLinkName = base.GetElementTextByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
-                        if (getreportLinkName == reportName)
-                        {
-                            IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(string.Format("//table[@id='tblrptgrid']/tbody/tr[{0}]/td/span[1]", i));
+                            IWebElement reportLinkName = base.GetWebElementPropertiesByXPath(string.Format
+                                (RptMainPageResource.RptMain_Page_Report_LinksName_Xpath_Locator, i));
                             base.ClickByJavaScriptExecutor(reportLinkName);
                             break;
                         }
@@ -366,3 +356,4 @@ namespace Pegasus.Pages.UI_Pages
 
     }
 }
+

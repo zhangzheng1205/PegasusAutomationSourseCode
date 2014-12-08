@@ -89,11 +89,29 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;radPAdimStudents__ctl1__ctl6_Detail10&apos;]/tbody/tr.
+        /// </summary>
+        internal static string RptStudentReportPage_StudentCount_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptStudentReportPage_StudentCount_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;_ctl4_allAssementDetail1&apos;]/table/tbody/tr[{0}]/td/div/table/tbody/tr/td/span.
         /// </summary>
         internal static string RptStudentReportPage_StudentDetails_XPath_Locator {
             get {
                 return ResourceManager.GetString("RptStudentReportPage_StudentDetails_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;radPAdimStudents__ctl1__ctl6_Detail10&apos;]/tbody/tr[{0}]/td[2].
+        /// </summary>
+        internal static string RptStudentReportPage_StudentName_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptStudentReportPage_StudentName_XPath_Locator", resourceCulture);
             }
         }
         

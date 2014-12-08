@@ -133,6 +133,24 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblrptgrid&apos;]/tbody/tr.
+        /// </summary>
+        internal static string RptMain_Page_Report_LinksCount_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMain_Page_Report_LinksCount_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;tblrptgrid&apos;]/tbody/tr[{0}]/td/span[1].
+        /// </summary>
+        internal static string RptMain_Page_Report_LinksName_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptMain_Page_Report_LinksName_Xpath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;pnlAssessmentReports&apos;]/table/tbody/tr[2]/td/div/table/tbody/tr[{0}].
         /// </summary>
         internal static string RptMain_Page_Report_Name_Xpath_Locator {
