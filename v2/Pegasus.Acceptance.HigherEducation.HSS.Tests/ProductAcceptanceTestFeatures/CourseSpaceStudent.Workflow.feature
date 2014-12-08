@@ -85,11 +85,11 @@ Then I should be on the "Today's View" page
 Scenario: Student submits the Non gradable assets from the TO DO tab
 When I navigate to "Assignments" tab and selected "To Do" subtab
 Then I should be on the "Assignments - To Do" page
-When I launch "Review the Chapter 1 Learning Objectives" asset
+When I launch "Review the Chapter 5 Learning Objectives" asset
 Then I should be on the "Learning Objectives - Chapter 1" page
 When I close the "Learning Objectives - Chapter 1" window
 Then I should see "Viewed" status for the asset
-Then I should see "Review the Chapter 1 Learning Objectives" in the 'Completed' tab
+And I should see the "Viewed" status for the activity "Review the Chapter 5 Learning Objectives" in "Assignments - Done" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 

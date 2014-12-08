@@ -252,7 +252,7 @@ testRunner.When("I navigate to \"Assignments\" tab and selected \"To Do\" subtab
 #line 87
 testRunner.Then("I should be on the \"Assignments - To Do\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 88
-testRunner.When("I launch \"Review the Chapter 1 Learning Objectives\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I launch \"Review the Chapter 5 Learning Objectives\" asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 89
 testRunner.Then("I should be on the \"Learning Objectives - Chapter 1\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 90
@@ -260,7 +260,8 @@ testRunner.When("I close the \"Learning Objectives - Chapter 1\" window", ((stri
 #line 91
 testRunner.Then("I should see \"Viewed\" status for the asset", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 92
-testRunner.Then("I should see \"Review the Chapter 1 Learning Objectives\" in the \'Completed\' tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I should see the \"Viewed\" status for the activity \"Review the Chapter 5 Learning " +
+                    "Objectives\" in \"Assignments - Done\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 93
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 94
