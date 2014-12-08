@@ -14,7 +14,7 @@ using System;
 
 namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
 {
-    /// <summary>
+        /// <summary>
     /// This class handles Student Report by Activity report Page Actions.  
     /// </summary>
     public class RptStudentReportByActivityPage : BasePage
@@ -43,8 +43,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             logger.LogMethodExit("RptStudentReportByActivityPage", "SelectWindow"
                , base.IsTakeScreenShotDuringEntryExit);
         }
-
-
         /// <summary>
         /// Get Student User name.
         /// </summary>
@@ -69,7 +67,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                  base.IsTakeScreenShotDuringEntryExit);
             return studentName;
         }
-
+        /// <summary>
+        /// Get Student And Section Name In Report
+        /// </summary>
+        /// <param name="reportDetails"></param>
+        /// <returns></returns>
         public string GetStudentAndSectionNameInReport(int reportDetails)
         {
             logger.LogMethodEntry("RptStudentReportByActivityPage", 
@@ -90,7 +92,10 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                  base.IsTakeScreenShotDuringEntryExit);
             return getStudentReportName;
         }
-
+        /// <summary>
+        /// Get Average Score In Report
+        /// </summary>
+        /// <returns></returns>
         public string GetAverageScoreInReport()
         {
             logger.LogMethodEntry("RptStudentReportByActivityPage", "GetAverageScoreInReport",
@@ -111,7 +116,10 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                  base.IsTakeScreenShotDuringEntryExit);
             return getAverageScore;
         }
-
+        /// <summary>
+        /// Click On Select Student
+        /// </summary>
+        /// <param name="studentButtonName"></param>
         public void ClickOnSelectStudent(string studentButtonName)
         {
             logger.LogMethodEntry("RptStudentReportByActivityPage", "ClickOnSelectStudent",
@@ -138,18 +146,18 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             logger.LogMethodExit("RptStudentReportByActivityPage", "ClickOnSelectStudent",
                  base.IsTakeScreenShotDuringEntryExit);
         }
-
-        public string GetReportDetails(int reportColumn)
+        /// <summary>
+        /// Get Report Details
+        /// </summary>
+        /// <param name="reportColumn"></param>
+        /// <returns></returns>
+       public string GetReportDetails(int reportColumn)
         {
             logger.LogMethodEntry("RptStudentReportByActivityPage", "GetReportDetails",
                 base.IsTakeScreenShotDuringEntryExit);
             string getReportDetails = String.Empty;
             //this.SelectWindow();
-            base.SwitchToLastOpenedWindow();
-            bool gf = base.IsElementPresent(By.XPath(String.Format(
-                RptStudentReportByActivityPageResource.
-                RptStudentReportPage_ReportDetails_XPath_Locator,
-                reportColumn)), 10);
+            base.SwitchToLastOpenedWindow();          
             base.WaitForElement(By.XPath(String.Format(
                 RptStudentReportByActivityPageResource.
                 RptStudentReportPage_ReportDetails_XPath_Locator,
@@ -164,7 +172,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         }
 
         /// <summary>
-        /// 
+        /// Add Student To Report
         /// </summary>
         public void AddStudentToReport(string studentButtonName, User.UserTypeEnum userTypeEnum)
         {
@@ -186,18 +194,21 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 "AddStudentToReport",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-
-        public void SelectSingleStudent(User.UserTypeEnum userTypeEnum)
+        /// <summary>
+        /// Select Single Student
+        /// </summary>
+        /// <param name="userTypeEnum"></param>
+       public void SelectSingleStudent(User.UserTypeEnum userTypeEnum)
         {
-            logger.LogMethodEntry("SelectSingleStudent",
-                "AddStudentToReport",
+            logger.LogMethodEntry("RptStudentReportByActivityPage",
+                "SelectSingleStudent",
                base.IsTakeScreenShotDuringEntryExit);
             string getStudentName = string.Empty;
             User user = User.Get(userTypeEnum);
             string studentName = user.LastName + ", " + user.FirstName;
             //Expand the students link
             int getStudentListCount = base.GetElementCountByXPath(
-                "//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr");
+                RptStudentReportByActivityPageResource.RptStudentReportPage_StudentCount_XPath_Locator);
             for (int i = 1; i <= getStudentListCount; i++)
             {
                 getStudentName = base.GetElementTextByXPath(String.Format(
@@ -205,13 +216,13 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 if (getStudentName == studentName)
                 {
                     IWebElement getStudent = base.GetWebElementPropertiesByXPath(
-                        String.Format("//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[{0}]/td[2]", i));
+                        String.Format(RptStudentReportByActivityPageResource.RptStudentReportPage_StudentName_XPath_Locator, i));
                     base.ClickByJavaScriptExecutor(getStudent);
                     break;
                 }
             }
-            logger.LogMethodExit("SelectSingleStudent",
-                "AddStudentToReport",
+            logger.LogMethodExit("RptStudentReportByActivityPage",
+                "SelectSingleStudent",
                 base.IsTakeScreenShotDuringEntryExit);
         }
     }

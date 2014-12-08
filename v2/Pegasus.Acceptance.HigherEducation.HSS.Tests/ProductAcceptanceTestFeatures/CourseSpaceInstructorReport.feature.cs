@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestFeat
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorReport", "               As a HSS CS Instructor \r\n\t\t\tI want to manage all the coursespace i" +
-                    "nstructor report related usecases \r\n\t\t\tso that I would validate all the coursesp" +
-                    "ace instructor report related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceInstructorReport", "               As a HSS CS Instructor \n\t\t\tI want to manage all the coursespace in" +
+                    "structor report related usecases \n\t\t\tso that I would validate all the coursespac" +
+                    "e instructor report related scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

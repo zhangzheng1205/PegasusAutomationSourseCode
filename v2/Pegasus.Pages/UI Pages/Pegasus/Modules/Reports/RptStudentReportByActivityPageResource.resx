@@ -126,8 +126,14 @@
   <data name="RptStudentReportPage_StudentButton_XPath_Locator" xml:space="preserve">
     <value>//a/span/span[text()='{0}'</value>
   </data>
+  <data name="RptStudentReportPage_StudentCount_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr</value>
+  </data>
   <data name="RptStudentReportPage_StudentDetails_XPath_Locator" xml:space="preserve">
     <value>//div[@id='_ctl4_allAssementDetail1']/table/tbody/tr[{0}]/td/div/table/tbody/tr/td/span</value>
+  </data>
+  <data name="RptStudentReportPage_StudentName_XPath_Locator" xml:space="preserve">
+    <value>//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[{0}]/td[2]</value>
   </data>
   <data name="RptStudentReportPage_StudentReport_Iframe_Id" xml:space="preserve">
     <value>_ctl0_PageContent_ifrmMiddle</value>

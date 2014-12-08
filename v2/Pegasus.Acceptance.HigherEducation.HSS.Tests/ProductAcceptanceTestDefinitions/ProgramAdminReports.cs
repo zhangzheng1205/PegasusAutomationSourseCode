@@ -22,7 +22,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.GetInstance(typeof(ProgramAdminReports));
 
         /// <summary>
-        /// Click the Student Enrollment link.
+        /// Click the Student Report link.
         /// </summary>
         [When(@"I clicked on the ""(.*)"" report link")]
         public void ClickOnReportLink(

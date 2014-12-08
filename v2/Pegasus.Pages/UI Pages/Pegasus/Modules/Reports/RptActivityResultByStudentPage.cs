@@ -13,7 +13,7 @@ using System.Threading;
 
 namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
 {
-    /// <summary>
+        /// <summary>
     /// This class handles Activity Resukt by Student Page Actions.  
     /// </summary>
     public class RptActivityResultByStudentPage : BasePage
@@ -43,10 +43,14 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             logger.LogMethodExit("RptActivityResultByStudentPage", "SelectWindow"
                , base.IsTakeScreenShotDuringEntryExit);
         }
-
+        /// <summary>
+        /// Get Activity Details In Report
+        /// </summary>
+        /// <param name="reportDetails"></param>
+        /// <returns></returns>
         public string GetActivityDetailsInReport(int reportDetails)
         {
-            logger.LogMethodEntry("RptActivityResultByStudentPage", "GetStudentAndSectionNameInReport",
+            logger.LogMethodEntry("RptActivityResultByStudentPage", "GetActivityDetailsInReport",
                 base.IsTakeScreenShotDuringEntryExit);
             string getActivityDetails = string.Empty;
             //this.SelectWindow();
@@ -59,11 +63,14 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 RptActivityResultByStudentPageRecource.
                 RptActivityResultByStudentPage_ActivityDetails_XPath_Locator,
                 reportDetails));
-            logger.LogMethodExit("RptActivityResultByStudentPage", "GetStudentAndSectionNameInReport",
+            logger.LogMethodExit("RptActivityResultByStudentPage", "GetActivityDetailsInReport",
                  base.IsTakeScreenShotDuringEntryExit);
             return getActivityDetails;
         }
-
+        /// <summary>
+        /// Get Average Score In The Report
+        /// </summary>
+        /// <returns></returns>
         public string GetAverageScoreInTheReport()
         {
             logger.LogMethodEntry("RptActivityResultByStudentPage", "GetAverageScoreInTheReport",
@@ -81,11 +88,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                  base.IsTakeScreenShotDuringEntryExit);
             return getAverageScore;
         }
-
+        /// <summary>
+        /// Get Student Name In Activity Result By Student
+        /// </summary>
+        /// <param name="studentName"></param>
+        /// <returns></returns>
         public bool GetStudentNameInActivityResultByStudent(string studentName)
         {
             logger.LogMethodEntry("RptActivityResultByStudentPage",
-                "GetActivityDetailsInActivityResultByStudent",
+                "GetStudentNameInActivityResultByStudent",
                 base.IsTakeScreenShotDuringEntryExit);
             bool isStudentPresent = false;
             string getStudentName = string.Empty;
@@ -112,11 +123,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 i++;
             }
             logger.LogMethodExit("RptActivityResultByStudentPage",
-            "GetActivityDetailsInActivityResultByStudent",
+            "GetStudentNameInActivityResultByStudent",
                  base.IsTakeScreenShotDuringEntryExit);
             return isStudentPresent;
         }
-
+        /// <summary>
+        /// Get Student Score In Activity Result By Student
+        /// </summary>
+        /// <param name="scoreRow"></param>
+        /// <returns></returns>
         public string GetStudentScoreInActivityResultByStudent(int scoreRow)
         {
             logger.LogMethodEntry("RptActivityResultByStudentPage",
@@ -135,7 +150,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 RptActivityResultByStudentPage_ActivityStudentScore_XPath_Locator, scoreRow));
             string studentPercentage = getScore.Split(' ')[0];
             logger.LogMethodExit("RptActivityResultByStudentPage",
-                "GetActivityDetailsInActivityResultByStudent",
+                "GetStudentScoreInActivityResultByStudent",
                      base.IsTakeScreenShotDuringEntryExit);
             return studentPercentage;
         }

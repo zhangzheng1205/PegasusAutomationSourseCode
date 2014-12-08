@@ -14,7 +14,7 @@ using System;
 
 namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
 {
-    /// <summary>
+        /// <summary>
     /// This class handles Study plan Reports Page Actions.  
     /// </summary>
     public class RptStudyPlanReportPage : BasePage
@@ -54,11 +54,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                    base.IsTakeScreenShotDuringEntryExit);
             return getaverageScore;
         }
-
+        /// <summary>
+        /// Get Student Name In Study Plan Activity
+        /// </summary>
+        /// <param name="studentName"></param>
+        /// <returns></returns>
         public bool GetStudentNameInStudtPlanActivity(string studentName)
         {
-            logger.LogMethodEntry("RptActivityResultByStudentPage",
-                "GetActivityDetailsInActivityResultByStudent",
+            logger.LogMethodEntry("RptStudyPlanReportPage",
+                "GetStudentNameInStudtPlanActivity",
                 base.IsTakeScreenShotDuringEntryExit);
             bool isStudentDisplayed = false;
             string getStudentName = string.Empty;
@@ -81,8 +85,8 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 }
                 i++;
             }
-            logger.LogMethodExit("RptActivityResultByStudentPage",
-            "GetActivityDetailsInActivityResultByStudent",
+            logger.LogMethodExit("RptStudyPlanReportPage",
+            "GetStudentNameInStudtPlanActivity",
                  base.IsTakeScreenShotDuringEntryExit);
             return isStudentDisplayed;
         }
@@ -94,15 +98,12 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         public string GetStudentStudyPlanPreTestScore(string studentName, int scoreRow)
         {
             //VGets the number of attemps taken by student 
-            logger.LogMethodEntry("RptAllAssessmentAllStudentPage", "GetStudentAttempt",
+            logger.LogMethodEntry("RptStudyPlanReportPage", "GetStudentStudyPlanPreTestScore",
                 base.IsTakeScreenShotDuringEntryExit);
             string getStudentName = string.Empty;
             string getStudentPreTestScore = string.Empty;
             try
-            {
-                logger.LogMethodEntry("RptActivityResultByStudentPage",
-                 "GetActivityDetailsInActivityResultByStudent",
-                 base.IsTakeScreenShotDuringEntryExit);
+            {               
                 base.WaitForElement(By.XPath(RptStudyPlanReportPageResource.
                     RptStudyPlanReportPage_StudentCount_XPath_Locator));
                 int getStudentNameCount = base.GetElementCountByXPath(RptStudyPlanReportPageResource.
@@ -134,7 +135,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("RptAllAssessmentAllStudentPage", "GetStudentAttempt",
+            logger.LogMethodExit("RptStudyPlanReportPage", "GetStudentStudyPlanPreTestScore",
                 base.IsTakeScreenShotDuringEntryExit);
             return getStudentPreTestScore;
         }
@@ -146,15 +147,12 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
         public string GetStudentStudyPlanPostTestScore(string studentName, int scoreRow)
         {
             //VGets the number of attemps taken by student 
-            logger.LogMethodEntry("RptAllAssessmentAllStudentPage", "GetStudentAttempt",
+            logger.LogMethodEntry("RptStudyPlanReportPage", "GetStudentAttempt",
                 base.IsTakeScreenShotDuringEntryExit);
             string getStudentName = string.Empty;
             string getStudentPostTestScore = string.Empty;
             try
-            {
-                logger.LogMethodEntry("RptActivityResultByStudentPage",
-                 "GetActivityDetailsInActivityResultByStudent",
-                 base.IsTakeScreenShotDuringEntryExit);
+            {                
                 base.WaitForElement(By.XPath(RptStudyPlanReportPageResource.
                     RptStudyPlanReportPage_StudentCount_XPath_Locator));
                 int getStudentNameCount = base.GetElementCountByXPath(RptStudyPlanReportPageResource.
@@ -185,7 +183,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             {
                 ExceptionHandler.HandleException(e);
             }
-            logger.LogMethodExit("RptAllAssessmentAllStudentPage", "GetStudentAttempt",
+            logger.LogMethodExit("RptStudyPlanReportPage", "GetStudentAttempt",
                 base.IsTakeScreenShotDuringEntryExit);
             return getStudentPostTestScore;
         }

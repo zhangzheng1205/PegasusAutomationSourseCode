@@ -12,14 +12,13 @@ When I logged into the Pegasus as "HSSProgramAdmin" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
 When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSProgramAdmin"
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSProgramAdmin"
 Then I should be on the "Program Administration" page
 When I navigate to the "Reports" tab
 And  I clicked on the "Student Results by Activity" report link
 Then I should be on the "Program Administration" page
 When I select Section
 And  I select Activity "Take the Chapter 1 Exam"
-And  I select "HSSCsSmsStudent" student 
+And  I select "HSSCsSmsStudent" student in "Select Student"
 Then I select 'save settings to My Reports' option
 When I click on the "Run Report" button in reports
 Then I should be on the "Save settings to My Reports" page
@@ -45,7 +44,7 @@ And  I clicked on the "Study Plan Results" report link
 Then I should be on the "Program Administration" page
 When I select Section
 And  I select Activity "Complete the Chapter 1 Study Plan"
-And  I select "HSSCsSmsStudent" student 
+And I 'Select All' in 'Student Options' by "HSSProgramAdmin"
 Then I select 'save settings to My Reports' option
 When I click on the "Run Report" button in reports
 Then I should be on the "Save settings to My Reports" page
