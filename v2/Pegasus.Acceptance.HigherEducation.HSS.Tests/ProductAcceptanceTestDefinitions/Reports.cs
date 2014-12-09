@@ -60,6 +60,43 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
         }
 
         /// <summary>
+        /// Verify the details of "Student report by activity" report generated.
+        /// </summary>
+        /// <param name="courseTypeEnum"></param>
+        /// <param name="userTypeEnum"></param>
+        /// <param name="averageScore">This is the Average score.</param> 
+        [Then(@"I should see the section ""(.*)"" for ""(.*)"" with average score ""(.*)""")]
+        public void VerifySectionNameAndAverageScoreInStudentReportByActivityByAdmin(
+            Course.CourseTypeEnum courseTypeEnum, User.UserTypeEnum userTypeEnum, string averageScore)
+        {
+            //Verify the details of "Student report by activity" report generated
+            Logger.LogMethodEntry("Reports",
+                "VerifySectionNameAndAverageScoreInStudentReportByActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+            string studentName = new RptStudentReportByActivityPage().
+                GetStudentUsername(userTypeEnum);
+            Course course = Course.Get(courseTypeEnum);
+            User user = User.Get(userTypeEnum);
+            //Verify student name
+            Logger.LogAssertion("VerifyStudentName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.AreEqual(studentName, new RptStudentReportByActivityPage().
+              GetStudentAndSectionNameInReport(1)));
+            //Verify section name
+            Logger.LogAssertion("VerifysectionName",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+            Assert.AreEqual(course.SectionName, new RptStudentReportByActivityPage().GetSectionNameInAdminReport()));           
+            //Verify Average score
+            Logger.LogAssertion("VerifyStudentAveragescore",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.AreEqual(averageScore, new RptStudentReportByActivityPage().
+              GetAverageScoreInReport()));
+            Logger.LogMethodExit("Reports",
+                "VerifySectionNameAndAverageScoreInStudentReportByActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Verify the details of the Student report by activity Report.
         /// </summary>
         /// <param name="activityName">This is the activity name.</param>
@@ -384,6 +421,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
                              base.IsTakeScreenShotDuringEntryExit);
             new RptStudentReportByActivityPage().AddStudentToReport(
                 studentButtonName, userTypeEnum);
+           
             Logger.LogMethodExit("Reports",
                "SelectStudentByProgramAdmin",
              base.IsTakeScreenShotDuringEntryExit);

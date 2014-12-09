@@ -118,8 +118,8 @@ testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.
 #line 28
 testRunner.Then("I should see the \"Save settings to My Reports\" popup closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 29
-testRunner.And("I should see the section name \"HSSMyPsychLabProgram\" for \"HSSCsSmsStudent\" with a" +
-                    "verage score \"100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("I should see the section \"HSSMyPsychLabProgram\" for \"HSSCsSmsStudent\" with averag" +
+                    "e score \"100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 30
 testRunner.And("I should see \" Take the Chapter 1 Exam \" \"Exam\" details in the report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31

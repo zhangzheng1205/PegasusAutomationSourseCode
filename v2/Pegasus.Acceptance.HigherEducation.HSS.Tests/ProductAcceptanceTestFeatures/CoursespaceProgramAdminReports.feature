@@ -26,7 +26,7 @@ When I select "Createnewreport" radiobutton
 And  I enter the "HSSActivityResultsByStudent" report name
 And  I click on "SaveandRun" button
 Then I should see the "Save settings to My Reports" popup closed
-And I should see the section name "HSSMyPsychLabProgram" for "HSSCsSmsStudent" with average score "100%" 
+And I should see the section "HSSMyPsychLabProgram" for "HSSCsSmsStudent" with average score "100%" 
 And I should see " Take the Chapter 1 Exam " "Exam" details in the report
 When I click on the "Cancel" button in reports
 Then I should be on the "Program Administration" page

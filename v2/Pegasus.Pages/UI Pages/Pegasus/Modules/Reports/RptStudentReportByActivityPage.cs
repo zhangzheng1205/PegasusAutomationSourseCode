@@ -81,8 +81,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             base.SwitchToLastOpenedWindow();
             base.WaitForElement(By.XPath(String.Format(
                 RptStudentReportByActivityPageResource.
-                RptStudentReportPage_StudentDetails_XPath_Locator,
-                reportDetails)));
+                RptStudentReportPage_StudentDetails_XPath_Locator,reportDetails)));
             getStudentReportName = base.GetElementTextByXPath(String.Format(
                 RptStudentReportByActivityPageResource.
                 RptStudentReportPage_StudentDetails_XPath_Locator,
@@ -103,9 +102,6 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             string getAverageScore = String.Empty;
             //this.SelectWindow();
             base.SwitchToLastOpenedWindow();
-            bool gf = base.IsElementPresent(By.XPath(
-                RptStudentReportByActivityPageResource.
-                RptStudentReportPage_StudentScore_XPath_Locator), 10);
             base.WaitForElement(By.XPath(
                 RptStudentReportByActivityPageResource.
                 RptStudentReportPage_StudentScore_XPath_Locator));
@@ -126,10 +122,14 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.SwitchToLastOpenedWindow();
 
                 base.SwitchToIFrameById(
                     RptStudentReportByActivityPageResource.
                     RptStudentReportPage_StudentReport_Iframe_Id);
+                base.SwitchToIFrameById("Mainframe");
+                bool gur = base.IsElementPresent(By.XPath(string.Format(RptStudentReportByActivityPageResource.
+                    RptStudentReportPage_StudentButton_XPath_Locator, studentButtonName)), 10);
                 base.WaitForElement(By.XPath(String.Format(
                     RptStudentReportByActivityPageResource.
                     RptStudentReportPage_StudentButton_XPath_Locator, studentButtonName)));
@@ -182,13 +182,11 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             //Click on 'Select Student' button
             this.ClickOnSelectStudent(studentButtonName);
             //Expand the students link
-            bool jdfh = base.IsElementPresent(By.XPath(
-                RptStudentReportByActivityPageResource.
-                RptStudentReportPage_AddStudent_XPath_Locator), 10);
+            base.SwitchToLastOpenedWindow();
             IWebElement expandStudent = base.GetWebElementPropertiesByXPath(
                 RptStudentReportByActivityPageResource.
                 RptStudentReportPage_AddStudent_XPath_Locator);
-            base.ClickByJavaScriptExecutor(expandStudent);
+            base.PerformClickAction(expandStudent);
             this.SelectSingleStudent(userTypeEnum);
             logger.LogMethodExit("RptStudentReportByActivityPage",
                 "AddStudentToReport",
@@ -215,15 +213,36 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                     "//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[{0}]/td[2]", i));
                 if (getStudentName == studentName)
                 {
+                    base.SwitchToLastOpenedWindow();
                     IWebElement getStudent = base.GetWebElementPropertiesByXPath(
-                        String.Format(RptStudentReportByActivityPageResource.RptStudentReportPage_StudentName_XPath_Locator, i));
-                    base.ClickByJavaScriptExecutor(getStudent);
+                        String.Format("//table[@id='radPAdimStudents__ctl1__ctl6_Detail10']/tbody/tr[{0}]/td[1]", i));               
+                    base.PerformMouseClickAction(getStudent);
+                    IWebElement addButton = base.GetWebElementPropertiesById("imgAddSections");
+                    base.PerformClickAction(addButton);
                     break;
                 }
             }
             logger.LogMethodExit("RptStudentReportByActivityPage",
                 "SelectSingleStudent",
                 base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+       /// Get Section Name In Admin Report.
+        /// </summary>
+        /// <returns>Section name.</returns>
+        public string GetSectionNameInAdminReport()
+       {
+           logger.LogMethodEntry("RptStudentReportByActivityPage",
+                          "GetSectionNameInAdminReport",
+                         base.IsTakeScreenShotDuringEntryExit);
+           string getSection = string.Empty;
+           getSection=base.GetElementTextByXPath(".//*[@id='divSection']/table/tbody/tr/td/span");
+           string studentSection = getSection.Split('|')[0];          
+           logger.LogMethodExit("RptStudentReportByActivityPage",
+               "GetSectionNameInAdminReport",
+               base.IsTakeScreenShotDuringEntryExit);
+           return studentSection;
         }
     }
 }
