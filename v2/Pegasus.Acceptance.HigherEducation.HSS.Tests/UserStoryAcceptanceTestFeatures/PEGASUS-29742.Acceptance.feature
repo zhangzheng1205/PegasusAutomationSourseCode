@@ -31,7 +31,10 @@ When I select "Createnewreport" radiobutton
 And  I enter the "HSSActivityResultsByStudent" report name
 And  I click on "SaveandRun" button
 Then I should see the "Save settings to My Reports" popup closed
-And  I should see "ActivityResultByStudent" report launched successfully
+And I should see the "Take the Chapter 1 Exam" with section name "HSSMyPsychLabProgram" with average score "0%" 
+And I should see 'Zero' "HSSCsSmsStudent" along with submitted score as "24%"
+And I should see the "HSSCsSmsStudent" along with attempt submitted as score as "40%"
+When I close the "Report: Activity Results by Student" window
 When I click on the "Cancel" button in reports
 Then I should be on the "Program Administration" page
 When I select "Run Report" for "HSSActivityResultsByStudent" report in 'My Reports' grid by "HSSProgramAdmin"

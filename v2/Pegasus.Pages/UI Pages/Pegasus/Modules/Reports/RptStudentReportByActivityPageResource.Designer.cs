@@ -62,6 +62,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to imgAddSections.
+        /// </summary>
+        internal static string RptStudentReportPage_AddStudent_ID_Locator {
+            get {
+                return ResourceManager.GetString("RptStudentReportPage_AddStudent_ID_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //table[@id=&apos;radPAdimStudents__ctl1&apos;]/tbody/tr/td[1]/img.
         /// </summary>
         internal static string RptStudentReportPage_AddStudent_XPath_Locator {
@@ -116,6 +125,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;radPAdimStudents__ctl1__ctl6_Detail10&apos;]/tbody/tr[{0}]/td[1].
+        /// </summary>
+        internal static string RptStudentReportPage_StudentNameSelect_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptStudentReportPage_StudentNameSelect_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to _ctl0_PageContent_ifrmMiddle.
         /// </summary>
         internal static string RptStudentReportPage_StudentReport_Iframe_Id {
@@ -139,6 +157,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         internal static string RptStudentReportPage_WindowName {
             get {
                 return ResourceManager.GetString("RptStudentReportPage_WindowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;divSection&apos;]/table/tbody/tr/td/span.
+        /// </summary>
+        internal static string RptStudentReportSetcion_Name_Xpath_Locator {
+            get {
+                return ResourceManager.GetString("RptStudentReportSetcion_Name_Xpath_Locator", resourceCulture);
             }
         }
     }

@@ -123,6 +123,35 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
                 "VerifyTheReportDetailsInStudentRepoprtByActivity",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
+
+        /// <summary>
+        /// Verify the details of the Student report by activity Report.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        /// <param name="activityType">This is the activity type.</param>
+        [Then(@"I should see ""(.*)"" ""(.*)"" details in report")]
+        public void VerifyTheReportDetailsInStudentRepoprtByActivityByAdmin(
+            string activityName, string activityType)
+        {
+            // Verify the details of the Student report by activity Report
+            Logger.LogMethodEntry("Reports",
+                "VerifyTheReportDetailsInStudentRepoprtByActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Verify activity name
+            Logger.LogAssertion("VerifyActivityName",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.AreEqual(activityName, new RptStudentReportByActivityPage().
+              GetReportDetails(1)));
+            //Verify Activity type
+            Logger.LogAssertion("VerifyActivityType",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.AreEqual(activityType, new RptStudentReportByActivityPage().
+              GetReportDetails(3)));
+            Logger.LogMethodExit("Reports",
+                "VerifyTheReportDetailsInStudentRepoprtByActivity",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
         /// <summary>
         /// Verify The Activity Details In Activity Result By Student Report.
         /// </summary>
@@ -146,8 +175,8 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             //Verify section name
             Logger.LogAssertion("VerifysectionName",
             ScenarioContext.Current.ScenarioInfo.Title, () =>
-            Assert.AreEqual(course.SectionName, new RptActivityResultByStudentPage().
-            GetActivityDetailsInReport(2)));
+            Assert.AreEqual(course.SectionName, new RptStudentReportByActivityPage().
+            GetSectionNameInAdminReport()));      
             //Verify average score
             Logger.LogAssertion("VerifyActivityAverageScore",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -426,6 +455,30 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
                "SelectStudentByProgramAdmin",
              base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Select section in HSS.
+        /// </summary>
+        /// <param name="sectionNameTypeEnum">This is the section name.</param>
+        /// <param name="templateNameTypeEnum">This is the template name.</param>
+        /// <param name="assessmentType">this is the assessment type.</param>
+        [When(@"I select ""(.*)"" section under ""(.*)"" template in ""(.*)""")]
+        public void SelectSectionUnderTemplateInHSS(Course.CourseTypeEnum sectionNameTypeEnum,
+            Course.CourseTypeEnum templateNameTypeEnum, string assessmentType)
+        {
+            //Select section in HSS
+            Logger.LogMethodEntry("Reports",
+                             "SelectSectionUnderTemplateInHSS",
+                             base.IsTakeScreenShotDuringEntryExit);
+            Course template = Course.Get(templateNameTypeEnum);
+            Course course = Course.Get(sectionNameTypeEnum);
+            new ProgramAdminReportsSubTabPage().SelectSectionBasedOnTemplateInHSS(
+               course.SectionName, template.Name, assessmentType);
+            Logger.LogMethodExit("Reports",
+              "SelectSectionUnderTemplateInHSS",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
+
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

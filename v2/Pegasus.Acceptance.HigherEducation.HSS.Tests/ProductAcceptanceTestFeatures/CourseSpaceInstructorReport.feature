@@ -28,7 +28,7 @@ And I click on the "Cancel" button in reports by "HSSCsSmsInstructor"
 And I select "Run Report" for "HSSActivityResultsByStudent" report in 'My Reports' grid by "HSSCsSmsInstructor"
 Then I should be on the "Report: Activity Results by Student" page
 When I close the "Report: Student Results by Activity" window
-When I "Sign out" from the "HSSCsSmsInstructor"
+And I "Sign out" from the "HSSCsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose : Generate and save the "Activity Results by Student" as a Section Instructor
@@ -39,8 +39,8 @@ Then I should see the successfull message "You have been signed out of the appli
 #Dependency : No dependency test can run with existing data
 Scenario: Generate and save the "Activity Results by Student" as a Section Instructor
 When I navigate to "Gradebook" tab and selected "Reports" subtab
-When I click on "Activity Results by Student" report link as "HSSCsSmsInstructor"
-When I select "Take the Chapter 1 Exam" asset in "Select Activity" by "HSSCsSmsInstructor"
+And I click on "Activity Results by Student" report link as "HSSCsSmsInstructor"
+And I select "Take the Chapter 1 Exam" asset in "Select Activity" by "HSSCsSmsInstructor"
 And I 'Select All' in 'Student Options' by "HSSCsSmsInstructor"
 And I select 'save settings to My Reports' option by "HSSCsSmsInstructor"
 And I click on the "Run Report" button in reports by "HSSCsSmsInstructor"
@@ -49,8 +49,8 @@ When I select "Createnewreport" radiobutton
 And  I enter the "HSSActivityResultsByStudent" report name
 And  I click on "SaveandRun" button
 Then I should see the "Save settings to My Reports" popup closed
-Then I should be on the "Report: Activity Results by Student" page
-Then I should see the "Take the Chapter 1 Exam" with section name "HSSMyPsychLabProgram" with average score "49%" 
+And I should be on the "Report: Activity Results by Student" page
+And I should see the "Take the Chapter 1 Exam" with section name "HSSMyPsychLabProgram" with average score "49%" 
 And I should see 'Zero' "HSSCsSmsStudent" along with submitted score as "24%"
 And I should see the "HSSCsSmsStudent" along with attempt submitted as score as "40%"
 When I close the "Report: Activity Results by Student" window
@@ -58,7 +58,7 @@ And I click on the "Cancel" button in reports by "HSSCsSmsInstructor"
 And I select "Run Report" for "HSSActivityResultsByStudent" report in 'My Reports' grid by "HSSCsSmsInstructor"
 Then I should be on the "Report: Activity Results by Student" page
 When I close the "Report: Activity Results by Student" window
-When I "Sign out" from the "HSSCsSmsInstructor"
+And I "Sign out" from the "HSSCsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
 
 #Purpose : Generate and save the  "Study plan Results report"  as a Section Instructor
@@ -68,8 +68,8 @@ Then I should see the successfull message "You have been signed out of the appli
 #Dependency : No dependency test can run with existing data
 Scenario: Generate and save the  "Study plan Results report"  as a Section Instructor
 When I navigate to "Gradebook" tab and selected "Reports" subtab
-When I click on "Study Plan Results" report link as "HSSCsSmsInstructor"
-When I select "Complete the Chapter 1 Study Plan" asset in "Select Study Plans" by "HSSCsSmsInstructor"
+And I click on "Study Plan Results" report link as "HSSCsSmsInstructor"
+And I select "Complete the Chapter 1 Study Plan" asset in "Select Study Plans" by "HSSCsSmsInstructor"
 And I 'Select All' in 'Student Options' by "HSSCsSmsInstructor"
 And I select 'save settings to My Reports' option by "HSSCsSmsInstructor"
 And I click on the "Run Report" button in reports by "HSSCsSmsInstructor"
@@ -78,8 +78,8 @@ When I select "Createnewreport" radiobutton
 And  I enter the "HSSStudytPlanResults" report name
 And  I click on "SaveandRun" button
 Then I should see the "Save settings to My Reports" popup closed
-Then I should be on the "Study Plan Results" page
-Then I should see average score "13.5%"
+And I should be on the "Study Plan Results" page
+And I should see average score "13.5%"
 And I should see 'Zero' "HSSCsSmsStudent" along with Pre-test "0%" Post-test "0%"
 And I should see the "HSSCsSmsStudent" along with  Pre-test "72%" Post-test "29.7%"
 When I close the "Study Plan Results" window
@@ -87,5 +87,5 @@ And I click on the "Cancel" button in reports by "HSSCsSmsInstructor"
 And I select "Run Report" for "HSSStudytPlanResults" report in 'My Reports' grid by "HSSCsSmsInstructor"
 Then I should be on the "Study Plan Results" page
 When I close the "Study Plan Results" window
-When I "Sign out" from the "HSSCsSmsInstructor"
+And I "Sign out" from the "HSSCsSmsInstructor"
 Then I should see the successfull message "You have been signed out of the application."
