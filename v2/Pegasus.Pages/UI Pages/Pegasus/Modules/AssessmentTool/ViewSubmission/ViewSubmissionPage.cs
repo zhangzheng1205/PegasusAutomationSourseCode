@@ -1311,6 +1311,9 @@ namespace Pegasus.Pages.UI_Pages
                 // Eliminate % delimeter from getScore
                 getScore = getScore.Replace(ViewSubmissionPageResource.
                     ViewSubmission_Page_ViewSubmission_Grade_Delimiter, string.Empty).Trim();
+                //close the view submission window
+                base.CloseBrowserWindow();
+              
             }
             catch (Exception e)
             {
@@ -1395,6 +1398,8 @@ namespace Pegasus.Pages.UI_Pages
             // Eliminate % delimeter from getScore
             getScore = getScore.Replace(ViewSubmissionPageResource.
                 ViewSubmission_Page_ViewSubmission_Grade_Delimiter, string.Empty).Trim();
+            //close the view submission window
+            base.CloseBrowserWindow();
             logger.LogMethodEntry("ViewSubmissionPage",
             "GetStudentScore", base.IsTakeScreenShotDuringEntryExit);
 

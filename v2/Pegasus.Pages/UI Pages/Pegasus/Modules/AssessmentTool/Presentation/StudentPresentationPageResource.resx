@@ -1338,4 +1338,7 @@
   <data name="StudentPresentation_Page_HSS_Activity_NextButton_ID_Locator" xml:space="preserve">
     <value>btnNext</value>
   </data>
+  <data name="StudentPrsentation_Page_Activity_ViewSubmission_ClassName_Locator" xml:space="preserve">
+    <value>btn_ViewSubmission</value>
+  </data>
 </root>

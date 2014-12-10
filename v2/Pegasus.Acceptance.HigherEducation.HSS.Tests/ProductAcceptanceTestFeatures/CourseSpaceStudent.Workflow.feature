@@ -5,6 +5,7 @@
 
 #Purpose : Student launching eText
 #Test case ID : peg-22168
+#PEGASUS-29431
 Scenario: Student launching eText
 When I Click on eText link
 Then I should be on the "Pearson eText Sign In Page" window
@@ -15,6 +16,7 @@ Then I should be on the "Today's View" page
 
 #Purpose : Basic/Random activity launch from Course Calendar and student abruptly closes the presentation
 #Test case ID : peg-22160
+#PEGASUS-29430
 Scenario: Student abruptly closes the Basic/Random activity presentation
 When I navigate to "Course Materials" tab
 Then I should be on the "Course Materials" page
@@ -115,11 +117,6 @@ Then I should be on the "Today's View" page
 #Test case ID : peg-22155
 #PEGASUS-29436
 Scenario: Student answers the Study plan posttest questions and scores 0%
-Given I browsed the login url for "HSSCsSmsStudent"
-When I logged into the Pegasus as "HSSCsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsStudent"
 When I navigate to "Assignments" tab and selected "To Do" subtab
 Then I should be on the "Assignments - To Do" page
 When I launch "Complete the Chapter 1 Study Plan" asset
@@ -135,8 +132,8 @@ When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 
 #Purpose : Study plan submission from To Do and student scoring 70% in pretest
-#Test case ID : peg-22155
-#PEGASUS-29436
+#Test case ID : peg-22153
+#PEGASUS-29434
 Scenario: Student answers the Study plan pretest questions and scores 70%
 When I navigate to "Assignments" tab and selected "To Do" subtab
 Then I should be on the "Assignments - To Do" page
@@ -174,31 +171,22 @@ Then I should be on the "Today's View" page
 
 #HSSMyPsychLabProgram
 #peg-22241/peg-22244
+#PEGASUS-29750
 #Purpose : Student validating score in gradebook for Basic/Random activity or Student validating score in gradebook for saved activity-Forcefull submission
 Scenario: Student validating score in gradebook for Basic/Random activity
-Given I browsed the login url for "HSSCsSmsStudent"
-When I logged into the Pegasus as "HSSCsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsStudent"
 When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I select "Take the Chapter 1 Exam" in "Gradebook" by "HSSCsSmsStudent"
 And I click on cmenu option "View Submissions" of asset "Take the Chapter 1 Exam" in grades tab
 Then I should be on the "View Submission" page
-And I should see the "--" score in the left frame
-And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : --" in the right frame
+And I should see the "100 %" score in the left frame
+And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 100.00%" in the right frame
 And I should be on the "Gradebook" page
 
 #HSSMyPsychLabProgram
 #peg-22242
 #Purpose : Student validating score in gradebook for study plan activity
 Scenario: Student validating score in gradebook for study plan activity
-Given I browsed the login url for "HSSCsSmsStudent"
-When I logged into the Pegasus as "HSSCsSmsStudent" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsStudent"
 When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I select "Complete the Chapter 1 Study Plan" in "Gradebook" by "HSSCsSmsStudent"
@@ -209,6 +197,8 @@ And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "
 And I should be on the "Gradebook" page
 When I click on cmenu option " View Submissions" of asset "Chapter 1 PostTest - PostTest" in grades tab
 Then I should be on the "View Submission" page
-And I should see the "29.7 %" score in the left frame
-And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 29.73%" in the right frame
+And I should see the "72 %" score in the left frame
+And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 72.00%" in the right frame
 And I should be on the "Gradebook" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page

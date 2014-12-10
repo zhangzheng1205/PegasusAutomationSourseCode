@@ -1547,6 +1547,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to btn_ViewSubmission.
+        /// </summary>
+        internal static string StudentPrsentation_Page_Activity_ViewSubmission_ClassName_Locator {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_Activity_ViewSubmission_ClassName_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quiz.
         /// </summary>
         internal static string StudentPrsentation_Page_ActivityQuiz_WindowName_Locator {

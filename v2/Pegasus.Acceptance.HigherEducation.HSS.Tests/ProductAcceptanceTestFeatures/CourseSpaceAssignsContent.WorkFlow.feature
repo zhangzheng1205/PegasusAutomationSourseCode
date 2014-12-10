@@ -5,6 +5,7 @@
 
 #Purpose: To drag and drop a folder in assignment calendar.
 #Test case ID : peg-21948.
+#PEGASUS-28902
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: Instructor drag and drop a folder in assignment calendar by Instructor
 When I navigate to the "Assignment Calendar" tab
@@ -31,9 +32,11 @@ Then I should see the check mark in assigned status column next to the assets
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 
-#PEGASUS-21971
+
 #Purpose : To validate Assign one content using Assign/Unassign link
 #Test Case Id :peg-21971 -Assign one content using Assign/Unassign link
+#PEGASUS-28903
+#Test case ID :peg-21971 
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: Assign one content using Assign Unassign link by Instructor
 When I navigate to the "Assignment Calendar" tab
@@ -48,6 +51,7 @@ Then I should be on the "Today's View" page
 
 #Purpose: To drag and drop multiple assets in assignment calendar.
 #Test case ID : peg-21981.
+#PEGASUS-28906
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: Drag and drop the more than one assets to current date in Assignment calendar
 When I navigate to the "Assignment Calendar" tab
@@ -60,7 +64,8 @@ Then I should see due date icon displayed in current date
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 
-#PEGASUS-21987
+#PEGASUS-29283
+#Test Case Id:peg-21987
 #Purpose : As Instructor for HED Product,I need to validate the display of start date icon in calendar frame
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: To validate the display of start date icon in calendar frame by Instructor
@@ -77,6 +82,7 @@ And I should see the startdate Icon in calendar frame
 
 #Purpose: To validate the current date assigned content in calendar frame by Coursespace Instructor
 #Test Case Id: peg-21985
+#PEGASUS-28907
 Scenario: To check the current date assigned content in the calendar by Instructor
 When I navigate to the "Assignment Calendar" tab
 Then I should be on the "Calendar" page
@@ -89,6 +95,7 @@ Then I should be on the "Today's View" page
 
 #Purpose :Instructor assign the asset with duedate in Managecoursework
 #TestCase Id: peg-22221
+#PEGASUS-29795
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: Instructor assign the asset with duedate in Managecoursework
 When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
@@ -102,17 +109,14 @@ And I should see assigned icon for "Review the Chapter 4 Learning Objectives"
 
 #Purpose: To assign the content to currentdate
 #MyPsychLab for Ciccarelli, Psychology, 3/e
+#PEGASUS-29796
+#peg-22220
 Scenario: Instructor assign the content with assign the content with due date ,startdate and endate
-Given I browsed the login url for "HSSCsSmsInstructor"
-When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
-When I navigate to the "Assignment Calendar" tab
-Then I should be on the "Calendar" page
-When I select "Complete the Chapter 1 Study Plan" in "Calendar" by "HSSCsSmsInstructor"
-And I select cmenu "Assignment Properties" of activity "Complete the Chapter 1 Study Plan" 
-Then I should see the "Assign" popup
+When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
+Then I should be on the "Course Materials" page
+When I select "Complete the Chapter 1 Study Plan" in "Course Materials" by "HSSCsSmsInstructor"
+And I click on "Properties" option in c menu of "Complete the Chapter 1 Study Plan" asset
+Then I should be on the "Properties" page
 And I assign the asset for current date in the properties popup
 Then I should see the duedate icon along with the checkmark in the calendar beside activity "Complete the Chapter 1 Study Plan" under "Chapter 1: The Science of Psychology"
 
