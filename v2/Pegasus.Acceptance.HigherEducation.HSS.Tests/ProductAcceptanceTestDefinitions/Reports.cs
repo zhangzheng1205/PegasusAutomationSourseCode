@@ -423,13 +423,13 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
               ScenarioContext.Current.ScenarioInfo.Title, () =>
               Assert.AreEqual(preTestScore,
               new RptStudyPlanReportPage().
-              GetStudentStudyPlanPreTestScore(studentName, 6)));
+              GetStudentStudyPlanPreTestScore(studentName, 4)));
             //Verify score value
             Logger.LogAssertion("GetStudentStudyPlanPostTestScore",
            ScenarioContext.Current.ScenarioInfo.Title, () =>
              Assert.AreEqual(postTestScore,
              new RptStudyPlanReportPage().
-             GetStudentStudyPlanPostTestScore(studentName, 6)));
+             GetStudentStudyPlanPostTestScore(studentName, 4)));
             Logger.LogMethodExit("Reports",
                 "Verify100ScoreStudentDetailsInHSSStudyPlanReports",
               base.IsTakeScreenShotDuringEntryExit);

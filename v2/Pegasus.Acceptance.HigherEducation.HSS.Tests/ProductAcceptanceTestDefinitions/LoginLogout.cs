@@ -249,6 +249,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 case User.UserTypeEnum.HedTeacherAssistant:
                 case User.UserTypeEnum.HedProgramAdmin:
                 case User.UserTypeEnum.HedWsInstructor:
+                case User.UserTypeEnum.HSSProgramAdmin:
                     // Click Sign out link 
                     new AdminToolPage().SignOutByHigherEdUsers(linkSignOut);
                     break;

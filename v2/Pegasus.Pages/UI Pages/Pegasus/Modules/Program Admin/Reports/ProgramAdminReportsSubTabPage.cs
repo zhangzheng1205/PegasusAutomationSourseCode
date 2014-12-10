@@ -198,7 +198,12 @@ namespace Pegasus.Pages.UI_Pages
                     new RptMainUXPage().OpenAssessmentWindow(assessmentType, "Select Sections");
                     //Selects the expected training and click 'Add'
                     new RptMainUXPage().AddAssessment(assessmentName);
-                    break;  
+                    break;
+                case "Select Study Plans":
+                    new RptMainUXPage().OpenAssessmentWindow(assessmentType, "Select Study Plans");
+                    //Selects the expected training and click 'Add'
+                    new RptMainUXPage().AddAssessment(assessmentName);
+                    break;
             }
             Logger.LogMethodExit("ProgramAdminReportsSubTabPage", "SelectAnAssessment",
             base.IsTakeScreenShotDuringEntryExit);

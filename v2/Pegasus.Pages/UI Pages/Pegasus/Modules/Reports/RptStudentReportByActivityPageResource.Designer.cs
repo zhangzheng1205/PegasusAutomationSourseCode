@@ -89,7 +89,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //a/span/span[text()=&apos;{0}&apos;.
+        ///   Looks up a localized string similar to //a/span/span[text()=&apos;{0}&apos;].
         /// </summary>
         internal static string RptStudentReportPage_StudentButton_XPath_Locator {
             get {

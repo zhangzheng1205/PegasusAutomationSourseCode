@@ -1812,6 +1812,7 @@ namespace Pegasus.Pages.UI_Pages
                 {
                     //Selects the activity when instructor is 'Program Admin'
                     case User.UserTypeEnum.HedProgramAdmin:
+                    case User.UserTypeEnum.HSSProgramAdmin:
                         new ProgramAdminReportsSubTabPage().
                             SelectAnAssessment(assessmentType, assessmentName);
                         break;
