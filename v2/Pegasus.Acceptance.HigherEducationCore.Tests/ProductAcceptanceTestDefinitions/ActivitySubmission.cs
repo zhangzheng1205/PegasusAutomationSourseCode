@@ -520,22 +520,39 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
                 "SubmitTheActivityWithLearnosityAudioQuestion",
                 base.IsTakeScreenShotDuringEntryExit);
         }
-        /// <summary>
-        /// Initialize Pegasus test before test execution starts.
-        /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
-        {
 
+        /// <summary>
+        /// Submit the WL SAM activity to score 100.
+        /// </summary>
+        [When(@"I submit the SAM Activity to score '100'")]
+        public void SubmitTheSAMActivity()
+        {
+            //Submit the WL SAM activity to score 100
+            Logger.LogMethodEntry("ActivitySubmission",
+                "SubmitTheSAMActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CourseContentUXPage().AnswerWLSAMActivityToScore100();
+            Logger.LogMethodExit("ActivitySubmission",
+               "SubmitTheSAMActivity",
+               base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Deinitialize Pegasus test after the execution of test.
+        /// Submit the WL SAM activity to score 0.
         /// </summary>
-        [AfterTestRun]
-        public static void TearDown()
+        [When(@"I submit SAM Activity to score '0'")]
+        public void WhenISubmitSAMActivity()
         {
-
+            //Submit the WL SAM activity to score 0
+            Logger.LogMethodEntry("ActivitySubmission",
+                "SubmitTheSAMActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+            new CourseContentUXPage().AnswerWLSAMActivityToScore0();
+            Logger.LogMethodExit("ActivitySubmission",
+               "SubmitTheSAMActivity",
+               base.IsTakeScreenShotDuringEntryExit);
         }
+
+
     }
 }

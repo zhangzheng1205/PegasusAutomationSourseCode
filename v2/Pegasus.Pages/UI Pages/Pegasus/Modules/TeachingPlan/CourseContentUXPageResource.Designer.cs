@@ -797,5 +797,104 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
                 return ResourceManager.GetString("CourseContentUXPage_ValueAttribute_Value", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SAM Activity.
+        /// </summary>
+        internal static string CourseContentUXPage_WL_ActivityWindowName {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WL_ActivityWindowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #nextQuextion div:nth-of-type({0}).
+        /// </summary>
+        internal static string CourseContentUXPage_WL_SAMActivity_AnswerField_CSS_Locator {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WL_SAMActivity_AnswerField_CSS_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _1.
+        /// </summary>
+        internal static string CourseContentUXPage_WL_SAMActivity_AppendText {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WL_SAMActivity_AppendText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Id.
+        /// </summary>
+        internal static string CourseContentUXPage_WL_SAMActivity_Attribute {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WL_SAMActivity_Attribute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le Madre.
+        /// </summary>
+        internal static string CourseContentUXPage_WLActivity_Q1_Answer {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WLActivity_Q1_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Los abuelos paternos.
+        /// </summary>
+        internal static string CourseContentUXPage_WLActivity_Q2_Answer {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WLActivity_Q2_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Los abuelos maternos.
+        /// </summary>
+        internal static string CourseContentUXPage_WLActivity_Q3_Answer {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WLActivity_Q3_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to La familia.
+        /// </summary>
+        internal static string CourseContentUXPage_WLActivity_Q4_Answer {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WLActivity_Q4_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Los padres.
+        /// </summary>
+        internal static string CourseContentUXPage_WLActivity_Q5_Answer {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WLActivity_Q5_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to El padre.
+        /// </summary>
+        internal static string CourseContentUXPage_WLActivity_Q6_Answer {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WLActivity_Q6_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Los Hermanos.
+        /// </summary>
+        internal static string CourseContentUXPage_WLActivity_WrongAnswer {
+            get {
+                return ResourceManager.GetString("CourseContentUXPage_WLActivity_WrongAnswer", resourceCulture);
+            }
+        }
     }
 }

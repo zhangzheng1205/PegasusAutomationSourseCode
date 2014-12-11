@@ -362,5 +362,38 @@
   </data>
   <data name="CourseContentUXPage_chkLink_Xpath_Locator" xml:space="preserve">
     <value>//table[@id='grdCourseContent']/tbody/tr[{0}]/td[1]/input</value>
-  </data>  
+  </data>
+  <data name="CourseContentUXPage_WLActivity_Q1_Answer" xml:space="preserve">
+    <value>Le Madre</value>
+  </data>
+  <data name="CourseContentUXPage_WLActivity_Q2_Answer" xml:space="preserve">
+    <value>Los abuelos paternos</value>
+  </data>
+  <data name="CourseContentUXPage_WLActivity_Q3_Answer" xml:space="preserve">
+    <value>Los abuelos maternos</value>
+  </data>
+  <data name="CourseContentUXPage_WLActivity_Q4_Answer" xml:space="preserve">
+    <value>La familia</value>
+  </data>
+  <data name="CourseContentUXPage_WLActivity_Q5_Answer" xml:space="preserve">
+    <value>Los padres</value>
+  </data>
+  <data name="CourseContentUXPage_WLActivity_Q6_Answer" xml:space="preserve">
+    <value>El padre</value>
+  </data>
+  <data name="CourseContentUXPage_WLActivity_WrongAnswer" xml:space="preserve">
+    <value>Los Hermanos</value>
+  </data>
+  <data name="CourseContentUXPage_WL_ActivityWindowName" xml:space="preserve">
+    <value>SAM Activity</value>
+  </data>
+  <data name="CourseContentUXPage_WL_SAMActivity_AnswerField_CSS_Locator" xml:space="preserve">
+    <value>#nextQuextion div:nth-of-type({0})</value>
+  </data>
+  <data name="CourseContentUXPage_WL_SAMActivity_AppendText" xml:space="preserve">
+    <value>_1</value>
+  </data>
+  <data name="CourseContentUXPage_WL_SAMActivity_Attribute" xml:space="preserve">
+    <value>Id</value>
+  </data>
 </root>

@@ -712,6 +712,7 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+
         /// <summary>
         /// Selecting The Given WL Activity
         /// </summary>
@@ -719,7 +720,8 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
         /// <param name="p1"></param>
         /// <param name="p2"></param>
         [When(@"I select ""(.*)"" in ""(.*)"" page by ""(.*)""")]
-        public void SelectingTheGivenWLActivity(string activityName, string windowTitle, User.UserTypeEnum studentName)
+        public void SelectingTheGivenWLActivity(string activityName, 
+            string windowTitle, User.UserTypeEnum studentName)
         {
             Logger.LogMethodEntry("CommonSteps",
              "SelectingTheGivenWLActivity",

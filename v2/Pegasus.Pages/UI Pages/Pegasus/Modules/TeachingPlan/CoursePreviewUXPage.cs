@@ -391,7 +391,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
          /// Select Activity By Student In WL.
         /// </summary>
-        /// <param name="activityNamr"></param>
+        /// <param name="activityNamr">This is the activity Name.</param>
          public void SelectActivityByStudentInWL(string activityName)
          {
              logger.LogMethodEntry("CoursePreviewUXPage", "SelectActivityByStudentInWL",
@@ -453,8 +453,7 @@ namespace Pegasus.Pages.UI_Pages
             }
             catch (Exception e)
             {
-
-                ExceptionHandler.HandleException(e);
+                 ExceptionHandler.HandleException(e);
             }
             logger.LogMethodExit("CourseContentUXPage", "AnswerWLEssayActivity",
                   base.IsTakeScreenShotDuringEntryExit);
@@ -463,27 +462,34 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Submitt WL Activity
         /// </summary>
-        private void SubmittWLActivity()
+        public void SubmittWLActivity()
         {
             logger.LogMethodEntry("CourseContentUXPage", "SubmittWLActivity",
                 base.IsTakeScreenShotDuringEntryExit);
-            //Click on submit button
-            IWebElement getFinishButton = base.GetWebElementPropertiesByPartialLinkText
-                (CoursePreviewUXPageResource.CoursePreviewUX_Page_Submit_Button_LinkText_Locator);
-            base.ClickByJavaScriptExecutor(getFinishButton);
-            //submit the activity
-            base.SwitchToLastOpenedWindow();
-            //Click on Finish button
-            IWebElement FinishButton = base.GetWebElementPropertiesById(
-                CoursePreviewUXPageResource.CoursePreviewUX_Page_Finish_Button_Id_Locator);
-            base.ClickByJavaScriptExecutor(FinishButton);
-            base.ClickButtonById(CoursePreviewUXPageResource.CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator);
+            try
+            {
+                //Click on submit button
+                IWebElement getFinishButton = base.GetWebElementPropertiesByPartialLinkText
+                    (CoursePreviewUXPageResource.CoursePreviewUX_Page_Submit_Button_LinkText_Locator);
+                base.ClickByJavaScriptExecutor(getFinishButton);
+                //submit the activity
+                base.SwitchToLastOpenedWindow();
+                //Click on Finish button
+                IWebElement FinishButton = base.GetWebElementPropertiesById(
+                    CoursePreviewUXPageResource.CoursePreviewUX_Page_Finish_Button_Id_Locator);
+                base.ClickByJavaScriptExecutor(FinishButton);
+                base.ClickButtonById(CoursePreviewUXPageResource.CoursePreviewUX_Page_ReturntoCourse_Button_Id_Locator);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
             logger.LogMethodEntry("CoursePreviewUXPage", "SubmittWLActivity",
                         base.IsTakeScreenShotDuringEntryExit);
         }
 
         /// <summary>
-        /// Verifyinr The Actvity Status of WL Activity
+        /// Verify The Actvity Status of WL Activity
         /// </summary>
         public string VerifyinrTheActvityStatusofWLActivity(string activityName)
         {
@@ -510,7 +516,6 @@ namespace Pegasus.Pages.UI_Pages
             }
             logger.LogMethodEntry("CoursePreviewUXPage", "VerifyinrTheActvityStatusofWLActivity",
                         base.IsTakeScreenShotDuringEntryExit);
-
           return getWLactivityStatus;
  
         }   
