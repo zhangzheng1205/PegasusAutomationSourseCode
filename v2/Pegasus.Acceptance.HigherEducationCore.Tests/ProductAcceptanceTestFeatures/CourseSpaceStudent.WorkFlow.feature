@@ -122,3 +122,19 @@ When I navigate to "Grades" tab
 Then I should be on the "Gradebook" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page 
+
+
+# Student submits Essay activity  from Course Calendar tab
+#(peg-22419)
+Scenario:Student submits Essay activity  from Course Calendar tab
+Given I browsed the login url for "HSSCsSmsStudent"
+When I logged into the Pegasus as "HSSCsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabMaster" from the Global Home page as "HSSCsSmsStudent"
+When I navigate to "Assignments" tab and selected "Course Calendar" subtab
+Then I should be on the "Course Materials" page
+When I select "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "HSSCsSmsStudent"
+Then I submit the essay activity
+Then I should see "Not passed" for "SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in "Course Materials" page by "HSSCsSmsStudent"
+

@@ -78,7 +78,7 @@ Scenario: User Login Program Admin and Navigate MyITLabOffice2013Section Course
 Given I browsed the login url for "HSSProgramAdmin"
 When I logged into the Pegasus as "HSSProgramAdmin" in "CourseSpace"
 Then I should logged in successfully
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
+When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSProgramAdmin"
 Then I should be on the "Program Administration" page
 When I navigate to "Sections" tab
 Then I should be on the "Program Administration" page

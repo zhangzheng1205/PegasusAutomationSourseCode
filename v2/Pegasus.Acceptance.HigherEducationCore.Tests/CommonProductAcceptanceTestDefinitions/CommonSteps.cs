@@ -712,6 +712,61 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
                 "ManageTheActivityFolderLevelNavigation",
                 base.IsTakeScreenShotDuringEntryExit);
         }
+        /// <summary>
+        /// Selecting The Given WL Activity
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        [When(@"I select ""(.*)"" in ""(.*)"" page by ""(.*)""")]
+        public void SelectingTheGivenWLActivity(string activityName, string windowTitle, User.UserTypeEnum studentName)
+        {
+            Logger.LogMethodEntry("CommonSteps",
+             "SelectingTheGivenWLActivity",
+             base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().SelectActivityByStudentInWL(activityName);
+            Logger.LogMethodExit("CommonSteps",
+               "SelectingTheGivenWLActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+          
+        }
+        /// <summary>
+        /// Submitting The WL Essay Activity
+        /// </summary>
+        [Then(@"I submit the essay activity")]
+        public void SubmittingTheWLEssayActivity()
+        {
+            Logger.LogMethodEntry("CommonSteps",
+             "SubmittingTheWLEssayActivity",
+             base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().AnswerWLEssayActivity();
+            Logger.LogMethodExit("CommonSteps",
+               "SubmittingTheWLEssayActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+        /// <summary>
+        /// Verifying WL Activity Status After Submission
+        /// </summary>
+        /// <param name="p0"></param>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <param name="studentName"></param>
+        [Then(@"I should see ""(.*)"" for ""(.*)"" in ""(.*)"" page by ""(.*)""")]
+        public void VerifyingWLActivityStatusAfterSubmission(string activityStatus, string activityName, string windowTitle, string studentName)
+        {
+            Logger.LogMethodEntry("CommonSteps",
+            "VerifyingWLActivityStatusAfterSubmission",
+            base.IsTakeScreenShotDuringEntryExit);
+            //Assert we have correct activity status displayed.
+            Logger.LogAssertion("VerifyOpenedPageTitle",
+                ScenarioContext.Current.ScenarioInfo.Title,
+                () => Assert.AreEqual(activityStatus,
+            new CoursePreviewUXPage().VerifyinrTheActvityStatusofWLActivity(activityName)));
+            Logger.LogMethodExit("CommonSteps",
+               "VerifyingWLActivityStatusAfterSubmission",
+               base.IsTakeScreenShotDuringEntryExit);
+           
+        }
 
         /// <summary>
         /// Initialize Pegasus test before test execution starts.

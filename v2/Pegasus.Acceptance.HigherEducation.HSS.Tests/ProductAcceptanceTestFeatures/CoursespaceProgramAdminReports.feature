@@ -27,8 +27,8 @@ And I click on the "Cancel" button in reports
 Then I should see the "Save settings to My Reports" popup closed
 And I should be on the "Program Administration" page
 When I select "Run Report" for "HSSActivityResultsByStudent" report in 'My Reports' grid by "HSSProgramAdmin"
-Then I should be on the "Report: Activity Results by Student" page
-When I close the "Report: Activity Results by Student" window
+Then I should be on the "Report: Student Results by Activity" page
+When I close the "Report: Student Results by Activity" window
 
 
 #Purpose : Generate and save the  "Study plan Results report"  as a ProgramAdmin
