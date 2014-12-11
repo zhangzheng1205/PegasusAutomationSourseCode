@@ -80,7 +80,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .//*[@id=&apos;lblContainer&apos;]/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[1]/td[1]/span.
+        ///   Looks up a localized string similar to .//*[@id=&apos;lblContainer&apos;]/div/div/table[2]/tbody/tr/td/div/table/tbody/tr.
         /// </summary>
         internal static string RptActivityResultByStudentPage_ActivityStudentCount_XPath_Locator {
             get {
@@ -103,6 +103,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         internal static string RptActivityResultByStudentPage_ActivityStudentScore_XPath_Locator {
             get {
                 return ResourceManager.GetString("RptActivityResultByStudentPage_ActivityStudentScore_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to html/body/form/span[2]/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]/td[3]/table/tbody/tr[2]/td/table[1]/tbody/tr/td[4].
+        /// </summary>
+        internal static string RptActivityResultByStudentPage_AdminActivityStudentScore_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptActivityResultByStudentPage_AdminActivityStudentScore_XPath_Locator", resourceCulture);
             }
         }
         

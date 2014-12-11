@@ -1845,7 +1845,7 @@ namespace Pegasus.Pages.UI_Pages
                                 this.AddAssessment(assessmentName);
                                 break;
                             case "Select Study Plans":
-                                this.OpenAssessmentWindow(assessmentType, "Select Study Plans");
+                                this.OpenAssessmentWindow(assessmentType, "Select Study Plan");
                                 //Selects the expected activity and click 'Add'
                                 this.AddAssessment(assessmentName);
                                 break;

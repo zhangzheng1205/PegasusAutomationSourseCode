@@ -252,6 +252,69 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
         }
 
         /// <summary>
+        /// Verify Zero Scoring Details In Activity Report By Student.
+        /// </summary>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        /// <param name="scorePercentage">This is expected percentage.</param>
+        [Then(@"I should see 'Zero' ""(.*)"" along with submitted score ""(.*)""")]
+        public void VerifyZeroScoringDetailsInAdminActivityReportByStudent(
+            User.UserTypeEnum userTypeEnum, string scorePercentage)
+        {
+            // Verify report heading ,section name and average score
+            Logger.LogMethodEntry("Reports",
+              "VerifyZeroScoringDetailsInActivityReportByStudent",
+              base.IsTakeScreenShotDuringEntryExit);
+            string studentName = new RptAllAssessmentAllStudentPage().
+                GetZeroScoreUsername(userTypeEnum);
+            //Verify student name
+            Logger.LogAssertion("VerifyZeroScoringStudentPresent",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.IsTrue(new RptActivityResultByStudentPage().
+              GetStudentNameInActivityResultByStudent(studentName)));
+            //Verify student score
+            Logger.LogAssertion("VerifyStudentPresent",
+           ScenarioContext.Current.ScenarioInfo.Title, () =>
+            Assert.AreEqual(scorePercentage, new RptActivityResultByStudentPage().
+            GetStudentScoreInActivityResultByStudentByAdmin(1)));
+            Logger.LogMethodExit("Reports",
+           "VerifyZeroScoringDetailsInActivityReportByStudent",
+         base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Verify 100 Scoring Details In Activity Report By Student
+        /// </summary>
+        /// <param name="userTypeEnum">This is user type enum.</param>
+        /// <param name="scorePercentage">This is the percentage.</param>
+        [Then(@"I should see the ""(.*)"" along with attempt submitted as score ""(.*)""")]
+        public void Verify100ScoringDetailsInAdminActivityReportByStudent
+            (User.UserTypeEnum userTypeEnum,
+             string scorePercentage)
+        {
+            // Verify report heading ,section name and average score
+            Logger.LogMethodEntry("Reports",
+                "Verify100ScoringDetailsInActivityReportByStudent",
+                base.IsTakeScreenShotDuringEntryExit);
+            User user = User.Get(userTypeEnum);
+            String firstName = user.FirstName;
+            String lastName = user.LastName;
+            String studentName = lastName + ", " + firstName;
+            //Verify student name
+            Logger.LogAssertion("VerifyZeroScoringStudentPresent",
+             ScenarioContext.Current.ScenarioInfo.Title, () =>
+              Assert.IsTrue(new RptActivityResultByStudentPage().
+              GetStudentNameInActivityResultByStudent(studentName)));
+            //Verify student score value
+            Logger.LogAssertion("VerifyStudentPresent",
+            ScenarioContext.Current.ScenarioInfo.Title, () =>
+             Assert.AreEqual(scorePercentage, new RptActivityResultByStudentPage().
+            GetStudentScoreInActivityResultByStudentByAdmin(3)));
+            Logger.LogMethodExit("Reports",
+       "Verify100ScoringDetailsInActivityReportByStudent",
+     base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Select All Students Based on instructor.
         /// </summary>
         /// <param name="userTypeEnum">This is the user type enum.</param>
@@ -449,8 +512,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
                              "SelectStudentByProgramAdmin",
                              base.IsTakeScreenShotDuringEntryExit);
             new RptStudentReportByActivityPage().AddStudentToReport(
-                studentButtonName, userTypeEnum);
-           
+                studentButtonName, userTypeEnum);           
             Logger.LogMethodExit("Reports",
                "SelectStudentByProgramAdmin",
              base.IsTakeScreenShotDuringEntryExit);

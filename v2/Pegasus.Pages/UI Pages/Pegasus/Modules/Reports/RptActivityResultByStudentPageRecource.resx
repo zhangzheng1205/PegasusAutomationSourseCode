@@ -124,13 +124,16 @@
     <value>//div[@id='_ctl3_allAssementDetail1']/table/tbody/tr[{0}]/td/div/table/tbody/tr/td/span</value>
   </data>
   <data name="RptActivityResultByStudentPage_ActivityStudentCount_XPath_Locator" xml:space="preserve">
-    <value>.//*[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[1]/td[1]/span</value>
+    <value>.//*[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr</value>
   </data>
   <data name="RptActivityResultByStudentPage_ActivityStudentName_XPath_Locator" xml:space="preserve">
     <value>.//*[@id='lblContainer']/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]/td[1]/span</value>
   </data>
   <data name="RptActivityResultByStudentPage_ActivityStudentScore_XPath_Locator" xml:space="preserve">
     <value>html/body/form/span[2]/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]/td[2]/table/tbody/tr[2]/td/table[1]/tbody/tr/td[4]</value>
+  </data>
+  <data name="RptActivityResultByStudentPage_AdminActivityStudentScore_XPath_Locator" xml:space="preserve">
+    <value>html/body/form/span[2]/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]/td[3]/table/tbody/tr[2]/td/table[1]/tbody/tr/td[4]</value>
   </data>
   <data name="RptActivityResultByStudentPage_WindowName" xml:space="preserve">
     <value>Report: Activity Results by Student</value>

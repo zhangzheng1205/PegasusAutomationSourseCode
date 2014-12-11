@@ -200,9 +200,15 @@ namespace Pegasus.Pages.UI_Pages
                     new RptMainUXPage().AddAssessment(assessmentName);
                     break;
                 case "Select Study Plans":
-                    new RptMainUXPage().OpenAssessmentWindow(assessmentType, "Select Study Plans");
+                    new RptMainUXPage().OpenAssessmentWindow(assessmentType, "Select Study Plan");
                     //Selects the expected training and click 'Add'
                     new RptMainUXPage().AddAssessment(assessmentName);
+                    break;
+                case "Select Student":
+                    new RptMainUXPage().OpenAssessmentWindow(assessmentType, "Select Student");
+                    //Selects the expected activity and click 'Add'
+                    new RptMainUXPage().AddHSSCsSmsStudent((User.UserTypeEnum)
+                         Enum.Parse(typeof(User.UserTypeEnum), assessmentName));
                     break;
             }
             Logger.LogMethodExit("ProgramAdminReportsSubTabPage", "SelectAnAssessment",
