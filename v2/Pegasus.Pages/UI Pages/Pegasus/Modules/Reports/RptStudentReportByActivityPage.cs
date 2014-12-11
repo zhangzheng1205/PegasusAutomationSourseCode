@@ -164,7 +164,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             getReportDetails = base.GetElementTextByXPath(
                 String.Format(RptStudentReportByActivityPageResource.
                 RptStudentReportPage_ReportDetails_XPath_Locator,
-                reportColumn));
+                reportColumn)).Trim();
             logger.LogMethodExit("RptStudentReportByActivityPage", "GetReportDetails",
                  base.IsTakeScreenShotDuringEntryExit);
             return getReportDetails;
@@ -249,7 +249,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                getSection = base.GetElementTextByXPath(
                    RptStudentReportByActivityPageResource.
                    RptStudentReportSetcion_Name_Xpath_Locator);
-                studentSection = getSection.Split('|')[0];
+                studentSection = getSection.Split('|')[0].Trim();
            }
            catch (Exception e)
            {

@@ -76,65 +76,55 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestFeat
         public virtual void GenerateAndSaveTheStudentResultsByActivityAsAProgramAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate and save the \"Student Results by Activity\" as a ProgramAdmin", ((string[])(null)));
-#line 9
-this.ScenarioSetup(scenarioInfo);
 #line 10
-testRunner.When("I enter in the \"HSSMyPsychLabProgram\" from the Global Home page as \"HSSProgramAdm" +
-                    "in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 11
-testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.When("I navigate to \"Reports\" tab of the \"Program Administration\" page as Admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
-testRunner.When("I navigate to the \"Reports\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
 testRunner.And("I clicked on the \"Student Results by Activity\" report link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
+#line 13
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 15
+#line 14
 testRunner.When("I select \"HSSMyPsychLabProgram\" section under \"HSSMyPsychLabMaster\" template in \"" +
                     "Select Sections\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
+#line 15
 testRunner.And("I select Activity \"Take the Chapter 1 Exam\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 16
 testRunner.And("I select \"HSSCsSmsStudent\" asset in \"Select Student\" by \"HSSProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 18
+#line 17
 testRunner.And("I select \"HSSCsSmsStudent\" student in \"Select Student\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
+#line 18
 testRunner.Then("I select \'save settings to My Reports\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 20
+#line 19
 testRunner.When("I click on the \"Run Report\" button in reports", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 21
+#line 20
 testRunner.Then("I should be on the \"Save settings to My Reports\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 22
+#line 21
 testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 23
+#line 22
 testRunner.And("I enter the \"HSSActivityResultsByStudent\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
+#line 23
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
+#line 24
 testRunner.Then("I should see the \"Save settings to My Reports\" popup closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 26
+#line 25
 testRunner.And("I should see the section \"HSSMyPsychLabProgram\" for \"HSSCsSmsStudent\" with averag" +
                     "e score \"100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
+#line 26
 testRunner.And("I should see \" Take the Chapter 1 Exam \" \"Exam\" details in report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
+#line 27
 testRunner.When("I close the \"Report: Student Results by Activity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
+#line 28
 testRunner.And("I click on the \"Cancel\" button in reports", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
+#line 29
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 31
+#line 30
 testRunner.When("I select \"Run Report\" for \"HSSActivityResultsByStudent\" report in \'My Reports\' gr" +
                     "id by \"HSSProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
+#line 31
 testRunner.Then("I should be on the \"Report: Activity Results by Student\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 33
+#line 32
 testRunner.When("I close the \"Report: Activity Results by Student\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
-testRunner.And("I \"Sign out\" from the \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 35
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -145,64 +135,115 @@ testRunner.Then("I should see the successfull message \"You have been signed out
         public virtual void GenerateAndSaveTheStudyPlanResultReportAsAProgramAdmin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate and save the \"Study plan Result report\" as a ProgramAdmin", ((string[])(null)));
-#line 40
+#line 39
 this.ScenarioSetup(scenarioInfo);
+#line 40
+testRunner.When("I navigate to \"Reports\" tab of the \"Program Administration\" page as Admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 41
-testRunner.When("I enter in the \"HSSMyPsychLabProgram\" from the Global Home page as \"HSSProgramAdm" +
-                    "in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.And("I clicked on the \"Study Plan Results\" report link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 42
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 43
-testRunner.When("I navigate to the \"Reports\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
-testRunner.And("I clicked on the \"Study Plan Results\" report link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 45
-testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 46
 testRunner.When("I select \"HSSMyPsychLabProgram\" section under \"HSSMyPsychLabMaster\" template in \"" +
                     "Select Sections\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 47
-testRunner.And("I select Activity \"Complete the Chapter 1 Study Plan\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 48
+#line 44
+testRunner.And("I select \"Complete the Chapter 1 Study Plan\" asset in \"Select Study Plans\" by \"HS" +
+                    "SCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 45
 testRunner.And("I \'Select All\' in \'Student Options\' by \"HSSProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 49
+#line 46
 testRunner.Then("I select \'save settings to My Reports\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 50
+#line 47
 testRunner.When("I click on the \"Run Report\" button in reports", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 48
 testRunner.Then("I should be on the \"Save settings to My Reports\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 52
+#line 49
 testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 53
+#line 50
 testRunner.And("I enter the \"HSSActivityResultsByStudent\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 54
+#line 51
 testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
+#line 52
 testRunner.Then("I should see the \"Save settings to My Reports\" popup closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 56
+#line 53
 testRunner.And("I should see average score \"13.5%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 57
+#line 54
 testRunner.And("I should see \'Zero\' \"HSSCsSmsStudent\" along with Pre-test \"0%\" Post-test \"0%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 58
+#line 55
 testRunner.And("I should see the \"HSSCsSmsStudent\" along with  Pre-test \"72%\" Post-test \"29.7%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 59
+#line 56
 testRunner.When("I close the \"Report: Student Results by Activity\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 60
+#line 57
 testRunner.And("I click on the \"Cancel\" button in reports", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 61
+#line 58
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 62
+#line 59
 testRunner.When("I select \"Run Report\" for \"HSSActivityResultsByStudent\" report in \'My Reports\' gr" +
                     "id by \"HSSProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 63
+#line 60
 testRunner.Then("I should be on the \"Study Plan Results\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 64
+#line 61
 testRunner.When("I close the \"Study Plan Results\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 65
-testRunner.And("I \"Sign out\" from the \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 66
-testRunner.Then("I should see the successfull message \"You have been signed out of the application" +
-                    ".\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Generate and save the \"Activity Results by Student\" as a Program Admin")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceProgramAdminReport")]
+        public virtual void GenerateAndSaveTheActivityResultsByStudentAsAProgramAdmin()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate and save the \"Activity Results by Student\" as a Program Admin", ((string[])(null)));
+#line 70
+this.ScenarioSetup(scenarioInfo);
+#line 71
+testRunner.When("I navigate to \"Reports\" tab of the \"Program Administration\" page as Admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 72
+testRunner.And("I clicked on the \"Activity Results by Student\" report link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 73
+testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 74
+testRunner.When("I select \"HSSMyPsychLabProgram\" section under \"HSSMyPsychLabMaster\" template in \"" +
+                    "Select Sections\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 75
+testRunner.And("I select Activity \"Take the Chapter 1 Exam\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 76
+testRunner.And("I select Student", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 77
+testRunner.Then("I select \'save settings to My Reports\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 78
+testRunner.When("I click on the \"Run Report\" button in reports", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 79
+testRunner.Then("I should be on the \"Save settings to My Reports\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 80
+testRunner.When("I select \"Createnewreport\" radiobutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 81
+testRunner.And("I enter the \"HSSActivityResultsByStudent\" report name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 82
+testRunner.And("I click on \"SaveandRun\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 83
+testRunner.Then("I should see the \"Save settings to My Reports\" popup closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 84
+testRunner.And("I should see the \"Take the Chapter 1 Exam\" with section name \"HSSMyPsychLabProgra" +
+                    "m\" with average score \"100%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 85
+testRunner.And("I should see \'Zero\' \"HSSCsSmsStudent\" along with submitted score as \"24%\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 86
+testRunner.And("I should see the \"HSSCsSmsStudent\" along with attempt submitted as score as \"40%\"" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 87
+testRunner.When("I close the \"Report: Activity Results by Student\" window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 88
+testRunner.When("I click on the \"Cancel\" button in reports", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 89
+testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 90
+testRunner.When("I select \"Run Report\" for \"HSSActivityResultsByStudent\" report in \'My Reports\' gr" +
+                    "id by \"HSSProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 91
+testRunner.Then("I should see \"ActivityResultByStudent\" report launched successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 92
+testRunner.And("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

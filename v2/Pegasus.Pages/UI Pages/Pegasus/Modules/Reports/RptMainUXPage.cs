@@ -1840,7 +1840,7 @@ namespace Pegasus.Pages.UI_Pages
                                 this.AddAssessment(assessmentName);
                                 break;
                             case "Select Activity":
-                                this.OpenAssessmentWindow(assessmentType, "Select Activity");
+                                this.OpenAssessmentWindow(assessmentType, "Select Activities");
                                 //Selects the expected activity and click 'Add'
                                 this.AddAssessment(assessmentName);
                                 break;

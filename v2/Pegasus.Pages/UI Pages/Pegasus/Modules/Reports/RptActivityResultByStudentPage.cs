@@ -62,7 +62,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             getActivityDetails = base.GetElementTextByXPath(string.Format(
                 RptActivityResultByStudentPageRecource.
                 RptActivityResultByStudentPage_ActivityDetails_XPath_Locator,
-                reportDetails));
+                reportDetails)).Trim();
             logger.LogMethodExit("RptActivityResultByStudentPage", "GetActivityDetailsInReport",
                  base.IsTakeScreenShotDuringEntryExit);
             return getActivityDetails;
@@ -83,7 +83,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 RptActivityResultByStudentPageRecource.
                 RptActivityResultByStudentPage_ActivityAverage_XPath_Locator));
             getAverageScore = base.GetElementTextByXPath(RptActivityResultByStudentPageRecource.
-                RptActivityResultByStudentPage_ActivityAverage_XPath_Locator);
+                RptActivityResultByStudentPage_ActivityAverage_XPath_Locator).Trim();
             logger.LogMethodExit("RptActivityResultByStudentPage", "GetAverageScoreInTheReport",
                  base.IsTakeScreenShotDuringEntryExit);
             return getAverageScore;
@@ -114,7 +114,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                     RptActivityResultByStudentPage_ActivityStudentName_XPath_Locator, i)), 10);
                 getStudentName = base.GetElementTextByXPath(string.Format(
                      RptActivityResultByStudentPageRecource.
-                    RptActivityResultByStudentPage_ActivityStudentName_XPath_Locator, i));
+                    RptActivityResultByStudentPage_ActivityStudentName_XPath_Locator, i)).Trim();
                 if (getStudentName == studentName)
                 {
                     isStudentPresent = true;
@@ -148,7 +148,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             getScore = base.GetElementTextByXPath(string.Format(
                 RptActivityResultByStudentPageRecource.
                 RptActivityResultByStudentPage_ActivityStudentScore_XPath_Locator, scoreRow));
-            string studentPercentage = getScore.Split(' ')[0];
+            string studentPercentage = getScore.Split(' ')[0].Trim();
             logger.LogMethodExit("RptActivityResultByStudentPage",
                 "GetStudentScoreInActivityResultByStudent",
                      base.IsTakeScreenShotDuringEntryExit);
