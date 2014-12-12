@@ -415,12 +415,17 @@ namespace Pegasus.Pages.UI_Pages
                           base.IsTakeScreenShotDuringEntryExit);
              try
              {
-                 base.SwitchToLastOpenedWindow();
+                 
+                 base.WaitUntilWindowLoads(CoursePreviewUXPageResource.CoursePreviewUX_Page_Activity_Window_Title_Name_HED);                
                  base.SelectWindow(CoursePreviewUXPageResource.CoursePreviewUX_Page_Activity_Window_Title_Name_HED);
+                 base.WaitForElement(By.CssSelector(string.Format(CoursePreviewUXPageResource.
+                      CoursePreviewUX_Page_Activity_Properties_CSS_Selector, answerField)));
                  string getId = base.GetWebElementPropertiesByCssSelector
                      (String.Format(CoursePreviewUXPageResource.
                      CoursePreviewUX_Page_Activity_Properties_CSS_Selector, answerField)).GetAttribute("id");
+                 
                  string textId = getId.Split('_')[1];
+                 base.WaitForElement(By.Id(textId));
                  base.FillTextBoxById(textId, CoursePreviewUXPageResource.CoursePreviewUX_Page_Activity_Essay_Text_to_Fill);
              }
              catch (Exception e)
