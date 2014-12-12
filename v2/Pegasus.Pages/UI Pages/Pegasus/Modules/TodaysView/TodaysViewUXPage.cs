@@ -3825,5 +3825,34 @@ namespace Pegasus.Pages.UI_Pages
             Logger.LogMethodExit("TodaysViewUXPage", "LoadAndSwitchToWindow",
                base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Get Activity Name Of Instructor Grading Channel
+        /// </summary>
+        /// <param name="activityName"></param>
+        /// <returns>getActivityName</returns>
+        public string GetActivityNameOfInstructorGradingChannel(string activityName)
+    {
+        Logger.LogMethodEntry("TodaysViewUXPage", "GetActivityNameOfInstructorGradingChannel",
+                    base.IsTakeScreenShotDuringEntryExit);
+             string getActivityName = string.Empty;
+             try
+             {
+
+                 base.SelectWindow(TodaysViewUXPageResource.TodaysViewUXPageResource_WindowsTitle);
+                 getActivityName = base.GetElementTextByPartialLinkText(activityName);
+
+             }
+             catch (Exception e)
+             {
+                 
+                 ExceptionHandler.HandleException(e);
+             }
+        Logger.LogMethodExit("TodaysViewUXPage", "GetActivityNameOfInstructorGradingChannel",
+                          base.IsTakeScreenShotDuringEntryExit);
+        return getActivityName;
+
+    }
+
     }
 }
