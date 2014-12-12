@@ -135,6 +135,9 @@
   <data name="RptActivityResultByStudentPage_AdminActivityStudentScore_XPath_Locator" xml:space="preserve">
     <value>html/body/form/span[2]/div/div/table[2]/tbody/tr/td/div/table/tbody/tr[{0}]/td[3]/table/tbody/tr[2]/td/table[1]/tbody/tr/td[4]</value>
   </data>
+  <data name="RptActivityResultByStudentPage_SectionName_XPath_Locator" xml:space="preserve">
+    <value>//*[@id='tblCourseTeacherName']/tbody/tr/td[1]/span</value>
+  </data>
   <data name="RptActivityResultByStudentPage_WindowName" xml:space="preserve">
     <value>Report: Activity Results by Student</value>
   </data>

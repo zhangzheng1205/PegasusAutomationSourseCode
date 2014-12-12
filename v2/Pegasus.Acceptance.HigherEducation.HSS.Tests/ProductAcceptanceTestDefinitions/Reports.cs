@@ -85,7 +85,8 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             //Verify section name
             Logger.LogAssertion("VerifysectionName",
             ScenarioContext.Current.ScenarioInfo.Title, () =>
-            Assert.AreEqual(course.SectionName, new RptStudentReportByActivityPage().GetSectionNameInAdminReport()));           
+            Assert.AreEqual(course.SectionName, new RptStudentReportByActivityPage().
+            GetSectionNameInAdminReport()));           
             //Verify Average score
             Logger.LogAssertion("VerifyStudentAveragescore",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -175,8 +176,8 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             //Verify section name
             Logger.LogAssertion("VerifysectionName",
             ScenarioContext.Current.ScenarioInfo.Title, () =>
-            Assert.AreEqual(course.SectionName, new RptStudentReportByActivityPage().
-            GetSectionNameInAdminReport()));      
+            Assert.AreEqual(course.SectionName, new RptActivityResultByStudentPage().
+            GetSectionNameInInstructorReport()));      
             //Verify average score
             Logger.LogAssertion("VerifyActivityAverageScore",
              ScenarioContext.Current.ScenarioInfo.Title, () =>
@@ -212,7 +213,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             Logger.LogAssertion("VerifyStudentPresent",
            ScenarioContext.Current.ScenarioInfo.Title, () =>
             Assert.AreEqual(scorePercentage, new RptActivityResultByStudentPage().
-            GetStudentScoreInActivityResultByStudent(1)));
+            GetStudentScoreInActivityResultByStudent(3)));
             Logger.LogMethodExit("Reports",
            "VerifyZeroScoringDetailsInActivityReportByStudent",
          base.IsTakeScreenShotDuringEntryExit);
@@ -245,7 +246,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.ProductAcceptanceTestDefi
             Logger.LogAssertion("VerifyStudentPresent",
             ScenarioContext.Current.ScenarioInfo.Title, () =>
              Assert.AreEqual(scorePercentage, new RptActivityResultByStudentPage().
-            GetStudentScoreInActivityResultByStudent(1)));
+            GetStudentScoreInActivityResultByStudent(5)));
             Logger.LogMethodExit("Reports",
        "Verify100ScoringDetailsInActivityReportByStudent",
      base.IsTakeScreenShotDuringEntryExit);

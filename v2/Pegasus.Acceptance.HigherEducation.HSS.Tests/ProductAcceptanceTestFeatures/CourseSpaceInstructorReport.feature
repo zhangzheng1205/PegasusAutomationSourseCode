@@ -9,11 +9,6 @@
 #PEGASUS-29438
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: Generate and save the "Student Results by Activity" as a Section Instructor
-Given I browsed the login url for "HSSProgramAdmin"
-When I logged into the Pegasus as "HSSProgramAdmin" in "CourseSpace"
-Then I should logged in successfully
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSProgramAdmin"
-Then I should be on the "Program Administration" page
 When I navigate to "Sections" tab
 Then I should be on the "Program Administration" page
 When I search the "HSSMyPsychLabProgram" first section
@@ -32,7 +27,6 @@ And  I click on "SaveandRun" button
 Then I should see the section name "HSSMyPsychLabProgram" for "HSSCsSmsStudent" with average score "100%" 
 And I should see "Take the Chapter 1 Exam" "Exam" details in the report
 When I close the "Report: Student Results by Activity" window
-Then I should see the "Save settings to My Reports" popup closed
 When I click on the "Cancel" button in reports by "HSSCsSmsInstructor"
 And I select "Run Report" for "HSSStudentResultsbyActivity" report in 'My Reports' grid by "HSSCsSmsInstructor"
 Then I should be on the "Report: Student Results by Activity" page
@@ -47,11 +41,6 @@ When I close the "Report: Student Results by Activity" window
 # in the program based on the below activities submissions available in the Course (Refer: Test link peg-22219)
 #Dependency : No dependency test can run with existing data
 Scenario: Generate and save the "Activity Results by Student" as a Section Instructor
-Given I browsed the login url for "HSSProgramAdmin"
-When I logged into the Pegasus as "HSSProgramAdmin" in "CourseSpace"
-Then I should logged in successfully
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
-Then I should be on the "Program Administration" page
 When I navigate to "Sections" tab
 Then I should be on the "Program Administration" page
 When I search the "HSSMyPsychLabProgram" first section
@@ -84,11 +73,6 @@ When I close the "Report: Activity Results by Student" window
 #Pre condition : This test case is to generate the Activity Results by Student Report across the Sections in the program based on the below activities submissions available in the Course (Refer: Test link peg-22219)
 #Dependency : No dependency test can run with existing data
 Scenario: Generate and save the  "Study plan Results report"  as a Section Instructor
-Given I browsed the login url for "HSSProgramAdmin"
-When I logged into the Pegasus as "HSSProgramAdmin" in "CourseSpace"
-Then I should logged in successfully
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
-Then I should be on the "Program Administration" page
 When I navigate to "Sections" tab
 Then I should be on the "Program Administration" page
 When I search the "HSSMyPsychLabProgram" first section
@@ -104,9 +88,9 @@ When I select "Createnewreport" radiobutton
 And  I enter the "HSSStudytPlanResults" report name
 And  I click on "SaveandRun" button
 Then I should be on the "Study Plan Results" page
-And I should see average score "13.5%"
+And I should see average score "36%"
 And I should see 'Zero' "HSSCsSmsStudent" along with Pre-test "0%" Post-test "0%"
-And I should see the "HSSCsSmsStudent" along with  Pre-test "72%" Post-test "29.7%"
+And I should see the "HSSCsSmsStudent" along with  Pre-test "72%" Post-test "72%"
 When I close the "Study Plan Results" window
 And I click on the "Cancel" button in reports by "HSSCsSmsInstructor"
 And I select "Run Report" for "HSSStudytPlanResults" report in 'My Reports' grid by "HSSCsSmsInstructor"

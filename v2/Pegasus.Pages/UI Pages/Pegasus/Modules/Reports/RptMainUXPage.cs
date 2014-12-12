@@ -1485,6 +1485,7 @@ namespace Pegasus.Pages.UI_Pages
                         break;
                     //Switch to this case when user is 'SMS Instructor' os 'Section Instructor'
                     case User.UserTypeEnum.CsSmsInstructor:
+                    case User.UserTypeEnum.HSSCsSmsInstructor:
                         this.SwitchToReportsWindow();
                         //Switch to 'Reports' page 'Mainframe' iframe
                         this.SwitchToMainFrame();
@@ -1997,7 +1998,7 @@ namespace Pegasus.Pages.UI_Pages
                 //Click assesment button
                 base.ClickByJavaScriptExecutor(getButton);
                 //Switch to window
-                base.WaitUntilWindowLoads(assessmentWindow);
+               base.WaitUntilWindowLoads(assessmentWindow);
                 base.SelectWindow(assessmentWindow);
             }
             catch (Exception e)

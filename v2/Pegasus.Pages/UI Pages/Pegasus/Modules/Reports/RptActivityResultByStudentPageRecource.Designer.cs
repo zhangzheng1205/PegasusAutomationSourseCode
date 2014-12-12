@@ -116,6 +116,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;tblCourseTeacherName&apos;]/tbody/tr/td[1]/span.
+        /// </summary>
+        internal static string RptActivityResultByStudentPage_SectionName_XPath_Locator {
+            get {
+                return ResourceManager.GetString("RptActivityResultByStudentPage_SectionName_XPath_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Report: Activity Results by Student.
         /// </summary>
         internal static string RptActivityResultByStudentPage_WindowName {

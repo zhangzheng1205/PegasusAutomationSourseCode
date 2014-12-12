@@ -219,5 +219,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             return studentPercentage;
         }
 
+        /// <summary>
+        /// Get Section Name In Instructor Report.
+        /// </summary>
+        /// <returns>Section name.</returns>
+        public string GetSectionNameInInstructorReport()
+        {
+            logger.LogMethodEntry("RptActivityResultByStudentPage",
+                           "GetSectionNameInInstructorReport",
+                          base.IsTakeScreenShotDuringEntryExit);
+            string getSection = string.Empty;
+            try
+            {
+                bool ghsd = base.IsElementPresent(By.XPath(
+                    RptActivityResultByStudentPageRecource.
+                    RptActivityResultByStudentPage_SectionName_XPath_Locator), 10);
+                getSection = base.GetElementTextByXPath(
+                    RptActivityResultByStudentPageRecource.
+                    RptActivityResultByStudentPage_SectionName_XPath_Locator);
+            }
+            catch (System.Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            logger.LogMethodExit("RptActivityResultByStudentPage",
+                "GetSectionNameInInstructorReport",
+                base.IsTakeScreenShotDuringEntryExit);
+            return getSection;
+        }
     }
 }

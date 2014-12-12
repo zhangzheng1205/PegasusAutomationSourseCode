@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent", "                As a CS Student \r\n\t\t\tI want to manage all the coursespace student" +
-                    " related usecases \r\n\t\t\tso that I would validate all the coursespace student scen" +
-                    "arios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent", "                As a CS Student \n\t\t\tI want to manage all the coursespace student " +
+                    "related usecases \n\t\t\tso that I would validate all the coursespace student scenar" +
+                    "ios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -376,26 +376,15 @@ testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), (
 #line 129
 this.ScenarioSetup(scenarioInfo);
 #line 130
-testRunner.Given("I browsed the login url for \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.When("I navigate to \"Assignments\" tab and selected \"Course Calendar\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 131
-testRunner.When("I logged into the Pegasus as \"HSSCsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 132
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 133
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 134
-testRunner.When("I enter in the \"MySpanishLabMaster\" from the Global Home page as \"HSSCsSmsStudent" +
-                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 135
-testRunner.And("I navigate to \"Assignments\" tab and selected \"Course Calendar\" subtab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 136
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 137
+#line 132
 testRunner.When("I select \"SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]\" i" +
                     "n \"Course Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 138
+#line 133
 testRunner.Then("I submit the essay activity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 139
+#line 134
 testRunner.Then("I should see \"Not passed\" for \"SAM 01-05 Heritage Language: tu español. [Vocabula" +
                     "rio 1. La familia]\" in \"Course Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -403,34 +392,23 @@ testRunner.Then("I should see \"Not passed\" for \"SAM 01-05 Heritage Language: 
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student submits sam activity  from Course Calendar tab and score 100")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student submits sam activity  from Course Calendar tab and score 100\"")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CourseSpaceStudent")]
         public virtual void StudentSubmitsSamActivityFromCourseCalendarTabAndScore100()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submits sam activity  from Course Calendar tab and score 100", ((string[])(null)));
-#line 144
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submits sam activity  from Course Calendar tab and score 100\"", ((string[])(null)));
+#line 139
 this.ScenarioSetup(scenarioInfo);
-#line 145
-testRunner.Given("I browsed the login url for \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 146
-testRunner.When("I logged into the Pegasus as \"HSSCsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 147
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 148
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 149
-testRunner.When("I enter in the \"MySpanishLabMaster\" from the Global Home page as \"HSSCsSmsStudent" +
-                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 150
-testRunner.And("I navigate to \"Assignments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 151
+#line 140
+testRunner.When("I navigate to \"Assignments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 141
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 152
+#line 142
 testRunner.When("I select \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]\" in \"Cours" +
                     "e Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 153
+#line 143
 testRunner.And("I submit the SAM Activity to score \'100\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 154
+#line 144
 testRunner.Then("I should see \"Passed\" for \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La fa" +
                     "milia]\" in \"Course Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -443,29 +421,18 @@ testRunner.Then("I should see \"Passed\" for \"SAM 01-02 Las familias hispanas. 
         public virtual void StudentSubmitsSamActivityFromCourseCalendarTabAndScore0()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student submits sam activity  from Course Calendar tab and score 0", ((string[])(null)));
-#line 159
+#line 149
 this.ScenarioSetup(scenarioInfo);
-#line 160
-testRunner.Given("I browsed the login url for \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 161
-testRunner.When("I logged into the Pegasus as \"HSSCsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 162
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 163
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 164
-testRunner.When("I enter in the \"MySpanishLabMaster\" from the Global Home page as \"HSSCsSmsStudent" +
-                    "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 165
-testRunner.And("I navigate to \"Assignments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 166
+#line 150
+testRunner.When("I navigate to \"Assignments\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 151
 testRunner.Then("I should be on the \"Course Materials\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 167
+#line 152
 testRunner.When("I select \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]\" in \"Cours" +
                     "e Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 168
+#line 153
 testRunner.And("I submit SAM Activity to score \'0\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 169
+#line 154
 testRunner.Then("I should see \"Passed\" for \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La fa" +
                     "milia]\" in \"Course Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
