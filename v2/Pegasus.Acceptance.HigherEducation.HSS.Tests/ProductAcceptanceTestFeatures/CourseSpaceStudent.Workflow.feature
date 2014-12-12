@@ -171,7 +171,7 @@ Then I should be on the "Today's View" page
 
 #HSSMyPsychLabProgram
 #peg-22241/peg-22244
-#PEGASUS-29750
+#PEGASUS-29750/ PEGASUS-29748
 #Purpose : Student validating score in gradebook for Basic/Random activity or Student validating score in gradebook for saved activity-Forcefull submission
 Scenario: Student validating score in gradebook for Basic/Random activity
 When I navigate to "Grades" tab
@@ -182,9 +182,12 @@ Then I should be on the "View Submission" page
 And I should see the "100 %" score in the left frame
 And I should see Student "scoring 100" as "HSSCsSmsStudent" and displayed like "Gradebook Grade : 100.00%" in the right frame
 And I should be on the "Gradebook" page
+When I navigate to "Today's View" tab
+Then I should be on the "Today's View" page
 
 #HSSMyPsychLabProgram
 #peg-22242
+#PEGASUS-29749
 #Purpose : Student validating score in gradebook for study plan activity
 Scenario: Student validating score in gradebook for study plan activity
 When I navigate to "Grades" tab

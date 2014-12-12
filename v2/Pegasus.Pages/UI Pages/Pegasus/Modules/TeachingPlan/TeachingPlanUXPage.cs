@@ -578,6 +578,7 @@ namespace Pegasus.Pages.UI_Pages
                      IWebElement getCmenuProperty = base.
                         GetWebElementPropertiesByXPath(string.Format(TeachingPlanUXPageResource.
                         TeachingPlanUX_Page_Activitycmenu_Xpath_Locator_Ins, initialCount));
+                     Thread.Sleep(3000);
                     //Click On Cmenu Option
                     base.ClickByJavaScriptExecutor(getCmenuProperty);
                     break;

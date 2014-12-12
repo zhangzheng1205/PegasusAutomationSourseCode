@@ -1240,6 +1240,8 @@ namespace Pegasus.Pages.UI_Pages
         {
             logger.LogMethodEntry("GBStudentUXPage", "GotoViewSubmissionPage",
             base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.XPath(GBStudentUXPageResource.
+                GBStudentUXPage_GradeBook_assetCount_xpath_Locator));
             int assetCount = base.GetElementCountByXPath(GBStudentUXPageResource.
                 GBStudentUXPage_GradeBook_assetCount_xpath_Locator);
             try
@@ -1265,8 +1267,10 @@ namespace Pegasus.Pages.UI_Pages
                         {
                             IWebElement viewSubmissionOption = base.GetWebElementPropertiesByXPath(
                                 string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Cmenu_ViewSubmissions_xpath_Locator, referenceId, i));
+                            Thread.Sleep(3000);
                             if (viewSubmissionOption.Text.Contains(assetCmenu))
                             {
+                                
                                 base.ClickByJavaScriptExecutor(viewSubmissionOption);
                                 break;
                             }

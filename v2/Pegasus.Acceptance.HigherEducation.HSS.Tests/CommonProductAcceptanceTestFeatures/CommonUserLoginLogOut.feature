@@ -73,8 +73,8 @@ Then I should logged in successfully
 Given I am on the "Global Home" page
 
 #User enter into the program course and enter into section
-#Purpose: Login as Program Admin and Navigate to section MyITLabOffice2013Program
-Scenario: User Login Program Admin and Navigate MyITLabOffice2013Section Course
+#Purpose: Login as Program Admin and Navigate to section HSS Course
+Scenario: User Login Program Admin and Navigate HSSSection Course
 Given I browsed the login url for "HSSProgramAdmin"
 When I logged into the Pegasus as "HSSProgramAdmin" in "CourseSpace"
 Then I should logged in successfully
@@ -85,4 +85,7 @@ Then I should be on the "Program Administration" page
 When I search the "HSSMyPsychLabProgram" first section
 And I click the "Enter Section as Instructor"
 
-
+#Purpose:To get the date and time of the instructor
+Scenario: Set the date and time of SMS Instructor
+When I click 'My Profile' link
+And I store user current date and time of the instructor

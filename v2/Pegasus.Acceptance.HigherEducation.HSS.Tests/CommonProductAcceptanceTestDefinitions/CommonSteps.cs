@@ -931,9 +931,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             {
                 // select grade book right iframe here
                 new GBInstructorUXPage().SelectGradebookFrame();
-                // make sleep intentionally to load frame completely
-                Thread.Sleep(Convert.ToInt32
-                   (CommonStepsResource.CommonSteps_SleepTime_Value));
+                Thread.Sleep(15000);
             }
             //Manage The Folder Navigation
             new CommonPage().ManageTheActivityFolderLevelNavigationHEDCore(
@@ -1212,6 +1210,35 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
                 base.IsTakeScreenShotDuringEntryExit);
         }
 
-   
+          /// <summary>
+        /// Click my profile link.
+        /// </summary>
+        [Then(@"I click 'My Profile' link")]
+        [When(@"I click 'My Profile' link")]
+        public void ClickMyProfileLink()
+        {
+            // Click my profile link
+            Logger.LogMethodEntry("CommonSteps", "ClickMyProfileLink",
+                 base.IsTakeScreenShotDuringEntryExit);
+            new HEDGlobalHomePage().ClickOnMyProfileLink();
+            Logger.LogMethodExit("CommonSteps", "ClickMyProfileLink",
+             base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Store users profile time and date.
+        /// </summary>
+        [When(@"I store user current date and time of the instructor")]
+        public void StoreUserCurrentDateAndTime()
+        {
+            // Store users profile time and date
+            Logger.LogMethodEntry("CommonSteps", "StoreUserCurrentDateAndTime",
+                base.IsTakeScreenShotDuringEntryExit);
+            new HEDGlobalHomePage().setUserCurrentDate();
+            Logger.LogMethodExit("CommonSteps", "StoreUserCurrentDateAndTime",
+            base.IsTakeScreenShotDuringEntryExit);
+
+
+        }
     }
 }

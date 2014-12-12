@@ -31,8 +31,8 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTe
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CommonUserLoginLogOut", "\t\tAs a Pegasus User\n\t\tI want to manage all the Pegasus User related usecases \n\t\ts" +
-                    "o that I would validate all the Pegasus User scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CommonUserLoginLogOut", "\t\tAs a Pegasus User\r\n\t\tI want to manage all the Pegasus User related usecases \r\n\t" +
+                    "\tso that I would validate all the Pegasus User scenarios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -275,11 +275,11 @@ testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTal
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login Program Admin and Navigate MyITLabOffice2013Section Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login Program Admin and Navigate HSSSection Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
-        public virtual void UserLoginProgramAdminAndNavigateMyITLabOffice2013SectionCourse()
+        public virtual void UserLoginProgramAdminAndNavigateHSSSectionCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login Program Admin and Navigate MyITLabOffice2013Section Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login Program Admin and Navigate HSSSection Course", ((string[])(null)));
 #line 77
 this.ScenarioSetup(scenarioInfo);
 #line 78
@@ -301,6 +301,22 @@ testRunner.Then("I should be on the \"Program Administration\" page", ((string)(
 testRunner.When("I search the \"HSSMyPsychLabProgram\" first section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 86
 testRunner.And("I click the \"Enter Section as Instructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Set the date and time of SMS Instructor")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
+        public virtual void SetTheDateAndTimeOfSMSInstructor()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Set the date and time of SMS Instructor", ((string[])(null)));
+#line 89
+this.ScenarioSetup(scenarioInfo);
+#line 90
+testRunner.When("I click \'My Profile\' link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 91
+testRunner.And("I store user current date and time of the instructor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

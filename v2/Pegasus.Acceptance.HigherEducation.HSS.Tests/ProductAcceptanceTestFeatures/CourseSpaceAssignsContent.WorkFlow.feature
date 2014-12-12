@@ -97,15 +97,18 @@ Then I should be on the "Today's View" page
 #TestCase Id: peg-22221
 #PEGASUS-29795
 #MyPsychLab for Ciccarelli, Psychology, 3/e
+
 Scenario: Instructor assign the asset with duedate in Managecoursework
 When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
 Then I should be on the "Course Materials" page
-When I select "Review the Chapter 4 Learning Objectives" in "Course Materials" by "HSSCsSmsInstructor"
-And I click on "Properties" option in c menu of "Review the Chapter 4 Learning Objectives" asset
+When I navigate to "Review the Chapter 1 Learning Objectives" asset in "Course Materials" tab as "HSSCsSmsInstructor"
+And I click on "Properties" option in c menu of "Review the Chapter 1 Learning Objectives" asset
 Then I should be on the "Properties" page
 When I assign asset with due date and save
 Then I should see the successfull message "Properties updated successfully."
-And I should see assigned icon for "Review the Chapter 4 Learning Objectives" 
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
 
 #Purpose: To assign the content to currentdate
 #MyPsychLab for Ciccarelli, Psychology, 3/e
@@ -114,11 +117,36 @@ And I should see assigned icon for "Review the Chapter 4 Learning Objectives"
 Scenario: Instructor assign the content with assign the content with due date ,startdate and endate
 When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
 Then I should be on the "Course Materials" page
-When I select "Complete the Chapter 1 Study Plan" in "Course Materials" by "HSSCsSmsInstructor"
-And I click on "Properties" option in c menu of "Complete the Chapter 1 Study Plan" asset
+When I navigate to "Read the eText: Chapter 1" asset in "Course Materials" tab as "HSSCsSmsInstructor"
+And I click on "Properties" option in c menu of "Read the eText: Chapter 1" asset
 Then I should be on the "Properties" page
-And I assign the asset for current date in the properties popup
-Then I should see the duedate icon along with the checkmark in the calendar beside activity "Complete the Chapter 1 Study Plan" under "Chapter 1: The Science of Psychology"
+When I assign and schedule the asset and save
+Then I should see the successfull message "Properties updated successfully."
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
+#Purpose: Assign a content to display start date icon
+#MyITLabOffice2013Program
+Scenario: Assign the content with due date to current date by SMS Instructor
+When I navigate to the "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+When I select "Read the eText: Chapter 5" in "Calendar" by "HSSCsSmsInstructor"
+And I select cmenu "Assignment Properties" of activity "Read the eText: Chapter 5" 
+Then I should see the "Assign" popup
+When I assign the asset for current date in the properties popup
+Then I should be on the "Calendar" page
+
+
+#PEGASUS-21987
+#Purpose : As Instructor for HED Product,I need to validate the display of start date icon in calendar frame
+#Test Case Id :peg-21987
+Scenario: To validate the display of start date icon in calendar frame by SMS Instructor
+When I navigate to the "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+And I should see the current date highlighted in the calendar frame
+And I should see the startdate Icon in calendar frame
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
 
 
  

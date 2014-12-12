@@ -365,6 +365,53 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.CommonProductAcceptanceTe
             Logger.LogMethodExit("CourseContent", "ConfirmAssetAssignedStatus",
             base.IsTakeScreenShotDuringEntryExit);
         }
+
+        /// <summary>
+        /// Assigning the asset with duedate and scheduling with start and end date
+        /// </summary>
+        [When(@"I assign and schedule the asset and save")]
+        public void AssignAndScheduleTheAssetAndSave()
+        {
+            Logger.LogMethodEntry("CourseContent", "AssignAndScheduleTheAssetAndSave",
+               base.IsTakeScreenShotDuringEntryExit);
+            AssignContentPage assignContent = new AssignContentPage();
+            //Selecting assign radio button
+            assignContent.SelectAssignedRadiobutton();
+            //Setting due date
+            assignContent.GetAndFillDueDate();
+            //Setting the start date and end date
+            assignContent.SetStartAndEndDate();
+            Logger.LogMethodExit("CourseContent", "AssignAndScheduleTheAssetAndSave",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Assign the asset to the current date,set start and end date,mark notification and save.
+        /// </summary>
+        [When(@"I assign the asset for current date in the properties popup")]
+        public void AssignTheAssetforStartDateIcon()
+        {
+            Logger.LogMethodEntry("AssignmentCalendar",
+               "AssignTheAsset",
+               base.IsTakeScreenShotDuringEntryExit);
+            base.SelectWindow("Assign");
+            AssignContentPage assignContentPage = new AssignContentPage();
+            //Select 'Assigned' radiobutton
+            assignContentPage.SelectAssignRadiobuttonInAssignWindow();
+            //Select current date
+            assignContentPage.SelectCurrentDateInAssignWindow();
+            //Set start and end date
+            assignContentPage.SetStartAndEndDateAssignWindow();
+            //Check availability notification
+            assignContentPage.CheckAvailabilityNotification();
+            //Save the properties
+            assignContentPage.SaveProperties();
+            Logger.LogMethodExit("AssignmentCalendar",
+                "AssignTheAsset",
+              base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        
     }
 }
 

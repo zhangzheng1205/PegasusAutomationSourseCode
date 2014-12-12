@@ -460,6 +460,10 @@ testRunner.And("I should see Student \"scoring 100\" as \"HSSCsSmsStudent\" and 
                     "book Grade : 100.00%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 184
 testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 185
+testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 186
+testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -470,41 +474,41 @@ testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((Tech
         public virtual void StudentValidatingScoreInGradebookForStudyPlanActivity()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student validating score in gradebook for study plan activity", ((string[])(null)));
-#line 189
-this.ScenarioSetup(scenarioInfo);
-#line 190
-testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 191
-testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 192
-testRunner.When("I select \"Complete the Chapter 1 Study Plan\" in \"Gradebook\" by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 193
+testRunner.When("I navigate to \"Grades\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 194
+testRunner.Then("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 195
+testRunner.When("I select \"Complete the Chapter 1 Study Plan\" in \"Gradebook\" by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 196
 testRunner.And("I click on cmenu option \" View Submissions\" of asset \"Chapter 1 PreTest - PreTest" +
                     "\" in grades tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 194
+#line 197
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 195
+#line 198
 testRunner.And("I should see the \"72 %\" score in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 196
+#line 199
 testRunner.And("I should see Student \"scoring 100\" as \"HSSCsSmsStudent\" and displayed like \"Grade" +
                     "book Grade : 72.00%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 197
+#line 200
 testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 198
+#line 201
 testRunner.When("I click on cmenu option \" View Submissions\" of asset \"Chapter 1 PostTest - PostTe" +
                     "st\" in grades tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 199
+#line 202
 testRunner.Then("I should be on the \"View Submission\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 200
+#line 203
 testRunner.And("I should see the \"72 %\" score in the left frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 201
+#line 204
 testRunner.And("I should see Student \"scoring 100\" as \"HSSCsSmsStudent\" and displayed like \"Grade" +
                     "book Grade : 72.00%\" in the right frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 202
+#line 205
 testRunner.And("I should be on the \"Gradebook\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 203
+#line 206
 testRunner.When("I navigate to \"Today\'s View\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 204
+#line 207
 testRunner.Then("I should be on the \"Today\'s View\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

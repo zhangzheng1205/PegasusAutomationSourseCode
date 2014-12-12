@@ -141,6 +141,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
+                                       
                                 }
                                 break;
                         }
@@ -183,7 +184,9 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
                                         break;
-                                    case "Review the Chapter 04 Learning Objectives":
+                                    //HSS activity
+                                    case "Review the Chapter 1 Learning Objectives":
+                                    case "Read the eText: Chapter 1":
                                         this.NavigateToAccessChapter4BrainAndNervousSystemFolder(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                             userTypeEnum, activityUnderTabName);
@@ -405,7 +408,7 @@ namespace Pegasus.Pages.CommonPageObjects
             // click folder level 
             this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
             this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
-                CommonPage_Chapter4_FolderName, webElementToWait);
+                CommonPage_Chapter1TheScienceofPsychology_FolderName, webElementToWait);
             Logger.LogMethodExit("CommonPage", "NavigateToExcelChapter1SimulationActivitiesFolder",
                base.IsTakeScreenShotDuringEntryExit);
         } 
@@ -962,8 +965,9 @@ namespace Pegasus.Pages.CommonPageObjects
                 "NavigateInsideActivityFolderUnderTab",
                 base.IsTakeScreenShotDuringEntryExit);
             //Wait for the element
-            base.WaitForElement(By.PartialLinkText(activityFolderName));
-            IWebElement getFolderLink = base.GetWebElementPropertiesByPartialLinkText
+            bool pres = base.IsElementPresent(By.LinkText(activityFolderName), 10);
+            base.WaitForElement(By.LinkText(activityFolderName));
+            IWebElement getFolderLink = base.GetWebElementPropertiesByLinkText
                 (activityFolderName);
             //Click the link
             base.ClickByJavaScriptExecutor(getFolderLink);
@@ -1414,6 +1418,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                                     userTypeEnum, activityUnderTabName);
                                         break;
+                                       
                                 }
                                 break;
 
@@ -1446,6 +1451,7 @@ namespace Pegasus.Pages.CommonPageObjects
                                                    userTypeEnum, activityUnderTabName);
                                         break;
                                     case "Review the Chapter 5 Learning Objectives":
+                                    case "Read the eText: Chapter 5":
                                         this.NavigateToChapter5ExamActivitiesFolder(CommonPageResource.
                                             CommonPage_BackToPreviousContentFolder_ImageBackArrow_Id_Locator,
                                                     userTypeEnum, activityUnderTabName);
@@ -1514,26 +1520,17 @@ namespace Pegasus.Pages.CommonPageObjects
                 "NavigateToChapter1StudyPlanGradeFolder",
             base.IsTakeScreenShotDuringEntryExit);
             this.NavigateToChapter1ExamGradeFolder(folderName);
-            new GBInstructorUXPage().SelectGradebookFrame();
-            int assetCount = base.GetElementCountByXPath(CommonPageResource.
-                CommonPage_assetCount_xpath_Locator);
             try
             {
-                for (int i = 1; i <= assetCount; i++)
-                {
-                    IWebElement assetElement = base.GetWebElementPropertiesByXPath(
-                        String.Format(CommonPageResource.
-                        CommonPage_AssesmentElement_Xpath_Locator, i));
-                    String elementText = assetElement.Text;
-                    if (elementText.Equals(activityName))
-                    {
-                        base.PerformMoveToElementClickAction(assetElement);
-                        break;
-                    }
-                }
+                new GBInstructorUXPage().SelectGradebookFrame();
+                base.WaitForElement(By.LinkText(activityName));
+                IWebElement assetElement = base.GetWebElementPropertiesByLinkText(activityName);
+                Thread.Sleep(3000);
+                base.ClickByJavaScriptExecutor(assetElement);
                 Thread.Sleep(Convert.ToInt32(CommonPageResource.
                 CommonPage_FolderNavigation_Sleep_Time));
             }
+
             catch (Exception e)
             {
                 ExceptionHandler.HandleException(e);
@@ -1893,6 +1890,23 @@ namespace Pegasus.Pages.CommonPageObjects
              "GetAmplifierIconClassAsInsturctor",
             base.IsTakeScreenShotDuringEntryExit);
             return amplifierIconClass;
+        }
+
+        /// <summary>
+        /// Navigate To 'Review the Chapter 4 Learning Objectives' HSS activity.
+        /// </summary>
+        private void NavigateReviewChapter4LearningObjectives(string webElementToWait,
+            User.UserTypeEnum userTypeEnum, string activityUnderTabName)
+        {
+            // navigate inside access chapter1 simulation activities folder
+            Logger.LogMethodEntry("CommonPage", "NavigateReviewChapter4LearningObjectives",
+               base.IsTakeScreenShotDuringEntryExit);
+            // click folder level
+            this.SelectWindowWithFrameForFolderNavigation(userTypeEnum, activityUnderTabName);
+            this.NavigateInsideActivityFolderUnderTab(CommonPageResource.
+                ComonPage_HSS_Chapter4_FolderName, webElementToWait);
+            Logger.LogMethodExit("CommonPage", "NavigateReviewChapter4LearningObjectives",
+               base.IsTakeScreenShotDuringEntryExit);
         }
     }
 }

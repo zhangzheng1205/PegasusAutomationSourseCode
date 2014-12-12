@@ -2672,6 +2672,7 @@ namespace Pegasus.Pages.UI_Pages
             IWebElement getViewAllSubmissionCmenu = base.GetWebElementPropertiesById
                 (GBInstructorUXPageResource.
                 GBInstructorUX_Page_ViewAllSubmission_Cmenu_Id_Locator);
+            Thread.Sleep(3000);
             base.ClickByJavaScriptExecutor(getViewAllSubmissionCmenu);
             logger.LogMethodExit("GBInstructorUXPage", "SelectViewAllSubmissionCmenuOption",
                                    base.IsTakeScreenShotDuringEntryExit);

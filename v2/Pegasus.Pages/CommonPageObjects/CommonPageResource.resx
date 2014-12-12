@@ -336,4 +336,7 @@
   <data name="CommonPage_TodaysView_WindowTitle_Value" xml:space="preserve">
     <value>Today's View</value>
   </data>
+  <data name="ComonPage_HSS_Chapter4_FolderName" xml:space="preserve">
+    <value>Chapter 4: Consciousness:  Sleep, Dreams, Hypnosis, and Drugs</value>
+  </data>
 </root>

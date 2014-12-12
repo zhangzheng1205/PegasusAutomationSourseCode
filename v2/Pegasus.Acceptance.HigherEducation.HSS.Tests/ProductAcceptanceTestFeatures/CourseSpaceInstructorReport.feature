@@ -9,10 +9,6 @@
 #PEGASUS-29438
 #MyPsychLab for Ciccarelli, Psychology, 3/e
 Scenario: Generate and save the "Student Results by Activity" as a Section Instructor
-When I navigate to "Sections" tab
-Then I should be on the "Program Administration" page
-When I search the "HSSMyPsychLabProgram" first section
-And I click the "Enter Section as Instructor"
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 Then I should be on the "Reports" page
 When I click on "Student Results by Activity" report link as "HSSCsSmsInstructor"
@@ -41,10 +37,6 @@ When I close the "Report: Student Results by Activity" window
 # in the program based on the below activities submissions available in the Course (Refer: Test link peg-22219)
 #Dependency : No dependency test can run with existing data
 Scenario: Generate and save the "Activity Results by Student" as a Section Instructor
-When I navigate to "Sections" tab
-Then I should be on the "Program Administration" page
-When I search the "HSSMyPsychLabProgram" first section
-And I click the "Enter Section as Instructor"
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 And I click on "Activity Results by Student" report link as "HSSCsSmsInstructor"
 And I select "Take the Chapter 1 Exam" asset in "Select Activity" by "HSSCsSmsInstructor"
@@ -73,10 +65,6 @@ When I close the "Report: Activity Results by Student" window
 #Pre condition : This test case is to generate the Activity Results by Student Report across the Sections in the program based on the below activities submissions available in the Course (Refer: Test link peg-22219)
 #Dependency : No dependency test can run with existing data
 Scenario: Generate and save the  "Study plan Results report"  as a Section Instructor
-When I navigate to "Sections" tab
-Then I should be on the "Program Administration" page
-When I search the "HSSMyPsychLabProgram" first section
-And I click the "Enter Section as Instructor"
 When I navigate to "Gradebook" tab and selected "Reports" subtab
 And I click on "Study Plan Results" report link as "HSSCsSmsInstructor"
 And I select "Complete the Chapter 1 Study Plan" asset in "Select Study Plans" by "HSSCsSmsInstructor"

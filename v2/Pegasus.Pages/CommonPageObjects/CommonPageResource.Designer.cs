@@ -664,6 +664,15 @@ namespace Pegasus.Pages.CommonPageObjects {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chapter 4: Consciousness:  Sleep, Dreams, Hypnosis, and Drugs.
+        /// </summary>
+        internal static string ComonPage_HSS_Chapter4_FolderName {
+            get {
+                return ResourceManager.GetString("ComonPage_HSS_Chapter4_FolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //div[@id=&apos;TreeViewContainer&apos;]/table[{0}]/tbody/tr/td[3]/table/tbody/tr/td[1]/div.
         /// </summary>
         internal static string ComonPage_InstructorRow_Text_XPath_Locator {
