@@ -597,6 +597,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.HedMyPsychLabProgram:
                             case Course.CourseTypeEnum.MySpanishLabTestingMaster:
                             case Course.CourseTypeEnum.HSSMyPsychLabProgram:
+                            case Course.CourseTypeEnum.MySpanishLabProgram:
                                 //Open the Course
                                 this.OpenTheCourse(course.Name);
                                 break;
@@ -612,6 +613,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.HSSMyPsychLabProgram:
                             case Course.CourseTypeEnum.MySpanishLabMaster:
                             case Course.CourseTypeEnum.MyITLabOffice2013Program:
+                            case Course.CourseTypeEnum.MySpanishLabProgram:
                                 //Open the Course
                                 this.OpenTheCourse(course.SectionName);
                                 break;
@@ -640,6 +642,7 @@ namespace Pegasus.Pages.UI_Pages
                             case Course.CourseTypeEnum.MyItLabProgramCourse:
                             case Course.CourseTypeEnum.MyItLabInstructorCourse:
                             case Course.CourseTypeEnum.InstructorCourse:
+                            case Course.CourseTypeEnum.MySpanishLabProgram:
                             
                                 //Open the Program Course
                                 this.OpenTheCourse(course.Name);

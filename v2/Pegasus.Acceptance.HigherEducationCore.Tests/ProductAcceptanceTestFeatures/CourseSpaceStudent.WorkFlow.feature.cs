@@ -31,9 +31,9 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.ProductAcceptanceTestFeatu
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent", "                As a CS Student \n\t\t\tI want to manage all the coursespace student " +
-                    "related usecases \n\t\t\tso that I would validate all the coursespace student scenar" +
-                    "ios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CourseSpaceStudent", "                As a CS Student \r\n\t\t\tI want to manage all the coursespace student" +
+                    " related usecases \r\n\t\t\tso that I would validate all the coursespace student scen" +
+                    "arios are working fine.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -433,8 +433,8 @@ testRunner.When("I select \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La 
 #line 153
 testRunner.And("I submit SAM Activity to score \'0\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 154
-testRunner.Then("I should see \"Passed\" for \"SAM 01-02 Las familias hispanas. [Vocabulario 1. La fa" +
-                    "milia]\" in \"Course Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should see \"Not passed\" for \"SAM 01-02 Las familias hispanas. [Vocabulario 1. L" +
+                    "a familia]\" in \"Course Materials\" page by \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

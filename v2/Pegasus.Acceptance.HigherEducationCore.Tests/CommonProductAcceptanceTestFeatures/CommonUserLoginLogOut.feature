@@ -212,30 +212,38 @@ Given I am on the "Global Home" page
 When I enter in the "InstructorCourse" from the Global Home page as "CsSmsInstructor"
 Then I should be on the "Calendar" page
 
-#-------------------------HSS----------------------------------
 #Purpose:Verify The User Login As CourseSpaceProgramAdmin
-Scenario: User Login As ProgramAdmin and Navigate To HedMyPsychLabProgram Course
-Given I browsed the login url for "HedProgramAdmin"
-When I logged into the Pegasus as "HedProgramAdmin" in "CourseSpace"
+Scenario: User Login As ProgramAdmin and Navigate To MySpanishLabProgram Course
+Given I browsed the login url for "HSSProgramAdmin"
+When I logged into the Pegasus as "HSSProgramAdmin" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
-When I enter in the "HedMyPsychLabProgram" from the Global Home page as "HedProgramAdmin"
+When I enter in the "MySpanishLabProgram" from the Global Home page as "HSSProgramAdmin"
 
-#Purpose: Verify The User Login As CourseSpaceSMSInstructor To HedMyPsychLabProgram Course
-Scenario: User Login As CsSMSInstructor and Navigate To HedMyPsychLabProgram Course
-Given I browsed the login url for "CsSmsInstructor"
-When I logged into the Pegasus as "CsSmsInstructor" in "CourseSpace"
+#Purpose: Verify The User Login As CourseSpaceSMSInstructor To MySpanishLabProgram Course
+Scenario: User Login As CsSMSInstructor and Navigate To MySpanishLabProgram Course
+Given I browsed the login url for "HSSCsSmsInstructor"
+When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
-When I enter in the "HedMyPsychLabProgram" from the Global Home page as "CsSmsInstructor"
+When I enter in the "MySpanishLabProgram" from the Global Home page as "HSSCsSmsInstructor"
 
-#Purpose: Verify The User Login As CourseSpaceSMSStudent To HedMyPsychLabProgram Course
-Scenario: User Login As CsSMSStudent and Navigate To HedMyPsychLabProgram Course
+#Purpose: Verify The User Login As CourseSpaceSMSStudent To MySpanishLabProgram Course
+Scenario: User Login As CsSMSStudent and Navigate To MySpanishLabProgram Course
+Given I browsed the login url for "HSSCsSmsStudent"
+When I logged into the Pegasus as "HSSCsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabProgram" from the Global Home page as "HSSCsSmsStudent"
+
+#Purpose: Login as Zero Score SMS Student
+Scenario: User login as SMS student to score zero percent
 Given I browsed the login url for "CsSmsStudent"
-When I logged into the Pegasus as "CsSmsStudent" in "CourseSpace"
+When I login as "scoring 0" into the pegasus as "HSSCsSmsStudent" in "CourseSpace"
 Then I should logged in successfully
 Given I am on the "Global Home" page
-When I enter in the "HedMyPsychLabProgram" from the Global Home page as "CsSmsStudent"
+When I enter in the "MySpanishLabProgram" from the Global Home page as "HSSCsSmsStudent"
+
 
 
 
