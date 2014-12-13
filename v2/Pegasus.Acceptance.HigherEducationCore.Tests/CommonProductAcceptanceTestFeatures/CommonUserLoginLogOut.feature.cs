@@ -665,70 +665,93 @@ testRunner.Then("I should be on the \"Calendar\" page", ((string)(null)), ((Tech
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As ProgramAdmin and Navigate To HedMyPsychLabProgram Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As ProgramAdmin and Navigate To MySpanishLabProgram Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
-        public virtual void UserLoginAsProgramAdminAndNavigateToHedMyPsychLabProgramCourse()
+        public virtual void UserLoginAsProgramAdminAndNavigateToMySpanishLabProgramCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As ProgramAdmin and Navigate To HedMyPsychLabProgram Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As ProgramAdmin and Navigate To MySpanishLabProgram Course", ((string[])(null)));
+#line 216
+this.ScenarioSetup(scenarioInfo);
 #line 217
-this.ScenarioSetup(scenarioInfo);
+testRunner.Given("I browsed the login url for \"HSSProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 218
-testRunner.Given("I browsed the login url for \"HedProgramAdmin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.When("I logged into the Pegasus as \"HSSProgramAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 219
-testRunner.When("I logged into the Pegasus as \"HedProgramAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 220
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 221
-testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 222
-testRunner.When("I enter in the \"HedMyPsychLabProgram\" from the Global Home page as \"HedProgramAdm" +
-                    "in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"HSSProgramAdmi" +
+                    "n\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSMSInstructor and Navigate To HedMyPsychLabProgram Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSMSInstructor and Navigate To MySpanishLabProgram Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
-        public virtual void UserLoginAsCsSMSInstructorAndNavigateToHedMyPsychLabProgramCourse()
+        public virtual void UserLoginAsCsSMSInstructorAndNavigateToMySpanishLabProgramCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSMSInstructor and Navigate To HedMyPsychLabProgram Course", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSMSInstructor and Navigate To MySpanishLabProgram Course", ((string[])(null)));
+#line 224
+this.ScenarioSetup(scenarioInfo);
 #line 225
-this.ScenarioSetup(scenarioInfo);
+testRunner.Given("I browsed the login url for \"HSSCsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 226
-testRunner.Given("I browsed the login url for \"CsSmsInstructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.When("I logged into the Pegasus as \"HSSCsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 227
-testRunner.When("I logged into the Pegasus as \"CsSmsInstructor\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 228
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 229
+#line 228
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 230
-testRunner.When("I enter in the \"HedMyPsychLabProgram\" from the Global Home page as \"CsSmsInstruct" +
-                    "or\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 229
+testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"HSSCsSmsInstru" +
+                    "ctor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSMSStudent and Navigate To HedMyPsychLabProgram Course")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User Login As CsSMSStudent and Navigate To MySpanishLabProgram Course")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
-        public virtual void UserLoginAsCsSMSStudentAndNavigateToHedMyPsychLabProgramCourse()
+        public virtual void UserLoginAsCsSMSStudentAndNavigateToMySpanishLabProgramCourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSMSStudent and Navigate To HedMyPsychLabProgram Course", ((string[])(null)));
-#line 233
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login As CsSMSStudent and Navigate To MySpanishLabProgram Course", ((string[])(null)));
+#line 232
 this.ScenarioSetup(scenarioInfo);
+#line 233
+testRunner.Given("I browsed the login url for \"HSSCsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 234
-testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.When("I logged into the Pegasus as \"HSSCsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 235
-testRunner.When("I logged into the Pegasus as \"CsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 236
 testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 237
+#line 236
 testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 238
-testRunner.When("I enter in the \"HedMyPsychLabProgram\" from the Global Home page as \"CsSmsStudent\"" +
-                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 237
+testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"HSSCsSmsStuden" +
+                    "t\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("User login as SMS student to score zero percent")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CommonUserLoginLogOut")]
+        public virtual void UserLoginAsSMSStudentToScoreZeroPercent()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User login as SMS student to score zero percent", ((string[])(null)));
+#line 240
+this.ScenarioSetup(scenarioInfo);
+#line 241
+testRunner.Given("I browsed the login url for \"CsSmsStudent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 242
+testRunner.When("I login as \"scoring 0\" into the pegasus as \"HSSCsSmsStudent\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 243
+testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 244
+testRunner.Given("I am on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 245
+testRunner.When("I enter in the \"MySpanishLabProgram\" from the Global Home page as \"HSSCsSmsStuden" +
+                    "t\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }

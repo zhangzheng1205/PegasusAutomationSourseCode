@@ -2084,13 +2084,13 @@ namespace Pegasus.Pages.UI_Pages
             //Answer the SAM activity questions based on field value
             Logger.LogMethodEntry("CourseContentUXPage", "AnswerSAMActivity",
                   base.IsTakeScreenShotDuringEntryExit);
-            try
+           try
             {
                 //Switch to Activity window
-                base.SelectWindow(CourseContentUXPageResource.
+                base.WaitUntilWindowLoads(CourseContentUXPageResource.
                     CourseContentUXPage_WL_ActivityWindowName);
-                bool hsdgf = base.IsElementPresent(By.CssSelector(string.Format(
-                    "#nextQuextion div:nth-of-type({0})", answerFieldValue)), 10);
+                base.SelectWindow(CourseContentUXPageResource.
+                    CourseContentUXPage_WL_ActivityWindowName);                         
                 IWebElement getAnswerField = base.GetWebElementPropertiesByCssSelector(
                     string.Format(CourseContentUXPageResource.
                     CourseContentUXPage_WL_SAMActivity_AnswerField_CSS_Locator,
@@ -2100,7 +2100,7 @@ namespace Pegasus.Pages.UI_Pages
                 string textId = getAnswerFieldId.Split('_')[1];
                 string getId = textId + getAnswerFieldId +
                     CourseContentUXPageResource.CourseContentUXPage_WL_SAMActivity_AppendText;
-                bool ajsdh = base.IsElementPresent(By.Id(getId), 10);
+                base.WaitForElement(By.Id(getId));
                 base.FillTextBoxById(getId, fieldAnswer);
             }
             catch (Exception e)

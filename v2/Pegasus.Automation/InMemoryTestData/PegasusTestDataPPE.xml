@@ -37,6 +37,16 @@
       <IsApproved>true</IsApproved>
     </Course>
     <Course>
+      <Name>WL_PPE_Automation</Name>
+      <CourseType>MySpanishLabProgram</CourseType>
+      <IsCreated>true</IsCreated>
+      <IsPreferenceStatus>true</IsPreferenceStatus>
+      <SectionName>WL_PPESection</SectionName>
+      <SectionId>CRSKLFF-4040659</SectionId>
+      <IsPublished>true</IsPublished>
+      <IsApproved>true</IsApproved>
+    </Course>
+    <Course>
       <Name>PPE_ MyITLab for Office 2013: GO! Series + Technology in Action</Name>
       <CourseType>MyITLabForOffice2013Master</CourseType>
       <IsCreated>true</IsCreated>

@@ -77,7 +77,7 @@ namespace Pegasus.Automation.DataTransferObjects
             MyTestAuthoredCourse=50,
             HSSMyPsychLabProgram = 51,
             HSSMyPsychLabMaster = 52,
-            MySpanishLabProgram
+            MySpanishLabProgram=53
         }
 
         /// <summary>
