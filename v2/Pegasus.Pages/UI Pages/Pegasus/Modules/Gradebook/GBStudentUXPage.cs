@@ -1248,26 +1248,40 @@ namespace Pegasus.Pages.UI_Pages
             {
                 for (int i = 1; i <= assetCount; i++)
                 {
+                    base.WaitForElement(By.XPath( string.Format(GBStudentUXPageResource.
+                        GBStudentUXPage_GradeBook_assetElement_xpath_Locator, i)));
                     IWebElement assetElement = base.GetWebElementPropertiesByXPath(
-                        string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_assetElement_xpath_Locator, i));
+                        string.Format(GBStudentUXPageResource.
+                        GBStudentUXPage_GradeBook_assetElement_xpath_Locator, i));
                     String elementText = assetElement.Text;
                     if (elementText.Equals(assetName))
                     {
-                        base.PerformMouseHoverAction(assetElement);
+                        base.PerformMouseHoverByJavaScriptExecutor(assetElement);
+                        base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
+                            GBStudentUXPage_GradeBook_assetElement_Cmenu_xpath_Locator, i)));
                         IWebElement cmenuOption = base.GetWebElementPropertiesByXPath(
-                            string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_assetElement_Cmenu_xpath_Locator, i));
+                            string.Format(GBStudentUXPageResource.
+                            GBStudentUXPage_GradeBook_assetElement_Cmenu_xpath_Locator, i));
+                        
                         base.ClickByJavaScriptExecutor(cmenuOption);
+                        base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
+                            GBStudentUXPage_GradeBook_Temp_Cmenu_xpath_Locator, i)));
                         IWebElement TempReference = base.GetWebElementPropertiesByXPath(
                             string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Temp_Cmenu_xpath_Locator, i));
                         string referenceId = TempReference.GetAttribute(
                             string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Cmenu_Reference_ID_Locator));
+                        base.WaitForElement(By.XPath(string.Format(GBStudentUXPageResource.
+                            GBStudentUXPage_GradeBook_Cmenu_ReferencesCount_xpath_Locator, referenceId)));
                         int count = base.GetElementCountByXPath(
-                            string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Cmenu_ReferencesCount_xpath_Locator, referenceId));
+                            string.Format(GBStudentUXPageResource.
+                            GBStudentUXPage_GradeBook_Cmenu_ReferencesCount_xpath_Locator, referenceId));
                         for (int j = 1; j <= count; j++)
                         {
+                            base.WaitForElement(By.XPath( string.Format(GBStudentUXPageResource.
+                                GBStudentUXPage_GradeBook_Cmenu_ViewSubmissions_xpath_Locator, referenceId, i)));
                             IWebElement viewSubmissionOption = base.GetWebElementPropertiesByXPath(
                                 string.Format(GBStudentUXPageResource.GBStudentUXPage_GradeBook_Cmenu_ViewSubmissions_xpath_Locator, referenceId, i));
-                            Thread.Sleep(3000);
+                           
                             if (viewSubmissionOption.Text.Contains(assetCmenu))
                             {
                                 

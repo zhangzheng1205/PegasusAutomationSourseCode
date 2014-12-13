@@ -1185,23 +1185,31 @@ namespace Pegasus.Pages.CommonPageObjects
                 ComonPage_Folder_Count_Initial_Value);
             string getFolderText = string.Empty;
             //Get Folder Count
+            base.WaitForElement(By.XPath(CommonPageResource.
+                ComonPage_Folder_Count_Xpath_Locator));
             getFolderCount = base.GetElementCountByXPath(CommonPageResource.
                 ComonPage_Folder_Count_Xpath_Locator);
             for (int i = Convert.ToInt32(CommonPageResource.
                 ComonPage_Loop_Initializer); i <= getFolderCount; i++)
             {
                 //Get Folder Text
+                base.WaitForElement(By.XPath(string.Format(
+                    CommonPageResource.ComonPage_Folder_Text_Xpath_Locator, i)));
                 getFolderText = base.GetElementTextByXPath(string.Format(
                     CommonPageResource.ComonPage_Folder_Text_Xpath_Locator, i));
                 if (getFolderText == folderName)
                 {
                     //Click on Folder
+                    base.WaitForElement(By.XPath(
+                        string.Format(CommonPageResource.
+                        ComonPage_Folder_Name_Xpath_Locator, i)));
                     IWebElement getFolderNameProperty = base.GetWebElementPropertiesByXPath(
                         string.Format(CommonPageResource.
                         ComonPage_Folder_Name_Xpath_Locator, i));
-                    base.ClickByJavaScriptExecutor(getFolderNameProperty);
                     Thread.Sleep(Convert.ToInt32(CommonPageResource.
                         ComonPage_Wait_Time));
+                    base.ClickByJavaScriptExecutor(getFolderNameProperty);
+                    Thread.Sleep(7000);
                    // base.WaitForElement(By.Id(webElementToWait));
                     break;
                 }
@@ -1525,10 +1533,9 @@ namespace Pegasus.Pages.CommonPageObjects
                 new GBInstructorUXPage().SelectGradebookFrame();
                 base.WaitForElement(By.LinkText(activityName));
                 IWebElement assetElement = base.GetWebElementPropertiesByLinkText(activityName);
-                Thread.Sleep(3000);
                 base.ClickByJavaScriptExecutor(assetElement);
                 Thread.Sleep(Convert.ToInt32(CommonPageResource.
-                CommonPage_FolderNavigation_Sleep_Time));
+               CommonPage_FolderNavigation_Sleep_Time));
             }
 
             catch (Exception e)
@@ -1549,11 +1556,12 @@ namespace Pegasus.Pages.CommonPageObjects
             Logger.LogMethodEntry("CommonPage", 
                 "NavigateToChapter1ExamGradeFolder",
             base.IsTakeScreenShotDuringEntryExit);
+            base.WaitForElement(By.PartialLinkText(folderName));
             IWebElement courseName = base.
                 GetWebElementPropertiesByPartialLinkText(folderName);
-            base.PerformMoveToElementClickAction(courseName);
+            base.ClickByJavaScriptExecutor(courseName);
             Thread.Sleep(Convert.ToInt32(CommonPageResource.
-            CommonPage_FolderNavigation_Sleep_Time));
+                CommonPage_FolderNavigation_Sleep_Time));
             Logger.LogMethodExit("CommonPage", 
                 "NavigateToChapter1ExamGradeFolder",
             base.IsTakeScreenShotDuringEntryExit);

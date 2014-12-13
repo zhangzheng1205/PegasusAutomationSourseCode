@@ -173,22 +173,6 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Initialize Pegasus test before test execution starts.
-        /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
-        {
-
-        }
-
-        /// <summary>
-        /// Deinitialize Pegasus test after the execution of test.
-        /// </summary>
-        [AfterTestRun]
-        public static void TearDown()
-        {
-
-        }
+       
     }
 }

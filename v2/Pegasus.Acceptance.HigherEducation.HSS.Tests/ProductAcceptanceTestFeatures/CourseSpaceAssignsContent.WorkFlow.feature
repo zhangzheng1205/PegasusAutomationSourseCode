@@ -64,21 +64,6 @@ Then I should see due date icon displayed in current date
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 
-#PEGASUS-29283
-#Test Case Id:peg-21987
-#Purpose : As Instructor for HED Product,I need to validate the display of start date icon in calendar frame
-#MyPsychLab for Ciccarelli, Psychology, 3/e
-Scenario: To validate the display of start date icon in calendar frame by Instructor
-Given I browsed the login url for "HSSCsSmsInstructor"
-When I logged into the Pegasus as "HSSCsSmsInstructor" in "CourseSpace"
-Then I should logged in successfully
-Given I am on the "Global Home" page
-When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSCsSmsInstructor"
-When I navigate to the "Assignment Calendar" tab
-Then I should be on the "Calendar" page
-And I should see "Chapter 1: The Science of Psychology" asset
-And I should see the current date highlighted in the calendar frame
-And I should see the startdate Icon in calendar frame
 
 #Purpose: To validate the current date assigned content in calendar frame by Coursespace Instructor
 #Test Case Id: peg-21985
@@ -93,11 +78,26 @@ Then I should see the assigned content "Complete the Chapter 1 Study Plan" in th
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page
 
+#Purpose: Assign a content to display start date icon
+#PEGASUS-29283
+#MyPsychLab for Ciccarelli, Psychology, 3/e
+Scenario: To validate the display of start date icon in calendar frame by SMS Instructor
+When I navigate to the "Assignment Calendar" tab
+Then I should be on the "Calendar" page
+When I select "Read the eText: Chapter 5" in "Calendar" by "HSSCsSmsInstructor"
+And I select cmenu "Assignment Properties" of activity "Read the eText: Chapter 5" 
+Then I should see the "Assign" popup
+When I assign the asset for current date in the properties popup
+Then I should be on the "Calendar" page
+And I should see the current date highlighted in the calendar frame
+And I should see the startdate Icon in calendar frame
+When I navigate to "Gradebook" tab
+Then I should be on the "Gradebook" page
+
 #Purpose :Instructor assign the asset with duedate in Managecoursework
 #TestCase Id: peg-22221
 #PEGASUS-29795
 #MyPsychLab for Ciccarelli, Psychology, 3/e
-
 Scenario: Instructor assign the asset with duedate in Managecoursework
 When I navigate to "Course Materials" tab and selected "Manage Course Materials" subtab
 Then I should be on the "Course Materials" page
@@ -125,28 +125,9 @@ Then I should see the successfull message "Properties updated successfully."
 When I navigate to "Gradebook" tab
 Then I should be on the "Gradebook" page
 
-#Purpose: Assign a content to display start date icon
-#MyITLabOffice2013Program
-Scenario: Assign the content with due date to current date by SMS Instructor
-When I navigate to the "Assignment Calendar" tab
-Then I should be on the "Calendar" page
-When I select "Read the eText: Chapter 5" in "Calendar" by "HSSCsSmsInstructor"
-And I select cmenu "Assignment Properties" of activity "Read the eText: Chapter 5" 
-Then I should see the "Assign" popup
-When I assign the asset for current date in the properties popup
-Then I should be on the "Calendar" page
 
 
-#PEGASUS-21987
-#Purpose : As Instructor for HED Product,I need to validate the display of start date icon in calendar frame
-#Test Case Id :peg-21987
-Scenario: To validate the display of start date icon in calendar frame by SMS Instructor
-When I navigate to the "Assignment Calendar" tab
-Then I should be on the "Calendar" page
-And I should see the current date highlighted in the calendar frame
-And I should see the startdate Icon in calendar frame
-When I navigate to "Gradebook" tab
-Then I should be on the "Gradebook" page
+
 
 
  

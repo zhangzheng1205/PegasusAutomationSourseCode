@@ -5950,6 +5950,8 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             string ActualQuestion = String.Empty;
             try
             {
+                base.WaitForElement(By.CssSelector(StudentPresentationPageResource.
+                        StudentPresentation_Page_HSS_Activity_QuestionCount_Value));
                 int QuestionCount = base.GetElementCountByCSSSelector(
                         StudentPresentationPageResource.
                         StudentPresentation_Page_HSS_Activity_QuestionCount_Value);
@@ -5976,11 +5978,10 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                             StudentPresentation_Page_HSS_Activity_inCorrect_AnswerOptionValue;
                         break;
                     }
+                    
                     IList<IWebElement> Qus = WebDriver.FindElements(By.ClassName(
                         StudentPresentationPageResource.
                         StudentPresentation_Page_HSS_Activity_Question_Value));
-                    Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                    StudentPresentation_Page_LaunchWindow_TimeValue));
                     foreach (IWebElement element in Qus)
                     {
                         if (element.Text.Equals(String.Empty)) continue;
@@ -5994,6 +5995,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                                 string[] words = Option.Split('|');
                                 foreach (string word in words)
                                 {
+                                    base.WaitForElement(By.LinkText(word));
                                     IWebElement SelectOption = base.
                                         GetWebElementPropertiesByLinkText(word);
                                     base.ClickByJavaScriptExecutor(SelectOption);
@@ -6009,15 +6011,12 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                                     {
                                         if (NthOption % 2 != 0)
                                         {
-                                            bool pres = base.IsElementPresent(By.XPath(string.Format(
-                                                StudentPresentationPageResource.
-                                                StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator,
-                                                NthQuestion, NthOption)),10);
                                             base.WaitForElement(By.XPath(string.Format(
                                                 StudentPresentationPageResource.
                                                 StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator,
                                                 NthQuestion, NthOption)));
-                                            IWebElement RadioOption = base.GetWebElementPropertiesByXPath(string.Format(
+                                            IWebElement RadioOption = base.
+                                                GetWebElementPropertiesByXPath(string.Format(
                                                 StudentPresentationPageResource.
                                                 StudentPresentation_Page_HSS_Activity_NumericOption_Xpath_Locator,
                                                 NthQuestion, NthOption));
@@ -6039,11 +6038,13 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                                     IWebElement SelectOption = base.
                                         GetWebElementPropertiesByLinkText(Option);
                                     Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                                    StudentPresentation_Page_LaunchWindow_TimeValue));
+                                           StudentPresentation_Page_LaunchWindow_TimeValue));
                                     base.ClickByJavaScriptExecutor(SelectOption);
                                    
                                 }
                             }
+                            base.WaitForElement(By.Id(StudentPresentationPageResource.
+                                StudentPresentation_Page_HSS_Activity_NextButton_ID_Locator));
                             IWebElement NextQuestButton = base.GetWebElementPropertiesById(
                                 StudentPresentationPageResource.
                                 StudentPresentation_Page_HSS_Activity_NextButton_ID_Locator);
@@ -6072,10 +6073,15 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.WaitForElement(By.Id(StudentPresentationPageResource.
+                    StudentPresentation_Page_HSS_Activity_SubmitButton_ID_Locator));
                 IWebElement SubmitButton = base.GetWebElementPropertiesById(
-                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmitButton_ID_Locator);
+                        StudentPresentationPageResource.
+                        StudentPresentation_Page_HSS_Activity_SubmitButton_ID_Locator);
                 base.ClickByJavaScriptExecutor(SubmitButton);
                 //Click on Finish button
+                base.WaitForElement(By.Id( StudentPresentationPageResource.
+                    StudentPresentation_Page_HSS_Activity_FinishButton_ID_Locator));
                 IWebElement FinishButton = base.GetWebElementPropertiesById(
                     StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_FinishButton_ID_Locator);
                 base.ClickByJavaScriptExecutor(FinishButton);
@@ -6127,10 +6133,12 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.WaitForElement(By.Id(StudentPresentationPageResource.
+                    StudentPresentation_Page_HSS_Activity_ReturnToCourseButton_ID_Locator));
                 IWebElement getReturnToCourseButton = base.GetWebElementPropertiesById(
-                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_ReturnToCourseButton_ID_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                                     StudentPresentation_Page_LaunchWindow_TimeValue));
+                        StudentPresentationPageResource.
+                        StudentPresentation_Page_HSS_Activity_ReturnToCourseButton_ID_Locator);
+               
                 base.ClickByJavaScriptExecutor(getReturnToCourseButton);
              
             }
@@ -6155,11 +6163,11 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 //Select Window And Frame
                 this.SelectWindowAndFrame();
                //Click on view submission button
+                base.WaitForElement(By.ClassName(StudentPresentationPageResource.
+                    StudentPrsentation_Page_Activity_ViewSubmission_ClassName_Locator));
                 IWebElement getViewSubmissionButton = base.
                     GetWebElementPropertiesByClassName(StudentPresentationPageResource.
                     StudentPrsentation_Page_Activity_ViewSubmission_ClassName_Locator);
-                Thread.Sleep(Convert.ToInt32(StudentPresentationPageResource.
-                                    StudentPresentation_Page_LaunchWindow_TimeValue));
                 base.ClickByJavaScriptExecutor(getViewSubmissionButton);
             }
             catch (Exception e)
@@ -6184,9 +6192,11 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                 base.SwitchToLastOpenedWindow();
                
                 base.WaitForElement(By.XPath(
-                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator));
+                    StudentPresentationPageResource.
+                    StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator));
                 IWebElement getScore = base.GetWebElementPropertiesByXPath(
-                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator);
+                    StudentPresentationPageResource.
+                    StudentPresentation_Page_HSS_Activity_SubmissionScore_Xpath_Locator);
                 actualScore = getScore.Text;
                 base.ClickByJavaScriptExecutor(getScore);
             }
@@ -6210,9 +6220,11 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             string actualScore = string.Empty;
             try
             {
-                base.WaitForElement(By.Id(StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator));
+                base.WaitForElement(By.Id(StudentPresentationPageResource.
+                    StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator));
                 IWebElement activityGrade = base.GetWebElementPropertiesById(
-                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator);
+                    StudentPresentationPageResource.
+                    StudentPresentation_Page_HSS_Activity_activityGrade_ID_Locator);
                 actualScore = activityGrade.Text;
             }
             catch (Exception e)
@@ -6236,9 +6248,11 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             try
             {
                 base.WaitForElement(By.Id(
-                        StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator));
+                        StudentPresentationPageResource.
+                        StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator));
                 IWebElement StudentDetails = base.GetWebElementPropertiesById(
-                    StudentPresentationPageResource.StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator);
+                    StudentPresentationPageResource.
+                    StudentPresentation_Page_HSS_Activity_StudentDetails_ID_Locator);
                 studentDetail = StudentDetails.Text;
             }
             catch (Exception e)
@@ -6260,10 +6274,14 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.WaitForElement(By.Id(StudentPresentationPageResource.
+                         StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator));
                 IWebElement getSaveForLaterButton = base.GetWebElementPropertiesById(
                          StudentPresentationPageResource.
                          StudentPresentation_Page_HSS_Activity_SaveForLater_ID_Locator);
                 base.ClickByJavaScriptExecutor(getSaveForLaterButton);
+                base.WaitForElement(By.Id(StudentPresentationPageResource.
+                    StudentPresentation_Page_HSS_Activity_ConfirmSave_ID_Locator));
                 IWebElement getSaveButton = base.GetWebElementPropertiesById(
                     StudentPresentationPageResource.
                     StudentPresentation_Page_HSS_Activity_ConfirmSave_ID_Locator);
@@ -6359,8 +6377,11 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
+                base.WaitForElement(By.Id(StudentPresentationPageResource.
+                    StudentPresentation_Page_Posttest_Cmenu_ID_Locator));
                 IWebElement cMenuButton = base.GetWebElementPropertiesById(
-                        StudentPresentationPageResource.StudentPresentation_Page_Posttest_Cmenu_ID_Locator);
+                        StudentPresentationPageResource.
+                        StudentPresentation_Page_Posttest_Cmenu_ID_Locator);
                 base.ClickByJavaScriptExecutor(cMenuButton);
             }
             catch (Exception e)
@@ -6380,7 +6401,9 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             {
                 base.WaitUntilWindowLoads("Open Study Plan");
                 base.SelectWindow("Open Study Plan");
-                IWebElement returnBackToCourse = base.GetWebElementPropertiesById("_ctl0:_ctl0:phBody:PageContent:lbtnBack");
+                base.WaitForElement(By.Id("_ctl0:_ctl0:phBody:PageContent:lbtnBack"));
+                IWebElement returnBackToCourse = base.
+                    GetWebElementPropertiesById("_ctl0:_ctl0:phBody:PageContent:lbtnBack");
                 base.ClickByJavaScriptExecutor(returnBackToCourse);
             }
             catch (Exception e)
@@ -6407,15 +6430,17 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
                     //Switch To Frame
                     base.SwitchToIFrameById(StudentPresentationPageResource.
                         StudentPresentation_Page_Content_Frame_Id_Locator);
-                             bool pres = base.IsElementPresent(By.XPath("//*[@id='TodoList']/div/div"));
+                           base.WaitForElement(By.XPath("//*[@id='TodoList']/div/div"));
              int Test = base.GetElementCountByXPath("//*[@id='TodoList']/div/div");
              for (int i = 2; i <= Test; i++)
                 {
+                    base.WaitForElement(By.XPath("//*[@id='TodoList']/div/div[" + i + "]/div/div[2]/table/tbody/tr/td[2]/div"));
                 IWebElement Text= base.GetWebElementPropertiesByXPath("//*[@id='TodoList']/div/div[" + i + "]/div/div[2]/table/tbody/tr/td[2]/div");
                 String ativityName = Text.Text;
 
                 if (ativityName.Equals(assetName))
                 {
+                    base.WaitForElement(By.XPath("//*[@id='TodoList']/div/div[" + i + "]/div/div[2]/table/tbody/tr/td[3]/div/div[2]/div[2]"));
                     IWebElement cmenuOption = base.GetWebElementPropertiesByXPath("//*[@id='TodoList']/div/div[" + i + "]/div/div[2]/table/tbody/tr/td[3]/div/div[2]/div[2]");
                     getActivitySubmittedStatus = cmenuOption.Text;
                      break;

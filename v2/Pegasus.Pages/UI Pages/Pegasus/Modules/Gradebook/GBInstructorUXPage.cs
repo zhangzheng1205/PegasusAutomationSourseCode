@@ -2019,7 +2019,7 @@ namespace Pegasus.Pages.UI_Pages
             int activityColumnNumber = Convert.ToInt32(GBInstructorUXPageResource.
                 GBInstructorUX_Page_Initial_Count_Value);
             base.WaitForElement(By.XPath(GBInstructorUXPageResource.
-                GBInstructorUX_Page_AcitivityNames_Xpath_Locator),10);
+                GBInstructorUX_Page_AcitivityNames_Xpath_Locator));
             //Getting the counts of Activity  
             int getActivityCount = base.GetElementCountByXPath(GBInstructorUXPageResource.
                 GBInstructorUX_Page_AcitivityNames_Xpath_Locator);

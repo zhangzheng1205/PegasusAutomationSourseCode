@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<OrderedTest name="OrderedTest.BuildVerification.Dependant.HSSFull" storage="d:\pegasus_automation_nov24\v2\pegasus.acceptance.highereducation.hss.tests\productacceptanceorderedtests\orderedtest.buildverification.dependant.hssfull.orderedtest" id="80be0f40-9d7c-4f2d-9f8e-a83b3312984f" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<OrderedTest name="orderedtest.buildverification.dependant.hssfull" storage="d:\pegasus_automation_nov24\v2\pegasus.acceptance.highereducation.hss.tests\productacceptanceorderedtests\orderedtest.buildverification.dependant.hssfull.orderedtest" id="80be0f40-9d7c-4f2d-9f8e-a83b3312984f" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <TestLinks>
-    <TestLink id="dcca87b9-60f7-49d5-9f76-0dbce4f08222" name="orderedtest.managecourse.bvt.hss" storage="orderedtest.managecourse.bvt.hss.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="6651f310-aef7-4bb4-8221-f07bed8c03c4" name="orderedtest.gradebook.bvt.hss" storage="orderedtest.gradebook.bvt.hss.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
     <TestLink id="5dd43150-3fbf-423c-ba82-bed835d2958c" name="OrderedTest.Reports.BVT.HSS" storage="orderedtest.reports.bvt.hss.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
   </TestLinks>
 </OrderedTest>

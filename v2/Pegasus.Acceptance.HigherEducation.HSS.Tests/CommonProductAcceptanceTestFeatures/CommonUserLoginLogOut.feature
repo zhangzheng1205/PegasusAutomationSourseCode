@@ -77,10 +77,9 @@ Given I am on the "Global Home" page
 Scenario: User Login Program Admin and Navigate HSSSection Course
 Given I browsed the login url for "HSSProgramAdmin"
 When I logged into the Pegasus as "HSSProgramAdmin" in "CourseSpace"
-Then I should logged in successfully
+Then I should be on the "Global Home" page
 When I enter in the "HSSMyPsychLabProgram" from the Global Home page as "HSSProgramAdmin"
-Then I should be on the "Program Administration" page
-When I navigate to "Sections" tab
+And I navigate to "Sections" tab of the "Program Administration" page as Admin
 Then I should be on the "Program Administration" page
 When I search the "HSSMyPsychLabProgram" first section
 And I click the "Enter Section as Instructor"

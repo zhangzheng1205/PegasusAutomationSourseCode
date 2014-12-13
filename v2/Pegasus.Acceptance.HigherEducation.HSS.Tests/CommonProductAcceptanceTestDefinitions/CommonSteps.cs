@@ -47,6 +47,25 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
         }
 
         /// <summary>
+        /// Initialize Pegasus test before test execution starts.
+        /// </summary>
+        [BeforeTestRun]
+        public static void Setup()
+        {
+            new CommonSteps().ResetWebdriver();
+        }
+
+        /// <summary>
+        /// Deinitialize Pegasus test after the execution of test
+        /// and clean the WebDriver Instance.
+        /// </summary>
+        [AfterTestRun]
+        public static void TearDown()
+        {
+            new CommonSteps().WebDriverCleanUp();
+        }
+
+        /// <summary>
         /// Verifies the Correct Page Opened.
         /// </summary>
         /// <param name="expectedPageTitle">This is Expected Page Title.</param>
@@ -310,6 +329,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             Logger.LogMethodEntry("CommonSteps", "ShowThePopUpInPegasus",
                 base.IsTakeScreenShotDuringEntryExit);
             //Is Pop Up Present
+            base.WaitUntilWindowLoads(popUpName);
             Boolean isPopUpExist = base.IsWindowsExists(popUpName);
             //Assert We Have Correct Pop Up Window Opened
             Logger.LogAssertion("VerifyOpenedPopUpTitle",
@@ -890,24 +910,7 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
              base.IsTakeScreenShotDuringEntryExit);
         }
 
-        /// <summary>
-        /// Initialize Pegasus test before test execution starts.
-        /// </summary>
-        [BeforeTestRun]
-        public static void Setup()
-        {
-            new CommonSteps().ResetWebdriver();
-        }
-
-        /// <summary>
-        /// Deinitialize Pegasus test after the execution of test
-        /// and clean the WebDriver Instance.
-        /// </summary>
-        [AfterTestRun]
-        public static void TearDown()
-        {
-            new CommonSteps().WebDriverCleanUp();
-        }
+       
 
         /// <summary>
         /// Manage The Activity Folder Level Navigation HED Core.
@@ -931,7 +934,17 @@ namespace Pegasus.Acceptance.HigherEducation.HSS.Tests.
             {
                 // select grade book right iframe here
                 new GBInstructorUXPage().SelectGradebookFrame();
-                Thread.Sleep(15000);
+                switch (userTypeEnum)
+                {
+                    case User.UserTypeEnum.HSSCsSmsInstructor:
+                        base.WaitForElement(By.Id("AssignmentStatusCriteria"));
+                        break;
+                    case User.UserTypeEnum.HSSCsSmsStudent:
+                        base.WaitForElement(By.Id("_ctl0_InnerPageContent_AssignedItems"));
+                        break;
+                }
+
+              
             }
             //Manage The Folder Navigation
             new CommonPage().ManageTheActivityFolderLevelNavigationHEDCore(

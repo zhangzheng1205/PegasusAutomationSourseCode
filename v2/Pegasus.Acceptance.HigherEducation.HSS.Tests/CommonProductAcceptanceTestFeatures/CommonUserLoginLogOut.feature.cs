@@ -287,19 +287,17 @@ testRunner.Given("I browsed the login url for \"HSSProgramAdmin\"", ((string)(nu
 #line 79
 testRunner.When("I logged into the Pegasus as \"HSSProgramAdmin\" in \"CourseSpace\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 80
-testRunner.Then("I should logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("I should be on the \"Global Home\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 81
 testRunner.When("I enter in the \"HSSMyPsychLabProgram\" from the Global Home page as \"HSSProgramAdm" +
                     "in\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 82
-testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.And("I navigate to \"Sections\" tab of the \"Program Administration\" page as Admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 83
-testRunner.When("I navigate to \"Sections\" tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 84
 testRunner.Then("I should be on the \"Program Administration\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 85
+#line 84
 testRunner.When("I search the \"HSSMyPsychLabProgram\" first section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 86
+#line 85
 testRunner.And("I click the \"Enter Section as Instructor\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -311,11 +309,11 @@ testRunner.And("I click the \"Enter Section as Instructor\"", ((string)(null)), 
         public virtual void SetTheDateAndTimeOfSMSInstructor()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Set the date and time of SMS Instructor", ((string[])(null)));
-#line 89
+#line 88
 this.ScenarioSetup(scenarioInfo);
-#line 90
+#line 89
 testRunner.When("I click \'My Profile\' link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 91
+#line 90
 testRunner.And("I store user current date and time of the instructor", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
