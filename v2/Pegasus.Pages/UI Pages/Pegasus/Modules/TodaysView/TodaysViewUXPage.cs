@@ -3853,6 +3853,100 @@ namespace Pegasus.Pages.UI_Pages
         return getActivityName;
 
     }
+        /// <summary>
+        /// Click on the cmenu of the activity.
+        /// </summary>
+        /// <param name="activityName">This is the activity name.</param>
+        public void ClickActivityCmenu(string activityName)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "ClickActivityCmenu",
+                   base.IsTakeScreenShotDuringEntryExit);
+            string getActivityName = string.Empty;
+            try
+            {
+                //get Activities Row Count
+                int getActivitiesRowCount = base.GetElementCountByXPath(TodaysViewUXPageResource.
+                    TodaysViewUXPageResource_InstructorComments_Activity_Count_By_Xpath);
+                //Iterate for Respective Activity In Table
+                for (int setActivityRowCount =
+                        Convert.ToInt32(TodaysViewUXPageResource.TodaysViewUXPageResource_Page_Initial_Value);
+                        setActivityRowCount <= getActivitiesRowCount; setActivityRowCount++)
+                {
+                    //Get The Activity Name From List   
+                    getActivityName =
+                        base.GetElementInnerTextByXPath(String.Format(TodaysViewUXPageResource.
+                        TodaysViewUXPageResource_InstructorComments_Activity_Name_By_Xpath,
+                        setActivityRowCount));
+                    if (getActivityName.Contains(activityName))
+                    {
+                        //Focus on activity cmenu
+                        base.FocusOnElementByXPath(string.Format(
+                            TodaysViewUXPageResource.
+                            TodayViewUXPageResource_ActivityCmenuFocus_Locator,
+                            setActivityRowCount));
+                        base.WaitForElement(By.XPath(string.Format(
+                            TodaysViewUXPageResource.
+                            TodayViewUXPageResource_ActivityCmenu_Locator,
+                            setActivityRowCount)), 10);
+                        //Click on activity cmenu
+                        IWebElement getActivityCmenu = base.GetWebElementPropertiesByXPath(string.Format(
+                           TodaysViewUXPageResource.
+                            TodayViewUXPageResource_ActivityCmenu_Locator,
+                            setActivityRowCount));
+                        base.ClickByJavaScriptExecutor(getActivityCmenu);
+                        //Click on 'View All Submission' option of the cmenu
+                        IWebElement getSubmissionOption = base.GetWebElementPropertiesById(
+                            TodaysViewUXPageResource.
+                            TodayViewUXPageResource_ActivityCmenuOption_IDLocator);
+                        base.ClickByJavaScriptExecutor(getSubmissionOption);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "ClickActivityCmenu",
+            base.IsTakeScreenShotDuringEntryExit);
+        }
 
+
+
+        /// <summary>
+        ///Click on the activity to display its details. 
+        /// </summary>
+        /// <param name="activityButton">This is the button name.</param>
+        public void OpenActivityDetails(string activityButton)
+        {
+            Logger.LogMethodEntry("TodaysViewUXPage", "OpenActivityDetails",
+                  base.IsTakeScreenShotDuringEntryExit);
+            base.SelectWindow(TodaysViewUXPageResource.
+                TodayViewUXPageResource_Activity_WindowName);
+            try
+            {
+                IWebElement getActivityDetails = base.GetWebElementPropertiesByXPath(
+                       TodaysViewUXPageResource.
+                        TodayViewUXPageResource_SelectActivity_XPath_Locator);
+                base.ClickByJavaScriptExecutor(getActivityDetails);
+                //Click on 'Mark as Read' option
+                base.WaitForElement(By.PartialLinkText(activityButton), 10);
+                IWebElement getMarkAsRead = base.GetWebElementPropertiesByPartialLinkText(activityButton);
+                base.ClickByJavaScriptExecutor(getMarkAsRead);
+                //Close 'View Submission'
+                base.SelectWindow(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_Activity_WindowName);
+                base.WaitForElement(By.Id(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_ActivityCloseButton_Id_Locator), 10);
+                IWebElement getClose = base.GetWebElementPropertiesById(TodaysViewUXPageResource.
+                    TodayViewUXPageResource_ActivityCloseButton_Id_Locator);
+                base.ClickByJavaScriptExecutor(getClose);
+            }
+            catch (Exception e)
+            {
+                ExceptionHandler.HandleException(e);
+            }
+            Logger.LogMethodExit("TodaysViewUXPage", "OpenActivityDetails",
+                    base.IsTakeScreenShotDuringEntryExit);
+        } 
     }
 }

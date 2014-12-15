@@ -47,7 +47,6 @@ When I click on the "Instructor Comments" option
 Then I should see the activity "SAM Activity : SAM 01-19 Singular y plural. [Gramática 3. Sustantivos singulares y plurales] Voice Recording." in the Instructor Comments channel
 And I should see the activity "SAM Activity : SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in the Instructor Comments channel
 
-
 #Purpose : Display of "Getting Started" channel in Overview tab for Student
 #Test case ID : peg-16754
 #Products : World Languages - MySpanishLab Authored Course
@@ -57,3 +56,18 @@ Scenario: Availability and display of Getting started in Overview tab for Studen
 Then I should be on the "Today's View" page
 And I should see the "Getting Started" channel
 And I should see the "Click on the icons below & follow the on-screen instructions for the best course experience!" inside the Getting started channel
+
+#Purpose: Student views Alert update in "Instructor Comments" channel of Todays View page
+#TestCase Id: peg-16751
+#US:PEGASUS-29237
+Scenario: Student views Alert update in "Instructor Comments" channel of Todays View page
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabProgram" from the Global Home page as "HSSCsSmsStudent"
+Then I should be on the "Today's View" page
+Then I should see the "Instructor Comments (1)" channels in 'Todays view' page
+And I should see the alert count updated as "1" in "Instructor Comments (1)" channel
+When I click on the "Instructor Comments" option
+Then I should see the activity "SAM Activity : SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]" in the Instructor Comments channel
+When I click on "View All Submissions" of the activity "SAM Activity : SAM 01-05 Heritage Language: tu español. [Vocabulario 1. La familia]"
+And I Click on "Mark as Read" button displayed in the right frame
+Then I should see the alert count updated as "0" in "Instructor Comments (0)" channel

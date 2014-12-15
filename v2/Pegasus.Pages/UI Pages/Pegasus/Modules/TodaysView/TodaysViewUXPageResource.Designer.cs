@@ -1249,6 +1249,51 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to View Submission.
+        /// </summary>
+        internal static string TodayViewUXPageResource_Activity_WindowName {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_Activity_WindowName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0:PopupPageContent:btnClose.
+        /// </summary>
+        internal static string TodayViewUXPageResource_ActivityCloseButton_Id_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_ActivityCloseButton_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;InsUnreadComments&apos;]/tbody/tr[{0}]/td/table/tbody/tr/td[2]/span.
+        /// </summary>
+        internal static string TodayViewUXPageResource_ActivityCmenu_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_ActivityCmenu_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //table[@id=&apos;InsUnreadComments&apos;]/tbody/tr[{0}]/td/table/tbody/tr/td/span.
+        /// </summary>
+        internal static string TodayViewUXPageResource_ActivityCmenuFocus_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_ActivityCmenuFocus_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to tdViewAllSubmission.
+        /// </summary>
+        internal static string TodayViewUXPageResource_ActivityCmenuOption_IDLocator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_ActivityCmenuOption_IDLocator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 2.
         /// </summary>
         internal static string TodayViewUXPageResource_Asset_InitialValue {
@@ -1624,6 +1669,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TodaysView {
         internal static string TodayViewUXPageResource_PCTInstructorResourceToolLink {
             get {
                 return ResourceManager.GetString("TodayViewUXPageResource_PCTInstructorResourceToolLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .//*[@id=&apos;_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items&apos;]/span/div[1]/div.
+        /// </summary>
+        internal static string TodayViewUXPageResource_SelectActivity_XPath_Locator {
+            get {
+                return ResourceManager.GetString("TodayViewUXPageResource_SelectActivity_XPath_Locator", resourceCulture);
             }
         }
         

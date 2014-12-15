@@ -3587,7 +3587,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptTwentyFirstQuestioin()
+        public void AttemptTwentyFirstQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentyFirstQuestioin",
                     base.IsTakeScreenShotDuringEntryExit);
@@ -3638,7 +3638,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptEighteenthQuestioin()
+        public void AttemptEighteenthQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptEighteenthQuestioin",
                     base.IsTakeScreenShotDuringEntryExit);
@@ -3708,7 +3708,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptTwentiethQuestioin()
+        public void AttemptTwentiethQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentiethQuestioin",
             base.IsTakeScreenShotDuringEntryExit);
@@ -3741,7 +3741,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptTwentySeventhQuestioin()
+        public void AttemptTwentySeventhQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentySeventhQuestioin",
             base.IsTakeScreenShotDuringEntryExit);
@@ -3772,7 +3772,7 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptTwentyFifthQuestioin()
+        public void AttemptTwentyFifthQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentyFifthQuestioin",
           base.IsTakeScreenShotDuringEntryExit);
@@ -3832,7 +3832,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptTwentySecondQuestioin()
+        public void AttemptTwentySecondQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentySecondQuestioin",
             base.IsTakeScreenShotDuringEntryExit);
@@ -3886,7 +3886,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptTwentysixthQuestioin()
+        public void AttemptTwentysixthQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentysixthQuestioin",
             base.IsTakeScreenShotDuringEntryExit);
@@ -3926,7 +3926,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptTwentyeightthQuestioin()
+        public void AttemptTwentyeightthQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTwentyeightthQuestioin",
             base.IsTakeScreenShotDuringEntryExit);
@@ -3954,7 +3954,7 @@ namespace Pegasus.Pages.UI_Pages
               base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptThirtySecondQuestioin()
+        public void AttemptThirtySecondQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptThirtySecondQuestioin",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4016,7 +4016,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptThirtyFirstQuestioin()
+        public void AttemptThirtyFirstQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptThirtyFirstQuestioin",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4063,7 +4063,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptThirtyThirdQuestioin()
+        public void AttemptThirtyThirdQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptThirtyThirdQuestioin",
            base.IsTakeScreenShotDuringEntryExit);
@@ -4106,7 +4106,7 @@ namespace Pegasus.Pages.UI_Pages
                       base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptSeventeenthQuestioin()
+        public void AttemptSeventeenthQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptSeventeenthQuestioin",
           base.IsTakeScreenShotDuringEntryExit);
@@ -4135,7 +4135,7 @@ namespace Pegasus.Pages.UI_Pages
                        base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptSixteenthQuestion()
+        public void AttemptSixteenthQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptSixteenthQuestion",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4196,7 +4196,7 @@ namespace Pegasus.Pages.UI_Pages
                        base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void NavigateToFileTabAndSelectParticularScreen()
+        public void NavigateToFileTabAndSelectParticularScreen()
         {
             //click on File Tab
             base.WaitForElement(By.XPath(StudentPresentationPageResource.
@@ -4222,7 +4222,7 @@ namespace Pegasus.Pages.UI_Pages
             StudentPrsentation_Page_SIM5_Sleep_Time));
         }
 
-        private void AttemptFifteenthQuestioin()
+        public void AttemptFifteenthQuestioin()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptFifteenthQuestioin",
           base.IsTakeScreenShotDuringEntryExit);
@@ -4254,7 +4254,7 @@ namespace Pegasus.Pages.UI_Pages
                        base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptFourteenthQuestion()
+        public void AttemptFourteenthQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptFourteenthQuestion",
           base.IsTakeScreenShotDuringEntryExit);
@@ -4295,7 +4295,7 @@ namespace Pegasus.Pages.UI_Pages
                        base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptThirteenthQuestion()
+        public void AttemptThirteenthQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptThirteenthQuestion",
           base.IsTakeScreenShotDuringEntryExit);
@@ -4343,7 +4343,7 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttempttwelfthQuestion()
+        public void AttempttwelfthQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttempttwelfthQuestion",
           base.IsTakeScreenShotDuringEntryExit);
@@ -4418,7 +4418,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptEleventhQuestion()
+        public void AttemptEleventhQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptEleventhQuestion",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4458,7 +4458,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptTenthQuestion()
+        public void AttemptTenthQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptTenthQuestion",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4530,7 +4530,7 @@ namespace Pegasus.Pages.UI_Pages
              base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptNinthQuestion()
+        public void AttemptNinthQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptNinthQuestion",
             base.IsTakeScreenShotDuringEntryExit);
@@ -4577,7 +4577,7 @@ namespace Pegasus.Pages.UI_Pages
             base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptEightQuestion()
+        public void AttemptEightQuestion()
         {
             logger.LogMethodEntry("StudentPresentationPage", "AttemptEightQuestion",
                base.IsTakeScreenShotDuringEntryExit);
@@ -4635,7 +4635,7 @@ namespace Pegasus.Pages.UI_Pages
           base.IsTakeScreenShotDuringEntryExit);
         }
 
-        private void AttemptSeventhQuestion()
+        public void AttemptSeventhQuestion()
         {
             //Attempt Seventh Question
             logger.LogMethodEntry("StudentPresentationPage", "AttemptSeventhQuestion",
@@ -4684,7 +4684,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Attempt Sixth Question.
         /// </summary>
-        private void AttemptSixthQuestion()
+        public void AttemptSixthQuestion()
         {
             //Attempt Sixth Question
             logger.LogMethodEntry("StudentPresentationPage", "AttemptSixthQuestion",
@@ -4721,7 +4721,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Attempt Fifth Question.
         /// </summary>
-        private void AttemptFifthQuestion()
+        public void AttemptFifthQuestion()
         {
             //Attempt Fifth Question
             logger.LogMethodEntry("StudentPresentationPage", "AttemptFifthQuestion",
@@ -4748,7 +4748,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enter Text In Third Bulleted Point.
         /// </summary>
-        private void EnterTextInThirdBulletedPoint()
+        public void EnterTextInThirdBulletedPoint()
         {
             //Enter Text In Third Bulleted Point
             logger.LogMethodEntry("StudentPresentationPage", "EnterTextInThirdBulletedPoint",
@@ -4798,7 +4798,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enter Text In Second Bulleted Point.
         /// </summary>
-        private void EnterTextInSecondBulletedPoint()
+        public void EnterTextInSecondBulletedPoint()
         {
             //Enter Text In Second Bulleted Point
             logger.LogMethodEntry("StudentPresentationPage", "EnterTextInSecondBulletedPoint",
@@ -4848,7 +4848,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enter Text In First Bulleted Point.
         /// </summary>
-        private void EnterTextInFirstBulletedPoint()
+        public void EnterTextInFirstBulletedPoint()
         {
             //Enter Text In First Bulleted Point
             logger.LogMethodEntry("StudentPresentationPage", "EnterTextInFirstBulletedPoint",
@@ -4890,7 +4890,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Attempt Fourth Question.
         /// </summary>
-        private void AttemptFourthQuestion()
+        public void AttemptFourthQuestion()
         {
             //Attempt Fourth Question
             logger.LogMethodEntry("StudentPresentationPage", "AttemptFourthQuestion",
@@ -4947,7 +4947,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Select Panoromic Slide and Enter Title.
         /// </summary>
-        private void SelectPanoromicSlideandEnterTitle()
+        public void SelectPanoromicSlideandEnterTitle()
         {
             //Select Panoromic Slide and Enter Title
             logger.LogMethodEntry("StudentPresentationPage", "SelectPanoromicSlideandEnterTitle",
@@ -4991,7 +4991,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Attempt Third Question.
         /// </summary>
-        private void AttemptThirdQuestion()
+        public void AttemptThirdQuestion()
         {
             //Attempt Third Question
             logger.LogMethodEntry("StudentPresentationPage", "AttemptThirdQuestion",
@@ -5031,7 +5031,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Attempt Second Question.
         /// </summary>
-        private void AttemptSecondQuestion()
+        public void AttemptSecondQuestion()
         {
             //Attempt Second Question
             logger.LogMethodEntry("StudentPresentationPage", "AttemptSecondQuestion",
@@ -5066,7 +5066,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Enter File Name and Save.
         /// </summary>
-        private void EnterFileNameandSave()
+        public void EnterFileNameandSave()
         {
             //Enter File Name and Save
             logger.LogMethodEntry("StudentPresentationPage", "EnterFileNameandSave",
@@ -5100,7 +5100,7 @@ namespace Pegasus.Pages.UI_Pages
         /// <summary>
         /// Create New Folder and Open.
         /// </summary>
-        private void CreateNewFolderandOpen()
+        public void CreateNewFolderandOpen()
         {
             //Create New Folder and Open
             logger.LogMethodEntry("StudentPresentationPage", "CreateNewFolderandOpen",
@@ -5275,7 +5275,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Click On Element By Xpath.
         /// </summary>
         /// <param name="elementAttribute">This is an Attribute.</param>
-        private void ClickOnElementByXpath(string elementAttribute)
+        public void ClickOnElementByXpath(string elementAttribute)
         {
             //Click On Element By Xpath
             logger.LogMethodEntry("StudentPresentationPage", "ClickOnElementByXpath",
@@ -5291,7 +5291,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Attempt First Question.
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
-        private void AttemptFirstQuestion(string activityName)
+        public void AttemptFirstQuestion(string activityName)
         {
             //Attempt First Question
             logger.LogMethodEntry("StudentPresentationPage", "AttemptFirstQuestion",
@@ -5332,7 +5332,7 @@ namespace Pegasus.Pages.UI_Pages
         /// Select Presentation Player Window.
         /// </summary>
         /// <param name="activityName">This is Activity Name.</param>
-        private void SelectPresentationPlayerWindow(string activityName)
+        public void SelectPresentationPlayerWindow(string activityName)
         {
             //Select Presentation Player Window
             logger.LogMethodEntry("StudentPresentationPage", "SelectPresentationPlayerWindow",

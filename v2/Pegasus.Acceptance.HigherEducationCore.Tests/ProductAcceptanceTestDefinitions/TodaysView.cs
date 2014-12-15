@@ -414,11 +414,39 @@ namespace Pegasus.Acceptance.HigherEducation.WL.Tests.
             //Assert we have correct Contents of Getting Started
             Logger.LogAssertion("VerifyActivityName", ScenarioContext.Current.
                   ScenarioInfo.Title, () => Assert.AreEqual
-                      (activityName, new TodaysViewUxPage().GetActivityNameOfInstructorGradingChannel(activityName)));
+                      (activityName, new TodaysViewUxPage().GetActivityNameOfInstructorCommentsChannel(activityName)));
             Logger.LogMethodExit("TodaysView", "VerifyTheGettingStartedContentText",
                 base.IsTakeScreenShotDuringEntryExit);
-
-
         }
+
+        /// <summary>
+        /// Click on the activity cmenu.
+        /// </summary>
+        /// <param name="cmenuOption">This is the cmenu option.</param>
+        /// <param name="activityName">This is the activity name.</param>
+        [When(@"I click on ""(.*)"" of the activity ""(.*)""")]
+        public void ViewAllSubmissionOfTheActivity(string cmenuOption, string activityName)
+        {
+            //Click on the activity cmenu
+            Logger.LogMethodEntry("TodaysView", "GettingStartedContent",
+                  base.IsTakeScreenShotDuringEntryExit);
+            new TodaysViewUxPage().ClickActivityCmenu(activityName);
+            Logger.LogMethodExit("TodaysView", "VerifyTheGettingStartedContentText",
+                base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
+        /// Perform 'Mark as read' for the activity.
+        /// </summary>
+        /// <param name="activityButton">This is the button name.</param>
+        [When(@"I Click on ""(.*)"" button displayed in the right frame")]
+        public void MarkAsReadForTheActivity(string activityButton)
+        {
+            Logger.LogMethodEntry("TodaysView", "MarkAsReadForTheActivity",
+                  base.IsTakeScreenShotDuringEntryExit);
+            new TodaysViewUxPage().OpenActivityDetails(activityButton);
+            Logger.LogMethodExit("TodaysView", "MarkAsReadForTheActivity",
+                base.IsTakeScreenShotDuringEntryExit);
+        }        
     }
 }

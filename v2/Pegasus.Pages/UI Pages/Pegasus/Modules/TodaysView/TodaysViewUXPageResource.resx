@@ -672,4 +672,22 @@
   <data name="TodayViewUXPageResource_Workspace_Amplifier_Window_Warning_Id_Locator" xml:space="preserve">
     <value>spnError</value>
   </data>
+  <data name="TodayViewUXPageResource_ActivityCloseButton_Id_Locator" xml:space="preserve">
+    <value>_ctl0:PopupPageContent:btnClose</value>
+  </data>
+  <data name="TodayViewUXPageResource_ActivityCmenuFocus_Locator" xml:space="preserve">
+    <value>//table[@id='InsUnreadComments']/tbody/tr[{0}]/td/table/tbody/tr/td/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_ActivityCmenuOption_IDLocator" xml:space="preserve">
+    <value>tdViewAllSubmission</value>
+  </data>
+  <data name="TodayViewUXPageResource_ActivityCmenu_Locator" xml:space="preserve">
+    <value>//table[@id='InsUnreadComments']/tbody/tr[{0}]/td/table/tbody/tr/td[2]/span</value>
+  </data>
+  <data name="TodayViewUXPageResource_Activity_WindowName" xml:space="preserve">
+    <value>View Submission</value>
+  </data>
+  <data name="TodayViewUXPageResource_SelectActivity_XPath_Locator" xml:space="preserve">
+    <value>.//*[@id='_ctl0_PopupPageContent_ucSubmissionList_gtStudents_items']/span/div[1]/div</value>
+  </data>
 </root>
