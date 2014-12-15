@@ -6392,6 +6392,9 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
              base.IsTakeScreenShotDuringEntryExit);
         }
 
+        /// <summary>
+        /// Click Return to Course.
+        /// </summary>
         public void ReturnToCourseSpace()
         {
 
@@ -6399,11 +6402,15 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             base.IsTakeScreenShotDuringEntryExit);
             try
             {
-                base.WaitUntilWindowLoads("Open Study Plan");
-                base.SelectWindow("Open Study Plan");
-                base.WaitForElement(By.Id("_ctl0:_ctl0:phBody:PageContent:lbtnBack"));
+                //Switch to window
+                this.SwitchToWindow(StudentPresentationPageResource.
+                    StudentPresentation_Page_OpenStudyPlan_Window_Name);
+                base.WaitForElement(By.Id(StudentPresentationPageResource.
+                    StudentPrsentation_Page_OpenStudyPlan_ReturnToCourseButton_Id_Value));
                 IWebElement returnBackToCourse = base.
-                    GetWebElementPropertiesById("_ctl0:_ctl0:phBody:PageContent:lbtnBack");
+                    GetWebElementPropertiesById(StudentPresentationPageResource.
+                    StudentPrsentation_Page_OpenStudyPlan_ReturnToCourseButton_Id_Value);
+                //Click on buttton
                 base.ClickByJavaScriptExecutor(returnBackToCourse);
             }
             catch (Exception e)
@@ -6415,6 +6422,18 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
 
         }
 
+        private void SwitchToWindow(string windowName)
+        {
+            base.WaitUntilWindowLoads(windowName);
+            base.SelectWindow(windowName);
+        }
+
+        /// <summary>
+        /// Get asset status value.
+        /// </summary>
+        /// <param name="assetName">This is asset name.</param>
+        /// <param name="windowName">This is window name.</param>
+        /// <returns>The status value of asset.</returns>
         public string GetStatusOfSubmittedActivityInAssignmentsPage(string assetName,string windowName)
         {
             //Get Status Of Submitted Activity In CourseMaterial
@@ -6425,23 +6444,31 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             string getActivitySubmittedStatus = string.Empty;
             try
             {
-                    WaitUntilWindowLoads(windowName);
-                    base.SelectWindow(windowName);
+                this.SwitchToWindow(windowName);
                     //Switch To Frame
                     base.SwitchToIFrameById(StudentPresentationPageResource.
                         StudentPresentation_Page_Content_Frame_Id_Locator);
-                           base.WaitForElement(By.XPath("//*[@id='TodoList']/div/div"));
-             int Test = base.GetElementCountByXPath("//*[@id='TodoList']/div/div");
+                    base.WaitForElement(By.XPath(StudentPresentationPageResource.
+                        StudentPresentation_CompletedActivity_Records_Xpath_Value));
+                    int Test = base.GetElementCountByXPath(StudentPresentationPageResource.
+                               StudentPresentation_CompletedActivity_Records_Xpath_Value);
              for (int i = 2; i <= Test; i++)
                 {
-                    base.WaitForElement(By.XPath("//*[@id='TodoList']/div/div[" + i + "]/div/div[2]/table/tbody/tr/td[2]/div"));
-                IWebElement Text= base.GetWebElementPropertiesByXPath("//*[@id='TodoList']/div/div[" + i + "]/div/div[2]/table/tbody/tr/td[2]/div");
+                 //Find the expected asset
+                    base.WaitForElement(By.XPath(string.Format(StudentPresentationPageResource.
+                        StudentPresentation_CompletedActivity_AssetName_Xpath_Value, i)));
+                IWebElement Text= base.GetWebElementPropertiesByXPath((string.Format(StudentPresentationPageResource.
+                        StudentPresentation_CompletedActivity_AssetName_Xpath_Value, i)));
                 String ativityName = Text.Text;
 
                 if (ativityName.Equals(assetName))
                 {
-                    base.WaitForElement(By.XPath("//*[@id='TodoList']/div/div[" + i + "]/div/div[2]/table/tbody/tr/td[3]/div/div[2]/div[2]"));
-                    IWebElement cmenuOption = base.GetWebElementPropertiesByXPath("//*[@id='TodoList']/div/div[" + i + "]/div/div[2]/table/tbody/tr/td[3]/div/div[2]/div[2]");
+                    base.WaitForElement(By.XPath(String.Format(StudentPresentationPageResource.
+                        StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value,i)));
+                    IWebElement cmenuOption = base.GetWebElementPropertiesByXPath((String.
+                        Format(StudentPresentationPageResource.
+                        StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value, i)));
+                    //Get the status value of the asset
                     getActivitySubmittedStatus = cmenuOption.Text;
                      break;
                 }
@@ -6455,7 +6482,7 @@ StudentPresentationPageResource.StudentPrsentation_Page_Text_tofill);
             logger.LogMethodExit("StudentPresentationPage",
                 "GetStatusOfSubmittedActivityInCourseMaterial",
                     base.IsTakeScreenShotDuringEntryExit);
-
+            //Return the status value of the asset
             return getActivitySubmittedStatus;
         }
     }

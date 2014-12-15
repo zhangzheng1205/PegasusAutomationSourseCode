@@ -80,6 +80,33 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;TodoList&apos;]/div/div[{0}]/div/div[2]/table/tbody/tr/td[2]/div.
+        /// </summary>
+        internal static string StudentPresentation_CompletedActivity_AssetName_Xpath_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_CompletedActivity_AssetName_Xpath_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;TodoList&apos;]/div/div[{0}]/div/div[2]/table/tbody/tr/td[3]/div/div[2]/div[2].
+        /// </summary>
+        internal static string StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_CompletedActivity_AssetStatusText_Xpath_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;TodoList&apos;]/div/div.
+        /// </summary>
+        internal static string StudentPresentation_CompletedActivity_Records_Xpath_Value {
+            get {
+                return ResourceManager.GetString("StudentPresentation_CompletedActivity_Records_Xpath_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Activity Alert.
         /// </summary>
         internal static string StudentPresentation_Page_Activity_Alert_Window_Name {
@@ -2056,6 +2083,15 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.AssessmentTool.Presentation {
         internal static string StudentPrsentation_Page_Open_Option_Id_Locator {
             get {
                 return ResourceManager.GetString("StudentPrsentation_Page_Open_Option_Id_Locator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _ctl0:_ctl0:phBody:PageContent:lbtnBack.
+        /// </summary>
+        internal static string StudentPrsentation_Page_OpenStudyPlan_ReturnToCourseButton_Id_Value {
+            get {
+                return ResourceManager.GetString("StudentPrsentation_Page_OpenStudyPlan_ReturnToCourseButton_Id_Value", resourceCulture);
             }
         }
         
