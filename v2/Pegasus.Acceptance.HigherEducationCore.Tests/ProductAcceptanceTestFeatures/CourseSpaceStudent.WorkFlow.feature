@@ -154,7 +154,19 @@ And I submit SAM Activity to score '0'
 Then I should see "Not passed" for "SAM 01-02 Las familias hispanas. [Vocabulario 1. La familia]" in "Course Materials" page by "HSSCsSmsStudent"
 
 #Purpose: Instructor should be notified with alert count in "Instructor Grading" channel when student submits Manual Gradable activities
-#Test Case Id:peg-16744
-#PEGASUS-29247 
+#Test Case Id:peg-22432
+#PEGASUS-30115
+Scenario: Student submits Learsonsity activity  from Course Calendar tab
+Given I browsed the login url for "HSSCsSmsStudent"
+When I logged into the Pegasus as "HSSCsSmsStudent" in "CourseSpace"
+Then I should logged in successfully
+Given I am on the "Global Home" page
+When I enter in the "MySpanishLabProgram" from the Global Home page as "HSSCsSmsStudent"
+When I navigate to "Assignments" tab and selected "Course Calendar" subtab
+Then I should be on the "Course Materials" page
+When I select "SAM 01-19 Singular y plural." in "Course Materials" page by "HSSCsSmsStudent"
+Then I submit the learnocity activity
+Then I should see "Not passed" for "SAM 01-19 Singular y plural." in "Course Materials" page by "HSSCsSmsStudent"
+
 
 

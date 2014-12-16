@@ -811,6 +811,21 @@ namespace Pegasus.Acceptance.HigherEducationCore.Tests.
               base.IsTakeScreenShotDuringEntryExit);
         }
         /// <summary>
+        /// 
+        /// </summary>
+        [Then(@"I submit the learnocity activity")]
+        public void SubmitTheLearnocityActivity()
+        {
+            Logger.LogMethodEntry("CommonSteps",
+              "SubmitTheLearnocityActivity",
+              base.IsTakeScreenShotDuringEntryExit);
+            new CoursePreviewUXPage().SubmittingtheWLLearnocityActivityByStudent();
+            Logger.LogMethodExit("CommonSteps",
+               "SubmitTheLearnocityActivity",
+               base.IsTakeScreenShotDuringEntryExit);
+        }
+
+        /// <summary>
         /// Initialize Pegasus test before test execution starts.
         /// </summary>
         [BeforeTestRun]
