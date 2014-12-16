@@ -246,7 +246,6 @@ namespace Pearson.Pegasus.TestAutomation.Frameworks
 
             // create chrome browser instance
             IWebDriver webDriver = new ChromeDriver(chromeDriverPath, chromeOptions, TimeSpan.FromMinutes(3));
-            webDriver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
             return webDriver;
         }
 
