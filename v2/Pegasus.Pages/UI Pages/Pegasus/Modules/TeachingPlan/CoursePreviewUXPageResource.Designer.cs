@@ -124,7 +124,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.TeachingPlan {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;TodoList&apos;]/div/div[3]/div/div[2]/table/tbody/tr/td[4]/div/a/span.
+        ///   Looks up a localized string similar to //div[@id=&apos;TodoList&apos;]/div/div[{0}]/div/div[2]/table/tbody/tr/td[4]/div/a/span.
         /// </summary>
         internal static string CouresPreviewUX_Page_TodoPage_ImDone_XPath_Locator {
             get {

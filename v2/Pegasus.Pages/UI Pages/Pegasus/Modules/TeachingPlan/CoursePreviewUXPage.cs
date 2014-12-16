@@ -329,15 +329,17 @@ namespace Pegasus.Pages.UI_Pages
                             CouresPreviewUX_Page_TodoPage_AssetStatus_XPathLocator, statusSearch));
                         if (getAssetStatus == assetStatus)
                         {
-                            break;
+                            base.WaitForElement(By.XPath(string.Format(CoursePreviewUXPageResource.
+                        CouresPreviewUX_Page_TodoPage_ImDone_XPath_Locator,statusSearch)));
+                            IWebElement getImDone = base.GetWebElementPropertiesByXPath(string.Format(CoursePreviewUXPageResource.
+                        CouresPreviewUX_Page_TodoPage_ImDone_XPath_Locator,statusSearch));
+                            //Click on 'I'm Done' button
+                            base.ClickByJavaScriptExecutor(getImDone);
                         }
                     }
-                    //Click on 'I'm Done' button
-                    base.WaitForElement(By.XPath(CoursePreviewUXPageResource.
-                        CouresPreviewUX_Page_TodoPage_ImDone_XPath_Locator));
-                    IWebElement getImDone = base.GetWebElementPropertiesByXPath(CoursePreviewUXPageResource.
-                        CouresPreviewUX_Page_TodoPage_ImDone_XPath_Locator);
-                    base.ClickByJavaScriptExecutor(getImDone);
+                   
+                   
+                   
                 }
                 catch (Exception e)
                 {

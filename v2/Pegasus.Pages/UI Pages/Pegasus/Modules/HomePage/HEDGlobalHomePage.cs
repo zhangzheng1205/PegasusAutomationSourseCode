@@ -319,7 +319,7 @@ namespace Pegasus.Pages.UI_Pages
                     .HEDGlobalHome_Page_ThreadSleep_Value));
                 //Wait for Element
                 base.WaitForElement(By.Id(HEDGlobalHomePageResource
-                         .HEDGlobalHome_Page_Course_Table_Id_Locator), 10);
+                         .HEDGlobalHome_Page_Course_Table_Id_Locator));
                 //Get Course Text
                 getCourseText = base.GetElementTextById(HEDGlobalHomePageResource
                         .HEDGlobalHome_Page_Course_Table_Id_Locator);

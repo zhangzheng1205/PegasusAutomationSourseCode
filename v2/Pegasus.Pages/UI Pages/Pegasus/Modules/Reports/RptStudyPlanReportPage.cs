@@ -41,6 +41,8 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             //this.SelectWindow();
             try
             {
+                base.WaitForElement(By.XPath(RptStudyPlanReportPageResource.
+                    RptStudyPlanReportPage_Average_XPath_Locator));
                 getaverageScore = base.GetElementTextByXPath(
                     RptStudyPlanReportPageResource.
                     RptStudyPlanReportPage_Average_XPath_Locator);
@@ -74,7 +76,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             {
                 base.WaitForElement(By.XPath(string.Format(
                     RptStudyPlanReportPageResource.
-                    RptStudyPlanReportPage_StudentName_XPath_Locator, i)), 10);
+                    RptStudyPlanReportPage_StudentName_XPath_Locator, i)));
                 getStudentName = base.GetElementTextByXPath(string.Format(
                      RptStudyPlanReportPageResource.
                     RptStudyPlanReportPage_StudentName_XPath_Locator, i));
@@ -113,7 +115,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 {
                     base.WaitForElement(By.XPath(string.Format(
                         RptStudyPlanReportPageResource.
-                    RptStudyPlanReportPage_StudentName_XPath_Locator, i)), 10);
+                    RptStudyPlanReportPage_StudentName_XPath_Locator, i)));
                     getStudentName = base.GetElementTextByXPath(string.Format(
                          RptStudyPlanReportPageResource.
                     RptStudyPlanReportPage_StudentName_XPath_Locator, i));
@@ -161,7 +163,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 {
                     base.WaitForElement(By.XPath(string.Format(
                         RptStudyPlanReportPageResource.
-                    RptStudyPlanReportPage_StudentName_XPath_Locator, i)), 10);
+                    RptStudyPlanReportPage_StudentName_XPath_Locator, i)));
                     getStudentName = base.GetElementTextByXPath(string.Format(
                          RptStudyPlanReportPageResource.
                     RptStudyPlanReportPage_StudentName_XPath_Locator, i));

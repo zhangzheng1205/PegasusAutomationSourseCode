@@ -243,9 +243,8 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
            string studentSection = string.Empty;
            try
            {
-               bool ghsd = base.IsElementPresent(By.XPath(
-                     RptStudentReportByActivityPageResource.
-                     RptStudentReportSetcion_Name_Xpath_Locator), 10);
+               base.WaitForElement(By.XPath(RptStudentReportByActivityPageResource.
+                    RptStudentReportSetcion_Name_Xpath_Locator));
                getSection = base.GetElementTextByXPath(
                    RptStudentReportByActivityPageResource.
                    RptStudentReportSetcion_Name_Xpath_Locator);

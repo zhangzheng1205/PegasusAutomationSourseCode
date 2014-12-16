@@ -136,7 +136,7 @@
     <value>ViewAll Course Material</value>
   </data>
   <data name="CouresPreviewUX_Page_TodoPage_ImDone_XPath_Locator" xml:space="preserve">
-    <value>//div[@id='TodoList']/div/div[3]/div/div[2]/table/tbody/tr/td[4]/div/a/span</value>
+    <value>//div[@id='TodoList']/div/div[{0}]/div/div[2]/table/tbody/tr/td[4]/div/a/span</value>
   </data>
   <data name="CouresPreviewUX_Page_ToDo_Window_Title" xml:space="preserve">
     <value>ToDo</value>

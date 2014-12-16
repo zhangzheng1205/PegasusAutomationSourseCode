@@ -91,6 +91,8 @@ When I launch "Review the Chapter 5 Learning Objectives" asset
 Then I should be on the "Learning Objectives - Chapter 5" page
 When I close the "Learning Objectives - Chapter 5" window
 Then I should see "Viewed" status for the asset
+When I navigate to "Assignments" tab and selected "Completed" subtab
+Then I should be on the "Assignments - Done" page
 And I should see the "Viewed" status for the activity "Review the Chapter 5 Learning Objectives" in "Assignments - Done" page
 When I navigate to "Today's View" tab
 Then I should be on the "Today's View" page

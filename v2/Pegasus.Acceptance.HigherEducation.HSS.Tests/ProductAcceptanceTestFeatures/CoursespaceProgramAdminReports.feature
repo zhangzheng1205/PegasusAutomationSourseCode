@@ -20,6 +20,7 @@ Then I should be on the "Save settings to My Reports" page
 When I select "Createnewreport" radiobutton
 And  I enter the "HSSActivityResultsByStudent" report name
 And  I click on "SaveandRun" button
+Then I should be on the "Report: Student Results by Activity" page
 Then I should see the section "HSSMyPsychLabProgram" for "HSSCsSmsStudent" with average score "100%" 
 And I should see "Take the Chapter 1 Exam" "Exam" details in report
 When I close the "Report: Student Results by Activity" window
@@ -48,7 +49,7 @@ Then I should be on the "Save settings to My Reports" page
 When I select "Createnewreport" radiobutton
 And  I enter the "HSSActivityResultsByStudent" report name
 And  I click on "SaveandRun" button
-Then I should see the "Save settings to My Reports" popup closed
+Then I should be on the "Study Plan Results" page
 And I should see average score "36%"
 And I should see 'Zero' "HSSCsSmsStudent" along with Pre-test "0%" Post-test "0%"
 And I should see the "HSSCsSmsStudent" along with  Pre-test "72%" Post-test "72%"
@@ -79,7 +80,7 @@ Then I should be on the "Save settings to My Reports" page
 When I select "Createnewreport" radiobutton
 And  I enter the "HSSActivityResultsByStudent" report name
 And  I click on "SaveandRun" button
-Then I should see the "Save settings to My Reports" popup closed
+Then I should be on the "Report: Activity Results by Student" page
 And I should see the "Take the Chapter 1 Exam" with section name "HSSMyPsychLabProgram" with average score "50%" 
 And I should see 'Zero' "HSSCsSmsStudent" along with submitted score "0%"
 And I should see the "HSSCsSmsStudent" along with attempt submitted as score "100%"

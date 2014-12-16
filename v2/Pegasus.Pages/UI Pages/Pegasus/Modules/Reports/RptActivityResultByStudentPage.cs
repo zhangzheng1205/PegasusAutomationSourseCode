@@ -128,7 +128,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 {
                     base.WaitForElement(By.XPath(string.Format(
                         RptActivityResultByStudentPageRecource.
-                        RptActivityResultByStudentPage_ActivityStudentName_XPath_Locator, i)), 10);
+                        RptActivityResultByStudentPage_ActivityStudentName_XPath_Locator, i)));
                     getStudentName = base.GetElementTextByXPath(string.Format(
                          RptActivityResultByStudentPageRecource.
                         RptActivityResultByStudentPage_ActivityStudentName_XPath_Locator, i)).Trim();
@@ -167,7 +167,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             {                
                 base.WaitForElement(By.XPath(string.Format(
                     RptActivityResultByStudentPageRecource.
-                    RptActivityResultByStudentPage_ActivityStudentScore_XPath_Locator, scoreRow)), 10);
+                    RptActivityResultByStudentPage_ActivityStudentScore_XPath_Locator, scoreRow)));
                 getScore = base.GetElementTextByXPath(string.Format(
                     RptActivityResultByStudentPageRecource.
                     RptActivityResultByStudentPage_ActivityStudentScore_XPath_Locator, scoreRow));
@@ -202,7 +202,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
                 base.WaitForElement(By.XPath(string.Format(
                        RptActivityResultByStudentPageRecource.
                       RptActivityResultByStudentPage_AdminActivityStudentScore_XPath_Locator,
-                       scoreRow)), 10);
+                       scoreRow)));
                 getScore = base.GetElementTextByXPath(string.Format(
                     RptActivityResultByStudentPageRecource.
                    RptActivityResultByStudentPage_AdminActivityStudentScore_XPath_Locator,
@@ -233,7 +233,7 @@ namespace Pegasus.Pages.UI_Pages.Pegasus.Modules.Reports
             {
                 bool ghsd = base.IsElementPresent(By.XPath(
                     RptActivityResultByStudentPageRecource.
-                    RptActivityResultByStudentPage_SectionName_XPath_Locator), 10);
+                    RptActivityResultByStudentPage_SectionName_XPath_Locator));
                 getSection = base.GetElementTextByXPath(
                     RptActivityResultByStudentPageRecource.
                     RptActivityResultByStudentPage_SectionName_XPath_Locator);
