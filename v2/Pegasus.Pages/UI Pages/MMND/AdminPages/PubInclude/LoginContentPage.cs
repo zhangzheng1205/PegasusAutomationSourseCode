@@ -141,6 +141,16 @@ namespace Pegasus.Pages.UI_Pages
                               break;
             }
             break;
+
+                case User.UserTypeEnum.WLCsSmsStudent:
+            switch (scenerioName)
+                    {
+                        case "scoring 0":
+                            user = User.Get(CommonResource.CommonResource
+                               .SMS_STU_UC5);
+                    break;
+                    }
+                    break;
         }
             Logger.LogMethodExit("LoginContentPage", "SelectUserDetailsBaesdOnScenerio",
              base.IsTakeScreenShotDuringEntryExit);

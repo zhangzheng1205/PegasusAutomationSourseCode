@@ -477,6 +477,17 @@
       <EnrolementStatus>false</EnrolementStatus>
     </User>
     <User>
+      <Name>3a8b0f2e-520f-4db6-9fa1-1a3eddd69418</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>cf3d</LastName>
+      <UserType>WLCsSmsInstructor</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
       <Name>5c016e1f-dde7-4607-aa40-c3bd49478ba3</Name>
       <Password>password1</Password>
       <Email>manish.singh@imfinity.com</Email>
@@ -523,7 +534,7 @@
       <UserType>HSSCsSmsStudent</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
-    </User>
+    </User>    
     <!--Hard coded Users data for Zero Score "HSSCsSMSStudent".-->
     <User>
       <Name>3e56555c-e8d4-44d0-a724-0cc565a6f598</Name>
@@ -547,6 +558,30 @@
       <LastName>6d58</LastName>
       <UserType>HSSCsSmsStudent</UserType>
       <UserId>HSS_User_SMS_STU_UC4</UserId>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>true</EnrolementStatus>
+    </User>
+    <User>
+      <Name>5c016e1f-dde7-4607-aa40-c3bd49478ba3</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>e77b</LastName>
+      <UserType>WLCsSmsStudent</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <!--Hard coded Users data for Zero Score "WLCsSmsStudent".-->
+    <User>
+      <Name>3e56555c-e8d4-44d0-a724-0cc565a6f598</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>e5c6</LastName>
+      <UserType>WLCsSmsStudent</UserType>
+      <UserId>WL_User_SMS_STU_UC5</UserId>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>true</EnrolementStatus>
     </User>
@@ -652,6 +687,17 @@
       <MiddleName>Pegasus</MiddleName>
       <LastName>f4e4</LastName>
       <UserType>HSSProgramAdmin</UserType>
+      <IsCreated>true</IsCreated>
+      <EnrolementStatus>false</EnrolementStatus>
+    </User>
+    <User>
+      <Name>4b8928b9-5fb4-4d4b-9290-95048963bc21</Name>
+      <Password>password1</Password>
+      <Email>manish.singh@imfinity.com</Email>
+      <FirstName>BDD</FirstName>
+      <MiddleName>Pegasus</MiddleName>
+      <LastName>f4e4</LastName>
+      <UserType>WLProgramAdmin</UserType>
       <IsCreated>true</IsCreated>
       <EnrolementStatus>false</EnrolementStatus>
     </User>
