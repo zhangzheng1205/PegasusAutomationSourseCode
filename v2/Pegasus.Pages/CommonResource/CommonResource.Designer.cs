@@ -185,5 +185,14 @@ namespace Pegasus.Pages.CommonResource {
                 return ResourceManager.GetString("SMS_STU_UC4", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WL_User_SMS_STU_UC5.
+        /// </summary>
+        internal static string SMS_STU_UC5 {
+            get {
+                return ResourceManager.GetString("SMS_STU_UC5", resourceCulture);
+            }
+        }
     }
 }

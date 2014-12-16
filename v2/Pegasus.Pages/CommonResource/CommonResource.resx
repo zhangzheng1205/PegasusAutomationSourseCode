@@ -159,4 +159,7 @@
   <data name="SMS_STU_UC4" xml:space="preserve">
     <value>HSS_User_SMS_STU_UC4</value>
   </data>
+  <data name="SMS_STU_UC5" xml:space="preserve">
+    <value>WL_User_SMS_STU_UC5</value>
+  </data>
 </root>
